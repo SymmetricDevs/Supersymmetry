@@ -16,15 +16,17 @@ PHASE_SEPARATOR = recipemap('phase_separator')
 POLYMERIZATION = recipemap('polymerization_tank')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 
-// TOC
+// Table of Contents
 /// A Preparation
 /// B 4-(methylthio)phenyl Methacrylate
 /// C Ruthenium Catalyst (for MAPDST)
 /// D MAPDST
 /// E MAPDST-MMA Copolymer
+/// References
 
 /// A Preparation
 // 2 Methanol + 2 Hydrogen Sulfide + (NC) Al2O3 = 1 Dimethyl Sulfide + 2 Water
+// From wikipedia, source [1]
 BR.recipeBuilder()
     .fluidInputs(fluid('methanol') * 2000)
     .fluidInputs(fluid('hydrogen_sulfide') * 2000)
@@ -36,6 +38,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 // 1 Methacrylic Acid + 1 Thionyl Chloride + (NC) LiCl = 1 Chlorosulfanic acid + 1 Methacryloyl Chloride [CSTR]
+// Based on [2]
 CSTR.recipeBuilder()
     .fluidInputs(fluid('methacrylic_acid') * 1000)
     .fluidInputs(fluid('thionyl_chloride') * 1000)
@@ -47,7 +50,7 @@ CSTR.recipeBuilder()
     .buildAndRegister()
 
 // 1 Dimethyl Sulfide + 1 Phenol + (NC) Aluminum Phenoxide = 1 2/4-(Methylthio)phenol Mixture [BR]
-// Aluminium phenoxide is aluminium phenolate
+// Recipe based on [3], aluminium phenoxide is essentially aluminium phenolate in game
 BR.recipeBuilder()
     .fluidInputs(fluid('dimethyl_sulfide') * 1000)
     .fluidInputs(fluid('phenol') * 1000)
@@ -57,16 +60,17 @@ BR.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-// 1 2/4-(Methylthio)phenol Mixture = 0.6 4-(Methylthio)phenol + 0.4 2-(Methylthio)phenol [distill]
+// 1 2/4-(Methylthio)phenol Mixture = 0.4 4-(Methylthio)phenol + 0.6 2-(Methylthio)phenol [distill]
+// [3] suggests that it is 17:7:3:1 for 2-(Methylthio)phenol : 4-(Methylthio)phenol : two other bis(Methylthio)phenol
 DT.recipeBuilder()
     .fluidInputs(fluid('two_four_methylthio_phenol_mixture') * 1000)
-    .fluidOutputs(fluid('two_methylthio_phenol') * 400)
-    .fluidOutputs(fluid('four_methylthio_phenol') * 600)
+    .fluidOutputs(fluid('two_methylthio_phenol') * 600)
+    .fluidOutputs(fluid('four_methylthio_phenol') * 400) // should be 250 IRL 
     .EUt(Globals.voltAmps[4])
     .duration(200)
     .buildAndRegister()
 
-// from wikipedia, need more info
+// All following recipes follows wikipedia (which has the citation)
 // 1 Chlorosulfuric Acid + 1 Ethanol = 1 Ethyl Sulfate + 1 HCl 
 BR.recipeBuilder()
     .fluidInputs(fluid('chlorosulfuric_acid') * 1000)
@@ -77,7 +81,6 @@ BR.recipeBuilder()
     .duration(150)
     .buildAndRegister()
 
-// from wikipedia, need more info
 // 2 Ethyl Sulfate + 1 Sodium Sulfate = 1 Diethyl Sulfate + 2 Sodium Bisulfate
 BR.recipeBuilder()
     .fluidInputs(fluid('ethyl_sulfate') * 2000)
@@ -130,8 +133,9 @@ DT.recipeBuilder()
     .buildAndRegister()
     
 /// B 4-(methylthio)phenyl Methacrylate
+// [4], see 4-(methylthio)phenyl methacrylate
 
-// 1 Methacryloyl Chloride + 3 Dichloromethane = 4 Methacryloyl Chloride Dichloromethane [mixer]
+// 1 Methacryloyl Chloride + 3 Dichloromethane = 4 Methacryloyl Chloride Dichloromethane Solution [mixer]
 MIXER.recipeBuilder()
     .fluidInputs(fluid('methacryloyl_chloride') * 1000)
     .fluidInputs(fluid('dichloromethane') * 3000)
@@ -229,6 +233,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .buildAndRegister()
 
 /// C Ruthenium Catalyst (for MAPDST)
+// See [5] 
 // 1 Ruthenium + 3 Chlorine = 1 Ruthenium (III) Chloride
 BR.recipeBuilder()
     .inputs(ore('dustAnyPurityRuthenium') * 1)
@@ -277,6 +282,8 @@ DRYER.recipeBuilder()
     .buildAndRegister()
 
 /// D MAPDST
+// [4], see Synthesis of dimethyl-(4-methacryloyloxy)phenylsulfonium triflate (PAGMA) 
+
 //  1 Methanol + 1 Hydrogen Iodide = 1 Iodomethane + 1 Water
 BR.recipeBuilder()
     .fluidInputs(fluid('methanol') * 1000)
@@ -341,6 +348,7 @@ CRYSTALLIZER.recipeBuilder()
     .buildAndRegister();
 
 /// E MAPDST-MMA Copolymer
+// [6], See Procedure for the Synthesis of MAPDST-MMA Copolymer (VIa)
 
 // 1 MAPDST (Dimethyl-(4-methacryloyloxy)phenylsulfonium Triflate) + 1 Methyl Methacrylate + 1 Azobisisobutyronitrile (AIBN) + 2 Tetrahydrofuran + 1 Acetonitrile = Rough MAPDST-MMA Copolymer Solution [polymerization tank]
 POLYMERIZATION.recipeBuilder()
@@ -416,3 +424,13 @@ MIXER.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .duration(1000)
     .buildAndRegister();
+
+/* 
+References
+[1] Roy, K.-M. (15 June 2000). "Thiols and Organic Sulfides". Ullmann's Encyclopedia of Industrial Chemistry. p. 8.
+[2] S. Kim, “How do I synthesize methacryloyl chloride?”, ResearchGate, 26-Jun-2017. [Online]. Available: https://www.researchgate.net/post/How-do-i-synthesize-methacryloyl-chloride. [Accessed: 26-Jun-2025].
+[3] Paul F. Ranken, B. Gary Mckinnie, Alkylthiolation of Phenols, Available: https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-1984-30744. [Accessed: 26-Jun-2025].
+[4] Andrew A. Brown, Omar Azzaroni, Luis M. Fidalgoa and Wilhelm T. S. Huck, Polymer brush resist for responsive wettability, Soft Matter, Available: https://pubs.rsc.org/en/content/articlelanding/2009/sm/b902179e. [Accessed: 26-Jun-2025].
+[5] Emily C. Corker, Uffe V. Mentzel, Jerrik Mielby, Anders Riisagera and Rasmus Fehrmann, An alternative pathway for production of acetonitrile: ruthenium catalysed aerobic dehydrogenation of ethylamine, Green Chemistry, Available: https://pubs.rsc.org/en/content/articlelanding/2013/gc/c3gc36513a. [Accessed: 26-Jun-2025].
+[6] V. S. V. Satyanarayana, Felipe Kessler, Vikram Singh, Francine R. Scheffer, Daniel E. Weibel, Subrata Ghosh, Kenneth E. Gonsalves, "Radiation-Sensitive Novel Polymeric Resist Materials: Iterative Synthesis and Their EUV Fragmentation Studies", ACS Applied Materials & Interfaces, 27-Feb-2014, Available: https://pubs.acs.org/doi/10.1021/am405905p. [Accessed: 26-Jun-2025].
+*/
