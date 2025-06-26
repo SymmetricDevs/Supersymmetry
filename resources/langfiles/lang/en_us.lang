@@ -2318,10 +2318,12 @@ susy.material.n_hydroxyethyl_ethylenediaminetriacetic_acid=N-Hydroxyethyl Ethyle
 susy.material.dimethyl_sulfide=Dimethyl Sulfide
 susy.material.chlorosulfanic_acid=Chlorosulfanic acid
 susy.material.methacryloyl_chloride=Methacryloyl Chloride
+susy.material.hydrolyzed_chlorosulfuric_acid=Hydrolyzed Chlorosulfuric Acid
 susy.material.two_four_methylthio_phenol_mixture=2/4-(Methylthio)phenol Mixture
 susy.material.two_methylthio_phenol=2-(Methylthio)phenol
 susy.material.four_methylthio_phenol=4-(Methylthio)phenol
 susy.material.ethyl_sulfate=Ethyl Sulfate
+susy.material.acidic_ethyl_sulfate=Acidic Ethyl Sulfate
 susy.material.diethyl_sulfate=Diethyl Sulfate
 susy.material.diisopropylethylamineN,N-Diisopropylethylamine (DIPEA)
 susy.material.trifluoromethanesulfonic_acid=Trifluoromethanesulfonic Acid

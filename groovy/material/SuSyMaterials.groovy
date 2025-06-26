@@ -2165,11 +2165,13 @@ class SuSyMaterials {
         public static Material DimethylSulfide; 
         public static Material ChlorosulfanicAcid; 
         public static Material MethacryloylChloride; 
+        public static Material HydrolyzedChlorosulfuricAcid;
         public static Material AluminiumPhenoxide; 
         public static Material TwoFourMethylthioPhenolMixture; 
         public static Material TwoMethylthioPhenol; 
         public static Material FourMethylthioPhenol; 
         public static Material EthylSulfate; 
+        public static Material AcidicEthylSulfate;
         public static Material DiethylSulfate; 
         public static Material Diisopropylethylamine; 
         public static Material TrifluoromethanesulfonicAcid; 

@@ -49,6 +49,24 @@ CSTR.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
+// Chlorosulfanic acid can be oxided [7] to chlorosulfuric for recycle,
+// but H2O2 decomposes into water, resulting hydrolysis of chlorosulfuric acid, which is later distilled.
+LCR.recipeBuilder()
+    .fluidInputs(fluid('chlorosulfanic_acid') * 1000)
+    .fluidInputs(fluid('hydrogen_peroxide') * 1000)
+    .fluidOutputs(fluid('hydrolyzed_chlorosulfuric_acid') * 2000)
+    .EUt(Globals.voltAmps[3])
+    .duration(200)
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('hydrolyzed_chlorosulfuric_acid') * 200)
+    .fluidOutputs(fluid('sulfuric_acid') * 100)
+    .fluidOutputs(fluid('hydrochloric_acid') * 100)
+    .EUt(Globals.voltAmps[2])
+    .duration(200)
+    .buildAndRegister()
+
 // 1 Dimethyl Sulfide + 1 Phenol + (NC) Aluminum Phenoxide = 1 2/4-(Methylthio)phenol Mixture [BR]
 // Recipe based on [3], aluminium phenoxide is essentially aluminium phenolate in game
 BR.recipeBuilder()
@@ -70,14 +88,24 @@ DT.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
+// 2-(Methylthio)phenol for pesticide, not used in the chain
+
 // All following recipes follows wikipedia (which has the citation)
 // 1 Chlorosulfuric Acid + 1 Ethanol = 1 Ethyl Sulfate + 1 HCl 
 BR.recipeBuilder()
     .fluidInputs(fluid('chlorosulfuric_acid') * 1000)
     .fluidInputs(fluid('ethanol') * 1000)
-    .fluidOutputs(fluid('ethyl_sulfate') * 1000)
-    .fluidOutputs(fluid('hydrochloric_acid') * 1000)
+    .fluidOutputs(fluid('acidic_ethyl_sulfate') * 1000)
     .EUt(Globals.voltAmps[3])
+    .duration(150)
+    .buildAndRegister()
+
+// Ethyl Sulfate + HCl separation
+DT.recipeBuilder()
+    .fluidInputs(fluid('acidic_ethyl_sulfate') * 1000)
+    .fluidOutputs(fluid('ethyl_sulfate') * 1000)
+    .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+    .EUt(Globals.voltAmps[2])
     .duration(150)
     .buildAndRegister()
 
@@ -433,4 +461,5 @@ References
 [4] Andrew A. Brown, Omar Azzaroni, Luis M. Fidalgoa and Wilhelm T. S. Huck, Polymer brush resist for responsive wettability, Soft Matter, Available: https://pubs.rsc.org/en/content/articlelanding/2009/sm/b902179e. [Accessed: 26-Jun-2025].
 [5] Emily C. Corker, Uffe V. Mentzel, Jerrik Mielby, Anders Riisagera and Rasmus Fehrmann, An alternative pathway for production of acetonitrile: ruthenium catalysed aerobic dehydrogenation of ethylamine, Green Chemistry, Available: https://pubs.rsc.org/en/content/articlelanding/2013/gc/c3gc36513a. [Accessed: 26-Jun-2025].
 [6] V. S. V. Satyanarayana, Felipe Kessler, Vikram Singh, Francine R. Scheffer, Daniel E. Weibel, Subrata Ghosh, Kenneth E. Gonsalves, "Radiation-Sensitive Novel Polymeric Resist Materials: Iterative Synthesis and Their EUV Fragmentation Studies", ACS Applied Materials & Interfaces, 27-Feb-2014, Available: https://pubs.acs.org/doi/10.1021/am405905p. [Accessed: 26-Jun-2025].
+[7] Chauvin, J.-P. R., & Pratt, D. A. (2016). On the Reactions of Thiols, Sulfenic Acids, and Sulfinic Acids with Hydrogen Peroxide. Angewandte Chemie, 129(22), 6351–6355. doi:10.1002/ange.201610402
 */
