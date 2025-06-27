@@ -2764,8 +2764,6 @@ public class OrganicChemistryMaterials {
                 .color(0x7ebdba)
                 .build();
         
-        ///// TODO
-
         DimethylSulfide = new Material.Builder(15439, SuSyUtility.susyId('dimethyl_sulfide'))
                 .liquid()
                 .flags(FLAMMABLE)
@@ -2856,188 +2854,117 @@ public class OrganicChemistryMaterials {
                 .components(Silver * 1, Carbon * 1, Fluorine * 3, Sulfur * 1, Oxygen * 3, Water * 1)
                 .color(0x418759)
                 .build();
-        SilverTrifluoromethanesulfonate.setFormula("(Ag[CF3O3S])(H2O)", true);
+        SilverTrifluoromethanesulfonate.setFormula("Ag[CF3O3S]", true);
         
-        MethacryloylChlorideDichloromethane = new Material.Builder(15453, SuSyUtility.susyId('methacryloyl_chloride_dichloromethane'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(MethacryloylChloride * 1, Chloromethane * 3)
-                .color(0x2f7580)
-                .build();
-
-        FourMethylthioPhenolDiisopropylethylamineDichloromethane = new Material.Builder(15454, SuSyUtility.susyId('four_methylthio_phenol_diisopropylethylamine_dichloromethane'))
-                .liquid()
-                .components(MethacryloylChloride * 1, Chloromethane * 3)
-                .color(0x102b75)
-                .build();
-
-        FourMethylthioPhenolMethacrylateReactionMixture = new Material.Builder(15455, SuSyUtility.susyId('four_methylthio_phenol_methacrylate_reaction_mixture'))
-                .liquid()
-                .components(MethacryloylChloride * 1, Chloromethane * 3)
-                .color(0x44a0b3)
-                .build();
-
-        FourMethylthioPhenylMethacrylate = new Material.Builder(15456, SuSyUtility.susyId('four_methylthio_phenyl_methacrylate'))
+        // plan to remove
+        FourMethylthioPhenylMethacrylate = new Material.Builder(15453, SuSyUtility.susyId('four_methylthio_phenyl_methacrylate'))
                 .dust()
                 .iconSet(SHINY)
                 .components(Carbon * 11, Hydrogen * 12, Oxygen * 2, Sulfur * 1)
                 .color(0x1875de)
                 .build();
-
-        ImpureFourMethylthioPhenylMethacrylate = new Material.Builder(15457, SuSyUtility.susyId('impure_four_methylthio_phenyl_methacrylate'))
-                .dust()
-                .color(0x315f69)
-                .build();
-        ImpureFourMethylthioPhenylMethacrylate.setFormula("(C11H12O2S)(C8H19N(HCl))?", true);
-
-        CrudeFourMethylthioPhenylMethacrylateTetrahydrofuranSolution = new Material.Builder(15458, SuSyUtility.susyId('crude_four_methylthio_phenyl_methacrylate_tetrahydrofuran'))
-                .liquid()
-                .components(FourMethylthioPhenylMethacrylate * 1, Tetrahydrofuran * 4)
-                .color(0x438491)
-                .build();
         
+        // FourMethylthioPhenolMethacrylateReactionMixture is registered 
+
         // Ethylbis(propan-2-yl)amine hydrochloride
-        DiisopropylethylamineHydrochloride = new Material.Builder(15459, SuSyUtility.susyId('diisopropylethylamine_hydrochloride'))
+        DiisopropylethylamineHydrochloride = new Material.Builder(15454, SuSyUtility.susyId('diisopropylethylamine_hydrochloride'))
                 .dust()
                 .components(Carbon * 4, Hydrogen * 20, Chlorine * 1, Nitrogen * 1)
                 .color(0xbb8fc9)
                 .build();
 
-        CrudeFourMethylthioPhenylMethacrylate = new Material.Builder(15460, SuSyUtility.susyId('crude_four_methylthio_phenyl_methacrylate'))
+        CrudeFourMethylthioPhenylMethacrylate = new Material.Builder(15455, SuSyUtility.susyId('crude_four_methylthio_phenyl_methacrylate'))
                 .dust()
-                .components(FourMethylthioPhenylMethacrylate * 1)
+                .components(DiisopropylethylamineHydrochloride * 1, FourMethylthioPhenylMethacrylate * 1)
                 .color(0x59b0c2)
                 .build();
 
-        CrudeFourMethylthioPhenylMethacrylateDichloromethaneSolution = new Material.Builder(15461, SuSyUtility.susyId('crude_four_methylthio_phenyl_methacrylate_dichloromethane'))
+        FourMethylthioPhenolMethacrylateReactionMixture = new Material.Builder(15456, SuSyUtility.susyId('four_methylthio_phenol_methacrylate_reaction_mixture'))
                 .liquid()
-                .components(FourMethylthioPhenylMethacrylate * 2, Dichloromethane * 5)
-                .color(0x3f638c)
-                .build();
-
-        AcidWashedCrudeFourMethylthioPhenylMethacrylateDichloromethaneSolution = new Material.Builder(15462, SuSyUtility.susyId('acid_washed_crude_four_methylthio_phenyl_methacrylate_dichloromethane'))
-                .liquid()
-                .components(FourMethylthioPhenylMethacrylate * 2, Dichloromethane * 5)
-                .color(0x3b6ba1)
-                .build();
-
-        WaterWashedCrudeFourMethylthioPhenylMethacrylateDichloromethaneSolution = new Material.Builder(15463, SuSyUtility.susyId('water_washed_crude_four_methylthio_phenyl_methacrylate_dichloromethane'))
-                .liquid()
-                .components(FourMethylthioPhenylMethacrylate * 2, Dichloromethane * 5)
-                .color(0x2f74c2)
-                .build();
-
-        RutheniumChlorideAluminaSlurry = new Material.Builder(15464, SuSyUtility.susyId('ruthenium_chloride_alumina_slurry'))
-                .liquid()
-                .components(RutheniumIIIChloride * 1, Alumina * 20, Water * 1)
-                .color(0x3db1eb)
+                .components(DiisopropylethylamineHydrochloride * 1, FourMethylthioPhenylMethacrylate * 1, Chloromethane * 5)
+                .color(0x44a0b3)
                 .build();
         
-        RutheniumOxideAluminaCatalyst = new Material.Builder(15465, SuSyUtility.susyId('ruthenium_oxide_alumina_catalyst'))
+        RutheniumOxideAluminaCatalyst = new Material.Builder(15457, SuSyUtility.susyId('ruthenium_oxide_alumina_catalyst'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0x087cc4)
                 .build();
         RutheniumOxideAluminaCatalyst.setFormula('RuOx/Al2O3', true);
 
-        RutheniumOxideAluminaCatalystSolution = new Material.Builder(15466, SuSyUtility.susyId('ruthenium_oxide_alumina_catalyst_solution'))
+        RutheniumOxideAluminaCatalystSolution = new Material.Builder(15458, SuSyUtility.susyId('ruthenium_oxide_alumina_catalyst_solution'))
                 .liquid()
                 .components(RutheniumOxideAluminaCatalyst * 1, Water * 2)
                 .color(0x143c87)
                 .build();
 
-        WetRutheniumOxideAluminaCatalyst = new Material.Builder(15467, SuSyUtility.susyId('wet_ruthenium_oxide_alumina_catalyst'))
-                .dust()
-                .components(RutheniumOxideAluminaCatalyst * 1)
-                .color(0x1a7bb8)
-                .build();
-
-        Iodomethane = new Material.Builder(15468, SuSyUtility.susyId('iodomethane'))
+        Iodomethane = new Material.Builder(15459, SuSyUtility.susyId('iodomethane'))
                 .liquid()
                 .components(Carbon * 1, Hydrogen * 3, Iodine * 1)
                 .color(0x510466)
                 .build();
 
-        Acetonitrile = new Material.Builder(15469, SuSyUtility.susyId('acetonitrile'))
+        Acetonitrile = new Material.Builder(15460, SuSyUtility.susyId('acetonitrile'))
                 .liquid()
                 .flags(FLAMMABLE)
                 .components(Carbon * 2, Hydrogen * 3, Nitrogen * 1)
                 .color(0xe37666)
                 .build();
 
-        IodomethaneAcetonitrileSolution = new Material.Builder(15470, SuSyUtility.susyId('iodomethane_acetonitrile_solution'))
-                .liquid()
-                .components(Iodomethane * 1, Acetonitrile * 5)
-                .color(0xdb146e)
-                .build();
-
-        SilverIodide = new Material.Builder(15471, SuSyUtility.susyId('silver_iodide'))
+        SilverIodide = new Material.Builder(15461, SuSyUtility.susyId('silver_iodide'))
                 .dust()
-                .components(Silver * 1, Iodine * 5)
+                .components(Silver * 1, Iodine * 1)
                 .color(0xC4AC71)
                 .build();
         
         // Actually Dimethyl-(4-methacryloyloxy)phenylsulfonium Triflate
-        MAPDST = new Material.Builder(15472, SuSyUtility.susyId('mapdst'))
+        MAPDST = new Material.Builder(15462, SuSyUtility.susyId('mapdst'))
                 .dust()
                 .iconSet(SHINY)
                 .components(Carbon * 13, Hydrogen * 15, Fluorine * 3, Oxygen * 5, Sulfur * 2)
                 .color(0xd63838)
                 .build();
 
-        CrudeMAPDSTAcetonitrileSolution = new Material.Builder(15473, SuSyUtility.susyId('crude_mapdst_acetonitrile_solution'))
+        CrudeMAPDSTAcetonitrileSolution = new Material.Builder(15463, SuSyUtility.susyId('crude_mapdst_acetonitrile_solution'))
                 .liquid()
                 .components(MAPDST * 1, Acetonitrile * 8)
                 .color(0x802222)
                 .build();
 
-        CrudeMAPDST = new Material.Builder(15474, SuSyUtility.susyId('crude_mapdst'))
+        CrudeMAPDST = new Material.Builder(15464, SuSyUtility.susyId('crude_mapdst'))
                 .dust()
                 .components(MAPDST * 1)
                 .color(0xa63232)
                 .build();
 
-        MapdstMmaCopolymer = new Material.Builder(15475, SuSyUtility.susyId('mapdst_mma_copolymer'))
+        MapdstMmaCopolymer = new Material.Builder(15465, SuSyUtility.susyId('mapdst_mma_copolymer'))
                 .dust()
+                .iconSet(SHINY)
                 .components(MAPDST * 1, MethylMethacrylate * 1)
                 .color(0xde5a02)
                 .build();
-
-        RoughMapdstMmaCopolymerSolution = new Material.Builder(15476, SuSyUtility.susyId('rough_mapdst_mma_copolymer_solution'))
-                .liquid()
-                .color(0xa15e32)
-                .build();
         
-        MapdstMmaCopolymerWaste = new Material.Builder(15477, SuSyUtility.susyId('mapdst_mma_copolymer_waste'))
+        MapdstMmaCopolymerWaste = new Material.Builder(15466, SuSyUtility.susyId('mapdst_mma_copolymer_waste'))
                 .liquid()
                 .color(0x1d577a)
                 .build();
         
-        RoughMapdstMmaCopolymer = new Material.Builder(15478, SuSyUtility.susyId('rough_mapdst_mma_copolymer'))
-                .dust()
-                .color(0xb5581b)
-                .build();
-        
-        CrudeMapdstMmaCopolymer = new Material.Builder(15479, SuSyUtility.susyId('crude_mapdst_mma_copolymer'))
+        CrudeMapdstMmaCopolymer = new Material.Builder(15467, SuSyUtility.susyId('crude_mapdst_mma_copolymer'))
                 .dust()
                 .color(0xc4682b)
                 .build();
 
-        CrudeMapdstMmaCopolymerSolution = new Material.Builder(15480, SuSyUtility.susyId('crude_mapdst_mma_copolymer_solution'))
+        CrudeMapdstMmaCopolymerSolution = new Material.Builder(15468, SuSyUtility.susyId('crude_mapdst_mma_copolymer_solution'))
                 .liquid()
                 .color(0xc4682b)
                 .build();
         
-        DiethylEtherMethanolMix = new Material.Builder(15481, SuSyUtility.susyId('diethyl_ether_methanol_mix'))
+        DiethylEtherMethanolMix = new Material.Builder(15469, SuSyUtility.susyId('diethyl_ether_methanol_mix'))
                 .liquid()
                 .color(0x0b5c0f)
                 .build();
 
-        WetMapdstMmaCopolymer = new Material.Builder(15482, SuSyUtility.susyId('wet_mapdst_mma_copolymer'))
-                .dust()
-                .color(0xb05315)
-                .build();
-
-        MapdstMmaCopolymerPhotoresist = new Material.Builder(15483, SuSyUtility.susyId('mapdst_mma_photoresist'))
+        MapdstMmaCopolymerPhotoresist = new Material.Builder(15470, SuSyUtility.susyId('mapdst_mma_photoresist'))
                 .fluid()
                 .color(0xcfa182)
                 .build();

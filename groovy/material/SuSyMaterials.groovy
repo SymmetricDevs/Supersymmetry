@@ -2177,24 +2177,14 @@ class SuSyMaterials {
         public static Material TrifluoromethanesulfonicAcid; 
         public static Material SilverTrifluoromethanesulfonateSolution; 
         public static Material SilverTrifluoromethanesulfonate; 
-        public static Material MethacryloylChlorideDichloromethane; 
-        public static Material FourMethylthioPhenolDiisopropylethylamineDichloromethane; 
-        public static Material FourMethylthioPhenolMethacrylateReactionMixture; 
         public static Material FourMethylthioPhenylMethacrylate; 
-        public static Material ImpureFourMethylthioPhenylMethacrylate; 
-        public static Material CrudeFourMethylthioPhenylMethacrylateTetrahydrofuranSolution; 
         public static Material DiisopropylethylamineHydrochloride; 
+        public static Material FourMethylthioPhenolMethacrylateReactionMixture; 
         public static Material CrudeFourMethylthioPhenylMethacrylate; 
-        public static Material CrudeFourMethylthioPhenylMethacrylateDichloromethaneSolution; 
-        public static Material AcidWashedCrudeFourMethylthioPhenylMethacrylateDichloromethaneSolution; 
-        public static Material WaterWashedCrudeFourMethylthioPhenylMethacrylateDichloromethaneSolution; 
-        public static Material RutheniumChlorideAluminaSlurry; 
         public static Material RutheniumOxideAluminaCatalyst; 
         public static Material RutheniumOxideAluminaCatalystSolution; 
-        public static Material WetRutheniumOxideAluminaCatalyst; 
         public static Material Iodomethane; 
         public static Material Acetonitrile; 
-        public static Material IodomethaneAcetonitrileSolution; 
         public static Material SilverIodide; 
         public static Material MAPDST; 
         public static Material CrudeMAPDSTAcetonitrileSolution; 
@@ -2202,11 +2192,9 @@ class SuSyMaterials {
         public static Material MapdstMmaCopolymer; 
         public static Material RoughMapdstMmaCopolymerSolution; 
         public static Material MapdstMmaCopolymerWaste; 
-        public static Material RoughMapdstMmaCopolymer; 
         public static Material CrudeMapdstMmaCopolymer; 
         public static Material CrudeMapdstMmaCopolymerSolution; 
         public static Material DiethylEtherMethanolMix; 
-        public static Material WetMapdstMmaCopolymer; 
         public static Material MapdstMmaCopolymerPhotoresist;
 
         // Third Degree Materials
