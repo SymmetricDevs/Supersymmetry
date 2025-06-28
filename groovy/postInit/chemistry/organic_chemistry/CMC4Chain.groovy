@@ -1,6 +1,6 @@
 import globals.Globals
 
-// p-Chloromethyl-Methoxy-Calix[4]arene Chain (for EUV Photoresist)
+// CMC4 (p-Chloromethyl-Methoxy-Calix[4]arene) Chain (for EUV Photoresist)
 
 BLENDER = recipemap('blender')
 BR = recipemap('batch_reactor')
@@ -15,7 +15,7 @@ VACUUM_DT = recipemap('vacuum_distillation')
 // Table of Contents
 /// A Calix[4]arene
 /// B 25,26,27,28-Tetramethoxycalix[4]arene
-/// C p-Chloromethyl-Methoxy-Calix[4]arene
+/// C CMC4
 /// D Photoresist Preparation
 /// References
 
@@ -146,7 +146,7 @@ VACUUM_CHAMBER.recipeBuilder()
 
 // n-Butanol recrystalize skipped
 
-/// C p-Chloromethyl-Methoxy-Calix[4]arene
+/// C CMC4
 // Based on [3], unless otherwise specified
 
 // 2000L Ethylene glycol + 1000L Sulfuric Acid = 1000L Dioxane + 1000L Diluted Surfuric Acid [BR]
@@ -161,7 +161,7 @@ BR.recipeBuilder()
     .buildAndRegister();
 
 // Rebalanced to ideal situation
-// 4 Hydrochloric Acid + 4 Paraformaldehyde + 1 25,26,27,28-tetramethoxycalix[4]arene =[Dioxane with Acetic Acid and Phosphoric Acid]=> p-Chloromethyl-Methoxy-Calix[4]arene
+// 4 Hydrochloric Acid + 4 Paraformaldehyde + 1 25,26,27,28-tetramethoxycalix[4]arene =[Dioxane with Acetic Acid and Phosphoric Acid]=> CMC4
 BLENDER.recipeBuilder()
     .inputs(ore('dustTetramethoxycalixFourArene') * 68)
     .fluidInputs(fluid('paraformaldehyde') * 4000)
@@ -174,7 +174,7 @@ BLENDER.recipeBuilder()
     .duration(800)
     .buildAndRegister();
 
-// Heating p-Chloromethyl-Methoxy-Calix[4]arene Reaction Mixture [fluid heater]
+// Heating CMC4 Reaction Mixture [fluid heater]
 FLUID_HEATER.recipeBuilder()
     .fluidInputs(fluid('cmc_four_reaction_mix') * 1000)
     .fluidOutputs(fluid('heated_cmc_four_reaction_mix') * 1000)
@@ -182,7 +182,7 @@ FLUID_HEATER.recipeBuilder()
     .duration(100)
     .buildAndRegister();
 
-// Heated p-Chloromethyl-Methoxy-Calix[4]arene Reaction Mixture = 1 Crude p-Chloromethyl-Methoxy-Calix[4]arene + Reaction Waste [filter/phase-sep]
+// Heated CMC4 Reaction Mixture = 1 Crude CMC4 + Reaction Waste [filter/phase-sep]
 VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('heated_cmc_four_reaction_mix') * 10000)
     .outputs(ore('dustCrudeCmcFour').first() * 80)
@@ -200,7 +200,7 @@ DT.recipeBuilder()
     .duration(100)
     .buildAndRegister();
 
-// 1 kmol Crude p-Chloromethyl-Methoxy-Calix[4]arene phase separate with chloroform and water = Crude p-Chloromethyl-Methoxy-Calix[4]arene Chloroform Solution + Acidic Waste Water
+// 1 kmol Crude CMC4 phase separate with chloroform and water = Crude CMC4 Chloroform Solution + Acidic Waste Water
 // Later switch to mixer settler
 MIXER.recipeBuilder()
     .inputs(ore('dustCrudeCmcFour') * 80)
@@ -281,5 +281,5 @@ References:
 [3] T. Nagasaki, K. Sisido, and T. Arimura, “Novel conformational isomerism of water-soluble calix[4]arenes,” Tetrahedron, vol. 59, no. 7, pp. 409-426, 2003. doi:10.1016/S0040‑4020(01)88184‑9
 [4] Y. R. Son, J. K. Park, E. W. Shin, S. P. Moon, and H. E. Park, “Synthesis of propylene glycol methyl ether acetate: Reaction kinetics and process simulation using heterogeneous catalyst,” Processes, vol. 12, no. 5, p. 865, 2024. doi:10.3390/pr12050865
 https://www.mdpi.com/2227-9717/12/5/865
-[5] M. Ishida, J. Fujita, T. Ogura, Y. Ochiai, E. Ohshima, and J. Momoda, “Sub-10-nm-scale lithography using p-chloromethyl-methoxy-calix[4]arene resist,” Jpn. J. Appl. Phys., vol. 42, no. 6S, pp. 3913–3916, 2003. doi:10.1143/JJAP.42.3913
+[5] M. Ishida, J. Fujita, T. Ogura, Y. Ochiai, E. Ohshima, and J. Momoda, “Sub-10-nm-scale lithography using p-Chloromethyl-Methoxy-Calix[4]arene resist,” Jpn. J. Appl. Phys., vol. 42, no. 6S, pp. 3913–3916, 2003. doi:10.1143/JJAP.42.3913
 */
