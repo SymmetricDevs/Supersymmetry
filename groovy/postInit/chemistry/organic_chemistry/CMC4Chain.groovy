@@ -8,7 +8,6 @@ DT = recipemap('distillation_tower')
 FLUID_HEATER = recipemap('fluid_heater')
 LCR = recipemap('large_chemical_reactor')
 POLYMERIZATION = recipemap('polymerization_tank')
-REACTION_FURNACE = recipemap('reaction_furnace')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 VACUUM_DT = recipemap('vacuum_distillation')
 
