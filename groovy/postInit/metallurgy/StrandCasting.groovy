@@ -1,7 +1,7 @@
 import globals.Globals
 import postInit.utils.RecyclingHelper
 
-POLISHING = recipemap('polishing_machine')
+POLISHING = recipemap('wafer_spinner')
 ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 ASSEMBLER = recipemap('assembler')

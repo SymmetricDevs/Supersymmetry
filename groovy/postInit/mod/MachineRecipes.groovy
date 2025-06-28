@@ -1014,7 +1014,7 @@ for (i = 1; i <= 8; i++) {
 // Polishing Machine
 
 for (i = 1; i <= 8; i++) {
-    RecyclingHelper.addShaped("gregtech:polishing_machine." + Globals.voltageTiers[i], metaitem('polishing_machine.' + Globals.voltageTiers[i]), [
+    RecyclingHelper.addShaped("gregtech:wafer_spinner." + Globals.voltageTiers[i], metaitem('wafer_spinner.' + Globals.voltageTiers[i]), [
         [robotArms[i], circuits[i], pumps[i]],
         [tieredGlass[i], hulls[i], tieredGlass[i]],
         [tieredCables[i], motors[i], tieredCables[i]]
