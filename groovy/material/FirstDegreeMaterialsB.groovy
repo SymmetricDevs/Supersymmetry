@@ -126,5 +126,18 @@ public class FirstDegreeMaterialsB {
                 .arcSmeltInto(Alnico)
                 .macerateInto(Alnico)
                 .build()
+
+        SodiumIodide = new Material.Builder(8722, SuSyUtility.susyId('sodium_iodide'))
+                .dust()
+                .components(Sodium, Iodine)
+                .colorAverage()
+                .build()
+        
+        SulfatedTitania = new Material.Builder(8723, SuSyUtility.susyId('sulfated_titania'))
+                .dust()
+                .components(Titanium * 1, Sulfur * 1, Oxygen * 6)
+                .colorAverage()
+                .build()
+        SulfatedTitania.setFormula("TiO2/SO4²⁻", true);
     }
 }

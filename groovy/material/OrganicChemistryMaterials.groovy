@@ -760,8 +760,8 @@ public class OrganicChemistryMaterials {
                 .liquid()
                 .components(Carbon * 3, Hydrogen * 7, Nitrogen * 1)
                 .colorAverage()
-                .build()
-                .setFormula('(CH3)2NCH', true);
+                .build();
+        Dimethylformamide.setFormula('(CH3)2NCH', true);
 
         CativaCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_catalyst'))
                 .dust()
@@ -2967,6 +2967,149 @@ public class OrganicChemistryMaterials {
         MapdstMmaCopolymerPhotoresist = new Material.Builder(15470, SuSyUtility.susyId('mapdst_mma_photoresist'))
                 .fluid()
                 .color(0xcfa182)
+                .build();
+
+        Paraformaldehyde = new Material.Builder(15471, SuSyUtility.susyId('paraformaldehyde'))
+                .fluid()
+                .components(Formaldehyde)
+                .color(0x486b9c)
+                .build();
+        Paraformaldehyde.setFormula("[CH2O]n", true);
+
+        PotassiumTertButylate = new Material.Builder(15472, SuSyUtility.susyId('potassium_tert_butylate'))
+                .liquid(new FluidBuilder().temperature(273 + 30)) // should be basic and corrosive, not supported rn
+                .components(Carbon * 4, Hydrogen * 9, Potassium * 1, Oxygen * 1)
+                .color(0x0a7967)
+                .build();
+
+        CalixFourArene = new Material.Builder(15473, SuSyUtility.susyId('calix_four_arene'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Carbon * 28, Hydrogen * 24, Oxygen * 4)
+                .color(0xdee3bf)
+                .build();
+
+        CrudeCalixFourArene = new Material.Builder(15474, SuSyUtility.susyId('crude_calix_four_arene'))
+                .dust()
+                .color(0xa1a686)
+                .components(CalixFourArene * 1)
+                .build();
+
+        FilteredCalixFourAreneSolution = new Material.Builder(15475, SuSyUtility.susyId('filtered_calix_four_arene_solution'))
+                .fluid()
+                .color(0x859c67)
+                .components(CrudeCalixFourArene * 1, Pyridine * 1)
+                .build();
+
+        PyridiniumChloride = new Material.Builder(15476, SuSyUtility.susyId('pyridinium_chloride'))
+                .dust()
+                .components(Carbon * 5, Hydrogen * 6, Nitrogen * 1, Chlorine * 1)
+                .color(0x489455)
+                .build();
+
+        CalixFourArenePrecipitatedSolution = new Material.Builder(15477, SuSyUtility.susyId('calix_four_arene_precipitated_solution'))
+                .fluid()
+                .color(0x99b570)
+                .components(CrudeCalixFourArene * 1)
+                .build();
+
+        CalixFourAreneWaste = new Material.Builder(15478, SuSyUtility.susyId('calix_four_arene_waste'))
+                .fluid()
+                .color(0x364520)
+                .build();
+
+        TetramethoxycalixFourArene = new Material.Builder(15479, SuSyUtility.susyId('tetramethoxycalix_four_arene'))
+                .dust()
+                .components(Carbon * 32, Hydrogen * 32, Oxygen * 4)
+                .color(0xdfe622)
+                .build();
+
+        CrudeTetramethoxycalixFourArene = new Material.Builder(15480, SuSyUtility.susyId('crude_tetramethoxycalix_four_arene'))
+                .dust()
+                .components(TetramethoxycalixFourArene * 1)
+                .color(0xabb023)
+                .build();
+
+        TetramethoxycalixFourAreneExtract = new Material.Builder(15481, SuSyUtility.susyId('tetramethoxycalix_four_arene_extract'))
+                .fluid()
+                .components(TetramethoxycalixFourArene * 1, Dichloromethane * 1)
+                .color(0xba8a1a)
+                .build();
+
+        DMFTHFMix = new Material.Builder(15482, SuSyUtility.susyId('dmf_thf_mix'))
+                .fluid()
+                .components(Dimethylformamide * 2, Tetrahydrofuran * 8)
+                .color(0x7c139c)
+                .build();
+
+        Dioxane = new Material.Builder(15483, SuSyUtility.susyId('dioxane'))
+                .fluid()
+                .components(Carbon * 2, Hydrogen * 8, Oxygen * 2)
+                .color(0x30cf47)
+                .build();
+        
+        // p-Chloromethyl-Methoxy-Calix[4]arene
+        // 5,11,17,23-tetrakis(chloromethyl)-25,26,27,28-tetramethoxy-calix[4]arene
+        CMCFour = new Material.Builder(15484, SuSyUtility.susyId('cmc_four'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Carbon * 36, Hydrogen * 36, Oxygen * 4, Chlorine * 4)
+                .color(0xf2c71b)
+                .build();
+        
+        CrudeCMCFour = new Material.Builder(15485, SuSyUtility.susyId('crude_cmc_four'))
+                .dust()
+                .components(CMCFour * 1)
+                .color(0xbf9e17)
+                .build();
+
+        CMCFourReactionMix = new Material.Builder(15486, SuSyUtility.susyId('cmc_four_reaction_mix'))
+                .liquid()     
+                .components(CMCFour * 1)
+                .color(0x839119)
+                .build();
+
+        HeatedCMCFourReactionMix = new Material.Builder(15487, SuSyUtility.susyId('heated_cmc_four_reaction_mix'))
+                .liquid(new FluidBuilder().temperature(273 + 80))     
+                .components(CMCFour * 1)
+                .color(0xa5b528)
+                .build();
+
+        CMCFourWaste = new Material.Builder(15488, SuSyUtility.susyId('cmc_four_waste'))
+                .fluid()
+                .components(CMCFour * 1)
+                .color(0x3f630f)
+                .build();
+
+        CMCFourExtract = new Material.Builder(15489, SuSyUtility.susyId('cmc_four_extract'))
+                .fluid()
+                .components(CMCFour * 1, Chloromethane * 1)
+                .color(0xc29b02)
+                .build();
+        
+        // 1-Methoxy-2-Propanol
+        PropyleneGlycolMethylEther = new Material.Builder(15490, SuSyUtility.susyId('propylene_glycol_methyl_ether'))
+                .fluid()
+                .components(Carbon * 4, Hydrogen * 10, Oxygen * 2)
+                .color(0xbadb14)
+                .build();
+        
+        PGMEA = new Material.Builder(15491, SuSyUtility.susyId('pgmea'))
+                .fluid()
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 3)
+                .color(0xb3ed2d)
+                .build(); 
+
+        PGMEACatalyticSolution = new Material.Builder(15492, SuSyUtility.susyId('pgmea_catalytic_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(PGMEA * 1, Water * 1, SulfatedTitania * 1)
+                .color(0x7dc920)
+                .build(); 
+
+        CMCFourPhotoresist = new Material.Builder(15493, SuSyUtility.susyId('cmc_four_photoresist'))
+                .fluid()
+                .components(CMCFour * 1, PGMEA * 8)
+                .color(0xecf00e)
                 .build();
     }
 }

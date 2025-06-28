@@ -1509,6 +1509,8 @@ class SuSyMaterials {
         public static Material PurifiedBerylliumHydroxide;
         public static Material PurifiedBerylliumOxide;
         public static Material PurifiedBerylliumChloride;
+        public static Material SodiumIodide;
+        public static Material SulfatedTitania;
 
         // HP Materials
 
@@ -2196,6 +2198,29 @@ class SuSyMaterials {
         public static Material CrudeMapdstMmaCopolymerSolution; 
         public static Material DiethylEtherMethanolMix; 
         public static Material MapdstMmaCopolymerPhotoresist;
+        public static Material Paraformaldehyde;
+        public static Material PotassiumTertButylate;
+        public static Material CalixFourArene;
+        public static Material CrudeCalixFourArene;
+        public static Material FilteredCalixFourAreneSolution;
+        public static Material PyridiniumChloride;
+        public static Material CalixFourArenePrecipitatedSolution;
+        public static Material CalixFourAreneWaste;
+        public static Material TetramethoxycalixFourArene;
+        public static Material CrudeTetramethoxycalixFourArene;
+        public static Material TetramethoxycalixFourAreneExtract;
+        public static Material DMFTHFMix;
+        public static Material Dioxane;
+        public static Material CMCFour;
+        public static Material CrudeCMCFour;
+        public static Material CMCFourReactionMix;
+        public static Material HeatedCMCFourReactionMix;
+        public static Material CMCFourWaste;
+        public static Material CMCFourExtract;
+        public static Material PropyleneGlycolMethylEther;
+        public static Material PGMEA;
+        public static Material PGMEACatalyticSolution;
+        public static Material CMCFourPhotoresist;
 
         // Third Degree Materials
 
