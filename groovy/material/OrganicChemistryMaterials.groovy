@@ -3111,5 +3111,26 @@ public class OrganicChemistryMaterials {
                 .components(CMCFour * 1, PGMEA * 8)
                 .color(0xecf00e)
                 .build();
+
+        TitaniumTetraisopropoxide = new Material.Builder(15494, SuSyUtility.susyId('titanium_tetraisopropoxide'))
+                .liquid()
+                .components(Carbon * 12, Hydrogen * 28, Oxygen * 4, Titanium * 1)
+                .colorAverage()
+                .build()
+        TitaniumTetraisopropoxide.setFormula("Ti[OCH(CH3)2]4");
+
+        TitaniumTetraisopropoxideSolution = new Material.Builder(15495, SuSyUtility.susyId('titanium_tetraisopropoxide_solution'))
+                .liquid()
+                .components(TitaniumTetraisopropoxide, Benzene)
+                .colorAverage()
+                .build()
+        TitaniumTetraisopropoxide.setFormula("Ti[OCH(CH3)2]4");
+                
+        Tetraethoxysilane = new Material.Builder(15496, SuSyUtility.susyId('tetraethoxysilane'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 20, Oxygen * 4, Silicon * 1)
+                .colorAverage()
+                .build()
+        Tetraethoxysilane.setFormula("Si(OC2H5)4");
     }
 }

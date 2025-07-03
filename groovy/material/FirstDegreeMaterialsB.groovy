@@ -139,5 +139,11 @@ public class FirstDegreeMaterialsB {
                 .colorAverage()
                 .build()
         SulfatedTitania.setFormula("TiO2/SO4²⁻", true);
+                
+        YttriumTrifluoride = new Material.Builder(8724, SuSyUtility.susyId('yttrium_trifluoride'))
+                .dust()
+                .components(Yttrium, Fluorine * 3)
+                .colorAverage()
+                .build()
     }
 }

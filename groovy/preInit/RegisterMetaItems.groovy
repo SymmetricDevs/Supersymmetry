@@ -125,6 +125,8 @@ eventManager.listen {
 
         customMetaItems.addItem(300, "mylar")
         customMetaItems.addItem(301, "spinneret")
+        customMetaItems.addItem(302, "molybdenum_grid");
+        customMetaItems.addItem(303, "ion_source");
 
         customMetaItems.addItem(400, "engine.spark_plug")
         customMetaItems.addItem(401, "engine.piston")
@@ -258,7 +260,13 @@ eventManager.listen {
         customMetaItems.addItem(5305, "etched.silicon_dioxide");
         customMetaItems.addItem(5306, "etched.polysilicon");
         customMetaItems.addItem(5307, "etched.silicon_nitride");
-        
+
+        customMetaItems.addItem(5308, "euv_photomask.chuck_applied")
+        customMetaItems.addItem(5309, "euv_photomask.mo_si_coated")
+        customMetaItems.addItem(5310, "euv_photomask.ru_capped")
+        customMetaItems.addItem(5311, "euv_photomask.absorber_applied")
+        customMetaItems.addItem(5312, "euv_photomask.blank")
+
         //Good Circuit Components 5900-6000
         customMetaItems.addItem(5900, "op_amp");
         customMetaItems.addItem(5901, "heat_sink");

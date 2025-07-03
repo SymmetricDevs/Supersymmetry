@@ -1511,6 +1511,7 @@ class SuSyMaterials {
         public static Material PurifiedBerylliumChloride;
         public static Material SodiumIodide;
         public static Material SulfatedTitania;
+        public static Material YttriumTrifluoride;
 
         // HP Materials
 
@@ -1726,6 +1727,8 @@ class SuSyMaterials {
         public static Material ThoriumChlorideSolution;
         public static Material HydroiodicAcid;
         public static Material PotassiumChlorateSolution;
+        public static Material TitaniumSiliconAlkoxideEthanolSolution;
+        public static Material TitaniumDopedSilicaGlass;
 
         // Organic Chemistry Materials
 
@@ -2221,6 +2224,9 @@ class SuSyMaterials {
         public static Material PGMEA;
         public static Material PGMEACatalyticSolution;
         public static Material CMCFourPhotoresist;
+        public static Material TitaniumTetraisopropoxide;
+        public static Material TitaniumTetraisopropoxideSolution;
+        public static Material Tetraethoxysilane;
 
         // Third Degree Materials
 

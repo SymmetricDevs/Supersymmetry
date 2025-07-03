@@ -2254,6 +2254,7 @@ susy.material.alnico=Alnico
 susy.material.alnico_magnetic=Magnetic Alnico
 susy.material.sodium_iodide=Sodoum Iodide
 susy.material.sulfated_titania=Sulfated Titania
+susy.material.yttrium_trifluoride=Yttrium Trifluoride
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.potassium_chlorate=Potassium Chlorate
@@ -2372,6 +2373,9 @@ susy.material.propylene_glycol_methyl_ether=PGME (Propylene Glycol Methyl Ether)
 susy.material.pgmea=PGMEA (Propylene Glycol Methyl Ether Acetate)
 susy.material.pgmea_catalytic_solution=PGMEA Catalytic Solution
 susy.material.cmc_four_photoresist=CMC4 Photoresist
+susy.material.titanium_tetraisopropoxide=Titanium Tetraisopropoxide
+susy.material.titanium_tetraisopropoxide_solution=Titanium Tetraisopropoxide Benzene Solution
+susy.material.tetraethoxysilane=Tetraethoxysilane (TEOS)
 
 susy.material.tributyl_phosphate_extraction_mixture=Tributyl Phosphate Extraction Mixture
 susy.material.aliquat_336_extraction_mixture=Aliquat 336 Extraction Mixture
@@ -2506,6 +2510,8 @@ susy.material.two_ethyl_one_hexene=2-Ethyl-1-hexene
 susy.material.di_two_ethylhexylphosphine=Di(2-Ethylhexyl)phosphine
 susy.material.di_two_ethylhexylphosphinic_acid=Di(2-Ethylhexyl)phosphinic Acid
 susy.material.potassium_chlorate_solution=Potassium Chlorate Solution
+susy.material.titanium_silicon_alkoxide_ethanol_solution=Titanium Silicon Alkoxide Ethanol Solution
+susy.material.titanium_doped_silica_glass=Titanium Doped Silica Glass
 susy.material.hydraulic_fluid=Hydraulic Fluid
 susy.material.yttria_stabilized_zirconia=Yttria Stabilized Zirconia
 susy.material.polyvinyl_alcohol_binder=Polyvinyl Alcohol Binder
@@ -2585,6 +2591,7 @@ recipemap.single_column_cryogenic_distillation.name=Single Column Cryogenic Dist
 recipemap.low_pressure_cryogenic_distillation.name=Low Pressure Cryogenic Distillation
 recipemap.high_pressure_cryogenic_distillation.name=High Pressure Cryogenic Distillation
 recipemap.high_pressure_advanced_steam_turbine=High Pressure Advanced Steam Turbine
+recipemap.low_pressure_advanced_steam_turbine=Low Pressure Advanced Steam Turbine
 recipemap.low_pressure_advanced_steam_turbine=Low Pressure Advanced Steam Turbine
 
 # QMD Particles
@@ -2789,6 +2796,12 @@ metaitem.etched.titanium.name=Etched Titanium-Coated Wafer
 metaitem.etched.tungsten.name=Etched Tungsten-Coated Wafer
 metaitem.etched.nickel.name=Etched Nickel-Coated Wafer
 
+metaitem.euv_photomask.chuck_applied.name=Electrostatic Chuck Applied EUV Photomask
+metaitem.euv_photomask.mo_si_coated.name=Mo/Si Coated EUV Photomask
+metaitem.euv_photomask.ru_capped.name=Ruthenium Capped EUV Photomask
+metaitem.euv_photomask.absorber_applied.name=Abosrber Applied EUV Photomask
+metaitem.euv_photomask.blank.name=Blank EUV Photomask
+
 metaitem.wafer.doped.silicon_dioxide.name=n-Doped Silicon Dioxide Wafer
 metaitem.wafer.polysilicon.name=Polysilicon Wafer
 metaitem.wafer.doped.polysilicon.name=Doped Polysilicon Wafer
@@ -2941,6 +2954,9 @@ metaitem.epoxy_lamina.name=Epoxy Lamina
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 
+metaitem.molybdenum_grid.name=Molybdenum Grid
+metaitem.ion_source.name=Ion Source
+
 metaitem.engine.spark_plug.name=Spark Plug
 metaitem.engine.piston.name=Piston
 metaitem.engine.crankshaft.name=Crankshaft
@@ -3031,6 +3047,9 @@ item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Woven Ultra Hi
 item.susy.material.kevlar.plate=Woven Kevlar
 item.gregtech.material.polytetrafluoroethylene.fiber=Expanded Polytetrafluoroethylene Fiber
 item.gregtech.material.polytetrafluoroethylene.thread=Expanded Polytetrafluoroethylene Thread
+item.susy.material.titanium_doped_silica_glass.dustTiny=Tiny Pile of Titanium Doped Silica Glass Gel
+item.susy.material.titanium_doped_silica_glass.dustSmall=Small Pile of Titanium Doped Silica Glass Gel
+item.susy.material.titanium_doped_silica_glass.dust=Titanium Doped Silica Glass Gel
 
 # Resin Logs
 gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
