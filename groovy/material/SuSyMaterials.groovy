@@ -1512,6 +1512,21 @@ class SuSyMaterials {
         public static Material SodiumIodide;
         public static Material SulfatedTitania;
         public static Material YttriumTrifluoride;
+        public static Material AluminiumNitrate;
+        public static Material AluminiumNitrateSolution;
+        public static Material YttriumNitrate;
+        public static Material YttriumNitrateSolution;
+        public static Material NeodymiumNitrate;
+        public static Material NeodymiumNitrateSolution;
+        public static Material AluminiumYttriumNeodymiumNitrateSolution;
+        public static Material AmmoniaBicarbonate;
+        public static Material AmmoniaBicarbonateSolution;
+        public static Material NdYagSuspensionSolution;
+        public static Material NdYagPrecursorCake;
+        public static Material NdYagPrecursor;
+        public static Material NdYagCeramic;
+        public static Material NdYagGreenBody;
+        public static Material RawNdYag;
 
         // HP Materials
 

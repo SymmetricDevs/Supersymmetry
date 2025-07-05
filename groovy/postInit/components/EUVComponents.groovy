@@ -1,6 +1,7 @@
 import globals.Globals
 
 // Every base component needed for EUV lithography
+// TODO: set voltage and duration
 
 ASSEMBLER = recipemap('assembler')
 // BLENDER = recipemap('blender')
@@ -156,7 +157,7 @@ SPUTTERING.recipeBuilder()
     .duration(200)
     .buildAndRegister();
 
-/// Antireflective Coating: YF3
+// Antireflective Coating: YF3
 // Credit to planetme, [6]
 BR.recipeBuilder()
     .inputs(ore('dustYttriumHydroxide') * 7)
@@ -175,6 +176,9 @@ SPUTTERING.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .duration(200)
     .buildAndRegister();
+
+
+/// EUV Components
 
 
 /*

@@ -127,6 +127,8 @@ public class FirstDegreeMaterialsB {
                 .macerateInto(Alnico)
                 .build()
 
+        // TODO: add colors
+
         SodiumIodide = new Material.Builder(8722, SuSyUtility.susyId('sodium_iodide'))
                 .dust()
                 .components(Sodium, Iodine)
@@ -145,5 +147,102 @@ public class FirstDegreeMaterialsB {
                 .components(Yttrium, Fluorine * 3)
                 .colorAverage()
                 .build()
+
+        AluminiumNitrate = new Material.Builder(8725, SuSyUtility.susyId('aluminium_nitrate'))
+                .dust()
+                .components(Aluminium, Nitrogen * 3, Oxygen * 9)
+                .colorAverage()
+                .build()
+        AluminiumNitrate.setFormula("Al(NO3)3", true);
+
+        AluminiumNitrateSolution = new Material.Builder(8726, SuSyUtility.susyId('aluminium_nitrate_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(AluminiumNitrate, Water * 3)
+                .colorAverage()
+                .build()
+
+        YttriumNitrate = new Material.Builder(8727, SuSyUtility.susyId('yttrium_nitrate'))
+                .dust()
+                .components(Yttrium, Nitrogen * 3, Oxygen * 9)
+                .colorAverage()
+                .build()
+        YttriumNitrate.setFormula("Y(NO3)3", true);
+
+        YttriumNitrateSolution = new Material.Builder(8728, SuSyUtility.susyId('yttrium_nitrate_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(YttriumNitrate * 2, Water * 3)
+                .colorAverage()
+                .build()
+
+        NeodymiumNitrate = new Material.Builder(8729, SuSyUtility.susyId('neodymium_nitrate'))
+                .dust()
+                .components(Neodymium, Nitrogen * 3, Oxygen * 9)
+                .colorAverage()
+                .build()
+        NeodymiumNitrate.setFormula("Nd(NO3)3", true);
+
+        NeodymiumNitrateSolution = new Material.Builder(8730, SuSyUtility.susyId('neodymium_nitrate_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(NeodymiumNitrate * 2, Water * 3)
+                .colorAverage()
+                .build()
+
+        AluminiumYttriumNeodymiumNitrateSolution = new Material.Builder(8731, SuSyUtility.susyId('aluminium_yttrium_neodymium_nitrate_solution'))
+                .liquid()
+                .color(0xffffff)
+                .build()
+
+        AmmoniaBicarbonate = new Material.Builder(8732, SuSyUtility.susyId('ammonia_bicarbonate'))
+                .dust()
+                .components(Carbon, Oxygen * 3, Nitrogen, Hydrogen * 1)
+                .colorAverage()
+                .build()
+        AmmoniaBicarbonate.setFormula("NH4HCO3", true);
+        
+
+        AmmoniaBicarbonateSolution = new Material.Builder(8733, SuSyUtility.susyId('ammonia_bicarbonate_solution'))
+                .liquid()
+                .components(AmmoniaBicarbonate * 3, Water * 2)
+                .colorAverage()
+                .build()
+
+        NdYagSuspensionSolution = new Material.Builder(8734, SuSyUtility.susyId('nd_yag_suspension_solution'))
+                .liquid()
+                .color(0xffffff)
+                .build()
+
+        // from literature, this is roughly solution of NH4AlY0.6(CO3)1.9(OH)2.0 . 8H2O
+        NdYagPrecursorCake = new Material.Builder(8735, SuSyUtility.susyId('nd_yag_precursor_cake'))
+                .dust()
+                .color(0xffffff)
+                .build()
+
+        NdYagPrecursor = new Material.Builder(8736, SuSyUtility.susyId('nd_yag_precursor'))
+                .dust()
+                .color(0xffffff)
+                .build()
+
+        NdYagCeramic = new Material.Builder(8737, SuSyUtility.susyId('nd_yag_ceramic'))
+                .dust()
+                .flags(NO_UNIFICATION, GENERATE_ROD)
+                .iconSet(SHINY)
+                .components(Yttrium * 3, Aluminium * 5, Oxygen * 12)
+                .color(0xffffff)
+                .build()
+        NdYagCeramic.setFormula("Nd:Y3Al5O12", true)
+
+        NdYagGreenBody = new Material.Builder(8738, SuSyUtility.susyId('nd_yag_green_body'))
+                .dust()
+                .flags(NO_UNIFICATION, GENERATE_ROD)
+                .components(NdYagCeramic)
+                .color(0xffffff)
+                .build()
+
+        RawNdYag = new Material.Builder(8739, SuSyUtility.susyId('raw_nd_yag'))
+                .dust()
+                .components(NdYagCeramic)
+                .color(0xffffff)
+                .build()
+
     }
 }
