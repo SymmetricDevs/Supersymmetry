@@ -3115,21 +3115,23 @@ public class OrganicChemistryMaterials {
         TitaniumTetraisopropoxide = new Material.Builder(15494, SuSyUtility.susyId('titanium_tetraisopropoxide'))
                 .liquid()
                 .components(Carbon * 12, Hydrogen * 28, Oxygen * 4, Titanium * 1)
-                .colorAverage()
+                .color(0xc837db)
                 .build()
         TitaniumTetraisopropoxide.setFormula("Ti[OCH(CH3)2]4");
 
         TitaniumTetraisopropoxideSolution = new Material.Builder(15495, SuSyUtility.susyId('titanium_tetraisopropoxide_solution'))
                 .liquid()
+                .flags(FLAMMABLE)
                 .components(TitaniumTetraisopropoxide, Benzene)
-                .colorAverage()
+                .color(0xe3e28f)
                 .build()
         TitaniumTetraisopropoxide.setFormula("Ti[OCH(CH3)2]4");
                 
         Tetraethoxysilane = new Material.Builder(15496, SuSyUtility.susyId('tetraethoxysilane'))
                 .liquid()
+                .flags(FLAMMABLE)
                 .components(Carbon * 8, Hydrogen * 20, Oxygen * 4, Silicon * 1)
-                .colorAverage()
+                .color(0xfad2f5)
                 .build()
         Tetraethoxysilane.setFormula("Si(OC2H5)4");
     }

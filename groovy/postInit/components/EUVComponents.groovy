@@ -4,18 +4,13 @@ import globals.Globals
 // TODO: set voltage and duration
 
 ASSEMBLER = recipemap('assembler')
-// BLENDER = recipemap('blender')
 BR = recipemap('batch_reactor')
 DT = recipemap('distillation_tower')
 EBF = recipemap('electric_blast_furnace')
-// FLUID_HEATER = recipemap('fluid_heater')
-// LCR = recipemap('large_chemical_reactor')
 MILLING = recipemap('milling')
 POLYMERIZATION = recipemap('polymerization_tank')
 REACTION_FURNACE = recipemap('reaction_furnace')
 SPUTTERING = recipemap('sputter_deposition')
-// VACUUM_CHAMBER = recipemap('vacuum_chamber')
-// VACUUM_DT = recipemap('vacuum_distillation')
 
 /// IBAD Apparatus
 MILLING.recipeBuilder()
@@ -180,6 +175,19 @@ SPUTTERING.recipeBuilder()
 
 /// EUV Components
 
+
+// ASSEMBLER.recipeBuilder
+//     .inputs(metaitem('co2_laser') * 4)
+//     .inputs(metaitem('nd_yag_laser') * 1)
+//     .inputs(metaitem('electric.pump.ev') * 1)
+//     .inputs(ore('circuitEv') * 1)
+//     .inputs(ore('screwTungstenSteel') * 16)
+//     .inputs(ore('plateTungstenSteel') * 6)
+//     .fluidInputs(fluid('soldering_alloy') * 144)
+//     // ???
+//     .duration(100)
+//     .EUt(Globals.voltAmps[1])
+//     .buildAndRegister()
 
 /*
 References:

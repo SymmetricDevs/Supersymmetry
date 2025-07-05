@@ -949,17 +949,20 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
+        // TODO: add colors and fluid properties
+
         TitaniumSiliconAlkoxideEthanolSolution = new Material.Builder(13158, SuSyUtility.susyId('titanium_silicon_alkoxide_ethanol_solution'))
                 .liquid()
-                .color(0xffffff)
+                .color(0x6c8032)
                 .build();
 
         TitaniumDopedSilicaGlass = new Material.Builder(13159, SuSyUtility.susyId('titanium_doped_silica_glass'))
                 .dust()
+                .iconSet(GLASS)
                 .flags(GENERATE_PLATE, NO_UNIFICATION)
                 .components(TitaniumDioxide * 1, SiliconDioxide * 15)
                 .blastTemp(1200, GasTier.LOW, GTValues.VA[GTValues.EV])
-                .color(0xffffff)
+                .color(0xfad2f5)
                 .build();
         TitaniumDopedSilicaGlass.setFormula("(TiO2)(SiO2)15", true);
     }

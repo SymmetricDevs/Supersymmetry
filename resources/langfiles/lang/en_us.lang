@@ -2811,11 +2811,11 @@ metaitem.etched.titanium.name=Etched Titanium-Coated Wafer
 metaitem.etched.tungsten.name=Etched Tungsten-Coated Wafer
 metaitem.etched.nickel.name=Etched Nickel-Coated Wafer
 
-metaitem.euv_photomask.chuck_applied.name=Electrostatic Chuck Applied EUV Photomask
-metaitem.euv_photomask.mo_si_coated.name=Mo/Si Coated EUV Photomask
-metaitem.euv_photomask.ru_capped.name=Ruthenium Capped EUV Photomask
-metaitem.euv_photomask.absorber_applied.name=Abosrber Applied EUV Photomask
-metaitem.euv_photomask.blank.name=Blank EUV Photomask
+metaitem.euv_photomask.chuck_applied.name=Electrostatic Chuck Applied EUV Photolithography Mask
+metaitem.euv_photomask.mo_si_coated.name=Mo/Si Coated EUV Photolithography Mask
+metaitem.euv_photomask.ru_capped.name=Ruthenium Capped EUV Photolithography Mask
+metaitem.euv_photomask.absorber_applied.name=Abosrber Applied EUV Photolithography Mask
+metaitem.euv_photomask.blank.name=EUV Photolithography Mask (Blank)
 
 metaitem.wafer.doped.silicon_dioxide.name=n-Doped Silicon Dioxide Wafer
 metaitem.wafer.polysilicon.name=Polysilicon Wafer
