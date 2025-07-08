@@ -2958,5 +2958,12 @@ public class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x1c382d)
                 .build();
+
+        CO2LaserMixture = new Material.Builder(4650, SuSyUtility.susyId('carbon_dioxide_laser_mixture'))
+                .gas()
+                .color(0x1c382d)
+                .build();
+
+        
     }
 }

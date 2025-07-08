@@ -11,6 +11,7 @@ import gregtech.api.unification.material.properties.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier
 import gregtech.api.unification.material.properties.OreProperty
 import gregtech.api.unification.material.properties.PropertyKey
+import gregtech.api.unification.ore.OrePrefix;
 import supersymmetry.api.fluids.SusyFluidStorageKeys
 import supersymmetry.api.recipes.SuSyRecipeMaps
 import supersymmetry.api.unification.material.properties.DummyABSProperty;
@@ -185,6 +186,8 @@ class ChangeFlags {
         Copper.addFlags("continuously_cast");
         VanadiumSteel.addFlags("generate_round")
         Mica.addFlags(GENERATE_PLATE, NO_UNIFICATION)
+        Chrome.addFlags(GENERATE_PLATE, GENERATE_FOIL)
+        BorosilicateGlass.addFlags(NO_SMASHING)
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -214,6 +217,7 @@ class ChangeFlags {
 
         // Formulae
 
+        Phosphorus.setFormula("P4", true);
         DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
         DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
         AquaRegia.setFormula("(HNO3)(HCl)3", true);
@@ -227,6 +231,11 @@ class ChangeFlags {
         Pitchblende.setFormula("(?)UO2", true);
         Bastnasite.setFormula("(REE)CO3F", true);
         Monazite.setFormula("(REE,Th)PO4", true);
+
+        // OrePrefix Removal
+
+        OrePrefix.block.setIgnored(BorosilicateCrownGlass);
+        OrePrefix.block.setIgnored(TitaniumDopedSilicaGlass);
 
         // Ore Processing
         

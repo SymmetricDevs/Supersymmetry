@@ -114,6 +114,8 @@ eventManager.listen {
         customMetaItems.addItem(216, "brush.unfired")
         customMetaItems.addItem(217, "brush")
 
+        customMetaItems.addItem(218, "nd_yag_precursor_cake")
+
         customMetaItems.addItem(250, "beads.amberlyst_ch");
         customMetaItems.addItem(251, "beads.strong_acidic_cation_exchange");
         customMetaItems.addItem(252, "beads.weak_basic_anion_exchange");
@@ -126,7 +128,8 @@ eventManager.listen {
         customMetaItems.addItem(300, "mylar")
         customMetaItems.addItem(301, "spinneret")
         customMetaItems.addItem(302, "molybdenum_grid");
-        customMetaItems.addItem(303, "ion_source");
+        customMetaItems.addItem(303, "pvd_apparatus.ion_source");
+        customMetaItems.addItem(304, "pvd_apparatus.electron_source");
 
         customMetaItems.addItem(400, "engine.spark_plug")
         customMetaItems.addItem(401, "engine.piston")
@@ -332,6 +335,20 @@ eventManager.listen {
         // Metallurgy 6400-6500
         customMetaItems.addItem(6400, "work_roll.unfinished")
         customMetaItems.addItem(6401, "nozzle.boron_nitride")
+
+        // Lasers & Mirrors 6500-6600
+        customMetaItems.addItem(6500, "lens.borosilicate")
+        customMetaItems.addItem(6501, "mirror.hafina_silica")
+        customMetaItems.addItem(6502, "mirror.intermediate.10_6_coated")
+        customMetaItems.addItem(6503, "mirror.10_6_micron")
+        customMetaItems.addItem(6504, "lens.bare_zinc_selenide")
+        customMetaItems.addItem(6505, "lens.zinc_selenide")
+        customMetaItems.addItem(6506, "mirror.molybdenum_silicon")
+
+        customMetaItems.addItem(6541, 'laser.component.xenon_flash_tube')
+        customMetaItems.addItem(6542, "laser.nd_yag")
+        customMetaItems.addItem(6543, "laser.fast_axial_gas_co2")
+
 
         //Seed crystals 7000-7500
 

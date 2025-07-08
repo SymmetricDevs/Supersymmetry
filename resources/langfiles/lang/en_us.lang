@@ -2262,10 +2262,9 @@ susy.material.yttrium_nitrate_solution=Yttrium Nitrate Solution
 susy.material.neodymium_nitrate=Neodymium Nitrate
 susy.material.neodymium_nitrate_solution=Neodymium Nitrate Solution
 susy.material.aluminium_yttrium_neodymium_nitrate_solution=Aluminium-Yttrium-Neodymium Nitrate Solution
-susy.material.ammonia_bicarbonate=Ammonia Bicarbonate
-susy.material.ammonia_bicarbonate_solution=Ammonia Bicarbonate Solution
+susy.material.ammonium_bicarbonate=Ammonium Bicarbonate
+susy.material.ammonium_bicarbonate_solution=Ammonium Bicarbonate Solution
 susy.material.nd_yag_suspension_solution=Nd:YAG Precursor Suspension Solution 
-susy.material.nd_yag_precursor_cake=Nd:YAG Precursor Cake
 susy.material.nd_yag_precursor=Nd:YAG Precursor
 susy.material.nd_yag_ceramic=Ceramic Nd:YAG
 susy.material.nd_yag_green_body=Ceramic Nd:YAG Green Body
@@ -2670,6 +2669,8 @@ metaitem.steam.pump.name=Steam Pump
 
 metaitem.bound_leather.name=Bound Leather
 
+metaitem.nd_yag_precursor_cake.name=Nd:YAG Precursor Cake
+
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
 metaitem.mylar.name=Thin Mylar Sheet
 
@@ -2970,7 +2971,7 @@ metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 
 metaitem.molybdenum_grid.name=Molybdenum Grid
-metaitem.ion_source.name=Ion Source
+metaitem.pvd_apparatus.ion_source.name=Ion Source
 
 metaitem.engine.spark_plug.name=Spark Plug
 metaitem.engine.piston.name=Piston

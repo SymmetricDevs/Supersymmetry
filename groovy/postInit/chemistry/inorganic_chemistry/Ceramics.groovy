@@ -177,24 +177,24 @@ BR.recipeBuilder()
     .fluidInputs(fluid('carbon_dioxide') * 1000)
     .fluidInputs(fluid('ammonia') * 1000)
     .fluidInputs(fluid('distilled_water') * 1000)
-    .outputs(ore('dustAmmoniaBicarbonate').first() * 10)
+    .outputs(ore('dustAmmoniumBicarbonate').first() * 10)
     .duration(200)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-// Based on [1], 1.5M ammonia bicarbonate sol
+// Based on [1], 1.5M ammonium bicarbonate sol
 MIXER.recipeBuilder()
-    .inputs(ore('dustAmmoniaBicarbonate') * 30)
+    .inputs(ore('dustAmmoniumBicarbonate') * 30)
     .fluidInputs(fluid('distilled_water') * 2000)
-    .fluidOutputs(fluid('ammonia_bicarbonate_solution') * 2000)
+    .fluidOutputs(fluid('ammonium_bicarbonate_solution') * 2000)
     .duration(200)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-// Based on [1], salt solution slowly poured into ammonia bicarbonate 
+// Based on [1], salt solution slowly poured into ammonium bicarbonate 
 CSTR.recipeBuilder()
     .fluidInputs(fluid('aluminium_yttrium_neodymium_nitrate_solution') * 200)
-    .fluidInputs(fluid('ammonia_bicarbonate_solution') * 320)
+    .fluidInputs(fluid('ammonium_bicarbonate_solution') * 320)
     .fluidOutputs(fluid('nd_yag_suspension_solution') * 520)
     .duration(200)
     .EUt(Globals.voltAmps[1])
@@ -202,13 +202,13 @@ CSTR.recipeBuilder()
 
 VACUUM_CHAMBER.recipeBuilder() // filtration
     .fluidInputs(fluid('nd_yag_suspension_solution') * 2600)
-    .outputs(ore('dustNdYagPrecursorCake').first() * 1)
+    .outputs(metaitem('nd_yag_precursor_cake') * 1)
     .duration(200)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
 MACERATOR.recipeBuilder() // crushing
-    .inputs(ore('dustNdYagPrecursorCake') * 1)
+    .inputs(metaitem('nd_yag_precursor_cake') * 1)
     .outputs(ore('dustNdYagPrecursor').first() * 1)
     .duration(200)
     .EUt(Globals.voltAmps[1])

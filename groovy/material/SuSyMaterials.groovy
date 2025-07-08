@@ -727,6 +727,7 @@ class SuSyMaterials {
         public static Material HydraulicFluid;
         public static Material YttriaStabilizedZirconia;
         public static Material HighAluminaRefractory;
+        public static Material CO2LaserMixture;
 
         // Petrochem Materials
 
@@ -1519,14 +1520,16 @@ class SuSyMaterials {
         public static Material NeodymiumNitrate;
         public static Material NeodymiumNitrateSolution;
         public static Material AluminiumYttriumNeodymiumNitrateSolution;
-        public static Material AmmoniaBicarbonate;
-        public static Material AmmoniaBicarbonateSolution;
+        public static Material AmmoniumBicarbonate;
+        public static Material AmmoniumBicarbonateSolution;
         public static Material NdYagSuspensionSolution;
-        public static Material NdYagPrecursorCake;
         public static Material NdYagPrecursor;
         public static Material NdYagCeramic;
         public static Material NdYagGreenBody;
         public static Material RawNdYag;
+        public static Material ZincSelenide;
+        public static Material YtterbiumFluoride;
+        public static Material BorosilicateCrownGlass;
 
         // HP Materials
 
@@ -2412,11 +2415,6 @@ class SuSyMaterials {
         //public static Material HighPressureHeavyWater;
         
 
-        public static void changeFormulas() {
-            log.infoMC("Changing Formulas!");
-            Phosphorus.setFormula("P4", true);
-        }
-
         public static void init() {
                 ElementMaterials.register();
                 IsotopeMaterials.register();
@@ -2429,6 +2427,5 @@ class SuSyMaterials {
                 PetrochemistryMaterials.register();
                 ThirdDegreeMaterials.register();
                 ThermodynamicsMaterials.register();
-                changeFormulas();
         }
 }

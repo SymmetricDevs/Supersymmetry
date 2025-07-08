@@ -7,32 +7,9 @@ ASSEMBLER = recipemap('assembler')
 BR = recipemap('batch_reactor')
 DT = recipemap('distillation_tower')
 EBF = recipemap('electric_blast_furnace')
-MILLING = recipemap('milling')
 POLYMERIZATION = recipemap('polymerization_tank')
 REACTION_FURNACE = recipemap('reaction_furnace')
 SPUTTERING = recipemap('sputter_deposition')
-
-/// IBAD Apparatus
-MILLING.recipeBuilder()
-    .inputs(ore('plateMolybdenum') * 1)
-    .outputs(metaitem('molybdenum_grid') * 1)
-    .EUt(Globals.voltAmps[3])
-    .duration(2000)
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('graphite_electrode') * 2)
-    .inputs(ore('wireFineMolybdenum') * 16)
-    .inputs(metaitem('molybdenum_grid') * 2)
-    .inputs(metaitem('plateTungstenSteel') * 8)
-    .inputs(ore('cableGtDoubleAluminium') * 8)
-    .inputs(metaitem('electric.pump.ev') * 1)
-    .fluidInputs(fluid('soldering_alloy') * 144)
-    .outputs(metaitem('ion_source') * 1)
-    .EUt(Globals.voltAmps[4])
-    .duration(200)
-    .buildAndRegister();
-
 
 /// LTE (Low Temperature Expansion) Substrate: Tianium Doped Silica Glass
 // This pick is based on [1]
@@ -59,7 +36,6 @@ DT.recipeBuilder()
     .buildAndRegister();
 
 
-// TODO: TEOS recipe subject to change
 // 1 Silicon Tetrachloride + 4 Ethanol + 4 Ammonia = 1 Tetraethoxysilane + 4 Ammonium Chloride
 // Based on [4]
 LCR.recipeBuilder()
@@ -109,10 +85,10 @@ EBF.recipeBuilder()
 /// EUV Photomask
 // Electrostatic Chuck: CrN or TaB (not implemented)
 SPUTTERING.recipeBuilder()
-    .inputs(ore('plateChrome') * 1)
+    .inputs(ore('foilChrome') * 1)
     .inputs(ore('plateTitaniumDopedSilicaGlass') * 1)
     .fluidInputs(fluid('argon') * 200)
-    .fluidInputs(fluid('nitrogen') * 1000)
+    .fluidInputs(fluid('nitrogen') * 250)
     .outputs(metaitem('euv_photomask.chuck_applied') * 1)
     .EUt(Globals.voltAmps[3])
     .duration(200)
@@ -121,8 +97,8 @@ SPUTTERING.recipeBuilder()
 // Mo/Si layer
 SPUTTERING.recipeBuilder()
     .inputs(metaitem('euv_photomask.chuck_applied') * 1)
-    .inputs(ore('plateSilicon') * 1)
-    .inputs(ore('plateMolybdenum') * 1)
+    .inputs(ore('foilSilicon') * 1)
+    .inputs(ore('foilMolybdenum') * 1)
     .fluidInputs(fluid('argon') * 200)
     .fluidInputs(fluid('krypton') * 200)
     .outputs(metaitem('euv_photomask.mo_si_coated') * 1)
@@ -133,7 +109,7 @@ SPUTTERING.recipeBuilder()
 // Ru Capping
 SPUTTERING.recipeBuilder()
     .inputs(metaitem('euv_photomask.mo_si_coated') * 1)
-    .inputs(ore('plateRuthenium') * 1)
+    .inputs(ore('foilRuthenium') * 1)
     .fluidInputs(fluid('krypton') * 200)
     .outputs(metaitem('euv_photomask.ru_capped') * 1)
     .EUt(Globals.voltAmps[3])
@@ -143,8 +119,8 @@ SPUTTERING.recipeBuilder()
 // TaN abosrber
 SPUTTERING.recipeBuilder()
     .inputs(metaitem('euv_photomask.ru_capped') * 1)
-    .inputs(ore('plateTantalum') * 1)
-    .notConsumable(metaitem('ion_source') * 1)
+    .inputs(ore('foilTantalum') * 1)
+    .notConsumable(metaitem('pvd_apparatus.ion_source') * 1)
     .fluidInputs(fluid('krypton') * 200)
     .fluidInputs(fluid('nitrogen') * 1000)
     .outputs(metaitem('euv_photomask.absorber_applied') * 1)
@@ -153,7 +129,7 @@ SPUTTERING.recipeBuilder()
     .buildAndRegister();
 
 // Antireflective Coating: YF3
-// Credit to planetme, [6]
+// material credit to planetme, [6]
 BR.recipeBuilder()
     .inputs(ore('dustYttriumHydroxide') * 7)
     .fluidInputs(fluid('hydrogen_fluoride') * 3000)
@@ -165,7 +141,7 @@ BR.recipeBuilder()
 
 SPUTTERING.recipeBuilder()
     .inputs(metaitem('euv_photomask.absorber_applied') * 1)
-    .inputs(ore('dustYttriumTrifluoride').first() * 4)
+    .inputs(ore('dustSmallYttriumTrifluoride') * 4)
     .fluidInputs(fluid('argon') * 200)
     .outputs(metaitem('euv_photomask.blank') * 1)
     .EUt(Globals.voltAmps[3])

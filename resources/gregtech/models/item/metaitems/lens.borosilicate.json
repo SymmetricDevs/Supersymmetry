@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "gregtech:items/metaitems/ion_source"
+      "layer0": "gregtech:items/metaitems/lens.borosilicate"
     }
   }
