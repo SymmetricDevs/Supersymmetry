@@ -338,7 +338,7 @@ eventManager.listen {
 
         // Lasers & Mirrors 6500-6600
         customMetaItems.addItem(6500, "lens.borosilicate")
-        customMetaItems.addItem(6501, "mirror.hafina_silica")
+        customMetaItems.addItem(6501, "mirror.hafnia_silica")
         customMetaItems.addItem(6502, "mirror.intermediate.10_6_coated")
         customMetaItems.addItem(6503, "mirror.10_6_micron")
         customMetaItems.addItem(6504, "lens.bare_zinc_selenide")

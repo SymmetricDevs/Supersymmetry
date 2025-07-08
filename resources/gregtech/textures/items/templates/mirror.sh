@@ -4,7 +4,7 @@ print_usage() {
     echo -e 'Usage: ./mirror.sh texture_file base_color reflection_color'
     echo -e 'Examples:'
     echo -e '\t./mirror.sh ../metaitems/mirror.10_6_micron.png FFE650 FFD97F'
-    echo -e '\t./mirror.sh ../metaitems/mirror.hafina_silica.png E1D4AA FFFFFF'
+    echo -e '\t./mirror.sh ../metaitems/mirror.hafnia_silica.png E1D4AA FFFFFF'
     echo -e '\t./mirror.sh ../metaitems/mirror.molybdenum_silicon.png 3C3C50 B4B4DC'
 }
 

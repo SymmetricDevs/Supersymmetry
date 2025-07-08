@@ -2269,6 +2269,10 @@ susy.material.nd_yag_precursor=Nd:YAG Precursor
 susy.material.nd_yag_ceramic=Ceramic Nd:YAG
 susy.material.nd_yag_green_body=Ceramic Nd:YAG Green Body
 susy.material.raw_nd_yag=Raw Nd:YAG
+susy.material.zinc_selenide=Zinc Selenide
+susy.material.ytterbium_fluoride=Ytterbium Fluoride
+susy.material.borosilicate_crown_glass=Borosilicate Crown Glass
+susy.material.carbon_dioxide_laser_mixture=Carbon Dioxide Laser Mixture
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.potassium_chlorate=Potassium Chlorate
@@ -2972,6 +2976,7 @@ metaitem.spinneret.name=Spinneret
 
 metaitem.molybdenum_grid.name=Molybdenum Grid
 metaitem.pvd_apparatus.ion_source.name=Ion Source
+metaitem.pvd_apparatus.electron_source.name=Electron Source
 
 metaitem.engine.spark_plug.name=Spark Plug
 metaitem.engine.piston.name=Piston
@@ -3014,6 +3019,18 @@ metaitem.brush.unfired.name=Unfired Brush
 
 metaitem.work_roll.unfinished.name=Unfinished Work Roll
 metaitem.nozzle.boron_nitride.name=Boron Nitride Nozzle
+
+metaitem.nd_yag_precursor_cake.name=Nd:YAG Precursor Cake
+metaitem.lens.borosilicate.name=Borosilicate Crown Glass Lens
+metaitem.mirror.hafnia_silica.name=Hafnia-Silica Coated Mirror
+metaitem.mirror.intermediate.10_6_coated.name=High-reflectivity Coated Gold Plate
+metaitem.mirror.10_6_micron.name=10.6 Micrometer High-reflectivity Coated Gold Mirror
+metaitem.lens.bare_zinc_selenide.name=Bare Zinc Selenide Lens
+metaitem.lens.zinc_selenide.name=Antireflective Coated Zinc Selenide Lens
+metaitem.mirror.molybdenum_silicon.name=Mo-Si Coated Mirror 
+metaitem.laser.component.xenon_flash_tube.name=Xenon Flash Tube
+metaitem.laser.nd_yag.name=Nd:YAG Laser
+metaitem.laser.fast_axial_gas_co2.name=Fast Axial Gas Carbon Dioxide Laser
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
