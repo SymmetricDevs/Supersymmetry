@@ -259,8 +259,8 @@ public class FirstDegreeMaterialsB {
 
         BorosilicateCrownGlass = new Material.Builder(8741, SuSyUtility.susyId('borosilicate_crown_glass'))
                 .ingot()
-                .iconSet(GLASS)
                 .liquid(new FluidBuilder().temperature(1200))
+                .iconSet(GLASS)
                 .flags(NO_SMASHING, EXCLUDE_BLOCK_CRAFTING_RECIPES)
                 .components(SiliconDioxide * 7, Alumina * 1, Potash * 1, BariumOxide * 1)
                 .blastTemp(1200, GasTier.LOW, GTValues.VA[GTValues.MV])
