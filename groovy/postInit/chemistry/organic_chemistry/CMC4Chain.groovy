@@ -148,10 +148,10 @@ VACUUM_CHAMBER.recipeBuilder()
 /// C CMC4
 // Based on [3], unless otherwise specified
 
-// 2000L Ethylene glycol + 1000L Sulfuric Acid = 1000L Dioxane + 1000L Diluted Surfuric Acid [BR]
+// 2 Ethylene glycol + 1000L Sulfuric Acid = 1 Dioxane + 1000L Diluted Surfuric Acid [BR]
 // From wikipedia
 BR.recipeBuilder()
-    .fluidInputs(fluid('ethylene_glycol') * 1000)
+    .fluidInputs(fluid('ethylene_glycol') * 2000)
     .fluidInputs(fluid('sulfuric_acid') * 1000)
     .fluidOutputs(fluid('dioxane') * 1000)
     .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)

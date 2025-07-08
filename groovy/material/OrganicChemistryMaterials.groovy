@@ -3044,7 +3044,7 @@ public class OrganicChemistryMaterials {
 
         Dioxane = new Material.Builder(15483, SuSyUtility.susyId('dioxane'))
                 .fluid()
-                .components(Carbon * 2, Hydrogen * 8, Oxygen * 2)
+                .components(Carbon * 4, Hydrogen * 8, Oxygen * 2)
                 .color(0x30cf47)
                 .build();
         
