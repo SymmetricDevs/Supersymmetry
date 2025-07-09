@@ -1018,6 +1018,7 @@ for (i = 1; i <= 8; i++) {
 }
 
 // Polishing Machine
+// Wafer Spinner
 
 for (i = 1; i <= 8; i++) {
     RecyclingHelper.addShaped("gregtech:wafer_spinner." + Globals.voltageTiers[i], metaitem('susy:wafer_spinner.' + Globals.voltageTiers[i]), [
@@ -1061,6 +1062,15 @@ RecyclingHelper.addShaped("gregtech:phase_separator", metaitem('susy:phase_separ
     [metaitem('frameSteel'), metaitem('drum.steel'), metaitem('pipeSmallFluidSteel')],
     [metaitem('pipeSmallFluidSteel'), metaitem('hull.lv'), metaitem('pipeSmallFluidSteel')]
 ])
+
+// Sputter Depositor
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:sputter_deposition." + Globals.voltageTiers[i], metaitem('susy:sputter_deposition.' + Globals.voltageTiers[i]), [
+        [pumps[i], circuits[i], pumps[i]],
+        [tieredGlass[i], hulls[i], tieredGlass[i]],
+        [circuits[i], motors[i], circuits[i]]
+    ])
+}
 
 //Multiblocked Machines
 
