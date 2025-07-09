@@ -1,7 +1,5 @@
 import globals.Globals
 
-// TODO: set voltage and duration
-
 ASSEMBLER = recipemap('assembler');
 BLENDER = recipemap('blender');
 CVD = recipemap('cvd');
@@ -14,8 +12,8 @@ SPUTTERING = recipemap('sputter_deposition');
 MILLING.recipeBuilder()
     .inputs(ore('plateMolybdenum') * 1)
     .outputs(metaitem('molybdenum_grid') * 1)
-    .EUt(Globals.voltAmps[3])
-    .duration(2000)
+    .EUt(Globals.voltAmps[1])
+    .duration(200)
     .buildAndRegister();
 
 // IBAD
@@ -33,7 +31,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 // e-beam
-ASSEMBLER.recipeBuilder().EUt(Globals.voltAmps[3]).duration(200)
+ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineTungsten') * 16)
     .inputs(metaitem('molybdenum_grid') * 2)
     .inputs(metaitem('plateStainlessSteel') * 4)
@@ -41,6 +39,8 @@ ASSEMBLER.recipeBuilder().EUt(Globals.voltAmps[3]).duration(200)
     .inputs(metaitem('electric.pump.hv') * 1)
     .fluidInputs(fluid('soldering_alloy') * 144)
     .outputs(metaitem('pvd_apparatus.electron_source') * 1)
+    .EUt(Globals.voltAmps[3])
+    .duration(200)
     .buildAndRegister();
 
 /// Nd:YAG laser
@@ -52,15 +52,17 @@ MIXER.recipeBuilder()
     .inputs(ore('dustPotash') * 3)
     .inputs(ore('dustBariumOxide') * 2)
     .outputs(ore('dustBorosilicateCrownGlass').first() * 10)
-    .EUt(Globals.voltAmps[3])
+    .EUt(Globals.voltAmps[1])
     .duration(200)
-    .buildAndRegister()
+    .buildAndRegister();
 
 LATHE.recipeBuilder()
     .inputs(ore('plateBorosilicateCrownGlass'))
     .outputs(metaitem('lens.borosilicate'))
     .outputs(ore('dustTinyBorosilicateCrownGlass').first())
-    .duration(1200).EUt(120).buildAndRegister();
+    .duration(1200) // follows all other lens
+    .EUt(120)
+    .buildAndRegister();
 
 SPUTTERING.recipeBuilder()
     .notConsumable(metaitem('pvd_apparatus.ion_source') * 1)
@@ -71,7 +73,7 @@ SPUTTERING.recipeBuilder()
     .fluidInputs(fluid('krypton') * 200)
     .outputs(metaitem('mirror.hafnia_silica') * 1)
     .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .duration(600)
     .buildAndRegister();
 
 // excitation source: xenon flash tube
@@ -81,8 +83,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .inputs(metaitem('component.glass.tube') * 8)
     .fluidInputs(fluid('xenon') * 2000)
     .outputs(metaitem('laser.component.xenon_flash_tube'))
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .duration(80)
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -92,8 +94,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('plateTungstenSteel') * 4)
     .fluidInputs(fluid('soldering_alloy') * 288)
     .outputs(metaitem('laser.nd_yag'))
+    .EUt(Globals.voltAmps[3])
     .duration(100)
-    .EUt(Globals.voltAmps[1])
     .buildAndRegister();
 
 /*
@@ -111,7 +113,7 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('water') * 9000)
     .duration(80)
     .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+    .buildAndRegister();
 
 // Coating material: [1]
 SPUTTERING.recipeBuilder()
@@ -124,15 +126,15 @@ SPUTTERING.recipeBuilder()
     .fluidInputs(fluid('argon') * 400)
     .fluidInputs(fluid('krypton') * 200)
     .outputs(metaitem('mirror.intermediate.10_6_coated'))
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[4])
+    .duration(800)
     .buildAndRegister();
 
 LATHE.recipeBuilder()
     .inputs(metaitem('mirror.intermediate.10_6_coated'))
     .outputs(metaitem('mirror.10_6_micron'))
     .outputs(ore('dustSmallGold').first())
-    .EUt(Globals.voltAmps[3])
+    .EUt(Globals.voltAmps[2])
     .duration(200)
     .buildAndRegister();
 
@@ -143,9 +145,9 @@ CVD.recipeBuilder()
     .fluidInputs(fluid('hydrogen_selenide') * 1000)
     .outputs(ore('plateZincSelenide').first())
     .fluidOutputs(fluid('hydrogen') * 2000)
-    .duration(120)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
+    .EUt(Globals.voltAmps[2])
+    .duration(200)
+    .buildAndRegister();
 
 // plate to bare lens
 LATHE.recipeBuilder()
@@ -164,8 +166,8 @@ SPUTTERING.recipeBuilder()
     .fluidInputs(fluid('argon') * 200)
     .fluidInputs(fluid('krypton') * 200)
     .outputs(metaitem('lens.zinc_selenide'))
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[4])
+    .duration(800)
     .buildAndRegister();
 
 /*
@@ -182,8 +184,8 @@ BLENDER.recipeBuilder()
     .fluidInputs(fluid('xenon') * 50)
     .fluidInputs(fluid('helium') * 500)
     .fluidOutputs(fluid('carbon_dioxide_laser_mixture') * 1000)
+    .EUt(Globals.voltAmps[2])
     .duration(100)
-    .EUt(Globals.voltAmps[1])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -196,8 +198,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('plateTungstenSteel') * 4)
     .fluidInputs(fluid('carbon_dioxide_laser_mixture') * 2000)
     .outputs(metaitem('laser.fast_axial_gas_co2'))
+    .EUt(Globals.voltAmps[4])
     .duration(100)
-    .EUt(Globals.voltAmps[1])
     .buildAndRegister();
 
 /*
@@ -214,7 +216,7 @@ SPUTTERING.recipeBuilder()
     .fluidInputs(fluid('krypton') * 400)
     .fluidInputs(fluid('argon') * 600)
     .outputs(metaitem('mirror.molybdenum_silicon'))
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[4])
+    .duration(1000)
     .buildAndRegister();
 

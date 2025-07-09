@@ -34,8 +34,8 @@ BR.recipeBuilder()
     .notConsumable(ore('dustAlumina') * 5)
     .fluidOutputs(fluid('dimethyl_sulfide') * 1000)
     .fluidOutputs(fluid('water') * 2000)
-    .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .EUt(Globals.voltAmps[2])
+    .duration(80)
     .buildAndRegister()
 
 // 1 Methacrylic Acid + 1 Thionyl Chloride + (NC) LiCl = 1 Chlorosulfanic acid + 1 Methacryloyl Chloride [CSTR]
@@ -46,8 +46,8 @@ CSTR.recipeBuilder()
     .notConsumable(ore('dustLithiumChloride') * 2)
     .fluidOutputs(fluid('chlorosulfanic_acid') * 1000)
     .fluidOutputs(fluid('methacryloyl_chloride') * 1000)
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[2])
+    .duration(80)
     .buildAndRegister()
 
 // Chlorosulfanic acid can be oxided [7] to chlorosulfuric for recycle,
@@ -57,7 +57,7 @@ LCR.recipeBuilder()
     .fluidInputs(fluid('hydrogen_peroxide') * 1000)
     .fluidOutputs(fluid('hydrolyzed_chlorosulfuric_acid') * 2000)
     .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .duration(80)
     .buildAndRegister()
 
 DT.recipeBuilder()
@@ -65,7 +65,7 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('sulfuric_acid') * 100)
     .fluidOutputs(fluid('hydrochloric_acid') * 100)
     .EUt(Globals.voltAmps[2])
-    .duration(200)
+    .duration(10)
     .buildAndRegister()
 
 // 1 Dimethyl Sulfide + 1 Phenol + (NC) Aluminum Phenoxide = 1 2/4-(Methylthio)phenol Mixture [BR]
@@ -75,8 +75,8 @@ BR.recipeBuilder()
     .fluidInputs(fluid('phenol') * 1000)
     .notConsumable(ore('dustAluminiumPhenolate')) // = aluminium phenoxide
     .fluidOutputs(fluid('two_four_methylthio_phenol_mixture') * 1000)
-    .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .EUt(Globals.voltAmps[2])
+    .duration(80)
     .buildAndRegister()
 
 // 1 2/4-(Methylthio)phenol Mixture = 0.4 4-(Methylthio)phenol + 0.6 2-(Methylthio)phenol [distill]
@@ -85,8 +85,8 @@ DT.recipeBuilder()
     .fluidInputs(fluid('two_four_methylthio_phenol_mixture') * 1000)
     .fluidOutputs(fluid('two_methylthio_phenol') * 600)
     .fluidOutputs(fluid('four_methylthio_phenol') * 400) // should be 250 IRL 
-    .EUt(Globals.voltAmps[4])
-    .duration(200)
+    .EUt(Globals.voltAmps[3])
+    .duration(100)
     .buildAndRegister()
 
 // 2-(Methylthio)phenol for pesticide, not used in the chain 
@@ -99,7 +99,7 @@ BR.recipeBuilder()
     .fluidInputs(fluid('ethanol') * 1000)
     .fluidOutputs(fluid('acidic_ethyl_sulfate') * 1000)
     .EUt(Globals.voltAmps[3])
-    .duration(150)
+    .duration(20)
     .buildAndRegister()
 
 // Ethyl Sulfate + HCl separation
@@ -108,7 +108,7 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('ethyl_sulfate') * 1000)
     .fluidOutputs(fluid('hydrogen_chloride') * 1000)
     .EUt(Globals.voltAmps[2])
-    .duration(150)
+    .duration(40)
     .buildAndRegister()
 
 // 2 Ethyl Sulfate + 1 Sodium Sulfate = 1 Diethyl Sulfate + 2 Sodium Bisulfate
@@ -117,8 +117,8 @@ BR.recipeBuilder()
     .inputs(ore('dustSodiumSulfate') * 7)
     .fluidOutputs(fluid('diethyl_sulfate') * 1000)
     .outputs(ore('dustSodiumBisulfate').first() * 14)
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[2])
+    .duration(60)
     .buildAndRegister()
     
 // 1 Diisopropylamine + 1 Diethyl Sulfate = 1 DIPEA (N,N-Diisopropylethylamine) + 1 Ethyl Sulfate [BR]
@@ -127,8 +127,8 @@ BR.recipeBuilder()
     .fluidInputs(fluid('diethyl_sulfate') * 1000)
     .fluidOutputs(fluid('diisopropylethylamine') * 1000)
     .fluidOutputs(fluid('ethyl_sulfate') * 1000)
-    .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .EUt(Globals.voltAmps[2])
+    .duration(60)
     .buildAndRegister()
     
 // 1 Methanesulfonic Acid + 4 Hydrogen Fluoride = 1 Trifluoromethanesulfonic Acid + 1 Water + 3 Hydrogen [eletrolysis (electrofluorination)]
@@ -139,16 +139,15 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .fluidOutputs(fluid('water') * 1000)
     .fluidOutputs(fluid('hydrogen') * 3000)
     .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .duration(80)
     .buildAndRegister()
 
 // 2 Trifluoromethanesulfonic Acid + 1 Silver (I) Oxide = 2 Silver Trifluoromethanesulfonate Solution
-// Divided by 4 for CSTR recipe
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('trifluoromethanesulfonic_acid') * 500)
-    .fluidInputs(fluid('water') * 500)
-    .inputs(ore('dustSmallSilverOxide') * 3)
-    .fluidOutputs(fluid('silver_trifluoromethanesulfonate_solution') * 500)
+BR.recipeBuilder()
+    .fluidInputs(fluid('trifluoromethanesulfonic_acid') * 2000)
+    .fluidInputs(fluid('water') * 2000)
+    .inputs(ore('dustSilverOxide') * 3)
+    .fluidOutputs(fluid('silver_trifluoromethanesulfonate_solution') * 2000)
     .EUt(Globals.voltAmps[3])
     .duration(20)
     .buildAndRegister()
@@ -158,8 +157,8 @@ DT.recipeBuilder()
     .fluidInputs(fluid('silver_trifluoromethanesulfonate_solution') * 1000)
     .outputs(ore('dustSilverTrifluoromethanesulfonate').first() * 9)
     .fluidOutputs(fluid('water') * 1000)
-    .EUt(Globals.voltAmps[4])
-    .duration(100)
+    .EUt(Globals.voltAmps[3])
+    .duration(40)
     .buildAndRegister()
     
 /// B 4-(methylthio)phenyl Methacrylate
@@ -172,8 +171,8 @@ BLENDER.recipeBuilder()
     .fluidInputs(fluid('diisopropylethylamine') * 1000)
     .fluidInputs(fluid('dichloromethane') * 5000)
     .fluidOutputs(fluid('four_methylthio_phenol_methacrylate_reaction_mixture') * 4000)
-    .EUt(Globals.voltAmps[4])
-    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .duration(400)
     .buildAndRegister()
 
 // 7 4-(methylthio)phenyl Methacrylate Reaction Mixture = 1 Impure 4-(methylthio)phenyl Methacrylate + 5 Dichloromethane [vaccum or rotary evaporation]
@@ -181,8 +180,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('four_methylthio_phenol_methacrylate_reaction_mixture') * 7000)
     .outputs(ore('dustCrudeFourMethylthioPhenylMethacrylate').first() * 52)
     .fluidOutputs(fluid('dichloromethane') * 4500) // intended lossy
-    .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .duration(200)
     .buildAndRegister()
 
 // 1 Impure 4-(methylthio)phenyl Methacrylate + 5 Tetrahydrofuran = 1 Crude 4-(methylthio)phenyl Methacrylate Tetrahydrofuran + 1 DIPEA Hydrochloride [filtering]
@@ -194,7 +193,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .chancedOutput(ore('dustFourMethylthioPhenylMethacrylate').first() * 26, 9000, 0)
     .outputs(ore('dustDiisopropylethylamineHydrochloride').first() * 26)
     .fluidOutputs(fluid('tetrahydrofuran') * 4500) // intended lossy
-    .EUt(Globals.voltAmps[4])
+    .EUt(Globals.voltAmps[3])
     .duration(100)
     .buildAndRegister()
 
@@ -221,8 +220,8 @@ BLENDER.recipeBuilder()
     .fluidInputs(fluid('distilled_water') * 1000)
     .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
     .fluidOutputs(fluid('ruthenium_oxide_alumina_catalyst_solution') * 2000)
-    .EUt(Globals.voltAmps[4])
-    .duration(2000)
+    .EUt(Globals.voltAmps[1])
+    .duration(1000)
     .buildAndRegister()
 
 // Ruthenium Oxide-Alumina Catalyst Solution = 1 Wet Ruthenium Oxide-Alumina Catalyst + 2 Waste Water [filteration]
@@ -231,8 +230,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('ruthenium_oxide_alumina_catalyst_solution') * 2000)
     .outputs(ore('dustRutheniumOxideAluminaCatalyst').first() * 102)
     .fluidOutputs(fluid('wastewater') * 2000)
-    .EUt(Globals.voltAmps[4])
-    .duration(1000)
+    .EUt(Globals.voltAmps[1])
+    .duration(500)
     .buildAndRegister()
 
 /// D MAPDST
@@ -256,8 +255,8 @@ CSTR.recipeBuilder()
     .notConsumable(ore('dustRutheniumOxideAluminaCatalyst') * 6)
     .fluidOutputs(fluid('acetonitrile') * 50)
     .fluidOutputs(fluid('water') * 50)
-    .EUt(Globals.voltAmps[2])
-    .duration(10)
+    .EUt(Globals.voltAmps[1])
+    .duration(4)
     .buildAndRegister();
 
 // 1 Iodomethane + 1kL Acetonitrile = 1kL Iodomethane Acetonitrile 
@@ -270,7 +269,7 @@ LCR.recipeBuilder()
     .fluidInputs(fluid('acetonitrile') * 8000)
     .outputs(ore('dustSilverIodide').first() * 2)
     .fluidOutputs(fluid('crude_mapdst_acetonitrile_solution') * 8000)
-    .EUt(Globals.voltAmps[5])
+    .EUt(Globals.voltAmps[4])
     .duration(100)
     .buildAndRegister();
 
@@ -279,8 +278,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('crude_mapdst_acetonitrile_solution') * 8000)
     .outputs(ore('dustCrudeMapdst').first() * 38)
     .fluidOutputs(fluid('acetonitrile') * 7200) // lossy
-    .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .duration(200)
     .buildAndRegister();
 
 // 1 kmol Crude MAPDST + 1000L (NC) Hot Tetrahydrofuran = 1 kmol MAPDST [crystalizer]
@@ -289,8 +288,8 @@ CRYSTALLIZER.recipeBuilder()
     .inputs(ore('dustCrudeMapdst') * 38)
     .notConsumable(fluid('tetrahydrofuran') * 1000)
     .outputs(ore('dustMapdst').first() * 38)
-    .EUt(Globals.voltAmps[4])
-    .duration(400)
+    .EUt(Globals.voltAmps[2])
+    .duration(50)
     .buildAndRegister();
 
 /// E MAPDST-MMA Copolymer
@@ -305,7 +304,7 @@ POLYMERIZATION.recipeBuilder()
     .fluidInputs(fluid('acetonitrile') * 1000)
     .fluidOutputs(fluid('crude_mapdst_mma_copolymer_solution') * 5000)
     .EUt(Globals.voltAmps[5])
-    .duration(500)
+    .duration(1000) // this is meant to be the bottleneck of all, but even with this duration it is still 320L/s production rate.
     .buildAndRegister();
 
 // Rough MAPDST-MMA Copolymer Solution + 1 Diethyl Ether = 1 Rough MAPDST-MMA Copolymer + 6 MAPDST-MMA Copolymerization Waste [phase separation]
@@ -314,8 +313,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('diethyl_ether') * 1000)
     .outputs(ore('dustCrudeMapdstMmaCopolymer').first() * 1)
     .fluidOutputs(fluid('mapdst_mma_copolymer_waste') * 6000)
-    .EUt(Globals.voltAmps[3])
-    .duration(500)
+    .EUt(Globals.voltAmps[2])
+    .duration(100)
     .buildAndRegister();
 
 // dichloromethane washing skipped
@@ -328,8 +327,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('diethyl_ether') * 1000)
     .chancedOutput(ore('dustMapdstMmaCopolymer').first() * 1, 8000, 0)
     .fluidOutputs(fluid('diethyl_ether_methanol_mix') * 1800) // lossy
-    .EUt(Globals.voltAmps[3])
-    .duration(300)
+    .EUt(Globals.voltAmps[1])
+    .duration(80)
     .buildAndRegister();
 
 // Diethyl Ether Methanol Mix = 1 Diethyl Ether + 1 Methanol [distillation]
@@ -337,16 +336,16 @@ DT.recipeBuilder()
     .fluidInputs(fluid('diethyl_ether_methanol_mix') * 200)
     .fluidOutputs(fluid('diethyl_ether') * 100)
     .fluidOutputs(fluid('methanol') * 100)
-    .EUt(Globals.voltAmps[3])
-    .duration(40)
+    .EUt(Globals.voltAmps[2])
+    .duration(10)
     .buildAndRegister();
 
 MIXER.recipeBuilder()
     .inputs(ore('dustMapdstMmaCopolymer') * 1)
-    .fluidInputs(fluid('methanol') * 8000)
-    .fluidOutputs(fluid('mapdst_mma_photoresist') * 8000)
-    .EUt(Globals.voltAmps[3])
-    .duration(1000)
+    .fluidInputs(fluid('methanol') * 16000)
+    .fluidOutputs(fluid('mapdst_mma_photoresist') * 16000)
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
     .buildAndRegister();
 
 /* 

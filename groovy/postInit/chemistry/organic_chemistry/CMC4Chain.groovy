@@ -7,6 +7,7 @@ BR = recipemap('batch_reactor')
 DT = recipemap('distillation_tower')
 FLUID_HEATER = recipemap('fluid_heater')
 LCR = recipemap('large_chemical_reactor')
+MIXER_SETTLER = recipemap('mixer_settler')
 POLYMERIZATION = recipemap('polymerization_tank')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 VACUUM_DT = recipemap('vacuum_distillation')
@@ -27,8 +28,8 @@ POLYMERIZATION.recipeBuilder()
     .fluidInputs(fluid('formaldehyde') * 1000)
     .notConsumable(fluid('sodium_hydroxide_solution') * 1000)
     .fluidOutputs(fluid('paraformaldehyde') * 1000)
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[2])
+    .duration(160)
     .buildAndRegister();
 
 // 1 tert-Butyl Alcohol + 1 Potassium = 1 Potassium tert-Butoxide + 1 Hydrogen
@@ -39,7 +40,7 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('potassium_tert_butylate') * 1000)
     .fluidOutputs(fluid('hydrogen') * 1000)
     .EUt(Globals.voltAmps[1])
-    .duration(100)
+    .duration(20)
     .buildAndRegister();
 
 // 4 Phenol + 4 Paraformaldehyde =[Potassium tert-Butoxide in Tetralin]=> 8kL Calix[4]arene Precipitated Tetralin Solution [LCR]
@@ -51,8 +52,8 @@ LCR.recipeBuilder()
     .fluidOutputs(fluid('potassium_hydroxide_solution') * 1000)
     .fluidOutputs(fluid('water') * 2000)
     .fluidOutputs(fluid('calix_four_arene_precipitated_solution') * 8000)
-    .EUt(Globals.voltAmps[4])
-    .duration(800)
+    .EUt(Globals.voltAmps[5])
+    .duration(1000)
     .buildAndRegister();
 
 // 8kL Calix[4]arene Precipitated Tetralin Solution = 1 Crude Calix[4]arene + 8kL Calix[4]arene Reaction Waste [suction filtration]
@@ -60,8 +61,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('calix_four_arene_precipitated_solution') * 8000)
     .outputs(ore('dustCrudeCalixFourArene').first() * 56)
     .fluidOutputs(fluid('calix_four_arene_waste') * 8000)
-    .EUt(Globals.voltAmps[3])
-    .duration(1000)
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
     .buildAndRegister();
 
 // 1 Crude Calix[4]arene + 1kL Pyridine = 1kL Filtered Calix[4]arene Pyridine Solution [filter]
@@ -70,8 +71,8 @@ MIXER.recipeBuilder()
     .notConsumable(metaitem('item_filter') * 1)
     .fluidInputs(fluid('pyridine') * 1000)
     .fluidOutputs(fluid('filtered_calix_four_arene_solution') * 1000)
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .duration(80)
     .buildAndRegister();
 
 // 1kL Filtered Calix[4]arene Pyridine Solution + 1 Hydrochloric Acid + 1kL Distilled Water = 1 Calix[4]arene  1 Pyridinium Chloride + 2kL Water
@@ -81,8 +82,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .chancedOutput(ore('dustCalixFourArene').first() * 56, 9000, 0)
     .outputs(ore('dustPyridiniumChloride').first() * 13)
     .fluidOutputs(fluid('acidic_wastewater') * 2000)
-    .EUt(Globals.voltAmps[3])
-    .duration(1000)
+    .EUt(Globals.voltAmps[2])
+    .duration(100)
     .buildAndRegister();
 
 // recycle
@@ -91,7 +92,7 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('tetralin') * 900) // 1000L, lossy
     .fluidOutputs(fluid('tert_butyl_alcohol') * 125) // 1kL per 8kL
     .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .duration(40)
     .buildAndRegister();
 
 
@@ -110,7 +111,7 @@ LCR.recipeBuilder()
     .fluidOutputs(fluid('hydrogen') * 8000)
     .fluidOutputs(fluid('dmf_thf_mix') * 9000)
     .EUt(Globals.voltAmps[5])
-    .duration(800)
+    .duration(1000)
     .buildAndRegister();
 
 // DMF/THF mix recycle
@@ -119,19 +120,19 @@ VACUUM_DT.recipeBuilder()
     .fluidOutputs(fluid('dimethylformamide') * 200)
     .fluidOutputs(fluid('tetrahydrofuran') * 800)
     .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .duration(40)
     .buildAndRegister();
 
 // 1 Rough 25,26,27,28-Tetramethoxycalix[4]arene + 1kL Chloromethane + 1kL Distilled Water = 1kL Wastewater + 1kL 25,26,27,28-Tetramethoxycalix[4]arene Cholormethane Extract [phase sep]
-// should be mixer settler
-MIXER.recipeBuilder()
+MIXER_SETTLER.recipeBuilder()
     .inputs(ore('dustCrudeTetramethoxycalixFourArene') * 68)
     .fluidInputs(fluid('chloromethane') * 1000)
     .fluidInputs(fluid('distilled_water') * 1000)
     .fluidOutputs(fluid('wastewater') * 1000)
     .fluidOutputs(fluid('tetramethoxycalix_four_arene_extract') * 1000)
     .EUt(Globals.voltAmps[4])
-    .duration(500)
+    .duration(80)    
+    .requiredCells(4)
     .buildAndRegister();
 
 // 1kL 25,26,27,28-Tetramethoxycalix[4]arene Cholormethane Extract = 1 Crude 25,26,27,28-Tetramethoxycalix[4]arene [vacuum]
@@ -139,8 +140,8 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('tetramethoxycalix_four_arene_extract') * 1000)
     .chancedOutput(ore('dustTetramethoxycalixFourArene').first() * 68, 9000, 0)
     .fluidOutputs(fluid('chloromethane') * 900)
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
     .buildAndRegister();
 
 // n-Butanol recrystalize skipped
@@ -155,8 +156,8 @@ BR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 1000)
     .fluidOutputs(fluid('dioxane') * 1000)
     .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000)
-    .EUt(Globals.voltAmps[2])
-    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .duration(80)
     .buildAndRegister();
 
 // Rebalanced to ideal situation
@@ -169,8 +170,8 @@ BLENDER.recipeBuilder()
     .fluidInputs(fluid('phosphoric_acid') * 1000)
     .fluidInputs(fluid('dioxane') * 8000)
     .fluidOutputs(fluid('cmc_four_reaction_mix') * 10000)
-    .EUt(Globals.voltAmps[5])
-    .duration(800)
+    .EUt(Globals.voltAmps[2])
+    .duration(400)
     .buildAndRegister();
 
 // Heating CMC4 Reaction Mixture [fluid heater]
@@ -178,16 +179,16 @@ FLUID_HEATER.recipeBuilder()
     .fluidInputs(fluid('cmc_four_reaction_mix') * 1000)
     .fluidOutputs(fluid('heated_cmc_four_reaction_mix') * 1000)
     .EUt(Globals.voltAmps[1])
-    .duration(100)
+    .duration(20)
     .buildAndRegister();
 
 // Heated CMC4 Reaction Mixture = 1 Crude CMC4 + Reaction Waste [filter/phase-sep]
 VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('heated_cmc_four_reaction_mix') * 10000)
-    .outputs(ore('dustCrudeCmcFour').first() * 80)
+    .outputs(ore('dustCrudeCmcFour').first())
     .fluidOutputs(fluid('cmc_four_waste') * 9000)
-    .EUt(Globals.voltAmps[3])
-    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .duration(160)
     .buildAndRegister();
 
 // recycle
@@ -195,20 +196,20 @@ DT.recipeBuilder()
     .fluidInputs(fluid('cmc_four_waste') * 1000)
     .fluidOutputs(fluid('dioxane') * 800)
     .fluidOutputs(fluid('acidic_wastewater') * 200)
-    .EUt(Globals.voltAmps[1])
-    .duration(100)
+    .EUt(Globals.voltAmps[2])
+    .duration(20)
     .buildAndRegister();
 
 // 1 kmol Crude CMC4 phase separate with chloroform and water = Crude CMC4 Chloroform Solution + Acidic Waste Water
-// Later switch to mixer settler
-MIXER.recipeBuilder()
-    .inputs(ore('dustCrudeCmcFour') * 80)
+MIXER_SETTLER.recipeBuilder()
+    .inputs(ore('dustCrudeCmcFour'))
     .fluidInputs(fluid('chloromethane') * 1000)
     .fluidInputs(fluid('distilled_water') * 4000)
     .fluidOutputs(fluid('acidic_wastewater') * 4000)
     .fluidOutputs(fluid('cmc_four_extract') * 1000)
     .EUt(Globals.voltAmps[4])
-    .duration(400)
+    .duration(80)
+    .requiredCells(4)
     .buildAndRegister();
 
 // Crude CMC4 Chloroform Solution ==[Magnesium Sulfate]=> CMC4 Chloroform Solution
@@ -217,9 +218,9 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('cmc_four_extract') * 1000)
     .notConsumable(ore('dustMagnesiumSulfate'))
     .fluidOutputs(fluid('chloromethane') * 900)
-    .chancedOutput(ore('dustCmcFour').first() * 80, 6000, 500)
+    .chancedOutput(ore('dustCmcFour').first(), 6000, 500)
     .EUt(Globals.voltAmps[1])
-    .duration(1000)
+    .duration(100)
     .buildAndRegister();
 
 /// D Photoresist Preparation
@@ -231,8 +232,8 @@ BR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 1000)
     .outputs(ore('dustSulfatedTitania').first() * 7)
     .fluidOutputs(fluid('hydrogen') * 2000)
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .duration(40)
     .buildAndRegister();
 
 // 1 Propylene Oxide + 1 Methanol ==[Sodium Methoxide]=> 1 1-Methoxy-2-propanol [BR]
@@ -241,8 +242,8 @@ BR.recipeBuilder()
     .fluidInputs(fluid('methanol') * 1000)
     .notConsumable(ore('dustSodiumMethoxide') * 6)
     .fluidOutputs(fluid('propylene_glycol_methyl_ether') * 1000)
-    .EUt(Globals.voltAmps[3])
-    .duration(200)
+    .EUt(Globals.voltAmps[1])
+    .duration(40)
     .buildAndRegister();
 
 // 1 1-Methoxy-2-Propanol + 1 Acetic Acid + ==[Sulfated Titania]=> 1kL 1-Methoxy-2-Propanol Acetate
@@ -251,8 +252,8 @@ LCR.recipeBuilder()
     .fluidInputs(fluid('propylene_glycol_methyl_ether') * 1000)
     .fluidInputs(fluid('acetic_acid') * 1000)
     .fluidOutputs(fluid('pgmea_catalytic_solution') * 2000)
-    .EUt(Globals.voltAmps[4])
-    .duration(200)
+    .EUt(Globals.voltAmps[2])
+    .duration(40)
     .buildAndRegister();
 
 // distill products
@@ -261,16 +262,16 @@ DT.recipeBuilder()
     .outputs(ore('dustSulfatedTitania').first() * 7)
     .fluidOutputs(fluid('water') * 1000)
     .fluidOutputs(fluid('pgmea') * 1000)
-    .EUt(Globals.voltAmps[4])
-    .duration(500)
+    .EUt(Globals.voltAmps[3])
+    .duration(20)
     .buildAndRegister();
 
 MIXER.recipeBuilder()
-    .inputs(ore('dustCmcFour') * 80)
-    .fluidInputs(fluid('pgmea') * 8000)
-    .fluidOutputs(fluid('cmc_four_photoresist') * 8000)
-    .EUt(Globals.voltAmps[3])
-    .duration(500)
+    .inputs(ore('dustCmcFour'))
+    .fluidInputs(fluid('pgmea') * 16000)
+    .fluidOutputs(fluid('cmc_four_photoresist') * 16000)
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
     .buildAndRegister();
 
 /*
