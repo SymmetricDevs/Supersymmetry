@@ -2233,7 +2233,8 @@ class SuSyMaterials {
         public static Material Pyrazine;
         public static Material Pentaerythritol;
         public static Material PentaerythritolTetranitrate;
-        public static Material RDX;        public static Material DimethylSulfide; 
+        public static Material RDX;        
+        public static Material DimethylSulfide; 
         public static Material ChlorosulfanicAcid; 
         public static Material MethacryloylChloride; 
         public static Material HydrolyzedChlorosulfuricAcid;
