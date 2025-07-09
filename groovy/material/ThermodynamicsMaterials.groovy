@@ -611,7 +611,7 @@ class ThermodynamicsMaterials {
                 .components(Steam)
                 .build();
 
-        /*HighPressureHeavyWater = new Material.Builder(22860, SuSyUtility.susyId("hp_heavy_water"))
+        /*HighPressureHeavyWater = new Material.Builder(22866, SuSyUtility.susyId("hp_heavy_water"))
                 .gas(new FluidBuilder().temperature(500))
                 .color(0xccd9f0)
                 .flags(DISABLE_DECOMPOSITION)
@@ -623,5 +623,9 @@ class ThermodynamicsMaterials {
                 374.4, 2064000, 4228.)
                     .setAccumulatesHydrogen(true));*/
 
+        ChilledWater = new Material.Builder(22867, SuSyUtility.susyId("chilled_water"))
+                .liquid(new FluidBuilder().temperature(283))
+                .color(0x6da2ed)
+                .build();
     }
 }

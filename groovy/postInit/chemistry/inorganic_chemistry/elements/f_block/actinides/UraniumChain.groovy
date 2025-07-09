@@ -30,6 +30,7 @@ CHEMICAL_BATH = recipemap('chemical_bath')
 ROTARY_KILN = recipemap('rotary_kiln')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 ION_EXCHANGE = recipemap('ion_exchange_column')
+MIXER_SETTLER = recipemap('mixer_settler')
 
 // Beneficiation
 
@@ -229,6 +230,91 @@ FLUIDIZEDBR.recipeBuilder()
     .inputs(ore('dustUraniumTetrafluoride') * 5)
     .fluidInputs(fluid('fluorine') * 2000)
     .fluidOutputs(fluid('natural_uranium_hexafluoride') * 1000)
+    .EUt(240)
+    .duration(80)
+    .buildAndRegister()
+
+// From reprocessing
+
+// Second PUREX cycle for purification
+MIXER_SETTLER.recipeBuilder()
+    .fluidInputs(fluid('reprocessed_uranium_concentrate') * 1500)
+    .fluidInputs(fluid('actinide_separation_mixture') * 10000)
+    .fluidOutputs(fluid('radioactive_wastewater') * 1500)
+    .fluidOutputs(fluid('reextracted_reprocessed_uranium_extract') * 10000)
+    .requiredCells(4)
+    .duration(120)
+    .EUt(480)
+    .buildAndRegister();
+
+
+MIXER_SETTLER.recipeBuilder()
+    .fluidInputs(fluid('reextracted_reprocessed_uranium_extract') * 10000)
+    .fluidInputs(fluid('plutonium_reduction_solution') * 10)
+    .fluidOutputs(fluid('purified_reprocessed_uranium_extract') * 10000)
+    .fluidOutputs(fluid('radioactive_wastewater') * 10)
+    .requiredCells(4)
+    .duration(120)
+    .EUt(480)
+    .buildAndRegister();
+
+MIXER_SETTLER.recipeBuilder()
+    .fluidInputs(fluid('purified_reprocessed_uranium_extract') * 10000)
+    .fluidInputs(fluid('diluted_nitric_acid') * 2000)
+    .fluidOutputs(fluid('radiolyzed_actinide_separation_mixture') * 10000)
+    .fluidOutputs(fluid('purified_reprocessed_uranium_concentrate') * 2000)
+    .requiredCells(4)
+    .duration(120)
+    .EUt(480)
+    .buildAndRegister();
+
+FBR.recipeBuilder()
+    .notConsumable(ore('catalystBedSilicaGel'))
+    .fluidInputs(fluid('purified_reprocessed_uranium_concentrate') * 2000)
+    .fluidOutputs(fluid('reprocessed_uranyl_nitrate_solution') * 2000)
+    .duration(60)
+    .EUt(480)
+    .buildAndRegister();
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('reprocessed_uranyl_nitrate_solution') * 2000)
+    .outputs(metaitem('dustReprocessedUranylNitrate') * 11)
+    .fluidOutputs(fluid('acidic_wastewater') * 2000)
+    .duration(20)
+    .EUt(30)
+    .buildAndRegister(); 
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustReprocessedUranylNitrate') * 11)
+    .outputs(metaitem('dustReprocessedUraniumTrioxide') * 4)
+    .fluidOutputs(fluid('nitrogen_dioxide') * 2000)
+    .fluidOutputs(fluid('oxygen') * 1000)
+    .duration(120)
+    .EUt(480)
+    .buildAndRegister();
+
+REACTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustReprocessedUraniumTrioxide') * 4)
+    .fluidInputs(fluid('hydrogen') * 2000)
+    .outputs(metaitem('dustReprocessedUraniumDioxide') * 3)
+    .fluidOutputs(fluid('dense_steam') * 1000)
+    .duration(120)
+    .EUt(480)
+    .buildAndRegister();
+
+ROTARY_KILN.recipeBuilder()
+    .inputs(ore('dustReprocessedUraniumDioxide') * 3)
+    .fluidInputs(fluid('hydrogen_fluoride') * 4000)
+    .outputs(metaitem('dustReprocessedUraniumTetrafluoride') * 5)
+    .fluidOutputs(fluid('dense_steam') * 2000)
+    .EUt(1920)
+    .duration(80)
+    .buildAndRegister()
+
+FLUIDIZEDBR.recipeBuilder()
+    .inputs(ore('dustReprocessedUraniumTetrafluoride') * 5)
+    .fluidInputs(fluid('fluorine') * 2000)
+    .fluidOutputs(fluid('reprocessed_uranium_hexafluoride') * 1000)
     .EUt(240)
     .duration(80)
     .buildAndRegister()

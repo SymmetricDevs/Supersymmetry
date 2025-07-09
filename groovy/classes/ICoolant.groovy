@@ -8,6 +8,7 @@ class ICoolant{
     public int duration_radiator = 200;
     public int amount_to_use = 1000;
     public int hx_time_factor = 10;
+    public int circuit = 0;
 
     public static void main(String[] args){
         //this is needed for some reason, otherwise it will error
@@ -34,6 +35,10 @@ class ICoolant{
         this.hx_time_factor = time;
     }
 
+    public void setCircuit(int number) {
+        this.circuit = number;
+    }
+
     public int getTimeFactor() {
         return hx_time_factor;
     }
@@ -44,5 +49,9 @@ class ICoolant{
 
     public String getWarmCoolant() {
         return warm_coolant;
+    }
+
+    public int getCircuit() {
+        return circuit;
     }
 }

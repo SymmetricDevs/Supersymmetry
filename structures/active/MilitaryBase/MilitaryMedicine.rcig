@@ -3,7 +3,7 @@
   "inventoryGeneratorID": "MilitaryMedicine",
   "items": [
     {
-      "weight": 2.0475566387176514,
+      "weight": 1.763644814491272,
       "min": 8,
       "max": 17,
       "item": {

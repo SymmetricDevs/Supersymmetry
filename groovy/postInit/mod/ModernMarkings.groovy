@@ -1,3 +1,5 @@
+MIXER = recipemap('mixer')
+
 mods.chisel.carving.addGroup("markings_basic")
 mods.chisel.carving.addGroup("markings_symbolic")
 mods.chisel.carving.addGroup("markings_symbolic_yellow")
@@ -65,7 +67,7 @@ def yellow = [
 ]
 
 for (anItem in basic) {
-	crafting.remove(anItem) // Should all be the same name
+    crafting.remove(anItem) // Should all be the same name
     mods.chisel.carving.addVariation("markings_basic", item(anItem))
 }
 
@@ -100,7 +102,7 @@ for (anItem in yellow) {
 }
 
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeWhite') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -109,7 +111,8 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(30)
     .buildAndRegister()
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dyeBlack') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -118,7 +121,7 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(30)
     .buildAndRegister()
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeBlue') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -127,7 +130,7 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(30)
     .buildAndRegister()
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeGreen') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -136,7 +139,7 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(30)
     .buildAndRegister()
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeOrange') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -145,7 +148,7 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(30)
     .buildAndRegister()
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeRed') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -154,7 +157,7 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(30)
     .buildAndRegister()
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeYellow') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -204,11 +207,11 @@ def symbolic = [
 ]
 
 for (anItem in symbolic) {
-	crafting.remove(anItem) // Should all be the same name
+    crafting.remove(anItem) // Should all be the same name
     mods.chisel.carving.addVariation("markings_symbolic", item(anItem))
 }
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeWhite') * 2)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 50)
     .circuitMeta(2)
@@ -241,11 +244,11 @@ def electric = [
 ]
 
 for (anItem in electric) {
-	crafting.remove(anItem) // Should all be the same name
+    crafting.remove(anItem) // Should all be the same name
     mods.chisel.carving.addVariation("markings_electric", item(anItem))
 }
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeWhite') * 2)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 50)
     .circuitMeta(3)
@@ -254,10 +257,10 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(30)
     .buildAndRegister()
 
-mods.gregtech.mixer.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dyeYellow') * 2)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 50)
-    .circuitMeta(1)
+    .circuitMeta(2)
     .outputs(item('ags_modernmarkings:wall_marking_symbol_yellow_electric') * 8)
     .EUt(8)
     .duration(30)
@@ -281,7 +284,7 @@ def yellow_symbolic = [
 
 
 for (anItem in yellow_symbolic) {
-	crafting.remove(anItem) // Should all be the same name
+    crafting.remove(anItem) // Should all be the same name
     mods.chisel.carving.addVariation("markings_symbolic_yellow", item(anItem))
 }
 

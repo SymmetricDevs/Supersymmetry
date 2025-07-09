@@ -1,7 +1,7 @@
 import globals.Globals
 import globals.SinteringGlobals
 
-FORMING_PRESS = recipemap("forming_press")
+HOT_ISOSTATIC_PRESS = recipemap('hot_isostatic_press')
 MIXER = recipemap('mixer')
 ELECTROLYZER = recipemap('electrolyzer')
 ASSEMBLER = recipemap('assembler')
@@ -147,7 +147,7 @@ ELECTROLYZER.recipeBuilder()
 
 // Samarium-cobalt magnets (LuV)
 
-FORMING_PRESS.recipeBuilder()
+HOT_ISOSTATIC_PRESS.recipeBuilder()
     .notConsumable(metaitem('shape.mold.long_rod'))
     .inputs(ore('dustSamariumAlloy'))
     .outputs(metaitem('stickLongSamariumAlloy'))
@@ -155,7 +155,7 @@ FORMING_PRESS.recipeBuilder()
     .EUt(240)
     .buildAndRegister()
 
-FORMING_PRESS.recipeBuilder()
+HOT_ISOSTATIC_PRESS.recipeBuilder()
     .notConsumable(metaitem('shape.mold.ring'))
     .inputs(ore('dustSamariumAlloy'))
     .outputs(metaitem('ringSamariumAlloy') * 4)
@@ -163,7 +163,7 @@ FORMING_PRESS.recipeBuilder()
     .EUt(240)
     .buildAndRegister()
 
-FORMING_PRESS.recipeBuilder()
+HOT_ISOSTATIC_PRESS.recipeBuilder()
     .notConsumable(metaitem('shape.mold.rod'))
     .inputs(ore('dustSamariumAlloy'))
     .outputs(metaitem('stickSamariumAlloy') * 2)
@@ -171,7 +171,7 @@ FORMING_PRESS.recipeBuilder()
     .EUt(240)
     .buildAndRegister()
 
-FORMING_PRESS.recipeBuilder()
+HOT_ISOSTATIC_PRESS.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
     .inputs(ore('dustSamariumAlloy'))
     .outputs(metaitem('plateSamariumAlloy'))
@@ -179,7 +179,7 @@ FORMING_PRESS.recipeBuilder()
     .EUt(240)
     .buildAndRegister()
 
-FORMING_PRESS.recipeBuilder()
+HOT_ISOSTATIC_PRESS.recipeBuilder()
     .notConsumable(metaitem('shape.mold.ingot'))
     .inputs(ore('dustSamariumAlloy'))
     .outputs(metaitem('ingotSamariumAlloy'))

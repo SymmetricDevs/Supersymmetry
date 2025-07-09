@@ -151,14 +151,6 @@ for (blastable in blastables) {
         .EUt(Globals.voltAmps[0])
         .buildAndRegister()
 
-    FORGE_HAMMER.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(ore('ingotWroughtIron'))
-        .outputs(item('minecraft:iron_ingot'))
-        .duration(60)
-        .EUt(Globals.voltAmps[0])
-        .buildAndRegister()
-
     // Puddling
     for (combustible in combustibles) {
         REVERBERATORY_FURNACE.recipeBuilder()
@@ -223,6 +215,7 @@ for (blastable in blastables) {
 // Continuous casting
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
+    .circuitMeta(20)
     .inputs(ore('dustSteel') * 10)
     .fluidOutputs(fluid('molten.steel') * 1440)
     .EUt(120)
@@ -288,6 +281,15 @@ EBF_RECIPES.recipeBuilder()
 
 // Hydroxide processing
 
+BR.recipeBuilder()
+    .fluidInputs(fluid('iron_ii_chloride_solution') * 2000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
+    .outputs(metaitem('dustIronIiHydroxide') * 5)
+    .fluidOutputs(fluid('diluted_salt_water') * 4000)
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
 ROASTER.recipeBuilder()
     .inputs(ore('dustIronIiiHydroxide') * 14)
     .outputs(metaitem('dustIronIiiOxide') * 5)
@@ -306,11 +308,54 @@ ROASTER.recipeBuilder()
 
 // Iron chloride processing
 
-BR.recipeBuilder()
-    .inputs(ore('dustIronIiiChloride') * 4)
-    .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
-    .outputs(metaitem('dustIronIiiHydroxide') * 7)
-    .fluidOutputs(fluid('salt_water') * 3000)
-    .duration(20)
-    .EUt(30)
-    .buildAndRegister()
+    BR.recipeBuilder()
+        .inputs(ore('dustIron'))
+        .fluidInputs(fluid('hydrochloric_acid') * 2000)
+        .fluidOutputs(fluid('iron_ii_chloride_solution') * 2000)
+        .fluidOutputs(fluid('hydrogen') * 2000)
+        .duration(100)
+        .EUt(16)
+        .buildAndRegister()
+
+    MIXER.recipeBuilder()
+        .inputs(ore('dustIronIiChloride') * 3)
+        .fluidInputs(fluid('water') * 2000)
+        .fluidOutputs(fluid('iron_ii_chloride_solution') * 2000)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister()
+
+    // Iron(III) chloride
+
+    ROASTER.recipeBuilder()
+        .fluidInputs(fluid('chlorine') * 1000)
+        .inputs(ore('dustIronIiChloride') * 3)
+        .outputs(metaitem('dustIronIiiChloride') * 4)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
+    ROASTER.recipeBuilder()
+        .fluidInputs(fluid('chlorine') * 6000)
+        .inputs(ore('dustAnyPurityIron') * 2)
+        .outputs(metaitem('dustIronIiiChloride') * 8)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid('water') * 1000)
+        .inputs(ore('dustIronIiiChloride') * 4)
+        .fluidOutputs(fluid('iron_iii_chloride_solution') * 1000)
+        .duration(160)
+        .EUt(30)
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustIronIiiChloride') * 4)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+        .outputs(metaitem('dustIronIiiHydroxide') * 7)
+        .fluidOutputs(fluid('salt_water') * 3000)
+        .duration(20)
+        .EUt(30)
+        .buildAndRegister()

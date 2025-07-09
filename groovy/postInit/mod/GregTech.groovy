@@ -354,15 +354,15 @@ RecyclingHelper.replaceShaped('gregtech:bronze_primitive_blast_furnace', metaite
     [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('screwBronze')]
 ])
 
-RecyclingHelper.addShaped('gregtech:reverberatory_furnace', metaitem('reverberatory_furnace'), [
+RecyclingHelper.addShaped('gregtech:reverberatory_furnace', metaitem('susy:reverberatory_furnace'), [
     [ore('craftingToolHardHammer'), ore('plateWroughtIron'), ore('screwWroughtIron')],
     [ore('blockGlass'), item('gregtech:metal_casing:1'), ore('stickWroughtIron')],
     [ore('craftingToolScrewdriver'), ore('plateWroughtIron'), ore('screwWroughtIron')]
 ])
 
-RecyclingHelper.addShaped('gregtech:high_pressure_latex_extractor', metaitem('latex_collector.steel'), [
+RecyclingHelper.addShaped('gregtech:high_pressure_latex_extractor', metaitem('susy:latex_collector.steel'), [
     [metaitem('pipeSmallFluidSteel'), metaitem('susy:pump.steam'), metaitem('pipeSmallFluidSteel')],
-    [metaitem('plateSteel'), metaitem('latex_collector.bronze'), metaitem('plateSteel')],
+    [metaitem('plateSteel'), metaitem('susy:latex_collector.bronze'), metaitem('plateSteel')],
     [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
 ])
 
@@ -456,7 +456,7 @@ RecyclingHelper.replaceShaped("gregtech:steam_extractor_bronze", metaitem('steam
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
 ])
 
-RecyclingHelper.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('vacuum_chamber.bronze'), [
+RecyclingHelper.replaceShaped("gregtech:steam_vacuum_chamber", metaitem('susy:vacuum_chamber.bronze'), [
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')],
     [metaitem('susy:pump.steam'), item('gregtech:steam_casing'), ore('blockGlass')],
     [ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze'), ore('pipeSmallFluidBronze')]
@@ -1004,62 +1004,62 @@ RecyclingHelper.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'
 ])
 
 // SuSy drums
-RecyclingHelper.addShaped("drum_lead", metaitem('drum.lead'), [
+RecyclingHelper.addShaped("drum_lead", metaitem('susy:drum.lead'), [
     [null,ore('craftingToolHardHammer'),null],
     [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')],
     [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')]
 ])
 
-RecyclingHelper.addShaped('gregtech:brass_drum', metaitem('drum.brass'), [
+RecyclingHelper.addShaped('gregtech:brass_drum', metaitem('susy:drum.brass'), [
     [null, ore('craftingToolHardHammer'), null],
     [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')],
     [metaitem('plateBrass'), metaitem('stickLongBrass'), metaitem('plateBrass')]
 ])
 
-RecyclingHelper.handleRecycling(metaitem('drum.pe'), [metaitem('platePlastic') * 6])
+RecyclingHelper.handleRecycling(metaitem('susy:drum.pe'), [metaitem('platePlastic') * 6])
 
-RecyclingHelper.handleRecycling(metaitem('drum.pp'), [metaitem('platePolypropylene') * 6])
+RecyclingHelper.handleRecycling(metaitem('susy:drum.pp'), [metaitem('platePolypropylene') * 6])
 
-RecyclingHelper.handleRecycling(metaitem('drum.ptfe'), [metaitem('platePolytetrafluoroethylene') * 6])
+RecyclingHelper.handleRecycling(metaitem('susy:drum.ptfe'), [metaitem('platePolytetrafluoroethylene') * 6])
 
-RecyclingHelper.handleRecycling(metaitem('drum.uhmwpe'), [metaitem('plateUltraHighMolecularWeightPolyethylene') * 6])
+RecyclingHelper.handleRecycling(metaitem('susy:drum.uhmwpe'), [metaitem('plateUltraHighMolecularWeightPolyethylene') * 6])
 
-//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_lead", metaitem('drum.lead'),
-//      metaitem('drum.lead')
+//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_lead", metaitem('susy:drum.lead'),
+//      metaitem('susy:drum.lead')
 //)
-//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_brass", metaitem('drum.brass'),
-//      metaitem('drum.brass')
+//ModHandler.addShapelessNBTClearingRecipe("drum_nbt_brass", metaitem('susy:drum.brass'),
+//      metaitem('susy:drum.brass')
 //)
 
 // ModHandler.addShapelessNBTClearingRecipe() is not reloadable, just using these seems fine, and we indeed have tooltips.
-crafting.addShapeless("drum_nbt_lead", metaitem('drum.lead'), [
-        metaitem('drum.lead').noReturn()
+crafting.addShapeless("drum_nbt_lead", metaitem('susy:drum.lead'), [
+        metaitem('susy:drum.lead').noReturn()
 ]);
 
-crafting.addShapeless("drum_nbt_brass", metaitem('drum.brass'), [
-        metaitem('drum.brass').noReturn()
+crafting.addShapeless("drum_nbt_brass", metaitem('susy:drum.brass'), [
+        metaitem('susy:drum.brass').noReturn()
 ]);
 
-crafting.addShapeless("drum_nbt_pe", metaitem('drum.pe'), [
-        metaitem('drum.pe').noReturn()
+crafting.addShapeless("drum_nbt_pe", metaitem('susy:drum.pe'), [
+        metaitem('susy:drum.pe').noReturn()
 ]);
 
-crafting.addShapeless("drum_nbt_pp", metaitem('drum.pp'), [
-        metaitem('drum.pp').noReturn()
+crafting.addShapeless("drum_nbt_pp", metaitem('susy:drum.pp'), [
+        metaitem('susy:drum.pp').noReturn()
 ]);
 
-crafting.addShapeless("drum_nbt_ptfe", metaitem('drum.ptfe'), [
-        metaitem('drum.ptfe').noReturn()
+crafting.addShapeless("drum_nbt_ptfe", metaitem('susy:drum.ptfe'), [
+        metaitem('susy:drum.ptfe').noReturn()
 ]);
 
-crafting.addShapeless("drum_nbt_uhmwpe", metaitem('drum.uhmwpe'), [
-        metaitem('drum.uhmwpe').noReturn()
+crafting.addShapeless("drum_nbt_uhmwpe", metaitem('susy:drum.uhmwpe'), [
+        metaitem('susy:drum.uhmwpe').noReturn()
 ]);
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('stickLongLead') * 2)
     .inputs(ore('plateLead') * 4)
-    .outputs(metaitem('drum.lead'))
+    .outputs(metaitem('susy:drum.lead'))
     .duration(200)
     .EUt(16)
     .circuitMeta(2)
@@ -1068,7 +1068,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(ore('stickLongBrass') * 2)
     .inputs(ore('plateBrass') * 4)
-    .outputs(metaitem('drum.brass'))
+    .outputs(metaitem('susy:drum.brass'))
     .duration(200)
     .EUt(16)
     .circuitMeta(2)
@@ -1077,7 +1077,7 @@ ASSEMBLER.recipeBuilder()
 EXTRUDER.recipeBuilder()
     .notConsumable(metaitem('shape.extruder.cell'))
     .fluidInputs(fluid('plastic') * 864)
-    .outputs(metaitem('drum.pe'))
+    .outputs(metaitem('susy:drum.pe'))
     .duration(200)
     .EUt(16)
     .buildAndRegister()
@@ -1085,7 +1085,7 @@ EXTRUDER.recipeBuilder()
 EXTRUDER.recipeBuilder()
     .notConsumable(metaitem('shape.extruder.cell'))
     .fluidInputs(fluid('polypropylene') * 864)
-    .outputs(metaitem('drum.pp'))
+    .outputs(metaitem('susy:drum.pp'))
     .duration(200)
     .EUt(16)
     .buildAndRegister()
@@ -1093,7 +1093,7 @@ EXTRUDER.recipeBuilder()
 EXTRUDER.recipeBuilder()
     .notConsumable(metaitem('shape.extruder.cell'))
     .fluidInputs(fluid('polytetrafluoroethylene') * 864)
-    .outputs(metaitem('drum.ptfe'))
+    .outputs(metaitem('susy:drum.ptfe'))
     .duration(200)
     .EUt(16)
     .buildAndRegister()
@@ -1101,55 +1101,55 @@ EXTRUDER.recipeBuilder()
 EXTRUDER.recipeBuilder()
     .notConsumable(metaitem('shape.extruder.cell'))
     .fluidInputs(fluid('ultra_high_molecular_weight_polyethylene') * 864)
-    .outputs(metaitem('drum.uhmwpe'))
+    .outputs(metaitem('susy:drum.uhmwpe'))
     .duration(200)
     .EUt(16)
     .buildAndRegister()
 
 // Logistics
-RecyclingHelper.addShaped('gregtech:extender.inv', metaitem('extender.inv'), [
+RecyclingHelper.addShaped('gregtech:extender.inv', metaitem('susy:extender.inv'), [
     [null, ore('craftingToolHardHammer'), metaitem('pipeNormalItemNickel')],
     [null, metaitem('hull.lv'), null],
     [metaitem('pipeNormalItemNickel'), ore('craftingToolWrench'), null]
 ])
 
-RecyclingHelper.addShaped('gregtech:extender.tank', metaitem('extender.tank'), [
+RecyclingHelper.addShaped('gregtech:extender.tank', metaitem('susy:extender.tank'), [
     [metaitem('pipeNormalFluidSteel'), ore('craftingToolHardHammer'), null],
     [null, metaitem('hull.lv'), null],
     [null, ore('craftingToolWrench'), metaitem('pipeNormalFluidSteel')]
 ])
 
-RecyclingHelper.addShaped('gregtech:extender.inv_tank', metaitem('extender.inv_tank'), [
+RecyclingHelper.addShaped('gregtech:extender.inv_tank', metaitem('susy:extender.inv_tank'), [
     [metaitem('pipeNormalFluidSteel'), ore('craftingToolHardHammer'), metaitem('pipeNormalItemNickel')],
     [null, metaitem('hull.lv'), null],
     [metaitem('pipeNormalItemNickel'), ore('craftingToolWrench'), metaitem('pipeNormalFluidSteel')]
 ])
 
-RecyclingHelper.addShaped('gregtech:extender.universal', metaitem('extender.universal'), [
+RecyclingHelper.addShaped('gregtech:extender.universal', metaitem('susy:extender.universal'), [
     [metaitem('pipeNormalFluidAluminium'), ore('rotorAluminium'), metaitem('pipeNormalItemElectrum')],
     [ore('circuitLv'), metaitem('hull.mv'), ore('gearAluminium')],
     [metaitem('pipeNormalItemElectrum'), ore('springAluminium'), metaitem('pipeNormalFluidAluminium')]
 ])
 
-RecyclingHelper.addShaped('gregtech:bridge.inv', metaitem('bridge.inv'), [
+RecyclingHelper.addShaped('gregtech:bridge.inv', metaitem('susy:bridge.inv'), [
     [ore('craftingToolHardHammer'), metaitem('pipeNormalItemNickel'), null],
     [null, metaitem('hull.lv'), null],
     [null, metaitem('pipeNormalItemNickel'), ore('craftingToolWrench')]
 ])
 
-RecyclingHelper.addShaped('gregtech:bridge.tank', metaitem('bridge.tank'), [
+RecyclingHelper.addShaped('gregtech:bridge.tank', metaitem('susy:bridge.tank'), [
     [ore('craftingToolHardHammer'), null, null],
     [metaitem('pipeNormalFluidSteel'), metaitem('hull.lv'), metaitem('pipeNormalFluidSteel')],
     [null, null, ore('craftingToolWrench')]
 ])
 
-RecyclingHelper.addShaped('gregtech:bridge.inv_tank', metaitem('bridge.inv_tank'), [
+RecyclingHelper.addShaped('gregtech:bridge.inv_tank', metaitem('susy:bridge.inv_tank'), [
     [ore('craftingToolHardHammer'), metaitem('pipeNormalItemNickel'), null],
     [metaitem('pipeNormalFluidSteel'), metaitem('hull.lv'), metaitem('pipeNormalFluidSteel')],
     [null, metaitem('pipeNormalItemNickel'), ore('craftingToolWrench')]
 ])
 
-RecyclingHelper.addShaped('gregtech:bridge.universal', metaitem('bridge.universal'), [
+RecyclingHelper.addShaped('gregtech:bridge.universal', metaitem('susy:bridge.universal'), [
     [ore('springAluminium'), metaitem('pipeNormalItemElectrum'), ore('rotorAluminium')],
     [metaitem('pipeNormalFluidAluminium'), metaitem('hull.mv'), metaitem('pipeNormalFluidAluminium')],
     [ore('circuitLv'), metaitem('pipeNormalItemElectrum'), ore('gearAluminium')]
@@ -1158,7 +1158,7 @@ RecyclingHelper.addShaped('gregtech:bridge.universal', metaitem('bridge.universa
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeNormalItemNickel') * 2)
     .inputs(metaitem('hull.lv'))
-    .outputs(metaitem('extender.inv'))
+    .outputs(metaitem('susy:extender.inv'))
     .duration(200)
     .EUt(16)
     .circuitMeta(2)
@@ -1167,7 +1167,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeNormalFluidSteel') * 2)
     .inputs(metaitem('hull.lv'))
-    .outputs(metaitem('extender.tank'))
+    .outputs(metaitem('susy:extender.tank'))
     .duration(200)
     .EUt(16)
     .circuitMeta(2)
@@ -1177,7 +1177,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeNormalItemNickel') * 2)
     .inputs(metaitem('pipeNormalFluidSteel') * 2)
     .inputs(metaitem('hull.lv'))
-    .outputs(metaitem('extender.inv_tank'))
+    .outputs(metaitem('susy:extender.inv_tank'))
     .duration(200)
     .EUt(16)
     .circuitMeta(3)
@@ -1190,7 +1190,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('gearAluminium'))
     .inputs(ore('springAluminium'))
     .inputs(metaitem('hull.mv'))
-    .outputs(metaitem('extender.universal'))
+    .outputs(metaitem('susy:extender.universal'))
     .duration(200)
     .EUt(64)
     .circuitMeta(3)
@@ -1199,7 +1199,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeNormalItemNickel') * 2)
     .inputs(metaitem('hull.lv'))
-    .outputs(metaitem('bridge.inv'))
+    .outputs(metaitem('susy:bridge.inv'))
     .duration(200)
     .EUt(16)
     .circuitMeta(4)
@@ -1208,7 +1208,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeNormalFluidSteel') * 2)
     .inputs(metaitem('hull.lv'))
-    .outputs(metaitem('bridge.tank'))
+    .outputs(metaitem('susy:bridge.tank'))
     .duration(200)
     .EUt(16)
     .circuitMeta(4)
@@ -1218,7 +1218,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeNormalItemNickel') * 2)
     .inputs(metaitem('pipeNormalFluidSteel') * 2)
     .inputs(metaitem('hull.lv'))
-    .outputs(metaitem('bridge.inv_tank'))
+    .outputs(metaitem('susy:bridge.inv_tank'))
     .duration(200)
     .EUt(16)
     .circuitMeta(5)
@@ -1231,14 +1231,14 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('gearAluminium'))
     .inputs(ore('springAluminium'))
     .inputs(metaitem('hull.mv'))
-    .outputs(metaitem('bridge.universal'))
+    .outputs(metaitem('susy:bridge.universal'))
     .duration(200)
     .EUt(64)
     .circuitMeta(5)
     .buildAndRegister()
 
 // Electrolytic Cell
-RecyclingHelper.addShaped('gregtech:electrolytic_cell', metaitem('electrolytic_cell'), [
+RecyclingHelper.addShaped('gregtech:electrolytic_cell', metaitem('susy:electrolytic_cell'), [
     [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')],
     [ore('wireGtQuadrupleTin'), metaitem('hull.lv'), ore('wireGtQuadrupleTin')],
     [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
@@ -1927,18 +1927,18 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('voltage_regulator.mv'))
     .inputs(metaitem('voltage_coil.mv'))
     .inputs(ore('cableGtQuadrupleCopper') * 2)
-    .outputs(metaitem('energy_hatch.output_4a.mv'))
+    .outputs(metaitem('susy:energy_hatch.output_4a.mv'))
     .duration(200)
     .EUt(30)
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('transformer.adjustable.mv'))
-    .inputs(metaitem('energy_hatch.output_4a.mv'))
+    .inputs(metaitem('susy:energy_hatch.output_4a.mv'))
     .inputs(metaitem('voltage_regulator.mv') * 2)
     .inputs(metaitem('voltage_coil.mv'))
     .inputs(ore('cableGtOctalCopper') * 2)
-    .outputs(metaitem('energy_hatch.output_16a.mv'))
+    .outputs(metaitem('susy:energy_hatch.output_16a.mv'))
     .duration(200)
     .EUt(30)
     .buildAndRegister()

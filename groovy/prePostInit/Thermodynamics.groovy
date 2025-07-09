@@ -46,6 +46,13 @@ def WaterCoolant = new ICoolant("water", "warm_water");
 WaterCoolant.setDurationRadiator(100);
 WaterCoolant.setAmountToUse(1000);
 WaterCoolant.setTimeFactor(10);
+WaterCoolant.setCircuit(1);
+
+def ChilledWaterCoolant = new ICoolant("chilled_water", "warm_water");
+ChilledWaterCoolant.setDurationRadiator(50);
+ChilledWaterCoolant.setAmountToUse(384);
+ChilledWaterCoolant.setTimeFactor(5);
+ChilledWaterCoolant.setCircuit(2);
 
 def SaltWaterCoolant = new ICoolant("salt_water", "warm_salt_water");
 SaltWaterCoolant.setDurationRadiator(100);
@@ -79,6 +86,7 @@ PolychlorinatedBiphenylCoolant.setTimeFactor(2);
 
 def Coolants = [
         WaterCoolant,
+        ChilledWaterCoolant,
         SaltWaterCoolant,
         LubricantCoolant,
         SodiumPotassiumCoolant,
@@ -289,6 +297,31 @@ def SupercriticalFluids = [
         PropaneSupercritical
 ]
 
+// Natural draft water cooling
+
+recipemap('natural_draft_cooling_tower').recipeBuilder()
+        .circuitMeta(1)
+        .fluidInputs(liquid('warm_water') * 1536)
+        .fluidOutputs(liquid('chilled_water') * 1536)
+        .duration(1)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister();
+
+recipemap('natural_draft_cooling_tower').recipeBuilder()
+        .circuitMeta(2)
+        .fluidInputs(liquid('warm_water') * 1536)
+        .fluidOutputs(liquid('water') * 1536)
+        .duration(1)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister();
+
+recipemap('natural_draft_cooling_tower').recipeBuilder()
+        .fluidInputs(liquid('water') * 1536)
+        .fluidOutputs(liquid('chilled_water') * 1536)
+        .duration(1)
+        .EUt(Globals.voltAmps[3])
+        .buildAndRegister();
+
 //Refrigerant recipes generation
 for (refrigerant in Refrigerants) {
     //Compression
@@ -314,35 +347,35 @@ for (refrigerant in Refrigerants) {
             .duration(refrigerant.duration_radiator)
             .buildAndRegister();
 
-    recipemap('natural_draft_cooling_tower').recipeBuilder()
+    //Water Secondary Loop
+    recipemap('heat_exchanger').recipeBuilder()
             .fluidInputs(liquid(refrigerant.hot_refrigerant) * refrigerant.amount_to_use)
+            .fluidInputs(liquid('chilled_water') * (int)(refrigerant.amount_to_use * 0.384))
             .fluidOutputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
-            .duration((int) (refrigerant.duration_radiator / 2))
-            .EUt(Globals.voltAmps[3])
-            .buildAndRegister();
-
-    recipemap('natural_draft_cooling_tower').recipeBuilder()
-            .fluidInputs(liquid(refrigerant.comp_refrigerant) * refrigerant.amount_to_use)
-            .fluidOutputs(liquid(refrigerant.cold_refrigerant) * refrigerant.amount_to_use)
+            .fluidOutputs(liquid('warm_water') * (int)(refrigerant.amount_to_use * 0.384))
             .duration((int) (refrigerant.duration_radiator / 2))
             .EUt(Globals.voltAmps[3])
             .buildAndRegister();
 }
 
 //Coolant recipes generation
+    
 for (coolant in Coolants) {
-    recipemap('radiator').recipeBuilder()
+    if (coolant.circuit != 0) {
+        recipemap('radiator').recipeBuilder()
+            .fluidInputs(liquid(coolant.warm_coolant) * (coolant.amount_to_use / 10))
+            .fluidOutputs(liquid(coolant.cold_coolant) * (coolant.amount_to_use / 10))
+            .duration(coolant.duration_radiator)
+            .circuitMeta(coolant.getCircuit())
+            .buildAndRegister();
+    }
+    else {
+        recipemap('radiator').recipeBuilder()
             .fluidInputs(liquid(coolant.warm_coolant) * (coolant.amount_to_use / 10))
             .fluidOutputs(liquid(coolant.cold_coolant) * (coolant.amount_to_use / 10))
             .duration(coolant.duration_radiator)
             .buildAndRegister();
-
-    recipemap('natural_draft_cooling_tower').recipeBuilder()
-            .fluidInputs(liquid(coolant.warm_coolant) * coolant.amount_to_use)
-            .fluidOutputs(liquid(coolant.cold_coolant) * coolant.amount_to_use)
-            .duration((int) (coolant.duration_radiator / 2))
-            .EUt(Globals.voltAmps[3])
-            .buildAndRegister();
+    }
 }
 
 //Heat exchanger recipes generation
@@ -405,34 +438,6 @@ for (cryogas in CryoGases) {
             .fluidOutputs(liquid(cryogas.high_pressure_gas) * (cryogas.amount_to_use / 10))
             .duration((int)(cryogas.duration_heat_exchanger * 5 / 2))
             .buildAndRegister();
-
-    recipemap('natural_draft_cooling_tower').recipeBuilder()
-            .fluidInputs(liquid(cryogas.hot_high_pressure_gas) * cryogas.amount_to_use)
-            .fluidOutputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
-            .duration(cryogas.duration_heat_exchanger)
-            .EUt(Globals.voltAmps[3])
-            .buildAndRegister();
-
-    /*if (!cryogas.needsAdvancedCooling) {
-    recipemap('natural_draft_cooling_tower').recipeBuilder()
-        .fluidInputs(liquid(cryogas.high_pressure_gas) * cryogas.amount_to_use)
-        .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * cryogas.amount_to_use)
-        .duration(cryogas.duration_heat_exchanger * 2)
-        .EUt(Globals.voltAmps[3])
-        .buildAndRegister();
-
-    } else {
-        for (CryoGas in ICryoGas.cryo_gases) {
-            recipemap('heat_exchanger').recipeBuilder()
-                    .fluidInputs(liquid(cryogas.high_pressure_gas) * (int) (cryogas.amount_to_use / 4))
-                    .fluidInputs(liquid(CryoGas.liquid_gas) * 100)              
-                    .fluidOutputs(liquid(CryoGas.normal_gas) * 6400)
-                    .fluidOutputs(liquid(cryogas.cold_high_pressure_gas) * (int) (cryogas.amount_to_use / 4))
-                    .duration(cryogas.duration_heat_exchanger * 4)
-                    .buildAndRegister();
-        }
-    }
-    */
 }
 
 //Water cooling
@@ -822,15 +827,6 @@ for (WorkingFluid in WorkingFluids) {
                 .buildAndRegister()
     }
 
-    recipemap('natural_draft_cooling_tower').recipeBuilder()
-            .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 64))
-            .fluidInputs(liquid('water') * 1000)
-            .fluidOutputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use * 64))
-            .fluidOutputs(liquid('water') * 750)
-            .duration(WorkingFluid.duration)
-            .EUt(8)
-            .buildAndRegister();
-
     recipemap('radiator').recipeBuilder()
             .fluidInputs(liquid(WorkingFluid.leftover_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 2))
             .fluidOutputs(liquid(WorkingFluid.normal_fluid) * (WorkingFluid.amount_to_use * 2))
@@ -838,6 +834,28 @@ for (WorkingFluid in WorkingFluids) {
             .EUt(8)
             .buildAndRegister();
 }
+
+// Water WF cooling tower
+
+recipemap('natural_draft_cooling_tower').recipeBuilder()
+        .fluidInputs(liquid('exhaust_steam') * (6 * 160 * 64))
+        .fluidOutputs(liquid('water') * (6 * 64))
+        .duration(1)
+        .EUt(480)
+        .buildAndRegister();
+
+// Supercritical fluid compression
+
+for (scfluid in SupercriticalFluids) {
+        recipemap('fluid_compressor').recipeBuilder()
+            .fluidInputs(fluid(scfluid.getStartingGas()) * 1280)
+            .fluidOutputs(fluid(scfluid.getSupercriticalFluid()) * 20)
+            .EUt(scfluid.getPowerToCompress())
+            .duration(scfluid.getDurationToCompress())
+            .buildAndRegister();
+}
+
+// Misc processing
 
 recipemap('fluid_compressor').recipeBuilder()
         .fluidInputs(liquid('benzene') * 1280)
@@ -861,24 +879,13 @@ recipemap('heat_exchanger').recipeBuilder()
         .duration(10)
         .buildAndRegister();
 
-// Supercritical fluid compression
-
-for (scfluid in SupercriticalFluids) {
-        recipemap('fluid_compressor').recipeBuilder()
-            .fluidInputs(fluid(scfluid.getStartingGas()) * 1280)
-            .fluidOutputs(fluid(scfluid.getSupercriticalFluid()) * 20)
-            .EUt(scfluid.getPowerToCompress())
-            .duration(scfluid.getDurationToCompress())
-            .buildAndRegister();
-}
-
 // Nuclear coolant cycles
 
 // PWR pressurizer & steam generator
 
 recipemap('fluid_compressor').recipeBuilder()
         .fluidInputs(liquid('distilled_water') * 1536)
-        .fluidInputs(liquid('hp_steam') * 20)
+        .fluidInputs(fluid('hp_steam') * 20)
         .fluidOutputs(liquid('pressurized_water') * 1536)
         .duration(1)
         .EUt(480)
@@ -888,8 +895,17 @@ recipemap('heat_exchanger').recipeBuilder()
         .fluidInputs(liquid('hot_pressurized_water') * 1536)
         .fluidInputs(liquid('water') * 1640)
         .fluidOutputs(liquid('distilled_water') * 1536)
-        .fluidOutputs(liquid('hp_steam') * 1640)
+        .fluidOutputs(fluid('hp_steam') * 1640)
         .duration(1)
+        .buildAndRegister();
+
+// PWR boostrap
+
+recipemap('fluid_compressor').recipeBuilder()
+        .fluidInputs(fluid('dense_steam') * 1536)
+        .fluidOutputs(fluid('hp_steam') * 1536)
+        .duration(2000)
+        .EUt(480)
         .buildAndRegister();
 
 // BWR bootstrap
@@ -927,15 +943,14 @@ for (lubricant in Globals.lubricants) {
 
 recipemap('natural_draft_cooling_tower').recipeBuilder()
         .fluidInputs(liquid('hp_exhaust_steam') * 1536)
-        .fluidInputs(liquid('water') * 384)
-        .fluidOutputs(liquid('water') * 1536)
+        .fluidOutputs(liquid('water') * 1152)
         .duration(1) // prevent overclocking, should limit 1 cooling tower per steam turbine.
         .EUt(480)
         .buildAndRegister();
 
-recipemap('natural_draft_cooling_tower').recipeBuilder()
+recipemap('heat_exchanger').recipeBuilder()
         .fluidInputs(liquid('hp_wet_exhaust_steam') * 1536)
-        .fluidInputs(liquid('water') * 192)
+        .fluidInputs(liquid('chilled_water') * 192)
         .fluidOutputs(liquid('boiling_water') * 1536)
         .duration(1)
         .EUt(480)

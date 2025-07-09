@@ -405,7 +405,7 @@ public class SecondDegreeMaterials {
 
         SodiumDichromateSolution = new Material.Builder(13063, SuSyUtility.susyId('sodium_dichromate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(SodiumDichromate * 1, Water * 1, SulfuricAcid * 1)
+                .components(SodiumDichromate * 1, SodiumSulfate * 1, Water * 2)
                 .color(0xe0912f)
                 .build();
 
@@ -949,12 +949,36 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        TitaniumSiliconAlkoxideEthanolSolution = new Material.Builder(13158, SuSyUtility.susyId('titanium_silicon_alkoxide_ethanol_solution'))
+        FerrousSulfamateSolution = new Material.Builder(13158, SuSyUtility.susyId('ferrous_sulfamate_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(FerrousSulfamate, SulfuricAcid * 2, Water * 9)
+                .colorAverage()
+                .build();
+
+        SodiumNitriteSolution = new Material.Builder(13159, SuSyUtility.susyId('sodium_nitrite_solution'))
+                .liquid()
+                .components(SodiumNitrite, Water)
+                .colorAverage()
+                .build();
+
+        PlutoniumReductionSolution = new Material.Builder(13160, SuSyUtility.susyId('plutonium_reduction_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(FerrousSulfamate, DilutedNitricAcid)
+                .colorAverage()
+                .build();
+
+        BariumNitrateSolution = new Material.Builder(13161, SuSyUtility.susyId('barium_nitrate_solution'))
+                .liquid()
+                .components(BariumNitrate, Water)
+                .colorAverage()
+                .build();
+
+        TitaniumSiliconAlkoxideEthanolSolution = new Material.Builder(13162, SuSyUtility.susyId('titanium_silicon_alkoxide_ethanol_solution'))
                 .liquid()
                 .color(0x6c8032)
                 .build();
 
-        TitaniumDopedSilicaGlass = new Material.Builder(13159, SuSyUtility.susyId('titanium_doped_silica_glass'))
+        TitaniumDopedSilicaGlass = new Material.Builder(13163, SuSyUtility.susyId('titanium_doped_silica_glass'))
                 .dust()
                 .iconSet(GLASS)
                 .flags(GENERATE_PLATE, EXCLUDE_BLOCK_CRAFTING_RECIPES, NO_UNIFICATION)

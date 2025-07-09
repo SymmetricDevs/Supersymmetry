@@ -3,7 +3,7 @@ import globals.Globals
 
 def DRONE_PAD = recipemap('drone_pad');
 
-crafting.addShaped("susy:drone_pad_controller", metaitem('drone_pad'), [
+crafting.addShaped("susy:drone_pad_controller", metaitem('susy:drone_pad'), [
     [ore('plateSteel'), metaitem('emitter.lv'), ore('plateSteel')],
     [item('susy:susy_multiblock_casing', 4), item('gregtech:metal_casing', 4), item('susy:susy_multiblock_casing', 4)],
     [ore('plateSteel'), item('susy:susy_multiblock_casing', 4), ore('plateSteel')]

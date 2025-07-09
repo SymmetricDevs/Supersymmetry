@@ -972,32 +972,32 @@ crafting.replaceShaped("pyrotech:tech/machine/stone_kiln", item('pyrotech:stone_
 
 // Primitive smelter
 // Controller
-crafting.addShaped("susy:primitive_smelter", metaitem('primitive_smelter'), [
+crafting.addShaped("susy:primitive_smelter", metaitem('susy:primitive_smelter'), [
         [ore('craftingToolHardHammer')],
         [item('pyrotech:masonry_brick_block')]
 ])
 
 // Export
-crafting.addShaped("susy:primitive_item_export_bus", metaitem('primitive_item_export'), [
+crafting.addShaped("susy:primitive_item_export_bus", metaitem('susy:primitive_item_export'), [
         [item('pyrotech:masonry_brick_block')],
         [item('pyrotech:mechanical_hopper')]
 ])
 
 // Import
-crafting.addShaped("susy:primitive_item_import_bus", metaitem('primitive_item_import'), [
+crafting.addShaped("susy:primitive_item_import_bus", metaitem('susy:primitive_item_import'), [
         [item('pyrotech:mechanical_hopper')],
         [item('pyrotech:masonry_brick_block')]
 ])
 
 // Interconversion
-crafting.addShaped("susy:primitive_bus_import_to_export", metaitem('primitive_item_export'), [
+crafting.addShaped("susy:primitive_bus_import_to_export", metaitem('susy:primitive_item_export'), [
         [ore('craftingToolHardHammer')],
-        [metaitem('primitive_item_import')]
+        [metaitem('susy:primitive_item_import')]
 ])
 
-crafting.addShaped("susy:primitive_bus_export_to_import", metaitem('primitive_item_import'), [
+crafting.addShaped("susy:primitive_bus_export_to_import", metaitem('susy:primitive_item_import'), [
         [ore('craftingToolHardHammer')],
-        [metaitem('primitive_item_export')]
+        [metaitem('susy:primitive_item_export')]
 ])
 
 // Misc machines

@@ -146,7 +146,6 @@ class ChangeFlags {
         Polytetrafluoroethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true);
 
         // Dummy properties for continuous casting
-        Copper.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
         Steel.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
         Aluminium.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
 
@@ -183,7 +182,6 @@ class ChangeFlags {
         SteelMagnetic.addFlags("generate_plate")
         StainlessSteel.addFlags("generate_round");
         Hafnium.addFlags("generate_long_rod", "generate_rod");
-        Copper.addFlags("continuously_cast");
         VanadiumSteel.addFlags("generate_round")
         Mica.addFlags(GENERATE_PLATE, NO_UNIFICATION)
         Chrome.addFlags(GENERATE_PLATE, GENERATE_FOIL)
@@ -231,6 +229,7 @@ class ChangeFlags {
         Pitchblende.setFormula("(?)UO2", true);
         Bastnasite.setFormula("(REE)CO3F", true);
         Monazite.setFormula("(REE,Th)PO4", true);
+        Gypsum.setFormula("(CaSO4)(H2O)2", true);
 
         // OrePrefix Removal
 

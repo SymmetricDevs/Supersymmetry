@@ -914,6 +914,37 @@ susy.material.alkali_fused_wulfenite=Alkali Fused Wulfenite
 susy.material.lead_ii_hydroxide=Lead II Hydroxide
 susy.material.sodium_molybdate_solution=Sodium Molybdate Solution
 susy.material.zinc_oxide=Zinc Oxide
+susy.material.spent_fuel_suspension=Spent Fuel Suspension
+susy.material.spent_fuel_solution=Spent Fuel Solution
+susy.material.uranium_plutonium_extract=Uranium-Plutonium Extract
+susy.material.transuranium_solution=Transuranium Solution
+susy.material.reprocessed_uranium_extract=Reprocessed Uranium Extract
+susy.material.impure_reprocessed_uranium_extract=Impure Reprocessed Uranium Extract
+susy.material.radiolyzed_actinide_separation_mixture=Radiolyzed Actinide Separation Mixture
+susy.material.reprocessed_uranium_concentrate=Reprocessed Uranium Concentrate
+susy.material.radioactive_wastewater=Radioactive Wastewater
+susy.material.purified_reprocessed_uranium_extract=Purified Reprocessed Uranium Extract
+susy.material.purified_reprocessed_uranium_concentrate=Purified Reprocessed Uranium Concentrate
+susy.material.reprocessed_uranyl_nitrate_solution=Reprocessed Uranyl Nitrate Solution
+susy.material.plutonium_concentrate=Plutonium Concentrate
+susy.material.purified_plutonium_concentrate=Purified Plutonium Concentrate
+susy.material.oxidized_plutonium_concentrate=Oxidized Plutonium Concentrate
+susy.material.plutonium_extract=Plutonium Extract
+susy.material.reprocessed_uranyl_nitrate=Reprocessed Uranyl Nitrate
+susy.material.ferrous_sulfamate=Ferrous Sulfamate
+susy.material.reprocessed_uranium_trioxide=Reprocessed Uranium Trioxide
+susy.material.reactor_grade_plutonium_iii_nitrate=Reactor Grade Plutonium III Nitrate
+susy.material.reactor_grade_plutonium_dioxide=Reactor Grade Plutonium Dioxide
+susy.material.hydroxylammonium_nitrate_solution=Hydroxylammonium Nitrate Solution
+susy.material.reprocessed_uranium_dioxide=Reprocessed Uranium Dioxide
+susy.material.reprocessed_uranium_tetrafluoride=Reprocessed Uranium Tetrafluoride
+susy.material.reprocessed_uranium_hexafluoride=Reprocessed Uranium Hexafluoride
+susy.material.ferrous_sulfamate_solution=Ferrous Sulfamate Solution
+susy.material.sodium_nitrite_solution=Sodium Nitrite Solution
+susy.material.plutonium_iii_nitrate_solution=Plutonium III Nitrate Solution
+susy.material.actinide_separation_mixture=Actinide Separation Mixture
+susy.material.reextracted_reprocessed_uranium_extract=Reextracted Reprocessed Uranium Extract
+susy.material.plutonium_reduction_solution=Plutonium Reduction Solution
 
 # Thermodynamics
 
@@ -1057,6 +1088,8 @@ susy.material.chlorodifluoromethane=Chlorodifluoromethane
 susy.material.liquid_argon_product=Liquid Argon Product
 susy.material.liquid_oxygen_product=Liquid Oxygen Product
 susy.material.liquid_nitrogen_product=Liquid Nitrogen Product
+
+susy.material.chilled_water=Chilled Water
 
 # Ores
 
@@ -2544,14 +2577,20 @@ susy.material.silver_indium_cadmium=Silver-Indium-Cadmium Alloy
 susy.material.high_alumina_refractory=High Alumina Refractory
 susy.material.mullitized_kyanite=Mullitized Kyanite
 susy.material.nimonic_105=Nimonic 105
-
-# Isotopes
-
-susy.material.natural_uranium=Natural Uranium
-susy.material.leu_235=Low Enriched Uranium-235 (LEU-235)
-susy.material.haleu_235=High Assay Low Enriched Uranium-235 (HALEU-235)
-susy.material.heu_235=High Enriched Uranium-235 (HEU-235)
-susy.material.weapons_grade_uranium=Weapons Grade Uranium
+susy.material.plutonium_gallium=Plutonium-Gallium Alloy
+susy.material.treated_liquid_nitrogen=Treated Liquid Nitrogen
+susy.material.treated_liquid_oxygen=Treated Liquid Oxygen
+susy.material.helium_neon_concentrate=Helium-Neon Concentrate
+susy.material.dehydrogenated_helium_neon_concentrate=Dehydrogenated Helium-Neon Concentrate
+susy.material.demoisturized_helium_neon_concentrate=Demoisturized Helium-Neon Concentrate
+susy.material.compressed_helium_neon_concentrate=Compressed Helium-Neon Concentrate
+susy.material.helium_neon_mixture=Helium-Neon Mixture
+susy.material.krypton_xenon_rich_liquid=Krypton-Xenon Rich Liquid
+susy.material.combusted_krypton_xenon_concentrate=Combusted Krypton-Xenon Concentrate
+susy.material.purified_krypton_xenon_concentrate=Purified Krypton-Xenon Concentrate
+susy.material.liquid_crude_xenon=Liquid Crude Xenon
+susy.material.oxidized_xenon=Oxidized Xenon
+susy.material.mixed_oxide_fuel=MOX
 susy.material.natural_uranium_hexafluoride=Natural Uranium Hexafluoride
 susy.material.leu_235_hexafluoride=LEU-235 Hexafluoride
 susy.material.haleu_235_hexafluoride=HALEU-235 Hexafluoride
@@ -2567,18 +2606,33 @@ susy.material.leu_235_dioxide=LEU-235 Dioxide
 susy.material.haleu_235_dioxide=HALEU-235 Dioxide
 susy.material.heu_235_dioxide=HEU-235 Dioxide
 susy.material.weapons_grade_uranium_dioxide=Weapons Grade Uranium Dioxide
-susy.material.treated_liquid_nitrogen=Treated Liquid Nitrogen
-susy.material.treated_liquid_oxygen=Treated Liquid Oxygen
-susy.material.helium_neon_concentrate=Helium-Neon Concentrate
-susy.material.dehydrogenated_helium_neon_concentrate=Dehydrogenated Helium-Neon Concentrate
-susy.material.demoisturized_helium_neon_concentrate=Demoisturized Helium-Neon Concentrate
-susy.material.compressed_helium_neon_concentrate=Compressed Helium-Neon Concentrate
-susy.material.helium_neon_mixture=Helium-Neon Mixture
-susy.material.krypton_xenon_rich_liquid=Krypton-Xenon Rich Liquid
-susy.material.combusted_krypton_xenon_concentrate=Combusted Krypton-Xenon Concentrate
-susy.material.purified_krypton_xenon_concentrate=Purified Krypton-Xenon Concentrate
-susy.material.liquid_crude_xenon=Liquid Crude Xenon
-susy.material.oxidized_xenon=Oxidized Xenon
+susy.material.hexamethylenetetramine=Hexamethylenetetramine (HMTA)
+susy.material.diluted_acetone=Diluted Acetone
+susy.material.pentaerythritol=Pentaerythritol
+susy.material.crude_pentaerythritol_tetranitrate=Crude Pentaerythritol Tetranitrate
+susy.material.pentaerythritol_tetranitrate=Pentaerythritol Tetranitrate (PETN)
+susy.material.rdx=RDX
+susy.material.composition_b=Composition B
+susy.material.barium_nitrate_solution=Barium Nitrate Solution
+susy.material.barium_nitrate=Barium Nitrate
+susy.material.baratol=Baratol
+susy.material.pentaerythritol_solution=Pentaerythritol Solution
+
+# Isotopes
+
+susy.material.natural_uranium=Natural Uranium
+susy.material.leu_235=Low Enriched Uranium-235 (LEU-235)
+susy.material.haleu_235=High Assay Low Enriched Uranium-235 (HALEU-235)
+susy.material.heu_235=High Enriched Uranium-235 (HEU-235)
+susy.material.weapons_grade_uranium=Weapons Grade Uranium
+susy.material.uranium_234=Uranium-234
+susy.material.uranium_236=Uranium-236
+susy.material.reprocessed_uranium=Reprocessed Uranium
+susy.material.plutonium_238=Plutonium-238
+susy.material.plutonium_240=Plutonium-240
+susy.material.plutonium_242=Plutonium-242
+susy.material.plutonium_244=Plutonium-244
+susy.material.reactor_grade_plutonium=Reactor Grade Plutonium
 
 # GregTech RecipeMaps
 

@@ -1,3 +1,36 @@
+# UPDATE 0.1.15.1
+## Mod Changes
+### Mod Updates
+- Inventory Bogo Sorter 1.4.10 -> 1.4.11
+- ReFined Tools 7.76 -> 7.77
+- SusyCore v0.1.65 -> v0.1.68
+- Supercritical 0.1.2 -> 0.1.3
+## Changes
+### New Features
+- You can now produce plutonium! This probably isn't bad or anything. (#1552 by @planetme)
+- [Susy-Core] You can now use the mixer-settler multiblock to perform liquid-liquid extractions! (#455 by @bruberu)
+### Changed Features
+- In-game tips have been refreshed! (#1547 by @Rick8484)
+- [Susy-Core] Basic gas masks now may also be used to breathe underwater! (#482 by @unitazer)
+### Fixes
+- The Inventory Bogo Sorter config is accessible now!
+- HV motors are once again obtainable! (#1534 by @planetme)
+- The chromite line is now more accurate. (#1537 by @Crindigo)
+- You will have to try a *little* harder to loot a structure now. (#1539, #1548 by @oliwier509)
+# UPDATE 0.1.15.0.1
+## Mod Changes
+### Mod Updates
+* SusyCore v0.1.64 -> v0.1.65
+* Supercritical 0.1.1 -> 0.1.2
+* GroovyScript 1.2.4 -> 1.2.5
+### Mod Additions
+* VisualClaiming -> 0.0.2
+## Changes
+### New Features
+- Hold V while shift-r-clicking with a wrench or right-clicking with a wirecutter to instantly direct flow/connect wires! (#1434 by @MCTian-mi)
+### Fixes
+- The questbook is more accurate and up-to-date! (#1494 by @The-ExZombie)
+- Issues with the last update have been resolved. (#1522 by @planetme) (#1524 by @oliwier509) (#1527 by @trainvoi) (#1526 by @h3tR)
 # UPDATE 0.1.15 – TRINITY
 ## Mod Changes
 ### Mod Updates

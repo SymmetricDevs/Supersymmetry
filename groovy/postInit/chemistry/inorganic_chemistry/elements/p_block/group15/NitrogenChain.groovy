@@ -81,7 +81,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-//Ostwald Process
+// Ostwald Process
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('mesh.platinum_rhodium') * 10)
@@ -103,7 +103,7 @@ REACTION_FURNACE.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
-//Birkeland–Eyde Process
+// Birkeland–Eyde Process
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(ore('stickCopper') * 2)
@@ -150,7 +150,7 @@ ROASTER.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-//Nitric Acid, Nitrogen Dioxide
+// Nitric Acid, Nitrogen Dioxide
 
 BCR.recipeBuilder()
     .fluidInputs(fluid('water') * 50)
@@ -185,3 +185,11 @@ DT.recipeBuilder()
     .duration(20)
     .EUt(30)
     .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('nitric_acid') * 1000)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('diluted_nitric_acid') * 2000)
+    .duration(6)
+    .EUt(30)
+    .buildAndRegister();

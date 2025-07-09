@@ -28,6 +28,20 @@ public class FirstDegreeMaterialsB {
 
         log.infoMC('Registering First Degree Materials B!');
 
+        ThoriumDioxide = new Material.Builder(8707, SuSyUtility.susyId('thorium_dioxide'))
+                .dust()
+                .components(Thorium, Oxygen * 2)
+                .color(0x00061e)
+                .build();
+
+        // ThoriumDioxide.setProperty(SCPropertyKey.FISSION_FUEL, new FissionFuelProperty(?, ?, ?, ?, ?, ?, ?, ThoriumDioxide.getRegistryName()));
+
+        ThoriumChloride = new Material.Builder(8708, SuSyUtility.susyId('thorium_chloride'))
+                .dust()
+                .components(Thorium, Chlorine * 3)
+                .color(0x012916)
+                .build();
+
         Zircaloy4 = new Material.Builder(8710, SuSyUtility.susyId('zircaloy_4'))
                 .ingot().liquid(new FluidBuilder().temperature(2200))
                 .components(HighPurityZirconium * 18, Tin * 3, Iron * 2, Chrome)
@@ -108,12 +122,12 @@ public class FirstDegreeMaterialsB {
                 .build();
 
         Alnico = new Material.Builder(8720, SuSyUtility.susyId('alnico'))
-                .dust().ingot().liquid(new FluidBuilder().temperature(1600))
+                .dust().ingot().liquid(new FluidBuilder().temperature(1800))
                 .components(Aluminium * 5, Nickel * 4, Cobalt * 3, Copper, Iron * 11)
                 .color(0xb2d8ed)
                 .iconSet(METALLIC)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE)
-                .blastTemp(1600, GasTier.LOW, 480, 200)
+                .blastTemp(1800, GasTier.LOW, 480, 200)
                 .build()
 
         AlnicoMagnetic = new Material.Builder(8721, SuSyUtility.susyId('alnico_magnetic'))
@@ -127,15 +141,118 @@ public class FirstDegreeMaterialsB {
                 .macerateInto(Alnico)
                 .build()
 
-        // TODO: add colors
+        ReprocessedUranylNitrate = new Material.Builder(8722, SuSyUtility.susyId('reprocessed_uranyl_nitrate'))
+                .dust()
+                .components(ReprocessedUranium, Nitrogen * 2, Oxygen * 8)
+                .color(0xb7d629)
+                .build()
 
-        SodiumIodide = new Material.Builder(8722, SuSyUtility.susyId('sodium_iodide'))
+        ReprocessedUranylNitrate.setFormula("UO2(NO3)2", true)
+
+        FerrousSulfamate = new Material.Builder(8723, SuSyUtility.susyId('ferrous_sulfamate'))
+                .dust()
+                .components(Iron * 1, Nitrogen * 1, Sulfur * 1, Oxygen * 3, Hydrogen * 6)
+                .color(0x4c5b4c)
+                .build()
+                
+        FerrousSulfamate.setFormula("Fe(NH2SO3)2", true)
+
+        ReprocessedUraniumTrioxide = new Material.Builder(8724, SuSyUtility.susyId('reprocessed_uranium_trioxide'))
+                .dust()
+                .components(ReprocessedUranium, Oxygen * 3)
+                .color(0x8b8b00)
+                .build();
+
+        ReprocessedUraniumTrioxide.setFormula("UO3", true);
+
+        ReactorGradePlutoniumIIINitrate = new Material.Builder(8725, SuSyUtility.susyId('reactor_grade_plutonium_iii_nitrate'))
+                .dust()
+                .components(ReactorGradePlutonium, Nitrogen * 3, Oxygen * 9)
+                .color(0x8b0000)
+                .build()
+
+        ReactorGradePlutoniumIIINitrate.setFormula("Pu(NO3)3", true);
+
+        ReactorGradePlutoniumDioxide = new Material.Builder(8726, SuSyUtility.susyId('reactor_grade_plutonium_dioxide'))
+                .dust()
+                .components(ReactorGradePlutonium, Oxygen * 2)
+                .colorAverage()
+                .build()
+        
+        ReactorGradePlutoniumDioxide.setFormula("PuO2", true)
+
+        HydroxylammoniumNitrateSolution = new Material.Builder(8727, SuSyUtility.susyId('hydroxylammonium_nitrate_solution'))
+                .liquid()
+                .components(Hydroxylamine, Hydrogen, Nitrogen, Oxygen * 3, Water)
+                .color(0x8b0000)
+                .build();
+
+        HydroxylammoniumNitrateSolution.setFormula("(N2H4O4)(H2O)", true);
+
+        ReprocessedUraniumDioxide = new Material.Builder(8728, SuSyUtility.susyId('reprocessed_uranium_dioxide'))
+                .dust()
+                .iconSet(SAND)
+                .components(ReprocessedUranium, Oxygen * 2)
+                .color(0x4c6e5c)
+                .build();
+
+        ReprocessedUraniumDioxide.setFormula("UO2", true);
+
+        ReprocessedUraniumTetrafluoride = new Material.Builder(8729, SuSyUtility.susyId('reprocessed_uranium_tetrafluoride'))
+                .dust()
+                .iconSet(SAND)
+                .components(ReprocessedUranium, Fluorine * 4)
+                .color(0x5d8570)
+                .build();
+
+        ReprocessedUraniumTetrafluoride.setFormula("UF4", true);
+
+        ReprocessedUraniumHexafluoride = new Material.Builder(8730, SuSyUtility.susyId('reprocessed_uranium_hexafluoride'))
+                .gas(new FluidBuilder().temperature(330))
+                .components(ReprocessedUranium, Fluorine * 6)
+                .color(0x49c930)
+                .build();
+
+        ReprocessedUraniumHexafluoride.setFormula("UF6", true);
+
+        PlutoniumGallium = new Material.Builder(8731, SuSyUtility.susyId('plutonium_gallium'))
+                .dust()
+                .iconSet(METALLIC)
+                .components(ReactorGradePlutonium * 29, Gallium)
+                .colorAverage()
+                .blastTemp(1100, GasTier.MID, GTValues.VA[GTValues.EV])
+                .build();
+
+        MixedOxideFuel = new Material.Builder(8732, SuSyUtility.susyId('mixed_oxide_fuel'))
+                .dust()
+                .color(0x62C032).iconSet(METALLIC)
+                .components(ReprocessedUraniumDioxide * 19, ReactorGradePlutoniumDioxide)
+                .build();
+
+        MixedOxideFuel.setFormula("(U,Pu)O2", true);
+        MixedOxideFuel.setProperty(SCPropertyKey.FISSION_FUEL, new FissionFuelProperty(1600, 1000, 50.0, 10.0, 4000.0, 10.0, 1.5, MixedOxideFuel.getRegistryName()));
+
+        DilutedAcetone = new Material.Builder(8733, SuSyUtility.susyId('diluted_acetone'))
+                .liquid()
+                .components(Acetone, Water)
+                .colorAverage()
+                .build();
+
+        BariumNitrate = new Material.Builder(8734, SuSyUtility.susyId('barium_nitrate'))
+                .dust()
+                .components(Barium, Nitrogen * 2, Oxygen * 6)
+                .colorAverage()
+                .build();
+
+        BariumNitrate.setFormula("Ba(NO3)2", true);
+
+        SodiumIodide = new Material.Builder(8735, SuSyUtility.susyId('sodium_iodide'))
                 .dust()
                 .components(Sodium, Iodine)
                 .colorAverage()
                 .build()
         
-        SulfatedTitania = new Material.Builder(8723, SuSyUtility.susyId('sulfated_titania'))
+        SulfatedTitania = new Material.Builder(8736, SuSyUtility.susyId('sulfated_titania'))
                 .dust()
                 .components(Titanium * 1, Sulfur * 1, Oxygen * 6)
                 .colorAverage()
@@ -143,57 +260,57 @@ public class FirstDegreeMaterialsB {
         SulfatedTitania.setFormula("TiO2/SO4²⁻", true);
                 
         // YttriumFluoride
-        YttriumTrifluoride = new Material.Builder(8724, SuSyUtility.susyId('yttrium_trifluoride'))
+        YttriumTrifluoride = new Material.Builder(8737, SuSyUtility.susyId('yttrium_trifluoride'))
                 .dust()
                 .components(Yttrium, Fluorine * 3)
                 .colorAverage()
                 .build()
 
-        AluminiumNitrate = new Material.Builder(8725, SuSyUtility.susyId('aluminium_nitrate'))
+        AluminiumNitrate = new Material.Builder(8738, SuSyUtility.susyId('aluminium_nitrate'))
                 .dust()
                 .components(Aluminium, Nitrogen * 3, Oxygen * 9)
                 .color(0x3698bf)
                 .build()
         AluminiumNitrate.setFormula("Al(NO3)3", true);
 
-        AluminiumNitrateSolution = new Material.Builder(8726, SuSyUtility.susyId('aluminium_nitrate_solution'))
+        AluminiumNitrateSolution = new Material.Builder(8739, SuSyUtility.susyId('aluminium_nitrate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(AluminiumNitrate, Water * 3)
                 .color(0x4ca0c2)
                 .build()
 
-        YttriumNitrate = new Material.Builder(8727, SuSyUtility.susyId('yttrium_nitrate'))
+        YttriumNitrate = new Material.Builder(8740, SuSyUtility.susyId('yttrium_nitrate'))
                 .dust()
                 .components(Yttrium, Nitrogen * 3, Oxygen * 9)
                 .color(0x966f4e)
                 .build()
         YttriumNitrate.setFormula("Y(NO3)3", true);
 
-        YttriumNitrateSolution = new Material.Builder(8728, SuSyUtility.susyId('yttrium_nitrate_solution'))
+        YttriumNitrateSolution = new Material.Builder(8741, SuSyUtility.susyId('yttrium_nitrate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(YttriumNitrate * 2, Water * 3)
                 .color(0xa38f7e)
                 .build()
 
-        NeodymiumNitrate = new Material.Builder(8729, SuSyUtility.susyId('neodymium_nitrate'))
+        NeodymiumNitrate = new Material.Builder(8742, SuSyUtility.susyId('neodymium_nitrate'))
                 .dust()
                 .components(Neodymium, Nitrogen * 3, Oxygen * 9)
                 .color(0xc947c9) // accurate
                 .build()
         NeodymiumNitrate.setFormula("Nd(NO3)3", true);
 
-        NeodymiumNitrateSolution = new Material.Builder(8730, SuSyUtility.susyId('neodymium_nitrate_solution'))
+        NeodymiumNitrateSolution = new Material.Builder(8743, SuSyUtility.susyId('neodymium_nitrate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(NeodymiumNitrate * 2, Water * 3)
                 .color(0xc96bc9)
                 .build()
 
-        AluminiumYttriumNeodymiumNitrateSolution = new Material.Builder(8731, SuSyUtility.susyId('aluminium_yttrium_neodymium_nitrate_solution'))
+        AluminiumYttriumNeodymiumNitrateSolution = new Material.Builder(8744, SuSyUtility.susyId('aluminium_yttrium_neodymium_nitrate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xc9abc8)
                 .build()
 
-        AmmoniumBicarbonate = new Material.Builder(8732, SuSyUtility.susyId('ammonium_bicarbonate'))
+        AmmoniumBicarbonate = new Material.Builder(8745, SuSyUtility.susyId('ammonium_bicarbonate'))
                 .dust()
                 .components(Carbon, Oxygen * 3, Nitrogen, Hydrogen * 1)
                 .color(0x6a45a3)
@@ -201,13 +318,13 @@ public class FirstDegreeMaterialsB {
         AmmoniumBicarbonate.setFormula("NH4HCO3", true);
         
 
-        AmmoniumBicarbonateSolution = new Material.Builder(8733, SuSyUtility.susyId('ammonium_bicarbonate_solution'))
+        AmmoniumBicarbonateSolution = new Material.Builder(8746, SuSyUtility.susyId('ammonium_bicarbonate_solution'))
                 .liquid()
                 .components(AmmoniumBicarbonate * 3, Water * 2)
                 .color(0x8266ad)
                 .build()
 
-        NdYagSuspensionSolution = new Material.Builder(8734, SuSyUtility.susyId('nd_yag_suspension_solution'))
+        NdYagSuspensionSolution = new Material.Builder(8747, SuSyUtility.susyId('nd_yag_suspension_solution'))
                 .liquid()
                 .color(0xb28db5)
                 .build()
@@ -215,13 +332,13 @@ public class FirstDegreeMaterialsB {
         // from literature, this is roughly solution of NH4AlY0.6(CO3)1.9(OH)2.0 . 8H2O
         // NdYagPrecursorCake is metaitem color (0xd1b2d4)
 
-        NdYagPrecursor = new Material.Builder(8735, SuSyUtility.susyId('nd_yag_precursor'))
+        NdYagPrecursor = new Material.Builder(8748, SuSyUtility.susyId('nd_yag_precursor'))
                 .dust()
                 .flags(NO_UNIFICATION)
                 .color(0xd1b2d4)
                 .build()
 
-        NdYagCeramic = new Material.Builder(8736, SuSyUtility.susyId('nd_yag_ceramic'))
+        NdYagCeramic = new Material.Builder(8749, SuSyUtility.susyId('nd_yag_ceramic'))
                 .dust()
                 .flags(NO_UNIFICATION, GENERATE_ROD)
                 .iconSet(SHINY)
@@ -230,20 +347,20 @@ public class FirstDegreeMaterialsB {
                 .build()
         NdYagCeramic.setFormula("Nd:Y3Al5O12", true)
 
-        NdYagGreenBody = new Material.Builder(8737, SuSyUtility.susyId('nd_yag_green_body'))
+        NdYagGreenBody = new Material.Builder(8750, SuSyUtility.susyId('nd_yag_green_body'))
                 .dust()
                 .flags(NO_UNIFICATION, GENERATE_ROD)
                 .components(NdYagCeramic)
                 .color(0xe59deb)
                 .build()
 
-        RawNdYag = new Material.Builder(8738, SuSyUtility.susyId('raw_nd_yag'))
+        RawNdYag = new Material.Builder(8751, SuSyUtility.susyId('raw_nd_yag'))
                 .dust()
                 .components(NdYagCeramic)
                 .color(0xe4b5e8)
                 .build()
 
-        ZincSelenide = new Material.Builder(8739, SuSyUtility.susyId('zinc_selenide'))
+        ZincSelenide = new Material.Builder(8752, SuSyUtility.susyId('zinc_selenide'))
                 .dust()
                 .iconSet(SHINY)
                 .flags(GENERATE_PLATE)
@@ -251,13 +368,13 @@ public class FirstDegreeMaterialsB {
                 .color(0xf0d211)
                 .build()
 
-        YtterbiumFluoride = new Material.Builder(8740, SuSyUtility.susyId('ytterbium_fluoride'))
+        YtterbiumFluoride = new Material.Builder(8753, SuSyUtility.susyId('ytterbium_fluoride'))
                 .ingot()
                 .components(Ytterbium, Fluorine * 3)
                 .color(0xf0d211)
                 .build()
 
-        BorosilicateCrownGlass = new Material.Builder(8741, SuSyUtility.susyId('borosilicate_crown_glass'))
+        BorosilicateCrownGlass = new Material.Builder(8754, SuSyUtility.susyId('borosilicate_crown_glass'))
                 .ingot()
                 .liquid(new FluidBuilder().temperature(1200))
                 .iconSet(GLASS)

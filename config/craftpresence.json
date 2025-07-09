@@ -1,5 +1,5 @@
 {
-  "_schemaVersion": 6,
+  "_schemaVersion": 7,
   "_lastMCVersionId": 340,
   "generalSettings": {
     "detectATLauncherInstance": false,
@@ -57,12 +57,7 @@
           "smallImageText": "{general.mods} mods installed",
           "startTimestamp": "{data.general.time}",
           "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
+          "buttons": {}
         }
       },
       "tardis": {
@@ -83,12 +78,7 @@
           "smallImageText": "{general.mods} mods installed",
           "startTimestamp": "{data.general.time}",
           "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
+          "buttons": {}
         }
       },
       "the_end": {
@@ -106,12 +96,7 @@
           "smallImageText": "{general.mods} mods installed",
           "startTimestamp": "{data.general.time}",
           "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
+          "buttons": {}
         }
       },
       "telos": {
@@ -143,12 +128,7 @@
           "smallImageText": "",
           "startTimestamp": "{data.general.time}",
           "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
+          "buttons": {}
         }
       }
     },
@@ -176,10 +156,6 @@
           "button_1": {
             "label": "Supersymmetry Discord",
             "url": "https://discord.gg/KYF5a4scRj"
-          },
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
           }
         }
       }
@@ -204,10 +180,6 @@
           "button_1": {
             "label": "Supersymmetry Discord",
             "url": "https://discord.gg/KYF5a4scRj"
-          },
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
           }
         }
       }
@@ -232,10 +204,6 @@
           "button_1": {
             "label": "Supersymmetry Discord",
             "url": "https://discord.gg/KYF5a4scRj"
-          },
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
           }
         }
       }
@@ -260,10 +228,6 @@
           "button_1": {
             "label": "Supersymmetry Discord",
             "url": "https://discord.gg/KYF5a4scRj"
-          },
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
           }
         }
       }
@@ -289,10 +253,6 @@
           "button_1": {
             "label": "Supersymmetry Discord",
             "url": "https://discord.gg/KYF5a4scRj"
-          },
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
           }
         }
       }
@@ -325,12 +285,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         },
         "default": {
@@ -351,12 +306,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         },
         "GuiScreenWorking": {
@@ -374,12 +324,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         },
         "GuiMultiplayer": {
@@ -397,12 +342,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         }
       }
@@ -428,8 +368,7 @@
     "playerSkinEndpoint": "https://mc-heads.net/avatar/{getOrDefault(player.uuid.short, player.name)}",
     "allowDuplicatePackets": false,
     "maxConnectionAttempts": 10,
-    "enableClassGraph": false,
-    "useClassLoader": true
+    "enableClassGraph": false
   },
   "accessibilitySettings": {
     "languageId": "en_us",
@@ -457,18 +396,11 @@
         "button_1": {
           "label": "Supersymmetry Discord",
           "url": "https://discord.gg/KYF5a4scRj"
-        },
-        "default": {
-          "label": "Discord Server",
-          "url": "https://discord.gg/KYF5a4scRj"
         }
       }
     },
-    "dynamicIcons": {
-      "default": "https://via.placeholder.com/256.png"
-    },
+    "dynamicIcons": {},
     "dynamicVariables": {
-      "default": "Example Text",
       "mods": "{general.mods} Mod(s)",
       "player_info_coordinate": "At {player.position.x}, {player.position.z}",
       "players": "{server.players.current} / {server.players.max} Players",
