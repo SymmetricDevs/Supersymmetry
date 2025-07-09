@@ -149,20 +149,48 @@ SPUTTERING.recipeBuilder()
 
 
 /// EUV Components
+// Laser
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('laser.fast_axial_gas_co2') * 4)
+    .inputs(metaitem('laser.nd_yag') * 1)
+    .inputs(metaitem('electric.pump.ev') * 1)
+    .inputs(ore('circuitEv') * 4)
+    .inputs(ore('plateTungstenSteel') * 6)
+    .inputs(ore('screwTungstenSteel') * 8)
+    .fluidInputs(fluid('soldering_alloy') * 1152)
+    .outputs(item('susy:euv_lithographer_component'))
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
 
+// Recticle
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('conveyor.module.ev') * 2)
+    .inputs(ore('frameGtTungstenSteel') * 1)
+    .inputs(ore('gearTungstenSteel') * 4)
+    .inputs(ore('plateTungstenSteel') * 6)
+    .inputs(ore('screwTungstenSteel') * 8)
+    .fluidInputs(fluid('soldering_alloy') * 1152)
+    .outputs(item('susy:euv_lithographer_component', 1))
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
 
-// ASSEMBLER.recipeBuilder
-//     .inputs(metaitem('co2_laser') * 4)
-//     .inputs(metaitem('nd_yag_laser') * 1)
-//     .inputs(metaitem('electric.pump.ev') * 1)
-//     .inputs(ore('circuitEv') * 1)
-//     .inputs(ore('screwTungstenSteel') * 16)
-//     .inputs(ore('plateTungstenSteel') * 6)
-//     .fluidInputs(fluid('soldering_alloy') * 144)
-//     // ???
-//     .duration(100)
-//     .EUt(Globals.voltAmps[1])
-//     .buildAndRegister()
+// Mirror
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('mirror.molybdenum_silicon') * 1)
+    .inputs(metaitem('electric.motor.ev') * 2)
+    .inputs(ore('gearSmallTungstenSteel') * 4)
+    .inputs(ore('frameGtTungstenSteel') * 1)
+    .inputs(ore('plateTungstenSteel') * 5)
+    .inputs(ore('screwTungstenSteel') * 8)
+    .fluidInputs(fluid('soldering_alloy') * 1152)
+    .outputs(item('susy:euv_lithographer_component', 2))
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+// Others are not registered because they might not even be used, and their recipes are straight forward
 
 /*
 References:
