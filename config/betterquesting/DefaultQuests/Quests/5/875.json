@@ -10,10 +10,13 @@
         "Damage:2": 2,
         "id:8": "gregtech:warning_sign"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.875.title"
     }
   },
   "questID:3": 875,
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
 }

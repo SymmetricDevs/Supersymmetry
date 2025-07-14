@@ -1,61 +1,100 @@
-You can never escape Greg
-If a machine catches fire, it can explode
-The factory must grow.
+You can never escape Greg!
+If a machine catches on fire, it might explode.
+The factory must grow!
 There are 15 tiers: from LV (32 EU/t) to MAX (2147483647 EU/t)
 Join our Discord to talk with other players!
 Join our GitHub to contribute and report bugs!
 Read the quest book!
 Visit r/feedthememes!
-Sometimes it's better to flee than fight some mobs
-If a machines receives a higher voltage than it can handle, it might explode
-Always separate your LV and MV machinery!
+Sometimes it is better to flee than fight some mobs.
+If a machines receives a higher voltage than it can handle, it will explode.
+Always separate your low tier and high tier machinery or use transformers!
 Gregification of the world!
-Going one Voltage tier up, means having 4 times more EU/t
-Don't build multiblocks on chunk borders
-You cannot make a Nether Portal, you need to dig down
-Dig down to bedrock to get to the Beneath!
-Don't forget to pray to Gregorius Techneticies every morning
-The Small Coal Boiler will release 4,000mB of steam when it gets full
+Going one Voltage tier up, means having 4 times more EU/t.
+Don't build multiblocks on chunk borders!
+You cannot make a Nether Portal, you need to dig down.
+Dig down to y-level 0 to reach the Beneath!
+Don't forget to pray to Gregorius Techneticies every morning.
+The Small Coal Boiler will release 4,000mB of steam when it gets full.
 SUPERSYMMETRY is not for magic.
-Check JEI for info on ore deposits
-SUPERSYMMETRY is a modpack by Zalgo
-Playing with friends is more fun
+Check JEI for info on ore deposits.
+SUPERSYMMETRY is a modpack by Zalgo.
+Playing with friends is more fun.
 Want more FPS? Try decreasing render distance.
-Don't try any chemical reactions shown here in real life
-Allocate more than 6 GB of RAM, if you don't want to crash every ten minutes
+Don't try any chemical reactions shown here in real life!
+Allocate more than 6 GB of RAM, if you don't want to crash every ten minutes!
 If you're playing with other people, make sure to invite them to your Questing Party!
-Now with 69% more Grzegorz Techszyszczykiewicz
-Your EBF won't work if the muffler doesn't point to the sky
-Abandon all vanilla knowledge all ye who enter here
-Multiblocks can share walls
-An EBF needs 4 LV generators
-Lost your questbook? You can access it instantly by pressing the GRAVE key
+Now with 69% more Grzegorz Techszyszczykiewicz!!!
+Your ERF won't work if the muffler doesn't point to the sky.
+Abandon all vanilla knowledge, ye who enter here!
+Multiblocks can share walls.
+An ERF needs 4 LV generators.
+Lost your questbook? You can access it instantly by pressing the GRAVE key.
 Recipes so realistic you'll get put on a watchlist!
-Don't stick your head into the particle accelerator
+Don't stick your head into the particle accelerator!
 A chemist's dream!
 Gregicality: now with more realistic particle physics!
-You can extract Sulfur from Pyrite
-You need a Pyrolyse Oven for Polyethylene
-If it's too tedious you're doing it wrong
-More Complexity, Less Waiting
+You can extract Sulfur from Pyrite.
+If it's too tedious, you're doing it wrong.
+More Complexity, less Waiting!
 With the power of Duct Tape, I solved all of your maintenance problems!
-Using a Circuit Assembler will make circuits cheaper
-The Bending Machine makes plates more efficiently
-The Wiremill makes wires more efficiently
+Using a Circuit Assembler will make circuits cheaper.
+The Bending Machine makes plates more efficiently.
+The Wiremill makes wires more efficiently.
 Yes, beds are unlocked at EV.
 Cables are lossy.
-You need Cryogenic machinery if you want superconductors 
-You can change InGame Info XML scale in ingame configs
-Mobs will increase their HP the longer you play. Good luck!
+You need Cryogenic machinery if you want superconductors.
+You can change InGame Info XML scale in ingame configs.
 Use F9 to see chunk borders!
-It's aluminIum, not aluminum
-Use JEI to see information about ore deposits
-Steam is hot! It will burn Wooden Fluid Pipes
-A machine draws electricity from its internal buffer first
-Loss on uninsulated cables is twice as big as on insulated ones
-Use the Traveler Backpack if you want an upgraded inventory
-You can bind the quests menu to a key, instead of using the book
-Make sure you have backups!
-Industrial Renewal tanks can have up to 1,000,000mB of storage
-The Electrolyzer separates substances into their basic chemicals
-Don't forget your daily offering to Flop
+It's aluminIum, not aluminum!
+Use JEI to see information about ore deposits.
+Steam is hot! It will burn Wooden Fluid Pipes!
+A machine draws electricity from its internal buffer first.
+Loss on uninsulated cables is twice as big as on insulated ones.
+Use the Traveler Backpack if you want an upgraded inventory.
+You can bind the quests menu to a hotkey instead of using the book.
+Make sure to have backups!
+Industrial Renewal tanks can have up to 1,000,000mB of storage.
+The Electrolyzer uses a voltage to break apart certain molecules.
+Don't forget your daily offering to Flop!
+Use the function 1-e^{-0.1x} to calculate SUSY's completion (x is in years).
+Former federation soldiers, zombies, bandits and parasites will show you no mercy!
+Smiley is your friend.
+Use superconductors.
+Make sure to claim your chunks to protect them against incidents.
+You can craft AE2 items from scratch... in UHV.
+You are going to need lots of ammunition to fight against dangerous mobs.
+Glory to the Federation!
+Do not cut off the water supply to large boilers!
+Do not visit Saturn.
+Skill issues will not be tolerated.
+Let JEI lead the way for you!
+Make sure to wear a mask in the Beneath to avoid suffocation!
+SUPERSYMMETRY: the chemistry textbook!
+Can you reach LV tier in real life?
+Integrated circuits require Rubylith.
+Make sure to use the better motor recipe in MV!
+Doctors recommend eating one steel pipe per day.
+Gregification is the left adjoint to the inclusion functor from GregTechs to mods.
+Play with your friends, play against your friends!
+You can win with the power of empirical evidence.
+You can win with the power of hard work.
+SUPERSYMMETRY: it is spreading.
+You cannot stop it.
+Don't forget to make acid-resistant pipes for acids!
+Turrets make for a nice defense.
+You are running out of time.
+This modpack follows the laws of thermodynamics.
+Make sure to upload logs when reporting bugs through mclo.gs!
+STILL DOWNLOADING USING THE CURSEFORGE APP?? Use PrismLauncher or ATLauncher!
+Don't use your launcher's update feature! Please redownload the modpack instead.
+Try out Industrial Renewal building blocks to improve your base's look!
+Beans on toast.
+Those bandits seem pretty friendly, don't they?
+IV tier - just a week away!
+Canonically begins on April 1st, 2423.
+Paint your pipes to aid in organization!
+Use extenders and bridges to help reduce pipe spaghetti.
+You'll need a pump or a conveyor to move both items and fluids from a singleblock.
+SUPERSYMMETRY does (mostly) follow conservation of mass!
+Thank you for playing SUPERSYMMETRY.

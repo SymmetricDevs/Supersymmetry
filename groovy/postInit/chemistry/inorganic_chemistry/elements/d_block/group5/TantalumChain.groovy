@@ -14,6 +14,7 @@ CLARIFIER = recipemap('clarifier')
 CHEMICAL_BATH = recipemap('chemical_bath')
 CRYSTALLIZER = recipemap('crystallizer')
 REACTION_FURNACE = recipemap('reaction_furnace')
+FORMING_PRESS = recipemap("forming_press")
 
 // Beneficiation
 
@@ -110,7 +111,7 @@ CENTRIFUGE.recipeBuilder() // Fluorotantalic Acid Solution
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder() // Potassium Heptafluorotantalate
-    .inputs(ore('dustPotassiumFluoride') * 36)
+    .inputs(ore('dustPotassiumFluoride') * 18)
     .fluidInputs(fluid('fluorotantalic_acid_solution') * 5000)
     .outputs(metaitem('dustPotassiumHeptafluorotantalate') * 45)
     .fluidOutputs(fluid('hydrofluoric_ammonia_mixture') * 5000)
@@ -181,5 +182,11 @@ CRYSTALLIZER.recipeBuilder()
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
 
-
-    
+// Crucibles
+FORMING_PRESS.recipeBuilder()
+    .notConsumable(metaitem('shape.mold.crucible'))
+    .inputs(ore('plateTantalum') * 4)
+    .outputs(metaitem('crucible.tantalum'))
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()

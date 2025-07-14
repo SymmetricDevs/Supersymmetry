@@ -35,17 +35,17 @@ eventManager.listen {
         customMetaItems.addItem(108, "crucible.graphite")
         customMetaItems.addItem(109, "shape.mold.long_rod")
         customMetaItems.addItem(110, "shape.mold.ring")
+        customMetaItems.addItem(111, "crucible.tantalum")
 
         customMetaItems.addItem(150, "mudbrick_mix")
         customMetaItems.addItem(151, "slaked_lime")
         customMetaItems.addItem(152, "sand.dust")
         customMetaItems.addItem(153, "native_copper")
-
         customMetaItems.addItem(154, "washed_rotten_flesh");
-
         customMetaItems.addItem(155, "sugar_cane_dust");
 
         // FREE ID: 156
+        
         customMetaItems.addItem(157, "hydrocracking_catalyst")
         customMetaItems.addItem(158, "paraffin_wax");
         customMetaItems.addItem(159, "spent_cracking_catalyst");
@@ -110,12 +110,18 @@ eventManager.listen {
         customMetaItems.addItem(213, "glass_fibers")
         customMetaItems.addItem(214, "epoxy_lamina")
 
+        customMetaItems.addItem(215, "commutator")
+        customMetaItems.addItem(216, "brush.unfired")
+        customMetaItems.addItem(217, "brush")
+
         customMetaItems.addItem(250, "beads.amberlyst_ch");
         customMetaItems.addItem(251, "beads.strong_acidic_cation_exchange");
         customMetaItems.addItem(252, "beads.weak_basic_anion_exchange");
         customMetaItems.addItem(253, "beads.loaded_rhenium_anion_exchange");
         customMetaItems.addItem(254, "beads.strong_basic_anion_exchange");
         customMetaItems.addItem(255, "beads.loaded_uranium_anion_exchange");
+        customMetaItems.addItem(256, "beads.rare_earth_cation_exchange")
+        customMetaItems.addItem(257, "beads.loaded_lutetium_cation_exchange")
 
         customMetaItems.addItem(300, "mylar")
         customMetaItems.addItem(301, "spinneret")
@@ -130,6 +136,7 @@ eventManager.listen {
         customMetaItems.addItem(1001, "hot_iron_rod")
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
         customMetaItems.addItem(1003, "electrolyte_paper")
+        customMetaItems.addItem(1004, "hot_steel_plate")
         
         customMetaItems.addItem(1100, "steam.piston")
         customMetaItems.addItem(1101, "steam.motor")
@@ -314,6 +321,10 @@ eventManager.listen {
         customMetaItems.addItem(6302, "anode_slime.lead")
         customMetaItems.addItem(6303, "anode_slime.copper")
         customMetaItems.addItem(6304, "anode_slime.decopperized")
+
+        // Metallurgy 6400-6500
+        customMetaItems.addItem(6400, "work_roll.unfinished")
+        customMetaItems.addItem(6401, "nozzle.boron_nitride")
 
         //Seed crystals 7000-7500
 

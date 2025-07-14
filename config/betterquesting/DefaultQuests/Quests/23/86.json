@@ -1,6 +1,8 @@
 {
   "preRequisites:11": [
-    125
+    125,
+    145,
+    176
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -9,7 +11,8 @@
         "Damage:2": 142,
         "id:8": "gregtechfoodoption:gtfo_meta_item"
       },
-      "name:8": "susy.quest.db.86.title"
+      "name:8": "susy.quest.db.86.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 86,

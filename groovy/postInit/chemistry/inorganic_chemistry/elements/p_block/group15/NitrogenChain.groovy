@@ -1,5 +1,4 @@
 import globals.Globals
-import static globals.CarbonGlobals.*
 
 ASSEMBLER = recipemap('assembler')
 PSA = recipemap('pressure_swing_adsorption')
@@ -11,26 +10,6 @@ ROASTER = recipemap('roaster')
 MIXER = recipemap('mixer')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 
-//Primitive Nitrogen Production
-ROASTER.recipeBuilder()
-    .inputs(ore('dustCopper'))
-    .fluidInputs(fluid('air') * 5000)
-    .outputs(metaitem('dustCupricOxide') * 2)
-    .fluidOutputs(fluid('nitrogen') * 7454)
-    .EUt(30)
-    .duration(160)
-    .buildAndRegister()
-
-ROASTER.recipeBuilder()
-    .inputs(ore('dustZinc'))
-    .fluidInputs(fluid('air') * 5000)
-    .outputs(metaitem('dustZincOxide') * 2)
-    .fluidOutputs(fluid('nitrogen') * 7454)
-    .EUt(30)
-    .duration(160)
-    .buildAndRegister()
-
-//PSA Method
 ASSEMBLER.recipeBuilder()
     .circuitMeta(8)
     .inputs(ore('wireFineAluminium') * 8)
@@ -196,5 +175,13 @@ ROASTER.recipeBuilder()
     .fluidInputs(fluid('oxygen') * 50)
     .fluidOutputs(fluid('nitrogen_dioxide') * 50)
     .duration(8)
+    .EUt(30)
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('diluted_nitric_acid') * 2000)
+    .fluidOutputs(fluid('nitric_acid') * 1000)
+    .fluidOutputs(fluid('water') * 1000)
+    .duration(20)
     .EUt(30)
     .buildAndRegister()

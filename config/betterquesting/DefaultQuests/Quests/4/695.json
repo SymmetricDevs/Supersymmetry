@@ -1,6 +1,7 @@
 {
   "preRequisites:11": [
-    479
+    479,
+    2127737218
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -9,7 +10,8 @@
         "Damage:2": 719,
         "id:8": "gregtech:meta_item_1"
       },
-      "name:8": "susy.quest.db.695.title"
+      "name:8": "susy.quest.db.695.title",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 695,

@@ -33,6 +33,8 @@ PSA = recipemap('pressure_swing_adsorption')
 SINTERING_OVEN = recipemap('sintering_oven')
 EXTRACTOR = recipemap('extractor')
 SIEVE_DT = recipemap('sieve_distillation')
+ION_EXCHANGE = recipemap('ion_exchange_column')
+BLENDER = recipemap('blender')
 
 //LIXIVANTS
 
@@ -125,7 +127,7 @@ SIEVE_DT = recipemap('sieve_distillation')
         .duration(200)
         .buildAndRegister()
 
-    CRYSTALLIZER.recipeBuilder() //TODO: ADD LINOLEIC ACID
+    CRYSTALLIZER.recipeBuilder()
         .fluidInputs(fluid('fatty_acid_solution') * 1000)
         .fluidInputs(fluid('methanol') * 1000)
         .inputs(ore('dustUrea'))
@@ -237,7 +239,7 @@ SIEVE_DT = recipemap('sieve_distillation')
             .duration(80)
             .buildAndRegister()
 
-        //POTASSIUM ETHYL XANTHATE
+        //POTASSIUM ETHYL XANTHATE (NO USE)
 
         BR.recipeBuilder()
             .inputs(ore('dustPotassiumHydroxide') * 3)
@@ -313,7 +315,7 @@ SIEVE_DT = recipemap('sieve_distillation')
             .duration(80)
             .buildAndRegister()
 
-        //POTASSIUM ISOPROPYL XANTHATE
+        //POTASSIUM ISOPROPYL XANTHATE (NO USE)
 
         BR.recipeBuilder()
             .inputs(ore('dustPotassiumHydroxide') * 3)
@@ -332,7 +334,7 @@ SIEVE_DT = recipemap('sieve_distillation')
             .duration(80)
             .buildAndRegister()
 
-    //HEXYLAMMONIUM ACETATE
+    //HEXYLAMMONIUM ACETATE (NO USE)
 
     BR.recipeBuilder()
         .notConsumable(metaitem('dustActivatedRaneyNickel'))
@@ -412,7 +414,7 @@ SIEVE_DT = recipemap('sieve_distillation')
 
 //LIQUID-LIQUID EXTRACTANTS
 
-    //TODGA
+    //TODGA (NO USE)
 
     CSTR.recipeBuilder()
         .fluidInputs(fluid('diethylene_glycol') * 50)
@@ -516,7 +518,16 @@ SIEVE_DT = recipemap('sieve_distillation')
         .EUt(120)
         .buildAndRegister()
 
-    //D2EHPA
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid('tributyl_phosphate') * 1000)
+        .fluidInputs(fluid('kerosene') * 9000)
+        .fluidOutputs(fluid('tributyl_phosphate_extraction_mixture') * 10000)
+        .circuitMeta(3)
+        .duration(60)
+        .EUt(120)
+        .buildAndRegister()
+
+    //D2EHPA (P204)
     
     CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
@@ -569,7 +580,7 @@ SIEVE_DT = recipemap('sieve_distillation')
         .EUt(120)
         .buildAndRegister()
 
-    //N1923
+    //N1923 (NO USE)
 
     MIXER.recipeBuilder()
         .inputs(ore('dustYttriumOxide') * 5)
@@ -826,6 +837,210 @@ SIEVE_DT = recipemap('sieve_distillation')
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
+    // Rare Earth Extractants
+    // Organophosphorus extractants always 25% saponified before use.
+    // 2.5:1 ratio of extractant to REE for extraction.
+
+    BLENDER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('dustSmallSodiumHydroxide') * 3)
+        .fluidInputs(fluid('di_two_ethylhexyl_phosphoric_acid_solution') * 1000)
+        .fluidInputs(fluid('isodecanol') * 500)
+        .fluidInputs(fluid('kerosene') * 8500)
+        .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 10000)
+        .duration(120)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustSmallSodiumHydroxide') * 3)
+        .fluidInputs(fluid('spent_p_two_zero_four_extraction_mixture') * 10000)
+        .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 10000)
+        .duration(10)
+        .EUt(Globals.voltAmps[4])
+        .buildAndRegister()
+
+    // EHEHPA (P507)
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('hydroiodic_acid') * 50)
+        .fluidInputs(fluid('two_ethylhexanol') * 50)
+        .fluidOutputs(fluid('water') * 50)
+        .fluidOutputs(fluid('two_ethylhexyl_iodide') * 50)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSodiumMethoxide') * 6)
+        .fluidInputs(fluid('phosphorus_trichloride') * 1000)
+        .outputs(metaitem('dustSalt') * 6)
+        .fluidOutputs(fluid('trimethyl_phosphite') * 1000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('trimethyl_phosphite') * 50)
+        .fluidInputs(fluid('two_ethylhexanol') * 150)
+        .fluidOutputs(fluid('methanol') * 150)
+        .fluidOutputs(fluid('tri_two_ethylhexyl_phosphite') * 50)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .notConsumable(fluid('two_ethylhexyl_iodide') * 1000)
+        .fluidInputs(fluid('tri_two_ethylhexyl_phosphite') * 50)
+        .fluidOutputs(fluid('two_ethylhexyl_phosphonic_acid_di_two_ethylhexyl_ester') * 50)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .notConsumable(fluid('acetic_acid') * 1000)
+        .fluidInputs(fluid('water') * 50)
+        .fluidInputs(fluid('two_ethylhexyl_phosphonic_acid_di_two_ethylhexyl_ester') * 50)
+        .fluidOutputs(fluid('two_ethylhexanol') * 100)
+        .fluidOutputs(fluid('two_ethylhexyl_phosphonic_acid_mono_two_ethylhexyl_ester') * 50)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustSmallSodiumHydroxide') * 3)
+        .fluidInputs(fluid('kerosene') * 8000)
+        .fluidInputs(fluid('two_ethylhexanol') * 1000)
+        .fluidInputs(fluid('two_ethylhexyl_phosphonic_acid_mono_two_ethylhexyl_ester') * 1000)
+        .circuitMeta(1)
+        .fluidOutputs(fluid('p_five_zero_seven_extraction_mixture') * 10000)
+        .duration(120)
+        .EUt(1920)
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustSmallSodiumHydroxide') * 3)
+        .fluidInputs(fluid('spent_p_five_zero_seven_extraction_mixture') * 10000)
+        .fluidOutputs(fluid('p_five_zero_seven_extraction_mixture') * 10000)
+        .duration(10)
+        .EUt(120)
+        .buildAndRegister()
+
+    // P229
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('hot_sulfuric_acid') * 100)
+        .fluidInputs(fluid('two_ethylhexanol') * 100)
+        .fluidOutputs(fluid('two_ethyl_one_hexene') * 100)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 200)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustTinyAzobisisobutyronitrile'))
+        .fluidInputs(fluid('phosphine') * 1000)
+        .fluidInputs(fluid('two_ethyl_one_hexene') * 2000)
+        .fluidOutputs(fluid('di_two_ethylhexylphosphine') * 1000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('di_two_ethylhexylphosphine') * 1000)
+        .fluidInputs(fluid('oxygen') * 2000)
+        .fluidOutputs(fluid('di_two_ethylhexylphosphinic_acid') * 1000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustSmallSodiumHydroxide') * 3)
+        .fluidInputs(fluid('di_two_ethylhexylphosphinic_acid') * 500)
+        .fluidInputs(fluid('two_ethylhexyl_phosphonic_acid_mono_two_ethylhexyl_ester') * 500)
+        .fluidInputs(fluid('two_ethylhexanol') * 1000)
+        .fluidInputs(fluid('kerosene') * 8000)
+        .circuitMeta(2)
+        .fluidOutputs(fluid('p_five_zero_seven_p_two_two_nine_extraction_mixture') * 10000)
+        .duration(120)
+        .EUt(Globals.voltAmps[5] * 2)
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustSmallSodiumHydroxide') * 3)
+        .fluidInputs(fluid('spent_p_five_zero_seven_p_two_two_nine_extraction_mixture') * 10000)
+        .fluidOutputs(fluid('p_five_zero_seven_p_two_two_nine_extraction_mixture') * 10000)
+        .duration(10)
+        .EUt(120)
+        .buildAndRegister()
+
+    /* CA-12 (NO USE)
+
+    CSTR.recipeBuilder()
+        .notConsumable(fluid('sulfuric_acid') * 1000)
+        .fluidInputs(fluid('one_octene') * 50)
+        .fluidInputs(fluid('water') * 50)
+        .fluidOutputs(fluid('two_octanol') * 50)
+        .duration(5)
+        .EUt(120)
+        .buildAndRegister()
+
+    BCR.recipeBuilder()
+        .fluidInputs(fluid('two_octanol') * 50)
+        .fluidInputs(fluid('hydrogen_chloride') * 50)
+        .fluidOutputs(fluid('two_chlorooctane') * 50)
+        .fluidOutputs(fluid('water') * 50)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .notConsumable(ore('dustAluminiumChloride'))
+        .fluidInputs(fluid('phenol') * 1000)
+        .fluidInputs(fluid('two_chlorooctane') * 1000)
+        .outputs(metaitem('dustSecOctylphenol'))
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+    
+    BR.recipeBuilder()
+        .inputs(ore('dustSecOctylphenol'))
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .fluidInputs(fluid('chloroacetic_acid') * 1000)
+        .outputs(metaitem('dustSecOctylphenoxyaceticAcid'))
+        .fluidOutputs(fluid('diluted_salt_water') * 2000)
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustSecOctylphenoxyaceticAcid'))
+        .fluidInputs(fluid('2_ethylhexanol') * 100)
+        .fluidInputs(fluid('kerosene') * 900)
+        .fluidOutputs(fluid('CA12_extraction_mixture') * 1000)
+        .duration(100)
+        .EUt(Globals.voltAmps[5])
+        .buildAndRegister()*/
+
+    // Aliquat 336
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('trioctylamine') * 1000)
+        .fluidInputs(fluid('chloromethane') * 1000)
+        .outputs(metaitem('dustMethyltrioctylammoniumChloride'))
+        .duration(100)
+        .EUt(120)
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustMethyltrioctylammoniumChloride'))
+        .fluidInputs(fluid('xylene') * 1000)
+        .fluidOutputs(fluid('aliquat_336_extraction_mixture') * 1000)
+        .duration(100)
+        .EUt(Globals.voltAmps[5] * 2)
+        .buildAndRegister()
+
 //ION EXCHANGE RESINS
 
     //ACIDIC RESINS
@@ -1007,10 +1222,10 @@ SIEVE_DT = recipemap('sieve_distillation')
         .duration(200)
         .buildAndRegister()
 
-MIXER.recipeBuilder()
-        .fluidInputs(fluid('water') * 1000)
-        .fluidInputs(fluid('hydrogen_peroxide') * 1000)
-        .fluidOutputs(fluid('hydrogen_peroxide_solution') * 1000)
-        .EUt(7)
+    ION_EXCHANGE.recipeBuilder()
+        .inputs(metaitem('beads.strong_acidic_cation_exchange'))
+        .fluidInputs(fluid('copper_ii_chloride_solution') * 10)
+        .outputs(metaitem('beads.rare_earth_cation_exchange'))
         .duration(40)
+        .EUt(480)
         .buildAndRegister()

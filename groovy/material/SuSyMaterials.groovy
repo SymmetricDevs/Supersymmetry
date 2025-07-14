@@ -10,7 +10,8 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
 import static material.ElementMaterials.*;
-import static material.FirstDegreeMaterials.*;
+import static material.FirstDegreeMaterialsA.*;
+import static material.FirstDegreeMaterialsB.*;
 import static material.IsotopeMaterials.*;
 import static material.OreMaterials.*;
 import static material.OrganicChemistryMaterials.*;
@@ -110,6 +111,7 @@ class SuSyMaterials {
         public static Material Rhodochrosite;
         public static Material Carnotite;
         public static Material AlluvialPGMSand;
+        public static Material Bertrandite;
 
         // Deposits for scanning
 
@@ -128,6 +130,8 @@ class SuSyMaterials {
 
         public static Material RoastedSperrylite;
         public static Material RoastedPetalite;
+        public static Material RoastedBastnasite;
+        public static Material RoastedXenotime;
 
         // Ore Leach Residue
 
@@ -398,7 +402,6 @@ class SuSyMaterials {
         public static Material CopperMatteFlueDust;
         public static Material CopperMatteFlueGas;
         public static Material CopperConcentrate;
-        public static Material PalladiumContainingSolution;
         public static Material ChlorofluoromethaneMix;
         public static Material HafniumExtractionMixture;
         public static Material HafniumExtract;
@@ -605,6 +608,125 @@ class SuSyMaterials {
         public static Material HotNitrogenOxideMixtureRichAir;
         public static Material NitrogenDioxideRichAir;
         public static Material NitricOxideRichAir;
+        public static Material P204ExtractionMixture;
+        public static Material SpentP204ExtractionMixture;
+        public static Material P507ExtractionMixture;
+        public static Material SpentP507ExtractionMixture;
+        public static Material P507P229ExtractionMixture;
+        public static Material SpentP507P229ExtractionMixture;
+        public static Material BastReHydroxides;
+        public static Material MonaReHydroxides;
+        public static Material XenoReHydroxides;
+        public static Material BastOxReConcentrate;
+        public static Material MonaOxReConcentrate;
+        public static Material BastOxReNitratesSolution;
+        public static Material MonaOxReNitratesSolution;
+        public static Material XenoReNitratesSolution;
+        public static Material BastCeFreeSolution;
+        public static Material MonaCeFreeSolution;
+        public static Material CeriumExtract;
+        public static Material BastLreeConcentrate;
+        public static Material MonaLreeConcentrate;
+        public static Material XenoLreeExtract;
+        public static Material XenoLreeConcentrate;
+        public static Material BastLreeFreeExtract;
+        public static Material MonaLreeFreeExtract;
+        public static Material BastLreeFreeConcentrate;
+        public static Material MonaLreeFreeConcentrate;
+        public static Material XenoLreeFreeConcentrate;
+        public static Material BastMreeConcentrate;
+        public static Material MonaMreeConcentrate;
+        public static Material XenoMreeConcentrate;
+        public static Material XenoMreeExtract;
+        public static Material XenoEnrichedMreeConcentrate;
+        public static Material BastHreeExtract;
+        public static Material MonaHreeExtract;
+        public static Material XenoHreeExtract;
+        public static Material BastHreeConcentrate;
+        public static Material MonaHreeConcentrate;
+        public static Material XenoCeFreeConcentrate;
+        public static Material BastPrNdHydroxides;
+        public static Material MonaPrNdHydroxides;
+        public static Material BastOxPrNdConcentrate;
+        public static Material MonaOxPrNdConcentrate;
+        public static Material BastReducedMreeConcentrate;
+        public static Material MonaReducedMreeConcentrate;
+        public static Material XenoReducedMreeConcentrate;
+        public static Material BastSmGdConcentrate;
+        public static Material MonaSmGdConcentrate;
+        public static Material XenoSmGdConcentrate;
+        public static Material BastSmConcentrate;
+        public static Material MonaSmConcentrate;
+        public static Material XenoSmConcentrate;
+        public static Material GadoliniumExtract;
+        public static Material BastDidymiumConcentrate;
+        public static Material MonaDidymiumConcentrate;
+        public static Material XenoDidymiumConcentrate;
+        public static Material LanthanumExtract;
+        public static Material BastNdConcentrate;
+        public static Material MonaNdConcentrate;
+        public static Material XenoNdConcentrate;
+        public static Material PraseodymiumExtract;
+        public static Material BastPurifiedHreeExtract;
+        public static Material MonaPurifiedHreeExtract;
+        public static Material BastScrubbedHreeExtract;
+        public static Material MonaScrubbedHreeExtract;
+        public static Material XenoScrubbedHreeExtract;
+        public static Material BastYttriumRichConcentrate;
+        public static Material MonaYttriumRichConcentrate;
+        public static Material XenoYttriumRichConcentrate;
+        public static Material BastTmYbExtract;
+        public static Material MonaThuliumGroupExtract;
+        public static Material XenoThuliumGroupExtract;
+        public static Material BastYttriumConcentrate;
+        public static Material MonaYttriumConcentrate;
+        public static Material XenoYttriumConcentrate;
+        public static Material BastTerbiumGroupExtract;
+        public static Material MonaTerbiumGroupExtract;
+        public static Material XenoTerbiumGroupExtract;
+        public static Material BastTerbiumGroupConcentrate;
+        public static Material MonaTerbiumGroupConcentrate;
+        public static Material XenoTerbiumGroupConcentrate;
+        public static Material BastPurifiedTerbiumGroupExtract;
+        public static Material MonaPurifiedTerbiumGroupExtract;
+        public static Material XenoPurifiedTerbiumGroupExtract;
+        public static Material BastTerbiumFreeExtract;
+        public static Material MonaTerbiumFreeExtract;
+        public static Material XenoTerbiumFreeExtract;
+        public static Material BastTerbiumConcentrate;
+        public static Material MonaTerbiumConcentrate;
+        public static Material XenoTerbiumConcentrate;
+        public static Material DysprosiumConcentrate;
+        public static Material BastHoErExtract;
+        public static Material MonaHoErExtract;
+        public static Material XenoHoErExtract;
+        public static Material BastErExtract;
+        public static Material MonaErExtract;
+        public static Material XenoErExtract;
+        public static Material BastTmYbConcentrate;
+        public static Material MonaThuliumGroupConcentrate;
+        public static Material XenoThuliumGroupConcentrate;
+        public static Material MonaTmLuConcentrate;
+        public static Material XenoTmLuConcentrate;
+        public static Material BastTmConcentrate;
+        public static Material MonaTmConcentrate;
+        public static Material XenoTmConcentrate;
+        public static Material DigestedThoriumConcentrate;
+        public static Material DissolvedThoriumConcentrate;
+        public static Material ThoriumExtract;
+        public static Material MonaziteLeach;
+        public static Material ThoriumConcentrate;
+        public static Material ThoriumFreeMonaziteLeach;
+        public static Material RareEarthFreeMonaziteLeach;
+        public static Material ImpureBertranditeLeach;
+        public static Material BertranditeLeach;
+        public static Material BerylliumExtractionMixture;
+        public static Material BerylliumExtract;
+        public static Material BasicBerylliumCarbonateSlurry;
+        public static Material BasicBerylliumCarbonateSolution;
+        public static Material HydraulicFluid;
+        public static Material YttriaStabilizedZirconia;
+        public static Material HighAluminaRefractory;
 
         // Petrochem Materials
 
@@ -787,7 +909,7 @@ class SuSyMaterials {
         public static Material RPOne;
         public static Material DehexanizedNaphtha;
 
-        // First Degree Materials
+        // First Degree Materials A
 
         public static Material PotassiumBisulfate;
         public static Material AmmoniumNitrate;
@@ -879,6 +1001,7 @@ class SuSyMaterials {
         public static Material CopperSulfate;
         public static Material WustiteCatalyst;
         public static Material PalladiumChloride;
+        public static Material AmmoniumBisulfateSolution;
         public static Material HexachloroiridicAcid;
         public static Material PotassiumIodide;
         public static Material IridiumIodide;
@@ -1292,6 +1415,7 @@ class SuSyMaterials {
         public static Material HSLA980X;
         public static Material FoodGradeStainlessSteel;
         public static Material CobaltSulfate;
+        public static Material Nimonic105;
         public static Material LithiumNitrate;
         public static Material LithiumNitrateSolution;
         public static Material ZincCarbonate;
@@ -1302,6 +1426,8 @@ class SuSyMaterials {
         public static Material PotassiumOsmate;
         public static Material SodiumHydrosulfide;
         public static Material PotassiumIodate;
+        public static Material Alnico;
+        public static Material AlnicoMagnetic;
         public static Material UraniumTetrafluoride;
         public static Material UraniumDioxide;
         public static Material NaturalUraniumHexafluoride;
@@ -1314,11 +1440,75 @@ class SuSyMaterials {
         public static Material HEU235AmmoniumDiuranate;
         public static Material WeaponsGradeAmmoniumDiuranate;
         public static Material DepletedAmmoniumDiuranate;
-        public static Material LEU235UraniumDioxide;
-        public static Material HALEU235UraniumDioxide;
-        public static Material HEU235UraniumDioxide;
+        public static Material LEU235Dioxide;
+        public static Material HALEU235Dioxide;
+        public static Material HEU235Dioxide;
         public static Material WeaponsGradeUraniumDioxide;
         public static Material DepletedUraniumDioxide;
+        public static Material AmmoniumCarbonate;
+        public static Material PotassiumChlorate;
+        public static Material AmmoniumPersulfate;
+        public static Material SodiumAmalgam;
+        public static Material DilutedNitricAcid;
+        public static Material YttriumChloride;
+        public static Material YttriumHydroxide;
+        public static Material LanthanumCarbonate;
+        public static Material LanthanumFluoride;
+        public static Material LanthanumOxide;
+        public static Material LanthanumNitrate;
+        public static Material CeriumIIINitrateSolution;
+        public static Material CeriumIIIFluoride;
+        public static Material CeriumIVHydroxide;
+        public static Material CeriumIIIChloride;
+        public static Material PraseodymiumIVOxide;
+        public static Material PraseodymiumIIIFluoride;
+        public static Material PraseodymiumIIINitrate;
+        public static Material NeodymiumChlorideSolution;
+        public static Material NeodymiumFluoride;
+        public static Material NeodymiumHydroxide;
+        public static Material SamariumHydroxide;
+        public static Material SamariumOxide;
+        public static Material EuropiumIISulfate;
+        public static Material EuropiumIIIOxide;
+        public static Material GadoliniumChloride;
+        public static Material GadoliniumFluoride;
+        public static Material TerbiumFluoride;
+        public static Material DysprosiumChloride;
+        public static Material DysprosiumFluoride;
+        public static Material HolmiumChloride;
+        public static Material HolmiumFluoride;
+        public static Material ErbiumSulfate;
+        public static Material ErbiumFluoride;
+        public static Material ThuliumFluoride;
+        public static Material YtterbiumAmalgam;
+        public static Material YtterbiumChlorideSolution;
+        public static Material YtterbiumHydroxide;
+        public static Material YtterbiumOxide;
+        public static Material LutetiumChlorideSolution;
+        public static Material LutetiumFluoride;
+        public static Material SaltyPhosphoricAcid;
+        public static Material ThoriumNitrateSolution;
+        public static Material ThoriumDioxide;
+        public static Material ThoriumChloride;
+        public static Material SodiumPhosphate;
+        public static Material SodiumBisulfiteSolution;
+        public static Material CalicheLeach;
+        public static Material IodateConcentrate;
+        public static Material IodideConcentrate;
+
+        // First Degree Materials B
+
+        public static Material Zircaloy4;
+        public static Material ReactorSteel;
+        public static Material Inconel718;
+        public static Material SilverIndiumCadmium;
+        public static Material MullitizedKyanite;
+        public static Material CalciumChlorideSolution;
+        public static Material VeryDilutedCalciumChlorideSolution;
+        public static Material AmmoniumAlum;
+        public static Material PurifiedBerylliumHydroxide;
+        public static Material PurifiedBerylliumOxide;
+        public static Material PurifiedBerylliumChloride;
 
         // HP Materials
 
@@ -1380,7 +1570,7 @@ class SuSyMaterials {
         public static Material HighPurityLead;
         public static Material HighPurityBismuth;
         public static Material HighPurityCerium;
-        public static Material HighPurityPraesodymium;
+        public static Material HighPurityPraseodymium;
         public static Material HighPurityNeodymium;
         public static Material HighPuritySamarium;
         public static Material HighPurityEuropium;
@@ -1404,7 +1594,6 @@ class SuSyMaterials {
         public static Material PotassiumChlorideSolution;
         public static Material PotassiumBisulfateSolution;
         public static Material SodiumBisulfateSolution;
-        public static Material CalciumChlorideSolution;
         public static Material SodaAshSolution;
         public static Material SodiumBicarbonateSolution;
         public static Material AmmoniumNitrateSolution;
@@ -1520,6 +1709,21 @@ class SuSyMaterials {
         public static Material TetraamminepalladiumDichlorideSolution;
         public static Material IronIIChlorideSolution;
         public static Material SodiumHydrosulfideSolution;
+        public static Material CopperIIChlorideSolution;
+        public static Material AmmoniumCarbonateSolution;
+        public static Material AmmoniumPersulfateSolution;
+        public static Material YttriumChlorideSolution;
+        public static Material LanthanumNitrateSolution;
+        public static Material CeriumIIIChlorideSolution;
+        public static Material PraseodymiumIIINitrateSolution;
+        public static Material GadoliniumChlorideSolution;
+        public static Material DysprosiumChlorideSolution;
+        public static Material HolmiumChlorideSolution;
+        public static Material ErbiumSulfateSolution;
+        public static Material SodiumPhosphateSolution;
+        public static Material ThoriumChlorideSolution;
+        public static Material HydroiodicAcid;
+        public static Material PotassiumChlorateSolution;
 
         // Organic Chemistry Materials
 
@@ -1944,6 +2148,21 @@ class SuSyMaterials {
         public static Material DiNHexylsulfide;
         public static Material Isopropylamine;
         public static Material PlatinumRhodium;
+        public static Material TrimethylPhosphite;
+        public static Material TwoEthylhexylIodide;
+        public static Material TriTwoEthylhexylPhosphite;
+        public static Material TwoEthylhexylPhosphonicAcidDiTwoEthylhexylEster;
+        public static Material TwoEthylhexylPhosphonicAcidMonoTwoEthylHexylEster;
+        public static Material TwoEthylOneHexene;
+        public static Material Azobisisobutyronitrile;
+        public static Material DiTwoEthylhexylphosphine;
+        public static Material DiTwoEthylhexylphosphinicAcid;
+        public static Material MethyltrioctylammoniumChloride;
+        public static Material PenteticAcid;
+        public static Material NHydroxyethylEthylenediamine;
+        public static Material NHydroxyethylEthylenediaminetriaceticAcid;
+        public static Material Pyrazine;
+
 
         // Third Degree Materials
 
@@ -1957,7 +2176,6 @@ class SuSyMaterials {
         public static Material AcetamideSolution;
         public static Material HydrazineSolution;
         public static Material EthylenediaminetetraaceticAcidSolution;
-        public static Material TetrasodiumEthylenediaminetetraacetateSolution;
         public static Material UreaSolution;
         public static Material DiiodobenzeneSolution;
         public static Material ImpureFourFourOxydianiline;
@@ -2051,11 +2269,13 @@ class SuSyMaterials {
         public static Material LithiumHydroxideMotherLiquor;
         public static Material LithiumHydroxideMonohydrate;
         public static Material IsopropylamineSolution;
+        public static Material TributylPhosphateExtractionMixture;
+        public static Material Aliquat336ExtractionMixture;
+        public static Material PolyvinylAlcoholBinder;
 
         // Thermodynamics Materials
 
         public static Material EarthlikeAir;
-        public static Material HotHighPressureSteam;
         public static Material WasteGaseousNitrogen;
         public static Material ChillyWasteGaseousNitrogen;
         public static Material SubcooledLiquidNitrogen;
@@ -2103,6 +2323,15 @@ class SuSyMaterials {
         public static Material PurifiedKryptonXenonConcentrate;
         public static Material LiquidCrudeXenon;
         public static Material OxidizedXenon;
+        public static Material HighPressureSteam;
+        public static Material HighPressureWetSteam;
+        public static Material HotPressurizedWater;
+        public static Material PressurizedWater;
+        public static Material BoilingWater;
+        public static Material HighPressureExhaustSteam;
+        public static Material HighPressureWetExhaustSteam;
+        //public static Material HighPressureHeavyWater;
+        public static Material ChilledWater;
         
 
         public static void changeFormulas() {
@@ -2115,7 +2344,8 @@ class SuSyMaterials {
                 IsotopeMaterials.register();
                 UnknownCompositionMaterials.register();
                 OreMaterials.register();
-                FirstDegreeMaterials.register();
+                FirstDegreeMaterialsA.register();
+                FirstDegreeMaterialsB.register();
                 SecondDegreeMaterials.register();
                 OrganicChemistryMaterials.register();
                 PetrochemistryMaterials.register();

@@ -20,6 +20,7 @@ DISTILLERY = recipemap('distillery')
 GRAVITY_SEPARATOR = recipemap('gravity_separator')
 ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 ROASTER = recipemap('roaster')
+TUBE_FURNACE = recipemap('tube_furnace')
 
 // Benefication
 
@@ -206,7 +207,7 @@ BR.recipeBuilder()
 
 for (highPurityCombustible in highPurityCombustibles()) {
         FLUIDIZED_BED_REACTOR.recipeBuilder()
-                .inputs(ore('dustZirconiumDioxide'))
+                .inputs(ore('dustZirconiumDioxide') * 3)
                 .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
                 .fluidInputs(fluid('chlorine') * 4000)
                 .outputs(metaitem('dustZirconiumTetrachloride') * 5)
@@ -261,4 +262,14 @@ CVD.recipeBuilder()
         .fluidOutputs(fluid('iodine') * 576)
         .duration(150)
         .EUt(Globals.voltAmps[4])
+        .buildAndRegister()
+
+// Yttria-stabilized zirconia
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(ore('dustZirconiumDioxide') * 9)
+        .inputs(ore('dustTinyYttriumOxide') * 4)
+        .outputs(metaitem('dustYttriaStabilizedZirconia') * 9) // Tetragonal (3% Y2O3)
+        .duration(20)
+        .EUt(Globals.voltAmps[1])
         .buildAndRegister()

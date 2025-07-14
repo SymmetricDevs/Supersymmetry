@@ -1,0 +1,13 @@
+name = "SuperSymmetry Refreshed"
+filename = "SuperSymmetry Refreshed 0.1_a.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "009fda135fa7f599a3257231a2632d1882986258"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6676450
+project-id = 1290857

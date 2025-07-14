@@ -1,0 +1,89 @@
+{
+  "preRequisites:11": [
+    813
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.108292354.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 1,
+        "id:8": "supercritical:fission_casing"
+      },
+      "name:8": "susy.quest.db.108292354.title"
+    }
+  },
+  "questID:3": 108292354,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "supercritical:fission_casing"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 14000,
+          "id:8": "gregtech:machine"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 14001,
+          "id:8": "gregtech:machine"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "supercritical:fission_casing"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 14002,
+          "id:8": "gregtech:machine"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 14003,
+          "id:8": "gregtech:machine"
+        },
+        "6:10": {
+          "Count:3": 1,
+          "Damage:2": 3,
+          "id:8": "supercritical:fission_casing"
+        },
+        "7:10": {
+          "Count:3": 1,
+          "Damage:2": 14004,
+          "id:8": "gregtech:machine"
+        },
+        "8:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "id:8": "supercritical:fission_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "Damage:2": 8710,
+          "id:8": "gregtech:meta_plate"
+        },
+        "1:10": {
+          "Count:3": 32,
+          "Damage:2": 8712,
+          "id:8": "gregtech:meta_stick"
+        },
+        "2:10": {
+          "Count:3": 16,
+          "Damage:2": 8711,
+          "id:8": "gregtech:meta_plate_double"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

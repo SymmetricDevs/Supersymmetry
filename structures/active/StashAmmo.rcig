@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "StashAmmo",
+  "items": [
+    {
+      "weight": 1.5121370553970337,
+      "min": 10,
+      "max": 56,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 17,
+      "max": 47,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 8,
+      "max": 24,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 8,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryOre",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 57,
+      "max": 63,
+      "item": {
+        "id": "gregtech:ore_ilmenite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 50,
+      "max": 59,
+      "item": {
+        "id": "gregtech:ore_raw_electrum_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 59,
+      "max": 64,
+      "item": {
+        "id": "gregtech:ore_chromite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 61,
+      "max": 64,
+      "item": {
+        "id": "gregtech:ore_magnetite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 46,
+      "max": 60,
+      "item": {
+        "id": "gregtech:ore_lepidolite_0",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 50,
+      "max": 54,
+      "item": {
+        "id": "susy:resource_block",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 33,
+      "max": 49,
+      "item": {
+        "id": "susy:resource_block",
+        "damage": 15,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 43,
+      "max": 61,
+      "item": {
+        "id": "gregtech:ore_fluorite_0",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

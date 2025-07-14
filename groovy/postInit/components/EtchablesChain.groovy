@@ -474,7 +474,7 @@ FORMING_PRESS.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', 1, 1, 1, 0, false)
+generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', 1, 1, 1, 10, false)
 generateEtchingRecipes('patterned.board.phenolic', 'circuit_board.good', 'copper', 1, 1, false)
 
 //PLASTIC CIRCUIT BOARD (TIER 3)
@@ -511,7 +511,7 @@ FORMING_PRESS.recipeBuilder()
         .EUt(30)
         .buildAndRegister()
 
-generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', 2, 1, 1, 0, false)
+generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', 2, 1, 1, 10, false)
 generateEtchingRecipes('patterned.board.plastic', 'circuit_board.plastic', 'copper', 2, 1, false)
 
 //NAND AND NOR

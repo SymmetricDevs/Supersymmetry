@@ -1,0 +1,33 @@
+{
+  "preRequisites:11": [
+    876,
+    649388409
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1337107364.desc",
+      "icon:10": {
+        "Damage:2": 8661,
+        "id:8": "gregtech:meta_fuel_pellet"
+      },
+      "name:8": "susy.quest.db.1337107364.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 1337107364,
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "leu_235_hexafluoride"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

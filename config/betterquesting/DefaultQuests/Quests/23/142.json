@@ -1,7 +1,9 @@
 {
   "preRequisites:11": [
     125,
-    140
+    140,
+    176,
+    145
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -9,7 +11,8 @@
       "icon:10": {
         "id:8": "minecraft:bread"
       },
-      "name:8": "susy.quest.db.142.title"
+      "name:8": "susy.quest.db.142.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 142,

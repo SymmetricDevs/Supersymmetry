@@ -1,13 +1,13 @@
 name = "GroovyScript"
-filename = "groovyscript-1.2.3.jar"
+filename = "groovyscript-1.2.5.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "95c3b408cc47ceec15af0f5193193bde5faff8c8"
+hash = "cca07a2422e451039d333cfb3eaa7a3c9515c360"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6377628
+file-id = 6695118
 project-id = 687577

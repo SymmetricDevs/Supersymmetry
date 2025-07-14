@@ -85,6 +85,7 @@ def orthomagmatic_tier_4 = [
 
 def metamorphic_tier_1 = [
     //T1
+    'gregtech:ore_graphite_0' : 5000,
     'gregtech:ore_arsenopyrite_0' : 7500,
     'gregtech:ore_cinnabar_0' : 2500,
     'gregtech:ore_cobaltite_0' : 1000,
@@ -97,7 +98,8 @@ def metamorphic_tier_1 = [
 ];
 
 def metamorphic_tier_2 = [
-        //T1
+    //T1
+    'gregtech:ore_graphite_0' : 5000,
     'gregtech:ore_arsenopyrite_0' : 7500,
     'gregtech:ore_cinnabar_0' : 2500,
     'gregtech:ore_cobaltite_0' : 1000,
@@ -114,6 +116,7 @@ def metamorphic_tier_2 = [
 
 def metamorphic_tier_3 = [
     //T1
+    'gregtech:ore_graphite_0' : 5000,
     'gregtech:ore_arsenopyrite_0' : 7500,
     'gregtech:ore_cinnabar_0' : 2500,
     'gregtech:ore_cobaltite_0' : 1000,
@@ -176,13 +179,13 @@ def sedimentary_tier_3 = [
     'gregtech:ore_magnesite_0' : 2000,
     //T3
     'gregtech:ore_ilmenite_0' : 1000,
-    //'susy:resource_block:1' : 10000,
+    'susy:resource_block:1' : 1000,
     'gregtech:ore_celestine_0' : 500,
     'gregtech:ore_barite_0' : 2500,
 ];
 
 def sedimentary_tier_4 = [
-        //T1
+    //T1
     'gregtech:ore_banded_iron_0' : 7500,
     'gregtech:ore_cinnabar_0' : 2000,
     'susy:resource_block:15' : 5000,
@@ -197,7 +200,7 @@ def sedimentary_tier_4 = [
     'gregtech:ore_magnesite_0' : 2000,
     //T3
     'gregtech:ore_ilmenite_0' : 1000,
-    //'susy:resource_block:1' : 10000,
+    'susy:resource_block:1' : 1000,
     'gregtech:ore_celestine_0' : 500,
     'gregtech:ore_barite_0' : 2500,
     //T4
@@ -245,7 +248,7 @@ def magmatic_hydrothermal_tier_3 = [
 ];
 
 def magmatic_hydrothermal_tier_4 = [
-            //T1 but better
+    //T1 but better
     'gregtech:ore_cassiterite_0' : 7500,
     'gregtech:ore_chalcopyrite_0' : 5500,
     'gregtech:ore_cobaltite_0' : 5000,
@@ -259,8 +262,10 @@ def magmatic_hydrothermal_tier_4 = [
     'gregtech:ore_scheelite_0' : 1250,
     'gregtech:ore_wolframite_0' : 1000,
     //T4
-    //'susy:resource_block:7' : 10000,
+
+    'gregtech:ore_bastnasite_0' : 2500,
     'gregtech:ore_pitchblende_0' : 500
+
 ];
 
 def hydrothermal_tier_1 = [
@@ -342,10 +347,9 @@ def hydrothermal_tier_4 = [
     //T3
     'gregtech:ore_witherite_0' : 2500,
     'gregtech:ore_bismuthinite_0' : 7500,
-    'gregtech:ore_pitchblende_0' : 1000
+    'gregtech:ore_pitchblende_0' : 1000,
+    'gregtech:ore_bertrandite_0' : 1000
     //'gregtech:ore_strontianite_0' : 10000 TODO: Fix #971
-    //T4
-    //'susy:resource_block:9' : 10000,
 ];
 
 def alluvial_tier_1 = [
@@ -379,7 +383,7 @@ def alluvial_tier_4 = [
     'susy:resource_block:11' : 10000,
     //T4
     'minecraft:soul_sand' : 100,
-    'susy:resource_block:6' : 7500
+    'susy:resource_block:6' : 1000
 ];
 
 //FORMAT: BASE ROCK, WASHING FLUID, WASTE FLUID, ORE OUTPUT LISTS, STARTING VOLTAGE TIER

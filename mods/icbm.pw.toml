@@ -1,13 +1,13 @@
 name = "ICBM - Interconnected Block Missiles"
-filename = "ICBM-classic-1.12.2-6.5.3.jar"
+filename = "ICBM-classic-1.12.2-6.5.4.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "931c9f43bd45831b220dbb41cb646c5db3ae475c"
+hash = "81d597d39abb5f88f0b11780c48b7378e948224f"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6420985
+file-id = 6496624
 project-id = 244451

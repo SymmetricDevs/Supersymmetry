@@ -461,7 +461,7 @@ public class OreMaterials{
                 .color(0x524728)
                 .components(Silver, Chlorine)
                 .build();
-
+ 
         Columbite = new Material.Builder(7060, SuSyUtility.susyId('columbite'))
                 .ore().dust().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293)).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
                 .color(0x574f2f)
@@ -510,14 +510,16 @@ public class OreMaterials{
                 .color(0x9c973e)
                 .components(Yttrium, Calcium, Cerium, Thorium, Niobium, Tantalum, Titanium, Oxygen * 6)
                 .build()
-                .setFormula('(Y,Ca,Ce,U,Th)(Nb,Ta,Ti)2O6', true);
+                .setFormula('(REE,U,Th)(Nb,Ta,Ti)2O6', true);
 
         Xenotime = new Material.Builder(7067, SuSyUtility.susyId('xenotime'))
                 .dust()
                 .iconSet(SHINY)
+                .flags(GENERATE_CONCENTRATE)
                 .color(0x6e572e)
                 .components(Yttrium, Phosphorus, Oxygen * 4)
-                .build();
+                .build()
+                .setFormula('(REE)PO4', true);
 
         Caliche = new Material.Builder(7068, SuSyUtility.susyId('caliche'))
                 .dust()
@@ -633,5 +635,15 @@ public class OreMaterials{
                 .flags(NO_UNIFICATION)
                 .color(0x644646)
                 .build();
+
+        Bertrandite = new Material.Builder(7086, SuSyUtility.susyId("bertrandite"))
+                .dust().ore()
+                .flags(NO_SMELTING)
+                .iconSet(SHINY)
+                .color(0x3a1682)
+                .components(Beryllium * 4, Silicon * 2, Hydrogen * 2, Oxygen * 9)
+                .build()
+        
+        Bertrandite.setFormula('Be4Si2O7(OH)2', true);
     }
 }

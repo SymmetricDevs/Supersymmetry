@@ -9,7 +9,8 @@
       "icon:10": {
         "id:8": "industrialrenewal:steam"
       },
-      "name:8": "susy.quest.db.326901357.title"
+      "name:8": "susy.quest.db.326901357.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 326901357,

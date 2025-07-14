@@ -104,24 +104,6 @@ CRYSTALLIZER.recipeBuilder()
 .EUt(Globals.voltAmps[1])
 .buildAndRegister()
 
-//PBN CRUCIBLE
-CVD.recipeBuilder()
-.fluidInputs(fluid('boron_trichloride') * 1000)
-.fluidInputs(fluid('ammonia') * 1000)
-.outputs(metaitem('dustBoronNitride') * 2)
-.fluidOutputs(fluid('hydrogen_chloride') * 3000)
-.duration(120)
-.EUt(Globals.voltAmps[1])
-.buildAndRegister()
-
-FORMINGPRESS.recipeBuilder()
-.inputs(ore('dustBoronNitride') * 14)
-.notConsumable(metaitem('shape.mold.crucible'))
-.outputs(metaitem('crucible.boron.nitride'))
-.duration(500)
-.EUt(Globals.voltAmps[1])
-.buildAndRegister()
-
 //CRYSTALLIZATION
 CRYSTALLIZER.recipeBuilder()
 .circuitMeta(1)

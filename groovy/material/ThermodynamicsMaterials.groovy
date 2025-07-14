@@ -18,6 +18,9 @@ import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 
+import supercritical.api.unification.material.properties.CoolantProperty;
+import supercritical.api.unification.material.properties.SCPropertyKey;
+
 class ThermodynamicsMaterials {
 
 
@@ -315,10 +318,7 @@ class ThermodynamicsMaterials {
                 .color(0x8fbfe3)
                 .build();
 
-        HotHighPressureSteam = new Material.Builder(22801, SuSyUtility.susyId("hot_hp_steam"))
-                .gas(new FluidBuilder().temperature(1200))
-                .color(0xffffff)
-                .build();
+        // FREE ID: 22801
 
         WasteGaseousNitrogen = new Material.Builder(22807, SuSyUtility.susyId("waste_gaseous_nitrogen"))
                 .gas()
@@ -562,5 +562,70 @@ class ThermodynamicsMaterials {
                 .gas(new FluidBuilder().temperature(180))
                 .color(0x0af0f7)
                 .build()
+
+        HighPressureSteam = new Material.Builder(22859, SuSyUtility.susyId("hp_steam"))
+                .gas(new FluidBuilder().temperature(558))
+                .color(0xffffff)
+                .components(Steam)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+
+        HighPressureWetSteam = new Material.Builder(22860, SuSyUtility.susyId("hp_wet_steam"))
+                .gas(new FluidBuilder().temperature(558))
+                .color(0xa7b6e8)
+                .components(Steam)
+                .build();
+
+        HotPressurizedWater = new Material.Builder(22861, SuSyUtility.susyId("hot_pressurized_water"))
+                .liquid(new FluidBuilder().temperature(588))
+                .color(0x183fc4)
+                .build();
+
+        PressurizedWater = new Material.Builder(22862, SuSyUtility.susyId("pressurized_water"))
+                .liquid(new FluidBuilder().temperature(548))
+                .color(0x0a2ca1)
+                .build();
+
+        PressurizedWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(PressurizedWater, HotPressurizedWater, FluidStorageKeys.LIQUID, 1, 1000, 588, 2260000, 4184).setAccumulatesHydrogen(true));
+        // per mole, 2,427,360J absorbed --> 359,946EU/mol
+
+
+        BoilingWater = new Material.Builder(22863, SuSyUtility.susyId("boiling_water"))
+                .liquid(new FluidBuilder().temperature(548))
+                .color(0x7585bd)
+                .build();
+
+        BoilingWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(BoilingWater, HighPressureWetSteam, FluidStorageKeys.LIQUID, 1, 1000, 558, 2260000, 4184).setAccumulatesHydrogen(true));
+        // per mole, 2,301,840J absorbed --> 341,333 EU/mol
+
+        HighPressureExhaustSteam = new Material.Builder(22864, SuSyUtility.susyId("hp_exhaust_steam"))
+                .gas(new FluidBuilder().temperature(558))
+                .color(0xc9cbd1)
+                .components(Steam)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+
+        HighPressureWetExhaustSteam = new Material.Builder(22865, SuSyUtility.susyId("hp_wet_exhaust_steam"))
+                .gas(new FluidBuilder().temperature(558))
+                .color(0xa6abbd)
+                .components(Steam)
+                .build();
+
+        /*HighPressureHeavyWater = new Material.Builder(22866, SuSyUtility.susyId("hp_heavy_water"))
+                .gas(new FluidBuilder().temperature(500))
+                .color(0xccd9f0)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Deuterium, 2, Oxygen, 1)
+                .build();
+                
+        HeavyWater.setProperty(SCPropertyKey.COOLANT,
+            new CoolantProperty(HeavyWater, HighPressureHeavyWater, FluidStorageKeys.LIQUID, 4., 1000,
+                374.4, 2064000, 4228.)
+                    .setAccumulatesHydrogen(true));*/
+
+        ChilledWater = new Material.Builder(22867, SuSyUtility.susyId("chilled_water"))
+                .liquid(new FluidBuilder().temperature(283))
+                .color(0x6da2ed)
+                .build();
     }
 }

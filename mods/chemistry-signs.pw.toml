@@ -1,0 +1,13 @@
+name = "Chemistry Signs"
+filename = "chem_signs-1.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "47c38d963c8d7c5f6a0fc38eeabd4fc688215309"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6586540
+project-id = 1269800

@@ -20,6 +20,7 @@ index.toml
 *.log
 *.txt
 *.dll
+*.so
 
 build/modlist.*
 config/InvTweaks.cfg
@@ -99,8 +100,9 @@ visualores/
 .idea/workspace.xml
 servers.dat
 mods/*.jar
-/mods/1.12.2
+/mods/1.12.2/*.jar
 /mods/memory_repo
-/resourcepacks
 vintagefix/transformerCache/jarDiscoverer.cache
 /journeymap
+hotbar.nbt
+/resourcepacks

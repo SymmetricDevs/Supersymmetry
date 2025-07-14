@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryTurretAmmo",
+  "items": [
+    {
+      "weight": 0.646636426448822,
+      "min": 5,
+      "max": 15,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 30,
+      "max": 43,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 18,
+      "max": 32,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 8,
+      "max": 17,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 3,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

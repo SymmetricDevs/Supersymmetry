@@ -1,0 +1,22 @@
+{
+  "preRequisites:11": [
+    954692491,
+    1344588484
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.969248866.desc",
+      "icon:10": {
+        "Damage:2": 32,
+        "id:8": "projectred-integration:gate"
+      },
+      "name:8": "susy.quest.db.969248866.title"
+    }
+  },
+  "questID:3": 969248866,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

@@ -86,7 +86,7 @@ for (combustible in combustibles()) {
 
 //MPLC CHLORINATION
 REACTION_FURNACE.recipeBuilder()
-        .inputs(ore('dustMagnesite') * 5)
+        .inputs(ore('dustMagnesite') * 1)
         .fluidInputs(fluid('carbon_monoxide') * 1000)
         .fluidInputs(fluid('chlorine') * 2000)
         .outputs(metaitem('dustMagnesiumChloride') * 3)

@@ -21,7 +21,7 @@
         "0:10": {
           "Count:3": 1,
           "Damage:2": 39,
-          "id:8": "gregtech:meta_dust_tiny"
+          "id:8": "gregtech:meta_dust"
         }
       },
       "taskID:8": "bq_standard:retrieval"

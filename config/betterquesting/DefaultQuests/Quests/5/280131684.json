@@ -1,0 +1,37 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    1,
+    1
+  ],
+  "preRequisites:11": [
+    977680348,
+    801,
+    797
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.280131684.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 3,
+        "id:8": "gregtech:wire_coil"
+      },
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.280131684.title"
+    }
+  },
+  "questID:3": 280131684,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "Damage:2": 3,
+          "id:8": "gregtech:wire_coil"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

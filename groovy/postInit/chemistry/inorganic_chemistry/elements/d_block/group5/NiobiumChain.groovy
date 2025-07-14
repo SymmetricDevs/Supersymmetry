@@ -110,7 +110,7 @@ REACTION_FURNACE.recipeBuilder() // Impure Niobium Pentachloride
     .notConsumable(fluid('salt') * 1440)
     .notConsumable(fluid('iron_iii_chloride') * 1440)
     .fluidOutputs(fluid('iron_iii_chloride') * 576)
-    .fluidOutputs(fluid('impure_niobium_pentachloride') * 8000)
+    .fluidOutputs(fluid('impure_niobium_pentachloride') * 4000)
     .duration(400)
     .EUt(Globals.voltAmps[4])
     .buildAndRegister()

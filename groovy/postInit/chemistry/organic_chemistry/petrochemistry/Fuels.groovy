@@ -457,6 +457,7 @@ mods.gregtech.blender.removeByInput(480, null, [fluid('bio_diesel') * 1000, flui
 // Cetane-Boosted Diesel * 1000
 mods.gregtech.mixer.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
 mods.gregtech.blender.removeByInput(480, null, [fluid('diesel') * 1000, fluid('tetranitromethane') * 20])
+
 for (major_solvent in major_solvents) {
     for (minor_solvent in minor_solvents) {
         BLENDER.recipeBuilder()

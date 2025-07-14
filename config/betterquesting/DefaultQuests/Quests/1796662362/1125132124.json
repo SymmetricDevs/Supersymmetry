@@ -1,0 +1,28 @@
+{
+  "preRequisites:11": [
+    1821654157
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1125132124.desc",
+      "icon:10": {
+        "Damage:2": 17,
+        "id:8": "projectred-transmission:wire"
+      },
+      "name:8": "susy.quest.db.1125132124.title"
+    }
+  },
+  "questID:3": 1125132124,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 17,
+          "id:8": "projectred-transmission:wire"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryTech",
+  "items": [
+    {
+      "weight": 1.0068187713623047,
+      "min": 14,
+      "max": 28,
+      "item": {
+        "id": "appliedenergistics2:part",
+        "damage": 36,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 235,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:drive",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 220,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 737,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 1800000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 448,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 1600000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 27,
+      "max": 44,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 5909,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.1442086547613144,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:gt_armor",
+        "damage": 1,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 80000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 214,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 10000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 25,
+      "max": 46,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 566,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 29,
+      "max": 53,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 627,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "rftools:storage_module",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:storage_cell_1k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 18,
+      "max": 36,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 575,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 17,
+      "max": 35,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 628,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 13,
+      "max": 32,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 629,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 630,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 631,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:storage_cell_4k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:fluid_storage_cell_1k",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 23,
+      "max": 46,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 523,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 23,
+      "max": 46,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 524,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 22,
+      "max": 46,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 525,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 23,
+      "max": 46,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 526,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 23,
+      "max": 46,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 527,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "opencomputers:component",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "opencomputers:component",
+        "damage": 10,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "opencomputers:component",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 8.315798913827166E-5,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:energy_acceptor",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

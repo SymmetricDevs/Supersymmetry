@@ -1,0 +1,13 @@
+name = "No Mob Friendly Fire"
+filename = "no_mob_friendly_fire-1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1989ceeb0cf5e71b2944136de610b8d7ee218817"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5159239
+project-id = 983129

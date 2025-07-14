@@ -1,0 +1,217 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryFood",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 62,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 64,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 192,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 14,
+      "max": 34,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 129,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 12,
+      "max": 26,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 220,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 9,
+      "max": 17,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 72,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 5,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 90,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 70,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 203,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 204,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 10,
+      "max": 24,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 210,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 4,
+      "max": 9,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 139,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 137,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 4,
+      "max": 13,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 151,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 3,
+      "max": 9,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 157,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 3,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 146,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 195,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 11,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 167,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 172,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 3,
+      "max": 9,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 173,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

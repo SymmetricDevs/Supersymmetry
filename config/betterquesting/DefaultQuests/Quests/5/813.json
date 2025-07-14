@@ -5,7 +5,9 @@
     801,
     803,
     797,
-    815
+    815,
+    90454916,
+    336324327
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -15,7 +17,6 @@
         "Damage:2": 3003,
         "id:8": "gregtech:meta_ingot"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.813.title"
     }
   },

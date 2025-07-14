@@ -63,7 +63,5 @@ public class IsotopeMaterials {
             .build();
 
         WeaponsGradeUranium.setFormula("U", true)
-
     }
-
 }

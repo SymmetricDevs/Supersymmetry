@@ -7,12 +7,14 @@ import gregtech.api.GregTechAPI;
 import gregtech.api.fluids.attribute.FluidAttributes;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.properties.*
+import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 
 import supersymmetry.api.util.SuSyUtility;
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
+import gregtech.api.unification.material.properties.BlastProperty.GasTier;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*;
 
@@ -52,11 +54,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        CalciumChlorideSolution = new Material.Builder(13005, SuSyUtility.susyId('calcium_chloride_solution'))
-                .liquid()
-                .components(CalciumChloride * 1, Water * 1)
-                .colorAverage()
-                .build();
+        // FREE ID: 13005
 
         SodaAshSolution = new Material.Builder(13006, SuSyUtility.susyId('soda_ash_solution'))
                 .liquid()
@@ -406,7 +404,7 @@ public class SecondDegreeMaterials {
 
         SodiumDichromateSolution = new Material.Builder(13063, SuSyUtility.susyId('sodium_dichromate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(SodiumDichromate * 1, Water * 1, SulfuricAcid * 1)
+                .components(SodiumDichromate * 1, SodiumSulfate * 1, Water * 2)
                 .color(0xe0912f)
                 .build();
 
@@ -774,7 +772,13 @@ public class SecondDegreeMaterials {
 
         TetraamminepalladiumDichlorideSolution.setFormula("([Pd(NH3)4]Cl2)(H2O)4", true)
 
-        // FREE ID: 13122-13129
+        AmmoniumBisulfateSolution = new Material.Builder(13122, SuSyUtility.susyId("ammonium_bisulfate_solution"))
+                .liquid()
+                .components(AmmoniumBisulfate, Water)
+                .colorAverage()
+                .build();
+
+        // FREE ID: 13129
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -804,15 +808,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        // FREE ID: 13134
-
-        PotassiumPersulfateSolution = new Material.Builder(13135, SuSyUtility.susyId('potassium_persulfate_solution'))
-                .fluid()
-                .components(PotassiumPersulfate * 1, Water * 1)
-                .colorAverage()
-                .build();
-
-        PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
+        // FREE ID: 13134-13135
 
         SodiumHydrosulfideSolution = new Material.Builder(13136, SuSyUtility.susyId('sodium_hydrosulfide_solution'))
                 .fluid()
@@ -855,5 +851,101 @@ public class SecondDegreeMaterials {
                 .flags(GENERATE_FINE_WIRE)
                 .blastTemp(2113, GasTier.MID)
                 .build()
+
+        CopperIIChlorideSolution = new Material.Builder(13142, SuSyUtility.susyId('copper_ii_chloride_solution'))
+                .liquid()
+                .components(CopperIIChloride, Water)
+                .colorAverage()
+                .build()
+
+        AmmoniumCarbonateSolution = new Material.Builder(13143, SuSyUtility.susyId('ammonium_carbonate_solution'))
+                .liquid()
+                .components(AmmoniumCarbonate, Water)
+                .colorAverage()
+                .build();
+
+        PotassiumPersulfateSolution = new Material.Builder(13144, SuSyUtility.susyId('potassium_persulfate_solution'))
+                .liquid()
+                .components(PotassiumPersulfate, Water * 2)
+                .colorAverage()
+                .build();
+
+        AmmoniumPersulfateSolution = new Material.Builder(13145, SuSyUtility.susyId('ammonium_persulfate_solution'))
+                .liquid()
+                .components(AmmoniumPersulfate, Water * 2)
+                .colorAverage()
+                .build();
+
+        YttriumChlorideSolution = new Material.Builder(13146, SuSyUtility.susyId('yttrium_chloride_solution'))
+                .liquid()
+                .components(YttriumChloride, Water * 6)
+                .colorAverage()
+                .build();
+
+        LanthanumNitrateSolution = new Material.Builder(13147, SuSyUtility.susyId('lanthanum_nitrate_solution'))
+                .liquid()
+                .components(LanthanumNitrate, Water)
+                .colorAverage()
+                .build();
+
+        CeriumIIIChlorideSolution = new Material.Builder(13148, SuSyUtility.susyId('cerium_iii_chloride_solution'))
+                .liquid()
+                .components(CeriumIIIChloride, Water * 8)
+                .colorAverage()
+                .build();
+
+        PraseodymiumIIINitrateSolution = new Material.Builder(13149, SuSyUtility.susyId('praseodymium_iii_nitrate_solution'))
+                .liquid()
+                .components(PraseodymiumIIINitrate, Water)
+                .colorAverage()
+                .build();
+
+        GadoliniumChlorideSolution = new Material.Builder(13150, SuSyUtility.susyId('gadolinium_chloride_solution'))
+                .liquid()
+                .components(GadoliniumChloride * 8, Water * 29)
+                .colorAverage()
+                .build();
+
+        DysprosiumChlorideSolution = new Material.Builder(13151, SuSyUtility.susyId('dysprosium_chloride_solution'))
+                .liquid()
+                .components(DysprosiumChloride, Water * 6)
+                .colorAverage()
+                .build();
+
+        HolmiumChlorideSolution = new Material.Builder(13152, SuSyUtility.susyId('holmium_chloride_solution'))
+                .liquid()
+                .components(HolmiumChloride, Water * 6)
+                .colorAverage()
+                .build();
+
+        ErbiumSulfateSolution = new Material.Builder(13153, SuSyUtility.susyId('erbium_sulfate_solution'))
+                .liquid()
+                .components(ErbiumSulfate, Water * 3)
+                .colorAverage()
+                .build();
+
+        SodiumPhosphateSolution = new Material.Builder(13154, SuSyUtility.susyId('sodium_phosphate_solution'))
+                .liquid()
+                .components(SodiumPhosphate, Water)
+                .colorAverage()
+                .build();
+
+        ThoriumChlorideSolution = new Material.Builder(13155, SuSyUtility.susyId('thorium_chloride_solution'))
+                .liquid()
+                .components(ThoriumChloride, Water * 6)
+                .colorAverage()
+                .build();
+
+        HydroiodicAcid = new Material.Builder(13156, SuSyUtility.susyId('hydroiodic_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(HydrogenIodide, Water)
+                .colorAverage()
+                .build();
+                
+        PotassiumChlorateSolution = new Material.Builder(13157, SuSyUtility.susyId('potassium_chlorate_solution'))
+                .liquid()
+                .components(PotassiumChlorate, Water)
+                .colorAverage()
+                .build();
     }
 }
