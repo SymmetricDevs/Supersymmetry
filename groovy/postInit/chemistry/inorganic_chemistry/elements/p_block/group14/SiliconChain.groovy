@@ -21,7 +21,7 @@ def FBR = recipemap('fixed_bed_reactor')
 def SINTERING_RECIPES = recipemap("sintering_oven")
 def EBF = recipemap('electric_blast_furnace')
 def CHEMICAL_BATH = recipemap('chemical_bath')
-def POLISHING_MACHINE = recipemap('polishing_machine')
+def WAFER_SPINNER = recipemap('wafer_spinner')
 def CSTR = recipemap('continuous_stirred_tank_reactor')
 
 // Silicon Carbide Plate * 1
@@ -239,7 +239,7 @@ MIXER.recipeBuilder()
         .EUt(64)
         .buildAndRegister()
 
-POLISHING_MACHINE.recipeBuilder()
+WAFER_SPINNER.recipeBuilder()
         .inputs(metaitem('wafer.treated.silicon'))
         .fluidInputs(fluid('silicon_dioxide_slurry') * 50)
         .outputs(metaitem('wafer.silicon'))

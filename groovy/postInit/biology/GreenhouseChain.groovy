@@ -147,6 +147,16 @@ MIXER.recipeBuilder()
         .duration(60)
         .buildAndRegister()
 
+// 2-(Methylthio)phenol from MAPDST-MMA copolyer chain
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('two_methylthio_phenol') * 10)
+    .fluidInputs(fluid('gtfo_sodium_stearate') * 10)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('pesticide') * 1000)
+    .EUt(30)
+    .duration(60)
+    .buildAndRegister()
+
 // GREENHOUSE GASES
 
 MIXER.recipeBuilder()

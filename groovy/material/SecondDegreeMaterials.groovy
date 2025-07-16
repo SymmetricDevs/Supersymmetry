@@ -8,6 +8,7 @@ import gregtech.api.fluids.attribute.FluidAttributes;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.properties.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier;
+import gregtech.api.GTValues;
 
 import supersymmetry.api.util.SuSyUtility;
 
@@ -971,5 +972,19 @@ public class SecondDegreeMaterials {
                 .components(BariumNitrate, Water)
                 .colorAverage()
                 .build();
+
+        TitaniumSiliconAlkoxideEthanolSolution = new Material.Builder(13162, SuSyUtility.susyId('titanium_silicon_alkoxide_ethanol_solution'))
+                .liquid()
+                .color(0x6c8032)
+                .build();
+
+        TitaniumDopedSilicaGlass = new Material.Builder(13163, SuSyUtility.susyId('titanium_doped_silica_glass'))
+                .dust()
+                .iconSet(GLASS)
+                .flags(GENERATE_PLATE, EXCLUDE_BLOCK_CRAFTING_RECIPES, NO_UNIFICATION)
+                .components(TitaniumDioxide * 1, SiliconDioxide * 15)
+                .color(0xfad2f5)
+                .build();
+        TitaniumDopedSilicaGlass.setFormula("(TiO2)(SiO2)15", true);
     }
 }

@@ -756,6 +756,7 @@ class SuSyMaterials {
         public static Material ReextractedReprocessedUraniumExtract;
         public static Material PentaerythritolSolution;
         public static Material CrudePentaerythritolTetranitrate;
+        public static Material CO2LaserMixture;
 
         // Petrochem Materials
 
@@ -1552,6 +1553,26 @@ class SuSyMaterials {
         public static Material MixedOxideFuel;
         public static Material DilutedAcetone;
         public static Material BariumNitrate;
+        public static Material SodiumIodide;
+        public static Material SulfatedTitania;
+        public static Material YttriumTrifluoride;
+        public static Material AluminiumNitrate;
+        public static Material AluminiumNitrateSolution;
+        public static Material YttriumNitrate;
+        public static Material YttriumNitrateSolution;
+        public static Material NeodymiumNitrate;
+        public static Material NeodymiumNitrateSolution;
+        public static Material AluminiumYttriumNeodymiumNitrateSolution;
+        public static Material AmmoniumBicarbonate;
+        public static Material AmmoniumBicarbonateSolution;
+        public static Material NdYagSuspensionSolution;
+        public static Material NdYagPrecursor;
+        public static Material NdYagCeramic;
+        public static Material NdYagGreenBody;
+        public static Material RawNdYag;
+        public static Material ZincSelenide;
+        public static Material YtterbiumFluoride;
+        public static Material BorosilicateCrownGlass;
 
         // HP Materials
 
@@ -1771,6 +1792,8 @@ class SuSyMaterials {
         public static Material SodiumNitriteSolution;
         public static Material PlutoniumReductionSolution;
         public static Material BariumNitrateSolution;
+        public static Material TitaniumSiliconAlkoxideEthanolSolution;
+        public static Material TitaniumDopedSilicaGlass;
 
         // Organic Chemistry Materials
 
@@ -2210,7 +2233,67 @@ class SuSyMaterials {
         public static Material Pyrazine;
         public static Material Pentaerythritol;
         public static Material PentaerythritolTetranitrate;
-        public static Material RDX;
+        public static Material RDX;        
+        public static Material DimethylSulfide; 
+        public static Material ChlorosulfanicAcid; 
+        public static Material MethacryloylChloride; 
+        public static Material HydrolyzedChlorosulfuricAcid;
+        public static Material AluminiumPhenoxide; 
+        public static Material TwoFourMethylthioPhenolMixture; 
+        public static Material TwoMethylthioPhenol; 
+        public static Material FourMethylthioPhenol; 
+        public static Material EthylSulfate; 
+        public static Material AcidicEthylSulfate;
+        public static Material DiethylSulfate; 
+        public static Material Diisopropylethylamine; 
+        public static Material TrifluoromethanesulfonicAcid; 
+        public static Material SilverTrifluoromethanesulfonateSolution; 
+        public static Material SilverTrifluoromethanesulfonate; 
+        public static Material FourMethylthioPhenylMethacrylate; 
+        public static Material DiisopropylethylamineHydrochloride; 
+        public static Material FourMethylthioPhenolMethacrylateReactionMixture; 
+        public static Material CrudeFourMethylthioPhenylMethacrylate; 
+        public static Material RutheniumOxideAluminaCatalyst; 
+        public static Material RutheniumOxideAluminaCatalystSolution; 
+        public static Material Iodomethane; 
+        public static Material Acetonitrile; 
+        public static Material SilverIodide; 
+        public static Material MAPDST; 
+        public static Material CrudeMAPDSTAcetonitrileSolution; 
+        public static Material CrudeMAPDST; 
+        public static Material MapdstMmaCopolymer; 
+        public static Material RoughMapdstMmaCopolymerSolution; 
+        public static Material MapdstMmaCopolymerWaste; 
+        public static Material CrudeMapdstMmaCopolymer; 
+        public static Material CrudeMapdstMmaCopolymerSolution; 
+        public static Material DiethylEtherMethanolMix; 
+        public static Material MapdstMmaCopolymerPhotoresist;
+        public static Material Paraformaldehyde;
+        public static Material PotassiumTertButylate;
+        public static Material CalixFourArene;
+        public static Material CrudeCalixFourArene;
+        public static Material FilteredCalixFourAreneSolution;
+        public static Material PyridiniumChloride;
+        public static Material CalixFourArenePrecipitatedSolution;
+        public static Material CalixFourAreneWaste;
+        public static Material TetramethoxycalixFourArene;
+        public static Material CrudeTetramethoxycalixFourArene;
+        public static Material TetramethoxycalixFourAreneExtract;
+        public static Material DMFTHFMix;
+        public static Material Dioxane;
+        public static Material CMCFour;
+        public static Material CrudeCMCFour;
+        public static Material CMCFourReactionMix;
+        public static Material HeatedCMCFourReactionMix;
+        public static Material CMCFourWaste;
+        public static Material CMCFourExtract;
+        public static Material PropyleneGlycolMethylEther;
+        public static Material PGMEA;
+        public static Material PGMEACatalyticSolution;
+        public static Material CMCFourPhotoresist;
+        public static Material TitaniumTetraisopropoxide;
+        public static Material TitaniumTetraisopropoxideSolution;
+        public static Material Tetraethoxysilane;
 
         // Third Degree Materials
 
@@ -2386,11 +2469,6 @@ class SuSyMaterials {
         public static Material ChilledWater;
         
 
-        public static void changeFormulas() {
-            log.infoMC("Changing Formulas!");
-            Phosphorus.setFormula("P4", true);
-        }
-
         public static void init() {
                 ElementMaterials.register();
                 IsotopeMaterials.register();
@@ -2403,6 +2481,5 @@ class SuSyMaterials {
                 PetrochemistryMaterials.register();
                 ThirdDegreeMaterials.register();
                 ThermodynamicsMaterials.register();
-                changeFormulas();
         }
 }

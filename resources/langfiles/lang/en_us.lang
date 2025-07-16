@@ -2282,6 +2282,27 @@ susy.material.nitric_oxide_rich_air=Nitric Oxide-Rich Air
 susy.material.potassium_iodate=Potassium Iodate
 susy.material.alnico=Alnico
 susy.material.alnico_magnetic=Magnetic Alnico
+susy.material.sodium_iodide=Sodoum Iodide
+susy.material.sulfated_titania=Sulfated Titania
+susy.material.yttrium_trifluoride=Yttrium Trifluoride
+susy.material.aluminium_nitrate=Aluminium Nitrate
+susy.material.aluminium_nitrate_solution=Aluminium Nitrate Solution
+susy.material.yttrium_nitrate=Yttrium Nitrate
+susy.material.yttrium_nitrate_solution=Yttrium Nitrate Solution
+susy.material.neodymium_nitrate=Neodymium Nitrate
+susy.material.neodymium_nitrate_solution=Neodymium Nitrate Solution
+susy.material.aluminium_yttrium_neodymium_nitrate_solution=Aluminium-Yttrium-Neodymium Nitrate Solution
+susy.material.ammonium_bicarbonate=Ammonium Bicarbonate
+susy.material.ammonium_bicarbonate_solution=Ammonium Bicarbonate Solution
+susy.material.nd_yag_suspension_solution=Nd:YAG Precursor Suspension Solution 
+susy.material.nd_yag_precursor=Nd:YAG Precursor
+susy.material.nd_yag_ceramic=Ceramic Nd:YAG
+susy.material.nd_yag_green_body=Ceramic Nd:YAG Green Body
+susy.material.raw_nd_yag=Raw Nd:YAG
+susy.material.zinc_selenide=Zinc Selenide
+susy.material.ytterbium_fluoride=Ytterbium Fluoride
+susy.material.borosilicate_crown_glass=Borosilicate Crown Glass
+susy.material.carbon_dioxide_laser_mixture=Carbon Dioxide Laser Mixture
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.potassium_chlorate=Potassium Chlorate
@@ -2345,6 +2366,65 @@ susy.material.methyltrioctylammonium_chloride=Methyltrioctylammonium Chloride
 susy.material.pentetic_acid=Pentetic Acid
 susy.material.n_hydroxyethyl_ethylenediamine=N-Hydroxyethyl Ethylenediamine
 susy.material.n_hydroxyethyl_ethylenediaminetriacetic_acid=N-Hydroxyethyl Ethylenediaminetriacetic Acid
+susy.material.dimethyl_sulfide=Dimethyl Sulfide
+susy.material.chlorosulfanic_acid=Chlorosulfanic acid
+susy.material.methacryloyl_chloride=Methacryloyl Chloride
+susy.material.hydrolyzed_chlorosulfuric_acid=Hydrolyzed Chlorosulfuric Acid
+susy.material.two_four_methylthio_phenol_mixture=2/4-(Methylthio)phenol Mixture
+susy.material.two_methylthio_phenol=2-(Methylthio)phenol
+susy.material.four_methylthio_phenol=4-(Methylthio)phenol
+susy.material.ethyl_sulfate=Ethyl Sulfate
+susy.material.acidic_ethyl_sulfate=Acidic Ethyl Sulfate
+susy.material.diethyl_sulfate=Diethyl Sulfate
+susy.material.diisopropylethylamine=N,N-Diisopropylethylamine (DIPEA)
+susy.material.trifluoromethanesulfonic_acid=Trifluoromethanesulfonic Acid
+susy.material.silver_trifluoromethanesulfonate_solution=Silver Trifluoromethanesulfonate Solution
+susy.material.silver_trifluoromethanesulfonate=Silver Trifluoromethanesulfonate
+susy.material.four_methylthio_phenol_methacrylate_reaction_mixture=4-(methylthio)phenyl Methacrylate Reaction Mixture
+susy.material.four_methylthio_phenyl_methacrylate=4-(methylthio)phenyl Methacrylate
+susy.material.diisopropylethylamine_hydrochloride=DIPEA Hydrochloride
+susy.material.crude_four_methylthio_phenyl_methacrylate=Crude 4-(methylthio)phenyl Methacrylate
+susy.material.ruthenium_oxide_alumina_catalyst=Ruthenium Oxide-Alumina Catalyst
+susy.material.ruthenium_oxide_alumina_catalyst_solution=Ruthenium Oxide-Alumina Catalyst Solution
+susy.material.iodomethane=Iodomethane
+susy.material.acetonitrile=Acetonitrile
+susy.material.silver_iodide=Silver Iodide
+susy.material.mapdst=Dimethyl-(4-methacryloyloxy)phenylsulfonium Triflate (MAPDST)
+susy.material.crude_mapdst_acetonitrile_solution=Crude MAPDST Acetonitrile Solution
+susy.material.crude_mapdst=Crude MAPDST
+susy.material.mapdst_mma_copolymer=MAPDST-MMA Copolymer
+susy.material.mapdst_mma_copolymer_waste=MAPDST-MMA Copolymerization Waste
+susy.material.crude_mapdst_mma_copolymer=Crude MAPDST-MMA Copolymer
+susy.material.crude_mapdst_mma_copolymer_solution=Crude MAPDST-MMA Copolymer Solution
+susy.material.diethyl_ether_methanol_mix=Diethyl Ether Methanol Mix
+susy.material.mapdst_mma_photoresist=MAPDST-MMA Copolymer Photoresist
+susy.material.paraformaldehyde=Paraformaldehyde
+susy.material.potassium_tert_butylate=Potassium tert-Butylate
+susy.material.calix_four_arene=25,26,27,28-Tetrahydroxycalix[4]arene (Calix[4]arene)
+susy.material.crude_calix_four_arene=Crude Calix[4]arene
+susy.material.filtered_calix_four_arene_solution=Filtered Calix[4]arene Pyridine Solution
+susy.material.pyridinium_chloride=Pyridinium Chloride
+susy.material.calix_four_arene_precipitated_solution=Crude Calix[4]arene Precipitated Tetralin Solution
+susy.material.calix_four_arene_waste=Calix[4]arene Reaction Waste
+susy.material.tetramethoxycalix_four_arene=25,26,27,28-Tetramethoxycalix[4]arene
+susy.material.crude_tetramethoxycalix_four_arene=Crude 25,26,27,28-Tetramethoxycalix[4]arene
+susy.material.tetramethoxycalix_four_arene_extract=25,26,27,28-Tetramethoxycalix[4]arene Dichloromethane Extract
+susy.material.dmf_thf_mix=Dimethylformamide-Tetrahydrofuran (DMF-THF) Mix
+susy.material.dioxane=1,4-Dioxane
+susy.material.cmc_four=CMC4 (p-Chloromethyl-methoxy-calix[4]arene)
+susy.material.crude_cmc_four=Crude CMC4
+susy.material.cmc_four_reaction_mix=CMC4 Reaction Mixture
+susy.material.heated_cmc_four_reaction_mix=Heated CMC4 Reaction Mixture
+susy.material.cmc_four_waste=CMC4 Reaction Waste
+susy.material.cmc_four_extract=CMC4 Dichloromethane Extract
+susy.material.propylene_glycol_methyl_ether=PGME (Propylene Glycol Methyl Ether)
+susy.material.pgmea=PGMEA (Propylene Glycol Methyl Ether Acetate)
+susy.material.pgmea_catalytic_solution=PGMEA Catalytic Solution
+susy.material.cmc_four_photoresist=CMC4 Photoresist
+susy.material.titanium_tetraisopropoxide=Titanium Tetraisopropoxide
+susy.material.titanium_tetraisopropoxide_solution=Titanium Tetraisopropoxide Benzene Solution
+susy.material.tetraethoxysilane=Tetraethoxysilane (TEOS)
+
 susy.material.tributyl_phosphate_extraction_mixture=Tributyl Phosphate Extraction Mixture
 susy.material.aliquat_336_extraction_mixture=Aliquat 336 Extraction Mixture
 susy.material.roasted_bastnasite=Roasted Bastnasite
@@ -2478,6 +2558,8 @@ susy.material.two_ethyl_one_hexene=2-Ethyl-1-hexene
 susy.material.di_two_ethylhexylphosphine=Di(2-Ethylhexyl)phosphine
 susy.material.di_two_ethylhexylphosphinic_acid=Di(2-Ethylhexyl)phosphinic Acid
 susy.material.potassium_chlorate_solution=Potassium Chlorate Solution
+susy.material.titanium_silicon_alkoxide_ethanol_solution=Titanium Silicon Alkoxide Ethanol Solution
+susy.material.titanium_doped_silica_glass=Titanium Doped Silica Glass
 susy.material.hydraulic_fluid=Hydraulic Fluid
 susy.material.yttria_stabilized_zirconia=Yttria Stabilized Zirconia
 susy.material.polyvinyl_alcohol_binder=Polyvinyl Alcohol Binder
@@ -2579,6 +2661,7 @@ recipemap.low_pressure_cryogenic_distillation.name=Low Pressure Cryogenic Distil
 recipemap.high_pressure_cryogenic_distillation.name=High Pressure Cryogenic Distillation
 recipemap.high_pressure_advanced_steam_turbine=High Pressure Advanced Steam Turbine
 recipemap.low_pressure_advanced_steam_turbine=Low Pressure Advanced Steam Turbine
+recipemap.low_pressure_advanced_steam_turbine=Low Pressure Advanced Steam Turbine
 
 # QMD Particles
 
@@ -2640,6 +2723,8 @@ metaitem.steam.motor.name=Steam Motor
 metaitem.steam.pump.name=Steam Pump
 
 metaitem.bound_leather.name=Bound Leather
+
+metaitem.nd_yag_precursor_cake.name=Nd:YAG Precursor Cake
 
 metaitem.vacuum_tube_components.name=Vacuum Tube Components
 metaitem.mylar.name=Thin Mylar Sheet
@@ -2781,6 +2866,12 @@ metaitem.etched.silicon_nitride.name=Etched Silicon Nitride Wafer
 metaitem.etched.titanium.name=Etched Titanium-Coated Wafer
 metaitem.etched.tungsten.name=Etched Tungsten-Coated Wafer
 metaitem.etched.nickel.name=Etched Nickel-Coated Wafer
+
+metaitem.euv_photomask.chuck_applied.name=Electrostatic Chuck Applied EUV Photolithography Mask
+metaitem.euv_photomask.mo_si_coated.name=Mo/Si Coated EUV Photolithography Mask
+metaitem.euv_photomask.ru_capped.name=Ruthenium Capped EUV Photolithography Mask
+metaitem.euv_photomask.absorber_applied.name=Abosrber Applied EUV Photolithography Mask
+metaitem.euv_photomask.blank.name=EUV Photolithography Mask (Blank)
 
 metaitem.wafer.doped.silicon_dioxide.name=n-Doped Silicon Dioxide Wafer
 metaitem.wafer.polysilicon.name=Polysilicon Wafer
@@ -2934,6 +3025,10 @@ metaitem.epoxy_lamina.name=Epoxy Lamina
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 
+metaitem.molybdenum_grid.name=Molybdenum Grid
+metaitem.pvd_apparatus.ion_source.name=Ion Source
+metaitem.pvd_apparatus.electron_source.name=Electron Source
+
 metaitem.engine.spark_plug.name=Spark Plug
 metaitem.engine.piston.name=Piston
 metaitem.engine.crankshaft.name=Crankshaft
@@ -2975,6 +3070,18 @@ metaitem.brush.unfired.name=Unfired Brush
 
 metaitem.work_roll.unfinished.name=Unfinished Work Roll
 metaitem.nozzle.boron_nitride.name=Boron Nitride Nozzle
+
+metaitem.nd_yag_precursor_cake.name=Nd:YAG Precursor Cake
+metaitem.lens.borosilicate.name=Borosilicate Crown Glass Lens
+metaitem.mirror.hafnia_silica.name=Hafnia-Silica Coated Mirror
+metaitem.mirror.intermediate.10_6_coated.name=High-reflectivity Coated Gold Plate
+metaitem.mirror.10_6_micron.name=10.6 Micrometer High-reflectivity Coated Gold Mirror
+metaitem.lens.bare_zinc_selenide.name=Bare Zinc Selenide Lens
+metaitem.lens.zinc_selenide.name=Antireflective Coated Zinc Selenide Lens
+metaitem.mirror.molybdenum_silicon.name=Mo-Si Coated Mirror 
+metaitem.laser.component.xenon_flash_tube.name=Xenon Flash Tube
+metaitem.laser.nd_yag.name=Nd:YAG Laser
+metaitem.laser.fast_axial_gas_co2.name=Fast Axial Gas Carbon Dioxide Laser
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
@@ -3024,6 +3131,9 @@ item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Woven Ultra Hi
 item.susy.material.kevlar.plate=Woven Kevlar
 item.gregtech.material.polytetrafluoroethylene.fiber=Expanded Polytetrafluoroethylene Fiber
 item.gregtech.material.polytetrafluoroethylene.thread=Expanded Polytetrafluoroethylene Thread
+item.susy.material.titanium_doped_silica_glass.dustTiny=Tiny Pile of Titanium Doped Silica Glass Gel
+item.susy.material.titanium_doped_silica_glass.dustSmall=Small Pile of Titanium Doped Silica Glass Gel
+item.susy.material.titanium_doped_silica_glass.dust=Titanium Doped Silica Glass Gel
 gregtech.material.chrome=Chromium
 
 # Resin Logs

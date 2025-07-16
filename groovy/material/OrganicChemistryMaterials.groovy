@@ -756,8 +756,8 @@ public class OrganicChemistryMaterials {
                 .liquid()
                 .components(Carbon * 3, Hydrogen * 7, Nitrogen * 1)
                 .colorAverage()
-                .build()
-                .setFormula('(CH3)2NCH', true);
+                .build();
+        Dimethylformamide.setFormula('(CH3)2NCH', true);
 
         CativaCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_catalyst'))
                 .dust()
@@ -2776,5 +2776,376 @@ public class OrganicChemistryMaterials {
                 .components(Carbon * 3, Hydrogen * 6, Nitrogen * 6, Oxygen * 6)
                 .color(0xb019ad)
                 .build();
+        
+        DimethylSulfide = new Material.Builder(15442, SuSyUtility.susyId('dimethyl_sulfide'))
+                .liquid()
+                .flags(FLAMMABLE)
+                .components(Carbon * 2, Hydrogen * 6, Sulfur * 1)
+                .color(0xd6d094)
+                .build();
+        
+        ChlorosulfanicAcid = new Material.Builder(15443, SuSyUtility.susyId('chlorosulfanic_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Chlorine * 1, Hydrogen * 1, Oxygen * 3, Sulfur * 1)
+                .color(0xe3deac)
+                .build();
+        ChlorosulfanicAcid.setFormula("SO2(OH)Cl", true);
+        
+        MethacryloylChloride = new Material.Builder(15444, SuSyUtility.susyId('methacryloyl_chloride'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .flags(FLAMMABLE)
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1, Oxygen * 1)
+                .color(0x9eb593)
+                .build();
+        
+        HydrolyzedChlorosulfuricAcid = new Material.Builder(15445, SuSyUtility.susyId('hydrolyzed_chlorosulfuric_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(SulfuricAcid * 1, HydrochloricAcid * 1)
+                .color(0xA7A15E)
+                .build();
+
+        TwoMethylthioPhenol = new Material.Builder(15446, SuSyUtility.susyId('two_methylthio_phenol'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 8, Oxygen * 1, Sulfur * 1)
+                .color(0xada26a)
+                .build();
+
+        FourMethylthioPhenol = new Material.Builder(15447, SuSyUtility.susyId('four_methylthio_phenol'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 8, Oxygen * 1, Sulfur * 1)
+                .color(0x8c8358)
+                .build();
+
+        TwoFourMethylthioPhenolMixture = new Material.Builder(15448, SuSyUtility.susyId('two_four_methylthio_phenol_mixture'))
+                .liquid()
+                .components(TwoMethylthioPhenol * 4, FourMethylthioPhenol * 6)
+                .color(0x869c48)
+                .build();
+
+        EthylSulfate = new Material.Builder(15449, SuSyUtility.susyId('ethyl_sulfate'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Carbon * 2, Hydrogen * 6, Oxygen * 4, Sulfur * 1)
+                .color(0x9ab357)
+                .build();
+
+        DiethylSulfate = new Material.Builder(15450, SuSyUtility.susyId('diethyl_sulfate'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Carbon * 4, Hydrogen * 10, Oxygen * 4, Sulfur * 1)
+                .color(0x6e8238)
+                .build();
+        DiethylSulfate.setFormula("(C2H5)2SO4", true);
+
+        AcidicEthylSulfate = new Material.Builder(15451, SuSyUtility.susyId('acidic_ethyl_sulfate'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(EthylSulfate * 1, HydrogenChloride * 1)
+                .color(0x6cc469)
+                .build();
+                
+        // DIPEA
+        Diisopropylethylamine = new Material.Builder(15452, SuSyUtility.susyId('diisopropylethylamine'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .flags(FLAMMABLE)
+                .components(Carbon * 8, Hydrogen * 19, Nitrogen * 1)
+                .color(0x57a819)
+                .build();
+        
+        TrifluoromethanesulfonicAcid = new Material.Builder(15453, SuSyUtility.susyId('trifluoromethanesulfonic_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Carbon * 1, Fluorine * 3, Sulfur * 1, Oxygen * 3, Hydrogen * 1)
+                .color(0x7bc795)
+                .build();
+
+        SilverTrifluoromethanesulfonateSolution = new Material.Builder(15454, SuSyUtility.susyId('silver_trifluoromethanesulfonate_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Silver * 1, Carbon * 1, Fluorine * 3, Sulfur * 1, Oxygen * 3, Water * 1)
+                .color(0x418759)
+                .build();
+        SilverTrifluoromethanesulfonateSolution.setFormula("(Ag[CF3O3S])(H2O)", true);
+
+        SilverTrifluoromethanesulfonate = new Material.Builder(15455, SuSyUtility.susyId('silver_trifluoromethanesulfonate'))
+                .dust()
+                .components(Silver * 1, Carbon * 1, Fluorine * 3, Sulfur * 1, Oxygen * 3, Water * 1)
+                .color(0x418759)
+                .build();
+        SilverTrifluoromethanesulfonate.setFormula("Ag[CF3O3S]", true);
+        
+        // plan to remove
+        FourMethylthioPhenylMethacrylate = new Material.Builder(15456, SuSyUtility.susyId('four_methylthio_phenyl_methacrylate'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Carbon * 11, Hydrogen * 12, Oxygen * 2, Sulfur * 1)
+                .color(0x1875de)
+                .build();
+        
+        // FourMethylthioPhenolMethacrylateReactionMixture is registered 
+
+        // Ethylbis(propan-2-yl)amine hydrochloride
+        DiisopropylethylamineHydrochloride = new Material.Builder(15457, SuSyUtility.susyId('diisopropylethylamine_hydrochloride'))
+                .dust()
+                .components(Carbon * 4, Hydrogen * 20, Chlorine * 1, Nitrogen * 1)
+                .color(0xbb8fc9)
+                .build();
+
+        CrudeFourMethylthioPhenylMethacrylate = new Material.Builder(15458, SuSyUtility.susyId('crude_four_methylthio_phenyl_methacrylate'))
+                .dust()
+                .components(DiisopropylethylamineHydrochloride * 1, FourMethylthioPhenylMethacrylate * 1)
+                .color(0x59b0c2)
+                .build();
+
+        FourMethylthioPhenolMethacrylateReactionMixture = new Material.Builder(15459, SuSyUtility.susyId('four_methylthio_phenol_methacrylate_reaction_mixture'))
+                .liquid()
+                .components(DiisopropylethylamineHydrochloride * 1, FourMethylthioPhenylMethacrylate * 1, Chloromethane * 5)
+                .color(0x44a0b3)
+                .build();
+        
+        RutheniumOxideAluminaCatalyst = new Material.Builder(15460, SuSyUtility.susyId('ruthenium_oxide_alumina_catalyst'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0x087cc4)
+                .build();
+        RutheniumOxideAluminaCatalyst.setFormula('RuOx/Al2O3', true);
+
+        RutheniumOxideAluminaCatalystSolution = new Material.Builder(15461, SuSyUtility.susyId('ruthenium_oxide_alumina_catalyst_solution'))
+                .liquid()
+                .components(RutheniumOxideAluminaCatalyst * 1, Water * 2)
+                .color(0x143c87)
+                .build();
+
+        Iodomethane = new Material.Builder(15462, SuSyUtility.susyId('iodomethane'))
+                .liquid()
+                .components(Carbon * 1, Hydrogen * 3, Iodine * 1)
+                .color(0x510466)
+                .build();
+
+        Acetonitrile = new Material.Builder(15463, SuSyUtility.susyId('acetonitrile'))
+                .liquid()
+                .flags(FLAMMABLE)
+                .components(Carbon * 2, Hydrogen * 3, Nitrogen * 1)
+                .color(0xe37666)
+                .build();
+
+        SilverIodide = new Material.Builder(15464, SuSyUtility.susyId('silver_iodide'))
+                .dust()
+                .components(Silver * 1, Iodine * 1)
+                .color(0xC4AC71)
+                .build();
+        
+        // Actually Dimethyl-(4-methacryloyloxy)phenylsulfonium Triflate
+        MAPDST = new Material.Builder(15465, SuSyUtility.susyId('mapdst'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Carbon * 13, Hydrogen * 15, Fluorine * 3, Oxygen * 5, Sulfur * 2)
+                .color(0xd63838)
+                .build();
+
+        CrudeMAPDSTAcetonitrileSolution = new Material.Builder(15466, SuSyUtility.susyId('crude_mapdst_acetonitrile_solution'))
+                .liquid()
+                .components(MAPDST * 1, Acetonitrile * 8)
+                .color(0x802222)
+                .build();
+
+        CrudeMAPDST = new Material.Builder(15467, SuSyUtility.susyId('crude_mapdst'))
+                .dust()
+                .components(MAPDST * 1)
+                .color(0xa63232)
+                .build();
+
+        MapdstMmaCopolymer = new Material.Builder(15468, SuSyUtility.susyId('mapdst_mma_copolymer'))
+                .dust()
+                .iconSet(SHINY)
+                .components(MAPDST * 1, MethylMethacrylate * 1)
+                .color(0xde5a02)
+                .build();
+        
+        MapdstMmaCopolymerWaste = new Material.Builder(15469, SuSyUtility.susyId('mapdst_mma_copolymer_waste'))
+                .liquid()
+                .color(0x1d577a)
+                .build();
+        
+        CrudeMapdstMmaCopolymer = new Material.Builder(15470, SuSyUtility.susyId('crude_mapdst_mma_copolymer'))
+                .dust()
+                .color(0xc4682b)
+                .build();
+
+        CrudeMapdstMmaCopolymerSolution = new Material.Builder(15471, SuSyUtility.susyId('crude_mapdst_mma_copolymer_solution'))
+                .liquid()
+                .color(0xc4682b)
+                .build();
+        
+        DiethylEtherMethanolMix = new Material.Builder(15472, SuSyUtility.susyId('diethyl_ether_methanol_mix'))
+                .liquid()
+                .color(0x0b5c0f)
+                .build();
+
+        MapdstMmaCopolymerPhotoresist = new Material.Builder(15473, SuSyUtility.susyId('mapdst_mma_photoresist'))
+                .fluid()
+                .color(0xcfa182)
+                .build();
+
+        Paraformaldehyde = new Material.Builder(15474, SuSyUtility.susyId('paraformaldehyde'))
+                .fluid()
+                .components(Formaldehyde)
+                .color(0x486b9c)
+                .build();
+        Paraformaldehyde.setFormula("[CH2O]n", true);
+
+        PotassiumTertButylate = new Material.Builder(15475, SuSyUtility.susyId('potassium_tert_butylate'))
+                .liquid(new FluidBuilder().temperature(273 + 30)) // should be basic and corrosive, not supported rn
+                .components(Carbon * 4, Hydrogen * 9, Potassium * 1, Oxygen * 1)
+                .color(0x0a7967)
+                .build();
+
+        CalixFourArene = new Material.Builder(15476, SuSyUtility.susyId('calix_four_arene'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Carbon * 28, Hydrogen * 24, Oxygen * 4)
+                .color(0xdee3bf)
+                .build();
+
+        CrudeCalixFourArene = new Material.Builder(15477, SuSyUtility.susyId('crude_calix_four_arene'))
+                .dust()
+                .color(0xa1a686)
+                .components(CalixFourArene * 1)
+                .build();
+
+        FilteredCalixFourAreneSolution = new Material.Builder(15478, SuSyUtility.susyId('filtered_calix_four_arene_solution'))
+                .fluid()
+                .color(0x859c67)
+                .components(CrudeCalixFourArene * 1, Pyridine * 1)
+                .build();
+
+        PyridiniumChloride = new Material.Builder(15479, SuSyUtility.susyId('pyridinium_chloride'))
+                .dust()
+                .components(Carbon * 5, Hydrogen * 6, Nitrogen * 1, Chlorine * 1)
+                .color(0x489455)
+                .build();
+
+        CalixFourArenePrecipitatedSolution = new Material.Builder(15480, SuSyUtility.susyId('calix_four_arene_precipitated_solution'))
+                .fluid()
+                .color(0x99b570)
+                .components(CrudeCalixFourArene * 1)
+                .build();
+
+        CalixFourAreneWaste = new Material.Builder(15481, SuSyUtility.susyId('calix_four_arene_waste'))
+                .fluid()
+                .color(0x364520)
+                .build();
+
+        TetramethoxycalixFourArene = new Material.Builder(15482, SuSyUtility.susyId('tetramethoxycalix_four_arene'))
+                .dust()
+                .components(Carbon * 32, Hydrogen * 32, Oxygen * 4)
+                .color(0xdfe622)
+                .build();
+
+        CrudeTetramethoxycalixFourArene = new Material.Builder(15483, SuSyUtility.susyId('crude_tetramethoxycalix_four_arene'))
+                .dust()
+                .components(TetramethoxycalixFourArene * 1)
+                .color(0xabb023)
+                .build();
+
+        TetramethoxycalixFourAreneExtract = new Material.Builder(15484, SuSyUtility.susyId('tetramethoxycalix_four_arene_extract'))
+                .fluid()
+                .components(TetramethoxycalixFourArene * 1, Dichloromethane * 1)
+                .color(0xba8a1a)
+                .build();
+
+        DMFTHFMix = new Material.Builder(15485, SuSyUtility.susyId('dmf_thf_mix'))
+                .fluid()
+                .components(Dimethylformamide * 2, Tetrahydrofuran * 8)
+                .color(0x7c139c)
+                .build();
+
+        Dioxane = new Material.Builder(15486, SuSyUtility.susyId('dioxane'))
+                .fluid()
+                .components(Carbon * 4, Hydrogen * 8, Oxygen * 2)
+                .color(0x30cf47)
+                .build();
+        
+        // p-Chloromethyl-Methoxy-Calix[4]arene
+        // 5,11,17,23-tetrakis(chloromethyl)-25,26,27,28-tetramethoxy-calix[4]arene
+        CMCFour = new Material.Builder(15487, SuSyUtility.susyId('cmc_four'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Carbon * 36, Hydrogen * 36, Oxygen * 4, Chlorine * 4)
+                .color(0xf2c71b)
+                .build();
+        
+        CrudeCMCFour = new Material.Builder(15488, SuSyUtility.susyId('crude_cmc_four'))
+                .dust()
+                .components(CMCFour * 1)
+                .color(0xbf9e17)
+                .build();
+
+        CMCFourReactionMix = new Material.Builder(15489, SuSyUtility.susyId('cmc_four_reaction_mix'))
+                .liquid()     
+                .components(CMCFour * 1)
+                .color(0x839119)
+                .build();
+
+        HeatedCMCFourReactionMix = new Material.Builder(15490, SuSyUtility.susyId('heated_cmc_four_reaction_mix'))
+                .liquid(new FluidBuilder().temperature(273 + 80))     
+                .components(CMCFour * 1)
+                .color(0xa5b528)
+                .build();
+
+        CMCFourWaste = new Material.Builder(15491, SuSyUtility.susyId('cmc_four_waste'))
+                .fluid()
+                .components(CMCFour * 1)
+                .color(0x3f630f)
+                .build();
+
+        CMCFourExtract = new Material.Builder(15492, SuSyUtility.susyId('cmc_four_extract'))
+                .fluid()
+                .components(CMCFour * 1, Chloromethane * 1)
+                .color(0xc29b02)
+                .build();
+        
+        // 1-Methoxy-2-Propanol
+        PropyleneGlycolMethylEther = new Material.Builder(15493, SuSyUtility.susyId('propylene_glycol_methyl_ether'))
+                .fluid()
+                .components(Carbon * 4, Hydrogen * 10, Oxygen * 2)
+                .color(0xbadb14)
+                .build();
+        
+        PGMEA = new Material.Builder(15494, SuSyUtility.susyId('pgmea'))
+                .fluid()
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 3)
+                .color(0xb3ed2d)
+                .build(); 
+
+        PGMEACatalyticSolution = new Material.Builder(15495, SuSyUtility.susyId('pgmea_catalytic_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(PGMEA * 1, Water * 1, SulfatedTitania * 1)
+                .color(0x7dc920)
+                .build(); 
+
+        CMCFourPhotoresist = new Material.Builder(15496, SuSyUtility.susyId('cmc_four_photoresist'))
+                .fluid()
+                .components(CMCFour * 1, PGMEA * 8)
+                .color(0xecf00e)
+                .build();
+
+        TitaniumTetraisopropoxide = new Material.Builder(15497, SuSyUtility.susyId('titanium_tetraisopropoxide'))
+                .liquid()
+                .components(Carbon * 12, Hydrogen * 28, Oxygen * 4, Titanium * 1)
+                .color(0xc837db)
+                .build()
+        TitaniumTetraisopropoxide.setFormula("Ti[OCH(CH3)2]4");
+
+        TitaniumTetraisopropoxideSolution = new Material.Builder(15498, SuSyUtility.susyId('titanium_tetraisopropoxide_solution'))
+                .liquid()
+                .flags(FLAMMABLE)
+                .components(TitaniumTetraisopropoxide, Benzene)
+                .color(0xe3e28f)
+                .build()
+        TitaniumTetraisopropoxide.setFormula("Ti[OCH(CH3)2]4");
+                
+        Tetraethoxysilane = new Material.Builder(15499, SuSyUtility.susyId('tetraethoxysilane'))
+                .liquid()
+                .flags(FLAMMABLE)
+                .components(Carbon * 8, Hydrogen * 20, Oxygen * 4, Silicon * 1)
+                .color(0xfad2f5)
+                .build()
+        Tetraethoxysilane.setFormula("Si(OC2H5)4");
     }
 }
