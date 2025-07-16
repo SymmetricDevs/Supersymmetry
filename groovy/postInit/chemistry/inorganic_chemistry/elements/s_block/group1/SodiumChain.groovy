@@ -15,15 +15,6 @@ ROASTER.recipeBuilder()
         .duration(120)
         .buildAndRegister()
 
-ROASTER.recipeBuilder()
-        .inputs(ore('dustSodaAsh') * 6)
-        .inputs(ore('dustAnyPurityCarbon') * 2)
-        .outputs(metaitem('dustSodium') * 2)
-        .fluidOutputs(fluid('carbon_monoxide') * 3000)
-        .EUt(30)
-        .duration(120)
-        .buildAndRegister()
-
 //IMPURE HALITE PURIFICATION
 BR.recipeBuilder()
         .inputs(ore('dustImpureSalt') * 2)

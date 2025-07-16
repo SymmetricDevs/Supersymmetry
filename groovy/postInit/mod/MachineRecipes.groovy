@@ -169,8 +169,8 @@ def tieredPipes = [metaitem('pipeLargeFluidSteel'), metaitem('pipeLargeFluidStee
                    metaitem('pipeLargeFluidTitanium'), metaitem('pipeLargeFluidTungstenCarbide'), metaitem('pipeLargeFluidNiobiumTitanium'),
                    metaitem('pipeLargeFluidNaquadah'), metaitem('pipeLargeFluidDuranium')]
 
-def tieredMagnets = [metaitem('stickIronMagnetic'), metaitem('stickIronMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickSteelMagnetic'),
-                     metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic'),
+def tieredMagnets = [metaitem('stickIronMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickAlnicoMagnetic'),
+                     metaitem('stickAlnicoMagnetic'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic'),
                      metaitem('stickSamariumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic')];
 
 log.infoMC("Adding Vulcanizing Press Craft")

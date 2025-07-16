@@ -3732,8 +3732,8 @@ DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('diluted_sodium_sulfate_solution') * 2000)
     .fluidOutputs(fluid('water') * 2000)
     .outputs(metaitem('dustSodiumSulfate') * 7)
-    .duration(30)
-    .EUt(200)
+    .duration(200)
+    .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
 // Dense steam processing

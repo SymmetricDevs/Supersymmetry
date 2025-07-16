@@ -344,8 +344,6 @@ susy.material.hydroxyapatite=Hydroxyapatite
 susy.material.calcium_metasilicate=Calcium Metasilicate
 susy.material.pyrazine=Pyrazine
 
-gregtech.material.chrome=Chromium
-
 # Fluids
 
 susy.material.smoke_bomb_mix=Smoke Bomb Mix
@@ -2147,7 +2145,6 @@ susy.material.compounded_styrene_butadiene_rubber=Compounded Styrene Butadiene R
 susy.material.fuel_oil=Fuel Oil
 susy.material.isopropylamine=Isopropylamine
 susy.material.isopropylamine_solution=Isopropylamine Solution
-susy.material.platinum_rhodium=Platinum-Rhodium
 susy.material.incoloy_20=Incoloy 20
 susy.material.incoloy_825=Incoloy 825
 susy.material.incoloy_908=Incoloy 908
@@ -3137,6 +3134,7 @@ item.gregtech.material.polytetrafluoroethylene.thread=Expanded Polytetrafluoroet
 item.susy.material.titanium_doped_silica_glass.dustTiny=Tiny Pile of Titanium Doped Silica Glass Gel
 item.susy.material.titanium_doped_silica_glass.dustSmall=Small Pile of Titanium Doped Silica Glass Gel
 item.susy.material.titanium_doped_silica_glass.dust=Titanium Doped Silica Glass Gel
+gregtech.material.chrome=Chromium
 
 # Resin Logs
 gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log

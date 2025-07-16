@@ -343,11 +343,14 @@ mods.gregtech.forge_hammer.removeByInput(16, [item('gregtech:ore_bauxite_0')], n
 mods.gregtech.macerator.removeByInput(2, [item('gregtech:ore_bauxite_0')], null)
 // Flower Pot * 1
 mods.gregtech.assembler.removeByInput(2, [item('minecraft:brick') * 3], null)
+// Tungsten Steel * 2
+mods.gregtech.mixer.removeByInput(1920, [metaitem('dustTungsten'), metaitem('dustSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
 RecipeMaps.SIFTER_RECIPES
     .modifyMaxFluidInputs(1)
     .modifyMaxFluidOutputs(1)
     .modifyMaxInputs(2)
+    .modifyMaxOutputs(8)
 
 RecipeMaps.CENTRIFUGE_RECIPES
     .modifyMaxFluidInputs(3)
