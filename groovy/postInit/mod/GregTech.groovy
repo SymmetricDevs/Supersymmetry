@@ -686,16 +686,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(960)
     .buildAndRegister();
 
-
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('cableGtSingleTin') * 2)
-    .inputs(metaitem('graphite_electrode'))
-    .inputs(metaitem('component.glass.tube') * 8)
-    .outputs(metaitem('carbon_arc_lamp') * 8)
-    .duration(100)
-    .EUt(30)
-    .buildAndRegister();
-
 //Ore Recipes
 
 MACERATOR.recipeBuilder()
