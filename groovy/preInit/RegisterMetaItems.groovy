@@ -272,15 +272,17 @@ eventManager.listen {
         //Light Sources 6000-6100
         customMetaItems.addItem(6000, "lamp.carbon_filament");
         customMetaItems.addItem(6001, "lamp.carbon_filament.unfilled");
-        customMetaItems.addItem(6006, "lamp.mercury.uv.unfilled");
-        customMetaItems.addItem(6006, "lamp.mercury.uv");
-        customMetaItems.addItem(6006, "lamp.mercury");
-        customMetaItems.addItem(6002, "lamp.incandescent");
-        customMetaItems.addItem(6003, "lamp.halogen");
-        customMetaItems.addItem(6004, "lamp.fluorescent");
-        customMetaItems.addItem(6005, "lamp.led");
-        customMetaItems.addItem(6006, "bulb.fused_quartz");
-        customMetaItems.addItem(6008, "bulb.glass");
+        customMetaItems.addItem(6002, "lamp.mercury.uv");
+        customMetaItems.addItem(6003, "lamp.mercury.uv.unfilled");
+        customMetaItems.addItem(6004, "lamp.mercury.hp");
+        customMetaItems.addItem(6005, "lamp.mercury.hp.unfilled");
+        customMetaItems.addItem(6006, "lamp.incandescent");
+        customMetaItems.addItem(6007, "lamp.halogen");
+        customMetaItems.addItem(6008, "lamp.fluorescent");
+        customMetaItems.addItem(6009, "lamp.led");
+
+        customMetaItems.addItem(6050, "bulb.fused_quartz");
+        customMetaItems.addItem(6051, "bulb.glass");
 
         //Superconductors 6100-6200
         customMetaItems.addItem(6100, "assemblymanganesephosphide");

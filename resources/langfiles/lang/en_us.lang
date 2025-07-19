@@ -2748,10 +2748,18 @@ metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
 metaitem.seed_crystal.gallium_arsenide.name=Gallium Arsenide Seed Crystal
 
 metaitem.lamp.carbon_filament.name=Carbon Filament Lamp
-metaitem.lamp.incandescent.name=Incandescent Lightbulb
-metaitem.lamp.halogen.name=Halogen Lightbulb
-metaitem.lamp.fluorescent.name=Fluorescent Lightbulb
-metaitem.lamp.led.name=L.E.D. Lights
+metaitem.lamp.carbon_filament.unfilled.name=Unfilled Carbon Filament Lamp
+metaitem.lamp.mercury.uv.name=Mercury UV Lamp
+metaitem.lamp.mercury.uv.unfilled.name=Unfilled Mercury UV Lamp
+metaitem.lamp.mercury.hp.name=High-Pressure Mercury Lamp
+metaitem.lamp.mercury.hp.unfilled.name=Unfilled Mercury Lamp
+metaitem.lamp.incandescent.name=Incandescent Lamp
+metaitem.lamp.halogen.name=Halogen Lamp
+metaitem.lamp.fluorescent.name=Fluorescent Lamp
+metaitem.lamp.led.name=L.E.D. Light
+
+metaitem.bulb.fused_quartz.name=Fused Quartz Bulb
+metaitem.bulb.glass.name=Glass Bulb
 
 metaitem.mineral_wool.name=Mineral Wool Sheet
 metaitem.hepa_filter.name=H.E.P.A. Filter

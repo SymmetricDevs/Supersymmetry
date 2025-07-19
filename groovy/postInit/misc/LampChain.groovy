@@ -38,7 +38,7 @@ PYROLYSE_OVEN.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtSingleTin') * 2)
-    .inputs(ore('wireCopper') * 2)
+    .inputs(ore('wireGtSingleCopper') * 2)
     .inputs(ore('wireFineCarbon') * 8)
     .inputs(metaitem('component.glass.tube'))
     .outputs(metaitem('lamp.carbon_filament.unfilled'))
@@ -55,7 +55,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .buildAndRegister();
 
 //Mercury Lamps
-/Low-Pressure Lamp (UV light source)
+//Low-Pressure Lamp (UV light source)
 EBF.recipeBuilder()
     .notConsumable(metaitem('shape.extruder.pipe.small'))
     .inputs(ore('dustSiliconDioxide') * 3)
@@ -66,8 +66,8 @@ EBF.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('dustTinyQuicklime'))
-    .inputs(ore('wireNickel') * 2)
-    .inputs(ore('wireCopper') * 2)
+    .inputs(ore('wireGtSingleNickel') * 2)
+    .inputs(ore('wireGtSingleCopper') * 2)
     .inputs(metaitem('bulb.fused_quartz'))
     .fluidInputs(fluid('polyvinyl_chloride') * 72)
     .outputs(metaitem('lamp.mercury.uv.unfilled'))
@@ -84,10 +84,9 @@ VACUUM_CHAMBER.recipeBuilder()
     .EUt(30)
     .buildAndRegister();
 
+crafting.remove("gregtech:blacklight")
+
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('dustTinyQuicklime'))
-    .inputs(ore('wireNickel') * 2)
-    .inputs(ore('wireCopper') * 2))
     .inputs(metaitem('lamp.mercury.uv'))
     .inputs(metaitem('bulb.glass'))
     .fluidInputs(fluid('polyvinyl_chloride') * 72)
