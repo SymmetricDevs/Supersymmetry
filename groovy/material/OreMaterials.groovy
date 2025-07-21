@@ -645,5 +645,23 @@ public class OreMaterials{
                 .build()
         
         Bertrandite.setFormula('Be4Si2O7(OH)2', true);
+
+        Skibidium = new Material.Builder(7087, SuSyUtility.susyId("skibidium"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x08cc4d)
+                .build();
+
+        Rizzium = new Material.Builder(7088, SuSyUtility.susyId("rizzium"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xcc0887)
+                .build();
+
+        Sigmium = new Material.Builder(7089, SuSyUtility.susyId("sigmium"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x585c5c)
+                .build();
     }
 }
