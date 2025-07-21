@@ -185,12 +185,12 @@ mods.gregtech.mixer.recipeBuilder()
         .buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('circuitHv') * 2)
+        .inputs(ore('circuitEv') * 2)
         .inputs(ore('monitor_screen'))
         .inputs(ore('wireFineGold') * 8)
         .inputs(metaitem('circuit_board.good'))
         .outputs(metaitem('code_breacher'))
         .duration(400)
-        .EUt(512)
+        .EUt(2048)
         .buildAndRegister();
         
