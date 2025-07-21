@@ -122,6 +122,11 @@ class SuSyMaterials {
         public static Material AlluvialPGMSand;
         public static Material Bertrandite;
 
+        //Brainrot ores
+        public static Material Skibidium;
+        public static Material Rizzium;
+        public static Material Sigmium;
+
         // Deposits for scanning
 
         public static Material OrthomagmaticDeposit;
