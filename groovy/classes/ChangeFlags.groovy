@@ -756,6 +756,15 @@ class ChangeFlags {
 
         oreProp = Bertrandite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        
+        oreProp = Skibidium.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        
+        oreProp = Rizzium.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        
+        oreProp = Sigmium.getProperty(PropertyKey.ORE);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
 
         oreProp = Cerussite.getProperty(PropertyKey.ORE);
         oreProp.setDirectSmeltResult(Lead);
