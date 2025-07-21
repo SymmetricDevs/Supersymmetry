@@ -1134,6 +1134,10 @@ susy.material.phosphorite=Phosphorite
 susy.material.sperrylite=Sperrylite
 susy.material.bertrandite=Bertrandite
 
+susy.material.skibidium=Skibidium
+susy.material.rizzium=Rizzium
+susy.material.sigmium=Sigmium
+
 # Deposit ores for scanning
 
 item.susy.material.orthomagmatic_deposit.ore=Orthomagmatic Deposit
