@@ -183,15 +183,3 @@ mods.gregtech.mixer.recipeBuilder()
         .duration(800)
         .EUt(16)
         .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('circuitHv') * 2)
-        .inputs(ore('monitor_screen'))
-        .inputs(ore('wireFineGold') * 8)
-        .inputs(metaitem('circuit_board.good'))
-        .fluidInputs(solder)
-        .outputs(metaitem('code_breacher'))
-        .duration(400)
-        .EUt(512)
-        .buildAndRegister();
-        

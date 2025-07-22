@@ -140,8 +140,7 @@ eventManager.listen {
         customMetaItems.addItem(1003, "electrolyte_paper")
         customMetaItems.addItem(1004, "hot_steel_plate")
         customMetaItems.addItem(1005, "hot_steel_rod")
-        customMetaItems.addItem(1006, "code_breacher")
-
+        
         customMetaItems.addItem(1100, "steam.piston")
         customMetaItems.addItem(1101, "steam.motor")
 

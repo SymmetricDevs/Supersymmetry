@@ -2110,8 +2110,6 @@ metaitem.drone.lv.name=Basic Drone
 metaitem.glass_fibers.name=Glass Fibers
 metaitem.epoxy_lamina.name=Epoxy Lamina
 
-metaitem.code_breacher=Code Breacher
-
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
