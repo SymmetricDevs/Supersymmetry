@@ -1,0 +1,29 @@
+{
+  "preRequisites:11": [
+    2127123573,
+    2056367361,
+    1950737300
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.745807167.desc",
+      "icon:10": {
+        "id:8": "ags_modernmarkings:wall_marking_symbol_yellow_radiation"
+      },
+      "name:8": "susy.quest.db.745807167.title"
+    }
+  },
+  "questID:3": 745807167,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 15,
+          "id:8": "icbmclassic:explosives"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}
