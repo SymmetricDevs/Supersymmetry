@@ -1806,9 +1806,9 @@ MACERATOR.recipeBuilder()
 // Multiblock Builder
 
 RecyclingHelper.replaceShaped("gregtech:multiblock_builder", metaitem('tool.multiblock_builder'), [
-    [ore('craftingToolWrench'), metaitem('robot.arm.ev'), metaitem('field.generator.hv')],
-    [ore('screwStainlessSteel'), ore('stickPolytetrafluoroethylene'), metaitem('robot.arm.ev')],
-    [ore('stickPolytetrafluoroethylene'), ore('screwStainlessSteel'), ore('craftingToolScrewdriver')]
+    [ore('craftingToolWrench'), metaitem('robot.arm.lv'), metaitem('sensor.lv')],
+    [ore('screwSteel'), ore('stickSteel'), metaitem('robot.arm.lv')],
+    [ore('stickSteel'), ore('screwSteel'), ore('craftingToolScrewdriver')]
 ])
 
 // Glue * 2500
