@@ -2132,4 +2132,11 @@ CHEMICAL_BATH.recipeBuilder()
     .EUt(7)
     .buildAndRegister()
 
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('dustTnt') * 4)
+    .inputs(metaitem('dustSmallTriacetonePeroxide'))
+    .outputs(item('gregtech:itnt'))
+    .duration(80)
+    .EUt(20)
+    .buildAndRegister()
 
