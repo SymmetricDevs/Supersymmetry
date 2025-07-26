@@ -816,5 +816,20 @@ class ThirdDegreeMaterials {
                 .components(FourNitroNMethylPhthalimide, SulfuricAcid, Water)
                 .colorAverage()
                 .build()
-    }
+        DiAcetonePeroxideFluid = new Material.Builder(24133, SuSyUtility.susyId('diacetone_peroxide_fluid'))
+                .liquid()
+                .components(DiAcetonePeroxide)
+                .colorAverage()
+                .build()
+        TriAcetonePeroxideFluid = new Material.Builder(24134, SuSyUtility.susyId('triacetone_peroxide_fluid'))
+                .liquid()
+                .components(TriAcetonePeroxide)
+                .colorAverage()
+                .build()
+        TriAcetonePeroxideSlurry = new Material.Builder(24135, SuSyUtility.susyId('triacetone_peroxide_slurry'))
+                .liquid()
+                .components(TriAcetonePeroxide, Water)
+                .colorAverage()
+                .build()
+        }
 }
