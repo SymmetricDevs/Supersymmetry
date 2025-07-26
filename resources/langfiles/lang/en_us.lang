@@ -122,6 +122,11 @@ susy.material.acidic_chloronitrobenzene_mixture=Acidic Chloronitrobenzene Mixtur
 susy.material.mixed_dichlorobenzene_solution=Mixed Dichlorobenzene Solution
 susy.material.two_butanol_solution=2-Butanol Solution
 susy.material.DilutedSodiumCarbonateSolution=Diluted Sodium Carbonate Solution
+susy.material.diacetone_peroxide=Diacetone Peroxide
+susy.material.triacetone_peroxide=Triacetone Peroxide
+susy.material.diacetone_peroxide_fluid=Diacetone Peroxide
+susy.material.triacetone_peroxide_fluid=Triacetone Peroxide
+susy.material.triacetone_peroxide_slurry=Triacetone Peroxide Slurry
 
 susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.potassium_bisulfate=Potassium Bisulfate
