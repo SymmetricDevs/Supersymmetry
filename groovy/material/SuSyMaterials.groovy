@@ -2399,7 +2399,12 @@ class SuSyMaterials {
     public static Material HexamethylenetetramineSolution
     public static Material CompositionB
     public static Material Baratol
-
+    public static Material DiAcetonePeroxide
+    public static Material TriAcetonePeroxide
+    public static Material DiAcetonePeroxideFluid
+    public static Material TriAcetonePeroxideFluid
+    public static Material TriAcetonePeroxideSlurry
+    
     // Thermodynamics Materials
 
     public static Material EarthlikeAir
