@@ -2404,6 +2404,7 @@ class SuSyMaterials {
     public static Material DiAcetonePeroxideFluid
     public static Material TriAcetonePeroxideFluid
     public static Material TriAcetonePeroxideSlurry
+    public static Material DiAcetonePeroxideSlurry
     
     // Thermodynamics Materials
 
