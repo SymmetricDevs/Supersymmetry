@@ -4017,3 +4017,23 @@ CSTR.recipeBuilder()
     .duration(10)
     .EUt(140)
     .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('hydrogen_peroxide_solution') * 60)
+    .fluidInputs(fluid('acetone') * 60)
+    .fluidInputs(fluid('hydrochloric_acid') * 15)
+    .fluidOutputs(fluid('triacetone_peroxide_slurry') * 20)
+    .fluidOutputs(fluid('diluted_hydrochloric_acid') * 30)
+    .duration(2)
+    .EUt(32)
+    .buildAndRegister
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_acid') * 20)
+    .fluidInputs(fluid('acetone') * 20)
+    .fluidInputs(fluid('hydrogen_peroxide') * 20)
+    .fluidOutput(fluid('diacetone_peroxide_slurry') * 10)
+    .fluidOutput(fluid('diluted_sulfuric_acid') * 40)
+    .duration(1)
+    .EUt(32)
+    .buildAndRegister
