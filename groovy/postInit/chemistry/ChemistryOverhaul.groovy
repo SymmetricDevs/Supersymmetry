@@ -4026,7 +4026,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('diluted_hydrochloric_acid') * 30)
     .duration(2)
     .EUt(32)
-    .buildAndRegister
+    .buildAndRegister()
 
 CSTR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 20)
@@ -4036,4 +4036,4 @@ CSTR.recipeBuilder()
     .fluidOutput(fluid('diluted_sulfuric_acid') * 40)
     .duration(1)
     .EUt(32)
-    .buildAndRegister
+    .buildAndRegister()
