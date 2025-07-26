@@ -3025,5 +3025,15 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 12, Hydrogen * 27, Oxygen * 3, Phosphorus * 1)
                 .color(0xc3bec4)
                 .build()
+        DiAcetonePeroxide = new Material.Builder(1578, SuSyUtility.susyId('diacetone_peroxide'))
+                .dust()
+                .composition(Carbon * 6, Hydrogen * 12, Oxygen * 4)
+                .color(0xf54927)
+                .build()
+        TriAcetonePeroxide = new Material.Builder(1579, SuSyUtility.susyId('triacetone_peroxide'))
+                .dust()
+                .composition(Carbon * 9, Hydrogen * 18, Oxygen * 6)
+                .color(0x9c2007)
+                .build()
     }
 }
