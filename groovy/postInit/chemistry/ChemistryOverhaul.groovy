@@ -4075,7 +4075,7 @@ DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('diacetone_peroxide_slurry') * 2000)
     .duration(100)
     .EUt(32)
-    .buildAndRegister
+    .buildAndRegister()
 
 DISTILLATION_TOWER.recipeBuilder()
     .fluidInputs(fluid('diacetone_peroxide_slurry') * 2000)
@@ -4083,4 +4083,4 @@ DISTILLATION_TOWER.recipeBuilder()
     .outputs(metaitem('dustDiacetonePeroxide'))
     .duration(20)
     .EUt(32)
-    .buildAndRegister
+    .buildAndRegister()
