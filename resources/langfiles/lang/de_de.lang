@@ -417,6 +417,9 @@ susy.material.anthracene=Anthracen
 susy.material.weed_killer=Unkrautvernichter
 susy.material.pesticide=Pestizid
 
+susy.material.sodium_vanillylmandelate_solution=Natriumvanillylmandelat-Lösung
+susy.material.sodium_vanilglycolate_solution=Natriumvanilglykolat-Lösung
+
 susy.material.greenhouse_gases=Treibhausgas
 susy.material.warm_greenhouse_gases=Warmes Treibhausgas
 susy.material.cool_greenhouse_gases=Kaltes Treibhausgas

@@ -3025,6 +3025,7 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 12, Hydrogen * 27, Oxygen * 3, Phosphorus * 1)
                 .color(0xc3bec4)
                 .build()
+
         DiacetonePeroxide = new Material.Builder(15478, SuSyUtility.susyId('diacetone_peroxide'))
                 .dust()
                 .liquid()
@@ -3037,5 +3038,23 @@ class OrganicChemistryMaterials {
                 .composition(Carbon * 9, Hydrogen * 18, Oxygen * 6)
                 .color(0x9c2007)
                 .build()
+
+
+        SodiumVanillylmandelateSolution = new Material.Builder(4673, SuSyUtility.susyId('sodium_vanillylmandelate_solution'))
+                .liquid()
+                .components(Sodium, Carbon * 9, Hydrogen * 9, Oxygen * 5, SodiumHydroxide, Water * 3)
+                .color(0xc2c099)
+                .build()
+
+        SodiumVanillylmandelateSolution.setFormula('(NaC9H9O5)(NaOH)(H2O)3', true)
+
+        SodiumVanilglycolateSolution = new Material.Builder(4674, SuSyUtility.susyId('sodium_vanilglycolate_solution'))
+                .liquid()
+                .components(Sodium, Carbon * 9, Hydrogen * 7, Oxygen * 5, SodiumHydroxide, Water * 4)
+                .color(0x82805b)
+                .build()
+        
+        SodiumVanillylmandelateSolution.setFormula('(NaC9H7O5)(NaOH)(H2O)4', true)
+
     }
 }

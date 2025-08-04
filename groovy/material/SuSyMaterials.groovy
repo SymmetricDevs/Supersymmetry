@@ -2266,6 +2266,8 @@ class SuSyMaterials {
     public static Material DibutylButylphosphonate
     public static Material TributylPhosphite
     public static Material NButylIodide
+    public static Material SodiumVanillylmandelateSolution
+    public static Material SodiumVanilglycolateSolution
 
     // Third Degree Materials
 

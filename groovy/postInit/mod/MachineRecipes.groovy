@@ -1360,3 +1360,15 @@ RecyclingHelper.addShaped("gregtech:injection_molder", metaitem('susy:injection_
         [ore('pipeLargeFluidStainlessSteel'), metaitem('hull.hv'), metaitem('electric.motor.hv')],
         [metaitem('springKanthal'), ore('circuitHv'), metaitem('cableGtSingleGold')],
 ])
+
+for (def i = 1; i < 8; i++) {
+    crafting.addShapeless("gregtech:fluid_decompressor." + Globals.voltageTiers[i], metaitem('susy:fluid_decompressor.' + Globals.voltageTiers[i]), [
+            metaitem('susy:fluid_compressor.' + Globals.voltageTiers[i]),
+            ore('craftingToolScrewdriver')
+    ])
+
+    crafting.addShapeless("gregtech:fluid_compressor." + Globals.voltageTiers[i], metaitem('susy:fluid_compressor.' + Globals.voltageTiers[i]), [
+            metaitem('susy:fluid_decompressor.' + Globals.voltageTiers[i]),
+            ore('craftingToolScrewdriver')
+    ])
+}
