@@ -20,6 +20,9 @@ class Globals {
     public static voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
     public static voltAmps =        [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
 
+    public static dimensions = ["Overworld": 0, "Beneath": 10, "Nether": -1]
+
+
     public static solders = [
         'tin': 144,
         'soldering_alloy': 72

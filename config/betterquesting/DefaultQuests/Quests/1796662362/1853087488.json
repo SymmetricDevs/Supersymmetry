@@ -1,0 +1,43 @@
+{
+  "preRequisites:11": [
+    1103231810
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1853087488.desc",
+      "icon:10": {
+        "Damage:2": 1,
+        "id:8": "projectred-core:resource_item"
+      },
+      "name:8": "susy.quest.db.1853087488.title"
+    }
+  },
+  "questID:3": 1853087488,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "projectred-core:resource_item"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 10,
+          "id:8": "projectred-core:resource_item"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 11,
+          "id:8": "projectred-core:resource_item"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "id:8": "projectred-core:resource_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -5,7 +5,6 @@ GRAVITY_SEPARATOR = recipemap('gravity_separator')
 ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 ROASTER = recipemap('roaster')
 AUTOCLAVE = recipemap('autoclave')
-CENTRIFUGE = recipemap('centrifuge')
 ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 BR = recipemap('batch_reactor')
@@ -13,6 +12,7 @@ MIXER = recipemap('mixer')
 CLARIFIER = recipemap('clarifier')
 CHEMICAL_BATH = recipemap('chemical_bath')
 REACTION_FURNACE = recipemap('reaction_furnace')
+MIXER_SETTLER = recipemap('mixer_settler')
 
 // Beneficiation
 
@@ -110,7 +110,7 @@ REACTION_FURNACE.recipeBuilder() // Impure Niobium Pentachloride
     .notConsumable(fluid('salt') * 1440)
     .notConsumable(fluid('iron_iii_chloride') * 1440)
     .fluidOutputs(fluid('iron_iii_chloride') * 576)
-    .fluidOutputs(fluid('impure_niobium_pentachloride') * 8000)
+    .fluidOutputs(fluid('impure_niobium_pentachloride') * 4000)
     .duration(400)
     .EUt(Globals.voltAmps[4])
     .buildAndRegister()
@@ -197,39 +197,43 @@ AUTOCLAVE.recipeBuilder() // Impure Fluoroniobic Acid Solution
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Niobium-rich Extract
+MIXER_SETTLER.recipeBuilder() // Niobium-rich Extract
     .fluidInputs(fluid('impure_fluoroniobic_acid_solution') * 1000)
     .fluidInputs(fluid('methyl_isobutyl_ketone') * 6000)
     .fluidOutputs(fluid('niobium_rich_extract') * 6000)
     .fluidOutputs(fluid('metal_sulfate_waste') * 1000)
     .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(4)
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Scrubbed Niobium-rich Extract
-    .fluidInputs(fluid('niobium_rich_extract') * 500)
-    .notConsumable(fluid('sulfuric_acid') * 500)
-    .fluidOutputs(fluid('scrubbed_niobium_rich_extract') * 500)
-    .duration(5)
+MIXER_SETTLER.recipeBuilder() // Scrubbed Niobium-rich Extract
+    .fluidInputs(fluid('niobium_rich_extract') * 6000)
+    .notConsumable(fluid('sulfuric_acid') * 6000)
+    .fluidOutputs(fluid('scrubbed_niobium_rich_extract') * 6000)
+    .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(2)
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Fluoroniobic Acid Solution
-    .fluidInputs(fluid('scrubbed_niobium_rich_extract') * 500)
-    .fluidInputs(fluid('distilled_water') * 500)
-    .fluidOutputs(fluid('diluted_tantalum_extract') * 500)
-    .fluidOutputs(fluid('fluoroniobic_acid_solution') * 500)
-    .duration(5)
+MIXER_SETTLER.recipeBuilder() // Fluoroniobic Acid Solution
+    .fluidInputs(fluid('scrubbed_niobium_rich_extract') * 6000)
+    .fluidInputs(fluid('distilled_water') * 6000)
+    .fluidOutputs(fluid('diluted_tantalum_extract') * 6000)
+    .fluidOutputs(fluid('fluoroniobic_acid_solution') * 6000)
+    .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(2)
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Purified Fluoroniobic Acid Solution
+MIXER_SETTLER.recipeBuilder() // Purified Fluoroniobic Acid Solution
     .fluidInputs(fluid('fluoroniobic_acid_solution') * 6000)
     .fluidInputs(fluid('methyl_isobutyl_ketone') * 1500)
     .fluidOutputs(fluid('purified_fluoroniobic_acid_solution') * 6000)
     .fluidOutputs(fluid('niobium_rich_extract') * 1500)
     .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(2)
     .buildAndRegister()
 
 BR.recipeBuilder() // Niobium Oxide Dihydrate (2 H2NbF7 + 14 NH3 + 5 H2O --> 14 NH4F + Nb2O5)
@@ -269,13 +273,14 @@ ADVANCED_ARC_FURNACE.recipeBuilder() // Niobium
     .buildAndRegister()
 
 // From tantalite
-CENTRIFUGE.recipeBuilder()
+MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('diluted_niobium_extract') * 9000)
     .fluidInputs(fluid('distilled_water') * 1000)
     .fluidOutputs(fluid('methyl_isobutyl_ketone') * 9000)
     .fluidOutputs(fluid('purified_fluoroniobic_acid_solution') * 1000)
     .duration(100)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(4)
     .buildAndRegister()
 
 ROASTER.recipeBuilder()

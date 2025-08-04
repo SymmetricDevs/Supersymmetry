@@ -5,12 +5,13 @@ import classes.*;
 import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.IngotProperty;
 import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.util.GTUtility;
 
 
 CHEMICAL_BATH = recipemap('chemical_bath')
 QUENCHER = recipemap('quencher')
 RADIATOR = recipemap('radiator')
-COOLING_UNIT = recipemap('cooling_unit')
+COOLING_UNIT = recipemap('natural_draft_cooling_tower')
 
 //IQuenchingFluid(cold fluid, hot fluid, amount, duration, isInert, generateHeatRadiatorRecipes)
 
@@ -83,15 +84,24 @@ def ingotMap = [
     'MolybdenumDisilicide':2300,
     'TitaniumTungstenCarbide':3800,
     'IncoloyMa956':3625,
-    'Incoloy825':3000,
-    'Incoloy908':3000,
-    'ReneN5':3000,
     'Monel500':3000,
-    'StelliteJ':3800,
-    'Stellite6':3000,
     'Hsla980X':2600,
     'FoodGradeStainlessSteel':2600,
-    'PlatinumRhodium':2113
+    'PlatinumRhodium':2113,
+    'Zircaloy4':2200,
+    'ReactorSteel':1800,
+    'Alnico':1800
+]
+
+def electrodeMap = [
+    'StelliteJ':3800,
+    'Stellite6':3000,
+    'ReneN5':3000,
+    'Incoloy825':3000,
+    'Incoloy908':3000,
+    'Incoloy20':3000,
+    'Nimonic105':3000,
+    'Inconel718':3000
 ]
 
 //MV Tweaks (from CEu #1724)
@@ -110,20 +120,55 @@ for (fluid in IQuenchingFluid.quenching_fluids) {
         .duration((int) fluid.getDuration() * 4)
         .EUt(120)
         .buildAndRegister();
+
+    CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('ingotHotAlnico'))
+        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+        .outputs(metaitem('ingotAlnico'))
+        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+        .duration((int) fluid.getDuration() * 4)
+        .EUt(120)
+        .buildAndRegister();
 }
 
 for (entry in ingotMap) {
     for (fluid in IQuenchingFluid.quenching_fluids) {
-    QUENCHER.recipeBuilder()
-        .inputs(ore('ingotHot' + entry.key))
-        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
-        .outputs(metaitem('ingot' + entry.key))
-        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
-        .duration((int) (fluid.getDuration() * (float) (entry.value / 2000)))
-        .EUt(120)
-        .buildAndRegister();
+        QUENCHER.recipeBuilder()
+            .inputs(ore('ingotHot' + entry.key))
+            .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+            .outputs(metaitem('ingot' + entry.key))
+            .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+            .duration((int) (fluid.getDuration() * (float) (entry.value / 2000)))
+            .EUt(120)
+            .buildAndRegister();
     }
 }
+
+for (entry in electrodeMap) {
+    for (quenching_fluid in IQuenchingFluid.quenching_fluids) {
+        QUENCHER.recipeBuilder()
+            .inputs(metaitem('shape.mold.rod'))
+            .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
+            .fluidInputs(fluid(GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
+            .outputs(metaitem('electrode' + entry.key))
+            .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
+            .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
+            .EUt(120)
+            .buildAndRegister();
+        
+        QUENCHER.recipeBuilder()
+            .inputs(metaitem('shape.mold.rod'))
+            .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
+            .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
+            .outputs(metaitem('electrode' + entry.key))
+            .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
+            .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
+            .EUt(120)
+            .buildAndRegister();
+    }
+}
+
+ingotMap['Steel'] = 1500
 
 def fluidMap = [
     'molten.kanthal':'Kanthal',
@@ -163,15 +208,13 @@ def fluidMap = [
     'molten.molybdenum_disilicide':'MolybdenumDisilicide',
     'molten.titanium_tungsten_carbide':'TitaniumTungstenCarbide',
     'molten.incoloy_ma_956':'IncoloyMa956',
-    'molten.incoloy_20':'Incoloy20',
-    'molten.incoloy_825':'Incoloy825',
-    'molten.incoloy_908':'Incoloy908',
-    'molten.rene_n_5':'ReneN5',
     'molten.monel_500':'Monel500',
-    'molten.stellite_j':'StelliteJ',
-    'molten.stellite_6':'Stellite6',
     'molten.hsla_980_x':'Hsla980X',
-    'molten.food_grade_stainless_steel':'FoodGradeStainlessSteel'
+    'molten.food_grade_stainless_steel':'FoodGradeStainlessSteel',
+    'molten.steel':'Steel',
+    'molten.zircaloy_4':'Zircaloy4',
+    'molten.reactor_steel':'ReactorSteel',
+    'molten.alnico':'Alnico'
 ]
 
 for (entry in fluidMap) {

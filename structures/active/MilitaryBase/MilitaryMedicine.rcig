@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryMedicine",
+  "items": [
+    {
+      "weight": 2.0475566387176514,
+      "min": 8,
+      "max": 17,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 230,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "industrialrenewal:medkit",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gp_inhaler:inhaler",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gaspunk:gas_tube",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 1,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

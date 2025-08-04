@@ -34,7 +34,7 @@ susy.material.salty_n_methyl_two_pyrrolidone=Соленый N-метил-2-пи�
 susy.material.trimethyl_borate=Триметилборат 
 susy.material.methyl_acetate_solution=Раствор метилацетата
 susy.material.two_chloronitrobenzene=2-хлорнитробензол
-susy.material.mixed_chloronitrobenzene=Смешанный хлорнитробензол
+susy.material.chloronitrobenzene_mixture=Смешанный хлорнитробензол
 susy.material.four_nitroaniline_solution=Раствор 4-нитроанилина
 susy.material.para_phenylenediamine_solution=П-Фенилендиамин
 susy.material.four_dichlorohydrazobenzene_solution=4-дихлоргидразобензол
@@ -565,7 +565,6 @@ susy.material.wacker_catalyst_solution=Раствор Ваккера
 susy.material.two_ethylanthraquinone_solution=Раствор 2-этилантрахинона
 susy.material.acetamide_solution=Ацетамид раствор
 susy.material.hydrazine_solution=Гидразиновый раствор
-susy.material.tetrasodium_ethylenediaminetetraacetate_solution=Раствор этилендиаминтетраацетата тетранатрия
 susy.material.urea_solution=Раствор мочевины
 susy.material.diiodobenzene_solution=Раствор дииодбензола
 susy.material.impure_four_four_oxydianiline=Нечистый 4,4-оксидианилин
@@ -575,8 +574,7 @@ susy.material.terephthalic_acid_slurry=Суспензия терефталево
 susy.material.impure_acetaldehyde=Нечистый ацетальдегид
 susy.material.cativa_catalyst_preparation=Катализатор Cativa
 susy.material.cativa_catalyst_solution=Раствор Катализатора Cativa
-susy.material.acidic_cumene=Кислый кумол
-susy.material.rearranged_cumene=Перегруппированный кумол
+susy.material.crude_cumene=Сырой кумол
 susy.material.impure_kapton_k=Нечистый каптон К
 susy.material.impure_kapton_e=Нечистый каптон E
 susy.material.kapton_e_preparation=Раствор для приготовления каптона E
@@ -624,7 +622,6 @@ susy.material.sodium_perchlorate_solution=Раствор перхлората н
 susy.material.sodium_chlorate_solution=Раствор хлората натрия
 susy.material.diluted_sodium_chlorate_solution=Разбавленный раствор хлората натрия
 susy.material.diluted_aniline=Разбавленный анилин
-susy.material.hot_hp_steam=Горячий пар высокого давления
 
 susy.material.sodium_thiosulfate_solution=Раствор тиосульфата натрия
 susy.material.sodium_sulfite_solution=Раствор сульфита натрия
@@ -769,7 +766,6 @@ susy.material.phosphorite_slurry=Фосфоритовая суспензия
 susy.material.phosphate_pulp=Фосфатная целлюлоза
 susy.material.filtered_phosphate_pulp=Фильтрованная фосфатная пульпа
 susy.material.phosphate_concentrate=Фосфатный концентрат
-susy.material.impure_ammonium_fluoroberyllate_solution=Нечистый раствор фторбериллата аммония
 susy.material.silicon_tetrafluoride=Тетрафторид кремния
 susy.material.ammonium_fluoroberyllate_solution=Раствор фторбериллата аммония
 susy.material.sodium_fluoroberyllate_solution=Раствор фторосиликата натрия
@@ -2229,7 +2225,7 @@ recipemap.heat_exchanger.name=Теплообменник
 recipemap.radiator.name=Радиатор
 recipemap.large_weapons_factory.name=Крупный оружейный завод
 recipemap.ore_sorter.name=Сортировка руды
-recipemap.cooling_tower.name=Градирни
+recipemap.natural_draft_cooling_tower.name=Градирня естественной тяги
 recipemap.gas_turbine_new.name=Газовая турбина
 recipemap.quencher.name=Утолитель
 recipemap.steam_turbine_new.name=Паровая турбина
@@ -2671,10 +2667,10 @@ item.gregtech.material.polytetrafluoroethylene.fiber=Расширенное по
 item.gregtech.material.polytetrafluoroethylene.thread=Расширенная политетрафторэтиленовая нить
 
 # Resin Logs
-gregtech.block_group_members.extractable_logs_1.name=Бревно из березы, джунглей, дуба и ели
-gregtech.block_group_members.extractable_logs_2.name=Акация и темный дуб
+susy.block_group_members.extractable_logs_1.name=Бревно из березы, джунглей, дуба и ели
+susy.block_group_members.extractable_logs_2.name=Акация и темный дуб
 
-gregtech.block_group_members.latex_logs.name=Резиновое бревно
+susy.block_group_members.latex_logs.name=Резиновое бревно
 
 # Main Menu
 susy.menu.options=Параметры

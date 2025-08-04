@@ -1,0 +1,49 @@
+{
+  "preRequisites:11": [
+    1853087488
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1344588484.desc",
+      "icon:10": {
+        "Damage:2": 20,
+        "id:8": "projectred-core:resource_item"
+      },
+      "name:8": "susy.quest.db.1344588484.title"
+    }
+  },
+  "questID:3": 1344588484,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 320,
+          "id:8": "projectred-core:resource_item"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 341,
+          "id:8": "projectred-core:resource_item"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 20,
+          "id:8": "projectred-core:resource_item"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 21,
+          "id:8": "projectred-core:resource_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

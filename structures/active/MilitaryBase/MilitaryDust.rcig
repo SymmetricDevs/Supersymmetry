@@ -1,0 +1,157 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryDust",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 16,
+      "max": 59,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 284,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 26,
+      "max": 55,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 8399,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 19,
+      "max": 51,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 267,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 24,
+      "max": 51,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 292,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 15,
+      "max": 39,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 382,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 31,
+      "max": 49,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 286,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 19,
+      "max": 45,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 271,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 21,
+      "max": 41,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 27113,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 15,
+      "max": 26,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 318,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 10,
+      "max": 31,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 293,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 20,
+      "max": 41,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 315,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 24,
+      "max": 51,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 7021,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 16,
+      "max": 37,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 7073,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 20,
+      "max": 45,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 7074,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 15,
+      "max": 28,
+      "item": {
+        "id": "gregtech:meta_dust_impure",
+        "damage": 2028,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

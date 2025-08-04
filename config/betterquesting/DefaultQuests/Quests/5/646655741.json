@@ -1,0 +1,40 @@
+{
+  "preRequisites:11": [
+    1337107364,
+    1133349266
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.646655741.desc",
+      "icon:10": {
+        "Damage:2": 8663,
+        "id:8": "gregtech:meta_fuel_rod"
+      },
+      "name:8": "susy.quest.db.646655741.title"
+    }
+  },
+  "questID:3": 646655741,
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "OR",
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8661,
+          "id:8": "gregtech:meta_fuel_rod"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 8662,
+          "id:8": "gregtech:meta_fuel_rod"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 8663,
+          "id:8": "gregtech:meta_fuel_rod"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

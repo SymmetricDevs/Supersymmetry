@@ -1,0 +1,33 @@
+import globals.Globals
+
+BR = recipemap('batch_reactor')
+REACTION_FURNACE = recipemap('reaction_furnace')
+DISTILLERY = recipemap('distillery')
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('erbium_sulfate_solution') * 3000)
+    .outputs(metaitem('dustErbiumSulfate') * 17)
+    .fluidOutputs(fluid('water') * 3000)
+    .duration(20)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustErbiumSulfate') * 17)
+    .fluidInputs(fluid('hydrofluoric_acid') * 6000)
+    .outputs(metaitem('dustErbiumFluoride') * 4)
+    .fluidOutputs(fluid('very_diluted_sulfuric_acid') * 9000)
+    .duration(80)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+    .notConsumable(metaitem('crucible.tantalum'))
+    .inputs(ore('dustErbiumFluoride') * 8)
+    .inputs(ore('dustHighPurityCalcium') * 3)
+    .fluidInputs(fluid('helium') * 50)
+    .outputs(metaitem('dustErbium') * 2)
+    .outputs(metaitem('dustFluorite') * 9)
+    .duration(200)
+    .EUt(960)
+    .buildAndRegister()

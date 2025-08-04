@@ -1,0 +1,35 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
+  "preRequisites:11": [
+    22,
+    32,
+    48
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1733167550.desc",
+      "icon:10": {
+        "Damage:2": 17016,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.1733167550.title"
+    }
+  },
+  "questID:3": 1733167550,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 17016,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

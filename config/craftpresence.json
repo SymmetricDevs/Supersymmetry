@@ -1,5 +1,5 @@
 {
-  "_schemaVersion": 6,
+  "_schemaVersion": 7,
   "_lastMCVersionId": 340,
   "generalSettings": {
     "detectATLauncherInstance": false,
@@ -29,8 +29,39 @@
   "dimensionSettings": {
     "fallbackDimensionIcon": "unknown",
     "dimensionData": {
+      "storage_cell": {
+        "textOverride": "In a {dimension.name}"
+      },
+      "gallifrey": {
+        "textOverride": "On {dimension.name}"
+      },
       "default": {
         "textOverride": "In the {dimension.name}"
+      },
+      "moon": {
+        "textOverride": "On the {dimension.name}"
+      },
+      "the_nether": {
+        "textOverride": "In the {dimension.name}",
+        "data": {
+          "enabled": true,
+          "useAsMain": false,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
+          "details": "In the Nether",
+          "gameState": "",
+          "largeImageKey": "susy_logo",
+          "largeImageText": "In the Nether",
+          "smallImageKey": "mclogo",
+          "smallImageText": "{general.mods} mods installed",
+          "startTimestamp": "{data.general.time}",
+          "endTimestamp": "",
+          "buttons": {}
+        }
+      },
+      "tardis": {
+        "textOverride": "In a {dimension.name}"
       },
       "overworld": {
         "data": {
@@ -47,35 +78,7 @@
           "smallImageText": "{general.mods} mods installed",
           "startTimestamp": "{data.general.time}",
           "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
-        }
-      },
-      "the_nether": {
-        "data": {
-          "enabled": false,
-          "useAsMain": true,
-          "isInstance": false,
-          "activityType": 0,
-          "partyPrivacy": 1,
-          "details": "{player.name} is in The Nether",
-          "gameState": "",
-          "largeImageKey": "nether",
-          "largeImageText": "In the Nether",
-          "smallImageKey": "mclogo",
-          "smallImageText": "{general.mods} mods installed",
-          "startTimestamp": "{data.general.time}",
-          "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
+          "buttons": {}
         }
       },
       "the_end": {
@@ -93,13 +96,14 @@
           "smallImageText": "{general.mods} mods installed",
           "startTimestamp": "{data.general.time}",
           "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
+          "buttons": {}
         }
+      },
+      "telos": {
+        "textOverride": "On {dimension.name}"
+      },
+      "space": {
+        "textOverride": "In {dimension.name}"
       }
     }
   },
@@ -124,12 +128,7 @@
           "smallImageText": "",
           "startTimestamp": "{data.general.time}",
           "endTimestamp": "",
-          "buttons": {
-            "default": {
-              "label": "Example Text",
-              "url": "https://google.com"
-            }
-          }
+          "buttons": {}
         }
       }
     },
@@ -154,9 +153,9 @@
         "startTimestamp": "{data.general.time}",
         "endTimestamp": "",
         "buttons": {
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
+          "button_1": {
+            "label": "Supersymmetry Discord",
+            "url": "https://discord.gg/KYF5a4scRj"
           }
         }
       }
@@ -169,7 +168,7 @@
         "isInstance": false,
         "activityType": 0,
         "partyPrivacy": 1,
-        "details": "Game is starting...",
+        "details": "Loading Supersymmetry...",
         "gameState": "",
         "largeImageKey": "susy_logo",
         "largeImageText": "Gregification of the World!",
@@ -178,15 +177,36 @@
         "startTimestamp": "{data.general.time}",
         "endTimestamp": "",
         "buttons": {
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
+          "button_1": {
+            "label": "Supersymmetry Discord",
+            "url": "https://discord.gg/KYF5a4scRj"
           }
         }
       }
     },
     "lanData": {
-      "textOverride": "Playing on a LAN Server"
+      "textOverride": "Playing on a LAN Server",
+      "data": {
+        "enabled": true,
+        "useAsMain": true,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
+        "details": "Playing on a LAN Server",
+        "gameState": "{dimension.message}",
+        "largeImageKey": "susy_logo",
+        "largeImageText": "Gregification of the World!",
+        "smallImageKey": "",
+        "smallImageText": "",
+        "startTimestamp": "{data.general.time}",
+        "endTimestamp": "",
+        "buttons": {
+          "button_1": {
+            "label": "Supersymmetry Discord",
+            "url": "https://discord.gg/KYF5a4scRj"
+          }
+        }
+      }
     },
     "singleplayerData": {
       "textOverride": "Playing Singleplayer",
@@ -197,7 +217,7 @@
         "activityType": 0,
         "partyPrivacy": 1,
         "details": "Playing Singleplayer",
-        "gameState": "",
+        "gameState": "{dimension.message}",
         "largeImageKey": "susy_logo",
         "largeImageText": "Gregification of the World!",
         "smallImageKey": "",
@@ -205,15 +225,37 @@
         "startTimestamp": "{data.general.time}",
         "endTimestamp": "",
         "buttons": {
-          "default": {
-            "label": "Example Text",
-            "url": "https://google.com"
+          "button_1": {
+            "label": "Supersymmetry Discord",
+            "url": "https://discord.gg/KYF5a4scRj"
           }
         }
       }
     },
     "realmData": {
-      "textOverride": "Playing on {server.motd.raw}"
+      "textOverride": "Playing on {server.motd.raw}",
+      "iconOverride": "",
+      "data": {
+        "enabled": true,
+        "useAsMain": true,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
+        "details": "Playing on {server.motd.raw}",
+        "gameState": "{dimension.name}",
+        "largeImageKey": "susy_logo",
+        "largeImageText": "Gregification of the World!",
+        "smallImageKey": "",
+        "smallImageText": "",
+        "startTimestamp": "{data.general.time}",
+        "endTimestamp": "",
+        "buttons": {
+          "button_1": {
+            "label": "Supersymmetry Discord",
+            "url": "https://discord.gg/KYF5a4scRj"
+          }
+        }
+      }
     }
   },
   "advancedSettings": {
@@ -243,12 +285,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         },
         "default": {
@@ -269,12 +306,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         },
         "GuiScreenWorking": {
@@ -292,12 +324,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         },
         "GuiMultiplayer": {
@@ -315,12 +342,7 @@
             "smallImageText": "{general.mods} mods installed",
             "startTimestamp": "{data.general.time}",
             "endTimestamp": "",
-            "buttons": {
-              "default": {
-                "label": "Example Text",
-                "url": "https://google.com"
-              }
-            }
+            "buttons": {}
           }
         }
       }
@@ -346,8 +368,7 @@
     "playerSkinEndpoint": "https://mc-heads.net/avatar/{getOrDefault(player.uuid.short, player.name)}",
     "allowDuplicatePackets": false,
     "maxConnectionAttempts": 10,
-    "enableClassGraph": false,
-    "useClassLoader": true
+    "enableClassGraph": false
   },
   "accessibilitySettings": {
     "languageId": "en_us",
@@ -368,21 +389,18 @@
       "largeImageKey": "susy_logo",
       "largeImageText": "Gregification of the World!",
       "smallImageKey": "",
-      "smallImageText": "",
+      "smallImageText": "{dimension.message}",
       "startTimestamp": "{data.general.time}",
       "endTimestamp": "",
       "buttons": {
-        "default": {
-          "label": "Example Text",
-          "url": "https://google.com"
+        "button_1": {
+          "label": "Supersymmetry Discord",
+          "url": "https://discord.gg/KYF5a4scRj"
         }
       }
     },
-    "dynamicIcons": {
-      "default": "https://via.placeholder.com/256.png"
-    },
+    "dynamicIcons": {},
     "dynamicVariables": {
-      "default": "Example Text",
       "mods": "{general.mods} Mod(s)",
       "player_info_coordinate": "At {player.position.x}, {player.position.z}",
       "players": "{server.players.current} / {server.players.max} Players",

@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryTurretAmmo",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 8,
+      "max": 22,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 4.065970420837402,
+      "min": 51,
+      "max": 64,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 20,
+      "max": 46,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 11,
+      "max": 32,
+      "item": {
+        "id": "openmodularturrets:ammo_meta",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 64,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 46,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 5,
+      "max": 18,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 7,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 9,
+      "item": {
+        "id": "techguns:fraggrenade",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

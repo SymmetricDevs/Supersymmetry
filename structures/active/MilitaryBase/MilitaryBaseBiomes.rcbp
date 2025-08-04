@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "biomes": "biomesoplenty:pasture"
+    },
+    {
+      "biomes": "biomesoplenty:shrubland"
+    },
+    {
+      "biomes": "biomesoplenty:brushland"
+    },
+    {
+      "biomes": "biomesoplenty:flower_field"
+    },
+    {
+      "biomes": "biomesoplenty:steppe"
+    },
+    {
+      "biomes": "biomesoplenty:grassland"
+    },
+    {
+      "biomes": "minecraft:savanna"
+    },
+    {
+      "biomes": "minecraft:plains"
+    },
+    {
+      "biomes": "biomesoplenty:prairie"
+    },
+    { 
+      "biomes": "biomesoplenty:outback"
+    },
+    { 
+      "biomes": "biomesoplenty:xeric_shrubland"
+    },
+    {
+      "biomes": "biomesoplenty:meadow"
+    }
+  ],
+  "metadata": {
+    "title": "MilitaryBaseBiomes",
+    "description": [
+      "All biomes the military base can spawn in."
+    ]
+  }
+}

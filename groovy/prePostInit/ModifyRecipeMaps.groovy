@@ -1,5 +1,6 @@
 package prePostInit
 
+import gregicality.multiblocks.api.recipes.GCYMRecipeMaps;
 import gregtech.api.GregTechAPI
 import gregtech.api.gui.GuiTextures
 import gregtech.api.recipes.GTRecipeHandler
@@ -29,6 +30,7 @@ GTRecipeHandler.removeAllRecipes(RecipeMaps.LASER_ENGRAVER_RECIPES)
 GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES)
+GTRecipeHandler.removeAllRecipes(GCYMRecipeMaps.ALLOY_BLAST_RECIPES)
 
 GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
     if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
@@ -341,14 +343,23 @@ mods.gregtech.forge_hammer.removeByInput(16, [item('gregtech:ore_bauxite_0')], n
 mods.gregtech.macerator.removeByInput(2, [item('gregtech:ore_bauxite_0')], null)
 // Flower Pot * 1
 mods.gregtech.assembler.removeByInput(2, [item('minecraft:brick') * 3], null)
+// Tungsten Steel * 2
+mods.gregtech.mixer.removeByInput(1920, [metaitem('dustTungsten'), metaitem('dustSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+// Molten Tungstensteel * 288
+mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), metaitem('dustTungsten'), metaitem('circuit.integrated').withNbt(['Configuration': 12])], [fluid('helium') * 200 * 200, fluid('refractory_gunning_mixture') * 50 * 50])
+// Molten Tungstensteel * 288
+mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), metaitem('dustTungsten'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('refractory_gunning_mixture') * 50 * 50])
+// Diesel * 6000
+mods.gregtech.blender.removeByInput(120, null, [fluid('light_fuel') * 5000 * 5000, fluid('heavy_fuel') * 1000 * 1000])
 
 RecipeMaps.SIFTER_RECIPES
     .modifyMaxFluidInputs(1)
     .modifyMaxFluidOutputs(1)
     .modifyMaxInputs(2)
+    .modifyMaxOutputs(8)
 
 RecipeMaps.CENTRIFUGE_RECIPES
-    .modifyMaxFluidInputs(2)
+    .modifyMaxFluidInputs(3)
     .setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY)
 
 RecipeMaps.MIXER_RECIPES
@@ -366,6 +377,7 @@ RecipeMaps.ELECTROLYZER_RECIPES
 RecipeMaps.ELECTROMAGNETIC_SEPARATOR_RECIPES
     .modifyMaxFluidInputs(1)
     .modifyMaxFluidOutputs(2)
+    .modifyMaxOutputs(4)
 
 GTFORecipeMaps.GREENHOUSE_RECIPES
     .modifyMaxFluidInputs(4)

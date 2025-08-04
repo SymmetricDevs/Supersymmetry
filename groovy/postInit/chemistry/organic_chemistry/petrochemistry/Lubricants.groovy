@@ -505,7 +505,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
     // Polyalkyl methacrylate
 
     BR.recipeBuilder()
-        .inputs(ore('dustMethacrylamideSulfate'))
+        .inputs(ore('dustMethacrylamideSulfate') * 20)
         .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('methacrylic_acid') * 1000)
         .outputs(metaitem('dustAmmoniumBisulfate') * 11)
@@ -871,7 +871,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .fluidInputs(fluid('phenol') * 1000)
         .fluidInputs(fluid('tripropylene') * 1000)
         .notConsumable(fluid('hydrofluoric_acid') * 100)
-        .fluidOutputs(fluid('nonylphenol') * 1000)
+        .outputs(metaitem('dustNonylphenol'))
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -894,7 +894,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .buildAndRegister()
 
     BR.recipeBuilder()
-        .fluidInputs(fluid('nonylphenol') * 1000)
+        .inputs(ore('dustNonylphenol'))
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
         .fluidInputs(fluid('chloroacetic_acid') * 1000)
         .outputs(metaitem('dustFourNonylphenoxyaceticAcid'))
@@ -1157,7 +1157,6 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
 }
 
 // Supreme
-
 for (chelate in chelates) {
     for (ci in corrosionInhibitors) {
         BLENDER.recipeBuilder()
@@ -1183,3 +1182,18 @@ for (chelate in chelates) {
         }
     }
 }
+
+// Hydraulic fluid
+BLENDER.recipeBuilder()
+    .fluidInputs(fluid('lubricating_oil') * 10000)
+    .fluidInputs(fluid('zinc_dialkyldithiophosphate') * 100) // EP additive, antiwear
+    .inputs(ore('dustTinyCalciumDidodecylbenzeneSulfonate')) // Corrosion/rust inhibitor
+    .inputs(ore('dustNPhenylOneNaphthylamine')) // Antioxidant
+    .inputs(ore('dustPolyisobutene')) // Pour point depressant & VI improver
+    .fluidInputs(fluid('polyethylene_glycol') * 100) // Demulsifier
+    .fluidInputs(fluid('antifoaming_additive') * 100)
+    .inputs(ore('dustTinyCalciumDodecylbenzeneSulfonate')) // Detergent
+    .fluidOutputs(fluid('hydraulic_fluid') * 10000)
+    .duration(200)
+    .EUt(120)
+    .buildAndRegister()

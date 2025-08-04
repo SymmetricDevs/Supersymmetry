@@ -1,0 +1,407 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "MilitaryArmory",
+  "items": [
+    {
+      "weight": 4.333380699157715,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:m4",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 30
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:m4_infiltrator",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 30
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 3.3419337272644043,
+      "min": 28,
+      "max": 61,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 13,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:lmg",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 100
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 15,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:as50",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 10
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 19,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 143,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 26,
+      "max": 46,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 144,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 45,
+      "max": 57,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 61,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 37,
+      "max": 53,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 8,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 32,
+      "max": 64,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 14,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:grenadelauncher",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 6
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 6,
+      "max": 19,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 3,
+      "max": 5,
+      "item": {
+        "id": "techguns:fraggrenade",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gaspunk:grenade",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:vx"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 29,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:advanced_shield",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t3_power_helmet",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "power": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t3_power_chestplate",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "power": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t3_power_leggings",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "power": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t3_power_boots",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "power": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:susy_armor",
+        "damage": 17,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:susy_armor",
+        "damage": 16,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:susy_armor",
+        "damage": 15,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:susy_armor",
+        "damage": 14,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

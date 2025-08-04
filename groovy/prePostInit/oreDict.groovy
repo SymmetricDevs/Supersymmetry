@@ -314,3 +314,12 @@ ore('nutrientPhosphorous').add(metaitem('dustTricalciumPhosphate'))
 ore('nutrientPhosphorous').add(metaitem('dustPhosphorus'))
 ore('nutrientPhosphorous').add(metaitem('dustPhosphorite'))
 ore('nutrientPhosphorous').add(item('minecraft:dye', 15))
+
+//Uranium Isotopes
+ore('dustIsotopesUranium').add(metaitem('dustNaturalUranium'))
+ore('dustIsotopesUranium').add(metaitem('dustUranium235'))
+ore('dustIsotopesUranium').add(metaitem('dustLeu235'))
+ore('dustIsotopesUranium').add(metaitem('dustHaleu235'))
+ore('dustIsotopesUranium').add(metaitem('dustHeu235'))
+ore('dustIsotopesUranium').add(metaitem('dustWeaponsGradeUranium'))
+ore('dustIsotopesUranium').add(metaitem('dustUranium'))

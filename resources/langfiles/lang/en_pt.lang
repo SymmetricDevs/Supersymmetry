@@ -434,6 +434,9 @@ susy.material.anthracene=Antraceno
 susy.material.weed_killer=Herbicida
 susy.material.pesticide=Pesticida
 
+susy.material.sodium_vanillylmandelate_solution=Solução de Vanililmandelato de Sódio
+susy.material.sodium_vanilglycolate_solution=Solução de Vanilglicolato de Sódio
+
 susy.material.greenhouse_gases=Gases de Estufa
 susy.material.warm_greenhouse_gases=Gases de Estufa Quentes
 susy.material.cool_greenhouse_gases=Gases de Estufa Frios
@@ -588,7 +591,6 @@ susy.material.hydrazine_solution=Solução de Hidrazina
 susy.material.ethylenediamine_solution=Solução de Etilenodiamina
 susy.material.deacidified_ethylenediamine=Etilenodiamina "desacidificada"
 susy.material.ethylenediaminetetraacetic_acid_solution=Solução Ácida de Etilenodiamina Tetra-Acética
-susy.material.tetrasodium_ethylenediaminetetraacetic_acid_solution=Solução Ácida de Tetra-Sódio de Etilenodiamina Tetra-Acética
 susy.material.urea_solution=Solução de Úrea
 susy.material.diiodobenzene_solution=Solução de Di-Iodobenzeno
 susy.material.impure_four_four_oxydianiline=4-4-Oxidianilina Impura
@@ -597,8 +599,7 @@ susy.material.terephthalic_acid_slurry=Pasta Ácida de Tereftálico
 
 susy.material.impure_acetaldehyde=Acetaldeído Impuro
 susy.material.cativa_catalyst_preparation=Preparação Catalisador de Cativa
-susy.material.acidic_cumene=Cumeno Acídico
-susy.material.rearranged_cumene=Cumeno Rearranjado
+susy.material.crude_cumene=Cumeno Bruto
 susy.material.impure_kapton_k=Kapton K Impuro
 susy.material.impure_kapton_e=Kapton E Impuro
 susy.material.kapton_e_preparation=Preparação de Solução de Kapton E
@@ -645,7 +646,6 @@ susy.material.sodium_arsenide=Arsénio Sódio
 susy.material.sodium_perchlorate_solution=Sodium Perchlorate Solution
 susy.material.sodium_chlorate_solution=Sodium Chlorate Solution
 susy.material.diluted_aniline=Diluted Aniline
-susy.material.hot_hp_steam=Hot High Pressure Steam
 
 susy.material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
 susy.material.sodium_sulfite_solution=Sodium Sulfite Solution
@@ -794,7 +794,6 @@ susy.material.phosphorite_slurry=Phosphorite Slurry
 susy.material.phosphate_pulp=Phosphate Pulp
 susy.material.filtered_phosphate_pulp=Filtered Phosphate Pulp
 susy.material.phosphate_concentrate=Phosphate Concentrate
-susy.material.impure_ammonium_fluoroberyllate_solution=Impure Ammonium Fluoroberyllate Solution
 susy.material.silicon_tetrafluoride=Silicon Tetrafluoride
 susy.material.ammonium_fluoroberyllate_solution=Ammonium Fluoroberyllate Solution
 susy.material.sodium_fluoroberyllate_solution=Sodium Fluorosilicate Solution
@@ -1762,7 +1761,7 @@ recipemap.heat_exchanger.name=Heat Exchanger
 recipemap.radiator.name=Radiator
 recipemap.large_weapons_factory.name=Large Weapons Factory
 recipemap.ore_sorter.name=Ore Sorting
-recipemap.cooling_tower.name=Cooling Tower
+recipemap.natural_draft_cooling_tower.name=Natural Draft Cooling Tower
 recipemap.gas_turbine_new.name=Gas Turbine
 recipemap.quencher.name=Quencher
 recipemap.steam_turbine_new.name=Steam Turbine
@@ -2146,7 +2145,7 @@ tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 
 # Resin Logs
-gregtech.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
-gregtech.block_group_members.extractable_logs_2.name=Acacia and Dark Oak
+susy.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
+susy.block_group_members.extractable_logs_2.name=Acacia and Dark Oak
 
-gregtech.block_group_members.latex_logs.name=Rubber Log
+susy.block_group_members.latex_logs.name=Rubber Log

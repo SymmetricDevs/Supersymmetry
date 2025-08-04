@@ -44,9 +44,9 @@ def compressed_fireclay_ingredients = [
 ]
 
 furnace.add(ore('dustLimestone'), item('gregtech:meta_dust', 360))
-crafting.addShapeless('ManualFineSandPile',metaitem('sand.dust') * 4, [item('minecraft:sand')]) 
-crafting.addShapeless('ManualFineSandPile',metaitem('sand.dust') * 4, [item('minecraft:sand', 1)])
-crafting.addShaped('ManualSandBlock', item('minecraft:sand'), [
+crafting.addShapeless('manual_fine_sand_pile',metaitem('sand.dust') * 4, [item('minecraft:sand')]) 
+crafting.addShapeless('manual_fine_sand_pile_red',metaitem('sand.dust') * 4, [item('minecraft:sand', 1)])
+crafting.addShaped('manual_sand_block', item('minecraft:sand'), [
     [metaitem('sand.dust'),metaitem('sand.dust')],
     [metaitem('sand.dust'),metaitem('sand.dust')]
 ])

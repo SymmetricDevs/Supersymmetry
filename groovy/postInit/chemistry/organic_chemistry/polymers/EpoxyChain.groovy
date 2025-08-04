@@ -145,9 +145,9 @@ for (curingAgent in curingAgents) {
 }
 
 VACUUM_CHAMBER.recipeBuilder()
-    .inputs(ore('dustWetEpoxy') * 7)
+    .inputs(ore('dustWetEpoxy') * 8)
     .notConsumable(ore('springNichrome'))
-    .outputs(metaitem('dustEpoxy') * 7)
+    .outputs(metaitem('dustEpoxy') * 8)
     .duration(100)
     .EUt(30)
     .buildAndRegister()

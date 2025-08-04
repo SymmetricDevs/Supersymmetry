@@ -121,28 +121,6 @@ DISTILLERY.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-//ELECTROLYSIS ELECTRODE PRODUCTION
-ARC_FURNACE.recipeBuilder()
-    .inputs(ore('dustBoronTrioxide') * 10)
-    .inputs(ore('dustAnyPurityCarbon') * 7)
-    .outputs(metaitem('dustBoronCarbide') * 5)
-    .fluidOutputs(fluid('carbon_monoxide') * 6000)
-    .duration(300)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-def SINTERING_RECIPES = recipemap("sintering_oven")
-for (blanket in sintering_blankets) {
-    SINTERING_RECIPES.recipeBuilder()
-        .inputs(ore('dustBoronCarbide'))
-        .notConsumable(metaitem('shape.mold.rod'))
-        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
-        .outputs(metaitem('stickBoronCarbide'))
-        .duration(blanket.duration)
-        .EUt(Globals.voltAmps[2])
-        .buildAndRegister()
-}
-
 //ELECTROLYSIS OF B2O3
 ELECTROLYTIC_CELL.recipeBuilder()
     .inputs(ore('dustBoronTrioxide') * 5)

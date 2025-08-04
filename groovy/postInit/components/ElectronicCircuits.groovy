@@ -183,3 +183,15 @@ mods.gregtech.mixer.recipeBuilder()
         .duration(800)
         .EUt(16)
         .buildAndRegister();
+
+mods.gregtech.assembler.recipeBuilder()
+        .inputs(ore('circuitIv') * 4)
+        .inputs(metaitem('cover.screen'))
+        .inputs(ore('wireFineGold') * 8)
+        .inputs(metaitem('circuit_board.plastic'))
+        .outputs(metaitem('susy:code_breacher'))
+        .fluidInputs(fluid('soldering_alloy') * 144)
+        .duration(400)
+        .EUt(2048)
+        .buildAndRegister();
+        

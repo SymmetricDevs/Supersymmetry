@@ -1,3 +1,155 @@
+# UPDATE 0.1.15.2
+## Mod Changes
+### Mod Updates
+- Supercritical 0.1.3 -> 0.2.0
+- SusyCore v0.1.69 → v0.1.71
+### Mod Additions
+- FluxLoading → 1.3.5
+### Mod Removals
+- BiomeTweakerCore
+- Yet Another Recipe Conflict Fixer (YARCF) 
+## Changes
+### New Features
+- Tritium, polonium, and nuclear weapons are now available! (#1532 by @planetme)
+- Code Breachers are now required for Federation-locked structures. (#1571 by @Rick8484)
+- [Susy-Core] Thermoplastics are now available! (#483 by @WideMann)
+### Changed Features
+- IMPORTANT: Nuclear reactor values have been modified. **Please turn off your reactors before updating!!!!!!**
+- Many recipes now use the Mixer Settler. Check your lines! (#1559 by @Rick8484)
+- The main menu images have been updated! (#1570 by @MCTian-mi)
+- Graphite and Mica are now more accessible. (#1573 by @planetme)
+### Fixes
+- [Susy-Core] Now you can turn off command blocks on the server, there's a workaround to made our structures still generate. (#505 by @oliwier509)
+- Thanks to @Oganesson897, @MCTian-mi, @Crindigo, @trainvoi, @Rick8484, @loxoDev, and @oliwier509 for continuing to stabillize the pack!
+# UPDATE 0.1.15.1
+## Mod Changes
+### Mod Updates
+- Inventory Bogo Sorter 1.4.10 -> 1.4.11
+- ReFined Tools 7.76 -> 7.77
+- SusyCore v0.1.65 -> v0.1.68
+- Supercritical 0.1.2 -> 0.1.3
+## Changes
+### New Features
+- You can now produce plutonium! This probably isn't bad or anything. (#1552 by @planetme)
+- [Susy-Core] You can now use the mixer-settler multiblock to perform liquid-liquid extractions! (#455 by @bruberu)
+### Changed Features
+- In-game tips have been refreshed! (#1547 by @Rick8484)
+- [Susy-Core] Basic gas masks now may also be used to breathe underwater! (#482 by @unitazer)
+### Fixes
+- The Inventory Bogo Sorter config is accessible now!
+- HV motors are once again obtainable! (#1534 by @planetme)
+- The chromite line is now more accurate. (#1537 by @Crindigo)
+- You will have to try a *little* harder to loot a structure now. (#1539, #1548 by @oliwier509)
+# UPDATE 0.1.15.0.1
+## Mod Changes
+### Mod Updates
+* SusyCore v0.1.64 -> v0.1.65
+* Supercritical 0.1.1 -> 0.1.2
+* GroovyScript 1.2.4 -> 1.2.5
+### Mod Additions
+* VisualClaiming -> 0.0.2
+## Changes
+### New Features
+- Hold V while shift-r-clicking with a wrench or right-clicking with a wirecutter to instantly direct flow/connect wires! (#1434 by @MCTian-mi)
+### Fixes
+- The questbook is more accurate and up-to-date! (#1494 by @The-ExZombie)
+- Issues with the last update have been resolved. (#1522 by @planetme) (#1524 by @oliwier509) (#1527 by @trainvoi) (#1526 by @h3tR)
+# UPDATE 0.1.15 – TRINITY
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.61 -> v0.1.63
+- Supercritical 0.0.6 -> 0.1.1
+- ReFinedTools 7.75 -> 7.76
+- StellarCore 1.5.21 -> 1.5.22
+- Universal Tweaks 1.12.2-1.15.1 -> 1.12.2-1.15.2
+### Mod Additions
+- ModernMarkings -> 0.4.1
+- No Mob Friendly Fire -> 1.0
+### Mod Removals
+- YUNG's Better Mineshafts (Forge)
+## Changes
+### New Features
+- Fission reactors are now available! (#1507 by @planetme)
+- SUSY has been translated into Deutsch! (#1454 by @PhoenixSk4)
+- Bertrandite ore is available for specialized beryllium processing! (#1484 by @Rick8484)
+- The quarry multiblock replaces the rock breaker! (#1514 by @h3tR)
+- QuestWizard’s texture pack is installed and may be enabled!
+- [Susy-Core] Metallurgy has been overhauled! Try out the hot isostatic press and the new continuous casting system! (#420 by @bruberu)
+- [Susy-Core] Advanced steam turbines (#454 by @h3tR)
+- [Susy-Core] There’s a new structure for you to explore… (#460 by @oliwier509)
+### Changed Features
+- Steel now requires limestone to smelt. (#420 by @bruberu)
+- New, more interesting motor recipes! (#1391 by @planetme)
+- Allow more MSFD distilled water overclocking (#1517 by @Rick8484)
+- [Susy-Core] JEI shows all rolling stock types (#452 by @MCTian-mi)
+- [Susy-Core] The cooling tower is a lot cooler (#461 by @planetme)
+### Fixes
+- The groovy cache is now automatically refreshed (#1496 by @bruberu)
+- Fix neodymium magnetization (#1490 by @WideMann)
+- Fix cobalt electrolysis (#1491 by @trainvoi)
+- Fix REE chain issues (#1492 by @Rick8484)
+- Make ethane flammable (#1495 by @Cone444)
+- Pyrotech recipe removal & GT small fluid cell craftable before LV (#1500 by @Brebexe)
+- Kevlar and Nomex polymerization fix (#1504 by @h3tR)
+- [Susy-Core] Fix in-world preview error for fluids in multiblocks. (#465 by @MCTian-mi)
+- And many more by our hardworking development team!
+# UPDATE 0.1.14.10.1
+## Changes
+### Fixes
+- Clarifiers and froth flotaters are now safe
+- Magnetic neodymium rods no longer need an assembly line (#1490 by WideMann)
+- Cobalt electrolysis no longer produces the high-purity version (#1491 by trainvoi)
+# UPDATE 0.1.14.10
+## Mod Changes
+### Mod Updates
+- Not Enough Energistics 1.12.2-2.0.7 -> 1.12.2-2.0.9
+- SusyCore v0.1.59 -> v0.1.61
+- Supercritical 0.0.5 -> 0.0.6
+- Had Enough Items 4.27.3 -> 4.28.0
+- Fixeroo 2.3.5-hotfix.1 -> 2.3.6b
+- OpenComputers MC1.12.2-1.8.8+8da357f -> MC1.12.2-1.8.9a+8ca336f
+- Universal Tweaks 1.12.2-1.14.0 -> 1.12.2-1.15.1
+- CraftPresence 2.5.3+1.12.2-forge -> 2.6.1+1.12.2-forge
+- ModularUI 2.5.0-rc4 -> 2.5.0-rc5
+- Forgelin-Continuous Continuous-2.1.10.0 -> Continuous-2.1.21.0
+- Extreme Sound Muffler: Legacy legacy-1.12.2-1.0.2 -> legacy-1.12.2-1.0.3
+- Chemistry Signs 1.0.0 -> 1.1.1
+- VintageFix 0.5.5 -> 0.6.2
+- PackagedAuto 1.12.2-1.0.17.60 -> 1.12.2-1.0.18.63
+- Flare (Spark for 1.12.2) 0.5.0 -> 0.7.0
+- UniLib 1.0.5+1.12.2-forge -> 1.1.0+1.12.2-forge
+- Quark: RotN Edition r1.6-189 -> r1.6-190
+- VisualOres 0.2.6 -> 0.2.7
+- Fugue 0.18.4 -> 0.18.6
+- GroovyScript 1.2.3 -> 1.2.4
+- Bubbles 2.4.4 -> 2.4.7
+### Mod Removals
+- RandomPatches (Forge)
+## Changes
+### New Features
+- Finally, the Rare-Earth Elements chain has reached SUSY! Play through 9 brand-new quests. (#1227 by @WideMann) (#1482 by @planetme)
+- Project Red mods now has a questline! (#1473 by @fil1423)
+- Iodine can now be extracted from caliche, a mineral in HV sedimentary rock. (#1485 by @planetme)
+- [Susy-Core] Reflective and asbestos suits now also protect you from drowning and hot/cold pipes! (#439 by @unitazer)
+- [Susy-Core] Four multiblocks now have excellent particle effects! (#446 by @h3tR)
+### Changed Features
+- Watch out: geothermal has been nerfed from 3L of lava usage to 10L of lava usage per recipe! You all deserved it though. (#1477 by @Oganesson897)
+- Germanium now uses distilled rather than ultrapure water (#1471 by @WideMann)
+- The chromite line now uses a mixer instead of a BR for one step (#1479 by @WideMann)
+- Aluminium's recipe is now stoichiometrically correct (#1459 by @WideMann)
+- The inhaler recipe is now logically correct (#1469 by @Rick8484)
+- [Susy-Core] The jet wingsuit now works as a bauble (#441 by @bruberu)
+- [Susy-Core] However, firework rockets no longer work with the elytra (#448 by @fil1423)
+### Fixes
+- Many people helped contribute to the questbook! (#1462 by @Rick8484) (#1463 by @Rick8484) (#1467 by @Cone444) (#1483 by @Brebexe) (#1487 by @Cone444)
+- Allow red sand to be used to craft sand pile (#1472 by @WideMann)
+- Magenta elevators are now craftable (#1475 by @Rick8484)
+- Recycling caution blocks no longer dupes steel (#1488 by @Fiery36)
+- [Susy-Core] Sheeted frames now stack when mined (#442 by @bruberu)
+- [Susy-Core] Evaporation pools no longer spam log (#449 by @MCTian-mi)
+- [Susy-Core] Filters are no longer removed from pipes when conveyors are placed on them (#450 by @unitazer)
+
+Finally, thanks to our first-time contributor @Blebkleb!
 # UPDATE 0.1.14.9
 
 ## Mod Changes

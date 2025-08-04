@@ -51,7 +51,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 RecyclingHelper.handleRecycling(item('susy:separator_rotor') * 5,
-		[metaitem('electric.motor.hv') * 2, ore('gearStainlessSteel') * 4, ore('rotorStainlessSteel') * 16, ore('plateStainlessSteel') * 16]
+        [metaitem('electric.motor.hv') * 2, ore('gearStainlessSteel') * 4, ore('rotorStainlessSteel') * 16, ore('plateStainlessSteel') * 16]
 )
 
 ASSEMBLER.recipeBuilder()
@@ -75,16 +75,27 @@ ASSEMBLER.recipeBuilder()
 
 RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 1), [ore('plateStainlessSteel') * 4, ore('frameGtStainlessSteel')])
 
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(13)
+    .inputs(ore('plateStainlessSteel') * 4)
+    .inputs(item('gregtech:metal_casing', 4))
+    .outputs(item('susy:susy_multiblock_casing', 10))
+    .duration(240)
+    .EUt(Globals.voltAmps[3])
+    .buildAndRegister()
+
+RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 10), [ore('plateStainlessSteel') * 4, item('gregtech:metal_casing', 4)])
+
 RecyclingHelper.addShaped("susy:air_vent_w", item('susy:meta_item', 4), [
-	[ore('craftingToolHardHammer'),ore('stickWroughtIron'),ore('craftingToolScrewdriver')],
-	[ore('plateWroughtIron'),ore('stickWroughtIron'),ore('plateWroughtIron')],
-	[ore('screwWroughtIron'),ore('stickWroughtIron'),ore('screwWroughtIron')]
+    [ore('craftingToolHardHammer'),ore('stickWroughtIron'),ore('craftingToolScrewdriver')],
+    [ore('plateWroughtIron'),ore('stickWroughtIron'),ore('plateWroughtIron')],
+    [ore('screwWroughtIron'),ore('stickWroughtIron'),ore('screwWroughtIron')]
 ])
 
 crafting.addShaped("susy:air_vent_n", item('susy:meta_item', 4), [
-	[ore('craftingToolHardHammer'),ore('stickIron'),ore('craftingToolScrewdriver')],
-	[ore('plateIron'),ore('stickIron'),ore('plateIron')],
-	[ore('screwIron'),ore('stickIron'),ore('screwIron')]
+    [ore('craftingToolHardHammer'),ore('stickIron'),ore('craftingToolScrewdriver')],
+    [ore('plateIron'),ore('stickIron'),ore('plateIron')],
+    [ore('screwIron'),ore('stickIron'),ore('screwIron')]
 ])
 
 ASSEMBLER.recipeBuilder()
@@ -154,7 +165,7 @@ crafting.addShaped("susy:gas_tank", item('susy:susy_armor', 3).withNbt(['oxygen'
 ])
 
 crafting.addShaped("susy:easy_cell", metaitem('fluid_cell'), [
-    [ore('toolHardHammer'), null],
+    [ore('craftingToolHardHammer'), null],
     [null, ore('plateSteel')]
 ])
 
@@ -336,7 +347,7 @@ ASSEMBLER.recipeBuilder()
     .duration(400)
     .EUt(Globals.voltAmps[4])
     .buildAndRegister()
-    
+
 ASSEMBLER.recipeBuilder()
     .circuitMeta(5)
     .inputs(ore('threadPolybenzimidazole') * 14)

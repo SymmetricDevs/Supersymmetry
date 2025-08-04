@@ -1,0 +1,13 @@
+name = "VisualClaiming"
+filename = "visualclaiming-0.0.2.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "462cf9babceab12ad6c5649d9cabd8f224857a0f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6476081
+project-id = 1254583
