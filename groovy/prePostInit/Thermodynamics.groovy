@@ -908,7 +908,7 @@ recipemap('fluid_compressor').recipeBuilder()
 recipemap('fluid_heater').recipeBuilder()
         .fluidInputs(liquid('heavy_water') * 1536)
         .fluidOutputs(liquid('pressurized_heavy_water') * 1536)
-        .duration(1)
+        .duration(2000)
         .EUt(480)
         .buildAndRegister();
 

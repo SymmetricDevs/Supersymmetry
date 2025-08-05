@@ -126,6 +126,9 @@ susy.material.diacetone_peroxide=Diacetone Peroxide
 susy.material.triacetone_peroxide=Triacetone Peroxide
 susy.material.triacetone_peroxide_slurry=Triacetone Peroxide Slurry
 susy.material.diacetone_peroxide_slurry=Diacetone Peroxide Slurry
+susy.material.four_nitrophenol=4-Nitrophenol
+susy.material.four_aminophenol_solution=4-Aminophenol Solution
+susy.material.four_aminophenol=4-Aminophenol
 
 susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.potassium_bisulfate=Potassium Bisulfate
@@ -1593,7 +1596,7 @@ susy.material.scrubbed_tungsten_extract=Scrubbed Tungsten Extract
 susy.material.molybdenum_trisulfide=Molybdenum Trisulfide
 susy.material.ammonium_isopolytungstate_solution=Ammonium Isopolytungstate Solution
 susy.material.ammonium_paratungstate=Ammonium Paratungstate
-susy.material.very_diluted_sodium_sulfate_solution=Diluted Sodium Sulfate Solution
+susy.material.very_diluted_sodium_sulfate_solution=Very Diluted Sodium Sulfate Solution
 susy.material.tripropylene=Tripropylene
 susy.material.isodecanal=Isodecanal
 susy.material.isodecanol=Isodecanol
@@ -2632,6 +2635,8 @@ susy.material.pentaerythritol_solution=Pentaerythritol Solution
 susy.material.ethylenediamine_solution=Ethylenediamine Solution
 susy.material.xylenol_solution=Xylenol Solution
 susy.material.acidic_ethanol_solution=Acidic Ethanol Solution
+susy.material.raney_copper=Raney Copper
+susy.material.activated_raney_copper=Activated Raney Copper
 
 # Isotopes
 

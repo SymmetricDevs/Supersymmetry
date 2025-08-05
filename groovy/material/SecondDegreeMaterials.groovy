@@ -117,7 +117,7 @@ class SecondDegreeMaterials {
 
         SodiumAluminateSolution = new Material.Builder(13015, SuSyUtility.susyId('sodium_aluminate_solution'))
                 .liquid()
-                .components(SodiumAluminate * 1, Water * 1)
+                .components(SodiumAluminate * 2, Water * 3)
                 .color(0x3f71bf)
                 .build()
 

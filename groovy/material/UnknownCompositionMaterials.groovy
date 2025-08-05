@@ -3089,6 +3089,5 @@ class UnknownCompositionMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .color(0xd6b465)
                 .build()
-
     }
 }

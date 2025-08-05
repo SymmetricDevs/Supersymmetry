@@ -2836,7 +2836,7 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        Ultem.setFormula('(C37H24O6N2)n', true)
+        Ultem.setFormula('[C37H24O6N2]n', true)
 
         PotassiumPhthalimide = new Material.Builder(15448, SuSyUtility.susyId('potassium_phthalimide'))
                 .dust()
@@ -2996,7 +2996,7 @@ class OrganicChemistryMaterials {
                 .color(0xbc716d)
                 .build()
 
-        Viton.setFormula('[(C3F6)(C2H2F2)]n', true)
+        Viton.setFormula('[C3F6]n[C2H2F2]n', true)
 
         PolyetherEtherKetone = new Material.Builder(15474, SuSyUtility.susyId('polyether_ether_ketone'))
                 .polymer()
@@ -3004,7 +3004,7 @@ class OrganicChemistryMaterials {
                 .color(0x316d3e)
                 .build()
 
-        PolyetherEtherKetone.setFormula('(C19H12O3)n', true)
+        PolyetherEtherKetone.setFormula('[C19H12O3]n', true)
 
         PolyphenyleneOxide = new Material.Builder(15475, SuSyUtility.susyId('polyphenylene_oxide'))
                 .polymer()
@@ -3012,7 +3012,7 @@ class OrganicChemistryMaterials {
                 .color(0x4a567d)
                 .build()
 
-        PolyphenyleneOxide.setFormula('(C8H8O)n(C8H8)n', true)
+        PolyphenyleneOxide.setFormula('[C8H8O]n[C8H8]n', true)
 
         NButylIodide = new Material.Builder(15476, SuSyUtility.susyId('n_butyl_iodide'))
                 .liquid()
@@ -3026,21 +3026,33 @@ class OrganicChemistryMaterials {
                 .color(0xc3bec4)
                 .build()
 
-        DiacetonePeroxide = new Material.Builder(15478, SuSyUtility.susyId('diacetone_peroxide'))
+        FourNitrophenol = new Material.Builder(15478, SuSyUtility.susyId('four_nitrophenol'))
+                .dust()
+                .components(Carbon * 6, Hydrogen * 5, Nitrogen, Oxygen * 3)
+                .color(0xe0e314)
+                .build()
+
+        DiacetonePeroxide = new Material.Builder(15479, SuSyUtility.susyId('diacetone_peroxide'))
                 .dust()
                 .liquid()
                 .composition(Carbon * 6, Hydrogen * 12, Oxygen * 4)
                 .color(0xf54927)
                 .build()
-        TriacetonePeroxide = new Material.Builder(15479, SuSyUtility.susyId('triacetone_peroxide'))
+      
+        TriacetonePeroxide = new Material.Builder(15480, SuSyUtility.susyId('triacetone_peroxide'))
                 .dust()
                 .liquid()
                 .composition(Carbon * 9, Hydrogen * 18, Oxygen * 6)
                 .color(0x9c2007)
                 .build()
+      
+        FourAminophenol = new Material.Builder(15481, SuSyUtility.susyId('four_aminophenol'))
+                .dust()
+                .components(Carbon * 6, Hydrogen * 7, Nitrogen, Oxygen)
+                .color(0xd9560b)
+                .build()
 
-
-        SodiumVanillylmandelateSolution = new Material.Builder(4673, SuSyUtility.susyId('sodium_vanillylmandelate_solution'))
+        SodiumVanillylmandelateSolution = new Material.Builder(15482, SuSyUtility.susyId('sodium_vanillylmandelate_solution'))
                 .liquid()
                 .components(Sodium, Carbon * 9, Hydrogen * 9, Oxygen * 5, SodiumHydroxide, Water * 3)
                 .color(0xc2c099)
@@ -3048,7 +3060,7 @@ class OrganicChemistryMaterials {
 
         SodiumVanillylmandelateSolution.setFormula('(NaC9H9O5)(NaOH)(H2O)3', true)
 
-        SodiumVanilglycolateSolution = new Material.Builder(4674, SuSyUtility.susyId('sodium_vanilglycolate_solution'))
+        SodiumVanilglycolateSolution = new Material.Builder(15483, SuSyUtility.susyId('sodium_vanilglycolate_solution'))
                 .liquid()
                 .components(Sodium, Carbon * 9, Hydrogen * 7, Oxygen * 5, SodiumHydroxide, Water * 4)
                 .color(0x82805b)

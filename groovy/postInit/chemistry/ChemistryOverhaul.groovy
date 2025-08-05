@@ -2075,17 +2075,6 @@ FBR.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-// Raney Nickel and cyclohexane
-
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('aluminium') * 144)
-    .inputs(ore('dustAnyPurityNickel') * 1)
-    .inputs(ore('dustTinyZinc') * 1)
-    .outputs(metaitem('dustRaneyNickel') * 2)
-    .duration(200)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
 BR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 1000)
     .inputs(ore('dustSodiumDichromate') * 11)
@@ -2100,17 +2089,6 @@ DISTILLERY.recipeBuilder()
     .fluidOutputs(fluid('water') * 1000)
     .outputs(metaitem('dustSodiumSulfate') * 7)
     .duration(200)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-BR.recipeBuilder()
-    .inputs(ore('dustRaneyNickel') * 4)
-    .inputs(ore('dustSodiumHydroxide') * 6)
-    .fluidInputs(fluid('water') * 6000)
-    .outputs(metaitem('dustActivatedRaneyNickel') * 2)
-    .outputs(metaitem('dustSodiumAluminate') * 20)
-    .fluidOutputs(fluid('hydrogen') * 6000)
-    .duration(240)
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
@@ -3503,6 +3481,7 @@ ROASTER.recipeBuilder()
 // Ethylbenzene
 
 CSTR.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('benzene') * 50)
     .fluidInputs(fluid('ethylene') * 50)
     .notConsumable(fluid('sulfuric_acid') * 50)

@@ -817,7 +817,7 @@ class FirstDegreeMaterialsA {
                 .dust()
                 .iconSet(SHINY)
                 .flags(DISABLE_DECOMPOSITION)
-                .components(Nickel, Aluminium)
+                .components(Nickel)
                 .color(0xa9aec4)
                 .build()
 
@@ -1213,7 +1213,7 @@ class FirstDegreeMaterialsA {
                 .dust()
                 .iconSet(SHINY)
                 .flags(DISABLE_DECOMPOSITION)
-                .components(Cobalt, Aluminium)
+                .components(Cobalt)
                 .color(0x3274bf)
                 .build()
 

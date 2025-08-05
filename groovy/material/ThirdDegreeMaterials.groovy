@@ -635,7 +635,15 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE IDs: 24101-24102
+        FourAminophenolSolution = new Material.Builder(24101, SuSyUtility.susyId('four_aminophenol_solution'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 7, Nitrogen, Oxygen, IsopropylAlcohol, Water * 2)
+                .color(0xd9560b)
+                .build()
+
+        FourAminophenolSolution.setFormula('(C6H7NO)(C3H8O)(H2O)2', true)
+
+        // FREE ID: 24102
 
         IsopropylamineSolution = new Material.Builder(24103, SuSyUtility.susyId('isopropylamine_solution'))
                 .liquid()
