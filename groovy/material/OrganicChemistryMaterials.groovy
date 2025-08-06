@@ -3100,13 +3100,13 @@ class OrganicChemistryMaterials {
         
         DiacetonePeroxide = new Material.Builder(15484, SuSyUtility.susyId('diacetone_peroxide'))
                 .dust()
-                .composition(Carbon * 6, Hydrogen * 12, Oxygen * 4)
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 4)
                 .color(0xf54927)
                 .build()
       
         TriacetonePeroxide = new Material.Builder(15485, SuSyUtility.susyId('triacetone_peroxide'))
                 .dust()
-                .composition(Carbon * 9, Hydrogen * 18, Oxygen * 6)
+                .components(Carbon * 9, Hydrogen * 18, Oxygen * 6)
                 .color(0x9c2007)
                 .build()
     }
