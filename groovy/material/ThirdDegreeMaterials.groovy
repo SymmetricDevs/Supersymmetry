@@ -79,11 +79,7 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DilutedDiTertButylPeroxide = new Material.Builder(24010, SuSyUtility.susyId('diluted_di_tert_butyl_peroxide'))
-                .liquid()
-                .components(DiTertButylPeroxide * 1, Water * 1)
-                .colorAverage()
-                .build()
+        // FREE ID: 24010
 
         SodiumEthoxideSolution = new Material.Builder(24011, SuSyUtility.susyId('sodium_ethoxide_solution'))
                 .liquid()
@@ -824,6 +820,17 @@ class ThirdDegreeMaterials {
                 .components(FourNitroNMethylPhthalimide, SulfuricAcid, Water)
                 .colorAverage()
                 .build()
-        
-        }
+
+        PerfluorovinylSulfonylEtherSolution = new Material.Builder(24133, SuSyUtility.susyId('perfluorovinyl_sulfonyl_ether_solution'))
+                .liquid()
+                .components(PerfluorovinylSulfonylEther * 1, SodiumFluoride * 2, Dimethylformamide * 2)
+                .colorAverage()
+                .build()
+
+        NafionSolution = new Material.Builder(24134, SuSyUtility.susyId('nafion_solution'))
+                .liquid()
+                .components(Nafion * 2, FluorinatedSurfactantMixture)
+                .colorAverage()
+                .build()
+    }
 }

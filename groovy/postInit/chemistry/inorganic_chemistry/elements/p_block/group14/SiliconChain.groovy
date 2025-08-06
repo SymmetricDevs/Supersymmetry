@@ -350,3 +350,14 @@ CSTR.recipeBuilder()
         .duration(5)
         .EUt(120)
         .buildAndRegister()
+
+// Silicates
+
+BATCH_REACTOR.recipeBuilder()
+    .inputs(ore('dustCalciumMetasilicate') * 5)
+    .fluidInputs(fluid('carbon_dioxide') * 1000)
+    .outputs(metaitem('dustCalcite') * 5)
+    .outputs(metaitem('dustSiliconDioxide') * 3)
+    .duration(120)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()

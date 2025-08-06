@@ -304,15 +304,6 @@ MIXER.recipeBuilder()
 
 // Styrene-Butadiene rubber
 
-SIFTER.recipeBuilder()
-    .fluidInputs(fluid('ethanol_water_azeotrope') * 1000)
-    .inputs(ore('dustMolecularSieve')* 4)
-    .fluidOutputs(fluid('ethanol') * 900)
-    .outputs(metaitem('dustWetMolecularSieve') * 4)
-    .EUt(30)
-    .duration(200)
-    .buildAndRegister()
-
 MIXER.recipeBuilder()
     .fluidInputs(fluid('styrene') * 1000)
     .fluidInputs(fluid('butadiene') * 3000)

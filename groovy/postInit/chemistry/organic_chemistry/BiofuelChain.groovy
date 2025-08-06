@@ -242,7 +242,7 @@ PHASE_SEPARATOR.recipeBuilder()
 // The carbon dioxide in the gaseous phase is formed via decarboxylation
 // You can use either PSA or NaOH solution
 PSA.recipeBuilder()
-    .notConsumable(ore('dustMolecularSieve') * 5)
+    .notConsumable(metaitem('membrane.zeolite'))
     .fluidInputs(fluid('acidic_hydrogen_vapor') * 9000)
     .fluidOutputs(fluid('hydrogen') * 8000)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)

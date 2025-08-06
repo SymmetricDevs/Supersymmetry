@@ -1277,7 +1277,7 @@ class FirstDegreeMaterialsA {
 
         AluminiumSulfate.setFormula("Al2(SO4)3", true)
 
-        DemineralizedWater = new Material.Builder(8277, SuSyUtility.susyId('demineralized_water'))
+        DeionizedWater = new Material.Builder(8277, SuSyUtility.susyId('deionized_water'))
                 .liquid()
                 .components(Hydrogen * 2, Oxygen)
                 .color(0x4761a8)
@@ -1826,8 +1826,11 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-
-        // FREE ID: 8360
+        PartiallyDeionizedWater = new Material.Builder(8360, SuSyUtility.susyId('partially_deionized_water'))
+                .liquid()
+                .components(Hydrogen * 2, Oxygen)
+                .color(0x2d4380)
+                .build()
 
         CrudeTin = new Material.Builder(8361, SuSyUtility.susyId('crude_tin'))
                 .liquid(new FluidBuilder().temperature(600))

@@ -134,7 +134,13 @@ def name_removals = [
     'gregtech:gregtech.machine.fisher.lv',
     'gregtech:gregtech.machine.fisher.mv',
     'gregtech:gregtech.machine.fisher.hv',
-    'gregtech:gregtech.machine.fisher.ev'
+    'gregtech:gregtech.machine.fisher.ev',
+    'gregtech:large_bronze_boiler',
+    'gregtech:large_steel_boiler',
+    'gregtech:steam_boiler_coal_bronze',
+    'gregtech:steam_boiler_coal_steel',
+    'gregtech:steam_boiler_lava_bronze',
+    'gregtech:steam_boiler_lava_steel'
 ]
 
 for (name in name_removals) {
@@ -341,12 +347,6 @@ for (item in item_removals) {
 
 //CONSUMES IRON BUCKET ONLY BECAUSE THE OUTPUT IS IN AN IRON BUCKET
 crafting.addShapeless('gregtech:salt_water_bucket', item('forge:bucketfilled').withNbt(["FluidName": "salt_water", "Amount": 1000]), [item('minecraft:water_bucket').noReturn(), metaitem('dustSalt'), metaitem('dustSalt')])
-
-RecyclingHelper.replaceShaped('gregtech:large_steel_boiler', metaitem('large_boiler.steel'), [
-    [ore('cableGtSingleCopper'), ore('circuitMv'), ore('cableGtSingleCopper')],
-    [ore('circuitMv'), item('gregtech:boiler_firebox_casing', 1), ore('circuitMv')],
-    [ore('cableGtSingleCopper'), ore('circuitMv'), ore('cableGtSingleCopper')]
-])
 
 RecyclingHelper.replaceShaped('gregtech:bronze_primitive_blast_furnace', metaitem('primitive_blast_furnace.bronze'), [
     [ore('craftingToolHardHammer'), ore('stickBronze'), ore('screwBronze')],
@@ -750,6 +750,7 @@ mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').wit
 
 SIFTER.recipeBuilder()
     .inputs(ore('dustPegmatiteTailings') * 3)
+    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
     .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
     .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
     .chancedOutput(metaitem('dustMica'), 5000, 500)
@@ -1582,52 +1583,6 @@ CENTRIFUGE.recipeBuilder()
     .outputs(metaitem('dustCarbon'))
     .duration(100)
     .EUt(6)
-    .buildAndRegister();
-
-// Add more semi fluid fuel options
-mods.gregtech.semi_fluid_generator.removeByInput(32, null, [fluid('sulfuric_heavy_fuel') * 16])
-mods.gregtech.semi_fluid_generator.removeByInput(32, null, [fluid('heavy_fuel') * 8])
-
-SEMI_FLUID_GENERATOR.recipeBuilder()
-    .fluidInputs(fluid('diesel') * 8)
-    .duration(15)
-    .EUt(-32)
-    .buildAndRegister();
-
-SEMI_FLUID_GENERATOR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_heavy_gas_oil') * 16)
-    .duration(7)
-    .EUt(-32)
-    .buildAndRegister();
-
-SEMI_FLUID_GENERATOR.recipeBuilder()
-    .fluidInputs(fluid('heavy_gas_oil') * 8)
-    .duration(21)
-    .EUt(-32)
-    .buildAndRegister();
-
-SEMI_FLUID_GENERATOR.recipeBuilder()
-    .fluidInputs(fluid('sulfuric_natural_gas') * 16)
-    .duration(4)
-    .EUt(-32)
-    .buildAndRegister();
-
-SEMI_FLUID_GENERATOR.recipeBuilder()
-    .fluidInputs(fluid('natural_gas') * 8)
-    .duration(12)
-    .EUt(-32)
-    .buildAndRegister();
-
-SEMI_FLUID_GENERATOR.recipeBuilder()
-    .fluidInputs(fluid('propane') * 8)
-    .duration(15)
-    .EUt(-32)
-    .buildAndRegister();
-
-SEMI_FLUID_GENERATOR.recipeBuilder()
-    .fluidInputs(fluid('gtfo_stearin') * 8)
-    .duration(15)
-    .EUt(-32)
     .buildAndRegister();
 
 // Light Concrete * 1

@@ -496,19 +496,41 @@ class FirstDegreeMaterialsB {
                 .color(0x47260e)
                 .build()
 
-        RaneyCopper = new Material.Builder(8740, SuSyUtility.susyId('raney_copper'))
+        DiammoniumHydrogenPhosphate = new Material.Builder(8740, SuSyUtility.susyId('diammonium_hydrogen_phosphate'))
+                .dust()
+                .components(Nitrogen * 2, Hydrogen * 9, Phosphorus, Oxygen * 4)
+                .colorAverage()
+                .build()
+
+        DiammoniumHydrogenPhosphate.setFormula('(NH4)2HPO4', true)
+
+        Boehmite = new Material.Builder(8741, SuSyUtility.susyId('boehmite'))
+                .dust()
+                .components(Aluminium, Oxygen * 2, Hydrogen)
+                .color(0x545e3d)
+                .build()
+
+        Boehmite.setFormula('AlO(OH)', true)
+        
+        RaneyCopper = new Material.Builder(8742, SuSyUtility.susyId('raney_copper'))
                 .dust()
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Copper, Aluminium)
                 .color(0xdb6d25)
                 .build()
 
-        ActivatedRaneyCopper = new Material.Builder(8741, SuSyUtility.susyId('activated_raney_copper'))
+        ActivatedRaneyCopper = new Material.Builder(8743, SuSyUtility.susyId('activated_raney_copper'))
                 .dust()
                 .iconSet(SHINY)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Copper)
                 .color(0xbd6c37)
+                .build()
+
+        ReverseOsmosisWater = new Material.Builder(8744, SuSyUtility.susyId('ro_water'))
+                .liquid()
+                .components(Hydrogen * 2, Oxygen)
+                .color(0x53a4c9)
                 .build()
     }
 }

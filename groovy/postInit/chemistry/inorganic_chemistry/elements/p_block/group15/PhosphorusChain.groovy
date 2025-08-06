@@ -313,16 +313,6 @@ FLUID_SOLIDIFIER.recipeBuilder()
     .EUt(Globals.voltAmps[1])
     .buildAndRegister()
 
-//CALCIUM METASILICATE-SILICA RECYCLING
-BATCH_REACTOR.recipeBuilder()
-    .inputs(ore('dustCalciumMetasilicate') * 5)
-    .fluidInputs(fluid('carbon_dioxide') * 1000)
-    .outputs(metaitem('dustCalcite') * 5)
-    .outputs(metaitem('dustSiliconDioxide') * 3)
-    .duration(120)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
 // Compounds
 
 DISTILLERY.recipeBuilder()
@@ -351,6 +341,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .buildAndRegister()
 
 // Polyphosphoric Acid
+
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('phosphoric_acid') * 6000)
     .outputs(metaitem('dustPolyphosphoricAcid'))
@@ -358,3 +349,39 @@ ROASTER.recipeBuilder()
     .duration(200)
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
+
+// Ammonium phosphates
+
+CSTR.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('phosphoric_acid') * 50)
+    .fluidInputs(fluid('ammonia_solution') * 50)
+    .fluidOutputs(fluid('ammonium_dihydrogen_phosphate_solution') * 50)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister();
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('ammonium_dihydrogen_phosphate_solution') * 1000)
+    .outputs(metaitem('dustAmmoniumDihydrogenPhosphate') * 12)
+    .fluidOutputs(fluid('water') * 1000)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister();
+
+CSTR.recipeBuilder()
+    .circuitMeta(2)
+    .fluidInputs(fluid('phosphoric_acid') * 50)
+    .fluidInputs(fluid('ammonia_solution') * 100)
+    .fluidOutputs(fluid('diammonium_hydrogen_phosphate_solution') * 100)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister();
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('diammonium_hydrogen_phosphate_solution') * 2000)
+    .outputs(metaitem('dustDiammoniumHydrogenPhosphate') * 15)
+    .fluidOutputs(fluid('water') * 2000)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister();

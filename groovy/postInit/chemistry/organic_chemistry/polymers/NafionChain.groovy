@@ -1,0 +1,69 @@
+import globals.Globals
+
+CSTR = recipemap('continuous_stirred_tank_reactor')
+LCR = recipemap('large_chemical_reactor')
+DT = recipemap('distillation_tower')
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('hexafluoropropylene') * 50)
+    .fluidInputs(fluid('oxygen') * 50)
+    .fluidOutputs(fluid('hexafluoropropylene_oxide') * 50)
+    .duration(5)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister();
+
+CSTR.recipeBuilder()
+    .notConsumable(ore('dustSodiumFluoride') * 2)
+    .fluidInputs(fluid('tetrafluoroethylene') * 50)
+    .fluidInputs(fluid('sulfur_trioxide') * 50)
+    .fluidOutputs(fluid('fluorosulfonyl_difluoroacetyl_fluoride') * 50)
+    .duration(5)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister();
+
+LCR.recipeBuilder()
+    .inputs(ore('dustSodiumCarbonate') * 5)
+    .fluidInputs(fluid('dimethylformamide') * 2000)
+    .fluidInputs(fluid('hexafluoropropylene_oxide') * 2000)
+    .fluidInputs(fluid('fluorosulfonyl_difluoroacetyl_fluoride') * 1000)
+    .fluidOutputs(fluid('perfluorovinyl_sulfonyl_ether_solution') * 3000)
+    .fluidOutputs(fluid('carbon_dioxide') * 2000)
+    .duration(100)
+    .EUt(Globals.voltAmps[4])
+    .buildAndRegister();
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('perfluorovinyl_sulfonyl_ether_solution') * 3000)
+    .outputs(metaitem('dustSodiumFluoride') * 4)
+    .fluidOutputs(fluid('perfluorovinyl_sulfonyl_ether') * 1000)
+    .fluidOutputs(fluid('dimethylformamide') * 2000)
+    .duration(100)
+    .EUt(240)
+    .buildAndRegister();
+
+POLYMERIZATION.recipeBuilder()
+    .fluidInputs(fluid('fluorinated_surfactant_mixture') * 500)
+    .fluidInputs(fluid('perfluorovinyl_sulfonyl_ether') * 1000)
+    .fluidInputs(fluid('tetrafluoroethylene') * 1000)
+    .inputs(ore('dustTinyPotassiumPersulfate'))
+    .fluidOutputs(fluid('nafion_solution') * 500)
+    .duration(100)
+    .EUt(240)
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('nafion_solution') * 500)
+    .outputs(metaitem('dustRawNafion'))
+    .fluidOutputs(fluid('fluorinated_surfactant_mixture') * 500)
+    .duration(40)
+    .EUt(30)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustRawNafion'))
+    .fluidInputs(fluid('deionized_water') * 2000)
+    .outputs(metaitem('dustNafion'))
+    .fluidOutputs(fluid('hydrofluoric_acid') * 1000)
+    .duration(40)
+    .EUt(30)
+    .buildAndRegister()

@@ -192,7 +192,7 @@ DISTILLERY.recipeBuilder()
 
 MIXER_SETTLER.recipeBuilder()
         .fluidInputs(fluid('tungsten_extract') * 8000)
-        .fluidInputs(fluid('demineralized_water') * 2000) 
+        .fluidInputs(fluid('deionized_water') * 2000) 
         .fluidOutputs(fluid('scrubbed_tungsten_extract') * 8000)
         .fluidOutputs(fluid('wastewater') * 2000)
         .EUt(Globals.voltAmps[3])

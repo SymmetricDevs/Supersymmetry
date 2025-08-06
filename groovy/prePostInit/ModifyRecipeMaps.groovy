@@ -31,6 +31,7 @@ GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES)
 GTRecipeHandler.removeAllRecipes(GCYMRecipeMaps.ALLOY_BLAST_RECIPES)
+GTRecipeHandler.removeAllRecipes(RecipeMaps.SEMI_FLUID_GENERATOR_FUELS)
 
 GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
     if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
@@ -406,7 +407,7 @@ RecipeMaps.GAS_TURBINE_FUELS
     .modifyMaxFluidOutputs(1)
 
 RecipeMaps.AUTOCLAVE_RECIPES
-    .modifyMaxFluidInputs(2)
+    .modifyMaxFluidInputs(4)
     .modifyMaxFluidOutputs(2)
 
 RecipeMaps.CHEMICAL_BATH_RECIPES

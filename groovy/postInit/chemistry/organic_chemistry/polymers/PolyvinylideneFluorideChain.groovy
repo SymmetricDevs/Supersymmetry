@@ -80,6 +80,7 @@ DRYER.recipeBuilder()
 // FKM/Viton production
 
 PYROLYSE_OVEN.recipeBuilder()
+    .notConsumable(fluid('dense_steam') * 1000)
     .fluidInputs(fluid('tetrafluoroethylene') * 1500)
     .fluidOutputs(fluid('hexafluoropropylene') * 1000)
     .duration(200)
