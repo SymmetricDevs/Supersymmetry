@@ -3032,20 +3032,7 @@ class OrganicChemistryMaterials {
                 .color(0xe0e314)
                 .build()
 
-        DiacetonePeroxide = new Material.Builder(15479, SuSyUtility.susyId('diacetone_peroxide'))
-                .dust()
-                .liquid()
-                .composition(Carbon * 6, Hydrogen * 12, Oxygen * 4)
-                .color(0xf54927)
-                .build()
-      
-        TriacetonePeroxide = new Material.Builder(15480, SuSyUtility.susyId('triacetone_peroxide'))
-                .dust()
-                .liquid()
-                .composition(Carbon * 9, Hydrogen * 18, Oxygen * 6)
-                .color(0x9c2007)
-                .build()
-      
+        //FREE IDs 15479-15480
         FourAminophenol = new Material.Builder(15481, SuSyUtility.susyId('four_aminophenol'))
                 .dust()
                 .components(Carbon * 6, Hydrogen * 7, Nitrogen, Oxygen)
@@ -3067,6 +3054,17 @@ class OrganicChemistryMaterials {
                 .build()
         
         SodiumVanillylmandelateSolution.setFormula('(NaC9H7O5)(NaOH)(H2O)4', true)
-
+        
+        DiacetonePeroxide = new Material.Builder(15484, SuSyUtility.susyId('diacetone_peroxide'))
+                .dust()
+                .composition(Carbon * 6, Hydrogen * 12, Oxygen * 4)
+                .color(0xf54927)
+                .build()
+      
+        TriacetonePeroxide = new Material.Builder(15485, SuSyUtility.susyId('triacetone_peroxide'))
+                .dust()
+                .composition(Carbon * 9, Hydrogen * 18, Oxygen * 6)
+                .color(0x9c2007)
+                .build()
     }
 }
