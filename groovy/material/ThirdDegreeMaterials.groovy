@@ -825,15 +825,5 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
         
-        TriacetonePeroxideSlurry = new Material.Builder(24135, SuSyUtility.susyId('triacetone_peroxide_slurry'))
-                .liquid()
-                .components(TriacetonePeroxide, Water)
-                .colorAverage()
-                .build()
-        DiacetonePeroxideSlurry = new Material.Builder(24136, SuSyUtility.susyId('diacetone_peroxide_slurry'))
-                .liquid()
-                .components(DiacetonePeroxide, Water)
-                .colorAverage()
-                .build()
         }
 }
