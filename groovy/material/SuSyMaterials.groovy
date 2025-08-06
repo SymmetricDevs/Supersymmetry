@@ -2407,8 +2407,6 @@ class SuSyMaterials {
     public static Material Baratol
     public static Material DiacetonePeroxide
     public static Material TriacetonePeroxide
-    public static Material TriacetonePeroxideSlurry
-    public static Material DiacetonePeroxideSlurry
     public static Material FourAminophenolSolution
 
 
