@@ -959,6 +959,7 @@ class OrganicChemistryMaterials {
                 .build()
 
         CelluloseAcetate = new Material.Builder(15157, SuSyUtility.susyId('cellulose_acetate'))
+                .dust()
                 .components(Carbon * 76, Hydrogen * 114, Oxygen * 49)
                 .color(0xd4c9ab)
                 .build()
@@ -1685,11 +1686,11 @@ class OrganicChemistryMaterials {
                 .color(0x2274a3)
                 .build()
 
-        NButylamine = new Material.Builder(15269, SuSyUtility.susyId('n_butylamine'))
+        /*NButylamine = new Material.Builder(15269, SuSyUtility.susyId('n_butylamine'))
                 .liquid()
                 .components(Carbon * 4, Hydrogen * 11, Nitrogen * 1)
                 .color(0x43576e)
-                .build()
+                .build()*/
 
         Ethyltoluene = new Material.Builder(15270, SuSyUtility.susyId('ethyltoluene'))
                 .liquid()
@@ -2836,7 +2837,7 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        Ultem.setFormula('(C37H24O6N2)n', true)
+        Ultem.setFormula('[C37H24O6N2]n', true)
 
         PotassiumPhthalimide = new Material.Builder(15448, SuSyUtility.susyId('potassium_phthalimide'))
                 .dust()
@@ -2996,7 +2997,7 @@ class OrganicChemistryMaterials {
                 .color(0xbc716d)
                 .build()
 
-        Viton.setFormula('[(C3F6)(C2H2F2)]n', true)
+        Viton.setFormula('[C3F6]n[C2H2F2]n', true)
 
         PolyetherEtherKetone = new Material.Builder(15474, SuSyUtility.susyId('polyether_ether_ketone'))
                 .polymer()
@@ -3004,7 +3005,7 @@ class OrganicChemistryMaterials {
                 .color(0x316d3e)
                 .build()
 
-        PolyetherEtherKetone.setFormula('(C19H12O3)n', true)
+        PolyetherEtherKetone.setFormula('[C19H12O3]n', true)
 
         PolyphenyleneOxide = new Material.Builder(15475, SuSyUtility.susyId('polyphenylene_oxide'))
                 .polymer()
@@ -3012,7 +3013,7 @@ class OrganicChemistryMaterials {
                 .color(0x4a567d)
                 .build()
 
-        PolyphenyleneOxide.setFormula('(C8H8O)n(C8H8)n', true)
+        PolyphenyleneOxide.setFormula('[C8H8O]n[C8H8]n', true)
 
         NButylIodide = new Material.Builder(15476, SuSyUtility.susyId('n_butyl_iodide'))
                 .liquid()
@@ -3026,7 +3027,61 @@ class OrganicChemistryMaterials {
                 .color(0xc3bec4)
                 .build()
 
-        SodiumVanillylmandelateSolution = new Material.Builder(4673, SuSyUtility.susyId('sodium_vanillylmandelate_solution'))
+        AluminiumIsopropoxide = new Material.Builder(15478, SuSyUtility.susyId('aluminium_isopropoxide'))
+                .dust()
+                .components(Aluminium, Carbon * 9, Hydrogen * 21, Oxygen * 3)
+                .color(0x5a799e)
+                .build()
+
+        AluminiumIsopropoxide.setFormula('Al(C3H7O)3', true)
+
+        HexafluoropropyleneOxide = new Material.Builder(15479, SuSyUtility.susyId('hexafluoropropylene_oxide'))
+                .gas()
+                .components(Carbon * 3, Fluorine * 6, Oxygen)
+                .color(0x5c8fb5)
+                .build()
+
+        FluorosulfonylDifluoroacetylFluoride = new Material.Builder(15480, SuSyUtility.susyId('fluorosulfonyl_difluoroacetyl_fluoride'))
+                .liquid()
+                .components(Carbon * 2, Fluorine * 4, Oxygen * 3, Sulfur)
+                .color(0x37877f)
+                .build()
+
+        PerfluorovinylSulfonylEther = new Material.Builder(15481, SuSyUtility.susyId('perfluorovinyl_sulfonyl_ether'))
+                .liquid()
+                .components(Carbon * 7, Fluorine * 14, Oxygen * 4, Sulfur)
+                .color(0x2c7d5f)
+                .build()
+
+        RawNafion = new Material.Builder(15482, SuSyUtility.susyId('raw_nafion'))
+                .dust()
+                .components(Carbon * 9, Fluorine * 18, Oxygen * 4, Sulfur)
+                .color(0x8bb5b1)
+                .build()
+
+        RawNafion.setFormula('[(C2F4)(C7F14O4S)]n', true)
+
+        Nafion = new Material.Builder(15483, SuSyUtility.susyId('nafion'))
+                .dust()
+                .components(Carbon * 9, Hydrogen, Fluorine * 17, Oxygen * 5, Sulfur)
+                .color(0xcfccb0)
+                .build()
+
+        Nafion.setFormula('[(C2F4)(C7HF13O5S)]n', true)
+        
+        FourNitrophenol = new Material.Builder(15484, SuSyUtility.susyId('four_nitrophenol'))
+                .dust()
+                .components(Carbon * 6, Hydrogen * 5, Nitrogen, Oxygen * 3)
+                .color(0xe0e314)
+                .build()
+
+        FourAminophenol = new Material.Builder(15485, SuSyUtility.susyId('four_aminophenol'))
+                .dust()
+                .components(Carbon * 6, Hydrogen * 7, Nitrogen, Oxygen)
+                .color(0xd9560b)
+                .build()
+
+        SodiumVanillylmandelateSolution = new Material.Builder(15486, SuSyUtility.susyId('sodium_vanillylmandelate_solution'))
                 .liquid()
                 .components(Sodium, Carbon * 9, Hydrogen * 9, Oxygen * 5, SodiumHydroxide, Water * 3)
                 .color(0xc2c099)
@@ -3034,7 +3089,7 @@ class OrganicChemistryMaterials {
 
         SodiumVanillylmandelateSolution.setFormula('(NaC9H9O5)(NaOH)(H2O)3', true)
 
-        SodiumVanilglycolateSolution = new Material.Builder(4674, SuSyUtility.susyId('sodium_vanilglycolate_solution'))
+        SodiumVanilglycolateSolution = new Material.Builder(15487, SuSyUtility.susyId('sodium_vanilglycolate_solution'))
                 .liquid()
                 .components(Sodium, Carbon * 9, Hydrogen * 7, Oxygen * 5, SodiumHydroxide, Water * 4)
                 .color(0x82805b)

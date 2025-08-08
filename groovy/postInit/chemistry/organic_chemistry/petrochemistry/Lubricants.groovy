@@ -91,40 +91,6 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .EUt(30)
         .buildAndRegister()
 
-        // Hydrodewaxing catalyst
-
-        LCR.recipeBuilder()
-            .inputs(ore('dustAlumina') * 5)
-            .fluidInputs(fluid('diisopropylamine') * 1200)
-            .fluidInputs(fluid('phosphoric_acid') * 1000)
-            .fluidInputs(fluid('tetraethyl_orthosilicate') * 200)
-            .fluidInputs(fluid('demineralized_water') * 5000)
-            .outputs(metaitem('dustSapoEleven'))
-            .duration(600)
-            .EUt(1920)
-            .buildAndRegister()
-
-        BR.recipeBuilder()
-            .inputs(ore('dustPlatinum'))
-            .fluidInputs(fluid('aqua_regia') * 8000)
-            .fluidInputs(fluid('nitric_acid') * 2000)
-            .fluidOutputs(fluid('chloroplatinic_acid_solution') * 4000)
-            .fluidOutputs(fluid('nitrogen_dioxide') * 4000)
-            .duration(20)
-            .EUt(30)
-            .buildAndRegister()
-            
-        BR.recipeBuilder()
-            .inputs(ore('dustSapoEleven'))
-            .inputs(ore('dustSodiumHydroxide') * 3)
-            .fluidInputs(fluid('ethylene_glycol') * 500)
-            .fluidInputs(fluid('chloroplatinic_acid_solution') * 1000)
-            .outputs(metaitem('dustPlatinumSapoEleven'))
-            .fluidOutputs(fluid('wastewater') * 1500)
-            .duration(600)
-            .EUt(1920)
-            .buildAndRegister()
-
         // Hydrodewaxing
 
         FBR.recipeBuilder()

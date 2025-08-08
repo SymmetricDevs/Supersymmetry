@@ -90,6 +90,7 @@ MIXER_SETTLER = recipemap('mixer_settler')
 // Purification
 
 BLENDER.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('kerosene') * 900)
     .fluidInputs(fluid('tributyl_phosphate') * 40)
     .fluidInputs(fluid('di_two_ethylhexyl_phosphoric_acid') * 60)

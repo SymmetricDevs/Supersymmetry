@@ -98,7 +98,7 @@ POLYMERIZATION.recipeBuilder()
 PHASE_SEPARATOR.recipeBuilder()
     .fluidInputs(fluid('polyvinyl_acetate_suspension') * 2000)
     .outputs(metaitem('dustPolyvinylAcetate'))
-    .fluidOutputs(fluid('methanol') * 1000)
+    .fluidOutputs(fluid('methanol') * 2000)
     .duration(50)
     .buildAndRegister()
 

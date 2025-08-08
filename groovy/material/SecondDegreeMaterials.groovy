@@ -117,7 +117,7 @@ class SecondDegreeMaterials {
 
         SodiumAluminateSolution = new Material.Builder(13015, SuSyUtility.susyId('sodium_aluminate_solution'))
                 .liquid()
-                .components(SodiumAluminate * 1, Water * 1)
+                .components(SodiumAluminate * 2, Water * 3)
                 .color(0x3f71bf)
                 .build()
 
@@ -787,7 +787,13 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13129
+        StabilizedSodiumSilicateSolution = new Material.Builder(13123, SuSyUtility.susyId('stabilized_sodium_silicate_solution'))
+                .liquid()
+                .components(SodiumSilicate, Ammonia, Water * 5)
+                .colorAverage()
+                .build()
+
+        // FREE ID: 13124-13129
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -1010,6 +1016,24 @@ class SecondDegreeMaterials {
         LithiumHydroxideMonohydrate = new Material.Builder(13166, SuSyUtility.susyId('lithium_hydroxide_monohydrate'))
                 .dust()
                 .components(LithiumHydroxide, Water)
+                .colorAverage()
+                .build()
+
+        AmmoniumDihydrogenPhosphateSolution = new Material.Builder(13167, SuSyUtility.susyId('ammonium_dihydrogen_phosphate_solution'))
+                .liquid()
+                .components(AmmoniumDihydrogenPhosphate, Water)
+                .colorAverage()
+                .build()
+
+        DiammoniumHydrogenPhosphateSolution = new Material.Builder(13168, SuSyUtility.susyId('diammonium_hydrogen_phosphate_solution'))
+                .liquid()
+                .components(DiammoniumHydrogenPhosphate, Water * 2)
+                .colorAverage()
+                .build()
+
+        MagnesiumNitrateSolution = new Material.Builder(13169, SuSyUtility.susyId('magnesium_nitrate_solution'))
+                .liquid()
+                .components(MagnesiumNitrate, Water * 2)
                 .colorAverage()
                 .build()
     }

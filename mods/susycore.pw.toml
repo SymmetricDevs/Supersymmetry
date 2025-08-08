@@ -1,13 +1,13 @@
 name = "SusyCore"
-filename = "supersymmetry-v0.1.71.jar"
+filename = "supersymmetry-v0.1.73.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "e4d82617e41622391deb07dcd00d38d6802a7ea3"
+hash = "ddc220eac0e2efe1dbdc037929485f9378094f82"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6800087
+file-id = 6853753
 project-id = 846224

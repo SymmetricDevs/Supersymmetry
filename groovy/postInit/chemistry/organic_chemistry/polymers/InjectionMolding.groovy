@@ -33,7 +33,7 @@ def polymers = [
         new ExtrudablePolymers('Polytetrafluoroethylene', 480, 8, true, true, true, false),
         new ExtrudablePolymers('PolyethyleneTerephthalate', 480, 8, true, false, false, false),
         new ExtrudablePolymers('EthyleneVinylAcetate', 480, 8, false, true, true, false),
-        new ExtrudablePolymers('SiliconeRubber', 480, 8, true, false, false, false),
+        new ExtrudablePolymers('SiliconeRubber', 480, 8, true, false, false, true),
         new ExtrudablePolymers('StyreneIsopreneRubber', 480, 8, true, false, false, false),
         new ExtrudablePolymers('StyreneButadieneRubber', 480, 8, true, false, false, false),
 

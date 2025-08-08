@@ -35,7 +35,7 @@ CENTRIFUGE.recipeBuilder()
 
 // Extraction
 BLENDER.recipeBuilder()
-    .circuitMeta(2)
+    .circuitMeta(3)
     .fluidInputs(fluid('tributyl_phosphate') * 3000)
     .fluidInputs(fluid('kerosene') * 7000)
     .fluidOutputs(fluid('actinide_separation_mixture') * 10000)

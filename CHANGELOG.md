@@ -1,3 +1,26 @@
+# UPDATE 0.1.15.3
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.71 → v0.1.73
+- Supercritical 0.1.7 → 0.2.0
+## Changes
+### New Features
+- Water purification has been made more accurate! Make sure to reconfigure your chains, and you may need to replace your zeolites and molecular sieves. (#1602 by @planetme)
+- Paracetamol caplets are now craftable with IV energy! Use them to heal yourself rapidly in battle. (#1598 by @Rick8484)
+- [Susy-Core] The great LT loot overhaul (#510 by @oliwier509)
+- [Susy-Core] Spray cans now have the Pipeliner trait. (#511 by @MCTian-mi)
+### Changed Features
+- Boilers have been buffed! They now produce steam faster and more efficiently, and large boilers are no longer nerfed! Craft your existing boilers into the new types to receive the buff. (#1597 by @bruberu)
+- Fluid compressors and fluid decompressors can now be crafted into each other! (#1599 by @WideMann)
+- [Susy-Core] Electrolytic cells now support distinct buses! (#518 by @bruberu)
+### Fixes
+- Magnetic alnico is once again obtainable. (#1588 by @Rick8484)
+Thanks to our other team members who have helped keep this modpack stable: 
+@Verdessence
+@ericsong1911
+@MCTian-mi
+@bruberu
+@oliwier509
 # UPDATE 0.1.15.2
 ## Mod Changes
 ### Mod Updates

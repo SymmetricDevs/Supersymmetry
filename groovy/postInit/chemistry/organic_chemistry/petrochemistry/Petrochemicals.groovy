@@ -69,7 +69,7 @@ FLUID_HEATER = recipemap('fluid_heater')
             .buildAndRegister()
 
         REFORMER.recipeBuilder()
-            .notConsumable(metaitem('catalystBedZsmFive'))
+            .notConsumable(metaitem('catalystBedHydrogenZsmFive'))
             .fluidInputs(fluid('meta_xylene') * 1000)
             .fluidOutputs(fluid('para_xylene') * 1000)
             .duration(60)

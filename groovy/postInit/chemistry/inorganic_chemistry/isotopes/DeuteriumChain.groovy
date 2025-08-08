@@ -6,24 +6,6 @@ ELECTROLYZER = recipemap('electrolyzer')
 ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 BR = recipemap('batch_reactor')
 
-ION_EXCHANGE.recipeBuilder()
-    .notConsumable(metaitem('beads.strong_acidic_cation_exchange'))
-    .fluidInputs(fluid('sea_water') * 12800)
-    .fluidInputs(fluid('diluted_sulfuric_acid') * 20)
-    .fluidOutputs(fluid('partially_deionized_sea_water') * 12800)
-    .EUt(480)
-    .duration(20)
-    .buildAndRegister()
-
-ION_EXCHANGE.recipeBuilder()
-    .notConsumable(metaitem('beads.strong_basic_anion_exchange'))
-    .fluidInputs(fluid('partially_deionized_sea_water') * 12800)
-    .fluidInputs(fluid('diluted_sodium_hydroxide_solution') * 20)
-    .fluidOutputs(fluid('deionized_sea_water') * 12800)
-    .EUt(480)
-    .duration(20)
-    .buildAndRegister()
-
 // Stage 1: 8x enrichment of deuterium from sea water, D = 0.015625% -> 0.125%
 
     // Cold tower stage 1

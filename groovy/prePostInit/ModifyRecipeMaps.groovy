@@ -31,6 +31,7 @@ GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES)
 GTRecipeHandler.removeAllRecipes(GCYMRecipeMaps.ALLOY_BLAST_RECIPES)
+GTRecipeHandler.removeAllRecipes(RecipeMaps.SEMI_FLUID_GENERATOR_FUELS)
 
 GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
     if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
@@ -351,6 +352,8 @@ mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), m
 mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), metaitem('dustTungsten'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('refractory_gunning_mixture') * 50 * 50])
 // Diesel * 6000
 mods.gregtech.blender.removeByInput(120, null, [fluid('light_fuel') * 5000 * 5000, fluid('heavy_fuel') * 1000 * 1000])
+// Tungstensteel Dust * 2
+mods.gregtech.blender.removeByInput(1920, [metaitem('dustTungsten'), metaitem('dustSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
 
 RecipeMaps.SIFTER_RECIPES
     .modifyMaxFluidInputs(1)
@@ -404,7 +407,7 @@ RecipeMaps.GAS_TURBINE_FUELS
     .modifyMaxFluidOutputs(1)
 
 RecipeMaps.AUTOCLAVE_RECIPES
-    .modifyMaxFluidInputs(2)
+    .modifyMaxFluidInputs(4)
     .modifyMaxFluidOutputs(2)
 
 RecipeMaps.CHEMICAL_BATH_RECIPES
