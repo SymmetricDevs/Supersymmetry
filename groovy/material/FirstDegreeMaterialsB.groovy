@@ -495,5 +495,13 @@ class FirstDegreeMaterialsB {
                 .components(Toluene, Methanol)
                 .color(0x47260e)
                 .build()
+
+        ThoriatedTungsten = new Material.Builder(8740, SuSyUtility.susyId('thoriated_tungsten'))
+                .dust()
+                .components(Tungsten * 98, ThoriumDioxide * 2)
+                .color(0x1F0808)
+                .build()
+        
+        ThoriatedTungsten.setFormula('W98(ThO2)2', true)
     }
 }

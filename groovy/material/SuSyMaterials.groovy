@@ -1565,6 +1565,8 @@ class SuSyMaterials {
     public static Material MixedOxideFuel
     public static Material DilutedAcetone
     public static Material BariumNitrate
+    public static Material ThoriatedTungsten
+
 
     // HP Materials
 
