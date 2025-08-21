@@ -1579,7 +1579,10 @@ class SuSyMaterials {
     public static Material Boehmite
     public static Material ReverseOsmosisWater
     public static Material ThoriatedTungsten
-
+    public static Material YttriumNitrate
+    public static Material YttriumNitrateSolution
+    public static Material YttriumAluminiumGarnet
+    public static Material AmmoniumHydroxide
 
     // HP Materials
 

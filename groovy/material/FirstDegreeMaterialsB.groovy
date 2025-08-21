@@ -540,5 +540,30 @@ class FirstDegreeMaterialsB {
                 .build()
         
         ThoriatedTungsten.setFormula('W98(ThO2)2', true)
+
+        YttriumNitrate = new Material.Builder(8746, SuSyUtility.susyId('yttrium_nitrate'))
+                .dust()
+                .components(Yttrium, Nitrate * 3)
+                .color(0xF4F8D4)
+                .build()
+        
+        YttriumNitrate.setFormula('Y(NO3)3', true)
+
+        YttriumNitrateSolution = new Material.Builder(8746, SuSyUtility.susyId('yttrium_nitrate_solution'))
+                .liquid()
+                .components(YttriumNitrate * 2, Water * 3)
+                .color(0xF4F8D4)
+                .build()
+        
+        YttriumNitrateSolution.setFormula('(Y(NO3)3)2(H2O)3', true)
+
+        YttriumAluminiumGarnet = new Material.Builder(8747, SuSyUtility.susyId('yag'))
+                .dust()
+                .flags(CRYSTALLIZABLE)
+                .components(Yttrium * 3, Aluminium * 5, Oxygen * 12)
+                .color(0xDDDDDD)
+                .build()
+        
+        YttriumAluminiumGarnet.setFormula('Y3Al5O12', true)
     }
 }
