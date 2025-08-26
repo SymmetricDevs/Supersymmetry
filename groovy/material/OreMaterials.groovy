@@ -670,5 +670,48 @@ class OreMaterials {
                 .build()
 
         Bertrandite.setFormula('Be4Si2O7(OH)2', true)
+
+        NonMarineEvaporiteDeposit = new Material.Builder(7087, SuSyUtility.susyId("non_marine_evaporite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x686860)
+                .build()
+
+        HalideEvaporiteDeposit = new Material.Builder(7088, SuSyUtility.susyId("halide_evaporite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x9b8c7c)
+                .build()
+
+        SulfateEvaporiteDeposit = new Material.Builder(7089, SuSyUtility.susyId("sulfate_evaporite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x8c8c84)
+                .build()
+
+        CarbonateEvaporiteDeposit = new Material.Builder(7090, SuSyUtility.susyId("carbonate_evaporite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x94948c)
+                .build()
+
+        PlatinumPlacerDeposit = new Material.Builder(7091, SuSyUtility.susyId("platinum_placer_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xaba48a)
+                .build()
+
+        PhosphoriteDeposit = new Material.Builder(7092, SuSyUtility.susyId("phosphorite_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x9c8464)
+                .build()
+
+        PotashDeposit = new Material.Builder(7093, SuSyUtility.susyId("potash_deposit"))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x735347)
+                .build()
+        
     }
 }

@@ -1,0 +1,38 @@
+{
+  "preRequisites:11": [
+    456863075
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1878108637.desc",
+      "icon:10": {
+        "Count:3": 1,
+        "id:8": "pyrotech:log_pile"
+      },
+      "name:8": "susy.quest.db.1878108637.title"
+    }
+  },
+  "questID:3": 1878108637,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "pyrotech:log_pile"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "pyrotech:tar_collector"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

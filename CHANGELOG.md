@@ -1,3 +1,59 @@
+# UPDATE 0.1.15.4
+## Mod Changes
+### Mod Updates
+- ReFinedTools 7.77 → 7.78
+- Bubbles 2.4.7 → 2.4.9
+- LibNine 1.12.2-1.2.1 → 1.12.2-1.2.2
+- Scalar Legacy 1.0.0 → 1.0.1
+- FluxLoading 1.3.5 → 1.3.7
+- Gregic Probe: CEu 1.4.3 → 1.4.4
+- Fugue 0.18.6 → 0.20.1
+- Forgelin-Continuous Continuous-2.1.21.0 → Continuous-2.2.0.0
+- GregTech Food Option 1.12.2-1.12.5 → 1.12.2-1.12.7.1
+- Custom Loading Screen 1.12.2-1.5.8 → 1.12.2-1.5.9
+- VisualClaiming 0.0.2 → 0.0.3
+- CensoredASM 5.28 → 5.29
+- SusyCore v0.1.73 → v0.1.74
+### Mod Additions
+- SussyPatches → 1.3.2
+- TipTheScales → 1.12.2-1.0.4
+### Mod Removals
+- ScalingGUIs
+## Changes
+### New Features
+- EV/IV fuel cells have been added! Use these singleblock generators to bring hydrogen-based power to your factory. (#1606 by @planetme)
+- [Susy-Core] The Quarry now supports sizes! You can reshape it to be as large as 31x31. (#527 by @Crindigo)
+### Changed Features
+- The primitive age questline has been reworked! (#1605 by @Fiery36)
+- Turbine casings are no longer recursively crafted. (#1612 by @Fiery36)
+### Fixes
+- You can no longer dupe steel using certain multiblock parts. (#1611 by @Fiery36)
+- Several progression roadblocks in MV have been fixed! (#1614 by @planetme)
+- [Susy-Core] Quarries now work much faster. (#528 by @Crindigo)
+- [Susy-Core] Small boilers now consume fuel at the intended rate. (#533 by @Crindigo)
+# UPDATE 0.1.15.3
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.71 → v0.1.73
+- Supercritical 0.1.7 → 0.2.0
+## Changes
+### New Features
+- Water purification has been made more accurate! Make sure to reconfigure your chains, and you may need to replace your zeolites and molecular sieves. (#1602 by @planetme)
+- Paracetamol caplets are now craftable with IV energy! Use them to heal yourself rapidly in battle. (#1598 by @Rick8484)
+- [Susy-Core] The great LT loot overhaul (#510 by @oliwier509)
+- [Susy-Core] Spray cans now have the Pipeliner trait. (#511 by @MCTian-mi)
+### Changed Features
+- Boilers have been buffed! They now produce steam faster and more efficiently, and large boilers are no longer nerfed! Craft your existing boilers into the new types to receive the buff. (#1597 by @bruberu)
+- Fluid compressors and fluid decompressors can now be crafted into each other! (#1599 by @WideMann)
+- [Susy-Core] Electrolytic cells now support distinct buses! (#518 by @bruberu)
+### Fixes
+- Magnetic alnico is once again obtainable. (#1588 by @Rick8484)
+Thanks to our other team members who have helped keep this modpack stable: 
+@Verdessence
+@ericsong1911
+@MCTian-mi
+@bruberu
+@oliwier509
 # UPDATE 0.1.15.2
 ## Mod Changes
 ### Mod Updates

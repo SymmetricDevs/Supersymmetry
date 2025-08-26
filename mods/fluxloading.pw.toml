@@ -1,13 +1,13 @@
 name = "FluxLoading"
-filename = "fluxloading-1.3.5.jar"
+filename = "fluxloading-1.3.7.jar"
 side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "a4c4c9109f9a6848e43bbceee3818b4533dfbf9f"
+hash = "19795e1cf320b39470f0e764dece68785d7cddc0"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6798822
+file-id = 6831188
 project-id = 1207328

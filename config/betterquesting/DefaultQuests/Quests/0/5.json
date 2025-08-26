@@ -7,20 +7,9 @@
       "desc:8": "susy.quest.db.5.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "id:8": "gregtech:knife",
-        "tag:10": {
-          "DisallowContainerItem:1": 0,
-          "GT.Behaviours:10": {},
-          "GT.Tool:10": {
-            "AttackDamage:5": 1.0,
-            "AttackSpeed:5": 2.5,
-            "Durability:3": 0,
-            "HarvestLevel:3": 0,
-            "Material:8": "gregtech:stone",
-            "MaxDurability:3": 31
-          },
-          "HideFlags:3": 2
-        }
+        "Count:3": 1,
+        "Damage:2": 2,
+        "id:8": "susy:susy_stone_smooth"
       },
       "ismain:1": 1,
       "name:8": "susy.quest.db.5.title"
@@ -29,24 +18,12 @@
   "questID:3": 5,
   "tasks:9": {
     "0:10": {
-      "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "id:8": "gregtech:knife",
-          "tag:10": {
-            "DisallowContainerItem:1": 0,
-            "GT.Behaviours:10": {},
-            "GT.Tool:10": {
-              "AttackDamage:5": 1.0,
-              "AttackSpeed:5": 2.5,
-              "Durability:3": 0,
-              "HarvestLevel:3": 0,
-              "Material:8": "gregtech:stone",
-              "MaxDurability:3": 31
-            },
-            "HideFlags:3": 2
-          }
+          "Damage:2": 2,
+          "id:8": "susy:susy_stone_cobble"
         }
       },
       "taskID:8": "bq_standard:retrieval"

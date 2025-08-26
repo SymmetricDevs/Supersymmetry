@@ -59,7 +59,7 @@ DISTILLATION_TOWER.recipeBuilder()
         .buildAndRegister()
 
 FBR.recipeBuilder()
-        .notConsumable(metaitem('dustMolecularSieve'))
+        .notConsumable(metaitem('catalystBedHydrogenZsmFive'))
         .fluidInputs(fluid('ethanolamine') * 3000)
         .outputs(metaitem('dustTriethylenediamine') * 8)
         .fluidOutputs(fluid('ammonia') * 1000)

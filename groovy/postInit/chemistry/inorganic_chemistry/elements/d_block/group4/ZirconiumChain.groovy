@@ -268,10 +268,18 @@ CVD.recipeBuilder()
 
 // Yttria-stabilized zirconia
 
-TUBE_FURNACE.recipeBuilder()
+/*TUBE_FURNACE.recipeBuilder()
     .inputs(ore('dustZirconiumDioxide') * 9)
     .inputs(ore('dustTinyYttriumOxide') * 4)
-    .outputs(metaitem('dustYttriaStabilizedZirconia') * 9) // Tetragonal (3% Y2O3)
+    .outputs(metaitem('dustTetragonalYttriaStabilizedZirconia') * 9) // Tetragonal (3% Y2O3)
+    .duration(200)
+    .EUt(Globals.voltAmps[2])
+    .buildAndRegister()*/
+
+TUBE_FURNACE.recipeBuilder()
+    .inputs(ore('dustZirconiumDioxide') * 35)
+    .inputs(ore('dustYttriumOxide') * 5)
+    .outputs(metaitem('dustYttriaStabilizedZirconia') * 40) // Cubic (~8% Y2O3)
     .duration(200)
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()

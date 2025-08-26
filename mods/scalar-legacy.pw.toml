@@ -1,13 +1,13 @@
 name = "Scalar Legacy"
-filename = "scalar-1.0.0.jar"
+filename = "Scalar Legacy-1.0.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "5e40af1953035150fb51f038e572de9f308488ba"
+hash = "5c5998c34798647802e14eab6660ba7afdf1a099"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6384100
+file-id = 6842491
 project-id = 1235372

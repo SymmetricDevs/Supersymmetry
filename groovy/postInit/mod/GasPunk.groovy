@@ -261,7 +261,7 @@ MIXER.recipeBuilder()
     .buildAndRegister();
 
 FBR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedCuprousOxide'))
+    .notConsumable(metaitem('catalystBedCopperIOxide'))
     .fluidInputs(fluid('acetone') * 100)
     .fluidInputs(fluid('hydrogen') * 400)
     .fluidInputs(fluid('ammonia') * 50)

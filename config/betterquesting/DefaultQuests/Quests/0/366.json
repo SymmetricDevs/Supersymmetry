@@ -1,11 +1,13 @@
 {
   "preRequisites:11": [
-    87
+    1580653524
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.366.desc",
+      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "susy:home_block"
       },
       "name:8": "susy.quest.db.366.title"
@@ -14,9 +16,11 @@
   "questID:3": 366,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
+          "Damage:2": 32767,
           "id:8": "susy:home_block"
         }
       },

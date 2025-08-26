@@ -1,13 +1,13 @@
 name = "Bubbles"
-filename = "Bubbles-2.4.7.jar"
+filename = "Bubbles-2.4.9.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "7a2dd84d201de123d9823ce03aa4c5ac0aa9c5b0"
+hash = "fc146ba779598154219c383a71cb5302e4e5c449"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6604728
+file-id = 6807550
 project-id = 995393

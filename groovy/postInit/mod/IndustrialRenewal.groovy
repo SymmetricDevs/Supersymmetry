@@ -524,7 +524,6 @@ crafting.addShaped("industrialrenewal:wrench_custom", item('industrialrenewal:ca
 
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('large_fluid_cell.steel'))
-	.inputs(metaitem('electric.pump.lv'))
 	.inputs(ore('ringRubber'))
 	.fluidInputs(fluid('compressed_carbon_dioxide') * 8000)
 	.outputs(item('industrialrenewal:item_fire_extinguisher'))

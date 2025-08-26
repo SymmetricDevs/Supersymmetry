@@ -7,8 +7,7 @@
       "desc:8": "susy.quest.db.7.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Damage:2": 3,
-        "OreDict:8": "logWood",
+        "Count:3": 1,
         "id:8": "minecraft:log"
       },
       "ismain:1": 1,

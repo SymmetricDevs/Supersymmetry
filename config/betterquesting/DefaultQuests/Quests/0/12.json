@@ -35,6 +35,8 @@
   "questID:3": 12,
   "tasks:9": {
     "0:10": {
+      "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -76,11 +78,47 @@
             },
             "HideFlags:3": 2
           }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:hammer",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 5.0,
+              "AttackSpeed:5": -3.8,
+              "Durability:3": 0,
+              "HarvestLevel:3": 1,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 95,
+              "ToolSpeed:5": 3.0
+            },
+            "HideFlags:3": 2
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "gregtech:knife",
+          "tag:10": {
+            "DisallowContainerItem:1": 0,
+            "GT.Behaviours:10": {},
+            "GT.Tool:10": {
+              "AttackDamage:5": 1.0,
+              "AttackSpeed:5": 2.5,
+              "Durability:3": 0,
+              "HarvestLevel:3": 0,
+              "Material:8": "gregtech:stone",
+              "MaxDurability:3": 31
+            },
+            "HideFlags:3": 2
+          }
         }
       },
       "taskID:8": "bq_standard:retrieval"
     },
     "1:10": {
+      "ignoreNBT:1": 1,
       "index:3": 1,
       "requiredItems:9": {
         "0:10": {
@@ -114,41 +152,6 @@
               "HarvestLevel:3": 1,
               "Material:8": "gregtech:stone",
               "MaxDurability:3": 95
-            },
-            "HideFlags:3": 2
-          }
-        },
-        "2:10": {
-          "Count:3": 1,
-          "id:8": "gregtech:hammer",
-          "tag:10": {
-            "DisallowContainerItem:1": 0,
-            "GT.Behaviours:10": {},
-            "GT.Tool:10": {
-              "AttackDamage:5": 5.0,
-              "AttackSpeed:5": -3.8,
-              "Durability:3": 0,
-              "HarvestLevel:3": 1,
-              "Material:8": "gregtech:stone",
-              "MaxDurability:3": 95,
-              "ToolSpeed:5": 3.0
-            },
-            "HideFlags:3": 2
-          }
-        },
-        "3:10": {
-          "Count:3": 1,
-          "id:8": "gregtech:knife",
-          "tag:10": {
-            "DisallowContainerItem:1": 0,
-            "GT.Behaviours:10": {},
-            "GT.Tool:10": {
-              "AttackDamage:5": 1.0,
-              "AttackSpeed:5": 2.5,
-              "Durability:3": 0,
-              "HarvestLevel:3": 0,
-              "Material:8": "gregtech:stone",
-              "MaxDurability:3": 31
             },
             "HideFlags:3": 2
           }

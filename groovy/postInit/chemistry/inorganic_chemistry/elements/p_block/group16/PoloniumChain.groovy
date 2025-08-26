@@ -1,26 +1,10 @@
 import globals.Globals
 
 CANNER = recipemap('canner')
-SPENT_FUEL_POOL = recipemap('spent_fuel_pool')
-CUTTING_MACHINE = recipemap('cutter')
 FLUID_EXTRACTOR = recipemap('extractor')
 BR = recipemap('batch_reactor')
 BLENDER = recipemap('blender')
 MIXER_SETTLER = recipemap('mixer_settler')
-
-SPENT_FUEL_POOL.recipeBuilder()
-    .inputs(metaitem('fuelRodHotDepletedBismuth'))
-    .outputs(metaitem('fuelRodDepletedBismuth'))
-    .duration(8000)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
-CUTTING_MACHINE.recipeBuilder()
-    .inputs(metaitem('fuelRodDepletedBismuth'))
-    .outputs(metaitem('fuelPelletDepletedBismuth') * 16)
-    .duration(200)
-    .EUt(Globals.voltAmps[3])
-    .buildAndRegister()
 
 FLUID_EXTRACTOR.recipeBuilder()
     .inputs(metaitem('fuelPelletDepletedBismuth'))

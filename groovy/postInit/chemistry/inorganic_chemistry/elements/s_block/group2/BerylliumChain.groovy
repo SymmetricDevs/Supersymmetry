@@ -331,6 +331,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 BLENDER.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('ammonia') * 1250) 
     .fluidInputs(fluid('di_two_ethylhexyl_phosphoric_acid') * 2500) //DEHPA or D2EHPA
     .fluidInputs(fluid('kerosene') * 7500)

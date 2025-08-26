@@ -160,6 +160,7 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 50)
     .fluidOutputs(fluid('benzenesulfonic_acid') * 50)
     .fluidOutputs(fluid('water') * 50)
+    .circuitMeta(2)
     .duration(5)
     .EUt(120)
     .buildAndRegister();
