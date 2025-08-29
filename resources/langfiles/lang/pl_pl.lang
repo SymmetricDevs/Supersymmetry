@@ -1945,11 +1945,11 @@ metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
 
-metaitem.gun.barrel.steel.name=Steel Barrel
+metaitem.gun.barrel.steel.name=Stalowa Lufa
 
-metaitem.cathode.lead.name=Lead Cathode
-metaitem.anode.lead.name=Lead Anode
-metaitem.battery.lead_acid.name=Lead Acid Battery
+metaitem.cathode.lead.name=Ołowiana Katoda
+metaitem.anode.lead.name=Ołowiana Anoda
+metaitem.battery.lead_acid.name=Akumulator Kwasowo-Ołowiowy
 
 metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
@@ -2246,7 +2246,7 @@ metaitem.stencil.lpic.name=LPIC Stencil
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
 
-item.fireworks.name=Elytra Rocket
+item.fireworks.name=Fajerwerk
 tile.appliedenergistics2.grindstone.name=Primitive Grindstone
 
 # Laser Engraver Renaming
@@ -2271,6 +2271,10 @@ item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 item.chesttransporter_copper.name=Bronze Chest Transporter
+gregtech.universal.tooltip.terrain_resist=§eNie eksploduje od wody, lawy, ognia i deszczu.
+gregtech.machine.electric_blast_furnace.name=Elektryczny Piec Oporowy
+
+recipemap.electric_blast_furnace.name=Piec Oporowy
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
