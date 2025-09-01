@@ -6,7 +6,9 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.650.desc",
       "icon:10": {
-        "id:8": "betterbuilderswands:wanddiamond"
+        "Count:3": 1,
+        "id:8": "littletiles:hammer",
+        "tag:10": {}
       },
       "name:8": "susy.quest.db.650.title"
     }

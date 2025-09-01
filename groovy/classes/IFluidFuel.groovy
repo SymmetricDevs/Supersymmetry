@@ -12,6 +12,7 @@ class IFluidFuel{
 
     public boolean refined_fuel = false;
     public boolean gas_turbine = true;
+    public boolean fuel_cell = false;
 
     public static void main(String[] args){
         //this is needed for some reason, otherwise it will error
@@ -44,5 +45,9 @@ class IFluidFuel{
 
     public void setIsGasTurbineFuel(boolean b){
         this.gas_turbine = b;
+    }
+
+    public void setIsFuelCellFuel(boolean b){
+        this.fuel_cell = b;
     }
 }

@@ -384,7 +384,7 @@ class FirstDegreeMaterialsA {
                 .color(0x9dad37)
                 .build()
 
-        CuprousOxide = new Material.Builder(8141, SuSyUtility.susyId('cuprous_oxide'))
+        CopperIOxide = new Material.Builder(8141, SuSyUtility.susyId('copper_i_oxide'))
                 .dust()
                 .components(Copper * 2, Oxygen)
                 .flags(GENERATE_CATALYST_BED)

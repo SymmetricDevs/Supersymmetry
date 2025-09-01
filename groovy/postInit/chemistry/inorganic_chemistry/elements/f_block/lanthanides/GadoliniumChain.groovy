@@ -42,3 +42,15 @@ REACTION_FURNACE.recipeBuilder()
     .duration(200)
     .EUt(960)
     .buildAndRegister()
+
+// Gadolinium carbonate
+
+BR.recipeBuilder()
+    .inputs(ore('dustGadoliniumChloride') * 8)
+    .inputs(ore('dustSodaAsh') * 18)
+    .fluidInputs(fluid('deionized_water') * 6000)
+    .outputs(metaitem('dustGadoliniumCarbonate') * 14)
+    .fluidOutputs(fluid('salt_water') * 6000)
+    .duration(80)
+    .EUt(30)
+    .buildAndRegister()

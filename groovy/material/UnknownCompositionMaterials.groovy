@@ -2926,10 +2926,7 @@ class UnknownCompositionMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        YttriaStabilizedZirconia = new Material.Builder(4641, SuSyUtility.susyId('yttria_stabilized_zirconia'))
-                .dust()
-                .color(0xe3ecff)
-                .build()
+        // FREE ID: 4641
 
         IrradiatedBismuth = new Material.Builder(4642, SuSyUtility.susyId('irradiated_bismuth'))
                 .liquid(new FluidBuilder().temperature(545))
@@ -3129,6 +3126,21 @@ class UnknownCompositionMaterials {
                 .dust()
                 .flags(GENERATE_CATALYST_BED)
                 .color(0x8fa118)
+                .build()
+
+        AmmoxidationCatalyst = new Material.Builder(4681, SuSyUtility.susyId('ammoxidation_catalyst'))
+                .dust()
+                .color(0x18877a)
+                .build()
+
+        PropyleneAmmoxidationMixture = new Material.Builder(4682, SuSyUtility.susyId('propylene_ammoxidation_mixture'))
+                .gas(new FluidBuilder().temperature(723))
+                .color(0x86a63a)
+                .build()
+
+        CrudeAcrylonitrile = new Material.Builder(4683, SuSyUtility.susyId('crude_acrylonitrile'))
+                .liquid()
+                .color(0x5c8c24)
                 .build()
     }
 }

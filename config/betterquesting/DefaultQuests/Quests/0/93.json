@@ -7,25 +7,17 @@
       "desc:8": "susy.quest.db.93.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "pyrotech:bucket_clay"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.93.title"
     }
   },
   "questID:3": 93,
   "tasks:9": {
     "0:10": {
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "id:8": "pyrotech:bucket_clay"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
-    },
-    "1:10": {
-      "index:3": 1,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -33,11 +25,10 @@
         },
         "1:10": {
           "Count:3": 1,
-          "Damage:2": 349,
-          "id:8": "gregtech:meta_item_1"
+          "id:8": "pyrotech:bucket_clay"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

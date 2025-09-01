@@ -1,23 +1,25 @@
 {
   "preRequisites:11": [
-    12
+    1051748281
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.88.desc",
+      "desc:8": "susy.quest.db.899643298.desc",
       "icon:10": {
-        "id:8": "minecraft:leather"
+        "Damage:2": 18400,
+        "id:8": "gregtech:machine"
       },
-      "name:8": "susy.quest.db.88.title"
+      "name:8": "susy.quest.db.899643298.title"
     }
   },
-  "questID:3": 88,
+  "questID:3": 899643298,
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "id:8": "minecraft:leather"
+          "Damage:2": 18400,
+          "id:8": "gregtech:machine"
         }
       },
       "taskID:8": "bq_standard:retrieval"

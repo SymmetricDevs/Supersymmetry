@@ -127,6 +127,9 @@ eventManager.listen {
 
         customMetaItems.addItem(300, "mylar")
         customMetaItems.addItem(301, "spinneret")
+        customMetaItems.addItem(302, "fiber.oxidized_polyacrylonitrile")
+        customMetaItems.addItem(303, "carbon.mesh.treated")
+        customMetaItems.addItem(304, "proton_exchange_membrane_fuel_cell")
 
         customMetaItems.addItem(400, "engine.spark_plug")
         customMetaItems.addItem(401, "engine.piston")

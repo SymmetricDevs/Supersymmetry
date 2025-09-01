@@ -16,13 +16,13 @@ RecyclingHelper.addShaped('susy:large_bronze_boiler', metaitem('susy:large_boile
 RecyclingHelper.addShaped('susy:steam_boiler_coal_bronze', metaitem('susy:steam_boiler_coal.bronze'), [
         [ore('plateBronze'), ore('plateBronze'), ore('plateBronze')], 
         [ore('plateBronze'), ore('toolWrench'), ore('plateBronze')],
-        [item('minecraft:brick_block'), ore('craftingFurnace'), item('minecraft:brick_block')]
+        [item('minecraft:brick_block'), item('minecraft:brick_block'), item('minecraft:brick_block')]
 ])
 
 RecyclingHelper.addShaped('susy:steam_boiler_coal_steel', metaitem('susy:steam_boiler_coal.steel'), [
         [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')], 
         [ore('plateSteel'), ore('toolWrench'), ore('plateSteel')],
-        [item('minecraft:brick_block'), ore('craftingFurnace'), item('minecraft:brick_block')]
+        [item('minecraft:brick_block'), item('minecraft:brick_block'), item('minecraft:brick_block')]
 ])
 
 RecyclingHelper.addShaped('susy:steam_boiler_liquid_bronze', metaitem('susy:steam_boiler_liquid.bronze'), [

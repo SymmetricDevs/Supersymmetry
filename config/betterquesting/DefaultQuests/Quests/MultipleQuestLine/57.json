@@ -21,7 +21,7 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 5,
+          "Damage:2": 18304,
           "id:8": "gregtech:machine"
         }
       },
@@ -32,7 +32,7 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 6,
+          "Damage:2": 18305,
           "id:8": "gregtech:machine"
         }
       },

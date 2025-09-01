@@ -13,7 +13,7 @@ POLYMERIZATION = recipemap('polymerization_tank')
 
 FLUIDIZED_BED_REACTOR.recipeBuilder()
     .fluidInputs(fluid('chloromethane') * 2000)
-    .notConsumable(ore('dustCuprousOxide'))
+    .notConsumable(ore('dustCopperIOxide'))
     .inputs(ore('dustSilicon'))
     .fluidOutputs(fluid('organosilicon_mixture') * 2000)
     .duration(160)

@@ -455,16 +455,19 @@ def NaturalGas = new IFluidFuel('natural_gas', 'flue_gas');
 NaturalGas.setDuration(100);
 NaturalGas.setAmountToBurn(160);
 NaturalGas.setByproductAmount(750);
+NaturalGas.setIsFuelCellFuel(true);
 
 def Methane = new IFluidFuel('methane', 'flue_gas');
 Methane.setDuration(80);
 Methane.setAmountToBurn(160);
 Methane.setByproductAmount(500);
+Methane.setIsFuelCellFuel(true);
 
 def Ethane = new IFluidFuel('ethane', 'flue_gas');
 Ethane.setDuration(85);
 Ethane.setAmountToBurn(160);
 Ethane.setByproductAmount(500);
+Ethane.setIsFuelCellFuel(true);
 
 def Butadiene = new IFluidFuel('butadiene', 'flue_gas');
 Butadiene.setDuration(100);
@@ -475,11 +478,13 @@ def Propane = new IFluidFuel('propane', 'flue_gas');
 Propane.setDuration(90);
 Propane.setAmountToBurn(160);
 Propane.setByproductAmount(500);
+Propane.setIsFuelCellFuel(true);
 
 def Butane = new IFluidFuel('butane', 'flue_gas');
 Butane.setDuration(95);
 Butane.setAmountToBurn(160);
 Butane.setByproductAmount(500);
+Butane.setIsFuelCellFuel(true);
 
 def Toluene = new IFluidFuel('toluene', 'flue_gas');
 Toluene.setDuration(160);
@@ -490,21 +495,25 @@ def WoodGas = new IFluidFuel('wood_gas', 'flue_gas');
 WoodGas.setDuration(80);
 WoodGas.setAmountToBurn(160);
 WoodGas.setByproductAmount(750);
+WoodGas.setIsFuelCellFuel(true);
 
 def CoalGas = new IFluidFuel('coal_gas', 'flue_gas');
 CoalGas.setDuration(90);
 CoalGas.setAmountToBurn(160);
 CoalGas.setByproductAmount(750);
+CoalGas.setIsFuelCellFuel(true);
 
 def HydrogenRichSyngas = new IFluidFuel('hydrogen_rich_syngas', 'flue_gas');
 HydrogenRichSyngas.setDuration(60);
 HydrogenRichSyngas.setAmountToBurn(160);
 HydrogenRichSyngas.setByproductAmount(1500);
+HydrogenRichSyngas.setIsFuelCellFuel(true);
 
 def MonoxideRichSyngas = new IFluidFuel('monoxide_rich_syngas', 'flue_gas');
 MonoxideRichSyngas.setDuration(50);
 MonoxideRichSyngas.setAmountToBurn(160);
 MonoxideRichSyngas.setByproductAmount(1500);
+MonoxideRichSyngas.setIsFuelCellFuel(true);
 
 def Ethylene = new IFluidFuel('ethylene', 'flue_gas');
 Ethylene.setDuration(85);
@@ -515,6 +524,7 @@ def Ammonia = new IFluidFuel('ammonia', 'nitrogen');
 Ammonia.setDuration(70);
 Ammonia.setAmountToBurn(160);
 Ammonia.setByproductAmount(500);
+Ammonia.setIsFuelCellFuel(true);
 
 def Propene = new IFluidFuel('propene', 'flue_gas');
 Propene.setDuration(85);
@@ -540,30 +550,35 @@ def Hydrogen = new IFluidFuel('hydrogen', "steam")
 Hydrogen.setDuration(10);
 Hydrogen.setAmountToBurn(160);
 Hydrogen.setByproductAmount(80);
+Hydrogen.setIsFuelCellFuel(true);
 
 def Methanol = new IFluidFuel('methanol', 'flue_gas');
 Methanol.setDuration(20);
 Methanol.setAmountToBurn(10);
 Methanol.setByproductAmount(1000);
 Methanol.setIsRefinedFuel(true);
+Methanol.setIsFuelCellFuel(true);
 
 def Ethanol = new IFluidFuel('ethanol', 'flue_gas');
 Ethanol.setDuration(48);
 Ethanol.setAmountToBurn(10);
 Ethanol.setByproductAmount(1200);
 Ethanol.setIsRefinedFuel(true);
+Ethanol.setIsFuelCellFuel(true);
 
 def LiquidNaturalGas = new IFluidFuel('liquid_natural_gas', 'flue_gas');
 LiquidNaturalGas.setDuration(120);
 LiquidNaturalGas.setAmountToBurn(10);
 LiquidNaturalGas.setByproductAmount(1250);
 LiquidNaturalGas.setIsRefinedFuel(true);
+LiquidNaturalGas.setIsFuelCellFuel(true);
 
 def FuelOil = new IFluidFuel('fuel_oil', 'flue_gas');
 FuelOil.setDuration(150);
 FuelOil.setAmountToBurn(10);
 FuelOil.setByproductAmount(2000);
 FuelOil.setIsRefinedFuel(true);
+FuelOil.setIsFuelCellFuel(true);
 
 def BioDiesel = new IFluidFuel('bio_diesel', 'flue_gas');
 BioDiesel.setDuration(75);
@@ -576,6 +591,7 @@ Diesel.setDuration(100);
 Diesel.setAmountToBurn(10);
 Diesel.setByproductAmount(2000);
 Diesel.setIsRefinedFuel(true);
+Diesel.setIsFuelCellFuel(true);
 
 def MidgradeDiesel = new IFluidFuel('midgrade_diesel', 'flue_gas');
 MidgradeDiesel.setDuration(150);
@@ -600,6 +616,7 @@ Gasoline.setDuration(100);
 Gasoline.setAmountToBurn(10);
 Gasoline.setByproductAmount(2000);
 Gasoline.setIsRefinedFuel(true);
+Gasoline.setIsFuelCellFuel(true);
 
 def MidgradeGasoline = new IFluidFuel('midgrade_gasoline', 'flue_gas');
 MidgradeGasoline.setDuration(150);
@@ -624,6 +641,7 @@ Kerosene.setDuration(100);
 Kerosene.setAmountToBurn(10);
 Kerosene.setByproductAmount(1000);
 Kerosene.setIsRefinedFuel(true);
+Kerosene.setIsFuelCellFuel(true);
 
 def MidgradeKerosene = new IFluidFuel('midgrade_kerosene', 'flue_gas');
 MidgradeKerosene.setDuration(150);
@@ -767,7 +785,32 @@ for (FluidFuel in FluidFuels) {
             .duration(80)
             .EUt(7)
             .buildAndRegister();
+
+    if (FluidFuel.fuel_cell) {
+        if (FluidFuel.refined_fuel) {
+                recipemap('fuel_cell').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(fluid('preheated_air') * 100)
+                        .duration(FluidFuel.duration * 2)
+                        .EUt(128)
+                        .buildAndRegister();
+        } else {
+                recipemap('fuel_cell').recipeBuilder()
+                        .fluidInputs(liquid(FluidFuel.liquid_fuel) * FluidFuel.amount_to_burn)
+                        .fluidInputs(fluid('preheated_air') * 100)
+                        .duration(FluidFuel.duration * 2)
+                        .EUt(32)
+                        .buildAndRegister();
+        }
+    }
 }
+
+recipemap('fluid_heater').recipeBuilder()
+        .fluidInputs(fluid('air') * 1000)
+        .fluidOutputs(fluid('preheated_air') * 1000)
+        .duration(5)
+        .EUt(Globals.voltAmps[4])
+        .buildAndRegister();
 
 for (WorkingFluid in WorkingFluids) {
     recipemap('heat_exchanger').recipeBuilder()

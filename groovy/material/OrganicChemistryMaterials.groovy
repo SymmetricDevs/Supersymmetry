@@ -2994,6 +2994,7 @@ class OrganicChemistryMaterials {
         Viton = new Material.Builder(15473, SuSyUtility.susyId('viton'))
                 .polymer()
                 .components(Hexafluoropropylene, VinylideneFluoride)
+                .flags(GENERATE_RING)
                 .color(0xbc716d)
                 .build()
 
@@ -3064,6 +3065,7 @@ class OrganicChemistryMaterials {
         Nafion = new Material.Builder(15483, SuSyUtility.susyId('nafion'))
                 .dust()
                 .components(Carbon * 9, Hydrogen, Fluorine * 17, Oxygen * 5, Sulfur)
+                .flags(GENERATE_PLATE)
                 .color(0xcfccb0)
                 .build()
 
@@ -3096,17 +3098,68 @@ class OrganicChemistryMaterials {
                 .build()
         
         SodiumVanillylmandelateSolution.setFormula('(NaC9H7O5)(NaOH)(H2O)4', true)
-        
-        DiacetonePeroxide = new Material.Builder(15488, SuSyUtility.susyId('diacetone_peroxide'))
+
+        Acrylonitrile = new Material.Builder(15488, SuSyUtility.susyId('acrylonitrile'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 3, Nitrogen)
+                .color(0x42ba32)
+                .build()
+
+        Polyacrylonitrile = new Material.Builder(15489, SuSyUtility.susyId('polyacrylonitrile'))
+                .dust()
+                .components(Carbon * 3, Hydrogen * 3, Nitrogen)
+                .color(0x44703e)
+                .build()
+
+        Polyacrylonitrile.setFormula('[C3H3N]n', true)
+        Polyacrylonitrile.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, false, false))
+
+        DimethylSulfide = new Material.Builder(15490, SuSyUtility.susyId('dimethyl_sulfide'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 6, Sulfur)
+                .color(0xc9af59)
+                .build()
+
+        DimethylSulfoxide = new Material.Builder(15491, SuSyUtility.susyId('dimethyl_sulfoxide'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 6, Sulfur, Oxygen)
+                .color(0xb3a434)
+                .build()
+
+        DiethylSulfate = new Material.Builder(15492, SuSyUtility.susyId('diethyl_sulfate'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 10, Sulfur, Oxygen * 4)
+                .color(0xc78f50)
+                .build()
+
+        DichlorodiphenylSulfone = new Material.Builder(15493, SuSyUtility.susyId('dichlorodiphenyl_sulfone'))
+                .dust()
+                .components(Carbon * 12, Hydrogen * 8, Chlorine * 2, Sulfur, Oxygen * 2)
+                .color(0x99c750)
+                .build()
+
+        Polysulfone = new Material.Builder(15494, SuSyUtility.susyId('polysulfone'))
+                .polymer(2)
+                .components(Carbon * 27, Hydrogen * 22, Sulfur, Oxygen * 2)
+                .flags(GENERATE_ROD, GENERATE_FRAME)
+                .color(0xd7d9bd)
+                .build()
+
+        Acetonitrile = new Material.Builder(15495, SuSyUtility.susyId('acetonitrile'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 3, Nitrogen)
+                .color(0x275e75)
+                .build()
+      
+      DiacetonePeroxide = new Material.Builder(15496, SuSyUtility.susyId('diacetone_peroxide'))
                 .dust()
                 .components(Carbon * 6, Hydrogen * 12, Oxygen * 4)
                 .color(0xf54927)
                 .build()
       
-        TriacetonePeroxide = new Material.Builder(15489, SuSyUtility.susyId('triacetone_peroxide'))
+        TriacetonePeroxide = new Material.Builder(15497, SuSyUtility.susyId('triacetone_peroxide'))
                 .dust()
                 .components(Carbon * 9, Hydrogen * 18, Oxygen * 6)
                 .color(0x9c2007)
-                .build()
     }
 }

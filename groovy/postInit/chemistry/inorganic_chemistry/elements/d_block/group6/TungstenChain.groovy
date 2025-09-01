@@ -186,7 +186,7 @@ DISTILLERY.recipeBuilder()
         .fluidInputs(fluid('very_diluted_sodium_sulfate_solution') * 9000)
         .outputs(metaitem('dustSodiumSulfate') * 7)
         .fluidOutputs(fluid('water') * 9000)
-        .EUt(Globals.voltAmps[1])
+        .EUt(Globals.voltAmps[2])
         .duration(20)
         .buildAndRegister()
 
@@ -238,3 +238,14 @@ REACTION_FURNACE.recipeBuilder()
         .duration(100)
         .EUt(Globals.voltAmps[4])
         .buildAndRegister()
+
+// Tungsten sources for catalysis
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustAmmoniumParatungstate'))
+    .fluidInputs(fluid('distilled_water') * 2000)
+    .outputs(metaitem('dustAmmoniumMetatungstate'))
+    .fluidOutputs(fluid('ammonia_solution') * 4000)
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
+    .buildAndRegister()

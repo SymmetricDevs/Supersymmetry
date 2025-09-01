@@ -1,3 +1,36 @@
+# UPDATE 0.1.15.4
+## Mod Changes
+### Mod Updates
+- ReFinedTools 7.77 → 7.78
+- Bubbles 2.4.7 → 2.4.9
+- LibNine 1.12.2-1.2.1 → 1.12.2-1.2.2
+- Scalar Legacy 1.0.0 → 1.0.1
+- FluxLoading 1.3.5 → 1.3.7
+- Gregic Probe: CEu 1.4.3 → 1.4.4
+- Fugue 0.18.6 → 0.20.1
+- Forgelin-Continuous Continuous-2.1.21.0 → Continuous-2.2.0.0
+- GregTech Food Option 1.12.2-1.12.5 → 1.12.2-1.12.7.1
+- Custom Loading Screen 1.12.2-1.5.8 → 1.12.2-1.5.9
+- VisualClaiming 0.0.2 → 0.0.3
+- CensoredASM 5.28 → 5.29
+- SusyCore v0.1.73 → v0.1.74
+### Mod Additions
+- SussyPatches → 1.3.2
+- TipTheScales → 1.12.2-1.0.4
+### Mod Removals
+- ScalingGUIs
+## Changes
+### New Features
+- EV/IV fuel cells have been added! Use these singleblock generators to bring hydrogen-based power to your factory. (#1606 by @planetme)
+- [Susy-Core] The Quarry now supports sizes! You can reshape it to be as large as 31x31. (#527 by @Crindigo)
+### Changed Features
+- The primitive age questline has been reworked! (#1605 by @Fiery36)
+- Turbine casings are no longer recursively crafted. (#1612 by @Fiery36)
+### Fixes
+- You can no longer dupe steel using certain multiblock parts. (#1611 by @Fiery36)
+- Several progression roadblocks in MV have been fixed! (#1614 by @planetme)
+- [Susy-Core] Quarries now work much faster. (#528 by @Crindigo)
+- [Susy-Core] Small boilers now consume fuel at the intended rate. (#533 by @Crindigo)
 # UPDATE 0.1.15.3
 ## Mod Changes
 ### Mod Updates

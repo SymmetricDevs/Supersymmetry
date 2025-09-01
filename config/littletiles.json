@@ -2,7 +2,7 @@
   "core": {
     "defaultSize": 16,
     "minSize": 1,
-    "scale": 10,
+    "scale": 7,
     "exponent": 2,
     "forceToSaveDefaultSize": false
   },

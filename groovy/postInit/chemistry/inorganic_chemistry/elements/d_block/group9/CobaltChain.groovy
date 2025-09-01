@@ -36,7 +36,7 @@ FLUIDIZEDBR.recipeBuilder()
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .inputs(ore('dustCobaltOxide'))
+        .inputs(ore('dustCobaltOxide') * 2)
         .fluidInputs(fluid('sulfuric_acid') * 1000)
         .fluidOutputs(fluid('cobalt_sulfate_solution') * 1000)
         .EUt(Globals.voltAmps[1])

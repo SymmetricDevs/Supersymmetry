@@ -6,18 +6,31 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1867050010.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "pyrotech:brick_kiln"
       },
-      "name:8": "susy.quest.db.1867050010.title"
+      "name:8": "susy.quest.db.1867050010.title",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 1867050010,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "id:8": "pyrotech:brick_kiln"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "pyrotech:brick_oven"
         }
       },
       "taskID:8": "bq_standard:retrieval"

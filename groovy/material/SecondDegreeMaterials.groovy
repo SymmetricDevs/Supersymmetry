@@ -461,11 +461,7 @@ class SecondDegreeMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .build()
 
-        AmmoniumMetatungstateSolution = new Material.Builder(13073, SuSyUtility.susyId('ammonium_metatungstate_solution'))
-                .liquid()
-                .components(AmmoniumMetatungstate, Ammonia * 4, Water * 4)
-                .color(0x340959)
-                .build()
+        // FREE ID: 13073
 
         DilutedSodiumChlorateSolution = new Material.Builder(13074, SuSyUtility.susyId('diluted_sodium_chlorate_solution'))
                 .liquid()
@@ -1034,6 +1030,12 @@ class SecondDegreeMaterials {
         MagnesiumNitrateSolution = new Material.Builder(13169, SuSyUtility.susyId('magnesium_nitrate_solution'))
                 .liquid()
                 .components(MagnesiumNitrate, Water * 2)
+                .colorAverage()
+                .build()
+        
+        PlatinumOnCarbon = new Material.Builder(13170, SuSyUtility.susyId('platinum_on_carbon'))
+                .dust()
+                .components(Platinum, ActivatedCarbon * 10)
                 .colorAverage()
                 .build()
     }

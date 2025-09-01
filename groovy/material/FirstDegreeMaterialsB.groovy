@@ -532,5 +532,109 @@ class FirstDegreeMaterialsB {
                 .components(Hydrogen * 2, Oxygen)
                 .color(0x53a4c9)
                 .build()
+
+        ChromiumIIINitrateSolution = new Material.Builder(8745, SuSyUtility.susyId('chromium_iii_nitrate_solution'))
+                .liquid()
+                .components(Chrome * 2, Nitrogen * 6, Oxygen * 18, Water * 3)
+                .color(0x2e0225)
+                .build()
+
+        ChromiumIIINitrateSolution.setFormula("(Cr(NO3)3)2(H2O)3", true)
+
+        ChromiumIIICarbonate = new Material.Builder(8746, SuSyUtility.susyId('chromium_iii_carbonate'))
+                .dust()
+                .components(Chrome * 2, Carbon * 3, Oxygen * 9)
+                .color(0x5ba68d)
+                .build()
+
+        ChromiumIIICarbonate.setFormula("Cr2(CO3)3", true)
+
+        ManganeseIICarbonate = new Material.Builder(8747, SuSyUtility.susyId('manganese_ii_carbonate'))
+                .dust()
+                .components(Manganese, Carbon, Oxygen * 3)
+                .color(0xd6d6ae)
+                .build()
+
+        CeriumIIICarbonate = new Material.Builder(8748, SuSyUtility.susyId('cerium_iii_carbonate'))
+                .dust()
+                .components(Cerium * 2, Carbon * 3, Oxygen * 9)
+                .colorAverage()
+                .build()
+
+        CeriumIIICarbonate.setFormula("Ce2(CO3)3", true)
+
+        GadoliniumCarbonate = new Material.Builder(8749, SuSyUtility.susyId('gadolinium_carbonate'))
+                .dust()
+                .components(Gadolinium * 2, Carbon * 3, Oxygen * 9)
+                .colorAverage()
+                .build()
+
+        GadoliniumCarbonate.setFormula("Gd2(CO3)3", true)
+
+        StrontiumNitrateSolution = new Material.Builder(8750, SuSyUtility.susyId('strontium_nitrate_solution'))
+                .liquid()
+                .components(Strontium, Nitrogen * 2, Oxygen * 6, Water)
+                .colorAverage()
+                .build()
+
+        StrontiumNitrateSolution.setFormula("Sr(NO3)2(H2O)", true)
+
+        LanthanumStrontiumManganite = new Material.Builder(8751, SuSyUtility.susyId('lanthanum_strontium_manganite'))
+                .components(Lanthanum, Strontium, Manganese, Oxygen * 3)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+
+        LanthanumStrontiumManganite.setFormula("(La,Sr)MnO3", true)
+
+        GadoliniumDopedCeria = new Material.Builder(8752, SuSyUtility.susyId('gadolinium_doped_ceria'))
+                .components(Cerium, Gadolinium, Oxygen * 2)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+
+        GadoliniumDopedCeria.setFormula("(Ce,Gd)O2", true)
+
+        NickelGadoliniumDopedCeria = new Material.Builder(8753, SuSyUtility.susyId('nickel_gadolinium_doped_ceria'))
+                .components(Nickel, Gadolinium, Cerium, Oxygen * 3)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+
+        NickelGadoliniumDopedCeria.setFormula("Ni(Gd,Ce)O3", true)
+
+        NickelYttriaStabilizedZirconia = new Material.Builder(8754, SuSyUtility.susyId('nickel_yttria_stabilized_zirconia'))
+                .components(Nickel, Yttrium, Zirconium, Oxygen * 3)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+
+        NickelYttriaStabilizedZirconia.setFormula("Ni(Zr,Y)O3", true)
+
+        LanthanumStrontiumChromite = new Material.Builder(8755, SuSyUtility.susyId('lanthanum_strontium_chromite'))
+                .components(Lanthanum, Strontium, Chrome, Oxygen * 3)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .colorAverage()
+                .build()
+
+        LanthanumStrontiumChromite.setFormula("(La,Sr)CrO3", true)
+
+        YttriaStabilizedZirconia = new Material.Builder(8756, SuSyUtility.susyId('yttria_stabilized_zirconia'))
+                .dust()
+                .components(Yttrium, Zirconium, Oxygen * 2)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .color(0xe3ecff)
+                .build()
+
+        YttriaStabilizedZirconia.setFormula("(Y,Zr)O2", true)
+
+        BismuthIIINitrateSolution = new Material.Builder(8757, SuSyUtility.susyId('bismuth_iii_nitrate_solution'))
+                .liquid()
+                .components(Bismuth * 2, Nitrogen * 6, Oxygen * 18, Water * 3)
+                .colorAverage()
+                .build()
+
+        BismuthIIINitrateSolution.setFormula("(Bi(NO3)3)2(H2O)3", true)
+
     }
 }

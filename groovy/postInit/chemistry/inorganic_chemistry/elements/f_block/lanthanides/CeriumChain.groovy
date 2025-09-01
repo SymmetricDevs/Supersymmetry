@@ -67,3 +67,15 @@ BR.recipeBuilder()
     .duration(80)
     .EUt(30)
     .buildAndRegister()
+
+// Cerium carbonate
+
+BR.recipeBuilder()
+    .inputs(ore('dustCeriumIiiChloride') * 8)
+    .inputs(ore('dustSodaAsh') * 18)
+    .fluidInputs(fluid('deionized_water') * 6000)
+    .outputs(metaitem('dustCeriumIiiCarbonate') * 14)
+    .fluidOutputs(fluid('salt_water') * 6000)
+    .duration(80)
+    .EUt(30)
+    .buildAndRegister()

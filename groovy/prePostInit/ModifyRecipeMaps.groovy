@@ -354,6 +354,8 @@ mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), m
 mods.gregtech.blender.removeByInput(120, null, [fluid('light_fuel') * 5000 * 5000, fluid('heavy_fuel') * 1000 * 1000])
 // Tungstensteel Dust * 2
 mods.gregtech.blender.removeByInput(1920, [metaitem('dustTungsten'), metaitem('dustSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Tempered Glass * 1
+mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:glass')], [fluid('oxygen') * 60 * 60])
 
 RecipeMaps.SIFTER_RECIPES
     .modifyMaxFluidInputs(1)

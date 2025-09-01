@@ -19,37 +19,26 @@ MIXER.recipeBuilder()
 
 // Alumina
 
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .inputs(ore('dustAlumina') * 10)
-    .fluidInputs(fluid('polyvinyl_alcohol_binder') * 200)
-    .notConsumable(metaitem('shape.mold.ring'))
-    .outputs(metaitem('sintered_alumina.insulator'))
-    .duration(500)
-    .EUt(Globals.voltAmps[1])
-    .buildAndRegister()
-
 for (blanket in sintering_blankets) {
     SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustAlumina') * 5)
-        .inputs(ore('dustSmallGraphite'))    
-        .notConsumable(metaitem('shape.mold.plate'))
+        .inputs(ore('dustAlumina') * 10)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 200)
+        .notConsumable(metaitem('shape.mold.ring'))
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
-        .outputs(metaitem('membrane.support.alumina'))
-        .circuitMeta(2)
+        .outputs(metaitem('sintered_alumina.insulator'))
         .duration(blanket.duration)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 }
 
-// Zirconia
-
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .inputs(ore('dustBoronNitride') * 12)
-    .fluidInputs(fluid('polyvinyl_alcohol_binder') * 400)
-    .outputs(metaitem('nozzle.boron_nitride'))
-    .duration(600)
-    .EUt(Globals.voltAmps[3])
-    .buildAndRegister()
+SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 5)
+        .inputs(ore('dustSmallGraphite'))    
+        .notConsumable(metaitem('shape.mold.plate'))
+        .outputs(metaitem('membrane.support.alumina'))
+        .duration(300)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
 
 // Boron carbide
 
@@ -108,4 +97,11 @@ FORMING_PRESS.recipeBuilder()
     .outputs(metaitem('crucible.boron.nitride'))
     .duration(2000)
     .EUt(Globals.voltAmps[2])
+    .buildAndRegister()
+
+HOT_ISOSTATIC_PRESS.recipeBuilder()
+    .inputs(ore('dustBoronNitride') * 12)
+    .outputs(metaitem('nozzle.boron_nitride'))
+    .duration(600)
+    .EUt(Globals.voltAmps[3])
     .buildAndRegister()

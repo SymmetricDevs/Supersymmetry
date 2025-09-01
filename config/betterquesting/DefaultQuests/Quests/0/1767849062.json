@@ -6,8 +6,9 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1767849062.desc",
       "icon:10": {
-        "Damage:2": 2,
-        "id:8": "pyrotech:cobblestone"
+        "Count:3": 1,
+        "Damage:2": 1,
+        "id:8": "minecraft:stone"
       },
       "name:8": "susy.quest.db.1767849062.title"
     }

@@ -823,13 +823,37 @@ class ThirdDegreeMaterials {
 
         PerfluorovinylSulfonylEtherSolution = new Material.Builder(24133, SuSyUtility.susyId('perfluorovinyl_sulfonyl_ether_solution'))
                 .liquid()
-                .components(PerfluorovinylSulfonylEther * 1, SodiumFluoride * 2, Dimethylformamide * 2)
+                .components(PerfluorovinylSulfonylEther, SodiumFluoride * 2, Dimethylformamide * 2)
                 .colorAverage()
                 .build()
 
         NafionSolution = new Material.Builder(24134, SuSyUtility.susyId('nafion_solution'))
                 .liquid()
                 .components(Nafion * 2, FluorinatedSurfactantMixture)
+                .colorAverage()
+                .build()
+
+        PolyacrylonitrileSolution = new Material.Builder(24135, SuSyUtility.susyId('polyacrylonitrile_solution'))
+                .liquid()
+                .components(Polyacrylonitrile, Dimethylformamide * 3)
+                .colorAverage()
+                .build()
+
+        DichlorodiphenylSulfoneSolution = new Material.Builder(24136, SuSyUtility.susyId('dichlorodiphenyl_sulfone_solution'))
+                .liquid()
+                .components(DichlorodiphenylSulfone, DiethylSulfate * 2)
+                .colorAverage()
+                .build()
+
+        FuelCellCatalystSolution = new Material.Builder(24137, SuSyUtility.susyId('fuel_cell_catalyst_solution'))
+                .liquid()
+                .components(PlatinumOnCarbon, Nafion, IsopropylAlcohol)
+                .colorAverage()
+                .build()
+
+        PolytetrafluoroethyleneCoatingSolution = new Material.Builder(24138, SuSyUtility.susyId('polytetrafluoroethylene_coating_solution'))
+                .liquid()
+                .components(Polytetrafluoroethylene * 2, Cyclohexane)
                 .colorAverage()
                 .build()
     }

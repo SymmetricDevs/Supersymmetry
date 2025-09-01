@@ -56,7 +56,7 @@ BR.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-// Lanthanothermy Recycing
+// Lanthanothermy Recycling
 BR.recipeBuilder()
     .inputs(ore('dustLanthanumOxide') * 5)
     .fluidInputs(fluid('hydrofluoric_acid') * 6000)
@@ -64,4 +64,15 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('water') * 9000)
     .duration(80)
     .EUt(60)
+    .buildAndRegister()
+
+// Lanthanum carbonate
+BR.recipeBuilder()
+    .inputs(ore('dustSodaAsh') * 18)
+    .fluidInputs(fluid('lanthanum_nitrate_solution') * 1000)
+    .fluidInputs(fluid('distilled_water') * 5000)
+    .outputs(metaitem('dustLanthanumCarbonate') * 14)
+    .fluidOutputs(fluid('sodium_nitrate_solution') * 6000)
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
     .buildAndRegister()
