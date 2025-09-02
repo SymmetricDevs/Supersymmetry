@@ -935,27 +935,27 @@ susy.material.cold_hp_nitrogen=Cold High-Pressure Nitrogen
 susy.material.hot_hp_propene=Hot High-Pressure Propene
 susy.material.hp_propene=High-Pressure Propene
 
-susy.material.hot_hp_benzene=Hot High-Pressure Benzene
-susy.material.hp_benzene=High-Pressure Benzene
+susy.material.hot_hp_benzene=Gorący Sprężony Benzen
+susy.material.hp_benzene=Sprężony Benzen
 
-susy.material.hot_hp_carbon_monoxide=Hot High-Pressure Carbon Monoxide
-susy.material.hp_carbon_monoxide=High-Pressure Carbon Monoxide
+susy.material.hot_hp_carbon_monoxide=Gorący Sprężony Tlenek Węgla
+susy.material.hp_carbon_monoxide=Sprężony Tlenek Węgla
 
-susy.material.liquid_hydrogen=Liquid Hydrogen
-susy.material.liquid_helium=Liquid Helium
-susy.material.liquid_neon=Liquid Neon
-susy.material.liquid_argon=Liquid Argon
-susy.material.liquid_krypton=Liquid Krypton
-susy.material.liquid_xenon=Liquid Xenon
-susy.material.liquid_nitrogen=Liquid Nitrogen
-susy.material.liquid_refinery_gas=Liquid Refinery Gas
-susy.material.liquid_natural_gas=Liquid Natural Gas (LNG)
-susy.material.liquid_methane=Liquid Methane
-susy.material.liquid_decarburized_air=Liquid Decarburized Air
+susy.material.liquid_hydrogen=Ciekły Wodór
+susy.material.liquid_helium=Ciekły Hel
+susy.material.liquid_neon=Ciekły Neon
+susy.material.liquid_argon=Ciekły Argon
+susy.material.liquid_krypton=Ciekły Krypton
+susy.material.liquid_xenon=Ciekły Ksenon
+susy.material.liquid_nitrogen=Ciekły Azot
+susy.material.liquid_refinery_gas=Ciekły Gaz Rafineryjny
+susy.material.liquid_natural_gas=Ciekły Gaz Ziemny (LNG)
+susy.material.liquid_methane=Ciekły Metan
+susy.material.liquid_decarburized_air=Ciekły Decarburized Air
 
-susy.material.hot_hp_air=Hot High-Pressure Air
-susy.material.hp_air=High-Pressure Air
-susy.material.cold_hp_air=Cold High-Pressure Air
+susy.material.hot_hp_air=Gorące Sprężone Powietrze
+susy.material.hp_air=Sprężone Powietrze
+susy.material.cold_hp_air=Zimne Sprężone Powietrze
 
 susy.material.hot_hp_nether_air=Hot High-Pressure Nether Air
 susy.material.hp_nether_air=High-Pressure Nether Air
@@ -969,28 +969,28 @@ susy.material.hot_hp_refinery_gas=Hot High-Pressure Refinery Gas
 susy.material.hp_refinery_gas=High-Pressure Refinery Gas
 susy.material.cold_hp_refinery_gas=Cold High-Pressure Refinery Gas
 
-susy.material.hot_hp_natural_gas=Hot High-Pressure Natural Gas
-susy.material.hp_natural_gas=High-Pressure Natural Gas
-susy.material.cold_hp_natural_gas=Cold High-Pressure Natural Gas
+susy.material.hot_hp_natural_gas=Gorący Sprężony Gaz Ziemny
+susy.material.hp_natural_gas=Sprężony Gaz Ziemny
+susy.material.cold_hp_natural_gas=Zimny Sprężony Gaz Ziemny
 
 susy.material.hot_hp_methane=Hot High-Pressure Methane
 susy.material.hp_methane=High-Pressure Methane
 susy.material.cold_hp_methane=Cold High-Pressure Methane
 
-susy.material.hot_compressed_ammonia=Hot Compressed Ammonia
-susy.material.compressed_ammonia=Compressed Ammonia
-susy.material.cold_compressed_ammonia=Cold Compressed Ammonia
-susy.material.cold_ammonia=Cold Ammonia
+susy.material.hot_compressed_ammonia=Gorący Sprężony Amoniak
+susy.material.compressed_ammonia=Sprężony Amoniak
+susy.material.cold_compressed_ammonia=Zimny Sprężony Amoniak
+susy.material.cold_ammonia=Zimny Amoniak
 
-susy.material.hot_compressed_propane=Hot Compressed Propane
-susy.material.compressed_propane=Compressed Propane
-susy.material.cold_compressed_propane=Cold Compressed Propane
-susy.material.cold_propane=Cold Propane
+susy.material.hot_compressed_propane=Gorący Sprężony Propan
+susy.material.compressed_propane=Sprężony Propan
+susy.material.cold_compressed_propane=Zimny Sprężony Propan
+susy.material.cold_propane=Zimny Propan
 
-susy.material.hot_compressed_carbon_dioxide=Hot Compressed Carbon Dioxide
-susy.material.compressed_carbon_dioxide=Compressed Carbon Dioxide
-susy.material.cold_compressed_carbon_dioxide=Cold Compressed Carbon Dioxide
-susy.material.cold_carbon_dioxide=Cold Carbon Dioxide
+susy.material.hot_compressed_carbon_dioxide=Gorący Sprężony Dwutlenek Węgla
+susy.material.compressed_carbon_dioxide=Stężony Dwutlenek Węgla
+susy.material.cold_compressed_carbon_dioxide=Zimny Stężony Dwutlenek Węgla
+susy.material.cold_carbon_dioxide=Zimny Dwutlenek Węgla
 
 susy.material.hot_compressed_trichlorofluoromethane=Hot Compressed Trichlorofluoromethane
 susy.material.compressed_trichlorofluoromethane=Compressed Trichlorofluoromethane
@@ -1012,15 +1012,15 @@ susy.material.compressed_chlorodifluoromethane=Compressed Chlorodifluoromethane
 susy.material.cold_compressed_chlorodifluoromethane=Cold Compressed Chlorodifluoromethane
 susy.material.cold_chlorodifluoromethane=Cold Chlorodifluoromethane
 
-susy.material.warm_water=Warm Water
+susy.material.warm_water=Ciepła Woda
 susy.material.warm_ethylene_glycol=Warm Ethylene Glycol
-susy.material.warm_salt_water=Warm Salt Water
+susy.material.warm_salt_water=Ciepła Słona Woda
 susy.material.warm_lubricant=Warm Lubricant
 susy.material.warm_polychlorinated_biphenyl=Warm Polychlorinated Biphenyl
 susy.material.warm_sodium_potassium=Warm Sodium Potassium
 
-susy.material.hot_air=Hot Air
-susy.material.hot_nitrogen=Hot Nitrogen
+susy.material.hot_air=Gorące Powietrze
+susy.material.hot_nitrogen=Gorący Azot
 
 susy.material.ethylene_glycol=Ethylene Glycol
 susy.material.carbon_disulfide=Carbon Disulfide
@@ -1074,8 +1074,8 @@ susy.material.lorandite=Lorandite
 susy.material.hutchinsonite=Hutchinsonite
 susy.material.crookesite=Crookesite
 susy.material.dilithium=Dilithium
-susy.material.lignite=Lignite
-susy.material.lignite_coke=Lignite Coke
+susy.material.lignite=Węgiel Brunatny
+susy.material.lignite_coke=Koks z Węgla Brunatnego
 susy.material.anthracite=Anthracite
 susy.material.phosphorite=Phosphorite
 susy.material.sperrylite=Sperrylite
