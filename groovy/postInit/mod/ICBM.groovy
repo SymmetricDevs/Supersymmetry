@@ -103,6 +103,7 @@ def name_removals = [
     "icbmclassic:spikes.2",
     "icbmclassic:powder.poison",
     "icbmclassic:saltpeter_ball",
+    "icbmclassic:parts/vanilla/gunpowder",
 ]
 
 for (item in name_removals) {

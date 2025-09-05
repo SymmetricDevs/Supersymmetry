@@ -143,7 +143,8 @@ crafting.replaceShaped('cd4017be_lib:rs_ctr/editor', item('rs_ctr:editor'), [
         [null, metaitem('workbench'), null]
 ])
 
-crafting.replaceShaped('cd4017be_lib:rs_ctr/processor3', item('rs_ctr:processor3'), [
+crafting.replaceShaped('cd4017be_lib:rs_ctr/processor3', 
+        { def i = item('rs_ctr:processor3'); i.setTagCompound(new net.minecraft.nbt.NBTTagCompound().tap { it.setIntArray("stats", [0,0,0,128,0,0] as int[]) }); i }(), [
         [null, metaitem('wireFineRedAlloy'), null],
         [item('rs_ctr:processor2'), metaitem('plateSteel'), item('rs_ctr:processor2')],
         [null, metaitem('wireFineRedAlloy'), null]

@@ -61,7 +61,7 @@ MIXER.recipeBuilder()
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_bastnasite_slurry') * 2000)
     .duration(80)
-    .EUt(30)
+    .EUt(480)
     .buildAndRegister()
 
 FROTH_FLOTATION.recipeBuilder()

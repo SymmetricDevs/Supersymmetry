@@ -3196,8 +3196,9 @@ gregtech.material.cupric_oxide=Copper II Oxide
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
-susy.block_group_members.extractable_logs_2.name=Acacia and Dark Oak
+susy.block_group_members.extractable_logs_2.name=Acacia and Dark Oak Log
 
+susy.block_group_members.rainbowwood_logs.name=Rainbowwood Log
 susy.block_group_members.latex_logs.name=Rubber Log
 
 # Main Menu
