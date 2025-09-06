@@ -356,11 +356,11 @@ VACUUM_CHAMBER.recipeBuilder()
         .buildAndRegister()
 
     VACUUM_CHAMBER.recipeBuilder()
-        .inputs(ore('dustWetFlameRetardantEpoxy') * 7)
+        .inputs(ore('dustWetFlameRetardantEpoxy') * 8)
         .notConsumable(ore('springNichrome'))
-        .outputs(metaitem('dustFlameRetardantEpoxy') * 7)
-        .duration(25)
-        .EUt(30)
+        .outputs(metaitem('dustFlameRetardantEpoxy') * 8)
+        .duration(30)
+        .EUt(480)
         .buildAndRegister()
 
 // Fiber reinforced epoxy

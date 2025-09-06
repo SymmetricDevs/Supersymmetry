@@ -1,3 +1,35 @@
+# UPDATE 0.1.15.5
+## Mod Changes
+### Mod Updates
+- Extreme Sound Muffler: Legacy 1.0.3 → 1.0.4
+- ModularUI 2.5.0-rc5 → 2.5.0-rc6
+- CraftPresence 2.6.1 → 2.6.2
+- Had Enough Items 4.28.0 → 4.29.6
+- UniLib 1.1.0 → 1.1.1
+- Supercritical 0.2.0 → 0.2.1
+- Universal Tweaks 1.15.2 → 1.16.0
+- SussyPatches 1.3.2 → 1.4.2
+- SusyCore v0.1.74 → v0.1.75
+- JEI Utilities 0.2.12 → 0.2.13
+- Fugue 0.20.1 → 0.20.3
+### Mod Removals
+- Better Placement
+## Changes
+### New Features
+- HEI now comes with autocrafting features to reduce the grind!
+- New quests have been added for Redstone Control! (#1625 by @PatRat2)
+- [Susy-Core] Evaporation pools, mixer settlers, and quarries now have intelligent in-world hints that scale with the outer bounds you place! (#541 by @Crindigo)
+### Changed Features
+- Recipes for making tungstensteel and diluting NaOH and HCl have been modified! Check your lines. (#1619, #1631 by @Rick8484)
+- Red alloy has been removed from MV circuits. (#1635 by @TheQuestWizard)
+- [Susy-Core] Long-distance item pipes are now uncraftable! Maybe use trains?
+- But trains have been considerably buffed in brake speed and acceleration! (#1634 by @TheQuestWizard)
+- Rainbowwood in the greenhouse now makes rainbow sap obtainable (#1628 by @bruberu)
+### Fixes
+- Acacia trees and dark oak trees no longer allow progression skips. (#1630 by @Syriusz171 (first time contributor!))
+- Gunpowder can no longer be made with your bare hands. (#1633 by @Syriusz171)
+- [Susy-Core] Fixes LT crash when a model is exploded (#540 by @oliwier509)
+And many more fixes and improvements have come from @Crindigo, @Fiery36, @Verdessence, @MCTian-mi, @lemonelk and @TheQuestWizard. Thanks!
 # UPDATE 0.1.15.4
 ## Mod Changes
 ### Mod Updates

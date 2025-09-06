@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    2053239479
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1277844953.desc",
+      "icon:10": {
+        "id:8": "rs_ctr:split_s"
+      },
+      "name:8": "susy.quest.db.1277844953.title"
+    }
+  },
+  "questID:3": 1277844953,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:splitter"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:split_s"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

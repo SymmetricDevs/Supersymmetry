@@ -1,0 +1,45 @@
+{
+  "preRequisites:11": [
+    1532373030
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.796249166.desc",
+      "icon:10": {
+        "id:8": "rs_ctr:lever"
+      },
+      "name:8": "susy.quest.db.796249166.title",
+      "tasklogic:8": "NAND"
+    }
+  },
+  "questID:3": 796249166,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:lever"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:slider"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "rs_ctr:lever"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 2,
+          "id:8": "rs_ctr:lever"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:clock"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

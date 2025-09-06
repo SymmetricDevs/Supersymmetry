@@ -242,6 +242,7 @@ class ChangeFlags {
         Polybenzimidazole.setFormula("[C20H12N4]n", true);
         PolyvinylAcetate.setFormula("[C4H6O2]n", true);
         PolyvinylButyral.setFormula("[C8H14O2]n", true);
+        TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true);
 
         // Ore Processing
         

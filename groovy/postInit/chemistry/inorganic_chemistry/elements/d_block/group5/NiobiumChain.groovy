@@ -84,18 +84,18 @@ CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
 
 REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
     .inputs(ore('dustIronIiiOxide') * 5)
-    .inputs(ore('dustDigestedPyrochlore') * 2)
-    .inputs(ore('dustAnyPurityAluminium') * 12)
-    .fluidInputs(fluid('sodium_nitrate') * 720)
-    .outputs(metaitem('dustFerroniobiumTantalum') * 5)
-    .outputs(metaitem('dustAlumina') * 30)
-    .outputs(metaitem('dustCalcium') * 4)
-    .fluidOutputs(fluid('sodium_nitrite') * 576)
+    .inputs(ore('dustDigestedPyrochlore') * 4)
+    .inputs(ore('dustAnyPurityAluminium') * 22)
+    .fluidInputs(fluid('sodium_nitrate') * 1440)
+    .outputs(metaitem('dustFerroniobiumTantalum') * 10)
+    .outputs(metaitem('dustAlumina') * 55)
+    .outputs(metaitem('dustCalcium') * 8)
+    .fluidOutputs(fluid('sodium_nitrite') * 1152)
     .duration(800)
     .EUt(Globals.voltAmps[4])
     .buildAndRegister()
 
-// Fe2O3 + 2 Ca2Nb1.75Ta0.25O7 + 12 Al + NaNO3 -> 0.5 Fe2Nb7Ta + 6 Al2O3 + 4 Ca + 1 NaNO2
+// Fe2O3 + 4 Ca2Nb1.75Ta0.25O7 + 22 Al + 2 NaNO3 -> Fe2Nb7Ta + 11 Al2O3 + 8 Ca + 2 NaNO2
 
 FLUID_SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('sodium_nitrite') * 144)
