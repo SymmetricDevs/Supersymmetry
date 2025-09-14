@@ -2693,6 +2693,8 @@ susy.material.dichlorodiphenyl_sulfone_solution=Dichlorodiphenyl Sulfone Solutio
 susy.material.fuel_cell_catalyst_solution=Fuel Cell Catalyst Solution
 susy.material.polytetrafluoroethylene_coating_solution=Polytetrafluoroethylene Coating Solution
 susy.material.acetonitrile=Acetonitrile
+susy.material.aluminium_alloy_6061=6061 Aluminium Alloy
+susy.material.aluminium_alloy_7075=7075 Aluminium Alloy
 
 # Isotopes
 
