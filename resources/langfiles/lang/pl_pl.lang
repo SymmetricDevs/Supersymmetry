@@ -119,7 +119,7 @@ susy.material.DilutedSodiumCarbonateSolution=Rozcieńczony Roztwór Węglanu Sod
 susy.material.iron_ii_sulfide=Siarczek Żelaza(II)
 susy.material.potassium_bisulfate=Wodorosiarczan Potasu
 susy.material.potassium_sulfate=Siarczan Potasu
-susy.material.wet_antimony_trifluoride=Mokry Trifluoerk Antymonu
+susy.material.wet_antimony_trifluoride=Mokry Trifluorek Antymonu
 susy.material.black_ash=Czarny Popiół
 susy.material.sodium_bicarbonate=Wodorowęglan sodu
 susy.material.calcium_sulfide=Siarczek Wapnia
@@ -190,7 +190,7 @@ susy.material.iron_iii_sulfate=Siarczan Żelaza(III)
 
 susy.material.aluminium_hydroxide=Wodorotlenek Glinu
 susy.material.aluminium_trifluoride=Fluorek Glinu
-susy.material.sodium_fluoride=Fluoerk Sodu
+susy.material.sodium_fluoride=Fluorek Sodu
 
 susy.material.gallium_phosphate=Fosforan Galu
 susy.material.lithium_niobate=Niobian Litu
@@ -1870,23 +1870,23 @@ susy.material.spent_pbi_solution=Spent PBI Solution
 
 # GregTech RecipeMaps
 
-recipemap.fluid_decompressor.name=Fluid (De)Compression
-recipemap.fluid_compressor.name=Fluid Compression
-recipemap.weapons_factory.name=Weapons Factory
-recipemap.heat_exchanger.name=Heat Exchanger
+recipemap.fluid_decompressor.name=Rozprężanie Płynów
+recipemap.fluid_compressor.name=Sprężanie Płynów
+recipemap.weapons_factory.name=Fabryka Broni
+recipemap.heat_exchanger.name=Wymiana Ciepła
 recipemap.radiator.name=Radiator
-recipemap.large_weapons_factory.name=Large Weapons Factory
-recipemap.ore_sorter.name=Ore Sorting
+recipemap.large_weapons_factory.name=Duża Fabryka Broni
+recipemap.ore_sorter.name=Sortowanie Rud
 recipemap.natural_draft_cooling_tower.name=Natural Draft Cooling Tower
-recipemap.gas_turbine_new.name=Gas Turbine
+recipemap.gas_turbine_new.name=Turbina Gazowa
 recipemap.quencher.name=Quencher
-recipemap.steam_turbine_new.name=Steam Turbine
-recipemap.railroad_engineering_station.name=Railroad Engineering Station
-recipemap.dryer.name=Drying
-recipemap.sintering_oven.name=Sintering
-recipemap.electrolytic_cell.name=Advanced Electrolysis
-recipemap.vat_fermentation.name=Fermentation Vat
-recipemap.vacuum_distillation.name=Vacuum Distillation
+recipemap.steam_turbine_new.name=Turbina Parowa
+recipemap.railroad_engineering_station.name=Stacja Inżynierii Kolejowej
+recipemap.dryer.name=Suszenie
+recipemap.sintering_oven.name=Spiekanie
+recipemap.electrolytic_cell.name=Zaawansowana Elektroliza
+recipemap.vat_fermentation.name=Fermentacja
+recipemap.vacuum_distillation.name=Destylacja Próżniowa
 recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
 recipemap.coking_tower.name=Coking Tower
 recipemap.ion_exchange_column.name=Ion Exchange
@@ -1903,15 +1903,15 @@ recipemap.high_pressure_cryogenic_distillation.name=High Pressure Cryogenic Dist
 
 gas.gaspunk.chlorine=Chlorine
 gas.gaspunk.radon=Radon
-gas.gaspunk.hydrogen_cyanide=Hydrogen Cyanide
+gas.gaspunk.hydrogen_cyanide=Cyjanowodór
 gas.gaspunk.vx=VX Nerve Agent
 gas.gaspunk.diborane=Diborane
 gas.gaspunk.phosphine=Phosphine
-gas.gaspunk.fluorine=Fluorine
+gas.gaspunk.fluorine=Fluor
 gas.gaspunk.hydrogen_sulfide=Hydrogen Sulfide
 gas.gaspunk.chloroform=Chloroform
-gas.gaspunk.ammonia=Ammonia
-gas.gaspunk.carbon_monoxide=Carbon Monoxide
+gas.gaspunk.ammonia=Amoniak
+gas.gaspunk.carbon_monoxide=Tlenek Węgla
 gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 gas.gaspunk.novichok=Novichok A-230 Nerve Agent
@@ -1919,17 +1919,17 @@ gas.gaspunk.novichok=Novichok A-230 Nerve Agent
 # Metaitems
 
 metaitem.rock.orthomagmatic.name=Orthomagmatic Rock
-metaitem.rock.metamorphic.name=Metamorphic Rock
-metaitem.rock.magmatic_hydrothermal.name=Magmatic Hydrothermal Rock
-metaitem.rock.sedimentary.name=Sedimentary Rock
-metaitem.rock.hydrothermal.name=Hydrothermal Rock
-metaitem.rock.alluvial.name=Alluvial Rock
+metaitem.rock.metamorphic.name=Skały Metamorficzne
+metaitem.rock.magmatic_hydrothermal.name=Skały Magmowo-Hydrotermalne
+metaitem.rock.sedimentary.name=Skały Osadowe
+metaitem.rock.hydrothermal.name=Skały Hydrotermalne
+metaitem.rock.alluvial.name=Skały Aluwialne
 metaitem.cement.clinker.name=Cement Clinker
 metaitem.hot.cement.clinker.name=Hot Cement Clinker
-metaitem.cement.dust.name=Cement Dust
+metaitem.cement.dust.name=Proszek Cementowy
 metaitem.chunk.magnetite.name=Magnetite Chunk
-metaitem.hot_iron_rod.name=Hot Iron Rod
-metaitem.voltaic_pile.name=Voltaic Pile
+metaitem.hot_iron_rod.name=Gorący Pręt Żelazny
+metaitem.voltaic_pile.name=Ogniwo Volty
 metaitem.electrolyte_paper.name=Electrolyte Paper
 metaitem.sand.dust.name=Fine Pile of Sand
 metaitem.straw.name=Straw
@@ -1951,9 +1951,9 @@ metaitem.cathode.lead.name=Ołowiana Katoda
 metaitem.anode.lead.name=Ołowiana Anoda
 metaitem.battery.lead_acid.name=Akumulator Kwasowo-Ołowiowy
 
-metaitem.steam.piston.name=Steam Piston
-metaitem.steam.motor.name=Steam Motor
-metaitem.steam.pump.name=Steam Pump
+metaitem.steam.piston.name=Tłok Parowy
+metaitem.steam.motor.name=Silnik Parowy
+metaitem.steam.pump.name=Pompa Parowa
 
 metaitem.bound_leather.name=Bound Leather
 
@@ -2036,10 +2036,10 @@ metaitem.circuit.suprachronal.opv.tooltip=§fOpV-tier Circuit/n
 metaitem.circuit.suprachronal.max.name=Supra-Chronal Maximum Circuit
 metaitem.circuit.suprachronal.max.tooltip=§fMAX-tier Circuit/n
 
-metaitem.sugar_cane_dust.name=Sugar Cane Dust
-metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
+metaitem.sugar_cane_dust.name=Proszek Trzciny Cukrowej
+metaitem.washed_rotten_flesh.name=Umyte Zgniłe Mięso
 
-metaitem.bitumen.name=Bitumen
+metaitem.bitumen.name=Bitum
 metaitem.paraffin_wax.name=Paraffin Wax
 metaitem.spent_cracking_catalyst.name=Spent Cracking Catalyst
 metaitem.cracking_catalyst.name=Cracking Catalyst
