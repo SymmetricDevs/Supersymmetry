@@ -1077,6 +1077,16 @@ mods.pyrotech.anvil.recipeBuilder()
         .tierGranite()
         .register()
 
+// Lignite Coal
+mods.pyrotech.anvil.recipeBuilder()
+        .name("susy:lignite_deposit")
+        .input(ore('oreLigniteDeposit'))
+        .output(metaitem('gemLignite') * 8)
+        .typeHammer()
+        .hits(2)
+        .tierGranite()
+        .register()
+		
 // Native Copper
 mods.pyrotech.anvil.recipeBuilder()
         .name("susy:native_copper_deposit")

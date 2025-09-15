@@ -21,11 +21,11 @@ crafting.addShaped('minecraft:chest', item('minecraft:chest'), [
     [allowedPlanks, allowedPlanks, allowedPlanks]])
 
 def chestVariants = [
-    [meta: 0, name: 'quark:custom_chest',    vanilla: item('minecraft:planks', 1), chisel: item('chisel:planks-spruce', 32767),   vertical: item('quark:vertical_planks', 1)],
-    [meta: 1, name: 'quark:custom_chest_2',  vanilla: item('minecraft:planks', 2), chisel: item('chisel:planks-birch', 32767),    vertical: item('quark:vertical_planks', 2)],
-    [meta: 2, name: 'quark:custom_chest_4',  vanilla: item('minecraft:planks', 3), chisel: item('chisel:planks-acacia', 32767),   vertical: item('quark:vertical_planks', 3)],
-    [meta: 3, name: 'quark:custom_chest_6',  vanilla: item('minecraft:planks', 4), chisel: item('chisel:planks-jungle', 32767),   vertical: item('quark:vertical_planks', 4)],
-    [meta: 4, name: 'quark:custom_chest_8',  vanilla: item('minecraft:planks', 5), chisel: item('chisel:planks-dark-oak', 32767), vertical: item('quark:vertical_planks', 5)],
+    [meta: 0, name: 'quark:spruce_chest',    vanilla: item('minecraft:planks', 1), chisel: item('chisel:planks-spruce', 32767),   vertical: item('quark:vertical_planks', 1)],
+    [meta: 1, name: 'quark:birch_chest',  vanilla: item('minecraft:planks', 2), chisel: item('chisel:planks-birch', 32767),    vertical: item('quark:vertical_planks', 2)],
+    [meta: 2, name: 'quark:acacia_chest',  vanilla: item('minecraft:planks', 3), chisel: item('chisel:planks-acacia', 32767),   vertical: item('quark:vertical_planks', 3)],
+    [meta: 3, name: 'quark:jungle_chest',  vanilla: item('minecraft:planks', 4), chisel: item('chisel:planks-jungle', 32767),   vertical: item('quark:vertical_planks', 4)],
+    [meta: 4, name: 'quark:dark_oak_chest',  vanilla: item('minecraft:planks', 5), chisel: item('chisel:planks-dark-oak', 32767), vertical: item('quark:vertical_planks', 5)],
 ]
 
 chestVariants.each { chest ->

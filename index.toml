@@ -842,19 +842,19 @@ hash = "2a4e1a7471d72bf65c15aa21877286fd411ca0287d5221c6de37f6715e3f9956"
 
 [[files]]
 file = "config/Universal Tweaks - Bugfixes.cfg"
-hash = "ddcbd96a5ff0b21335ccfb81a20e558da452159fe3842777b274015c8e9372ce"
+hash = "3b97a13cb38ebc860f2e4e810087630076291170706b31233d29d6682596905d"
 
 [[files]]
 file = "config/Universal Tweaks - General.cfg"
-hash = "4a68b49bf108303bf17d8a0c225091bd999dcff9c3b493778cc694df9e2c2452"
+hash = "aa46c627c5b130cc70f5c6423635321c90946f250b10e58724fbc09473898207"
 
 [[files]]
 file = "config/Universal Tweaks - Mod Integration.cfg"
-hash = "79b6b54a0e67b14d2f80c7d62f2a4185412c109cd1d2c92665eec5b108122bef"
+hash = "072c460fdc97ecc1e4b45d6e2523bb2e6be8b959a324f9423d9f60f35811723b"
 
 [[files]]
 file = "config/Universal Tweaks - Tweaks.cfg"
-hash = "1a0f7c90bd60f8507aa446f01b8a766da641da46464c66533309b33b0758904c"
+hash = "e489e4dcf2f4325e54b35fef9ae3dfe5c84217c21afd3c25e4036f4804b7dd25"
 
 [[files]]
 file = "config/Weeping Angels.cfg"
@@ -1302,7 +1302,7 @@ hash = "4fb47601d721edb81ad39cee36185be7bf62a915bb19f47b6f8b789f2e8e967b"
 
 [[files]]
 file = "config/betterquesting/DefaultQuests/Quests/1/11.json"
-hash = "23bf27ad50fe11e532e70fcda157d1d1d997d9d37cfccbe0fbf4b668df3dfc3e"
+hash = "3acc3219ba5671e4bc8141baef4cca20a594b15ddb5f4aa739f904255b0004a6"
 
 [[files]]
 file = "config/betterquesting/DefaultQuests/Quests/1/130.json"
@@ -4610,7 +4610,7 @@ hash = "c5c49c003e1e6cee4bdcdb7eed1e20456049fdaa18f9aacb49c60816a82df3fd"
 
 [[files]]
 file = "config/betterquesting/DefaultQuests/Quests/MultipleQuestLine/1112000445.json"
-hash = "3c8c86314ba331e2bce8b238676265d7cb9f3ab3a099cfa54e16ce0c51dcdae0"
+hash = "9ddcc609ea24d16898002a2ce8fee3b779ded1678ec4f2dfa6e9c77ca95843ee"
 
 [[files]]
 file = "config/betterquesting/DefaultQuests/Quests/MultipleQuestLine/112.json"
@@ -5222,7 +5222,7 @@ hash = "2619ab5a4978e07627fd1be9618df21b9105fda6f76f926b1f067422ed18e3da"
 
 [[files]]
 file = "config/betterquesting/resources/supersymmetry/lang/en_us.lang"
-hash = "8ffa547ebc22bd064f1695ce1effdef1540ad1d6bfed3b08c1633fb4f4a8cb29"
+hash = "0716c9b03a343efb0bb05fa55c94a12a2462710cd6f52893d4b1af35b384f26e"
 
 [[files]]
 file = "config/betterquesting/resources/supersymmetry/lang/ru_ru.lang"
@@ -6522,7 +6522,7 @@ hash = "563d6c57dacd48178c8c18d11642199a8d6ab13ffb90932e4aa4d19d92ee77f1"
 
 [[files]]
 file = "config/dropt/wood.json"
-hash = "0f8c617d1c7ad2d9e1151e9abc71891c8b4d5c332e062ee94f4c871bd128e886"
+hash = "174c8813cfd1e9a7c21abc4bd29b5685324eda70b6c9b1a0739f51160dc23d7c"
 
 [[files]]
 file = "config/dropt/wood_chips.json"
@@ -7550,7 +7550,7 @@ hash = "ec92ba604baca7fcfed9e28464134e952bbd5acc1bfcaf5c1cb9308604a7d6e9"
 
 [[files]]
 file = "config/immersiverailroading.cfg"
-hash = "ae3094753131cb48ac12cde95ba4c230db549aeffe081fb8e2e90b9f17d8d528"
+hash = "b9d0d59bf2d12d103bf1e8531f37f8a3bd0f3e62e20355c4c516a99058bb1d1b"
 
 [[files]]
 file = "config/immersiverailroading/black-mesa-transit-system.pw.toml"
@@ -7595,7 +7595,7 @@ hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/industrialrenewal.cfg"
-hash = "e5ddffbc31557055fec36cf30ef96bb71bc24a4f91da18f50aade0ab9e4ef9a7"
+hash = "e4bf775a70dbe49fc3c07dc42bdf9177f4f57a354ea86316df8c7a6521752860"
 
 [[files]]
 file = "config/ingameinfoxml.cfg"
@@ -7643,7 +7643,7 @@ hash = "558789b8367b23fd5f8fa0c3ffbb1949a1dfc570bf7cb833bb1e6c131bf6a166"
 
 [[files]]
 file = "config/littletiles.json"
-hash = "9be4eddb8ce6605d5b2a948d3398516c4792d73a156385a3725ab351faab26f2"
+hash = "431297c8e3f6c96afce92d55e08a2fc8404fc764968808a0ea4cbc925e32b34d"
 
 [[files]]
 file = "config/loliasm.cfg"
@@ -7999,7 +7999,7 @@ hash = "a1375ed1c4e56ca599543d2ef6e26d947d2b8d64ee4c4b25cb5eaf858c17ec84"
 
 [[files]]
 file = "config/sussypatches.cfg"
-hash = "b3c2682e83b825a619c95de72ea34b9d5bc8e7d1a9c88a8e1cf58bc9b3bca0fb"
+hash = "be716e883eab921363f5e8afbc0cbbe6e7220ad24144980dd6524b0d7e80dfa5"
 
 [[files]]
 file = "config/susy/susy_canary"
@@ -8079,7 +8079,7 @@ hash = "2ceef3bc4218cd4b75422259c84013d90c9672536d4810acbf067d1b1c2b7a31"
 
 [[files]]
 file = "groovy/classes/ChangeFlags.groovy"
-hash = "bd4643668311b98571a5840b25f1f3d1545db53ed0de40bc55c3fbfbbd4d46ef"
+hash = "dd9340f9ae82138a9481f72d9c676d1f5f28d758da0c2542d90b5d04369a47ed"
 
 [[files]]
 file = "groovy/classes/ICoolant.groovy"
@@ -8187,7 +8187,7 @@ hash = "0107ac509d9c8d068ebe3c4fb037548cd66d90816435de410373f252f7207594"
 
 [[files]]
 file = "groovy/postInit/biology/GreenhouseChain.groovy"
-hash = "5e9e330eff5172e5398731d8c945adf7343de7ab7bb7819d6b4ff62bdcd6cae6"
+hash = "bbaab72f42ac7af40a79fe2086743560358cdb324b6069d23345328d0ae3f4dc"
 
 [[files]]
 file = "groovy/postInit/biology/PaperChain.groovy"
@@ -8203,7 +8203,7 @@ hash = "7b11cc3ee1aa9d18fa58014594f4b1d026d7b56059cf1b015e043182c550d926"
 
 [[files]]
 file = "groovy/postInit/chemistry/ChemistryOverhaul.groovy"
-hash = "374ab49dda958e5c2bb1e590e3c4d3d67b6f1690471a07a99a7fa51b83a5f509"
+hash = "c55dc3a06a10b7a299092c037edf834ef19c063709a3a8849bdfa40ce5cd888c"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/Ceramics.groovy"
@@ -8287,7 +8287,7 @@ hash = "56fce9cbfb2c88b77a95cfcf83b749f832f47a32cab7961c6d9607f6cdbdfb56"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/d_block/group5/NiobiumChain.groovy"
-hash = "b13bb6005a5629b09ca60ab0a627620684ffe06b48ea0b7f568408125db61f28"
+hash = "f0b463ed6f2afb4e021616990a1b0e9e25c61763c3fc162fc0465e81864cd86f"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/d_block/group5/TantalumChain.groovy"
@@ -8323,7 +8323,7 @@ hash = "a113137f2c337b7cbf33965d19c02fa0577bd62769b9530ca095d35aefd01a26"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/d_block/group9/CobaltChain.groovy"
-hash = "963c40e17deee1db5aec55fc80eed7f57ced33f3fd2941d95dfd27c57fbb0f44"
+hash = "fd29961886084f00f3514d360420f79532e08244fa5b8b7b0c842450eb4b70bc"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/f_block/actinides/NuclearReprocessing.groovy"
@@ -8399,7 +8399,7 @@ hash = "d70528f0dd527cba65aee09e2f830282f2a7160fca03dac95adb399060915e84"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/f_block/lanthanides/separations/BastnasiteProcessing.groovy"
-hash = "5274a6898487278c793ee88d768a4cd63cf738bda9fad9a2ba9546330a5020dd"
+hash = "d1501d275123a9d5e109073e6a3cd9a876e6f80bb619c3677572292a948a8e74"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/f_block/lanthanides/separations/MonaziteProcessing.groovy"
@@ -8411,7 +8411,7 @@ hash = "b4a4d1e5474f73989017d07ba69a7ab9e2a0ec3c0cf5731e4c3b01769f014aea"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/p_block/group13/AluminiumChain.groovy"
-hash = "86b1f98eb5b5b5499595cdff298cbcbe072c71087c8de96164efbdd99b7b4ce1"
+hash = "592cfcd3b31b0798c66042d048bd78b320849b635761d2d071644e283bfbafd9"
 
 [[files]]
 file = "groovy/postInit/chemistry/inorganic_chemistry/elements/p_block/group13/BoronChain.groovy"
@@ -8747,7 +8747,7 @@ hash = "916fe5cfaaab0b161b08a1a242b140ebea4efab088585e5d78b0601be4fd6a6c"
 
 [[files]]
 file = "groovy/postInit/chemistry/organic_chemistry/polymers/thermosets/EpoxyChain.groovy"
-hash = "f9e0ab0575cf1663ecdc382099e9d42715fdb3ee6ce1d4b42726f7b34dbdfcfc"
+hash = "a9021eb91988782078bd9142cd581d229147d0393cb3de1253d815ee5b1faaf1"
 
 [[files]]
 file = "groovy/postInit/chemistry/organic_chemistry/polymers/thermosets/PolydimethylsiloxaneChain.groovy"
@@ -8791,11 +8791,11 @@ hash = "3ab920cd42110a6d2bab229c76fe36868e502e66e9e25c06f7f8c44abf4df694"
 
 [[files]]
 file = "groovy/postInit/components/IntegratedCircuits.groovy"
-hash = "33c0d25355e4fb50a59e9b0c022a73a36246c97cd7da75312c421a5e490ff661"
+hash = "550b60dfe34c7aa1fac35f3ebf405ff1566389f246fbdc7843b2a31a73b6d3c3"
 
 [[files]]
 file = "groovy/postInit/components/Motors.groovy"
-hash = "6a40684af1c2cd33812fac85b96c679c3766e7095fafc4950432519fee71c202"
+hash = "4cf093b3b5fce725b8a2629efd688396d98062fa2f50fe79f0d27cd376df4c9e"
 
 [[files]]
 file = "groovy/postInit/components/OpAmpCircuits.groovy"
@@ -8823,7 +8823,7 @@ hash = "b9ee49957b0d5380b2e56732d7f03f6daa35dbfee097080a25838cb6e292fb33"
 
 [[files]]
 file = "groovy/postInit/gameplay/BoilerTweaks.groovy"
-hash = "f5780391c83f0e56439939a6dcb41a4f8567f43f38c4b0c1690e1ff13c84ba4e"
+hash = "a5ac5dd8bac5cc3bf8271269c773c559a2c50457c3b3a58710a0a2a35f786eaa"
 
 [[files]]
 file = "groovy/postInit/gameplay/Drone.groovy"
@@ -8875,7 +8875,7 @@ hash = "efa200405ab107524ee155a0bf7afd6d1acf5783c1bb4756c800cea3812d5c5e"
 
 [[files]]
 file = "groovy/postInit/metallurgy/LadleMetallurgy.groovy"
-hash = "a31c397d7f4b074758e23201d510dd6fe4f0417332ceb404c6474cfad1c820d8"
+hash = "7c996e912b3efe5aefc7f98ad8e401aed800151a0b21c355a357ced3363c5e1a"
 
 [[files]]
 file = "groovy/postInit/metallurgy/MetallurgyRemovals.groovy"
@@ -8891,7 +8891,7 @@ hash = "f134d6bb87307066cc4bf6c941522b6e39f55fa51c86d2c1635a0d0e4011651c"
 
 [[files]]
 file = "groovy/postInit/metallurgy/Quenching.groovy"
-hash = "261262028d5972e8bb3acab6216f083327a1125326a39b587f7bf325c5803910"
+hash = "ff65e7c9f0121c814379a35e94bedc15f5d2a6ff53e34f1b3a926975952079fd"
 
 [[files]]
 file = "groovy/postInit/metallurgy/Solders.groovy"
@@ -8967,7 +8967,7 @@ hash = "18ac5bbce5f1c4bb458d0088f1f3275f721c23da8868f91f577d3c2030623c6d"
 
 [[files]]
 file = "groovy/postInit/mod/CraftingCalculator.groovy"
-hash = "a1e632384eb0c392ab745c43b01776ae06b0dfa5863b28c96257c16c5a3f639e"
+hash = "04dde76814b4d936dd111f32dd19bf7750a78e39d87115b3828538fa36e72f40"
 
 [[files]]
 file = "groovy/postInit/mod/Cyberware.groovy"
@@ -8995,7 +8995,7 @@ hash = "d586068a5c6bd25c04242cb360027efa98bdeac1ec60d035d5872a00ac5649ec"
 
 [[files]]
 file = "groovy/postInit/mod/GregTech.groovy"
-hash = "28eced66478d238b083b89d2540badf8497fa47a1b1082d40752a231fd1d1633"
+hash = "c5f1416b05cdbfd07ad0ae224f61bfc4bab4a55cee4960fc37ae276b0a559989"
 
 [[files]]
 file = "groovy/postInit/mod/GregTechFoodOption.groovy"
@@ -9003,7 +9003,7 @@ hash = "b72e69941e869f636dee83013caf27a9cf8859571dda13e43b11a2c3535508a2"
 
 [[files]]
 file = "groovy/postInit/mod/ICBM.groovy"
-hash = "9a363205b52b2ba56a3a91a1fe9ec0ee7c8e04ca9e8f5ba7f176c717ab578a85"
+hash = "e4f0a18d753c87d9df06ed5e086f18b1d3c2ddfb26474afe1d6189cc19cb53f8"
 
 [[files]]
 file = "groovy/postInit/mod/ImmersiveRailroading.groovy"
@@ -9079,7 +9079,7 @@ hash = "d2029421dc5390a174499197a77dbfeec723ccb1a69941546bc87d9797f87c0a"
 
 [[files]]
 file = "groovy/postInit/mod/Pyrotech.groovy"
-hash = "76afdc13c4be49fd3a0cc8245578a8d730cbe6b6dcfdbf1eb5db7b17aef416f5"
+hash = "f821c4505368cca4ca6193551264959901b648a00fedbb8b504117786936223e"
 
 [[files]]
 file = "groovy/postInit/mod/Quark.groovy"
@@ -9171,7 +9171,7 @@ hash = "4d8489a42457ec77bdaf93c0cd4d808509be606bac5a5a658511f91fada2d14a"
 
 [[files]]
 file = "groovy/prePostInit/ModifyRecipeMaps.groovy"
-hash = "eeaa8ed48c31ad7631d63de966bd80ffe1163c9daea012ec01eb06b3c38823ce"
+hash = "29074a79c96e2ce07f67eba8481655da8510d6a18d6dd82e65f25f973846aece"
 
 [[files]]
 file = "groovy/prePostInit/Thermodynamics.groovy"
@@ -9290,11 +9290,6 @@ hash = "2a1972a3a503f84def89480dfe6f18906d071b07db6ae3eec20141b00bb4b12a"
 metafile = true
 
 [[files]]
-file = "mods/better-placement.pw.toml"
-hash = "702fbc1f69092f74062225f887089ff330fe268a95bb1fcc04104194981a4939"
-metafile = true
-
-[[files]]
 file = "mods/better-questing-unofficial.pw.toml"
 hash = "9b776708ec9e440753b1e71d8add0fffebce4e580b9741a0314ad750ff0b81c9"
 metafile = true
@@ -9406,7 +9401,7 @@ metafile = true
 
 [[files]]
 file = "mods/craftpresence.pw.toml"
-hash = "b7e60b75b9768c952a47cdc10e258840146e75288cf94a72b8e4515f034c2074"
+hash = "d440aff0017236ef7234b03254b3121a3aec2c71381c07812ac7e5b878533618"
 metafile = true
 
 [[files]]
@@ -9461,7 +9456,7 @@ metafile = true
 
 [[files]]
 file = "mods/extreme-sound-muffler-legacy.pw.toml"
-hash = "b673fd5da3c219a329be4ef8aaec04a43de121401de596de9f35239bcf24b4c1"
+hash = "bf38a48c85c30e071fa6fbd2598129f9f5cf87b0154be82f0f6f94b9628d9c0e"
 metafile = true
 
 [[files]]
@@ -9511,7 +9506,7 @@ metafile = true
 
 [[files]]
 file = "mods/fugue.pw.toml"
-hash = "1b9dc3473bcc52b7e2f2234c84952161a330363c5c68179d11caa6f4afade979"
+hash = "6b6ebb31c9b3ae0e9278ac831ace8db79afd91149475beb4acad1e516e071e09"
 metafile = true
 
 [[files]]
@@ -9576,7 +9571,7 @@ metafile = true
 
 [[files]]
 file = "mods/had-enough-items.pw.toml"
-hash = "0e6042748c6d7adb59972417e708e49b6dab6bfa0c4a1cdaacd5e4a1f62c06e9"
+hash = "e6380f5b41c35fd1d131f29a63bd9495a3ca413027446c2256a69306bdbd178b"
 metafile = true
 
 [[files]]
@@ -9656,7 +9651,7 @@ metafile = true
 
 [[files]]
 file = "mods/jei-utilities.pw.toml"
-hash = "b2666c31123ab5b1a9a740ddeb9a9daefa88290c9fcd836e43a6d1e41f07317d"
+hash = "66554db52513d3c10215e62cafc23b3d3ee5bcb83f5a5b82409c11b7d83cfcfe"
 metafile = true
 
 [[files]]
@@ -9736,7 +9731,7 @@ metafile = true
 
 [[files]]
 file = "mods/modularui.pw.toml"
-hash = "6e5f896206566685c8546fd514f9983edb06018bbc47d3a9bbade86f4842556c"
+hash = "cec41fdb2dd9b84063650bfc04348f4c4f0ea811773f3e0deb1523ee6c8c1e91"
 metafile = true
 
 [[files]]
@@ -10001,17 +9996,17 @@ metafile = true
 
 [[files]]
 file = "mods/supercritical.pw.toml"
-hash = "39a6778b40a5431fb9855ff94b88b8a9a4e3eab42202b8a5f6ca9ddc623201c2"
+hash = "510e59d547c0566ab1dd0e874e8013d776acbcd7974ea52c408879d5dd5a80a8"
 metafile = true
 
 [[files]]
 file = "mods/sussypatches.pw.toml"
-hash = "7e5151d41245ff81c0d843c8f6703cc90f849e5d0d789e22112dc5cce1e952aa"
+hash = "1d862cdc2e03c48fef2f9f5caf07654ae730ec731b6c85353050748832ef288c"
 metafile = true
 
 [[files]]
 file = "mods/susycore.pw.toml"
-hash = "56cb33d2e90685f790803df0ac7407b88d0644fa8b4656f4beffbf566b92fce0"
+hash = "56976f1eb808a9f5631ead6c99d6383b0162a1050c967dccaa337fd9b0f40bcd"
 metafile = true
 
 [[files]]
@@ -10081,7 +10076,7 @@ metafile = true
 
 [[files]]
 file = "mods/unilib.pw.toml"
-hash = "7e3c0e910ad3e0169a653b7bd28b4909d068234d52e53c4c7706c522d6174160"
+hash = "2a5f36319a90f887534365610e1a4a960c7ea3864252060be79d001064909f74"
 metafile = true
 
 [[files]]
@@ -10091,7 +10086,7 @@ metafile = true
 
 [[files]]
 file = "mods/universal-tweaks.pw.toml"
-hash = "4f23f9632cbd431a6bcb90af2daaa37d9bc7ad0e4355158f6238ed42cb0b580b"
+hash = "988e57cf4b46da7c3c8bcd5646dae6e3561f089b34444ffa6d83bc43c5aa996e"
 metafile = true
 
 [[files]]
@@ -10151,7 +10146,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/supersymmetry-refreshed.pw.toml"
-hash = "0c0ae807c62f5cfa39dfb91697e776ce823a6301c44aa02eab6a5f6670a85c8f"
+hash = "62827732e4a5dfdc5dc10930680f7627f34274b644581c146f7ff4d9be0a3aac"
 metafile = true
 
 [[files]]
@@ -13188,7 +13183,7 @@ hash = "7b841532e6fc993dd4e445201d42f47f6d7a88b84f90bb1ee93c16d0b76c8075"
 
 [[files]]
 file = "resources/langfiles/lang/en_us.lang"
-hash = "3e728c276e2ff95dc7e19cb44b9b30cf6583373ffdd47c9f52e50843e9facd22"
+hash = "741f5d3c361769cf17a206716ac3b8c2954ceae52cfeda4f160dc81bd6b1c7dc"
 
 [[files]]
 file = "resources/langfiles/lang/pl_pl.lang"
