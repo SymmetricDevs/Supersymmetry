@@ -137,7 +137,8 @@ def name_removals = [
     'gregtech:steam_boiler_coal_bronze',
     'gregtech:steam_boiler_coal_steel',
     'gregtech:steam_boiler_lava_bronze',
-    'gregtech:steam_boiler_lava_steel'
+    'gregtech:steam_boiler_lava_steel',
+    'gregtech:magic_energy_absorber'
 ]
 
 for (name in name_removals) {
