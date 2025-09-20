@@ -27,7 +27,9 @@ eventManager.listen {
         customMetaItems.addItem(100, "cement.clinker")
         customMetaItems.addItem(101, "hot.cement.clinker")
         customMetaItems.addItem(102, "cement.dust")
-        customMetaItems.addItem(103, "limestone.dust")
+
+        // Free ID: 103
+
         customMetaItems.addItem(104, "shape.mold.rod")
         customMetaItems.addItem(105, "shape.mold.crucible")
         customMetaItems.addItem(106, "crucible.boron.nitride")
@@ -69,12 +71,12 @@ eventManager.listen {
 
         customMetaItems.addItem(170, "raw_diamond");
 
-        customMetaItems.addItem(171, "mesh.cellulose_acetate");
+        customMetaItems.addItem(171, "membrane.cellulose_acetate");
         customMetaItems.addItem(172, "mesh.platinum");
         customMetaItems.addItem(173, "mesh.platinum_rhodium");
 
-        customMetaItems.addItem(177, "zeolite_membrane_support");
-        customMetaItems.addItem(178, "zeolite_membrane");
+        customMetaItems.addItem(177, "membrane.support.alumina");
+        customMetaItems.addItem(178, "membrane.zeolite");
 
         customMetaItems.addItem(180, "patterned_thick_film_substrate_wafer");
         customMetaItems.addItem(181, "thick_film_resistor_wafer");
@@ -125,6 +127,9 @@ eventManager.listen {
 
         customMetaItems.addItem(300, "mylar")
         customMetaItems.addItem(301, "spinneret")
+        customMetaItems.addItem(302, "fiber.oxidized_polyacrylonitrile")
+        customMetaItems.addItem(303, "carbon.mesh.treated")
+        customMetaItems.addItem(304, "proton_exchange_membrane_fuel_cell")
 
         customMetaItems.addItem(400, "engine.spark_plug")
         customMetaItems.addItem(401, "engine.piston")
@@ -137,7 +142,8 @@ eventManager.listen {
         customMetaItems.addItem(1002, "voltaic_pile").setMaxStackSize(1);
         customMetaItems.addItem(1003, "electrolyte_paper")
         customMetaItems.addItem(1004, "hot_steel_plate")
-        
+        customMetaItems.addItem(1005, "hot_steel_rod")
+
         customMetaItems.addItem(1100, "steam.piston")
         customMetaItems.addItem(1101, "steam.motor")
 

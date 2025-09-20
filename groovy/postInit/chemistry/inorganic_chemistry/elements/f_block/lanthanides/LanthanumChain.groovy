@@ -2,8 +2,8 @@ import globals.Globals
 
 BR = recipemap('batch_reactor')
 REACTION_FURNACE = recipemap('reaction_furnace')
-CENTRIFUGE = recipemap('centrifuge')
 DISTILLERY = recipemap('distillery')
+MIXER_SETTLER = recipemap('mixer_settler')
 
 // Tier 1
 BR.recipeBuilder()
@@ -29,13 +29,14 @@ REACTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // Tier 2
-CENTRIFUGE.recipeBuilder()
+MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('distilled_water') * 1000)
     .fluidInputs(fluid('lanthanum_extract') * 10000)
     .fluidOutputs(fluid('lanthanum_nitrate_solution') * 1000)
     .fluidOutputs(fluid('aliquat_336_extraction_mixture') * 10000)
     .duration(80)
     .EUt(120)
+    .requiredCells(2)
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -55,7 +56,7 @@ BR.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-// Lanthanothermy Recycing
+// Lanthanothermy Recycling
 BR.recipeBuilder()
     .inputs(ore('dustLanthanumOxide') * 5)
     .fluidInputs(fluid('hydrofluoric_acid') * 6000)
@@ -63,4 +64,15 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('water') * 9000)
     .duration(80)
     .EUt(60)
+    .buildAndRegister()
+
+// Lanthanum carbonate
+BR.recipeBuilder()
+    .inputs(ore('dustSodaAsh') * 18)
+    .fluidInputs(fluid('lanthanum_nitrate_solution') * 1000)
+    .fluidInputs(fluid('distilled_water') * 5000)
+    .outputs(metaitem('dustLanthanumCarbonate') * 14)
+    .fluidOutputs(fluid('sodium_nitrate_solution') * 6000)
+    .EUt(Globals.voltAmps[1])
+    .duration(100)
     .buildAndRegister()

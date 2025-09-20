@@ -147,7 +147,7 @@ for (entry in ingotMap) {
 for (entry in electrodeMap) {
     for (quenching_fluid in IQuenchingFluid.quenching_fluids) {
         QUENCHER.recipeBuilder()
-            .inputs(metaitem('shape.mold.rod'))
+            .notConsumable(metaitem('shape.mold.rod'))
             .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
             .fluidInputs(fluid(GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
             .outputs(metaitem('electrode' + entry.key))
@@ -157,7 +157,7 @@ for (entry in electrodeMap) {
             .buildAndRegister();
         
         QUENCHER.recipeBuilder()
-            .inputs(metaitem('shape.mold.rod'))
+            .notConsumable(metaitem('shape.mold.rod'))
             .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
             .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
             .outputs(metaitem('electrode' + entry.key))
@@ -173,6 +173,7 @@ ingotMap['Steel'] = 1500
 def fluidMap = [
     'molten.kanthal':'Kanthal',
     'molten.nichrome':'Nichrome',
+    'molten.rtm_alloy':'RtmAlloy',
     'molten.niobium_nitride':'NiobiumNitride',
     'molten.niobium_titanium':'NiobiumTitanium',
     'molten.black_bronze':'BlackBronze',

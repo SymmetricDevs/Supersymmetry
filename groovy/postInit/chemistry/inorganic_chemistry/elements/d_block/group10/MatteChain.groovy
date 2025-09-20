@@ -24,6 +24,7 @@ BCR = recipemap('bubble_column_reactor')
 SIEVE_DT = recipemap('sieve_distillation')
 PHASE_SEPARATOR = recipemap('phase_separator')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
+MIXER_SETTLER = recipemap('mixer_settler')
 
 // Smelting
 // The pelletized material is smelted in a shaft furnace to form a 
@@ -183,7 +184,7 @@ MIXER.recipeBuilder()
 
 // Cyanex-272 extractant makes cobalt sulfate leaving behind nickel sulfate solution
 
-CENTRIFUGE.recipeBuilder()
+MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('cobalt_extraction_mixture') * 1000) 
     .fluidInputs(fluid('nickel_cobalt_sulfate_solution') * 1000)
     .fluidOutputs(fluid('cobalt_extract') * 1000) 
@@ -191,13 +192,15 @@ CENTRIFUGE.recipeBuilder()
     .fluidOutputs(fluid('diluted_sulfuric_acid') * 300)
     .duration(200)
     .EUt(Globals.voltAmps[2])
+    .requiredCells(4)
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder()
+MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('cobalt_extract') * 1000)
     .fluidInputs(fluid('diluted_sulfuric_acid') * 300)
     .fluidOutputs(fluid('cobalt_extraction_mixture') * 1000)
     .fluidOutputs(fluid('cobalt_sulfate_solution') * 150) 
     .duration(200)
     .EUt(Globals.voltAmps[2])
+    .requiredCells(2)
     .buildAndRegister()

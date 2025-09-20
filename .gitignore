@@ -9,6 +9,7 @@ journeymap/
 logs/
 saves/
 mods/*.jar
+.idea/
 
 .curseclient
 usercache.json
@@ -106,3 +107,4 @@ vintagefix/transformerCache/jarDiscoverer.cache
 /journeymap
 hotbar.nbt
 /resourcepacks
+config/susy/susy_canary

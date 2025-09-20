@@ -11,7 +11,7 @@ def registry = JERAPI.getInstance().getMobRegistry()
 def world = MinecraftCompat.getWorld()
 
 for (entityEntry in ForgeRegistries.ENTITIES.getValues()) {
-    log.infoMC(entityEntry.getName());
+    // log.infoMC(entityEntry.getName());
 
     def entityClass = entityEntry.getEntityClass();
     def entityInstance = EntityList.newEntity(entityClass, world)
@@ -20,7 +20,7 @@ for (entityEntry in ForgeRegistries.ENTITIES.getValues()) {
     }
 
     def lootResource = entityInstance.getLootTable()
-    
+
     if (lootResource == null) {
         continue
     }

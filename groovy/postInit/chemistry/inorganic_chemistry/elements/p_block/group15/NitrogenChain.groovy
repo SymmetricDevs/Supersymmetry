@@ -2,7 +2,6 @@ import globals.Globals
 
 ASSEMBLER = recipemap('assembler')
 PSA = recipemap('pressure_swing_adsorption')
-AUTOCLAVE = recipemap('autoclave')
 REACTION_FURNACE = recipemap('reaction_furnace')
 BCR = recipemap('bubble_column_reactor')
 RADIATOR = recipemap('radiator')
@@ -10,25 +9,8 @@ ROASTER = recipemap('roaster')
 MIXER = recipemap('mixer')
 DISTILLATION_TOWER = recipemap('distillation_tower')
 
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(8)
-    .inputs(ore('wireFineAluminium') * 8)
-    .outputs(metaitem('zeolite_membrane_support'))
-    .duration(180)
-    .EUt(30)
-    .buildAndRegister()
-
-AUTOCLAVE.recipeBuilder()
-    .fluidInputs(fluid('distilled_water') * 1000)
-    .inputs(ore('dustMolecularSieve') * 4)
-    .inputs(metaitem('zeolite_membrane_support'))
-    .outputs(metaitem('zeolite_membrane'))
-    .duration(180)
-    .EUt(30)
-    .buildAndRegister()
-
 PSA.recipeBuilder()
-    .notConsumable(metaitem('zeolite_membrane'))
+    .notConsumable(metaitem('membrane.zeolite'))
     .fluidInputs(fluid('air') * 10000)
     .fluidOutputs(fluid('nitrogen') * 7808)
     .fluidOutputs(fluid('oxygen') * 2095)
@@ -81,7 +63,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-//Ostwald Process
+// Ostwald Process
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('mesh.platinum_rhodium') * 10)
@@ -103,7 +85,7 @@ REACTION_FURNACE.recipeBuilder()
     .EUt(Globals.voltAmps[2])
     .buildAndRegister()
 
-//Birkeland–Eyde Process
+// Birkeland–Eyde Process
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(ore('stickCopper') * 2)
@@ -150,7 +132,7 @@ ROASTER.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
-//Nitric Acid, Nitrogen Dioxide
+// Nitric Acid, Nitrogen Dioxide
 
 BCR.recipeBuilder()
     .fluidInputs(fluid('water') * 50)
@@ -185,3 +167,11 @@ DT.recipeBuilder()
     .duration(20)
     .EUt(30)
     .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('nitric_acid') * 1000)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('diluted_nitric_acid') * 2000)
+    .duration(6)
+    .EUt(30)
+    .buildAndRegister();

@@ -1,9 +1,9 @@
-package material;
+package material
 
-import static material.SuSyMaterials.*;
+import static material.SuSyMaterials.*
 
-import gregtech.api.unification.material.Material;
-import gregtech.api.GregTechAPI;
+import gregtech.api.unification.material.Material
+import gregtech.api.GregTechAPI
 import gregtech.api.unification.material.properties.*
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
@@ -15,8 +15,6 @@ public class ElementMaterials {
         log.infoMC("Registering Element Materials!");
         
         Carbon.addFlags(GENERATE_FINE_WIRE)
-        
-
 
     }
 }

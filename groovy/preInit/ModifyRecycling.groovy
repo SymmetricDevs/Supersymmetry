@@ -35,4 +35,16 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
         ore('plateAlnicoMagnetic') * 3,
         ore('wireGtDoubleGraphene') * 4
     ])
+
+    RecyclingManager.addRecyclingGroovy(item('gregtech:metal_casing', 4) * 4, [
+        ore('ingotSteel') * 8
+    ])
+
+    RecyclingManager.addRecyclingGroovy(item('gregtech:boiler_casing', 1) * 4, [
+        ore('ingotSteel') * 18
+    ])
+
+    RecyclingManager.addRecyclingGroovy(item('gregtech:boiler_firebox_casing', 1) * 4, [
+        ore('ingotSteel') * 8
+    ])
 }

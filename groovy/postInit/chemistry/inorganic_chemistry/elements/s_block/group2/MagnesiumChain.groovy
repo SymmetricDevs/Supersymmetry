@@ -275,3 +275,13 @@ ELECTROLYZER.recipeBuilder()
         .EUt(30)
         .duration(300)
         .buildAndRegister()
+
+// Magnesium nitrate
+
+BR.recipeBuilder()
+        .inputs(ore('dustMagnesiumHydroxide') * 5)
+        .fluidInputs(fluid('nitric_acid') * 2000)
+        .fluidOutputs(fluid('magnesium_nitrate_solution') * 2000)
+        .EUt(30)
+        .duration(120)
+        .buildAndRegister()

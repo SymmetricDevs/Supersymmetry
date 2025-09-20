@@ -87,9 +87,23 @@ ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
 ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'))
 
-//Add non traditional ore blocks to scanner
+//Add ore dict to non traditional ore blocks 
 
 ore('oreBauxite').add(item('susy:resource_block:0'))
+ore('oreCaliche').add(item('susy:resource_block:1'))
+
+ore('oreNonMarineEvaporiteDeposit').add(item('susy:resource_block:2'))
+ore('oreHalideEvaporiteDeposit').add(item('susy:resource_block:3'))
+ore('oreSulfateEvaporiteDeposit').add(item('susy:resource_block:4'))
+ore('oreCarbonateEvaporiteDeposit').add(item('susy:resource_block:5'))
+
+ore('oreAlluvialMonaziteDeposit').add(item('susy:resource_block:6'))
+ore('oreAlluvialEuxeniteDeposit').add(item('susy:resource_block:8'))
+ore('orePlatinumPlacerDeposit').add(item('susy:resource_block:10'))
+ore('oreAlluvialGoldDeposit').add(item('susy:resource_block:11'))
+ore('orePhosphoriteDeposit').add(item('susy:resource_block:12'))
+ore('orePotashDeposit').add(item('susy:resource_block:13'))
+
 ore('oreSulfur').add(item('susy:resource_block:14'))
 ore('oreCoalDeposit').add(item('susy:resource_block:15'))
 ore('oreNativeCopperDeposit').add(item('susy:resource_block_1:0'))

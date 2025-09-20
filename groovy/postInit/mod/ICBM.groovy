@@ -103,6 +103,7 @@ def name_removals = [
     "icbmclassic:spikes.2",
     "icbmclassic:powder.poison",
     "icbmclassic:saltpeter_ball",
+    "icbmclassic:parts/vanilla/gunpowder",
 ]
 
 for (item in name_removals) {
@@ -328,7 +329,47 @@ Globals.solders.each { key, val ->
             .EUt(300)
             .buildAndRegister();
     }
+
+    //Explosives tier 4
+    //Nuclear explosive
+    LARGE_WEAPON_FACTORY.recipeBuilder()
+        .inputs([
+            ore('componentCapacitor') * 8,
+            ore('wireFinePlatinum') * 32,
+            ore('dustCompositionB') * 64,
+            ore('dustBaratol') * 64,
+            ore('plateDoubleBeryllium') * 4,
+            metaitem('dustWeaponsGradeUranium') * 32,
+            ore('plateUranium238') * 64,
+            ore('dustPolonium'),
+            ore('dustBeryllium')
+        ])
+        .fluidInputs(fluid(key) * val)
+        .outputs(item('icbmclassic:explosives:15'))
+        .duration(200)
+        .EUt(1200)
+        .buildAndRegister();
+
+    LARGE_WEAPON_FACTORY.recipeBuilder()
+        .inputs([
+            ore('componentCapacitor') * 8,
+            ore('wireFinePlatinum') * 8,
+            ore('dustCompositionB') * 16,
+            ore('dustBaratol') * 16,
+            ore('plateDoubleBeryllium') * 4,
+            metaitem('dustPlutoniumGallium') * 8,
+            ore('plateUranium238') * 16,
+            ore('dustPolonium'),
+            ore('dustBeryllium')
+        ])
+        .fluidInputs(fluid(key) * val)
+        .outputs(item('icbmclassic:explosives:15'))
+        .duration(200)
+        .EUt(1200)
+        .buildAndRegister();
 }
+
+
 
 //Concrete
 ASSEMBLER.recipeBuilder()
@@ -380,6 +421,7 @@ ASSEMBLER.recipeBuilder()
     .duration(160)
     .EUt(384)
     .buildAndRegister();
+
 
 
 //Launchers

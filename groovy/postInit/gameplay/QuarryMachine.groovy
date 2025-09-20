@@ -46,6 +46,14 @@ for(entry in overworld_ores){
 }
 
 QUARRY.recipeBuilder()
+            .notConsumable(ore('dustMica'))
+            .chancedOutput(metaitem('dustMica'), 1000, 500)
+            .dimension(Globals.dimensions["Beneath"])
+            .duration(240)
+            .EUt(64)
+            .buildAndRegister();
+
+QUARRY.recipeBuilder()
             .circuitMeta(1)
             .chancedOutput(item('minecraft:stone'), 1667, 500)
             .chancedOutput(item('minecraft:stone', 1), 1667, 500)
@@ -82,7 +90,6 @@ for(entry in beneath_ores){
             .duration(100)
             .EUt(64)
             .buildAndRegister();
-    
 }
 
 QUARRY.recipeBuilder()

@@ -89,7 +89,9 @@ def fuels = [
     //'ThoriumDioxide',
     'Leu235Dioxide',
     'Haleu235Dioxide',
-    'Heu235Dioxide'
+    'Heu235Dioxide',
+    'MixedOxideFuel',
+    'Bismuth'
 ]
 
     // Fuel Cladding
@@ -396,7 +398,7 @@ RecyclingHelper.handleRecycling(metaitem('supercritical:basket.anode'),
     // Panelling
 
     ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateStainlessSteelSteel') * 6)
+        .inputs(ore('plateStainlessSteel') * 6)
         .inputs(ore('frameGtStainlessSteel'))
         .fluidInputs(fluid('concrete') * 144)
         .circuitMeta(17)
@@ -450,7 +452,7 @@ for (fuel in fuels) {
     CUTTING_MACHINE.recipeBuilder()
         .inputs(metaitem('fuelRodDepleted' + fuel))
         .outputs(metaitem('fuelPelletDepleted' + fuel) * 16)
-        .duration(64000)
-        .EUt(Globals.voltAmps[1])
+        .duration(200)
+        .EUt(Globals.voltAmps[3])
         .buildAndRegister()
 }

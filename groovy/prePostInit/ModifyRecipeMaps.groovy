@@ -31,6 +31,7 @@ GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES)
 GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES)
 GTRecipeHandler.removeAllRecipes(GCYMRecipeMaps.ALLOY_BLAST_RECIPES)
+GTRecipeHandler.removeAllRecipes(RecipeMaps.SEMI_FLUID_GENERATOR_FUELS)
 
 GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
     if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
@@ -343,11 +344,55 @@ mods.gregtech.forge_hammer.removeByInput(16, [item('gregtech:ore_bauxite_0')], n
 mods.gregtech.macerator.removeByInput(2, [item('gregtech:ore_bauxite_0')], null)
 // Flower Pot * 1
 mods.gregtech.assembler.removeByInput(2, [item('minecraft:brick') * 3], null)
+// Tungsten Steel * 2
+mods.gregtech.mixer.removeByInput(1920, [metaitem('dustTungsten'), metaitem('dustSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+// Molten Tungstensteel * 288
+mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), metaitem('dustTungsten'), metaitem('circuit.integrated').withNbt(['Configuration': 12])], [fluid('helium') * 200 * 200, fluid('refractory_gunning_mixture') * 50 * 50])
+// Molten Tungstensteel * 288
+mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), metaitem('dustTungsten'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('refractory_gunning_mixture') * 50 * 50])
+// Diesel * 6000
+mods.gregtech.blender.removeByInput(120, null, [fluid('light_fuel') * 5000 * 5000, fluid('heavy_fuel') * 1000 * 1000])
+// Tungstensteel Dust * 2
+mods.gregtech.blender.removeByInput(1920, [metaitem('dustTungsten'), metaitem('dustSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Steel Dust * 1, Tungstent Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustTungstenSteel') * 2], null)
+// Tempered Glass * 1
+mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:glass')], [fluid('oxygen') * 60 * 60])
+// Yttria Stabilized Zirconia Plate * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustYttriaStabilizedZirconia')], null)
+// Small Ethylene-Vinyl Acetate (EVA) Fluid Pipe * 1
+mods.gregtech.extruder.removeByInput(42, [metaitem('ingotEthyleneVinylAcetate'), metaitem('shape.extruder.pipe.small')], null)
+// Small Ethylene-Vinyl Acetate (EVA) Fluid Pipe * 1
+mods.gregtech.extruder.removeByInput(42, [metaitem('dustEthyleneVinylAcetate'), metaitem('shape.extruder.pipe.small')], null)
+// Polysulfone Bar * 1
+mods.gregtech.extruder.removeByInput(28, [metaitem('dustPolysulfone'), metaitem('shape.extruder.ingot')], null)
+// Polysulfone Rod * 2
+mods.gregtech.extruder.removeByInput(42, [metaitem('ingotPolysulfone'), metaitem('shape.extruder.rod')], null)
+// Viton Ring * 4
+mods.gregtech.extruder.removeByInput(42, [metaitem('ingotViton'), metaitem('shape.extruder.ring')], null)
+// Viton Ring * 4
+mods.gregtech.extruder.removeByInput(42, [metaitem('dustViton'), metaitem('shape.extruder.ring')], null)
+// Polyvinylidene Fluoride (PVDF) Sheet * 1
+mods.gregtech.extruder.removeByInput(56, [metaitem('ingotPolyvinylideneFluoride'), metaitem('shape.extruder.plate')], null)
+// Polyvinylidene Fluoride (PVDF) Sheet * 1
+mods.gregtech.extruder.removeByInput(56, [metaitem('dustPolyvinylideneFluoride'), metaitem('shape.extruder.plate')], null)
+// Thin Polyphenylene Sulfide Sheet * 4
+mods.gregtech.extruder.removeByInput(24, [metaitem('ingotPolyphenyleneSulfide'), metaitem('shape.extruder.foil')], null)
+// Thin Polyphenylene Sulfide Sheet * 4
+mods.gregtech.extruder.removeByInput(24, [metaitem('dustPolyphenyleneSulfide'), metaitem('shape.extruder.foil')], null)
+// Thin Polyphenylene Sulfide Sheet * 4
+mods.gregtech.bender.removeByInput(24, [metaitem('platePolyphenyleneSulfide'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Thin Polyphenylene Sulfide Sheet * 4
+mods.gregtech.bender.removeByInput(24, [metaitem('ingotPolyphenyleneSulfide'), metaitem('circuit.integrated').withNbt(['Configuration': 10])], null)
+// Ethenone * 100
+mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('acetone') * 100])
+
 
 RecipeMaps.SIFTER_RECIPES
     .modifyMaxFluidInputs(1)
     .modifyMaxFluidOutputs(1)
     .modifyMaxInputs(2)
+    .modifyMaxOutputs(8)
 
 RecipeMaps.CENTRIFUGE_RECIPES
     .modifyMaxFluidInputs(3)
@@ -395,7 +440,7 @@ RecipeMaps.GAS_TURBINE_FUELS
     .modifyMaxFluidOutputs(1)
 
 RecipeMaps.AUTOCLAVE_RECIPES
-    .modifyMaxFluidInputs(2)
+    .modifyMaxFluidInputs(4)
     .modifyMaxFluidOutputs(2)
 
 RecipeMaps.CHEMICAL_BATH_RECIPES

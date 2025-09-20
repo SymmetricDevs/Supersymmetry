@@ -1,5 +1,5 @@
 {
-  "weight": 40,
+  "weight": 80,
   "density": 1,
   "dimension_filter":[
         "dimension_id:-1"

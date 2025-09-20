@@ -118,18 +118,9 @@ ROASTER.recipeBuilder()
         .buildAndRegister();
 
 BR.recipeBuilder()
-        .fluidInputs(fluid('phosphoric_acid') * 1000)
-        .fluidInputs(fluid('ammonia') * 1000)
-        .outputs(metaitem('dustAmmoniumDihydrogenPhosphate') * 12)
-        .duration(200)
-        .EUt(30)
-        .buildAndRegister();
-
-BR.recipeBuilder()
         .inputs(ore('dustGalliumTrioxide') * 5)
-        .inputs(ore('dustAmmoniumDihydrogenPhosphate') * 24)
-        .fluidOutputs(fluid('water') * 3000)
-        .fluidOutputs(fluid('ammonia') * 2000)
+        .fluidInputs(fluid('ammonium_dihydrogen_phosphate_solution') * 1000)
+        .fluidOutputs(fluid('diluted_ammonia_solution') * 4000)
         .outputs(metaitem('dustGalliumPhosphate') * 12)
         .duration(200)
         .EUt(120)

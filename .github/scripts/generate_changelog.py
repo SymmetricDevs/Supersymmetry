@@ -176,19 +176,19 @@ def generate_mod_changelog():
     if changes["updates"]:
         markdown += "### Mod Updates\n"
         for update in changes["updates"]:
-            markdown += f"* {update['name']} {update['old_version']} -> {update['new_version']}\n"
+            markdown += f"- {update['name']} {update['old_version']} → {update['new_version']}\n"
         markdown += "\n"
     
     if changes["additions"]:
         markdown += "### Mod Additions\n"
         for addition in changes["additions"]:
-            markdown += f"* {addition['name']} -> {addition['version']}\n"
+            markdown += f"- {addition['name']} → {addition['version']}\n"
         markdown += "\n"
     
     if changes["removals"]:
         markdown += "### Mod Removals\n"
         for removal in changes["removals"]:
-            markdown += f"* {removal['name']}\n"
+            markdown += f"- {removal['name']}\n"
         markdown += "\n"
     
     return markdown, susy_old_version, susy_new_version

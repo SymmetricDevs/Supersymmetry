@@ -72,19 +72,19 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
     // Purification
 
     SIFTER.recipeBuilder()
-        .inputs(ore('dustMolecularSieve') * 36)
+        .inputs(ore('dustMolecularSieveX') * 36)
         .fluidInputs(fluid('raw_hydrogen_rich_syngas') * 12000)
         .fluidOutputs(fluid('hydrogen_rich_syngas') * 11280)
-        .outputs(metaitem('dustCarbonatedMolecularSieve') * 36)
+        .outputs(metaitem('dustCarbonatedMolecularSieveX') * 36)
         .duration(4)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
     SIFTER.recipeBuilder()
-        .inputs(ore('dustMolecularSieve') * 36)
+        .inputs(ore('dustMolecularSieveX') * 36)
         .fluidInputs(fluid('raw_monoxide_rich_syngas') * 12000)
         .fluidOutputs(fluid('monoxide_rich_syngas') * 11280)
-        .outputs(metaitem('dustCarbonatedMolecularSieve') * 36)
+        .outputs(metaitem('dustCarbonatedMolecularSieveX') * 36)
         .duration(4)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -233,7 +233,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 
         PSA.recipeBuilder()
             .fluidInputs(fluid('reformed_hydrogen_rich_syngas') * 8000)
-            .notConsumable(metaitem('dustMolecularSieve') * 5)
+            .notConsumable(metaitem('membrane.zeolite'))
             .fluidOutputs(fluid('hydrogen') * 7000)
             .fluidOutputs(fluid('carbon_dioxide') * 1000)
             .duration(80)
@@ -242,7 +242,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 
         PSA.recipeBuilder()
             .fluidInputs(fluid('hydrogen_rich_syngas') * 6000)
-            .notConsumable(metaitem('dustMolecularSieve') * 5)
+            .notConsumable(metaitem('membrane.zeolite'))
             .fluidOutputs(fluid('hydrogen') * 5000)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .duration(80)
@@ -251,7 +251,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 
         PSA.recipeBuilder()
             .fluidInputs(fluid('reformed_monoxide_rich_syngas') * 7000)
-            .notConsumable(metaitem('dustMolecularSieve') * 5)
+            .notConsumable(metaitem('membrane.zeolite'))
             .fluidOutputs(fluid('hydrogen') * 6000)
             .fluidOutputs(fluid('carbon_dioxide') * 1000)
             .duration(80)
@@ -260,7 +260,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 
         PSA.recipeBuilder()
             .fluidInputs(fluid('monoxide_rich_syngas') * 5000)
-            .notConsumable(metaitem('dustMolecularSieve') * 5)
+            .notConsumable(metaitem('membrane.zeolite'))
             .fluidOutputs(fluid('hydrogen') * 4000)
             .fluidOutputs(fluid('carbon_monoxide') * 1000)
             .duration(80)
@@ -271,7 +271,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 
     FLBR.recipeBuilder()
         .fluidInputs(fluid('methanol') * 4460)
-        .notConsumable(ore('catalystBedZsmFive'))
+        .notConsumable(ore('catalystBedHydrogenZsmFive'))
         .fluidOutputs(fluid('methanol_dehydration_overheads') * 580)
         .fluidOutputs(fluid('naphtha') * 420)
         .fluidOutputs(fluid('water') * 4460)

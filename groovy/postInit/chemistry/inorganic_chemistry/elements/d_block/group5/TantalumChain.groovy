@@ -5,7 +5,6 @@ GRAVITY_SEPARATOR = recipemap('gravity_separator')
 ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 ROASTER = recipemap('roaster')
 AUTOCLAVE = recipemap('autoclave')
-CENTRIFUGE = recipemap('centrifuge')
 ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 BR = recipemap('batch_reactor')
@@ -15,6 +14,7 @@ CHEMICAL_BATH = recipemap('chemical_bath')
 CRYSTALLIZER = recipemap('crystallizer')
 REACTION_FURNACE = recipemap('reaction_furnace')
 FORMING_PRESS = recipemap("forming_press")
+MIXER_SETTLER = recipemap('mixer_settler')
 
 // Beneficiation
 
@@ -75,39 +75,43 @@ AUTOCLAVE.recipeBuilder() // Impure Fluorotantalic Acid Solution
     .EUt(Globals.voltAmps[3])
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Tantalum-rich Extract
+MIXER_SETTLER.recipeBuilder() // Tantalum-rich Extract
     .fluidInputs(fluid('impure_fluorotantalic_acid_solution') * 1000)
     .fluidInputs(fluid('methyl_isobutyl_ketone') * 8000)
     .fluidOutputs(fluid('tantalum_rich_extract') * 8000)
     .fluidOutputs(fluid('metal_sulfate_waste') * 1000)
     .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(4)
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Scrubbed Tantalum-rich Extract
-    .fluidInputs(fluid('tantalum_rich_extract') * 500)
-    .notConsumable(fluid('sulfuric_acid') * 500)
-    .fluidOutputs(fluid('scrubbed_tantalum_rich_extract') * 500)
-    .duration(5)
+MIXER_SETTLER.recipeBuilder() // Scrubbed Tantalum-rich Extract
+    .fluidInputs(fluid('tantalum_rich_extract') * 8000)
+    .notConsumable(fluid('sulfuric_acid') * 8000)
+    .fluidOutputs(fluid('scrubbed_tantalum_rich_extract') * 8000)
+    .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(2)
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Tantalum Extract
+MIXER_SETTLER.recipeBuilder() // Tantalum Extract
     .fluidInputs(fluid('scrubbed_tantalum_rich_extract') * 9000)
     .fluidInputs(fluid('distilled_water') * 1000)
     .fluidOutputs(fluid('tantalum_extract') * 9000)
     .fluidOutputs(fluid('purified_fluoroniobic_acid_solution') * 1000)
     .duration(90)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(2)
     .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder() // Fluorotantalic Acid Solution
+MIXER_SETTLER.recipeBuilder() // Fluorotantalic Acid Solution
     .fluidInputs(fluid('tantalum_extract') * 8000)
     .fluidInputs(fluid('diluted_ammonia_solution') * 2000)
     .fluidOutputs(fluid('methyl_isobutyl_ketone') * 8000)
     .fluidOutputs(fluid('fluorotantalic_acid_solution') * 2000) // 9/5 mol Ta
     .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(2)
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder() // Potassium Heptafluorotantalate
@@ -139,13 +143,14 @@ REACTION_FURNACE.recipeBuilder() // Tantalum
     .buildAndRegister()
 
 // From columbite
-CENTRIFUGE.recipeBuilder() // Fluorotantalic Acid Solution
+MIXER_SETTLER.recipeBuilder() // Fluorotantalic Acid Solution
     .fluidInputs(fluid('diluted_tantalum_extract') * 4500)
     .fluidInputs(fluid('diluted_ammonia_solution') * 250)
     .fluidOutputs(fluid('methyl_isobutyl_ketone') * 4500)
     .fluidOutputs(fluid('fluorotantalic_acid_solution') * 250) //0.2 mol of Ta per 8000L of dil. Ta ext.
     .duration(80)
     .EUt(Globals.voltAmps[3])
+    .requiredCells(2)
     .buildAndRegister()
 
 // From pyrochlore

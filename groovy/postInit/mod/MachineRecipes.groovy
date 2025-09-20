@@ -169,8 +169,8 @@ def tieredPipes = [metaitem('pipeLargeFluidSteel'), metaitem('pipeLargeFluidStee
                    metaitem('pipeLargeFluidTitanium'), metaitem('pipeLargeFluidTungstenCarbide'), metaitem('pipeLargeFluidNiobiumTitanium'),
                    metaitem('pipeLargeFluidNaquadah'), metaitem('pipeLargeFluidDuranium')]
 
-def tieredMagnets = [metaitem('stickIronMagnetic'), metaitem('stickIronMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickSteelMagnetic'),
-                     metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic'),
+def tieredMagnets = [metaitem('stickIronMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickSteelMagnetic'), metaitem('stickAlnicoMagnetic'),
+                     metaitem('stickAlnicoMagnetic'), metaitem('stickNeodymiumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic'),
                      metaitem('stickSamariumAlloyMagnetic'), metaitem('stickSamariumAlloyMagnetic')];
 
 log.infoMC("Adding Vulcanizing Press Craft")
@@ -573,12 +573,6 @@ RecyclingHelper.addShaped("steel_turbine_controller", metaitem('susy:basic_steam
     [metaitem('cableGtSingleTin'), ore('circuitLv'),                   metaitem('cableGtSingleTin')]
 ])
 
-RecyclingHelper.replaceShaped("gregtech:casing_steel_turbine_casing", item('gregtech:turbine_casing', 5) * 4, [
-    [metaitem('plateSteel'), ore('craftingToolHardHammer'), metaitem('plateSteel')],
-    [metaitem('stickLongSteel'), item('gregtech:stone_smooth', 4), metaitem('stickLongSteel')],
-    [metaitem('plateSteel'), ore('craftingToolWrench'), metaitem('plateSteel')]
-])
-
 RecyclingHelper.addShaped("gas_turbine_controller", metaitem('susy:basic_gas_turbine'), [
     [ore('plateSteel'),               metaitem('cableGtSingleCopper'),    ore('plateSteel')],
     [ore('circuitMv'),                metaitem('hull.mv'),                ore('circuitMv')],
@@ -609,13 +603,80 @@ RecyclingHelper.addShaped("lp_turbine_rotor", item('susy:turbine_rotor', 4), [
     [ore('plateTitanium'),             ore('rotorIncoloy825'),     ore('plateTitanium')]
 ])
 
-// Titanium Turbine Casing * 2
+// Steel Turbine Casing 
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateMagnalium') * 6, metaitem('frameBlueSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(ore('stickLongSteel') * 2)
+    .inputs(ore('plateSteel') * 4)
+    .inputs(item('gregtech:stone_smooth', 4))
+    .outputs(item('gregtech:turbine_casing', 5) * 4)
+    .duration(50)
+    .EUt(16)
+    .buildAndRegister();
+
+RecyclingHelper.replaceShaped("gregtech:casing_steel_turbine_casing", item('gregtech:turbine_casing', 5) * 4, [
+    [metaitem('plateSteel'), ore('craftingToolHardHammer'), metaitem('plateSteel')],
+    [metaitem('stickLongSteel'), item('gregtech:stone_smooth', 4), metaitem('stickLongSteel')],
+    [metaitem('plateSteel'), ore('craftingToolWrench'), metaitem('plateSteel')]
+])
+
+// Stainless Turbine Casing 
+mods.gregtech.assembler.removeByInput(16, [item('gregtech:turbine_casing', 5), metaitem('plateStainlessSteel') * 6, metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(ore('stickLongStainlessSteel') * 2)
+    .inputs(ore('plateStainlessSteel') * 4)
+    .inputs(item('gregtech:stone_smooth', 4))
+    .outputs(item('gregtech:turbine_casing', 7) * 2)
+    .duration(50)
+    .EUt(16)
+    .buildAndRegister();
+
+RecyclingHelper.replaceShaped("gregtech:casing_stainless_turbine_casing", item('gregtech:turbine_casing', 7) * 2, [
+    [metaitem('plateStainlessSteel'), ore('craftingToolHardHammer'), metaitem('plateStainlessSteel')],
+    [metaitem('stickLongStainlessSteel'), item('gregtech:stone_smooth', 4), metaitem('stickLongStainlessSteel')],
+    [metaitem('plateStainlessSteel'), ore('craftingToolWrench'), metaitem('plateStainlessSteel')]
+])
+
+// Titanium Turbine Casing 
 mods.gregtech.assembler.removeByInput(16, [item('gregtech:turbine_casing', 5), metaitem('plateTitanium') * 6, metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(ore('stickLongTitanium') * 2)
+    .inputs(ore('plateTitanium') * 4)
+    .inputs(item('gregtech:stone_smooth', 4))
+    .outputs(item('gregtech:turbine_casing', 6) * 2)
+    .duration(50)
+    .EUt(16)
+    .buildAndRegister();
 
 RecyclingHelper.replaceShaped("gregtech:casing_titanium_turbine_casing", item('gregtech:turbine_casing', 6) * 2, [
     [metaitem('plateTitanium'), ore('craftingToolHardHammer'), metaitem('plateTitanium')],
     [metaitem('stickLongTitanium'), item('gregtech:stone_smooth', 4), metaitem('stickLongTitanium')],
     [metaitem('plateTitanium'), ore('craftingToolWrench'), metaitem('plateTitanium')]
+])
+
+// Tungstensteel Turbine Casing 
+mods.gregtech.assembler.removeByInput(16, [item('gregtech:turbine_casing', 5), metaitem('plateTungstenSteel') * 6, metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(ore('stickLongTungstenSteel') * 2)
+    .inputs(ore('plateTungstenSteel') * 4)
+    .inputs(item('gregtech:stone_smooth', 4))
+    .outputs(item('gregtech:turbine_casing', 8) * 2)
+    .duration(50)
+    .EUt(16)
+    .buildAndRegister();
+
+RecyclingHelper.replaceShaped("gregtech:casing_tungstensteel_turbine_casing", item('gregtech:turbine_casing', 8) * 2, [
+    [metaitem('plateTungstenSteel'), ore('craftingToolHardHammer'), metaitem('plateTungstenSteel')],
+    [metaitem('stickLongTungstenSteel'), item('gregtech:stone_smooth', 4), metaitem('stickLongTungstenSteel')],
+    [metaitem('plateTungstenSteel'), ore('craftingToolWrench'), metaitem('plateTungstenSteel')]
 ])
 
 RecyclingHelper.addShaped("silicon_carbide_casing", item('susy:susy_multiblock_casing') * 2, [
@@ -970,6 +1031,12 @@ RecyclingHelper.addShaped("gregtech:high_temperature_distillation_tower", metait
     [pumps[3], hulls[3], pumps[3]],
     [circuits[3], item('gregtech:wire_coil'), circuits[3]]
 ]);
+
+RecyclingHelper.addShaped("susy:mixer_settler", metaitem('susy:mixer_settler'), [
+    [motors[3], circuits[3], motors[3]],
+    [rotors[3], hulls[3], rotors[3]],
+    [pumps[3], tieredCables[3], pumps[3]]
+])
 
 //ION EXCHANGE COLUMN
 
@@ -1348,3 +1415,21 @@ RecyclingHelper.addShaped("gregtech:locomotive_controller", metaitem('susy:stock
 		[ore('pipeSmallItemNickel'), metaitem('hull.lv'), ore('pipeSmallItemNickel')],
 		[metaitem('emitter.lv'), ore('circuitLv'), metaitem('sensor.lv')]
 ])
+
+RecyclingHelper.addShaped("gregtech:injection_molder", metaitem('susy:injection_molder'), [
+        [metaitem('springKanthal'), ore('circuitHv'), metaitem('cableGtSingleGold')],
+        [ore('pipeLargeFluidStainlessSteel'), metaitem('hull.hv'), metaitem('electric.motor.hv')],
+        [metaitem('springKanthal'), ore('circuitHv'), metaitem('cableGtSingleGold')],
+])
+
+for (def i = 1; i < 8; i++) {
+    crafting.addShapeless("gregtech:fluid_decompressor." + Globals.voltageTiers[i], metaitem('susy:fluid_decompressor.' + Globals.voltageTiers[i]), [
+            metaitem('susy:fluid_compressor.' + Globals.voltageTiers[i]),
+            ore('craftingToolScrewdriver')
+    ])
+
+    crafting.addShapeless("gregtech:fluid_compressor." + Globals.voltageTiers[i], metaitem('susy:fluid_compressor.' + Globals.voltageTiers[i]), [
+            metaitem('susy:fluid_decompressor.' + Globals.voltageTiers[i]),
+            ore('craftingToolScrewdriver')
+    ])
+}

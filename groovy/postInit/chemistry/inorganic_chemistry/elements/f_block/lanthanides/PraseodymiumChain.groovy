@@ -2,8 +2,8 @@ import globals.Globals
 
 BR = recipemap('batch_reactor')
 REACTION_FURNACE = recipemap('reaction_furnace')
-CENTRIFUGE = recipemap('centrifuge')
 DISTILLERY = recipemap('distillery')
+MIXER_SETTLER = recipemap('mixer_settler')
 
 // Tier 1
 
@@ -33,13 +33,14 @@ REACTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // Tier 2
-CENTRIFUGE.recipeBuilder()
+MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('distilled_water') * 1000)
     .fluidInputs(fluid('praseodymium_extract') * 10000)
     .fluidOutputs(fluid('praseodymium_iii_nitrate_solution') * 1000)
     .fluidOutputs(fluid('aliquat_336_extraction_mixture') * 10000)
     .duration(80)
     .EUt(120)
+    .requiredCells(2)
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()

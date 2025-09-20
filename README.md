@@ -43,6 +43,8 @@ The player will have to conquer Overworld and its resources first, then move on 
 The pack is currently in Beta. You can join the discord server here:
 https://discord.gg/BNbbK98rh6
 
+Players looking to join a server may check #looking-for-group on the discord.
+
 ## Credits
 Thanks to the [Gregicality Community Pack](https://github.com/Gregicality/Gregicality-Community-Pack) developers for letting us use some of their scripts.
 Build script by [htmlcsjs](https://github.com/htmlcsjs).

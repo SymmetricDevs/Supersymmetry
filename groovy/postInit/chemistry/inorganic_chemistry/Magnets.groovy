@@ -16,7 +16,7 @@ def voltaic_pile_ingredients = [
     [null, metaitem('plateCopper'), null]
 ]
 
-def magnetic_rod_ingredients = [
+def iron_magnetic_rod_ingredients = [
     [metaitem('voltaic_pile').reuse(), metaitem('wireGtSingleCopper').reuse(), metaitem('springCopper').reuse()],
     [null, null, metaitem('hot_iron_rod')],
     [null, null, null]
@@ -28,6 +28,12 @@ def magnetic_plate_ingredients = [
     [null, null, null]
 ]
 
+def steel_magnetic_rod_ingredients = [
+    [metaitem('voltaic_pile').reuse(), metaitem('wireGtSingleCopper').reuse(), metaitem('springCopper').reuse()],
+    [null, null, metaitem('hot_steel_rod')],
+    [null, null, null]
+]
+
 oreDict.add('electrolyteFruit', metaitem('gregtechfoodoption:food.lime'))
 oreDict.add('electrolyteFruit', metaitem('gregtechfoodoption:food.lemon'))
 oreDict.add('electrolyteFruit', metaitem('gregtechfoodoption:food.orange'))
@@ -35,6 +41,7 @@ oreDict.add('electrolyteFruit', metaitem('gregtechfoodoption:food.orange'))
 crafting.removeByOutput(metaitem('stickIronMagnetic')) 
 furnace.add(metaitem('stickIron'), metaitem('hot_iron_rod'))
 furnace.add(metaitem('plateSteel'), metaitem('hot_steel_plate'))
+furnace.add(metaitem('stickSteel'), metaitem('hot_steel_rod'))
 
 crafting.addShapeless('ElectrolytePaperSalt',metaitem('electrolyte_paper'), [
     item('forge:bucketfilled').withNbt([FluidName: "salt_water", Amount: 1000]),
@@ -52,6 +59,11 @@ crafting.addShapeless('MagneticIronDuplication',metaitem('stickIronMagnetic') * 
     metaitem('stickIronMagnetic')
 ])
 
+crafting.addShapeless('MagneticSteelDuplication',metaitem('stickSteelMagnetic') * 2, [
+    metaitem('hot_steel_rod'), 
+    metaitem('stickSteelMagnetic')
+])
+
 crafting.addShapeless('SteelPlateDuplication',metaitem('plateSteelMagnetic') * 2, [
     metaitem('hot_steel_plate'),
     metaitem('plateSteelMagnetic')
@@ -62,13 +74,19 @@ crafting.addShapeless('MagneticIronMagnetite',metaitem('stickIronMagnetic'), [
     metaitem('chunk.magnetite')
 ])
 
-crafting.addShapeless('MagneticSteelMagnetite',metaitem('plateSteelMagnetic'), [
+crafting.addShapeless('MagneticSteelMagnetite',metaitem('stickSteelMagnetic'), [
+    metaitem('hot_steel_rod'), 
+    metaitem('chunk.magnetite')
+])
+
+crafting.addShapeless('SteelPlateMagnetite',metaitem('plateSteelMagnetic'), [
     metaitem('hot_steel_plate'),
     metaitem('chunk.magnetite')
 ])
 
-crafting.addShaped('MagneticRodVoltaic',metaitem('stickIronMagnetic'), magnetic_rod_ingredients)
+crafting.addShaped('MagneticIronRodVoltaic',metaitem('stickIronMagnetic'), iron_magnetic_rod_ingredients)
 crafting.addShaped('MagneticPlateVoltaic',metaitem('plateSteelMagnetic'), magnetic_plate_ingredients)
+crafting.addShaped('MagneticSteelRodVoltaic',metaitem('stickSteelMagnetic'), steel_magnetic_rod_ingredients)
 crafting.addShaped('VoltaicPileCrafting',metaitem('voltaic_pile'), voltaic_pile_ingredients)
 
 // Alnico (HV-EV)
@@ -300,7 +318,7 @@ crafting.replaceShaped('gregtech:gregtech.machine.polarizer.iv', metaitem('polar
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('stickAlnicoMagnetic') * 1)
-    .inputs(ore('wireFineTungstenSteel') * 16)
+    .inputs(ore('wireFinePlatinum') * 16)
     .outputs(metaitem('voltage_coil.ev'))
     .duration(200)
     .EUt(1920)
@@ -344,35 +362,35 @@ POLARIZER.recipeBuilder()
     .inputs(ore('stickLongAlnico'))
     .outputs(metaitem('stickLongAlnicoMagnetic'))
     .duration(150)
-    .EUt(240)
+    .EUt(120)
     .buildAndRegister();
 
 POLARIZER.recipeBuilder()
     .inputs(ore('stickAlnico'))
     .outputs(metaitem('stickAlnicoMagnetic'))
     .duration(75)
-    .EUt(240)
+    .EUt(120)
     .buildAndRegister();
 
 POLARIZER.recipeBuilder()
     .inputs(ore('ringAlnico'))
     .outputs(metaitem('ringAlnicoMagnetic'))
     .duration(40)
-    .EUt(240)
+    .EUt(120)
     .buildAndRegister();
 
 POLARIZER.recipeBuilder()
     .inputs(ore('ingotAlnico'))
     .outputs(metaitem('ingotAlnicoMagnetic'))
     .duration(150)
-    .EUt(240)
+    .EUt(120)
     .buildAndRegister();
 
 POLARIZER.recipeBuilder()
     .inputs(ore('plateAlnico'))
     .outputs(metaitem('plateAlnicoMagnetic'))
     .duration(150)
-    .EUt(240)
+    .EUt(120)
     .buildAndRegister();
 
 POLARIZER.recipeBuilder()

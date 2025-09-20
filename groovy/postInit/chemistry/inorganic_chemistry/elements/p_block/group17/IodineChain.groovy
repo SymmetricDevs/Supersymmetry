@@ -5,6 +5,7 @@ MIXER = recipemap('mixer');
 EVAPORATION_POOL = recipemap('evaporation_pool');
 CSTR = recipemap('continuous_stirred_tank_reactor');
 BR = recipemap('batch_reactor');
+FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
 MACERATOR.recipeBuilder()
     .inputs(item('susy:resource_block:1'))
@@ -45,4 +46,11 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('acidic_wastewater') * 15750)
     .duration(100)
     .EUt(120)
+    .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+    .fluidInputs(fluid('iodine') * 144)
+    .outputs(metaitem('dustIodine'))
+    .duration(100)
+    .EUt(Globals.voltAmps[1])
     .buildAndRegister()

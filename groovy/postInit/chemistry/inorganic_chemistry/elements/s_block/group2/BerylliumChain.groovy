@@ -16,6 +16,7 @@ FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 LCR = recipemap('large_chemical_reactor')
 BLENDER = recipemap('blender')
 SIFTER = recipemap('sifter')
+MIXER_SETTLER = recipemap('mixer_settler')
 
 //Emerald: 3BeO · Al2O3 · 6SiO2
 //Bertrandite: Be4Si2O7(OH)2
@@ -117,7 +118,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 //SEPARATION OF SODIUM FLUOROBERYLLATE
-CENTRIFUGE.recipeBuilder()
+BR.recipeBuilder()
     .inputs(ore('dustFluorideFusedBeryl') * 23)
     .fluidInputs(fluid('distilled_water') * 6000)
     .outputs(metaitem('dustAlumina') * 10)
@@ -330,6 +331,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 BLENDER.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('ammonia') * 1250) 
     .fluidInputs(fluid('di_two_ethylhexyl_phosphoric_acid') * 2500) //DEHPA or D2EHPA
     .fluidInputs(fluid('kerosene') * 7500)
@@ -338,25 +340,27 @@ BLENDER.recipeBuilder()
     .duration(200)
     .buildAndRegister() 
 
-CENTRIFUGE.recipeBuilder()
+MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('bertrandite_leach') * 2500) 
     .fluidInputs(fluid('beryllium_extraction_mixture') * 8000)
     .fluidOutputs(fluid('beryllium_extract') * 8000)
     .fluidOutputs(fluid('wastewater') * 2500) //contains other impurites from bertrandite
     .EUt(Globals.voltAmps[2])
+    .requiredCells(6)
     .duration(50)
     .buildAndRegister()
 
 // (NH4)2CO3 + H2O -> 2NH4OH + CO2
 // 2 BeSO4 + (NH4)2CO3 + 2NH4OH -> Be2CO3(OH)2 + 2(NH4)2SO4
 
-CENTRIFUGE.recipeBuilder() 
+MIXER_SETTLER.recipeBuilder()
     .inputs(ore('dustAmmoniumCarbonate') * 28) // 2 mol
     .fluidInputs(fluid('distilled_water') * 3000)
     .fluidInputs(fluid('beryllium_extract') * 8000)
     .fluidOutputs(fluid('basic_beryllium_carbonate_slurry') * 2000) //Idk what else to call it
     .fluidOutputs(fluid('beryllium_extraction_mixture') * 8000) 
     .EUt(Globals.voltAmps[2])
+    .requiredCells(2)
     .duration(50)
     .buildAndRegister()
 

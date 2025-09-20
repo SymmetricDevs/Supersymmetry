@@ -84,10 +84,6 @@ def name_removals = [
     "techguns:combatshotgun",
     "techguns:combatshotgun_ammo_default",
     "techguns:combatshotgun_ammo_incendiary",
-    "techguns:boltaction_ammo_default",
-    "techguns:boltaction_ammo_incendiary",
-    "techguns:revolver_ammo_default",
-    "techguns:revolver_ammo_incendiary",
     "techguns:goldenrevolver",
     "techguns:mac10",
     "techguns:mac10_alt",
@@ -99,6 +95,8 @@ def name_removals = [
     "techguns:guidedmissilelauncher",
     "techguns:guidedmissilelauncher_alt",
     "techguns:grimreaper",
+    "techguns:grimreaper_ammo_default",
+    "techguns:grimreaper_ammo_high_velocity",
     "techguns:grenadelauncher",
     "techguns:aug",
     "techguns:aug_alt",
@@ -1086,138 +1084,115 @@ crafting.addShaped("tg_glider_wing", item('techguns:itemshared:91'), [
     [ore('platePlastic'), ore('platePlastic'), ore('platePlastic')]
 ]);
 
-crafting.replaceShapeless("techguns:thompson_ammo_default", item('techguns:thompson'), [
-    item('techguns:thompson:*'), 
-    item('techguns:itemshared', 9)
+// fixes guns dropped by mobs not working with ammo swapping recipes
+
+def guns = [
+    [name:"revolver",    ammo: 6,   default: 1,    incendiary: 109],
+    [name:"goldenrevolver",    ammo: 6,   default: 1,    incendiary: 109],
+    [name:"thompson",    ammo: 20,   default: 9,    incendiary: 112],
+    [name:"ak47",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"boltaction",    ammo: 6,   default: 3,    incendiary: 110],
+    [name:"m4",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"m4_infiltrator",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"pistol",    ammo: 18,   default: 11,    incendiary: 113],
+    [name:"mac10",    ammo: 32,   default: 9,    incendiary: 112],
+    [name:"aug",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"lmg",    ammo: 100,   default: 15,    incendiary: 116],
+    [name:"minigun",    ammo: 200,   default: 17,    incendiary: 114],
+    [name:"as50",    ammo: 10,   default: 19,    incendiary: 107],
+    [name:"vector",    ammo: 25,   default: 9,    incendiary: 112],
+    [name:"scar",    ammo: 20,   default: 13,    incendiary: 115],
+]
+
+guns.each { gun -> 
+
+crafting.replaceShapeless("techguns:" + gun.name + "_ammo_default", item("techguns:" + gun.name), [
+    item("techguns:" + gun.name + ":*"), 
+    item("techguns:itemshared", gun.default)
 ]);
 
-crafting.replaceShapeless("techguns:thompson_ammo_incendiary", item('techguns:thompson').withNbt([ammovariant: 'incendiary', ammo: 20]), [
-    item('techguns:thompson:*'), 
-    item('techguns:itemshared', 112)
+crafting.replaceShapeless("techguns:" + gun.name + "_ammo_incendiary", item("techguns:" + gun.name).withNbt([ammovariant: "incendiary", ammo: gun.ammo]), [
+    item("techguns:" + gun.name + ":*"), 
+    item("techguns:itemshared", gun.incendiary)
 ]);
 
-crafting.replaceShapeless("techguns:pistol_ammo_default", item('techguns:pistol'), [
-    item('techguns:pistol:*'), 
-    item('techguns:itemshared', 11)
+}
+
+crafting.replaceShapeless("techguns:as50_ammo_explosive", item("techguns:as50").withNbt([ammovariant: "explosive", ammo: 10]), [
+    item("techguns:as50:*"), 
+    item("techguns:itemshared", 143)
 ]);
 
-crafting.replaceShapeless("techguns:pistol_ammo_incendiary", item('techguns:pistol').withNbt([ammovariant: 'incendiary', ammo: 18]), [
-    item('techguns:pistol:*'), 
-    item('techguns:itemshared', 113)
+def launchers = [
+    [name:"rocketlauncher"],
+    [name:"guidedmissilelauncher"],
+]
+
+launchers.each { launcher -> 
+
+crafting.replaceShapeless("techguns:" + launcher.name + "_ammo_default", item("techguns:" + launcher.name), [
+    item("techguns:" + launcher.name + ":*"), 
+    item("techguns:itemshared", 7)
 ]);
 
-crafting.replaceShapeless("techguns:ak47_ammo_default", item('techguns:ak47'), [
-    item('techguns:ak47:*'), 
-    item('techguns:itemshared', 13)
+crafting.replaceShapeless("techguns:" + launcher.name + "_ammo_high_velocity", item("techguns:" + launcher.name).withNbt([ammovariant: "high_velocity", ammo: 1]), [
+    item("techguns:" + launcher.name + ":*"), 
+    item("techguns:itemshared", 145)
 ]);
 
-crafting.replaceShapeless("techguns:ak47_ammo_incendiary", item('techguns:ak47').withNbt([ammovariant: 'incendiary', ammo: 30]), [
-    item('techguns:ak47:*'), 
-    item('techguns:itemshared', 115)
-]);
+}
 
-crafting.addShapeless("techguns:boltaction_ammo1", item('techguns:boltaction').withNbt([ammovariant: 'incendiary', ammo: 6]), [
-    item('techguns:boltaction:*'), 
-    item('techguns:itemshared', 110)
-]);
+// shotgun and grim reaper ammo swapping recipes because their ammo is only equivalent to one shot
 
-crafting.addShapeless("techguns:boltaction_ammo2", item('techguns:boltaction'), [
-    item('techguns:boltaction:*'), 
-    item('techguns:itemshared', 3)
-]);
+def  oneshot = [
+    [name:"sawedoff",  ammo: 2, ammovariant: "incendiary",  default: 2,   variant: 106],
+    [name:"combatshotgun",  ammo: 8, ammovariant: "incendiary",  default: 2,   variant: 106],
+    [name:"grimreaper",  ammo: 4,  ammovariant: "high_velocity", default: 7,   variant: 145],
+]
 
-crafting.addShapeless("techguns:revolver_ammo1", item('techguns:revolver').withNbt([ammovariant: 'incendiary', ammo: 6]), [
-    item('techguns:revolver:*'), 
-    item('techguns:itemshared', 109)
-]);
-
-crafting.addShapeless("techguns:revolver_ammo2", item('techguns:revolver'), [
-    item('techguns:revolver:*'), 
-    item('techguns:itemshared', 1)
-]);
-
-//Shotgun reloading recipes 
+oneshot.each { one ->
 
 crafting.shapelessBuilder()
-    .name('techguns:sawedoff_ammo1')
-    .output(item('techguns:sawedoff').withNbt([ammovariant: 'incendiary', ammo: 2])) 
-    .input(item('techguns:sawedoff:*').mark('ammo'))  
-    .input(item('techguns:itemshared', 106)) 
-    .recipeFunction { output, inputs, info ->
+    .name("techguns:" + one.name + "_ammo_default") 
+    .output(item("techguns:" + one.name).withNbt([ammovariant: "default", ammo: one.ammo])) 
+    .input(item("techguns:" + one.name +":*").mark("ammo")) 
+    .input(item("techguns:itemshared", one.default))
+    .recipeFunction { output, inputs, info -> 
         if (!output.hasTagCompound()) { 
             output.setTagCompound(new net.minecraft.nbt.NBTTagCompound()) 
         }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") != 'incendiary') {
+        if (inputs["ammo"].getTagCompound().getString("ammovariant") == one.ammovariant) {
             output.getTagCompound().setShort("ammo", (short) 1) 
         }
         else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 2)        
-            output.getTagCompound().setShort("ammo", (short) newAmmo)
-        }
-    }
-    .register()  
-
-
-crafting.shapelessBuilder()
-    .name('techguns:sawedoff_ammo2') 
-    .output(item('techguns:sawedoff').withNbt([ammovariant: 'default', ammo: 2])) 
-    .input(item('techguns:sawedoff:*').mark('ammo'))
-    .input(item('techguns:itemshared', 2))
-    .recipeFunction { output, inputs, info -> 
-        if (!output.hasTagCompound()) { 
-            output.setTagCompound(new net.minecraft.nbt.NBTTagCompound())
-        }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") == 'incendiary') {            
-            output.getTagCompound().setShort("ammo", (short) 1) 
-        }
-        else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 2)        
+            short currentAmmo = inputs["ammo"].getTagCompound().getShort("ammo")
+            short newAmmo = (short) Math.min(currentAmmo + 1, one.ammo)        
             output.getTagCompound().setShort("ammo", (short) newAmmo)
         }
     }
     .register()
 
 crafting.shapelessBuilder()
-    .name('techguns:combatshotgun_ammo_default') 
-    .output(item('techguns:combatshotgun').withNbt([ammovariant: 'default', ammo: 8])) 
-    .input(item('techguns:combatshotgun:*').mark('ammo')) 
-    .input(item('techguns:itemshared', 2))
+    .name("techguns:" + one.name + "_ammo_" + one.ammovariant) 
+    .output(item("techguns:" + one.name).withNbt([ammovariant: one.ammovariant, ammo: one.ammo])) 
+    .input(item("techguns:" + one.name +":*").mark("ammo")) 
+    .input(item("techguns:itemshared", one.variant))
     .recipeFunction { output, inputs, info -> 
         if (!output.hasTagCompound()) { 
             output.setTagCompound(new net.minecraft.nbt.NBTTagCompound()) 
         }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") == 'incendiary') {
+        if (inputs["ammo"].getTagCompound().getString("ammovariant") != one.ammovariant) {
             output.getTagCompound().setShort("ammo", (short) 1) 
         }
         else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 8)        
+            short currentAmmo = inputs["ammo"].getTagCompound().getShort("ammo")
+            short newAmmo = (short) Math.min(currentAmmo + 1, one.ammo)        
             output.getTagCompound().setShort("ammo", (short) newAmmo)
         }
     }
     .register()
 
-crafting.shapelessBuilder()
-    .name('techguns:combatshotgun_ammo_incendiary') 
-    .output(item('techguns:combatshotgun').withNbt([ammovariant: 'incendiary', ammo: 8]))
-    .input(item('techguns:combatshotgun:*').mark('ammo')) 
-    .input(item('techguns:itemshared', 106))
-    .recipeFunction { output, inputs, info -> 
-        if (!output.hasTagCompound()) { 
-            output.setTagCompound(new net.minecraft.nbt.NBTTagCompound()) 
-        }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") != 'incendiary') {
-            output.getTagCompound().setShort("ammo", (short) 1) 
-        }
-        else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 8)        
-            output.getTagCompound().setShort("ammo", (short) newAmmo)
-        }
-    }
-    .register()
+}
 
 //--------------------GregTech machines only recipes--------------------
 

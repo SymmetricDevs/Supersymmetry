@@ -75,6 +75,17 @@ ASSEMBLER.recipeBuilder()
 
 RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 1), [ore('plateStainlessSteel') * 4, ore('frameGtStainlessSteel')])
 
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(13)
+    .inputs(ore('plateStainlessSteel') * 4)
+    .inputs(item('gregtech:metal_casing', 4))
+    .outputs(item('susy:susy_multiblock_casing', 10))
+    .duration(240)
+    .EUt(Globals.voltAmps[3])
+    .buildAndRegister()
+
+RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 10), [ore('plateStainlessSteel') * 4, item('gregtech:metal_casing', 4)])
+
 RecyclingHelper.addShaped("susy:air_vent_w", item('susy:meta_item', 4), [
     [ore('craftingToolHardHammer'),ore('stickWroughtIron'),ore('craftingToolScrewdriver')],
     [ore('plateWroughtIron'),ore('stickWroughtIron'),ore('plateWroughtIron')],
@@ -293,7 +304,7 @@ CVD.recipeBuilder()
 
 // Filtered tank
 ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('dustMolecularSieve'))
+    .inputs(metaitem('dustMolecularSieveX'))
     .inputs(metaitem('plateStainlessSteel') * 4)
     .inputs(item('susy:meta_item', 1))
     .inputNBT(item('susy:susy_armor', 10), NBTMatcher.ANY, NBTCondition.ANY)
@@ -317,7 +328,7 @@ ASSEMBLER.recipeBuilder()
     .circuitMeta(3)
     .inputs(metaitem('plateNomex') * 8)
     .inputs(ore('threadPolybenzimidazole') * 20)
-    .inputs(metaitem('dustMolecularSieve') * 4)
+    .inputs(metaitem('dustMolecularSieveX') * 4)
     .inputs(metaitem('pipeSmallFluidEthyleneVinylAcetate') * 2)
     .inputs(metaitem('electric.piston.ev'))
     .inputs(metaitem('rotorTitanium'))

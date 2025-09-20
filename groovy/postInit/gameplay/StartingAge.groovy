@@ -33,6 +33,15 @@ crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('ingotClay')
 ])
 
+crafting.replaceShapeless("gregtech:stick_to_smallwoodpulp", metaitem('dustSmallWood'), [
+        ore('craftingToolMortar'),
+        ore('stickWood')
+])
+
+crafting.replaceShapeless("gregtech:longstick_to_woodpulp", metaitem('dustWood'), [
+        ore('craftingToolMortar'),
+        ore('stickLongWood')
+])
 // 8 * compressed clay
 crafting.addShaped("gregtech:compressed_clay_8", item('gregtech:meta_item_1', 349) * 8, [
         [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
