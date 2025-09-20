@@ -155,6 +155,7 @@ class ChangeFlags {
 
         // Flags
 
+        Carbon.addFlags("generate_fine_wire");
         Asbestos.addFlags("generate_foil");
         Magnesium.addFlags("generate_rod", "generate_plate");
         Tellurium.addFlags("generate_plate");
