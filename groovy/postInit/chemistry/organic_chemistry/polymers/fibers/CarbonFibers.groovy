@@ -1,19 +1,12 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-FLBR = recipemap('fluidized_bed_reactor')
-PHASE_SEPARATOR = recipemap('phase_separator')
-DT = recipemap('distillation_tower')
-POLYMERIZATION = recipemap('polymerization_tank')
-SIFTER = recipemap('sifter')
-CHEMICAL_BATH = recipemap('chemical_bath')
-TUBE_FURNACE = recipemap('tube_furnace')
 
 // Acrylonitrile production via ammoxidation of propylene
 
 // C3H6 + NH3 + 3O -> C3H3N + 3H2O
 // C3H6 + NH3 + 5O -> C2H3N + 3H2O + CO2
 // C3H6 + 3NH3 + 6O -> 3HCN + 6H2O
-FLBR.recipeBuilder() // 100 -> acrylonitrile, 1 -> acetonitrile, 6 -> HCN in SOHIO process
+FLUIDIZED_BR.recipeBuilder() // 100 -> acrylonitrile, 1 -> acetonitrile, 6 -> HCN in SOHIO process
     .notConsumable(ore('dustAmmoxidationCatalyst'))
     .fluidInputs(fluid('propene') * (100 + 1 + 6))
     .fluidInputs(fluid('ammonia') * (100 + 1 + 18))
@@ -42,7 +35,7 @@ DT.recipeBuilder()
 
 // Polyacrylonitrile production
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('acrylonitrile') * 1000)
     .fluidInputs(fluid('water') * 1000)
     .inputs(ore('dustTinyPotassiumPersulfate'))

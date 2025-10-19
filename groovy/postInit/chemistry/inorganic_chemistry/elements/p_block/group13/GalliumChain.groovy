@@ -1,17 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ELECTROLYZER = recipemap('electrolyzer')
-BATCH_REACTOR = recipemap('batch_reactor')
-VACUUM_DT = recipemap('vacuum_distillation')
-DT = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-CRYSTALLIZER = recipemap('crystallizer')
-CVD = recipemap('cvd')
-FORMINGPRESS = recipemap('forming_press')
-ZONEREFINER = recipemap('zone_refiner')
-MACERATOR = recipemap('macerator')
-CUTTER = recipemap('cutter')
-ROASTER = recipemap('roaster')
 
 //FROM BAUXITE
 ELECTROLYZER.recipeBuilder()
@@ -65,7 +53,7 @@ DT.recipeBuilder()
 // Small Pile of Mercury II Chloride Dust * 1
 mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('crude_gallium_trichloride') * 432])
 
-BATCH_REACTOR.recipeBuilder()
+BR.recipeBuilder()
 .fluidInputs(fluid('gallium_trichloride') * 1000)
 .fluidInputs(fluid('hydrogen') * 3000)
 .outputs(metaitem('dustHighPurityGallium'))
@@ -130,7 +118,7 @@ CRYSTALLIZER.recipeBuilder()
 .EUt(VA[LV])
 .buildAndRegister()
 
-ZONEREFINER.recipeBuilder()
+ZONE_REFINER.recipeBuilder()
 .inputs(metaitem('unrefined_boule.gallium_arsenide'))
 .outputs(metaitem('boule.gallium_arsenide'))
 .duration(120)

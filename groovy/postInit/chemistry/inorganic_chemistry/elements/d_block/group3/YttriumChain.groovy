@@ -1,9 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-DISTILLERY = recipemap('distillery')
-REACTION_FURNACE = recipemap('reaction_furnace')
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
 
 BR.recipeBuilder()
     .inputs(ore('dustYttriumHydroxide') * 7)

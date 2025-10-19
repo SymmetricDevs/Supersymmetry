@@ -1,9 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-FLOTATION = recipemap('froth_flotation')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
 
 MIXER.recipeBuilder()
     .inputs(ore('dustImpureCinnabar') * 8)
@@ -13,7 +9,7 @@ MIXER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_cinnabar_slurry') * 2000)
     .notConsumable(metaitem('dustPotassiumButylXanthate'))
     .notConsumable(metaitem('dustLeadNitrate') * 9)

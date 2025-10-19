@@ -1,22 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-SIFTER = recipemap('sifter')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-FLUID_COMPRESSOR = recipemap('fluid_compressor')
-FLUID_DECOMPRESSOR = recipemap('fluid_decompressor')
-HEAT_EXCHANGER = recipemap('heat_exchanger')
-PHASE_SEPARATOR = recipemap('phase_separator')
-LOW_PRESSURE_DISTILLATION_TOWER = recipemap('low_pressure_cryogenic_distillation')
-HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillation')
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT = recipemap('single_column_cryogenic_distillation')
-BATH_CONDENSER = recipemap('bath_condenser')
-FBR = recipemap('fixed_bed_reactor')
-CENTRIFUGE = recipemap('centrifuge')
-FLUID_HEATER = recipemap('fluid_heater')
-DT = recipemap('distillation_tower')
-FLUID_COMPRESSOR = recipemap('fluid_compressor')
-PSA = recipemap('pressure_swing_adsorption')
-TUBE_FURNACE = recipemap('tube_furnace')
 
 /*INFORMATION
 STANDARD I/O LIQUID: 64L OF REGULAR GAS
@@ -197,7 +180,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
 
 //PROCESSED AIR DISTILLATION
     //STARTUP DISTILLATION RECIPE
-    HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+    HIGH_PRESSURE_CRYO_DT.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(fluid('liquid_decarburized_air') * 100)
         .fluidInputs(fluid('cold_hp_decarburized_air') * 5600)
@@ -215,7 +198,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
         .duration(1)
         .buildAndRegister()
 
-    HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+    HIGH_PRESSURE_CRYO_DT.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('untreated_liquid_nitrogen') * 25)
         .fluidInputs(fluid('liquid_decarburized_air') * 100)
@@ -229,7 +212,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
 
     //UPPER COLUMN FOR FINAL AIR SEPARATION
     //STARTUP
-    LOW_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+    LOW_PRESSURE_CRYO_DT.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(fluid('oxygen_rich_liquid') * 50)
         .fluidInputs(fluid('oxygen_rich_gas') * 200)
@@ -260,7 +243,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
         .duration(5)
         .buildAndRegister()
 
-    LOW_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+    LOW_PRESSURE_CRYO_DT.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('oxygen_rich_liquid') * 50)
         .fluidInputs(fluid('oxygen_rich_gas') * 200)
@@ -292,7 +275,7 @@ CENTRIFUGE.recipeBuilder()
 //TIER TWO: ADDED ARGON
 
 //NO GAS TAPOFF
-HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+HIGH_PRESSURE_CRYO_DT.recipeBuilder()
     .circuitMeta(3)
     .fluidInputs(fluid('untreated_liquid_nitrogen') * 50)
     .fluidInputs(fluid('liquid_decarburized_air') * 200)
@@ -305,7 +288,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
 
 //ARGON COARSE SEPARATION
     //STARTUP DISTILLATION
-    SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+    SINGLE_COLUMN_CRYO_DT.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(fluid('argon_rich_gas') * 2400)
         .fluidOutputs(fluid('oxygen_rich_liquid') * 45)
@@ -315,7 +298,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
         .buildAndRegister()
 
     //REFLUXED DISTILLATION
-    SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+    SINGLE_COLUMN_CRYO_DT.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('liquid_crude_argon') * 5)
         .fluidInputs(fluid('argon_rich_gas') * 2400)
@@ -336,7 +319,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
         .buildAndRegister()
 
     //DEOXYGENATION
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('liquid_crude_argon') * 50)
         .fluidInputs(fluid('hydrogen') * 24)
         .notConsumable(metaitem('catalystBedSupportedPlatinum'))
@@ -348,7 +331,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
 
 //ARGON PURIFICATION
     //STARTUP DISTILLATION
-    SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+    SINGLE_COLUMN_CRYO_DT.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(fluid('liquid_deoxygenated_argon') * 200)
         .fluidOutputs(fluid('liquid_argon_product') * 200)
@@ -365,7 +348,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
         .duration(1)
         .buildAndRegister()
 
-    SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+    SINGLE_COLUMN_CRYO_DT.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('liquid_deoxygenated_argon') * 200)
         .fluidInputs(fluid('argon') * 2400)
@@ -410,7 +393,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
         .buildAndRegister()
 
 //ADAPTED LOW PRESSURE RECIPE
-LOW_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+LOW_PRESSURE_CRYO_DT.recipeBuilder()
     .circuitMeta(3)
     .fluidInputs(fluid('oxygen_rich_liquid') * 145)
     .fluidInputs(fluid('oxygen_rich_gas') * 400)
@@ -451,7 +434,7 @@ HEAT_EXCHANGER.recipeBuilder()
 0.00216 Xe*/
 
 //ADAPATED RECIPES
-HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+HIGH_PRESSURE_CRYO_DT.recipeBuilder()
     .circuitMeta(4)
     .fluidInputs(fluid('treated_liquid_nitrogen') * 50)
     .fluidInputs(fluid('liquid_decarburized_air') * 200)
@@ -481,7 +464,7 @@ HEAT_EXCHANGER.recipeBuilder()
     .buildAndRegister()
 
 //HELIUM & NEON
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+SINGLE_COLUMN_CRYO_DT.recipeBuilder()
     .fluidInputs(fluid('untreated_liquid_nitrogen') * 200)
     .fluidOutputs(fluid('treated_liquid_nitrogen') * 199)
     .fluidOutputs(fluid('helium_neon_concentrate') * 48)
@@ -490,7 +473,7 @@ SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
     .buildAndRegister()
 
 //DEHYDROGENATION
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedSupportedPlatinum'))
     .fluidInputs(fluid('helium_neon_concentrate') * 6000)
     .fluidInputs(fluid('oxygen') * 4)
@@ -534,7 +517,7 @@ PSA.recipeBuilder()
     .buildAndRegister()
     
 //KRYPTON & XENON
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+SINGLE_COLUMN_CRYO_DT.recipeBuilder()
     .fluidInputs(fluid('untreated_liquid_oxygen') * 105)
     .fluidOutputs(fluid('krypton_xenon_rich_liquid')) // Contains 0.0264 Kr and 0.00216 Xe gas
     .fluidOutputs(fluid('treated_liquid_oxygen') * 105)
@@ -558,7 +541,7 @@ PSA.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+SINGLE_COLUMN_CRYO_DT.recipeBuilder()
     .fluidInputs(fluid('purified_krypton_xenon_concentrate') * 22224)
     .fluidOutputs(fluid('krypton') * 12)
     .chancedFluidOutput(fluid('krypton'), 2222, 0)

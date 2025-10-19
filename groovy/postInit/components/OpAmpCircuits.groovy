@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-def ASSEMBLER = recipemap('assembler')
-def VACUUM = recipemap('vacuum_chamber')
-def CIRCUIT_ASSEMBLER = recipemap('circuit_assembler')
 
 //Change transistor to use silicon wafer instead of silicon plate
 // Transistor * 8
@@ -159,7 +156,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-VACUUM.recipeBuilder()
+VACUUM_CHAMBER.recipeBuilder()
         .inputs(metaitem('voltage_regulator.hv.unsealed'))
         .inputs(ore('wireFineAluminium') * 4)
         .fluidInputs(fluid('plastic') * 144)

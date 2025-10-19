@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-REACTION_FURNACE = recipemap('reaction_furnace')
-ROASTER = recipemap('roaster')
-BR = recipemap('batch_reactor')
 
 BR.recipeBuilder()
     .fluidInputs(fluid('ytterbium_amalgam') * 1000)

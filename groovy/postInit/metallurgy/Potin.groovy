@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ALLOY_SMELTER = recipemap('alloy_smelter')
 
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('dustBronze') * 8)

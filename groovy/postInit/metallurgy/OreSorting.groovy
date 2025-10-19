@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import classes.*
 import static gregtech.api.GTValues.*
 
@@ -366,7 +367,6 @@ def alluvial_tier_2 = [
     'susy:resource_block:11' : 5000
 ];
 
-
 def alluvial_tier_3 = [
     //T1.3
     'gregtech:ore_cassiterite_0' : 10000,
@@ -407,7 +407,7 @@ def rocks = [
 for (rock in rocks) {
     int a = 0;
     for (oreList in rock.oreLists) {
-        def recipe = recipemap('ore_sorter').recipeBuilder();
+        def recipe = ORE_SORTER.recipeBuilder();
         recipe.circuitMeta(a + 1)
         recipe.inputs(metaitem(rock.input_rock) * (oreList.size()));
         for (ore in oreList) {

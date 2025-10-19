@@ -1,17 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
-
-FLOTATION = recipemap('froth_flotation')
-ROASTER = recipemap('roaster')
-BR = recipemap('batch_reactor')
-BCR = recipemap('bubble_column_reactor')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
-CENTRIFUGE = recipemap('centrifuge')
-REACTION_FURNACE = recipemap('reaction_furnace')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-ROTARY_KILN = recipemap('rotary_kiln')
 
 GRAVITY_SEPARATOR.recipeBuilder()
     .inputs(ore('dustCelestine'))
@@ -30,7 +19,7 @@ MIXER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_celestine_slurry') * 2000)
     .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
     .notConsumable(fluid('alkaline_sodium_oleate_solution') * 100)

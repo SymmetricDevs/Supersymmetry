@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-REACTION_FURNACE = recipemap('reaction_furnace')
 
 class PartialOxidationFeedstock {
     String name

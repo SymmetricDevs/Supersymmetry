@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ROASTER = recipemap('roaster')
 
 BR.recipeBuilder()
     .fluidInputs(fluid('neodymium_chloride_solution') * 3000)

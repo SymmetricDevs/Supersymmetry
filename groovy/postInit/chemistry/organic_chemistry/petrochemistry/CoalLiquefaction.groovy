@@ -1,11 +1,7 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-FBR = recipemap('fixed_bed_reactor')
-FLBR = recipemap('fluidized_bed_reactor')
-SIEVE_DT = recipemap('sieve_distillation')
-VACUUM_DT = recipemap('vacuum_distillation')
-
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(ore('catalystBedSupportedNickel'))
     .fluidInputs(fluid('naphthalene') * 1000)
     .fluidInputs(fluid('hydrogen') * 4000)
@@ -14,7 +10,7 @@ FBR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-FLBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .notConsumable(ore('dustSupportedNickel'))
     .notConsumable(fluid('tetralin') * 8000)
     .inputs(ore('dustCoal') * 16)

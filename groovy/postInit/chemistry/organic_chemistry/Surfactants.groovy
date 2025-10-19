@@ -1,19 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-CRYSTALLIZER = recipemap('crystallizer')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-CHEMICAL_BATH = recipemap('chemical_bath')
-LCR = recipemap('large_chemical_reactor')
 
 // Lubricity Surfactants (SDS, Narrow-chain ethoxylates)
 

@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 crafting.replaceShaped('chisel:chisel_iron', item('chisel:chisel_iron'), [
@@ -99,8 +100,6 @@ for (def i = 0; i < 2; i++) {
             [ore('craftingToolSaw'), item('chisel:glass1', i)]
     ])
 }
-
-ASSEMBLER = recipemap('assembler')
 
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stone') * 4)

@@ -1,17 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-MIXER = recipemap('mixer')
-FLOTATION = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-CHEMICAL_BATH = recipemap('chemical_bath')
-CRYSTALLIZER = recipemap('crystallizer')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-REACTION_FURNACE = recipemap('reaction_furnace')
-VACUUM_DT = recipemap('vacuum_distillation')
-BR = recipemap('batch_reactor')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
 // From pollucite
 MIXER.recipeBuilder()
@@ -22,7 +11,7 @@ MIXER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_pollucite_slurry') * 2000)
     .fluidInputs(fluid('aluminium_sulfate_solution') * 50)
     .notConsumable(fluid('coco_amine_acetate') * 1000)
@@ -150,7 +139,7 @@ CSTR.recipeBuilder()
     .duration(4)
     .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('caesium') * 144)
     .outputs(metaitem('dustCaesium'))
     .EUt(VA[LV])

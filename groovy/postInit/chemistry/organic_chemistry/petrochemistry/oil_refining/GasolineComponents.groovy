@@ -1,12 +1,8 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-REACTION_FURNACE = recipemap('reaction_furnace')
-FBR = recipemap('fixed_bed_reactor')
-REFORMER = recipemap('catalytic_reformer_recipes')
-PHASE_SEPARATOR = recipemap('phase_separator')
-
 // Isomerization
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedChloridedAlumina'))
         .fluidInputs(fluid('light_naphtha') * 1000)
         .fluidInputs(fluid('hydrogen') * 200)
@@ -17,7 +13,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .EUt(VA[MV])
         .buildAndRegister()
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedSulfatedMetalOxide'))
         .fluidInputs(fluid('light_naphtha') * 1000)
         .fluidInputs(fluid('hydrogen') * 200)
@@ -28,7 +24,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .EUt(VA[MV])
         .buildAndRegister()
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedChloridedAlumina'))
         .fluidInputs(fluid('light_naphtha') * 4000)
         .fluidInputs(fluid('isohexane_rich_stream') * 8000)
@@ -40,7 +36,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .EUt(VA[MV])
         .buildAndRegister()
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedSulfatedMetalOxide'))
         .fluidInputs(fluid('light_naphtha') * 4000)
         .fluidInputs(fluid('isohexane_rich_stream') * 8000)
@@ -96,7 +92,7 @@ PHASE_SEPARATOR = recipemap('phase_separator')
         .buildAndRegister()
 
 // Polymerization
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedSolidPhosphoricAcid'))
         .fluidInputs(fluid('catalytic_olefin_rich_mixture') * 1000)
         .fluidOutputs(fluid('raw_gasoline_polymerate') * 500)

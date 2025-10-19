@@ -1,14 +1,8 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
-
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
-CRYSTALLIZER = recipemap('crystallizer')
 
 ELECTROLYZER.recipeBuilder()
     .notConsumable(metaitem('graphite_electrode'))
@@ -132,7 +126,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .duration(720)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('diluted_salt_water') * 2000)
     .fluidOutputs(fluid('salt_water') * 1000)
     .fluidOutputs(fluid('water') * 1000)

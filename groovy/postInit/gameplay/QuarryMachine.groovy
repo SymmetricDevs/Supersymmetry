@@ -1,15 +1,12 @@
+import static prePostInit.Recipemaps.*
 import gregtech.api.recipes.RecipeBuilder
 import globals.Globals
-QUARRY = recipemap('quarry')
-
 
 crafting.addShaped("susy:quarry_controller", metaitem('susy:quarry'), [
     [ore('plateSteel'), metaitem('electric.motor.lv'), ore('plateSteel')],
     [ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
     [ore('cableGtSingleTin'), metaitem('component.grinder.diamond'), ore('cableGtSingleTin')]
 ])
-
-
 
 def overworld_ores = [
     item('minecraft:stone'),
@@ -80,8 +77,6 @@ QUARRY.recipeBuilder()
     .duration(100)
     .EUt(16)
     .buildAndRegister();
-
-
 
 //beneath rocks:
 for (entry in beneath_ores) {

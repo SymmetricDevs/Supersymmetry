@@ -1,11 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
-
-BCR = recipemap("bubble_column_reactor")
-CRACKER = recipemap("cracker")
-ROASTER = recipemap("roaster")
-DT = recipemap("sieve_distillation")
-ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
 
 /* Data:
 - Slurry oil: 40 carbons
@@ -24,7 +19,7 @@ crackables.each { _, crackable ->
             .EUt(VA[LV] * 2)
             .buildAndRegister()
 
-        DT.recipeBuilder()
+        SIEVE_DT.recipeBuilder()
             .fluidInputs(crackable.getCrudeCatalyticallyCracked(4000))
             .fluidInputs(fluid('dense_steam') * 400)
             .fluidOutputs(crackable.getCatalyticallyCracked(4000))
@@ -44,7 +39,7 @@ ROASTER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('catalytically_cracked_heavy_gas_oil') * 1000)
     .fluidOutputs(fractions.light_cycle_oil.get(355))
     .fluidOutputs(fractions.naphtha.get(2015))
@@ -53,7 +48,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('catalytically_cracked_atmospheric_oil_residue') * 1000)
     .fluidOutputs(fluid('slurry_oil') * 500)
     .fluidOutputs(fractions.light_cycle_oil.getSulfuric(575))
@@ -63,7 +58,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('catalytically_cracked_vacuum_oil_residue') * 1000)
     .fluidOutputs(fluid('slurry_oil') * 680)
     .fluidOutputs(fractions.light_cycle_oil.getSulfuric(680))

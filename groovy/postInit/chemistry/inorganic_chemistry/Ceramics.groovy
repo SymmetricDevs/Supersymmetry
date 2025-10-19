@@ -1,11 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
-
-SINTERING_OVEN = recipemap('sintering_oven')
-HOT_ISOSTATIC_PRESS = recipemap('hot_isostatic_press')
-MIXER = recipemap('mixer')
-FORMING_PRESS = recipemap('forming_press')
-CVD = recipemap('cvd')
 
 // PVA binder
 

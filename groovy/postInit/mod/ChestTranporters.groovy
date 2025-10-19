@@ -1,3 +1,5 @@
+import static prePostInit.Recipemaps.*
+
 def name_removals = [
   'chesttransporter:tin_transporter',
   'chesttransporter:gold_transporter',
@@ -33,7 +35,7 @@ crafting.replaceShaped('chesttransporter:copper_transporter', item('chesttranspo
   [ore('craftingToolScrewdriver'), ore('stickBronze'), ore('craftingToolHardHammer')]
 ]);
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .inputs(item('minecraft:stick') * 4)
         .fluidInputs(fluid('glue') * 20)
         .outputs(item('chesttransporter:chesttransporter'))
@@ -41,7 +43,7 @@ recipemap('assembler').recipeBuilder()
         .EUt(16)
         .buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .inputs(item('minecraft:stick') * 4)
         .fluidInputs(fluid('resin') * 100)
         .outputs(item('chesttransporter:chesttransporter'))

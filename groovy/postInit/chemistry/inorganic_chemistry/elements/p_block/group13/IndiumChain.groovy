@@ -1,13 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-BCR = recipemap('bubble_column_reactor')
-ROASTER = recipemap('roaster')
-CHEMICAL_BATH = recipemap('chemical_bath')
-ELECTROLYZER = recipemap('electrolyzer')
-MACERATOR = recipemap('macerator')
-VACUUM_DT = recipemap('vacuum_distillation')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 // From zinc calcine (zincite) or zinc oxide fume from lead
 

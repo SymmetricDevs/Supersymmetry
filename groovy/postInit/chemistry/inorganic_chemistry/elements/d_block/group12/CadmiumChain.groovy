@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
 
 // From zinc pyrometallurgy
 BR.recipeBuilder()

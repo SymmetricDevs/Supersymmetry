@@ -1,27 +1,16 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 
-INJECTION_MOLDER = recipemap('injection_molder')
-
-class ExtrudablePolymers {
-    String name
-    int voltage_required
-    int duration
-    boolean plate
-    boolean pipe
-    boolean fluidpipe
-    boolean ring
+record ExtrudablePolymers (
+    String name,
+    int voltage_required,
+    int duration,
+    boolean plate,
+    boolean pipe,
+    boolean fluidpipe,
+    boolean ring,
     boolean rod
-    ExtrudablePolymers(name, voltage_required, duration, plate, pipe, fluidpipe, ring, rod) {
-        this.name = name
-        this.voltage_required = voltage_required
-        this.duration = duration
-        this.plate = plate
-        this.pipe = pipe
-        this.fluidpipe = fluidpipe
-        this.ring = ring
-        this.rod = rod
-    }
-}
+) {}
 
 def polymers = [
         new ExtrudablePolymers('Plastic', 120, 8, true, true, true, false, false),

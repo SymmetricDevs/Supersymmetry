@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import globals.GroovyUtils
 import globals.Globals
 import postInit.utils.RecyclingHelper
@@ -8,22 +9,6 @@ import gregtechfoodoption.worldgen.trees.GTFOTrees
 import net.minecraft.init.Blocks
 
 log.infoMC("Running GregTech.groovy...")
-
-ASSEMBLER = recipemap('assembler')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-MIXER = recipemap('mixer')
-AUTOCLAVE = recipemap('autoclave')
-CHEMICAL_BATH = recipemap('chemical_bath')
-MACERATOR = recipemap('macerator')
-CENTRIFUGE = recipemap('centrifuge')
-SIFTER = recipemap('sifter')
-FORGE_HAMMER = recipemap('forge_hammer')
-SEMI_FLUID_GENERATOR = recipemap('semi_fluid_generator')
-CUTTING_MACHINE = recipemap('cutter')
-PACKAGER = recipemap('packer')
-EXTRUDER = recipemap('extruder')
-GAS_COLLECTOR = recipemap('gas_collector')
-FORMING_PRESS = recipemap('forming_press')
 
 //REMOVALS
 
@@ -234,7 +219,6 @@ mods.gregtech.arc_furnace.removeByInput(30, [metaitem('pyrolyse_oven')], [fluid(
 mods.gregtech.macerator.removeByInput(8, [metaitem('pyrolyse_oven')], null)
 // Lapotron Crystal * 1
 mods.gregtech.assembler.removeByInput(1920, [metaitem('gemLapotron'), metaitem('circuit.advanced_integrated') * 2], null)
-
 
 def fluid_removals = [
     fluid('polybenzimidazole'),
@@ -591,7 +575,7 @@ MIXER.recipeBuilder()
 
 //Iron III chloride
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('iron_iii_chloride') * 144)
     .outputs(metaitem('dustIronIiiChloride') * 1)
     .duration(30)
@@ -600,7 +584,7 @@ FLUID_SOLIDIFIER.recipeBuilder()
 
 //Lava
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('chilled_lava') * 1000)
     .notConsumable(metaitem('shape.mold.block'))
     .outputs(item('minecraft:obsidian') * 1)
@@ -706,7 +690,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(960)
     .buildAndRegister();
 
-
 ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtSingleTin') * 2)
     .inputs(metaitem('graphite_electrode'))
@@ -738,7 +721,7 @@ CENTRIFUGE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('mud') * 250)
     .notConsumable(metaitem('shape.mold.ball'))
     .outputs(item('biomesoplenty:mudball') * 1)
@@ -1264,8 +1247,6 @@ RecyclingHelper.addShaped('gregtech:electrolytic_cell', metaitem('susy:electroly
     [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
 ])
 
-LATEX_COLLECTOR = recipemap('latex_collector')
-
 LATEX_COLLECTOR.recipeBuilder()
     .notConsumable(fluid('water') * 10)
     .fluidOutputs(fluid('latex') * 100)
@@ -1398,7 +1379,7 @@ MACERATOR.recipeBuilder()
 // Stone Slab * 2
 mods.gregtech.cutter.removeByInput(7, [item('minecraft:stone')], [fluid('water') * 4])
 
-CUTTING_MACHINE.recipeBuilder()
+CUTTER.recipeBuilder()
     .inputs(ore('stone'))
     .outputs(item('minecraft:stone_slab') * 2)
     .duration(25)
@@ -1408,7 +1389,7 @@ CUTTING_MACHINE.recipeBuilder()
 // Cobblestone Slab * 2
 mods.gregtech.cutter.removeByInput(7, [item('minecraft:cobblestone')], [fluid('water') * 4])
 
-CUTTING_MACHINE.recipeBuilder()
+CUTTER.recipeBuilder()
     .inputs(ore('cobblestone'))
     .outputs(item('minecraft:stone_slab', 3) * 2)
     .duration(25)
@@ -1515,7 +1496,7 @@ CENTRIFUGE.recipeBuilder()
 // Light Concrete * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.block'))
     .fluidInputs(fluid('concrete') * 144)
     .outputs(item('gregtech:stone_smooth', 4))
@@ -1850,8 +1831,6 @@ RecyclingHelper.handleRecycling(metaitem('susy:jet_wingpack'), [
 ])
 
 // Register Jet Wingpack fuels
-JET_WINGPACK = recipemap('jet_wingpack_fuels')
-
 mods.jei.catalyst.add('gregtech:jet_wingpack_fuels', metaitem('susy:jet_wingpack'))
 
 JET_WINGPACK.recipeBuilder()
@@ -1948,7 +1927,6 @@ for (color in lamp_colors) {
         .buildAndRegister()
 }
 
-
 //do this separately for light gray lamps because they are called silver for some reason?
 for (int i = 0; i < 8; i++) {
     mods.gregtech.assembler.removeByInput(7, [metaitem('plateGlass') * 6, item('minecraft:glowstone_dust'), metaitem('circuit.integrated').withNbt(['Configuration': i+1])], [fluid('dye_light_gray') * 144 * 144])
@@ -1962,5 +1940,4 @@ CHEMICAL_BATH.recipeBuilder()
     .duration(10)
     .EUt(VA[ULV])
     .buildAndRegister()
-
 

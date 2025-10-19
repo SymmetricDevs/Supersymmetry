@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-REACTION_FURNACE = recipemap('reaction_furnace')
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('crucible.tantalum'))

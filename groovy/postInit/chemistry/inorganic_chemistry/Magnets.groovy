@@ -1,12 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.SinteringGlobals
 import static gregtech.api.GTValues.*
-
-HOT_ISOSTATIC_PRESS = recipemap('hot_isostatic_press')
-MIXER = recipemap('mixer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-ASSEMBLER = recipemap('assembler')
-ASSEMBLY_LINE = recipemap('assembly_line')
-POLARIZER = recipemap('polarizer')
 
 // Iron & steel magnets (LV-MV)
 

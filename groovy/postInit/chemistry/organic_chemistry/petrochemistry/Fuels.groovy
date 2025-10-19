@@ -1,38 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-CRYSTALLIZER = recipemap('crystallizer')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-CHEMICAL_BATH = recipemap('chemical_bath')
-CENTRIFUGE = recipemap('centrifuge')
-PYROLYSE = recipemap('pyrolyse_oven')
-LCR = recipemap('large_chemical_reactor')
-EBF = recipemap('electric_blast_furnace')
-VULCANIZER = recipemap('vulcanizing_press')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ARC_FURNACE = recipemap('arc_furnace')
-VACUUM_DT = recipemap('vacuum_distillation')
-AUTOCLAVE = recipemap('autoclave')
-COMPRESSOR = recipemap('compressor')
-ASSEMBLER = recipemap('assembler')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
-SINTERING_OVEN = recipemap('sintering_oven')
-BLENDER = recipemap('blender')
 
 def major_solvents = [
     'xylene',
@@ -50,7 +18,7 @@ def minor_solvents = [
 
 // Methyl-tert-butyl ether
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedChloridedAlumina'))
         .notConsumable(fluid('hydrogen') * 50)
         .fluidInputs(fluid('butane') * 50)
@@ -312,7 +280,7 @@ CSTR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedAlumina'))
     .fluidInputs(fluid('propanolamine_mix') * 50)
     .fluidInputs(fluid('ammonia') * 50)
@@ -346,7 +314,7 @@ BR.recipeBuilder()
 
     // EVA-isobutylene terpolymer for cold flow additives
 
-    POLYMERIZATION.recipeBuilder()
+    POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(3)
         .fluidInputs(fluid('ethylene') * 1000)
         .fluidInputs(fluid('isobutylene') * 1000)
@@ -366,7 +334,7 @@ BR.recipeBuilder()
 
     // Wax antisettling agent (not implemented)(N,N-dihexadecyl phthalic acid amide)
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(metaitem('catalystBedAlumina'))
         .fluidInputs(fluid('n_hexadecanol') * 100)
         .fluidInputs(fluid('ammonia') * 50)
@@ -546,7 +514,6 @@ for (major_solvent in major_solvents) {
             .duration(200)
             .EUt(VA[MV])
             .buildAndRegister()
-
 
         def antioxidantPairs = getUniquePairs(AntioxidantMap)
 
@@ -736,7 +703,7 @@ BLENDER.recipeBuilder()
 
 // RP-1
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .fluidInputs(fluid('supreme_kerosene') * 1000)
     .fluidInputs(fluid('hydrogen') * 1000)
     .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))

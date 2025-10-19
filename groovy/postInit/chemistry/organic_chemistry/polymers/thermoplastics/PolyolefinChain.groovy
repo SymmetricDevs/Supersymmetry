@@ -1,11 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-POLYMERIZATION = recipemap('polymerization_tank')
-EXTRUDER = recipemap('extruder')
 
 // Polyethylene
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(fluid('ethylene') * 2000)
         .outputs(metaitem('dustPlastic'))
@@ -13,7 +11,7 @@ POLYMERIZATION.recipeBuilder()
         .duration(300)
         .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(2)
         .notConsumable(metaitem('dustPhilipsCatalyst'))
         .fluidInputs(fluid('ethylene') * 1500)
@@ -22,7 +20,7 @@ POLYMERIZATION.recipeBuilder()
         .duration(150)
         .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(3)
         .notConsumable(metaitem('dustZieglerNattaCatalyst'))
         .fluidInputs(fluid('ethylene') * 1250)
@@ -31,7 +29,7 @@ POLYMERIZATION.recipeBuilder()
         .duration(75)
         .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(4)
         .notConsumable(metaitem('dustKaminskyCatalyst'))
         .fluidInputs(fluid('ethylene') * 1000)
@@ -49,7 +47,7 @@ mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], 
 // Ultra High Molecular Weight Polyethylene (UHMWPE) * 144
 mods.gregtech.extractor.removeByInput(30, [metaitem('plateUltraHighMolecularWeightPolyethylene')], null)
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(5)
         .notConsumable(metaitem('dustZieglerNattaCatalyst'))
         .fluidInputs(fluid('ethylene') * 1000)
@@ -58,7 +56,7 @@ POLYMERIZATION.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(6)
         .notConsumable(metaitem('dustKaminskyCatalyst'))
         .fluidInputs(fluid('ethylene') * 1000)
@@ -77,7 +75,7 @@ EXTRUDER.recipeBuilder()
 
 // Polypropylene
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(1)
         .notConsumable(metaitem('dustPhilipsCatalyst'))
         .fluidInputs(fluid('propene') * 2000)
@@ -86,7 +84,7 @@ POLYMERIZATION.recipeBuilder()
         .duration(500)
         .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(2)
         .notConsumable(metaitem('dustZieglerNattaCatalyst'))
         .fluidInputs(fluid('propene') * 1500)
@@ -95,7 +93,7 @@ POLYMERIZATION.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
         .circuitMeta(3)
         .notConsumable(metaitem('dustKaminskyCatalyst'))
         .fluidInputs(fluid('propene') * 1000)

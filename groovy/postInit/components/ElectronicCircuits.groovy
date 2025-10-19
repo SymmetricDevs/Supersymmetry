@@ -1,9 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ingredients.GTRecipeItemInput
-
-ASSEMBLER = recipemap('assembler')
-MIXER = recipemap('mixer')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 
 // Diode * 2
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineAnnealedCopper') * 4, metaitem('dustSmallGalliumArsenide')], [fluid('glass') * 144])

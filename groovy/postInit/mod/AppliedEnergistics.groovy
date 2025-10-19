@@ -1,12 +1,8 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import com.cleanroommc.groovyscript.api.GroovyLog
 import gregtech.api.metatileentity.multiblock.CleanroomType
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
-CIRCUIT_ASSEMBLER = recipemap('circuit_assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
-
 
 /*
 def solders = [
@@ -204,7 +200,6 @@ crafting.replaceShaped('appliedenergistics2:network/blocks/energy_energy_accepto
         [ore('plateTitanium'), item('appliedenergistics2:part:16'), ore('plateTitanium')]
 ])
 
-
 crafting.replaceShaped('appliedenergistics2:network/parts/export_bus', item('appliedenergistics2:part:260'), [
         [null, null, null],
         [ore('plateTitanium'), item('appliedenergistics2:material:43'), ore('plateTitanium')],
@@ -216,7 +211,6 @@ crafting.replaceShaped('appliedenergistics2:network/parts/export_bus_fluid', ite
         [ore('plateTitanium'), item('appliedenergistics2:material:43'), ore('plateTitanium')],
         [ore('plateTitanium'), metaitem('electric.pump.ev'), ore('plateTitanium')]
 ])
-
 
 crafting.replaceShaped('appliedenergistics2:network/parts/panels_semi_dark_monitor', item('appliedenergistics2:part:180'), [
         [null, null, null],
@@ -724,7 +718,6 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
         .EUt(VA[UIV])
         .buildAndRegister()
 
-
 //Fluid cells
 CIRCUIT_ASSEMBLER.recipeBuilder()
         .inputs(ore('circuitEv'))
@@ -822,7 +815,6 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
         .duration(200)
         .EUt(VA[UIV])
         .buildAndRegister()
-
 
 //Spatial cells
 CIRCUIT_ASSEMBLER.recipeBuilder()

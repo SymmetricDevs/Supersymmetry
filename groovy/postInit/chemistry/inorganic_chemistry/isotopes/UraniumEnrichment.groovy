@@ -1,9 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-REACTION_FURNACE = recipemap('reaction_furnace')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-GAS_CENTRIFUGE = recipemap('gas_centrifuge')
-MIXER = recipemap('mixer')
 
 // Natural uranium: 0.7% U-235
 // Low-enriched uranium (LEU): 5% U-235

@@ -1,11 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-DT = recipemap('distillation_tower')
-SIEVE_DT = recipemap('sieve_distillation')
-CRYSTALLIZER = recipemap('crystallizer')
-EXTRACTOR = recipemap('extractor')
-REFORMER = recipemap('catalytic_reformer_recipes')
-FLUID_HEATER = recipemap('fluid_heater')
 
 // Aromatics
     SIEVE_DT.recipeBuilder()

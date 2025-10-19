@@ -1,7 +1,6 @@
+import static prePostInit.Recipemaps.*
 import postInit.utils.RecyclingHelper
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
 
 // LV Electric Motor * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('cableGtSingleTin') * 2, metaitem('stickIron') * 2, metaitem('stickIronMagnetic'), metaitem('wireGtSingleCopper') * 4], null)

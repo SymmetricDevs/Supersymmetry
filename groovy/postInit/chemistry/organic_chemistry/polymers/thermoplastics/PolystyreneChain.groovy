@@ -1,15 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-FBR = recipemap('fixed_bed_reactor')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-POLYMERIZATION = recipemap('polymerization_tank')
 
 // Styrene 
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .fluidInputs(fluid('ethylbenzene') * 50)
     .fluidInputs(fluid('dense_steam') * 50)
     .notConsumable(ore('catalystBedIronIiiOxide'))
@@ -19,7 +13,7 @@ FBR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('crude_styrene') * 1000)
     .fluidOutputs(fluid('styrene') * 900)
     .fluidOutputs(fluid('ethylbenzene') * 100)
@@ -37,7 +31,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('styrene_suspension') * 2000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
     .fluidOutputs(fluid('polystyrene_suspension') * 2000)

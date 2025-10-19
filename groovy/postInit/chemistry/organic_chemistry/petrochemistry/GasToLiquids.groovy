@@ -1,15 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
-PYROLYSE = recipemap('pyrolyse_oven')
-BCR = recipemap('bubble_column_reactor')
-FLBR = recipemap('fluidized_bed_reactor')
-SIFTER = recipemap('sifter')
-SIEVE_DT = recipemap('sieve_distillation')
-CENTRIFUGE = recipemap('centrifuge')
-HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillation')
 
 // Syngas production and refining
 
@@ -121,7 +111,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
         .EUt(VA[MV])
         .buildAndRegister()
 
-    HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+    HIGH_PRESSURE_CRYO_DT.recipeBuilder()
         .fluidInputs(fluid('lt_light_gases') * 1490)
         .fluidOutputs(fluid('butane') * 40)
         .fluidOutputs(fluid('butene') * 50)
@@ -137,7 +127,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 
     // HT Fischer Tropsch
 
-    FLBR.recipeBuilder()
+    FLUIDIZED_BR.recipeBuilder()
         .fluidInputs(fluid('monoxide_rich_syngas') * 41700)
         .notConsumable(ore('dustHtftCatalyst'))
         .fluidOutputs(fluid('raw_ht_syncrude') * 5000)
@@ -165,7 +155,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
         .EUt(VA[MV])
         .buildAndRegister()
 
-    HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+    HIGH_PRESSURE_CRYO_DT.recipeBuilder()
         .fluidInputs(fluid('ht_light_gases') * 4480)
         .fluidOutputs(fluid('butane') * 170)
         .fluidOutputs(fluid('butene') * 180)
@@ -269,7 +259,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
 
     // Methanol to gasoline
 
-    FLBR.recipeBuilder()
+    FLUIDIZED_BR.recipeBuilder()
         .fluidInputs(fluid('methanol') * 4460)
         .notConsumable(ore('catalystBedHydrogenZsmFive'))
         .fluidOutputs(fluid('methanol_dehydration_overheads') * 580)
@@ -279,7 +269,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillati
         .EUt(VA[MV])
         .buildAndRegister()
 
-    HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+    HIGH_PRESSURE_CRYO_DT.recipeBuilder()
         .fluidInputs(fluid('methanol_dehydration_overheads') * 580)
         .fluidOutputs(fluid('butane') * 20)
         .fluidOutputs(fluid('isobutane') * 160)

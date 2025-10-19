@@ -1,8 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
-
-CRACKER = recipemap('cracker')
-DT = recipemap('sieve_distillation')
 
 crackables.each { _, crackable ->
     if (crackable.hydro_crackable) {
@@ -18,7 +16,7 @@ crackables.each { _, crackable ->
     }
 }
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('hydrocracked_light_gas_oil') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 320)
     .fluidOutputs(fluid('naphtha') * 1780)
@@ -26,7 +24,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('hydrocracked_light_cycle_oil') * 1000)
     .fluidInputs(fluid('furfural') * 40)
     .fluidOutputs(fluid('naphtha') * 450)
@@ -35,7 +33,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('hydrocracked_heavy_gas_oil') * 1000)
     .fluidOutputs(fluid('heavy_gas_oil') * 200)
     .fluidOutputs(fluid('light_gas_oil') * 500)
@@ -44,7 +42,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('hydrocracked_atmospheric_oil_residue') * 1000)
     .fluidOutputs(fluid('atmospheric_oil_residue') * 290)
     .fluidOutputs(fluid('heavy_gas_oil') * 640)
@@ -54,7 +52,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('hydrocracked_vacuum_oil_residue') * 1000)
     .fluidOutputs(fluid('vacuum_oil_residue') * 270)
     .fluidOutputs(fluid('heavy_gas_oil') * 690)
@@ -64,7 +62,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('hydrocracked_synthetic_wax') * 1000)
     .fluidOutputs(fluid('heavy_gas_oil') * 280)
     .fluidOutputs(fluid('light_gas_oil') * 260)

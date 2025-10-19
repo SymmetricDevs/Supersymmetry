@@ -1,16 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-DISTLLERY = recipemap('distillery')
-BR = recipemap('batch_reactor')
-AUTOCLAVE = recipemap('autoclave')
-DT = recipemap('distillation_tower')
-DRYER = recipemap('dryer')
-MIXER = recipemap('mixer')
-ROASTER = recipemap('roaster')
-FBR = recipemap('fixed_bed_reactor')
-LCR = recipemap('large_chemical_reactor')
-ION_EXCHANGE = recipemap('ion_exchange_column')
-SIFTER = recipemap('sifter')
 
 // 1 zeolite dust corresponds to 1 mole of Al atoms. Typically exhibits 1 Na:1 Al. Si:Al ratio (SAR) never drops below 1.
 
@@ -236,7 +225,7 @@ ION_EXCHANGE.recipeBuilder()
 
 // ZSM-5 (pentasil high SAR zeolite, methanol to gasoline, various catalysts)
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedAlumina'))
     .fluidInputs(fluid('ammonia') * 50)
     .fluidInputs(fluid('n_propanol') * 150)

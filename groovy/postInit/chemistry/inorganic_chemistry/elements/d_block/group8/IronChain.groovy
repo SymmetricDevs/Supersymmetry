@@ -1,14 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-FORGE_HAMMER = recipemap('forge_hammer')
-RF = recipemap('reaction_furnace')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-METALLURGICAL_CONVERTER = recipemap('metallurgical_converter')
-REVERBERATORY_FURNACE = recipemap('reverberatory_furnace')
 
 // Pyrometallurgical processing
 
@@ -31,7 +23,6 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('ingotWroughtI
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustWroughtIron'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('oxygen') * 200])
 mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('dustIron') * 4, metaitem('dustCarbon')], null)
 mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('dustWroughtIron') * 4, metaitem('dustCarbon')], null)
-
 
 // Should replace inner classes with closures if possible
 record BlastableIron(
@@ -56,9 +47,6 @@ class ReductantIron {
         this.byproduct_amount = 1000 * byproduct_amount
     }
 }
-
-def PBF_RECIPES = recipemap("primitive_blast_furnace")
-def EBF_RECIPES = recipemap("electric_blast_furnace")
 
 def blastables = [
     new BlastableIron('dustMagnetite', 2, 6, 4, 80),
@@ -89,7 +77,7 @@ furnace.add(metaitem('dustYellowLimonite'), metaitem('dustBandedIron'))
 for (blastable in blastables) {
     for (combustible in Carbons.combustibles()) {
         // Bessemer process
-        PBF_RECIPES.recipeBuilder()
+        PBF.recipeBuilder()
             .inputs(ore(blastable.name) * blastable.amount_required)
             .inputs(ore(combustible.name) * (combustible.equivalent(1) * blastable.reductant_required))
             .inputs(ore('dustSmallLimestone'))
@@ -99,7 +87,7 @@ for (blastable in blastables) {
             .buildAndRegister()
 
         // Modern blast furnace
-        EBF_RECIPES.recipeBuilder()
+        ERF.recipeBuilder()
             .inputs(ore(blastable.name) * blastable.amount_required)
             .inputs(ore(combustible.name) * (combustible.equivalent(1) * blastable.reductant_required))
             .inputs(ore('dustSmallLimestone'))
@@ -113,7 +101,7 @@ for (blastable in blastables) {
 
     // Direct reduced iron
     for (reductant in reductants) {
-        EBF_RECIPES.recipeBuilder()
+        ERF.recipeBuilder()
             .inputs(ore(blastable.name) * blastable.amount_required)
             .fluidInputs(fluid(reductant.name) * (blastable.reductant_required * reductant.amount_required))
             .outputs(metaitem('ingotPigIron') * blastable.amount_produced)
@@ -153,7 +141,7 @@ for (blastable in blastables) {
 
     // Cemented steel
     for (combustible in Carbons.combustibles()) {
-        PBF_RECIPES.recipeBuilder()
+        PBF.recipeBuilder()
             .inputs(item('minecraft:iron_ingot'))
             .inputs(ore(combustible.name) * combustible.equivalent(1))
             .outputs(metaitem('ingotSteel'))
@@ -161,7 +149,7 @@ for (blastable in blastables) {
             .duration(combustible.duration * 120)
             .buildAndRegister()
 
-        PBF_RECIPES.recipeBuilder()
+        PBF.recipeBuilder()
             .inputs(ore('ingotWroughtIron'))
             .inputs(ore(combustible.name) * combustible.equivalent(1))
             .outputs(metaitem('ingotSteel'))
@@ -171,7 +159,7 @@ for (blastable in blastables) {
     }
 
     // Basic oxygen process
-    EBF_RECIPES.recipeBuilder()
+    ERF.recipeBuilder()
         .inputs(ore('ingotPigIron') * 10)
         .inputs(ore('dustQuicklime'))
         .fluidInputs(fluid('oxygen') * 500)
@@ -182,7 +170,7 @@ for (blastable in blastables) {
         .circuitMeta(1)
         .buildAndRegister()
 
-    EBF_RECIPES.recipeBuilder()
+    ERF.recipeBuilder()
         .inputs(ore('ingotPigIron') * 10)
         .inputs(ore('dustQuicklime'))
         .fluidInputs(fluid('oxygen') * 500)
@@ -219,7 +207,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSteelMagn
 
 // Readding Steel Dust -> Steel Ingot recipe
 
-EBF_RECIPES.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustSteel'))
     .outputs(metaitem('ingotSteel'))
     .duration(60)
@@ -227,7 +215,7 @@ EBF_RECIPES.recipeBuilder()
     .EUt(60)
     .buildAndRegister()
 
-EBF_RECIPES.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustSteelMagnetic'))
     .outputs(metaitem('ingotSteel'))
     .duration(60)
@@ -237,7 +225,7 @@ EBF_RECIPES.recipeBuilder()
 
 // High purity iron
 
-RF.recipeBuilder()
+REACTION_FURNACE.recipeBuilder()
     .inputs(ore('dustIron'))
     .fluidInputs(fluid('carbon_monoxide') * 5000)
     .fluidOutputs(fluid('crude_iron_pentacarbonyl') * 1000)
@@ -260,7 +248,7 @@ ROASTER.recipeBuilder()
     .EUt(VA[LV])
 	.buildAndRegister()
 
-EBF_RECIPES.recipeBuilder()
+ERF.recipeBuilder()
     .circuitMeta(1)
     .inputs(ore('dustAnyPurityIron'))
     .outputs(item('minecraft:iron_ingot'))

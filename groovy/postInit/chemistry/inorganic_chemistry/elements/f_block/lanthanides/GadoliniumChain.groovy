@@ -1,9 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-DISTILLERY = recipemap('distillery')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('hydrochloric_acid') * 3625)

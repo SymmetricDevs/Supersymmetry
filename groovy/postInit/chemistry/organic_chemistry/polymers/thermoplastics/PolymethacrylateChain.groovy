@@ -1,14 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DT = recipemap('distillation_tower')
-LCR = recipemap('large_chemical_reactor')
-BCR = recipemap('bubble_column_reactor')
-CENTRIFUGE = recipemap('centrifuge')
 
 // Route 1
 
@@ -39,7 +30,7 @@ BR.recipeBuilder()
 
 // Route 2
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(ore('dustMolybdenumTrioxide'))
     .fluidInputs(fluid('isobutylene') * 50)
     .fluidInputs(fluid('oxygen') * 100)
@@ -57,7 +48,7 @@ LCR.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(ore('dustPhosphomolybdicAcid'))
     .fluidInputs(fluid('gaseous_methacrolein_mixture') * 100)
     .fluidInputs(fluid('oxygen') * 50)
@@ -121,7 +112,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('methyl_methacrylate_emulsion') * 2000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
     .fluidOutputs(fluid('polymethyl_methacrylate_solution') * 2000)

@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-REACTION_FURNACE = recipemap('reaction_furnace')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
 
 DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('holmium_chloride_solution') * 9000)

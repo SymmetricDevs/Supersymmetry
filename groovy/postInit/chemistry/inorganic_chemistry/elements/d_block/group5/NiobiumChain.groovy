@@ -1,18 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-FF = recipemap('froth_flotation')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-ROASTER = recipemap('roaster')
-AUTOCLAVE = recipemap('autoclave')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
-CHEMICAL_BATH = recipemap('chemical_bath')
-REACTION_FURNACE = recipemap('reaction_furnace')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 // Beneficiation
 
@@ -45,7 +32,7 @@ MIXER.recipeBuilder() // Impure Pyrochlore Slurry
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder() // Pyrochlore Slurry
+FROTH_FLOTATION.recipeBuilder() // Pyrochlore Slurry
     .notConsumable(ore('dustOxalicAcid'))
     .fluidInputs(fluid('impure_pyrochlore_slurry') * 2000)
     .notConsumable(fluid('hexafluorosilicic_acid') * 100)
@@ -97,7 +84,7 @@ REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
 
 // Fe2O3 + 4 Ca2Nb1.75Ta0.25O7 + 22 Al + 2 NaNO3 -> Fe2Nb7Ta + 11 Al2O3 + 8 Ca + 2 NaNO2
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('sodium_nitrite') * 144)
     .outputs(metaitem('dustSodiumNitrite'))
     .duration(40)
@@ -115,7 +102,7 @@ REACTION_FURNACE.recipeBuilder() // Impure Niobium Pentachloride
     .EUt(VA[EV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder() // Niobium Pentachloride
+DT.recipeBuilder() // Niobium Pentachloride
     .fluidInputs(fluid('impure_niobium_pentachloride') * 8000)
     .fluidOutputs(fluid('tantalum_pentachloride') * 1000)
     .fluidOutputs(fluid('niobium_pentachloride') * 7000)
@@ -123,7 +110,7 @@ DISTILLATION_TOWER.recipeBuilder() // Niobium Pentachloride
     .EUt(VA[MV])
     .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('niobium_pentachloride') * 1000)
     .outputs(metaitem('dustNiobiumPentachloride') * 6)
     .duration(100)
@@ -168,7 +155,7 @@ MIXER.recipeBuilder() // Impure Columbite Slurry
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder() // Columbite Slurry
+FROTH_FLOTATION.recipeBuilder() // Columbite Slurry
     .notConsumable(ore('dustSodiumFluorosilicate'))
     .fluidInputs(fluid('impure_columbite_slurry') * 2000)
     .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)

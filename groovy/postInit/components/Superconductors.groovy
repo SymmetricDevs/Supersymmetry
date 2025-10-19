@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import classes.*
 import static gregtech.api.GTValues.*
 
@@ -39,40 +40,6 @@ mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('dustSamarium
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMagnesiumDiboride'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('nitrogen') * 1000])
 // Hot Magnesium Diboride Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMagnesiumDiboride'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-
-def TUBE_FURNACE = recipemap('tube_furnace')
-def EBF = recipemap('electric_blast_furnace')
-def EXTRUDER = recipemap('extruder')
-def CHEMICAL_BATH = recipemap('chemical_bath')
-def CANNER = recipemap('canner')
-def ASSEMBLER = recipemap('assembler')
-VACUUM_FREEZER = recipemap('vacuum_freezer')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
-PYROLYSE = recipemap('pyrolyse_oven')
-LCR = recipemap('large_chemical_reactor')
-EBF = recipemap('electric_blast_furnace')
-VULCANIZER = recipemap('vulcanizing_press')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ARC_FURNACE = recipemap('arc_furnace')
-AUTOCLAVE = recipemap('autoclave')
-COMPRESSOR = recipemap('compressor')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
 
 def allSuperconductors = ["ManganesePhosphide", "MagnesiumDiboride", "MercuryBariumCalciumCuprate", "UraniumTriplatinum", "SamariumIronArsenicOxide", "IndiumTinBariumTitaniumCuprate", "UraniumRhodiumDinaquadide", "EnrichedNaquadahTriniumEuropiumDuranide", "RutheniumTriniumAmericiumNeutronate"]
 def lowTempSuperconductors = ["ManganesePhosphide", "UraniumTriplatinum", "IndiumTinBariumTitaniumCuprate", "UraniumRhodiumDinaquadide", "EnrichedNaquadahTriniumEuropiumDuranide", "RutheniumTriniumAmericiumNeutronate"]
@@ -218,7 +185,6 @@ mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexEnrichedNaquadah
 // Ruthenium Trinium Americium Neutronate Ingot * 8
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexRutheniumTriniumAmericiumNeutronate')], [fluid('oxygen') * 1776])
 
-
 for (supercon in allSuperconductors) {
 
         if (supercon == "ManganesePhosphide") {
@@ -237,7 +203,6 @@ for (supercon in allSuperconductors) {
         mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtQuadruple' + supercon)], null)
         mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtOctal' + supercon)], null)
         mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtHex' + supercon)], null)
-
 
 }
 
@@ -377,7 +342,6 @@ TUBE_FURNACE.recipeBuilder()
         .duration(600)
         .EUt(VA[EV])
         .buildAndRegister();
-
 
 TUBE_FURNACE.recipeBuilder()
         .inputs(ore('dustAnyPurityManganese'))

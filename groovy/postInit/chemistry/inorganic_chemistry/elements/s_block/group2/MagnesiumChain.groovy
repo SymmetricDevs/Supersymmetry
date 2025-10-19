@@ -1,17 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-EBF = recipemap('electric_blast_furnace')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
-CRYSTALLIZER = recipemap('crystallizer')
-REACTION_FURNACE = recipemap('reaction_furnace')
-LCR = recipemap('large_chemical_reactor')
-VACUUM_DT = recipemap('vacuum_distillation')
-FLBR = recipemap('fluidized_bed_reactor')
-DT = recipemap('distillation_tower')
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustMagnesite') * 1)
@@ -38,7 +27,7 @@ ROASTER.recipeBuilder()
         .duration(120)
         .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustMagnesia') * 4)
         .inputs(ore('dustQuicklime') * 4)
         .inputs(ore('dustSilicon') * 1)
@@ -50,7 +39,7 @@ EBF.recipeBuilder()
         .buildAndRegister()
 
 for (combustible in Carbons.combustibles()) {
-    EBF.recipeBuilder()
+    ERF.recipeBuilder()
         .inputs(ore('dustMagnesia') * 2)
         .inputs(ore(combustible.name) * combustible.equivalent(1))
         .outputs(metaitem('dustMagnesium'))
@@ -246,7 +235,7 @@ DT.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-FLBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustMagnesiumChlorideAmmoniate') * 9)
         .outputs(metaitem('dustPurifiedMagnesiumChloride') * 3)
         .fluidOutputs(fluid('ammonia') * 6000)

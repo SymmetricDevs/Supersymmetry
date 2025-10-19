@@ -1,15 +1,7 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-CVD = recipemap('cvd')
-FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-MACERATOR = recipemap('macerator')
-EBF = recipemap('electric_blast_furnace')
-ROASTER = recipemap('roaster')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('hafnium_extract') * 1000)
@@ -31,7 +23,7 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
 
 for (highPurityCombustible in Carbons.highPurityCombustibles()) {
-    FLUIDIZED_BED_REACTOR.recipeBuilder()
+    FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustHafniumDioxide') * 3)
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
         .fluidInputs(fluid('chlorine') * 4000)
@@ -52,7 +44,7 @@ REACTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 for (inertGas in Globals.inertGases) {
-    EBF.recipeBuilder()
+    ERF.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('hafnium_tetrachloride') * 720)
         .notConsumable(fluid(inertGas.name) * inertGas.amount_required)

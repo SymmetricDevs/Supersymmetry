@@ -1,12 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
-CRYSTALLIZER = recipemap('crystallizer')
-EBF = recipemap('electric_blast_furnace')
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustBismuthinite') * 1)

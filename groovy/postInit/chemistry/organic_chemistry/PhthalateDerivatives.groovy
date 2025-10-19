@@ -1,26 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-SIFTER = recipemap('sifter')
-LCR = recipemap('large_chemical_reactor')
-FBR = recipemap('fixed_bed_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-VACUUM_DT = recipemap('vacuum_distillation')
-MIXER = recipemap('mixer')
-CRYSTALLIZER = recipemap('crystallizer')
-FBR = recipemap('fixed_bed_reactor')
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-TBR = recipemap('trickle_bed_reactor')
-DISTILLERY = recipemap('distillery')
-FLUID_EXTRACTOR = recipemap('extractor')
-DRYER = recipemap('dryer')
-ROASTER = recipemap('roaster')
 
 // Phthalic Acid
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .fluidInputs(fluid('ortho_xylene') * 1000)
     .fluidInputs(fluid('oxygen') * 6000)
     .notConsumable(ore('dustVanadiumPentoxide'))
@@ -38,7 +21,7 @@ BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .notConsumable(ore('dustVanadiumPentoxide'))
     .fluidInputs(fluid('naphthalene') * 1000)
     .fluidInputs(fluid('oxygen') * 9000)
@@ -137,7 +120,7 @@ SIFTER.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('diluted_acetic_acid') * 2000)
     .fluidOutputs(fluid('acetic_acid') * 1000)
     .fluidOutputs(fluid('water') * 1000)
@@ -221,7 +204,7 @@ DISTILLERY.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-FLUID_EXTRACTOR.recipeBuilder()
+EXTRACTOR.recipeBuilder()
     .inputs(ore('dustParaToluicAcid'))
     .fluidOutputs(fluid('para_toluic_acid') * 1000)
     .EUt(VA[LV])
@@ -230,7 +213,7 @@ FLUID_EXTRACTOR.recipeBuilder()
 
 // Dynamit-Nobel process
 // Initialization
-FBR.recipeBuilder() 
+FIXED_BR.recipeBuilder() 
     .circuitMeta(1)
     .notConsumable(metaitem('catalystBedCobalt'))
     .fluidInputs(fluid('para_xylene') * 50)
@@ -251,7 +234,7 @@ REACTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // Looping
-FBR.recipeBuilder() 
+FIXED_BR.recipeBuilder() 
     .circuitMeta(2)
     .notConsumable(metaitem('catalystBedCobalt'))
     .fluidInputs(fluid('para_xylene') * 50)

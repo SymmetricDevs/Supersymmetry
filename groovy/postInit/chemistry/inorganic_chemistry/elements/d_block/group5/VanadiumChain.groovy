@@ -1,42 +1,10 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 
 import static gregtech.api.GTValues.*
 import gregtech.api.GregTechAPI
 import gregtech.api.unification.material.Material
 import static gregtech.api.unification.material.Materials.*
-
-VACUUM_FREEZER = recipemap('vacuum_freezer')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-ROTARY_KILN = recipemap('rotary_kiln')
-MACERATOR = recipemap('macerator')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
-PYROLYSE = recipemap('pyrolyse_oven')
-LCR = recipemap('large_chemical_reactor')
-EBF = recipemap('electric_blast_furnace')
-VULCANIZER = recipemap('vulcanizing_press')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ARC_FURNACE = recipemap('arc_furnace')
-AUTOCLAVE = recipemap('autoclave')
-COMPRESSOR = recipemap('compressor')
-ASSEMBLER = recipemap('assembler')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
-CHEMICAL_BATH = recipemap('chemical_bath')
-FLOTATION = recipemap('froth_flotation')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 
 REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustVanadinite') * 1)
@@ -133,7 +101,7 @@ MIXER.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_vanadiferous_titanomagnetite_slurry') * 2000)
         .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
         .notConsumable(fluid('n_octylamine') * 100)

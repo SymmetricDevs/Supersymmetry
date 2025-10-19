@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-ION_EXCHANGE = recipemap('ion_exchange_column')
-REACTION_FURNACE = recipemap('reaction_furnace')
 
 ION_EXCHANGE.recipeBuilder()
     .inputs(metaitem('beads.loaded_lutetium_cation_exchange'))

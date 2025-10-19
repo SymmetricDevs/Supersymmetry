@@ -1,17 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CVD = recipemap('cvd')
-CUTTER = recipemap('cutter')
-CRYSTALLIZER = recipemap('crystallizer')
-SOLIDIFIER = recipemap('fluid_solidifier')
-CUTTER = recipemap('cutter')
-FORGE_HAMMER = recipemap('forge_hammer')
-AUTOCLAVE = recipemap('autoclave')
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
-TUBE_FURNACE = recipemap('tube_furnace')
-REACTION_FURNACE = recipemap('reaction_furnace')
-FORMING_PRESS = recipemap("forming_press")
 
 CVD.recipeBuilder()
         .notConsumable(metaitem('wafer.silicon'))

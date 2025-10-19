@@ -1,28 +1,12 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static globals.SinteringGlobals.*
 
 import static gregtech.api.GTValues.*
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
-
-def ROASTER = recipemap('roaster');
-def DISTILLERY = recipemap('distillery');
-def DT = recipemap('distillation_tower');
-def MIXER = recipemap('mixer');
-def ELECTROLYZER = recipemap('electrolyzer');
-def CRYSTALLIZER = recipemap('crystallizer');
-def CUTTER = recipemap('cutter');
-def AUTOCLAVE = recipemap('autoclave');
-def ZONEREFINER = recipemap('zone_refiner');
-def VACUUMCHAMBER = recipemap('vacuum_chamber')
-def FBR = recipemap('fixed_bed_reactor')
-def SINTERING_RECIPES = recipemap("sintering_oven")
-def EBF = recipemap('electric_blast_furnace')
-def CHEMICAL_BATH = recipemap('chemical_bath')
-def POLISHING_MACHINE = recipemap('polishing_machine')
-def CSTR = recipemap('continuous_stirred_tank_reactor')
+import gregtech.api.recipes.ModHandler
+import gregtech.api.unification.material.Materials
+import gregtech.api.unification.ore.OrePrefix
+import gregtech.api.unification.stack.UnificationEntry
 
 // Silicon Carbide Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
@@ -146,7 +130,7 @@ ROASTER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-VACUUMCHAMBER.recipeBuilder()
+VACUUM_CHAMBER.recipeBuilder()
         .fluidInputs(fluid("silicon_dioxide") * 1008)
         .notConsumable(metaitem('shape.mold.crucible'))
         .outputs(metaitem('crucible.quartz'))
@@ -175,7 +159,7 @@ CRYSTALLIZER.recipeBuilder()
         .EUt(VA[MV])
         .buildAndRegister()
 
-ZONEREFINER.recipeBuilder()
+ZONE_REFINER.recipeBuilder()
         .inputs(metaitem('unrefined_boule.silicon'))
         .outputs(metaitem('boule.silicon'))
         .duration(120)
@@ -263,7 +247,7 @@ ROASTER.recipeBuilder()
         .EUt(VA[MV])
         .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('trichlorosilane') * 2000)
         .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidOutputs(fluid('disproportionated_trichlorosilane') * 2000)
@@ -279,7 +263,7 @@ DT.recipeBuilder()
         .EUt(VA[MV])
         .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('dichlorosilane') * 2000)
         .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidOutputs(fluid('disproportionated_dichlorosilane') * 2000)
@@ -295,7 +279,7 @@ DT.recipeBuilder()
         .EUt(VA[MV])
         .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('chlorosilane') * 2000)
         .notConsumable(metaitem('catalystBedAluminiumChloride'))
         .fluidOutputs(fluid('disproportionated_chlorosilane') * 2000)
@@ -313,7 +297,7 @@ DT.recipeBuilder()
 
 for (fuel in sintering_fuels) {
     if (fuel.isPlasma) {
-        SINTERING_RECIPES.recipeBuilder()
+        SINTERING_OVEN.recipeBuilder()
                 .notConsumable(metaitem('shape.mold.plate'))
                 .inputs(ore('dustSiliconCarbide'))
                 .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -325,7 +309,7 @@ for (fuel in sintering_fuels) {
 
     } else {
         for (comburent in sintering_comburents) {
-            SINTERING_RECIPES.recipeBuilder()
+            SINTERING_OVEN.recipeBuilder()
                     .notConsumable(metaitem('shape.mold.plate'))
                     .inputs(ore('dustSiliconCarbide'))
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -352,7 +336,7 @@ CSTR.recipeBuilder()
 
 // Silicates
 
-BATCH_REACTOR.recipeBuilder()
+BR.recipeBuilder()
     .inputs(ore('dustCalciumMetasilicate') * 5)
     .fluidInputs(fluid('carbon_dioxide') * 1000)
     .outputs(metaitem('dustCalcite') * 5)

@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-BCR = recipemap('bubble_column_reactor')
-FBR = recipemap('fixed_bed_reactor')
 
 // TODO: move other organic solvents (THF etc.) here
 
@@ -33,7 +30,7 @@ FBR = recipemap('fixed_bed_reactor')
 
     // DMS
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedAlumina'))
         .fluidInputs(fluid('methanol') * 100)
         .fluidInputs(fluid('hydrogen_sulfide') * 50)
@@ -45,7 +42,7 @@ FBR = recipemap('fixed_bed_reactor')
 
     // DMSO
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedCupricOxide'))
         .fluidInputs(fluid('dimethyl_sulfide') * 50)
         .fluidInputs(fluid('oxygen') * 50)
@@ -58,7 +55,7 @@ FBR = recipemap('fixed_bed_reactor')
 
     // EDC (ethylene dichloride / 1,2-dichloroethane / Freon 150)
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 100)
         .fluidInputs(fluid('ethylene') * 50)
         .notConsumable(ore('catalystBedIronIiiOxide'))
@@ -67,7 +64,7 @@ FBR = recipemap('fixed_bed_reactor')
         .duration(10)
         .buildAndRegister()
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('ethylene') * 50)
         .fluidInputs(fluid('hydrochloric_acid') * 100)
         .fluidInputs(fluid('oxygen') * 50)
@@ -106,7 +103,7 @@ FBR = recipemap('fixed_bed_reactor')
 
     // Isopropyl Amine
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedNickel'))
         .fluidInputs(fluid('acetone') * 50)
         .fluidInputs(fluid('hydrogen') * 100)
@@ -116,7 +113,7 @@ FBR = recipemap('fixed_bed_reactor')
         .EUt(VA[MV])
         .buildAndRegister()
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedNickel'))
         .fluidInputs(fluid('isopropyl_alcohol') * 50)
         .fluidInputs(fluid('ammonia') * 50)

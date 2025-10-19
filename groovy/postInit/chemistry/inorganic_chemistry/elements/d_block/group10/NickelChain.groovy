@@ -1,13 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-PRIMITIVEBLASTFURNACE = recipemap('primitive_blast_furnace')
-EBF = recipemap('electric_blast_furnace')
-ROASTER = recipemap('roaster')
-REACTION_FURNACE = recipemap('reaction_furnace')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
 
 // Garnierite Dust * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustPentlandite')], [fluid('oxygen') * 3000])
@@ -31,7 +24,7 @@ MIXER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_pentlandite_slurry') * 2000)
     .notConsumable(ore('dustSodiumIsobutylXanthate'))
     .notConsumable(fluid('copper_sulfate_solution') * 100)
@@ -52,7 +45,7 @@ CLARIFIER.recipeBuilder()
 
 // Furnace conversion
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustPentlandite'))
     .fluidInputs(fluid('oxygen') * 3000)
     .outputs(metaitem('dustGarnierite'))
@@ -62,7 +55,7 @@ EBF.recipeBuilder()
     .duration(40)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .circuitMeta(1)
     .inputs(ore('dustFlotatedPentlandite'))
     .fluidInputs(fluid('oxygen') * 3000)
@@ -74,7 +67,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 for (combustible in Carbons.combustibles()) {
-    PRIMITIVEBLASTFURNACE.recipeBuilder()
+    PBF.recipeBuilder()
         .inputs(ore('dustAnyPurityNickel'))
         .inputs(ore(combustible.name) * combustible.equivalent(1))
         .outputs(metaitem('ingotNickel'))
@@ -82,7 +75,7 @@ for (combustible in Carbons.combustibles()) {
         .duration(250)
         .buildAndRegister()
 
-    PRIMITIVEBLASTFURNACE.recipeBuilder()
+    PBF.recipeBuilder()
         .inputs(ore('dustGarnierite'))
         .inputs(ore(combustible.name) * combustible.equivalent(1))
         .outputs(metaitem('ingotNickel'))
@@ -90,7 +83,7 @@ for (combustible in Carbons.combustibles()) {
         .duration(250)
         .buildAndRegister()
 
-    PRIMITIVEBLASTFURNACE.recipeBuilder()
+    PBF.recipeBuilder()
         .inputs(ore('dustPentlandite'))
         .inputs(ore(combustible.name) * combustible.equivalent(4))
         .outputs(metaitem('ingotNickel'))
@@ -98,7 +91,7 @@ for (combustible in Carbons.combustibles()) {
         .duration(250)
         .buildAndRegister()
 
-    EBF.recipeBuilder()
+    ERF.recipeBuilder()
         .inputs(ore('dustGarnierite'))
         .inputs(ore(combustible.name) * combustible.equivalent(1))
         .outputs(metaitem('ingotNickel'))

@@ -1,9 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-CRACKER = recipemap('cracker')
-DT = recipemap('sieve_distillation')
 
 crackables.each { _, crackable -> 
     if (crackable.steam_crackable) {
@@ -34,7 +31,7 @@ crackables.each { _, crackable ->
 - Light naphtha: 5.5 carbons per mol
 - Heavy naphtha: 9 carbons per mol */
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_ethane') * 1000)
     .fluidOutputs(fluid('ethylene') * 890)
     .fluidOutputs(fluid('methane') * 220)
@@ -43,7 +40,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_propane') * 1000)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 30)
     .fluidOutputs(fluid('butadiene') * 40)
@@ -55,7 +52,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_butane') * 1000)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 45)
     .fluidOutputs(fluid('butadiene') * 45)
@@ -68,7 +65,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_light_naphtha') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 25)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 185)
@@ -82,7 +79,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_heavy_naphtha') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 30)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 310)
@@ -96,7 +93,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_light_gas_oil') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 235)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 295)
@@ -110,7 +107,7 @@ DT.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_heavy_gas_oil') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 355)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 565)

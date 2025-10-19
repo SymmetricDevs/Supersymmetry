@@ -1,19 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
-
-ASSEMBLER = recipemap('assembler')
-CIRCUIT_ASSEMBLER = recipemap('circuit_assembler')
-FORMING_PRESS = recipemap('forming_press')
-CHEMICAL_BATH = recipemap('chemical_bath')
-MIXER = recipemap('mixer')
-LASER_ENGRAVER = recipemap('laser_engraver')
-ELECTROLYZER = recipemap('electrolyzer')
-CUTTER = recipemap('cutter')
-ION_IMPLANTER = recipemap('ion_implantation')
-UV_LIGHT_BOX = recipemap('uv_light_box')
-CVD = recipemap('cvd')
-REACTION_FURNACE = recipemap('reaction_furnace')
-CSTR = recipemap('continuous_stirred_tank_reactor')
 
 /*
 Etchants used:
@@ -371,7 +358,6 @@ for (ndopant in NDopant.ndopants) {
 }
 
 //WAFERS
-
 
 generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', MV, 4, 1, 1, false)
 generatePatterningRecipes('wafer.silicon', 'patterned.ulpic', 'mask.ulpic', MV, 4, 1, 2, false)

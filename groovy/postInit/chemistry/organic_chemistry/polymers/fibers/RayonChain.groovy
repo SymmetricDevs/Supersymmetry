@@ -1,14 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ModHandler
 import gregtech.api.unification.material.Materials
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
-
-def POLYMERIZATION = recipemap('polymerization_tank');
-def CHEMICAL_BATH = recipemap('chemical_bath');
-def COMPRESSOR = recipemap('compressor');
-def LCR = recipemap('large_chemical_reactor')
-def MIXER = recipemap('mixer')
 
 CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('dustCellulose') * 4)

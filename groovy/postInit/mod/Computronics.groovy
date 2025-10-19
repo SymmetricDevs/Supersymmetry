@@ -384,7 +384,6 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 }
 
-
 crafting.addShaped('computronics:iron_note_block0', item('computronics:iron_note_block'), [
     [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
     [ore('plateSteel'), item('minecraft:noteblock'), ore('plateSteel')],

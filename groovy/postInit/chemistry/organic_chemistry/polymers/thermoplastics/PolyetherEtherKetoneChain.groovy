@@ -1,16 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-BCR = recipemap('bubble_column_reactor')
-ROASTER = recipemap('roaster')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
-FBR = recipemap('fixed_bed_reactor')
-DISTILLERY = recipemap('distillery')
-DT = recipemap('distillation_tower')
-MIXER = recipemap('mixer')
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-EXTRACTOR = recipemap('extractor')
-SOLIDIFIER = recipemap('fluid_solidifier')
 
 // 4,4'-difluorobenzophenone
 BR.recipeBuilder()

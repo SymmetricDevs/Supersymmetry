@@ -1,11 +1,10 @@
+import static prePostInit.Recipemaps.*
 import globals.Batteries
 import static gregtech.api.GTValues.*
 import gregtech.api.capability.GregtechCapabilities
 import gregtech.api.capability.IElectricItem
 
 log.infoMC("Running PoweredTools.groovy...")
-
-ASSEMBLER = recipemap('assembler')
 
 def setChargeFromBatteryFn = { output, inputs, info ->
     def batteryTag = inputs['battery']?.getTagCompound()

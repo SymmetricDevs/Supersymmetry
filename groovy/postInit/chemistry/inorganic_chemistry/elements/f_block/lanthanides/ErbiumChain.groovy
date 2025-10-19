@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-DISTILLERY = recipemap('distillery')
 
 DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('erbium_sulfate_solution') * 3000)

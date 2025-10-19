@@ -1,35 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
-PYROLYSE = recipemap('pyrolyse_oven')
-LCR = recipemap('large_chemical_reactor')
-EBF = recipemap('electric_blast_furnace')
-VULCANIZER = recipemap('vulcanizing_press')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ARC_FURNACE = recipemap('arc_furnace')
-AUTOCLAVE = recipemap('autoclave')
-COMPRESSOR = recipemap('compressor')
-ASSEMBLER = recipemap('assembler')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
-WEAPONS_FACTORY = recipemap('weapons_factory')
-CANNER = recipemap('canner')
 
 def name_removals = [
     "gaspunk:diffuser",
@@ -155,7 +126,7 @@ CSTR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedAluminiumChloride'))
     .fluidInputs(fluid('ethylene_oxide') * 50)
     .fluidInputs(fluid('diisopropylamine') * 50)
@@ -261,7 +232,7 @@ MIXER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedCopperIOxide'))
     .fluidInputs(fluid('acetone') * 100)
     .fluidInputs(fluid('hydrogen') * 400)
@@ -271,7 +242,7 @@ FBR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('diluted_diisopropylamine') * 3000)
     .fluidOutputs(fluid('water') * 2000)
     .fluidOutputs(fluid('diisopropylamine') * 1000)
@@ -288,7 +259,7 @@ CSTR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('hydrated_propene') * 3000)
     .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
     .fluidOutputs(fluid('isopropyl_alcohol') * 1000)
@@ -296,7 +267,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedAlumina'))
     .fluidInputs(fluid('ethanol') * 300)
     .fluidInputs(fluid('ammonia') * 150)
@@ -305,7 +276,7 @@ FBR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('ethylamine_mix') * 9000)
     .fluidOutputs(fluid('water') * 6000)
     .fluidOutputs(fluid('triethylamine') * 1000)

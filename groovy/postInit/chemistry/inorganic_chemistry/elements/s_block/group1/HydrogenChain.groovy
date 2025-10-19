@@ -1,11 +1,7 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-EBF = recipemap('electric_blast_furnace')
-FBR = recipemap('fluidized_bed_reactor')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PYROLYSE = recipemap('pyrolyse_oven')
-
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustCeriumIvOxide') * 12)
         .outputs(metaitem('dustCeriumIiiOxide') * 10)
         .fluidOutputs(fluid('oxygen') * 2000)
@@ -14,7 +10,7 @@ EBF.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-FBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustCeriumIiiOxide') * 10)
         .fluidInputs(fluid('water') * 2000)
         .outputs(metaitem('dustCeriumIvOxide') * 12)
@@ -23,7 +19,7 @@ FBR.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-PYROLYSE.recipeBuilder()
+PYROLYSE_OVEN.recipeBuilder()
     .fluidInputs(fluid('methane') * 1000)
     .fluidOutputs(fluid('hydrogen') * 4000)
     .inputs(ore('dustAnyPurityBismuth'))

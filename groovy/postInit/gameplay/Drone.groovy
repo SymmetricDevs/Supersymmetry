@@ -1,8 +1,7 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.RecipeBuilder
-
-def DRONE_PAD = recipemap('drone_pad');
 
 crafting.addShaped("susy:drone_pad_controller", metaitem('susy:drone_pad'), [
     [ore('plateSteel'), metaitem('emitter.lv'), ore('plateSteel')],

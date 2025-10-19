@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
 
 // Tungstensteel
 ADVANCED_ARC_FURNACE.recipeBuilder()

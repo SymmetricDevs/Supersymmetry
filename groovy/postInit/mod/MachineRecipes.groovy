@@ -1,11 +1,7 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import postInit.utils.RecyclingHelper
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
-MIXER = recipemap('mixer')
-EXTRUDER = recipemap('extruder')
-SINTERING_OVEN = recipemap('sintering_oven')
 
 def name_removals = [
     'gregtech:gregtech.machine.fisher.lv',
@@ -316,7 +312,6 @@ SINTERING_OVEN.recipeBuilder()
     .EUt(VA[LV])
     .duration(150)
     .buildAndRegister()
-
 
 for (i = 1; i <= 8; i++) {
     RecyclingHelper.removeByOutput(metaitem('arc_furnace.' + Globals.voltageTiers[i]))

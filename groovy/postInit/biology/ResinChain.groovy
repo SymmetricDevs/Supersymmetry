@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 //REMOVALS
@@ -13,10 +14,6 @@ crafting.addShaped('gregtech:resin_item', metaitem('rubber_drop') * 4, [
         [null, metaitem('shape.mold.ball').reuse(), null]
 ])
 
-def DISTILLERY = recipemap('distillery');
-def CENTRIFUGE = recipemap('centrifuge');
-def FLUID_SOLIDIFIER = recipemap('fluid_solidifier');
-
 DISTILLERY.recipeBuilder()
         .fluidInputs(fluid('resin') * 100)
         .fluidOutputs(fluid('glue') * 75)
@@ -24,7 +21,7 @@ DISTILLERY.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('resin') * 250)
         .outputs(metaitem('rubber_drop'))
         .duration(20)

@@ -1,10 +1,7 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-POLYMERIZATION = recipemap('polymerization_tank')
-BR = recipemap('batch_reactor')
-EXTRUDER = recipemap('extruder')
-
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('ethylene_glycol') * 1000)
     .fluidInputs(fluid('terephthalic_acid') * 2592)
     .outputs(metaitem('dustPolyethyleneTerephthalate') * 2)
@@ -22,7 +19,7 @@ BR.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .notConsumable(ore('dustCobaltIiAcetate'))
     .fluidInputs(fluid('ethylene_glycol') * 1000)
     .fluidInputs(fluid('dimethyl_terephthalate') * 3456)

@@ -1,10 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-EBF = recipemap('electric_blast_furnace')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-VACUUM_DT = recipemap('vacuum_distillation')
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustGypsum') * 8)

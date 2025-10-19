@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 crafting.replaceShaped('xtones:zome', item('xtones:zome') * 8, [
@@ -35,8 +36,6 @@ crafting.replaceShaped('xtones:base', item('xtones:base') * 32, [
         [ore('slabStone'), ore('stone'), ore('slabStone')],
         [null, ore('slabStone'), ore('slabStone')]
 ])
-
-ASSEMBLER = recipemap('assembler')
 
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stone'))

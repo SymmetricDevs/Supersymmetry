@@ -264,7 +264,6 @@ for (int i = 4; i < 8; i++) {
             .buildAndRegister();
 }
 
-
 crafting.addShapeless("gtfo:wood_crafting_0", item('gregtechfoodoption:gtfo_planks_0') * 4, [item('gregtechfoodoption:gtfo_log_0')])
 crafting.addShapeless("gtfo:wood_crafting_1", item('gregtechfoodoption:gtfo_planks_0:1') * 4, [item('gregtechfoodoption:gtfo_log_0:4')])
 crafting.addShapeless("gtfo:wood_crafting_2", item('gregtechfoodoption:gtfo_planks_0:2') * 4, [item('gregtechfoodoption:gtfo_log_0:8')])

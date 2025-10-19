@@ -1,10 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-SIEVE_DT = recipemap('sieve_distillation')
-ION_EXCHANGE = recipemap('ion_exchange_column')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-BR = recipemap('batch_reactor')
 
 // Stage 1: 8x enrichment of deuterium from sea water, D = 0.015625% -> 0.125%
 

@@ -1,22 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
-CENTRIFUGE = recipemap('centrifuge')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-DISTILLERY = recipemap('distillery')
-SINTERING_OVEN = recipemap('sintering_oven')
-AUTOCLAVE = recipemap('autoclave')
-FLUID_EXTRACTOR = recipemap('extractor')
-ARC_FURNACE = recipemap('arc_furnace')
-DT = recipemap('distillation_tower')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-LCR = recipemap('large_chemical_reactor')
-BLENDER = recipemap('blender')
-SIFTER = recipemap('sifter')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 //Emerald: 3BeO · Al2O3 · 6SiO2
 //Bertrandite: Be4Si2O7(OH)2
@@ -167,7 +151,7 @@ DT.recipeBuilder() //Maybe switch to a fractional condenser
     .duration(480)
     .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('aluminium_chloride') * 1000)
     .outputs(metaitem('dustAluminiumChloride') * 4)
     .EUt(VA[LV])

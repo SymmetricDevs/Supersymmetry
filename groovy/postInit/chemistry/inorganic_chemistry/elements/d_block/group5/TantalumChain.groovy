@@ -1,20 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-FF = recipemap('froth_flotation')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-ROASTER = recipemap('roaster')
-AUTOCLAVE = recipemap('autoclave')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
-CHEMICAL_BATH = recipemap('chemical_bath')
-CRYSTALLIZER = recipemap('crystallizer')
-REACTION_FURNACE = recipemap('reaction_furnace')
-FORMING_PRESS = recipemap("forming_press")
-MIXER_SETTLER = recipemap('mixer_settler')
 
 // Beneficiation
 
@@ -46,7 +31,7 @@ MIXER.recipeBuilder() // Impure Tantalite Slurry
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder() // Tantalite Slurry
+FROTH_FLOTATION.recipeBuilder() // Tantalite Slurry
     .notConsumable(ore('dustSodiumFluorosilicate'))
     .fluidInputs(fluid('impure_tantalite_slurry') * 2000)
     .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)
@@ -123,7 +108,7 @@ CRYSTALLIZER.recipeBuilder() // Potassium Heptafluorotantalate
     .EUt(VA[HV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('hydrofluoric_ammonia_mixture') * 2500)
     .fluidOutputs(fluid('water') * 2500)
     .fluidOutputs(fluid('hydrogen_fluoride') * 9000)
@@ -154,7 +139,7 @@ MIXER_SETTLER.recipeBuilder() // Fluorotantalic Acid Solution
     .buildAndRegister()
 
 // From pyrochlore
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('tantalum_pentachloride') * 1000)
     .outputs(metaitem('dustTantalumPentachloride') * 6)
     .duration(100)

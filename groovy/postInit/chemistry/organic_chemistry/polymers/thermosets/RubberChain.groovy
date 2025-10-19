@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ModHandler
 import gregtech.api.unification.material.Materials
@@ -5,14 +6,6 @@ import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
 
 import groovy.transform.TupleConstructor
-
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-MIXER = recipemap('mixer')
-SIFTER = recipemap('sifter')
-DRYER = recipemap('dryer')
-EXTRACTOR = recipemap('extractor')
-COAGULATOR = recipemap("coagulation_tank")
-VULCANIZER = recipemap("vulcanizing_press")
 
 //REMOVALS
 // Raw Rubber Pulp * 2
@@ -256,7 +249,7 @@ MIXER.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('styrene_isoprene_solution') * 5000)
     .notConsumable(fluid('butyllithium') * 100)
     .fluidOutputs(fluid('polymerized_styrene_isoprene_solution') * 5000)
@@ -291,7 +284,7 @@ MIXER.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('styrene_butadiene_solution') * 5000)
     .notConsumable(fluid('butyllithium') * 100)
     .fluidOutputs(fluid('polymerized_styrene_butadiene_solution') * 5000)

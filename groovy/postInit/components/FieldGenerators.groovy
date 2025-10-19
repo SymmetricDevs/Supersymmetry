@@ -32,7 +32,6 @@ mods.gregtech.assembly_line.removeByInput(24000, [metaitem('frameNaquadahAlloy')
 // UV Field Generator * 1
 mods.gregtech.assembly_line.removeByInput(100000, [metaitem('frameTritanium'), metaitem('plateTritanium') * 6, metaitem('gravistar'), metaitem('emitter.uv') * 2, metaitem('circuit.wetware_computer') * 2, metaitem('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, metaitem('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, metaitem('cableGtSingleYttriumBariumCuprate') * 4], [fluid('soldering_alloy') * 1728, fluid('naquadria') * 576])
 
-
 //REPLACEMENTS
 
 def cryoLiquids = [

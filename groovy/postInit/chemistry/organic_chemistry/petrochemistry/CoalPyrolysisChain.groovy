@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 
 import static gregtech.api.GTValues.*
@@ -5,13 +6,6 @@ import gregtech.api.recipes.ModHandler
 import gregtech.api.unification.material.Materials
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
-
-def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
-def DISTILLATION_TOWER = recipemap('distillation_tower');
-def CENTRIFUGE = recipemap('centrifuge');
-def MIXER = recipemap('mixer');
-def CSTR = recipemap('continuous_stirred_tank_reactor');
-def DISTILLERY = recipemap('distillery');
 
 Carbons['dustCoal', 'gemCoal', 'dustCharcoal', 'gemCharcoal'].each { input ->
     int CARBON_PROCESSED = 1200
@@ -85,7 +79,7 @@ CENTRIFUGE.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .chancedOutput(metaitem('dustAsphalt'), 5000, 0)
         .fluidInputs(fluid('coal_tar') * 1000)
         .fluidOutputs(fluid('anthracene_oil') * 100)
@@ -114,7 +108,7 @@ CENTRIFUGE.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .fluidInputs(fluid('purified_naphthalene_oil') * 1000)
         .fluidOutputs(fluid('anthracene_oil') * 100)
         .fluidOutputs(fluid('naphthalene') * 800)
@@ -148,7 +142,7 @@ CSTR.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .fluidInputs(fluid('impure_pyridine') * 1000)
         .outputs(metaitem('dustAmmoniumSulfate') * 15)
         .fluidOutputs(fluid('gtfo_aniline') * 250)
@@ -174,7 +168,7 @@ CENTRIFUGE.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .fluidInputs(fluid('anthracene_extract') * 1000)
         .chancedOutput(metaitem('dustAnthracene'), 8000, 0)
         .fluidOutputs(fluid('ethylene_glycol') * 100)
@@ -191,7 +185,7 @@ CSTR.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .fluidInputs(fluid('impure_quinoline') * 1000)
         .outputs(metaitem('dustAmmoniumSulfate') * 15)
         .fluidOutputs(fluid('quinoline') * 800)

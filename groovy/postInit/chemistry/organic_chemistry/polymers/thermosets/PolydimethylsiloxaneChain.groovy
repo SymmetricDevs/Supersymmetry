@@ -1,17 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-DISTILLATION_TOWER = recipemap('distillation_tower')
-FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-CENTRIFUGE = recipemap('centrifuge')
-ROASTER = recipemap('roaster')
-PHASE_SEPARATOR = recipemap('phase_separator')
-CHEMICAL_BATH = recipemap('chemical_bath')
-POLYMERIZATION = recipemap('polymerization_tank')
 
 // Polydimethylsiloxane
 
-FLUIDIZED_BED_REACTOR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .fluidInputs(fluid('chloromethane') * 2000)
     .notConsumable(ore('dustCopperIOxide'))
     .inputs(ore('dustSilicon'))
@@ -20,7 +12,7 @@ FLUIDIZED_BED_REACTOR.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('organosilicon_mixture') * 1000)
     .fluidOutputs(fluid('dimethyldichlorosilane') * 800)
     .fluidOutputs(fluid('methyltrichlorosilane') * 100)
@@ -60,7 +52,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustSiliconDioxide'))
@@ -69,7 +61,7 @@ POLYMERIZATION.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustCarbon'))

@@ -1,19 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ModHandler
 import gregtech.api.unification.material.Materials
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
-
-MIXER = recipemap('mixer')
-FLUID_HEATER = recipemap('fluid_heater')
-CENTRIFUGE = recipemap('centrifuge')
-GREENHOUSE = recipemap('greenhouse')
-COMPRESSOR = recipemap('compressor')
-CHEMICAL_BATH = recipemap('chemical_bath')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
-EXTRUDER = recipemap('extruder')
-EXTRACTOR = recipemap('extractor')
-MACERATOR = recipemap('macerator')
 
 //REMOVALS
 
@@ -117,8 +107,6 @@ MIXER.recipeBuilder()
         .EUt(VA[LV])
         .duration(60)
         .buildAndRegister()
-
-
 
 COMPRESSOR.recipeBuilder()
         .inputs(ore('treeLeaves') * 16)

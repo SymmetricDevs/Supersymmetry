@@ -1,15 +1,8 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import static gregtech.api.GTValues.*
 import techguns.items.guns.GenericGun
 import techguns.plugins.crafttweaker.EnumGunStat
-
-WEAPONS_FACTORY = recipemap('weapons_factory')
-ASSEMBLER = recipemap('assembler')
-CANNER = recipemap('canner')
-ROASTER = recipemap('roaster')
-FORMING_PRESS = recipemap('forming_press')
-LATHE = recipemap('lathe')
-CHEMICAL_BATH = recipemap('chemical_bath')
 
 def name_removals = [
     "techguns:basicmachine_0_ammo_press",
@@ -238,11 +231,6 @@ ore_dict.remove('ingotLead', item('techguns:itemshared', 82))
 ore_dict.remove('ingotSteel', item('techguns:itemshared', 83))
 ore_dict.remove('ingotTitanium', item('techguns:itemshared', 85))
 
-
-
-
-
-
 crafting.replaceShaped("techguns:stielgranate", item('techguns:stielgranate'), [
     [null, null, null],
     [null, item('techguns:itemshared', 5), null],
@@ -412,7 +400,6 @@ crafting.replaceShaped("techguns:pistolrounds", item('techguns:itemshared', 1) *
 crafting.replaceShaped("techguns:shotgunrounds", item('techguns:itemshared', 2) * 8, [
         [ore('plateSteel'), ore('gunpowder'), ore('roundLead')],
 ])
-
 
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
     ore('plateRubber'), 

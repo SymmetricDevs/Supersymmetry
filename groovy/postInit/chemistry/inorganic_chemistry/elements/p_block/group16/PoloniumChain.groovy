@@ -1,12 +1,7 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-CANNER = recipemap('canner')
-FLUID_EXTRACTOR = recipemap('extractor')
-BR = recipemap('batch_reactor')
-BLENDER = recipemap('blender')
-MIXER_SETTLER = recipemap('mixer_settler')
-
-FLUID_EXTRACTOR.recipeBuilder()
+EXTRACTOR.recipeBuilder()
     .inputs(metaitem('fuelPelletDepletedBismuth'))
     .fluidOutputs(fluid('irradiated_bismuth') * 144)
     .duration(20)

@@ -1,11 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-MACERATOR = recipemap('macerator');
-MIXER = recipemap('mixer');
-EVAPORATION_POOL = recipemap('evaporation_pool');
-CSTR = recipemap('continuous_stirred_tank_reactor');
-BR = recipemap('batch_reactor');
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
 MACERATOR.recipeBuilder()
     .inputs(item('susy:resource_block:1'))
@@ -48,7 +42,7 @@ BR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('iodine') * 144)
     .outputs(metaitem('dustIodine'))
     .duration(100)

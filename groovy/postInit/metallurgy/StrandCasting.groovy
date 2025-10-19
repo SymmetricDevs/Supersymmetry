@@ -1,19 +1,11 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import postInit.utils.RecyclingHelper
-
-POLISHING = recipemap('polishing_machine')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-ASSEMBLER = recipemap('assembler')
-SINTERING_OVEN = recipemap('sintering_oven')
-METALLURGICAL_CONVERTER = recipemap('metallurgical_converter')
-MIXER = recipemap('mixer')
-EBF = recipemap('electric_blast_furnace')
 
 // Recipes for the machines and components needed for the multiblocks
 
 // Rolls
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('vanadium_steel') * 432)
     .inputs(metaitem('shape.mold.cylinder'))
     .outputs(metaitem('work_roll.unfinished'))
@@ -21,7 +13,7 @@ FLUID_SOLIDIFIER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-POLISHING.recipeBuilder()
+POLISHING_MACHINE.recipeBuilder()
     .inputs(metaitem('work_roll.unfinished'))
     .fluidInputs(fluid('silicon_dioxide_slurry') * 100)
     .outputs(item('susy:metallurgy_roll'))
@@ -240,7 +232,7 @@ MIXER.recipeBuilder()
     .duration(10)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustKyanite'))
     .outputs(metaitem('dustMullitizedKyanite'))
     .EUt(VA[HV])

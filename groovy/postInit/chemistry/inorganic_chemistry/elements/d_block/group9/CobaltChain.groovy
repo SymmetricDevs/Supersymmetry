@@ -1,20 +1,12 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-EBF = recipemap('electric_blast_furnace')
-PBF_RECIPES = recipemap("primitive_blast_furnace")
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //ROAST RECOVERY OF As2O3
 //COBALTITE MODIFICATION
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCobaltite')], [fluid('oxygen') * 3000])
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustCobaltite') * 2)
         .fluidInputs(fluid('oxygen') * 9000)
         .outputs(metaitem('dustCobaltOxide') * 2)
@@ -25,7 +17,7 @@ EBF.recipeBuilder()
         .duration(240)
         .buildAndRegister()
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustCobaltite') * 2)
         .fluidInputs(fluid('oxygen') * 9000)
         .outputs(metaitem('dustCobaltOxide') * 4)
@@ -68,7 +60,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .buildAndRegister()
 
 for (combustible in Carbons.combustibles()) {
-    EBF.recipeBuilder()
+    ERF.recipeBuilder()
         .inputs(ore('dustCobaltOxide') * 2)
         .inputs(ore(combustible.name) * combustible.equivalent(1))
         .outputs(metaitem('dustCobalt'))
@@ -89,7 +81,7 @@ def cobalt_matte_recipes = [
 
 cobalt_matte_recipes.forEach { recipe ->
     Carbons.combustibles().forEach { combustible ->
-        PBF_RECIPES.recipeBuilder()
+        PBF.recipeBuilder()
                 .inputs(ore(recipe[0]))
                 .inputs(ore(combustible.name) * (combustible.equivalent(2)))
                 .outputs(metaitem('ingotCobaltMatte') * recipe[1])

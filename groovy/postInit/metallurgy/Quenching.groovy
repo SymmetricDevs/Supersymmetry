@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import classes.*
 
 import static gregtech.api.GTValues.*
@@ -8,12 +9,6 @@ import gregtech.api.unification.material.properties.IngotProperty
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.util.GTUtility
 import gregtech.loaders.recipe.handlers.OreRecipeHandler
-
-
-CHEMICAL_BATH = recipemap('chemical_bath')
-QUENCHER = recipemap('quencher')
-RADIATOR = recipemap('radiator')
-COOLING_UNIT = recipemap('natural_draft_cooling_tower')
 
 //QuenchingFluid(cold fluid, hot fluid, amount, duration, isInert, generateHeatRadiatorRecipes)
 
@@ -251,7 +246,7 @@ RADIATOR.recipeBuilder()
     .duration(100)
     .buildAndRegister();
 
-COOLING_UNIT.recipeBuilder()
+COOLING_TOWER.recipeBuilder()
     .fluidInputs(fluid('hot_air') * 1000)
     .fluidOutputs(liquid('air') * 1000)
     .duration(50)

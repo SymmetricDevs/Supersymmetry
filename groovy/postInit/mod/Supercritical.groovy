@@ -1,17 +1,9 @@
+import static prePostInit.Recipemaps.*
 import postInit.utils.RecyclingHelper
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ingredients.nbtmatch.*
 
 import static gregtech.api.unification.material.Materials.*;
-
-ASSEMBLER = recipemap('assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-SINTERING_OVEN = recipemap('sintering_oven')
-FORMING_PRESS = recipemap('forming_press')
-CANNER = recipemap('canner')
-SPENT_FUEL_POOL = recipemap('spent_fuel_pool')
-CUTTING_MACHINE = recipemap('cutter')
 
 // Gas Centrifuge
 
@@ -449,7 +441,7 @@ for (fuel in fuels) {
         .EUt(VA[LV])
         .buildAndRegister()
 
-    CUTTING_MACHINE.recipeBuilder()
+    CUTTER.recipeBuilder()
         .inputs(metaitem('fuelRodDepleted' + fuel))
         .outputs(metaitem('fuelPelletDepleted' + fuel) * 16)
         .duration(200)

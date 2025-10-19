@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster');
-REACTION_FURNACE = recipemap('reaction_furnace')
-
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustPyrite') * 2)

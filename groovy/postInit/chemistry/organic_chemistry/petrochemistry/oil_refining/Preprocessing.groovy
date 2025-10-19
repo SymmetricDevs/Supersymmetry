@@ -1,10 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
-
-MIXER = recipemap('mixer')
-ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
-CENTRIFUGE = recipemap('centrifuge')
-FLUID_HEATER = recipemap('fluid_heater')
 
 oils.each { _, oil -> {
         // Desalting

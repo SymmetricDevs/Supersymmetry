@@ -1,15 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ModHandler
 import gregtech.api.unification.material.Materials
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
-
-def PYROLYSE_OVEN = recipemap('pyrolyse_oven')
-def DISTILLERY = recipemap('distillery')
-def MIXER = recipemap('mixer')
-def DISTILLATION_TOWER = recipemap('distillation_tower')
-def AUTOCLAVE = recipemap('autoclave')
-def FERMENTER = recipemap('vat_fermentation')
 
 //GENERIC BIOMASS CHAIN
 PYROLYSE_OVEN.recipeBuilder()

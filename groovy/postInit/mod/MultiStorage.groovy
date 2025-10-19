@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 def name_removals = [
@@ -92,7 +93,7 @@ def cvalues = [10329495, 16351261, 8439583, 15961002, 11546150, 16383998, 384713
 def vaultcolors = ["silver", "orange", "lime", "pink", "red", "white", "light_blue", "yellow", "brown", "blue", "gray", "cyan", "green", "magenta", "black", "purple"]
 def dyes = ["light_gray", "orange", "lime", "pink", "red", "white", "light_blue", "yellow", "brown", "blue", "gray", "cyan", "green", "magenta", "black", "purple"]
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .inputs(item('gregtech:stone_smooth', 4) * 4)
         .inputs(metaitem('electric.motor.lv') * 2)
         .inputs(ore('stickSteel') * 8)
@@ -103,7 +104,7 @@ recipemap('assembler').recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .circuitMeta(12)
         .fluidInputs(fluid('concrete') * 144)
         .inputs(metaitem('frameSteel'))
@@ -113,7 +114,7 @@ recipemap('assembler').recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .circuitMeta(12)
         .inputs(item('gregtech:transparent_casing'))
         .inputs(metaitem('frameSteel'))
@@ -123,7 +124,7 @@ recipemap('assembler').recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .circuitMeta(13)
         .fluidInputs(fluid('concrete') * 144)
         .inputs(item('minecraft:chest'))
@@ -134,7 +135,7 @@ recipemap('assembler').recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .circuitMeta(14)
         .fluidInputs(fluid('concrete') * 144)
         .inputs(ore('wireGtSingleRedAlloy') * 2)
@@ -145,7 +146,7 @@ recipemap('assembler').recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .circuitMeta(15)
         .fluidInputs(fluid('concrete') * 144)
         .inputs(ore('pipeSmallFluidSteel'))
@@ -156,7 +157,7 @@ recipemap('assembler').recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .circuitMeta(16)
         .fluidInputs(fluid('concrete') * 144)
         .inputs(ore('cableGtSingleTin') * 2)
@@ -168,7 +169,7 @@ recipemap('assembler').recipeBuilder()
         .buildAndRegister()
 
 for (int i = 1; i < 16; i++) {
-    recipemap('chemical_bath').recipeBuilder()
+    CHEMICAL_BATH.recipeBuilder()
             .fluidInputs(fluid('dye_' + dyes[i]) * 18)
             .inputs(item('multistorage:vault', 1).withNbt(["color": "silver", "cvalue": 10329495]))
             .outputs(item('multistorage:vault', 1).withNbt(["color": vaultcolors[i], "cvalue": cvalues[i]]))
@@ -178,7 +179,7 @@ for (int i = 1; i < 16; i++) {
 }
 
 for (int i = 1; i < 16; i++) {
-    recipemap('chemical_bath').recipeBuilder()
+    CHEMICAL_BATH.recipeBuilder()
             .fluidInputs(fluid('dye_' + dyes[i]) * 18)
             .inputs(item('multistorage:vault', 2).withNbt(["color": "silver", "cvalue": 10329495]))
             .outputs(item('multistorage:vault', 2).withNbt(["color": vaultcolors[i], "cvalue": cvalues[i]]))
@@ -188,7 +189,7 @@ for (int i = 1; i < 16; i++) {
 }
 
 for (int i = 1; i < 16; i++) {
-    recipemap('chemical_bath').recipeBuilder()
+    CHEMICAL_BATH.recipeBuilder()
             .fluidInputs(fluid('dye_' + dyes[i]) * 18)
             .inputs(item('multistorage:vault', 3).withNbt(["color": "silver", "cvalue": 10329495]))
             .outputs(item('multistorage:vault', 3).withNbt(["color": vaultcolors[i], "cvalue": cvalues[i]]))
@@ -198,7 +199,7 @@ for (int i = 1; i < 16; i++) {
 }
 
 for (int i = 1; i < 16; i++) {
-    recipemap('chemical_bath').recipeBuilder()
+    CHEMICAL_BATH.recipeBuilder()
             .fluidInputs(fluid('dye_' + dyes[i]) * 18)
             .inputs(item('multistorage:vault', 4).withNbt(["color": "silver", "cvalue": 10329495]))
             .outputs(item('multistorage:vault', 4).withNbt(["color": vaultcolors[i], "cvalue": cvalues[i]]))
@@ -208,7 +209,7 @@ for (int i = 1; i < 16; i++) {
 }
 
 for (int i = 1; i < 16; i++) {
-    recipemap('chemical_bath').recipeBuilder()
+    CHEMICAL_BATH.recipeBuilder()
             .fluidInputs(fluid('dye_' + dyes[i]) * 18)
             .inputs(item('multistorage:vault', 5).withNbt(["color": "silver", "cvalue": 10329495]))
             .outputs(item('multistorage:vault', 5).withNbt(["color": vaultcolors[i], "cvalue": cvalues[i]]))
@@ -218,7 +219,7 @@ for (int i = 1; i < 16; i++) {
 }
 
 for (int i = 1; i < 16; i++) {
-    recipemap('chemical_bath').recipeBuilder()
+    CHEMICAL_BATH.recipeBuilder()
             .fluidInputs(fluid('dye_' + dyes[i]) * 18)
             .inputs(item('multistorage:vault', 13).withNbt(["color": "silver", "cvalue": 10329495]))
             .outputs(item('multistorage:vault', 13).withNbt(["color": vaultcolors[i], "cvalue": cvalues[i]]))

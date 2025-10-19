@@ -1,19 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
-MACERATOR = recipemap('macerator')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-DISTILLERY = recipemap('distillery')
-ARC_FURNACE = recipemap('arc_furnace')
-EXTRUDER = recipemap('extruder')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-FORMINGPRESS = recipemap('forming_press')
-REACTION_FURNACE = recipemap('reaction_furnace')
-MIXER = recipemap('mixer')
-AUTOCLAVE = recipemap('autoclave')
-VACUUM_DT = recipemap('vacuum_distillation')
 
 //BORAX CALCINATION
 ROASTER.recipeBuilder()
@@ -142,7 +129,7 @@ MACERATOR.recipeBuilder()
     .buildAndRegister()
 
 //PURIFICATION OF SEMICONDUCTOR-GRADE BORON
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .inputs(ore('dustAmorphousBoron') * 1)
     .fluidInputs(fluid('chlorine') * 4040)
     .chancedOutput(metaitem('dustMagnesiumChloride') * 3, 600, 0)
@@ -151,7 +138,7 @@ FLUIDIZEDBR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .inputs(ore('dustElectrolyticBoron') * 1)
     .fluidInputs(fluid('chlorine') * 3040)
     .chancedOutput(metaitem('dustMagnesiumChloride') * 3, 600, 0)
@@ -178,7 +165,6 @@ REACTION_FURNACE.recipeBuilder()
     .duration(400)
     .EUt(VA[HV])
     .buildAndRegister()
-
 
 //Sodium Borohydride
 

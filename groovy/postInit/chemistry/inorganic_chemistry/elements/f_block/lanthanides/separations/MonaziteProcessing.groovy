@@ -1,29 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
 
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-MIXER = recipemap('mixer')
-FROTH_FLOTATION = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-ROASTER = recipemap('roaster')
-ROTARY_KILN = recipemap('rotary_kiln')
-BR = recipemap('batch_reactor')
-FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')
-ION_EXCHANGE = recipemap('ion_exchange_column')
-CENTRIFUGE = recipemap('centrifuge')
-LCR = recipemap('large_chemical_reactor')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-SIFTER = recipemap('sifter')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-CRYSTALLIZER = recipemap('crystallizer')
-MACERATOR = recipemap('macerator')
-AUTOCLAVE = recipemap('autoclave')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-MIXER_SETTLER = recipemap('mixer_settler')
-
 // Monazite Dust * 1
 mods.gregtech.electromagnetic_separator.removeByInput(24, [metaitem('dustPureMonazite')], null)
-
 
 /* REE Data (%mol)
 La: 23.4
@@ -253,7 +233,6 @@ MIXER_SETTLER.recipeBuilder()
         .duration(80)
         .EUt(VA[MV])
         .buildAndRegister()
-
 
 // Monazite Element Extraction Tier 2 (IV)
 

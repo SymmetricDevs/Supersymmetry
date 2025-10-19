@@ -1,11 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ROASTER = recipemap('roaster')
-DISTILLERY = recipemap('distillery')
-MIXER_SETTLER = recipemap('mixer_settler')
-ROASTER = recipemap('roaster')
 
 // Cerium reductive stripping
 // 2Ce(NO3)4 + H2O2 -> 2Ce(NO3)3 + O2 + 2HNO3

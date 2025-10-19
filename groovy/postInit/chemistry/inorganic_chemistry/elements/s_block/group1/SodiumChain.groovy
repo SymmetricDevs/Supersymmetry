@@ -1,9 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
 
 //TRONA
 ROASTER.recipeBuilder()

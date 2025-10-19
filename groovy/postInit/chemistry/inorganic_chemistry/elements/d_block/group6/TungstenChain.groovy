@@ -1,19 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-MIXER = recipemap('mixer')
-FF = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DISTILLERY = recipemap('distillery')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-ROASTER = recipemap('roaster')
-LCR = recipemap('large_chemical_reactor')
-AUTOCLAVE = recipemap('autoclave')
-CRYSTALLIZER = recipemap('crystallizer')
-REACTION_FURNACE = recipemap('reaction_furnace')
-BLENDER = recipemap('blender')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 // Tungstic Acid Dust * 7
 mods.gregtech.chemical_bath.removeByInput(960, [metaitem('dustScheelite') * 6], [fluid('hydrochloric_acid') * 2000])
@@ -39,7 +25,7 @@ MIXER.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-FF.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_scheelite_slurry') * 2000)
         .notConsumable(fluid('oleic_acid') * 1000)
         .notConsumable(ore('dustSodiumSilicate') * 6)
@@ -96,7 +82,7 @@ MIXER.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-FF.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_wolframite_slurry') * 2000)
         .notConsumable(fluid('oleic_acid') * 1000)
         .notConsumable(ore('dustSodiumSilicate') * 6)

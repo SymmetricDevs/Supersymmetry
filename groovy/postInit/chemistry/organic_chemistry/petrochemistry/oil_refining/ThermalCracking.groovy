@@ -1,12 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
-
-CRACKER = recipemap('cracker')
-DT = recipemap('distillation_tower')
-COKING = recipemap('coking_tower')
-TUBE_FURNACE = recipemap('tube_furnace')
-FLBR = recipemap('fluidized_bed_reactor')
-PHASE_SEPARATOR = recipemap('phase_separator')
 
 // Thermal Cracking
 crackables.each { _, crackable -> 
@@ -137,7 +131,7 @@ crackables.each { _, crackable ->
             .buildAndRegister()
             
     // Fluid Coking
-        FLBR.recipeBuilder()
+        FLUIDIZED_BR.recipeBuilder()
             .fluidInputs(crackables.atmospheric_oil_residue.get(1125))
             .inputs(ore('dustHeatedGreenCoke') * 4)
             .fluidOutputs(fluid('coke_fines') * 1000)
@@ -145,7 +139,7 @@ crackables.each { _, crackable ->
             .EUt(VA[LV])
             .buildAndRegister()
 
-        FLBR.recipeBuilder()
+        FLUIDIZED_BR.recipeBuilder()
             .fluidInputs(crackables.vacuum_oil_residue.get(1000))
             .inputs(ore('dustHeatedGreenCoke') * 4)
             .fluidOutputs(fluid('coke_fines') * 1000)
@@ -153,7 +147,7 @@ crackables.each { _, crackable ->
             .EUt(VA[LV])
             .buildAndRegister()
 
-        FLBR.recipeBuilder()
+        FLUIDIZED_BR.recipeBuilder()
             .fluidInputs(fluid('clarified_slurry_oil') * 1125)
             .inputs(ore('dustHeatedGreenCoke') * 4)
             .fluidOutputs(fluid('coke_fines') * 1000)
@@ -161,7 +155,7 @@ crackables.each { _, crackable ->
             .EUt(VA[LV])
             .buildAndRegister()
 
-        FLBR.recipeBuilder()
+        FLUIDIZED_BR.recipeBuilder()
             .fluidInputs(fluid('visbreaking_residue') * 960)
             .inputs(ore('dustHeatedGreenCoke') * 4)
             .fluidOutputs(fluid('coke_fines') * 1000)

@@ -1,11 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-AUTOCLAVE = recipemap('autoclave')
-ROASTER = recipemap('roaster')
-BR = recipemap('batch_reactor')
-CHEMICAL_BATH = recipemap('chemical_bath')
-DT = recipemap('distillation_tower')
-MIXER = recipemap('mixer')
 
 AUTOCLAVE.recipeBuilder()
         .inputs(ore('dustWood'))

@@ -1,18 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-PHASE_SEPARATOR = recipemap('phase_separator')
-MIXER = recipemap('mixer')
-FLUID_HEATER = recipemap('fluid_heater')
-CENTRIFUGE = recipemap('centrifuge')
-SIFTER = recipemap('sifter')
-DRYER = recipemap('dryer')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-PSA = recipemap('pressure_swing_adsorption')
-BR = recipemap('batch_reactor')
-BCR = recipemap('bubble_column_reactor')
-TBR = recipemap('trickle_bed_reactor')
-DT = recipemap('distillation_tower')
-SIEVE_DT = recipemap('sieve_distillation')
 
 class Lipid {
 

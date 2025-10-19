@@ -1,15 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-FBR = recipemap('fixed_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-FERMENTER = recipemap('vat_fermentation');
-MIXER = recipemap('mixer')
-ROASTER = recipemap('roaster')
-LCR = recipemap('large_chemical_reactor')
-BR = recipemap('batch_reactor')
-DRYER = recipemap('dryer')
-DISTILLERY = recipemap('distillery')
-BCR = recipemap('bubble_column_reactor')
 
 // Formic acid
 
@@ -50,7 +40,7 @@ CSTR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('hydrolyzed_methyl_formate_solution') * 4000)
     .chancedOutput(metaitem('dustSodiumSulfate'), 5250, 0)
     .fluidOutputs(fluid('sulfuric_acid') * 1000)
@@ -104,7 +94,7 @@ FERMENTER.recipeBuilder()
     .EUt(16)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('vinegar') * 2000)
     .outputs(metaitem('dustWood'))
     .fluidOutputs(fluid('acetic_acid') * 400)
@@ -113,7 +103,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('gtfo_apple_cider') * 2000)
     .fluidOutputs(fluid('acetic_acid') * 400)
     .fluidOutputs(fluid('water') * 1600)
@@ -123,7 +113,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 // Acetic acid (chemical)
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .fluidInputs(fluid('ethylene') * 100)
     .fluidInputs(fluid('oxygen') * 100)
     .notConsumable(ore('catalystBedPlatinum'))
@@ -132,7 +122,7 @@ FBR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .fluidInputs(fluid('gtfo_acetaldehyde') * 100)
     .fluidInputs(fluid('oxygen') * 100)
     .notConsumable(ore('catalystBedCobalt'))

@@ -1,29 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DISTILLERY = recipemap('distillery')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-ROASTER = recipemap('roaster')
-MACERATOR = recipemap('macerator')
-SIFTER = recipemap('sifter')
-CRYSTALLIZER = recipemap('crystallizer')
-REACTION_FURNACE = recipemap('reaction_furnace')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-FF = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-MIXER = recipemap('mixer')
-EBF = recipemap('electric_blast_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-AUTOCLAVE = recipemap('autoclave')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-SIFTER = recipemap('sifter')
-DRYER = recipemap('dryer')
-VACUUM_DT = recipemap('vacuum_distillation')
-BCR = recipemap('bubble_column_reactor')
-SIEVE_DT = recipemap('sieve_distillation')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 // Pt/Pd FROM SECONDARY ORES (TIER 1)
 
@@ -72,7 +48,7 @@ MIXER_SETTLER = recipemap('mixer_settler')
         .EUt(VA[MV])
         .buildAndRegister()
 
-    DISTILLATION_TOWER.recipeBuilder()
+    DT.recipeBuilder()
         .fluidInputs(fluid('alluvial_platinum_mother_liquor') * 14000)
         .chancedOutput(metaitem('dustZincChloride') * 3, 9000, 0)
         .fluidOutputs(fluid('ammonium_chloride_solution') * 1000)
@@ -127,7 +103,7 @@ MIXER_SETTLER = recipemap('mixer_settler')
         .EUt(VA[MV])
         .buildAndRegister()
 
-    DISTILLATION_TOWER.recipeBuilder()
+    DT.recipeBuilder()
         .fluidInputs(fluid('alluvial_palladium_mother_liquor') * 16000)
         .chancedOutput(metaitem('dustZincChloride') * 3, 9500, 0)
         .fluidOutputs(fluid('ammonium_chloride_solution') * 2000)
@@ -275,7 +251,7 @@ MIXER_SETTLER = recipemap('mixer_settler')
         // Output: AgCl precipitate
         // Output: Solution Pt,Pd,Rh,Ir,Au
 
-        DISTILLATION_TOWER.recipeBuilder()
+        DT.recipeBuilder()
             .fluidInputs(fluid('os_ru_free_pgm_solution') * 1130)
             .chancedOutput(metaitem('dustSilverChloride') * 2, 200, 0)
             .fluidOutputs(fluid('silver_free_pgm_solution') * 1130)

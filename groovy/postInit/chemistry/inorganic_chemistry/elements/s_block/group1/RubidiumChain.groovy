@@ -1,7 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CRYSTALLIZER = recipemap('crystallizer')
-BR = recipemap('batch_reactor')
 
 // From lepidolite
 

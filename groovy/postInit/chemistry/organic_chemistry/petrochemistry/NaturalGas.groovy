@@ -1,10 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-MIXER = recipemap('mixer')
-FLUID_HEATER = recipemap('fluid_heater')
-BCR = recipemap('bubble_column_reactor')
-DT = recipemap('distillation_tower')
-HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillation')
 
 // Water removal 
 
@@ -56,7 +51,7 @@ DT.recipeBuilder()
 .EUt(VA[LV] * 2)
 .buildAndRegister()
 
-HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder()
+HIGH_PRESSURE_CRYO_DT.recipeBuilder()
 .fluidInputs(fluid('liquid_natural_gas') * 20)
 .fluidOutputs(fluid('butane') * 64)
 .fluidOutputs(fluid('propane') * 128)

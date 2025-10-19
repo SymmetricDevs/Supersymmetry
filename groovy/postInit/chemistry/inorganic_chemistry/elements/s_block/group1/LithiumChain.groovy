@@ -1,22 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-CENTRIFUGE = recipemap('centrifuge')
-AUTOCLAVE = recipemap('autoclave')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-FLOTATION = recipemap('froth_flotation')
-CRYSTALLIZER = recipemap('crystallizer')
-ROTARY_KILN = recipemap("rotary_kiln")
-DRYER = recipemap("dryer")
-MACERATOR = recipemap("macerator")
-CLARIFIER = recipemap("clarifier")
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
 
 //UNIVERSAL
 MIXER.recipeBuilder()
@@ -27,7 +11,7 @@ MIXER.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_spodumene_slurry') * 2000)
         .notConsumable(fluid('alkaline_sodium_oleate_solution') * 1000)
         .fluidOutputs(fluid('spodumene_slurry') * 1000)
@@ -66,14 +50,14 @@ ROASTER.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustSpodumene') * 1)
         .outputs(metaitem('dustBetaSpodumene') * 10)
         .EUt(VA[MV])
         .duration(40)
         .buildAndRegister()
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustPetalite') * 1)
         .outputs(metaitem('dustRoastedPetalite') * 16)
         .EUt(160)
@@ -191,7 +175,7 @@ BR.recipeBuilder()
         .EUt(200)
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .fluidInputs(fluid('diluted_hydrofluoric_acid') * 2000)
         .fluidOutputs(fluid('hydrofluoric_acid') * 1000)
         .fluidOutputs(fluid('water') * 1000)

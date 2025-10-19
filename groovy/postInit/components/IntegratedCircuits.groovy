@@ -1,14 +1,10 @@
+import static prePostInit.Recipemaps.*
 import classes.*
 import globals.Globals
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-def ASSEMBLER = recipemap('assembler')
-def VACUUM = recipemap('vacuum_chamber')
-def CIRCUIT_ASSEMBLER = recipemap('circuit_assembler')
-
 mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('plate.integrated_logic_circuit'), metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
-
 
 // NAND Chip * 8
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])

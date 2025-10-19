@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-MIXER = recipemap('mixer')
-SIFTER = recipemap('sifter')
-ROASTER = recipemap('roaster')
 
 MIXER.recipeBuilder()
         .fluidInputs(fluid('water') * 100)

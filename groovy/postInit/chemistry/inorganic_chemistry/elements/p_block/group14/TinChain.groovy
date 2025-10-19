@@ -1,17 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-AUTOCLAVE = recipemap('autoclave')
-ROASTER = recipemap('roaster')
-FLOTATION = recipemap('froth_flotation')
-EM_SEPARATOR = recipemap('electromagnetic_separator')
-CHEMICAL_BATH = recipemap('chemical_bath')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-REACTION_FURNACE = recipemap('reaction_furnace')
-CENTRIFUGE = recipemap('centrifuge')
-CRYSTALLIZER = recipemap('crystallizer')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
 
 // Tin Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('crude_tin') * 1000])
@@ -25,7 +14,7 @@ MIXER.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_cassiterite_slurry') * 2000)
         .notConsumable(metaitem('dustSodiumFluorosilicate'))
         .notConsumable(fluid('oleic_acid') * 1000)
@@ -52,7 +41,7 @@ CENTRIFUGE.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-EM_SEPARATOR.recipeBuilder()
+ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
         .inputs(ore('dustCassiterite'))
         .outputs(metaitem('dustConcentrateCassiterite'))
         .chancedOutput(metaitem('dustHematite'), 2500, 0)
@@ -102,7 +91,7 @@ CENTRIFUGE.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
         .notConsumable(metaitem('shape.mold.ingot'))
         .fluidInputs(fluid('crude_tin') * 216)
         .outputs(metaitem('ingotTin'))
@@ -110,7 +99,7 @@ FLUID_SOLIDIFIER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
         .notConsumable(metaitem('shape.mold.ingot'))
         .fluidInputs(fluid('decopperized_tin') * 180)
         .outputs(metaitem('ingotTin'))

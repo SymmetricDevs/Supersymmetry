@@ -1,12 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
-
-VACUUM_DT = recipemap('vacuum_distillation')
-CRYSTALLIZER = recipemap('crystallizer')
-EXTRACTOR = recipemap('extractor')
-MIXER = recipemap('mixer')
-PHASE_SEPARATOR = recipemap('phase_separator')
-ROTARY_KILN = recipemap('rotary_kiln')
 
 // Atmospheric residue processing
 

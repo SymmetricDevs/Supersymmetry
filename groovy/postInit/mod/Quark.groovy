@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 def name_removals = [
@@ -68,5 +69,4 @@ for (i in 0..15) {
 		.buildAndRegister();
 	
 }
-
 

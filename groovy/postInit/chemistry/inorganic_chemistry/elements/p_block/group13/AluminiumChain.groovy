@@ -1,26 +1,14 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
 
-ROASTER = recipemap('roaster')
-CENTRIFUGE = recipemap('centrifuge')
-AUTOCLAVE = recipemap('autoclave')
-BR = recipemap('batch_reactor')
-EBF = recipemap('electric_blast_furnace')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-BCR = recipemap('bubble_column_reactor')
-DISTILLERY = recipemap('distillery')
-EMSEPARATOR = recipemap('electromagnetic_separator')
-ELECTROLYZER = recipemap('electrolyzer')
-CRYSTALLIZER = recipemap('crystallizer')
-ZONE_REFINER = recipemap('zone_refiner')
-
 // Aluminium Nugget * 3
 mods.gregtech.electric_blast_furnace.removeByInput(100, [metaitem('dustRuby')], null)
-//Remove EBF recipe with Aluminium Dust:
+//Remove ERF recipe with Aluminium Dust:
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('nitrogen') * 1000])
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-//EBF recipe with Al dust re-enabled:
-EBF.recipeBuilder()
+//ERF recipe with Al dust re-enabled:
+ERF.recipeBuilder()
     .inputs(ore('dustAluminium'))
     .outputs(metaitem('ingotAluminium'))
     .duration(240)
@@ -30,14 +18,13 @@ EBF.recipeBuilder()
 
 // remove auto generated furnace recipe, split into separate normal/pure recipes.
 furnace.removeByInput(metaitem('dustHighPurityAluminium'))
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustHighPurityAluminium'))
     .outputs(metaitem('ingotHighPurityAluminium'))
     .duration(240)
     .blastFurnaceTemp(933)
     .EUt(VA[MV])
     .buildAndRegister()
-
 
 // Ruby Slurry * 3000
 mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedRuby') * 2], [fluid('aqua_regia') * 3000])
@@ -91,7 +78,7 @@ CRYSTALLIZER.recipeBuilder()
 
 // Alumina from Al(OH)3
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustAluminiumHydroxide') * 14)
     .fluidOutputs(fluid('dense_steam') * 3000)
     .outputs(metaitem('dustAlumina') * 5)
@@ -152,7 +139,7 @@ ROASTER.recipeBuilder()
 
 // Red mud processing
 
-EMSEPARATOR.recipeBuilder()
+ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
     .fluidInputs(fluid('red_mud') * 2000)
     .chancedOutput(metaitem('dustIronIiiOxide'), 5000, 0)
     .fluidOutputs(fluid('concentrated_red_mud') * 1000)
@@ -160,7 +147,7 @@ EMSEPARATOR.recipeBuilder()
     .EUt(96)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .fluidInputs(fluid('concentrated_red_mud') * 2000)
     .outputs(ore('ingotIron').first())
     .outputs(metaitem('red_mud_slag'))

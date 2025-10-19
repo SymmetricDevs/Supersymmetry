@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
 
 def name_removals = [
         "rftools:machine_frame",

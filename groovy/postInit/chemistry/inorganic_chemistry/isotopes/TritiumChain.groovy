@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-PHASE_SEPARATOR = recipemap('phase_separator')
-FIXED_BED_REACTOR = recipemap('fixed_bed_reactor')
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION = recipemap('single_column_cryogenic_distillation')
 
 PHASE_SEPARATOR.recipeBuilder()
     .fluidInputs(fluid('tritiated_heavy_water') * 7680)
@@ -11,7 +8,7 @@ PHASE_SEPARATOR.recipeBuilder()
     .duration(10)
     .buildAndRegister()
 
-FIXED_BED_REACTOR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedSupportedPlatinum'))
     .fluidInputs(fluid('hydrogen') * 2)
     .fluidInputs(fluid('tritiated_steam'))
@@ -21,7 +18,7 @@ FIXED_BED_REACTOR.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION.recipeBuilder()
+SINGLE_COLUMN_CRYO_DT.recipeBuilder()
     .fluidInputs(fluid('deuterium_tritium_mixture') * 100)
     .fluidOutputs(fluid('tritium') * 1)
     .fluidOutputs(fluid('deuterium') * 99)

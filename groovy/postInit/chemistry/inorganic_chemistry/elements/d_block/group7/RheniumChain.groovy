@@ -1,10 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
-BR = recipemap('batch_reactor')
-ION_EXCHANGE = recipemap('ion_exchange_column')
-CRYSTALLIZER = recipemap('crystallizer')
 
 ELECTROSTATIC_SEPARATOR.recipeBuilder()
     .notConsumable(metaitem('item_filter'))

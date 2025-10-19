@@ -1,13 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
 
 // Diphenyl Isophthalate
 
@@ -30,7 +22,7 @@ CSTR.recipeBuilder()
 
 // 3,3'-Dichlorobenzidine
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
 .fluidInputs(fluid('two_chloronitrobenzene') * 288)
 .fluidInputs(fluid('hot_hp_hydrogen') * 10000)
 .notConsumable(ore('dustPalladiumOnCarbon'))
@@ -51,7 +43,7 @@ BR.recipeBuilder()
 
 // 3,3-Diaminobenzidine
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
 .fluidInputs(fluid('dichlorobenzidine_solution') * 100)
 .fluidInputs(fluid('hot_compressed_ammonia') * 200)
 .notConsumable(ore('dustCopper'))
@@ -63,7 +55,7 @@ FLUIDIZEDBR.recipeBuilder()
 
 // PBI
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
 .notConsumable(fluid('nitrogen') * 8000)
 .fluidInputs(fluid('diaminobenzidine_solution') * 1000)
 .fluidInputs(fluid('diphenyl_isophthalate_solution') * 1000)
@@ -108,7 +100,7 @@ DISTILLERY.recipeBuilder()
 .EUt(VA[LV])
 .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
 .fluidInputs(fluid('pbi_waste') * 4000)
 .fluidOutputs(fluid('toluene') * 1000)
 .fluidOutputs(fluid('phenol') * 2000)

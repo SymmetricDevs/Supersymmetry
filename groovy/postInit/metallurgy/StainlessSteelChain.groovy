@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 
 import static gregtech.api.GTValues.*
@@ -18,12 +19,7 @@ mods.gregtech.advanced_arc_furnace.removeByInput(480, [metaitem('dustIron') * 6,
 // Liquid Stainless Steel * 1296
 mods.gregtech.advanced_arc_furnace.removeByInput(480, [metaitem('dustIron') * 6, metaitem('dustChrome'), metaitem('dustManganese'), metaitem('dustNickel'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('refractory_gunning_mixture') * 800])
 
-
-EBF = recipemap('electric_blast_furnace')
-MIXER = recipemap('mixer')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustIron') * 24)
     .inputs(ore('dustNickel') * 4)
     .inputs(ore('dustManganese'))
@@ -33,7 +29,7 @@ EBF.recipeBuilder()
     .EUt(VA[MV] * 2)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustMagnetite') * 8)
     .inputs(ore('dustNickel') * 4)
     .inputs(ore('dustManganese'))
@@ -43,7 +39,7 @@ EBF.recipeBuilder()
     .EUt(VA[MV] * 2)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustBandedIron') * 12)
     .inputs(ore('dustNickel') * 4)
     .inputs(ore('dustManganese'))
@@ -53,7 +49,7 @@ EBF.recipeBuilder()
     .EUt(VA[MV] * 2)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustIronIiiOxide') * 60)
     .inputs(ore('dustNickel') * 4)
     .inputs(ore('dustManganese'))
@@ -63,7 +59,7 @@ EBF.recipeBuilder()
     .EUt(VA[MV] * 2)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustGraniticMineralSand') * 8)
     .inputs(ore('dustNickel') * 4)
     .inputs(ore('dustManganese'))
@@ -86,7 +82,7 @@ EBF.recipeBuilder()
 //     .buildAndRegister()
 
 for (highPurityCombustible in Carbons.highPurityCombustibles()) {
-    EBF.recipeBuilder()
+    ERF.recipeBuilder()
     .inputs(ore('dustSiliconDioxide') * 9)
     .inputs(ore('dustIron'))
     .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(6))

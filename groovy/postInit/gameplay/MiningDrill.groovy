@@ -1,8 +1,7 @@
+import static prePostInit.Recipemaps.*
 import classes.*
 import static gregtech.api.GTValues.*
 import net.minecraft.init.Blocks
-
-MINING_DRILL = recipemap('mining_drill')
 
 MINING_DRILL.recipeBuilder()
         .notConsumable(item('susy:deposit_block'))

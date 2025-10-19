@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 
 import static gregtech.api.GTValues.*
@@ -8,18 +9,10 @@ import gregtech.api.unification.OreDictUnifier
 import gregtech.api.unification.ore.OrePrefix
 import static gregtech.api.unification.material.Materials.*
 
-EBF = recipemap('electric_blast_furnace')
-ROASTER = recipemap('roaster')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-DISTILLERY = recipemap('distillery')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-
 //PYROMETALLUGRICAL METHODS (75%)
 
 for (combustible in Carbons.combustibles()) {
-    EBF.recipeBuilder()
+    ERF.recipeBuilder()
         .inputs(ore('dustPyrolusite'))
         .inputs(ore(combustible.name) * combustible.equivalent(2))
         .inputs(ore('dustTinyCalcite'))

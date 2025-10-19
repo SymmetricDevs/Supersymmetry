@@ -1,14 +1,7 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-BR = recipemap('batch_reactor')
-CHEMICAL_BATH = recipemap('chemical_bath')
-EBF = recipemap('electric_blast_furnace')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-VACUUM_DT = recipemap('vacuum_distillation')
-ZONE_REFINER = recipemap('zone_refiner')
-DISTILLERY = recipemap('distillery')
-
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustTelluriumResidue')) // 0.25 Na2TeO4, 2 Ag/Au
     .outputs(metaitem('dustRawElectrum') * 2)
     .chancedOutput(metaitem('dustTelluriumSlag'), 2500, 0)

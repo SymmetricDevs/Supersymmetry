@@ -1,4 +1,4 @@
-package postInit.mod
+import static prePostInit.Recipemaps.*
 
 import com.cleanroommc.groovyscript.api.IIngredient
 import com.codetaylor.mc.pyrotech.library.spi.block.IBlockIgnitableWithIgniterItem
@@ -19,12 +19,6 @@ import net.minecraftforge.fml.common.eventhandler.Event
 import postInit.utils.RecyclingHelper
 
 log.infoMC("Running Pyrotech.groovy...")
-
-SMELTER = recipemap('primitive_smelter')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-CUTTER = recipemap('cutter')
-ASSEMBLER = recipemap('assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
 
 // Make it easier to create a pit kiln
 event_manager.listen { PlayerInteractEvent.RightClickBlock event ->
@@ -1235,7 +1229,7 @@ ores.forEach { oreIn ->
 reductants.forEach { reductant ->
     ores.forEach { oreIn ->
         smelting_prefixes.forEach { prefix ->
-            def builder = SMELTER.recipeBuilder()
+            def builder = PRIMITIVE_SMELTER.recipeBuilder()
                     .inputs(oreIn.get(prefix))
                     .inputs(reductant.get(oreIn, prefix))
                     .duration(oreIn.getDuration(reductant, prefix))
@@ -1260,7 +1254,7 @@ def extra_smelting_recipes = [
 
 extra_smelting_recipes.forEach { recipe ->
     reductants.forEach { reductant ->
-        SMELTER.recipeBuilder()
+        PRIMITIVE_SMELTER.recipeBuilder()
                 .inputs(*(recipe[0]))
                 .inputs(ore(reductant.name) * 8)
                 .outputs(*(recipe[1]))
@@ -1281,7 +1275,7 @@ def alloy_add = {String outputAlloy, int outputAmount, int recipeDuration, Array
         def uniqueCombinations = ([alloying_prefixes] * numUniqueInputs).combinations()
         reductants.forEach { reductant ->
             uniqueCombinations.forEach { uniqueCombination ->
-                def builder = SMELTER.recipeBuilder()
+                def builder = PRIMITIVE_SMELTER.recipeBuilder()
                 double fuel_duration_multiplier = 0
                 int fuelCount = 0
                 for (int i = 0; i < numUniqueInputs; i++) {

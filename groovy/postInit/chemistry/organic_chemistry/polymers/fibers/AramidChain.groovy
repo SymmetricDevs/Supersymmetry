@@ -1,16 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-LCR = recipemap('large_chemical_reactor')
-FBR = recipemap('fixed_bed_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-SIFTER = recipemap('sifter')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-PHASE_SEPARATOR = recipemap('phase_separator')
-ASSEMBLER = recipemap('assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
-DISTILLERY = recipemap('distillery')
-ASSEMBLER = recipemap('assembler')
 
 // Spinneret
 
@@ -49,7 +38,7 @@ BCR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('para_phenylenediamine_solution') * 3000)
     .fluidOutputs(fluid('toluene') * 1000)
     .fluidOutputs(fluid('dense_steam') * 2000)
@@ -60,7 +49,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 // Kevlar
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .inputs(ore('dustParaPhenylenediamine') * 32)
     .inputs(ore('dustTerephthaloylChloride') * 32)
     .fluidInputs(fluid('calcium_hydroxide_slurry') * 1000)
@@ -129,7 +118,7 @@ BR.recipeBuilder()
 
 // Nomex
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .inputs(ore('dustMetaPhenylenediamine') * 16)
     .inputs(ore('dustIsophthaloylChloride') * 16)
     .fluidInputs(fluid('calcium_hydroxide_slurry') * 1000)

@@ -1,22 +1,7 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-CVD = recipemap('cvd')
-MIXER = recipemap('mixer')
-FF = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-CENTRIFUGE = recipemap('centrifuge')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-BR = recipemap('batch_reactor')
-SIFTER = recipemap('sifter')
-FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')
-VACUUM_FREEZER = recipemap('vacuum_freezer')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-MACERATOR = recipemap('macerator')
-FIXED_BED_REACTOR = recipemap('fixed_bed_reactor')
-EBF = recipemap('electric_blast_furnace')
 
 // Hot Titanium Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMagnesium') * 2], [fluid('titanium_tetrachloride') * 1000])
@@ -31,7 +16,7 @@ MIXER.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-FF.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_ilmenite_slurry') * 2000)
         .notConsumable(fluid('diluted_sulfuric_acid') * 1000)
         .notConsumable(fluid('oleic_acid') * 1000)
@@ -123,7 +108,7 @@ BR.recipeBuilder()
 // Chloride Ilmenite Process
 
 for (highPurityCombustible in Carbons.highPurityCombustibles()) {
-        FLUIDIZED_BED_REACTOR.recipeBuilder()
+        FLUIDIZED_BR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 3000)
         .inputs(ore('dustIlmenite'))
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
@@ -135,7 +120,7 @@ for (highPurityCombustible in Carbons.highPurityCombustibles()) {
         .EUt(VA[LV])
         .buildAndRegister()
 
-        FLUIDIZED_BED_REACTOR.recipeBuilder()
+        FLUIDIZED_BR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 2000)
         .inputs(ore('dustPerovskite'))
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(1))
@@ -147,7 +132,7 @@ for (highPurityCombustible in Carbons.highPurityCombustibles()) {
         .EUt(VA[LV])
         .buildAndRegister()
 
-        FLUIDIZED_BED_REACTOR.recipeBuilder()
+        FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustRutile') * 3)
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
         .fluidInputs(fluid('chlorine') * 5000)
@@ -187,7 +172,7 @@ VACUUM_FREEZER.recipeBuilder()
         .EUt(VA[LV] * 2)
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .fluidInputs(fluid('impure_titanium_tetrachloride') * 1000)
         .fluidOutputs(fluid('distilled_titanium_tetrachloride') * 1000)
         .fluidOutputs(fluid('tin_tetrachloride') * 50)
@@ -196,7 +181,7 @@ DISTILLATION_TOWER.recipeBuilder()
         .EUt(VA[MV]  * 2)
         .buildAndRegister()
 
-FIXED_BED_REACTOR.recipeBuilder()
+FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('distilled_titanium_tetrachloride') * 1000)
         .fluidInputs(fluid('hydrogen_sulfide') * 25)
         .notConsumable(ore('catalystBedCopper'))
@@ -206,7 +191,7 @@ FIXED_BED_REACTOR.recipeBuilder()
         .EUt(VA[MV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
         .fluidInputs(fluid('vanadium_free_titanium_tetrachloride') * 1000)
         .fluidOutputs(fluid('aluminium_chloride') * 50)
         .fluidOutputs(fluid('titanium_tetrachloride') * 1000)
@@ -218,7 +203,7 @@ DISTILLATION_TOWER.recipeBuilder()
 // Kroll Process
 
 for (inertGas in Globals.inertGases) {
-        EBF.recipeBuilder()
+        ERF.recipeBuilder()
                 .circuitMeta(2)
                 .fluidInputs(fluid('titanium_tetrachloride') * 3600)
                 .notConsumable(fluid(inertGas.name) * inertGas.amount_required)

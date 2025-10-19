@@ -1,12 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
-BR = recipemap('batch_reactor')
-FBR = recipemap('fixed_bed_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-UV_LIGHT_BOX = recipemap('uv_light_box')
 
 // Acrylic Acid
 
@@ -51,7 +44,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
             .EUt(VA[MV])
             .buildAndRegister()
 
-        FBR.recipeBuilder()
+        FIXED_BR.recipeBuilder()
             .notConsumable(ore('dustPhosphomolybdicAcid'))
             .fluidInputs(fluid('propene') * 50)
             .fluidInputs(fluid('oxygen') * 100)
@@ -61,7 +54,7 @@ UV_LIGHT_BOX = recipemap('uv_light_box')
             .EUt(VA[MV])
             .buildAndRegister()
 
-        FBR.recipeBuilder()
+        FIXED_BR.recipeBuilder()
             .notConsumable(ore('catalystBedSupportedMolybdenumVanadium'))
             .fluidInputs(fluid('acrolein') * 50)
             .fluidInputs(fluid('oxygen') * 50)

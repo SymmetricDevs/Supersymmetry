@@ -1,13 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-REACTION_FURNACE = recipemap('reaction_furnace')
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-CRYSTALLIZER = recipemap('crystallizer')
-EBF = recipemap('electric_blast_furnace')
-SIFTER = recipemap('sifter')
-FF = recipemap('froth_flotation')
 
 // MOLYBDENITE BENEFICIATION
 
@@ -19,7 +11,7 @@ MIXER.recipeBuilder()
         .duration(80)
         .buildAndRegister()
 
-FF.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_molybdenite_slurry') * 2500)
         .notConsumable(ore('dustQuicklime'))
         .notConsumable(ore('dustPotassiumAmylXanthate'))
@@ -48,7 +40,7 @@ BR.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-FF.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('copper_molybdenite_slurry') * 2000)
         .fluidInputs(fluid('sodium_dithiophosphate_solution') * 50)
         .notConsumable(ore('dustSodiumCyanide') * 3)
@@ -70,7 +62,7 @@ CLARIFIER.recipeBuilder()
 
 // WULFENITE
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustWulfenite'))
         .inputs(ore('dustSodiumHydroxide') * 6)
         .outputs(metaitem('dustAlkaliFusedWulfenite') * 9)
@@ -182,7 +174,7 @@ ROASTER.recipeBuilder()
 
 // BYPASS (95% yield)
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustImpureMolybdenumTrioxide') * 4)
         .fluidInputs(fluid('air') * 1000)
         .fluidOutputs(fluid('sublimated_molybdenum_trioxide') * 1000)
@@ -191,7 +183,7 @@ EBF.recipeBuilder()
         .EUt(VA[IV])
         .buildAndRegister()
         
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustMolybdenumTrioxide') * 4)
         .fluidInputs(fluid('air') * 1000)
         .fluidOutputs(fluid('sublimated_molybdenum_trioxide') * 1000)

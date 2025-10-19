@@ -1,23 +1,7 @@
+import static prePostInit.Recipemaps.*
 import postInit.utils.RecyclingHelper
 import static gregtech.api.GTValues.*
 import gregtechfoodoption.utils.GTFOUtils
-
-ASSEMBLER = recipemap('assembler')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
-LCR = recipemap('large_chemical_reactor')
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-FERMENTER = recipemap('vat_fermentation')
-ELECTROLYZER = recipemap('electrolyzer')
-CENTRIFUGE = recipemap('centrifuge')
-ROASTER = recipemap('roaster')
-CHEMICAL_BATH = recipemap('chemical_bath')
-BCR = recipemap('bubble_column_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
-VACUUM_FREEZER = recipemap('vacuum_freezer')
 
 // MACHINE RECIPES
 
@@ -345,7 +329,7 @@ FERMENTER.recipeBuilder()
     .EUt(15)
     .buildAndRegister()
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .fluidInputs(fluid('dimethylamine') * 1000)
     .fluidInputs(fluid('gtfo_x_phenothiazine_ii_propyl_chloride') * 1000)
     .notConsumable(metaitem('dustCopper'))
@@ -399,7 +383,7 @@ BR.recipeBuilder()
     .EUt(60)
     .buildAndRegister()    
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(ore('catalystBedSilver'))
     .fluidInputs(fluid('ethylene_glycol') * 50)
     .fluidInputs(fluid('oxygen') * 100)
@@ -547,7 +531,6 @@ mods.gregtech.lathe.removeByInput(40, [metaitem('stickStainlessSteel')], null)
 
 // Baking Soda Solution * 1000
 mods.gregtech.blender.removeByInput(8, [metaitem('dustSodiumBicarbonate')], [fluid('water') * 1000])
-
 
 VACUUM_FREEZER.recipeBuilder()
 	.inputs(metaitem('gregtechfoodoption:matter_graham_hot_plate'))

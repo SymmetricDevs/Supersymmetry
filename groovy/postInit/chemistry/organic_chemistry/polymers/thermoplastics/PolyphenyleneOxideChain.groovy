@@ -1,11 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-BCR = recipemap('bubble_column_reactor')
-CENTRIFUGE = recipemap('centrifuge')
-MIXER = recipemap('mixer')
-BR = recipemap('batch_reactor')
-SIEVE_DT = recipemap('sieve_distillation')
 
 MIXER.recipeBuilder()
     .fluidInputs(fluid('two_six_xylenol') * 1000)

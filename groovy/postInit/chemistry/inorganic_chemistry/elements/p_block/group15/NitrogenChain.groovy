@@ -1,13 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
-PSA = recipemap('pressure_swing_adsorption')
-REACTION_FURNACE = recipemap('reaction_furnace')
-BCR = recipemap('bubble_column_reactor')
-RADIATOR = recipemap('radiator')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-DISTILLATION_TOWER = recipemap('distillation_tower')
 
 PSA.recipeBuilder()
     .notConsumable(metaitem('membrane.zeolite'))
@@ -55,7 +47,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('ammonia_solution') * 1000)
     .fluidOutputs(fluid('water') * 1000)
     .fluidOutputs(fluid('ammonia') * 1000)

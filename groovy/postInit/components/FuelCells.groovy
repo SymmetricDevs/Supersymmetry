@@ -1,11 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
-
-MIXER = recipemap('mixer')
-SPINNING = recipemap('spinning')
-ASSEMBLER = recipemap('assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
-TUBE_FURNACE = recipemap('tube_furnace')
 
 // PEMFCs
 

@@ -1,11 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-MIXER_SETTLER = recipemap('mixer_settler')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-DT = recipemap('distillation_tower')
-ROTARY_KILN = recipemap('rotary_kiln')
-REACTION_FURNACE = recipemap('reaction_furnace')
 
 // Purification
 MIXER_SETTLER.recipeBuilder()

@@ -1,10 +1,8 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.material.Materials.*
 import gregtech.api.unification.material.MarkerMaterials
 import static gregtech.api.unification.ore.OrePrefix.dye
-
-ROASTER = recipemap('roaster')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 //POTASSIUM FLUORIDE PRODUCTION
 ROASTER.recipeBuilder()

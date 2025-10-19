@@ -1,16 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-CRYSTALLIZER = recipemap('crystallizer')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-LCR = recipemap('large_chemical_reactor')
-MIXER = recipemap('mixer')
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-DT = recipemap('distillation_tower')
-SOLIDIFIER = recipemap('fluid_solidifier')
-EXTRACTOR = recipemap('extractor')
-PHASE_SEPARATOR = recipemap('phase_separator')
 
 // Ultem
 
@@ -146,7 +135,7 @@ ROASTER.recipeBuilder()
 
 // Kapton K
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .inputs(ore('dustPyromelliticDianhydride'))
     .inputs(ore('dustFourFourOxydianiline'))
     .fluidInputs(fluid('acetone') * 2000)
@@ -176,7 +165,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('kapton_e_preparation') * 1000)
     .fluidOutputs(fluid('impure_kapton_e') * 1000)
     .duration(200)

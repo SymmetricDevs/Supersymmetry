@@ -1,14 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-MIXER_SETTLER = recipemap('mixer_settler')
-DISTILLERY = recipemap('distillery')
-DT = recipemap('distillation_tower')
-ROTARY_KILN = recipemap('rotary_kiln')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-BLENDER = recipemap('blender')
 
 /* Composition data
 U - 98.90%

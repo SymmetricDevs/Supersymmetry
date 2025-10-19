@@ -1,8 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import postInit.utils.RecyclingHelper
-
-ASSEMBLER = recipemap('assembler')
-BENDER = recipemap('bender')
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(16)

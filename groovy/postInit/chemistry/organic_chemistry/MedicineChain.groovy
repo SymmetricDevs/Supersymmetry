@@ -1,11 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-AUTOCLAVE = recipemap('autoclave')
-TBR = recipemap('trickle_bed_reactor')
-DT = recipemap('distillation_tower')
-BR = recipemap('batch_reactor')
-FORMING_PRESS = recipemap('forming_press')
-LCR = recipemap('large_chemical_reactor')
 
 // Paracetamol
 

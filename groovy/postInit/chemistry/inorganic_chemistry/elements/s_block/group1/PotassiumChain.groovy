@@ -1,15 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ROASTER = recipemap('roaster')
-CENTRIFUGE = recipemap('centrifuge')
-MIXER = recipemap('mixer')
-DISTILLERY = recipemap('distillery')
-CRYSTALLIZER = recipemap('crystallizer')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
-REACTION_FURNACE = recipemap('reaction_furnace')
-FLBR = recipemap('fluidized_bed_reactor')
-CLARIFIER = recipemap('clarifier')
 
 MIXER.recipeBuilder()
         .inputs(ore('dustPotashConcentrate') * 8)
@@ -19,7 +9,7 @@ MIXER.recipeBuilder()
         .duration(40)
         .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_potash_slurry') * 2000)
         .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
         .notConsumable(metaitem('dustNHexadecylammoniumAcetate'))

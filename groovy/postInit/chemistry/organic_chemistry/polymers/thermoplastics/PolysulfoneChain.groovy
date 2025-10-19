@@ -1,9 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-LCR = recipemap('large_chemical_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DISTILLERY = recipemap('distillery')
-POLYMERIZATION = recipemap('polymerization_tank')
 
 LCR.recipeBuilder()
     .inputs(ore('dustSodiumSulfate') * 7)
@@ -33,7 +29,7 @@ DISTILLERY.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .notConsumable(fluid('dimethyl_sulfoxide') * 1000)
     .inputs(ore('dustDichlorodiphenylSulfone') * 25)
     .inputs(ore('dustSodiumBisphenolate') * 33)

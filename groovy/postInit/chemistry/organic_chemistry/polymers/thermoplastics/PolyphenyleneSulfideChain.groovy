@@ -1,11 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-POLYMERIZATION = recipemap('polymerization_tank')
-DISTILLERY = recipemap('distillery')
 
 // Polyphenylene Sulfide
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 1000)
     .inputs(ore('dustDichlorobenzene') * 12)
     .inputs(ore('dustSodiumSulfide') * 3)

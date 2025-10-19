@@ -1,13 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-FLOTATION = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-EBF = recipemap('electric_blast_furnace')
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
 
 // BENEFICIATION
 
@@ -32,7 +24,7 @@ REACTION_FURNACE = recipemap('reaction_furnace')
         .duration(80)
         .buildAndRegister()
 
-    FLOTATION.recipeBuilder()
+    FROTH_FLOTATION.recipeBuilder()
         .fluidInputs(fluid('impure_stibnite_slurry') * 2000)
         .notConsumable(metaitem('dustSodiumIsobutylXanthate'))
         .notConsumable(metaitem('dustLeadNitrate'))
@@ -74,7 +66,7 @@ ROASTER.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustStibnite'))
     .fluidInputs(fluid('oxygen') * 6000)
     .outputs(metaitem('ingotAntimony') * 2)
@@ -83,7 +75,7 @@ EBF.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustAntimonyIiiSulfide') * 5)
     .fluidInputs(fluid('oxygen') * 6000)
     .outputs(metaitem('ingotAntimony') * 2)

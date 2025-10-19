@@ -1,29 +1,7 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-CVD = recipemap('cvd')
-MIXER = recipemap('mixer')
-FF = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-SIFTER = recipemap('sifter')
-FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')
-VACUUM_FREEZER = recipemap('vacuum_freezer')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-MACERATOR = recipemap('macerator')
-FIXED_BED_REACTOR = recipemap('fixed_bed_reactor')
-EBF = recipemap('electric_blast_furnace')
-DISTILLERY = recipemap('distillery')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-ROASTER = recipemap('roaster')
-TUBE_FURNACE = recipemap('tube_furnace')
-BLENDER = recipemap('blender')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 // Benefication
 
@@ -44,7 +22,7 @@ MIXER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_zircon_slurry') * 2000)
     .notConsumable(fluid('soda_ash_solution') * 1000)
     .notConsumable(fluid('alkaline_sodium_oleate_solution') * 1000)
@@ -87,7 +65,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
 
 // Carbochlorination (100%)
 for (highPurityCombustible in Carbons.highPurityCombustibles()) {
-    FLUIDIZED_BED_REACTOR.recipeBuilder()
+    FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustConcentrateZircon'))
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(4))
         .fluidInputs(fluid('chlorine') * 8000)
@@ -149,7 +127,7 @@ BR.recipeBuilder()
 
 // Carbochlorination (100%)
 for (highPurityCombustible in Carbons.highPurityCombustibles()) {
-    FLUIDIZED_BED_REACTOR.recipeBuilder()
+    FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustBaddeleyite'))
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
         .fluidInputs(fluid('chlorine') * 4000)
@@ -210,7 +188,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 for (highPurityCombustible in Carbons.highPurityCombustibles()) {
-    FLUIDIZED_BED_REACTOR.recipeBuilder()
+    FLUIDIZED_BR.recipeBuilder()
         .inputs(ore('dustZirconiumDioxide') * 3)
         .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(2))
         .fluidInputs(fluid('chlorine') * 4000)
@@ -222,7 +200,7 @@ for (highPurityCombustible in Carbons.highPurityCombustibles()) {
 }
 
 for (inertGas in Globals.inertGases) {
-    EBF.recipeBuilder()
+    ERF.recipeBuilder()
         .circuitMeta(2)
         .inputs(ore('dustZirconiumTetrachloride') * 5)
         .notConsumable(fluid(inertGas.name) * inertGas.amount_required)

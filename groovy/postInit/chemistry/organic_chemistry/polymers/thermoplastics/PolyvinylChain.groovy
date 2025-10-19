@@ -1,16 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
-DISTILLATION_TOWER = recipemap('distillation_tower');
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-AUTOCLAVE = recipemap('autoclave')
-PHASE_SEPARATOR = recipemap('phase_separator')
-ROASTER = recipemap('roaster')
 
 // Vinyl Chloride
 
@@ -41,7 +30,7 @@ PYROLYSE_OVEN.recipeBuilder()
     .buildAndRegister()
 
 // https://koreascience.kr/article/JAKO200211920879285.pdf
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('cracked_one_two_dichloroethane_mix') * 2000)
     .fluidOutputs(fluid('hydrogen_chloride') * 1000)
     .fluidOutputs(fluid('vinyl_chloride') * 500)
@@ -63,7 +52,7 @@ AUTOCLAVE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('vinyl_chloride_suspension') * 2000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
     .fluidOutputs(fluid('polyvinyl_chloride_suspension') * 2000)
@@ -89,7 +78,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .circuitMeta(1)
     .fluidInputs(fluid('vinyl_acetate_suspension') * 1000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
@@ -107,7 +96,7 @@ PHASE_SEPARATOR.recipeBuilder()
 
 // Ethylene-vinyl acetate
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .circuitMeta(2)
     .fluidInputs(fluid('ethylene') * 1000)
     .fluidInputs(fluid('vinyl_acetate_suspension') * 1000)

@@ -1,21 +1,10 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
-
-ROTARY_KILN = recipemap('rotary_kiln')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-CRYSTALLIZER = recipemap('crystallizer')
-BCR = recipemap('bubble_column_reactor')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-ROASTER = recipemap('roaster')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-MIXER = recipemap('mixer')
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(ore('dustChromite'))

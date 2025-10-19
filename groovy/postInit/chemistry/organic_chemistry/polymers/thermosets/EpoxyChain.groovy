@@ -1,19 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ION_EXCHANGE = recipemap('ion_exchange_column')
-FLUID_EXTRACTOR = recipemap('extractor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-LCR = recipemap('large_chemical_reactor')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-PHASE_SEPARATOR = recipemap('phase_separator')
-POLYMERIZATION = recipemap('polymerization_tank')
-EBF = recipemap('electric_blast_furnace')
-FLUID_SOLIDIFER = recipemap('fluid_solidifier')
-CHEMICAL_BATH = recipemap('chemical_bath')
-FBR = recipemap('fixed_bed_reactor')
 
 // Fiber-Reinforced Epoxy Resin Sheet * 1
 mods.gregtech.chemical_bath.removeByInput(16, [metaitem('wireFineBorosilicateGlass')], [fluid('epoxy') * 144])
@@ -21,18 +7,12 @@ mods.gregtech.chemical_bath.removeByInput(16, [metaitem('wireFineBorosilicateGla
 mods.gregtech.chemical_bath.removeByInput(16, [metaitem('carbon.fibers')], [fluid('epoxy') * 144])
 
 // Curing agents
-class CuringAgent {
-    String name
-    boolean liquid
-    int amount_required
+record CuringAgent (
+    String name,
+    boolean liquid,
+    int amount_required,
     double duration
-    CuringAgent(name, liquid, amount_required, duration) {
-        this.name = name
-        this.liquid = liquid
-        this.amount_required = amount_required
-        this.duration = duration
-    }
-}
+) {}
 
 curingAgents = [
     new CuringAgent('diethylenetriamine', true, 100, 1),
@@ -55,7 +35,7 @@ ION_EXCHANGE.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-FLUID_EXTRACTOR.recipeBuilder()
+EXTRACTOR.recipeBuilder()
     .inputs(ore('dustBisphenolA'))
     .fluidOutputs(fluid('bisphenol_a') * 1000)
     .EUt(VA[LV])
@@ -81,7 +61,7 @@ BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('epichlorohydrin_solution') * 4200)
     .fluidOutputs(fluid('acetic_acid') * 200)
     .fluidOutputs(fluid('epichlorohydrin') * 1000)
@@ -107,7 +87,7 @@ BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('diluted_epichlorohydrin') * 2000)
     .fluidOutputs(fluid('epichlorohydrin') * 1000)
     .fluidOutputs(fluid('water') * 1000)
@@ -120,7 +100,7 @@ DISTILLATION_TOWER.recipeBuilder()
 
 for (curingAgent in curingAgents) {
     if (curingAgent.liquid) {
-        POLYMERIZATION.recipeBuilder()
+        POLYMERIZATION_TANK.recipeBuilder()
             .inputs(ore('dustBisphenolA'))
             .fluidInputs(fluid('epichlorohydrin') * 1200) //excess epichlorohydrin to control degree of polymerization
             .fluidInputs(fluid(curingAgent.name) * curingAgent.amount_required)
@@ -131,7 +111,7 @@ for (curingAgent in curingAgents) {
             .EUt(VA[HV])
             .buildAndRegister()
     } else {
-        POLYMERIZATION.recipeBuilder()
+        POLYMERIZATION_TANK.recipeBuilder()
             .inputs(ore('dustBisphenolA') * 4)
             .fluidInputs(fluid('epichlorohydrin') * 4800)
             .inputs(ore(curingAgent.name) * curingAgent.amount_required)
@@ -220,7 +200,7 @@ VACUUM_CHAMBER.recipeBuilder()
 
 // Epoxy Cresol Novolacs (ECN)
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(ore('catalystBedMagnesia'))
     .fluidInputs(fluid('phenol') * 50)
     .fluidInputs(fluid('methanol') * 50)
@@ -230,7 +210,7 @@ FBR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(ore('catalystBedMagnesia'))
     .fluidInputs(fluid('phenol') * 50)
     .fluidInputs(fluid('methanol') * 100)
@@ -248,7 +228,7 @@ ROASTER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('ortho_cresylic_acid_mixture') * 1000)
     .fluidOutputs(fluid('ortho_cresol') * 995)
     .fluidOutputs(fluid('two_six_xylenol') * 5)
@@ -256,7 +236,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('xylenol') * 1000)
     //.fluidOutputs(fluid('three_four_xylenol') * 65)
     //.fluidOutputs(fluid('three_five_xylenol') * 320) // These xylenols are used for insecticide, not needed now.
@@ -267,7 +247,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('cresol') * 1400)
     .fluidInputs(fluid('formaldehyde') * 1000)
     .fluidInputs(fluid('two_six_xylenol') * 100)
@@ -277,7 +257,7 @@ POLYMERIZATION.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('ortho_cresol') * 1400)
     .fluidInputs(fluid('formaldehyde') * 1000)
     .fluidInputs(fluid('two_six_xylenol') * 100)
@@ -344,7 +324,7 @@ VACUUM_CHAMBER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-    POLYMERIZATION.recipeBuilder()
+    POLYMERIZATION_TANK.recipeBuilder()
         .inputs(ore('dustTetrabromobisphenolA') * 4)
         .fluidInputs(fluid('epichlorohydrin') * 4800)
         .inputs(ore('dustEpoxyCuringMixture'))
@@ -410,7 +390,7 @@ VACUUM_CHAMBER.recipeBuilder()
 
 // SU-8 photoresist
     // Bisphenol A Novolac Epoxy
-    POLYMERIZATION.recipeBuilder()
+    POLYMERIZATION_TANK.recipeBuilder()
         .fluidInputs(fluid('epoxy') * 1008)
         .fluidInputs(fluid('formaldehyde') * 3000)
         .outputs(metaitem('dustBisphenolANovolacEpoxy') * 7)
@@ -436,7 +416,7 @@ VACUUM_CHAMBER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-    DISTILLATION_TOWER.recipeBuilder()
+    DT.recipeBuilder()
         .fluidInputs(fluid('propylene_oxide_solution') * 2000)
         .outputs(metaitem('dustCalciumChloride') * 3)
         .fluidOutputs(fluid('water') * 2000)

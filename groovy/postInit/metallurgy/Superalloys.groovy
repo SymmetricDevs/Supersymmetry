@@ -1,7 +1,7 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
 import postInit.utils.RecyclingHelper
 
-ASSEMBLER = recipemap('assembler')
 static def removeItemsOfAlloy(String itemCategory) {
     mods.jei.ingredient.removeAndHide(metaitem('ingot' + itemCategory));
     mods.jei.ingredient.removeAndHide(metaitem('ingotHot' + itemCategory));
@@ -68,7 +68,6 @@ mods.gregtech.assembler.removeByInput(16, [metaitem('plateHastelloyX') * 6, meta
                                            metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateTitaniumTungstenCarbide') * 6, metaitem('frameTitanium'),
                                            metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
-
 
 // Secure Maceration Casing
 RecyclingHelper.replaceShaped('gcym:casing_large_macerator', item('gcym:large_multiblock_casing') * 2, [

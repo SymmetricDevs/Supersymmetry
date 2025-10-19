@@ -1,12 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
-BCR = recipemap('bubble_column_reactor')
-MIXER = recipemap('mixer')
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-DRYER = recipemap('dryer')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
 
 // Lithium Perfluorooctanoate Surfactant
 

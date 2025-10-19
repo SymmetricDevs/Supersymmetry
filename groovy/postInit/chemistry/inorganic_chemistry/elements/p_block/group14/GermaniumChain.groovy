@@ -1,18 +1,7 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import static globals.SinteringGlobals.*
 import gregtech.api.recipes.ingredients.GTRecipeItemInput;
-
-AUTOCLAVE = recipemap('autoclave')
-CHEMICAL_BATH = recipemap('chemical_bath')
-ROTARY_KILN = recipemap('rotary_kiln')
-DT = recipemap('distillation_tower')
-BR = recipemap('batch_reactor')
-TUBE_FURNACE = recipemap('tube_furnace')
-ZONE_REFINER = recipemap('zone_refiner')
-MIXER = recipemap('mixer')
-BLENDER = recipemap('blender')
-ROASTER = recipemap('roaster')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 // Tannic acid for Ge precipitation
 

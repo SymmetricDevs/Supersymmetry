@@ -1,25 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ModHandler
 import gregtech.api.unification.material.Materials
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
-
-def MIXER = recipemap('mixer')
-def CLARIFIER = recipemap('clarifier')
-def DRYER = recipemap('dryer')
-def DISTILLERY = recipemap('distillery')
-def PSA = recipemap('pressure_swing_adsorption')
-def MSFD = recipemap('multi_stage_flash_distillation')
-def EVAPORATION_POOL = recipemap('evaporation_pool')
-def FLUID_HEATER = recipemap('fluid_heater')
-def ION_EXCHANGE = recipemap('ion_exchange_column')
-def VACUUM_CHAMBER = recipemap('vacuum_chamber')
-def FLUID_COMPRESSOR = recipemap('fluid_compressor')
-def UV_LIGHT_BOX = recipemap('uv_light_box')
-def BR = recipemap('batch_reactor')
-def BCR = recipemap('bubble_column_reactor')
-def CENTRIFUGE = recipemap('centrifuge')
-def SIFTER = recipemap('sifter')
 
 // Salt * 2
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('salt_water') * 1000])

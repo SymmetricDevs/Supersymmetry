@@ -1,21 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Carbons
 import static gregtech.api.GTValues.*
-
-//REVERBERATORY_FURNACE = recipemap('reverberatory_furnace')
-EBF = recipemap('electric_blast_furnace')
-FLOTATION = recipemap('froth_flotation')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DISTILLERY = recipemap('distillery')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-REVERBERATORY_FURNACE = recipemap('reverberatory_furnace')
-METALLURGICAL_CONVERTER = recipemap('metallurgical_converter')
 
 // Cupric Oxide Dust * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustTetrahedrite')], [fluid('oxygen') * 3000])
@@ -31,7 +16,7 @@ MIXER.recipeBuilder()
     .duration(80)
     .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_malachite_slurry') * 2000)
     .notConsumable(metaitem('dustQuicklime'))
     .notConsumable(metaitem('dustPotassiumOctylHydroxamate'))
@@ -85,7 +70,7 @@ DISTILLERY.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('diluted_copper_sulfate_solution') * 3300)
     .fluidOutputs(fluid('copper_sulfate_solution') * 2000)
     .fluidOutputs(fluid('water') * 1300)
@@ -132,7 +117,7 @@ for (copperOre in copperOres) {
         .buildAndRegister()
 
     if (copperOre.produces_iron) {
-        FLOTATION.recipeBuilder()
+        FROTH_FLOTATION.recipeBuilder()
             .fluidInputs(fluid('impure_' + copperOre.name.toLowerCase() + '_slurry') * ((copperOre.amount_produced * 1000) + 1000))
             .notConsumable(metaitem('dustQuicklime'))
             .notConsumable(metaitem('dustSodiumEthylXanthate'))
@@ -145,7 +130,7 @@ for (copperOre in copperOres) {
             .buildAndRegister()
 
     } else {
-        FLOTATION.recipeBuilder()
+        FROTH_FLOTATION.recipeBuilder()
             .fluidInputs(fluid('impure_' + copperOre.name.toLowerCase() + '_slurry') * ((copperOre.amount_produced * 1000) + 1000))
             .notConsumable(metaitem('dustQuicklime'))
             .notConsumable(metaitem('dustSodiumEthylXanthate'))
@@ -184,7 +169,7 @@ for (combustible in Carbons.combustibles()) {
         .buildAndRegister()
     }
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustCopperConcentrate'))
     .notConsumable(item('gregtech:fluid_pipe_tiny', 323) * 2)
     .fluidInputs(fluid('oxygen') * 50)

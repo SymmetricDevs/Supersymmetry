@@ -1,24 +1,10 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
 
-DRYER = recipemap('dryer')
-BCR = recipemap('bubble_column_reactor')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-MIXER = recipemap('mixer')
-DISTILLERY = recipemap('distillery')
-VACUUM_DT = recipemap('vacuum_distillation')
-TUBE_FURNACE = recipemap('tube_furnace')
-SIFTER = recipemap('sifter')
-BR = recipemap('batch_reactor')
-VACUUM_FREEZER = recipemap('vacuum_freezer')
-PHASE_SEPARATOR = recipemap('phase_separator')
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT = recipemap('single_column_cryogenic_distillation')
-
 //Molten Salt Method
-
 
 ELECTROLYTIC_CELL.recipeBuilder()
     .inputs(metaitem("graphite_electrode"))
@@ -32,7 +18,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.ball'))
     .fluidInputs(fluid('impure_lithium_carbonate') * 144)
     .outputs(metaitem('dustImpureLithiumCarbonate'))
@@ -126,7 +112,7 @@ VACUUM_FREEZER.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister();
 
-SINGLE_COLUMN_CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+SINGLE_COLUMN_CRYO_DT.recipeBuilder()
     .fluidInputs(fluid('partially_liquefied_argon_hydrogen_mixture') * 16000)
     .fluidOutputs(fluid('liquid_argon') * 125)
     .fluidOutputs(fluid('hydrogen') * 16000)

@@ -1,12 +1,10 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
 
-DT = recipemap('sieve_distillation')
-PHASE_SEPARATOR = recipemap('phase_separator')
-
 // Atmospheric distillation
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('dense_steam') * 10000)
     .fluidInputs(oils.oil.getHeated(10000))
     .fluidOutputs(fluid('atmospheric_oil_residue') * 2000)
@@ -18,7 +16,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('dense_steam') * 10000)
     .fluidInputs(oils.oil_heavy.getHeated(10000))
     .fluidOutputs(fluid('atmospheric_oil_residue') * 3500)
@@ -30,7 +28,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('dense_steam') * 10000)
     .fluidInputs(oils.oil_light.getHeated(10000))
     .fluidOutputs(fluid('atmospheric_oil_residue') * 1000)
@@ -46,7 +44,7 @@ DT.recipeBuilder()
 
 fractions.each { _, fraction ->
     if (fraction.strippable) {
-        DT.recipeBuilder()
+        SIEVE_DT.recipeBuilder()
         .fluidInputs(fraction.getCrude(1000))
         .fluidInputs(fluid('dense_steam') * 1000)
         .fluidOutputs(fraction.getSulfuric(1000))

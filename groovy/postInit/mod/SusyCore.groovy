@@ -1,10 +1,7 @@
+import static prePostInit.Recipemaps.*
 import postInit.utils.RecyclingHelper
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.ingredients.nbtmatch.*
-
-ASSEMBLER = recipemap('assembler')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-CVD = recipemap('cvd')
 
 crafting.addShaped("susy:basic_structural_casing", item('susy:susy_multiblock_casing', 3) * 6, [
     [ore('screwWroughtIron'), ore('plateWroughtIron'), ore('craftingToolHardHammer')],
@@ -118,7 +115,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-
 // Restrictive Filters
 ASSEMBLER.recipeBuilder()
     .inputs(ore('foilSteel') * 8)
@@ -173,8 +169,6 @@ crafting.addShapeless("susy:gas_tank_fill", item('susy:susy_armor', 3).withNbt([
     [item('susy:susy_armor', 3),
     metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'air', 'Amount': 1000]])
 ])
-
-
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(1)
@@ -360,7 +354,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 //Industrial Concrete
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .inputs(ore('frameGtSteel'))
     .fluidInputs(fluid('concrete') * 576)
     .outputs(item('susy:susy_stone_smooth', 9) * 32)

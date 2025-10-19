@@ -1,45 +1,8 @@
+import static prePostInit.Recipemaps.*
 import static globals.SinteringGlobals.*
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-SINTERING_RECIPES = recipemap("sintering_oven")
-CUTTER = recipemap('cutter')
-CRYSTALLIZER = recipemap('crystallizer')
-SOLIDIFIER = recipemap('fluid_solidifier')
-CVD = recipemap('cvd')
-FORGE_HAMMER = recipemap('forge_hammer')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
-PYROLYSE = recipemap('pyrolyse_oven')
-LCR = recipemap('large_chemical_reactor')
-EBF = recipemap('electric_blast_furnace')
-VULCANIZER = recipemap('vulcanizing_press')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ARC_FURNACE = recipemap('arc_furnace')
-AUTOCLAVE = recipemap('autoclave')
-COMPRESSOR = recipemap('compressor')
-ASSEMBLER = recipemap('assembler')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
-FORMING_PRESS = recipemap('forming_press')
-LASER_ENGRAVER = recipemap('laser_engraver')
-CHEMICAL_BATH = recipemap('chemical_bath')
-VACUUM_CHAMBER = recipemap('vacuum_chamber');
-CANNER = recipemap('canner');
 // Inductor * 2
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineCopper') * 2], [fluid('plastic') * 36])
 // Inductor * 4
@@ -69,7 +32,6 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('w
 // SMD Resistor * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
 
-
 // SMD Diode * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
 
@@ -89,7 +51,6 @@ mods.gregtech.compressor.removeByInput(2, [metaitem('dustAlumina')], null)
 
 // Advanced SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(3840, [metaitem('foilVanadiumGallium'), metaitem('wireFineHssg') * 8], [fluid('polybenzimidazole') * 144])
-
 
 //SMD Diodes
 
@@ -121,7 +82,7 @@ for (fuel in sintering_fuels) {
 
     if (fuel.isPlasma) {
 
-        SINTERING_RECIPES.recipeBuilder()
+        SINTERING_OVEN.recipeBuilder()
                 .inputs(ore('dustAlumina'))
                 .notConsumable(metaitem('shape.mold.plate'))
                 .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -131,7 +92,7 @@ for (fuel in sintering_fuels) {
                 .EUt(240)
                 .buildAndRegister()
 
-        SINTERING_RECIPES.recipeBuilder()
+        SINTERING_OVEN.recipeBuilder()
                 .inputs(ore('dustBerylliumOxide'))
                 .notConsumable(metaitem('shape.mold.plate'))
                 .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -141,7 +102,7 @@ for (fuel in sintering_fuels) {
                 .EUt(240)
                 .buildAndRegister()
 
-        SINTERING_RECIPES.recipeBuilder()
+        SINTERING_OVEN.recipeBuilder()
                 .inputs(ore('dustTantalum'))
                 .notConsumable(metaitem('shape.mold.nugget'))
                 .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -155,7 +116,7 @@ for (fuel in sintering_fuels) {
 
         for (comburent in sintering_comburents) {
 
-            SINTERING_RECIPES.recipeBuilder()
+            SINTERING_OVEN.recipeBuilder()
                     .inputs(ore('dustAlumina'))
                     .notConsumable(metaitem('shape.mold.plate'))
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -166,7 +127,7 @@ for (fuel in sintering_fuels) {
                     .EUt(240)
                     .buildAndRegister()
 
-            SINTERING_RECIPES.recipeBuilder()
+            SINTERING_OVEN.recipeBuilder()
                     .inputs(ore('dustBerylliumOxide'))
                     .notConsumable(metaitem('shape.mold.plate'))
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -177,7 +138,7 @@ for (fuel in sintering_fuels) {
                     .EUt(240)
                     .buildAndRegister()
 
-            SINTERING_RECIPES.recipeBuilder()
+            SINTERING_OVEN.recipeBuilder()
                     .inputs(ore('dustTantalum'))
                     .notConsumable(metaitem('shape.mold.nugget'))
                     .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
@@ -457,7 +418,6 @@ CRYSTALLIZER.recipeBuilder()
         .EUt(240)
         .buildAndRegister()
 
-
 CUTTER.recipeBuilder()
         .inputs(metaitem('boule.beryllium_oxide'))
         .outputs(metaitem('seed_crystal.beryllium_oxide'))
@@ -644,7 +604,7 @@ ELECTROLYZER.recipeBuilder()
         .EUt(240)
         .buildAndRegister()
 
-PYROLYSE.recipeBuilder()
+PYROLYSE_OVEN.recipeBuilder()
         .inputs(metaitem('anodized_tantalum_chip') * 8)
         .inputs(ore('dustManganeseIiNitrate'))
         .outputs(metaitem('manganized_tantalum_chip') * 8)
@@ -660,7 +620,7 @@ CHEMICAL_BATH.recipeBuilder()
         .EUt(240)
         .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustPurifiedIronIiiOxide') * 10)
         .inputs(ore('dustZincOxide') * 2)
         .inputs(ore('dustNickelIiOxide') * 2)
@@ -670,7 +630,7 @@ EBF.recipeBuilder()
         .EUt(60)
         .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustPurifiedIronIiiOxide') * 10)
         .inputs(ore('dustZincOxide') * 2)
         .inputs(ore('dustManganeseIiOxide') * 2)
@@ -680,7 +640,7 @@ EBF.recipeBuilder()
         .EUt(60)
         .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustPurifiedIronIiiOxide') * 30)
         .inputs(ore('dustBariumCarbonate') * 5)
         .outputs(metaitem('ingotBariumFerrite') * 32)
@@ -690,7 +650,7 @@ EBF.recipeBuilder()
         .EUt(60)
         .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustPurifiedIronIiiOxide') * 30)
         .inputs(ore('dustStrontiumCarbonate') * 5)
         .outputs(metaitem('ingotStrontiumFerrite') * 32)

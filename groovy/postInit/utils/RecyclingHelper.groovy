@@ -25,9 +25,9 @@ import java.util.stream.Collectors
 class RecyclingHelper {
 
     private static final List recyclingRecipeMaps = [
-            recipemap("macerator"),
-            recipemap("arc_furnace"),
-            recipemap("extractor")
+            recipemap('macerator'),
+            recipemap('arc_furnace'),
+            recipemap('extractor')
     ]
 
     static final void removeByOutput(ItemStack output) {

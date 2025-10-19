@@ -1,10 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
-
-DT = recipemap("sieve_distillation")
-FLUID_HEATER = recipemap("fluid_heater")
-FBR = recipemap("fixed_bed_reactor")
-BCR = recipemap("bubble_column_reactor")
 
 fractions.each { _, fraction ->
     if (fraction.sulfuric) {
@@ -15,7 +11,7 @@ fractions.each { _, fraction ->
             .EUt(VA[LV])
             .buildAndRegister()
     
-        FBR.recipeBuilder()
+        FIXED_BR.recipeBuilder()
             .fluidInputs(fraction.getHeated(1000))
             .fluidInputs(fluid('hydrogen') * 100)
             .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))
@@ -24,7 +20,7 @@ fractions.each { _, fraction ->
             .EUt(VA[LV])
             .buildAndRegister()
 
-        DT.recipeBuilder()
+        SIEVE_DT.recipeBuilder()
             .fluidInputs(fraction.getTreatedSulfuric(1000))
             .fluidOutputs(fraction.get(1000))
             .fluidOutputs(fluid('sour_gas') * 100)

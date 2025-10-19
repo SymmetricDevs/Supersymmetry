@@ -1,10 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
-DISTILLERY = recipemap('distillery')
-EBF = recipemap('electric_blast_furnace')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 BR.recipeBuilder()
     .inputs(ore('dustThoriumConcentrate'))
@@ -70,7 +65,7 @@ DISTILLERY.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .notConsumable(fluid('argon') * 1000)
     .inputs(ore('dustThoriumChloride') * 5)
     .inputs(ore('dustMagnesium') * 2)

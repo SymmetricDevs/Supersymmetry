@@ -128,7 +128,6 @@ for (name in stair_materials) {
 	)
 }
 
-
 // Concrete
 
 mods.gregtech.cutter.recipeBuilder()

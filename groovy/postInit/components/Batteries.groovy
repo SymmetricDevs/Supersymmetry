@@ -1,3 +1,4 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.recipeproperties.RecipeProperty
 import gregtech.api.recipes.RecipeBuilder
@@ -12,15 +13,6 @@ import gregtech.api.unification.stack.UnificationEntry
 import postInit.utils.RecyclingHelper
 
 log.infoMC("Running Batteries.groovy...")
-
-ASSEMBLER = recipemap('assembler')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-EXTRACTOR = recipemap('extractor')
-FORMING_PRESS = recipemap('forming_press')
-ROASTER = recipemap('roaster')
 
 /*
  * Components

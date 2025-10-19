@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-DISTILLATION_TOWER = recipemap('distillation_tower')
 
 BR.recipeBuilder()
     .inputs(ore('dustThalliumIChloride') * 4)
@@ -12,7 +9,7 @@ BR.recipeBuilder()
     .duration(20)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('acidic_thallium_sulfate_solution') * 1000)
     .fluidOutputs(fluid('thallium_sulfate_solution') * 1000)
     .fluidOutputs(fluid('hydrogen_chloride') * 2000)

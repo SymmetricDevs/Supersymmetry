@@ -1,12 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 
 // PTFE
 BR.recipeBuilder()
@@ -29,7 +22,7 @@ BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('sodium_sulfate_acetone_solution') * 1000)
     .outputs(metaitem('dustSodiumSulfate') * 42)
     .fluidOutputs(fluid('water') * 9000)
@@ -98,7 +91,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('tetrafluoroethylene_emulsion') * 1500)
     .inputs(ore('dustTinyPotassiumPersulfate'))
     .fluidOutputs(fluid('polytetrafluoroethylene_solution') * 500)

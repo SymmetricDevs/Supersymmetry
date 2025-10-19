@@ -1,13 +1,10 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
 import static gregtech.api.GTValues.*
 
-DT = recipemap('sieve_distillation')
-BCR = recipemap('bubble_column_reactor')
-HIGH_PRESSURE_DISTILLATION_TOWER = recipemap('high_pressure_cryogenic_distillation')
-
 // Debutanization
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fractions.naphtha.getCrude(10000))
     .fluidOutputs(fluid('sulfuric_debutanized_naphtha') * 8000)
     .fluidOutputs(fluid('sulfuric_fuel_gas') * 2000)
@@ -17,7 +14,7 @@ DT.recipeBuilder()
 
 // Naphtha hydrotreatment/splitting
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('sulfuric_debutanized_naphtha') * 10000)
     .fluidOutputs(fluid('sulfuric_heavy_naphtha') * 5000)
     .fluidOutputs(fluid('sulfuric_light_naphtha') * 5000)
@@ -25,7 +22,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('naphtha') * 10000)
     .fluidOutputs(fluid('heavy_naphtha') * 5000)
     .fluidOutputs(fluid('light_naphtha') * 5000)
@@ -35,7 +32,7 @@ DT.recipeBuilder()
 
 // Depropanization
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('sulfuric_fuel_gas') * 1000)
     .fluidOutputs(fluid('sulfuric_butane_fuel_gas') * 600)
     .fluidOutputs(fluid('sulfuric_propane_fuel_gas') * 400)
@@ -43,7 +40,7 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister() 
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('fuel_gas') * 1000)
     .fluidOutputs(fluid('butane_fuel_gas') * 600)
     .fluidOutputs(fluid('propane_fuel_gas') * 400)
@@ -53,7 +50,7 @@ DT.recipeBuilder()
     
 // Deethanization
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('propane_fuel_gas') * 1000)
     .fluidOutputs(fluid('propane') * 900)
     .fluidOutputs(fluid('ethane') * 100)
@@ -92,7 +89,7 @@ BCR.recipeBuilder()
 
 // iC4-nC4 separation
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('butane_fuel_gas') * 1000)
     .fluidOutputs(fluid('butane') * 800)
     .fluidOutputs(fluid('isobutane') * 200)
@@ -102,7 +99,7 @@ DT.recipeBuilder()
 
 // FCC light ends treatment
 
-DT.recipeBuilder() // Mwt: 24.533
+SIEVE_DT.recipeBuilder() // Mwt: 24.533
     .fluidInputs(fluid('catalytic_overheads') * 1000)
     .fluidOutputs(fluid('catalytic_olefin_rich_mixture') * 830)
     .fluidOutputs(fluid('hydrogen') * 170)
@@ -110,7 +107,7 @@ DT.recipeBuilder() // Mwt: 24.533
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder() // Mwt: 29.145 
+SIEVE_DT.recipeBuilder() // Mwt: 29.145 
     .fluidInputs(fluid('catalytic_olefin_rich_mixture') * 830)
     .fluidOutputs(fluid('catalytic_c_four_fraction') * 30)
     .fluidOutputs(fluid('catalytic_c_three_fraction') * 70)
@@ -119,7 +116,7 @@ DT.recipeBuilder() // Mwt: 29.145
     .EUt(VA[LV])
     .buildAndRegister()
 
-HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder() // Mwt: 21.8698
+HIGH_PRESSURE_CRYO_DT.recipeBuilder() // Mwt: 21.8698
     .fluidInputs(fluid('catalytic_light_gases') * 1000)
     .fluidOutputs(fluid('ethane') * 270)
     .fluidOutputs(fluid('ethylene') * 170)
@@ -128,7 +125,7 @@ HIGH_PRESSURE_DISTILLATION_TOWER.recipeBuilder() // Mwt: 21.8698
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder() // Mwt: 42.585
+SIEVE_DT.recipeBuilder() // Mwt: 42.585
     .fluidInputs(fluid('catalytic_c_three_fraction') * 1000)
     .fluidOutputs(fluid('propane') * 250)
     .fluidOutputs(fluid('propene') * 750)
@@ -136,7 +133,7 @@ DT.recipeBuilder() // Mwt: 42.585
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder() // Mwt: 57.114
+SIEVE_DT.recipeBuilder() // Mwt: 57.114
     .fluidInputs(fluid('catalytic_c_four_fraction') * 1000)
     .fluidOutputs(fluid('butane') * 150)
     .fluidOutputs(fluid('catalytic_butene_mixture') * 500)
@@ -145,7 +142,7 @@ DT.recipeBuilder() // Mwt: 57.114
     .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder() // Mwt: 56.108
+SIEVE_DT.recipeBuilder() // Mwt: 56.108
     .fluidInputs(fluid('catalytic_butene_mixture') * 1000)
     .fluidOutputs(fluid('two_butene') * 450)
     .fluidOutputs(fluid('one_butene') * 250)

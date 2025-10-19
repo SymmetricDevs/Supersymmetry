@@ -1,16 +1,9 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-FBR = recipemap('fixed_bed_reactor')
-BR = recipemap('batch_reactor')
-LCR = recipemap('large_chemical_reactor')
-CENTRIFUGE = recipemap('centrifuge')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-REACTION_FURNACE = recipemap('reaction_furnace')
 
 // Caprolactam
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
 .fluidInputs(fluid('nitric_oxide') * 50)
 .fluidInputs(fluid('hydrogen') * 150)
 .notConsumable(ore('catalystBedPlatinum'))
@@ -19,7 +12,7 @@ FBR.recipeBuilder()
 .EUt(VA[LV])
 .buildAndRegister()
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
 .fluidInputs(fluid('cyclohexane') * 50)
 .fluidInputs(fluid('oxygen') * 100)
 .notConsumable(ore('catalystBedCobalt'))

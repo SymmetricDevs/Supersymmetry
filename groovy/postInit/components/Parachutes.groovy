@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(2)

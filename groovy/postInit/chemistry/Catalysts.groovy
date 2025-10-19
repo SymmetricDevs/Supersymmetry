@@ -1,19 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-MIXER = recipemap('mixer')
-SINTERING_OVEN = recipemap('sintering_oven')
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-ROASTER = recipemap('roaster')
-DISTILLERY = recipemap('distillery')
-DT = recipemap('distillation_tower')
-DRYER = recipemap('dryer')
-AUTOCLAVE = recipemap('autoclave')
-ION_EXCHANGE = recipemap('ion_exchange_column')
-FBR = recipemap('fixed_bed_reactor')
-LCR = recipemap('large_chemical_reactor')
-ASSEMBLER = recipemap('assembler')
-ALLOY_SMELTER = recipemap('alloy_smelter')
 
 // Alumina supports
 
@@ -96,7 +82,6 @@ ROASTER.recipeBuilder()
         .duration(120)
         .EUt(VA[LV])
         .buildAndRegister()
-
 
 // Isomerization catalysts
 
@@ -329,7 +314,6 @@ BR.recipeBuilder()
     .duration(100)
     .EUt(VA[MV])
     .buildAndRegister();
-
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustCopperCarbonate') * 10)

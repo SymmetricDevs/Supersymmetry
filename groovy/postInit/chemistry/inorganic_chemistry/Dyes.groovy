@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-EBF = recipemap('electric_blast_furnace')
 
 BR.recipeBuilder()
         .inputs(ore('dustLeadIiOxide') * 2)
@@ -44,7 +41,7 @@ BR.recipeBuilder()
         .duration(200)
         .buildAndRegister()
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
         .inputs(ore('dustAlumina') * 5)
         .inputs(ore('dustCobaltOxide') * 2)
         .outputs(metaitem('dustCobaltAluminate') * 7)

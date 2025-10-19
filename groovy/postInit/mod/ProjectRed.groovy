@@ -1,7 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-ASSEMBLER = recipemap('assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
 
 log.infoMC("Running projectRed.groovy...")
 
@@ -81,7 +79,6 @@ ASSEMBLER.recipeBuilder()
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister()
-
 
 // Conductive Plate
 crafting.replaceShaped("projectred-core:parts/conductive_plate", item('projectred-core:resource_item:1'), [

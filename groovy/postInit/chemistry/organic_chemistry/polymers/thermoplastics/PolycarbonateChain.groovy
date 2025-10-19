@@ -1,9 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BCR = recipemap('bubble_column_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-DISTILLATION_TOWER = recipemap('distillation_tower')
 
 BCR.recipeBuilder()
     .fluidInputs(fluid('phosgene') * 50)
@@ -30,7 +26,7 @@ CSTR.recipeBuilder()
     .duration(3)
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('oligomeric_bisphenol_solution') * 4000)
     .fluidInputs(fluid('triethylamine') * 1000)
     .outputs(metaitem('dustPolycarbonate') * 8)
@@ -39,7 +35,7 @@ POLYMERIZATION.recipeBuilder()
     .duration(60)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('triethylamine_solution') * 5000)
     .fluidOutputs(fluid('triethylamine') * 1000)
     .fluidOutputs(fluid('dichloromethane') * 4000)

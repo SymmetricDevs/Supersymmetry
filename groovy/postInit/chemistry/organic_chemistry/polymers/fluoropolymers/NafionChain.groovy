@@ -1,12 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-LCR = recipemap('large_chemical_reactor')
-DT = recipemap('distillation_tower')
-ROASTER = recipemap('roaster')
-POLYMERIZATION = recipemap('polymerization_tank')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
 
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('hexafluoropropylene') * 50)
@@ -45,7 +38,7 @@ DT.recipeBuilder()
     .EUt(240)
     .buildAndRegister();
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('fluorinated_surfactant_mixture') * 500)
     .fluidInputs(fluid('perfluorovinyl_sulfonyl_ether') * 1000)
     .fluidInputs(fluid('tetrafluoroethylene') * 1000)

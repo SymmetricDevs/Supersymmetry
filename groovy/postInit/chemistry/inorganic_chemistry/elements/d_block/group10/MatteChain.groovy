@@ -1,30 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-BR = recipemap('batch_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DISTILLERY = recipemap('distillery')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-ROASTER = recipemap('roaster')
-MACERATOR = recipemap('macerator')
-SIFTER = recipemap('sifter')
-CRYSTALLIZER = recipemap('crystallizer')
-REACTION_FURNACE = recipemap('reaction_furnace')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-FF = recipemap('froth_flotation')
-CLARIFIER = recipemap('clarifier')
-MIXER = recipemap('mixer')
-EBF = recipemap('electric_blast_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-AUTOCLAVE = recipemap('autoclave')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-SIFTER = recipemap('sifter')
-DRYER = recipemap('dryer')
-VACUUM_DT = recipemap('vacuum_distillation')
-BCR = recipemap('bubble_column_reactor')
-SIEVE_DT = recipemap('sieve_distillation')
-PHASE_SEPARATOR = recipemap('phase_separator')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-MIXER_SETTLER = recipemap('mixer_settler')
 
 // Smelting
 // The pelletized material is smelted in a shaft furnace to form a 
@@ -32,7 +7,7 @@ MIXER_SETTLER = recipemap('mixer_settler')
 // to oxidize the iron sulfide selectively to iron oxide, 
 // which forms a slag.
 
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .circuitMeta(2)
     .inputs(ore('dustFlotatedPentlandite') * 6)
     .outputs(metaitem('dustGreenMatte') * 6)
@@ -42,7 +17,7 @@ EBF.recipeBuilder()
     .buildAndRegister()
 
 // GM: Ni: 33%, Cu: 18%, Co: 6%, Fe: 7%, S: 33%, S: 2%, Se/Te: 1%
-EBF.recipeBuilder()
+ERF.recipeBuilder()
     .inputs(ore('dustGreenMatte') * 6)
     .fluidInputs(fluid('oxygen') * 1400)
     .chancedOutput(metaitem('white_matte') * 6, 8600, 0) // Remaining components

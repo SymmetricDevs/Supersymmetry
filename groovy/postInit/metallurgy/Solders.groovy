@@ -1,8 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
-EBF = recipemap('electric_blast_furnace')
-MIXER = recipemap('mixer')
-ALLOY_SMELTER = recipemap('alloy_smelter')
 
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('dustBismuth') * 6)
