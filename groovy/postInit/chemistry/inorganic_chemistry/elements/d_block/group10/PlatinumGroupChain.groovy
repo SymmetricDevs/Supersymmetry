@@ -299,7 +299,7 @@ import static gregtech.api.GTValues.*
             .fluidInputs(fluid('oxalic_acid_solution') * 1500)
             .fluidInputs(fluid('distilled_water') * 2500)
             .fluidOutputs(fluid('dibutyl_carbitol') * 1000)
-            .fluidOutputs(fluid('hydrochloric_acid') * 4000)
+            .fluidOutputs(fluid('hydrochloric_acid') * 1000)
             .fluidOutputs(fluid('carbon_dioxide') * 3000)
             .outputs(metaitem('dustGold'))
             .EUt(240)
