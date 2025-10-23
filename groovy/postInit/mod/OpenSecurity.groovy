@@ -1,3 +1,5 @@
+import static gregtech.api.GTValues.*
+
 def solder = fluid('soldering_alloy') * 72
 
 def name_removals = [
@@ -38,7 +40,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:keypad'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -50,7 +52,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:rfid_reader'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -61,7 +63,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:card_writer'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -72,7 +74,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:alarm'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -83,7 +85,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:data_block'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -95,7 +97,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:entity_detector'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -106,7 +108,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:mag_reader'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -118,7 +120,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:mag_reader_camo'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -129,7 +131,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:biometric_reader'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -139,7 +141,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:secure_door'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -150,7 +152,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:private_secure_door'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -160,7 +162,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:rolldoor'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -171,7 +173,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:door_controller'))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -182,7 +184,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opensecurity:rolldoor_controller')) //same recipe, diff circuit
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -192,7 +194,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta(2)
 		.outputs(item('opensecurity:rfid_card')) 
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -202,7 +204,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta(3)
 		.outputs(item('opensecurity:mag_card')) 
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -215,5 +217,5 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([13])
 		.outputs(item('opensecurity:rfid_reader_card'))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();

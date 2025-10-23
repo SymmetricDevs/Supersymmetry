@@ -779,6 +779,8 @@ class SuSyMaterials {
     public static Material AmmoxidationCatalyst
     public static Material PropyleneAmmoxidationMixture
     public static Material CrudeAcrylonitrile
+    public static Material Ebonite
+    public static Material CompoundedEbonite
 
     // Petrochem Materials
 
@@ -1141,7 +1143,7 @@ class SuSyMaterials {
     public static Material LithiumHexafluorophosphate
     public static Material NickelHydroxide
     public static Material NickelChloride
-    public static Material NickelOxideHydroxide
+    public static Material NickelChlorideSolution
     public static Material SilverNitrateSolution
     public static Material ChloroauricAcid
     public static Material SpentMoebiusElectrolyte
@@ -1234,7 +1236,7 @@ class SuSyMaterials {
     public static Material ManganeseZincFerrite
     public static Material StrontiumCarbonate
     public static Material BariumCarbonate
-    public static Material LeadOxide
+    public static Material LeadIIOxide
     public static Material TantalumNitride
     public static Material RutheniumIIIChloride
     public static Material BismuthIridate
@@ -1600,6 +1602,7 @@ class SuSyMaterials {
     public static Material LanthanumStrontiumChromite
     public static Material YttriaStabilizedZirconia
     public static Material BismuthIIINitrateSolution
+    public static Material LeadIVOxide
 
     // HP Materials
 
@@ -1786,6 +1789,7 @@ class SuSyMaterials {
     public static Material SodiumAlumSolution
     public static Material OxidizedManganateSolution
     public static Material SupportedNickel
+    public static Material WattsBathElectrolyte
     public static Material AmmoniumMetatungstateSolution
     public static Material CobaltNitrateSolution
     public static Material GalvanizedSteel
@@ -1805,6 +1809,7 @@ class SuSyMaterials {
     public static Material AmmoniumPersulfateSolution
     public static Material YttriumChlorideSolution
     public static Material LanthanumNitrateSolution
+    public static Material DilutedLanthanumNitrateSolution
     public static Material CeriumIIIChlorideSolution
     public static Material PraseodymiumIIINitrateSolution
     public static Material GadoliniumChlorideSolution

@@ -1,20 +1,5 @@
-import globals.Globals
-
-FF = recipemap('froth_flotation')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-ROASTER = recipemap('roaster')
-AUTOCLAVE = recipemap('autoclave')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
-CHEMICAL_BATH = recipemap('chemical_bath')
-CRYSTALLIZER = recipemap('crystallizer')
-REACTION_FURNACE = recipemap('reaction_furnace')
-FORMING_PRESS = recipemap("forming_press")
-MIXER_SETTLER = recipemap('mixer_settler')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Beneficiation
 
@@ -25,7 +10,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Tantalite
     .outputs(metaitem('dustSiftedTantalite'))
     .chancedOutput(metaitem('dustPegmatiteTailings'), 2500, 0)
     .chancedOutput(metaitem('dustNetherQuartz'), 2500, 0)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(40)
     .buildAndRegister()
 
@@ -34,7 +19,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Tantalite Concentrate
     .outputs(metaitem('dustConcentrateTantalite'))
     .chancedOutput(metaitem('dustPegmatiteTailings'), 2500, 0)
     .chancedOutput(metaitem('dustNetherQuartz'), 2500, 0)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(20)
     .buildAndRegister()
 
@@ -42,11 +27,11 @@ MIXER.recipeBuilder() // Impure Tantalite Slurry
     .inputs(ore('dustConcentrateTantalite') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_tantalite_slurry') * 2000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder() // Tantalite Slurry
+FROTH_FLOTATION.recipeBuilder() // Tantalite Slurry
     .notConsumable(ore('dustSodiumFluorosilicate'))
     .fluidInputs(fluid('impure_tantalite_slurry') * 2000)
     .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)
@@ -54,7 +39,7 @@ FF.recipeBuilder() // Tantalite Slurry
     .notConsumable(fluid('hydrochloric_acid') * 100)
     .fluidOutputs(fluid('tantalite_slurry') * 1000)
     .fluidOutputs(fluid('pegmatite_tailing_slurry') * 1000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
@@ -63,7 +48,7 @@ CLARIFIER.recipeBuilder() // Flotated Tantalite
     .outputs(metaitem('dustFlotatedTantalite') * 16)
     .fluidOutputs(fluid('wastewater') * 1000)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 AUTOCLAVE.recipeBuilder() // Impure Fluorotantalic Acid Solution
@@ -72,7 +57,7 @@ AUTOCLAVE.recipeBuilder() // Impure Fluorotantalic Acid Solution
     .fluidInputs(fluid('diluted_sulfuric_acid') * 2000)
     .fluidOutputs(fluid('impure_fluorotantalic_acid_solution') * 1000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 MIXER_SETTLER.recipeBuilder() // Tantalum-rich Extract
@@ -81,7 +66,7 @@ MIXER_SETTLER.recipeBuilder() // Tantalum-rich Extract
     .fluidOutputs(fluid('tantalum_rich_extract') * 8000)
     .fluidOutputs(fluid('metal_sulfate_waste') * 1000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(4)
     .buildAndRegister()
 
@@ -90,7 +75,7 @@ MIXER_SETTLER.recipeBuilder() // Scrubbed Tantalum-rich Extract
     .notConsumable(fluid('sulfuric_acid') * 8000)
     .fluidOutputs(fluid('scrubbed_tantalum_rich_extract') * 8000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
 
@@ -100,7 +85,7 @@ MIXER_SETTLER.recipeBuilder() // Tantalum Extract
     .fluidOutputs(fluid('tantalum_extract') * 9000)
     .fluidOutputs(fluid('purified_fluoroniobic_acid_solution') * 1000)
     .duration(90)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
 
@@ -110,7 +95,7 @@ MIXER_SETTLER.recipeBuilder() // Fluorotantalic Acid Solution
     .fluidOutputs(fluid('methyl_isobutyl_ketone') * 8000)
     .fluidOutputs(fluid('fluorotantalic_acid_solution') * 2000) // 9/5 mol Ta
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
 
@@ -120,16 +105,16 @@ CRYSTALLIZER.recipeBuilder() // Potassium Heptafluorotantalate
     .outputs(metaitem('dustPotassiumHeptafluorotantalate') * 45)
     .fluidOutputs(fluid('hydrofluoric_ammonia_mixture') * 5000)
     .duration(180)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('hydrofluoric_ammonia_mixture') * 2500)
     .fluidOutputs(fluid('water') * 2500)
     .fluidOutputs(fluid('hydrogen_fluoride') * 9000)
     .fluidOutputs(fluid('ammonia') * 1250)
     .duration(90)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder() // Tantalum
@@ -139,7 +124,7 @@ REACTION_FURNACE.recipeBuilder() // Tantalum
     .outputs(metaitem('dustSodiumFluoride') * 10)
     .outputs(metaitem('dustPotassiumFluoride') * 4)
     .duration(40)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 // From columbite
@@ -149,16 +134,16 @@ MIXER_SETTLER.recipeBuilder() // Fluorotantalic Acid Solution
     .fluidOutputs(fluid('methyl_isobutyl_ketone') * 4500)
     .fluidOutputs(fluid('fluorotantalic_acid_solution') * 250) //0.2 mol of Ta per 8000L of dil. Ta ext.
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
 
 // From pyrochlore
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('tantalum_pentachloride') * 1000)
     .outputs(metaitem('dustTantalumPentachloride') * 6)
     .duration(100)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -167,7 +152,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustTantalumFluoride') * 6)
     .fluidOutputs(fluid('hydrogen_chloride') * 5000)
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 MIXER.recipeBuilder()
@@ -175,7 +160,7 @@ MIXER.recipeBuilder()
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('tantalum_fluoride_solution') * 2000)
     .duration(100)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
@@ -184,7 +169,7 @@ CRYSTALLIZER.recipeBuilder()
     .outputs(metaitem('dustPotassiumHeptafluorotantalate') * 10)
     .fluidOutputs(fluid('hydrofluoric_acid') * 2000)
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 // Crucibles
@@ -193,5 +178,5 @@ FORMING_PRESS.recipeBuilder()
     .inputs(ore('plateTantalum') * 4)
     .outputs(metaitem('crucible.tantalum'))
     .duration(100)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()

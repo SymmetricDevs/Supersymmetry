@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "RigDesk",
+  "items": [
+    {
+      "weight": 1.290178656578064,
+      "min": 7,
+      "max": 22,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 89,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 90,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "usesLeft": {
+              "nbtType": "int",
+              "nbt": 16
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 91,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "butane"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 100
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 17,
+      "max": 42,
+      "item": {
+        "id": "minecraft:paper",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 4,
+      "max": 16,
+      "item": {
+        "id": "minecraft:book",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

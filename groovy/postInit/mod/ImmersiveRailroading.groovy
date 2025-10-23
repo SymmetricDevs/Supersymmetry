@@ -1,7 +1,7 @@
-
+import globals.Globals
+import static gregtech.api.GTValues.*
 import cam72cam.immersiverailroading.IRItems
 import cam72cam.mod.serialization.TagCompound
-import globals.Globals
 import supersymmetry.api.recipes.SuSyRecipeMaps
 import trackapi.lib.Gauges
 
@@ -122,7 +122,7 @@ mods.gregtech.bender.recipeBuilder()
 		.inputs(ore('plateSteel'))
 		.outputs(item('immersiverailroading:item_rail_part') * 10)
 		.duration(200)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
@@ -131,7 +131,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('plateSteel') * 2)
 		.outputs(item('susy:meta_item', 5) * 2)
 		.duration(200)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
@@ -140,7 +140,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('plateAluminium') * 2)
 		.outputs(item('susy:meta_item', 5) * 4)
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
@@ -149,7 +149,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('plateStainlessSteel') * 2)
 		.outputs(item('susy:meta_item', 5) * 8)
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
@@ -158,14 +158,14 @@ mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('plateDoubleSteel') * 16)
 		.outputs(metaitem('tunnelbore.drillhead'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister()
 
 mods.gregtech.forge_hammer.recipeBuilder()
 		.inputs(ore('stickLongSteel') * 16)
 		.outputs(metaitem('tunnelbore.axle'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
@@ -177,7 +177,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(fluid('lubricant') * 8000)
 		.outputs(metaitem('tunnelbore.engine'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister()
 		
 Globals.solders.each { key, val ->
@@ -203,7 +203,7 @@ Globals.solders.each { key, val ->
 			.inputs(ore('stickLongSteel') * 8)
 			.fluidInputs(fluid(key) * (val * 10))
 			.outputs(is.internal)
-			.EUt(30)
+			.EUt(VA[LV])
 			.duration(400)
 			.buildAndRegister();
 
@@ -223,7 +223,7 @@ Globals.solders.each { key, val ->
 			.inputs(ore('stickLongSteel') * 8)
 			.fluidInputs(fluid(key) * (val * 10))
 			.outputs(is2.internal)
-			.EUt(30)
+			.EUt(VA[LV])
 			.duration(400)
 			.buildAndRegister();
 
@@ -244,7 +244,7 @@ Globals.solders.each { key, val ->
 			.inputs(ore('blockGlass') * 4)
 			.fluidInputs(fluid(key) * (val * 10))
 			.outputs(is3.internal)
-			.EUt(30)
+			.EUt(VA[LV])
 			.duration(400)
 			.buildAndRegister();
 
@@ -265,7 +265,7 @@ Globals.solders.each { key, val ->
 			.inputs(metaitem('electric.pump.lv') * 2)
 			.fluidInputs(fluid(key) * (val * 10))
 			.outputs(is4.internal)
-			.EUt(30)
+			.EUt(VA[LV])
 			.duration(400)
 			.buildAndRegister();
 
@@ -293,7 +293,7 @@ Globals.solders.each { key, val ->
 		.inputs(metaitem('tunnelbore.engine'))
 		.fluidInputs(fluid(key) * (val * 10))
 		.outputs(is5.internal)
-		.EUt(30)
+		.EUt(VA[LV])
 		.duration(400)
 		.buildAndRegister();
 

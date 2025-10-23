@@ -11,8 +11,8 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.98.desc",
       "icon:10": {
-        "Damage:2": 1,
-        "id:8": "minecraft:sand"
+        "Damage:2": 10207,
+        "id:8": "gregtech:meta_item_2"
       },
       "name:8": "susy.quest.db.98.title"
     }

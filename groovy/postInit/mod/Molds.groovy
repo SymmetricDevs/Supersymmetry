@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import postInit.utils.RecyclingHelper
-
-def FORMINGPRESS = recipemap('forming_press')
 
 //ROD MOLD
 crafting.addShaped("mold_rod", metaitem('shape.mold.rod'), [
@@ -13,7 +12,7 @@ RecyclingHelper.handleRecycling(metaitem('shape.mold.rod'), [
 		metaitem('shape.empty')
 ])
 
-FORMINGPRESS.recipeBuilder()
+FORMING_PRESS.recipeBuilder()
 	.inputs(metaitem('shape.empty'))
 	.notConsumable(metaitem('shape.mold.rod'))
     .outputs(metaitem('shape.mold.rod'))
@@ -32,7 +31,7 @@ RecyclingHelper.handleRecycling(metaitem('shape.mold.crucible'), [
 		metaitem('shape.empty')
 ])
 
-FORMINGPRESS.recipeBuilder()
+FORMING_PRESS.recipeBuilder()
 	.inputs(metaitem('shape.empty'))
 	.notConsumable(metaitem('shape.mold.crucible'))
     .outputs(metaitem('shape.mold.crucible'))
@@ -51,7 +50,7 @@ RecyclingHelper.handleRecycling(metaitem('shape.mold.long_rod'), [
 		metaitem('shape.empty')
 ])
 
-FORMINGPRESS.recipeBuilder()
+FORMING_PRESS.recipeBuilder()
 		.inputs(metaitem('shape.empty'))
 		.notConsumable(metaitem('shape.mold.long_rod'))
 		.outputs(metaitem('shape.mold.long_rod'))
@@ -70,7 +69,7 @@ RecyclingHelper.handleRecycling(metaitem('shape.mold.ring'), [
 		metaitem('shape.empty')
 ])
 
-FORMINGPRESS.recipeBuilder()
+FORMING_PRESS.recipeBuilder()
 		.inputs(metaitem('shape.empty'))
 		.notConsumable(metaitem('shape.mold.ring'))
 		.outputs(metaitem('shape.mold.ring'))

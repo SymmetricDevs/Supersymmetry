@@ -1,9 +1,5 @@
-import globals.Globals
-
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-DISTILLERY = recipemap('distillery')
-MIXER_SETTLER = recipemap('mixer_settler')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Tier 1
 
@@ -18,7 +14,7 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('water') * 3000)
     .fluidOutputs(fluid('oxygen') * 1000)
     .duration(80)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
@@ -39,7 +35,7 @@ MIXER_SETTLER.recipeBuilder()
     .fluidOutputs(fluid('praseodymium_iii_nitrate_solution') * 1000)
     .fluidOutputs(fluid('aliquat_336_extraction_mixture') * 10000)
     .duration(80)
-    .EUt(120)
+    .EUt(VA[MV])
     .requiredCells(2)
     .buildAndRegister()
 
@@ -48,7 +44,7 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustPraseodymiumIiiNitrate') * 13)
     .fluidOutputs(fluid('water') * 1000)
     .duration(20)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -57,5 +53,5 @@ BR.recipeBuilder()
     .outputs(metaitem('dustPraseodymiumIiiFluoride') * 4)
     .fluidOutputs(fluid('diluted_nitric_acid') * 6000)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()

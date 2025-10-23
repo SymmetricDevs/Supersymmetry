@@ -1,9 +1,6 @@
-import globals.Globals
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
-
-ROASTER = recipemap('roaster')
-CRACKER = recipemap('cracker')
-DT = recipemap('sieve_distillation')
+import static gregtech.api.GTValues.*
 
 crackables.each { _, crackable -> 
     if (crackable.steam_crackable) {
@@ -13,7 +10,7 @@ crackables.each { _, crackable ->
             .fluidInputs(fluid('dense_steam') * 1000)
             .fluidOutputs(crackable.getSteam(700))
             .duration(300)
-            .EUt(Globals.voltAmps[1])
+            .EUt(VA[LV])
             .buildAndRegister()
 
         CRACKER.recipeBuilder()
@@ -21,7 +18,7 @@ crackables.each { _, crackable ->
             .fluidInputs(fluid('dense_steam') * 4000)
             .fluidOutputs(crackable.getSteam(4000))
             .duration(80)
-            .EUt(Globals.voltAmps[2])
+            .EUt(VA[MV])
             .buildAndRegister()  
         
     }
@@ -34,16 +31,16 @@ crackables.each { _, crackable ->
 - Light naphtha: 5.5 carbons per mol
 - Heavy naphtha: 9 carbons per mol */
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_ethane') * 1000)
     .fluidOutputs(fluid('ethylene') * 890)
     .fluidOutputs(fluid('methane') * 220)
     .fluidOutputs(fluid('hydrogen') * 3330)
     .duration(20)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_propane') * 1000)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 30)
     .fluidOutputs(fluid('butadiene') * 40)
@@ -52,10 +49,10 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('methane') * 680)
     .fluidOutputs(fluid('hydrogen') * 1845)
     .duration(20)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_butane') * 1000)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 45)
     .fluidOutputs(fluid('butadiene') * 45)
@@ -65,10 +62,10 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('methane') * 945)
     .fluidOutputs(fluid('hydrogen') * 2310)
     .duration(20)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_light_naphtha') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 25)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 185)
@@ -79,10 +76,10 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('methane') * 825)
     .fluidOutputs(fluid('hydrogen') * 2320)
     .duration(20)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_heavy_naphtha') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 30)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 310)
@@ -93,10 +90,10 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('methane') * 1150)
     .fluidOutputs(fluid('hydrogen') * 2585)
     .duration(20)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_light_gas_oil') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 235)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 295)
@@ -107,10 +104,10 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('methane') * 1290)
     .fluidOutputs(fluid('hydrogen') * 1730)
     .duration(20)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('steamcracked_heavy_gas_oil') * 1000)
     .fluidOutputs(fluid('light_gas_oil') * 355)
     .fluidOutputs(fluid('pyrolysis_gasoline') * 565)
@@ -121,5 +118,5 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('methane') * 1125)
     .fluidOutputs(fluid('hydrogen') * 2265)
     .duration(20)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()

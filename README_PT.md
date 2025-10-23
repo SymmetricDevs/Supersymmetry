@@ -39,6 +39,7 @@ O _pack_ espalha-se por muitos níveis diferentes de masteria tecnológica, desd
 Todos os mods têm a sua progressão alterada para se incluir melhor na progressão do GregTech. Como consequência, automação e produção massiva são vitais, encorajando a construção de grandes fábricas e redes de transporte para mover recursos e produtos. O jogador terá de conquistar o Overworld e os seus recursos primeiro, para se deslocar e estabelecer uma permanente presença no espaço, depois explorar o sistema solar e finalmente sair do espaço inter-estrelar, explorando uma variedade de planetas com desafios únicos, geração de mundo, e enimigos para combater, e para aceder aos recursos mais exóticos do cosmos, começando do nada e construindo algo cada vez mais expansivo do que uma civilização Kardashev do tipo III.
 
 O _pack_ de momento encontra-se em beta. Podes te juntar ao nosso servidor de _discord_ aqui: https://discord.gg/BNbbK98rh6
+Jogadores que procuram se juntar a um servidor devem verificar o canal #looking-for-group no discord.
 
 ## Créditos
 Obrigado aos desenvolvedores da [Gregicality Community Pack](https://github.com/Gregicality/Gregicality-Community-Pack) por nos deixarem usar alguns dos seus *scripts*.

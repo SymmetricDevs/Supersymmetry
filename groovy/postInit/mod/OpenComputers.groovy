@@ -1,4 +1,5 @@
 import gregtech.api.recipes.ingredients.nbtmatch.*
+import static gregtech.api.GTValues.*
 
 def solder = fluid('soldering_alloy') * 72
 
@@ -181,7 +182,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta(2)
 		.outputs(item('opencomputers:cable'))
 		.duration(100)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -192,7 +193,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:adapter'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -204,7 +205,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:assembler'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -218,7 +219,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:case1'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -231,7 +232,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:case2'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -244,7 +245,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:case3'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -254,7 +255,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:charger'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -266,7 +267,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:diskdrive'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -277,7 +278,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:geolyzer'))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -287,7 +288,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:hologram1'))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -297,7 +298,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:hologram2'))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -308,7 +309,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:motionsensor'))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -320,7 +321,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:powerdistributor'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -330,7 +331,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:printer'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -342,7 +343,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:raid'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -352,7 +353,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:redstone'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -364,7 +365,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta(1)
 		.outputs(item('opencomputers:relay'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -373,7 +374,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:screen1'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -382,7 +383,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:screen2'))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -391,7 +392,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:screen3'))
 		.duration(200)
-		.EUt(1920)
+		.EUt(VA[EV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -402,7 +403,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:rack'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -412,7 +413,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:waypoint'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -423,7 +424,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:netsplitter'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -434,7 +435,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:transposer'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -443,7 +444,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:material', 5))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -456,7 +457,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:material', 17))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -469,7 +470,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.outputs(item('opencomputers:material', 18))
 		.circuitMeta([1])
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -481,7 +482,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:material', 20))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -493,7 +494,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.outputs(item('opencomputers:material', 21))
 		.circuitMeta([2])
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -506,7 +507,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([4])
 		.outputs(item('opencomputers:material', 23))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -519,7 +520,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.outputs(item('opencomputers:material', 24))
 		.circuitMeta([4])
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -528,7 +529,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.outputs(item('opencomputers:material', 26))
 		.circuitMeta([15])
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -539,7 +540,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.inputs(item('opencomputers:material', 26))
 		.outputs(item('opencomputers:material', 27))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -552,7 +553,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:tool'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -565,7 +566,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:tool', 2))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -576,7 +577,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([4])
 		.outputs(item('opencomputers:tool', 3))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -586,7 +587,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:component'))
 		.duration(200)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -596,7 +597,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:component', 1))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -606,7 +607,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:component', 2))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -616,7 +617,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:component', 3))
 		.duration(200)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -626,7 +627,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:component', 4))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -636,7 +637,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:component', 5))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -646,7 +647,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:component', 6))
 		.duration(200)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -656,7 +657,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:component', 7))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -666,7 +667,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:component', 8))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -676,7 +677,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([4])
 		.outputs(item('opencomputers:component', 9))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -686,7 +687,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([5])
 		.outputs(item('opencomputers:component', 10))
 		.duration(200)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -696,7 +697,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([6])
 		.outputs(item('opencomputers:component', 11))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -708,7 +709,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([15])
 		.outputs(item('opencomputers:component', 13))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -720,7 +721,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([15])
 		.outputs(item('opencomputers:component', 14))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -732,7 +733,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([15])
 		.outputs(item('opencomputers:component', 15))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -745,7 +746,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:component', 16))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -758,7 +759,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:component', 17))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -770,7 +771,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('opencomputers:diskdrive'))
 		.duration(200)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -782,7 +783,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:card', 1))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -794,7 +795,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:card', 2))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -806,7 +807,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:card', 3))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 	
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -817,7 +818,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:card', 4))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -828,7 +829,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:card', 5))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -841,7 +842,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:card', 6))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -853,7 +854,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:card', 7))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -865,7 +866,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:card', 8))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -876,7 +877,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([10])
 		.outputs(item('opencomputers:card', 10))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -887,7 +888,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([11])
 		.outputs(item('opencomputers:card', 11))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -898,7 +899,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([12])
 		.outputs(item('opencomputers:card', 12))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -908,7 +909,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 1))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -918,7 +919,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:upgrade', 2))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -928,7 +929,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:upgrade', 3))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -938,7 +939,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 5))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -948,7 +949,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:upgrade', 6))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -958,7 +959,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:upgrade', 7))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -968,7 +969,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([11])
 		.outputs(item('opencomputers:upgrade', 8))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -978,7 +979,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([12])
 		.outputs(item('opencomputers:upgrade', 9))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -988,7 +989,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([13])
 		.outputs(item('opencomputers:upgrade', 10))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -998,7 +999,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 11))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1008,7 +1009,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 12))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1018,7 +1019,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('opencomputers:upgrade', 13))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -1028,7 +1029,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([3])
 		.outputs(item('opencomputers:upgrade', 14))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1038,7 +1039,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 17))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1048,7 +1049,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 18))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1058,7 +1059,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 19))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1068,7 +1069,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 20))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1078,7 +1079,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 21))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1088,7 +1089,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 23))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1098,7 +1099,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 24))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1108,7 +1109,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 25))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1118,7 +1119,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:upgrade', 26))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1129,7 +1130,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([10])
 		.outputs(item('opencomputers:upgrade', 30))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1141,7 +1142,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([10])
 		.outputs(item('opencomputers:card', 6))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1153,7 +1154,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([10])
 		.outputs(item('opencomputers:upgrade', 31))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1163,7 +1164,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([10])
 		.outputs(item('opencomputers:upgrade', 33))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -1173,7 +1174,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:storage'))
 		.duration(400)
-		.EUt(30)
+		.EUt(VA[LV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1184,7 +1185,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:storage', 1))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -1194,7 +1195,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:storage', 2))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 		
 mods.gregtech.assembler.recipeBuilder()
@@ -1204,7 +1205,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:storage', 3))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -1214,7 +1215,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:storage', 4))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
@@ -1225,14 +1226,14 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.circuitMeta([1])
 		.outputs(item('opencomputers:component', 19))
 		.duration(400)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 mods.gregtech.forming_press.recipeBuilder()
 		.inputs(ore('foilPolycaprolactam') * 4)
 		.outputs(item('opencomputers:material', 28))
 		.duration(160)
-		.EUt(120)
+		.EUt(VA[MV])
 		.buildAndRegister();
 
 crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
@@ -1247,5 +1248,5 @@ crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
 			.inputs(ore('dustSmallCobalt'))
             .outputs(item('opencomputers:material', 12))
             .duration(400)
-            .EUt(120)
+            .EUt(VA[MV])
             .buildAndRegister();

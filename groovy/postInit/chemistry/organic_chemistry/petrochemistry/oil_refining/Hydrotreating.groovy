@@ -1,9 +1,6 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
-
-DT = recipemap("sieve_distillation")
-FLUID_HEATER = recipemap("fluid_heater")
-FBR = recipemap("fixed_bed_reactor")
-BCR = recipemap("bubble_column_reactor")
+import static gregtech.api.GTValues.*
 
 fractions.each { _, fraction ->
     if (fraction.sulfuric) {
@@ -11,24 +8,24 @@ fractions.each { _, fraction ->
             .fluidInputs(fraction.getSulfuric(1000))
             .fluidOutputs(fraction.getHeated(1000))
             .duration(40)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister()
     
-        FBR.recipeBuilder()
+        FIXED_BR.recipeBuilder()
             .fluidInputs(fraction.getHeated(1000))
             .fluidInputs(fluid('hydrogen') * 100)
             .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))
             .fluidOutputs(fraction.getTreatedSulfuric(1000))
             .duration(15)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister()
 
-        DT.recipeBuilder()
+        SIEVE_DT.recipeBuilder()
             .fluidInputs(fraction.getTreatedSulfuric(1000))
             .fluidOutputs(fraction.get(1000))
             .fluidOutputs(fluid('sour_gas') * 100)
             .duration(50)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister()
     }
 }
@@ -41,7 +38,7 @@ BCR.recipeBuilder()
     .fluidOutputs(fluid('hydrogen') * 1000)
     .fluidOutputs(fluid('rich_amine') * 1000)
     .duration(40)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 BCR.recipeBuilder()
@@ -49,7 +46,7 @@ BCR.recipeBuilder()
     .fluidOutputs(fluid('hydrogen_sulfide') * 500)
     .fluidOutputs(fluid('ethanolamine_mix') * 1000)
     .duration(10)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 // Sulfuric overheads
@@ -60,5 +57,5 @@ BCR.recipeBuilder()
     .fluidOutputs(fluid('catalytic_overheads') * 4000)
     .fluidOutputs(fluid('rich_amine') * 1000)
     .duration(40)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()

@@ -82,7 +82,7 @@ def oreDictSmeltingRemovals = [
 ]
 
 for (entry in oreDictSmeltingRemovals) {
-    for(item in entry.getMatchingStacks()) {
+    for (item in entry.getMatchingStacks()) {
         furnace.removeByInput(item)
     }
 }

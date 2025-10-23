@@ -1,15 +1,12 @@
-import globals.Globals
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
-POLYMERIZATION = recipemap('polymerization_tank')
-BR = recipemap('batch_reactor')
-EXTRUDER = recipemap('extruder')
-
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('ethylene_glycol') * 1000)
     .fluidInputs(fluid('terephthalic_acid') * 2592)
     .outputs(metaitem('dustPolyethyleneTerephthalate') * 2)
     .fluidOutputs(fluid('water') * 2000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
@@ -18,17 +15,17 @@ BR.recipeBuilder()
     .fluidInputs(fluid('acetic_acid') * 2000)
     .fluidInputs(fluid('distilled_water') * 3000)
     .outputs(metaitem('dustCobaltIiAcetate') * 18)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .duration(80)
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .notConsumable(ore('dustCobaltIiAcetate'))
     .fluidInputs(fluid('ethylene_glycol') * 1000)
     .fluidInputs(fluid('dimethyl_terephthalate') * 3456)
     .outputs(metaitem('dustPolyethyleneTerephthalate') * 2)
     .fluidOutputs(fluid('methanol') * 2000)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .duration(80)
     .buildAndRegister()
 
@@ -36,14 +33,14 @@ EXTRUDER.recipeBuilder()
     .notConsumable(metaitem('spinneret'))
     .fluidInputs(fluid('polyethylene_terephthalate') * 144)
     .outputs(metaitem('fiberPolyethyleneTerephthalate') * 8)
-    .EUt(480)
+    .EUt(VA[HV])
     .duration(20)
     .buildAndRegister()
 
 EXTRUDER.recipeBuilder()
     .inputs(ore('foilPolyethyleneTerephthalate'))
     .outputs(metaitem('mylar'))
-    .EUt(120)
+    .EUt(VA[MV])
     .duration(10)
     .buildAndRegister()
 

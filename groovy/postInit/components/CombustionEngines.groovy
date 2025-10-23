@@ -1,8 +1,6 @@
-import globals.Globals;
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 import postInit.utils.RecyclingHelper
-
-ASSEMBLER = recipemap('assembler')
-BENDER = recipemap('bender')
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(16)
@@ -13,7 +11,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('cableGtSingleCopper'))
     .outputs(metaitem('engine.spark_plug'))
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 RecyclingHelper.handleRecycling(metaitem('engine.spark_plug'), [
@@ -31,7 +29,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('ingotStainlessSteel'))
     .outputs(metaitem('engine.piston'))
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 RecyclingHelper.handleRecycling(metaitem('engine.piston'), [
@@ -46,7 +44,7 @@ BENDER.recipeBuilder()
     .inputs(ore('stickLongStainlessSteel') * 2)
     .outputs(metaitem('engine.crankshaft'))
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 RecyclingHelper.handleRecycling(metaitem('engine.crankshaft'), [

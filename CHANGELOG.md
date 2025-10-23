@@ -1,3 +1,120 @@
+# UPDATE 0.1.15.8
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.78 → v0.1.79
+- Universal Mod Core 1.12.2-forge-1.2.1 → 1.12.2-forge-1.2.2-3d12767
+- GroovyScript 1.2.5 → 1.3.1
+- ModularUI 2.5.0 → 3.0.3
+- Inventory Bogo Sorter 1.4.11 → 1.5.0
+- Fixeroo 2.3.6b → 2.3.6
+- Fugue 0.20.4 → 0.21.0
+- SussyPatches 1.6.4 → 1.8.0
+### Mod Additions
+- Key Binding Patch → 1.12.2] Key Binding Patch v1.3.3.3 - 2024-12-1
+- Aqua Acrobatics [Forge] → 1.15.4
+## Changes
+### New Features
+- Parachute items are now craftable; you'll need them eventually... (#1671 by @lemonelk)
+- Ore vein displays are now much easier to read! (#1688 by @MCTian-mi)
+- Aqua Acrobatics is now available! (#1690 by @MCTian-mi)
+### Changed Features
+- Batteries now require specialized hardened rubber! (#1687 by @trexxet)
+- [Susy-Core] Refractory gunning mixture usage has been balanced for longer recipes. (#561 by @trainvoi)
+- Bastnasitic Pr-Nd Hydroxides now just need a crystallizer rather than an LCR. (#1676 by @Rick8484)
+### Fixes
+Many small issues and dupes have been fixed, including: 
+- Fix machine block items being invisible (#1686 by @MCTian-mi)
+- Allow quarry to mine infinite limestone (#1680 by @trainvoi)
+- Moved ULPIC quest out of MV (#1683 by @Fiery36)
+Thanks to @trainvoi and @Rick8484 for further changes.
+# UPDATE 0.1.15.7.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.77 → v0.1.78
+- Fluidlogged API API-v2.2.4-mc1.12.2 → API-v3.1.1-mc1.12.2
+- ModularUI 2.5.0-rc6 → 2.5.0
+- Had Enough Items 4.29.7 → 4.29.8
+- Extreme Sound Muffler: Legacy legacy-1.12.2-1.0.4 → legacy-1.12.2-1.0.5
+- MixinBooter 10.6 → 10.7
+- Fugue 0.20.3 → 0.20.4
+- SussyPatches 1.6.2 → 1.6.4
+## Changes
+### New Features
+- [Susy-Core] added more concrete types for upcoming dungeons (#559 by @oliwier509)
+- Biomes for techbrohouses (#1675 by @Rick8484)
+### Fixes
+- Use Ni(OH)2 instead of NiOOH in battery production (#1672 by @trexxet)
+# UPDATE 0.1.15.7
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.76 → v0.1.77
+- Supercritical 0.2.1 → 0.2.2
+- SussyPatches 1.5.0 → 1.6.2
+## Changes
+### New Features
+- Structures have been upgraded once more! Explore the world. (#1669 by @oliwier509)
+- Lead-acid battery recipes have been properly SUSY-fied! (#1655 by @trexxet)
+- Lead-acid batteries also now act as baubles. (#1657 by @MCTian-mi)
+### Changed Features
+- Large steam hammers are now craftable (#1658 by @trexxet)
+- Rubber pipes are no longer overpowered. (#1662 by @trainvoi)
+- More items now have recycling! (#1663 by @trexxet)
+### Fixes
+- Lots of small changes and fixes have occurred since the last update... (#1659 by @Rick8484) (#1660 by @Fiery36) (#1665 by @PatRat2) (#1670 by @Syriusz171)
+# UPDATE 0.1.15.6
+## Mod Changes
+### Mod Updates
+- Forgelin-Continuous Continuous-2.2.0.0 → Continuous-2.2.20.0
+- Had Enough Items 4.29.6 → 4.29.7
+- Universal Tweaks 1.12.2-1.16.0 → 1.12.2-1.16.0.1
+- SussyPatches 1.4.2 → 1.5.0
+- SusyCore v0.1.75 → v0.1.76
+## Changes
+### New Features
+- [Susy-Core] Replace your forge hammers with the new large steam hammer multiblock! (#548 by @trexxet)
+### Changed Features
+- The NaHSO4 recipe has been updated to match industry (#1642 by @Fiery36)
+- Added dustwood recipe with Mortar (#1650 by @Ceredick)
+- Storage drawers can now be crafted with all wood types! (#1651 by @Fiery36)
+- EV coils now use platinum in place of tungstensteel (#1640 by @Rick8484)
+### Fixes
+- Tungstensteel can no longer be recycled to dupe materials. (#1648 by @Rick8484)
+- Encoding and spelling errors have been removed from the questbook (#1647 by @Fiery36) (#1643 by @Solothesolo)
+- Guns dropped by bandits can now be reloaded! (#1649 by @Fiery36)
+- Lignite deposits can now be processed with hammers! (#1653 by @PatRat2)
+- [Susy-Core] Sieve Distillation towers now accept item buses. (#545 by @WideMann)
+# UPDATE 0.1.15.5
+## Mod Changes
+### Mod Updates
+- Extreme Sound Muffler: Legacy 1.0.3 → 1.0.4
+- ModularUI 2.5.0-rc5 → 2.5.0-rc6
+- CraftPresence 2.6.1 → 2.6.2
+- Had Enough Items 4.28.0 → 4.29.6
+- UniLib 1.1.0 → 1.1.1
+- Supercritical 0.2.0 → 0.2.1
+- Universal Tweaks 1.15.2 → 1.16.0
+- SussyPatches 1.3.2 → 1.4.2
+- SusyCore v0.1.74 → v0.1.75
+- JEI Utilities 0.2.12 → 0.2.13
+- Fugue 0.20.1 → 0.20.3
+### Mod Removals
+- Better Placement
+## Changes
+### New Features
+- HEI now comes with autocrafting features to reduce the grind!
+- New quests have been added for Redstone Control! (#1625 by @PatRat2)
+- [Susy-Core] Evaporation pools, mixer settlers, and quarries now have intelligent in-world hints that scale with the outer bounds you place! (#541 by @Crindigo)
+### Changed Features
+- Recipes for making tungstensteel and diluting NaOH and HCl have been modified! Check your lines. (#1619, #1631 by @Rick8484)
+- Red alloy has been removed from MV circuits. (#1635 by @TheQuestWizard)
+- [Susy-Core] Long-distance item pipes are now uncraftable! Maybe use trains?
+- But trains have been considerably buffed in brake speed and acceleration! (#1634 by @TheQuestWizard)
+- Rainbowwood in the greenhouse now makes rainbow sap obtainable (#1628 by @bruberu)
+### Fixes
+- Acacia trees and dark oak trees no longer allow progression skips. (#1630 by @Syriusz171 (first time contributor!))
+- Gunpowder can no longer be made with your bare hands. (#1633 by @Syriusz171)
+- [Susy-Core] Fixes LT crash when a model is exploded (#540 by @oliwier509)
+And many more fixes and improvements have come from @Crindigo, @Fiery36, @Verdessence, @MCTian-mi, @lemonelk and @TheQuestWizard. Thanks!
 # UPDATE 0.1.15.4
 ## Mod Changes
 ### Mod Updates

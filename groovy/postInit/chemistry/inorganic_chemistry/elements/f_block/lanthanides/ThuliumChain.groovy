@@ -1,6 +1,5 @@
-import globals.Globals
-
-REACTION_FURNACE = recipemap('reaction_furnace')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('crucible.tantalum'))
@@ -10,5 +9,5 @@ REACTION_FURNACE.recipeBuilder()
     .outputs(metaitem('dustThulium') * 2)
     .outputs(metaitem('dustFluorite') * 9)
     .duration(200)
-    .EUt(Globals.voltAmps[3] * 2)
+    .EUt(VA[HV] * 2)
     .buildAndRegister()

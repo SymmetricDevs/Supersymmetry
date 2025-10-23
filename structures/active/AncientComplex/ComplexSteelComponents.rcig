@@ -1,0 +1,227 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ComplexSteelComponents",
+  "items": [
+    {
+      "weight": 0.9243392944335938,
+      "min": 8,
+      "max": 28,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0068187713623047,
+      "min": 6,
+      "max": 15,
+      "item": {
+        "id": "gregtech:meta_ring",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:meta_rotor",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.3419337272644043,
+      "min": 37,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 7,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_gear",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.3419337272644043,
+      "min": 52,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_bolt",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 45,
+      "max": 59,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 55,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 18,
+      "max": 33,
+      "item": {
+        "id": "gregtech:meta_spring",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1612,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 6,
+      "max": 13,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1627,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 18,
+      "max": 28,
+      "item": {
+        "id": "gregtech:boiler_casing",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 4,
+      "max": 10,
+      "item": {
+        "id": "gregtech:boiler_firebox_casing",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 11,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_rotor",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 13,
+      "max": 28,
+      "item": {
+        "id": "gregtech:turbine_casing",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 24,
+      "max": 37,
+      "item": {
+        "id": "gregtech:meta_block_frame_20",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 10,
+      "max": 30,
+      "item": {
+        "id": "gregtech:turbine_casing",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 15,
+      "max": 33,
+      "item": {
+        "id": "gregtech:metal_casing",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1613,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 2,
+      "max": 5,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1628,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 42,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0068187713623047,
+      "min": 1,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 2,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

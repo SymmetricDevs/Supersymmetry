@@ -3,7 +3,7 @@ import nc.radiation.RadSources;
 
 log.infoMC("Running Radiation.groovy...")
 
-private void addRadiationToDusts (String materialName, double baseRadiation){
+private void addRadiationToDusts (String materialName, double baseRadiation) {
     RadSources.addToStackMap(metaitem("dust" + materialName), baseRadiation);
     RadSources.addToStackMap(metaitem("dustSmall" + materialName), baseRadiation / 4.0);
     RadSources.addToStackMap(metaitem("dustTiny" + materialName), baseRadiation / 9.0);
@@ -27,7 +27,7 @@ addRadiationToDusts('Actinium225', 28d);
 addRadiationToDusts('Actinium226', 240d);
 addRadiationToDusts('Actinium227', 0.037d);
 
-private void addRadiationToIngots (String materialName, double baseRadiation){
+private void addRadiationToIngots (String materialName, double baseRadiation) {
     RadSources.addToStackMap(metaitem("ingot" + materialName), baseRadiation);
     RadSources.addToStackMap(metaitem("dust" + materialName), baseRadiation);
     RadSources.addToStackMap(metaitem("dustSmall" + materialName), baseRadiation / 4.0);
@@ -48,7 +48,7 @@ addRadiationToIngots("Promethium147", 0.38);
 addRadiationToIngots("Europium155", 0.21);
 addRadiationToIngots("Gold198", 135);
 
-private void  addIsotopeRadiation (String materialName, double baseRadiation){
+private void  addIsotopeRadiation (String materialName, double baseRadiation) {
     addRadiationToIngots(materialName, baseRadiation);
     addRadiationToIngots(materialName + "Carbide", baseRadiation);
     addRadiationToIngots(materialName + "Oxide", baseRadiation);

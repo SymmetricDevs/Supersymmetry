@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ComplexSmallMedCabinet",
+  "items": [
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "minecraft:potion",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Potion": {
+              "nbtType": "string",
+              "nbt": "minecraft:water"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "minecraft:glass_bottle",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

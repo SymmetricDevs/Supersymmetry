@@ -1,33 +1,25 @@
-import globals.Globals
-
-DISTILLATION_TOWER = recipemap('distillation_tower')
-FLUIDIZED_BED_REACTOR = recipemap('fluidized_bed_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-CENTRIFUGE = recipemap('centrifuge')
-ROASTER = recipemap('roaster')
-PHASE_SEPARATOR = recipemap('phase_separator')
-CHEMICAL_BATH = recipemap('chemical_bath')
-POLYMERIZATION = recipemap('polymerization_tank')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Polydimethylsiloxane
 
-FLUIDIZED_BED_REACTOR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
     .fluidInputs(fluid('chloromethane') * 2000)
     .notConsumable(ore('dustCopperIOxide'))
     .inputs(ore('dustSilicon'))
     .fluidOutputs(fluid('organosilicon_mixture') * 2000)
     .duration(160)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('organosilicon_mixture') * 1000)
     .fluidOutputs(fluid('dimethyldichlorosilane') * 800)
     .fluidOutputs(fluid('methyltrichlorosilane') * 100)
     .fluidOutputs(fluid('methyldichlorosilane') * 50)
     .fluidOutputs(fluid('chlorotrimethylsilane') * 50)
     .duration(400)
-    .EUt(Globals.voltAmps[1] * 2)
+    .EUt(VA[LV] * 2)
     .buildAndRegister()
 
 //Methyltrichlorosilane can be used as a water repellent when put on a surface with water
@@ -41,7 +33,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('impure_polydimethylsiloxane_mixture') * 75)
     .fluidOutputs(fluid('hydrochloric_acid') * 50)
     .duration(10)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 PHASE_SEPARATOR.recipeBuilder()
@@ -57,25 +49,25 @@ MIXER.recipeBuilder()
     .fluidOutputs(fluid('hydrochloric_acid') * 500)
     .fluidOutputs(fluid('polydimethylsiloxane') * 1000)
     .duration(200)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustSiliconDioxide'))
     .fluidOutputs(fluid('silicone_rubber') * 144)
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustCarbon'))
     .fluidOutputs(fluid('silicone_rubber') * 144)
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 // Liquid Polydimethylsiloxane * 144

@@ -1,18 +1,13 @@
 package globals
 
+import groovy.transform.TupleConstructor
+
 class Petrochemistry {
-
-    public static void main (String[] args) {}
-
+    @TupleConstructor
     public static class Oil {
         String name
         String brine
 
-        Oil(String name, String brine) {
-            this.name = name
-            this.brine = brine
-        }
-        
         def getDiluted(int amount) {
             return fluid('diluted_' + this.name) * amount
         }

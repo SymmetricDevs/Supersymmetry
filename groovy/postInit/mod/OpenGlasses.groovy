@@ -1,3 +1,5 @@
+import static gregtech.api.GTValues.*
+
 def solder = fluid('soldering_alloy') * 72
 
 def name_removals = [
@@ -20,7 +22,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.fluidInputs(solder)
 		.outputs(item('openglasses:openglasses_card'))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -30,7 +32,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('openglasses:openglassesterminal'))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()
@@ -46,5 +48,5 @@ mods.gregtech.assembler.recipeBuilder()
 		.circuitMeta([2])
 		.outputs(item('openglasses:openglasses'))
 		.duration(400)
-		.EUt(480)
+		.EUt(VA[HV])
 		.buildAndRegister();

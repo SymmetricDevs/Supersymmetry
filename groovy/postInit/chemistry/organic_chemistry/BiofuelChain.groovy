@@ -1,16 +1,5 @@
-PHASE_SEPARATOR = recipemap('phase_separator')
-MIXER = recipemap('mixer')
-FLUID_HEATER = recipemap('fluid_heater')
-CENTRIFUGE = recipemap('centrifuge')
-SIFTER = recipemap('sifter')
-DRYER = recipemap('dryer')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-PSA = recipemap('pressure_swing_adsorption')
-BR = recipemap('batch_reactor')
-BCR = recipemap('bubble_column_reactor')
-TBR = recipemap('trickle_bed_reactor')
-DT = recipemap('distillation_tower')
-SIEVE_DT = recipemap('sieve_distillation')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 class Lipid {
 
@@ -89,7 +78,7 @@ grade2Lipids.forEach { lipid ->
         .fluidOutputs(fluid('deacidified_lipid') * 900)
         .fluidOutputs(fluid('stearic_acid') * 100)
         .duration(50)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
     // Neutralization
@@ -99,7 +88,7 @@ grade2Lipids.forEach { lipid ->
         .fluidOutputs(fluid('deacidified_lipid') * 900)
         .fluidOutputs(fluid('gtfo_sodium_stearate') * 100)
         .duration(15)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister()
 
     // Esterification
@@ -109,7 +98,7 @@ grade2Lipids.forEach { lipid ->
         .notConsumable(fluid('sulfuric_acid') * 1000)
         .fluidOutputs(fluid('deacidified_lipid') * 1000)
         .duration(120)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister()
 }
 
@@ -124,7 +113,7 @@ alcohols.forEach { alcohol ->
         .fluidOutputs(alcohol.getGlycerolSolution(3500))
         .fluidOutputs(alcohol.getCrudeEster(3500))
         .duration(tpbb * 3)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
     }
 
@@ -135,7 +124,7 @@ alcohols.forEach { alcohol ->
         .fluidOutputs(fluid('crude_glycerol') * 3000)
         .fluidOutputs(alcohol.get(5000))
         .duration(60)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 }
     // Distillation of Crude Glycerol
@@ -145,7 +134,7 @@ alcohols.forEach { alcohol ->
         .fluidOutputs(fluid('glycerol') * 2000)
         .fluidOutputs(fluid('water') * 1000)
         .duration(20)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
 alcohols.forEach { alcohol ->
@@ -156,7 +145,7 @@ alcohols.forEach { alcohol ->
         .fluidOutputs(alcohol.getNeutralizedEster(3500))
         .fluidOutputs(fluid('diluted_salt_water') * 1000)
         .duration(30)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister()
 
     // Distillation of Neutralized FAXEs
@@ -165,7 +154,7 @@ alcohols.forEach { alcohol ->
         .fluidOutputs(fluid('unscrubbed_bio_diesel') * 3000)
         .fluidOutputs(alcohol.get(500))
         .duration(tpbb * 3)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 }
     // Washing of Bio Diesel with heated water
@@ -175,7 +164,7 @@ alcohols.forEach { alcohol ->
         .fluidOutputs(fluid('wastewater') * 1000)
         .fluidOutputs(fluid('moist_bio_diesel') * 3000)
         .duration(tpbb * 3)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister()
 
     // Drying
@@ -183,7 +172,7 @@ alcohols.forEach { alcohol ->
         .fluidInputs(fluid('moist_bio_diesel') * 1000)
         .fluidOutputs(fluid('bio_diesel') * 1000)
         .duration(tpbb)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
 // tick per 1/4 bucket of n-paraffin
@@ -199,7 +188,7 @@ grade1Lipids.forEach { lipid ->
         .fluidInputs(lipid.get())
         .fluidOutputs(fluid('bleaching_lipid_mix') * 1000)
         .duration(120)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 }
 // Separation of Al2SiO5
@@ -208,7 +197,7 @@ SIFTER.recipeBuilder()
     .outputs(metaitem('dustAluminiumSilicate'))
     .fluidOutputs(fluid('bleached_lipid') * 1000)
     .duration(20)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Preheat the bleached lipid for the hydrotreating process
@@ -216,7 +205,7 @@ FLUID_HEATER.recipeBuilder()
     .fluidInputs(fluid('bleached_lipid') * 1000)
     .fluidOutputs(fluid('heated_lipid') * 1000)
     .duration(30)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Hydrotreating heated lipid
@@ -226,7 +215,7 @@ TBR.recipeBuilder()
     .notConsumable(ore('dustHydrotreatingCatalyst')) // Since molybdenum is EV
     .fluidOutputs(fluid('hydrotreated_lipid_mixture') * 7000)
     .duration(tpbnp)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 // Separating out water & gases
@@ -247,7 +236,7 @@ PSA.recipeBuilder()
     .fluidOutputs(fluid('hydrogen') * 8000)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
     .duration(20)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 // Using the same number as the one uses pure CO2
@@ -257,7 +246,7 @@ BCR.recipeBuilder()
     .fluidOutputs(fluid('diluted_sodium_carbonate_solution') * 150)
     .fluidOutputs(fluid('hydrogen') * 400)
     .duration(4)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Neutralize unreacted fatty acids in the crude n-paraffin
@@ -269,7 +258,7 @@ MIXER.recipeBuilder()
     .fluidOutputs(fluid('gtfo_sodium_stearate') * 50)
     .fluidOutputs(fluid('neutralized_n_paraffin') * 1000)
     .duration(20)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Separation & hydroisomerization of hydrocarbons in the paraffin
@@ -284,7 +273,7 @@ SIEVE_DT.recipeBuilder()
     .fluidOutputs(fluid('naphtha') * 125)
     .fluidOutputs(fluid('propane') * 500)
     .duration(tpbnp * 8)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Hydroisomerization of the remaining n-paraffin, to improve the cold flow properties
@@ -296,7 +285,7 @@ TBR.recipeBuilder()
     .fluidOutputs(fluid('hydrogen') * 400)
     .fluidOutputs(fluid('isomerized_paraffin') * 5500)
     .duration(tpbnp * 32)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 // Second fraction distillation
@@ -305,5 +294,5 @@ SIEVE_DT.recipeBuilder()
     .fluidOutputs(fluid('diesel') * 800)
     .fluidOutputs(fluid('kerosene') * 300)
     .duration(tpbnp * 6)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()

@@ -1,9 +1,5 @@
-import globals.Globals
-
-LCR = recipemap('large_chemical_reactor')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-DISTILLERY = recipemap('distillery')
-POLYMERIZATION = recipemap('polymerization_tank')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 LCR.recipeBuilder()
     .inputs(ore('dustSodiumSulfate') * 7)
@@ -13,7 +9,7 @@ LCR.recipeBuilder()
     .fluidOutputs(fluid('diethyl_sulfate') * 1000)
     .fluidOutputs(fluid('hydrogen_chloride') * 2000)
     .duration(600)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 CSTR.recipeBuilder()
@@ -22,7 +18,7 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('diethyl_sulfate') * 2000)
     .fluidOutputs(fluid('dichlorodiphenyl_sulfone_solution') * 3000)
     .duration(5)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -30,14 +26,14 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustDichlorodiphenylSulfone') * 25)
     .fluidOutputs(fluid('diethyl_sulfate') * 2000)
     .duration(600)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .notConsumable(fluid('dimethyl_sulfoxide') * 1000)
     .inputs(ore('dustDichlorodiphenylSulfone') * 25)
     .inputs(ore('dustSodiumBisphenolate') * 33)
     .outputs(metaitem('dustPolysulfone'))
     .duration(100)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister()

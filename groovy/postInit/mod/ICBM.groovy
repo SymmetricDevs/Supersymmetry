@@ -1,9 +1,7 @@
-import classes.*;
+import static prePostInit.Recipemaps.*
+import classes.*
 import globals.Globals
-
-LARGE_WEAPON_FACTORY = recipemap('large_weapons_factory');
-WEAPON_FACTORY = recipemap('weapons_factory');
-ASSEMBLER = recipemap('assembler');
+import static gregtech.api.GTValues.*
 
 def name_removals = [
     "icbmclassic:missile/missile.module",
@@ -103,6 +101,7 @@ def name_removals = [
     "icbmclassic:spikes.2",
     "icbmclassic:powder.poison",
     "icbmclassic:saltpeter_ball",
+    "icbmclassic:parts/vanilla/gunpowder",
 ]
 
 for (item in name_removals) {
@@ -112,7 +111,7 @@ for (item in name_removals) {
 furnace.removeByInput(item('icbmclassic:saltpeter_ball'))
 
 for (var i = 0; i < 8; i++) {
-    WEAPON_FACTORY.recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             item('icbmclassic:explosives', i),
             metaitem('plateSteel'),
@@ -121,7 +120,7 @@ for (var i = 0; i < 8; i++) {
         ])
         .outputs(item('icbmclassic:grenade', i))
         .duration(80)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 }
 
@@ -156,7 +155,7 @@ def flammable_liquids = [
 ];
 
 for (liquid in flammable_liquids) {
-    WEAPON_FACTORY.recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             item('icbmclassic:explosives:0'),
             metaitem('fluid_cell')
@@ -168,7 +167,7 @@ for (liquid in flammable_liquids) {
         .buildAndRegister();
 }
 
-WEAPON_FACTORY.recipeBuilder()
+WEAPONS_FACTORY.recipeBuilder()
     .inputs([
         item('icbmclassic:explosives:0'),
         metaitem('fluid_cell')
@@ -188,7 +187,7 @@ def poisons = [
 ];
 
 for (poison in poisons) {
-    WEAPON_FACTORY.recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             item('icbmclassic:explosives:0'),
             metaitem('fluid_cell')
@@ -200,7 +199,7 @@ for (poison in poisons) {
         .buildAndRegister();
 }
 
-WEAPON_FACTORY.recipeBuilder()
+WEAPONS_FACTORY.recipeBuilder()
     .inputs([
         item('icbmclassic:explosives:0'),
         ore('dustPicricAcid') * 7,
@@ -213,7 +212,7 @@ WEAPON_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 //Explosives tier 2
-WEAPON_FACTORY.recipeBuilder()
+WEAPONS_FACTORY.recipeBuilder()
     .inputs([
         item('icbmclassic:explosives:0'),
         metaitem('plateSteel') * 16
@@ -229,7 +228,7 @@ def thermobaric_fuels = [
 ];
 
 for (fuel in thermobaric_fuels) {
-    WEAPON_FACTORY.recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             metaitem('fluid_cell') * 8,
             item('icbmclassic:explosives:6'),
@@ -242,7 +241,7 @@ for (fuel in thermobaric_fuels) {
         .buildAndRegister();
 }
 
-/* WEAPON_FACTORY.recipeBuilder()
+/* WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             item('icbmclassic:explosives:1'),
             ore('plateSteel') * 8
@@ -252,7 +251,7 @@ for (fuel in thermobaric_fuels) {
         .EUt(60)
         .buildAndRegister();
 
-WEAPON_FACTORY.recipeBuilder()
+WEAPONS_FACTORY.recipeBuilder()
     .inputs([
         metaitem('fluid_cell') * 8,
         item('icbmclassic:explosives:6'),
@@ -285,7 +284,7 @@ Globals.solders.each { key, val ->
     cryoLiquids.each { liquid, temp ->
         if(HV_SC_CriticalTemp > temp) {
             //EMP
-            WEAPON_FACTORY.recipeBuilder()
+            WEAPONS_FACTORY.recipeBuilder()
                 .inputs([
                     ore('plateStainlessSteel') * 4,
                     metaitem('wireGtSingleMercuryBariumCalciumCuprate') * 8,
@@ -300,7 +299,7 @@ Globals.solders.each { key, val ->
         }
 
         //Endothermic
-        WEAPON_FACTORY.recipeBuilder()
+        WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                 metaitem('fluid_cell') * 8,
                 item('icbmclassic:explosives:6') * 8,
@@ -315,7 +314,7 @@ Globals.solders.each { key, val ->
     }
 
     for (fuel in thermobaric_fuels) {
-        LARGE_WEAPON_FACTORY.recipeBuilder()
+        LARGE_WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                 metaitem('fluid_cell') * 8,
                 item('icbmclassic:explosives:6') * 8,
@@ -331,7 +330,7 @@ Globals.solders.each { key, val ->
 
     //Explosives tier 4
     //Nuclear explosive
-    LARGE_WEAPON_FACTORY.recipeBuilder()
+    LARGE_WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             ore('componentCapacitor') * 8,
             ore('wireFinePlatinum') * 32,
@@ -349,7 +348,7 @@ Globals.solders.each { key, val ->
         .EUt(1200)
         .buildAndRegister();
 
-    LARGE_WEAPON_FACTORY.recipeBuilder()
+    LARGE_WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             ore('componentCapacitor') * 8,
             ore('wireFinePlatinum') * 8,
@@ -367,8 +366,6 @@ Globals.solders.each { key, val ->
         .EUt(1200)
         .buildAndRegister();
 }
-
-
 
 //Concrete
 ASSEMBLER.recipeBuilder()
@@ -421,8 +418,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(384)
     .buildAndRegister();
 
-
-
 //Launchers
 ASSEMBLER.recipeBuilder()
     .inputs([
@@ -434,7 +429,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('icbmclassic:launcherbase:0'))
     .duration(400)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -447,7 +442,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('icbmclassic:launcherscreen:0'))
     .duration(400)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -459,7 +454,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('icbmclassic:launcherframe:0'))
     .duration(400)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 //Missiles
@@ -500,7 +495,7 @@ Globals.solders.each { key, val ->
     for (s_fuel in solidfuels) {
         for (s_oxy in solidoxys) {
             for (var i = 0; i < 8; i++) {
-                LARGE_WEAPON_FACTORY.recipeBuilder()
+                LARGE_WEAPONS_FACTORY.recipeBuilder()
                     .inputs([ore('stickAluminium') * 4,
                          ore('ringAluminium') * 2,
                          ore('plateAluminium') * 2,
@@ -512,11 +507,11 @@ Globals.solders.each { key, val ->
                     .fluidInputs(fluid(key) * val)
                     .outputs(item('icbmclassic:explosive_missile:' + i))
                     .duration(200)
-                    .EUt(30)
+                    .EUt(VA[LV])
                     .buildAndRegister();
             }
 
-            WEAPON_FACTORY.recipeBuilder()
+            WEAPONS_FACTORY.recipeBuilder()
                 .inputs([
                     ore('plateStainlessSteel') * 2,
                     s_oxy,
@@ -530,7 +525,7 @@ Globals.solders.each { key, val ->
                 .EUt(200)
                 .buildAndRegister();
 
-            WEAPON_FACTORY.recipeBuilder()
+            WEAPONS_FACTORY.recipeBuilder()
                 .inputs([
                     ore('plateStainlessSteel') * 2,
                     s_oxy,
@@ -544,7 +539,7 @@ Globals.solders.each { key, val ->
                 .EUt(200)
                 .buildAndRegister();
 
-            WEAPON_FACTORY.recipeBuilder()
+            WEAPONS_FACTORY.recipeBuilder()
                 .inputs([
                     ore('plateStainlessSteel') * 2,
                     s_oxy * 2,
@@ -558,7 +553,7 @@ Globals.solders.each { key, val ->
                 .EUt(200)
                 .buildAndRegister();
 
-            WEAPON_FACTORY.recipeBuilder()
+            WEAPONS_FACTORY.recipeBuilder()
                 .inputs([
                     ore('plateStainlessSteel') * 2,
                     s_oxy,
@@ -575,7 +570,7 @@ Globals.solders.each { key, val ->
 
         for (l_oxy in liquidoxys) {
             for (var j = 8; j < 14; j++) {
-                LARGE_WEAPON_FACTORY.recipeBuilder()
+                LARGE_WEAPONS_FACTORY.recipeBuilder()
                     .inputs([ore('stickStainlessSteel') * 4,
                          ore('ringStainlessSteel') * 2,
                          ore('plateStainlessSteel') * 2,
@@ -587,7 +582,7 @@ Globals.solders.each { key, val ->
                     .fluidInputs(l_oxy * 2000)
                     .outputs(item('icbmclassic:explosive_missile:' + j))
                     .duration(200)
-                    .EUt(120)
+                    .EUt(VA[MV])
                     .buildAndRegister();
             }
         }
@@ -596,7 +591,7 @@ Globals.solders.each { key, val ->
     for (h_fuel in hypergolicfuels) {
         for (h_oxy_1 in hypergolicoxys) {
             for (var k = 15; k < 24; k++) {
-                LARGE_WEAPON_FACTORY.recipeBuilder()
+                LARGE_WEAPONS_FACTORY.recipeBuilder()
                     .inputs([ore('stickTitanium') * 4,
                          ore('ringTitanium') * 2,
                          ore('plateTitanium') * 2,
@@ -627,14 +622,12 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('icbmclassic:launcher_connector') * 4)
     .duration(400)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
-
-
 
 //empty bomblet
 Globals.solders.each { key, val ->
-    LARGE_WEAPON_FACTORY.recipeBuilder()
+    LARGE_WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             ore('plateSteel') * 8,
             ore('circuitLv'),
@@ -643,20 +636,20 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('icbmclassic:empty_bomblet'))
         .duration(300)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 }
 
 //filled bomblets
 for (var i = 0; i < 15; i++) {
-    LARGE_WEAPON_FACTORY.recipeBuilder()
+    LARGE_WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             item('icbmclassic:explosives', i),
             item('icbmclassic:empty_bomblet')
         ])
         .outputs(item('icbmclassic:explosive_bomblet', i))
         .duration(300)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 }
 
@@ -669,7 +662,7 @@ ASSEMBLER.recipeBuilder()
     ])
     .outputs(item('icbmclassic:parachute'))
     .duration(200)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 //payload baloon
@@ -681,12 +674,12 @@ ASSEMBLER.recipeBuilder()
     ])
     .outputs(item('icbmclassic:balloon'))
     .duration(50)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 //missile module (empty missile)
 Globals.solders.each { key, val ->
-    LARGE_WEAPON_FACTORY.recipeBuilder()
+    LARGE_WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
         .inputs([
             ore('stickAluminium') * 4,
@@ -697,12 +690,12 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('icbmclassic:explosive_missile:' + 24))
         .duration(300)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 }
 //cluster missile
 Globals.solders.each { key, val ->
-    LARGE_WEAPON_FACTORY.recipeBuilder()
+    LARGE_WEAPONS_FACTORY.recipeBuilder()
         .inputs([
             ore('screwAluminium') * 4,
             metaitem('crate.aluminium'),
@@ -711,6 +704,6 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('icbmclassic:cluster_missile'))
         .duration(400)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 }

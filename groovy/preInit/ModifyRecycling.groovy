@@ -12,7 +12,7 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
         ore('cableGtSingleCopper') * 2,
         ore('stickLongAluminium'),
         ore('plateSteelMagnetic') * 3,
-        ore('wireGtDoubleCupronickel') * 4
+        ore('wireGtDoubleAnnealedCopper') * 4
     ])
 
     RecyclingManager.addRecyclingGroovy(metaitem('electric.motor.hv') * 6, [
@@ -26,11 +26,11 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
         ore('cableGtDoubleAluminium') * 2,
         ore('stickLongTitanium'),
         ore('plateAlnicoMagnetic') * 3,
-        ore('wireGtDoubleKanthal') * 4
+        ore('wireGtDoubleGold') * 4
     ])
 
     RecyclingManager.addRecyclingGroovy(metaitem('electric.motor.iv') * 6, [
-        ore('cableGtDoubleTungsten') * 2,
+        ore('cableGtDoublePlatinum') * 2,
         ore('stickLongTungstenSteel'),
         ore('plateAlnicoMagnetic') * 3,
         ore('wireGtDoubleGraphene') * 4

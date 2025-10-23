@@ -1,11 +1,8 @@
-import globals.Globals
-
-import static gregtech.api.unification.material.Materials.*;
-import gregtech.api.unification.material.MarkerMaterials;
-import static gregtech.api.unification.ore.OrePrefix.dye;
-
-ROASTER = recipemap('roaster')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+import static gregtech.api.unification.material.Materials.*
+import gregtech.api.unification.material.MarkerMaterials
+import static gregtech.api.unification.ore.OrePrefix.dye
 
 //POTASSIUM FLUORIDE PRODUCTION
 ROASTER.recipeBuilder()
@@ -15,7 +12,7 @@ ROASTER.recipeBuilder()
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
         .fluidOutputs(fluid('dense_steam') * 1000)
         .duration(200)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -24,7 +21,7 @@ DISTILLERY.recipeBuilder()
         .fluidOutputs(fluid('water') * 1000)
         .outputs(metaitem('dustPotassiumFluoride') * 2)
         .duration(200)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister()
 
 //HYDROFLUORIC ACID ELECTROLYSIS
@@ -35,7 +32,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .fluidInputs(fluid('hydrogen_fluoride') * 2000)
         .fluidOutputs(fluid('fluorine') * 1000)
         .fluidOutputs(fluid('hydrogen') * 1000)
-        .EUt(120)
+        .EUt(VA[MV])
         .duration(720)
         .buildAndRegister()
 

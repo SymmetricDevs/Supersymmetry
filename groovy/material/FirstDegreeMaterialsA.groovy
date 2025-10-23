@@ -1373,13 +1373,13 @@ class FirstDegreeMaterialsA {
 
         NickelHydroxide.setFormula("Ni(OH)2", true)
 
-        NickelOxideHydroxide = new Material.Builder(8292, SuSyUtility.susyId('nickel_oxide_hydroxide'))
-                .dust()
-                .components(Nickel, Oxygen * 3, Hydrogen * 2)
+        NickelChlorideSolution = new Material.Builder(8292, SuSyUtility.susyId('nickel_chloride_solution'))
+                .liquid()
+                .components(NickelChloride, Water)
                 .colorAverage()
                 .build()
 
-        NickelOxideHydroxide.setFormula("NiO(OH)2", true)
+        NickelChlorideSolution.setFormula("(NiCl2)(H2O)", true)
 
         SilverNitrateSolution = new Material.Builder(8293, SuSyUtility.susyId('silver_nitrate_solution'))
                 .liquid()
@@ -2008,7 +2008,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        LeadOxide = new Material.Builder(8388, SuSyUtility.susyId('lead_oxide'))
+        LeadIIOxide = new Material.Builder(8388, SuSyUtility.susyId('lead_ii_oxide'))
                 .dust().gas(new FluidBuilder().temperature(1750))
                 .flags(NO_UNIFICATION)
                 .components(Lead, Oxygen)
@@ -3265,7 +3265,7 @@ class FirstDegreeMaterialsA {
         ManganeseIIChloride = new Material.Builder(8581, SuSyUtility.susyId("manganese_ii_chloride"))
                 .dust()
                 .components(Manganese, Chlorine * 2)
-                .colorAverage()
+                .color(0xe4aef2)
                 .build()
 
         ChloroplatinicAcidSolution = new Material.Builder(8582, SuSyUtility.susyId("chloroplatinic_acid_solution"))
@@ -3516,7 +3516,7 @@ class FirstDegreeMaterialsA {
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, DISABLE_DECOMPOSITION)
                 .components(Iron * 2, Nickel * 1, Cobalt * 1)
                 .colorAverage()
-                .blast(b -> b.temp(1723, GasTier.LOW).blastStats(120, 90))
+                .blastTemp(1723, GasTier.LOW, GTValues.VA[GTValues.MV], 90)
                 .build()
 
         Kovar.setFormula("Fe10Ni5Co3", true)
@@ -3842,14 +3842,14 @@ class FirstDegreeMaterialsA {
 
         LEU235Dioxide.setFormula("UO2", true)
 
-        LEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(LEU235Dioxide.getRegistryName(), 1500, 100000, 3.5)
+        LEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(LEU235Dioxide.getRegistryName(), 1500, 22000000, 3.5)
                 .fastNeutronCaptureCrossSection(0.4)
                 .fastNeutronFissionCrossSection(0.2)
                 .slowNeutronCaptureCrossSection(1.8)
                 .slowNeutronFissionCrossSection(1.8)
                 .requiredNeutrons(1)
                 .releasedNeutrons(2.5)
-                .releasedHeatEnergy(0.01)
+                .releasedHeatEnergy(0.025)
                 .decayRate(0.025)
                 .build())
 
@@ -3862,14 +3862,14 @@ class FirstDegreeMaterialsA {
 
         HALEU235Dioxide.setFormula("UO2", true)
 
-        HALEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(HALEU235Dioxide.getRegistryName(), 1600, 200000, 3)
+        HALEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(HALEU235Dioxide.getRegistryName(), 1600, 44000000, 3)
                 .fastNeutronCaptureCrossSection(0.35)
                 .fastNeutronFissionCrossSection(0.175)
                 .slowNeutronCaptureCrossSection(1.9)
                 .slowNeutronFissionCrossSection(1.9)
                 .requiredNeutrons(1)
                 .releasedNeutrons(2.5)
-                .releasedHeatEnergy(0.01)
+                .releasedHeatEnergy(0.025)
                 .decayRate(0.025)
                 .build())
 
@@ -3883,14 +3883,14 @@ class FirstDegreeMaterialsA {
         HEU235Dioxide.setFormula("UO2", true)
 
         HEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL,
-                FissionFuelProperty.builder(HEU235Dioxide.getRegistryName(), 1800, 400000, 2.5)
+                FissionFuelProperty.builder(HEU235Dioxide.getRegistryName(), 1800, 88000000, 2.5)
                         .fastNeutronCaptureCrossSection(0.3)
                         .fastNeutronFissionCrossSection(0.15)
                         .slowNeutronCaptureCrossSection(2)
                         .slowNeutronFissionCrossSection(2)
                         .requiredNeutrons(1)
                         .releasedNeutrons(2.5)
-                        .releasedHeatEnergy(0.01)
+                        .releasedHeatEnergy(0.025)
                         .decayRate(0.05)
                         .build())
 

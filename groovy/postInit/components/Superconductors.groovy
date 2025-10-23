@@ -1,5 +1,6 @@
-import globals.Globals
-import classes.*;
+import static prePostInit.Recipemaps.*
+import classes.*
+import static gregtech.api.GTValues.*
 
 def recipesToRemove = [
         'gregtech:manganese_phosphide_wire_single',
@@ -10,7 +11,7 @@ def recipesToRemove = [
         'gregtech:ruthenium_trinium_americium_neutronate_wire_single'
 ]
 
-for(name in recipesToRemove) {
+for (name in recipesToRemove) {
     crafting.remove(name)
 }
 
@@ -40,40 +41,6 @@ mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMagnesium
 // Hot Magnesium Diboride Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMagnesiumDiboride'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
-def TUBE_FURNACE = recipemap('tube_furnace')
-def EBF = recipemap('electric_blast_furnace')
-def EXTRUDER = recipemap('extruder')
-def CHEMICAL_BATH = recipemap('chemical_bath')
-def CANNER = recipemap('canner')
-def ASSEMBLER = recipemap('assembler')
-VACUUM_FREEZER = recipemap('vacuum_freezer')
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
-PYROLYSE = recipemap('pyrolyse_oven')
-LCR = recipemap('large_chemical_reactor')
-EBF = recipemap('electric_blast_furnace')
-VULCANIZER = recipemap('vulcanizing_press')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ARC_FURNACE = recipemap('arc_furnace')
-AUTOCLAVE = recipemap('autoclave')
-COMPRESSOR = recipemap('compressor')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
-
 def allSuperconductors = ["ManganesePhosphide", "MagnesiumDiboride", "MercuryBariumCalciumCuprate", "UraniumTriplatinum", "SamariumIronArsenicOxide", "IndiumTinBariumTitaniumCuprate", "UraniumRhodiumDinaquadide", "EnrichedNaquadahTriniumEuropiumDuranide", "RutheniumTriniumAmericiumNeutronate"]
 def lowTempSuperconductors = ["ManganesePhosphide", "UraniumTriplatinum", "IndiumTinBariumTitaniumCuprate", "UraniumRhodiumDinaquadide", "EnrichedNaquadahTriniumEuropiumDuranide", "RutheniumTriniumAmericiumNeutronate"]
 def highTempSuperconductors = ["MagnesiumDiboride", "MercuryBariumCalciumCuprate", "SamariumIronArsenicOxide"]
@@ -94,7 +61,7 @@ for (i = 0; i < 6; i++) {
             .inputs(ore('foilCopper'))
             .outputs(metaitem('assembly' + lowTempSuperconductorsLowerCase[i]))
             .duration(200)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister();
 
     EXTRUDER.recipeBuilder()
@@ -102,7 +69,7 @@ for (i = 0; i < 6; i++) {
             .notConsumable(metaitem('shape.extruder.wire'))
             .outputs(metaitem('base' + lowTempSuperconductorsLowerCase[i]) * 16)
             .duration(200)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister();
 }
 
@@ -218,7 +185,6 @@ mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexEnrichedNaquadah
 // Ruthenium Trinium Americium Neutronate Ingot * 8
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('wireGtHexRutheniumTriniumAmericiumNeutronate')], [fluid('oxygen') * 1776])
 
-
 for (supercon in allSuperconductors) {
 
         if (supercon == "ManganesePhosphide") {
@@ -238,7 +204,6 @@ for (supercon in allSuperconductors) {
         mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtOctal' + supercon)], null)
         mods.gregtech.extractor.removeByInput(480, [metaitem('wireGtHex' + supercon)], null)
 
-
 }
 
 TUBE_FURNACE.recipeBuilder()
@@ -246,7 +211,7 @@ TUBE_FURNACE.recipeBuilder()
         .fluidInputs(fluid('nitrogen') * 500)
         .outputs(metaitem('tubemagnesiumdiboride'))
         .duration(1006)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
@@ -254,7 +219,7 @@ TUBE_FURNACE.recipeBuilder()
         .fluidInputs(fluid('argon') * 50)
         .outputs(metaitem('tubemagnesiumdiboride'))
         .duration(670)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
@@ -262,7 +227,7 @@ TUBE_FURNACE.recipeBuilder()
         .fluidInputs(fluid('nitrogen') * 500)
         .outputs(metaitem('tubemercurybariumcalciumcuprate'))
         .duration(1500)
-        .EUt(480)
+        .EUt(VA[HV])
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
@@ -270,7 +235,7 @@ TUBE_FURNACE.recipeBuilder()
         .fluidInputs(fluid('argon') * 50)
         .outputs(metaitem('tubemercurybariumcalciumcuprate'))
         .duration(1005)
-        .EUt(480)
+        .EUt(VA[HV])
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
@@ -287,7 +252,7 @@ for (i = 0; i < 3; i++) {
             .inputs(ore('dust' + highTempSuperconductors[i]))
             .outputs(metaitem('canned' + highTempSuperconductorsLowerCase[i]))
             .duration(200)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister();
 
     EXTRUDER.recipeBuilder()
@@ -295,11 +260,11 @@ for (i = 0; i < 3; i++) {
             .notConsumable(metaitem('shape.extruder.wire'))
             .outputs(metaitem('base' + highTempSuperconductorsLowerCase[i]) * 16)
             .duration(200)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister();
 }
 
-for (def i = 0; i < 9; i++) {
+for (def i = ULV; i < UHV; i++) {
     //REMOVE AUTOGENERATED GT RECIPES FOR SUPERCONDUCTORS
     if (i < 2) {
         mods.gregtech.extruder.removeByInput(42, [metaitem('ingot' + allSuperconductors[i]), metaitem('shape.extruder.wire')], null)
@@ -336,7 +301,7 @@ for (def i = 0; i < 9; i++) {
                         .fluidInputs(liquid(key) * 1)
                         .outputs(metaitem('wireGtSingle' + allSuperconductors[i]))
                         .duration(50)
-                        .EUt(Globals.voltAmps[i + 1])
+                        .EUt(VA[i + 1])
                         .buildAndRegister();
                 }
         }
@@ -347,7 +312,7 @@ ROASTER.recipeBuilder()
         .fluidInputs(liquid('oxygen') * 1000)
         .outputs(metaitem('dustBariumOxide') * 2)
         .duration(200)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -355,7 +320,7 @@ ROASTER.recipeBuilder()
         .fluidInputs(liquid('oxygen') * 1000)
         .outputs(metaitem('dustMercuryOxide') * 2)
         .duration(200)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 MIXER.recipeBuilder()
@@ -375,9 +340,8 @@ TUBE_FURNACE.recipeBuilder()
         .fluidInputs(fluid('oxygen') * 1000)
         .outputs(metaitem('dustSamariumIronArsenicOxide') * 4)
         .duration(600)
-        .EUt(1920)
+        .EUt(VA[EV])
         .buildAndRegister();
-
 
 TUBE_FURNACE.recipeBuilder()
         .inputs(ore('dustAnyPurityManganese'))
@@ -385,7 +349,7 @@ TUBE_FURNACE.recipeBuilder()
         .fluidInputs(fluid('nitrogen') * 1000)
         .outputs(metaitem('dustManganesePhosphide') * 4)
         .duration(200)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 
 MIXER.recipeBuilder()
@@ -394,7 +358,7 @@ MIXER.recipeBuilder()
         .inputs(ore('dustCupricOxide') * 12)
         .outputs(metaitem('dustYttriumBariumCuprate') * 25)
         .duration(600)
-        .EUt(7680)
+        .EUt(VA[IV])
         .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -402,7 +366,7 @@ ROASTER.recipeBuilder()
         .fluidInputs(liquid('chlorine') * 3000)
         .outputs(metaitem('dustIndiumChloride') * 4)
         .duration(200)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 BR.recipeBuilder()
@@ -411,7 +375,7 @@ BR.recipeBuilder()
         .outputs(metaitem('dustIndiumHydroxide') * 7)
         .fluidOutputs(liquid('salt_water') * 3000)
         .duration(200)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -419,7 +383,7 @@ ROASTER.recipeBuilder()
         .outputs(metaitem('dustIndiumOxide') * 5)
         .fluidOutputs(liquid('dense_steam') * 3000)
         .duration(200)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 MIXER.recipeBuilder()
@@ -430,5 +394,5 @@ MIXER.recipeBuilder()
         .inputs(ore('dustCupricOxide') * 14)
         .outputs(metaitem('dustIndiumTinBariumTitaniumCuprate') * 16)
         .duration(600)
-        .EUt(30720)
+        .EUt(VA[LuV])
         .buildAndRegister();

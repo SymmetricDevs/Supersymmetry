@@ -1,3 +1,5 @@
+import static prePostInit.Recipemaps.*
+
 def name_removals = [
         'buildinggadgets:buildingtool',
         'buildinggadgets:exchangingtool',

@@ -1,0 +1,236 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ComplexStorageroom",
+  "items": [
+    {
+      "weight": 0.25986868143081665,
+      "min": 12,
+      "max": 28,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 6102,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.32298368215560913,
+      "min": 8,
+      "max": 23,
+      "item": {
+        "id": "gregtech:wire_single",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 5,
+      "max": 15,
+      "item": {
+        "id": "gregtech:wire_double",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "gregtech:wire_quadruple",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 3,
+      "max": 8,
+      "item": {
+        "id": "gregtech:wire_octal",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtech:wire_hex",
+        "damage": 424,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:wire_single",
+        "damage": 425,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:wire_double",
+        "damage": 425,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:crowbar",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 4.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 6.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 2
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 255
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.4
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:iron"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "appliedenergistics2:network_tool",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 2,
+      "max": 8,
+      "item": {
+        "id": "appliedenergistics2:part",
+        "damage": 36,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 6,
+      "max": 16,
+      "item": {
+        "id": "appliedenergistics2:facade",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "item": {
+              "nbtType": "string",
+              "nbt": "xtones:iszm"
+            },
+            "damage": {
+              "nbtType": "int",
+              "nbt": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 10,
+      "max": 17,
+      "item": {
+        "id": "appliedenergistics2:facade",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "item": {
+              "nbtType": "string",
+              "nbt": "xtones:iszm"
+            },
+            "damage": {
+              "nbtType": "int",
+              "nbt": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 5,
+      "max": 14,
+      "item": {
+        "id": "appliedenergistics2:facade",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "item": {
+              "nbtType": "string",
+              "nbt": "minecraft:brick_block"
+            },
+            "damage": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

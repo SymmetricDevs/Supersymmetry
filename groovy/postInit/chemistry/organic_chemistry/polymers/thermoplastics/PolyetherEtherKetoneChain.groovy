@@ -1,16 +1,5 @@
-import globals.Globals
-
-BR = recipemap('batch_reactor')
-BCR = recipemap('bubble_column_reactor')
-ROASTER = recipemap('roaster')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
-FBR = recipemap('fixed_bed_reactor')
-DISTILLERY = recipemap('distillery')
-DT = recipemap('distillation_tower')
-MIXER = recipemap('mixer')
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-EXTRACTOR = recipemap('extractor')
-SOLIDIFIER = recipemap('fluid_solidifier')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // 4,4'-difluorobenzophenone
 BR.recipeBuilder()
@@ -20,7 +9,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustBenzenediazoniumFluoride') * 14)
     .fluidOutputs(fluid('diluted_sodium_fluoride_solution') * 2000)
     .duration(120)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -28,7 +17,7 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('fluorobenzene') * 1000)
     .fluidOutputs(fluid('nitrogen') * 2000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -37,7 +26,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustParaNitrobenzoicAcid') * 17)
     .fluidOutputs(fluid('dense_steam') * 1000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -47,7 +36,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustParaAminobenzoicAcid') * 17)
     .fluidOutputs(fluid('dense_steam') * 2000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -57,7 +46,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustParaAminobenzylEthylEster') * 23)
     .fluidOutputs(fluid('dense_steam') * 1000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -67,7 +56,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustParaDiazoniobenzylEthylEsterFluoride') * 23)
     .fluidOutputs(fluid('diluted_sodium_fluoride_solution') * 2000)
     .duration(120)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -75,7 +64,7 @@ ROASTER.recipeBuilder()
     .outputs(metaitem('dustParaFluorobenzoicAcidEthylEster') * 21)
     .fluidOutputs(fluid('nitrogen') * 2000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -84,7 +73,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustParaFluorobenzoicAcid') * 15)
     .fluidOutputs(fluid('acidic_ethanol_solution') * 2000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 DT.recipeBuilder()
@@ -93,7 +82,7 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('water') * 2000)
     .fluidOutputs(fluid('hydrogen_chloride') * 2250)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -103,7 +92,7 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('hydrochloric_acid') * 1000)
     .fluidOutputs(fluid('sulfur_dioxide') * 1000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -114,7 +103,7 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('four_four_difluorobenzophenone_solution') * 1000)
     .fluidOutputs(fluid('hydrogen_chloride') * 1000)
     .duration(200)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 DISTILLERY.recipeBuilder()
@@ -122,7 +111,7 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustFourFourDifluorobenzophenone'))
     .fluidOutputs(fluid('hexane') * 1000)
     .duration(60)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 // Hydroquinone
@@ -133,7 +122,7 @@ BR.recipeBuilder()
     .fluidInputs(fluid('para_diisopropylbenzene') * 1000)
     .outputs(metaitem('dustParaDiisopropylbenzeneDihydroperoxide') * 34)
     .duration(10)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -141,7 +130,7 @@ BR.recipeBuilder()
     .inputs(ore('dustParaDiisopropylbenzeneDihydroperoxide') * 34)
     .fluidOutputs(fluid('cleaved_para_diisopropylbenzene_mixture') * 2200)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 DT.recipeBuilder()
@@ -150,7 +139,7 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('sulfuric_acid') * 200)
     .fluidOutputs(fluid('acetone') * 2000)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 // Diphenyl Sulfone
@@ -162,7 +151,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('water') * 50)
     .circuitMeta(2)
     .duration(5)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -171,7 +160,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustDiphenylSulfone') * 25)
     .fluidOutputs(fluid('sulfuric_acid') * 1000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 // Polymerisation
@@ -185,7 +174,7 @@ POLYMERIZATION_TANK.recipeBuilder()
     .outputs(metaitem('dustPeekMixture') * 2)
     .fluidOutputs(fluid('carbon_dioxide') * 50)
     .duration(300)
-    .EUt(1920)
+    .EUt(VA[EV])
     .buildAndRegister();
 
 MIXER.recipeBuilder()
@@ -194,7 +183,7 @@ MIXER.recipeBuilder()
     .outputs(metaitem('dustPolyetherEtherKetone'))
     .fluidOutputs(fluid('diphenyl_sulfone_solution') * 1000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 DISTILLERY.recipeBuilder()
@@ -202,5 +191,5 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustDiphenylSulfone') * 25)
     .fluidOutputs(fluid('acetone') * 1000)
     .duration(60)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();

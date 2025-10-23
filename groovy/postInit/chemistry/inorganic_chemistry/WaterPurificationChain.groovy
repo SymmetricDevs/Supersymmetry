@@ -1,26 +1,9 @@
-import globals.Globals
-
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
-
-def MIXER = recipemap('mixer');
-def CLARIFIER = recipemap('clarifier');
-def DRYER = recipemap('dryer');
-def DISTILLERY = recipemap('distillery');
-def PSA = recipemap('pressure_swing_adsorption');
-def MSFD = recipemap('multi_stage_flash_distillation');
-def EVAPORATION_POOL = recipemap('evaporation_pool');
-def FLUID_HEATER = recipemap('fluid_heater');
-def ION_EXCHANGE = recipemap('ion_exchange_column');
-def VACUUM_CHAMBER = recipemap('vacuum_chamber');
-def FLUID_COMPRESSOR = recipemap('fluid_compressor');
-def UV_LIGHT_BOX = recipemap('uv_light_box');
-def BR = recipemap('batch_reactor');
-def BCR = recipemap('bubble_column_reactor');
-def CENTRIFUGE = recipemap('centrifuge');
-def SIFTER = recipemap('sifter');
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+import gregtech.api.recipes.ModHandler
+import gregtech.api.unification.material.Materials
+import gregtech.api.unification.ore.OrePrefix
+import gregtech.api.unification.stack.UnificationEntry
 
 // Salt * 2
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('salt_water') * 1000])
@@ -35,7 +18,7 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustSalt') * 2)
     .fluidOutputs(fluid('water') * 1000)
     .duration(240)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -43,7 +26,7 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustSalt') * 4)
     .fluidOutputs(fluid('water') * 1000)
     .duration(280)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -51,14 +34,14 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustSalt') * 8)
     .fluidOutputs(fluid('water') * 1000)
     .duration(320)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('sea_water') * 1000)
     .fluidOutputs(fluid('water') * 1000)
     .duration(240)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 EVAPORATION_POOL.recipeBuilder()
@@ -112,7 +95,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustBoricAcid') * 7)
     .fluidOutputs(fluid('boron_free_brine') * 1000)
     .duration(120)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -121,7 +104,7 @@ BR.recipeBuilder()
     .outputs(metaitem('gregtechfoodoption:lithium_carbonate_dust') * 6)
     .fluidOutputs(fluid('lithium_free_brine') * 1000)
     .duration(120)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 BCR.recipeBuilder()
@@ -129,7 +112,7 @@ BCR.recipeBuilder()
     .fluidInputs(fluid('chlorine') * 25)
     .fluidOutputs(fluid('chlorinated_brine') * 50)
     .duration(1)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 VACUUM_CHAMBER.recipeBuilder()
@@ -138,7 +121,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidOutputs(fluid('impure_bromine') * 500)
     .fluidOutputs(fluid('wastewater_sludge') * 500)
     .duration(120)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
@@ -146,7 +129,7 @@ CENTRIFUGE.recipeBuilder()
     .fluidOutputs(fluid('bromine') * 1000)
     .chancedOutput(metaitem('dustIodine'), 1000, 1000)
     .duration(120)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 MSFD.recipeBuilder()
@@ -155,7 +138,7 @@ MSFD.recipeBuilder()
     .fluidOutputs(fluid('water') * 5000)
     .fluidOutputs(fluid('salt_water') * 5000)
     .duration(10)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 MSFD.recipeBuilder()
@@ -164,7 +147,7 @@ MSFD.recipeBuilder()
     .fluidOutputs(fluid('water') * 2500)
     .fluidOutputs(fluid('concentrated_salt_water') * 2500)
     .duration(10)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 MSFD.recipeBuilder()
@@ -173,7 +156,7 @@ MSFD.recipeBuilder()
     .fluidOutputs(fluid('water') * 1250)
     .fluidOutputs(fluid('hypersaline_water') * 1250)
     .duration(10)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 MSFD.recipeBuilder()
@@ -181,7 +164,7 @@ MSFD.recipeBuilder()
     .fluidInputs(fluid('steam') * 2000)
     .fluidOutputs(fluid('distilled_water') * 17500)
     .duration(10)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 FLUID_COMPRESSOR.recipeBuilder()
@@ -190,7 +173,7 @@ FLUID_COMPRESSOR.recipeBuilder()
     .fluidOutputs(fluid('hypersaline_water') * 2500)
     .fluidOutputs(fluid('water') * 7500)
     .duration(40)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister()
 
 FLUID_COMPRESSOR.recipeBuilder()
@@ -199,7 +182,7 @@ FLUID_COMPRESSOR.recipeBuilder()
     .fluidOutputs(fluid('hypersaline_water') * 5000)
     .fluidOutputs(fluid('water') * 5000)
     .duration(40)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister()
 
 // Wastewater treatment
@@ -207,7 +190,7 @@ FLUID_HEATER.recipeBuilder()
     .fluidInputs(fluid('wastewater') * 1000)
     .fluidOutputs(fluid('heated_wastewater') * 1000)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 MIXER.recipeBuilder()
@@ -215,7 +198,7 @@ MIXER.recipeBuilder()
     .inputs(ore('dustFlocculant'))
     .fluidOutputs(fluid('flocculated_wastewater') * 1000)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 CLARIFIER.recipeBuilder()
@@ -224,7 +207,7 @@ CLARIFIER.recipeBuilder()
     .fluidOutputs(fluid('wastewater_sludge') * 2000)
     .fluidOutputs(fluid('water') * 6000)
     .duration(600)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Deionized water
@@ -234,7 +217,7 @@ ION_EXCHANGE.recipeBuilder()
     .fluidInputs(fluid('diluted_sulfuric_acid') * 20)
     .fluidOutputs(fluid('partially_deionized_water') * 12800)
     .fluidOutputs(fluid('wastewater') * 10)
-    .EUt(480)
+    .EUt(VA[HV])
     .duration(20)
     .buildAndRegister()
 
@@ -244,7 +227,7 @@ ION_EXCHANGE.recipeBuilder()
     .fluidInputs(fluid('sodium_hydroxide_solution') * 10)
     .fluidOutputs(fluid('deionized_water') * 12800)
     .fluidOutputs(fluid('wastewater') * 10)
-    .EUt(480)
+    .EUt(VA[HV])
     .duration(20)
     .buildAndRegister()
 
@@ -254,7 +237,7 @@ ION_EXCHANGE.recipeBuilder()
     .fluidInputs(fluid('diluted_sulfuric_acid') * 6400)
     .fluidOutputs(fluid('partially_deionized_sea_water') * 12800)
     .fluidOutputs(fluid('wastewater') * 3200)
-    .EUt(480)
+    .EUt(VA[HV])
     .duration(20)
     .buildAndRegister()
 
@@ -264,7 +247,7 @@ ION_EXCHANGE.recipeBuilder()
     .fluidInputs(fluid('sodium_hydroxide_solution') * 3200)
     .fluidOutputs(fluid('deionized_sea_water') * 12800)
     .fluidOutputs(fluid('wastewater') * 3200)
-    .EUt(480)
+    .EUt(VA[HV])
     .duration(20)
     .buildAndRegister()
 
@@ -274,7 +257,7 @@ SIFTER.recipeBuilder()
     .notConsumable(ore('dustActivatedCarbon') * 4)
     .fluidOutputs(fluid('filtered_water') * 1000)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 VACUUM_CHAMBER.recipeBuilder()
@@ -282,7 +265,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .fluidInputs(fluid('steam') * 100)
     .fluidOutputs(fluid('deaerated_water') * 1100)
     .duration(110)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Reverse osmosis
@@ -292,7 +275,7 @@ FLUID_COMPRESSOR.recipeBuilder()
     .fluidOutputs(fluid('ro_water') * 800)
     .fluidOutputs(fluid('wastewater') * 200)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Deionization occurs between these two steps
@@ -301,7 +284,7 @@ UV_LIGHT_BOX.recipeBuilder()
     .fluidInputs(fluid('deionized_water') * 1000)
     .fluidOutputs(fluid('sterilized_water') * 1000)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -322,5 +305,5 @@ DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('sterilized_water') * 100)
     .fluidOutputs(fluid('ultrapure_water') * 90)
     .duration(10)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()

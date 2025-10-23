@@ -1,34 +1,6 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BCR = recipemap('bubble_column_reactor')
-BR = recipemap('batch_reactor')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-DISTILLERY = recipemap('distillery')
-ROASTER = recipemap('roaster')
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
-PYROLYSE = recipemap('pyrolyse_oven')
-LCR = recipemap('large_chemical_reactor')
-EBF = recipemap('electric_blast_furnace')
-VULCANIZER = recipemap('vulcanizing_press')
-ALLOY_SMELTER = recipemap('alloy_smelter')
-ARC_FURNACE = recipemap('arc_furnace')
-AUTOCLAVE = recipemap('autoclave')
-COMPRESSOR = recipemap('compressor')
-ASSEMBLER = recipemap('assembler')
-ELECTROLYZER = recipemap('electrolyzer')
-ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-PSA = recipemap('pressure_swing_adsorption')
-WEAPONS_FACTORY = recipemap('weapons_factory')
-CANNER = recipemap('canner')
+import static gregtech.api.GTValues.*
 
 def name_removals = [
     "gaspunk:diffuser",
@@ -151,16 +123,16 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('ethylene') * 100)
     .fluidOutputs(fluid('mustard_gas') * 50)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedAluminiumChloride'))
     .fluidInputs(fluid('ethylene_oxide') * 50)
     .fluidInputs(fluid('diisopropylamine') * 50)
     .fluidOutputs(fluid('diisopropylaminoethanol') * 50)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 LCR.recipeBuilder()
@@ -171,7 +143,7 @@ LCR.recipeBuilder()
     .fluidOutputs(fluid('methyldichlorophosphine') * 1000)
     .outputs(metaitem('dustIronIiChloride') * 3)
     .duration(200)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 TBR.recipeBuilder()
@@ -180,7 +152,7 @@ TBR.recipeBuilder()
     .fluidInputs(fluid('chlorine') * 100)
     .fluidOutputs(fluid('sulfuryl_chloride') * 50)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -189,7 +161,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('thionyl_chloride') * 50)
     .fluidOutputs(fluid('methylphosphonyl_dichloride') * 50)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -198,7 +170,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('methylphosphonyl_difluoride') * 50)
     .fluidOutputs(fluid('hydrogen_chloride') * 50)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -207,7 +179,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('sarin') * 50)
     .fluidOutputs(fluid('hydrogen_fluoride') * 50)
     .duration(5)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -216,7 +188,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('methyl_diethylphosphinate') * 50)
     .fluidOutputs(fluid('hydrogen_chloride') * 100)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -225,7 +197,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('diisopropylamino_ethyl_ethyl_methylphosphonite') * 50)
     .fluidOutputs(fluid('ethanol') * 50)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -233,7 +205,7 @@ ROASTER.recipeBuilder()
     .inputs(ore('dustSulfur'))
     .fluidOutputs(fluid('vx') * 1000)
     .duration(200)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 CENTRIFUGE.recipeBuilder()
@@ -241,7 +213,7 @@ CENTRIFUGE.recipeBuilder()
     .inputs(metaitem('gregtechfoodoption:black_pepper_dust'))
     .fluidOutputs(fluid('capsaicin_solution') * 1000)
     .duration(200)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 DRYER.recipeBuilder()
@@ -249,7 +221,7 @@ DRYER.recipeBuilder()
     .outputs(metaitem('dustTinyCapsaicin'))
     .fluidOutputs(fluid('ethanol') * 1000)
     .duration(200)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 MIXER.recipeBuilder()
@@ -257,25 +229,25 @@ MIXER.recipeBuilder()
     .inputs(ore('dustCapsaicin'))
     .fluidOutputs(fluid('tear_gas') * 1000)
     .duration(200)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedCopperIOxide'))
     .fluidInputs(fluid('acetone') * 100)
     .fluidInputs(fluid('hydrogen') * 400)
     .fluidInputs(fluid('ammonia') * 50)
     .fluidOutputs(fluid('diluted_diisopropylamine') * 150)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('diluted_diisopropylamine') * 3000)
     .fluidOutputs(fluid('water') * 2000)
     .fluidOutputs(fluid('diisopropylamine') * 1000)
     .duration(200)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -284,34 +256,34 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 50)
     .fluidOutputs(fluid('hydrated_propene') * 150)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('hydrated_propene') * 3000)
     .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
     .fluidOutputs(fluid('isopropyl_alcohol') * 1000)
     .duration(200)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedAlumina'))
     .fluidInputs(fluid('ethanol') * 300)
     .fluidInputs(fluid('ammonia') * 150)
     .fluidOutputs(fluid('ethylamine_mix') * 450)
     .duration(5)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('ethylamine_mix') * 9000)
     .fluidOutputs(fluid('water') * 6000)
     .fluidOutputs(fluid('triethylamine') * 1000)
     .fluidOutputs(fluid('diethylamine') * 1000)
     .fluidOutputs(fluid('ethylamine') * 1000)
     .duration(300)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -320,7 +292,7 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('titanium_tetrachloride') * 200)
     .fluidOutputs(fluid('titanium_ethoxide') * 50)
     .duration(20)
-    .EUt(1920)
+    .EUt(VA[EV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
@@ -329,7 +301,7 @@ CSTR.recipeBuilder()
     .fluidOutputs(fluid('diethylacetamide') * 50)
     .fluidOutputs(fluid('acetic_acid') * 50)
     .duration(3)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 LCR.recipeBuilder()
@@ -339,7 +311,7 @@ LCR.recipeBuilder()
     .fluidOutputs(fluid('water') * 1000)
     .fluidOutputs(fluid('diethylacetimidamine') * 1000)
     .duration(200)
-    .EUt(1920)
+    .EUt(VA[EV])
     .buildAndRegister();
 
 LCR.recipeBuilder()
@@ -348,5 +320,5 @@ LCR.recipeBuilder()
     .fluidOutputs(fluid('novichok') * 1000)
     .fluidOutputs(fluid('hydrogen_fluoride') * 1000)
     .duration(200)
-    .EUt(1920)
+    .EUt(VA[EV])
     .buildAndRegister();

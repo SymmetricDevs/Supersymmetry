@@ -1,0 +1,11 @@
+{
+  "parent": "gregtech:item/metaitems/dimension_display",
+  "textures": {
+    "front": "gregtech:items/metaitems/dimension_display/mars/front",
+    "back": "gregtech:items/metaitems/dimension_display/mars/back",
+    "left": "gregtech:items/metaitems/dimension_display/mars/left",
+    "right": "gregtech:items/metaitems/dimension_display/mars/right",
+    "top": "gregtech:items/metaitems/dimension_display/mars/top",
+    "bottom": "gregtech:items/metaitems/dimension_display/mars/bottom"
+  }
+}

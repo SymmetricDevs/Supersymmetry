@@ -1,3 +1,5 @@
+import static gregtech.api.GTValues.*
+
 crafting.addShaped('susy:gabbro_bricks', item('susy:susy_stone_bricks') * 4, [
     [ore('stoneGabbro'), ore('stoneGabbro')],
     [ore('stoneGabbro'), ore('stoneGabbro')]
@@ -57,15 +59,15 @@ mods.gregtech.extruder.recipeBuilder()
 	.fluidInputs(fluid('concrete') * 576)
 	.outputs(item('susy:structural_block') * 32)
 	.duration(200)
-	.EUt(30)
+	.EUt(VA[LV])
 	.buildAndRegister();
 
 //add variants to chisel group
 mods.chisel.carving.addGroup("susy_structural_blocks")
-for(int i = 0; i<16;i++){ 
+for (int i = 0; i<16; i++) { 
 	mods.chisel.carving.addVariation("susy_structural_blocks", item('susy:structural_block', i))
 }
-for(int i = 0; i<10;i++){ 
+for (int i = 0; i<10; i++) { 
 	mods.chisel.carving.addVariation("susy_structural_blocks", item('susy:structural_block_1', i))
 }
 

@@ -5,6 +5,7 @@
         "blocks": {
           "blocks": [
             "minecraft:log:*",
+            "minecraft:log2:*",
             "biomesoplenty:log_0:*",
             "biomesoplenty:log_1:*",
             "biomesoplenty:log_2:*",

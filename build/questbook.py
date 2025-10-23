@@ -186,7 +186,7 @@ def build(args):
         print("Editing quest IDs: %s" % editQuestIds)
     
     try:
-        with open(langFile, "r", errors="ignore") as file:
+        with open(langFile, "r", errors="ignore", encoding='utf-8') as file:
             for line in file.readlines():
                 questKeys[line.split("=", 1)[0]] = line.split("=", 1)[1].rstrip()
     except FileNotFoundError:
@@ -196,7 +196,7 @@ def build(args):
     knowKeys = 0
     for root, dirs, files in os.walk(defaultQuests):
         for filename in files:
-            with open(os.path.join(root, filename), "r") as file:
+            with open(os.path.join(root, filename), "r", encoding='utf-8') as file:
                 currentquest = json.load(file)
                 
             if filename == "QuestSettings.json": 
@@ -216,14 +216,14 @@ def build(args):
                     knowKeys += i18n(output=questKeys, id=entryid, entry=currentquest, place="db", prefix=args.prefix,
                                      reverse=entryid in editQuestIds)
 
-            with open(os.path.join(root, filename), "w", newline='\n') as file:
+            with open(os.path.join(root, filename), "w", newline='\n', encoding='utf-8') as file:
                 json.dump(currentquest, file, indent=2)
     
     
     if (knowKeys > 0):
         print("Already knew %s keys " % knowKeys)
     
-    with open(langFile, "w", newline='\n') as file:
+    with open(langFile, "w", newline='\n', encoding='utf-8') as file:
         for i in sorted(questKeys, key=key):
             file.write(i + "=" + questKeys[i] + "\n")
 

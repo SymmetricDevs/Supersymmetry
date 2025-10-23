@@ -1,22 +1,14 @@
-CSTR = recipemap('continuous_stirred_tank_reactor')
-TBR = recipemap('trickle_bed_reactor')
-BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
-DISTILLATION_TOWER = recipemap('distillation_tower');
-MIXER = recipemap('mixer')
-DRYER = recipemap('dryer')
-AUTOCLAVE = recipemap('autoclave')
-PHASE_SEPARATOR = recipemap('phase_separator')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Vinyl Chloride
 
-BR.recipeBuilder()
+ROASTER.recipeBuilder()
     .fluidInputs(fluid('mercury') * 1000)
     .fluidInputs(fluid('chlorine') * 2000)
     .outputs(metaitem('dustMercuryIiChloride') * 3)
     .duration(200)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Klatte process
@@ -26,7 +18,7 @@ TBR.recipeBuilder()
     .fluidInputs(fluid('hydrogen_chloride') * 50)
     .fluidOutputs(fluid('vinyl_chloride') * 50)
     .duration(5)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Dehydrochlorination
@@ -34,11 +26,11 @@ PYROLYSE_OVEN.recipeBuilder()
     .fluidInputs(fluid('one_two_dichloroethane') * 1000)
     .fluidOutputs(fluid('cracked_one_two_dichloroethane_mix') * 2000)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // https://koreascience.kr/article/JAKO200211920879285.pdf
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
     .fluidInputs(fluid('cracked_one_two_dichloroethane_mix') * 2000)
     .fluidOutputs(fluid('hydrogen_chloride') * 1000)
     .fluidOutputs(fluid('vinyl_chloride') * 500)
@@ -47,7 +39,7 @@ DISTILLATION_TOWER.recipeBuilder()
     .fluidOutputs(fluid('ethylene') * 50)
     .fluidOutputs(fluid('one_two_dichloroethylene') * 50)
     .duration(80)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 // PVC
@@ -57,10 +49,10 @@ AUTOCLAVE.recipeBuilder()
     .fluidInputs(fluid('water') * 1000)
     .fluidOutputs(fluid('vinyl_chloride_suspension') * 2000)
     .duration(160)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('vinyl_chloride_suspension') * 2000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
     .fluidOutputs(fluid('polyvinyl_chloride_suspension') * 2000)
@@ -73,7 +65,7 @@ DRYER.recipeBuilder()
     .outputs(metaitem('dustPolyvinylChloride'))
     .fluidOutputs(fluid('water') * 1000)
     .duration(260)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Polyvinyl Acetate
@@ -83,28 +75,28 @@ MIXER.recipeBuilder()
     .fluidInputs(fluid('methanol') * 1000)
     .fluidOutputs(fluid('vinyl_acetate_suspension') * 1000)
     .duration(200)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .circuitMeta(1)
-    .fluidInputs(fluid('vinyl_acetate_suspension') * 2000)
+    .fluidInputs(fluid('vinyl_acetate_suspension') * 1000)
     .inputs(ore('dustTinyPotassiumPersulfate'))
-    .fluidOutputs(fluid('polyvinyl_acetate_suspension') * 2000)
+    .fluidOutputs(fluid('polyvinyl_acetate_suspension') * 1000)
     .duration(150)
     .EUt(60)
     .buildAndRegister()
 
 PHASE_SEPARATOR.recipeBuilder()
-    .fluidInputs(fluid('polyvinyl_acetate_suspension') * 2000)
+    .fluidInputs(fluid('polyvinyl_acetate_suspension') * 1000)
     .outputs(metaitem('dustPolyvinylAcetate'))
-    .fluidOutputs(fluid('methanol') * 2000)
+    .fluidOutputs(fluid('methanol') * 1000)
     .duration(50)
     .buildAndRegister()
 
 // Ethylene-vinyl acetate
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
     .circuitMeta(2)
     .fluidInputs(fluid('ethylene') * 1000)
     .fluidInputs(fluid('vinyl_acetate_suspension') * 1000)

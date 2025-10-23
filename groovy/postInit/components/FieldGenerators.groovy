@@ -1,6 +1,5 @@
-import globals.Globals
 import classes.*;
-import prePostInit.Thermodynamics
+import static gregtech.api.GTValues.*
 
 //REMOVALS
 
@@ -33,7 +32,6 @@ mods.gregtech.assembly_line.removeByInput(24000, [metaitem('frameNaquadahAlloy')
 // UV Field Generator * 1
 mods.gregtech.assembly_line.removeByInput(100000, [metaitem('frameTritanium'), metaitem('plateTritanium') * 6, metaitem('gravistar'), metaitem('emitter.uv') * 2, metaitem('circuit.wetware_computer') * 2, metaitem('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, metaitem('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, metaitem('cableGtSingleYttriumBariumCuprate') * 4], [fluid('soldering_alloy') * 1728, fluid('naquadria') * 576])
 
-
 //REPLACEMENTS
 
 def cryoLiquids = [
@@ -58,7 +56,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 250)
                 .outputs(metaitem('field.generator.lv'))
                 .duration(100)
-                .EUt(30)
+                .EUt(VA[LV])
                 .buildAndRegister();
     }
     if(45 > val) {
@@ -70,7 +68,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 500)
                 .outputs(metaitem('field.generator.mv'))
                 .duration(100)
-                .EUt(120)
+                .EUt(VA[MV])
                 .buildAndRegister();
     }
     if(25 > val) {
@@ -82,7 +80,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 1000)
                 .outputs(metaitem('field.generator.hv'))
                 .duration(100)
-                .EUt(480)
+                .EUt(VA[HV])
                 .buildAndRegister();
     }
     if(5 > val) {
@@ -94,7 +92,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 1500)
                 .outputs(metaitem('field.generator.ev'))
                 .duration(100)
-                .EUt(1920)
+                .EUt(VA[EV])
                 .buildAndRegister();
     }
     if(5 > val) {
@@ -106,7 +104,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 2000)
                 .outputs(metaitem('field.generator.iv'))
                 .duration(100)
-                .EUt(7680)
+                .EUt(VA[IV])
                 .buildAndRegister();
     }
     if(5 > val) {
@@ -122,7 +120,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 4000)
                 .outputs(metaitem('field.generator.luv'))
                 .duration(600)
-                .EUt(7680)
+                .EUt(VA[IV])
                 .buildAndRegister();
     }
     if(5 > val) {

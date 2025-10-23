@@ -1,27 +1,24 @@
-import gregtech.loaders.recipe.handlers.OreRecipeHandler;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.material.Material;
-import classes.*;
-import gregtech.api.unification.material.properties.PropertyKey;
-import gregtech.api.unification.material.properties.IngotProperty;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.util.GTUtility;
+import static prePostInit.Recipemaps.*
+import classes.*
 
+import static gregtech.api.GTValues.*
+import gregtech.api.unification.ore.OrePrefix
+import gregtech.api.unification.material.Material
+import gregtech.api.unification.material.properties.PropertyKey
+import gregtech.api.unification.material.properties.IngotProperty
+import gregtech.api.unification.ore.OrePrefix
+import gregtech.api.util.GTUtility
+import gregtech.loaders.recipe.handlers.OreRecipeHandler
 
-CHEMICAL_BATH = recipemap('chemical_bath')
-QUENCHER = recipemap('quencher')
-RADIATOR = recipemap('radiator')
-COOLING_UNIT = recipemap('natural_draft_cooling_tower')
+//QuenchingFluid(cold fluid, hot fluid, amount, duration, isInert, generateHeatRadiatorRecipes)
 
-//IQuenchingFluid(cold fluid, hot fluid, amount, duration, isInert, generateHeatRadiatorRecipes)
-
-IQuenchingFluid Water = new IQuenchingFluid("water", 'warm_water', 1000, 100.0, false);
-IQuenchingFluid Air = new IQuenchingFluid('air', 'hot_air', 10000, 1000.0, false);
-IQuenchingFluid CompressedAir = new IQuenchingFluid('hp_air', 'hot_hp_air', 5000, 500.0, false);
-IQuenchingFluid Nitrogen = new IQuenchingFluid('nitrogen', 'hot_nitrogen', 10000, 500.0, true);
-IQuenchingFluid CompressedNitrogen = new IQuenchingFluid('hp_nitrogen', 'hot_hp_nitrogen', 5000, 500.0, true);
-IQuenchingFluid SaltWater = new IQuenchingFluid('salt_water', 'warm_salt_water', 1000, 150.0, false);
-IQuenchingFluid Brine = new IQuenchingFluid('brine', 'warm_brine', 1000, 150.0, false);
+QuenchingFluid Water = new QuenchingFluid("water", 'warm_water', 1000, 100.0, false);
+QuenchingFluid Air = new QuenchingFluid('air', 'hot_air', 10000, 1000.0, false);
+QuenchingFluid CompressedAir = new QuenchingFluid('hp_air', 'hot_hp_air', 5000, 500.0, false);
+QuenchingFluid Nitrogen = new QuenchingFluid('nitrogen', 'hot_nitrogen', 10000, 500.0, true);
+QuenchingFluid CompressedNitrogen = new QuenchingFluid('hp_nitrogen', 'hot_hp_nitrogen', 5000, 500.0, true);
+QuenchingFluid SaltWater = new QuenchingFluid('salt_water', 'warm_salt_water', 1000, 150.0, false);
+QuenchingFluid Brine = new QuenchingFluid('brine', 'warm_brine', 1000, 150.0, false);
 
 //Material name, blast furnace temperature
 
@@ -111,14 +108,14 @@ mods.gregtech.chemical_bath.removeByInput(120, [metaitem('ingotHotKanthal')], [f
 // Kanthal Ingot * 1
 mods.gregtech.chemical_bath.removeByInput(120, [metaitem('ingotHotKanthal')], [fluid('distilled_water') * 100])
 
-for (fluid in IQuenchingFluid.quenching_fluids) {
+for (fluid in QuenchingFluid.quenching_fluids) {
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('ingotHotKanthal'))
         .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
         .outputs(metaitem('ingotKanthal'))
         .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
         .duration((int) fluid.getDuration() * 4)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister();
 
     CHEMICAL_BATH.recipeBuilder()
@@ -127,43 +124,53 @@ for (fluid in IQuenchingFluid.quenching_fluids) {
         .outputs(metaitem('ingotAlnico'))
         .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
         .duration((int) fluid.getDuration() * 4)
-        .EUt(120)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    QUENCHER.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.ingot'))
+        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+        .fluidInputs(liquid('stainless_steel') * 2880)
+        .outputs(metaitem('ingotStainlessSteel') * 20)
+        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+        .duration((int) fluid.getDuration() * 1)
+        .EUt(VA[MV])
         .buildAndRegister();
 }
 
 for (entry in ingotMap) {
-    for (fluid in IQuenchingFluid.quenching_fluids) {
+    for (fluid in QuenchingFluid.quenching_fluids) {
         QUENCHER.recipeBuilder()
             .inputs(ore('ingotHot' + entry.key))
             .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
             .outputs(metaitem('ingot' + entry.key))
             .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
             .duration((int) (fluid.getDuration() * (float) (entry.value / 2000)))
-            .EUt(120)
+            .EUt(VA[MV])
             .buildAndRegister();
     }
 }
 
 for (entry in electrodeMap) {
-    for (quenching_fluid in IQuenchingFluid.quenching_fluids) {
+    for (quenching_fluid in QuenchingFluid.quenching_fluids) {
         QUENCHER.recipeBuilder()
-            .inputs(metaitem('shape.mold.rod'))
+            .notConsumable(metaitem('shape.mold.rod'))
             .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
             .fluidInputs(fluid(GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
             .outputs(metaitem('electrode' + entry.key))
             .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
             .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
-            .EUt(120)
+            .EUt(VA[MV])
             .buildAndRegister();
         
         QUENCHER.recipeBuilder()
-            .inputs(metaitem('shape.mold.rod'))
+            .notConsumable(metaitem('shape.mold.rod'))
             .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
             .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
             .outputs(metaitem('electrode' + entry.key))
             .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
             .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
-            .EUt(120)
+            .EUt(VA[MV])
             .buildAndRegister();
     }
 }
@@ -173,6 +180,7 @@ ingotMap['Steel'] = 1500
 def fluidMap = [
     'molten.kanthal':'Kanthal',
     'molten.nichrome':'Nichrome',
+    'molten.rtm_alloy':'RtmAlloy',
     'molten.niobium_nitride':'NiobiumNitride',
     'molten.niobium_titanium':'NiobiumTitanium',
     'molten.black_bronze':'BlackBronze',
@@ -218,7 +226,7 @@ def fluidMap = [
 ]
 
 for (entry in fluidMap) {
-    for (fluid in IQuenchingFluid.quenching_fluids) {
+    for (fluid in QuenchingFluid.quenching_fluids) {
         QUENCHER.recipeBuilder()
             .notConsumable(metaitem('shape.mold.ingot'))
             .fluidInputs(liquid(entry.key) * 144)
@@ -226,7 +234,7 @@ for (entry in fluidMap) {
             .outputs(metaitem('ingot' + entry.value))
             .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
             .duration((int) ((int) fluid.getDuration() * (int) 2))
-            .EUt(120)
+            .EUt(VA[MV])
             .buildAndRegister();
     }
 }
@@ -238,9 +246,9 @@ RADIATOR.recipeBuilder()
     .duration(100)
     .buildAndRegister();
 
-COOLING_UNIT.recipeBuilder()
+COOLING_TOWER.recipeBuilder()
     .fluidInputs(fluid('hot_air') * 1000)
     .fluidOutputs(liquid('air') * 1000)
     .duration(50)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();

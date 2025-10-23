@@ -1,12 +1,5 @@
-import globals.Globals
-
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
-BCR = recipemap('bubble_column_reactor')
-MIXER = recipemap('mixer')
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-DRYER = recipemap('dryer')
-PYROLYSE_OVEN = recipemap('pyrolyse_oven')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Lithium Perfluorooctanoate Surfactant
 
@@ -15,7 +8,7 @@ BR.recipeBuilder()
     .fluidInputs(fluid('lithium_hydroxide_solution') * 1000)
     .fluidOutputs(fluid('vinylidene_fluoride_surfactant_mixture') * 2000)
     .duration(200)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 // Vinylidene Fluoride
@@ -26,7 +19,7 @@ BCR.recipeBuilder()
     .fluidInputs(fluid('hydrogen_chloride') * 50)
     .fluidOutputs(fluid('one_one_dichloroethane') * 50)
     .duration(2)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BCR.recipeBuilder()
@@ -36,7 +29,7 @@ BCR.recipeBuilder()
     .fluidOutputs(fluid('one_one_one_trichloroethane') * 50)
     .fluidOutputs(fluid('hydrogen') * 100)
     .duration(4)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -46,7 +39,7 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('one_chloro_two_two_difluoroethane') * 1000)
     .fluidOutputs(fluid('hydrochloric_acid') * 2000)
     .duration(200)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 PYROLYSE_OVEN.recipeBuilder()
@@ -55,7 +48,7 @@ PYROLYSE_OVEN.recipeBuilder()
     .fluidOutputs(fluid('vinylidene_fluoride') * 1000)
     .fluidOutputs(fluid('hydrochloric_acid') * 1000)
     .duration(200)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 // Polymerization
@@ -66,7 +59,7 @@ POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('vinylidene_fluoride_surfactant_mixture') * 500)
     .fluidOutputs(fluid('polyvinylidene_fluoride_solution') * 500)
     .duration(300)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister();
 
 DRYER.recipeBuilder()
@@ -74,7 +67,7 @@ DRYER.recipeBuilder()
     .outputs(metaitem('dustPolyvinylideneFluoride'))
     .fluidOutputs(fluid('vinylidene_fluoride_surfactant_mixture') * 500)
     .duration(300)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister();
 
 // FKM/Viton production
@@ -84,7 +77,7 @@ PYROLYSE_OVEN.recipeBuilder()
     .fluidInputs(fluid('tetrafluoroethylene') * 1500)
     .fluidOutputs(fluid('hexafluoropropylene') * 1000)
     .duration(200)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 POLYMERIZATION_TANK.recipeBuilder()
@@ -94,7 +87,7 @@ POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('vinylidene_fluoride_surfactant_mixture') * 500)
     .fluidOutputs(fluid('viton_solution') * 500)
     .duration(200)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 DRYER.recipeBuilder()
@@ -102,5 +95,5 @@ DRYER.recipeBuilder()
     .outputs(metaitem('dustViton'))
     .fluidOutputs(fluid('vinylidene_fluoride_surfactant_mixture') * 500)
     .duration(300)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();

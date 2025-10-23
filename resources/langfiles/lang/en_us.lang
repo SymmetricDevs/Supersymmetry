@@ -721,9 +721,9 @@ susy.material.lithium_cobalt_oxide=Lithium Cobalt Oxide
 susy.material.sodium_cathode_alloy=Sodium Battery Cathode Alloy
 susy.material.lithium_hexafluorophosphate=Lithium Hexafluorophosphate
 susy.material.nickel_chloride=Nickel Chloride
+susy.material.nickel_chloride_solution=Nickel Chloride Solution
 susy.material.nickel_hydroxide=Nickel Hydroxide
 susy.material.dimethyl_carbonate=Dimethyl Carbonate
-susy.material.nickel_oxide_hydroxide=Nickel Oxide Hydroxide
 susy.material.calcium_orthosilicate=Calcium Orthosilicate
 susy.material.magnesium_hydroxide=Magnesium Hydroxide
 susy.material.magnesium_chloride_solution=Magnesium Chloride Solution
@@ -1225,7 +1225,7 @@ susy.material.barium_ferrite=Barium Ferrite
 susy.material.manganese_zinc_ferrite=Manganese Zinc Ferrite
 susy.material.strontium_carbonate=Strontium Carbonate
 susy.material.barium_carbonate=Barium Carbonate
-susy.material.lead_oxide=Lead Oxide
+susy.material.lead_ii_oxide=Lead II Oxide
 susy.material.tantalum_nitride=Tantalum Nitride
 susy.material.ruthenium_iv_oxide=Ruthenium IV Oxide
 susy.material.ruthenium_iii_chloride=Ruthenium III Chloride
@@ -2062,6 +2062,7 @@ susy.material.heavy_atmospheric_overheads=Heavy Atmospheric Overheads
 susy.material.light_atmospheric_overheads=Light Atmospheric Overheads
 susy.material.hydrotreating_catalyst=Hydrotreating Catalyst
 susy.material.supported_nickel=Supported Nickel
+susy.material.watts_bath_electrolyte=Watts Bath Electrolyte
 susy.material.debutanized_naphtha=Debutanized Naphtha
 susy.material.sulfuric_debutanized_naphtha=Sulfuric Debutanized Naphtha
 susy.material.sulfuric_fuel_gas=Sulfuric Fuel Gas
@@ -2353,6 +2354,7 @@ susy.material.potassium_persulfate_solution=Potassium Persulfate Solution
 susy.material.ammonium_persulfate_solution=Ammonium Persulfate Solution
 susy.material.yttrium_chloride_solution=Yttrium Chloride Solution
 susy.material.lanthanum_nitrate_solution=Lanthanum Nitrate Solution
+susy.material.diluted_lanthanum_nitrate_solution=Diluted Lanthanum Nitrate Solution
 susy.material.cerium_iii_chloride_solution=Cerium III Chloride Solution
 susy.material.praseodymium_iii_nitrate_solution=Praseodymium III Nitrate Solution
 susy.material.gadolinium_chloride_solution=Gadolinium Chloride Solution
@@ -2668,6 +2670,8 @@ susy.material.ro_water=Reverse Osmosis Water
 susy.material.ammoxidation_catalyst=Ammoxidation Catalyst
 susy.material.propylene_ammoxidation_mixture=Propylene Ammoxidation Mixture
 susy.material.crude_acrylonitrile=Crude Acrylonitrile
+susy.material.ebonite=Ebonite
+susy.material.compounded_ebonite=Compounded Ebonite
 susy.material.chromium_iii_nitrate_solution=Chromium III Nitrate Solution
 susy.material.chromium_iii_carbonate=Chromium III Carbonate
 susy.material.manganese_ii_carbonate=Manganese II Carbonate
@@ -2693,6 +2697,7 @@ susy.material.dichlorodiphenyl_sulfone_solution=Dichlorodiphenyl Sulfone Solutio
 susy.material.fuel_cell_catalyst_solution=Fuel Cell Catalyst Solution
 susy.material.polytetrafluoroethylene_coating_solution=Polytetrafluoroethylene Coating Solution
 susy.material.acetonitrile=Acetonitrile
+susy.material.lead_iv_oxide=Lead IV Oxide
 
 # Isotopes
 
@@ -2794,9 +2799,17 @@ metaitem.storage.segment.name=Storage Segment
 
 metaitem.gun.barrel.steel.name=Steel Barrel
 
+metaitem.cathode.lead_paste.name=Lead Cathode Paste
+metaitem.cathode.lead_frame.name=Lead Cathode Frame
 metaitem.cathode.lead.name=Lead Cathode
 metaitem.anode.lead.name=Lead Anode
-metaitem.battery.lead_acid.name=Lead Acid Battery
+metaitem.battery.lead_acid.name=Lead-Acid Battery
+metaitem.battery.ni_fe.name=Nickel-Iron Battery
+metaitem.electrode.steel_frame.name=Steel Electrode Frame
+metaitem.electrode.nickeled_steel_frame.name=Nickel-plated Steel Electrode Frame
+
+metaitem.battery.primitivehull.lv.name=Primitive LV Battery Hull
+metaitem.battery.primitivehull.mv.name=Primitive MV Battery Hull
 
 metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
@@ -3143,6 +3156,18 @@ metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
 metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel Cell (PEMFC)
 
+## Dimension Display Items
+metaitem.display.overworld.name=Overworld
+metaitem.display.nether.name=Nether
+metaitem.display.beneath.name=Beneath
+metaitem.display.moon.name=Moon
+metaitem.display.mercury.name=Mercury
+metaitem.display.mars.name=Mars
+
+metaitem.parachute.drogue.name=Drogue Parachute
+metaitem.parachute.main.name=Subsonic Main Parachute
+metaitem.parachute.supersonic_main.name=Supersonic Disk-Gap-Band Parachute
+
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
@@ -3196,8 +3221,9 @@ gregtech.material.cupric_oxide=Copper II Oxide
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
-susy.block_group_members.extractable_logs_2.name=Acacia and Dark Oak
+susy.block_group_members.extractable_logs_2.name=Acacia and Dark Oak Log
 
+susy.block_group_members.rainbowwood_logs.name=Rainbowwood Log
 susy.block_group_members.latex_logs.name=Rubber Log
 
 # Main Menu

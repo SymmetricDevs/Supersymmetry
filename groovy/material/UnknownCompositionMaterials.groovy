@@ -3142,5 +3142,17 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x5c8c24)
                 .build()
+
+        Ebonite = new Material.Builder(4684, SuSyUtility.susyId('ebonite'))
+                .dust()
+                .flags(NO_UNIFICATION, GENERATE_PLATE)
+                .color(0x2b170c)
+                .build()
+
+        CompoundedEbonite = new Material.Builder(4685, SuSyUtility.susyId('compounded_ebonite'))
+                .dust()
+                .flags(NO_UNIFICATION)
+                .color(0x2b1e0c)
+                .build()
     }
 }

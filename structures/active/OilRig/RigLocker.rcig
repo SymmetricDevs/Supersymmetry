@@ -1,0 +1,145 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "RigLocker",
+  "items": [
+    {
+      "weight": 2.540874481201172,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "industrialrenewal:safety_belt",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "ench": {
+              "nbtType": "list",
+              "nbt": [
+                {
+                  "nbtType": "compound",
+                  "nbt": {
+                    "id": {
+                      "nbtType": "short",
+                      "nbt": 2
+                    },
+                    "lvl": {
+                      "nbtType": "short",
+                      "nbt": 4
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "industrialrenewal:safety_helmet",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "ench": {
+              "nbtType": "list",
+              "nbt": [
+                {
+                  "nbtType": "compound",
+                  "nbt": {
+                    "id": {
+                      "nbtType": "short",
+                      "nbt": 0
+                    },
+                    "lvl": {
+                      "nbtType": "short",
+                      "nbt": 4
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:screwdriver",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:iron"
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 255
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 1.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": 3.0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "opensecurity:rfid_card",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "opensecurity:mag_card",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

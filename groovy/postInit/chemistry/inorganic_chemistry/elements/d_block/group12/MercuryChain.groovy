@@ -1,25 +1,21 @@
-import globals.Globals
-
-ROASTER = recipemap('roaster')
-FLOTATION = recipemap('froth_flotation')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 MIXER.recipeBuilder()
     .inputs(ore('dustImpureCinnabar') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_cinnabar_slurry') * 2000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
-FLOTATION.recipeBuilder()
+FROTH_FLOTATION.recipeBuilder()
     .fluidInputs(fluid('impure_cinnabar_slurry') * 2000)
     .notConsumable(metaitem('dustPotassiumButylXanthate'))
     .notConsumable(metaitem('dustLeadNitrate') * 9)
     .fluidOutputs(fluid('pegmatite_tailing_slurry') * 1000)
     .fluidOutputs(fluid('cinnabar_slurry') * 1000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
@@ -27,7 +23,7 @@ CLARIFIER.recipeBuilder()
     .fluidInputs(fluid('cinnabar_slurry') * 1000)
     .outputs(metaitem('dustCinnabar') * 16)
     .fluidOutputs(fluid('wastewater') * 1000)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(20)
     .buildAndRegister()
 
@@ -37,5 +33,5 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('mercury') * 1000)
     .fluidOutputs(fluid('sulfur_dioxide') * 1000)
     .duration(60)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()

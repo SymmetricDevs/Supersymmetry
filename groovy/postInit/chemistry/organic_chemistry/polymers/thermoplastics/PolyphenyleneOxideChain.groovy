@@ -1,18 +1,12 @@
-import globals.Globals
-
-POLYMERIZATION_TANK = recipemap('polymerization_tank')
-BCR = recipemap('bubble_column_reactor')
-CENTRIFUGE = recipemap('centrifuge')
-MIXER = recipemap('mixer')
-BR = recipemap('batch_reactor')
-SIEVE_DT = recipemap('sieve_distillation')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 MIXER.recipeBuilder()
     .fluidInputs(fluid('two_six_xylenol') * 1000)
     .fluidInputs(fluid('toluene') * 1000)
     .fluidOutputs(fluid('xylenol_solution') * 2000)
     .duration(60)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 POLYMERIZATION_TANK.recipeBuilder()
@@ -24,15 +18,16 @@ POLYMERIZATION_TANK.recipeBuilder()
     .fluidOutputs(fluid('impure_ppo_solution') * 1000)
     .fluidOutputs(fluid('wastewater') * 1000)
     .duration(180)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister();
 
 MIXER.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('ethylenediamine') * 1000)
     .fluidInputs(fluid('water') * 1000)
     .fluidOutputs(fluid('ethylenediamine_solution') * 2000)
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 CENTRIFUGE.recipeBuilder()
@@ -41,7 +36,7 @@ CENTRIFUGE.recipeBuilder()
     .fluidOutputs(fluid('ppo_solution') * 1000)
     .fluidOutputs(fluid('wastewater') * 50)
     .duration(120)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
@@ -51,7 +46,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustPolyphenyleneOxide') * 2)
     .fluidOutputs(fluid('ppo_waste') * 2000)
     .duration(120)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 SIEVE_DT.recipeBuilder()
@@ -60,5 +55,5 @@ SIEVE_DT.recipeBuilder()
     .fluidOutputs(fluid('toluene') * 1000)
     .fluidOutputs(fluid('methanol') * 1000)
     .duration(40)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();

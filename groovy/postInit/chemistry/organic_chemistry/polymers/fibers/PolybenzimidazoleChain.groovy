@@ -1,11 +1,5 @@
-CSTR = recipemap('continuous_stirred_tank_reactor')
-FBR = recipemap('fixed_bed_reactor')
-BR = recipemap('batch_reactor')
-POLYMERIZATION = recipemap('polymerization_tank')
-FLUIDIZEDBR = recipemap('fluidized_bed_reactor')
-DISTILLATION_TOWER = recipemap('distillation_tower')
-SIFTER = recipemap('sifter')
-CENTRIFUGE = recipemap('centrifuge')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Diphenyl Isophthalate
 
@@ -14,7 +8,7 @@ BR.recipeBuilder()
 .inputs(ore('dustSodiumHydroxide') * 3)
 .fluidOutputs(fluid('sodium_phenoxide_solution') * 1000)
 .duration(160)
-.EUt(30)
+.EUt(VA[LV])
 .buildAndRegister()
 
 CSTR.recipeBuilder()
@@ -23,19 +17,19 @@ CSTR.recipeBuilder()
 .fluidOutputs(fluid('diphenyl_isophthalate_solution') * 50)
 .fluidOutputs(fluid('salt_water') * 100)
 .duration(10)
-.EUt(30)
+.EUt(VA[LV])
 .buildAndRegister()
 
 // 3,3'-Dichlorobenzidine
 
-FBR.recipeBuilder()
+FIXED_BR.recipeBuilder()
 .fluidInputs(fluid('two_chloronitrobenzene') * 288)
 .fluidInputs(fluid('hot_hp_hydrogen') * 10000)
 .notConsumable(ore('dustPalladiumOnCarbon'))
 .outputs(metaitem('dustTwoTwoDichlorohydrazobenzene'))
 .fluidOutputs(fluid('water') * 4000)
 .duration(300)
-.EUt(120)
+.EUt(VA[MV])
 .buildAndRegister()
 
 BR.recipeBuilder()
@@ -44,12 +38,12 @@ BR.recipeBuilder()
 .notConsumable(fluid('sulfuric_acid') * 50)
 .fluidOutputs(fluid('dichlorobenzidine_solution') * 1000)
 .duration(200)
-.EUt(120)
+.EUt(VA[MV])
 .buildAndRegister()
 
 // 3,3-Diaminobenzidine
 
-FLUIDIZEDBR.recipeBuilder()
+FLUIDIZED_BR.recipeBuilder()
 .fluidInputs(fluid('dichlorobenzidine_solution') * 100)
 .fluidInputs(fluid('hot_compressed_ammonia') * 200)
 .notConsumable(ore('dustCopper'))
@@ -61,7 +55,7 @@ FLUIDIZEDBR.recipeBuilder()
 
 // PBI
 
-POLYMERIZATION.recipeBuilder()
+POLYMERIZATION_TANK.recipeBuilder()
 .notConsumable(fluid('nitrogen') * 8000)
 .fluidInputs(fluid('diaminobenzidine_solution') * 1000)
 .fluidInputs(fluid('diphenyl_isophthalate_solution') * 1000)
@@ -85,7 +79,7 @@ MIXER.recipeBuilder()
 .inputs(ore('dustPbiPrepolymer'))
 .fluidOutputs(fluid('pbi_solution') * 1000)
 .duration(100)
-.EUt(120)
+.EUt(VA[MV])
 .buildAndRegister()
 
 CHEMICAL_BATH.recipeBuilder()
@@ -95,7 +89,7 @@ CHEMICAL_BATH.recipeBuilder()
 .outputs(metaitem('fiberPolybenzimidazole') * 8)
 .fluidOutputs(fluid('spent_pbi_solution') * 1000)
 .duration(100)
-.EUt(480)
+.EUt(VA[HV])
 .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -103,10 +97,10 @@ DISTILLERY.recipeBuilder()
 .outputs(metaitem('dustLithiumChloride') * 2)
 .fluidOutputs(fluid('dimethylacetamide') * 1000)
 .duration(20)
-.EUt(30)
+.EUt(VA[LV])
 .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+DT.recipeBuilder()
 .fluidInputs(fluid('pbi_waste') * 4000)
 .fluidOutputs(fluid('toluene') * 1000)
 .fluidOutputs(fluid('phenol') * 2000)

@@ -1,6 +1,7 @@
 {
   "preRequisites:11": [
-    41
+    41,
+    38
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -12,7 +13,8 @@
           "Configuration:3": 0
         }
       },
-      "name:8": "susy.quest.db.666.title"
+      "name:8": "susy.quest.db.666.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 666,

@@ -1,0 +1,11 @@
+{
+  "parent": "gregtech:item/metaitems/dimension_display",
+  "textures": {
+    "front": "gregtech:items/metaitems/dimension_display/mercury/front",
+    "back": "gregtech:items/metaitems/dimension_display/mercury/back",
+    "left": "gregtech:items/metaitems/dimension_display/mercury/left",
+    "right": "gregtech:items/metaitems/dimension_display/mercury/right",
+    "top": "gregtech:items/metaitems/dimension_display/mercury/top",
+    "bottom": "gregtech:items/metaitems/dimension_display/mercury/bottom"
+  }
+}

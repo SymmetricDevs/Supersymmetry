@@ -1,5 +1,5 @@
-import globals.Globals
-
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.RecipeBuilder;
 
@@ -9,9 +9,6 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.*
 
-ASSEMBLER = recipemap('assembler')
-VACUUM_CHAMBER = recipemap('vacuum_chamber')
-
 crafting.remove("gregtech:vacuum_tube")
 
 // Vacuum Tube * 4
@@ -20,7 +17,6 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), meta
 mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('red_alloy') * 18])
 // Vacuum Tube * 2
 mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-
 
 crafting.addShaped("vacuum_tube_components", metaitem('vacuum_tube_components') * 4, [
     [null, metaitem('wireFineCupronickel'), null],
@@ -34,14 +30,12 @@ crafting.addShaped("vacuum_tube_components_oxide", metaitem('vacuum_tube_compone
     [null, metaitem('boltSteel'), null]
 ])
 
-
-
 VACUUM_CHAMBER.recipeBuilder()
     .inputs(metaitem('component.glass.tube'))
     .inputs(metaitem('vacuum_tube_components'))
     .inputs(ore('ringKovar'))
     .outputs(metaitem('circuit.vacuum_tube'))
-    .EUt(7)
+    .EUt(VA[ULV])
     .duration(200)
     .buildAndRegister()
 

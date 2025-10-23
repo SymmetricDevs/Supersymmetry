@@ -1,5 +1,6 @@
+import static prePostInit.Recipemaps.*
 import classes.*
-import globals.Globals
+import static gregtech.api.GTValues.*
 
 log.infoMC("Running OreSorting.groovy...")
 
@@ -366,7 +367,6 @@ def alluvial_tier_2 = [
     'susy:resource_block:11' : 5000
 ];
 
-
 def alluvial_tier_3 = [
     //T1.3
     'gregtech:ore_cassiterite_0' : 10000,
@@ -388,12 +388,12 @@ def alluvial_tier_4 = [
 
 //FORMAT: BASE ROCK, WASHING FLUID, WASTE FLUID, ORE OUTPUT LISTS, STARTING VOLTAGE TIER
 
-def rock_orthomagmatic = new IOreRock('rock.orthomagmatic', 'water', 'water', [orthomagmatic_tier_1, orthomagmatic_tier_2, orthomagmatic_tier_3, orthomagmatic_tier_4], 1);
-def rock_sedimentary = new IOreRock('rock.sedimentary', 'water', 'water', [sedimentary_tier_1, sedimentary_tier_2, sedimentary_tier_3, sedimentary_tier_4], 1);
-def rock_metamorphic = new IOreRock('rock.metamorphic', 'water', 'water', [metamorphic_tier_1, metamorphic_tier_2, metamorphic_tier_3], 1);
-def rock_magmatic_hydrothermal = new IOreRock('rock.magmatic_hydrothermal', 'water', 'water', [magmatic_hydrothermal_tier_1, magmatic_hydrothermal_tier_2, magmatic_hydrothermal_tier_3, magmatic_hydrothermal_tier_4], 1);
-def rock_hydrothermal = new IOreRock('rock.hydrothermal', 'water', 'water', [hydrothermal_tier_1, hydrothermal_tier_2, hydrothermal_tier_3, hydrothermal_tier_4], 1);
-def rock_alluvial = new IOreRock('rock.alluvial', 'water', 'water', [alluvial_tier_1, alluvial_tier_2, alluvial_tier_3, alluvial_tier_4], 1);
+def rock_orthomagmatic = new OreRock('rock.orthomagmatic', 'water', 'water', [orthomagmatic_tier_1, orthomagmatic_tier_2, orthomagmatic_tier_3, orthomagmatic_tier_4], LV);
+def rock_sedimentary = new OreRock('rock.sedimentary', 'water', 'water', [sedimentary_tier_1, sedimentary_tier_2, sedimentary_tier_3, sedimentary_tier_4], LV);
+def rock_metamorphic = new OreRock('rock.metamorphic', 'water', 'water', [metamorphic_tier_1, metamorphic_tier_2, metamorphic_tier_3], LV);
+def rock_magmatic_hydrothermal = new OreRock('rock.magmatic_hydrothermal', 'water', 'water', [magmatic_hydrothermal_tier_1, magmatic_hydrothermal_tier_2, magmatic_hydrothermal_tier_3, magmatic_hydrothermal_tier_4], LV);
+def rock_hydrothermal = new OreRock('rock.hydrothermal', 'water', 'water', [hydrothermal_tier_1, hydrothermal_tier_2, hydrothermal_tier_3, hydrothermal_tier_4], LV);
+def rock_alluvial = new OreRock('rock.alluvial', 'water', 'water', [alluvial_tier_1, alluvial_tier_2, alluvial_tier_3, alluvial_tier_4], LV);
 
 def rocks = [
         rock_orthomagmatic,
@@ -407,7 +407,7 @@ def rocks = [
 for (rock in rocks) {
     int a = 0;
     for (oreList in rock.oreLists) {
-        def recipe = recipemap('ore_sorter').recipeBuilder();
+        def recipe = ORE_SORTER.recipeBuilder();
         recipe.circuitMeta(a + 1)
         recipe.inputs(metaitem(rock.input_rock) * (oreList.size()));
         for (ore in oreList) {
@@ -418,7 +418,7 @@ for (rock in rocks) {
             }
         }
         recipe.duration(20);
-        recipe.EUt(Globals.voltAmps[rock.starting_tier + a]);
+        recipe.EUt(VA[rock.starting_tier + a]);
         recipe.buildAndRegister();
         a += 1;
     }
