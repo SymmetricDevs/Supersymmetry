@@ -2534,6 +2534,7 @@ class SuSyMaterials {
     public static Material TritiatedHeavyWater
     public static Material TritiatedSteam
     public static Material ChilledWater
+    public static Material HotHighPressureFlueGas
 
 
     public static void changeFormulas() {

@@ -647,5 +647,10 @@ class ThermodynamicsMaterials {
                 .liquid(new FluidBuilder().temperature(283))
                 .color(0x6da2ed)
                 .build()
+
+        HotHighPressureFlueGas = new Material.Builder(22871, SuSyUtility.susyId("hot_hp_flue_gas"))
+                .liquid(new FluidBuilder().temperature(573))
+                .color(0x262626)
+                .build()
     }
 }
