@@ -121,6 +121,7 @@ class SuSyMaterials {
     public static Material Carnotite
     public static Material AlluvialPGMSand
     public static Material Bertrandite
+    public static Material Chromitite
 
     // Deposits for scanning
 

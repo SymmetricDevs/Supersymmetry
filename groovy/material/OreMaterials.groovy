@@ -712,6 +712,12 @@ class OreMaterials {
                 .flags(NO_UNIFICATION)
                 .color(0x735347)
                 .build()
+
+        Chromitite = new Material.Builder(7094, SuSyUtility.susyId('chromitite'))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0x69583d)
+                .build()
         
     }
 }
