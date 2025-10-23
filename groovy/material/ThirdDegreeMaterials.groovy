@@ -856,5 +856,11 @@ class ThirdDegreeMaterials {
                 .components(Polytetrafluoroethylene * 2, Cyclohexane)
                 .colorAverage()
                 .build()
+
+        SaltyDilutedGlycolicAcid = new Material.Builder(24139, SuSyUtility.susyId('salty_diluted_glycolic_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(GlycolicAcid, Salt * 6, Water * 4)
+                .colorAverage()
+                .build()
     }
 }

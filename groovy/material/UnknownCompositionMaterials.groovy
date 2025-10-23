@@ -3154,5 +3154,20 @@ class UnknownCompositionMaterials {
                 .flags(NO_UNIFICATION)
                 .color(0x2b1e0c)
                 .build()
+
+        SodiumCMCSuspension = new Material.Builder(4686, SuSyUtility.susyId('sodium_cmc_suspension'))
+                .liquid()
+                .color(0xe9e7e9)
+                .build()
+
+        SodiumCMCSuspensionMedium = new Material.Builder(4687, SuSyUtility.susyId('sodium_cmc_suspension_medium'))
+                .liquid()
+                .color(0xe7e5eb)
+                .build()
+
+        AcidicSodiumCMCSuspensionMedium = new Material.Builder(4688, SuSyUtility.susyId('acidic_sodium_cmc_suspension_medium'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xe9e3e7)
+                .build()
     }
 }

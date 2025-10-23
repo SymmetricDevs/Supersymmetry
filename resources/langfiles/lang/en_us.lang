@@ -2684,6 +2684,7 @@ susy.material.nickel_gadolinium_doped_ceria=Nickel Gadolinium Doped Ceria
 susy.material.nickel_yttria_stabilized_zirconia=Nickel Yttria Stabilized Zirconia
 susy.material.lanthanum_strontium_chromite=Lanthanum Strontium Chromite (LSC)
 susy.material.bismuth_iii_nitrate_solution=Bismuth III Nitrate Solution
+susy.material.lead_iv_oxide=Lead IV Oxide
 susy.material.platinum_on_carbon=Platinum On Carbon
 susy.material.acrylonitrile=Acrylonitrile
 susy.material.polyacrylonitrile=Polyacrylonitrile (PAN)
@@ -2697,7 +2698,12 @@ susy.material.dichlorodiphenyl_sulfone_solution=Dichlorodiphenyl Sulfone Solutio
 susy.material.fuel_cell_catalyst_solution=Fuel Cell Catalyst Solution
 susy.material.polytetrafluoroethylene_coating_solution=Polytetrafluoroethylene Coating Solution
 susy.material.acetonitrile=Acetonitrile
-susy.material.lead_iv_oxide=Lead IV Oxide
+susy.material.glycolic_acid=Glycolic Acid
+susy.material.sodium_carboxymethyl_cellulose=Sodium Carboxymethyl Cellulose (CMC)
+susy.material.sodium_cmc_suspension=Sodium CMC Suspension
+susy.material.sodium_cmc_suspension_medium=Sodium CMC Suspension Medium
+susy.material.acidic_sodium_cmc_suspension_medium=Acidic Sodium CMC Suspension Medium
+susy.material.salty_diluted_glycolic_acid=Salty Diluted Glycolic Acid
 
 # Isotopes
 

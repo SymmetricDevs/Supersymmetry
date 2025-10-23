@@ -781,6 +781,9 @@ class SuSyMaterials {
     public static Material CrudeAcrylonitrile
     public static Material Ebonite
     public static Material CompoundedEbonite
+    public static Material SodiumCMCSuspension
+    public static Material SodiumCMCSuspensionMedium
+    public static Material AcidicSodiumCMCSuspensionMedium
 
     // Petrochem Materials
 
@@ -2330,6 +2333,8 @@ class SuSyMaterials {
     public static Material DichlorodiphenylSulfone
     public static Material Polysulfone
     public static Material Acetonitrile
+    public static Material GlycolicAcid
+    public static Material SodiumCarboxymethylCellulose
     
     // Third Degree Materials
 
@@ -2470,7 +2475,7 @@ class SuSyMaterials {
     public static Material DichlorodiphenylSulfoneSolution
     public static Material FuelCellCatalystSolution
     public static Material PolytetrafluoroethyleneCoatingSolution
-
+    public static Material SaltyDilutedGlycolicAcid
 
     // Thermodynamics Materials
 

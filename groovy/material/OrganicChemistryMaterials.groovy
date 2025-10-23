@@ -125,6 +125,7 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 6, Hydrogen * 9, Oxygen * 5, Sodium * 1)
                 .color(0x7d6547)
                 .build()
+        AlkaliCellulose.setFormula('[C6H7O2(OH)2ONa]n', true)
 
         SodiumCelluloseXanthate = new Material.Builder(15016, SuSyUtility.susyId('sodium_cellulose_xanthate'))
                 .dust()
@@ -3154,5 +3155,19 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 2, Hydrogen * 3, Nitrogen)
                 .color(0x275e75)
                 .build()
+
+        GlycolicAcid = new Material.Builder(15496, SuSyUtility.susyId('glycolic_acid'))
+                .dust()
+                .components(Carbon * 2, Hydrogen * 4, Oxygen * 3)
+                .color(0xdcdff5)
+                .build()
+        GlycolicAcid.setFormula('CH2(OH)COOH', true)
+
+        SodiumCarboxymethylCellulose = new Material.Builder(15497, SuSyUtility.susyId('sodium_carboxymethyl_cellulose'))
+                .dust()
+                .components(Carbon * 8, Hydrogen * 11, Oxygen * 6, Sodium)
+                .color(0xf5eedc)
+                .build()
+        SodiumCarboxymethylCellulose.setFormula('[C6H7O2(OH)2OCH2COONa]n', true)
     }
 }
