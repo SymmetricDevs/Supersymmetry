@@ -826,7 +826,7 @@ for (working_fluid in WorkingFluids) {
 
     HEAT_EXCHANGER.recipeBuilder()
             .fluidInputs(liquid(working_fluid.normal_fluid) * (working_fluid.amount_to_use * 16))
-            .fluidInputs(liquid('hot_hp_flue_gas') * 20)
+            .fluidInputs(liquid('hot_hp_flue_gas') * 320)
             .fluidOutputs(liquid(working_fluid.heated_fluid) * (working_fluid.amount_to_use * working_fluid.conversion_factor * 16))
             .fluidOutputs(liquid('chilled_flue_gas') * 2000)
             .duration((int) (working_fluid.duration))
