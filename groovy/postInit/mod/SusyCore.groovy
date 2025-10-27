@@ -367,3 +367,119 @@ mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_smooth', 9)], nu
 // Concrete Dust * 1
 mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_cobble', 9)], null)
 
+// Asbestos Fiber
+EXTRUDER.recipeBuilder()
+    .inputs(metaitem('dustAsbestos'))
+    .notConsumable(metaitem('shape.extruder.wire'))
+    .outputs(metaitem('fiberAsbestos') * 4)
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Asbestos Plate * 1
+mods.gregtech.assembler.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1]), metaitem('threadAsbestos') * 8], null)
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('threadAsbestos'))
+    .outputs(item('susy:fake_wool') * 8)
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+def dyes = [
+    'orange'     : 1,
+    'magenta'    : 2,
+    'light_blue' : 3,
+    'yellow'     : 4,
+    'lime'       : 5,
+    'pink'       : 6,
+    'gray'       : 7,
+    'light_gray' : 8,
+    'cyan'       : 9,
+    'purple'     : 10,
+    'blue'       : 11,
+    'brown'      : 12,
+    'green'      : 13,
+    'red'        : 14,
+    'black'      : 15
+]
+
+dyes.each { dye, number ->
+    CHEMICAL_BATH.recipeBuilder()
+        .inputs(item('susy:fake_wool'))
+        .fluidInputs(fluid('dye_' + dye) * 144)
+        .outputs(item('susy:fake_wool', + number))
+        .duration(40)
+        .EUt(VA[LV])
+        .buildAndRegister()
+}
+
+//Custom Susy Blocks for Black Mesa Research Facility
+MIXER.recipeBuilder() 
+    .inputs(metaitem('dustStone')) 
+    .fluidInputs(fluid('concrete') * 144) 
+    .outputs(item('susy:random_concrete') * 8) 
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+def concretes = [1, 2, 3]
+
+concretes.each { number ->
+    MIXER.recipeBuilder()
+        .circuitMeta(number)
+        .inputs(metaitem('dustStone'))
+        .fluidInputs(fluid('concrete') * 144)
+        .outputs(item('susy:random_concrete', number) * 8)
+        .duration(80)
+        .EUt(VA[LV])
+        .buildAndRegister()
+}
+
+def panels = [4, 5, 6, 7]
+
+panels.each { number ->
+    ASSEMBLER.recipeBuilder()
+        .circuitMeta(number)
+        .inputs(metaitem('plateWroughtIron') * 4)
+        .inputs(metaitem('screwWroughtIron') * 2)
+        .outputs(item('susy:random_concrete', number) * 8)
+        .duration(80)
+        .EUt(VA[LV])
+        .buildAndRegister()
+}
+
+def cinders = [8, 9, 10, 11, 12, 13]
+
+cinders.each { number ->
+    EXTRUDER.recipeBuilder()
+        .circuitMeta(number)
+        .notConsumable(metaitem('shape.extruder.block'))
+        .fluidInputs(fluid('concrete') * 144)
+        .outputs(item('susy:random_concrete', number) * 8)
+        .duration(80)
+        .EUt(VA[LV])
+        .buildAndRegister()
+} 
+
+def smooths = [14, 15]
+
+smooths.each { number ->
+    EXTRUDER.recipeBuilder()
+        .circuitMeta(number)
+        .inputs(metaitem('frameSteel'))
+        .fluidInputs(fluid('concrete') * 144)
+        .outputs(item('susy:random_concrete', number) * 8)
+        .duration(80)
+        .EUt(VA[LV])
+        .buildAndRegister()
+} 
+
+EXTRUDER.recipeBuilder()
+    .circuitMeta(16)
+    .inputs(metaitem('frameSteel'))
+    .fluidInputs(fluid('concrete') * 144)
+    .outputs(item('susy:random_concrete1') * 8)
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister()
