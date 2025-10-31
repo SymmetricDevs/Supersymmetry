@@ -1,4 +1,5 @@
 import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 import gregtech.api.recipes.RecipeBuilder
 import globals.Globals
 
@@ -40,7 +41,7 @@ for (entry in overworld_ores) {
         .outputs(entry)
         .dimension(Globals.dimensions["Overworld"])
         .duration(100)
-        .EUt(16)
+        .EUt(VA[ULV])
         .buildAndRegister();
 }
 
@@ -50,7 +51,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('gregtech:meta_dust', 2023), 1000, 500)
     .dimension(Globals.dimensions["Overworld"])
     .duration(100)
-    .EUt(16)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
@@ -58,7 +59,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(metaitem('dustMica'), 1000, 500)
     .dimension(Globals.dimensions["Beneath"])
     .duration(240)
-    .EUt(64)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
@@ -71,7 +72,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_smooth', 5), 1667, 500)
     .dimension(Globals.dimensions["Overworld"])
     .duration(100)
-    .EUt(16)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
@@ -84,7 +85,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_cobble', 5), 1667, 500)
     .dimension(Globals.dimensions["Overworld"])
     .duration(100)
-    .EUt(16)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 //beneath rocks:
@@ -94,7 +95,7 @@ for (entry in beneath_ores) {
         .outputs(entry)
         .dimension(Globals.dimensions["Beneath"])
         .duration(100)
-        .EUt(64)
+        .EUt(VA[MV])
         .buildAndRegister();
 }
 
@@ -105,7 +106,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_smooth', 6), 3333, 500)
     .dimension(Globals.dimensions["Beneath"])
     .duration(100)
-    .EUt(64)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
@@ -115,5 +116,5 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_cobble', 6), 3333, 500)
     .dimension(Globals.dimensions["Beneath"])
     .duration(100)
-    .EUt(64)
+    .EUt(VA[MV])
     .buildAndRegister();
