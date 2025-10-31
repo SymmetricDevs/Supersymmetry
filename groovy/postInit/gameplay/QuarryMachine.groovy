@@ -45,6 +45,15 @@ for (entry in overworld_ores) {
 }
 
 QUARRY.recipeBuilder()
+    .notConsumable(item('minecraft:sand'))
+    .outputs(item('minecraft:sand'))
+    .chancedOutput(item('gregtech:meta_dust', 2023), 1000, 500)
+    .dimension(Globals.dimensions["Overworld"])
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister();
+
+QUARRY.recipeBuilder()
     .notConsumable(ore('dustMica'))
     .chancedOutput(metaitem('dustMica'), 1000, 500)
     .dimension(Globals.dimensions["Beneath"])
