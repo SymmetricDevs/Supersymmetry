@@ -41,7 +41,7 @@ for (entry in overworld_ores) {
         .outputs(entry)
         .dimension(Globals.dimensions["Overworld"])
         .duration(100)
-        .EUt(VA[ULV])
+        .EUt(VA[LV])
         .buildAndRegister();
 }
 
@@ -51,7 +51,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('gregtech:meta_dust', 2023), 1000, 500)
     .dimension(Globals.dimensions["Overworld"])
     .duration(100)
-    .EUt(VA[ULV])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
@@ -72,7 +72,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_smooth', 5), 1667, 500)
     .dimension(Globals.dimensions["Overworld"])
     .duration(100)
-    .EUt(VA[ULV])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
@@ -85,7 +85,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_cobble', 5), 1667, 500)
     .dimension(Globals.dimensions["Overworld"])
     .duration(100)
-    .EUt(VA[ULV])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 //beneath rocks:
