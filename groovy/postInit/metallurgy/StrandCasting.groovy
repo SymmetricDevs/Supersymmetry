@@ -7,7 +7,7 @@ import postInit.utils.RecyclingHelper
 // Rolls
 SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('vanadium_steel') * 432)
-    .inputs(metaitem('shape.mold.cylinder'))
+    .notConsumable(metaitem('shape.mold.cylinder'))
     .outputs(metaitem('work_roll.unfinished'))
     .EUt(VA[LV])
     .duration(80)
