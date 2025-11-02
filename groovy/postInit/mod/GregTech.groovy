@@ -1940,3 +1940,14 @@ CENTRIFUGE.recipeBuilder()
     .duration(30)
     .EUt(VA[MV])
     .buildAndRegister()
+
+// Coke Oven Brick * 2
+mods.gregtech.alloy_smelter.removeByInput(7, [item('minecraft:sand'), item('minecraft:clay_ball')], null)
+
+ALLOY_SMELTER.recipeBuilder()
+    .inputs(item('minecraft:sand'))
+    .inputs(item('minecraft:clay_ball'))
+    .outputs(metaitem('brick.coke'))
+    .duration(40)
+    .EUt(VA[LV])
+    .buildAndRegister()
