@@ -91,6 +91,10 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('foilPolycaprolactam') * 2, 
 // BrainTech Aerospace Advanced Reinforced Duct Tape FAL-84 * 8
 mods.gregtech.assembler.removeByInput(30, [metaitem('foilPolybenzimidazole'), metaitem('carbon.mesh')], [fluid('plastic') * 72])
 // Silicon Dioxide Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustGlass')], null)
+// Silicon Dioxide Dust * 1
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustOpal')], null)
+// Silicon Dioxide Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFlint')], null)
 
 def name_removals = [
@@ -1932,6 +1936,13 @@ CHEMICAL_BATH.recipeBuilder()
     .outputs(item('gregtech:silver_lamp'))
     .duration(10)
     .EUt(VA[ULV])
+    .buildAndRegister()
+
+CENTRIFUGE.recipeBuilder()
+    .inputs(metaitem('dustGlass'))
+    .outputs(item('gregtech:meta_dust', 356))
+    .duration(30)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
