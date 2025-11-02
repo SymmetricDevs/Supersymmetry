@@ -581,7 +581,7 @@ SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('iron_iii_chloride') * 144)
     .outputs(metaitem('dustIronIiiChloride') * 1)
     .duration(30)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 //Lava
@@ -591,7 +591,7 @@ SOLIDIFIER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.block'))
     .outputs(item('minecraft:obsidian') * 1)
     .duration(210)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 //Coils
@@ -689,7 +689,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('springSmallSteel') * 8)
     .outputs(item('minecraft:bed'))
     .duration(400)
-    .EUt(960)
+    .EUt(VA[EV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -706,9 +706,8 @@ ASSEMBLER.recipeBuilder()
 MACERATOR.recipeBuilder()
     .inputs(item('susy:resource_block'))
     .outputs(metaitem('crushedBauxite') * 4)
-    .chancedOutput(metaitem('dustStone'), 6700, 800)
     .duration(400)
-    .EUt(2)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 //Mud
@@ -728,7 +727,7 @@ SOLIDIFIER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.ball'))
     .outputs(item('biomesoplenty:mudball') * 1)
     .duration(40)
-    .EUt(4)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 // Home block
@@ -879,7 +878,7 @@ FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block', 15))
     .outputs(item('minecraft:coal') * 8)
     .duration(10)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 MACERATOR.recipeBuilder()
@@ -893,7 +892,7 @@ FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block_1', 1))
     .outputs(metaitem('gemAnthracite') * 8)
     .duration(10)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 MACERATOR.recipeBuilder()
@@ -907,7 +906,7 @@ FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block_1', 2))
     .outputs(metaitem('gemLignite') * 8)
     .duration(10)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 MACERATOR.recipeBuilder()
@@ -928,7 +927,7 @@ FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block_1'))
     .outputs(metaitem('native_copper') * 8)
     .duration(10)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 SIFTER.recipeBuilder()
@@ -1066,7 +1065,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('plateLead') * 4)
     .outputs(metaitem('susy:drum.lead'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(2)
     .buildAndRegister()
 
@@ -1075,7 +1074,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('plateBrass') * 4)
     .outputs(metaitem('susy:drum.brass'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(2)
     .buildAndRegister()
 
@@ -1084,7 +1083,7 @@ EXTRUDER.recipeBuilder()
     .fluidInputs(fluid('plastic') * 864)
     .outputs(metaitem('susy:drum.pe'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 EXTRUDER.recipeBuilder()
@@ -1092,7 +1091,7 @@ EXTRUDER.recipeBuilder()
     .fluidInputs(fluid('polypropylene') * 864)
     .outputs(metaitem('susy:drum.pp'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 EXTRUDER.recipeBuilder()
@@ -1100,7 +1099,7 @@ EXTRUDER.recipeBuilder()
     .fluidInputs(fluid('polytetrafluoroethylene') * 864)
     .outputs(metaitem('susy:drum.ptfe'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 EXTRUDER.recipeBuilder()
@@ -1108,7 +1107,7 @@ EXTRUDER.recipeBuilder()
     .fluidInputs(fluid('ultra_high_molecular_weight_polyethylene') * 864)
     .outputs(metaitem('susy:drum.uhmwpe'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Logistics
@@ -1165,7 +1164,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .outputs(metaitem('susy:extender.inv'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(2)
     .buildAndRegister()
 
@@ -1174,7 +1173,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .outputs(metaitem('susy:extender.tank'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(2)
     .buildAndRegister()
 
@@ -1184,7 +1183,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .outputs(metaitem('susy:extender.inv_tank'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(3)
     .buildAndRegister()
 
@@ -1197,7 +1196,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .outputs(metaitem('susy:extender.universal'))
     .duration(200)
-    .EUt(64)
+    .EUt(VA[MV])
     .circuitMeta(3)
     .buildAndRegister()
 
@@ -1206,7 +1205,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .outputs(metaitem('susy:bridge.inv'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(4)
     .buildAndRegister()
 
@@ -1215,7 +1214,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .outputs(metaitem('susy:bridge.tank'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(4)
     .buildAndRegister()
 
@@ -1225,7 +1224,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .outputs(metaitem('susy:bridge.inv_tank'))
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .circuitMeta(5)
     .buildAndRegister()
 
@@ -1238,7 +1237,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .outputs(metaitem('susy:bridge.universal'))
     .duration(200)
-    .EUt(64)
+    .EUt(VA[MV])
     .circuitMeta(5)
     .buildAndRegister()
 
@@ -1290,7 +1289,7 @@ MIXER.recipeBuilder()
     .fluidInputs(fluid('concrete') * 576)
     .fluidOutputs(fluid('construction_foam') * 8000)
     .duration(20)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 CENTRIFUGE.recipeBuilder()
@@ -1350,14 +1349,6 @@ CENTRIFUGE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-CENTRIFUGE.recipeBuilder()
-        .inputs(ore('dustNiobiumNitride') * 2)
-        .outputs(metaitem('dustNiobium'))
-        .fluidOutputs(fluid('nitrogen') * 1000)
-        .duration(96)
-        .EUt(VA[LV])
-        .buildAndRegister();
-
 // Fix distillation tower being too difficult (4 EV circuits? Seriously?)
 
 RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillation_tower'), [
@@ -1375,7 +1366,7 @@ MACERATOR.recipeBuilder()
     .inputs(ore('cobblestone'))
     .outputs(metaitem('dustStone'))
     .duration(98)
-    .EUt(2)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 // Stone Slab * 2
@@ -1403,7 +1394,7 @@ GAS_COLLECTOR.recipeBuilder()
     .fluidOutputs(fluid('air') * 10000)
     .dimension(Globals.dimensions["Beneath"])
     .duration(200)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 FORMING_PRESS.recipeBuilder()
@@ -1422,7 +1413,7 @@ FORMING_PRESS.recipeBuilder()
     .inputs(item('minecraft:stone'))
     .outputs(item('minecraft:cobblestone'))
     .duration(10)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 /*/ Nickel Zinc Ferrite * 864
@@ -1492,7 +1483,7 @@ CENTRIFUGE.recipeBuilder()
     .outputs(metaitem('dustAsh'))
     .outputs(metaitem('dustCarbon'))
     .duration(100)
-    .EUt(6)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 // Light Concrete * 1
@@ -1526,7 +1517,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('plateSteel') * 6)
     .inputs(ore('frameGtSteel'))
     .outputs(item('gregtech:metal_casing', 4) * 4)
-    .EUt(16)
+    .EUt(VA[LV])
     .duration(50)
     .buildAndRegister()
 
@@ -1634,7 +1625,7 @@ MACERATOR.recipeBuilder()
     .inputs(item('gregtech:stone_smooth'))
     .outputs(metaitem('dustGraniteBlack'))
     .duration(150)
-    .EUt(2)
+    .EUt(VA[ULV])
     .buildAndRegister()
 
 // Red Granite Dust * 1
@@ -1644,7 +1635,7 @@ MACERATOR.recipeBuilder()
     .inputs(item('gregtech:stone_smooth',01))
     .outputs(metaitem('dustGraniteRed'))
     .duration(150)
-    .EUt(2)
+    .EUt(VA[ULV])
     .buildAndRegister()
 
 // Multiblock Builder
@@ -1692,7 +1683,7 @@ MACERATOR.recipeBuilder()
     .outputs(metaitem('dustSmallIron') * 2)
     .outputs(metaitem('dustSmallRedAlloy'))
     .duration(869)
-    .EUt(2)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 // MV Alternate Energy Handling
@@ -1947,5 +1938,5 @@ CENTRIFUGE.recipeBuilder()
     .inputs(metaitem('dustFlint'))
     .outputs(item('gregtech:meta_dust', 356))
     .duration(30)
-    .EUt(64)
+    .EUt(VA[MV])
     .buildAndRegister()
