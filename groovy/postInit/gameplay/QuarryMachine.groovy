@@ -50,8 +50,8 @@ QUARRY.recipeBuilder()
     .outputs(item('minecraft:sand'))
     .chancedOutput(item('gregtech:meta_dust', 2023), 1000, 500)
     .dimension(Globals.dimensions["Overworld"])
-    .duration(100)
-    .EUt(VA[LV])
+    .duration(200)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
