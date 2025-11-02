@@ -370,7 +370,7 @@ class OrganicChemistryMaterials {
 
         PBISolution = new Material.Builder(15057, SuSyUtility.susyId('pbi_solution'))
                 .liquid()
-                .components(Dimethylacetamide * 1, Polybenzimidazole * 1)
+                .components(Dimethylacetamide * 1, Polybenzimidazole * 1, LithiumChloride * 1)
                 .color(0x171410)
                 .build()
 
