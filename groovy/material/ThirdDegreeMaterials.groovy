@@ -601,7 +601,7 @@ class ThirdDegreeMaterials {
 
         SpentPBISolution = new Material.Builder(24096, SuSyUtility.susyId('spent_pbi_solution'))
                 .liquid()
-                .components(Dimethylacetamide * 1)
+                .components(Dimethylacetamide * 1, LithiumChloride * 1)
                 .colorAverage()
                 .build()
 
