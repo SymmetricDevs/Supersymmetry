@@ -186,17 +186,6 @@ MIXER.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('circuitIv') * 4)
-    .inputs(metaitem('cover.screen'))
-    .inputs(ore('wireFineGold') * 8)
-    .inputs(metaitem('circuit_board.plastic'))
-    .outputs(metaitem('susy:code_breacher'))
-    .fluidInputs(fluid('soldering_alloy') * 144)
-    .duration(400)
-    .EUt(2048)
-    .buildAndRegister();
-
 //Kovar AAF recipes because GCYM somehow generated a conflicted recipe with invar
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
@@ -219,4 +208,3 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
     .duration(67)
     .EUt(VA[MV])
     .buildAndRegister()
-    
