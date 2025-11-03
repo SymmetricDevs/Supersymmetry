@@ -241,15 +241,3 @@ ASSEMBLY_LINE.recipeBuilder()
     .duration(600)
     .EUt(100000)
     .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('electric.motor.mv') * 2)
-    .inputs(ore('plateRubber') * 4)
-    .inputs(ore('wireFineAnnealedCopper') * 4)
-    .inputs(ore('stickLongSteel') * 4)
-    .inputs(ore('gearSmallSteel') * 2)
-    .fluidInputs(fluid('lubricant') * 500)
-    .outputs(item('susy:conveyor_belt'))
-    .duration(120)
-    .EUt(VA[MV])
-    .buildAndRegister();
