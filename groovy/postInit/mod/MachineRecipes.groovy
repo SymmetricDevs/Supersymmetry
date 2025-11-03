@@ -1034,6 +1034,51 @@ RecyclingHelper.addShaped("susy:mixer_settler", metaitem('susy:mixer_settler'), 
     [pumps[3], tieredCables[3], pumps[3]]
 ])
 
+RecyclingHelper.addShaped("susy:induction_furnace", metaitem('susy:induction_furnace'), [
+        [ore('cableGtQuadrupleTin'), tieredPlates[1], ore('cableGtQuadrupleTin')],
+        [circuits[1], hulls[1], circuits[1]],
+        [pumps[1], tieredPlates[1], robotArms[1]]
+]);
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustMagnesia') * 1)
+        .fluidInputs(fluid('diluted_sodium_silicate_solution') * 200)
+        .fluidInputs(fluid('water') * 7800)
+        .fluidOutputs(fluid('ceramic_coating_slurry') * 8000)
+        .EUt(VA[LV])
+        .duration(200)
+        .buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('pipeNormalFluidCopper'))
+        .fluidInputs(fluid('ceramic_coating_slurry') * 1000)
+        .outputs(metaitem('coated_copper_coil'))
+        .EUt(VA[LV])
+        .duration(100)
+        .buildAndRegister()
+
+DRYER.recipeBuilder()
+        .inputs(metaitem('coated_copper_coil'))
+        .outputs(metaitem('cured_coated_coil'))
+        .EUt(VA[LV])
+        .duration(200)
+        .buildAndRegister()
+
+BENDER.recipeBuilder()
+        .inputs(metaitem('cured_coated_coil'))
+        .outputs(metaitem('induction_coil'))
+        .EUt(VA[LV])
+        .duration(200)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('induction_coil'))
+        .inputs(ore('plateMica')  * 4)
+        .outputs(item('susy:induction_coil_assembly'))
+        .EUt(VA[LV])
+        .duration(600)
+        .buildAndRegister()
+
 //ION EXCHANGE COLUMN
 
 for (i = 1; i <= 8; i++) {

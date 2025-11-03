@@ -823,7 +823,7 @@ class ThirdDegreeMaterials {
 
         PerfluorovinylSulfonylEtherSolution = new Material.Builder(24133, SuSyUtility.susyId('perfluorovinyl_sulfonyl_ether_solution'))
                 .liquid()
-                .components(PerfluorovinylSulfonylEther, SodiumFluoride * 2, Dimethylformamide * 2)
+                .components(PerfluorovinylSulfonylEther, Dimethylformamide * 2)
                 .colorAverage()
                 .build()
 

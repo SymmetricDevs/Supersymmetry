@@ -1758,7 +1758,7 @@ ASSEMBLER.recipeBuilder()
 // Wing panel
 AUTOCLAVE.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
-    .notConsumable(ore('foilPolyethyleneTerephthalate'))
+    .inputs(ore('foilPolyethyleneTerephthalate'))
     .fluidInputs(fluid('reinforced_epoxy_resin') * 288)
     .outputs(metaitem('wing_panel.fiber_reinforced_epoxy'))
     .duration(600)

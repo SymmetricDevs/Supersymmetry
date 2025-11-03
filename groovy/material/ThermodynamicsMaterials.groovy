@@ -589,7 +589,9 @@ class ThermodynamicsMaterials {
                 .color(0x0a2ca1)
                 .build()
 
-        PressurizedWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(PressurizedWater, HotPressurizedWater, FluidStorageKeys.LIQUID, 1, 1000, 588, 2260000, 4184).setAccumulatesHydrogen(true))
+        PressurizedWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(PressurizedWater, HotPressurizedWater, FluidStorageKeys.LIQUID, 2, 1000, 588, 2260000, 4184).setAccumulatesHydrogen(true)
+                .setSlowAbsorptionFactor(0.1875)
+                .setFastAbsorptionFactor(0.0625))
         // per mole, 2,427,360J absorbed --> 359,946EU/mol
 
 
@@ -598,7 +600,9 @@ class ThermodynamicsMaterials {
                 .color(0x7585bd)
                 .build()
 
-        BoilingWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(BoilingWater, HighPressureWetSteam, FluidStorageKeys.LIQUID, 1, 1000, 558, 2260000, 4184).setAccumulatesHydrogen(true))
+        BoilingWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(BoilingWater, HighPressureWetSteam, FluidStorageKeys.LIQUID, 2, 1000, 558, 2260000, 4184).setAccumulatesHydrogen(true)
+                .setSlowAbsorptionFactor(0.1875)
+                .setFastAbsorptionFactor(0.0625))
         // per mole, 2,301,840J absorbed --> 341,333 EU/mol
 
         HighPressureExhaustSteam = new Material.Builder(22864, SuSyUtility.susyId("hp_exhaust_steam"))
@@ -628,7 +632,9 @@ class ThermodynamicsMaterials {
                 .components(Deuterium * 2, Oxygen * 1)
                 .build()
 
-        PressurizedHeavyWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(PressurizedHeavyWater, HotPressurizedHeavyWater, FluidStorageKeys.LIQUID, 4, 1000, 558, 2064000, 4228).setAccumulatesHydrogen(true))
+        PressurizedHeavyWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(PressurizedHeavyWater, HotPressurizedHeavyWater, FluidStorageKeys.LIQUID, 4, 1000, 558, 2064000, 4228).setAccumulatesHydrogen(true)
+                .setSlowAbsorptionFactor(0.0625)
+                .setFastAbsorptionFactor(0.03125))
         // per mole, 2,233,120J absorbed --> 331,143 EU/mol
 
         TritiatedHeavyWater = new Material.Builder(22868, SuSyUtility.susyId("tritiated_heavy_water"))

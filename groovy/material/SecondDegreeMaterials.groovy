@@ -60,6 +60,8 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
+        PoloniumIVNitrateSolution.setFormula('Po(NO3)4(H2O)', true)
+
         SodaAshSolution = new Material.Builder(13006, SuSyUtility.susyId('soda_ash_solution'))
                 .liquid()
                 .components(SodaAsh * 1, Water * 1)

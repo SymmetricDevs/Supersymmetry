@@ -61,6 +61,7 @@ class Recipemaps {
     static final def HIGH_PRESSURE_CRYO_DT = recipemap('high_pressure_cryogenic_distillation')
     static final def HIGH_TEMP_DT = recipemap('high_temperature_distillation')
     static final def HOT_ISOSTATIC_PRESS = recipemap('hot_isostatic_press')
+    static final def INDUCTION_FURNACE = recipemap('induction_furnace')
     static final def INJECTION_MOLDER = recipemap('injection_molder')
     static final def ION_EXCHANGE = recipemap('ion_exchange_column')
     static final def ION_IMPLANTER = recipemap('ion_implantation')

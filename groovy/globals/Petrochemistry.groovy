@@ -99,10 +99,20 @@ class Petrochemistry {
         boolean strippable = true
     }
 
+    trait Naphthenic {
+        boolean naphthenic = true
+        int naphthenic_acid_content // L of NA per 1kL of fraction
+
+        def getAlkaliTreated(int amount) {
+            return fluid('alkali_treated_' + this.name) * amount
+        }
+    }
+
     public static class OilFraction {
         String name
         boolean strippable = false
         boolean sulfuric = false
+        boolean naphthenic = false
 
         OilFraction(String name) {
             this.name = name
@@ -144,8 +154,8 @@ class Petrochemistry {
 
     public static fractions = [
         heavy_gas_oil : new OilFraction('heavy_gas_oil').withTraits(Sulfuric, Heatable, Strippable),
-        light_gas_oil : new OilFraction('light_gas_oil').withTraits(Sulfuric, Heatable, Strippable),
-        kerosene : new OilFraction('kerosene').withTraits(Sulfuric, Heatable, Strippable),
+        light_gas_oil : new OilFraction('light_gas_oil').withTraits(Sulfuric, Heatable, Strippable, Naphthenic).tap { naphthenic_acid_content = 1 },
+        kerosene : new OilFraction('kerosene').withTraits(Sulfuric, Heatable, Strippable, Naphthenic).tap { naphthenic_acid_content = 25 },
         heavy_naphtha : new OilFraction('heavy_naphtha').withTraits(Sulfuric, Heatable),
         light_cycle_oil : new OilFraction('light_cycle_oil').withTraits(Sulfuric, Heatable),
         naphtha : new OilFraction('naphtha').withTraits(Crude),

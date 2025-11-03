@@ -29,22 +29,32 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
         ore('wireGtDoubleGold') * 4
     ])
 
-    RecyclingManager.addRecyclingGroovy(metaitem('electric.motor.iv') * 6, [
+    RecyclingManager.addRecyclingGroovy(metaitem('electric.motor.iv') * 3, [
         ore('cableGtDoublePlatinum') * 2,
         ore('stickLongTungstenSteel'),
-        ore('plateAlnicoMagnetic') * 3,
+        ore('plateNeodymiumAlloyMagnetic') * 3,
         ore('wireGtDoubleGraphene') * 4
     ])
 
+    RecyclingManager.addRecyclingGroovy(metaitem('voltage_coil.ev'), [
+        ore('stickAlnicoMagnetic'),
+        ore('wireFinePlatinum') * 16
+    ])
+
     RecyclingManager.addRecyclingGroovy(item('gregtech:metal_casing', 4) * 4, [
-        ore('ingotSteel') * 8
+        ore('frameGtSteel'),
+        ore('plateSteel') * 6
     ])
 
     RecyclingManager.addRecyclingGroovy(item('gregtech:boiler_casing', 1) * 4, [
-        ore('ingotSteel') * 18
+        ore('frameGtSteel'),
+        ore('pipeNormalFluidSteel') * 4,
+        ore('plateSteel') * 4
     ])
 
     RecyclingManager.addRecyclingGroovy(item('gregtech:boiler_firebox_casing', 1) * 4, [
-        ore('ingotSteel') * 8
+        ore('frameGtSteel'),
+        ore('stickSteel') * 4,
+        ore('plateSteel') * 4
     ])
 }

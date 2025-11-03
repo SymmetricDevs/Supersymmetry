@@ -15,7 +15,7 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('sulfur_trioxide') * 50)
     .fluidOutputs(fluid('fluorosulfonyl_difluoroacetyl_fluoride') * 50)
     .duration(5)
-    .EUt(VA[MV])
+    .EUt(VA[HV])
     .buildAndRegister();
 
 LCR.recipeBuilder()
@@ -31,11 +31,10 @@ LCR.recipeBuilder()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('perfluorovinyl_sulfonyl_ether_solution') * 3000)
-    .outputs(metaitem('dustSodiumFluoride') * 4)
     .fluidOutputs(fluid('perfluorovinyl_sulfonyl_ether') * 1000)
     .fluidOutputs(fluid('dimethylformamide') * 2000)
     .duration(100)
-    .EUt(240)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 POLYMERIZATION_TANK.recipeBuilder()
@@ -45,7 +44,7 @@ POLYMERIZATION_TANK.recipeBuilder()
     .inputs(ore('dustTinyPotassiumPersulfate'))
     .fluidOutputs(fluid('nafion_solution') * 500)
     .duration(100)
-    .EUt(240)
+    .EUt(VA[HV])
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()

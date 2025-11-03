@@ -402,6 +402,11 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10251, "parachute.main")
         addItem(10252, "parachute.supersonic_main")
 
+        // Induction Furnace
+        addItem(10301, "coated_copper_coil")
+        addItem(10302, "cured_coated_coil")
+        addItem(10303, "induction_coil")
+
     }
 
     log.infoMC("Finished adding metaitems")

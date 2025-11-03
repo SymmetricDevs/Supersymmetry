@@ -75,40 +75,10 @@ crafting.addShaped("ir_coupler", item('immersiverailroading:item_augment').withN
 		[null, null, null]
 ]);
 
-crafting.addShaped("ir_fluid_loader", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 5]), [
-		[null, metaitem('electric.pump.lv'), null],
-		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-		[null, null, null]
-]);
-
-crafting.addShaped("ir_item_loader", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 3]), [
-		[null, metaitem('conveyor.module.lv'), null],
-		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-		[null, null, null]
-]);
-
 crafting.addShaped("ir_detector", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 7]), [
 		[null, metaitem('sensor.lv'), null],
 		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
 		[null, metaitem('wireFineRedAlloy'), null]
-]);
-
-crafting.addShaped("ir_fluid_unloader", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 6]), [
-		[null, null, null],
-		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-		[null, metaitem('electric.pump.lv'), null]
-]);
-
-crafting.addShaped("ir_locomotive_control", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 2]), [
-		[null, metaitem('emitter.lv'), null],
-		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-		[null, metaitem('wireFineRedAlloy'), null]
-]);
-
-crafting.addShaped("ir_item_unloader", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 4]), [
-		[null, null, null],
-		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-		[null, metaitem('conveyor.module.lv'), null]
 ]);
 
 crafting.addShaped("ir_speed_retarder", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 0]), [
@@ -116,14 +86,6 @@ crafting.addShaped("ir_speed_retarder", item('immersiverailroading:item_augment'
 		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
 		[null, null, null]
 ]);
-
-mods.gregtech.bender.recipeBuilder()
-		.circuitMeta(3)
-		.inputs(ore('plateSteel'))
-		.outputs(item('immersiverailroading:item_rail_part') * 10)
-		.duration(200)
-		.EUt(VA[LV])
-		.buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
 		.fluidInputs(fluid('concrete') * 144)
