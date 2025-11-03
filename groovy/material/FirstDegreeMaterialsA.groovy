@@ -1231,6 +1231,7 @@ class FirstDegreeMaterialsA {
                 .components(Carbon * 6, Hydrogen * 10, Oxygen * 5)
                 .color(0x4a432f)
                 .build()
+
         Cellulose.setFormula('[C6H7O2(OH)3]n', true)
 
         CrudeGalliumTrichloride = new Material.Builder(8270, SuSyUtility.susyId('crude_gallium_trichloride'))

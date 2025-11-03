@@ -2708,12 +2708,9 @@ susy.material.napalm_gelling_agent=Napalm Gelling Agent
 susy.material.aluminium_alloy_6061=6061 Aluminium Alloy
 susy.material.aluminium_alloy_7075=7075 Aluminium Alloy
 susy.material.ceramic_coating_slurry=Ceramic-Coating Slurry
-susy.material.glycolic_acid=Glycolic Acid
 susy.material.sodium_carboxymethyl_cellulose=Sodium Carboxymethyl Cellulose (CMC)
 susy.material.sodium_cmc_suspension=Sodium CMC Suspension
-susy.material.sodium_cmc_suspension_medium=Sodium CMC Suspension Medium
-susy.material.acidic_sodium_cmc_suspension_medium=Acidic Sodium CMC Suspension Medium
-susy.material.salty_diluted_glycolic_acid=Salty Diluted Glycolic Acid
+susy.material.cmc_waste=CMC Waste
 
 # Isotopes
 
