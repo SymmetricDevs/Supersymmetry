@@ -152,7 +152,7 @@ Globals.solders.each { key, val ->
                 .outputs(metaitem('circuit.mainframe'))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(500)
-                .EUt(VA[MV])
+                .EUt(VA[HV])
                 .buildAndRegister();
 
 }
