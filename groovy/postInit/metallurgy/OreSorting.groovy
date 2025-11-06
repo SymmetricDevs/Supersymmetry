@@ -323,7 +323,7 @@ def hydrothermal_tier_3 = [
     //T2
     'gregtech:ore_vanadinite_0' : 5000,
     //T3
-    'gregtech:ore_witherite_0' : 2500,
+    //'gregtech:ore_witherite_0' : 2500,
     'gregtech:ore_bismuthinite_0' : 7500
     //'gregtech:ore_strontianite_0' : 10000 TODO: Fix #971
 ];
@@ -346,7 +346,7 @@ def hydrothermal_tier_4 = [
     //T2
     'gregtech:ore_vanadinite_0' : 5000,
     //T3
-    'gregtech:ore_witherite_0' : 2500,
+    //'gregtech:ore_witherite_0' : 2500,
     'gregtech:ore_bismuthinite_0' : 7500,
     'gregtech:ore_pitchblende_0' : 1000,
     'gregtech:ore_bertrandite_0' : 1000
