@@ -33,7 +33,7 @@ MIXER.recipeBuilder() // Impure Pyrochlore Slurry
     .buildAndRegister()
 
 FROTH_FLOTATION.recipeBuilder() // Pyrochlore Slurry
-    .notConsumable(ore('dustOxalicAcid'))
+    .notConsumable(ore('dustOxalicAcid') * 8)
     .fluidInputs(fluid('impure_pyrochlore_slurry') * 2000)
     .notConsumable(fluid('hexafluorosilicic_acid') * 100)
     .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)

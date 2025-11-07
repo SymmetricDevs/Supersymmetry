@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import postInit.utils.RecyclingHelper
 
 // Iron & steel magnets (LV-MV)
 
@@ -293,6 +294,13 @@ ASSEMBLER.recipeBuilder()
     .duration(200)
     .EUt(VA[EV])
     .buildAndRegister();
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('voltage_coil.ev'))
+RecyclingHelper.handleRecycling(metaitem('voltage_coil.ev'), [ore('stickAlnicoMagnetic'), ore('wireFinePlatinum') * 16])
+RecyclingHelper.removeRecyclingRecipes(metaitem('energy_hatch.input.ev'))
+RecyclingHelper.handleRecycling(metaitem('energy_hatch.input.ev'), [metaitem('hull.ev'), ore('cableGtSingleAluminium') * 2, ore('stickAlnicoMagnetic'), ore('wireFinePlatinum') * 16])
+RecyclingHelper.removeRecyclingRecipes(metaitem('energy_hatch.output.ev'))
+RecyclingHelper.handleRecycling(metaitem('energy_hatch.output.ev'), [metaitem('hull.ev'), ore('springAluminium') * 2, ore('stickAlnicoMagnetic'), ore('wireFinePlatinum') * 16])
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('stickNeodymiumAlloyMagnetic') * 1)

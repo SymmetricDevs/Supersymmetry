@@ -1,3 +1,18 @@
+# UPDATE 0.1.15.9
+## Changes
+### New Features
+- 6061 and 7075 Aluminium Alloys are now craftable! I wonder what you'll need this for. (#1710 by @Fiery36)
+- More decoration blocks, like asbestos wool, are now available for you to craft! (#1711 by @Rick8484)
+- The NiFe MV battery has now replaced the MV sodium battery. (#1689 by @trexxet)
+### Changed Features
+- Techbro houses no longer spawn quite as often as before, and the loot tables are now correct. (#1696 by @oliwier509)
+- Stainless steel no longer uses small dusts. (#1700 by @Rick8484)
+### Fixes
+- Resolve the conflict between LT and Universal Tweaks (#1692 by @Rick8484)
+- Sodium sulfate solution can now be made from sodium sulfate dust. (#1699 by @Fiery36)
+Many more bugfixes were made by @Rick8484, @Fiery36, and @trexxet. Thank you for keeping the pack stable!
+### TODO: Uncategorized Changes (Please Categorize)
+- updating PR (#1677 by @oliwier509)
 # UPDATE 0.1.15.8
 ## Mod Changes
 ### Mod Updates

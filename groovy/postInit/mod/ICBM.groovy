@@ -151,7 +151,8 @@ crafting.addShaped("icbm_exp_1_0_tnp", item('icbmclassic:explosives:0'), [
 
 def flammable_liquids = [
     liquid('naphtha') * 1000,
-    liquid('gasoline') * 500
+    liquid('gasoline') * 500,
+    liquid('napalm') * 250
 ];
 
 for (liquid in flammable_liquids) {

@@ -125,6 +125,8 @@ susy.material.DilutedSodiumCarbonateSolution=Diluted Sodium Carbonate Solution
 susy.material.four_nitrophenol=4-Nitrophenol
 susy.material.four_aminophenol_solution=4-Aminophenol Solution
 susy.material.four_aminophenol=4-Aminophenol
+susy.material.napalm=Napalm
+susy.material.naphthenic_acid=Naphthenic Acid
 
 susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.potassium_bisulfate=Potassium Bisulfate
@@ -2616,7 +2618,7 @@ susy.material.ammonium_dihydrogen_phosphate_solution=Ammonium Dihydrogen Phospha
 susy.material.diammonium_hydrogen_phosphate_solution=Diammonium Hydrogen Phosphate Solution
 susy.material.aluminium_isopropoxide=Aluminium Isopropoxide
 susy.material.hexafluoropropylene_oxide=Hexafluoropropylene Oxide
-susy.material.fluorosulfonyl_difluoroacetyl_fluoride_mix=Fluorosulfonyl Difluoroacetyl Fluoride Mix
+susy.material.fluorosulfonyl_difluoroacetyl_fluoride=Fluorosulfonyl Difluoroacetyl Fluoride
 susy.material.perfluorovinyl_sulfonyl_ether=Perfluorovinyl Sulfonyl Ether (PVSE)
 susy.material.raw_nafion=Raw Nafion
 susy.material.nafion=Nafion
@@ -2684,6 +2686,7 @@ susy.material.nickel_gadolinium_doped_ceria=Nickel Gadolinium Doped Ceria
 susy.material.nickel_yttria_stabilized_zirconia=Nickel Yttria Stabilized Zirconia
 susy.material.lanthanum_strontium_chromite=Lanthanum Strontium Chromite (LSC)
 susy.material.bismuth_iii_nitrate_solution=Bismuth III Nitrate Solution
+susy.material.lead_iv_oxide=Lead IV Oxide
 susy.material.platinum_on_carbon=Platinum On Carbon
 susy.material.acrylonitrile=Acrylonitrile
 susy.material.polyacrylonitrile=Polyacrylonitrile (PAN)
@@ -2697,7 +2700,17 @@ susy.material.dichlorodiphenyl_sulfone_solution=Dichlorodiphenyl Sulfone Solutio
 susy.material.fuel_cell_catalyst_solution=Fuel Cell Catalyst Solution
 susy.material.polytetrafluoroethylene_coating_solution=Polytetrafluoroethylene Coating Solution
 susy.material.acetonitrile=Acetonitrile
-susy.material.lead_iv_oxide=Lead IV Oxide
+susy.material.myristic_acid=Myristic Acid
+susy.material.alkali_treated_kerosene=Alkali Treated Kerosene
+susy.material.alkali_treated_light_gas_oil=Alkali Treated Light Gas Oil
+susy.material.sodium_naphthenate_solution=Sodium Naphthenate Solution
+susy.material.napalm_gelling_agent=Napalm Gelling Agent
+susy.material.aluminium_alloy_6061=6061 Aluminium Alloy
+susy.material.aluminium_alloy_7075=7075 Aluminium Alloy
+susy.material.ceramic_coating_slurry=Ceramic-Coating Slurry
+susy.material.sodium_carboxymethyl_cellulose=Sodium Carboxymethyl Cellulose (CMC)
+susy.material.sodium_cmc_suspension=Sodium CMC Suspension
+susy.material.cmc_waste=CMC Waste
 
 # Isotopes
 
@@ -3167,6 +3180,10 @@ metaitem.display.mars.name=Mars
 metaitem.parachute.drogue.name=Drogue Parachute
 metaitem.parachute.main.name=Subsonic Main Parachute
 metaitem.parachute.supersonic_main.name=Supersonic Disk-Gap-Band Parachute
+
+metaitem.coated_copper_coil.name=Ceramic-Coated Copper Tubing
+metaitem.cured_coated_coil.name=Cured Ceramic-Coated Copper Tubing
+metaitem.induction_coil.name=Induction Coil
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand

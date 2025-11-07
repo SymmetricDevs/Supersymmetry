@@ -57,7 +57,7 @@ Make sure to have backups!
 Industrial Renewal tanks can have up to 1,000,000mB of storage.
 The Electrolyzer uses a voltage to break apart certain molecules.
 Don't forget your daily offering to Flop!
-Use the function 1-e^{-0.1x} to calculate SUSY's completion (x is in years).
+Consider the function 1-e^{-0.1x} as the susy completion reaching 100% in x years.
 Former federation soldiers, zombies, bandits and parasites will show you no mercy!
 Smiley is your friend.
 Use superconductors.
@@ -69,7 +69,7 @@ Do not cut off the water supply to large boilers!
 Do not visit Saturn.
 Skill issues will not be tolerated.
 Let JEI lead the way for you!
-Make sure to wear a mask in the Beneath to avoid suffocation!
+Make sure to wear a mask in the Beneath and the Nether to avoid suffocation!
 SUPERSYMMETRY: the chemistry textbook!
 Can you reach LV tier in real life?
 Integrated circuits require Rubylith.
@@ -79,7 +79,7 @@ Gregification is the left adjoint to the inclusion functor from GregTechs to mod
 Play with your friends, play against your friends!
 You can win with the power of empirical evidence.
 You can win with the power of hard work.
-SUPERSYMMETRY: it is spreading.
+In the absence of symmetry, the potential for super is lost.
 You cannot stop it.
 Don't forget to make acid-resistant pipes for acids!
 Turrets make for a nice defense.

@@ -1,25 +1,25 @@
 {
   "preRequisites:11": [
-    468
+    99
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.469.desc",
+      "desc:8": "susy.quest.db.1742975876.desc",
       "icon:10": {
-        "Damage:2": 4009,
-        "id:8": "gregtech:meta_item_2"
+        "Count:3": 1,
+        "id:8": "susy:induction_coil_assembly"
       },
-      "name:8": "susy.quest.db.469.title"
+      "name:8": "susy.quest.db.1742975876.title"
     }
   },
-  "questID:3": 469,
+  "questID:3": 1742975876,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 4009,
-          "id:8": "gregtech:meta_item_2"
+          "id:8": "susy:induction_coil_assembly"
         }
       },
       "taskID:8": "bq_standard:retrieval"

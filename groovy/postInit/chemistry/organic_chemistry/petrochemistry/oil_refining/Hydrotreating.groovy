@@ -4,12 +4,30 @@ import static gregtech.api.GTValues.*
 
 fractions.each { _, fraction ->
     if (fraction.sulfuric) {
-        FLUID_HEATER.recipeBuilder()
-            .fluidInputs(fraction.getSulfuric(1000))
-            .fluidOutputs(fraction.getHeated(1000))
-            .duration(40)
-            .EUt(VA[LV])
-            .buildAndRegister()
+        if (fraction.naphthenic) {
+            CENTRIFUGE.recipeBuilder()
+                .fluidInputs(fraction.getSulfuric(1000))
+                .fluidInputs(fluid('diluted_sodium_hydroxide_solution') * (fraction.naphthenic_acid_content * 2))
+                .fluidOutputs(fraction.getAlkaliTreated(1000))
+                .fluidOutputs(fluid('sodium_naphthenate_solution') * (fraction.naphthenic_acid_content * 2))
+                .duration(60)
+                .EUt(VA[LV])
+                .buildAndRegister()
+
+            FLUID_HEATER.recipeBuilder()
+                .fluidInputs(fraction.getAlkaliTreated(1000))
+                .fluidOutputs(fraction.getHeated(1000))
+                .duration(40)
+                .EUt(VA[LV])
+                .buildAndRegister()
+        } else {
+            FLUID_HEATER.recipeBuilder()
+                .fluidInputs(fraction.getSulfuric(1000))
+                .fluidOutputs(fraction.getHeated(1000))
+                .duration(40)
+                .EUt(VA[LV])
+                .buildAndRegister()
+        }
     
         FIXED_BR.recipeBuilder()
             .fluidInputs(fraction.getHeated(1000))
@@ -57,5 +75,17 @@ BCR.recipeBuilder()
     .fluidOutputs(fluid('catalytic_overheads') * 4000)
     .fluidOutputs(fluid('rich_amine') * 1000)
     .duration(40)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Naphthenic acid recovery
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('sodium_naphthenate_solution') * 2000)
+    .fluidInputs(fluid('sulfuric_acid') * 500)
+    .fluidInputs(fluid('carbon_dioxide') * 10)
+    .fluidOutputs(fluid('naphthenic_acid') * 1000)
+    .fluidOutputs(fluid('wastewater') * 3000)
+    .duration(60)
     .EUt(VA[MV])
     .buildAndRegister()

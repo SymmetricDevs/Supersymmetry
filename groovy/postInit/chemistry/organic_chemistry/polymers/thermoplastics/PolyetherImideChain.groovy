@@ -106,7 +106,7 @@ SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('phthalimide') * 144)
     .outputs(metaitem('dustPhthalimide'))
     .duration(40)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 POLYMERIZATION_TANK.recipeBuilder()

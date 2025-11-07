@@ -90,6 +90,7 @@ def Coolants = [
         WaterCoolant,
         ChilledWaterCoolant,
         SaltWaterCoolant,
+        BrineCoolant,
         LubricantCoolant,
         SodiumPotassiumCoolant,
         EthyleneGlycolCoolant,
