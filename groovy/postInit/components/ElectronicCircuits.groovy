@@ -69,7 +69,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineCopper') * 4)
     .outputs(metaitem('component.resistor') * 2)
     .duration(160)
-    .EUt(VA[LV])
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
