@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.385.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 2,
         "id:8": "icbmclassic:explosives"
       },
@@ -16,6 +17,7 @@
   "tasks:9": {
     "0:10": {
       "entryLogic:8": "OR",
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

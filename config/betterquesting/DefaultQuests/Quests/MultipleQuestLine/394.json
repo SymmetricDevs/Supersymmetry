@@ -10,6 +10,7 @@
       "desc:8": "susy.quest.db.394.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "susy:turbine_rotor"
       },
       "ismain:1": 1,
@@ -19,6 +20,7 @@
   "questID:3": 394,
   "rewards:9": {
     "0:10": {
+      "index:3": 0,
       "rewardID:8": "bq_standard:item",
       "rewards:9": {
         "0:10": {
@@ -32,7 +34,7 @@
               "Count:3": 1,
               "id:8": "susy:turbine_rotor"
             },
-            "TrophyName:8": "It's All Coming Together",
+            "TrophyName:8": "It\u0027s All Coming Together",
             "TrophyShowsTooltip:1": 1,
             "TrophyVariant:8": "classic"
           }
@@ -42,6 +44,7 @@
   },
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

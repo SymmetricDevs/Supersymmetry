@@ -11,6 +11,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.406.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "icbmclassic:launcherscreen"
       },
       "name:8": "susy.quest.db.406.title"
@@ -19,6 +20,7 @@
   "questID:3": 406,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

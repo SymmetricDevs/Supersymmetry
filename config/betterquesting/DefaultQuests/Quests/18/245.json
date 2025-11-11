@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.245.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "engineersdecor:clinker_brick_stained_block"
       },
       "name:8": "susy.quest.db.245.title"

@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.586.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "opensecurity:rolldoor_controller"
       },
       "name:8": "susy.quest.db.586.title"
@@ -14,6 +15,7 @@
   "questID:3": 586,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

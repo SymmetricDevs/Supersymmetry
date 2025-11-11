@@ -7,6 +7,7 @@
       "desc:8": "susy.quest.db.30.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "OreDict:8": "ingotSteel",
         "id:8": "betterquesting:placeholder",
         "tag:10": {
@@ -21,6 +22,7 @@
   "questID:3": 30,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 8,

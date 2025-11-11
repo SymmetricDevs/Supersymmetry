@@ -7,6 +7,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1807049983.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "methanol"

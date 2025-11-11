@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1064746016.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 6,
         "id:8": "susy:resource_block"
       },
@@ -16,6 +17,7 @@
   "questID:3": 1064746016,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.826.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 253,
         "id:8": "gregtech:meta_item_2"
       },
@@ -17,6 +18,7 @@
   "questID:3": 826,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

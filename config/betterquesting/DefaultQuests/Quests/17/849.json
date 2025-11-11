@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.849.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "biomesoplenty:white_sand"
       },
       "name:8": "susy.quest.db.849.title"

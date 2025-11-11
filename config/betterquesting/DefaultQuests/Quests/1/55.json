@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.55.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 337,
         "OreDict:8": "dustImpureYellowLimonite",
         "id:8": "gregtech:meta_dust_impure"
@@ -16,6 +17,7 @@
   "questID:3": 55,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

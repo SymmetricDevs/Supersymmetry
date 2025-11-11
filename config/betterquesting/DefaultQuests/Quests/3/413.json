@@ -11,6 +11,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.413.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "gaspunk:grenade",
         "tag:10": {
           "gaspunk:contained_gas:8": "gaspunk:chlorine"
@@ -22,6 +23,7 @@
   "questID:3": 413,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

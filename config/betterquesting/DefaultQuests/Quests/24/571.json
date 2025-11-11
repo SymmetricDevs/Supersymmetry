@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.571.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "opencomputers:misc",
         "tag:10": {
           "oc:container:10": {
@@ -1930,6 +1931,7 @@
   "questID:3": 571,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

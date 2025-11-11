@@ -3,6 +3,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.314.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 110,
         "id:8": "gregtech:meta_dust"
       },

@@ -1,46 +1,37 @@
 {
-  "preRequisiteTypes:7": [
-    1
-  ],
   "preRequisites:11": [
-    243
+    1334753160
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.927023403.desc",
+      "desc:8": "susy.quest.db.397.desc",
+      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
-          "FluidName:8": "lt_syncrude"
+          "FluidName:8": "ethylene"
         }
       },
-      "name:8": "susy.quest.db.927023403.title",
+      "ismain:1": 1,
+      "name:8": "susy.quest.db.397.title",
       "tasklogic:8": "OR"
     }
   },
-  "questID:3": 927023403,
+  "questID:3": 796070586,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,
-          "FluidName:8": "lt_syncrude"
+          "FluidName:8": "ethylene"
         }
       },
       "taskID:8": "bq_standard:fluid"
     },
     "1:10": {
       "index:3": 1,
-      "requiredFluids:9": {
-        "0:10": {
-          "Amount:3": 1000,
-          "FluidName:8": "ht_syncrude"
-        }
-      },
-      "taskID:8": "bq_standard:fluid"
-    },
-    "2:10": {
-      "index:3": 2,
       "taskID:8": "bq_standard:checkbox"
     }
   }

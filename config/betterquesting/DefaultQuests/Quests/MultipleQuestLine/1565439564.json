@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1565439564.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "simple_trophies:trophy",
         "tag:10": {
           "TrophyColorBlue:3": 213,
@@ -39,6 +40,7 @@
   "questID:3": 1565439564,
   "rewards:9": {
     "0:10": {
+      "index:3": 0,
       "rewardID:8": "bq_standard:item",
       "rewards:9": {
         "0:10": {
@@ -75,6 +77,7 @@
   },
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 512,

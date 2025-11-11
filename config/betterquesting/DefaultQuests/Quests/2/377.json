@@ -7,6 +7,7 @@
       "desc:8": "susy.quest.db.377.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 6,
         "id:8": "gregtech:meta_item_2"
       },
@@ -17,6 +18,7 @@
   "questID:3": 377,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

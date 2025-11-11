@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.696.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "naturescompass:naturescompass",
         "tag:10": {}
       },

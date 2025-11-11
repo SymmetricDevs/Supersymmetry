@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.542.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 20,
         "id:8": "opencomputers:component"
       },
@@ -15,6 +16,7 @@
   "questID:3": 542,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

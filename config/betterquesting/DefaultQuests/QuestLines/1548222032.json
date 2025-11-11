@@ -5,6 +5,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.ql.1548222032.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 114,
         "id:8": "gregtech:machine"
       },
@@ -20,7 +21,7 @@
       "y:3": 12
     },
     "1:10": {
-      "id:3": 444684218,
+      "id:3": 445076545,
       "sizeX:3": 24,
       "sizeY:3": 24,
       "x:3": -48,

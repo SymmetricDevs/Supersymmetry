@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.23.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 122,
         "OreDict:8": "ingotZinc",
         "id:8": "gregtech:meta_ingot"
@@ -16,6 +17,7 @@
   "questID:3": 23,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 8,

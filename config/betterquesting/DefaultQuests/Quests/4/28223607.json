@@ -1,23 +1,30 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
   "preRequisites:11": [
-    181,
-    927023403
+    641,
+    181
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.659.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "propane"
         }
       },
-      "name:8": "susy.quest.db.659.title"
+      "name:8": "susy.quest.db.659.title",
+      "tasklogic:8": "OR"
     }
   },
-  "questID:3": 659,
+  "questID:3": 28223607,
   "tasks:9": {
     "0:10": {
+      "index:3": 1,
       "taskID:8": "bq_standard:checkbox"
     }
   }

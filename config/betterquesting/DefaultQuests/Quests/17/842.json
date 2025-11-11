@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.842.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "quark:snow_bricks"
       },
       "name:8": "susy.quest.db.842.title"

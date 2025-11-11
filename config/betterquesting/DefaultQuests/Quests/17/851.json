@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.851.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 5,
         "id:8": "chisel:andesite1"
       },
@@ -16,6 +17,7 @@
   "tasks:9": {
     "0:10": {
       "biome:8": "Phobos",
+      "index:3": 0,
       "name:8": "Phobos",
       "taskID:8": "bq_standard:location"
     }

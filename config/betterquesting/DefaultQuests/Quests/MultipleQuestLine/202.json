@@ -8,6 +8,7 @@
       "desc:8": "susy.quest.db.202.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 8171,
         "OreDict:8": "dustCryolite",
         "id:8": "gregtech:meta_dust"
@@ -19,6 +20,7 @@
   "questID:3": 202,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -10,6 +10,7 @@
       "desc:8": "susy.quest.db.367.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 1,
         "id:8": "susy:meta_item"
       },
@@ -20,6 +21,7 @@
   "questID:3": 367,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

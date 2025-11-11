@@ -3,6 +3,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.363.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "betterquesting:placeholder"
       },
       "name:8": "susy.quest.db.363.title"

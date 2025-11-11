@@ -1,23 +1,27 @@
 {
   "preRequisites:11": [
-    398
+    136649634
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.444684218.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "simple_trophies:trophy",
         "tag:10": {
           "TrophyColorBlue:3": 205,
           "TrophyColorGreen:3": 205,
           "TrophyColorRed:3": 205,
+          "TrophyEarnedAt:4": 1762879757,
           "TrophyItem:10": {
             "Count:3": 1,
+            "Damage:2": 0,
             "id:8": "simple_trophies:trophy",
             "tag:10": {
               "TrophyColorBlue:3": 205,
               "TrophyColorGreen:3": 205,
               "TrophyColorRed:3": 205,
+              "TrophyEarnedAt:4": 1736715654,
               "TrophyItem:10": {
                 "Count:3": 1,
                 "Damage:2": 1012,
@@ -36,9 +40,10 @@
       "name:8": "susy.quest.db.444684218.title"
     }
   },
-  "questID:3": 444684218,
+  "questID:3": 445076545,
   "rewards:9": {
     "0:10": {
+      "index:3": 0,
       "rewardID:8": "bq_standard:item",
       "rewards:9": {
         "0:10": {
@@ -48,13 +53,16 @@
             "TrophyColorBlue:3": 205,
             "TrophyColorGreen:3": 205,
             "TrophyColorRed:3": 205,
+            "TrophyEarnedAt:4": 1762879757,
             "TrophyItem:10": {
               "Count:3": 1,
+              "Damage:2": 0,
               "id:8": "simple_trophies:trophy",
               "tag:10": {
                 "TrophyColorBlue:3": 205,
                 "TrophyColorGreen:3": 205,
                 "TrophyColorRed:3": 205,
+                "TrophyEarnedAt:4": 1736715654,
                 "TrophyItem:10": {
                   "Count:3": 1,
                   "Damage:2": 1012,
@@ -75,6 +83,7 @@
   },
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 512,

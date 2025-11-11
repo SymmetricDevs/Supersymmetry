@@ -13,6 +13,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.438.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "gregtech:boiler_firebox_casing"
       },
       "name:8": "susy.quest.db.438.title",
@@ -23,6 +24,7 @@
   "questID:3": 438,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -1,12 +1,10 @@
 {
-  "preRequisites:11": [
-    398
-  ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.654.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 3,
         "id:8": "gregtech:warning_sign"
       },

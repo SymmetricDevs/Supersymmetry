@@ -4,6 +4,7 @@
       "desc:8": "susy.quest.db.291.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 14,
         "id:8": "opencomputers:upgrade"
       },
@@ -14,6 +15,7 @@
   "questID:3": 291,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

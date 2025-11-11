@@ -5,6 +5,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.ql.0.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "minecraft:stone_pickaxe"
       },
       "name:8": "susy.quest.ql.0.title"

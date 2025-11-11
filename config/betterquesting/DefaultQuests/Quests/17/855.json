@@ -13,6 +13,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.855.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "betterquesting:placeholder",
         "tag:10": {
           "orig_id:8": "notreepunching:cobblestone/marble",

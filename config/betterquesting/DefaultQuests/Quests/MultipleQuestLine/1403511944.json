@@ -18,6 +18,7 @@
       "desc:8": "susy.quest.db.1403511944.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 4,
         "id:8": "susy:susy_armor",
         "tag:10": {
@@ -31,6 +32,7 @@
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
