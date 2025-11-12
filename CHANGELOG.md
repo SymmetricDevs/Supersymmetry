@@ -1,3 +1,26 @@
+# UPDATE 0.1.15.10
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.80 → v0.1.81
+- Universal Tweaks 1.12.2-1.16.0.1 → 1.12.2-1.17.0
+- UniLib 1.1.1+1.12.2-forge → 1.2.0+1.12.2-forge
+- CraftPresence 2.6.2+1.12.2-forge → 2.7.0+1.12.2-forge
+- SussyPatches 1.8.0 → 1.8.1
+## Changes
+**NOTICE: THIS IS A HIGHLY BREAKING UPDATE.** Players with large gas turbines are advised to prepare large quantities of steel and floor space to transition to this update.
+### New Features
+- [Susy-Core] Multiblock combustion engines are now available at MV! Pollute the environment in style! (#549 by @planetme)
+- Recipe documentation is now available within JEI recipes! (#1724 by @bruberu)
+- Who knows what this heat shield could be for? (#1726 by @lemonelk)
+- A new combat-focused chapter is here to help declutter the questbook! (#1718 by @Fiery36)
+- A partial French translation is also disponible pour tous nos joueurs français. (#1721 by @Vmdelpapa)
+### Changed Features
+- Realistic napalm is now needed for your incendiary weapons. (#1661 by @lemonelk) 
+- MV/HV batteries have been replaced with Ni/Zn formulations. (#1722 by @trexxet)
+- [Susy-Core] Your asbestos armor has never looked better! Environmental survival armors have been given a lift-up thanks to our new contributor Suharakimi! (#525 by @MCTian-mi and @Suharakimi)
+- [Susy-Core] The mixer settler now can perform 16 recipes in parallel. (#566 by @trainvoi)
+### Fixes
+Many thanks to Fiery36, Solothesolo, and trainvoi for helping to keep our pack stable.
 # UPDATE 0.1.15.9
 ## Changes
 ### New Features
