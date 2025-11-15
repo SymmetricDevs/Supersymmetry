@@ -1,6 +1,7 @@
 package prePostInit
 
 class Recipemaps {
+    static final def ADV_STEAM_TURBINE = recipemap('advanced_steam_turbine')
     static final def ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
     static final def ALLOY_SMELTER = recipemap('alloy_smelter')
     static final def ARC_FURNACE = recipemap('arc_furnace')
@@ -27,6 +28,7 @@ class Recipemaps {
     static final def CRACKER = recipemap('cracker')
     static final def CRYSTALLIZER = recipemap('crystallizer')
     static final def CSTR = recipemap('continuous_stirred_tank_reactor')
+    static final def CURTAIN_COATER = recipemap('curtain_coater')
     static final def CUTTER = recipemap('cutter')
     static final def CVD = recipemap('cvd')
     static final def DISTILLERY = recipemap('distillery')
@@ -57,7 +59,6 @@ class Recipemaps {
     static final def GRAVITY_SEPARATOR = recipemap('gravity_separator')
     static final def GREENHOUSE = recipemap('greenhouse')
     static final def HEAT_EXCHANGER = recipemap('heat_exchanger')
-    static final def HIGH_PRESSURE_ADV_STEAM_TURBINE = recipemap('high_pressure_advanced_steam_turbine')
     static final def HIGH_PRESSURE_CRYO_DT = recipemap('high_pressure_cryogenic_distillation')
     static final def HIGH_TEMP_DT = recipemap('high_temperature_distillation')
     static final def HOT_ISOSTATIC_PRESS = recipemap('hot_isostatic_press')
@@ -73,10 +74,10 @@ class Recipemaps {
     static final def LATEX_COLLECTOR = recipemap('latex_collector')
     static final def LATHE = recipemap('lathe')
     static final def LCR = recipemap('large_chemical_reactor')
-    static final def LOW_PRESSURE_ADV_STEAM_TURBINE = recipemap('low_pressure_advanced_steam_turbine')
     static final def LOW_PRESSURE_CRYO_DT = recipemap('low_pressure_cryogenic_distillation')
     static final def MACERATOR = recipemap('macerator')
     static final def METALLURGICAL_CONVERTER = recipemap('metallurgical_converter')
+    static final def MILLING = recipemap('milling')
     static final def MINING_DRILL = recipemap('mining_drill')
     static final def MIXER = recipemap('mixer')
     static final def MIXER_SETTLER = recipemap('mixer_settler')

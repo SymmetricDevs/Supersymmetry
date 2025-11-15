@@ -172,46 +172,6 @@ for (material in materials) {
 
 // Samarium-cobalt magnets (LuV)
 
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.ingot'))
-    .inputs(ore('dustSamariumAlloy'))
-    .outputs(metaitem('ingotSamariumAlloy'))
-    .duration(200)
-    .EUt(VA[IV])
-    .buildAndRegister()
-
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.plate'))
-    .inputs(ore('dustSamariumAlloy'))
-    .outputs(metaitem('plateSamariumAlloy'))
-    .duration(200)
-    .EUt(VA[IV])
-    .buildAndRegister()
-
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.long_rod'))
-    .inputs(ore('dustSamariumAlloy'))
-    .outputs(metaitem('stickLongSamariumAlloy'))
-    .duration(200)
-    .EUt(VA[IV])
-    .buildAndRegister()
-
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.rod'))
-    .inputs(ore('dustSamariumAlloy'))
-    .outputs(metaitem('stickSamariumAlloy') * 2)
-    .duration(200)
-    .EUt(VA[IV])
-    .buildAndRegister()
-
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.ring'))
-    .inputs(ore('dustSamariumAlloy'))
-    .outputs(metaitem('ringSamariumAlloy') * 4)
-    .duration(200)
-    .EUt(VA[IV])
-    .buildAndRegister()
-
 // Replace magnetic component recipes
 
 // Extreme Voltage Coil * 1
@@ -236,30 +196,6 @@ mods.gregtech.polarizer.removeByInput(256, [metaitem('ingotNeodymium')], null)
 mods.gregtech.polarizer.removeByInput(4096, [metaitem('ingotSamarium')], null)
 // Magnetic Iron Screw * 1
 mods.gregtech.polarizer.removeByInput(16, [metaitem('screwIron')], null)
-
-crafting.replaceShaped('gregtech:magnet_hv_battery.re.hv.sodium', metaitem('item_magnet.hv'), [
-    [metaitem('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('stickNeodymiumAlloyMagnetic'), metaitem('battery.re.hv.sodium'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('wireGtSingleGold'), metaitem('plateStainlessSteel'), metaitem('wireGtSingleGold')]
-])
-
-crafting.replaceShaped('gregtech:magnet_hv_battery.re.hv.lithium', metaitem('item_magnet.hv'), [
-    [metaitem('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('stickNeodymiumAlloyMagnetic'), metaitem('battery.re.hv.lithium'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('wireGtSingleGold'), metaitem('plateStainlessSteel'), metaitem('wireGtSingleGold')]
-])
-
-crafting.replaceShaped('gregtech:magnet_hv_battery.re.hv.cadmium', metaitem('item_magnet.hv'), [
-    [metaitem('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('stickNeodymiumAlloyMagnetic'), metaitem('battery.re.hv.cadmium'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('wireGtSingleGold'), metaitem('plateStainlessSteel'), metaitem('wireGtSingleGold')]
-])
-
-crafting.replaceShaped('gregtech:magnet_hv_energy_crystal', metaitem('item_magnet.hv'), [
-    [metaitem('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('stickNeodymiumAlloyMagnetic'), metaitem('energy_crystal'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('wireGtSingleGold'), metaitem('plateStainlessSteel'), metaitem('wireGtSingleGold')]
-])
 
 crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.ev', metaitem('electromagnetic_separator.ev'), [
     [metaitem('conveyor.module.ev'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')],

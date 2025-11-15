@@ -32,6 +32,8 @@ mods.jei.ingredient.yeet(
     item('projectred-integration:gate', 34),            //IC Gate
     item('projectred-transmission:wire', 34),           //Low Load Power Line
     item('projectred-transmission:framed_wire', 34),    //Framed Low Load Power Line
+    item('microblockcbe:saw_stone'),                    //Stone Saw
+    item('microblockcbe:saw_iron')                      //Iron Saw
 )
 
 def name_removals = [
@@ -242,6 +244,12 @@ ASSEMBLER.recipeBuilder()
 
 //Black Insulated Wire
 crafting.addShapeless(item('projectred-transmission:wire:16'), [ore('cableGtSingleRedAlloy')]);
+
+crafting.replaceShaped("microblockcbe:diamond_saw", item('microblockcbe:saw_diamond'), [
+        [null, null, null],
+        [ore('stickWood'), ore('stickStone'), ore('stickStone')],
+        [ore('stickWood'), item('minecraft:diamond'), ore('stickStone')]
+])
 
 def chemical_dyes = [
     'dye_white',

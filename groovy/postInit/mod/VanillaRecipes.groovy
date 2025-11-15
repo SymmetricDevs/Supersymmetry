@@ -102,8 +102,8 @@ def recipesToRemove = [
     'chisel:emerald',
     'chisel:coal',
     'chisel:charcoal',
-    'quark:charcoal_block'
-
+    'quark:charcoal_block',
+    'minecraft:bow'
 ]
 
 for (name in recipesToRemove) {
@@ -375,6 +375,9 @@ crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
 
 //GT Machines recipes
 //Assembler
+
+// Bow * 1
+mods.gregtech.assembler.removeByInput(4, [item('minecraft:string') * 3 * 3, item('minecraft:stick') * 3 * 3], null)
 
 // Redstone Repeater * 1
 mods.gregtech.assembler.removeByInput(10, [item('minecraft:redstone_torch') * 2, item('minecraft:redstone')], [fluid('concrete') * 144])

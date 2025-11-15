@@ -89,7 +89,7 @@ for (residue in residues) {
         .fluidInputs(fluid(residue) * 1000)
         .fluidInputs(fluid('natural_gas') * 10)
         .fluidInputs(fluid('oxygen') * 20)
-        .outputs(metaitem('dustCarbonBlack') * 30)
+        .outputs(metaitem('dustCarbon') * 30)
         .fluidOutputs(fluid('flue_gas') * 1000)
         .duration(80)
         .EUt(VA[MV])
@@ -99,11 +99,9 @@ for (residue in residues) {
         .fluidInputs(fluid(residue) * 1000)
         .fluidInputs(fluid('methane') * 35)
         .fluidInputs(fluid('oxygen') * 70)
-        .outputs(metaitem('dustCarbonBlack') * 30)
+        .outputs(metaitem('dustCarbon') * 30)
         .fluidOutputs(fluid('carbon_dioxide') * 10000)
         .duration(100)
         .EUt(VA[MV])
         .buildAndRegister()
 }
-
-oreDict.add('dyeBlack', metaitem('dustCarbonBlack'))

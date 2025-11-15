@@ -1,0 +1,37 @@
+{
+  "preRequisites:11": [
+    1403511944
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.762134374.desc",
+      "icon:10": {
+        "Damage:2": 253,
+        "id:8": "gregtech:meta_fiber"
+      },
+      "name:8": "susy.quest.db.762134374.title"
+    }
+  },
+  "questID:3": 762134374,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 253,
+          "id:8": "gregtech:meta_fiber"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 253,
+          "id:8": "gregtech:meta_thread"
+        },
+        "2:10": {
+          "Count:3": 8,
+          "id:8": "susy:fake_wool"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

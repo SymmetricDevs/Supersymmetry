@@ -884,10 +884,7 @@ class UnknownCompositionMaterials {
                 .color(0x475453)
                 .build()
 
-        CarbonBlack = new Material.Builder(4169, SuSyUtility.susyId('carbon_black'))
-                .dust()
-                .color(0x140f02)
-                .build()
+        // FREE ID: 4169
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()
@@ -1833,20 +1830,7 @@ class UnknownCompositionMaterials {
 
         MolybdenumDialkyldithiophosphate.setFormula("Mo[(S2P(OR)2]2", true)
 
-        MidgradeLubricant = new Material.Builder(4389, SuSyUtility.susyId('midgrade_lubricant'))
-                .liquid()
-                .color(0xc7aa2a)
-                .build()
-
-        PremiumLubricant = new Material.Builder(4390, SuSyUtility.susyId('premium_lubricant'))
-                .liquid()
-                .color(0xba831c)
-                .build()
-
-        SupremeLubricant = new Material.Builder(4391, SuSyUtility.susyId('supreme_lubricant'))
-                .liquid()
-                .color(0xad5f10)
-                .build()
+        // FREE IDs: 4389-4391
 
         DinitrobenzeneMixture = new Material.Builder(4392, SuSyUtility.susyId("dinitrobenzene_mixture"))
                 .dust()
@@ -3190,6 +3174,36 @@ class UnknownCompositionMaterials {
         CMCWaste = new Material.Builder(4692, SuSyUtility.susyId('cmc_waste'))
                 .liquid()
                 .color(0xe7e3eb)
+                .build()
+        
+        ResolResinMixture = new Material.Builder(4693, SuSyUtility.susyId('resol_resin_mixture'))
+                .liquid()
+                .color(0xad9478)
+                .build()
+        
+        ResolResinInfiltrant = new Material.Builder(4694, SuSyUtility.susyId('resol_resin_infiltrant'))
+                .liquid()
+                .color(0x4e2f0a)
+                .build()
+        
+        CyanamideSlurry = new Material.Builder(4695, SuSyUtility.susyId('cyanamide_slurry'))
+                .liquid()
+                .color(0x213766)
+                .build()
+
+        CrudeCyanamideSolution = new Material.Builder(4696, SuSyUtility.susyId('crude_cyanamide_solution'))
+                .liquid()
+                .color(0x1e4585)
+                .build()
+
+        CyanamideSolution = new Material.Builder(4697, SuSyUtility.susyId('cyanamide_solution'))
+                .liquid()
+                .color(0x2b5599)
+                .build()
+                
+        GreenEpoxyPCBCoating = new Material.Builder(4698, SuSyUtility.susyId('green_epoxy_pcb_coating'))
+                .liquid()
+                .color(0x196809)
                 .build()
     }
 }

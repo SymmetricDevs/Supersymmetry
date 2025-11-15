@@ -10,11 +10,12 @@ class Sintering {
         int duration
         String byproduct
         int byproductAmount
+        int tier
     }
 
     record Comburent(String name, int amountRequired, int duration) {}
 
-    record Blanket(String name, int amountRequired, int duration) {}
+    record Blanket(String name, int amountRequired, int duration, int tier) {}
 
     trait Plasma {}
 
@@ -34,7 +35,8 @@ class Sintering {
     ]
 
     public static blankets = [
-        new Blanket('argon', 100, 300)
+        new Blanket('nitrogen', 400, 1200, 1),
+        new Blanket('argon', 100, 300, 2)
     ]
 
     static class RotaryKiln {

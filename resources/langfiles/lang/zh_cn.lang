@@ -703,7 +703,6 @@ susy.material.impure_bromine=含杂溴
 susy.material.concentrated_salt_water=浓盐水
 susy.material.hypersaline_water=高浓盐水
 susy.material.lithium_cobalt_oxide=钴酸锂
-susy.material.sodium_cathode_alloy=钠电池阴极合金
 susy.material.lithium_hexafluorophosphate=六氟磷酸锂
 susy.material.nickel_chloride=氯化镍
 susy.material.nickel_hydroxide=氢氧化镍
@@ -2119,7 +2118,6 @@ susy.material.rp_one=RP-1航天煤油
 susy.material.ammonium_metatungstate=偏钨酸铵（AMT）
 susy.material.clarified_slurry_oil=澄清油
 susy.material.pyrolysis_raffinate=热裂解抽余油
-susy.material.carbon_black=炭黑
 susy.material.compounded_polyisoprene=炭黑改性聚异戊二烯
 susy.material.compounded_styrene_isoprene_rubber=炭黑改性苯乙烯-异戊二烯共聚物橡胶
 susy.material.compounded_styrene_butadiene_rubber=炭黑改性丁苯橡胶
@@ -2558,8 +2556,7 @@ recipemap.electrostatic_separator.name=静电分离
 recipemap.single_column_cryogenic_distillation.name=单塔式低温蒸馏
 recipemap.low_pressure_cryogenic_distillation.name=低压低温蒸馏
 recipemap.high_pressure_cryogenic_distillation.name=高压低温蒸馏
-recipemap.high_pressure_advanced_steam_turbine=高压高级蒸汽轮机
-recipemap.low_pressure_advanced_steam_turbine=低压高级蒸汽轮机
+recipemap.advanced_steam_turbine=高级蒸汽轮机
 
 # QMD Particles
 
@@ -2911,7 +2908,7 @@ metaitem.sponge.rhodium.name=海绵铑
 metaitem.drone.lv.name=基础无人机
 
 metaitem.glass_fibers.name=玻璃纤维
-metaitem.epoxy_lamina.name=层压环氧树脂
+metaitem.board.epoxy.prepreg.name=层压环氧树脂
 metaitem.stem.cotton.name=棉花茎
 metaitem.spinneret.name=喷丝头
 
@@ -3006,6 +3003,7 @@ item.susy.material.kevlar.plate=凯夫拉纤维布
 item.gregtech.material.polytetrafluoroethylene.fiber=膨体聚四氟乙烯（ePTFE）纤维
 item.gregtech.material.polytetrafluoroethylene.thread=膨体聚四氟乙烯（ePTFE）纱线
 # gregtech.material.chrome=铬 // 中文无需重命名
+gregtech.material.carbon=炭黑
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=白桦木，丛林木，橡木或云杉木

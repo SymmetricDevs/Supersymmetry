@@ -155,6 +155,7 @@ for (blastable in blastables) {
             .outputs(metaitem('ingotSteel'))
             .outputs(metaitem(combustible.byproduct) * combustible.equivalent(1))
             .duration(combustible.duration * 60)
+            .info('recipe.steel.production')
             .buildAndRegister()
     }
 

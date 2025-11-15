@@ -156,11 +156,7 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        LubricatingOil = new Material.Builder(20024, SuSyUtility.susyId('lubricating_oil'))
-                .liquid()
-                .color(0x858146)
-                .flags(FLAMMABLE)
-                .build()
+        // FREE ID: 20024
 
         SlackWax = new Material.Builder(20025, SuSyUtility.susyId('slack_wax'))
                 .liquid()

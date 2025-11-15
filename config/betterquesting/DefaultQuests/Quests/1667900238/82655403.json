@@ -1,0 +1,44 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    2
+  ],
+  "preRequisites:11": [
+    624,
+    737
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.82655403.desc",
+      "icon:10": {
+        "Damage:2": 153,
+        "id:8": "techguns:itemshared"
+      },
+      "name:8": "susy.quest.db.82655403.title",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 82655403,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 153,
+          "id:8": "techguns:itemshared"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 154,
+          "id:8": "techguns:itemshared"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 155,
+          "id:8": "techguns:itemshared"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

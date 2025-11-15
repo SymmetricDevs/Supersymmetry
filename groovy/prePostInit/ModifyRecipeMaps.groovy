@@ -436,8 +436,7 @@ RecipeMaps.LASER_ENGRAVER_RECIPES
     .modifyMaxFluidInputs(1)
 
 RecipeMaps.GAS_TURBINE_FUELS
-    .modifyMaxInputs(1)
-    .modifyMaxFluidInputs(3)
+    .modifyMaxFluidInputs(1)
     .modifyMaxFluidOutputs(1)
 
 RecipeMaps.AUTOCLAVE_RECIPES

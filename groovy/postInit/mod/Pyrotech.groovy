@@ -935,7 +935,7 @@ def anvil_recipes = [
         ["diorite_to_cobbled", item('minecraft:stone', 3), item('pyrotech:cobblestone', 1), 2],
         ["flour_from_wheat", ore('itemWheat').or(ore('cropWheat')), metaitem('dustWheat'), 1],
         ["brick_stone", ore('stone'), item('pyrotech:material', 16) * 4, 2, false],
-        ["stick_stone", item('pyrotech:material', 16), item('pyrotech:material', 27) * 2, 2, false],
+        ["stick_stone", item('pyrotech:material', 16), item('gregtech:meta_stick', 1599), 2, false],
         ["bone_shard", ore('bone'), item('pyrotech:material', 11) * 3, 2],
         ["flint_shard", ore('gemFlint'), item('pyrotech:material', 10) * 3, 2],
         ["cobblestone_to_rocks", ore('cobblestone'), item('pyrotech:rock') * 8, 2, false],

@@ -50,7 +50,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.nand_chip') * 16)
                 .duration(10)
-                .EUt(16)
+                .EUt(VA[LV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -61,7 +61,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.nand_chip') * 24)
                 .duration(10)
-                .EUt(16)
+                .EUt(VA[LV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -87,7 +87,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.microprocessor') * 12)
                 .duration(200)
-                .EUt(60)
+                .EUt(VA[MV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -98,7 +98,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.microprocessor') * 18)
                 .duration(50)
-                .EUt(600)
+                .EUt(VA[EV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -131,7 +131,7 @@ Globals.solders.each { key, val ->
                 .inputs(metaitem('frameAluminium'))
                 .inputs(metaitem('circuit.assembly') * 2)
                 .inputs(metaitem('component.smd.diode') * 4)
-                .inputs(metaitem('plate.random_access_memory') * 4)
+                .inputs(metaitem('plate.nand_memory_chip') * 4)
                 .inputs(metaitem('plate.central_processing_unit') * 4)
                 .inputs(ore('cableGtSingleElectrum') * 4)
                 .fluidInputs(fluid(key) * (val * 2))
@@ -152,7 +152,7 @@ Globals.solders.each { key, val ->
                 .outputs(metaitem('circuit.mainframe'))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(500)
-                .EUt(VA[MV])
+                .EUt(VA[HV])
                 .buildAndRegister();
 
 }

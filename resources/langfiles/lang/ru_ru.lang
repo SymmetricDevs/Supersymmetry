@@ -556,7 +556,6 @@ susy.material.tetramethylammonium_hydroxide_solution=Раствор гидрок
 susy.material.boron_trioxide_solution=Раствор триоксида бора
 susy.material.phosphorus_solution=Фосфорный раствор
 susy.material.sodium_cyanide_solution=Раствор цианида натрия
-susy.material.brominated_sulfur_dioxide=Бромированный диоксид серы
 susy.material.phosphorus_trichloride=трихлорид фосфора
 
 susy.material.wacker_catalyst_solution=Раствор Ваккера
@@ -682,7 +681,6 @@ susy.material.impure_bromine=Нечистый бром
 susy.material.concentrated_salt_water=Концентрированная соленая вода
 susy.material.hypersaline_water=Гиперсоленая вода
 susy.material.lithium_cobalt_oxide=оксид лития-кобальта
-susy.material.sodium_cathode_alloy=Катодный сплав натрия
 susy.material.lithium_hexafluorophosphate=Литий гексафторфосфат
 susy.material.nickel_chloride=Никель хлорид
 susy.material.nickel_hydroxide=Гидроксид никеля
@@ -2066,7 +2064,6 @@ susy.material.rp_one=РТ-1
 susy.material.ammonium_metatungstate=Метавольфрамат аммония (АМТ)
 susy.material.clarified_slurry_oil=Осветленнай шламовая нефть
 susy.material.pyrolysis_raffinate=Пиролизный рафинант
-susy.material.carbon_black=Углеродная сажа
 susy.material.compounded_polyisoprene=Составной полиизопрен
 susy.material.compounded_styrene_isoprene_rubber=Составной стирол-изопреновый каучук
 susy.material.compounded_styrene_butadiene_rubber=Составной бутадиен-стирольный каучук
@@ -2580,7 +2577,7 @@ metaitem.sponge.rhodium.name=Родиевая губка
 metaitem.drone.lv.name=Базовый дрон
 
 metaitem.glass_fibers.name=Стекловолокно
-metaitem.epoxy_lamina.name=Эпоксидная ламина
+metaitem.board.epoxy.prepreg.name=Эпоксидная ламина
 metaitem.stem.cotton.name=Хлопковый стебель
 metaitem.spinneret.name=Фильера
 
@@ -2656,6 +2653,7 @@ item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Тканый �
 item.susy.material.kevlar.plate=Кевлар
 item.gregtech.material.polytetrafluoroethylene.fiber=Расширенное политетрафторэтиленовое волокно
 item.gregtech.material.polytetrafluoroethylene.thread=Расширенная политетрафторэтиленовая нить
+gregtech.material.carbon=Углеродная сажа
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Бревно из березы, джунглей, дуба и ели

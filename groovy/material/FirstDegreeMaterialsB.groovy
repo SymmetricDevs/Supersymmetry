@@ -656,5 +656,11 @@ class FirstDegreeMaterialsB {
                 .components(Aluminium * 678, Zinc * 17, Magnesium * 20, Copper * 4, Chrome * 1)
                 .colorAverage()
                 .build()
+
+        SilverNitrate = new Material.Builder(8761, SuSyUtility.susyId('silver_nitrate'))
+                .dust()
+                .components(Silver, Nitrogen, Oxygen * 3)
+                .color(0xF5F3D0)
+                .build()
     }
 }

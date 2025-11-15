@@ -722,6 +722,7 @@ CENTRIFUGE.recipeBuilder()
     .chancedOutput(item('minecraft:sand'), 2500, 250)
     .chancedOutput(item('minecraft:gravel'), 2500, 250)
     .chancedOutput(metaitem('dustLimestone'), 2500, 250)
+    .info('recipe.mud')
     .duration(20)
     .EUt(VA[LV])
     .buildAndRegister();
@@ -1256,6 +1257,7 @@ LATEX_COLLECTOR.recipeBuilder()
     .notConsumable(fluid('water') * 10)
     .fluidOutputs(fluid('latex') * 100)
     .blockStates("latex_logs", MetaBlocks.RUBBER_LOG.getBlockState())
+    .info('recipe.latex_extraction')
     .duration(20)
     .EUt(VA[ULV])
     .buildAndRegister();
@@ -1293,55 +1295,6 @@ MIXER.recipeBuilder()
     .fluidInputs(fluid('concrete') * 576)
     .fluidOutputs(fluid('construction_foam') * 8000)
     .duration(20)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustAnthracite'))
-    .chancedOutput(metaitem('dustCarbon'), 9000, 0)
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustGreenCoke'))
-    .chancedOutput(metaitem('dustCarbon'), 8500, 0)
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustCoal'))
-    .chancedOutput(metaitem('dustCarbon'), 7500, 0)
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustCharcoal'))
-    .chancedOutput(metaitem('dustCarbon'), 6000, 0)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustCoke'))
-    .outputs(metaitem('dustCarbon'))
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustDiamond'))
-    .outputs(metaitem('dustCarbon'))
-    .duration(40)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustGraphite'))
-    .outputs(metaitem('dustCarbon'))
-    .duration(40)
     .EUt(VA[LV])
     .buildAndRegister();
 

@@ -122,6 +122,7 @@ susy.material.acidic_chloronitrobenzene_mixture=Acidic Chloronitrobenzene Mixtur
 susy.material.mixed_dichlorobenzene_solution=Mixed Dichlorobenzene Solution
 susy.material.two_butanol_solution=2-Butanol Solution
 susy.material.DilutedSodiumCarbonateSolution=Diluted Sodium Carbonate Solution
+susy.material.green_epoxy_pcb_coating=Green Epoxy PCB Coating
 susy.material.four_nitrophenol=4-Nitrophenol
 susy.material.four_aminophenol_solution=4-Aminophenol Solution
 susy.material.four_aminophenol=4-Aminophenol
@@ -205,6 +206,27 @@ susy.material.basic_beryllium_carbonate_solution=Basic Beryllium Carbonate Solut
 susy.material.purified_beryllium_hydroxide=Purified Beryllium Hydroxide
 susy.material.purified_beryllium_oxide=Purified Beryllium Oxide
 susy.material.purified_beryllium_chloride=Purified Beryllium Chloride
+
+susy.material.aniline=Aniline
+susy.material.acetanilide=Acetanilide
+susy.material.n_acetylsulfanilyl_chloride=N-Acetylsulfanilyl Chloride
+susy.material.guanidinium_nitrate=Guanidinium Nitrate
+susy.material.tetramethoxypropane=Tetramethoxypropane
+susy.material.trimethyl_orthoformate=Trimethyl Orthoformate
+susy.material.methyl_vinyl_ether=Methyl Vinyl Ether
+susy.material.two_aminopyrimidine=2-Aminopyrimidine
+susy.material.sodium_sulfadiazine=Sodium Sulfadiazine
+susy.material.silver_nitrate=Silver Nitrate
+susy.material.silver_sulfadiazine=Silver Sulfadiazine
+susy.material.dicyanamide=Dicyanamide
+susy.material.potassium_methoxide=Potassium Methoxide
+susy.material.acetanilide_solution=Acetanilide Solution
+susy.material.cyanamide_slurry=Cyanamide Slurry
+susy.material.crude_cyanamide_solution=Crude Cyanamide Solution
+susy.material.cyanamide_solution=Cyanamide Solution
+susy.material.guanidinium_nitrate_solution=Guanidinium Nitrate Solution
+susy.material.crude_trimethyl_orthoformate=Crude Trimethyl Orthoformate
+susy.material.crude_methyl_vinyl_ether=Crude Methyl Vinyl Ether
 
 # Solids
 
@@ -580,7 +602,6 @@ susy.material.tetramethylammonium_hydroxide_solution=Tetramethylammonium Hydroxi
 susy.material.boron_trioxide_solution=Boron Trioxide Solution
 susy.material.phosphorus_solution=Phosphorus Solution
 susy.material.sodium_cyanide_solution=Sodium Cyanide Solution
-susy.material.brominated_sulfur_dioxide=Brominated Sulfur Dioxide
 susy.material.phosphorus_trichloride=Phosphorus Trichloride
 
 susy.material.wacker_catalyst_solution=Wacker Catalyst Solution
@@ -720,7 +741,6 @@ susy.material.impure_bromine=Impure Bromine
 susy.material.concentrated_salt_water=Concentrated Salt Water
 susy.material.hypersaline_water=Hypersaline Water
 susy.material.lithium_cobalt_oxide=Lithium Cobalt Oxide
-susy.material.sodium_cathode_alloy=Sodium Battery Cathode Alloy
 susy.material.lithium_hexafluorophosphate=Lithium Hexafluorophosphate
 susy.material.nickel_chloride=Nickel Chloride
 susy.material.nickel_chloride_solution=Nickel Chloride Solution
@@ -2161,7 +2181,6 @@ susy.material.rp_one=RP-1
 susy.material.ammonium_metatungstate=Ammonium Metatungstate (AMT)
 susy.material.clarified_slurry_oil=Clarified Slurry Oil
 susy.material.pyrolysis_raffinate=Pyrolysis Raffinate
-susy.material.carbon_black=Carbon Black
 susy.material.compounded_polyisoprene=Compounded Polyisoprene
 susy.material.compounded_styrene_isoprene_rubber=Compounded Styrene Isoprene Rubber
 susy.material.compounded_styrene_butadiene_rubber=Compounded Styrene Butadiene Rubber
@@ -2711,6 +2730,12 @@ susy.material.ceramic_coating_slurry=Ceramic-Coating Slurry
 susy.material.sodium_carboxymethyl_cellulose=Sodium Carboxymethyl Cellulose (CMC)
 susy.material.sodium_cmc_suspension=Sodium CMC Suspension
 susy.material.cmc_waste=CMC Waste
+susy.material.tetrahydrobenzaldehyde=Tetrahydrobenzaldehyde
+susy.material.peracetic_acid_solution=Peracetic Acid Solution
+susy.material.epoxycyclohexane_carboxylate=3,4-Epoxycyclohexylmethyl-3',4'-Epoxycyclohexane Carboxylate (ECC)
+susy.material.tetrasodium_ethylenediaminetetraacetate_solution=Tetrasodium EDTA Solution
+susy.material.resol_resin_infiltrant=Resol Resin Infiltrant
+susy.material.resol_resin_mixture=Resol Resin Mixture
 
 # Isotopes
 
@@ -2756,8 +2781,7 @@ recipemap.electrostatic_separator.name=Electrostatic Separation
 recipemap.single_column_cryogenic_distillation.name=Single Column Cryogenic Distillation
 recipemap.low_pressure_cryogenic_distillation.name=Low Pressure Cryogenic Distillation
 recipemap.high_pressure_cryogenic_distillation.name=High Pressure Cryogenic Distillation
-recipemap.high_pressure_advanced_steam_turbine=High Pressure Advanced Steam Turbine
-recipemap.low_pressure_advanced_steam_turbine=Low Pressure Advanced Steam Turbine
+recipemap.advanced_steam_turbine=Advanced Steam Turbine
 recipemap.injection_molder.name=Injection Molding
 
 # QMD Particles
@@ -2820,9 +2844,15 @@ metaitem.battery.lead_acid.name=Lead-Acid Battery
 metaitem.battery.ni_fe.name=Nickel-Iron Battery
 metaitem.electrode.steel_frame.name=Steel Electrode Frame
 metaitem.electrode.nickeled_steel_frame.name=Nickel-plated Steel Electrode Frame
+metaitem.battery.ni_zn.mv.name=Nickel-Zinc MV Battery
+metaitem.battery.ni_zn.hv.name=Nickel-Zinc HV Battery
+metaitem.anode.zinc_oxide.name=Zinc Oxide Anode
+metaitem.cathode.nioh2.name=Nickel Hydroxide Cathode
 
 metaitem.battery.primitivehull.lv.name=Primitive LV Battery Hull
 metaitem.battery.primitivehull.mv.name=Primitive MV Battery Hull
+metaitem.battery.hull.mv.name=MV Battery Hull
+metaitem.battery.hull.hv.name=HV Battery Hull
 
 metaitem.steam.piston.name=Steam Piston
 metaitem.steam.motor.name=Steam Motor
@@ -3119,14 +3149,15 @@ metaitem.sponge.rhodium.name=Rhodium Sponge
 metaitem.drone.lv.name=Basic Drone
 
 metaitem.glass_fibers.name=Glass Fibers
-metaitem.epoxy_lamina.name=Epoxy Lamina
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 
-metaitem.engine.spark_plug.name=Spark Plug
+metaitem.engine.spark_plug.palladium.name=Palladium-Tipped Spark Plug
+metaitem.engine.spark_plug.iridium.name=Iridium-Tipped Spark Plug
 metaitem.engine.piston.name=Piston
 metaitem.engine.crankshaft.name=Crankshaft
 metaitem.sintered_alumina.insulator.name=Sintered Alumina Insulator
+metaitem.titanium_cylinder.name=Titanium Cylinder
 
 metaitem.rubylith.name=Rubylith
 metaitem.rubylith_film.name=Rubylith Film
@@ -3165,6 +3196,19 @@ metaitem.brush.unfired.name=Unfired Brush
 metaitem.work_roll.unfinished.name=Unfinished Work Roll
 metaitem.nozzle.boron_nitride.name=Boron Nitride Nozzle
 
+metaitem.board.epoxy.prepreg.name=FR-4 Epoxy Prepreg
+metaitem.board.epoxy.copper_clad.name=FR-4 Copper Clad Laminate
+metaitem.board.epoxy.patterned.name=Patterned FR-4 Circuit Board
+metaitem.board.epoxy.etched.name=Etched FR-4 Circuit Board
+metaitem.board.epoxy.drilled.name=Drilled FR-4 Circuit Board
+metaitem.board.epoxy.electroless.name=Electroless Plated FR-4 Circuit Board
+metaitem.board.epoxy.electrolytic.name=Electrolytic Plated FR-4 Circuit Board
+metaitem.board.epoxy.wet_masked.name=Wet Masked FR-4 Circuit Board
+metaitem.board.epoxy.masked.name=Masked FR-4 Circuit Board
+metaitem.board.epoxy.mask_affixed.name=Mask-Affixed FR-4 Circuit Board
+metaitem.circuit_board.fr4.name=Advanced Circuit Board
+metaitem.circuit_board.fr4.tooltip=An Advanced Circuit Board/nDouble-sided FR-4 Printed Circuit Board
+
 metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
 metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel Cell (PEMFC)
@@ -3184,6 +3228,10 @@ metaitem.parachute.supersonic_main.name=Supersonic Disk-Gap-Band Parachute
 metaitem.coated_copper_coil.name=Ceramic-Coated Copper Tubing
 metaitem.cured_coated_coil.name=Cured Ceramic-Coated Copper Tubing
 metaitem.induction_coil.name=Induction Coil
+
+metaitem.carbon.mesh.phenolic.moist.name=Moist Phenolic Carbon Mesh
+metaitem.carbon.mesh.phenolic.treated.name=Treated Phenolic Carbon Mesh
+metaitem.carbon.tile.phenolic.treated.name=Treated Phenolic Carbon Tile
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
@@ -3234,7 +3282,9 @@ item.susy.material.kevlar.plate=Woven Kevlar
 item.gregtech.material.polytetrafluoroethylene.fiber=Expanded Polytetrafluoroethylene Fiber
 item.gregtech.material.polytetrafluoroethylene.thread=Expanded Polytetrafluoroethylene Thread
 gregtech.material.chrome=Chromium
+gregtech.material.carbon=Carbon Black
 gregtech.material.cupric_oxide=Copper II Oxide
+gregtech.material.polycaprolactam=Polycaprolactam (Nylon-6)
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
@@ -3254,3 +3304,36 @@ susy.menu.quit.hover=You can never escape Greg.
 
 supersymmetry.subtitle.2=Vitals: stable. Pod fuel: 46%%.
 
+# Recipes
+recipe.latex_extraction=The easiest way to make rubber./nRemember to place the rubber log on the side with the white square (and leave the vent unblocked)!
+recipe.vulcanization.=Sulfur may be obtained by processing pyrite or pure sulfur deposits./nYou can speed this up with optional catalysts./nVulcanization makes cross links between polymer chains, improving the strength of rubber.
+recipe.vulcanization.dustMagnesia=The catalyst requires magnesite ore in steam age, which is only found in the beneath and nether.
+recipe.vulcanization.dustZincite=The catalyst requires smithsonite ore, which is only found in the nether.
+recipe.compounded_polyisoprene=This is an HV-age post-oil-processing product that makes rubber more efficiently./nDo not try to make this in steam age!
+recipe.iron_iii_sulfate.roasting=You can produce iron III sulfate from pyrite in steam age./nThis is a very important recipe for sulfur/sulfuric acid production!
+recipe.hydrogen_fluoride.production=The best way to begin producing HF (and hydrofluoric acid) in LV by treating fluorite with sulfuric acid. This produces an insoluble byproduct, calcium sulfate, which can be used to regenerate sulfuric acid.
+recipe.chloralkali.upfront=§2Chloralkali process
+recipe.chloralkali=The primary method to produce Cl gas and NaOH./nRequires the sintering oven AND pyrolysis oven for the graphite electrode.
+recipe.graphite_electrode=Syngas may be obtained from pyrolyzing coke.
+recipe.steel.production=This is the best way of obtaining steel before MV./nPig iron may be obtained from crushed iron ore, coal, and limestone.
+recipe.acanthite.roasting=The simplest way of producing silver in LV./nReplaced by raw electrum processing in MV.
+recipe.cryolite.production=Alumina and hydrofluoric acid must be made before this. Cryolite is an electrolyte used to dissolve alumina in a molten bath. You do not need to automate cryolite for the aluminium chain as it is not consumed.
+recipe.aluminium_hydroxide.early.upfront=§2Bootstrapping recipe
+recipe.aluminium_hydroxide.early=The crystallization may be made more efficient by saving a dust for later.
+recipe.aluminium_hydroxide.late=The seed requires using a slightly different bootstrapping recipe./nUse this recipe for the gallium byproduct.
+recipe.bayer_process.upfront=§2Bayer process
+recipe.bayer_process=This is the beginning of the Bayer process, a way to turn bauxite into alumina./nThat alumina is then used for pure aluminium.
+recipe.hall-heroult.upfront=§2Hall-Héroult process
+recipe.hall-heroult=The primary Al production method using melt electrolysis converting alumina to molten aluminium.
+recipe.sodium_aluminate_solution=A dumper may be used to get rid of the red mud byproduct.
+recipe.mud=Acquire mud with the primitive mud pump./nThe easiest way to automate limestone/clay.
+recipe.refrigeration=Carbon dioxide is the simplest refrigerant out of all of these.
+recipe.motor.brushless=Once you have access to silicon wafers in mid-MV, this is far cheaper.
+recipe.water.electrolysis=This is significantly faster if done in an electrolysis cell after unlocking NaOH.
+recipe.power_generation.multiblock_rotation=This recipe is run in a multiblock with shaft rotation mechanics, which means there is a spin-up time to reach maximum power outpu. Supply with lubricants to keep it running smoothly!
+recipe.power_generation.combustion=Can either be run in a multiblock or singleblock configuration. Multiblocks only require lubricant but singleblocks also require a coolant!
+recipe.power_generation.fuel_cell=Fuel cells require a certain temperature to run properly. Make sure to maintain temperature with preheated air!
+recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste heat from gas turbine exhaust to boil water. Flue gas carries 10 EU/L of energy, and yields an extra 25% energy for a given amount of fuel.
+recipe.lubricant.midgrade=Provides a 1.2x boost in power generation recipes requiring lubricant.
+recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requiring lubricant.
+recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.

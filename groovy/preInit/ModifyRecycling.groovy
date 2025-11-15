@@ -57,4 +57,30 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
         ore('stickSteel') * 4,
         ore('plateSteel') * 4
     ])
+
+    RecyclingManager.addRecyclingGroovy(metaitem('engine.spark_plug.palladium'), [
+    ore('boltPalladium'),
+    ore('plateSteel'),
+    ore('boltSteel'),
+    metaitem('cableGtSingleCopper'),
+    ])
+
+    RecyclingManager.addRecyclingGroovy(metaitem('engine.spark_plug.iridium'), [
+        ore('boltIridium'),
+        ore('plateStainlessSteel'),
+        ore('boltStainlessSteel'),
+        metaitem('cableGtSingleCopper'),
+    ])
+
+    RecyclingManager.addRecyclingGroovy(metaitem('engine.piston'), [
+        ore('plateDoubleStainlessSteel'),
+        ore('boltStainlessSteel'),
+        ore('ringStainlessSteel') * 4,
+        ore('ingotStainlessSteel'),
+    ])
+
+    RecyclingManager.addRecyclingGroovy(metaitem('engine.crankshaft'), [
+        ore('stickLongSteel') * 2,
+        ore('ringSteel') * 2
+    ])
 }

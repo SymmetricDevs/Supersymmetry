@@ -47,7 +47,8 @@ ARC_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 Sintering.blankets.each { blanket ->
-    SINTERING_OVEN.recipeBuilder()
+    if (blanket.tier >= 2) {
+        SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustBoronCarbide'))
         .fluidInputs(fluid('novolacs') * 100)
         .notConsumable(metaitem('shape.mold.rod'))
@@ -56,21 +57,24 @@ Sintering.blankets.each { blanket ->
         .duration(blanket.duration)
         .EUt(VA[MV])
         .buildAndRegister()
+    }
 }
 
 // Long Boron Carbide Rod * 1
 mods.gregtech.forge_hammer.removeByInput(16, [metaitem('stickBoronCarbide') * 2], null)
 
 Sintering.blankets.each { blanket ->
-    SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustBoronCarbide'))
-        .fluidInputs(fluid('novolacs') * 100)
-        .notConsumable(metaitem('shape.mold.long_rod'))
-        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
-        .outputs(metaitem('stickLongBoronCarbide'))
-        .duration(blanket.duration)
-        .EUt(VA[MV])
-        .buildAndRegister()
+    if (blanket.tier >= 2) {
+        SINTERING_OVEN.recipeBuilder()
+            .inputs(ore('dustBoronCarbide'))
+            .fluidInputs(fluid('novolacs') * 100)
+            .notConsumable(metaitem('shape.mold.long_rod'))
+            .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+            .outputs(metaitem('stickLongBoronCarbide'))
+            .duration(blanket.duration)
+            .EUt(VA[MV])
+            .buildAndRegister()
+    }
 }
 
 // Boron nitride

@@ -10,9 +10,10 @@ import gregtech.api.unification.material.properties.*
 
 import supersymmetry.api.util.SuSyUtility
 
-import static gregtech.api.unification.material.info.MaterialIconSet.*
-import static gregtech.api.unification.material.info.MaterialFlags.*
-import static gregtech.api.unification.material.Materials.*
+import static gregtech.api.unification.material.info.MaterialIconSet.*;
+import static gregtech.api.unification.material.info.MaterialFlags.*;
+import static gregtech.api.unification.material.Materials.*;
+import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 class ThirdDegreeMaterials {
     static void register() {
@@ -211,7 +212,7 @@ class ThirdDegreeMaterials {
 
         FluorinatedSurfactantMixture = new Material.Builder(24032, SuSyUtility.susyId('fluorinated_surfactant_mixture'))
                 .liquid()
-                .components(PerfluorooctanoicAcid * 1, Water * 1)
+                .components(PerfluorooctanoicAcid * 1, Water * 1, Ammonia * 1)
                 .colorAverage()
                 .build()
 
@@ -601,7 +602,7 @@ class ThirdDegreeMaterials {
 
         SpentPBISolution = new Material.Builder(24096, SuSyUtility.susyId('spent_pbi_solution'))
                 .liquid()
-                .components(Dimethylacetamide * 1)
+                .components(Dimethylacetamide * 1, LithiumChloride * 1)
                 .colorAverage()
                 .build()
 
@@ -854,6 +855,36 @@ class ThirdDegreeMaterials {
         PolytetrafluoroethyleneCoatingSolution = new Material.Builder(24138, SuSyUtility.susyId('polytetrafluoroethylene_coating_solution'))
                 .liquid()
                 .components(Polytetrafluoroethylene * 2, Cyclohexane)
+                .colorAverage()
+                .build()
+
+        AcetanilideSolution = new Material.Builder(24139, SuSyUtility.susyId('acetanilide_solution'))
+                .liquid()
+                .components(Acetanilide, AceticAcid)
+                .colorAverage()
+                .build()
+
+        GuanidiniumNitrateSolution = new Material.Builder(24140, SuSyUtility.susyId('guanidinium_nitrate_solution'))
+                .liquid()
+                .components(GuanidiniumNitrate, Water * 2)
+                .colorAverage()
+                .build()
+
+        CrudeTrimethylOrthoformate = new Material.Builder(24141, SuSyUtility.susyId('crude_trimethyl_orthoformate'))
+                .liquid()
+                .components(TrimethylOrthoformate, Methanol)
+                .colorAverage()
+                .build()
+
+        CrudeMethylVinylEther = new Material.Builder(24142, SuSyUtility.susyId('crude_methyl_vinyl_ether'))
+                .liquid()
+                .components(MethylVinylEther, Methanol, PotassiumHydroxide)
+                .colorAverage()
+                .build()
+                
+        TetrasodiumEthylenediaminetetraacetateSolution = new Material.Builder(24143, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetate_solution'))
+                .liquid()
+                .components(TetrasodiumEthylenediaminetetraacetate, Water)
                 .colorAverage()
                 .build()
     }

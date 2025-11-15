@@ -75,6 +75,23 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
+    ERF.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('dustPlatinum'))
+        .outputs(metaitem('ingotPlatinum'))
+        .duration(240)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+    ERF.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(metaitem('dustPlatinum'))
+        .fluidInputs(fluid('nitrogen') * 1000)
+        .outputs(metaitem('ingotPlatinum'))
+        .duration(160)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
     BR.recipeBuilder()
         .notConsumable(ore('springCupronickel'))
         .fluidInputs(fluid('alluvial_platinum_mother_liquor') * 14000)

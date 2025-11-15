@@ -320,7 +320,6 @@ class SuSyMaterials {
     public static Material WaelzSlag
     public static Material ReducedZincLeach
     public static Material WaelzOxide
-    public static Material CarbonBlack
     public static Material ZincCementationSlurry
     public static Material PrecipitatedZincLeach
     public static Material CopperCadmiumResidue
@@ -502,9 +501,6 @@ class SuSyMaterials {
     public static Material Pama
     public static Material PolymerizedStyreneIsopreneSolution
     public static Material PolyisobuteneSuccinicAnhydride
-    public static Material MidgradeLubricant
-    public static Material PremiumLubricant
-    public static Material SupremeLubricant
     public static Material ZincDialkyldithiophospate
     public static Material MolybdenumDialkyldithiophosphate
     public static Material AcidicDinitrobenzeneMixture
@@ -591,6 +587,8 @@ class SuSyMaterials {
     public static Material OrthoCresylicAcidMixture
     public static Material CresolNovolacsOligomer
     public static Material EpoxyCresolNovolacs
+    public static Material ResolResinMixture
+    public static Material ResolResinInfiltrant
     public static Material OsmiumRutheniumTetroxideMixture
     public static Material OsmiumRutheniumSolution
     public static Material ChlorinatedRhodiumIridiumSolution
@@ -788,6 +786,10 @@ class SuSyMaterials {
     public static Material CeramicCoatingSlurry
     public static Material SodiumCMCSuspension
     public static Material CMCWaste
+    public static Material CyanamideSlurry
+    public static Material CrudeCyanamideSolution
+    public static Material CyanamideSolution
+    public static Material GreenEpoxyPCBCoating
 
     // Petrochem Materials
 
@@ -881,7 +883,6 @@ class SuSyMaterials {
     public static Material HeavyAtmosphericOverheads
     public static Material LightAtmosphericOverheads
 
-    public static Material LubricatingOil
     public static Material TreatedSulfuricLubricatingOil
 
     public static Material LightCycleOil
@@ -1148,7 +1149,6 @@ class SuSyMaterials {
     public static Material HypersalineWater
     public static Material LithiumCarbonate
     public static Material LithiumCobaltOxide
-    public static Material SodiumCathodeAlloy
     public static Material LithiumHexafluorophosphate
     public static Material NickelHydroxide
     public static Material NickelChloride
@@ -1595,6 +1595,7 @@ class SuSyMaterials {
     public static Material MixedOxideFuel
     public static Material DilutedAcetone
     public static Material BariumNitrate
+    public static Material SilverNitrate
     public static Material DiammoniumHydrogenPhosphate
     public static Material Boehmite
     public static Material ReverseOsmosisWater
@@ -1725,7 +1726,6 @@ class SuSyMaterials {
     public static Material SodiumSulfiteSolution
     public static Material PhosphorusSolution
     public static Material SodiumCyanideSolution
-    public static Material BrominatedSulfurDioxide
     public static Material SodiumThiosulfateSolution
     public static Material DilutedIronIIIChlorideSolution
     public static Material SodiumPerchlorateSolution
@@ -2343,6 +2343,20 @@ class SuSyMaterials {
     public static Material Acetonitrile
     public static Material MyristicAcid
     public static Material SodiumCarboxymethylCellulose
+    public static Material Acetanilide
+    public static Material NAcetylsulfanilylChloride
+    public static Material GuanidiniumNitrate
+    public static Material Tetramethoxypropane
+    public static Material TrimethylOrthoformate
+    public static Material MethylVinylEther
+    public static Material TwoAminopyrimidine
+    public static Material SodiumSulfadiazine
+    public static Material SilverSulfadiazine
+    public static Material Dicyanamide
+    public static Material PotassiumMethoxide
+    public static Material Tetrahydrobenzaldehyde
+    public static Material PeraceticAcidSolution
+    public static Material EpoxycyclohexaneCarboxylate
 
     // Third Degree Materials
 
@@ -2483,6 +2497,11 @@ class SuSyMaterials {
     public static Material DichlorodiphenylSulfoneSolution
     public static Material FuelCellCatalystSolution
     public static Material PolytetrafluoroethyleneCoatingSolution
+    public static Material AcetanilideSolution
+    public static Material GuanidiniumNitrateSolution
+    public static Material CrudeTrimethylOrthoformate
+    public static Material CrudeMethylVinylEther
+    public static Material TetrasodiumEthylenediaminetetraacetateSolution
 
     // Thermodynamics Materials
 

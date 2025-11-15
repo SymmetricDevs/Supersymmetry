@@ -4,14 +4,14 @@ import postInit.utils.RecyclingHelper
 
 RecyclingHelper.addShaped('susy:large_steel_boiler', metaitem('susy:large_boiler.steel'), [
     [ore('cableGtSingleCopper'), ore('circuitMv'), ore('cableGtSingleCopper')],
-    [ore('circuitMv'), item('gregtech:boiler_firebox_casing', 1), ore('circuitMv')],
-    [ore('cableGtSingleCopper'), ore('circuitMv'), ore('cableGtSingleCopper')]
+    [ore('pipeSmallFluidSteel'), item('gregtech:boiler_firebox_casing', 1), ore('pipeSmallFluidSteel')],
+    [ore('cableGtSingleCopper'), metaitem('electric.pump.mv'), ore('cableGtSingleCopper')]
 ])
 
 RecyclingHelper.addShaped('susy:large_bronze_boiler', metaitem('susy:large_boiler.bronze'), [
     [ore('cableGtSingleTin'), ore('circuitLv'), ore('cableGtSingleTin')],
-    [ore('circuitLv'), item('gregtech:boiler_firebox_casing', 0), ore('circuitLv')],
-    [ore('cableGtSingleTin'), ore('circuitLv'), ore('cableGtSingleTin')]
+    [metaitem('electric.pump.lv'), item('gregtech:boiler_firebox_casing', 0), metaitem('electric.pump.lv')],
+    [ore('cableGtSingleTin'), ore('pipeNormalFluidBronze'), ore('cableGtSingleTin')]
 ])
 
 RecyclingHelper.addShaped('susy:steam_boiler_coal_bronze', metaitem('susy:steam_boiler_coal.bronze'), [
@@ -76,31 +76,37 @@ BOILER.recipeBuilder()
         .duration(80)
         .EUt(-32)
         .buildAndRegister()
+        
 BOILER.recipeBuilder()
         .inputs(ore('dustCharcoal'))
         .duration(800)
         .EUt(-32)
         .buildAndRegister()
+        
 BOILER.recipeBuilder()
         .inputs(ore('dustCoal'))
         .duration(992)
         .EUt(-32)
         .buildAndRegister()
+        
 BOILER.recipeBuilder()
         .inputs(ore('dustLignite'))
         .duration(496)
         .EUt(-32)
         .buildAndRegister()
+        
 BOILER.recipeBuilder()
         .inputs(ore('dustCoke'))
         .duration(1328)
         .EUt(-32)
         .buildAndRegister()
+        
 BOILER.recipeBuilder()
         .inputs(ore('dustLigniteCoke'))
         .duration(992)
         .EUt(-32)
         .buildAndRegister()
+        
 BOILER.recipeBuilder()
         .inputs(ore('dustAnthracite'))
         .duration(2000)
@@ -113,13 +119,15 @@ SEMI_FLUID_GENERATOR.recipeBuilder()
         .duration(240)
         .EUt(-32)
         .buildAndRegister()
+
 SEMI_FLUID_GENERATOR.recipeBuilder()
         .fluidInputs(fluid('coal_gas') * 250)
-        .duration(160)
+        .duration(56)
         .EUt(-32)
         .buildAndRegister()
+
 SEMI_FLUID_GENERATOR.recipeBuilder()
         .fluidInputs(fluid('wood_gas') * 250)
-        .duration(120)
+        .duration(40)
         .EUt(-32)
         .buildAndRegister()

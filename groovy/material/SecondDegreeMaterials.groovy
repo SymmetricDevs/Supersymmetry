@@ -220,11 +220,7 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        BrominatedSulfurDioxide = new Material.Builder(13032, SuSyUtility.susyId('brominated_sulfur_dioxide'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(SulfuricAcid, HydrobromicAcid * 2)
-                .colorAverage()
-                .build()
+        // FREE ID: 13032
 
         SodiumThiosulfateSolution = new Material.Builder(13033, SuSyUtility.susyId('sodium_thiosulfate_solution'))
                 .liquid()

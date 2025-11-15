@@ -1014,6 +1014,7 @@ solidAntiwearMap.each { saw, multiplier ->
         .fluidOutputs(fluid('midgrade_lubricant') * (1000 * multiplier * 4))
         .duration(200)
         .EUt(VA[MV])
+        .info('recipe.lubricant.midgrade')
         .buildAndRegister()
         
     BLENDER.recipeBuilder()
@@ -1024,6 +1025,7 @@ solidAntiwearMap.each { saw, multiplier ->
         .fluidOutputs(fluid('midgrade_lubricant') * (1000 * multiplier * 4))
         .duration(200)
         .EUt(VA[MV])
+        .info('recipe.lubricant.midgrade')
         .buildAndRegister()
 }
 
@@ -1036,6 +1038,7 @@ liquidAntiwearMap.each { law, multiplier ->
         .fluidOutputs(fluid('midgrade_lubricant') * (1000 * multiplier))
         .duration(200)
         .EUt(VA[MV])
+        .info('recipe.lubricant.midgrade')
         .buildAndRegister()
 
     BLENDER.recipeBuilder()
@@ -1046,6 +1049,7 @@ liquidAntiwearMap.each { law, multiplier ->
         .fluidOutputs(fluid('midgrade_lubricant') * (1000 * multiplier * 4))
         .duration(200)
         .EUt(VA[MV])
+        .info('recipe.lubricant.midgrade')
         .buildAndRegister()
 }
 
@@ -1059,6 +1063,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
         .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4))
         .duration(200)
         .EUt(VA[MV])
+        .info('recipe.lubricant.premium')
         .buildAndRegister()
 
     BLENDER.recipeBuilder()
@@ -1069,6 +1074,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
         .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * 3 * 4 * 1.5))
         .duration(200)
         .EUt(VA[MV])
+        .info('recipe.lubricant.premium')
         .buildAndRegister()
     
     detergentMap.each { det, multiplier2 ->
@@ -1080,6 +1086,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
             .EUt(VA[MV])
+            .info('recipe.lubricant.premium')
             .buildAndRegister()
 
         BLENDER.recipeBuilder()
@@ -1090,6 +1097,7 @@ pourPointDepressantMap.each { ppd, multiplier1 ->
             .fluidOutputs(fluid('premium_lubricant') * (1000 * multiplier1 * multiplier2 * 4))
             .duration(200)
             .EUt(VA[MV])
+            .info('recipe.lubricant.premium')
             .buildAndRegister()
     }
 }
@@ -1105,6 +1113,7 @@ for (chelate in chelates) {
             .fluidOutputs(fluid('supreme_lubricant') * 4000)
             .duration(200)
             .EUt(VA[MV])
+            .info('recipe.lubricant.supreme')
             .buildAndRegister()
 
         antioxidantMap.each { ant, multiplier ->
@@ -1116,6 +1125,7 @@ for (chelate in chelates) {
                 .fluidOutputs(fluid('supreme_lubricant') * (1000 * multiplier * 4))
                 .duration(200)
                 .EUt(VA[MV])
+                .info('recipe.lubricant.supreme')
                 .buildAndRegister()
         }
     }

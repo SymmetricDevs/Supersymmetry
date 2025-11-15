@@ -1,6 +1,7 @@
 {
   "preRequisites:11": [
-    469
+    469,
+    1131298338
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -18,6 +19,7 @@
   "questID:3": 470,
   "tasks:9": {
     "0:10": {
+      "ignoreNBT:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

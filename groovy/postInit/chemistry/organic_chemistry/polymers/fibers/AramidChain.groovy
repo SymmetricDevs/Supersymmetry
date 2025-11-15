@@ -57,7 +57,7 @@ POLYMERIZATION_TANK.recipeBuilder()
     .fluidInputs(fluid('dimethylacetamide') * 8000)
     .fluidOutputs(fluid('kevlar_polymerization_mix') * 8000)
     .fluidOutputs(fluid('very_diluted_calcium_chloride_solution') * 3000)
-    .EUt(VA[EV])
+    .EUt(VA[HV])
     .duration(600)
     .buildAndRegister()
 

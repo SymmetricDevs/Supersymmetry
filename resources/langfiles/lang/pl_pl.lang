@@ -567,7 +567,6 @@ susy.material.tetramethylammonium_hydroxide_solution=Roztwór Wodorotlenku Tetra
 susy.material.boron_trioxide_solution=Roztwór Tritlenku Diboru
 susy.material.phosphorus_solution=Roztwór Fosforu
 susy.material.sodium_cyanide_solution=Roztwór Cyjanku Sodu
-susy.material.brominated_sulfur_dioxide=Bromowany Dwutlenek Siarki
 susy.material.phosphorus_trichloride=Trichlorek Fosforu
 
 susy.material.wacker_catalyst_solution=Roztwór Katalizatora Wacker
@@ -691,7 +690,6 @@ susy.material.impure_bromine=Impure Bromine
 susy.material.concentrated_salt_water=Concentrated Salt Water
 susy.material.hypersaline_water=Hypersaline Water
 susy.material.lithium_cobalt_oxide=Lithium Cobalt Oxide
-susy.material.sodium_cathode_alloy=Sodium Battery Cathode Alloy
 susy.material.lithium_hexafluorophosphate=Lithium Hexafluorophosphate
 susy.material.nickel_chloride=Nickel Chloride
 susy.material.nickel_hydroxide=Nickel Hydroxide
@@ -2228,7 +2226,7 @@ metaitem.sponge.hafnium.crude.name=Crude Hafnium Sponge
 metaitem.drone.lv.name=Basic Drone
 
 metaitem.glass_fibers.name=Glass Fibers
-metaitem.epoxy_lamina.name=Epoxy Lamina
+metaitem.board.epoxy.prepreg.name=Epoxy Lamina
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 

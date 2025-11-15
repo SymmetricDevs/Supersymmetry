@@ -1,7 +1,5 @@
 package classes
 
-import groovy.transform.TupleConstructor
-
 import baubles.api.BaubleType
 import gregtech.integration.baubles.BaubleBehavior
 import gregtech.api.GregTechAPI
@@ -13,11 +11,16 @@ import gregtech.api.items.metaitem.StandardMetaItem
 import gregtech.api.unification.material.MarkerMaterials
 import gregtech.api.unification.ore.OrePrefix
 
-@TupleConstructor
 class Battery {
     String name
     int tier
     long capacity
+
+    Battery(String name, int tier, int secs) {
+        this.name = name
+        this.tier = tier
+        this.capacity = secs * GTValues.V[tier] * 20
+    }
 
     public String fetchMetaname() { "battery.$name" }
     public ItemStack fetchMetaitem() { metaitem(fetchMetaname()) }

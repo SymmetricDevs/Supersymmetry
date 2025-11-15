@@ -565,7 +565,6 @@ susy.material.tetramethylammonium_hydroxide_solution=Tetramethylammoniumhydroxid
 susy.material.boron_trioxide_solution=Bortrioxid-Lösung
 susy.material.phosphorus_solution=Phosphor-Lösung
 susy.material.sodium_cyanide_solution=Natriumcyanid-Lösung
-susy.material.brominated_sulfur_dioxide=Bromiertes Schwefeldioxid
 susy.material.phosphorus_trichloride=Phosphortrichlorid
 
 susy.material.wacker_catalyst_solution=Wacker-Katalysator-Lösung
@@ -696,7 +695,6 @@ susy.material.impure_bromine=Verunreinigtes Brom
 susy.material.concentrated_salt_water=Konzentriertes Salzwasser
 susy.material.hypersaline_water=Hypersalines Wasser
 susy.material.lithium_cobalt_oxide=Lithiumcobaltoxid
-susy.material.sodium_cathode_alloy=Natrium-Batterie-Kathodenlegierung
 susy.material.lithium_hexafluorophosphate=Lithiumhexafluorophosphat
 susy.material.nickel_chloride=Nickelchlorid
 susy.material.nickel_hydroxide=Nickelhydroxid
@@ -2088,7 +2086,6 @@ susy.material.rp_one=RP-1
 susy.material.ammonium_metatungstate=Ammoniummetawolframat (AMT)
 susy.material.clarified_slurry_oil=Geklärtes Schlammöl
 susy.material.pyrolysis_raffinate=Pyrolyse-Raffinat
-susy.material.carbon_black=Ruß
 susy.material.compounded_polyisoprene=Compoundiertes Polyisopren
 susy.material.compounded_styrene_isoprene_rubber=Compoundierter Styrol-Isopren-Kautschuk
 susy.material.compounded_styrene_butadiene_rubber=Compoundierter Styrol-Butadien-Kautschuk
@@ -2715,6 +2712,7 @@ item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Gewebtes Ultra
 item.susy.material.kevlar.plate=Gewebtes Kevlar
 item.gregtech.material.polytetrafluoroethylene.fiber=Expandierte Polytetrafluorethylen-Faser
 item.gregtech.material.polytetrafluoroethylene.thread=Expandierter Polytetrafluorethylen-Faden
+gregtech.material.carbon=Ruß
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Birken-, Tropen-, Eichen- und Fichtenholz

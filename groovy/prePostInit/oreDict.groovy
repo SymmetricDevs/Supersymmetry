@@ -249,6 +249,7 @@ ore('ingotSteel').remove(item('industrialrenewal:ingot_steel'))
 ore('blockConcrete').remove(item('susy:susy_stone_smooth:9'))
 ore('stone').remove(item('susy:susy_stone_smooth:9'))
 ore('cobblestone').remove(item('susy:susy_stone_cobble:9'))
+ore('stickStone').remove(item('pyrotech:material', 27))
 
 //Misc Fixes
 

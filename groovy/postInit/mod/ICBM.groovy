@@ -315,7 +315,7 @@ Globals.solders.each { key, val ->
     }
 
     for (fuel in thermobaric_fuels) {
-        LARGE_WEAPONS_FACTORY.recipeBuilder()
+        WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                 metaitem('fluid_cell') * 8,
                 item('icbmclassic:explosives:6') * 8,
@@ -331,41 +331,48 @@ Globals.solders.each { key, val ->
 
     //Explosives tier 4
     //Nuclear explosive
-    LARGE_WEAPONS_FACTORY.recipeBuilder()
-        .inputs([
-            ore('componentCapacitor') * 8,
-            ore('wireFinePlatinum') * 32,
-            ore('dustCompositionB') * 64,
-            ore('dustBaratol') * 64,
-            ore('plateDoubleBeryllium') * 4,
-            metaitem('dustWeaponsGradeUranium') * 32,
-            ore('plateUranium238') * 64,
-            ore('dustPolonium'),
-            ore('dustBeryllium')
-        ])
-        .fluidInputs(fluid(key) * val)
-        .outputs(item('icbmclassic:explosives:15'))
-        .duration(200)
-        .EUt(1200)
-        .buildAndRegister();
+    def WEAPON_FACTORYS = [
+            WEAPONS_FACTORY,
+            LARGE_WEAPONS_FACTORY
+    ]
 
-    LARGE_WEAPONS_FACTORY.recipeBuilder()
-        .inputs([
-            ore('componentCapacitor') * 8,
-            ore('wireFinePlatinum') * 8,
-            ore('dustCompositionB') * 16,
-            ore('dustBaratol') * 16,
-            ore('plateDoubleBeryllium') * 4,
-            metaitem('dustPlutoniumGallium') * 8,
-            ore('plateUranium238') * 16,
-            ore('dustPolonium'),
-            ore('dustBeryllium')
-        ])
-        .fluidInputs(fluid(key) * val)
-        .outputs(item('icbmclassic:explosives:15'))
-        .duration(200)
-        .EUt(1200)
-        .buildAndRegister();
+    for (FACTORYS in WEAPON_FACTORYS) {
+        FACTORYS.recipeBuilder()
+                .inputs([
+                        ore('componentCapacitor') * 8,
+                        ore('wireFinePlatinum') * 32,
+                        ore('dustCompositionB') * 64,
+                        ore('dustBaratol') * 64,
+                        ore('plateDoubleBeryllium') * 4,
+                        metaitem('dustWeaponsGradeUranium') * 32,
+                        ore('plateUranium238') * 64,
+                        ore('dustPolonium'),
+                        ore('dustBeryllium')
+                ])
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('icbmclassic:explosives:15'))
+                .duration(200)
+                .EUt(1200)
+                .buildAndRegister();
+
+        FACTORYS.recipeBuilder()
+                .inputs([
+                        ore('componentCapacitor') * 8,
+                        ore('wireFinePlatinum') * 8,
+                        ore('dustCompositionB') * 16,
+                        ore('dustBaratol') * 16,
+                        ore('plateDoubleBeryllium') * 4,
+                        metaitem('dustPlutoniumGallium') * 8,
+                        ore('plateUranium238') * 16,
+                        ore('dustPolonium'),
+                        ore('dustBeryllium')
+                ])
+                .fluidInputs(fluid(key) * val)
+                .outputs(item('icbmclassic:explosives:15'))
+                .duration(200)
+                .EUt(1200)
+                .buildAndRegister();
+    }
 }
 
 //Concrete
@@ -514,7 +521,7 @@ Globals.solders.each { key, val ->
 
             WEAPONS_FACTORY.recipeBuilder()
                 .inputs([
-                    ore('plateStainlessSteel') * 2,
+                    ore('plateTitanium') * 2,
                     s_oxy,
                     s_fuel,
                     ore('wireFineRedAlloy')
@@ -523,7 +530,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(item('openmodularturrets:ammo_meta:4') * 8)
                 .duration(20)
-                .EUt(200)
+                .EUt(VA[EV])
                 .buildAndRegister();
 
             WEAPONS_FACTORY.recipeBuilder()

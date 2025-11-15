@@ -69,7 +69,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineCopper') * 4)
     .outputs(metaitem('component.resistor') * 2)
     .duration(160)
-    .EUt(6)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -78,7 +78,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineAnnealedCopper') * 4)
     .outputs(metaitem('component.resistor') * 4)
     .duration(160)
-    .EUt(6)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 crafting.shapedBuilder()
@@ -171,7 +171,7 @@ MIXER.recipeBuilder()
     .outputs(metaitem('dustKovar') * 18)
     .circuitMeta(2)
     .duration(220)
-    .EUt(16)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 // This is faster, and the previous recipe catches people not paying attention. :)
@@ -183,18 +183,7 @@ MIXER.recipeBuilder()
     .outputs(metaitem('dustKovar') * 18)
     .circuitMeta(4)
     .duration(800)
-    .EUt(16)
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('circuitIv') * 4)
-    .inputs(metaitem('cover.screen'))
-    .inputs(ore('wireFineGold') * 8)
-    .inputs(metaitem('circuit_board.plastic'))
-    .outputs(metaitem('susy:code_breacher'))
-    .fluidInputs(fluid('soldering_alloy') * 144)
-    .duration(400)
-    .EUt(2048)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 //Kovar AAF recipes because GCYM somehow generated a conflicted recipe with invar
@@ -219,4 +208,3 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
     .duration(67)
     .EUt(VA[MV])
     .buildAndRegister()
-    

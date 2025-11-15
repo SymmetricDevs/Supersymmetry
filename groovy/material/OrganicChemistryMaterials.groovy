@@ -371,7 +371,7 @@ class OrganicChemistryMaterials {
 
         PBISolution = new Material.Builder(15057, SuSyUtility.susyId('pbi_solution'))
                 .liquid()
-                .components(Dimethylacetamide * 1, Polybenzimidazole * 1)
+                .components(Dimethylacetamide * 1, Polybenzimidazole * 1, LithiumChloride * 1)
                 .color(0x171410)
                 .build()
 
@@ -3169,5 +3169,91 @@ class OrganicChemistryMaterials {
                 .build()
 
         SodiumCarboxymethylCellulose.setFormula('[C6H7O2(OH)2OCH2COONa]n', true)
+
+        Acetanilide = new Material.Builder(15498, SuSyUtility.susyId('acetanilide'))
+                .dust()
+                .components(Carbon * 8, Hydrogen * 9, Nitrogen, Oxygen)
+                .color(0x76ded7)
+                .build()
+
+        NAcetylsulfanilylChloride = new Material.Builder(15499, SuSyUtility.susyId('n_acetylsulfanilyl_chloride'))
+                .dust()
+                .components(Carbon * 8, Hydrogen * 8, Chlorine, Nitrogen, Oxygen * 3, Sulfur)
+                .color(0xe1e8c3)
+                .build()   
+        
+        SodiumSulfadiazine = new Material.Builder(15500, SuSyUtility.susyId('sodium_sulfadiazine'))
+                .dust()
+                .components(Sodium, Carbon * 10, Hydrogen * 9, Nitrogen * 4, Oxygen * 2, Sulfur)
+                .color(0xf5f3d0)
+                .build()
+
+        GuanidiniumNitrate = new Material.Builder(15501, SuSyUtility.susyId('guanidinium_nitrate'))
+                .dust()
+                .components(Carbon, Hydrogen * 6, Nitrogen * 4, Oxygen * 3)
+                .color(0x6b86b3)
+                .build()
+
+        Tetramethoxypropane = new Material.Builder(15502, SuSyUtility.susyId('tetramethoxypropane'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 16, Oxygen * 4)
+                .color(0xa69a60)
+                .build()
+
+        TrimethylOrthoformate = new Material.Builder(15503, SuSyUtility.susyId('trimethyl_orthoformate'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 10, Oxygen * 3)
+                .color(0x615196)
+                .build()
+
+        MethylVinylEther = new Material.Builder(15504, SuSyUtility.susyId('methyl_vinyl_ether'))
+                .gas() 
+                .components(Carbon * 3, Hydrogen * 6, Oxygen)
+                .color(0x7cbd6f)
+                .build()
+        
+        TwoAminopyrimidine = new Material.Builder(15505, SuSyUtility.susyId('two_aminopyrimidine'))
+                .dust()
+                .components(Carbon * 4, Hydrogen * 5, Nitrogen * 3)
+                .color(0x4d94bd)
+                .build()
+        
+        SilverSulfadiazine = new Material.Builder(15506, SuSyUtility.susyId('silver_sulfadiazine'))
+                .dust()
+                .components(Silver, Carbon * 10, Hydrogen * 9, Nitrogen * 4, Oxygen * 2, Sulfur)
+                .color(0xfff8e6)
+                .build()
+
+        Dicyanamide = new Material.Builder(15507, SuSyUtility.susyId('dicyanamide'))
+                .dust()
+                .components(Carbon * 2, Hydrogen * 4, Nitrogen * 4)
+                .color(0x1272cc)
+                .build()
+
+        PotassiumMethoxide = new Material.Builder(15508, SuSyUtility.susyId('potassium_methoxide'))
+                .dust()
+                .components(Carbon, Hydrogen * 3, Oxygen, Potassium)
+                .color(0xb59426)                
+                .build()
+
+        Tetrahydrobenzaldehyde = new Material.Builder(15509, SuSyUtility.susyId('tetrahydrobenzaldehyde'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 10, Oxygen)
+                .color(0xe08043)
+                .build()
+
+        PeraceticAcidSolution = new Material.Builder(15510, SuSyUtility.susyId('peracetic_acid_solution'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 4, Oxygen * 3, Water)
+                .color(0x97bd28)
+                .build()
+
+        PeraceticAcidSolution.setFormula('(CH3CO3H)(H2O)', true)
+
+        EpoxycyclohexaneCarboxylate = new Material.Builder(15511, SuSyUtility.susyId('epoxycyclohexane_carboxylate'))
+                .liquid()
+                .components(Carbon * 14, Hydrogen * 20, Oxygen * 4)
+                .color(0x2dad80)
+                .build()
     }
 }
