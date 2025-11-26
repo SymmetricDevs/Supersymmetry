@@ -3255,5 +3255,35 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 14, Hydrogen * 20, Oxygen * 4)
                 .color(0x2dad80)
                 .build()
+
+        OneTetralone = new Material.Builder(15512, SuSyUtility.susyId('one_tetralone'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 10, Oxygen)
+                .colorAverage()
+                .build()
+
+        OneNaphthol = new Material.Builder(15513, SuSyUtility.susyId('one_naphthol'))
+                .liquid(new FluidBuilder().temperature(369))
+                .components(Carbon * 10, Hydrogen * 8, Oxygen)
+                .colorAverage()
+                .build()
+
+        TwoNitroOneNaphthol = new Material.Builder(15514, SuSyUtility.susyId('two_nitro_one_naphthol'))
+                .liquid(new FluidBuilder().temperature(397))
+                .components(Carbon * 10, Hydrogen * 7, Oxygen * 3, Nitrogen)
+                .colorAverage()
+                .build()
+
+        TwoAminoOneNaphthol = new Material.Builder(15515, SuSyUtility.susyId('two_amino_one_naphthol'))
+                .liquid(new FluidBuilder().temperature(528))
+                .components(Carbon * 10, Hydrogen * 9, Oxygen, Nitrogen)
+                .colorAverage()
+                .build()
+
+        Diazonaphthoquinone = new Material.Builder(15516, SuSyUtility.susyId('diazonaphthoquinone'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 6, Oxygen, Nitrogen * 2)
+                .colorAverage()
+                .build()
     }
 }

@@ -662,35 +662,5 @@ class FirstDegreeMaterialsB {
                 .components(Silver, Nitrogen, Oxygen * 3)
                 .color(0xF5F3D0)
                 .build()
-
-        OneTetralone = new Material.Builder(8762, SuSyUtility.susyId('one_tetralone'))
-                .liquid()
-                .components(Carbon * 10, Hydrogen * 10, Oxygen)
-                .colorAverage()
-                .build()
-
-        OneNaphthol = new Material.Builder(8763, SuSyUtility.susyId('one_naphthol'))
-                .liquid()
-                .components(Carbon * 10, Hydrogen * 8, Oxygen)
-                .colorAverage()
-                .build()
-
-        TwoNitroOneNaphthol = new Material.Builder(8764, SuSyUtility.susyId('two_nitro_one_naphthol'))
-                .liquid()
-                .components(Carbon * 10, Hydrogen * 7, Oxygen * 3, Nitrogen)
-                .colorAverage()
-                .build()
-
-        TwoAminoOneNaphthol = new Material.Builder(8765, SuSyUtility.susyId('two_amino_one_naphthol'))
-                .liquid()
-                .components(Carbon * 10, Hydrogen * 9, Oxygen, Nitrogen)
-                .colorAverage()
-                .build()
-
-        Diazonaphthoquinone = new Material.Builder(8767, SuSyUtility.susyId('diazonaphthoquinone'))
-                .liquid()
-                .components(Carbon * 10, Hydrogen * 6, Oxygen, Nitrogen * 2)
-                .colorAverage()
-                .build()
     }
 }
