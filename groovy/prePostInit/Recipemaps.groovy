@@ -97,6 +97,7 @@ class Recipemaps {
     static final def RADIATOR = recipemap('radiator')
     static final def REACTION_FURNACE = recipemap('reaction_furnace')
     static final def REFORMER = recipemap('catalytic_reformer_recipes')
+    static final def RESISTANCE_FURNACE = recipemap('resistance_furnace')
     static final def REVERBERATORY_FURNACE = recipemap('reverberatory_furnace')
     static final def ROASTER = recipemap('roaster')
     static final def ROTARY_KILN = recipemap('rotary_kiln')

@@ -66,7 +66,6 @@ DT.recipeBuilder()
         .buildAndRegister()
 
 DT.recipeBuilder()
-        .chancedOutput(metaitem('dustAsphalt'), 5000, 0)
         .fluidInputs(fluid('creosote') * 1000)
         .fluidOutputs(fluid('creosol') * 400)
         .fluidOutputs(fluid('gtfo_guaiacol') * 250)

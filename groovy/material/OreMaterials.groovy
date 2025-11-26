@@ -713,5 +713,11 @@ class OreMaterials {
                 .color(0x735347)
                 .build()
         
+        Epsomite = new Material.Builder(7094, SuSyUtility.susyId('epsomite'))
+                .dust()
+                .flags(NO_UNIFICATION)
+                .color(0xcad7e8)
+                .components(Magnesium, Sulfur, Oxygen * 4, Water * 7)
+                .build()
     }
 }

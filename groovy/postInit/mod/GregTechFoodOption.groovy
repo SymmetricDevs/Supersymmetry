@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import postInit.utils.RecyclingHelper
 import static gregtech.api.GTValues.*
 import gregtechfoodoption.utils.GTFOUtils
+import gregtechfoodoption.item.GTFOMetaItem
 
 // MACHINE RECIPES
 
@@ -545,3 +546,20 @@ VACUUM_FREEZER.recipeBuilder()
 	.EUt(5)
 	.duration(200)
 	.buildAndRegister()
+
+// Dried Ditalini * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.ditalini')], null)
+// Dried Rigatoni * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.rigatoni')], null)
+// Dried Lasagna * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.lasagna')], null)
+// Dried Spaghetti * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.spaghetti')], null)
+// Dried Tagliatelle * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.tagliatelle')], null)
+
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_DITALINI.getStackForm(), GTFOMetaItem.DRIED_DITALINI.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_RIGATONI.getStackForm(), GTFOMetaItem.DRIED_RIGATONI.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_LASAGNA.getStackForm(), GTFOMetaItem.DRIED_LASAGNA.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_SPAGHETTI.getStackForm(), GTFOMetaItem.DRIED_SPAGHETTI.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_TAGLIATELLE.getStackForm(), GTFOMetaItem.DRIED_TAGLIATELLE.getStackForm(), 800, 310, 1);

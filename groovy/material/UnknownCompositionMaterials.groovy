@@ -2918,11 +2918,11 @@ class UnknownCompositionMaterials {
                 .flags(NO_UNIFICATION)
                 .build()
 
-        HighAluminaRefractory = new Material.Builder(4643, SuSyUtility.susyId('high_alumina_refractory'))
+        SyntheticMulliteRefractory = new Material.Builder(4643, SuSyUtility.susyId('synthetic_mullite_refractory'))
                 .dust().ingot()
                 .iconSet(DULL)
                 .flags(NO_UNIFICATION)
-                .color(0xe8dec3)
+                .color(0xeaddc7 )
                 .build()
 
         ImpureBertranditeLeach = new Material.Builder(4644, SuSyUtility.susyId('impure_bertrandite_leach'))
@@ -3204,6 +3204,98 @@ class UnknownCompositionMaterials {
         GreenEpoxyPCBCoating = new Material.Builder(4698, SuSyUtility.susyId('green_epoxy_pcb_coating'))
                 .liquid()
                 .color(0x196809)
+                .build()
+
+        ConcentratedSeaWater = new Material.Builder(4699, SuSyUtility.susyId('concentrated_sea_water'))
+                .liquid()
+                .color(0x3440eb)
+                .build()
+
+        SeaBittern = new Material.Builder(4700, SuSyUtility.susyId('sea_bittern'))
+                .liquid()
+                .color(0x5f6e2f)
+                .build()
+
+        DesulfatizedSeaBittern = new Material.Builder(4701, SuSyUtility.susyId('desulfatized_sea_bittern'))
+                .liquid()
+                .color(0x657339)
+                .build()
+
+        ChlorinatedSeaBittern = new Material.Builder(4702, SuSyUtility.susyId('chlorinated_sea_bittern'))
+                .liquid()
+                .color(0x577d39)
+                .build()
+
+        DebrominatedSeaBittern = new Material.Builder(4703, SuSyUtility.susyId('debrominated_sea_bittern'))
+                .liquid()
+                .color(0x407d39)
+                .build()
+
+        DesalinatedSeaWater = new Material.Builder(4704, SuSyUtility.susyId('desalinated_sea_water'))
+                .liquid()
+                .color(0x4b68c9)
+                .build()
+
+        DemagnesiatedBrine = new Material.Builder(4705, SuSyUtility.susyId('demagnesiated_brine'))
+                .liquid()
+                .color(0xbfbe7a)
+                .build()
+
+        DecalcifiedBrine = new Material.Builder(4706, SuSyUtility.susyId('decalcified_brine'))
+                .liquid()
+                .color(0xc4c370)
+                .build()
+
+        BrineMotherLiquor = new Material.Builder(4707, SuSyUtility.susyId('brine_mother_liquor'))
+                .liquid()
+                .color(0xd1d069)
+                .build()
+
+        PotassiumRichMotherLiquor = new Material.Builder(4708, SuSyUtility.susyId('potassium_rich_mother_liquor'))
+                .liquid()
+                .color(0xd4b957)
+                .build()
+
+        BromineRichMotherLiquor = new Material.Builder(4709, SuSyUtility.susyId('bromine_rich_mother_liquor'))
+                .liquid()
+                .color(0xdba553)
+                .build()
+
+        ChlorinatedMotherLiquor = new Material.Builder(4710, SuSyUtility.susyId('chlorinated_mother_liquor'))
+                .liquid()
+                .color(0xd4b444)
+                .build()
+
+        SalarBrine = new Material.Builder(4711, SuSyUtility.susyId('salar_brine'))
+                .liquid()
+                .color(0xdbcc97)
+                .build()
+
+        DemagnesiatedSalarBrine = new Material.Builder(4712, SuSyUtility.susyId('demagnesiated_salar_brine'))
+                .liquid()
+                .color(0xcfbe82)
+                .build()
+
+        DecalcifiedSalarBrine = new Material.Builder(4713, SuSyUtility.susyId('decalcified_salar_brine'))
+                .liquid()
+                .color(0xd4c07b)
+                .build()
+
+        ConcentratedSalarBrine = new Material.Builder(4714, SuSyUtility.susyId('concentrated_salar_brine'))
+                .liquid()
+                .color(0xe3c046)
+                .build()           
+                
+        Pitch = new Material.Builder(4715, SuSyUtility.susyId('pitch'))
+                .dust()
+                .color(0x170a04)
+                .build()
+
+        TabularAluminaRefractory = new Material.Builder(4716, SuSyUtility.susyId('tabular_alumina_refractory'))
+                .dust().ingot()
+                .iconSet(DULL)
+                .flags(NO_UNIFICATION)
+                .color(0xe7ddcd)
                 .build()
     }
 }

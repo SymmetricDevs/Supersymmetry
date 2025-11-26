@@ -58,27 +58,8 @@ for (quartz in quartz_dusts) {
                         .EUt(VA[MV])
                         .duration(160)
                         .buildAndRegister()
-
-                ARC_FURNACE.recipeBuilder()
-                        .circuitMeta(2)
-                        .fluidInputs(fluid('air') * 100)
-                        .inputs(ore(quartz) * 3)
-                        .inputs(ore(carbon.name) * carbon.equivalent(3))
-                        .outputs(metaitem('dustSiliconCarbide') * 2)
-                        .fluidOutputs(fluid('carbon_monoxide') * 2000)
-                        .EUt(VA[MV])
-                        .duration(200)
-                        .buildAndRegister()
         }
 }
-
-ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustSiliconCarbide') * 2)
-        .outputs(metaitem('dustSilicon'))
-        .outputs(metaitem('dustGraphite'))
-        .EUt(60)
-        .duration(270)
-        .buildAndRegister()
 
 ROASTER.recipeBuilder()
         .inputs(ore('dustSilicon'))

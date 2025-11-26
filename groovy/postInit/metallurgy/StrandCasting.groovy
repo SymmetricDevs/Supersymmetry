@@ -232,31 +232,3 @@ MIXER.recipeBuilder()
     .duration(10)
     .buildAndRegister()
 
-ERF.recipeBuilder()
-    .inputs(ore('dustKyanite'))
-    .outputs(metaitem('dustMullitizedKyanite'))
-    .EUt(VA[HV])
-    .blastFurnaceTemp(1200)
-    .duration(100)
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .inputs(ore('dustMullitizedKyanite') * 2)
-    .inputs(ore('dustBauxite'))
-    .inputs(ore('dustClay'))
-    .outputs(metaitem('dustHighAluminaRefractory') * 4)
-    .EUt(VA[HV])
-    .duration(200)
-    .buildAndRegister()
-
-SINTERING_OVEN.recipeBuilder()
-    .inputs(metaitem('dustHighAluminaRefractory'))
-    .outputs(metaitem('ingotHighAluminaRefractory'))
-    .EUt(VA[HV])
-    .duration(50)
-    .buildAndRegister()
-
-crafting.addShaped("susy:advanced_refractory", item('susy:susy_multiblock_casing', 9), [
-    [ore('ingotHighAluminaRefractory'), ore('ingotHighAluminaRefractory')],
-    [ore('ingotHighAluminaRefractory'), ore('ingotHighAluminaRefractory')]
-])

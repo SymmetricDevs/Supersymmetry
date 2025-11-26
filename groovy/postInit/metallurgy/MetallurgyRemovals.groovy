@@ -90,3 +90,7 @@ mods.gregtech.advanced_arc_furnace.removeByInput(7680, [metaitem('dustPalladium'
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPlatinum'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
 // Hot Platinum Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPlatinum'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('nitrogen') * 1000])
+// Hot Palladium Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Hot Palladium Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('nitrogen') * 1000])

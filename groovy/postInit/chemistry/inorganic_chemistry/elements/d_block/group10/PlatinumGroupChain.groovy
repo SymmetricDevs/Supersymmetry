@@ -75,22 +75,31 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
+def metals = [
+    'Platinum',
+    'Palladium'
+]
+
+for (metal in metals) {
     ERF.recipeBuilder()
         .circuitMeta(1)
-        .inputs(metaitem('dustPlatinum'))
-        .outputs(metaitem('ingotPlatinum'))
+        .inputs(metaitem('dust' + metal))
+        .outputs(metaitem('ingot' + metal))
+        .blastFurnaceTemp(2000)
         .duration(240)
         .EUt(VA[HV])
         .buildAndRegister()
 
     ERF.recipeBuilder()
         .circuitMeta(2)
-        .inputs(metaitem('dustPlatinum'))
+        .inputs(metaitem('dust' + metal))
         .fluidInputs(fluid('nitrogen') * 1000)
-        .outputs(metaitem('ingotPlatinum'))
+        .outputs(metaitem('ingot' + metal))
+        .blastFurnaceTemp(2000)
         .duration(160)
         .EUt(VA[HV])
         .buildAndRegister()
+}
 
     BR.recipeBuilder()
         .notConsumable(ore('springCupronickel'))

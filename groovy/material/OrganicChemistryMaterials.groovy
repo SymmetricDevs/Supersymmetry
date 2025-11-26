@@ -3285,5 +3285,33 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 10, Hydrogen * 6, Oxygen, Nitrogen * 2)
                 .colorAverage()
                 .build()
+
+        TrimethylGalliumSolution = new Material.Builder(13174, SuSyUtility.susyId('trimethyl_gallium_solution'))
+                .liquid()
+                .components(Gallium * 1, Carbon * 3, Hydrogen * 9, Toluene * 1)
+                .color(0x424242)
+                .build()
+        TrimethylGalliumSolution.setFormula('Ga(CH3)33(C6H5CH3)', true)
+
+        TrimethylIndiumSolution = new Material.Builder(13175, SuSyUtility.susyId('trimethyl_indium_solution'))
+                .liquid()
+                .components(Indium * 1, Carbon * 3, Hydrogen * 9, Toluene * 1)
+                .color(0x3b2f61)
+                .build()
+        TrimethylIndiumSolution.setFormula('In(CH3)3(C6H5CH3)', true)
+
+        TrimethylGallium = new Material.Builder(13176, SuSyUtility.susyId('trimethyl_gallium'))
+                .liquid()
+                .components(Gallium * 1, Carbon * 3, Hydrogen * 9)
+                .color(0xb3bab7)
+                .build()
+        TrimethylGallium.setFormula('Ga(CH3)3', true)
+
+        TrimethylIndium = new Material.Builder(13177, SuSyUtility.susyId('trimethyl_indium'))
+                .liquid()
+                .components(Indium * 1, Carbon * 3, Hydrogen * 9)
+                .color(0x7c60d6)
+                .build()
+        TrimethylIndium.setFormula('Ga(CH3)3', true)
     }
 }

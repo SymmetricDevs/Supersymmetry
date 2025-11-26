@@ -35,11 +35,11 @@ class Globals {
         "biomesoplenty"
     ]
 
-    record InertGas(String name, int amount_required, int duration) {}
+    record InertGas(String name, int amount_required, int duration, int tier) {}
     public static inertGases = [
-        new InertGas('nitrogen', 8000, 4),
-        new InertGas('helium', 4000, 2),
-        new InertGas('argon', 1000, 1)
+        new InertGas('nitrogen', 8000, 4, 1),
+        new InertGas('argon', 4000, 2, 2),
+        new InertGas('helium', 1000, 1, 3)
     ]
 
     public static int determineTemperatureGas(Material material) {

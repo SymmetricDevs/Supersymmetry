@@ -84,3 +84,13 @@ ROASTER.recipeBuilder()
     .duration(80)
     .EUt(VA[EV])
     .buildAndRegister()
+
+//Cerium IV oxide
+
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('oxygen') * 2000)
+    .inputs(metaitem('dustCerium'))
+    .outputs(metaitem('dustCeriumIvOxide') * 3)
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister();

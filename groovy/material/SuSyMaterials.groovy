@@ -121,6 +121,7 @@ class SuSyMaterials {
     public static Material Carnotite
     public static Material AlluvialPGMSand
     public static Material Bertrandite
+    public static Material Epsomite
 
     // Deposits for scanning
 
@@ -737,7 +738,7 @@ class SuSyMaterials {
     public static Material BasicBerylliumCarbonateSlurry
     public static Material BasicBerylliumCarbonateSolution
     public static Material HydraulicFluid
-    public static Material HighAluminaRefractory
+    public static Material SyntheticMulliteRefractory
     public static Material ImpurePPOSolution
     public static Material PolyphosphoricAcid
     public static Material SupportedPolyphosphoricAcid
@@ -790,6 +791,24 @@ class SuSyMaterials {
     public static Material CrudeCyanamideSolution
     public static Material CyanamideSolution
     public static Material GreenEpoxyPCBCoating
+    public static Material ConcentratedSeaWater
+    public static Material SeaBittern
+    public static Material DesulfatizedSeaBittern
+    public static Material ChlorinatedSeaBittern
+    public static Material DebrominatedSeaBittern
+    public static Material DesalinatedSeaWater
+    public static Material DemagnesiatedBrine
+    public static Material DecalcifiedBrine
+    public static Material BrineMotherLiquor
+    public static Material PotassiumRichMotherLiquor
+    public static Material BromineRichMotherLiquor
+    public static Material ChlorinatedMotherLiquor
+    public static Material SalarBrine
+    public static Material DemagnesiatedSalarBrine
+    public static Material DecalcifiedSalarBrine
+    public static Material ConcentratedSalarBrine
+    public static Material Pitch
+    public static Material TabularAluminaRefractory
 
     // Petrochem Materials
 
@@ -996,7 +1015,7 @@ class SuSyMaterials {
     public static Material DilutedSaltpeterSolution
     public static Material HydrogenBromide
     public static Material DilutedCalciumChlorideSolution
-    public static Material DilutedRockSaltSolution
+    public static Material DilutedPotassiumChlorideSolution
     public static Material AmmoniaSolution
     public static Material SaltpeterSolution
     public static Material SaltySaltpeterSolution
@@ -1266,6 +1285,7 @@ class SuSyMaterials {
     public static Material SamariumAlloyMagnetic
     public static Material ChloroaceticAnhydride
     public static Material CopperIINitrate
+    public static Material CopperIINitrateSolution
     public static Material NickelIINitrate
     public static Material ZincNitrate
     public static Material MagnesiumNitrate
@@ -1620,7 +1640,7 @@ class SuSyMaterials {
     public static Material AcidicTwoNitroOneNaphthol
     public static Material TwoNitroOneNaphthol
     public static Material TwoAminoOneNaphthol
-    public static Material AcidicTwoAminoOneNaphthol
+    public static Material TwoNaphtholOneDiazoniumChloride
     public static Material Diazonaphthoquinone
 
     // HP Materials
@@ -1853,7 +1873,8 @@ class SuSyMaterials {
     public static Material StabilizedSodiumSilicateSolution
     public static Material MagnesiumNitrateSolution
     public static Material PlatinumOnCarbon
-
+    public static Material TabularAlumina
+    public static Material ReactiveAlumina
 
     // Organic Chemistry Materials
 
@@ -2572,6 +2593,13 @@ class SuSyMaterials {
     public static Material TritiatedHeavyWater
     public static Material TritiatedSteam
     public static Material ChilledWater
+    public static Material HalophosphatePhosphor
+    public static Material HalophosphatePhosphorSolution
+    public static Material TrimethylGalliumSolution
+    public static Material TrimethylIndiumSolution
+    public static Material TrimethylGallium
+    public static Material TrimethylIndium
+    public static Material YttriumAluminiumGarnetCerium
 
 
     public static void changeFormulas() {

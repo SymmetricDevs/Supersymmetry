@@ -28,7 +28,6 @@ def ingotMap = [
     'Molybdenum':2890,
     'Niobium':2750,
     'Osmium':4500,
-    'Palladium':1828,
     'Rhodium':2237,
     'Ruthenium':2607,
     'Samarium':5400,
@@ -134,24 +133,6 @@ for (fluid in QuenchingFluid.quenching_fluids) {
         .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
         .duration((int) fluid.getDuration() * 1)
         .EUt(VA[MV])
-        .buildAndRegister();
-
-    CHEMICAL_BATH.recipeBuilder()
-        .inputs(ore('ingotHotPlatinum'))
-        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
-        .outputs(metaitem('ingotPlatinum'))
-        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
-        .duration((int) fluid.getDuration() * 4)
-        .EUt(120)
-        .buildAndRegister();
-
-    CHEMICAL_BATH.recipeBuilder()
-        .inputs(ore('ingotHotPalladium'))
-        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
-        .outputs(metaitem('ingotPalladium'))
-        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
-        .duration((int) fluid.getDuration() * 4)
-        .EUt(120)
         .buildAndRegister();
 }
 

@@ -83,11 +83,12 @@ CRYSTALLIZER.recipeBuilder()
 // Alumina from Al(OH)3
 
 ERF.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustAluminiumHydroxide') * 14)
     .fluidOutputs(fluid('dense_steam') * 3000)
     .outputs(metaitem('dustAlumina') * 5)
     .duration(100)
-    .blastFurnaceTemp(1400)
+    .blastFurnaceTemp(1500)
     .EUt(40)
     .buildAndRegister()
 

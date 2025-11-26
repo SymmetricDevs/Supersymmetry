@@ -23,7 +23,8 @@ ore('gtLight').add(metaitem('incandescent_light'))
 ore('gtLight').add(metaitem('halogen_light'))
 ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
-ore('gtLight').add(metaitem('carbon_arc_lamp'))
+ore('gtLight').add(metaitem('lamp.mercury.hp'))
+
 
 //Coke block
 

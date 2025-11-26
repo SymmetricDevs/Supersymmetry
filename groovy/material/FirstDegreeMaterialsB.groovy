@@ -645,14 +645,14 @@ class FirstDegreeMaterialsB {
 
         AluminiumAlloy6061 = new Material.Builder(8759, SuSyUtility.susyId('aluminium_alloy_6061'))
                 .ingot().liquid(new FluidBuilder().temperature(923))
-                .flags(DISABLE_DECOMPOSITION)
+                .flags(DISABLE_DECOMPOSITION, CONTINUOUSLY_CAST)
                 .components(Aluminium * 634, Magnesium * 8, Silicon * 4, Copper * 1, Chrome * 1)
                 .colorAverage()
                 .build()
 
         AluminiumAlloy7075 = new Material.Builder(8760, SuSyUtility.susyId('aluminium_alloy_7075'))
                 .ingot().liquid(new FluidBuilder().temperature(913))
-                .flags(DISABLE_DECOMPOSITION)
+                .flags(DISABLE_DECOMPOSITION, CONTINUOUSLY_CAST)
                 .components(Aluminium * 678, Zinc * 17, Magnesium * 20, Copper * 4, Chrome * 1)
                 .colorAverage()
                 .build()

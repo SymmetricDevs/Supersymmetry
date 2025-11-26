@@ -1,3 +1,24 @@
+ # UPDATE 0.1.15.11
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.82 → v0.1.84
+- SussyPatches 1.9.0 → 1.9.2
+### Mod Removals
+- FluxLoading
+## Changes
+### New Features
+- Electric furnaces have been replaced by the better singleblock resistance furnace! Craft your current electric furnaces directly into them to get started. (#1725 by @Fiery36)
+- Lights of all types are now craftable! (#1729 by @PatRat2)
+- DNQ photoresist is now availab (#1740 by @WideMann)
+- Copper and the aluminium alloys are now continually castable. (#1736 by @Rick8484)
+### Changed Features
+- Brine processing has been mildly SUSY-fied **with some breaking changes**. (#1745 by @planetme)
+- The Periodic Table chapter has been brought up-to-date! (#1739 by @Engineerboy2998)
+- Added recipes for glass dust from full flint dusts (#1741 by @Leninus)
+- You will no longer be accosted by BOP hives. (#1742 by @koukopuff (first contribution!!!))
+### Fixes
+- Several multiblock infos, such as the evaporation pool's and the turning zone's, are now visible again. (#572 by @MCTian-mi)
+And thanks to @Rick8484, @Fiery36, @planetme, @Crindigo, and @MCTian-mi for helping to keep the pack stable.
 # UPDATE 0.1.15.10.1
 ## Mod Changes
 ### Mod Updates

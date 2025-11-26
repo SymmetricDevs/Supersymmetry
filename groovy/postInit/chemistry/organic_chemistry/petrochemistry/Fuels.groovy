@@ -345,7 +345,7 @@ BR.recipeBuilder()
         .buildAndRegister();
 
     BR.recipeBuilder()
-        .inputs(ore("dustPhthalicAnhydride") * 13)
+        .inputs(ore("dustPhthalicAnhydride") * 15)
         .fluidInputs(fluid('dihexadecylamine') * 2000)
         .notConsumable(fluid('sulfuric_acid') * 50)
         .outputs(metaitem('dustDihexadecylaminePhthalateAmide'))

@@ -868,6 +868,45 @@ def generateGreenhouseCropRecipes(String gasType, input, output, int multiplier)
             .buildAndRegister()
 }
 
+def seedOilSourcesItem = [
+    'minecraft:wheat_seeds': 10,
+    'minecraft:beetroot_seeds': 10,
+    'minecraft:melon_seeds': 3,
+    'minecraft:pumpkin_seeds': 6
+]
+
+def seedOilSourcesMetaitem = [
+    'gregtechfoodoption:seed.coffee': 8,
+    'gregtechfoodoption:seed.tomato': 8,
+    'gregtechfoodoption:seed.onion': 8,
+    'gregtechfoodoption:seed.grape': 8,
+    'gregtechfoodoption:seed.soy': 8,
+    'gregtechfoodoption:seed.oregano': 8,
+    'gregtechfoodoption:seed.horseradish': 8,
+    'gregtechfoodoption:seed.basil': 8,
+    'gregtechfoodoption:corn_kernel_bare_gem_chipped': 8
+]
+
+seedOilSourcesItem.each {seed, amount ->
+    COMPRESSOR.recipeBuilder()
+        .inputs(item(seed) * 8)
+        .outputs(metaitem('plant_ball'))
+        .fluidOutputs(fluid('seed_oil') * (amount * 8))
+        .EUt(2)
+        .duration(64)
+        .buildAndRegister()
+}
+
+seedOilSourcesMetaitem.each {seed, amount ->
+    COMPRESSOR.recipeBuilder()
+        .inputs(metaitem(seed) * 8)
+        .outputs(metaitem('plant_ball'))
+        .fluidOutputs(fluid('seed_oil') * (amount * 8))
+        .EUt(2)
+        .duration(64)
+        .buildAndRegister()
+}
+
 generateGreenhouseCropRecipes('greenhouse_gases', item('minecraft:potato'), item('minecraft:potato'), 30)
 generateGreenhouseCropRecipes('greenhouse_gases', item('minecraft:carrot'), item('minecraft:carrot'), 30)
 generateGreenhouseCropRecipes('greenhouse_gases', item('minecraft:beetroot_seeds'), item('minecraft:beetroot'), 30)
