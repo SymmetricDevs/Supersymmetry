@@ -870,11 +870,11 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .inputs(ore('plateBrass') * 2)
+    .inputs(ore('plateSteel'))
     .inputs(ore('dustGunpowder'))
-    .inputs(ore('roundLead') * 3)
+    .inputs(ore('roundLead'))
     .circuitMeta(2)
-    .outputs(item('techguns:itemshared', 2) * 5)
+    .outputs(item('techguns:itemshared', 2) * 24)
     .duration(10)
     .EUt(VA[LV])
     .buildAndRegister();
