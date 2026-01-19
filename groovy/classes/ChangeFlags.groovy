@@ -22,6 +22,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*
 import static material.SuSyMaterials.*
 
 import supercritical.api.unification.material.properties.FissionFuelProperty
+import supercritical.api.unification.material.properties.ModeratorProperty
 import supercritical.api.unification.material.properties.SCPropertyKey
 
 //eventManager.listen(EventPriority.LOWEST)
@@ -864,5 +865,17 @@ class ChangeFlags {
                 .releasedNeutrons(0)
                 .releasedHeatEnergy(0.005)
                 .build())
+
+        Graphite.setProperty(SCPropertyKey.MODERATOR, ModeratorProperty.builder()
+                .maxTemperature(3650)
+                .absorptionFactor(0.0625)
+                .moderationFactor(3).build())
+        Graphite.addFlags("force_generate_block")
+
+        Beryllium.setProperty(SCPropertyKey.MODERATOR, ModeratorProperty.builder()
+                .maxTemperature(1500)
+                .absorptionFactor(0.015625)
+                .moderationFactor(5).build());
+        Beryllium.addFlags("force_generate_block")
     }
 }

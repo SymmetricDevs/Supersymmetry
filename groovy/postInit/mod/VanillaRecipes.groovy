@@ -1,6 +1,7 @@
 import static prePostInit.Recipemaps.*
 import classes.*
 import static gregtech.api.GTValues.*
+import postInit.utils.RecyclingHelper
 
 def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
@@ -723,17 +724,17 @@ crafting.remove("gregtech:diamond_chestplate");
 crafting.remove("gregtech:diamond_leggings");
 crafting.remove("gregtech:diamond_boots");
 
-crafting.replaceShaped('gregtech:iron_helmet', item('minecraft:iron_helmet'), [
+RecyclingHelper.replaceShaped('gregtech:iron_helmet', item('minecraft:iron_helmet'), [
         [ore('screwIron'), ore('plateIron'), ore('screwIron')],
         [ore('plateIron'), ore('leather'), ore('plateIron')],
         [null, null, null]])
 
-crafting.replaceShaped('gregtech:iron_chestplate', item('minecraft:iron_chestplate'), [
+RecyclingHelper.replaceShaped('gregtech:iron_chestplate', item('minecraft:iron_chestplate'), [
         [ore('screwIron'), null, ore('screwIron')],
         [ore('plateIron'), ore('leather'), ore('plateIron')],
         [ore('plateIron'), ore('plateIron'), ore('plateIron')]])
 
-crafting.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings'), [
+RecyclingHelper.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings'), [
         [ore('screwIron'), ore('plateIron'), ore('screwIron')],
         [ore('plateIron'), ore('leather'), ore('plateIron')],
         [ore('plateIron'), null, ore('plateIron')]])

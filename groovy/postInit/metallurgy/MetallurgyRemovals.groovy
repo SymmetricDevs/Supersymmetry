@@ -86,11 +86,3 @@ mods.gregtech.advanced_arc_furnace.removeByInput(480, [metaitem('dustBarium') * 
 mods.gregtech.advanced_arc_furnace.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 12])], [fluid('refractory_gunning_mixture') * 200, fluid('argon') * 200])
 // Molten Rhodium Plated Palladium * 576
 mods.gregtech.advanced_arc_furnace.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('refractory_gunning_mixture') * 350])
-// Hot Platinum Ingot * 1
-mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPlatinum'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
-// Hot Platinum Ingot * 1
-mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPlatinum'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('nitrogen') * 1000])
-// Hot Palladium Ingot * 1
-mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
-// Hot Palladium Ingot * 1
-mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('nitrogen') * 1000])

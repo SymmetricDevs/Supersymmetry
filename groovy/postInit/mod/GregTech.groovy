@@ -1450,6 +1450,7 @@ crafting.replaceShaped("gregtech:casing_steel_firebox", item('gregtech:boiler_fi
 
 // Tapes
 ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('foilPlastic') * 4)
     .fluidInputs(fluid('glue') * 250)
     .outputs(metaitem('basic_tape') * 8)

@@ -3062,9 +3062,9 @@ metaitem.seed_crystal.silicon.name=Silicon Seed Crystal
 metaitem.seed_crystal.gallium_arsenide.name=Gallium Arsenide Seed Crystal
 
 metaitem.carbon_arc_lamp.name=Carbon Arc Lamp
-metaitem.incandescent_light.name=Incandescent Lightbulb
-metaitem.halogen_light.name=Halogen Lightbulb
-metaitem.fluorescent_light.name=Fluorescent Lightbulb
+metaitem.incandescent_light.name=Incandescent Light Bulb
+metaitem.halogen_light.name=Halogen Light Bulb
+metaitem.fluorescent_light.name=Fluorescent Light Bulb
 metaitem.led_light.name=L.E.D. Lights
 
 metaitem.mineral_wool.name=Mineral Wool Sheet
@@ -3271,9 +3271,9 @@ metaitem.parachute.drogue.name=Drogue Parachute
 metaitem.parachute.main.name=Subsonic Main Parachute
 metaitem.parachute.supersonic_main.name=Supersonic Disk-Gap-Band Parachute
 
-metaitem.coated_copper_coil.name=Ceramic-Coated Copper Tubing
-metaitem.cured_coated_coil.name=Cured Ceramic-Coated Copper Tubing
-metaitem.induction_coil.name=Induction Coil
+metaitem.coated_copper_coil.name=Ceramic-Coated Copper Coil
+metaitem.cured_coated_coil.name=Cured Ceramic-Coated Copper Coil
+metaitem.copper_coil.name=Copper Coil
 
 metaitem.carbon_filament.name=Carbon Filament
 metaitem.gallium_nitride_buffer_wafer.name=Gallium Nitride Buffer Wafer

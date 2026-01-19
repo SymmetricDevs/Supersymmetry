@@ -42,7 +42,7 @@ def nonMetals = [
         [input: item('minecraft:stained_hardened_clay', 15), output: item('minecraft:black_glazed_terracotta')],
         [input: item('biomesoplenty:mudball'), output: item('biomesoplenty:mud_brick')],
         [input: item('biomesoplenty:mud'), output: item('minecraft:dirt')],
-        [input: metaitem('gregtechfoodoption:brick.adobe_fired'), output: metaitem('gregtechfoodoption:brick.adobe')],
+        [input: metaitem('gregtechfoodoption:brick.adobe'), output: metaitem('gregtechfoodoption:brick.adobe_fired')],
         [input: metaitem('compressed.clay'), output: item('minecraft:brick')],
         [input: metaitem('compressed.coke_clay'), output: metaitem('brick.coke')],
         [input: metaitem('compressed.fireclay'), output: metaitem('brick.fireclay')],
@@ -138,12 +138,12 @@ ore('carbonSource').add(
 
 RESISTANCE_FURNACE.recipeBuilder()
         .notConsumable(metaitem('graphite_electrode'))
-        .notConsumable(ore('dustSilicaSand') * 2)
-        .notConsumable(ore('carbonSource') * 6)
-        .inputs(ore('dustSilicaSand'))
-        .inputs(ore('carbonSource') * 3)
-        .outputs(metaitem('dustSiliconCarbide'))
-        .fluidOutputs(fluid('carbon_monoxide') * 1000)
+        .notConsumable(ore('dustSilicaSand') * 3)
+        .notConsumable(ore('carbonSource') * 3)
+        .inputs(ore('dustSilicaSand') * 6)
+        .inputs(ore('carbonSource') * 6)
+        .outputs(metaitem('dustSiliconCarbide') * 4)
+        .fluidOutputs(fluid('carbon_monoxide') * 4000)
         .duration(160)
         .EUt(VA[LV])
         .buildAndRegister()

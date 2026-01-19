@@ -351,6 +351,17 @@ RecyclingHelper.handleRecycling(metaitem('supercritical:control_rod_moderated'),
     ore('dustGraphite')
 ])
 
+// Moderator Port
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.ev'))
+    .inputs(ore('frameGtReactorSteel'))
+    .inputs(ore('screwReactorSteel') * 16)
+    .circuitMeta(3)
+    .outputs(metaitem('supercritical:moderator_port'))
+    .duration(160)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
 // Anode Basket
 ASSEMBLER.recipeBuilder()
     .inputs(ore('ringTitanium') * 2)

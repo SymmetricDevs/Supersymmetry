@@ -22,26 +22,6 @@
           "Count:3": 1,
           "Damage:2": 15061,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 8,
-          "Damage:2": 15,
-          "id:8": "gregtech:meta_block_frame_17"
-        },
-        "2:10": {
-          "Count:3": 16,
-          "Damage:2": 1,
-          "id:8": "gregtech:boiler_casing"
-        },
-        "3:10": {
-          "Count:3": 9,
-          "Damage:2": 1,
-          "id:8": "gregtech:boiler_firebox_casing"
-        },
-        "4:10": {
-          "Count:3": 17,
-          "Damage:2": 2,
-          "id:8": "gregtech:metal_casing"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -1,0 +1,159 @@
+name: Server Test
+# Thank you Claude
+
+on:
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  test-server:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+      
+      - name: Get latest pre-release
+        id: get_release
+        run: |
+          RELEASE_DATA=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/releases/tags/latest")
+
+          
+          DOWNLOAD_URL=$(echo "$RELEASE_DATA" | jq -r '.assets[2].browser_download_url')
+          echo "download_url=$DOWNLOAD_URL" >> $GITHUB_OUTPUT
+          echo "Downloading from: $DOWNLOAD_URL"
+      
+      - name: Download and extract pre-release
+        run: |
+          wget -O server.zip "${{ steps.get_release.outputs.download_url }}"
+          mkdir -p server
+          unzip server.zip -d server/
+      
+      - name: Download additional mods from Google Drive
+        run: |
+          # Install gdown for Google Drive downloads
+          pip install gdown
+          
+          # Download mods folder (use folder ID from Google Drive URL)
+          # Format: https://drive.google.com/drive/folders/FOLDER_ID
+          gdown --folder "${{ secrets.GDRIVE_MODS_URL }}" -O additional_mods/ > /dev/null 2>&1
+          
+          echo "✓ Additional mods downloaded successfully"
+      
+      - name: Setup server files
+        run: |
+          cd server
+          
+          # Sign EULA
+          echo "eula=true" > eula.txt
+          
+          # Copy additional mods from downloaded folder
+          mkdir -p mods
+          cp -r ../additional_mods/* mods/
+          
+          # Default-world-generator port (server.properties is read with a hashmap so it's fine if it's duplicated)
+          echo "defaultworldgenerator-port=a55790f1-609f-11ee-b9f3-80e82ceaaf53" >> server.properties
+      
+      - name: Run server until ready
+        run: |
+          cd server
+          
+          echo "=== Pre-flight checks ==="
+          echo "Java version:"
+          java -version
+          echo "Server jar exists: $([ -f forge-1.12.2-14.23.5.2860.jar ] && echo 'yes' || echo 'no')"
+          echo "========================="
+          
+          # Start server in background
+          java -Xmx4G -Xms4G -jar forge-1.12.2-14.23.5.2860.jar nogui > server_output.log 2>&1 &
+          SERVER_PID=$!
+          
+          echo "Server started with PID: $SERVER_PID"
+          
+          # Give it a moment to actually start
+          sleep 2
+          
+          # Wait for the ready message
+          timeout 200 bash -c '
+            while true; do
+              # Check if server process is still running
+              if kill -n 0 $SERVER_PID 2>/dev/null; then
+                echo "ERROR: Server process died unexpectedly!"
+                echo "=== Server output log ==="
+                cat server_output.log 2>/dev/null || echo "No server output found"
+                echo "=== Latest log (if exists) ==="
+                cat logs/latest.log 2>/dev/null || echo "No latest.log found"
+                echo "=== Check for crash reports ==="
+                ls -la crash-reports/ 2>/dev/null || echo "No crash-reports directory"
+                exit 1
+              fi
+              
+              if [ -f logs/latest.log ] && grep -q "\[FTB Library\]: Reloaded server" logs/latest.log; then
+                echo "Server is ready!"
+                break
+              fi
+              
+              # Show last line of log to detect stalls
+              if [ -f logs/latest.log ]; then
+                tail -n 1 logs/latest.log
+              else
+                echo "Waiting for logs/latest.log to be created..."
+                echo "=== Current server output (last 5 lines) ==="
+                tail -n 5 server_output.log 2>/dev/null || echo "No output yet"
+                echo "============================"
+              fi
+              
+              sleep 5
+            done
+          ' || {
+            echo "Timeout waiting for server to be ready"
+            echo "=== Last 20 lines of server log ==="
+            tail -n 20 logs/latest.log 2>/dev/null || echo "No log file found"
+            echo "=== Full server output ==="
+            cat server_output.log 2>/dev/null || echo "No server output found"
+            kill $SERVER_PID 2>/dev/null || true
+            exit 1
+          }
+          
+          # Stop the server gracefully
+          kill $SERVER_PID
+          wait $SERVER_PID 2>/dev/null || true
+          
+          echo "Server stopped successfully"
+      - name: Check for Groovy errors
+        run: |
+          cd server
+          
+          if [ -f logs/groovy_server.log ]; then
+            if grep -q "An exception occurred while running scripts." logs/groovy_server.log; then
+              echo "ERROR: Groovy script errors detected!"
+              echo "=== Groovy Log Contents ==="
+              cat logs/groovy_server.log
+              exit 1
+            else
+              echo "No Groovy errors detected"
+            fi
+          else
+            echo "Warning: groovy_server.log not found"
+          fi
+      
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-logs
+          path: |
+            server/logs/
+          retention-days: 3
+      
+      - name: Report success
+        if: success()
+        run: echo "✅ Server test completed successfully!"
+

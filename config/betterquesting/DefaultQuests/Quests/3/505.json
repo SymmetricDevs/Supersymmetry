@@ -26,11 +26,6 @@
         "1:10": {
           "Count:3": 1,
           "id:8": "susy:evaporation_bed"
-        },
-        "2:10": {
-          "Count:3": 26,
-          "Damage:2": 4,
-          "id:8": "gregtech:stone_smooth"
         }
       },
       "taskID:8": "bq_standard:retrieval"

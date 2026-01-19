@@ -21,8 +21,12 @@
           "id:8": "gregtech:machine"
         },
         "1:10": {
-          "Count:3": 30,
+          "Count:3": 1,
           "id:8": "supercritical:nuclear_casing"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "supercritical:panelling"
         }
       },
       "taskID:8": "bq_standard:retrieval"

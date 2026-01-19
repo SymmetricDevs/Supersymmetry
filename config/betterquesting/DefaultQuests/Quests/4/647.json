@@ -22,15 +22,6 @@
           "Count:3": 1,
           "Damage:2": 1009,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 20,
-          "Damage:2": 5,
-          "id:8": "gregtech:metal_casing"
-        },
-        "2:10": {
-          "Count:3": 16,
-          "id:8": "gregtech:wire_coil"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -1094,6 +1094,13 @@ mods.pyrotech.anvil.recipeBuilder()
         .tierGranite()
         .register()
 
+FORGE_HAMMER.recipeBuilder()
+        .inputs(ore('stone'))
+        .outputs(item('pyrotech:material', 16) * 4)
+        .duration(10)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
 def materials = [
         "Stone",
         "Flint",
