@@ -99,6 +99,7 @@ DT.recipeBuilder()
     .buildAndRegister()
 
 // Propanol
+
 BR.recipeBuilder()
     .inputs(ore('dustDicobaltOctacarbonyl') * 18)
     .fluidInputs(fluid('hydrogen') * 2000)
@@ -127,6 +128,7 @@ FIXED_BR.recipeBuilder()
     .buildAndRegister()
 
 // n-Pentanol
+
 REACTION_FURNACE.recipeBuilder()
     .inputs(metaitem('dustDicobaltOctacarbonyl') * 18)
     .fluidInputs(fluid('hot_hp_hydrogen') * 2000)

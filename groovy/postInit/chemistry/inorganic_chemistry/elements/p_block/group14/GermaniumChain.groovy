@@ -7,9 +7,9 @@ import gregtech.api.recipes.ingredients.GTRecipeItemInput;
 
 CHEMICAL_BATH.recipeBuilder()
     .inputs(ore('logWood'))
-    .fluidInputs(fluid('distilled_water') * 100)
-    .fluidOutputs(fluid('tannic_acid_solution') * 100)
-    .duration(160)
+    .fluidInputs(fluid('distilled_water') * 1000)
+    .fluidOutputs(fluid('tannic_acid_solution') * 1000)
+    .duration(1600)
     .EUt(VA[MV])
     .buildAndRegister()
 

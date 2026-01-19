@@ -742,7 +742,7 @@ class UnknownCompositionMaterials {
 
         CrosslinkedPolystyrene = new Material.Builder(4141, SuSyUtility.susyId('crosslinked_polystyrene'))
                 .ingot().liquid(new FluidBuilder().temperature(513))
-                .flags(GENERATE_ROUND)
+                .flags(GENERATE_ROUND, GENERATE_PLATE)
                 .color(0xa7a9d6)
                 .build()
 
@@ -841,6 +841,7 @@ class UnknownCompositionMaterials {
         AmorphousSilicaAlumina = new Material.Builder(4160, SuSyUtility.susyId('amorphous_silica_alumina'))
                 .dust()
                 .color(0x7ea3ed)
+                .flags(GENERATE_CATALYST_BED)
                 .iconSet(DULL)
                 .build()
 
@@ -1545,7 +1546,7 @@ class UnknownCompositionMaterials {
 
         FunctionalizableCrosslinkedPolystyrene = new Material.Builder(4334, SuSyUtility.susyId('functionalizable_crosslinked_polystyrene'))
                 .ingot().liquid(new FluidBuilder().temperature(513))
-                .flags(GENERATE_ROUND)
+                .flags(GENERATE_ROUND, GENERATE_PLATE)
                 .color(0x8689cf)
                 .build()
 
@@ -2068,7 +2069,7 @@ class UnknownCompositionMaterials {
         NickelCobaltSulfate = new Material.Builder(4438, SuSyUtility.susyId("nickel_cobalt_sulfate"))
                 .dust()
                 .color(0xe60e0e)
-                .components(Nickel * 1, Cobalt * 1, Sulfur, Oxygen * 4)
+                .components(Nickel, Cobalt, Sulfur, Oxygen * 4)
                 .build()
 
         NickelCobaltSulfate.setFormula('(Ni,Co)(SO4)', true)

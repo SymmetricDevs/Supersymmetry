@@ -4,6 +4,8 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
 
+// Persulfates
+
 ELECTROLYZER.recipeBuilder()
     .notConsumable(metaitem('graphite_electrode'))
     .notConsumable(metaitem('stickPlatinum'))
@@ -39,6 +41,8 @@ CRYSTALLIZER.recipeBuilder()
     .EUt(VA[LV])
     .duration(200)
     .buildAndRegister()
+
+// Chlorates
 
 ELECTROLYZER.recipeBuilder()
     .notConsumable(metaitem('graphite_electrode'))
@@ -78,6 +82,8 @@ DISTILLERY.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
+// Water electrolysis
+
 ELECTROLYZER.recipeBuilder()
     .notConsumable(metaitem('stickNickel'))
     .notConsumable(metaitem('stickIron'))
@@ -100,7 +106,8 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .duration(400)
     .buildAndRegister()
 
-//CHLOROALKALI PROCESS
+// Chloralkali process
+
 ELECTROLYTIC_CELL.recipeBuilder()
     .notConsumable(metaitem('stickNickel'))
     .notConsumable(metaitem('graphite_electrode'))
@@ -158,4 +165,16 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustPotassiumHydroxide') * 3)
     .EUt(16)
     .duration(60)
+    .buildAndRegister()
+
+// Bisulfates
+
+ELECTROLYZER.recipeBuilder()
+    .notConsumable(ore('stickPlatinum'))
+    .notConsumable(metaitem('graphite_electrode'))
+    .fluidInputs(fluid('ammonium_bisulfate') * 1584)
+    .fluidOutputs(fluid('sulfuric_acid') * 1000)
+    .fluidOutputs(fluid('ammonia') * 1000)
+    .duration(300)
+    .EUt(VA[LV])
     .buildAndRegister()

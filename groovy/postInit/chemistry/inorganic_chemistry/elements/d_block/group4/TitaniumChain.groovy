@@ -96,15 +96,6 @@ SIFTER.recipeBuilder()
         .EUt(VA[ULV])
         .buildAndRegister()
 
-BR.recipeBuilder()
-        .fluidInputs(fluid('acidic_wastewater') * 1000)
-        .inputs(ore('dustSodaAsh'))
-        .fluidOutputs(fluid('wastewater') * 1000)
-        .fluidOutputs(fluid('carbon_dioxide') * 1000)
-        .duration(200)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
 // Chloride Ilmenite Process
 
 for (highPurityCombustible in Carbons.highPurityCombustibles()) {

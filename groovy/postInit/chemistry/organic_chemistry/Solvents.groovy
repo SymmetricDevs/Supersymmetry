@@ -3,6 +3,49 @@ import static gregtech.api.GTValues.*
 
 // TODO: move other organic solvents (THF etc.) here
 
+// Ketones
+
+    // Methyl Ethyl Ketone (MEK)
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedCopper'))
+        .fluidInputs(fluid('two_butanol') * 50)
+        .fluidOutputs(fluid('methyl_ethyl_ketone_solution') * 100)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    SIEVE_DT.recipeBuilder()
+        .notConsumable(fluid('toluene') * 100)
+        .fluidInputs(fluid('methyl_ethyl_ketone_solution') * 2000)
+        .fluidOutputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('methyl_ethyl_ketone') * 1000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+// Glycols
+
+    // Ethylene glycol
+    
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('ethylene_oxide') * 85)
+        .fluidInputs(fluid('water') * 100)
+        .fluidOutputs(fluid('ethylene_glycol_mix') * 100)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    VACUUM_DT.recipeBuilder()
+        .fluidInputs(fluid('ethylene_glycol_mix') * 1000)
+        .fluidOutputs(fluid('triethylene_glycol') * 15)
+        .fluidOutputs(fluid('diethylene_glycol') * 55)
+        .fluidOutputs(fluid('ethylene_glycol') * 750)
+        .fluidOutputs(fluid('water') * 180)
+        .duration(50)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
 // Carbonate esters
 
     // DMC (dimethyl carbonate)
@@ -129,3 +172,26 @@ import static gregtech.api.GTValues.*
         .duration(200)
         .EUt(VA[MV])
         .buildAndRegister()
+
+// Other solvents
+
+    // Dimethoxymethane (methylal)
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('sulfuric_acid') * 50)
+        .fluidInputs(fluid('methanol') * 100)
+        .fluidInputs(fluid('formaldehyde') * 50)
+        .fluidOutputs(fluid('dimethoxymethane_solution') * 150)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('dimethoxymethane_solution') * 3000)
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('dimethoxymethane') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+    

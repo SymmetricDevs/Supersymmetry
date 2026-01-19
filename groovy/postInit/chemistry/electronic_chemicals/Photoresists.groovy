@@ -1,0 +1,666 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
+// HMDS resist adhesion promoter
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('trimethylsilyl_chloride') * 100)
+    .fluidInputs(fluid('ammonia') * 150)
+    .fluidInputs(fluid('hexane') * 50)
+    .fluidOutputs(fluid('hexamethyldisilazane_solution') * 100)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('hexamethyldisilazane_solution') * 2000)
+    .outputs(metaitem('dustAmmoniumChloride') * 12)
+    .fluidOutputs(fluid('hexamethyldisilazane') * 1000)
+    .fluidOutputs(fluid('hexane') * 1000)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Novolac-based photoresists
+
+    // PGMEA solvent
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('propylene_oxide') * 50)
+        .fluidInputs(fluid('methanol') * 50)
+        .fluidOutputs(fluid('propylene_glycol_methyl_ether') * 50)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('propylene_glycol_methyl_ether') * 1000)
+        .fluidInputs(fluid('acetic_acid') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 100)
+        .fluidOutputs(fluid('propylene_glycol_methyl_ether_acetate_solution') * 2100)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    SIEVE_DT.recipeBuilder()
+        .notConsumable(fluid('toluene') * 100)
+        .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate_solution') * 2100)
+        .fluidOutputs(fluid('sulfuric_acid') * 100)
+        .fluidOutputs(fluid('propylene_glycol_methyl_ether_acetate') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // Ethyl lactate cosolvent
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('lactic_acid_solution') * 50)
+        .fluidInputs(fluid('ethanol') * 50)
+        .fluidInputs(fluid('sulfuric_acid') * 50)
+        .fluidOutputs(fluid('ethyl_lactate_solution') * 200)
+        .duration(12)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    SIEVE_DT.recipeBuilder()
+        .notConsumable(fluid('toluene') * 100)
+        .fluidInputs(fluid('ethyl_lactate_solution') * 4000)
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('ethyl_lactate') * 1000)
+        .fluidOutputs(fluid('water') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // Diazonaphthoquinone
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('naphthalene') * 50)
+        .fluidInputs(fluid('oleum') * 1100)
+        .fluidOutputs(fluid('naphthalenedisulfonic_acid_solution') * 1000)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    SIEVE_DT.recipeBuilder()
+        .notConsumable(fluid('water') * 10000)
+        .fluidInputs(fluid('naphthalenedisulfonic_acid_solution') * 10000)
+        .chancedOutput(metaitem('dustOneFiveNaphthalenedisulfonicAcid'), 5300, 0) // 1,6 may be separated from the water filtrate if necessary later.  
+        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore('dustOneFiveNaphthalenedisulfonicAcid'))
+        .fluidInputs(fluid('sodium_hydroxide') * 1296)
+        .fluidInputs(fluid('water') * 750)
+        .fluidOutputs(fluid('sodium_naphthol_sulfonate_solution') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    CRYSTALLIZER.recipeBuilder()
+        .inputs(ore('dustSalt') * 2)
+        .fluidInputs(fluid('sodium_naphthol_sulfonate_solution') * 1000)
+        .outputs(metaitem('dustSodiumOneNaphtholFiveSulfonate'))
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(metaitem('dustSodiumOneNaphtholFiveSulfonate'))
+        .inputs(ore('dustSodiumNitrite') * 4)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidOutputs(fluid('two_nitroso_one_naphthol_five_sulfonic_acid_solution') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSodiumSulfide') * 3)
+        .fluidInputs(fluid('two_nitroso_one_naphthol_five_sulfonic_acid_solution') * 2000)
+        .fluidInputs(fluid('diluted_sulfuric_acid') * 2000)
+        .fluidOutputs(fluid('diaminonapthoquinone_sulfonic_acid_solution') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSodiumNitrite') * 4)
+        .inputs(ore('dustTinyCopperSulfate'))
+        .fluidInputs(fluid('diaminonapthoquinone_sulfonic_acid_solution') * 1000)
+        .fluidOutputs(fluid('diazonaphthoquinone_sulfonic_acid_solution') * 2000)
+        .duration(80)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('diazonaphthoquinone_sulfonic_acid_solution') * 2000)
+        .outputs(metaitem('dustDiazonaphthoquinoneFiveSulfonicAcid'))
+        .fluidOutputs(fluid('acidic_wastewater') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore('dustDiazonaphthoquinoneFiveSulfonicAcid'))
+        .fluidInputs(fluid('chlorosulfuric_acid') * 1000)
+        .outputs(ore('dustDiazonaphthoquinoneFiveSulfonylChloride'))
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // Ballast (2,3,4-trihydroxybenzophenone)
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('tannic_acid_solution') * 1000)
+        .fluidInputs(fluid('water') * 8000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('gallic_acid_solution') * 2000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('gallic_acid_solution') * 2000)
+        .outputs(metaitem('dustGallicAcid') * 8)
+        .fluidOutputs(fluid('acidic_wastewater') * 2000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustGallicAcid'))
+        .outputs(metaitem('dustPyrogallol'))
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
+        .duration(100)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedAluminiumChloride'))
+        .inputs(ore('dustPyrogallol'))
+        .fluidInputs(fluid('benzoyl_chloride') * 1000)
+        .outputs(metaitem('dustTwoThreeFourTrihydroxybenzophenone'))
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // Final DNQ assembly
+
+    BR.recipeBuilder()
+        .inputs(ore('dustTwoThreeFourTrihydroxybenzophenone'))
+        .inputs(ore('dustDiazonaphthoquinoneFiveSulfonylChloride') * 3)
+        .fluidInputs(fluid('acetone') * 1000)
+        .fluidOutputs(fluid('diazonaphthoquinone_five_sulfonate_ester_solution') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('diazonaphthoquinone_five_sulfonate_ester_solution') * 1000)
+        .outputs(metaitem('dustDiazonaphthoquinoneFiveSulfonateEster'))
+        .fluidOutputs(fluid('acetone') * 1000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 3000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // Novolac positive resist
+
+    MIXER.recipeBuilder()
+        .inputs(ore('dustTinyDiazonaphthoquinoneFiveSulfonateEster'))
+        .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 8750)
+        .fluidInputs(fluid('ethyl_lactate') * 4900)
+        .fluidInputs(fluid('phenolic_novolac_resin') * 6250)
+        .fluidOutputs(fluid('novolac_resist') * 20000)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // EBR Solvent, 70/30 
+
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid('propylene_glycol_methyl_ether') * 770)
+        .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 230)
+        .fluidOutputs(fluid('novolac_ebr_solvent') * 1000)
+        .duration(50)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // Bis-azide crosslinker (2,6-bis(4-azidobenzylidene)-4-methylcyclohexanone)
+
+        // p-Aminobenzaldehyde, source: https://doi.org/10.1246/bcsj.52.2399
+
+        BR.recipeBuilder()
+            .inputs(ore('dustParaNitrotoluene') * 17)
+            .inputs(ore('dustSodiumHydroxide') * 6)
+            .inputs(ore('dustSodiumPolysulfide') * 3)
+            .fluidInputs(fluid('ethanol_water_azeotrope') * 1000)
+            .fluidOutputs(fluid('para_aminobenzaldehyde_solution') * 2000)
+            .duration(100)
+            .EUt(VA[LV])
+            .buildAndRegister();
+
+        CRYSTALLIZER.recipeBuilder()
+            .fluidInputs(fluid('para_aminobenzaldehyde_solution') * 2000)
+            .chancedOutput(metaitem('dustParaAminobenzaldehyde') * 16, 4000, 0)
+            .fluidOutputs(fluid('wastewater') * 2000)
+            .duration(100)
+            .EUt(VA[LV])
+            .buildAndRegister();
+
+        // Diazotization
+
+        BR.recipeBuilder()
+            .inputs(ore('dustSodiumNitrite') * 4)
+            .inputs(ore('dustParaAminobenzaldehyde') * 16)
+            .fluidInputs(fluid('hydrochloric_acid') * 2000)
+            .fluidOutputs(fluid('para_diazobenzaldehyde_chloride_solution') * 4000)
+            .duration(120)
+            .EUt(VA[MV])
+            .buildAndRegister();
+
+        BR.recipeBuilder()
+            .inputs(ore('dustSodiumAzide') * 4)
+            .fluidInputs(fluid('para_diazobenzaldehyde_chloride_solution') * 4000)
+            .fluidOutputs(fluid('para_azidobenzaldehyde_solution') * 4000)
+            .fluidOutputs(fluid('nitrogen') * 2000)
+            .duration(120)
+            .EUt(VA[MV])
+            .buildAndRegister();
+
+        CRYSTALLIZER.recipeBuilder()
+            .notConsumable(ore('springCupronickel'))
+            .fluidInputs(fluid('para_azidobenzaldehyde_solution') * 4000)
+            .outputs(metaitem('dustParaAzidobenzaldehyde') * 16)
+            .fluidOutputs(fluid('sodium_chloride_solution') * 2000)
+            .fluidOutputs(fluid('dense_steam') * 2000)
+            .duration(120)
+            .EUt(VA[MV])
+            .buildAndRegister();
+
+        // Claisen-Schmidt condensation to produce bis-azide
+
+        FIXED_BR.recipeBuilder()
+            .notConsumable(ore('catalystBedSupportedNickel'))
+            .fluidInputs(fluid('para_cresol') * 50)
+            .fluidInputs(fluid('hydrogen') * 200)
+            .fluidOutputs(fluid('four_methylcyclohexanone') * 50)
+            .duration(6)    
+            .EUt(VA[LV])
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .inputs(ore('dustParaAzidobenzaldehyde') * 32)
+            .inputs(ore('dustSodiumHydroxide') * 3)
+            .fluidInputs(fluid('four_methylcyclohexanone') * 1000)
+            .fluidInputs(fluid('ethanol') * 1000)
+            .fluidOutputs(fluid('bis_azide_crosslinker_solution') * 3000)
+            .duration(120)
+            .EUt(VA[MV])
+            .buildAndRegister();
+
+        CRYSTALLIZER.recipeBuilder()
+            .fluidInputs(fluid('bis_azide_crosslinker_solution') * 3000)
+            .outputs(metaitem('dustBisAzideCrosslinker'))
+            .fluidOutputs(fluid('wastewater') * 3000)
+            .duration(120)
+            .EUt(VA[MV])
+            .buildAndRegister();
+
+    // Novolac negative liftoff resist
+
+    MIXER.recipeBuilder()
+        .inputs(ore('dustTinyBisAzideCrosslinker'))
+        .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 8750)
+        .fluidInputs(fluid('ethyl_lactate') * 4900)
+        .fluidInputs(fluid('phenolic_novolac_resin') * 6250)
+        .fluidOutputs(fluid('novolac_liftoff_resist') * 20000)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+// Acrylate dry-film photoresists
+
+    // Acrylic Acid
+
+        // Reppe route
+
+        ROASTER.recipeBuilder()
+            .inputs(ore('dustCopper'))
+            .inputs(ore('dustNickel'))
+            .fluidInputs(fluid('bromine') * 4000)
+            .outputs(metaitem('dustAcrylicCatalyst'))
+            .duration(200)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        REACTION_FURNACE.recipeBuilder()
+            .notConsumable(ore('dustAcrylicCatalyst'))
+            .fluidInputs(fluid('acetylene') * 1000)
+            .fluidInputs(fluid('carbon_monoxide') * 1000)
+            .fluidInputs(fluid('water') * 1000)
+            .fluidOutputs(fluid('acrylic_acid') * 1000)
+            .duration(200)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        // Propene route
+            
+        REACTION_FURNACE.recipeBuilder()
+            .inputs(ore('dustMolybdenumTrioxide') * 4)
+            .inputs(ore('dustVanadiumPentoxide') * 7)
+            .inputs(ore('dustAlumina') * 5)
+            .outputs(metaitem('dustSupportedMolybdenumVanadium'))
+            .duration(200)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        FIXED_BR.recipeBuilder()
+            .notConsumable(ore('dustPhosphomolybdicAcid'))
+            .fluidInputs(fluid('propene') * 50)
+            .fluidInputs(fluid('oxygen') * 100)
+            .fluidOutputs(fluid('acrolein') * 50)
+            .fluidOutputs(fluid('dense_steam') * 50)
+            .duration(8)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        FIXED_BR.recipeBuilder()
+            .notConsumable(ore('catalystBedSupportedMolybdenumVanadium'))
+            .fluidInputs(fluid('acrolein') * 50)
+            .fluidInputs(fluid('oxygen') * 50)
+            .fluidOutputs(fluid('acrylic_acid') * 50)
+            .duration(8)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+    // TMPTA
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('butyraldehyde') * 1000)
+        .fluidInputs(fluid('formaldehyde') * 3000)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .outputs(metaitem('dustTrimethylolpropane'))
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .notConsumable(ore('springCupronickel'))
+        .notConsumable(fluid('sulfuric_acid') * 1000)
+        .inputs(ore('dustTrimethylolpropane'))
+        .fluidInputs(fluid('acrylic_acid') * 3000)
+        .fluidOutputs(fluid('trimethylolpropane_triacrylate') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 3000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // UV initiator, Michler's ketone
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('sulfuric_acid') * 50)
+        .fluidInputs(fluid('gtfo_aniline') * 50)
+        .fluidInputs(fluid('methanol') * 100)
+        .fluidOutputs(fluid('dimethylaniline_solution') * 200)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('dimethylaniline_solution') * 4000)
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('dimethylaniline') * 1000)
+        .fluidOutputs(fluid('water') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BCR.recipeBuilder()
+        .fluidInputs(fluid('dimethylaniline') * 2000)
+        .fluidInputs(fluid('phosgene') * 1000)
+        .outputs(metaitem('dustMichlersKetone'))
+        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    // Final acrylate resist assembly
+
+    MIXER.recipeBuilder()
+        .inputs(ore('dustSmallMichlersKetone'))
+        .inputs(ore('dustPolymethylMethacrylate') * 3)
+        .fluidInputs(fluid('dye_blue') * 100)
+        .fluidInputs(fluid('trimethylolpropane_triacrylate') * 2000)
+        .fluidInputs(fluid('methyl_ethyl_ketone') * 8000)
+        .fluidOutputs(fluid('acrylate_resist_mixture') * 10000)
+        .duration(500)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    DRYER.recipeBuilder()
+        .inputs(ore('foilMylar'))
+        .fluidInputs(fluid('acrylate_resist_mixture') * 5000)
+        .outputs(metaitem('dry_film_photoresist'))
+        .fluidOutputs(fluid('methyl_ethyl_ketone') * 4000)
+        .duration(300)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('dry_film_photoresist'))
+        .inputs(ore('foilPlastic'))
+        .outputs(metaitem('laminated_dry_film_photoresist') * 32)
+        .duration(200)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+// SU-8 photoresist
+
+    // Bisphenol A Novolac Epoxy
+
+    POLYMERIZATION_TANK.recipeBuilder()
+        .fluidInputs(fluid('epoxy') * 1008)
+        .fluidInputs(fluid('formaldehyde') * 3000)
+        .outputs(metaitem('dustBisphenolANovolacEpoxy') * 7)
+        .duration(100)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+    // Propylene Carbonate
+
+    BCR.recipeBuilder()
+        .fluidInputs(fluid('propylene_oxide') * 50)
+        .fluidInputs(fluid('carbon_dioxide') * 50)
+        .fluidOutputs(fluid('propylene_carbonate') * 50)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Triarylsulfonium Hexafluoroantimonate
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('antimony_trifluoride') * 576)
+        .fluidInputs(fluid('fluorine') * 2000)
+        .fluidOutputs(fluid('antimony_pentafluoride') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSodiumFluoride') * 2)
+        .fluidInputs(fluid('antimony_pentafluoride') * 1000)
+        .outputs(metaitem('dustSodiumHexafluoroantimonate') * 8)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSulfur') * 2)
+        .fluidInputs(fluid('chlorine') * 2000)
+        .fluidOutputs(fluid('disulfur_dichloride') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('benzene') * 2000)
+        .fluidInputs(fluid('disulfur_dichloride') * 1000)
+        .outputs(metaitem('dustSulfur'))
+        .outputs(metaitem('dustDiphenylSulfide'))
+        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .notConsumable(ore('dustAluminiumChloride'))
+        .fluidInputs(fluid('benzene') * 2000)
+        .fluidInputs(fluid('sulfur_dioxide') * 1000)
+        .outputs(metaitem('dustDiphenylSulfoxide'))
+        .duration(80)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustTinyPotassiumPersulfate'))
+        .fluidInputs(fluid('methane') * 1000)
+        .fluidInputs(fluid('oleum') * 11000)
+        .fluidOutputs(fluid('methanesulfonic_acid') * 1000)
+        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .duration(100)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+    MIXER.recipeBuilder()
+        .inputs(ore('dustPhosphorusPentoxide'))
+        .fluidInputs(fluid('methanesulfonic_acid') * 4000)
+        .fluidOutputs(fluid('sulfonium_preparation_mixture') * 4000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustDiphenylSulfoxide'))
+        .inputs(ore('dustDiphenylSulfide'))
+        .inputs(ore('dustSodiumHexafluoroantimonate') * 8)
+        .notConsumable(fluid('sulfonium_preparation_mixture') * 28000)
+        .outputs(metaitem('dustTriarylsulfoniumHexafluoroantimonate') * 52)
+        .duration(100)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+/*
+Bisphenol-A Novolac Epoxy
+    Average Molar Mass: "430" g/mol (not real)
+    Percent Weight: 50%
+Gamma-Butyrolactone
+    Molar Mass: 86.090 g/mol
+    Percent Weight: 45%
+Propylene Carbonate
+    Molar Mass: 102.089 g/mol
+    Percent Weight: 2.5%
+Triarylsulfonium Hexafluoroantimonate
+    Molar Mass: 607.29 g/mol
+    Percent Weight: 2.5%
+
+Assume 100g of material.
+    50g Novolac
+    45g Gamma Butyrolactone
+    2.5g Propylene Carbonate
+    2.5g Triarylsulfonium Hexafluoroantimonate
+
+    116 mmol Bisphenol-A Novolac Epoxy
+    523 mmol Gamma-Butyrolactone
+    24.5 mmol Propylene Carbonate
+    4.12 mmol Triarylsulfonium Hexafluoroantimonate
+
+Total: 667.62 mmol.
+    17.4% Bisphenol-A Novolac Epoxy
+    78.3% Gamma-Butyrolactone
+    3.67% Propylene Carbonate
+    0.617% Triarylsulfonium Hexafluoroantimonate
+*/
+
+LCR.recipeBuilder()
+    .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate'))
+    .inputs(ore('dustBisphenolANovolacEpoxy') * 7)
+    .fluidInputs(fluid('propylene_carbonate') * 200)
+    .fluidInputs(fluid('gamma_butyrolactone') * 4800)
+    .fluidOutputs(fluid('su_eight') * 5000)
+    .duration(670)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+// Hydrogen silsesquioxane (HSQ) photoresist
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('toluene') * 50)
+    .fluidInputs(fluid('oleum') * 550)
+    .fluidInputs(fluid('distilled_water') * 50)
+    .fluidOutputs(fluid('tosylic_acid_solution') * 50)
+    .fluidOutputs(fluid('sulfuric_acid') * 500)
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('trichlorosilane') * 50)
+    .fluidInputs(fluid('toluene') * 300)
+    .fluidOutputs(fluid('trichlorosilane_solution') * 350)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .notConsumable(fluid('tosylic_acid_solution') * 3500)
+    .fluidInputs(fluid('trichlorosilane_solution') * 3500)
+    .fluidOutputs(fluid('acidic_hydrogen_silsesquioxane_solution') * 3000)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('acidic_hydrogen_silsesquioxane_solution') * 3000)
+    .fluidInputs(fluid('distilled_water') * 100)
+    .fluidOutputs(fluid('hydrogen_silsesquioxane_solution') * 3050)
+    .fluidOutputs(fluid('acidic_wastewater') * 50)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+VACUUM_DT.recipeBuilder()
+    .fluidInputs(fluid('hydrogen_silsesquioxane_solution') * 3050)
+    .chancedOutput(metaitem('dustHydrogenSilsesquioxane'), 625, 0)
+    .fluidOutputs(fluid('water') * 50)
+    .fluidOutputs(fluid('toluene') * 3000)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+/*
+Let us produce a 5% wt solution of hydrogen silsesquioxane (H8Si8O12) in MIBK.
+
+Assume 100g.
+5g HSQ / (424.744 g/mol) = 0.0117718 mol HSQ
+95g MIBK / (100.16 g/mol) = 0.94848 mol MIBK
+
+Thus, HSQ should be 1.24% molar in MIBK
+*/
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustTinyHydrogenSilsesquioxane'))
+    .fluidInputs(fluid('methyl_isobutyl_ketone') * 11000)
+    .fluidOutputs(fluid('hydrogen_silsesquioxane_photoresist') * 11000)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()

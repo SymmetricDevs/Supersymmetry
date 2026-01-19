@@ -926,47 +926,6 @@ FORGE_HAMMER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-SIFTER.recipeBuilder()
-    .inputs(ore('dustNonMarineEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustBorax'), 7000, 250)
-    .chancedOutput(metaitem('dustTrona'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustSulfateEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustGypsum'), 5000, 250)
-    .chancedOutput(metaitem('dustKieserite'), 5000, 250)
-    .chancedOutput(metaitem('dustLangbeinite'), 5000, 250)
-    .chancedOutput(metaitem('dustPolyhalite'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustCarbonateEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustDolomite'), 5000, 250)
-    .chancedOutput(metaitem('dustCalcite'), 5000, 250)
-    .chancedOutput(metaitem('dustMagnesite'), 5000, 250)
-    .chancedOutput(metaitem('dustTrona'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustHalideEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustCarnallite'), 7000, 250)
-    .chancedOutput(metaitem('dustKainite'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 CENTRIFUGE.recipeBuilder()
     .inputs(ore('dustLimestone'))
     .outputs(metaitem('dustCalcite'))

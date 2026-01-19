@@ -13,9 +13,6 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), m
 // SMD Inductor * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
 
-// SMD Resistor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineElectrum') * 4], [fluid('plastic') * 288])
-
 // SMD Capacitor * 8
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
 // SMD Capacitor * 12
@@ -29,11 +26,6 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
 // SMD Transistor * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineTantalum') * 8], [fluid('plastic') * 144])
-// SMD Resistor * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
-
-// SMD Diode * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
 
 // Ferrite Mixture Dust * 6
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
@@ -71,7 +63,7 @@ CRYSTALLIZER.recipeBuilder()
         .buildAndRegister()
 
 CUTTER.recipeBuilder()
-        .inputs(metaitem('boule.alumina'))
+        .inputs(metaitem('boule.alumina')) 
         .outputs(metaitem('seed_crystal.alumina'))
         .outputs(metaitem('wafer.alumina') * 32)
         .duration(400)

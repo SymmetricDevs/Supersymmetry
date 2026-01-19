@@ -1095,7 +1095,6 @@ class SuSyMaterials {
     public static Material RaneyNickel
     public static Material ActivatedRaneyNickel
     public static Material DicobaltOctacarbonyl
-    public static Material ImpregnatedAluminaCatalyst
     public static Material BismuthCopper
     public static Material Bromobenzene
     public static Material Triethylaluminium
@@ -1976,7 +1975,7 @@ class SuSyMaterials {
     public static Material Rayon
     public static Material AlkaliCellulose
     public static Material SodiumCelluloseXanthate
-    public static Material PMMA
+    public static Material PolymethylMethacrylate
     public static Material Polypropylene
     public static Material PhthalicAnhydride
     public static Material ImpureCaprolactam
@@ -2250,7 +2249,6 @@ class SuSyMaterials {
     public static Material Trimethylolpropane
     public static Material AcrylicAcid
     public static Material TrimethylolpropaneTriacrylate
-    public static Material BenzenediazoniumChloride
     public static Material Crotonaldehyde
     public static Material GaseousMethacroleinMixture
     public static Material GaseousMethacroleinResidue
@@ -2531,7 +2529,6 @@ class SuSyMaterials {
     public static Material CrudeMethylVinylEther
     public static Material TetrasodiumEthylenediaminetetraacetateSolution
     public static Material OneNaphtholTwoDiazoniumChlorideSolution
-    public static Material BenzenediazoniumChlorideSolution
     public static Material BenzenediazoniumFluorideSolution
 
     // Thermodynamics Materials

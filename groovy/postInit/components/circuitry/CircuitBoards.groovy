@@ -1,5 +1,4 @@
 import globals.Globals
-import globals.Photoresists
 import globals.Etchants
 
 import static prePostInit.Recipemaps.*
@@ -51,7 +50,24 @@ FORMING_PRESS.recipeBuilder()
         .buildAndRegister();
 
 // Patterned
-Photoresists.generatePatterningRecipes("board.epoxy.copper_clad", "board.epoxy.patterned", "mask.pcb", EV, 2 /* double sided */, 1, 1, true)
+
+FORMING_PRESS.recipeBuilder()
+        .inputs(metaitem('board.epoxy.copper_clad'))
+        .inputs(ore('foilDryFilmPhotoresist') * 2)
+        .outputs(metaitem('board.epoxy.resist'))
+        .EUt(VA[MV])
+        .duration(100)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+UV_LIGHT_BOX.recipeBuilder()
+        .inputs(metaitem('board.epoxy.resist'))
+        .notConsumable(metaitem('mask.pcb'))
+        .outputs(metaitem('board.epoxy.patterned'))
+        .duration(photoresist.timeUsed * timeMultiplier)
+        .EUt(VA[voltageTier]);
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
 
 // Etched
 Etchants.generateEtchingRecipes("board.epoxy.patterned", "board.epoxy.etched", "copper", EV, 2 /* double sided */, true)
@@ -133,7 +149,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 // Masking
 MIXER.recipeBuilder()
         .inputs(ore('dyeGreen'))
-        .inputs(ore('dustBenzenediazoniumChloride'))
+        .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate'))
         .fluidInputs(fluid('epoxycyclohexane_carboxylate') * 8000)
         .fluidOutputs(fluid('green_epoxy_pcb_coating') * 8000)
         .EUt(VA[LV])

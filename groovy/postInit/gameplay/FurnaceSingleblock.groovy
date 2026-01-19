@@ -67,7 +67,8 @@ def nonMetals = [
         [input: metaitem('gregtechfoodoption:component.coconut'), output: metaitem('copra')],
         [input: metaitem('raw_electrode'), output: metaitem('carbon_electrode')],
         [input: metaitem('raw_carbon_crucible'), output: metaitem('carbon_crucible')],
-        [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('clay_graphite_crucible')]
+        [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('clay_graphite_crucible')],
+        [input: metaitem('component.resistor.unfired_carbon_composite'), output: metaitem('component.resistor.fired_carbon_composite')]
 ]
 
 nonMetals += mapRange('susy:susy_stone_cobble', 'susy:susy_stone_smooth', 0..11)

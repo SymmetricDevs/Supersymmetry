@@ -1,36 +1,118 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-//BORAX CALCINATION
-ROASTER.recipeBuilder()
-    .inputs(ore('dustBorax') * 4)
-    .outputs(metaitem('dustSodiumTetraborate') * 13)
-    .fluidOutputs(fluid('dense_steam') * 10000)
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister()
+// Boric acid
 
-//DISSOLUTION OF TETRABORATE
-BR.recipeBuilder()
-    .inputs(ore('dustSodiumTetraborate') * 13)
-    .fluidInputs(fluid('distilled_water') * 2000)
-    .outputs(metaitem('dustTinyClay'))
-    .fluidOutputs(fluid('borate_liquor') * 2000)
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister()
+    // Kernite
 
-//PRECIPITATION OF BORIC ACID
-BR.recipeBuilder()
-    .fluidInputs(fluid('borate_liquor') * 2000)
-    .fluidInputs(fluid('hydrochloric_acid') * 2000)
-    .outputs(metaitem('dustBoricAcid') * 31)
-    .fluidOutputs(fluid('salt_water') * 2000)
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister()
+    BR.recipeBuilder()
+        .inputs(ore('dustKernite'))
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidInputs(fluid('distilled_water') * 3000)
+        .fluidOutputs(fluid('boric_acid_solution') * 2000)
+        .fluidOutputs(fluid('kernite_liquor') * 2000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
 
-//CALCINATION OF BORIC ACID
+    CLARIFIER.recipeBuilder()
+        .fluidInputs(fluid('kernite_liquor') * 2000)
+        .chancedOutput(metaitem('dustLimestoneTailings'), 1000, 0)
+        .fluidOutputs(fluid('clarified_kernite_liquor') * 2000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CRYSTALLIZER.recipeBuilder()
+        .notConsumable(ore('springCupronickel'))
+        .fluidInputs(fluid('clarified_kernite_liquor') * 2000)
+        .outputs(metaitem('dustBoricAcid') * 28)
+        .fluidOutputs(fluid('sodium_sulfate_solution') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Colemanite
+
+    BR.recipeBuilder()
+        .inputs(ore('dustColemanite'))
+        .fluidInputs(fluid('sulfuric_acid') * 2000)
+        .fluidInputs(fluid('distilled_water') * 12000)
+        .fluidOutputs(fluid('colemanite_liquor') * 6000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    SIFTER.recipeBuilder()
+        .notConsumable(metaitem('item_filter'))
+        .fluidInputs(fluid('colemanite_liquor') * 6000)
+        .outputs(metaitem('dustGypsum') * 2)
+        .fluidOutputs(fluid('clarified_colemanite_liquor') * 6000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('clarified_colemanite_liquor') * 1000)
+        .outputs(metaitem('dustBoricAcid') * 7)
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Borax
+
+    BR.recipeBuilder()
+        .inputs(ore('dustBorax'))
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('borax_liquor') * 5000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CLARIFIER.recipeBuilder()
+        .fluidInputs(fluid('borax_liquor') * 5000)
+        .chancedOutput(metaitem('dustLimestoneTailings'), 1000, 0)
+        .fluidOutputs(fluid('clarified_borax_liquor') * 5000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CRYSTALLIZER.recipeBuilder()
+        .notConsumable(ore('springCupronickel'))
+        .fluidInputs(fluid('clarified_borax_liquor') * 5000)
+        .outputs(metaitem('dustBoricAcid') * 28)
+        .fluidOutputs(fluid('sodium_sulfate_solution') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 4000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // From brine
+
+    MIXER_SETTLER.recipeBuilder()
+        .fluidInputs(fluid('boron_extract') * 10000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidInputs(fluid('distilled_water') * 2000)
+        .fluidOutputs(fluid('boron_extraction_mixture') * 10000)
+        .fluidOutputs(fluid('boric_acid_concentrate') * 2000)
+        .requiredCells(2)
+        .duration(60)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('boric_acid_concentrate') * 2000)
+        .outputs(metaitem('dustBoricAcid') * 7)
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(60)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+// Boron trioxide
+
 ROASTER.recipeBuilder()
     .inputs(ore('dustBoricAcid') * 14)
     .outputs(metaitem('dustBoronTrioxide') * 5)
@@ -39,49 +121,27 @@ ROASTER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-//REDUCTION OF BORON TRIOXIDE
+// Boron metal
+
 ROASTER.recipeBuilder()
     .inputs(ore('dustBoronTrioxide') * 5)
     .inputs(ore('dustAnyPurityMagnesium') * 3)
-    .outputs(metaitem('dustAmorphousBoron') * 2)
-    .outputs(metaitem('dustMagnesia') * 6)
+    .outputs(metaitem('dustBoronMixture') * 8)
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister()
 
-MACERATOR.recipeBuilder()
-    .inputs(ore('dustAmorphousBoron') * 2)
-    .outputs(metaitem('dustBoron'))
-    .duration(100)
+CHEMICAL_BATH.recipeBuilder()
+    .inputs(ore('dustBoronMixture') * 8)
+    .fluidInputs(fluid('hydrochloric_acid') * 6000)
+    .outputs(metaitem('dustBoron') * 2)
+    .fluidOutputs(fluid('diluted_magnesium_chloride_solution') * 9000)
+    .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()
 
-//MAGNESIUM REGERNATION
-ELECTROLYTIC_CELL.recipeBuilder()
-    .inputs(ore('dustMagnesia') * 2)
-    .notConsumable(ore('stickTantalum'))
-    .notConsumable(metaitem('graphite_electrode'))
-    .notConsumable(fluid('rock_salt') * 288)
-    .notConsumable(fluid('magnesium_chloride') * 864)
-    .duration(100)
-    .outputs(metaitem('dustMagnesium'))
-    .fluidOutputs(fluid('oxygen') * 1000)
-    .EUt(VA[LV])
-    .buildAndRegister()
+// Potassium tetrafluoroborate
 
-ELECTROLYTIC_CELL.recipeBuilder()
-    .inputs(ore('dustMagnesia') * 2)
-    .notConsumable(ore('stickSteel'))
-    .notConsumable(metaitem('graphite_electrode'))
-    .notConsumable(fluid('rock_salt') * 288)
-    .notConsumable(fluid('magnesium_chloride') * 864)
-    .duration(400)
-    .outputs(metaitem('dustMagnesium'))
-    .fluidOutputs(fluid('oxygen') * 1000)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-//PRODUCTION OF KBF4
 BR.recipeBuilder()
     .inputs(ore('dustBoricAcid') * 7)
     .fluidInputs(fluid('hydrofluoric_acid') * 4000)
@@ -107,30 +167,11 @@ DISTILLERY.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-//ELECTROLYSIS OF B2O3
-ELECTROLYTIC_CELL.recipeBuilder()
-    .inputs(ore('dustBoronTrioxide') * 5)
-    .notConsumable(metaitem('graphite_electrode'))
-    .notConsumable(metaitem('stickBoronCarbide'))
-    .notConsumable(fluid('sodium_fluoride') * (13 * 144))
-    .notConsumable(fluid('potassium_tetrafluoroborate') * (6 * 144))
-    .outputs(metaitem('dustElectrolyticBoron') * 2)
-    .fluidOutputs(fluid('oxygen') * 3000)
-    .duration(120)
-    .EUt(VA[MV])
-    .buildAndRegister()
+// Purification
 
-MACERATOR.recipeBuilder()
-    .inputs(ore('dustElectrolyticBoron') * 4)
-    .outputs(metaitem('dustBoron') * 3)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-//PURIFICATION OF SEMICONDUCTOR-GRADE BORON
 FLUIDIZED_BR.recipeBuilder()
-    .inputs(ore('dustAmorphousBoron') * 1)
-    .fluidInputs(fluid('chlorine') * 4040)
+    .inputs(ore('dustBoron') * 1)
+    .fluidInputs(fluid('chlorine') * 3120)
     .chancedOutput(metaitem('dustMagnesiumChloride') * 3, 600, 0)
     .fluidOutputs(fluid('boron_trichloride') * 1000)
     .duration(200)
@@ -138,11 +179,10 @@ FLUIDIZED_BR.recipeBuilder()
     .buildAndRegister()
 
 FLUIDIZED_BR.recipeBuilder()
-    .inputs(ore('dustElectrolyticBoron') * 1)
-    .fluidInputs(fluid('chlorine') * 3040)
-    .chancedOutput(metaitem('dustMagnesiumChloride') * 3, 200, 0)
+    .inputs(ore('dustHighPurityBoron') * 1)
+    .fluidInputs(fluid('chlorine') * 3120)
     .fluidOutputs(fluid('boron_trichloride') * 1000)
-    .duration(100)
+    .duration(20)
     .EUt(VA[LV])
     .buildAndRegister()
 
@@ -165,7 +205,7 @@ REACTION_FURNACE.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-//Sodium Borohydride
+// Sodium borohydride
 
 BR.recipeBuilder()
     .inputs(ore('dustBoricAcid') * 7)
@@ -183,15 +223,6 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('trimethyl_borate') * 1000)
     .duration(600)
     .EUt(90)
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .notConsumable(fluid('lubricating_oil') * 100)
-    .fluidInputs(fluid('sodium') * 144)
-    .fluidInputs(fluid('hydrogen') * 1000)
-    .outputs(metaitem('dustSodiumHydride') * 2)
-    .duration(100)
-    .EUt(VA[HV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -235,7 +266,7 @@ DISTILLERY.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-//Sodium Cyanoborohydride
+// Sodium cyanoborohydride
 
 BR.recipeBuilder()
     .fluidInputs(fluid('diborane') * 500)
@@ -243,4 +274,43 @@ BR.recipeBuilder()
     .outputs(metaitem('dustSodiumCyanoborohydride') * 14)
     .duration(160)
     .EUt(VA[MV])
+    .buildAndRegister()
+
+// Diborane
+
+BR.recipeBuilder()
+    .inputs(ore('dustLithiumHydride') * 12)
+    .fluidInputs(fluid('boron_trifluoride') * 8000)
+    .outputs(metaitem('dustLithiumTetrafluoroborate') * 36)
+    .fluidOutputs(fluid('diborane') * 1000)
+    .duration(300)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustLithiumTetrafluoroborate') * 6)
+    .outputs(metaitem('dustLithiumFluoride') * 2)
+    .fluidOutputs(fluid('boron_trifluoride') * 1000)
+    .duration(300)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Boron Trifluoride
+
+BR.recipeBuilder()
+    .inputs(ore('dustBoronTrioxide') * 5)
+    .fluidInputs(fluid('hydrogen_fluoride') * 6000)
+    .fluidOutputs(fluid('boron_trifluoride') * 2000)
+    .fluidOutputs(fluid('water') * 3000)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustBoricAcid') * 7)
+    .fluidInputs(fluid('hydrogen_fluoride') * 3000)
+    .fluidOutputs(fluid('boron_trifluoride') * 1000)
+    .fluidOutputs(fluid('water') * 3000)
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()

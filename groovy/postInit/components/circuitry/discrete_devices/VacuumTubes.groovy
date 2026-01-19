@@ -18,17 +18,55 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), meta
 // Vacuum Tube * 2
 mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
-crafting.addShaped("vacuum_tube_components", metaitem('vacuum_tube_components') * 4, [
-    [null, metaitem('wireFineCupronickel'), null],
-    [metaitem('plateNickel'), metaitem('ringSteel'), metaitem('foilNickel')],
-    [null, metaitem('boltSteel'), null]
+crafting.addShapeless("vacuum_tube_components", metaitem('vacuum_tube_components') * 4, [
+    metaitem('carbon_filament'),
+    ore('wireFineCopper') * 4,
+    ore('foilNickel')
 ])
 
-crafting.addShaped("vacuum_tube_components_oxide", metaitem('vacuum_tube_components') * 6, [
-    [null, metaitem('wireFineCupronickel'), metaitem('dustSmallQuicklime')],
-    [metaitem('plateNickel'), metaitem('ringSteel'), metaitem('foilNickel')],
-    [null, metaitem('boltSteel'), null]
-])
+MIXER.recipeBuilder()
+    .inputs(ore('dustInvar') * 15)
+    .inputs(ore('dustCobalt') * 3)
+    .outputs(metaitem('dustKovar') * 18)
+    .circuitMeta(2)
+    .duration(220)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+// This is faster, and the previous recipe catches people not paying attention. :)
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustIron') * 10)
+    .inputs(ore('dustNickel') * 5)
+    .inputs(ore('dustCobalt') * 3)
+    .outputs(metaitem('dustKovar') * 18)
+    .circuitMeta(4)
+    .duration(800)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+// Kovar AAF recipes because GCYM somehow generated a conflicted recipe with invar
+
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(ore('dustIron') * 2)
+    .inputs(ore('dustNickel'))
+    .inputs(ore('dustCobalt'))
+    .circuitMeta(19)
+    .fluidInputs(fluid('nitrogen') * 4000)
+    .fluidOutputs(fluid('kovar') * 576)
+    .duration(45)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(ore('dustIron') * 2)
+    .inputs(ore('dustNickel'))
+    .inputs(ore('dustCobalt'))
+    .circuitMeta(9)
+    .fluidOutputs(fluid('kovar') * 576)
+    .duration(67)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
 VACUUM_CHAMBER.recipeBuilder()
     .inputs(metaitem('component.glass.tube'))
@@ -40,10 +78,9 @@ VACUUM_CHAMBER.recipeBuilder()
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('wireFineCupronickel'))
-    .inputs(metaitem('foilNickel') * 2)
-    .inputs(metaitem('boltSteel') * 4)
-    .inputs(metaitem('dustSmallQuicklime'))
+    .inputs(metaitem('carbon_filament'))
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(ore('foilNickel'))
     .outputs(metaitem('vacuum_tube_components') * 8)
     .EUt(16)
     .duration(400)
@@ -51,9 +88,8 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('wireFineTungsten'))
-    .inputs(metaitem('foilNickel') * 2)
-    .inputs(metaitem('boltSteel') * 4)
-    .inputs(metaitem('dustSmallQuicklime'))
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(ore('foilNickel'))
     .outputs(metaitem('vacuum_tube_components') * 12)
     .EUt(16)
     .duration(400)
@@ -61,9 +97,8 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('wireFineTungsten'))
-    .inputs(metaitem('foilMolybdenum') * 2)
-    .inputs(metaitem('boltSteel') * 4)
-    .inputs(metaitem('dustSmallQuicklime'))
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(metaitem('foilMolybdenum'))
     .outputs(metaitem('vacuum_tube_components') * 16)
     .EUt(16)
     .duration(400)

@@ -160,17 +160,6 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-AUTOCLAVE.recipeBuilder()
-    .inputs(ore('dustSodiumHydroxide') * 36)
-    .inputs(metaitem('membrane.support.alumina'))
-    .fluidInputs(fluid('sodium_aluminate_solution') * 750)
-    .fluidInputs(fluid('sodium_silicate_solution') * 1500)
-    .fluidInputs(fluid('distilled_water') * 4750)
-    .outputs(metaitem('membrane.zeolite'))
-    .duration(180)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 // Type Y zeolite (FAU structure, FCC catalyst)
 
 AUTOCLAVE.recipeBuilder()
@@ -224,16 +213,6 @@ ION_EXCHANGE.recipeBuilder()
     .buildAndRegister()
 
 // ZSM-5 (pentasil high SAR zeolite, methanol to gasoline, various catalysts)
-
-FIXED_BR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedAlumina'))
-    .fluidInputs(fluid('ammonia') * 50)
-    .fluidInputs(fluid('n_propanol') * 150)
-    .fluidOutputs(fluid('tripropylamine') * 50)
-    .fluidOutputs(fluid('water') * 150)
-    .duration(5)
-    .EUt(VA[MV])
-    .buildAndRegister();
 
 BR.recipeBuilder()
     .notConsumable(metaitem('emitter.lv'))

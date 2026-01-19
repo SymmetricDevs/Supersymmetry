@@ -403,6 +403,49 @@ import static gregtech.api.GTValues.*
         .EUt(VA[HV])
         .buildAndRegister()
 
+    //2-ethyl-1,3-hexanediol
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSodiumHydroxide') * 3)
+        .fluidInputs(fluid('butyraldehyde') * 2000)
+        .fluidOutputs(fluid('butyraldol_solution') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('butyraldol_solution') * 2000)
+        .outputs(metaitem('dustSodiumHydroxide') * 3)
+        .fluidOutputs(fluid('butyraldol') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedPlatinum'))
+        .fluidInputs(fluid('butyraldol') * 50)
+        .fluidInputs(fluid('hydrogen') * 100)
+        .fluidOutputs(fluid('two_ethyl_one_three_hexanediol_mixture') * 100)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+        
+    PHASE_SEPARATOR.recipeBuilder()
+        .fluidInputs(fluid('two_ethyl_one_three_hexanediol_mixture') * 1000)
+        .fluidOutputs(fluid('two_ethyl_one_three_hexanediol') * 500)
+        .fluidOutputs(fluid('water') * 500)
+        .duration(20)
+        .buildAndRegister()
+
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid('two_ethyl_one_three_hexanediol') * 2000)
+        .fluidInputs(fluid('kerosene') * 8000)
+        .fluidOutputs(fluid('boron_extraction_mixture') * 10000)
+        .duration(400)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
     //TRIOCTYLAMINE
 
     TBR.recipeBuilder()

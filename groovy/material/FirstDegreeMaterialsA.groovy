@@ -57,7 +57,7 @@ class FirstDegreeMaterialsA {
         HighPuritySodium = generatePurifiedElement(Sodium, 8004, false, false)
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
         HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, false, true).addFlags(GENERATE_FOIL)
-        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false)
+        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false).addFlags(GENERATE_ROD)
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)
         HighPurityPotassium = generatePurifiedElement(Potassium, 8010, false, false)
@@ -841,11 +841,7 @@ class FirstDegreeMaterialsA {
 
         DicobaltOctacarbonyl.setFormula("Co2(CO)8", true)
 
-        ImpregnatedAluminaCatalyst = new Material.Builder(8211, SuSyUtility.susyId('impregnated_alumina_catalyst'))
-                .dust()
-                .components(SiliconDioxide, Alumina)
-                .colorAverage()
-                .build()
+        // FREE ID: 8211
 
         BismuthCopper = new Material.Builder(8212, SuSyUtility.susyId('bismuth_copper'))
                 .dust()
@@ -1030,7 +1026,6 @@ class FirstDegreeMaterialsA {
 
         AluminiumChloride = new Material.Builder(8242, SuSyUtility.susyId('aluminium_chloride'))
                 .dust().gas(new FluidBuilder().temperature(453))
-                .flags(GENERATE_CATALYST_BED)
                 .components(Aluminium, Chlorine * 3)
                 .colorAverage()
                 .build()
@@ -2565,7 +2560,7 @@ class FirstDegreeMaterialsA {
         IronIIHydroxide.setFormula("Fe(OH)2", true)
 
         SodiumAmide = new Material.Builder(8469, SuSyUtility.susyId('sodium_amide'))
-                .dust()
+                .dust().liquid(new FluidBuilder().temperature(483))
                 .components(Sodium, Nitrogen, Hydrogen * 2)
                 .colorAverage()
                 .build()
@@ -3510,7 +3505,7 @@ class FirstDegreeMaterialsA {
         Kovar = new Material.Builder(8619, SuSyUtility.susyId('kovar'))
                 .ingot().liquid(new FluidBuilder().temperature(1723))
                 .iconSet(SHINY)
-                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, DISABLE_DECOMPOSITION)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Iron * 2, Nickel * 1, Cobalt * 1)
                 .colorAverage()
                 .blastTemp(1723, GasTier.LOW, GTValues.VA[GTValues.MV], 90)

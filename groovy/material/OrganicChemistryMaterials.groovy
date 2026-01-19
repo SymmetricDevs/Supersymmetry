@@ -133,7 +133,7 @@ class OrganicChemistryMaterials {
                 .color(0x7d6057)
                 .build()
 
-        PMMA = new Material.Builder(15017, SuSyUtility.susyId('pmma'))
+        PolymethylMethacrylate = new Material.Builder(15017, SuSyUtility.susyId('polymethyl_methacrylate'))
                 .polymer(1)
                 .liquid(new FluidBuilder().temperature(438))
                 .color(0x72e0c9)
@@ -141,7 +141,7 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 5, Oxygen * 2, Hydrogen * 8)
                 .build()
 
-        PMMA.setFormula('[C5H8O2]n', true)
+        PolymethylMethacrylate.setFormula('[C5H8O2]n', true)
 
         PhthalicAnhydride = new Material.Builder(15018, SuSyUtility.susyId('phthalic_anhydride'))
                 .dust().liquid(new FluidBuilder().temperature(405))
@@ -2446,11 +2446,7 @@ class OrganicChemistryMaterials {
                 .color(0x279630)
                 .build()
 
-        BenzenediazoniumChloride = new Material.Builder(15385, SuSyUtility.susyId('benzenediazonium_chloride'))
-                .dust()
-                .components(Carbon * 6, Hydrogen * 5, Nitrogen * 2, Chlorine * 1)
-                .color(0x18262b)
-                .build()
+        // FREE ID: 15385
 
         Crotonaldehyde = new Material.Builder(15386, SuSyUtility.susyId('crotonaldehyde'))
                 .liquid()

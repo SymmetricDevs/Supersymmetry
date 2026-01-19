@@ -12,31 +12,6 @@ oreDict.add('dustFlocculant', metaitem('dustPotassiumAlum'))
 oreDict.add('dustFlocculant', metaitem('dustSodiumAlum'))
 oreDict.add('dustFlocculant', metaitem('dustAluminiumSulfate'))
 
-// Wastewater treatment
-FLUID_HEATER.recipeBuilder()
-    .fluidInputs(fluid('wastewater') * 1000)
-    .fluidOutputs(fluid('heated_wastewater') * 1000)
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('heated_wastewater') * 1000)
-    .inputs(ore('dustFlocculant'))
-    .fluidOutputs(fluid('flocculated_wastewater') * 1000)
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-CLARIFIER.recipeBuilder()
-    .fluidInputs(fluid('flocculated_wastewater') * 8000)
-    .outputs(metaitem('dustAluminiumSulfate'))
-    .fluidOutputs(fluid('wastewater_sludge') * 2000)
-    .fluidOutputs(fluid('water') * 6000)
-    .duration(600)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 // Deionized water
 ION_EXCHANGE.recipeBuilder()
     .notConsumable(metaitem('beads.strong_acidic_cation_exchange'))
