@@ -1,5 +1,5 @@
 import globals.Globals
-import globals.Etchants
+import globals.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -70,7 +70,7 @@ UV_LIGHT_BOX.recipeBuilder()
         .buildAndRegister();
 
 // Etched
-Etchants.generateEtchingRecipes("board.epoxy.patterned", "board.epoxy.etched", "copper", EV, 2 /* double sided */, true)
+Etching.generateWetEtchingRecipes("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true, false)
 
 // Drilled
 MILLING.recipeBuilder()

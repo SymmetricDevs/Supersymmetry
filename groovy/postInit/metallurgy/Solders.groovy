@@ -41,8 +41,24 @@ MIXER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-crafting.addShaped("susy:cryogenic_solder", metaitem('dustCryogenicSolder') * 3, [
-        [ore('dustIndium'), ore('dustIndium'), ore('dustIndium')],
-        [ore('dustTinySilver'), null, null],
-        [null, null, null]
+crafting.addShapeless("susy:cryogenic_solder", metaitem('dustCryogenicSolder') * 3, [
+    ore('dustIndium'),
+    ore('dustIndium'),
+    ore('dustIndium'),
+    ore('dustTinySilver')
+])
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustLead') * 43)
+    .inputs(ore('dustTinySilver') * 6)
+    .inputs(ore('dustTinyTin') * 4)
+    .outputs(metaitem('dustHighTemperatureSolder') * 44)
+    .duration(120)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+crafting.addShapeless("susy:high_temperature_solder", metaitem('dustHighTemperatureSolder') * 44, [
+    ore('dustLead') * 43,
+    ore('dustTinySilver') * 6,
+    ore('dustTinyTin') * 4
 ])

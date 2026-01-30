@@ -28,39 +28,30 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDi
 
 // Silicon & Graphite
 
-def quartz_dusts = [
-    'dustSiliconDioxide',
-    'dustCertusQuartz',
-    'dustNetherQuartz',
-    'dustQuartzite'
-]
-
 // Metallurgical silicon
 
-for (quartz in quartz_dusts) {
-    for (carbon in Carbons.dusts()) {
-        ARC_FURNACE.recipeBuilder()
-            .circuitMeta(1)
-            .fluidInputs(fluid('air') * 100)
-            .inputs(ore(quartz) * 3)
-            .inputs(ore(carbon.name) * carbon.equivalent(2))
-            .outputs(metaitem('dustSilicon'))
-            .fluidOutputs(fluid('carbon_monoxide') * 2000)
-            .EUt(VA[LV])
-            .duration(320)
-            .buildAndRegister()
-        
-        ADVANCED_ARC_FURNACE.recipeBuilder()
-            .circuitMeta(1)
-            .fluidInputs(fluid('air') * 100)
-            .inputs(ore(quartz) * 12)
-            .inputs(ore(carbon.name) * carbon.equivalent(8))
-            .outputs(metaitem('dustSilicon') * 4)
-            .fluidOutputs(fluid('carbon_monoxide') * 8000)
-            .EUt(VA[MV])
-            .duration(160)
-            .buildAndRegister()
-    }
+for (carbon in Carbons.dusts()) {
+    ARC_FURNACE.recipeBuilder()
+        .circuitMeta(1)
+        .fluidInputs(fluid('air') * 100)
+        .inputs(ore('silicaSource') * 3)
+        .inputs(ore(carbon.name) * carbon.equivalent(2))
+        .outputs(metaitem('dustSilicon'))
+        .fluidOutputs(fluid('carbon_monoxide') * 2000)
+        .EUt(VA[LV])
+        .duration(320)
+        .buildAndRegister()
+    
+    ADVANCED_ARC_FURNACE.recipeBuilder()
+        .circuitMeta(1)
+        .fluidInputs(fluid('air') * 100)
+        .inputs(ore('silicaSource') * 12)
+        .inputs(ore(carbon.name) * carbon.equivalent(8))
+        .outputs(metaitem('dustSilicon') * 4)
+        .fluidOutputs(fluid('carbon_monoxide') * 8000)
+        .EUt(VA[MV])
+        .duration(160)
+        .buildAndRegister()
 }
 
 // Semiconductor silicon precursors

@@ -14,6 +14,8 @@ MIXER.recipeBuilder()
 
 // Alumina
 
+mods.jei.ingredient.yeet(metaitem('screwAlumina'))
+
 Sintering.blankets.each { blanket ->
     SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustAlumina') * 10)
@@ -24,16 +26,26 @@ Sintering.blankets.each { blanket ->
         .duration(blanket.duration)
         .EUt(VA[MV])
         .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 5)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 200)
+        .notConsumable(metaitem('shape.mold.bolt'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('boltAlumina') * 20)
+        .duration(blanket.duration)
+        .EUt(VA[MV])
+        .buildAndRegister()
 }
 
 SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustAlumina') * 5)
-        .inputs(ore('dustSmallGraphite'))    
-        .notConsumable(metaitem('shape.mold.plate'))
-        .outputs(metaitem('membrane.support.alumina'))
-        .duration(300)
-        .EUt(VA[MV])
-        .buildAndRegister()
+    .inputs(ore('dustAlumina') * 5)
+    .inputs(ore('dustSmallGraphite'))    
+    .notConsumable(metaitem('shape.mold.plate'))
+    .outputs(metaitem('membrane.support.alumina'))
+    .duration(300)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
 // Boron carbide
 

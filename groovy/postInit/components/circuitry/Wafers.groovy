@@ -21,6 +21,16 @@ CRYSTALLIZER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+CRYSTALLIZER.recipeBuilder()
+    .notConsumable(metaitem('crucible.quartz'))
+    .notConsumable(ore('springCupronickel') * 2)
+    .fluidInputs(fluid('high_purity_germanium') * 576)
+    .outputs(metaitem('seed_crystal.germanium'))
+    .duration(840)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+
 // Boules
 
 // Doped mixtures
@@ -89,6 +99,16 @@ ZONE_REFINER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+ZONE_REFINER.recipeBuilder()
+    .notConsumable(metaitem('induction_coil'))
+    .fluidInputs(fluid('phosphine') * 100)
+    .inputs(ore('seed_crystal.germanium'))
+    .inputs(ore('ingotHighPurityGermanium'))
+    .outputs(metaitem('boule.germanium.n_doped'))
+    .duration(1200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
 // Czochiralski Process (Large wafers, needed HV+)
 
 CRYSTALLIZER.recipeBuilder()
@@ -119,6 +139,7 @@ CRYSTALLIZER.recipeBuilder()
 public static class Wafer {
     String boule_name
     String wafer_name
+    String seed_name
     boolean small
 
     // Property getters
@@ -129,6 +150,10 @@ public static class Wafer {
 
     // Itemstack getters
     
+    def getSeed(int count = 1) {
+        return metaitem(seed_name) * count
+    }
+
     def getBoule(int count = 1) {
         return metaitem(boule_name) * count
     }
@@ -145,19 +170,21 @@ public static class Wafer {
         return metaitem(wafer_name) * count
     }
 
-    Wafer(String boule_name, String wafer_name, boolean small) {
+    Wafer(String boule_name, String wafer_name, String seed_name, boolean small) {
         this.boule_name = boule_name
         this.wafer_name = wafer_name
+        this.seed_name = seed_name
         this.small = small
     }
 }
 
 public static final wafers = [
-    new Wafer('boule.silicon.cz', 'wafer.silicon', false),
-    new Wafer('boule.silicon.cz.p_doped', 'wafer.silicon.p_doped', false),
-    new Wafer('boule.silicon.cz.n_doped', 'wafer.silicon.n_doped', false),
-    new Wafer('boule.silicon.fz.n_doped', 'wafer.small.silicon.n_doped', true),
-    new Wafer('boule.silicon.fz.heavily_n_doped', 'wafer.small.silicon.heavily_n_doped', true)
+    new Wafer('boule.silicon.cz', 'wafer.silicon', 'seed_crystal.silicon', false),
+    new Wafer('boule.silicon.cz.p_doped', 'wafer.silicon.p_doped', 'seed_crystal.silicon', false),
+    new Wafer('boule.silicon.cz.n_doped', 'wafer.silicon.n_doped', 'seed_crystal.silicon', false),
+    new Wafer('boule.silicon.fz.n_doped', 'wafer.small.silicon.n_doped', 'seed_crystal.silicon', true),
+    new Wafer('boule.silicon.fz.heavily_n_doped', 'wafer.small.silicon.heavily_n_doped', 'seed_crystal.silicon', true)
+    new Wafer('boule.germanium.n_doped', 'wafer.germanium.n_doped', 'seed_crystal.germanium', true)
 ]
 
 // CMP slurry & RCA clean solutions.
@@ -237,16 +264,19 @@ MIXER.recipeBuilder()
 for (wafer in wafers) {
     def cuttingRecipe = CUTTER.recipeBuilder()
         .inputs(wafer.getBoule())
-        .outputs(metaitem('seed_crystal.silicon'))
-        .outputs(wafer.getRawWafer() * 14)
-        .chancedOutput(wafer.getRawWafer() * 2, 5000, 0)
-        .chancedOutput(metaitem('dustSilicon') * 2, 5000, 0)
+        .outputs(wafer.getSeed())
         .chancedOutputLogic(ChancedOutputLogic.XOR)
 
     if (wafer.isSmall()) {
+        .outputs(wafer.getRawWafer(14))
+        .chancedOutput(wafer.getRawWafer(2), 5000, 0)
+        .chancedOutput(metaitem('dustSilicon'), 625, 0)
         cuttingRecipe.fluidInputs(fluid('ultrapure_water') * 500)
         cuttingRecipe.duration(4500).EUt(VA[MV])
     } else {
+        .outputs(wafer.getRawWafer(60))
+        .chancedOutput(wafer.getRawWafer(4), 5000, 0)
+        .outputs(metaitem('dustSilicon') * 2)
         cuttingRecipe.fluidInputs(fluid('ultrapure_water') * 2000)
         cuttingRecipe.duration(9000).EUt(VA[HV])
         cuttingRecipe.cleanroom(CleanroomType.CLEANROOM)
@@ -270,8 +300,8 @@ for (wafer in wafers) {
     polishingRecipe.buildAndRegister()
     
     def treatmentRecipe = CHEMICAL_BATH.recipeBuilder()
-        .inputs(metaitem('wafer.silicon.raw'))
-        .outputs(metaitem('wafer.silicon.treated'))
+        .inputs(wafer.getPolishedWafer())
+        .outputs(wafer.getWafer())
         .buildAndRegister()
 
     if (wafer.isSmall()) {

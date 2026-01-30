@@ -27,39 +27,27 @@ crafting.removeByOutput(metaitem('electric.motor.iv'))
 
 // Brushed DC Motors (LV-EV)
 
-crafting.addShapeless('commutator', metaitem('commutator'), [
+crafting.addShapeless('susy:commutator', metaitem('component.commutator'), [
     metaitem('plateCopper'), metaitem('plateStone'), metaitem('rubber_drop'), ore('toolWireCutter')
 ])
 
-crafting.addShapeless('brush.unfired', metaitem('brush.unfired'), [
+crafting.addShapeless('susy:brush.unfired', metaitem('component.brush.unfired'), [
     metaitem('dustGraphite'), metaitem('rubber_drop'), ore('toolHammer')
 ])
 
-furnace.add(metaitem('brush.unfired'), metaitem('brush'))
+furnace.add(metaitem('component.brush.unfired'), metaitem('component.brush'))
 
 crafting.addShaped('susy:electric_motor_lv', metaitem('electric.motor.lv'), [
-    [metaitem('plateSteelMagnetic'), metaitem('wireGtSingleCopper'), metaitem('cableGtSingleTin')],
-    [metaitem('brush'), metaitem('stickSteel'), metaitem('wireGtSingleCopper')],
-    [metaitem('commutator'), metaitem('brush'), metaitem('plateSteelMagnetic')]
-])
-
-crafting.replaceShaped('gregtech:electric_motor_mv', metaitem('electric.motor.mv'), [
-    [metaitem('plateSteelMagnetic'), metaitem('wireGtDoubleAnnealedCopper'), metaitem('cableGtSingleCopper')],
-    [metaitem('brush'), metaitem('stickAluminium'), metaitem('wireGtDoubleAnnealedCopper')],
-    [metaitem('commutator'), metaitem('brush'), metaitem('plateSteelMagnetic')]
-])
-
-crafting.replaceShaped('gregtech:electric_motor_hv', metaitem('electric.motor.hv'), [
-    [metaitem('plateAlnicoMagnetic'), metaitem('wireGtDoubleElectrum'), metaitem('cableGtDoubleSilver')],
-    [metaitem('brush'), metaitem('stickStainlessSteel'), metaitem('wireGtDoubleElectrum')],
-    [metaitem('commutator'), metaitem('brush'), metaitem('plateAlnicoMagnetic')]
+    [metaitem('plateSteelMagnetic'), metaitem('wireGtFineCopper'), metaitem('cableGtSingleTin')],
+    [metaitem('component.brush'), metaitem('stickSteel'), metaitem('wireGtFineCopper')],
+    [metaitem('component.commutator'), metaitem('component.brush'), metaitem('plateSteelMagnetic')]
 ])
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('plateCopper'))
     .inputs(ore('plateMica'))
     .fluidInputs(fluid('glue') * 100)
-    .outputs(metaitem('commutator') * 4)
+    .outputs(metaitem('component.commutator') * 4)
     .duration(120)
     .EUt(VA[LV])
     .buildAndRegister();
@@ -67,7 +55,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(ore('dustGraphite'))
     .fluidInputs(fluid('glue') * 100)
-    .outputs(metaitem('brush.unfired') * 2)
+    .outputs(metaitem('component.brush.unfired') * 2)
     .duration(80)
     .EUt(VA[LV])
     .buildAndRegister();
@@ -84,45 +72,61 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtSingleTin'))
     .inputs(ore('stickSteel'))
     .inputs(ore('plateSteelMagnetic') * 2)
-    .inputs(ore('wireGtSingleCopper') * 2)
-    .inputs(metaitem('commutator'))
-    .inputs(metaitem('brush') * 2)
+    .inputs(ore('wireFineAnnealedCopper') * 4)
+    .inputs(metaitem('component.commutator'))
+    .inputs(metaitem('component.brush') * 2)
     .outputs(metaitem('electric.motor.lv'))
     .duration(80)
     .EUt(VA[LV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('cableGtSingleCopper'))
+    .inputs(ore('cableGtSingleCopper') * 2)
     .inputs(ore('stickAluminium'))
     .inputs(ore('plateSteelMagnetic') * 2)
-    .inputs(ore('wireGtDoubleAnnealedCopper') * 2)
-    .inputs(metaitem('commutator'))
-    .inputs(metaitem('brush') * 2)
+    .inputs(ore('wireFineAnnealedCopper') * 4)
+    .inputs(metaitem('component.commutator'))
+    .inputs(metaitem('component.brush') * 2)
     .outputs(metaitem('electric.motor.mv'))
     .duration(80)
     .EUt(VA[MV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('cableGtDoubleSilver'))
+    .inputs(ore('wireFineAnnealedCopper') * 16)
+    .fluidInputs(fluid('polyethylene_terephthalate') * 36)
+    .outputs(metaitem('wireFineEnamelledCopper') * 16)
+    .duration(80)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('cableGtDoubleSilver') * 2)
     .inputs(ore('stickStainlessSteel'))
     .inputs(ore('plateAlnicoMagnetic') * 2)
-    .inputs(ore('wireGtDoubleElectrum') * 2)
-    .inputs(metaitem('commutator'))
-    .inputs(metaitem('brush') * 2)
+    .inputs(ore('wireFineEnameledCopper') * 8)
+    .inputs(metaitem('component.commutator'))
+    .inputs(metaitem('component.brush') * 2)
     .outputs(metaitem('electric.motor.hv'))
     .duration(80)
     .EUt(VA[HV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('cableGtDoubleAluminium'))
+    .inputs(ore('wireFineGold') * 16)
+    .fluidInputs(fluid('polyethylene_terephthalate') * 36)
+    .outputs(metaitem('wireFineEnamelledGold') * 16)
+    .duration(80)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('cableGtDoubleAluminium') * 2)
     .inputs(ore('stickTitanium'))
     .inputs(ore('plateAlnicoMagnetic') * 2)
-    .inputs(ore('wireGtDoubleGold') * 2)
-    .inputs(metaitem('commutator'))
-    .inputs(metaitem('brush') * 2)
+    .inputs(ore('wireFineEnamelledGold') * 16)
+    .inputs(metaitem('component.commutator'))
+    .inputs(metaitem('component.brush') * 2)
     .outputs(metaitem('electric.motor.ev'))
     .duration(80)
     .EUt(VA[HV])
@@ -134,8 +138,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtSingleTin') * 2)
     .inputs(ore('stickLongSteel'))
     .inputs(ore('plateSteelMagnetic') * 3)
-    .inputs(ore('wireGtSingleCopper') * 4)
-    .inputs(ore('componentTransistor') * 3)
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(metaitem('component.transistor.alloy_junction') * 3)
     .inputs(ore('circuitLv'))
     .inputs(metaitem('circuit_board.basic'))
     .outputs(metaitem('electric.motor.lv') * 6)
@@ -148,7 +152,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtSingleCopper') * 2)
     .inputs(ore('stickLongAluminium'))
     .inputs(ore('plateSteelMagnetic') * 3)
-    .inputs(ore('wireGtDoubleAnnealedCopper') * 4)
+    .inputs(ore('wireFineAnnealedCopper') * 8)
     .inputs(metaitem('plate.ultra_low_power_integrated_circuit'))
     .inputs(ore('circuitMv'))
     .inputs(metaitem('circuit_board.good'))
@@ -161,7 +165,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtDoubleSilver') * 2)
     .inputs(ore('stickLongStainlessSteel'))
     .inputs(ore('plateAlnicoMagnetic') * 3)
-    .inputs(ore('wireGtDoubleElectrum') * 4)
+    .inputs(ore('wireFineEnamelledCopper') * 16)
     .inputs(metaitem('plate.low_power_integrated_circuit'))
     .inputs(ore('circuitHv'))
     .inputs(metaitem('circuit_board.plastic'))
@@ -174,7 +178,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtDoubleAluminium') * 2)
     .inputs(ore('stickLongTitanium'))
     .inputs(ore('plateAlnicoMagnetic') * 3)
-    .inputs(ore('wireGtDoubleGold') * 4)
+    .inputs(ore('wireFineEnamelledGold') * 32)
     .inputs(metaitem('plate.power_integrated_circuit'))
     .inputs(ore('circuitEv'))
     .inputs(metaitem('circuit_board.advanced'))
@@ -183,11 +187,27 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister();
 
+CVD.recipeBuilder()
+    .inputs(ore('wireFineGold') * 64)
+    .fluidInputs(fluid('methane') * 1000)
+    .outputs(ore('wireFineGrapheneCoatedGold') * 64)
+    .duration(200)
+    .EUt(VA[EV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('wireFineGrapheneCoatedGold') * 16)
+    .fluidInputs(fluid('polyethylene_terephthalate') * 36)
+    .outputs(metaitem('wireFineEnamelledGrapheneCoatedGold') * 16)
+    .duration(80)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
 ASSEMBLER.recipeBuilder()
     .inputs(ore('cableGtDoublePlatinum') * 2)
     .inputs(ore('stickLongTungstenSteel'))
     .inputs(ore('plateNeodymiumAlloyMagnetic') * 3)
-    .inputs(ore('wireGtDoubleGraphene') * 4)
+    .inputs(ore('wireFineEnamelledGrapheneCoatedGold') * 64)
     .inputs(metaitem('plate.high_power_integrated_circuit'))
     .inputs(ore('circuitIv'))
     .inputs(metaitem('circuit_board.extreme'))

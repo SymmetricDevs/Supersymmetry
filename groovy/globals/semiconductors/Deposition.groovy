@@ -50,6 +50,19 @@ class Deposition {
         }
     }
 
+    public static final evaporationSources = [
+        new EvaporationSource("aluminium", "MV"),
+        new EvaporationSource("gold_antimony", "MV"),
+    ]
+
+    static void generateEvaporationRecipe(String input, String product, int duration, String targetMaterial, boolean cleanroom) {
+        for (evaporationSource in evaporationSources) {
+            if (evaporationSource.material == targetMaterial)
+                evaporationSource.generateRecipe(input, product, duration, cleanroom)
+        }
+    }
+
+
     /* Sputtering
      Data for important applications
     // Ti-Ni/Pd-Ag metallization for n-doped substrates.
@@ -66,6 +79,7 @@ class Deposition {
     Ti/W: 2000+ hours
     Ni: 500-1000 hours
     Pd/Au/Ag: 100-300 hours
+    Si: 100-200 hours
     Al/Cu: 100-500 hours*/
 
     public static class SputteringTarget {
@@ -107,7 +121,8 @@ class Deposition {
         new SputteringTarget("gold", "MV", 0.0375),
         new SputteringTarget("palladium", "EV", 0.0375),
         new SputteringTarget("tungsten", "EV", 0.00375),
-        new SputteringTarget("antimony", "MV", 0.025)
+        new SputteringTarget("antimony", "MV", 0.025),
+        new SputteringTarget("silicon", "MV", 0.05)
     ]
 
     static void generateSputteringRecipe(String input, String product, int duration, String targetMaterial) {

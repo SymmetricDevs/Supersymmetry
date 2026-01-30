@@ -45,6 +45,16 @@ REACTION_FURNACE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Hydrogen sulfide
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('sulfur') * 144)
+    .fluidInputs(fluid('hydrogen') * 2000)
+    .fluidOutputs(fluid('hydrogen_sulfide') * 1000)
+    .duration(40)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 // Sulfates and bisulfates
 
 DISTILLERY.recipeBuilder()

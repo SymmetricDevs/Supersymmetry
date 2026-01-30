@@ -22,7 +22,7 @@ Etchants used:
 - Copper: Iron III chloride or Sodium bisulfite, fluorine plasma
  */
 
-class Etchants {
+class Etching {
 
     static class Etchant {
         String fluidName

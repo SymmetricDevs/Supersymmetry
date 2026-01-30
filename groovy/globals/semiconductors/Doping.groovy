@@ -1,6 +1,6 @@
 package globals
 import globals.Globals
-import globals.Etchants
+import globals.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -61,7 +61,7 @@ class Doping {
             .buildAndRegister();
 
         // Remove BSG
-        Etchants.generateEtchingRecipes(input + '.bsg', product, 'silicon_dioxide', LV, 1, false)
+        Etching.generateEtchingRecipes(input + '.bsg', product, 'silicon_dioxide', LV, 1, false)
     }
 
     static void generatePhosphorusDiffusionDopingRecipes(String input, String product, int duration) {
@@ -79,12 +79,13 @@ class Doping {
             .buildAndRegister();
 
         // Remove PSG
-        Etchants.generateEtchingRecipes(input + '.psg', product, 'silicon_dioxide', LV, 1, false)
+        Etching.generateEtchingRecipes(input + '.psg', product, 'silicon_dioxide', LV, 1, false)
     }
 
     static void generateDriveInRecipe(String input, String product, int duration) {
         RESISTANCE_FURNACE.recipeBuilder() // Drive-in of diffusant
             .notConsumable(ore('springCupronickel'))
+            .fluidInputs(fluid('nitrogen') * 100)
             .inputs(metaitem(input))
             .outputs(metaitem(product))
             .duration(duration)

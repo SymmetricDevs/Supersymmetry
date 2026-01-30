@@ -53,18 +53,25 @@ ROASTER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+oreDict.add('silicaSource', metaitem('dustSiliconDioxide'))
+oreDict.add('silicaSource', metaitem('dustQuartzite'))
+oreDict.add('silicaSource', metaitem('dustNetherQuartz'))
+oreDict.add('silicaSource', metaitem('dustCertusQuartz'))
+
 // (2 Ca3(PO4)2 + 6 SiO2 + 10 C -> 6 CaSiO3 + 10 CO + P4) / 2
-ERF.recipeBuilder()
-    .inputs(ore('dustTricalciumPhosphate') * 13)
-    .inputs(ore('dustSiliconDioxide') * 9)
-    .inputs(ore('dustAnyPurityCarbon') * 5)
-    .outputs(metaitem('dustPhosphorus') * 2)
-    .outputs(metaitem('dustCalciumMetasilicate') * 15)
-    .fluidOutputs(fluid('carbon_monoxide') * 5000)
-    .blastFurnaceTemp(1200)
-    .duration(240)
-    .EUt(VA[MV])
-    .buildAndRegister()
+for (highPurityCombustible in Carbons.highPurityCombustibles()) {
+    ERF.recipeBuilder()
+        .inputs(ore('dustTricalciumPhosphate') * 13)
+        .inputs(ore('silicaSource') * 9)
+        .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(5))
+        .outputs(metaitem('dustPhosphorus') * 2)
+        .outputs(metaitem('dustCalciumMetasilicate') * 15)
+        .fluidOutputs(fluid('carbon_monoxide') * 5000)
+        .blastFurnaceTemp(1200)
+        .duration(240)
+        .EUt(VA[MV])
+        .buildAndRegister()
+}
 
 // 3 Ca(OH)2 + 2 H3PO4 -> Ca3(PO4)2 + 6H2O
 BR.recipeBuilder()
