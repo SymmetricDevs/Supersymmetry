@@ -1,3 +1,52 @@
+# UPDATE 0.1.16.0
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.93 → v0.1.94
+## Changes
+### Changed Features
+- [Susy-Core] ULV energy hatches no longer appear in JEI previews to annoy you. (#604 by @Crindigo)
+- PWRs are now ~4x as effective to match BWRs. (#1798 by @aliu-here)
+### Fixes
+- [Susy-Core] Drone pad resets if drone despawns (#605 by @Zalgo239)
+- Certain dupes/lossy vanilla-related recipes have been fixed. (#1794 by @aliu-here, #1799, #1800 by @Fiery36)
+# UPDATE 0.1.16-rc2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.91 → v0.1.93
+### Mod Removals
+- AssetMover
+## Changes
+### Fixes
+- This fixes some item ID shifts introduced by the last update. The culprits will be injected with Xenotimic Rare Earth Nitrates Solution.
+- The ball mill model and recipe logic have been slightly tweaked.
+- Both Acheson process recipes for graphite electrodes are now available.
+# UPDATE 0.1.16-rc1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.88 → v0.1.91
+- Universal Tweaks 1.12.2-1.17.0 → 1.12.2-1.18.0
+- GregTech Food Option 1.12.2-1.12.7.1 → 1.12.2-1.12.8
+### Mod Removals
+- Climate Control/Geographicraft
+## Changes
+### New Features
+- The nitrile-butadiene rubber chain is here! (#1756 by @aliu-here)
+- Large boilers now accept a redstone control hatch! Control your multiblock even more. (sc#589 by @unitazer)
+- The eccentric roll crusher (jaw crusher) and ball mill have been added! Use these to greatly speed up your ore processing. (sc#592 by @MCTian-mi)
+- You may now make high-purity aluminium! (#1735 by @Fiery36)
+### Changed Features
+- Nuclear power output is now 32x higher. (#1791 by @planetme)
+- Bismuth fuel rods are now 3x cheaper, making polonium easier to obtain.
+- Sugarcane is now affected by sprinklers.
+### Fixes
+- Worlds now correctly load on CurseForge launcher! (But we had to remove Geographicraft for it.)
+- The questbook has been improved thanks to @whoisyp and @Fiery36.
+- You now receive the correct singleblock combustion generators from crafting. (#1781 by @Fiery36)
+- [Susy-Core] Barrels no longer crash servers! (sc#595 by @bruberu)
+- [Susy-Core] CPU lag from Project Red has also decreased. (sc#597 by @bruberu)
+But don't worry about all of the other code we merged lately from @Engineerboy2998, @xnossisx, @Suharakimi, @1minus4, @loxoDev, @aluminium0316, @unitazer and @ThisMightBeNoah.
+That's definitely not leading to anything.
+Of course, thanks to our new contributors @1minus4 and @aliu-here! Although we're still trying to figure out who @aliu-here is on Discord...
 # UPDATE 0.1.15.14
 ## Mod Changes
 ### Mod Updates

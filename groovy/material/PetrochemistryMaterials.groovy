@@ -150,7 +150,17 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        // FREE ID: 20023-20024
+        HeavyGasOil = new Material.Builder(20023, SuSyUtility.susyId('heavy_gas_oil'))
+                .liquid()
+                .color(0x9e9a4f)
+                .flags(FLAMMABLE)
+                .build()
+
+        HeatedLightLiquefactionOil = new Material.Builder(20024, SuSyUtility.susyId('heated_light_liquefaction_oil'))
+                .liquid(new FluidBuilder().temperature(300))
+                .color(0x494b61)
+                .flags(FLAMMABLE)
+                .build()
 
         SlackWax = new Material.Builder(20025, SuSyUtility.susyId('slack_wax'))
                 .liquid(new FluidBuilder().temperature(35W3))
@@ -199,7 +209,13 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        // FREE IDs: 20033-20034
+        TreatedSulfuricMediumLiquefactionOil = new Material.Builder(20033, SuSyUtility.susyId('treated_sulfuric_medium_liquefaction_oil'))
+                .liquid(new FluidBuilder().temperature(550))
+                .color(0x4f5163)
+                .flags(FLAMMABLE)
+                .build()
+
+        // FREE ID: 20034
 
         SteamcrackedLightGasOil = new Material.Builder(20035, SuSyUtility.susyId('steamcracked_light_gas_oil'))
                 .gas(new FluidBuilder().temperature(1223))
@@ -773,7 +789,11 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        // FREE ID: 20133
+        SulfuricMediumLiquefactionOil = new Material.Builder(20133, SuSyUtility.susyId('sulfuric_medium_liquefaction_oil'))
+                .liquid()
+                .color(0x1b1c29)
+                .flags(FLAMMABLE)
+                .build()
 
         TreatedSulfuricLightCycleOil = new Material.Builder(20134, SuSyUtility.susyId('treated_sulfuric_light_cycle_oil'))
                 .gas()
@@ -781,7 +801,11 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        // FREE ID: 20134
+        HeatedMediumLiquefactionOil = new Material.Builder(20135, SuSyUtility.susyId('heated_medium_liquefaction_oil'))
+                .liquid(new FluidBuilder().temperature(550))
+                .color(0x1f2130)
+                .flags(FLAMMABLE)
+                .build()
 
         HeatedLightNaphtha = new Material.Builder(20136, SuSyUtility.susyId('heated_light_naphtha'))
                 .liquid(new FluidBuilder().temperature(300))

@@ -74,7 +74,8 @@ def rubbers = [
     new Rubber('dustLatex', 'Rubber', 4, 40 * 20, 4),
     new Rubber('dustCompoundedPolyisoprene', 'Rubber', 8, 225, 8),
     new Rubber('dustCompoundedStyreneIsopreneRubber', 'StyreneIsopreneRubber', 4, 30 * 20, 4),
-    new Rubber('dustCompoundedStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4)
+    new Rubber('dustCompoundedStyreneButadieneRubber', 'StyreneButadieneRubber', 4, 30 * 20, 4),
+    new Rubber('dustRawNitrileRubber', 'NitrileRubber', 4, 30 * 20, 4)
 ]
 
 def sulfurs = [
@@ -306,6 +307,48 @@ MIXER.recipeBuilder()
     .inputs(ore('dustRawStyreneButadieneRubber') * 8)
     .inputs(ore('dustCarbon') * 2)
     .outputs(metaitem('dustCompoundedStyreneButadieneRubber') * 10)
+    .EUt(VA[MV])
+    .duration(250)
+    .buildAndRegister()
+
+// Nitrile-Butadiene rubber
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustTinySodiumDodecylSulfate'))
+    .fluidInputs(fluid('butadiene') * 400)
+    .fluidInputs(fluid('acrylonitrile') * 1000)
+    .fluidInputs(fluid('water') * 2000)
+    .fluidOutputs(fluid('nitrile_rubber_precursor_emulsion') * 3400)
+    .EUt(VA[MV])
+    .duration(20)
+    .buildAndRegister()
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .inputs(ore('dustTinySodiumDithionite'))
+    .inputs(ore('dustTinyIronSulfate'))
+    .fluidInputs(fluid('nitrile_rubber_precursor_emulsion') * 3400)
+    .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
+    .fluidOutputs(fluid('nitrile_rubber_emulsion') * 2400)
+    .EUt(VA[MV])
+    .duration(500)
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('nitrile_rubber_emulsion') * 2400)
+    .fluidOutputs(fluid('nitrile_rubber_latex') * 2000)
+    .fluidOutputs(fluid('acrylonitrile') * 300)
+    .fluidOutputs(fluid('butadiene') * 100)
+    .EUt(VA[MV])
+    .duration(125)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('dustSalt') * 2)
+    .fluidInputs(fluid('sulfuric_acid') * 100)
+    .fluidInputs(fluid('nitrile_rubber_latex') * 2000)
+    .fluidOutputs(fluid('acidic_wastewater') * 2100)
+    .outputs(metaitem('dustRawNitrileRubber'))
     .EUt(VA[MV])
     .duration(250)
     .buildAndRegister()

@@ -220,7 +220,11 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13032
+        HoopesElectrolyte = new Material.Builder(13032, SuSyUtility.susyId('hoopes_electrolyte'))
+                .dust().liquid(new FluidBuilder().temperature(1273))
+                .components(BariumFluoride, AluminiumTrifluoride * 2, SodiumFluoride * 2)
+                .colorAverage()
+                .build()
 
         SodiumThiosulfateSolution = new Material.Builder(13033, SuSyUtility.susyId('sodium_thiosulfate_solution'))
                 .liquid()
@@ -793,7 +797,13 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13124-13129
+        SodiumDithioniteSolution = new Material.Builder(13124, SuSyUtility.susyId('sodium_dithionite_solution'))
+                .liquid()
+                .components(SodiumDithionite, Water)
+                .colorAverage()
+                .build()
+
+        // FREE ID: 13125-13129
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))

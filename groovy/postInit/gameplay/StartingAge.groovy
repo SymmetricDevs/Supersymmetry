@@ -32,6 +32,11 @@ crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('ingotClay')
 ])
 
+crafting.replaceShapeless("gregtech:clay_block_to_dust", metaitem('dustClay') * 4, [
+        ore('craftingToolMortar'),
+        ore('blockClay')
+])
+
 crafting.replaceShapeless("gregtech:stick_to_smallwoodpulp", metaitem('dustSmallWood'), [
         ore('craftingToolMortar'),
         ore('stickWood')

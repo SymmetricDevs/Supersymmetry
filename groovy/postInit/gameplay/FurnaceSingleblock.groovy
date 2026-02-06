@@ -155,6 +155,7 @@ ore('insulatingCarbon').add(
 )
 
 RESISTANCE_FURNACE.recipeBuilder()
+        .circuitMeta(1)
         .inputs(metaitem('carbon_electrode') * 2)
         .inputs(ore('insulatingCarbon') * 4)
         .notConsumable(ore('insulatingCarbon') * 16)
@@ -164,6 +165,7 @@ RESISTANCE_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 RESISTANCE_FURNACE.recipeBuilder()
+        .circuitMeta(2)
         .inputs(metaitem('carbon_electrode'))
         .inputs(ore('insulatingCarbon') * 4)
         .notConsumable(ore('insulatingCarbon') * 16)

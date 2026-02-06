@@ -186,6 +186,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .buildAndRegister();
 
 VACUUM_CHAMBER.recipeBuilder()
+    .circuitMeta(1)
     .inputs(metaitem('fused_quartz_bulb') * 2)
     .inputs(ore('wireGtSingleSteel') * 2)
     .inputs(metaitem('wireFineNickel') * 2)
@@ -197,6 +198,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .buildAndRegister();
 
 VACUUM_CHAMBER.recipeBuilder()
+    .circuitMeta(2)
     .inputs(metaitem('fused_quartz_bulb') * 2)
     .inputs(ore('wireGtSingleSteel') * 2)
     .inputs(metaitem('wireFineNickel') * 2)

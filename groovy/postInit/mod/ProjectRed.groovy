@@ -33,7 +33,8 @@ mods.jei.ingredient.yeet(
     item('projectred-transmission:wire', 34),           //Low Load Power Line
     item('projectred-transmission:framed_wire', 34),    //Framed Low Load Power Line
     item('microblockcbe:saw_stone'),                    //Stone Saw
-    item('microblockcbe:saw_iron')                      //Iron Saw
+    item('microblockcbe:saw_iron'),                     //Iron Saw
+    item('microblockcbe:stone_rod')                     //Stone Rod
 )
 
 def name_removals = [

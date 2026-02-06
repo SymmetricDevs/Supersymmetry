@@ -198,11 +198,30 @@ crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
     [null, ore('dustRedstone'), ore('craftingToolScrewdriver')]
 ])
 
-crafting.replaceShaped('minecraft:tripwire_hook', item('minecraft:tripwire_hook') * 2, [
+RecyclingHelper.replaceShaped('minecraft:tripwire_hook', item('minecraft:tripwire_hook'), [
     [null, ore('ringIron'), null],
     [ore('springSmallIron'), ore('stickWood'), null],
     [ore('dustRedstone'), ore('cobblestone'), null]
 ])
+
+// Tripwire Hook * 1
+mods.gregtech.assembler.removeByInput(4, [item('biomesoplenty:bamboo') * 2 * 2, metaitem('ringIron') * 2], null)
+// Tripwire Hook * 1
+mods.gregtech.assembler.removeByInput(4, [item('biomesoplenty:bamboo') * 2 * 2, metaitem('ringWroughtIron') * 2], null)
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('ringIron'))
+    .inputs(ore('springSmallIron'))
+    .inputs(ore('stickWood'))
+    .inputs(ore('dustRedstone'))
+    .inputs(ore('cobblestone'))
+    .outputs(item('minecraft:tripwire_hook'))
+    .duration(100)
+    .EUt(4)
+    .buildAndRegister()
+
+RecyclingHelper.removeRecyclingRecipes(item('minecraft:trapped_chest'))
+RecyclingHelper.handleRecycling(item('minecraft:trapped_chest'), [item('minecraft:chest'), ore('ringIron'), ore('springSmallIron'), ore('stickWood'), ore('dustRedstone'), ore('cobblestone')])
 
 crafting.replaceShaped('quark:iron_rod', item('quark:iron_rod'), [
     [null, ore('stickIron'), null],
@@ -842,3 +861,74 @@ crafting.addShaped("tnt_block", item('minecraft:tnt'), [
 ]);
 
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_rail')], null)
+
+// Make stair recipes in assembler equivalent to crafting table
+
+// Oak Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks') * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Cobblestone Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:mossy_cobblestone:*') * 6 * 6], null)
+// Brick Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:brick_block') * 6 * 6], null)
+// Stone Brick Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:stonebrick') * 6 * 6], null)
+// Nether Brick Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:nether_brick') * 6 * 6], null)
+// Sandstone Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:sandstone') * 6 * 6], null)
+// Spruce Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 1) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Birch Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 2) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Jungle Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 3) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Quartz Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:quartz_block') * 6 * 6], null)
+// Acacia Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 4) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Dark Oak Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 5) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Purpur Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:purpur_block') * 6 * 6], null)
+// Rubber Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('gregtech:planks') * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Treated Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('gregtech:planks', 1) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Small Pile of Stone Dust * 6
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:sandstone_stairs')], null)
+// Small Pile of Stone Dust * 6
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:red_sandstone_stairs')], null)
+
+def stairVariants = [
+        [block: item('minecraft:planks'), stair: item('minecraft:oak_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:cobblestone'), stair: item('minecraft:stone_stairs'), dust: metaitem('dustSmallStone')],
+        [block: item('minecraft:brick_block'), stair: item('minecraft:brick_stairs'), dust: metaitem('dustBrick')],
+        [block: item('minecraft:stonebrick'), stair: item('minecraft:stone_brick_stairs'), dust: metaitem('dustSmallStone')],
+        [block: item('minecraft:nether_brick'), stair: item('minecraft:nether_brick_stairs'), dust: metaitem('dustNetherrack')],
+        [block: item('minecraft:sandstone'), stair: item('minecraft:sandstone_stairs')],
+        [block: item('minecraft:planks', 1), stair: item('minecraft:spruce_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:planks', 2), stair: item('minecraft:birch_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:planks', 3), stair: item('minecraft:jungle_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:quartz_block'), stair: item('minecraft:quartz_stairs'), dust: metaitem('dustNetherQuartz')],
+        [block: item('minecraft:planks', 4), stair: item('minecraft:acacia_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:planks', 5), stair: item('minecraft:dark_oak_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:red_sandstone'), stair: item('minecraft:red_sandstone_stairs')],
+        [block: item('minecraft:purpur_block'), stair: item('minecraft:purpur_stairs')],
+        [block: item('gregtech:planks'), stair: item('gregtech:rubber_wood_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('gregtech:planks', 2), stair: item('gregtech:treated_wood_stairs'), dust: metaitem('dustSmallTreatedWood')],
+]
+
+stairVariants.each {material ->
+    ASSEMBLER.recipeBuilder()
+            .circuitMeta(7)
+            .inputs(material.block * 6)
+            .outputs(material.stair * 8)
+            .duration(100)
+            .EUt(1)
+            .buildAndRegister()
+
+    if (material.dust != null) {
+        RecyclingHelper.removeRecyclingRecipes(material.stair)
+        RecyclingHelper.handleRecycling(material.stair, [material.dust * 3])
+    }
+}
