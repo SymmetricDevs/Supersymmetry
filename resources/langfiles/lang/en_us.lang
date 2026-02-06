@@ -361,7 +361,6 @@ susy.material.iron_pentacarbonyl=Iron Pentacarbonyl
 susy.material.crude_gallium_trichloride=Crude Gallium Trichloride
 susy.material.mercury_ii_chloride=Mercury II Chloride
 susy.material.boron_nitride=Boron Nitride
-susy.material.crude_gallium_arsenide=Crude Gallium Arsenide
 susy.material.gallium_arsenide=Pure Gallium Arsenide
 
 susy.material.monocalcium_phosphate=Monocalcium Phosphate
@@ -3339,6 +3338,7 @@ item.susy.material.kevlar.plate=Woven Kevlar
 item.gregtech.material.polytetrafluoroethylene.fiber=Expanded Polytetrafluoroethylene Fiber
 item.gregtech.material.polytetrafluoroethylene.thread=Expanded Polytetrafluoroethylene Thread
 gregtech.material.chrome=Chromium
+gregtech.material.nether_quartz=Quartz
 gregtech.material.carbon=Carbon Black
 gregtech.material.cupric_oxide=Copper II Oxide
 gregtech.material.polycaprolactam=Polycaprolactam (Nylon-6)

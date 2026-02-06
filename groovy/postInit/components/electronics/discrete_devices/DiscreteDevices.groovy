@@ -17,7 +17,7 @@ MIXER.recipeBuilder()
 
 // Miscellaneous discrete devices
 
-    // Relay
+    // Solenoid
 
     crafting.addShaped("gregtech:solenoid", metaitem('component.solenoid'), [
         [ore('wireFineCopper'), ore('wireFineCopper'), ore('wireFineCopper')],
@@ -32,6 +32,16 @@ MIXER.recipeBuilder()
         .duration(120)
         .EUt(VA[ULV])
         .buildAndRegister();
+
+    ASSEMBLER.recipeBuilder()
+        .inputs(ore('boltPermendur'))
+        .inputs(ore('wireFineEnamelledCopper') * 4)
+        .outputs(metaitem('component.solenoid'))
+        .duration(120)
+        .EUt(VA[ULV])
+        .buildAndRegister();
+
+    // Relay
 
     crafting.addShaped("gregtech:relay", metaitem('component.relay'), [
         [ore('plateSteel'), ore('wireFineCopper'), ore('wireGtSingleCopper')],

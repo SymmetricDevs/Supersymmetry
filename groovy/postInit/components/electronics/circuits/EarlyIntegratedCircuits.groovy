@@ -49,57 +49,172 @@ mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plas
 
 // Depletion load NMOS IC fabrication chain
 
+def generateNMOSFabrication(String componentName, int circ) {
+
+    // FEOL
+
+    // LOCOS transistor isolation
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.p_doped', 'wafer.' + componentName + '.step_one', 400, 'silicon_nitride', 1)
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_one', 'wafer.' + componentName + '.step_two', 'novolacs_resist', 'mask.' + componentName + '_set', true)
+    Etching.generateWetEtchingRecipes('wafer.' + componentName + '.step_two', 'wafer.' + componentName + '.step_three', 'silicon_nitride', 400, false, false)
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_three', 'wafer.' + componentName + '.step_four', 'HV', 1)
+    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_four', 'wafer.' + componentName + '.step_five', 400, 'boron_trifluoride')
+    Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_four', 'wafer.' + componentName + '.step_five', 400, true)
+    Etching.generateWetEtchingRecipes('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 'silicon_nitride', 400, false, false)
+
+    // Dope depletion-load transistors
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_six', 'wafer.' + componentName + '.step_seven', 'novolacs_resist', 'mask.' + componentName + '_set', true)
+    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_seven', 'wafer.' + componentName + '.step_eight', 100, 'phosphine')
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_eight', 'wafer.' + componentName + '.step_nine', 'HV', 1)
+
+    // Gate and gate oxide formation
+    Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_nine', 'wafer.' + componentName + '.step_ten', 400, false)
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_ten', 'wafer.' + componentName + '.step_eleven', 400, 'silicon')
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_eleven', 'wafer.' + componentName + '.step_twelve', 'novolacs_resist', 'mask.' + componentName + '_set', true)
+    Etching.generateWetEtchingRecipes('wafer.' + componentName + '.step_twelve', 'wafer.' + componentName + '.step_thirteen', 'silicon', 400, false, false)
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_thirteen', 'wafer.' + componentName + '.step_fourteen', 'HV', 1)
+
+    // Source/drain doping
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_fourteen', 'wafer.' + componentName + '.step_fifteen', 'novolacs_resist', 'mask.' + componentName + '_set', true)
+    Etching.generateWetEtchingRecipes('wafer.' + componentName + '.step_fifteen', 'wafer.' + componentName + '.step_sixteen', 'silicon_dioxide', 400, false, false)
+    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_sixteen', 'wafer.' + componentName + '.step_seventeen', 400, 'phosphine')
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_seventeen', 'wafer.' + componentName + '.step_eighteen', 'HV', 1)
+    Doping.generateDriveInRecipe('wafer.' + componentName + '.step_eighteen', 'wafer.' + componentName + '.step_nineteen', 100)
+
+    // BEOL
+
+    Deposition.generateSputteringRecipes('wafer.' + componentName + '.step_nineteen', 'wafer.' + componentName + '.step_twenty', [ 'aluminium' : 396, 'silicon' : 4 ])
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty', 'wafer.' + componentName + '.step_twenty_one', 'novolacs_resist', 'mask.' + componentName + '_set', true)
+    Etching.generateWetEtchingRecipes('wafer.' + componentName + '.step_twenty_one', 'wafer.' + componentName + '.step_twenty_two', 'aluminium', 400, false, false)
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_twenty_two', 'wafer.' + componentName + '.step_twenty_three', 'HV', 1)
+    Deposition.generateSinteringRecipe('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 400, HV)
+
+    // Packaging
+
+    Packaging.generateDicingRecipe('wafer.' + componentName + '.step_twenty_four', 'die.' + componentName, 24, 400, HV)
+    Packaging.generateWireBondingRecipe('die.' + componentName, 'die.' + componentName + '.bonded', 'gold', 50, HV)
+
+    ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('die.' + componentName + '.bonded'))
+        .inputs(metaitem('component.lead_frame')) // or leadframe material
+        .fluidInputs(fluid('epoxy_molding_compound') * 288)
+        .outputs(metaitem('component.' + componentName))
+        .duration(50)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+}
+
+generateNMOSFabrication('nmos_cpu', 1)
+generateNMOSFabrication('nmos_sram', 2)
+generateNMOSFabrication('nmos_uart', 3)
+generateNMOSFabrication('nmos_mask_rom', 4)
+
+// NMOS planar DRAM, no depletion load
+
 // FEOL
 
 // LOCOS transistor isolation
-Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.p_doped', 'wafer.early_ic.step_one', 400, 'silicon_nitride', 1)
-Lithography.generatePhotolithographyRecipes('wafer.early_ic.step_one', 'wafer.early_ic.step_two', 'novolacs_resist', 'mask.early_ic_set', true)
-Etching.generateWetEtchingRecipes('wafer.early_ic.step_two', 'wafer.early_ic.step_three', 'silicon_nitride', 400, false, false)
-Lithography.generateResistStrippingRecipes('wafer.early_ic.step_three', 'wafer.early_ic.step_four', 'HV', 1)
-Doping.generateIonImplantationRecipes('wafer.early_ic.step_four', 'wafer.early_ic.step_five', 400, 'boron_trifluoride')
-Deposition.generateSiliconDioxideGrowthRecipe('wafer.early_ic.step_four', 'wafer.early_ic.step_five', 400, true)
-Etching.generateWetEtchingRecipes('wafer.early_ic.step_five', 'wafer.early_ic.step_six', 'silicon_nitride', 400, false, false)
-
-// Dope depletion-load transistors
-Lithography.generatePhotolithographyRecipes('wafer.early_ic.step_six', 'wafer.early_ic.step_seven', 'novolacs_resist', 'mask.early_ic_set', true)
-Doping.generateIonImplantationRecipes('wafer.early_ic.step_seven', 'wafer.early_ic.step_eight', 100, 'phosphine')
-Lithography.generateResistStrippingRecipes('wafer.early_ic.step_eight', 'wafer.early_ic.step_nine', 'HV', 1)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.p_doped', 'wafer.nmos_dram.step_one', 400, 'silicon_nitride', 5)
+Lithography.generatePhotolithographyRecipes('wafer.nmos_dram.step_one', 'wafer.nmos_dram.step_two', 'novolacs_resist', 'mask.nmos_dram_set', true)
+Etching.generateWetEtchingRecipes('wafer.nmos_dram.step_two', 'wafer.nmos_dram.step_three', 'silicon_nitride', 400, false, false)
+Lithography.generateResistStrippingRecipes('wafer.nmos_dram.step_three', 'wafer.nmos_dram.step_four', 'HV', 1)
+Doping.generateIonImplantationRecipes('wafer.nmos_dram.step_four', 'wafer.nmos_dram.step_five', 400, 'boron_trifluoride')
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.nmos_dram.step_five', 'wafer.nmos_dram.step_six', 400, true)
+Etching.generateWetEtchingRecipes('wafer.nmos_dram.step_six', 'wafer.nmos_dram.step_seven', 'silicon_nitride', 400, false, false)
 
 // Gate and gate oxide formation
-Deposition.generateSiliconDioxideGrowthRecipe('wafer.early_ic.step_nine', 'wafer.early_ic.step_ten', 400, false)
-Deposition.generateChemicalVaporDepositionRecipe('wafer.early_ic.step_ten', 'wafer.early_ic.step_eleven', 400, 'silicon')
-Lithography.generatePhotolithographyRecipes('wafer.early_ic.step_eleven', 'wafer.early_ic.step_twelve', 'novolacs_resist', 'mask.early_ic_set', true)
-Etching.generateWetEtchingRecipes('wafer.early_ic.step_twelve', 'wafer.early_ic.step_thirteen', 'silicon', 400, false, false)
-Lithography.generateResistStrippingRecipes('wafer.early_ic.step_thirteen', 'wafer.early_ic.step_fourteen', 'HV', 1)
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.nmos_dram.step_seven', 'wafer.nmos_dram.step_eight', 400, false)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.nmos_dram.step_eight', 'wafer.nmos_dram.step_nine', 400, 'silicon')
+Lithography.generatePhotolithographyRecipes('wafer.nmos_dram.step_nine', 'wafer.nmos_dram.step_ten', 'novolacs_resist', 'mask.nmos_dram_set', true)
+Etching.generateWetEtchingRecipes('wafer.nmos_dram.step_ten', 'wafer.nmos_dram.step_eleven', 'silicon', 400, false, false)
+Lithography.generateResistStrippingRecipes('wafer.nmos_dram.step_eleven', 'wafer.nmos_dram.step_twelve', 'HV', 1)
 
 // Source/drain doping
-Lithography.generatePhotolithographyRecipes('wafer.early_ic.step_fourteen', 'wafer.early_ic.step_fifteen', 'novolacs_resist', 'mask.early_ic_set', true)
-Etching.generateWetEtchingRecipes('wafer.early_ic.step_fifteen', 'wafer.early_ic.step_sixteen', 'silicon_dioxide', 400, false, false)
-Doping.generateIonImplantationRecipes('wafer.early_ic.step_sixteen', 'wafer.early_ic.step_seventeen', 400, 'phosphine')
-Lithography.generateResistStrippingRecipes('wafer.early_ic.step_seventeen', 'wafer.early_ic.step_eighteen', 'HV', 1)
-Doping.generateDriveInRecipe('wafer.early_ic.step_eighteen', 'wafer.early_ic.step_nineteen', 100)
+Lithography.generatePhotolithographyRecipes('wafer.nmos_dram.step_twelve', 'wafer.nmos_dram.step_thirteen', 'novolacs_resist', 'mask.nmos_dram_set', true)
+Etching.generateWetEtchingRecipes('wafer.nmos_dram.step_thirteen', 'wafer.nmos_dram.step_fourteen', 'silicon_dioxide', 400, false, false)
+Doping.generateIonImplantationRecipes('wafer.nmos_dram.step_fourteen', 'wafer.nmos_dram.step_fifteen', 400, 'phosphine')
+Lithography.generateResistStrippingRecipes('wafer.nmos_dram.step_fifteen', 'wafer.nmos_dram.step_sixteen', 'HV', 1)
+Doping.generateDriveInRecipe('wafer.nmos_dram.step_sixteen', 'wafer.nmos_dram.step_seventeen', 100)
 
 // BEOL
 
-Deposition.generateSputteringRecipes('wafer.early_ic.step_nineteen', 'wafer.early_ic.step_twenty', [ 'aluminium' : 396, 'silicon' : 4 ])
-Lithography.generatePhotolithographyRecipes('wafer.early_ic.step_twenty', 'wafer.early_ic.step_twenty_one', 'novolacs_resist', 'mask.early_ic_set', true)
-Etching.generateWetEtchingRecipes('wafer.early_ic.step_twenty_one', 'wafer.early_ic.step_twenty_two', 'aluminium', 400, false, false)
-Lithography.generateResistStrippingRecipes('wafer.early_ic.step_twenty_two', 'wafer.early_ic.step_twenty_three', 'HV', 1)
-Deposition.generateSinteringRecipe('wafer.early_ic.step_twenty_three', 'wafer.early_ic.step_twenty_four', 400, HV)
+Deposition.generateSputteringRecipes('wafer.nmos_dram.step_seventeen', 'wafer.nmos_dram.step_eighteen', [ 'aluminium' : 396, 'silicon' : 4 ])
+Lithography.generatePhotolithographyRecipes('wafer.nmos_dram.step_eighteen', 'wafer.nmos_dram.step_nineteen', 'novolacs_resist', 'mask.nmos_dram_set', true)
+Etching.generateWetEtchingRecipes('wafer.nmos_dram.step_nineteen', 'wafer.nmos_dram.step_twenty', 'aluminium', 400, false, false)
+Lithography.generateResistStrippingRecipes('wafer.nmos_dram.step_twenty', 'wafer.nmos_dram.step_twenty_one', 'HV', 1)
+Deposition.generateSinteringRecipe('wafer.nmos_dram.step_twenty_one', 'wafer.nmos_dram.step_twenty_two', 400, HV)
 
 // Packaging
 
-Packaging.generateDicingRecipe('wafer.early_ic.step_twenty_four', 'die.early_ic', 24, 400, HV)
-Packaging.generateWireBondingRecipe('die.early_ic', 'plate.early_power_integrated_circuit', 'gold', 50, HV)
+Packaging.generateDicingRecipe('wafer.nmos_dram.step_twenty_two', 'die.nmos_dram', 24, 400, HV)
+Packaging.generateWireBondingRecipe('die.nmos_dram', 'die.nmos_dram.bonded', 'gold', 50, HV)
 
 ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('die.early_ic.bonded'))
+    .inputs(metaitem('die.nmos_dram.bonded'))
     .inputs(metaitem('component.lead_frame')) // or leadframe material
     .fluidInputs(fluid('epoxy_molding_compound') * 288)
-    .outputs(metaitem('plate.early_power_integrated_circuit'))
+    .outputs(metaitem('component.nmos_dram'))
     .duration(50)
     .EUt(VA[HV])
     .buildAndRegister()
+
+// Clock generator
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('circuit_board.plastic'))
+    .inputs(metaitem('component.crystal_oscillator'))
+    .inputs(ore('componentCapacitorMedium') * 2)
+    .inputs(ore('componentResistorMedium') * 2)
+    .inputs(ore('componentTransistor') * 2)
+    .fluidInputs(fluid('soldering_alloy') * 72)
+    .outputs(metaitem('component.clock_generator'))
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Magnetic storage
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustPurifiedIronTwoThreeOxide') * 14)
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('dustGammaIronThreeOxide') * 15)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustGammaIronThreeOxide') * 5)
+    .inputs(ore('dustCarbon'))
+    .fluidInputs(fluid('polyester_melt') * 2100)
+    .fluidInputs(fluid('methyl_ethyl_ketone') * 1900)
+    .fluidOutputs(fluid('magnetic_lining_slurry') * 4000)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+    // Floppy disks
+
+    ASSEMBLER.recipeBuilder()
+        .inputs(ore('foilMylar'))
+        .inputs(ore('platePolyvinylChloride') * 2)
+        .inputs(ore('foilSteel'))
+        .fluidInputs(fluid('magnetic_lining_slurry') * 100)
+        .outputs(metaitem('component.floppy_disk'))
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Floppy disk drive
+
+    CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuit_board.plastic'))
+        .inputs(metaitem('electric.motor.lv') * 2)
+        .inputs(ore('boltNickelZincFerrite'))
+        .inputs(ore('wireFineCopper') * 4)
+        .inputs(metaitem('component.op_amp') * 2)
+        .inputs(metaitem('component.solenoid')
+
 
 /*Globals.solders.each { key, val ->;
        CIRCUIT_ASSEMBLER.recipeBuilder()

@@ -53,6 +53,7 @@ class Deposition {
     public static final evaporationSources = [
         new EvaporationSource("aluminium", "MV"),
         new EvaporationSource("gold_antimony", "MV"),
+        new EvaporationSource("silver", "HV"),
     ]
 
     static void generateEvaporationRecipe(String input, String product, int duration, String targetMaterial, boolean cleanroom) {

@@ -22,7 +22,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium
     SIFTER.recipeBuilder()
         .inputs(ore('dustAlluvialPgmSand'))
         .outputs(metaitem('nuggetAlluvialPgm') * 4)
-        .outputs(metaitem('dustNetherQuartz') * 3)
+        .outputs(metaitem('dustQuartzSand') * 3)
         .duration(160)
         .EUt(VA[LV])
         .buildAndRegister()

@@ -161,3 +161,11 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[HV])
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister();
+
+// Photodiodes
+
+// Light-emitting diodes
+
+    // Infrared
+
+    

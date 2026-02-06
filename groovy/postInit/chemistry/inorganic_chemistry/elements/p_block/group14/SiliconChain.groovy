@@ -174,7 +174,7 @@ CVD.recipeBuilder() // Bootstrap. 25% single-pass conversion
     .buildAndRegister()
 
 CVD.recipeBuilder() // 25% single-pass conversion
-    .notConsumable(ore('stickHighPuritySilicon') * 7)
+    .inputs(ore('stickHighPuritySilicon') * 7)
     .fluidInputs(fluid('trichlorosilane') * 19200)
     .fluidInputs(fluid('hydrogen') * 19200)
     .outputs(metaitem('ingotHighPuritySilicon') * 7)

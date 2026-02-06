@@ -1,0 +1,127 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
+import globals.semiconductors.Deposition
+
+// Monocrystalline quartz
+
+AUTOCLAVE.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(ore('dustSiliconDioxide') * 4)
+    .fluidInputs(fluid('distilled_water') * 1000)
+    .outputs(metaitem('gemExquisiteNetherQuartz'))
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+CUTTING_SAW.recipeBuilder()
+    .circuitMeta(1)  // AT-cut angle (35°15')
+    .inputs(ore('gemExquisiteNetherQuartz'))
+    .outputs(metaitem('wafer.quartz.at_cut') * 24)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+LATHE.recipeBuilder()
+    .circuitMeta(1)  // Target frequency
+    .inputs(metaitem('wafer.quartz.at_cut'))
+    .outputs(metaitem('wafer.quartz.at_cut.tuned'))
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+Deposition.generateEvaporationRecipe('wafer.quartz.at_cut.tuned', 'component.quartz_oscillator', 100, 'silver', false)
+
+// Piezoelectric ceramics
+
+    // Barium Titanate
+
+    AUTOCLAVE.recipeBuilder()
+        .inputs(ore('dustBariumCarbonate') * 5)
+        .inputs(ore('dustRutile') * 3)
+        .fluidInputs(fluid('water') * 1000)
+        .outputs(metaitem('gemExquisiteBariumTitanate'))
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Gallium Phosphate
+
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustGallium') * 2)
+        .fluidInputs(fluid('oxygen') * 3000)
+        .outputs(metaitem('dustGalliumTrioxide') * 5)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore('dustGalliumTrioxide') * 5)
+        .fluidInputs(fluid('ammonium_dihydrogen_phosphate_solution') * 1000)
+        .fluidOutputs(fluid('diluted_ammonia_solution') * 4000)
+        .outputs(metaitem('dustGalliumPhosphate') * 12)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    // Lithium Niobate
+
+    TUBE_FURNACE.recipeBuilder()
+        .inputs(ore('dustNiobiumOxide') * 7)
+        .inputs(ore('dustLithiumOxide') * 32)
+        .chancedOutput(metaitem('seed_crystal.lithium_niobate'), 5000, 1000)
+        .duration(200)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+    CRYSTALLIZER.recipeBuilder()
+        .inputs(metaitem('seed_crystal.lithium_niobate'))
+        .inputs(ore('dustNiobiumOxide') * 14)
+        .fluidInputs(fluid('lithium_oxide') * 864)
+        .outputs(metaitem('boule.lithium_niobate'))
+        .duration(400)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    CRYSTALLIZER.recipeBuilder()
+        .inputs(metaitem('seed_crystal.lithium_niobate'))
+        .inputs(ore('dustLithiumNiobate') * 20)
+        .outputs(metaitem('boule.lithium_niobate'))
+        .duration(400)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    CUTTER.recipeBuilder()
+        .inputs(metaitem('boule.lithium_niobate'))
+        .outputs(metaitem('seed_crystal.lithium_niobate'))
+        .outputs(metaitem('gemExquisiteLithiumNiobate') * 5)
+        .duration(400)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Lead Zirconate Titanate
+
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustLeadIiOxide'))
+        .fluidOutputs(fluid('lead_ii_oxide') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    REACTION_FURNACE.recipeBuilder()
+        .notConsumable(fluid('lead_ii_oxide') * 1000)
+        .inputs(ore('dustLeadIiOxide') * 4)
+        .inputs(ore('dustTitaniumDioxide') * 3)
+        .inputs(ore('dustZirconiumDioxide') * 3)
+        .outputs(metaitem('dustLeadZirconateTitanate') * 10)
+        .duration(200)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+    FORMING_PRESS.recipeBuilder()
+        .inputs(ore('dustLeadZirconateTitanate') * 10)
+        .notConsumable(metaitem('shape.mold.ball'))
+        .outputs(metaitem('gemLeadZirconateTitanate'))
+        .duration(500)
+        .EUt(VA[LV])
+        .buildAndRegister()

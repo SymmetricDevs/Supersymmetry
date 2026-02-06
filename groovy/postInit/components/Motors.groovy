@@ -45,6 +45,15 @@ crafting.addShaped('susy:electric_motor_lv', metaitem('electric.motor.lv'), [
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('plateCopper'))
+    .inputs(ore('plateStone'))
+    .fluidInputs(fluid('glue') * 100)
+    .outputs(metaitem('component.commutator') * 2)
+    .duration(120)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('plateCopper'))
     .inputs(ore('plateMica'))
     .fluidInputs(fluid('glue') * 100)
     .outputs(metaitem('component.commutator') * 4)

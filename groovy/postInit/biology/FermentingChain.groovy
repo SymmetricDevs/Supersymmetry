@@ -124,6 +124,3 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .duration(1200)
     .EUt(VA[LV])
     .buildAndRegister()
-
-DT.recipeBuilder()
-    .fluidInputs(fluid())

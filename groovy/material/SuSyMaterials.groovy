@@ -1151,7 +1151,6 @@ class SuSyMaterials {
     public static Material GalliumTrichloride
     public static Material MercuryIIChloride
     public static Material BoronNitride
-    public static Material CrudeGalliumArsenide
     public static Material IronPentacarbonyl
     public static Material DilutedPhosphoricAcid
     public static Material MonocalciumPhosphate
