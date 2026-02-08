@@ -1,3 +1,14 @@
+# UPDATE 0.1.16.0
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.93 → v0.1.94
+## Changes
+### Changed Features
+- [Susy-Core] ULV energy hatches no longer appear in JEI previews to annoy you. (#604 by @Crindigo)
+- PWRs are now ~4x as effective to match BWRs. (#1798 by @aliu-here)
+### Fixes
+- [Susy-Core] Drone pad resets if drone despawns (#605 by @Zalgo239)
+- Certain dupes/lossy vanilla-related recipes have been fixed. (#1794 by @aliu-here, #1799, #1800 by @Fiery36)
 # UPDATE 0.1.16-rc2
 ## Mod Changes
 ### Mod Updates

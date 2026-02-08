@@ -1,12 +1,12 @@
 name = "Supersymmetry"
 author = "SymmetricDevs"
-version = "0.1.16-rc2"
+version = "0.1.16.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "c2f99453e89f3a27834ab25b6eef19b4d69d6672627a183f564ad48c28599f76"
+hash = "3e0e13e6f8a89fcb2e6153594a92643011a99964360084a68ffb1705b3396409"
 
 [versions]
 forge = "14.23.5.2860"

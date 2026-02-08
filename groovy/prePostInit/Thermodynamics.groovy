@@ -831,17 +831,17 @@ FLUID_HEATER.recipeBuilder()
         .buildAndRegister();
 
 HEAT_EXCHANGER.recipeBuilder()
-        .fluidInputs(liquid('hot_pressurized_water') * 1536)
+        .fluidInputs(liquid('hot_pressurized_water') * 400)
         .fluidInputs(liquid('deionized_water') * 1640)
-        .fluidOutputs(liquid('deionized_water') * 1536)
+        .fluidOutputs(liquid('deionized_water') * 400)
         .fluidOutputs(fluid('hp_steam') * 1640)
         .duration(1)
         .buildAndRegister();
 
 HEAT_EXCHANGER.recipeBuilder()
-        .fluidInputs(liquid('hot_pressurized_heavy_water') * 1536)
+        .fluidInputs(liquid('hot_pressurized_heavy_water') * 384)
         .fluidInputs(liquid('deionized_water') * 1490)
-        .fluidOutputs(liquid('tritiated_heavy_water') * 1536)
+        .fluidOutputs(liquid('tritiated_heavy_water') * 384)
         .fluidOutputs(fluid('hp_steam') * 1490)
         .duration(1)
         .buildAndRegister();
