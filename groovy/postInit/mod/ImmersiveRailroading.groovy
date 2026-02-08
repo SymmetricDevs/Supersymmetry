@@ -259,4 +259,36 @@ Globals.solders.each { key, val ->
 		.duration(400)
 		.buildAndRegister();
 
+	TagCompound tag6 = new TagCompound();
+
+	tag6.setString("defID", "rolling_stock/transporter_erector/soyuz_transporter.json");
+	tag6.setFloat("gauge", (float) Gauges.STANDARD);
+	
+	cam72cam.mod.item.ItemStack is6 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is6.setTagCompound(tag6);
+
+	// https://en.wikipedia.org/wiki/Transporter_erector
+	// https://positron96.gitlab.io/projects/soyuz-transporter/
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+	.circuitMeta(6)
+	.inputs(ore('plateHsla980X') * 512) 
+	.inputs(ore('frameGtHsla980X') * 64) 
+	.inputs(ore('gearSteel') * 8) 
+	.inputs(metaitem('minecart_wheels.steel') * 8)
+	.inputs(item('susy:metallurgy', 1) * 8) 
+	.inputs(metaitem('fluid.regulator.hv') * 4) 
+	.inputs(metaitem('electric.pump.hv') * 4) 
+	.inputs(metaitem('electric.motor.hv') * 8) 
+	.inputs(ore('stickLongSteel') * 64) 
+	.inputs(metaitem('sensor.ev') * 4) 
+	.inputs(ore('circuitHv') * 8) 
+	.inputs(metaitem('battery_buffer.hv.4')) 
+	.inputs(ore('cableGtQuadrupleCopper') * 32) 
+	.inputs(ore('pipeNormalFluidSteel') * 32)
+	.fluidInputs(fluid(key) * (val * 20)) 
+	.fluidInputs(fluid('hydraulic_fluid') * 5000)
+	.outputs(is6.internal)
+	.EUt(VA[EV]) 
+	.duration(7200)
+	.buildAndRegister();
 }
