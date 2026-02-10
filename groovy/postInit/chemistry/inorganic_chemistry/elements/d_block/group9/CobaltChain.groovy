@@ -74,7 +74,7 @@ for (combustible in Carbons.combustibles()) {
 // COBALTITE ACID LEACHING
 
 BR.recipeBuilder()
-        .inputs(metaitem('dustCobaltite') * 9)
+        .inputs(metaitem('dustCobaltite') * 3)
         .fluidInputs(fluid('nitric_acid') * 13000)
         .fluidInputs(fluid('distilled_water') * 3000)
         .outputs(metaitem('dustSulfur') * 3)
