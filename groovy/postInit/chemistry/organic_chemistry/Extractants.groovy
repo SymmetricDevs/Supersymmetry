@@ -450,7 +450,7 @@ import static gregtech.api.GTValues.*
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
         .fluidInputs(fluid('butyraldehyde') * 2000)
         .fluidOutputs(fluid('two_ethyl_two_hexenal') * 3000)
-        .fluidOutputs(fluid('diluted_sodium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('diluted_sodium_hydroxide_solution') * 2000)
         .duration(60)
         .EUt(VA[MV])
         .buildAndRegister()

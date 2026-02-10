@@ -643,24 +643,45 @@ class FirstDegreeMaterialsB {
                 .build()
                 .setFormula("PbO2", true)
 
-        AluminiumAlloy6061 = new Material.Builder(8759, SuSyUtility.susyId('aluminium_alloy_6061'))
-                .ingot().liquid(new FluidBuilder().temperature(923))
-                .flags(DISABLE_DECOMPOSITION, CONTINUOUSLY_CAST)
-                .components(Aluminium * 634, Magnesium * 8, Silicon * 4, Copper * 1, Chrome * 1)
-                .colorAverage()
-                .build()
-
-        AluminiumAlloy7075 = new Material.Builder(8760, SuSyUtility.susyId('aluminium_alloy_7075'))
-                .ingot().liquid(new FluidBuilder().temperature(913))
-                .flags(DISABLE_DECOMPOSITION, CONTINUOUSLY_CAST)
-                .components(Aluminium * 678, Zinc * 17, Magnesium * 20, Copper * 4, Chrome * 1)
-                .colorAverage()
-                .build()
-
         SilverNitrate = new Material.Builder(8761, SuSyUtility.susyId('silver_nitrate'))
                 .dust()
                 .components(Silver, Nitrogen, Oxygen * 3)
                 .color(0xF5F3D0)
+                .build()
+
+        ZincDithioniteSolution = new Material.Builder(8762, SuSyUtility.susyId('zinc_dithionite_solution'))
+                .liquid()
+                .components(Zinc, Sulfur * 2, Oxygen * 4, Water)
+                .color(0xd6c7b0)
+                .build()
+
+        SodiumDithionite = new Material.Builder(8763, SuSyUtility.susyId('sodium_dithionite'))
+                .dust()
+                .components(Sodium * 2, Sulfur * 2, Oxygen * 4)
+                .color(0xcfc0a1)
+                .build()
+
+        ZincHydroxide = new Material.Builder(8764, SuSyUtility.susyId('zinc_hydroxide'))
+                .dust()
+                .components(Zinc, Hydrogen * 2, Oxygen * 2)
+                .color(0x939cbf)
+                .build()
+
+        ZincHydroxide.setFormula("Zn(OH)2", true)
+      
+        BariumFluoride = new Material.Builder(8765, SuSyUtility.susyId('barium_fluoride'))
+                .dust()
+                .components(Barium, Fluorine * 2)
+                .colorAverage()
+                .build()
+
+        ManganeseSteel = new Material.Builder(8766, SuSyUtility.susyId('manganese_steel'))
+                .ingot().liquid(new FluidBuilder().temperature(1600))
+                .iconSet(SHINY)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .components(Iron * 83, Manganese * 13, Carbon * 4)
+                .color(0xc2e6a3)
+                .blastTemp(1600, GasTier.LOW, GTValues.VA[GTValues.MV], 200)
                 .build()
     }
 }

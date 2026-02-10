@@ -1,3 +1,93 @@
+# UPDATE 0.1.16.0
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.93 → v0.1.94
+## Changes
+### Changed Features
+- [Susy-Core] ULV energy hatches no longer appear in JEI previews to annoy you. (#604 by @Crindigo)
+- PWRs are now ~4x as effective to match BWRs. (#1798 by @aliu-here)
+### Fixes
+- [Susy-Core] Drone pad resets if drone despawns (#605 by @Zalgo239)
+- Certain dupes/lossy vanilla-related recipes have been fixed. (#1794 by @aliu-here, #1799, #1800 by @Fiery36)
+# UPDATE 0.1.16-rc2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.91 → v0.1.93
+### Mod Removals
+- AssetMover
+## Changes
+### Fixes
+- This fixes some item ID shifts introduced by the last update. The culprits will be injected with Xenotimic Rare Earth Nitrates Solution.
+- The ball mill model and recipe logic have been slightly tweaked.
+- Both Acheson process recipes for graphite electrodes are now available.
+# UPDATE 0.1.16-rc1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.88 → v0.1.91
+- Universal Tweaks 1.12.2-1.17.0 → 1.12.2-1.18.0
+- GregTech Food Option 1.12.2-1.12.7.1 → 1.12.2-1.12.8
+### Mod Removals
+- Climate Control/Geographicraft
+## Changes
+### New Features
+- The nitrile-butadiene rubber chain is here! (#1756 by @aliu-here)
+- Large boilers now accept a redstone control hatch! Control your multiblock even more. (sc#589 by @unitazer)
+- The eccentric roll crusher (jaw crusher) and ball mill have been added! Use these to greatly speed up your ore processing. (sc#592 by @MCTian-mi)
+- You may now make high-purity aluminium! (#1735 by @Fiery36)
+### Changed Features
+- Nuclear power output is now 32x higher. (#1791 by @planetme)
+- Bismuth fuel rods are now 3x cheaper, making polonium easier to obtain.
+- Sugarcane is now affected by sprinklers.
+### Fixes
+- Worlds now correctly load on CurseForge launcher! (But we had to remove Geographicraft for it.)
+- The questbook has been improved thanks to @whoisyp and @Fiery36.
+- You now receive the correct singleblock combustion generators from crafting. (#1781 by @Fiery36)
+- [Susy-Core] Barrels no longer crash servers! (sc#595 by @bruberu)
+- [Susy-Core] CPU lag from Project Red has also decreased. (sc#597 by @bruberu)
+But don't worry about all of the other code we merged lately from @Engineerboy2998, @xnossisx, @Suharakimi, @1minus4, @loxoDev, @aluminium0316, @unitazer and @ThisMightBeNoah.
+That's definitely not leading to anything.
+Of course, thanks to our new contributors @1minus4 and @aliu-here! Although we're still trying to figure out who @aliu-here is on Discord...
+# UPDATE 0.1.15.14
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.87 → v0.1.88
+## Changes
+### New Features
+- [Susy-Core] You can now see which LittleTiles blocks have loot in TOP! Never miss those random GTFO food items again. (#585 by @aluminium0316)
+### Changed Features
+- [Susy-Core] Singleblock combustion generators now accept manual insertion of coolant. (#586 by @ThisMightBeNoah)
+### Fixes
+- Iron armor no longer causes dupes. (#1766 by @koukopuff)
+- Yet another step has been taken towards stoichiometric perfection... (#1772 by @Crindigo)
+- [Susy-Core] Combustion generator UIs are now more accurate. (#584 by @aluminium0316)
+And thanks to @Fiery36, @whoisyp, and @Syriusz171 for fixing issues in the questbook.
+I also want to highlight our new contributors: @ThisMightBeNoah, @Engineerboy2998, and @aluminium0316! Thank you for joining us.
+# UPDATE 0.1.15.13
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.86 → v0.1.87
+## Changes
+### Fixes
+- Reverted TechGuns repairing recipes to the default (to prevent server errors) (#1760 by @Fiery36)
+- BrainTech Aerospace Tape(tm) is now available again! (#1762 by @Fiery36)
+- The zirconium chain now preserves chlorine. (#1764 by @whoisyp)
+- [Susy-Core] Have you experienced issues with freezing while joining a server? That's fixed now! It turns out drone pad sounds were the issue... (#583 by @bruberu)
+While we're still working on things in the background, I hope you enjoy this small, gift-sized little update. Also, thanks to @whoisyp for their first contribution!
+# UPDATE 0.1.15.12
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.85 → v0.1.86
+- Supercritical 0.2.3 → 0.2.4
+## Changes
+### Changed Features
+- Masonry bricks can now be automated! (#1755 by @Fiery36)
+- [Susy-Core] The AFC multiblock is now more symmetrical. (#582 by @koukopuff)
+- Multiblock quests no longer require all blocks simultaneously. (#1753 by @Fiery36)
+### Fixes
+- Replaced the deprecated blocks (#1751 by @oliwier509)
+- [Susy-Core] The flying shear is now actually required, and strands are no longer deleted. (#581 by @bruberu)
+And thanks to @Fiery36 and @oliwier509 for maintaining the pack.
+We're mostly working on space, circuits, and finals, so expect visible progress to be slow... until it isn't.
 # UPDATE 0.1.15.11.1
 ## Mod Changes
 ### Mod Updates

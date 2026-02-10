@@ -8,10 +8,6 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-import static prePostInit.Recipemaps.*
-import static gregtech.api.GTValues.*
-import gregtech.api.metatileentity.multiblock.CleanroomType
-
 /*
 Etchants used:
 - Aluminum: Phosphoric Acid, chlorine plasma
@@ -185,10 +181,6 @@ for (pdopant in PDopants.pdopants) {
 }
 
 //WAFERS
-
-Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', MV, 4, 1, 1, false)
-Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ulpic', 'mask.ulpic', MV, 4, 1, 2, false)
-Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ic', 'mask.ic', MV, 4, 1, 3, false)
 
 Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', MV, 4, 1, 1, false)
 Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ulpic', 'mask.ulpic', MV, 4, 1, 2, false)

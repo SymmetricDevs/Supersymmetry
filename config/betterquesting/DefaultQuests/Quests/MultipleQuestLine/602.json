@@ -6,7 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.602.desc",
       "icon:10": {
-        "Damage:2": 6002,
+        "Damage:2": 6003,
         "id:8": "gregtech:meta_item_2"
       },
       "name:8": "susy.quest.db.602.title"
@@ -18,7 +18,7 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 6002,
+          "Damage:2": 6003,
           "id:8": "gregtech:meta_item_2"
         }
       },

@@ -101,7 +101,7 @@ Carbons.dusts().grep(Carbons.HighPurityCombustible).each { carbon ->
         .notConsumable(ore('dustAluminiumTrifluoride') * 4)
         .inputs(ore(carbon.name) * carbon.equivalent(3))
         .fluidOutputs(fluid('carbon_dioxide') * 3000)
-        .outputs(metaitem('ingotAluminium') * 4)
+        .fluidOutputs(fluid('aluminium') * 576)
         .info('recipe.hall-heroult')
         .duration(200 * carbon.duration - 100) // makes 100 for carbon / high purity carbon and 200 for coke / green coke
         .EUt(40)
@@ -224,12 +224,35 @@ BR.recipeBuilder()
     .EUt(200)
     .buildAndRegister()
 
-// Ullman's - Aluminium Ch. 5. Hall-Heroult makes like 99.9% pure already so not making it a chanced output.
-ZONE_REFINER.recipeBuilder()
-    .inputs(ore('ingotAluminium'))
-    .outputs(metaitem('ingotHighPurityAluminium'))
+// High purity aluminium (Ullman's - Aluminium Ch. 5)
+
+BR.recipeBuilder()
+    .inputs(ore('dustBariumCarbonate') * 5)
+    .fluidInputs(fluid('ammonium_fluoride_solution') * 2000)
+    .outputs(metaitem('dustBariumFluoride') * 3)
+    .fluidOutputs(fluid('ammonium_carbonate_solution') * 1000)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustSodiumFluoride') * 4)
+    .inputs(ore('dustAluminiumTrifluoride') * 8)
+    .inputs(ore('dustBariumFluoride') * 3)
+    .outputs(metaitem('dustHoopesElectrolyte') * 15)
     .duration(200)
     .EUt(VA[LV])
+    .buildAndRegister()
+
+ELECTROLYTIC_CELL.recipeBuilder()
+    .notConsumable(metaitem('graphite_electrode'))
+    .notConsumable(ore('blockGraphite'))
+    .notConsumable(fluid('hoopes_electrolyte') * 2160)
+    .notConsumable(fluid('copper') * 144)
+    .fluidInputs(fluid('aluminium') * 576)
+    .fluidOutputs(liquid('high_purity_aluminium') * 576)
+    .duration(400)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 // Alums

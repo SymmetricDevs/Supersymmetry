@@ -657,14 +657,6 @@ Globals.solders.each { key, val ->
         .EUt(VA[MV])
         .buildAndRegister();
 
-    CANNER.recipeBuilder()
-        .fluidInputs(fluid('napalm') * 250)
-        .inputs(item('techguns:itemshared', 28))
-        .outputs(item('techguns:itemshared', 27))
-        .duration(80)
-        .EUt(VA[ULV])
-        .buildAndRegister();
-
     WEAPONS_FACTORY.recipeBuilder()
         .inputs(item('techguns:itemshared', 72))
         .inputs(item('techguns:itemshared', 33))
@@ -1402,37 +1394,6 @@ WEAPONS_FACTORY.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister();
 
-// Repair bench materials
-
-TGArmors.t1_miner_Helmet.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.5f, 2)
-TGArmors.t1_miner_Chestplate.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.5f, 4)
-TGArmors.t1_miner_Leggings.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.333f, 2)
-TGArmors.t1_miner_Boots.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.5f, 2)
-
-TGArmors.t1_combat_Helmet.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.5f, 2)
-TGArmors.t1_combat_Chestplate.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.5f, 4)
-TGArmors.t1_combat_Leggings.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.333f, 3)
-TGArmors.t1_combat_Boots.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.5f, 2)
-
-TGArmors.t2_combat_Helmet.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-TGArmors.t2_combat_Chestplate.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 4)
-TGArmors.t2_combat_Leggings.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.333f, 3)
-TGArmors.t2_combat_Boots.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-
-TGArmors.t2_riot_Helmet.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-TGArmors.t2_riot_Chestplate.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f,  4)
-TGArmors.t2_riot_Leggings.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.333f, 3)
-TGArmors.t2_riot_Boots.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-
-TGArmors.t2_commando_Helmet.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.5f, 2)
-TGArmors.t2_commando_Chestplate.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.5f, 4)
-TGArmors.t2_commando_Leggings.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.333f, 3)
-TGArmors.t2_commando_Boots.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.5f, 2)
-
-TGArmors.riot_shield.setRepairMat(new ItemStackOreDict("platePolycarbonate",3))
-TGArmors.ballistic_shield.setRepairMat(new ItemStackOreDict("plateBoronNitride",3))
-TGArmors.advanced_shield.setRepairMat(new ItemStackOreDict("plateUltraHighMolecularWeightPolyethylene",3))
-
 //Compressed air
 
 CANNER.recipeBuilder()
@@ -1440,6 +1401,14 @@ CANNER.recipeBuilder()
     .fluidInputs(fluid('hp_air') * 1000)
     .outputs(item('techguns:itemshared:23'))
     .duration(100)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+    
+CANNER.recipeBuilder()
+    .fluidInputs(fluid('napalm') * 250)
+    .inputs(item('techguns:itemshared', 28))
+    .outputs(item('techguns:itemshared', 27))
+    .duration(80)
     .EUt(VA[ULV])
     .buildAndRegister();
 

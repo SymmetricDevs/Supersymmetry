@@ -2528,7 +2528,7 @@ class OrganicChemistryMaterials {
                 .build()
 
         // FREE ID: 15396
-
+            
         Polycarbonate = new Material.Builder(15397, SuSyUtility.susyId('polycarbonate'))
                 .polymer()
                 .flags(GENERATE_PLATE)
@@ -3322,6 +3322,19 @@ class OrganicChemistryMaterials {
                 .dust()
                 .components(Carbon * 10, Hydrogen * 6, Oxygen, Nitrogen * 2)
                 .colorAverage()
+                .build()
+
+        RawNitrileRubber = new Material.Builder(15522, SuSyUtility.susyId('raw_nitrile_rubber'))
+                .dust()
+                .components(Acrylonitrile * 3, Butadiene * 7)
+                .color(0x0a0e1f)
+                .build()
+
+        NitrileRubber = new Material.Builder(15523, SuSyUtility.susyId('nitrile_rubber'))
+                .polymer()
+                .components(Acrylonitrile * 3, Butadiene * 7)
+                .flags(GENERATE_FOIL, GENERATE_RING)
+                .color(0x040714)
                 .build()
     }
 }

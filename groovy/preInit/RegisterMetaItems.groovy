@@ -422,7 +422,7 @@ eventManager.listen { PostMaterialEvent event ->
         // Induction Furnace 10300-10310
         addItem(10300, "coated_copper_coil")
         addItem(10301, "cured_coated_coil")
-        addItem(10302, "induction_coil")
+        addItem(10302, "copper_coil")
 
         // Graphite Crucibles and Electrodes 10310-10330
         addItem(10310, "raw_electrode")

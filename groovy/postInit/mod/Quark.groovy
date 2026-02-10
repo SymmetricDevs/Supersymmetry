@@ -9,20 +9,20 @@ def name_removals = [
     'quark:custom_chest_2',
     'quark:custom_chest_4',
     'quark:custom_chest_6',
-    'quark:custom_chest_8'
+    'quark:custom_chest_8',
+    'quark:bark',
+    'quark:bark_1',
+    'quark:bark_2',
+    'quark:bark_3',
+    'quark:bark_4',
+    'quark:bark_5'
 ]
 
 for (name in name_removals) {
     crafting.remove(name);
 }
 
-allowedPlanks = item('minecraft:planks') | item('biomesoplenty:planks_0', 32767) | item('chisel:planks-oak', 32767) | item('quark:stained_planks', 32767) | item('quark:vertical_stained_planks', 32767) | item('quark:vertical_planks') | item('gregtech:planks') | item('gregtechfoodoption:gtfo_planks_0', 32767)
-
-crafting.addShaped('minecraft:chest', item('minecraft:chest'), [
-    [allowedPlanks, allowedPlanks, allowedPlanks],
-    [allowedPlanks, null, allowedPlanks],
-    [allowedPlanks, allowedPlanks, allowedPlanks]])
-
+// Allow quark chests to crafted using modded plank variants of the matching wood type
 def chestVariants = [
     [meta: 0, name: 'quark:spruce_chest',    vanilla: item('minecraft:planks', 1), chisel: item('chisel:planks-spruce', 32767),   vertical: item('quark:vertical_planks', 1)],
     [meta: 1, name: 'quark:birch_chest',  vanilla: item('minecraft:planks', 2), chisel: item('chisel:planks-birch', 32767),    vertical: item('quark:vertical_planks', 2)],
@@ -40,6 +40,16 @@ chestVariants.each { chest ->
         [planks, planks, planks]])
 }
 
+// Allow vanilla chests to be crafted using all remaining modded wood plank variants
+allowedPlanks = item('minecraft:planks') | item('biomesoplenty:planks_0', 32767) | item('chisel:planks-oak', 32767) | item('quark:stained_planks', 32767) | item('quark:vertical_stained_planks', 32767) | item('quark:vertical_planks') | item('gregtech:planks') | item('gregtechfoodoption:gtfo_planks_0', 32767)
+
+crafting.addShaped('minecraft:chest', item('minecraft:chest'), [
+        [allowedPlanks, allowedPlanks, allowedPlanks],
+        [allowedPlanks, null, allowedPlanks],
+        [allowedPlanks, allowedPlanks, allowedPlanks]])
+
+
+// Add chemical bath recipes for dyeing the colored woods
 def dye_colors = [
     'white',
     'orange',
@@ -70,3 +80,11 @@ for (i in 0..15) {
 	
 }
 
+// Add recipes for quark wood bark blocks due to conflict with pyrotech log pile
+
+for (i in 0..3) {
+    crafting.addShapeless('quark:bark_' + i, item('quark:bark', i), [item('minecraft:log', i)])
+}
+
+crafting.addShapeless('quark:bark_4', item('quark:bark', 4), [item('minecraft:log2')])
+crafting.addShapeless('quark:bark_5', item('quark:bark', 5), [item('minecraft:log2', 1)])

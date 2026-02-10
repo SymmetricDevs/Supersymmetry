@@ -22,15 +22,6 @@
           "Count:3": 1,
           "Damage:2": 14639,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 46,
-          "id:8": "gregtech:machine_casing"
-        },
-        "2:10": {
-          "Count:3": 4,
-          "Damage:2": 4,
-          "id:8": "gregtech:meta_block_frame_20"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -56,7 +56,7 @@ class FirstDegreeMaterialsA {
         HighPurityCarbon = generatePurifiedElement(Carbon, 8003, false, false)
         HighPuritySodium = generatePurifiedElement(Sodium, 8004, false, false)
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
-        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, false, true).addFlags(GENERATE_FOIL)
+        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true).addFlags(GENERATE_FOIL)
         HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false)
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)

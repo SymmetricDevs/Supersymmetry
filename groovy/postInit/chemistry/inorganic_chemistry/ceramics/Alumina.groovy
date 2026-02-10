@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import globals.CoolantGases
 import globals.Sintering
 
 // Synthetic Mullite Refractory
@@ -83,20 +84,6 @@ Sintering.nonPlasmaFuels().each { fuel ->
                 .duration(fuel.duration + comburent.duration)
                 .EUt(VA[ULV])
                 .buildAndRegister()
-    }
-}
-
-class CoolantGases {
-    String name
-    String byproduct
-    int amount
-    int duration
-
-    CoolantGases(name, byproduct, amount, duration) {
-        this.name = name
-        this.byproduct = byproduct
-        this.amount = amount
-        this.duration = duration
     }
 }
 

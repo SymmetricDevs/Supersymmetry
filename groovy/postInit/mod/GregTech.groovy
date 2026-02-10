@@ -96,6 +96,10 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustGlass')], null)
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustOpal')], null)
 // Silicon Dioxide Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFlint')], null)
+// Stone Rod * 2
+mods.gregtech.lathe.removeByInput(7, [item('minecraft:stone')], null)
+// Stone Rod * 2
+mods.gregtech.lathe.removeByInput(7, [item('minecraft:cobblestone')], null)
 
 def name_removals = [
     'gregtech:cover_fluid_voiding',
@@ -1491,6 +1495,7 @@ crafting.replaceShaped("gregtech:casing_steel_firebox", item('gregtech:boiler_fi
 
 // Tapes
 ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('foilPlastic') * 4)
     .fluidInputs(fluid('glue') * 250)
     .outputs(metaitem('basic_tape') * 8)
@@ -1927,3 +1932,13 @@ crafting.addShapeless('gregtech:glass_flint_dust_full', metaitem('dustGlass') * 
         metaitem('dustFlint'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
         metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
         metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand')])
+
+LATHE.recipeBuilder()
+        .inputs(ore('stone'))
+        .outputs(metaitem('stickStone') * 4)
+        .duration(20)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('stickStone'))
+RecyclingHelper.handleRecycling(metaitem('stickStone'), [metaitem('dustSmallStone')])
