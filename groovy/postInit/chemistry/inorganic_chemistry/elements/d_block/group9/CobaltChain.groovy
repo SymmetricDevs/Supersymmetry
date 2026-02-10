@@ -7,7 +7,7 @@ import static gregtech.api.GTValues.*
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCobaltite')], [fluid('oxygen') * 3000])
 
 ERF.recipeBuilder()
-        .inputs(ore('dustCobaltite') * 2)
+        .inputs(ore('dustCobaltite') * 6)
         .fluidInputs(fluid('oxygen') * 9000)
         .outputs(metaitem('dustCobaltOxide') * 2)
         .chancedOutput(metaitem('dustArsenicTrioxide') * 5, 7500, 0)
@@ -18,7 +18,7 @@ ERF.recipeBuilder()
         .buildAndRegister()
 
 FLUIDIZED_BR.recipeBuilder()
-        .inputs(ore('dustCobaltite') * 2)
+        .inputs(ore('dustCobaltite') * 6)
         .fluidInputs(fluid('oxygen') * 9000)
         .outputs(metaitem('dustCobaltOxide') * 4)
         .chancedOutput(metaitem('dustArsenicTrioxide') * 5, 9000, 0)
@@ -70,6 +70,30 @@ for (combustible in Carbons.combustibles()) {
         .EUt(VA[LV])
         .buildAndRegister()
 }
+
+// COBALTITE ACID LEACHING
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustCobaltite') * 9)
+        .fluidInputs(fluid('nitric_acid') * 13000)
+        .fluidInputs(fluid('distilled_water') * 3000)
+        .outputs(metaitem('dustSulfur') * 3)
+        .fluidOutputs(fluid(ore.toLowerCase() + "cobaltite_leach_solution") * 1000)
+        .fluidOutputs(fluid('nitric_oxide') * 7000)
+        .duration(240)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(metaitem('stickCobalt'))
+        .notConsumable(metaitem('graphite_electrode'))
+        .fluidInputs(fluid('cobaltite_leach_solution') * 1000)
+        .outputs(metaitem('dustCobalt') * 3)
+        .fluidOutputs(fluid('oxygen') * 3000)
+        .fluidOutputs(fluid('acidic_arsenate_v_solution') * 1000)
+        .EUt(VA[HV])
+        .duration(240)
+        .buildAndRegister()
 
 // Primitive ways for getting impure cobalt (cobalt matte) for Kovar.
 def cobalt_matte_recipes = [

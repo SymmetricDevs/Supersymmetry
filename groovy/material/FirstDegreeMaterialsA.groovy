@@ -683,21 +683,21 @@ class FirstDegreeMaterialsA {
 
         CobaltiteLeachSolution = new Material.Builder(8188, SuSyUtility.susyId('cobaltite_leach_solution'))
                 .liquid(new FluidBuilder().temperature(343))
-                .components(Cobalt * 3, Nitrogen * 6, Oxygen * 30, Hydrogen * 9, Arsenic * 3, Water * 3)
+                .components(Cobalt * 3, Nitrogen * 6, Oxygen * 30, Hydrogen * 9, Arsenic * 3, Water * 5)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
 
-        CobaltiteLeachSolution.setFormula("(Co(NO3)2)3(H3AsO4)3(H2O)3", true)
+        CobaltiteLeachSolution.setFormula("(Co(NO3)2)3(H3AsO4)3(H2O)5", true)
 
         ArsenopyriteLeachSolution = new Material.Builder(8189, SuSyUtility.susyId('arsenopyrite_leach_solution'))
                 .liquid()
-                .components(Iron * 3, Nitrogen * 6, Oxygen * 32, Hydrogen * 13, Arsenic * 3, Water * 3)
+                .components(Iron * 3, Nitrogen * 6, Oxygen * 32, Hydrogen * 13, Arsenic * 3, Water * 5)
                 .flags(DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
 
-        ArsenopyriteLeachSolution.setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)3", true)
+        ArsenopyriteLeachSolution.setFormula("(Fe(NO3)2)3(H3AsO4)3(H2O)5", true)
 
         CopperIISulfide = new Material.Builder(8190, SuSyUtility.susyId('copper_ii_sulfide'))
                 .dust()
