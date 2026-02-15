@@ -819,6 +819,7 @@ class OrganicChemistryMaterials {
 
         KaptonK = new Material.Builder(15135, SuSyUtility.susyId('kapton_k'))
                 .polymer(1)
+                .flags(GENERATE_FOIL)
                 .components(Carbon * 22, Hydrogen * 10, Nitrogen * 2, Oxygen * 5)
                 .color(0xfabe19)
                 .build()

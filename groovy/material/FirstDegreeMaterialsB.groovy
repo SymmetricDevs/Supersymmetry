@@ -534,8 +534,8 @@ class FirstDegreeMaterialsB {
                 .build()
 
         ThoriatedTungsten = new Material.Builder(8745, SuSyUtility.susyId('thoriated_tungsten'))
-                .dust()
-                .components(Tungsten * 98, ThoriumDioxide * 2)
+                .dust().ingot()
+                .components(Tungsten * 98, Thorium * 2)
                 .color(0x1F0808)
                 .build()
         
@@ -565,5 +565,15 @@ class FirstDegreeMaterialsB {
                 .build()
         
         YttriumAluminiumGarnet.setFormula('Y3Al5O12', true)
+
+        UnprocessedThoriatedTungsten = new Material.Builder(8748, SuSyUtility.susyId('unprocessed_thoriated_tungsten'))
+                .dust()
+                .color(0x121212)
+                .build()
+        
+        UnsinteredThoriatedTungsten = new Material.Builder(8749, SuSyUtility.susyId('unsintered_thoriated_tungsten'))
+                .dust().ingot()
+                .color(0x0D0D0D)
+                .build()
     }
 }

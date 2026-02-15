@@ -1578,6 +1578,8 @@ class SuSyMaterials {
     public static Material DiammoniumHydrogenPhosphate
     public static Material Boehmite
     public static Material ReverseOsmosisWater
+    public static Material UnprocessedThoriatedTungsten
+    public static Material UnsinteredThoriatedTungsten
     public static Material ThoriatedTungsten
     public static Material YttriumNitrate
     public static Material YttriumNitrateSolution
