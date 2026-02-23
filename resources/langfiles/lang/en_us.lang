@@ -1042,7 +1042,7 @@ susy.material.liquid_krypton=Liquid Krypton
 susy.material.liquid_xenon=Liquid Xenon
 susy.material.liquid_nitrogen=Liquid Nitrogen
 susy.material.liquid_refinery_gas=Liquid Refinery Gas
-susy.material.liquid_natural_gas=Liquified Natural Gas (LNG)
+susy.material.liquid_natural_gas=Liquefied Natural Gas (LNG)
 susy.material.liquid_methane=Liquid Methane
 susy.material.liquid_decarburized_air=Liquid Decarburized Air
 
@@ -1467,7 +1467,7 @@ susy.material.cold_water=Cold Water
 susy.material.waste_gaseous_nitrogen=Waste Gaseous Nitrogen
 susy.material.purified_waste_gaseous_nitrogen=Purfied Waste Gaseous Nitrogen
 susy.material.chilled_boosted_air=Chilled Boosted Air
-susy.material.partially_liquified_air=Partially Liquified Air
+susy.material.partially_liquefied_air=Partially Liquefied Air
 susy.material.gaseous_air_feedstock=Gaseous Air Feedstock
 susy.material.liquid_air_feedstock=Liquid Air Feedstock
 susy.material.chilly_waste_gaseous_nitrogen=Chilly Waste Gaseous Nitrogen
@@ -2788,6 +2788,8 @@ susy.material.reactive_alumina=Reactive Alumina
 susy.material.tabular_alumina_refractory=Tabular Alumina Refractory
 susy.material.manganese_steel=Manganese Steel
 susy.material.hoopes_electrolyte=Hoopes Electrolyte
+susy.material.green_carbon=Green Carbon
+susy.material.baked_carbon=Baked Carbon
 
 # Isotopes
 
@@ -3002,14 +3004,14 @@ metaitem.hydrocracking_catalyst.name=Hydrocracking Catalyst
 metaitem.red_mud_slag.name=Red Mud Slag
 metaitem.leached_red_mud_slag.name=Leached Red Mud Slag
 metaitem.carbon_paste.name=Carbon Paste
-metaitem.raw_electrode.name=Unfired Carbon Electrode
-metaitem.carbon_electrode.name=Carbon Electrode
+metaitem.raw_electrode.name=Green Carbon Electrode
+metaitem.carbon_electrode.name=Baked Carbon Electrode
 metaitem.graphite_electrode.name=Graphite Electrode
 
-metaitem.raw_carbon_crucible.name=Unfired Carbon Crucible
-metaitem.carbon_crucible.name=Carbon Crucible
+metaitem.raw_carbon_crucible.name=Green Carbon Crucible
+metaitem.carbon_crucible.name=Baked Carbon Crucible
 metaitem.clay_graphite_paste.name=Clay-Graphite Paste
-metaitem.raw_clay_graphite_crucible.name=Unfired Clay-Graphite Crucible
+metaitem.raw_clay_graphite_crucible.name=Green Clay-Graphite Crucible
 metaitem.clay_graphite_crucible.name=Clay-Graphite Crucible
 
 metaitem.hot_cac_clinker.name=Hot Calcium Aluminate Cement Clinker
@@ -3390,7 +3392,6 @@ recipe.iron_iii_sulfate.roasting=You can produce iron III sulfate from pyrite in
 recipe.hydrogen_fluoride.production=The best way to begin producing HF (and hydrofluoric acid) in LV by treating fluorite with sulfuric acid. This produces an insoluble byproduct, calcium sulfate, which can be used to regenerate sulfuric acid.
 recipe.chloralkali.upfront=§2Chloralkali process
 recipe.chloralkali=The primary method to produce chlorine gas and alkali metal hydroxides./nRequires the sintering oven AND pyrolysis oven for the graphite electrode./nAsbestos membranes are initially used, but you may use Nafion membranes in EV to speed up the process.
-recipe.graphite_electrode=Syngas may be obtained from pyrolyzing coke.
 recipe.steel.production=This is the best way of obtaining steel before MV./nPig iron may be obtained from crushed iron ore, coal, and limestone.
 recipe.acanthite.roasting=The simplest way of producing silver in LV./nReplaced by raw electrum processing in MV.
 recipe.cryolite.production=Alumina and hydrofluoric acid must be made before this. Cryolite is an electrolyte used to dissolve alumina in a molten bath. You do not need to automate cryolite for the aluminium chain as it is not consumed.

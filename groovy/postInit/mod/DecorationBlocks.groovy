@@ -52,16 +52,6 @@ crafting.addShaped('susy:industrial_concrete_bricks', item('susy:susy_stone_bric
 
 crafting.addShapeless('marble_conversion', item('gregtech:stone_smooth', 2), [item('chisel:marble2', 7)])
 
-// Structural Block
-mods.gregtech.extruder.recipeBuilder()
-	.inputs(metaitem('frameSteel'))
-	.notConsumable(metaitem('shape.extruder.block'))
-	.fluidInputs(fluid('concrete') * 576)
-	.outputs(item('susy:structural_block') * 32)
-	.duration(200)
-	.EUt(VA[LV])
-	.buildAndRegister();
-
 //add variants to chisel group
 mods.chisel.carving.addGroup("susy_structural_blocks")
 for (int i = 0; i<16; i++) { 

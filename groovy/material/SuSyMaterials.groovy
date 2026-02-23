@@ -1646,6 +1646,8 @@ class SuSyMaterials {
     public static Material SodiumDithionite
     public static Material ZincHydroxide
     public static Material BariumFluoride
+    public static Material GreenCarbon
+    public static Material BakedCarbon
 
     // HP Materials
 

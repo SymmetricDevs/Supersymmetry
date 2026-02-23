@@ -8,6 +8,7 @@ class Recipemaps {
     static final def ASSEMBLER = recipemap('assembler')
     static final def ASSEMBLY_LINE = recipemap('assembly_line')
     static final def AUTOCLAVE = recipemap('autoclave')
+    static final def BALL_MILL = recipemap('ball_mill')
     static final def BATH_CONDENSER = recipemap('bath_condenser')
     static final def BCR = recipemap('bubble_column_reactor')
     static final def BENDER = recipemap('bender')
@@ -35,6 +36,7 @@ class Recipemaps {
     static final def DRONE_PAD = recipemap('drone_pad')
     static final def DRYER = recipemap('dryer')
     static final def DT = recipemap('distillation_tower')
+    static final def ROLL_CRUSHER = recipemap('eccentric_roll_crusher')
     static final def ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
     static final def ELECTROLYZER = recipemap('electrolyzer')
     static final def ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
@@ -119,4 +121,5 @@ class Recipemaps {
     static final def VULCANIZER = recipemap('vulcanizing_press')
     static final def WEAPONS_FACTORY = recipemap('weapons_factory')
     static final def ZONE_REFINER = recipemap('zone_refiner')
+    static final def CUPOLA_FURNACE = recipemap('cupola_furnace')
 }

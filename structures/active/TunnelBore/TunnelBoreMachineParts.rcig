@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "TunnelBoreMachineParts",
+  "items": [
+    {
+      "weight": 3.124999523162842,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtech:fluid_pipe_tiny",
+        "damage": 1068,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 1,
+      "max": 5,
+      "item": {
+        "id": "gregtech:fluid_pipe_small",
+        "damage": 1068,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 4,
+      "max": 22,
+      "item": {
+        "id": "gregtech:fluid_pipe_tiny",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 5,
+      "max": 16,
+      "item": {
+        "id": "gregtech:fluid_pipe_small",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.23224952816963196,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtech:boiler_casing",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.25986868143081665,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 127,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 5,
+      "item": {
+        "id": "gregtech:metal_casing",
+        "damage": 4,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

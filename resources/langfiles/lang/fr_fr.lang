@@ -1009,7 +1009,7 @@ susy.material.liquid_krypton=Liquid Krypton
 susy.material.liquid_xenon=Liquid Xenon
 susy.material.liquid_nitrogen=Liquid Nitrogen
 susy.material.liquid_refinery_gas=Liquid Refinery Gas
-susy.material.liquid_natural_gas=Liquified Natural Gas (LNG)
+susy.material.liquid_natural_gas=Liquefied Natural Gas (LNG)
 susy.material.liquid_methane=Liquid Methane
 susy.material.liquid_decarburized_air=Liquid Decarburized Air
 
@@ -1433,7 +1433,7 @@ susy.material.cold_water=Cold Water
 susy.material.waste_gaseous_nitrogen=Waste Gaseous Nitrogen
 susy.material.purified_waste_gaseous_nitrogen=Purfied Waste Gaseous Nitrogen
 susy.material.chilled_boosted_air=Chilled Boosted Air
-susy.material.partially_liquified_air=Partially Liquified Air
+susy.material.partially_liquefied_air=Partially Liquefied Air
 susy.material.gaseous_air_feedstock=Gaseous Air Feedstock
 susy.material.liquid_air_feedstock=Liquid Air Feedstock
 susy.material.chilly_waste_gaseous_nitrogen=Chilly Waste Gaseous Nitrogen

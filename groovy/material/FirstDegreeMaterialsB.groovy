@@ -683,5 +683,19 @@ class FirstDegreeMaterialsB {
                 .color(0xc2e6a3)
                 .blastTemp(1600, GasTier.LOW, GTValues.VA[GTValues.MV], 200)
                 .build()
+
+        GreenCarbon = new Material.Builder(8767, SuSyUtility.susyId('green_carbon'))
+                .dust()
+                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION)
+                .components(Carbon)
+                .color(0x312b29)
+                .build()
+
+        BakedCarbon = new Material.Builder(8768, SuSyUtility.susyId('baked_carbon'))
+                .dust()
+                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION)
+                .components(Carbon)
+                .color(0x353535)
+                .build()
     }
 }

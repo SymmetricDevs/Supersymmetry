@@ -172,7 +172,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
         .buildAndRegister()
 
     PHASE_SEPARATOR.recipeBuilder()
-        .fluidInputs(fluid('partially_liquified_air') * 150)
+        .fluidInputs(fluid('partially_liquefied_air') * 150)
         .fluidOutputs(fluid('liquid_air_feedstock') * 50)
         .fluidOutputs(fluid('gaseous_air_feedstock') * 100)
         .duration(114)

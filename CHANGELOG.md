@@ -1,3 +1,24 @@
+# UPDATE 0.1.16.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.94 → v0.1.95
+### Mod Additions
+- BiomeTweaker → 1.12.2-3.2.369
+## Changes
+### New Features
+- [Susy-Core] Supersymmetry now has an external recipe viewer! Go to https://symmetricdevs.github.io/RecipeViewer to get started. (#615 by @bruberu)
+- Produce cast iron using the Cupola Furnace! It's blazingly fast (just like rust) (#1801 by @aliu-here)
+### Changed Features
+- Graphite blocks now require similar processing to graphite electrodes. (#1804 by @Fiery36)
+- Incinerators now have their own quest! (#1805 by @Sentrymon)
+### Fixes
+- All BOP biomes now spawn again (#1808 by @Fiery36)
+- COFFEE MV FIX (actual PR title produced by SUSY devs) (#1806 by @Brebexe)
+- [Susy-Core] Turbines no longer produce negative power. (#610 by @aliu-here)
+- [Susy-Core] Drones now actually stick around for more than five seconds (#612 by @Zalgo239)
+- [Susy-Core] BDSM crates no longer crash servers. (#613 by @bruberu)
+- Many QB updates and stoichiometry fixes... (#1812 by @Fiery36) (#1796 by @whoisyp) (#1809 by @Crindigo)
+I also give welcome to our new contributor @Sentrymon.
 # UPDATE 0.1.16.0
 ## Mod Changes
 ### Mod Updates

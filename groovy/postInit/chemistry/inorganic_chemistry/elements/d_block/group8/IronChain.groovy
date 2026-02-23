@@ -48,6 +48,18 @@ class ReductantIron {
     }
 }
 
+class ReductantCarbon {
+    String name
+    int consumption
+    float duration_multiplier
+    ReductantCarbon(String name, int consumption, float multiplier) {
+        this.name = name
+        this.consumption = consumption
+        this.duration_multiplier = multiplier
+    }
+}
+
+
 def blastables = [
     new BlastableIron('dustMagnetite', 2, 6, 4, 80),
     new BlastableIron('dustBandedIron', 2, 4, 3, 80),
@@ -181,6 +193,29 @@ for (blastable in blastables) {
         .duration(100)
         .circuitMeta(2)
         .buildAndRegister()
+
+def carbon_reductants = [
+        new ReductantCarbon("charcoal", 9, 1),
+        new ReductantCarbon("gemCoal", 8, 1), // Standard consumption, 10 = 8 + 2
+        new ReductantCarbon("gemLigniteCoke", 9, 1.2),
+        new ReductantCarbon("fuelCoke", 6, 0.8),
+        new ReductantCarbon("gemAnthracite", 6, 0.75),
+        new ReductantCarbon("dustCharcoal", 9, 0.95),
+        new ReductantCarbon("dustCoal", 8, 0.9),
+        new ReductantCarbon("dustLigniteCoke", 9, 1),
+        new ReductantCarbon("dustCoke", 6, 0.75),
+        new ReductantCarbon("dustAnthracite", 6, 0.7)
+]
+    for (carbon_reductant in carbon_reductants) {
+        //cast iron in cupola furnace; primitive age
+        CUPOLA_FURNACE.recipeBuilder()
+            .inputs(ore('ingotPigIron') * 8)
+            .inputs(ore('dustSmallLimestone'))
+            .inputs(ore(carbon_reductant.name) * carbon_reductant.consumption)
+            .outputs(item('minecraft:iron_ingot') * 8)
+            .duration((200 * carbon_reductant.duration_multiplier).toInteger())
+            .buildAndRegister()
+    }
 
     METALLURGICAL_CONVERTER.recipeBuilder()
         .inputs(ore('ingotPigIron') * 10)

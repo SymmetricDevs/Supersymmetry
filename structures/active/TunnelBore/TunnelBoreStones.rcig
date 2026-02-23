@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "TunnelBoreStones",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_dust_tiny",
+        "damage": 393,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_dust_small",
+        "damage": 393,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 393,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "susy:susy_stone_cobble",
+        "damage": 7,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "susy:susy_stone_smooth",
+        "damage": 7,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}
