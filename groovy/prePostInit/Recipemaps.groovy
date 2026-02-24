@@ -29,6 +29,7 @@ class Recipemaps {
     static final def CRACKER = recipemap('cracker')
     static final def CRYSTALLIZER = recipemap('crystallizer')
     static final def CSTR = recipemap('continuous_stirred_tank_reactor')
+    static final def CUPOLA_FURNACE = recipemap('cupola_furnace')
     static final def CURTAIN_COATER = recipemap('curtain_coater')
     static final def CUTTER = recipemap('cutter')
     static final def CVD = recipemap('cvd')
@@ -121,5 +122,4 @@ class Recipemaps {
     static final def VULCANIZER = recipemap('vulcanizing_press')
     static final def WEAPONS_FACTORY = recipemap('weapons_factory')
     static final def ZONE_REFINER = recipemap('zone_refiner')
-    static final def CUPOLA_FURNACE = recipemap('cupola_furnace')
 }
