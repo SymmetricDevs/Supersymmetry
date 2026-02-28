@@ -71,6 +71,7 @@ class Recipemaps {
     static final def ION_IMPLANTER = recipemap('ion_implantation')
     static final def JET_WINGPACK = recipemap('jet_wingpack_fuels')
     static final def LARGE_FLUID_PUMP = recipemap('large_fluid_pump')
+    static final def LARGE_RAILROAD_ENGINEERING_STATION = recipemap('LARGE_RES')
     static final def LARGE_STEAM_TURBINE = recipemap('large_steam_turbine')
     static final def LARGE_WEAPONS_FACTORY = recipemap('large_weapons_factory')
     static final def LASER_ENGRAVER = recipemap('laser_engraver')
