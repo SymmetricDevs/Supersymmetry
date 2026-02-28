@@ -1731,13 +1731,6 @@ MIXER.recipeBuilder()
 
 // fix conflict
 mods.gregtech.fluid_heater.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('air') * 1000])
-FLUID_HEATER.recipeBuilder()
-    .circuitMeta(2)
-    .fluidInputs(fluid('air') * 1000)
-    .fluidOutputs(fluid('hot_air') * 1000)
-    .duration(20)
-    .EUt(VA[LV])
-    .buildAndRegister()
 
 DRYER.recipeBuilder()
     .fluidInputs(fluid('cellulose_acetate_solution') * 2000)

@@ -7,6 +7,8 @@ import gregtech.common.blocks.MetaBlocks
 import gregtech.common.blocks.MetaBlocks.*
 import gregtechfoodoption.worldgen.trees.GTFOTrees
 import net.minecraft.init.Blocks
+import net.minecraft.block.BlockLog
+
 
 log.infoMC("Running GregTech.groovy...")
 
@@ -1276,7 +1278,9 @@ LATEX_COLLECTOR.recipeBuilder()
 LATEX_COLLECTOR.recipeBuilder()
     .notConsumable(fluid('hot_hp_air') * 10)
     .fluidOutputs(fluid('gtfo_rainbow_sap') * 100)
-    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState)
+    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState, 
+        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Y),
+        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z))
     .duration(20)
     .EUt(VA[ULV])
     .buildAndRegister();
