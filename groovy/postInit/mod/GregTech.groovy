@@ -7,6 +7,8 @@ import gregtech.common.blocks.MetaBlocks
 import gregtech.common.blocks.MetaBlocks.*
 import gregtechfoodoption.worldgen.trees.GTFOTrees
 import net.minecraft.init.Blocks
+import net.minecraft.block.BlockLog
+
 
 log.infoMC("Running GregTech.groovy...")
 
@@ -96,6 +98,10 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustGlass')], null)
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustOpal')], null)
 // Silicon Dioxide Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFlint')], null)
+// Stone Rod * 2
+mods.gregtech.lathe.removeByInput(7, [item('minecraft:stone')], null)
+// Stone Rod * 2
+mods.gregtech.lathe.removeByInput(7, [item('minecraft:cobblestone')], null)
 
 def name_removals = [
     'gregtech:cover_fluid_voiding',
@@ -1272,7 +1278,9 @@ LATEX_COLLECTOR.recipeBuilder()
 LATEX_COLLECTOR.recipeBuilder()
     .notConsumable(fluid('hot_hp_air') * 10)
     .fluidOutputs(fluid('gtfo_rainbow_sap') * 100)
-    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState)
+    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState, 
+        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Y),
+        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z))
     .duration(20)
     .EUt(VA[ULV])
     .buildAndRegister();
@@ -1928,3 +1936,13 @@ crafting.addShapeless('gregtech:glass_flint_dust_full', metaitem('dustGlass') * 
         metaitem('dustFlint'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
         metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
         metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand')])
+
+LATHE.recipeBuilder()
+        .inputs(ore('stone'))
+        .outputs(metaitem('stickStone') * 4)
+        .duration(20)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('stickStone'))
+RecyclingHelper.handleRecycling(metaitem('stickStone'), [metaitem('dustSmallStone')])

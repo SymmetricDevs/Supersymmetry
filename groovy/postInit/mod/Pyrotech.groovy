@@ -355,7 +355,8 @@ mods.jei.ingredient.yeet(
         item('forge:bucketfilled').withNbt(['FluidName': 'pyroberry_wine', 'Amount': 1000]),
         item('forge:bucketfilled').withNbt(['FluidName': 'gloamberry_wine', 'Amount': 1000]),
         item('forge:bucketfilled').withNbt(['FluidName': 'freckleberry_wine', 'Amount': 1000]),
-        item('pyrotech:pile_ash')
+        item('pyrotech:pile_ash'),
+        item('pyrotech:material', 27)
 )
 
 def furnace_removals = [
@@ -1093,13 +1094,6 @@ mods.pyrotech.anvil.recipeBuilder()
         .hits(2)
         .tierGranite()
         .register()
-
-FORGE_HAMMER.recipeBuilder()
-        .inputs(ore('stone'))
-        .outputs(item('pyrotech:material', 16) * 4)
-        .duration(10)
-        .EUt(VA[LV])
-        .buildAndRegister()
 
 def materials = [
         "Stone",

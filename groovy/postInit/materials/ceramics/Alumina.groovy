@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import globals.CoolantGases
 import globals.Sintering
 
 // Synthetic Mullite Refractory
@@ -60,12 +61,11 @@ Sintering.RotaryKiln.fuels.each { fuel ->
 
 // Reactive Alumina
 
-// Replace with ball milling whenever that's added
-MACERATOR.recipeBuilder()
+BALL_MILL.recipeBuilder()
         .inputs(ore('dustAlumina'))
         .outputs(metaitem('dustReactiveAlumina'))
-        .duration(20)
-        .EUt(VA[ULV])
+        .duration(40)
+        .EUt(VA[LV])
         .buildAndRegister()
 
 // Calcium Aluminate Cement
@@ -83,20 +83,6 @@ Sintering.nonPlasmaFuels().each { fuel ->
                 .duration(fuel.duration + comburent.duration)
                 .EUt(VA[ULV])
                 .buildAndRegister()
-    }
-}
-
-class CoolantGases {
-    String name
-    String byproduct
-    int amount
-    int duration
-
-    CoolantGases(name, byproduct, amount, duration) {
-        this.name = name
-        this.byproduct = byproduct
-        this.amount = amount
-        this.duration = duration
     }
 }
 

@@ -125,7 +125,7 @@ def export_server_pack():
                     arcname = os.path.relpath(file_path, start='.')
                     zipf.write(file_path, arcname)
 
-        for file in ['launch.sh', 'forge-1.12.2-14.23.5.2860.jar', 'LICENSE', 'minecraft_server.1.12.2.jar']:
+        for file in ['launch.sh', 'forge-1.12.2-14.23.5.2860.jar', 'LICENSE', 'minecraft_server.1.12.2.jar', 'resourcepacks/Black_Mesa.zip']:
             zipf.write(file, file)
         if missing_mods_list:
             zipf.writestr("missing_mods.txt",missing_mods_list)

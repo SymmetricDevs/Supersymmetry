@@ -50,7 +50,6 @@ def name_removals = [
 	"industrialrenewal:manual",
 	"industrialrenewal:medkit",
 	"industrialrenewal:chunk_loader",
-	"industrialrenewal:concrete"
 ]
 
 for (name in name_removals) {
@@ -529,28 +528,6 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(item('industrialrenewal:item_fire_extinguisher'))
 	.duration(20)
 	.EUt(VA[LV])
-	.buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-	.circuitMeta(6)
-	.fluidInputs(fluid('water') * 500)
-	.inputs(ore('dustCement') * 1)
-	.inputs(ore('dustStone') * 3)
-	.inputs(ore('wireFineSteel') * 16)
-	.inputs(ore('sand') * 2)
-	.outputs(item('industrialrenewal:concrete') * 4)
-	.duration(40)
-	.EUt(14)
-	.buildAndRegister();
-
-mods.gregtech.mixer.recipeBuilder()
-	.fluidInputs(fluid('water') * 250)
-	.inputs(ore('dustConcrete'))
-	.inputs(ore('dustCement'))
-	.inputs(ore('wireFineSteel') * 8)
-	.outputs(item('industrialrenewal:concrete') * 2)
-	.duration(60)
-	.EUt(VA[ULV])
 	.buildAndRegister();
 
 mods.gregtech.assembler.recipeBuilder()

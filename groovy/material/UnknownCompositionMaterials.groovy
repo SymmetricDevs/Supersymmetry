@@ -182,7 +182,10 @@ class UnknownCompositionMaterials {
                 .color(0x571a0b)
                 .build()
 
-        // FREE ID: 4031
+        NitrileRubberEmulsion = new Material.Builder(4031, SuSyUtility.susyId('nitrile_rubber_emulsion'))
+                .liquid()
+                .color(0x132147)
+                .build()
 
         SulfatedMetalOxide = new Material.Builder(4032, SuSyUtility.susyId('sulfated_metal_oxide'))
                 .dust()
@@ -884,7 +887,10 @@ class UnknownCompositionMaterials {
                 .color(0x475453)
                 .build()
 
-        // FREE ID: 4169
+        NitrileRubberLatex = new Material.Builder(4169, SuSyUtility.susyId('nitrile_rubber_latex'))
+                .liquid()
+                .color(0x162140)
+                .build()
 
         ZincCementationSlurry = new Material.Builder(4170, SuSyUtility.susyId('zinc_cementation_slurry'))
                 .liquid()
@@ -1272,7 +1278,12 @@ class UnknownCompositionMaterials {
                 .color(0xb3bf6b)
                 .build()
 
-        //FREE IDs: 4245-4250
+        NitrileRubberPrecursorEmulsion = new Material.Builder(4246, SuSyUtility.susyId('nitrile_rubber_precursor_emulsion'))
+                .fluid()
+                .color(0x25296e)
+                .build()
+
+        //FREE IDs: 4247-4250
 
         PegmatiteTailingSlurry = new Material.Builder(4251, SuSyUtility.susyId('pegmatite_tailing_slurry'))
                 .liquid()
@@ -1368,7 +1379,7 @@ class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .build()
 
-        //FREE IDs: 4272-4275
+        // FREE IDs: 4272-4275
 
         CalcinedScheelite = new Material.Builder(4276, SuSyUtility.susyId('calcined_scheelite'))
                 .dust()
@@ -1376,7 +1387,7 @@ class UnknownCompositionMaterials {
                 .iconSet(FLINT)
                 .build()
 
-        //FREE IDs: 4277-4280
+        // FREE IDs: 4277-4280
 
         SilicateFreeTungstateSolution = new Material.Builder(4281, SuSyUtility.susyId('silicate_free_tungstate_solution'))
                 .liquid()

@@ -519,7 +519,45 @@ PYROLYSE_OVEN.recipeBuilder()
     .duration(80)
     .EUt(VA[MV])
     .buildAndRegister()
-    
+//Removing old recipes for coffee bean washing and drying
+
+mods.gregtech.chemical_bath.removeByInput(60, [metaitem('gregtechfoodoption:basic_coffee_small_gem_chipped') * 64], [fluid('water') * 16000])
+mods.gregtech.chemical_bath.removeByInput(60, [metaitem('gregtechfoodoption:basic_coffee_large_gem_chipped') * 32], [fluid('water') * 16000])
+mods.gregtech.dryer.removeByInput(30, [metaitem('gregtechfoodoption:wet_coffee_large_gem_chipped') * 32], null)
+mods.gregtech.dryer.removeByInput(30, [metaitem('gregtechfoodoption:wet_coffee_small_gem_chipped') * 64], null)
+
+//Re-added coffee bean washing and drying
+CHEMICAL_BATH.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1029') * 32)
+    .fluidInputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1027') * 32)
+    .duration(3600)
+    .EUt(60)
+    .buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1028') * 64)
+    .fluidInputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1026') * 64)
+    .duration(3600)
+    .EUt(60)
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1027') * 32)
+    .fluidOutputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1025') * 32)
+    .duration(3600)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1026') * 64)
+    .fluidOutputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1024') * 64)
+    .duration(3600)
+    .EUt(VA[LV])
+    .buildAndRegister()
 // Force GTFO skewers to be made with only long rods
 // Skewer * 16
 mods.gregtech.lathe.removeByInput(200, [metaitem('stickTitanium')], null)

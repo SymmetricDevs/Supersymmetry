@@ -160,6 +160,7 @@ class Petrochemistry {
         light_cycle_oil : new OilFraction('light_cycle_oil').withTraits(Sulfuric, Heatable),
         naphtha : new OilFraction('naphtha').withTraits(Crude),
         light_naphtha : new OilFraction('light_naphtha').withTraits(Sulfuric, Heatable),
+        medium_liquefaction_oil : new OilFraction('medium_liquefaction_oil').withTraits(Sulfuric, Heatable)
     ]
 
     public static crackables = [

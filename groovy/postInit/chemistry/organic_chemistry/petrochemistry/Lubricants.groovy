@@ -290,8 +290,8 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
     ROASTER.recipeBuilder()
         .notConsumable(fluid('nitrogen') * 8000)
-        .inputs(ore('dustMolybdenumTrisulfide'))
-        .outputs(metaitem('dustMolybdenumDisulfide'))
+        .inputs(ore('dustMolybdenumTrisulfide') * 4)
+        .outputs(metaitem('dustMolybdenumDisulfide') * 3)
         .outputs(metaitem('dustSulfur'))
         .duration(200)
         .EUt(VA[MV])

@@ -1,20 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import globals.CoolantGases
 import globals.Sintering
-
-class CoolantGases {
-    String name
-    String byproduct
-    int amount
-    int duration
-
-    CoolantGases(name, byproduct, amount, duration) {
-        this.name = name
-        this.byproduct = byproduct
-        this.amount = amount
-        this.duration = duration
-    }
-}
 
 Sintering.plasmaFuels().each { fuel ->
     SINTERING_OVEN.recipeBuilder()

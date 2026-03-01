@@ -15,6 +15,7 @@ import supersymmetry.api.fluids.SusyFluidStorageKeys
 import supersymmetry.api.recipes.SuSyRecipeMaps
 import supersymmetry.api.unification.material.properties.DummyABSProperty;
 import supersymmetry.api.unification.material.properties.FiberProperty
+import supersymmetry.api.unification.material.properties.MillBallProperty
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
 import static gregtech.api.unification.material.Materials.*
@@ -876,5 +877,9 @@ class ChangeFlags {
                 .absorptionFactor(0.015625)
                 .moderationFactor(5).build());
         Beryllium.addFlags("force_generate_block")
+
+        // Mill balls
+        Steel.setProperty(SuSyPropertyKey.MILL_BALL, new MillBallProperty(7680));
+        StainlessSteel.setProperty(SuSyPropertyKey.MILL_BALL, new MillBallProperty(17280));
     }
 }

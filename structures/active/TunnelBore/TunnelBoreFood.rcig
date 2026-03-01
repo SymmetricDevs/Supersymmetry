@@ -1,0 +1,376 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "TunnelBoreFood",
+  "items": [
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 38,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 39,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 40,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 41,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 38,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "17aaqe0i1q/1/2/3/7/10/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            },
+            "display": {
+              "nbtType": "compound",
+              "nbt": {
+                "Name": {
+                  "nbtType": "string",
+                  "nbt": "Otirfs"
+                }
+              }
+            },
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 39,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "17aaqe0i1q/1/2/3/7/10/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            },
+            "display": {
+              "nbtType": "compound",
+              "nbt": {
+                "Name": {
+                  "nbtType": "string",
+                  "nbt": "Sack O\u0027 Chips"
+                }
+              }
+            },
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 40,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "17aaqe0i1q/1/2/3/7/10/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            },
+            "display": {
+              "nbtType": "compound",
+              "nbt": {
+                "Name": {
+                  "nbtType": "string",
+                  "nbt": "Salt N\u0027 Vinegar Chips"
+                }
+              }
+            },
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 41,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "17aaqe0i1q/1/2/3/7/10/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            },
+            "display": {
+              "nbtType": "compound",
+              "nbt": {
+                "Name": {
+                  "nbtType": "string",
+                  "nbt": "Bay Salmon Extra Fat Chips"
+                }
+              }
+            },
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 16,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 153,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 220,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 129,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 157,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 77,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.05511390045285225,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "minecraft:potato",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "display": {
+              "nbtType": "compound",
+              "nbt": {
+                "Lore": {
+                  "nbtType": "list",
+                  "nbt": [
+                    {
+                      "nbtType": "string",
+                      "nbt": "Still alive despite everything"
+                    }
+                  ]
+                },
+                "Name": {
+                  "nbtType": "string",
+                  "nbt": "Ancient Potato"
+                }
+              }
+            },
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 13,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 68,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "17aaqe0i1q/1/2/3/7/10/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            },
+            "display": {
+              "nbtType": "compound",
+              "nbt": {
+                "Name": {
+                  "nbtType": "string",
+                  "nbt": "Ancient Meat Sandwich"
+                }
+              }
+            },
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 90,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "display": {
+              "nbtType": "compound",
+              "nbt": {
+                "Name": {
+                  "nbtType": "string",
+                  "nbt": "Ancient Meat Burger"
+                }
+              }
+            },
+            "RepairCost": {
+              "nbtType": "int",
+              "nbt": 0
+            },
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "17aaqe0i1q/1/2/3/7/10/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

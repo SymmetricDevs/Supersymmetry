@@ -27,6 +27,7 @@ def polymers = [
         new ExtrudablePolymers('SiliconeRubber', 480, 8, true, false, false, true, false),
         new ExtrudablePolymers('StyreneIsopreneRubber', 480, 8, true, false, false, false, false),
         new ExtrudablePolymers('StyreneButadieneRubber', 480, 8, true, false, false, false, false),
+        new ExtrudablePolymers('NitrileRubber', 480, 8, true, false, false, false, false),
 
         new ExtrudablePolymers('PolyphenyleneOxide', 1920, 8, false, false, false, false, false),
         new ExtrudablePolymers('PolyphenyleneSulfide', 1920, 8, true, false, false, false, false),
