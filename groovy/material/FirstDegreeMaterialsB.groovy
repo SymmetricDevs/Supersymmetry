@@ -697,5 +697,13 @@ class FirstDegreeMaterialsB {
                 .components(Carbon)
                 .color(0x353535)
                 .build()
+
+        GRCop84 = new Material.Builder(8769, SuSyUtility.susyId('grcop_84'))
+                .dust()
+                .ingot().liquid(new FluidBuilder().temperature(1337))
+                .flags(GENERATE_PLATE)
+                .components(Copper * 19, Chrome * 2, Niobium)
+                .colorAverage()
+                .build()
     }
 }
