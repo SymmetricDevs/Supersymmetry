@@ -69,6 +69,21 @@ mods.gregtech.assembler.removeByInput(16, [metaitem('plateHastelloyX') * 6, meta
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateTitaniumTungstenCarbide') * 6, metaitem('frameTitanium'),
                                            metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
 
+// GRCop-84
+
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('dustGrcop84')], [fluid('oxygen') * 62])
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustGrcop84')], null)
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustCopper') * 19)
+        .inputs(metaitem('dustChrome') * 2)
+        .inputs(metaitem('dustNiobium'))
+        .outputs(metaitem('dustGrcop84') * 22)
+        .duration(5)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+
 // Secure Maceration Casing
 RecyclingHelper.replaceShaped('gcym:casing_large_macerator', item('gcym:large_multiblock_casing') * 2, [
     [ore('plateStelliteJ'), ore('craftingToolHardHammer'), ore('plateStelliteJ')],
