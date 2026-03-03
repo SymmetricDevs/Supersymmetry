@@ -3581,7 +3581,7 @@ class FirstDegreeMaterialsA {
         Incoloy908 = new Material.Builder(8629, SuSyUtility.susyId("incoloy_908"))
                 .ingot().liquid(new FluidBuilder().temperature(1685))
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROD, SUPERALLOY)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, SUPERALLOY)
                 .components(Iron * 20, Nickel * 30, Cobalt, Chrome * 3, Aluminium, Titanium * 2, Tungsten, Niobium * 2)
                 .colorAverage()
                 .blastTemp(3000, GasTier.HIGH, GTValues.VA[GTValues.EV])
