@@ -1648,6 +1648,8 @@ class SuSyMaterials {
     public static Material BariumFluoride
     public static Material GreenCarbon
     public static Material BakedCarbon
+    public static Material GRCop84
+    public static Material MARM246
 
     // HP Materials
 
@@ -1883,7 +1885,6 @@ class SuSyMaterials {
     public static Material ReactiveAlumina
     public static Material SodiumDithioniteSolution
     public static Material HoopesElectrolyte
-    public static Material GRCop84
 
     // Organic Chemistry Materials
 
