@@ -1,7 +1,5 @@
 package material
 
-import javax.swing.border.TitledBorder
-
 import static material.SuSyMaterials.*
 import static globals.Globals.*
 
@@ -705,15 +703,18 @@ class FirstDegreeMaterialsB {
                 .ingot().liquid(new FluidBuilder().temperature(1337))
                 .flags(GENERATE_PLATE)
                 .components(Copper * 19, Chrome * 2, Niobium)
+                .iconSet(SHINY)
                 .colorAverage()
                 .build()
 
-        MARM246 = new Material.Builder(8770, SuSyUtility.susyId('mar_m246'))
-                .ingot().liquid(new FluidBuilder().temperature(1300))
-                .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW)
+        MARM246 = new Material.Builder(8770, SuSyUtility.susyId('mar_m_246'))
+                .ingot().liquid(new FluidBuilder().temperature(1558))
+                .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW, SUPERALLOY)
                 .components(Nickel * 29, Chrome * 5, Cobalt  * 5, Tungsten * 5, Aluminium * 3, Molybdenum * 1, Titanium * 1, Tantalum * 1)
                 .rotorStats(9.0f, 4.0f, 2048)
+                .iconSet(SHINY)
                 .colorAverage()
+                .blastTemp(3800, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
     }
 }
