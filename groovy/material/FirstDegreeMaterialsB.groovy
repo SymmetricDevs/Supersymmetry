@@ -533,15 +533,17 @@ class FirstDegreeMaterialsB {
                 .color(0x53a4c9)
                 .build()
 
-        ThoriatedTungsten = new Material.Builder(8745, SuSyUtility.susyId('thoriated_tungsten'))
+        ThoriatedTungsten = new Material.Builder(8765, SuSyUtility.susyId('thoriated_tungsten'))
                 .dust().ingot()
+                .flags(NO_UNIFICATION)
                 .components(Tungsten * 98, Thorium * 2)
                 .color(0x1F0808)
+                .blastTemp(3000, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
         
         ThoriatedTungsten.setFormula('W98(ThO2)2', true)
 
-        YttriumNitrate = new Material.Builder(8746, SuSyUtility.susyId('yttrium_nitrate'))
+        YttriumNitrate = new Material.Builder(8766, SuSyUtility.susyId('yttrium_nitrate'))
                 .dust()
                 .components(Yttrium, Nitrate * 3)
                 .color(0xF4F8D4)
@@ -549,7 +551,7 @@ class FirstDegreeMaterialsB {
         
         YttriumNitrate.setFormula('Y(NO3)3', true)
 
-        YttriumNitrateSolution = new Material.Builder(8746, SuSyUtility.susyId('yttrium_nitrate_solution'))
+        YttriumNitrateSolution = new Material.Builder(8767, SuSyUtility.susyId('yttrium_nitrate_solution'))
                 .liquid()
                 .components(YttriumNitrate * 2, Water * 3)
                 .color(0xF4F8D4)
@@ -557,7 +559,7 @@ class FirstDegreeMaterialsB {
         
         YttriumNitrateSolution.setFormula('(Y(NO3)3)2(H2O)3', true)
 
-        YttriumAluminiumGarnet = new Material.Builder(8747, SuSyUtility.susyId('yag'))
+        YttriumAluminiumGarnet = new Material.Builder(8768, SuSyUtility.susyId('yag'))
                 .dust()
                 .flags(CRYSTALLIZABLE)
                 .components(Yttrium * 3, Aluminium * 5, Oxygen * 12)
@@ -566,13 +568,15 @@ class FirstDegreeMaterialsB {
         
         YttriumAluminiumGarnet.setFormula('Y3Al5O12', true)
 
-        UnprocessedThoriatedTungsten = new Material.Builder(8748, SuSyUtility.susyId('unprocessed_thoriated_tungsten'))
+        ThoriatedTungstenMixture = new Material.Builder(8769, SuSyUtility.susyId('unprocessed_thoriated_tungsten'))
                 .dust()
                 .color(0x121212)
                 .build()
         
-        UnsinteredThoriatedTungsten = new Material.Builder(8749, SuSyUtility.susyId('unsintered_thoriated_tungsten'))
+        UnsinteredThoriatedTungsten = new Material.Builder(8770, SuSyUtility.susyId('unsintered_thoriated_tungsten'))
                 .dust().ingot()
+                .setFlags(NO_UNIFICATION)
+                .blastTemp(3000, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .color(0x0D0D0D)
                 .build()
     }
