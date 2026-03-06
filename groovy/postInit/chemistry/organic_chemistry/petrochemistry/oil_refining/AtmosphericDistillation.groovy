@@ -1,11 +1,10 @@
+import static prePostInit.Recipemaps.*
 import static globals.Petrochemistry.*
-
-DT = recipemap('sieve_distillation')
-PHASE_SEPARATOR = recipemap('phase_separator')
+import static gregtech.api.GTValues.*
 
 // Atmospheric distillation
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('dense_steam') * 10000)
     .fluidInputs(oils.oil.getHeated(10000))
     .fluidOutputs(fluid('atmospheric_oil_residue') * 2000)
@@ -14,10 +13,10 @@ DT.recipeBuilder()
     .fluidOutputs(fractions.kerosene.getCrude(1250))
     .fluidOutputs(fluid('atmospheric_overheads') * 5000)
     .duration(200)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('dense_steam') * 10000)
     .fluidInputs(oils.oil_heavy.getHeated(10000))
     .fluidOutputs(fluid('atmospheric_oil_residue') * 3500)
@@ -26,10 +25,10 @@ DT.recipeBuilder()
     .fluidOutputs(fractions.kerosene.getCrude(500))
     .fluidOutputs(fluid('heavy_atmospheric_overheads') * 3500)
     .duration(200)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
-DT.recipeBuilder()
+SIEVE_DT.recipeBuilder()
     .fluidInputs(fluid('dense_steam') * 10000)
     .fluidInputs(oils.oil_light.getHeated(10000))
     .fluidOutputs(fluid('atmospheric_oil_residue') * 1000)
@@ -38,20 +37,20 @@ DT.recipeBuilder()
     .fluidOutputs(fractions.kerosene.getCrude(1750))
     .fluidOutputs(fluid('light_atmospheric_overheads') * 6000)
     .duration(200)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Stripping of contaminants using steam
 
 fractions.each { _, fraction ->
     if (fraction.strippable) {
-        DT.recipeBuilder()
+        SIEVE_DT.recipeBuilder()
         .fluidInputs(fraction.getCrude(1000))
         .fluidInputs(fluid('dense_steam') * 1000)
         .fluidOutputs(fraction.getSulfuric(1000))
         .fluidOutputs(fluid('sour_water') * 1000)
         .duration(20)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
     }
 }
@@ -87,5 +86,5 @@ BCR.recipeBuilder()
     .fluidOutputs(fluid('hydrogen_sulfide') * 200)
     .fluidOutputs(fluid('wastewater') * 11000)
     .duration(100)
-    .EUt(7)
+    .EUt(VA[ULV])
     .buildAndRegister()

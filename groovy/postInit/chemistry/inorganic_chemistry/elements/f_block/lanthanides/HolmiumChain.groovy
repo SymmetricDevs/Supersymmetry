@@ -1,15 +1,12 @@
-import globals.Globals
-
-REACTION_FURNACE = recipemap('reaction_furnace')
-BR = recipemap('batch_reactor')
-DISTILLERY = recipemap('distillery')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('holmium_chloride_solution') * 9000)
     .outputs(metaitem('dustHolmiumChloride') * 4)
     .fluidOutputs(fluid('water') * 9000)
     .duration(20)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -18,7 +15,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustHolmiumFluoride') * 4)
     .fluidOutputs(fluid('hydrochloric_acid') * 3000)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()

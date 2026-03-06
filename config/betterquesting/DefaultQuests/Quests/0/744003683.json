@@ -1,6 +1,6 @@
 {
   "preRequisites:11": [
-    87
+    456863075
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -10,6 +10,7 @@
         "Damage:2": 2,
         "id:8": "pyrotech:material"
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.744003683.title"
     }
   },

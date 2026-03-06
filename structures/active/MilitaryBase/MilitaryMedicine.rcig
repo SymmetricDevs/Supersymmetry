@@ -3,9 +3,9 @@
   "inventoryGeneratorID": "MilitaryMedicine",
   "items": [
     {
-      "weight": 2.0475566387176514,
-      "min": 8,
-      "max": 17,
+      "weight": 0.5354365706443787,
+      "min": 4,
+      "max": 13,
       "item": {
         "id": "gregtechfoodoption:gtfo_meta_item",
         "damage": 230,
@@ -23,7 +23,7 @@
       }
     },
     {
-      "weight": 0.646636426448822,
+      "weight": 0.8473554849624634,
       "min": 1,
       "max": 1,
       "item": {
@@ -42,7 +42,7 @@
       }
     },
     {
-      "weight": 0.646636426448822,
+      "weight": 0.8473554849624634,
       "min": 1,
       "max": 1,
       "item": {
@@ -61,7 +61,7 @@
       }
     },
     {
-      "weight": 1.39763605594635,
+      "weight": 1.1894346475601196,
       "min": 2,
       "max": 4,
       "item": {

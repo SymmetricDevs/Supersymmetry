@@ -14,9 +14,8 @@
     "0:10": {
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 16,
+          "Count:3": 1,
           "Damage:2": 115,
-          "OreDict:8": "dustTungsten",
           "id:8": "gregtech:meta_dust"
         }
       },

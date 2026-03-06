@@ -31,17 +31,7 @@
       }
     },
     {
-      "weight": 1.39763605594635,
-      "min": 2,
-      "max": 5,
-      "item": {
-        "id": "gregtech:meta_item_1",
-        "damage": 267,
-        "count": 1
-      }
-    },
-    {
-      "weight": 0.9243392944335938,
+      "weight": 0.32298368215560913,
       "min": 1,
       "max": 1,
       "item": {
@@ -60,7 +50,7 @@
       }
     },
     {
-      "weight": 1.290178656578064,
+      "weight": 0.18405085802078247,
       "min": 1,
       "max": 1,
       "item": {
@@ -74,22 +64,12 @@
       }
     },
     {
-      "weight": 3.5707483291625977,
+      "weight": 2.9194812774658203,
       "min": 1,
       "max": 1,
       "item": {
         "id": "gregtech:meta_item_1",
         "damage": 60,
-        "count": 1
-      }
-    },
-    {
-      "weight": 0.11158588528633118,
-      "min": 1,
-      "max": 1,
-      "item": {
-        "id": "gregtech:machine",
-        "damage": 1560,
         "count": 1
       }
     },
@@ -124,7 +104,7 @@
       }
     },
     {
-      "weight": 1.9013646841049194,
+      "weight": 0.4858947992324829,
       "min": 1,
       "max": 1,
       "item": {
@@ -136,7 +116,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 2,
+      "max": 1,
       "item": {
         "id": "opensecurity:mag_card",
         "damage": 0,
@@ -146,7 +126,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 2,
+      "max": 1,
       "item": {
         "id": "opensecurity:rfid_card",
         "damage": 0,
@@ -164,9 +144,9 @@
       }
     },
     {
-      "weight": 1.290178656578064,
+      "weight": 1.39763605594635,
       "min": 1,
-      "max": 6,
+      "max": 8,
       "item": {
         "id": "openmodularturrets:upgrade_meta",
         "damage": 2,
@@ -174,9 +154,9 @@
       }
     },
     {
-      "weight": 1.0950840711593628,
+      "weight": 1.39763605594635,
       "min": 1,
-      "max": 4,
+      "max": 8,
       "item": {
         "id": "openmodularturrets:upgrade_meta",
         "damage": 3,
@@ -184,9 +164,47 @@
       }
     },
     {
-      "weight": 1.1894346475601196,
+      "weight": 0.08515378087759018,
       "min": 1,
-      "max": 4,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 1004,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1612,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "supreme_lubricant"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 28000
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 8,
       "item": {
         "id": "openmodularturrets:intermediate_tiered",
         "damage": 6,
@@ -194,9 +212,9 @@
       }
     },
     {
-      "weight": 1.5121370553970337,
+      "weight": 0.8473554849624634,
       "min": 1,
-      "max": 4,
+      "max": 8,
       "item": {
         "id": "openmodularturrets:intermediate_tiered",
         "damage": 11,
@@ -204,9 +222,29 @@
       }
     },
     {
-      "weight": 1.6340234279632568,
+      "weight": 0.8473554849624634,
       "min": 1,
-      "max": 3,
+      "max": 4,
+      "item": {
+        "id": "openmodularturrets:intermediate_tiered",
+        "damage": 8,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "openmodularturrets:intermediate_tiered",
+        "damage": 13,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 16,
       "item": {
         "id": "openmodularturrets:intermediate_regular",
         "damage": 0,

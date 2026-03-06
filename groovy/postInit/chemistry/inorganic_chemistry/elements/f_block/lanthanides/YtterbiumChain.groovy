@@ -1,8 +1,5 @@
-import globals.Globals
-
-REACTION_FURNACE = recipemap('reaction_furnace')
-ROASTER = recipemap('roaster')
-BR = recipemap('batch_reactor')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 BR.recipeBuilder()
     .fluidInputs(fluid('ytterbium_amalgam') * 1000)
@@ -11,7 +8,7 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('hydrogen') * 5000)
     .fluidOutputs(fluid('ytterbium_chloride_solution') * 5000)
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -21,7 +18,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustYtterbiumHydroxide') * 7)
     .fluidOutputs(fluid('diluted_salt_water') * 6000)
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
@@ -29,7 +26,7 @@ ROASTER.recipeBuilder()
     .outputs(metaitem('dustYtterbiumOxide') * 5)
     .fluidOutputs(fluid('dense_steam') * 3000)
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
@@ -39,5 +36,5 @@ REACTION_FURNACE.recipeBuilder()
     .outputs(metaitem('dustYtterbium') * 2)
     .outputs(metaitem('dustLanthanumOxide') * 5)
     .duration(200)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister()

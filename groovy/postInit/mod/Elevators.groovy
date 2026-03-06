@@ -1,3 +1,6 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
 def name_removals = [
         'elevatorid:redye_white',
         'elevatorid:redye_orange',
@@ -43,31 +46,31 @@ crafting.replaceShaped('elevatorid:elevator_white', item('elevatorid:elevator_wh
 ])
 
 def dyes = [
-	'orange',
-	'pink',
-	'light_blue',
-	'yellow',
-	'lime',
-	'gray',
-	'cyan',
-	'purple',
-	'blue',
-	'brown',
-	'green',
-	'red',
-	'black',
-	'white',
-	'magenta'
+    'orange',
+    'pink',
+    'light_blue',
+    'yellow',
+    'lime',
+    'gray',
+    'cyan',
+    'purple',
+    'blue',
+    'brown',
+    'green',
+    'red',
+    'black',
+    'white',
+    'magenta'
 ]
 
 for (dye in dyes) {
-	CHEMICAL_BATH.recipeBuilder()
-        	.fluidInputs(fluid('dye_' + dye) * 144)
-        	.inputs(ore('blockElevator'))
-        	.outputs(item('elevatorid:elevator_' + dye))
-        	.duration(20)
-        	.EUt(7)
-        	.buildAndRegister();
+    CHEMICAL_BATH.recipeBuilder()
+            .fluidInputs(fluid('dye_' + dye) * 144)
+            .inputs(ore('blockElevator'))
+            .outputs(item('elevatorid:elevator_' + dye))
+            .duration(20)
+            .EUt(VA[ULV])
+            .buildAndRegister();
 }
 
 CHEMICAL_BATH.recipeBuilder()
@@ -75,5 +78,5 @@ CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('blockElevator'))
         .outputs(item('elevatorid:elevator_silver'))
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();

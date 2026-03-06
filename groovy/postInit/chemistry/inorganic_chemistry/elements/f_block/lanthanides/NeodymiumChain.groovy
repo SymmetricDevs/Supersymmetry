@@ -1,8 +1,5 @@
-import globals.Globals
-
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-ROASTER = recipemap('roaster')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 BR.recipeBuilder()
     .fluidInputs(fluid('neodymium_chloride_solution') * 3000)
@@ -10,7 +7,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustNeodymiumFluoride') * 4)
     .fluidOutputs(fluid('diluted_hydrochloric_acid') * 6000)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -19,7 +16,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustNeodymiumHydroxide') * 7)
     .fluidOutputs(fluid('salt_water') * 3000)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
@@ -27,7 +24,7 @@ ROASTER.recipeBuilder()
     .outputs(metaitem('dustNeodymiumOxide') * 5)
     .fluidOutputs(fluid('dense_steam') * 3000)
     .duration(100)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()

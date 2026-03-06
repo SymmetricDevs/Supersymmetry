@@ -1,4 +1,5 @@
-import globals.Globals
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 //REMOVALS
 furnace.removeByInput(item('minecraft:slime_ball'))
@@ -13,18 +14,14 @@ crafting.addShaped('gregtech:resin_item', metaitem('rubber_drop') * 4, [
         [null, metaitem('shape.mold.ball').reuse(), null]
 ])
 
-def DISTILLERY = recipemap('distillery');
-def CENTRIFUGE = recipemap('centrifuge');
-def FLUID_SOLIDIFIER = recipemap('fluid_solidifier');
-
 DISTILLERY.recipeBuilder()
         .fluidInputs(fluid('resin') * 100)
         .fluidOutputs(fluid('glue') * 75)
         .duration(15)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('resin') * 250)
         .outputs(metaitem('rubber_drop'))
         .duration(20)
@@ -37,5 +34,5 @@ CENTRIFUGE.recipeBuilder()
         .inputs(metaitem('rubber_drop'))
         .fluidOutputs(fluid('resin') * 250)
         .duration(40)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister()

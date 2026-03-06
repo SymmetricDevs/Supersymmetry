@@ -1,14 +1,11 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
-import techguns.items.guns.GenericGun;
-import techguns.plugins.crafttweaker.EnumGunStat;
-
-WEAPONS_FACTORY = recipemap('weapons_factory')
-ASSEMBLER = recipemap('assembler')
-CANNER = recipemap('canner')
-ROASTER = recipemap('roaster')
-FORMING_PRESS = recipemap('forming_press')
-LATHE = recipemap('lathe')
-CHEMICAL_BATH = recipemap('chemical_bath')
+import static gregtech.api.GTValues.*
+import techguns.items.guns.GenericGun
+import techguns.plugins.crafttweaker.EnumGunStat
+import techguns.TGArmors
+import techguns.TGItems
+import techguns.util.ItemStackOreDict
 
 def name_removals = [
     "techguns:basicmachine_0_ammo_press",
@@ -75,6 +72,7 @@ def name_removals = [
     "techguns:thompson_alt",
     "techguns:ak47",
     "techguns:ak47_alt",
+    "techguns:boltaction",
     "techguns:m4",
     "techguns:m4_alt",
     "techguns:m4_infiltrator",
@@ -84,10 +82,6 @@ def name_removals = [
     "techguns:combatshotgun",
     "techguns:combatshotgun_ammo_default",
     "techguns:combatshotgun_ammo_incendiary",
-    "techguns:boltaction_ammo_default",
-    "techguns:boltaction_ammo_incendiary",
-    "techguns:revolver_ammo_default",
-    "techguns:revolver_ammo_incendiary",
     "techguns:goldenrevolver",
     "techguns:mac10",
     "techguns:mac10_alt",
@@ -99,6 +93,8 @@ def name_removals = [
     "techguns:guidedmissilelauncher",
     "techguns:guidedmissilelauncher_alt",
     "techguns:grimreaper",
+    "techguns:grimreaper_ammo_default",
+    "techguns:grimreaper_ammo_high_velocity",
     "techguns:grenadelauncher",
     "techguns:aug",
     "techguns:aug_alt",
@@ -186,7 +182,15 @@ def name_removals = [
     "techguns:itemshared_155_upgrade_blast_protection_3",
     "techguns:itemshared_86_nuggetcopper",
     "techguns:itemshared_87_nuggetlead",
-    "techguns:itemshared_88_nuggetsteel"
+    "techguns:itemshared_88_nuggetsteel",
+    "techguns:steam_helmet",
+    "techguns:steam_chestplate",
+    "techguns:steam_leggings",
+    "techguns:steam_boots",
+    "techguns:t1_combat_helmet",
+    "techguns:t1_combat_chestplate",
+    "techguns:t1_combat_leggings",
+    "techguns:t1_combat_boots"
 ]
 
 for (name in name_removals) {
@@ -238,11 +242,6 @@ ore_dict.remove('ingotBronze', item('techguns:itemshared', 81))
 ore_dict.remove('ingotLead', item('techguns:itemshared', 82))
 ore_dict.remove('ingotSteel', item('techguns:itemshared', 83))
 ore_dict.remove('ingotTitanium', item('techguns:itemshared', 85))
-
-
-
-
-
 
 crafting.replaceShaped("techguns:stielgranate", item('techguns:stielgranate'), [
     [null, null, null],
@@ -358,30 +357,6 @@ crafting.replaceShaped("techguns:t1_miner_boots", item('techguns:t1_miner_boots'
     [ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')]
 ])
 
-crafting.replaceShaped("techguns:steam_helmet", item('techguns:steam_helmet'), [
-    [null, null, null],
-    [item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)],
-    [item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)]
-])
-
-crafting.replaceShaped("techguns:steam_chestplate", item('techguns:steam_chestplate'), [
-    [item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)],
-    [item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)],
-    [item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)]
-])
-
-crafting.replaceShaped("techguns:steam_leggings", item('techguns:steam_leggings'), [
-    [item('techguns:itemshared', 45), item('techguns:itemshared', 45), item('techguns:itemshared', 45)],
-    [item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)],
-    [item('techguns:itemshared', 45), null, item('techguns:itemshared', 45)]
-])
-
-crafting.replaceShaped("techguns:steam_boots", item('techguns:steam_boots'), [
-    [null, null, null],
-    [item('techguns:itemshared', 45), ore('craftingToolWrench'), item('techguns:itemshared', 45)],
-    [item('techguns:itemshared', 45), null, item('techguns:itemshared', 45)]
-])
-
 crafting.replaceShaped("techguns:item_bunkerdoor", item('techguns:item_bunkerdoor'), [
     [null, ore('craftingToolHardHammer'), ore('screwIron')],
     [null, ore('plateIron'), item('minecraft:iron_door')],
@@ -392,12 +367,6 @@ crafting.replaceShaped("techguns:revolver", item('techguns:revolver'), [
     [ore('craftingToolHardHammer'), ore('plateIron'), ore('springSmallIron')],
     [item('techguns:itemshared', 38), ore('gearSmallIron'), ore('boltIron')],
     [ore('craftingToolFile'), item('techguns:itemshared', 42), item('techguns:itemshared', 1)]
-])
-
-crafting.replaceShaped("techguns:boltaction", item('techguns:boltaction'), [
-    [null, ore('craftingToolWrench'), item('techguns:itemshared', 3)],
-    [ore('plateGlass'), ore('ringIron'), ore('plateGlass')],
-    [item('techguns:itemshared', 38), item('techguns:itemshared', 33), item('techguns:itemshared', 42)]
 ])
 
 crafting.replaceShaped("techguns:sawedoff", item('techguns:sawedoff'), [
@@ -413,7 +382,6 @@ crafting.replaceShaped("techguns:pistolrounds", item('techguns:itemshared', 1) *
 crafting.replaceShaped("techguns:shotgunrounds", item('techguns:itemshared', 2) * 8, [
         [ore('plateSteel'), ore('gunpowder'), ore('roundLead')],
 ])
-
 
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
     ore('plateRubber'), 
@@ -436,7 +404,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('techguns:basicmachine', 3))
     .duration(100)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 Globals.solders.each { key, val ->
@@ -450,7 +418,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared', 33))
         .duration(100)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister()
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -463,7 +431,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:34'))
         .duration(80)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -476,7 +444,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:35'))
         .duration(80)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -489,7 +457,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:36'))
         .duration(80)
-        .EUt(Globals.voltAmps[3])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -501,7 +469,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:pistol'))
         .duration(300)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -511,7 +479,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:12') * 4)
         .duration(10)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -521,7 +489,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:10') * 4)
         .duration(20)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -531,7 +499,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:14') * 4)
         .duration(20)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -541,7 +509,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:16'))
         .duration(20)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -551,7 +519,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:18'))
         .duration(20)
-        .EUt(Globals.voltAmps[3])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -561,7 +529,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:20') * 2)
         .duration(20)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -571,7 +539,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:itemshared:22') * 4)
         .duration(20)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -584,7 +552,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:revolver'))
         .duration(20)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -597,7 +565,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:boltaction'))
         .duration(20)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -609,7 +577,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:thompson'))
         .duration(200)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -621,7 +589,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:ak47'))
         .duration(200)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -635,7 +603,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:m4'))
         .duration(200)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -650,7 +618,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:m4_infiltrator'))
         .duration(200)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -663,7 +631,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:combatshotgun'))
         .duration(400)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -675,7 +643,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:sawedoff'))
         .duration(400)
-        .EUt(Globals.voltAmps[1])
+        .EUt(VA[LV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -686,7 +654,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:mac10'))
         .duration(200)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -698,7 +666,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:flamethrower'))
         .duration(200)
-        .EUt(Globals.voltAmps[2])
+        .EUt(VA[MV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -711,7 +679,7 @@ Globals.solders.each { key, val ->
         .outputs(item('techguns:rocketlauncher'))
         .circuitMeta(1)
         .duration(200)
-        .EUt(Globals.voltAmps[4])
+        .EUt(VA[EV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -726,7 +694,7 @@ Globals.solders.each { key, val ->
         .outputs(item('techguns:guidedmissilelauncher'))
         .circuitMeta(2)
         .duration(200)
-        .EUt(Globals.voltAmps[4])
+        .EUt(VA[EV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -741,7 +709,7 @@ Globals.solders.each { key, val ->
         .outputs(item('techguns:grimreaper'))
         .circuitMeta(3)
         .duration(200)
-        .EUt(Globals.voltAmps[5])
+        .EUt(VA[IV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -753,7 +721,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:grenadelauncher'))
         .duration(200)
-        .EUt(Globals.voltAmps[4])
+        .EUt(VA[EV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -767,7 +735,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:aug'))
         .duration(200)
-        .EUt(Globals.voltAmps[3])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -780,7 +748,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:lmg'))
         .duration(200)
-        .EUt(Globals.voltAmps[3])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -791,7 +759,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:minigun'))
         .duration(200)
-        .EUt(Globals.voltAmps[4])
+        .EUt(VA[EV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -803,7 +771,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:as50'))
         .duration(200)
-        .EUt(Globals.voltAmps[3])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -816,7 +784,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:vector'))
         .duration(200)
-        .EUt(Globals.voltAmps[3])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
@@ -830,7 +798,7 @@ Globals.solders.each { key, val ->
         .fluidInputs(fluid(key) * val)
         .outputs(item('techguns:scar'))
         .duration(200)
-        .EUt(Globals.voltAmps[3])
+        .EUt(VA[HV])
         .buildAndRegister();
 }
 
@@ -860,7 +828,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(1)
     .outputs(item('techguns:itemshared', 5) * 4)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -872,7 +840,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(2)
     .outputs(item('techguns:fraggrenade') * 4)
     .duration(80)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -880,7 +848,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(1)
     .outputs(item('techguns:itemshared', 43))
     .duration(200)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -890,7 +858,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(1)
     .outputs(item('techguns:itemshared', 1) * 12)
     .duration(10)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -900,7 +868,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(2)
     .outputs(item('techguns:itemshared', 2) * 5)
     .duration(10)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -908,7 +876,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('ringTin') * 2)
     .outputs(item('techguns:itemshared', 28))
     .duration(200)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -917,7 +885,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('platePlastic') * 4)
     .outputs(item('techguns:itemshared', 72))
     .duration(200)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 FORMING_PRESS.recipeBuilder()
@@ -929,21 +897,21 @@ FORMING_PRESS.recipeBuilder()
     .inputs(ore('boltBrass'))
     .outputs(item('techguns:itemshared', 45))
     .duration(60)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 LATHE.recipeBuilder()
     .inputs(ore('stickIron'))
     .outputs(item('techguns:itemshared', 38))
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 LATHE.recipeBuilder()
     .inputs(ore('stickSteel'))
     .outputs(metaitem('gun.barrel.steel'))
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 CHEMICAL_BATH.recipeBuilder()
@@ -951,7 +919,7 @@ CHEMICAL_BATH.recipeBuilder()
     .fluidInputs(fluid('glyceryl_trinitrate') * 250)
     .outputs(item('techguns:itemshared', 144) * 4)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 CANNER.recipeBuilder()
@@ -959,7 +927,7 @@ CANNER.recipeBuilder()
     .inputs(ore('dustPhosphorus'))
     .outputs(item('techguns:itemshared', 106) * 4)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 CANNER.recipeBuilder()
@@ -967,7 +935,7 @@ CANNER.recipeBuilder()
     .inputs(ore('dustPhosphorus'))
     .outputs(item('techguns:itemshared', 108) * 4)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 CANNER.recipeBuilder()
@@ -975,7 +943,7 @@ CANNER.recipeBuilder()
     .inputs(ore('dustPhosphorus'))
     .outputs(item('techguns:itemshared', 109) * 6)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 CANNER.recipeBuilder()
@@ -983,7 +951,7 @@ CANNER.recipeBuilder()
     .inputs(ore('dustPhosphorus'))
     .outputs(item('techguns:itemshared', 110) * 4)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 crafting.replaceShaped("techguns:riot_shield", item('techguns:riot_shield'), [
@@ -1046,28 +1014,6 @@ crafting.addShaped("techguns_iron_receiver", item('techguns:itemshared:33'), [
         [null, ore('screwIron'), ore('screwIron')]
 ]);
 
-crafting.replaceShaped("techguns:t1_combat_helmet", item('techguns:t1_combat_helmet'), [
-    [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
-    [item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')]
-]);
-
-crafting.replaceShaped("techguns:t1_combat_chestplate", item('techguns:t1_combat_chestplate'), [
-    [item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
-    [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
-    [item('techguns:itemshared:60'), item('techguns:itemshared:60'), item('techguns:itemshared:60')]
-]);
-
-crafting.replaceShaped("techguns:t1_combat_leggings", item('techguns:t1_combat_leggings'), [
-    [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')],
-    [item('techguns:itemshared:60'), ore('craftingToolHardHammer'), item('techguns:itemshared:60')],
-    [item('techguns:itemshared:60'), null, item('techguns:itemshared:60')]
-]);
-
-crafting.replaceShaped("techguns:t1_combat_boots", item('techguns:t1_combat_boots'), [
-    [item('techguns:itemshared:60'), null, item('techguns:itemshared:60')],
-    [ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
-]);
-
 crafting.addShaped("tg_pistol_rounds", item('techguns:itemshared:1')*12, [
     [null, ore('craftingToolHardHammer'), null],
     [null, ore('roundLead'), null],
@@ -1086,138 +1032,115 @@ crafting.addShaped("tg_glider_wing", item('techguns:itemshared:91'), [
     [ore('platePlastic'), ore('platePlastic'), ore('platePlastic')]
 ]);
 
-crafting.replaceShapeless("techguns:thompson_ammo_default", item('techguns:thompson'), [
-    item('techguns:thompson:*'), 
-    item('techguns:itemshared', 9)
+// fixes guns dropped by mobs not working with ammo swapping recipes
+
+def guns = [
+    [name:"revolver",    ammo: 6,   default: 1,    incendiary: 109],
+    [name:"goldenrevolver",    ammo: 6,   default: 1,    incendiary: 109],
+    [name:"thompson",    ammo: 20,   default: 9,    incendiary: 112],
+    [name:"ak47",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"boltaction",    ammo: 6,   default: 3,    incendiary: 110],
+    [name:"m4",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"m4_infiltrator",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"pistol",    ammo: 18,   default: 11,    incendiary: 113],
+    [name:"mac10",    ammo: 32,   default: 9,    incendiary: 112],
+    [name:"aug",    ammo: 30,   default: 13,    incendiary: 115],
+    [name:"lmg",    ammo: 100,   default: 15,    incendiary: 116],
+    [name:"minigun",    ammo: 200,   default: 17,    incendiary: 114],
+    [name:"as50",    ammo: 10,   default: 19,    incendiary: 107],
+    [name:"vector",    ammo: 25,   default: 9,    incendiary: 112],
+    [name:"scar",    ammo: 20,   default: 13,    incendiary: 115],
+]
+
+guns.each { gun -> 
+
+crafting.replaceShapeless("techguns:" + gun.name + "_ammo_default", item("techguns:" + gun.name), [
+    item("techguns:" + gun.name + ":*"), 
+    item("techguns:itemshared", gun.default)
 ]);
 
-crafting.replaceShapeless("techguns:thompson_ammo_incendiary", item('techguns:thompson').withNbt([ammovariant: 'incendiary', ammo: 20]), [
-    item('techguns:thompson:*'), 
-    item('techguns:itemshared', 112)
+crafting.replaceShapeless("techguns:" + gun.name + "_ammo_incendiary", item("techguns:" + gun.name).withNbt([ammovariant: "incendiary", ammo: gun.ammo]), [
+    item("techguns:" + gun.name + ":*"), 
+    item("techguns:itemshared", gun.incendiary)
 ]);
 
-crafting.replaceShapeless("techguns:pistol_ammo_default", item('techguns:pistol'), [
-    item('techguns:pistol:*'), 
-    item('techguns:itemshared', 11)
+}
+
+crafting.replaceShapeless("techguns:as50_ammo_explosive", item("techguns:as50").withNbt([ammovariant: "explosive", ammo: 10]), [
+    item("techguns:as50:*"), 
+    item("techguns:itemshared", 143)
 ]);
 
-crafting.replaceShapeless("techguns:pistol_ammo_incendiary", item('techguns:pistol').withNbt([ammovariant: 'incendiary', ammo: 18]), [
-    item('techguns:pistol:*'), 
-    item('techguns:itemshared', 113)
+def launchers = [
+    [name:"rocketlauncher"],
+    [name:"guidedmissilelauncher"],
+]
+
+launchers.each { launcher -> 
+
+crafting.replaceShapeless("techguns:" + launcher.name + "_ammo_default", item("techguns:" + launcher.name), [
+    item("techguns:" + launcher.name + ":*"), 
+    item("techguns:itemshared", 7)
 ]);
 
-crafting.replaceShapeless("techguns:ak47_ammo_default", item('techguns:ak47'), [
-    item('techguns:ak47:*'), 
-    item('techguns:itemshared', 13)
+crafting.replaceShapeless("techguns:" + launcher.name + "_ammo_high_velocity", item("techguns:" + launcher.name).withNbt([ammovariant: "high_velocity", ammo: 1]), [
+    item("techguns:" + launcher.name + ":*"), 
+    item("techguns:itemshared", 145)
 ]);
 
-crafting.replaceShapeless("techguns:ak47_ammo_incendiary", item('techguns:ak47').withNbt([ammovariant: 'incendiary', ammo: 30]), [
-    item('techguns:ak47:*'), 
-    item('techguns:itemshared', 115)
-]);
+}
 
-crafting.addShapeless("techguns:boltaction_ammo1", item('techguns:boltaction').withNbt([ammovariant: 'incendiary', ammo: 6]), [
-    item('techguns:boltaction:*'), 
-    item('techguns:itemshared', 110)
-]);
+// shotgun and grim reaper ammo swapping recipes because their ammo is only equivalent to one shot
 
-crafting.addShapeless("techguns:boltaction_ammo2", item('techguns:boltaction'), [
-    item('techguns:boltaction:*'), 
-    item('techguns:itemshared', 3)
-]);
+def  oneshot = [
+    [name:"sawedoff",  ammo: 2, ammovariant: "incendiary",  default: 2,   variant: 106],
+    [name:"combatshotgun",  ammo: 8, ammovariant: "incendiary",  default: 2,   variant: 106],
+    [name:"grimreaper",  ammo: 4,  ammovariant: "high_velocity", default: 7,   variant: 145],
+]
 
-crafting.addShapeless("techguns:revolver_ammo1", item('techguns:revolver').withNbt([ammovariant: 'incendiary', ammo: 6]), [
-    item('techguns:revolver:*'), 
-    item('techguns:itemshared', 109)
-]);
-
-crafting.addShapeless("techguns:revolver_ammo2", item('techguns:revolver'), [
-    item('techguns:revolver:*'), 
-    item('techguns:itemshared', 1)
-]);
-
-//Shotgun reloading recipes 
+oneshot.each { one ->
 
 crafting.shapelessBuilder()
-    .name('techguns:sawedoff_ammo1')
-    .output(item('techguns:sawedoff').withNbt([ammovariant: 'incendiary', ammo: 2])) 
-    .input(item('techguns:sawedoff:*').mark('ammo'))  
-    .input(item('techguns:itemshared', 106)) 
-    .recipeFunction { output, inputs, info ->
+    .name("techguns:" + one.name + "_ammo_default") 
+    .output(item("techguns:" + one.name).withNbt([ammovariant: "default", ammo: one.ammo])) 
+    .input(item("techguns:" + one.name +":*").mark("ammo")) 
+    .input(item("techguns:itemshared", one.default))
+    .recipeFunction { output, inputs, info -> 
         if (!output.hasTagCompound()) { 
             output.setTagCompound(new net.minecraft.nbt.NBTTagCompound()) 
         }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") != 'incendiary') {
+        if (inputs["ammo"].getTagCompound().getString("ammovariant") == one.ammovariant) {
             output.getTagCompound().setShort("ammo", (short) 1) 
         }
         else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 2)        
-            output.getTagCompound().setShort("ammo", (short) newAmmo)
-        }
-    }
-    .register()  
-
-
-crafting.shapelessBuilder()
-    .name('techguns:sawedoff_ammo2') 
-    .output(item('techguns:sawedoff').withNbt([ammovariant: 'default', ammo: 2])) 
-    .input(item('techguns:sawedoff:*').mark('ammo'))
-    .input(item('techguns:itemshared', 2))
-    .recipeFunction { output, inputs, info -> 
-        if (!output.hasTagCompound()) { 
-            output.setTagCompound(new net.minecraft.nbt.NBTTagCompound())
-        }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") == 'incendiary') {            
-            output.getTagCompound().setShort("ammo", (short) 1) 
-        }
-        else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 2)        
+            short currentAmmo = inputs["ammo"].getTagCompound().getShort("ammo")
+            short newAmmo = (short) Math.min(currentAmmo + 1, one.ammo)        
             output.getTagCompound().setShort("ammo", (short) newAmmo)
         }
     }
     .register()
 
 crafting.shapelessBuilder()
-    .name('techguns:combatshotgun_ammo_default') 
-    .output(item('techguns:combatshotgun').withNbt([ammovariant: 'default', ammo: 8])) 
-    .input(item('techguns:combatshotgun:*').mark('ammo')) 
-    .input(item('techguns:itemshared', 2))
+    .name("techguns:" + one.name + "_ammo_" + one.ammovariant) 
+    .output(item("techguns:" + one.name).withNbt([ammovariant: one.ammovariant, ammo: one.ammo])) 
+    .input(item("techguns:" + one.name +":*").mark("ammo")) 
+    .input(item("techguns:itemshared", one.variant))
     .recipeFunction { output, inputs, info -> 
         if (!output.hasTagCompound()) { 
             output.setTagCompound(new net.minecraft.nbt.NBTTagCompound()) 
         }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") == 'incendiary') {
+        if (inputs["ammo"].getTagCompound().getString("ammovariant") != one.ammovariant) {
             output.getTagCompound().setShort("ammo", (short) 1) 
         }
         else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 8)        
+            short currentAmmo = inputs["ammo"].getTagCompound().getShort("ammo")
+            short newAmmo = (short) Math.min(currentAmmo + 1, one.ammo)        
             output.getTagCompound().setShort("ammo", (short) newAmmo)
         }
     }
     .register()
 
-crafting.shapelessBuilder()
-    .name('techguns:combatshotgun_ammo_incendiary') 
-    .output(item('techguns:combatshotgun').withNbt([ammovariant: 'incendiary', ammo: 8]))
-    .input(item('techguns:combatshotgun:*').mark('ammo')) 
-    .input(item('techguns:itemshared', 106))
-    .recipeFunction { output, inputs, info -> 
-        if (!output.hasTagCompound()) { 
-            output.setTagCompound(new net.minecraft.nbt.NBTTagCompound()) 
-        }
-        if (inputs['ammo'].getTagCompound().getString("ammovariant") != 'incendiary') {
-            output.getTagCompound().setShort("ammo", (short) 1) 
-        }
-        else {
-            short currentAmmo = inputs['ammo'].getTagCompound().getShort("ammo")
-            short newAmmo = (short) Math.min(currentAmmo + 1, 8)        
-            output.getTagCompound().setShort("ammo", (short) newAmmo)
-        }
-    }
-    .register()
+}
 
 //--------------------GregTech machines only recipes--------------------
 
@@ -1234,7 +1157,7 @@ FORMING_PRESS.recipeBuilder()
     .inputs(item('techguns:itemshared:38'))
     .outputs(item('techguns:itemshared:39'))
     .duration(30)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 ROASTER.recipeBuilder()
@@ -1242,7 +1165,7 @@ ROASTER.recipeBuilder()
     .fluidInputs(fluid('water') * 1000)
     .outputs(item('techguns:itemshared:77'))
     .duration(85)
-    .EUt(7)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 crafting.addShaped("bound_leather", metaitem('bound_leather')*8, [
@@ -1293,7 +1216,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateBoronNitride') * 2)
     .outputs(item('techguns:t2_combat_helmet'))
     .duration(100)
-    .EUt(960)
+    .EUt(240)
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1302,7 +1225,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateBoronNitride') * 4)
     .outputs(item('techguns:t2_combat_chestplate'))
     .duration(100)
-    .EUt(960)
+    .EUt(240)
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1311,7 +1234,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateBoronNitride') * 3)
     .outputs(item('techguns:t2_combat_leggings'))
     .duration(100)
-    .EUt(960)
+    .EUt(240)
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1320,8 +1243,76 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateBoronNitride') * 2)
     .outputs(item('techguns:t2_combat_boots'))
     .duration(100)
-    .EUt(960)
-    .buildAndRegister();
+    .EUt(240)
+    .buildAndRegister()
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('plateSteel') * 3)
+        .inputs(item('techguns:itemshared', 60) * 2)
+        .outputs(item('techguns:t1_combat_helmet'))
+        .duration(100)
+        .EUt(60)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('plateSteel') * 3)
+        .inputs(item('techguns:itemshared', 60) * 5)
+        .outputs(item('techguns:t1_combat_chestplate'))
+        .duration(100)
+        .EUt(60)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(3)
+        .inputs(ore('plateSteel') * 3)
+        .inputs(item('techguns:itemshared', 60) * 4)
+        .outputs(item('techguns:t1_combat_leggings'))
+        .duration(100)
+        .EUt(60)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(ore('plateSteel') * 2)
+        .inputs(item('techguns:itemshared', 60) * 2)
+        .outputs(item('techguns:t1_combat_boots'))
+        .duration(100)
+        .EUt(60)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(item('techguns:itemshared', 45) * 5)
+        .outputs(item('techguns:steam_helmet'))
+        .duration(100)
+        .EUt(15)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(item('techguns:itemshared', 45) * 8)
+        .outputs(item('techguns:steam_chestplate'))
+        .duration(100)
+        .EUt(15)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(3)
+        .inputs(item('techguns:itemshared', 45) * 7)
+        .outputs(item('techguns:steam_leggings'))
+        .duration(100)
+        .EUt(15)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(item('techguns:itemshared', 45) * 4)
+        .outputs(item('techguns:steam_boots'))
+        .duration(100)
+        .EUt(15)
+        .buildAndRegister();
     
 //Armor upgrades
 
@@ -1330,7 +1321,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateSteel') * 4)
     .outputs(item('techguns:itemshared:147'))
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1339,7 +1330,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('platePolycaprolactam') * 2)
     .outputs(item('techguns:itemshared:150'))
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1348,7 +1339,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateKevlar') * 2)
     .outputs(item('techguns:itemshared:153'))
     .duration(100)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1356,7 +1347,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateSteel') * 4)
     .outputs(item('techguns:itemshared:148'))
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1365,7 +1356,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('platePolycaprolactam') * 2)
     .outputs(item('techguns:itemshared:151'))
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1374,7 +1365,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateKevlar') * 2)
     .outputs(item('techguns:itemshared:154'))
     .duration(100)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1382,7 +1373,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateSteel') * 4)
     .outputs(item('techguns:itemshared:149'))
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1391,7 +1382,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('platePolycaprolactam') * 2)
     .outputs(item('techguns:itemshared:152'))
     .duration(100)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1400,7 +1391,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateKevlar') * 2)
     .outputs(item('techguns:itemshared:155'))
     .duration(100)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 //Compressed air
@@ -1410,7 +1401,15 @@ CANNER.recipeBuilder()
     .fluidInputs(fluid('hp_air') * 1000)
     .outputs(item('techguns:itemshared:23'))
     .duration(100)
-    .EUt(7)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+    
+CANNER.recipeBuilder()
+    .fluidInputs(fluid('napalm') * 250)
+    .inputs(item('techguns:itemshared', 28))
+    .outputs(item('techguns:itemshared', 27))
+    .duration(80)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 //-------------------Change TechGuns damage values to be better suited with SUSY progression----------------

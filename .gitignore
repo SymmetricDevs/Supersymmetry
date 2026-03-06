@@ -106,7 +106,6 @@ mods/*.jar
 vintagefix/transformerCache/jarDiscoverer.cache
 /journeymap
 hotbar.nbt
-/resourcepacks
 config/susy/susy_canary
 lib/groovy-5.0.0-alpha-1-sources.jar
 lib/groovy-5.0.0-alpha-1.jar

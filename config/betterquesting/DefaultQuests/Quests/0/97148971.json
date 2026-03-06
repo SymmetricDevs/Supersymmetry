@@ -10,6 +10,7 @@
         "Damage:2": 14800,
         "id:8": "gregtech:machine"
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.97148971.title"
     }
   },
@@ -57,12 +58,12 @@
           "id:8": "gregtech:machine"
         },
         "3:10": {
-          "Count:3": 4,
-          "id:8": "pyrotech:masonry_brick_slab"
-        },
-        "4:10": {
           "Count:3": 16,
           "id:8": "pyrotech:masonry_brick_block"
+        },
+        "4:10": {
+          "Count:3": 4,
+          "id:8": "pyrotech:masonry_brick_slab"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -1,4 +1,5 @@
 /*
+import static prePostInit.Recipemaps.*
 
 def name_removals = [
         'armourers_workshop:item.soap',
@@ -183,7 +184,7 @@ crafting.replaceShaped('armourers_workshop:tile.outfit-maker', item('armourers_w
         [ore('plankWood'), item('armourers_workshop:tile.skin-cube'), ore('plankWood')]
 ])
 
-recipemap('fluid_solidifier').recipeBuilder()
+SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('gtfo_sodium_stearate') * 100)
         .notConsumable(metaitem('shape.mold.ball'))
         .outputs(item('armourers_workshop:item.soap'))

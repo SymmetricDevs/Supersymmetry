@@ -1,6 +1,6 @@
 {
   "preRequisites:11": [
-    117
+    58115670
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -19,17 +19,17 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 4,
-          "Damage:2": 43,
-          "id:8": "gregtechfoodoption:gtfo_meta_item"
+          "id:8": "biomesoplenty:mudball"
         },
         "1:10": {
           "Count:3": 4,
-          "Damage:2": 44,
+          "Damage:2": 43,
           "id:8": "gregtechfoodoption:gtfo_meta_item"
         },
         "2:10": {
-          "Count:3": 1,
-          "id:8": "gregtechfoodoption:gtfo_casing"
+          "Count:3": 4,
+          "Damage:2": 44,
+          "id:8": "gregtechfoodoption:gtfo_meta_item"
         }
       },
       "taskID:8": "bq_standard:retrieval"

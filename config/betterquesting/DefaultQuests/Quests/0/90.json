@@ -9,7 +9,6 @@
       "icon:10": {
         "id:8": "minecraft:coal"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.90.title"
     }
   },
@@ -19,13 +18,13 @@
       "entryLogic:8": "OR",
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 32,
-          "id:8": "minecraft:coal"
+          "Count:3": 1,
+          "Damage:2": 15,
+          "id:8": "susy:resource_block"
         },
         "1:10": {
           "Count:3": 8,
-          "Damage:2": 15,
-          "id:8": "susy:resource_block"
+          "id:8": "minecraft:coal"
         }
       },
       "taskID:8": "bq_standard:retrieval"

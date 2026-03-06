@@ -1,6 +1,7 @@
 {
   "preRequisites:11": [
-    149
+    149,
+    763
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -17,17 +18,17 @@
     "0:10": {
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 2,
-          "Damage:2": 1596,
-          "id:8": "gregtech:machine"
-        },
-        "1:10": {
           "Count:3": 1,
           "Damage:2": 1597,
           "id:8": "gregtech:machine"
         },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 1596,
+          "id:8": "gregtech:machine"
+        },
         "2:10": {
-          "Count:3": 23,
+          "Count:3": 1,
           "Damage:2": 5,
           "id:8": "gregtech:steam_casing"
         }

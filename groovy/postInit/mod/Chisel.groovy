@@ -1,3 +1,6 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
 crafting.replaceShaped('chisel:chisel_iron', item('chisel:chisel_iron'), [
     [null, null, ore('plateIron')],
     [null, ore('plateIron'), null],
@@ -98,15 +101,13 @@ for (def i = 0; i < 2; i++) {
     ])
 }
 
-ASSEMBLER = recipemap('assembler')
-
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stone') * 4)
         .inputs(item('minecraft:iron_ingot') * 4)
         .outputs(item('chisel:factory') * 32)
         .circuitMeta(1)
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -115,7 +116,7 @@ ASSEMBLER.recipeBuilder()
         .outputs(item('chisel:tyrian') * 32)
         .circuitMeta(2)
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -124,5 +125,5 @@ ASSEMBLER.recipeBuilder()
         .outputs(item('chisel:temple') * 32)
         .circuitMeta(3)
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();

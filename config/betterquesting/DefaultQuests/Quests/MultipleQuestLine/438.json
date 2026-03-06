@@ -26,20 +26,8 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 1013,
+          "Damage:2": 18300,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 20,
-          "id:8": "gregtech:metal_casing"
-        },
-        "2:10": {
-          "Count:3": 2,
-          "id:8": "gregtech:boiler_casing"
-        },
-        "3:10": {
-          "Count:3": 4,
-          "id:8": "gregtech:boiler_firebox_casing"
         }
       },
       "taskID:8": "bq_standard:retrieval"

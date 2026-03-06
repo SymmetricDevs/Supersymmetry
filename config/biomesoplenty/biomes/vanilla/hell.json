@@ -16,7 +16,7 @@
       "maxRadius": 9,
       "bottomExtra": 4,
       "amountPerChunk": 0.2,
-      "enable": true,
+      "enable": false,
       "halfHeight": 7,
       "emptyChance": 0.25,
       "layerSize": 3

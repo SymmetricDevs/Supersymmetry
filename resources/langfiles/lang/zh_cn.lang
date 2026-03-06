@@ -93,7 +93,7 @@ susy.material.butyllithium=正丁基锂
 susy.material.diluted_butyllithium=稀正丁基锂
 susy.material.polymerized_styrene_butadiene_solution=苯乙烯-丁二烯共聚物溶液
 susy.material.diluted_calcium_chloride_solution=稀氯化钙溶液
-susy.material.diluted_rock_salt_solution=稀岩盐溶液
+susy.material.diluted_potassium_chloride_solution=稀氯化钾溶液
 susy.material.diluted_potassium_carbonate_solution=稀碳酸钾溶液
 susy.material.potassium_hydroxide_solution=氢氧化钾溶液
 susy.material.calcium_hydroxide_slurry=氢氧化钙浆液
@@ -157,7 +157,7 @@ susy.material.sodium_silicate=硅酸钠
 susy.material.sodium_aluminate=铝酸钠
 susy.material.calcium_carbide=碳化钙
 susy.material.iron_ii_chloride=氯化亚铁
-susy.material.cuprous_oxide=氧化亚铜
+susy.material.copper_i_oxide=氧化亚铜
 susy.material.lithium_bromide=溴化锂
 susy.material.iron_iii_oxide=氧化铁
 susy.material.copper_ii_chloride=氯化铜
@@ -703,12 +703,10 @@ susy.material.impure_bromine=含杂溴
 susy.material.concentrated_salt_water=浓盐水
 susy.material.hypersaline_water=高浓盐水
 susy.material.lithium_cobalt_oxide=钴酸锂
-susy.material.sodium_cathode_alloy=钠电池阴极合金
 susy.material.lithium_hexafluorophosphate=六氟磷酸锂
 susy.material.nickel_chloride=氯化镍
 susy.material.nickel_hydroxide=氢氧化镍
 susy.material.dimethyl_carbonate=碳酸二甲酯
-susy.material.nickel_oxide_hydroxide=二氢氧化氧镍
 susy.material.calcium_orthosilicate=正硅酸钙
 susy.material.magnesium_hydroxide=氢氧化镁
 susy.material.magnesium_chloride_solution=氯化镁溶液
@@ -1403,7 +1401,7 @@ susy.material.cold_water=冷水
 susy.material.waste_gaseous_nitrogen=废氮
 susy.material.purified_waste_gaseous_nitrogen=纯净废氮
 susy.material.chilled_boosted_air=增压冷空气
-susy.material.partially_liquified_air=部分液化空气
+susy.material.partially_liquefied_air=部分液化空气
 susy.material.gaseous_air_feedstock=气态空气原料
 susy.material.liquid_air_feedstock=液态空气原料
 susy.material.chilly_waste_gaseous_nitrogen=冷废氮
@@ -2118,10 +2116,8 @@ susy.material.hp_fuel_gas=高压燃料气
 susy.material.cold_hp_fuel_gas=冷高压燃料气
 susy.material.rp_one=RP-1航天煤油
 susy.material.ammonium_metatungstate=偏钨酸铵（AMT）
-susy.material.ammonium_metatungstate_solution=偏钨酸铵溶液
 susy.material.clarified_slurry_oil=澄清油
 susy.material.pyrolysis_raffinate=热裂解抽余油
-susy.material.carbon_black=炭黑
 susy.material.compounded_polyisoprene=炭黑改性聚异戊二烯
 susy.material.compounded_styrene_isoprene_rubber=炭黑改性苯乙烯-异戊二烯共聚物橡胶
 susy.material.compounded_styrene_butadiene_rubber=炭黑改性丁苯橡胶
@@ -2560,8 +2556,7 @@ recipemap.electrostatic_separator.name=静电分离
 recipemap.single_column_cryogenic_distillation.name=单塔式低温蒸馏
 recipemap.low_pressure_cryogenic_distillation.name=低压低温蒸馏
 recipemap.high_pressure_cryogenic_distillation.name=高压低温蒸馏
-recipemap.high_pressure_advanced_steam_turbine=高压高级蒸汽轮机
-recipemap.low_pressure_advanced_steam_turbine=低压高级蒸汽轮机
+recipemap.advanced_steam_turbine=高级蒸汽轮机
 
 # QMD Particles
 
@@ -2913,7 +2908,7 @@ metaitem.sponge.rhodium.name=海绵铑
 metaitem.drone.lv.name=基础无人机
 
 metaitem.glass_fibers.name=玻璃纤维
-metaitem.epoxy_lamina.name=层压环氧树脂
+metaitem.board.epoxy.prepreg.name=层压环氧树脂
 metaitem.stem.cotton.name=棉花茎
 metaitem.spinneret.name=喷丝头
 
@@ -3008,6 +3003,7 @@ item.susy.material.kevlar.plate=凯夫拉纤维布
 item.gregtech.material.polytetrafluoroethylene.fiber=膨体聚四氟乙烯（ePTFE）纤维
 item.gregtech.material.polytetrafluoroethylene.thread=膨体聚四氟乙烯（ePTFE）纱线
 # gregtech.material.chrome=铬 // 中文无需重命名
+gregtech.material.carbon=炭黑
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=白桦木，丛林木，橡木或云杉木

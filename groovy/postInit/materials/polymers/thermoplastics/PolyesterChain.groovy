@@ -1,0 +1,47 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .fluidInputs(fluid('ethylene_glycol') * 1000)
+    .fluidInputs(fluid('terephthalic_acid') * 2592)
+    .outputs(metaitem('dustPolyethyleneTerephthalate') * 2)
+    .fluidOutputs(fluid('water') * 2000)
+    .EUt(VA[HV])
+    .duration(80)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustCobaltOxide') * 2)
+    .fluidInputs(fluid('acetic_acid') * 2000)
+    .fluidInputs(fluid('distilled_water') * 3000)
+    .outputs(metaitem('dustCobaltIiAcetate') * 18)
+    .EUt(VA[MV])
+    .duration(80)
+    .buildAndRegister()
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .notConsumable(ore('dustCobaltIiAcetate'))
+    .fluidInputs(fluid('ethylene_glycol') * 1000)
+    .fluidInputs(fluid('dimethyl_terephthalate') * 3456)
+    .outputs(metaitem('dustPolyethyleneTerephthalate') * 2)
+    .fluidOutputs(fluid('methanol') * 2000)
+    .EUt(VA[MV])
+    .duration(80)
+    .buildAndRegister()
+
+EXTRUDER.recipeBuilder()
+    .notConsumable(metaitem('spinneret'))
+    .fluidInputs(fluid('polyethylene_terephthalate') * 144)
+    .outputs(metaitem('fiberPolyethyleneTerephthalate') * 8)
+    .EUt(VA[HV])
+    .duration(20)
+    .buildAndRegister()
+
+EXTRUDER.recipeBuilder()
+    .inputs(ore('foilPolyethyleneTerephthalate'))
+    .outputs(metaitem('mylar'))
+    .EUt(VA[MV])
+    .duration(10)
+    .buildAndRegister()
+
+oreDict.add('foilMylar', metaitem('mylar'))

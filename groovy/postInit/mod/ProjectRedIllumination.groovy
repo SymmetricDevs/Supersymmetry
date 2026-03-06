@@ -1,5 +1,5 @@
-ASSEMBLER = recipemap('assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 def dye_colors = [
     'white',
@@ -20,7 +20,7 @@ def dye_colors = [
     'black'
 ]
 
-for (color in dye_colors){
+for (color in dye_colors) {
 	def color_name_removals = [
 		  "lamp/${color}_lamp",
 		  "lamp/${color}_lamp_inverted",
@@ -55,13 +55,13 @@ def colored_lights = [
 ]
 
 for (i = 1; i < 16; i++) {
-	for(light in colored_lights){
+	for (light in colored_lights) {
 		CHEMICAL_BATH.recipeBuilder()
 			.inputs(item('projectred-illumination:' + light))
 			.fluidInputs(fluid('dye_' + dye_colors[i]) * 18)
 			.outputs(item('projectred-illumination:' + light, i))
 			.duration(20)
-			.EUt(7)
+			.EUt(VA[ULV])
 			.buildAndRegister();
 	}
 	
@@ -71,7 +71,7 @@ for (i = 1; i < 16; i++) {
 		.fluidInputs(fluid('dye_' + dye_colors[i]) * 18)
 		.outputs(item('projectred-illumination:lamp', 16 + i))
 		.duration(20)
-		.EUt(7)
+		.EUt(VA[ULV])
 		.buildAndRegister();	
 			
 }
@@ -83,7 +83,7 @@ ASSEMBLER.recipeBuilder()
 	.inputs(ore('plateGlass') * 3)
 	.outputs(item('projectred-illumination:light_button') * 3)
 	.duration(40)
-	.EUt(7)
+	.EUt(VA[ULV])
 	.buildAndRegister();
 	
 ASSEMBLER.recipeBuilder()
@@ -94,7 +94,7 @@ ASSEMBLER.recipeBuilder()
 	.outputs(item('projectred-illumination:lamp') * 3)
 	.circuitMeta(2)
 	.duration(40)
-	.EUt(7)
+	.EUt(VA[ULV])
 	.buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -105,7 +105,7 @@ ASSEMBLER.recipeBuilder()
 	.outputs(item('projectred-illumination:lamp', 16) * 3)
 	.circuitMeta(3)
 	.duration(40)
-	.EUt(7)
+	.EUt(VA[ULV])
 	.buildAndRegister();
 
 crafting.addShaped("projectred-illumination:lantern", item('projectred-illumination:lantern'), [

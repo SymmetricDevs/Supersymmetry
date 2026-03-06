@@ -1,0 +1,181 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditLockerGear",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t1_scout_boots",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "toolbelt:belt",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "travelersbackpack:travelers_backpack",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 11,
+      "max": 29,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 12,
+      "max": 26,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 77,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 16,
+      "item": {
+        "id": "minecraft:paper",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 12,
+      "max": 32,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 60,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 20,
+      "max": 44,
+      "item": {
+        "id": "minecraft:iron_ingot",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 14,
+      "max": 23,
+      "item": {
+        "id": "minecraft:string",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t1_scout_helmet",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t1_scout_boots",
+        "damage": 621,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 24,
+      "max": 33,
+      "item": {
+        "id": "minecraft:gunpowder",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t1_scout_chestplate",
+        "damage": 512,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:t1_scout_leggings",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 142,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "toolbelt:pouch",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 5,
+      "max": 10,
+      "item": {
+        "id": "gregtech:meta_ring",
+        "damage": 1068,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

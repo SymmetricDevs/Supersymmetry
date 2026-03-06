@@ -56,7 +56,7 @@ class FirstDegreeMaterialsA {
         HighPurityCarbon = generatePurifiedElement(Carbon, 8003, false, false)
         HighPuritySodium = generatePurifiedElement(Sodium, 8004, false, false)
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
-        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, false, true)
+        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true).addFlags(GENERATE_FOIL)
         HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false)
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)
@@ -70,7 +70,7 @@ class FirstDegreeMaterialsA {
         HighPurityIron = generatePurifiedElement(Iron, 8017, false, false)
         HighPurityNickel = generatePurifiedElement(Cobalt, 8018, false, false)
         HighPurityCobalt = generatePurifiedElement(Nickel, 8019, false, false)
-        HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false)
+        HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false).addFlags(GENERATE_FOIL)
         HighPurityZinc = generatePurifiedElement(Zinc, 8021, false, false)
         HighPurityGallium = generatePurifiedElement(Gallium, 8022, true, false)
         HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, true)
@@ -384,7 +384,7 @@ class FirstDegreeMaterialsA {
                 .color(0x9dad37)
                 .build()
 
-        CuprousOxide = new Material.Builder(8141, SuSyUtility.susyId('cuprous_oxide'))
+        CopperIOxide = new Material.Builder(8141, SuSyUtility.susyId('copper_i_oxide'))
                 .dust()
                 .components(Copper * 2, Oxygen)
                 .flags(GENERATE_CATALYST_BED)
@@ -534,7 +534,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        DilutedRockSaltSolution = new Material.Builder(8164, SuSyUtility.susyId('diluted_rock_salt_solution'))
+        DilutedPotassiumChlorideSolution = new Material.Builder(8164, SuSyUtility.susyId('diluted_potassium_chloride_solution'))
                 .liquid()
                 .components(RockSalt, Water * 2)
                 .colorAverage()
@@ -1232,6 +1232,8 @@ class FirstDegreeMaterialsA {
                 .color(0x4a432f)
                 .build()
 
+        Cellulose.setFormula('[C6H7O2(OH)3]n', true)
+
         CrudeGalliumTrichloride = new Material.Builder(8270, SuSyUtility.susyId('crude_gallium_trichloride'))
                 .dust().liquid(new FluidBuilder().temperature(351))
                 .components(Gallium, Chlorine * 3)
@@ -1340,18 +1342,13 @@ class FirstDegreeMaterialsA {
 
         CryogenicSolder.setFormula("In97Ag3", true)
 
-
         LithiumCobaltOxide = new Material.Builder(8287, SuSyUtility.susyId('lithium_cobalt_oxide'))
                 .dust()
                 .components(Lithium, Cobalt, Oxygen * 2)
                 .colorAverage()
                 .build()
 
-        SodiumCathodeAlloy = new Material.Builder(8288, SuSyUtility.susyId('sodium_cathode_alloy'))
-                .dust()
-                .components(Sodium * 4, Iron * 3, Manganese * 3, Oxygen * 12)
-                .colorAverage()
-                .build()
+        // FREE ID: 8288
 
         LithiumHexafluorophosphate = new Material.Builder(8289, SuSyUtility.susyId('lithium_hexafluorophosphate'))
                 .dust()
@@ -1373,13 +1370,13 @@ class FirstDegreeMaterialsA {
 
         NickelHydroxide.setFormula("Ni(OH)2", true)
 
-        NickelOxideHydroxide = new Material.Builder(8292, SuSyUtility.susyId('nickel_oxide_hydroxide'))
-                .dust()
-                .components(Nickel, Oxygen * 3, Hydrogen * 2)
+        NickelChlorideSolution = new Material.Builder(8292, SuSyUtility.susyId('nickel_chloride_solution'))
+                .liquid()
+                .components(NickelChloride, Water)
                 .colorAverage()
                 .build()
 
-        NickelOxideHydroxide.setFormula("NiO(OH)2", true)
+        NickelChlorideSolution.setFormula("(NiCl2)(H2O)", true)
 
         SilverNitrateSolution = new Material.Builder(8293, SuSyUtility.susyId('silver_nitrate_solution'))
                 .liquid()
@@ -2008,7 +2005,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        LeadOxide = new Material.Builder(8388, SuSyUtility.susyId('lead_oxide'))
+        LeadIIOxide = new Material.Builder(8388, SuSyUtility.susyId('lead_ii_oxide'))
                 .dust().gas(new FluidBuilder().temperature(1750))
                 .flags(NO_UNIFICATION)
                 .components(Lead, Oxygen)
@@ -2089,7 +2086,7 @@ class FirstDegreeMaterialsA {
         NeodymiumAlloy = new Material.Builder(8400, SuSyUtility.susyId('neodymium_alloy'))
                 .ingot()
                 .color(0x2b2a2a).iconSet(METALLIC)
-                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, HIP_PRESSED)
                 .components(Neodymium * 2, Iron * 14, Boron)
                 .blastTemp(1297, GasTier.MID)
                 .build()
@@ -2119,7 +2116,7 @@ class FirstDegreeMaterialsA {
         SamariumAlloy = new Material.Builder(8403, SuSyUtility.susyId('samarium_alloy'))
                 .dust().ingot().liquid(new FluidBuilder().temperature(1600))
                 .color(0xb3d683).iconSet(METALLIC)
-                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_UNIFICATION)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_UNIFICATION, HIP_PRESSED)
                 .components(Samarium, Cobalt * 5)
                 .build()
 
@@ -3265,7 +3262,7 @@ class FirstDegreeMaterialsA {
         ManganeseIIChloride = new Material.Builder(8581, SuSyUtility.susyId("manganese_ii_chloride"))
                 .dust()
                 .components(Manganese, Chlorine * 2)
-                .colorAverage()
+                .color(0xe4aef2)
                 .build()
 
         ChloroplatinicAcidSolution = new Material.Builder(8582, SuSyUtility.susyId("chloroplatinic_acid_solution"))
@@ -3516,7 +3513,7 @@ class FirstDegreeMaterialsA {
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, DISABLE_DECOMPOSITION)
                 .components(Iron * 2, Nickel * 1, Cobalt * 1)
                 .colorAverage()
-                .blast(b -> b.temp(1723, GasTier.LOW).blastStats(120, 90))
+                .blastTemp(1723, GasTier.LOW, GTValues.VA[GTValues.MV], 90)
                 .build()
 
         Kovar.setFormula("Fe10Ni5Co3", true)
@@ -3593,7 +3590,7 @@ class FirstDegreeMaterialsA {
         ReneN5 = new Material.Builder(8630, SuSyUtility.susyId("rene_n_5"))
                 .ingot().liquid(new FluidBuilder().temperature(1780))
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_ROTOR, SUPERALLOY)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROTOR, SUPERALLOY)
                 .components(Nickel * 22, Cobalt * 4, Chrome * 3, Aluminium * 3, Tungsten * 2, Hafnium, Rhenium * 2, Tantalum * 3)
                 .colorAverage()
                 .blastTemp(3000, GasTier.HIGH, GTValues.VA[GTValues.EV])
@@ -3842,14 +3839,14 @@ class FirstDegreeMaterialsA {
 
         LEU235Dioxide.setFormula("UO2", true)
 
-        LEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(LEU235Dioxide.getRegistryName(), 1500, 100000, 3.5)
+        LEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(LEU235Dioxide.getRegistryName(), 1500, 22000000, 3.5)
                 .fastNeutronCaptureCrossSection(0.4)
                 .fastNeutronFissionCrossSection(0.2)
                 .slowNeutronCaptureCrossSection(1.8)
                 .slowNeutronFissionCrossSection(1.8)
                 .requiredNeutrons(1)
                 .releasedNeutrons(2.5)
-                .releasedHeatEnergy(0.01)
+                .releasedHeatEnergy(0.025)
                 .decayRate(0.025)
                 .build())
 
@@ -3862,14 +3859,14 @@ class FirstDegreeMaterialsA {
 
         HALEU235Dioxide.setFormula("UO2", true)
 
-        HALEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(HALEU235Dioxide.getRegistryName(), 1600, 200000, 3)
+        HALEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL, FissionFuelProperty.builder(HALEU235Dioxide.getRegistryName(), 1600, 44000000, 3)
                 .fastNeutronCaptureCrossSection(0.35)
                 .fastNeutronFissionCrossSection(0.175)
                 .slowNeutronCaptureCrossSection(1.9)
                 .slowNeutronFissionCrossSection(1.9)
                 .requiredNeutrons(1)
                 .releasedNeutrons(2.5)
-                .releasedHeatEnergy(0.01)
+                .releasedHeatEnergy(0.025)
                 .decayRate(0.025)
                 .build())
 
@@ -3883,14 +3880,14 @@ class FirstDegreeMaterialsA {
         HEU235Dioxide.setFormula("UO2", true)
 
         HEU235Dioxide.setProperty(SCPropertyKey.FISSION_FUEL,
-                FissionFuelProperty.builder(HEU235Dioxide.getRegistryName(), 1800, 400000, 2.5)
+                FissionFuelProperty.builder(HEU235Dioxide.getRegistryName(), 1800, 88000000, 2.5)
                         .fastNeutronCaptureCrossSection(0.3)
                         .fastNeutronFissionCrossSection(0.15)
                         .slowNeutronCaptureCrossSection(2)
                         .slowNeutronFissionCrossSection(2)
                         .requiredNeutrons(1)
                         .releasedNeutrons(2.5)
-                        .releasedHeatEnergy(0.01)
+                        .releasedHeatEnergy(0.025)
                         .decayRate(0.05)
                         .build())
 

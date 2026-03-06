@@ -1,13 +1,13 @@
 name = "Custom Loading Screen"
-filename = "CustomLoadingScreen-1.12.2-1.5.8.jar"
+filename = "CustomLoadingScreen-1.12.2-1.5.9.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "b18ec02512ce7e63cd70731e8716818385252a5d"
+hash = "f9a08f9d38624a794b86d33c5f786ab45755e066"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 5825891
+file-id = 6771073
 project-id = 229302

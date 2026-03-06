@@ -1,4 +1,5 @@
-REACTION_FURNACE = recipemap('reaction_furnace')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 class PartialOxidationFeedstock {
     String name
@@ -36,6 +37,6 @@ for (feedstock in feedstocks.values()) {
         .fluidInputs(fluid(feedstock.name) * 1000)
         .fluidOutputs(fluid('monoxide_rich_syngas') * feedstock.gas_produced)
         .duration(feedstock.duration)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister()
 }

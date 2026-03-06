@@ -1,3 +1,6 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
 def name_removals = [
     'bdsandm:upgrade_void',
 ]
@@ -83,42 +86,42 @@ crafting.replaceShaped('bdsandm:shipping_b', item('bdsandm:shipping_container'),
     [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]
 ])
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
 	.circuitMeta(1)
 	.inputs(item('minecraft:item_frame'))
 	.inputs(ore('chestWood'))
 	.inputs(ore('ingotIron'))
 	.outputs(item('bdsandm:upgrade') * 4)
 	.duration(10)
-	.EUt(7)
+	.EUt(VA[ULV])
 	.buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
 	.circuitMeta(2)
 	.inputs(item('minecraft:item_frame'))
 	.inputs(ore('chestWood'))
 	.inputs(ore('ingotIron'))
 	.outputs(item('bdsandm:upgrade', 1))
 	.duration(20)
-	.EUt(7)
+	.EUt(VA[ULV])
 	.buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
 	.circuitMeta(3)
 	.inputs(item('minecraft:item_frame') * 4)
 	.inputs(ore('chestWood') * 4)
 	.inputs(ore('ingotIron') * 4)
 	.outputs(item('bdsandm:upgrade', 2))
 	.duration(40)
-	.EUt(7)
+	.EUt(VA[ULV])
 	.buildAndRegister()
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
 	.circuitMeta(4)
 	.inputs(item('minecraft:item_frame') * 16)
 	.inputs(ore('chestWood') * 16)
 	.inputs(ore('ingotIron') * 16)
 	.outputs(item('bdsandm:upgrade', 3))
 	.duration(80)
-	.EUt(7)
+	.EUt(VA[ULV])
 	.buildAndRegister()

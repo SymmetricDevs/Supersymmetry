@@ -1,0 +1,26 @@
+{
+  "preRequisites:11": [
+    1110551649
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.616673869.desc",
+      "icon:10": {
+        "id:8": "rs_ctr:counter"
+      },
+      "name:8": "susy.quest.db.616673869.title"
+    }
+  },
+  "questID:3": 616673869,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:counter"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

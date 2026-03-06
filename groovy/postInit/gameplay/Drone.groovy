@@ -1,7 +1,7 @@
-import gregtech.api.recipes.RecipeBuilder
+import static prePostInit.Recipemaps.*
 import globals.Globals
-
-def DRONE_PAD = recipemap('drone_pad');
+import static gregtech.api.GTValues.*
+import gregtech.api.recipes.RecipeBuilder
 
 crafting.addShaped("susy:drone_pad_controller", metaitem('susy:drone_pad'), [
     [ore('plateSteel'), metaitem('emitter.lv'), ore('plateSteel')],
@@ -32,7 +32,7 @@ mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('batteryLv'))
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(metaitem('drone.lv').withNbt(["Charge": 0L]))
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(80)
     .buildAndRegister()
 

@@ -1,0 +1,36 @@
+{
+  "preRequisites:11": [
+    39,
+    32
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.2053239479.desc",
+      "icon:10": {
+        "id:8": "rs_ctr:wire"
+      },
+      "name:8": "susy.quest.db.2053239479.title"
+    }
+  },
+  "questID:3": 2053239479,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:wire"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:rs_port"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 1,
+          "id:8": "rs_ctr:rs_port"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -60,6 +60,8 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
+        PoloniumIVNitrateSolution.setFormula('Po(NO3)4(H2O)', true)
+
         SodaAshSolution = new Material.Builder(13006, SuSyUtility.susyId('soda_ash_solution'))
                 .liquid()
                 .components(SodaAsh * 1, Water * 1)
@@ -218,9 +220,9 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        BrominatedSulfurDioxide = new Material.Builder(13032, SuSyUtility.susyId('brominated_sulfur_dioxide'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(SulfuricAcid, HydrobromicAcid * 2)
+        HoopesElectrolyte = new Material.Builder(13032, SuSyUtility.susyId('hoopes_electrolyte'))
+                .dust().liquid(new FluidBuilder().temperature(1273))
+                .components(BariumFluoride, AluminiumTrifluoride * 2, SodiumFluoride * 2)
                 .colorAverage()
                 .build()
 
@@ -461,11 +463,13 @@ class SecondDegreeMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .build()
 
-        AmmoniumMetatungstateSolution = new Material.Builder(13073, SuSyUtility.susyId('ammonium_metatungstate_solution'))
+        WattsBathElectrolyte = new Material.Builder(13073, SuSyUtility.susyId('watts_bath_electrolyte'))
                 .liquid()
-                .components(AmmoniumMetatungstate, Ammonia * 4, Water * 4)
-                .color(0x340959)
+                .components(NickelSulfate * 5, NickelChloride * 1, BoricAcid * 2, Water * 1)
+                .colorAverage()
                 .build()
+
+        WattsBathElectrolyte.setFormula('(NiSO4)5(NiCl2)(H3BO3)2(H2O)', true)
 
         DilutedSodiumChlorateSolution = new Material.Builder(13074, SuSyUtility.susyId('diluted_sodium_chlorate_solution'))
                 .liquid()
@@ -793,7 +797,13 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13124-13129
+        SodiumDithioniteSolution = new Material.Builder(13124, SuSyUtility.susyId('sodium_dithionite_solution'))
+                .liquid()
+                .components(SodiumDithionite, Water)
+                .colorAverage()
+                .build()
+
+        // FREE ID: 13125-13129
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -1021,7 +1031,7 @@ class SecondDegreeMaterials {
 
         AmmoniumDihydrogenPhosphateSolution = new Material.Builder(13167, SuSyUtility.susyId('ammonium_dihydrogen_phosphate_solution'))
                 .liquid()
-                .components(AmmoniumDihydrogenPhosphate, Water)
+                .components(AmmoniumDihydrogenPhosphate * 2, Water)
                 .colorAverage()
                 .build()
 
@@ -1034,6 +1044,54 @@ class SecondDegreeMaterials {
         MagnesiumNitrateSolution = new Material.Builder(13169, SuSyUtility.susyId('magnesium_nitrate_solution'))
                 .liquid()
                 .components(MagnesiumNitrate, Water * 2)
+                .colorAverage()
+                .build()
+        
+        PlatinumOnCarbon = new Material.Builder(13170, SuSyUtility.susyId('platinum_on_carbon'))
+                .dust()
+                .components(Platinum, ActivatedCarbon * 10)
+                .colorAverage()
+                .build()
+
+        DilutedLanthanumNitrateSolution = new Material.Builder(13171, SuSyUtility.susyId('diluted_lanthanum_nitrate_solution'))
+                .liquid()
+                .components(LanthanumNitrate * 2, Water * 3)
+                .colorAverage()
+                .build()
+
+        HalophosphatePhosphor = new Material.Builder(13172, SuSyUtility.susyId('halophosphate_phosphor'))
+                .dust()
+                //.components(LanthanumNitrate * 2, Water * 3)
+                .color(0xd6d1a9)
+                .build()
+
+        HalophosphatePhosphorSolution = new Material.Builder(13173, SuSyUtility.susyId('halophosphate_phosphor_solution'))
+                .liquid()
+                .color(0xd6d1a9)
+                .build()
+
+        // FREE IDs: 13174-13177
+      
+        YttriumAluminiumGarnetCerium = new Material.Builder(13178, SuSyUtility.susyId('yttrium_aluminium_garnet_cerium'))
+                .dust()
+                .color(0xfff1a8)
+                .build()
+
+        TabularAlumina = new Material.Builder(13179, SuSyUtility.susyId('tabular_alumina'))
+                .dust()
+                .components(Alumina)
+                .color(0xe7e8f7)
+                .build()
+
+        ReactiveAlumina = new Material.Builder(13180, SuSyUtility.susyId('reactive_alumina'))
+                .dust()
+                .components(Alumina)
+                .color(0xf1f2fa)
+                .build()
+      
+        CopperIINitrateSolution = new Material.Builder(13181, SuSyUtility.susyId('copper_ii_nitrate_solution'))
+                .liquid()
+                .components(CopperIINitrate, Water)
                 .colorAverage()
                 .build()
     }

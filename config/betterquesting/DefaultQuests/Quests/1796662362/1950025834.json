@@ -1,0 +1,38 @@
+{
+  "preRequisites:11": [
+    1110551649
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1950025834.desc",
+      "icon:10": {
+        "id:8": "rs_ctr:num_comb"
+      },
+      "name:8": "susy.quest.db.1950025834.title"
+    }
+  },
+  "questID:3": 1950025834,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:analog_comb"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:num_comb"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:xor_gate"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "rs_ctr:logic_comb"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -92,7 +92,7 @@ susy.material.butyllithium=Н-Бутиллитий
 susy.material.diluted_butyllithium=Разбавленный Н-Бутиллитий
 susy.material.polymerized_styrene_butadiene_solution=Полимеризованный раствор бутадиена стирола
 susy.material.diluted_calcium_chloride_solution=Разбавленный раствор хлорида кальция
-susy.material.diluted_rock_salt_solution=Разбавленный раствор каменной соли
+susy.material.diluted_potassium_chloride_solution=Разбавленный раствор хлорида калия
 susy.material.diluted_potassium_carbonate_solution=Разбавленный раствор карбоната калия
 susy.material.potassium_hydroxide_solution=Раствор гидроксида калия
 susy.material.calcium_hydroxide_slurry=Суспензия гидроксида кальция
@@ -156,7 +156,7 @@ susy.material.sodium_silicate=Силикат натрия
 susy.material.sodium_aluminate=Алюминат натрия
 susy.material.calcium_carbide=Карбид кальция
 susy.material.iron_ii_chloride=Хлорид железа II
-susy.material.cuprous_oxide=оксид меди
+susy.material.copper_i_oxide=оксид меди I
 susy.material.lithium_bromide=Бромид лития
 susy.material.iron_iii_oxide=Оксид железа III
 susy.material.copper_ii_chloride=Хлорид меди II
@@ -556,7 +556,6 @@ susy.material.tetramethylammonium_hydroxide_solution=Раствор гидрок
 susy.material.boron_trioxide_solution=Раствор триоксида бора
 susy.material.phosphorus_solution=Фосфорный раствор
 susy.material.sodium_cyanide_solution=Раствор цианида натрия
-susy.material.brominated_sulfur_dioxide=Бромированный диоксид серы
 susy.material.phosphorus_trichloride=трихлорид фосфора
 
 susy.material.wacker_catalyst_solution=Раствор Ваккера
@@ -682,12 +681,10 @@ susy.material.impure_bromine=Нечистый бром
 susy.material.concentrated_salt_water=Концентрированная соленая вода
 susy.material.hypersaline_water=Гиперсоленая вода
 susy.material.lithium_cobalt_oxide=оксид лития-кобальта
-susy.material.sodium_cathode_alloy=Катодный сплав натрия
 susy.material.lithium_hexafluorophosphate=Литий гексафторфосфат
 susy.material.nickel_chloride=Никель хлорид
 susy.material.nickel_hydroxide=Гидроксид никеля
 susy.material.dimethyl_carbonate=Диметилкарбонат
-susy.material.nickel_oxide_hydroxide=Гидроксид оксида никеля 
 susy.material.calcium_orthosilicate=Ортосиликат кальция
 susy.material.magnesium_hydroxide=Гидроксид магния
 susy.material.magnesium_chloride_solution=Раствор хлорида магния
@@ -1346,7 +1343,7 @@ susy.material.cold_water=Холодная вода
 susy.material.waste_gaseous_nitrogen=Отходной газообразный азот
 susy.material.purified_waste_gaseous_nitrogen=Очищенный отходящий газообразный азот
 susy.material.chilled_boosted_air=Охлажденный наддувочный воздух
-susy.material.partially_liquified_air=Частично сжиженный воздух
+susy.material.partially_liquefied_air=Частично сжиженный воздух
 susy.material.gaseous_air_feedstock=Газообразное воздушное сырье
 susy.material.liquid_air_feedstock=Жидко-воздушное сырье
 susy.material.chilly_waste_gaseous_nitrogen=Газообразный азот из холодных отходов
@@ -2065,10 +2062,8 @@ susy.material.hp_fuel_gas=Углеводородный газ высокого �
 susy.material.cold_hp_fuel_gas=Холодный углеводородный газ высокого давления
 susy.material.rp_one=РТ-1
 susy.material.ammonium_metatungstate=Метавольфрамат аммония (АМТ)
-susy.material.ammonium_metatungstate_solution=Раствор метавольфрамата аммония
 susy.material.clarified_slurry_oil=Осветленнай шламовая нефть
 susy.material.pyrolysis_raffinate=Пиролизный рафинант
-susy.material.carbon_black=Углеродная сажа
 susy.material.compounded_polyisoprene=Составной полиизопрен
 susy.material.compounded_styrene_isoprene_rubber=Составной стирол-изопреновый каучук
 susy.material.compounded_styrene_butadiene_rubber=Составной бутадиен-стирольный каучук
@@ -2283,9 +2278,14 @@ metaitem.storage.segment.name=Сегмент хранения
 
 metaitem.gun.barrel.steel.name=Стальной ствол
 
+metaitem.cathode.lead_paste.name=Свинцовая катодная паста
+metaitem.cathode.lead_frame.name=Свинцовая катодная рама
 metaitem.cathode.lead.name=Свинцовый катод
 metaitem.anode.lead.name=Свинцовый анод
 metaitem.battery.lead_acid.name=Свинцово-кислотная батарея
+
+metaitem.battery.primitivehull.lv.name=Примитивный корпус LV-батареи
+metaitem.battery.primitivehull.mv.name=Примитивный корпус MV-батареи
 
 metaitem.steam.piston.name=Паровой поршень
 metaitem.steam.motor.name=Паровой двигатель
@@ -2577,7 +2577,7 @@ metaitem.sponge.rhodium.name=Родиевая губка
 metaitem.drone.lv.name=Базовый дрон
 
 metaitem.glass_fibers.name=Стекловолокно
-metaitem.epoxy_lamina.name=Эпоксидная ламина
+metaitem.board.epoxy.prepreg.name=Эпоксидная ламина
 metaitem.stem.cotton.name=Хлопковый стебель
 metaitem.spinneret.name=Фильера
 
@@ -2653,6 +2653,7 @@ item.susy.material.ultra_high_molecular_weight_polyethylene.plate=Тканый �
 item.susy.material.kevlar.plate=Кевлар
 item.gregtech.material.polytetrafluoroethylene.fiber=Расширенное политетрафторэтиленовое волокно
 item.gregtech.material.polytetrafluoroethylene.thread=Расширенная политетрафторэтиленовая нить
+gregtech.material.carbon=Углеродная сажа
 
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Бревно из березы, джунглей, дуба и ели

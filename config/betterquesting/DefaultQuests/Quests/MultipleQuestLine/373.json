@@ -1,8 +1,13 @@
 {
+  "preRequisiteTypes:7": [
+    1,
+    0,
+    0
+  ],
   "preRequisites:11": [
-    181,
-    410,
-    786
+    813,
+    977680348,
+    688409262
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -24,24 +29,6 @@
         "0:10": {
           "Count:3": 1,
           "Damage:2": 17001,
-          "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 57,
-          "Damage:2": 5,
-          "id:8": "gregtech:turbine_casing"
-        },
-        "2:10": {
-          "Count:3": 3,
-          "id:8": "susy:alternator_coil"
-        },
-        "3:10": {
-          "Count:3": 4,
-          "id:8": "susy:turbine_rotor"
-        },
-        "4:10": {
-          "Count:3": 1,
-          "Damage:2": 16001,
           "id:8": "gregtech:machine"
         }
       },

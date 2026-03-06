@@ -5,7 +5,7 @@
     "enableHotbarSwap": true,
     "sortSound": "minecraft:ui.button.click",
     "buttonColor": "#ffffffff",
-    "_comment": "By setting the chance below to 0 you agree to have no humor and that you are boring."
+    "buttonEnabled": true
   },
   "ItemSortRules": [
     {

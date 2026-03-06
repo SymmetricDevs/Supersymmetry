@@ -1,4 +1,4 @@
-import globals.Globals
+import static gregtech.api.GTValues.*
 
 //REMOVALS
 
@@ -34,7 +34,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(item('minecraft:emerald'))
         .outputs(metaitem('sensor.mv'))
         .duration(100)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 
 //HV EMITTER
@@ -52,7 +52,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('gemGalliumPhosphate'))
         .outputs(metaitem('sensor.hv'))
         .duration(100)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 
 //EV EMITTER
@@ -70,7 +70,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('gemLithiumNiobate'))
         .outputs(metaitem('sensor.ev'))
         .duration(100)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 
 //IV EMITTER
@@ -88,7 +88,7 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('gemLeadZirconateTitanate'))
         .outputs(metaitem('sensor.iv'))
         .duration(100)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister();
 
 //LuV EMITTER

@@ -10,7 +10,8 @@
         "id:8": "susy:resource_block"
       },
       "name:8": "susy.quest.db.1064746016.title",
-      "questlogic:8": "OR"
+      "questlogic:8": "OR",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 1064746016,

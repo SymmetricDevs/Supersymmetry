@@ -20,19 +20,6 @@
           "Count:3": 1,
           "Damage:2": 8517,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 39,
-          "id:8": "gregtechfoodoption:gtfo_metal_casing"
-        },
-        "2:10": {
-          "Count:3": 4,
-          "id:8": "gregtech:transparent_casing"
-        },
-        "3:10": {
-          "Count:3": 4,
-          "Damage:2": 4,
-          "id:8": "gregtech:meta_block_frame_20"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -1,5 +1,7 @@
-import classes.*;
-import globals.Globals
+import static prePostInit.Recipemaps.*
+import classes.*
+import static gregtech.api.GTValues.*
+import postInit.utils.RecyclingHelper
 
 def circuit(x) {
     return metaitem('circuit.integrated').withNbt([Configuration: x])
@@ -15,16 +17,16 @@ def recipesToRemove = [
     'quark:gravisand',
     'quark:ender_watcher',
     'quark:redstone_inductor',
-	'minecraft:stone_sword',
-	'minecraft:stone_shovel',
-	'minecraft:stone_pickaxe',
-	'minecraft:stone_axe',
-	'minecraft:stone_hoe',
-	'minecraft:wooden_sword',
-	'minecraft:wooden_shovel',
-	'minecraft:wooden_pickaxe',
-	'minecraft:wooden_axe',
-	'minecraft:wooden_hoe',
+    'minecraft:stone_sword',
+    'minecraft:stone_shovel',
+    'minecraft:stone_pickaxe',
+    'minecraft:stone_axe',
+    'minecraft:stone_hoe',
+    'minecraft:wooden_sword',
+    'minecraft:wooden_shovel',
+    'minecraft:wooden_pickaxe',
+    'minecraft:wooden_axe',
+    'minecraft:wooden_hoe',
     'minecraft:fermented_spider_eye',
     'minecraft:speckled_melon',
     'minecraft:magma_cream',
@@ -32,21 +34,21 @@ def recipesToRemove = [
     'minecraft:golden_carrot',
     'quark:golden_frog_leg',
     'minecraft:white_bed',
-	'minecraft:orange_bed',
-	'minecraft:magenta_bed',
-	'minecraft:light_blue_bed',
-	'minecraft:yellow_bed',
-	'minecraft:lime_bed',
-	'minecraft:pink_bed',
-	'minecraft:gray_bed',
-	'minecraft:light_gray_bed',
-	'minecraft:cyan_bed',
-	'minecraft:purple_bed',
-	'minecraft:blue_bed',
-	'minecraft:brown_bed',
-	'minecraft:green_bed',
-	'minecraft:red_bed',
-	'minecraft:black_bed',
+    'minecraft:orange_bed',
+    'minecraft:magenta_bed',
+    'minecraft:light_blue_bed',
+    'minecraft:yellow_bed',
+    'minecraft:lime_bed',
+    'minecraft:pink_bed',
+    'minecraft:gray_bed',
+    'minecraft:light_gray_bed',
+    'minecraft:cyan_bed',
+    'minecraft:purple_bed',
+    'minecraft:blue_bed',
+    'minecraft:brown_bed',
+    'minecraft:green_bed',
+    'minecraft:red_bed',
+    'minecraft:black_bed',
     'minecraft:enchanting_table',
     'minecraft:ender_chest',
     'minecraft:end_rod',
@@ -78,34 +80,34 @@ def recipesToRemove = [
     'agricraft:combine_nugget_quartz',
     'minecraft:purple_shulker_box',
     'quark:purple_shulker_box',
-	'agricraft:combine_nugget_iron',
-	'chisel:uncraft_blockiron',
-	'chisel:diamond',
-	'chisel:uncraft_blockgold',
-	'appliedenergistics2:decorative/quartz_block_pure',
-	'endercore:shapeless_paper',
-	'gregtech:paper_dust',
-	'gregtech:sugar',
-	'minecraft:bone_meal_from_bone',
-	'minecraft:diorite',
-	'minecraft:granite',
-	'minecraft:andesite',
-	'minecraft:minecart',
-	'quark:trapdoor',
-	'minecraft:golden_apple',
-	'chisel:uncraft_blockcopper',
-	'chisel:uncraft_blocksteel',
-	'chisel:uncraft_blocktin',
-	'chisel:uncraft_blockbronze',
-	'chisel:redstone',
-	'chisel:emerald',
-	'chisel:coal',
-	'chisel:charcoal',
-	'quark:charcoal_block'
-
+    'agricraft:combine_nugget_iron',
+    'chisel:uncraft_blockiron',
+    'chisel:diamond',
+    'chisel:uncraft_blockgold',
+    'appliedenergistics2:decorative/quartz_block_pure',
+    'endercore:shapeless_paper',
+    'gregtech:paper_dust',
+    'gregtech:sugar',
+    'minecraft:bone_meal_from_bone',
+    'minecraft:diorite',
+    'minecraft:granite',
+    'minecraft:andesite',
+    'minecraft:minecart',
+    'quark:trapdoor',
+    'minecraft:golden_apple',
+    'chisel:uncraft_blockcopper',
+    'chisel:uncraft_blocksteel',
+    'chisel:uncraft_blocktin',
+    'chisel:uncraft_blockbronze',
+    'chisel:redstone',
+    'chisel:emerald',
+    'chisel:coal',
+    'chisel:charcoal',
+    'quark:charcoal_block',
+    'minecraft:bow'
 ]
 
-for(name in recipesToRemove) {
+for (name in recipesToRemove) {
     crafting.remove(name)
 }
 
@@ -173,9 +175,9 @@ for (entry in buttonItemMap) {
 }
 
 crafting.replaceShaped('minecraft:dispenser', item('minecraft:dispenser'), [
-	[ore('cobblestone'), ore('gearIron'), ore('cobblestone')],
-	[ore('string'), ore('springSteel'), metaitem('electric.motor.lv')],//metaitem('electric.motor.lv')
-	[ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
+    [ore('cobblestone'), ore('gearIron'), ore('cobblestone')],
+    [ore('string'), ore('springSteel'), metaitem('electric.motor.lv')],//metaitem('electric.motor.lv')
+    [ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
 ])
 
 crafting.replaceShaped('minecraft:noteblock', item('minecraft:noteblock'), [
@@ -196,11 +198,30 @@ crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
     [null, ore('dustRedstone'), ore('craftingToolScrewdriver')]
 ])
 
-crafting.replaceShaped('minecraft:tripwire_hook', item('minecraft:tripwire_hook') * 2, [
+RecyclingHelper.replaceShaped('minecraft:tripwire_hook', item('minecraft:tripwire_hook'), [
     [null, ore('ringIron'), null],
     [ore('springSmallIron'), ore('stickWood'), null],
     [ore('dustRedstone'), ore('cobblestone'), null]
 ])
+
+// Tripwire Hook * 1
+mods.gregtech.assembler.removeByInput(4, [item('biomesoplenty:bamboo') * 2 * 2, metaitem('ringIron') * 2], null)
+// Tripwire Hook * 1
+mods.gregtech.assembler.removeByInput(4, [item('biomesoplenty:bamboo') * 2 * 2, metaitem('ringWroughtIron') * 2], null)
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('ringIron'))
+    .inputs(ore('springSmallIron'))
+    .inputs(ore('stickWood'))
+    .inputs(ore('dustRedstone'))
+    .inputs(ore('cobblestone'))
+    .outputs(item('minecraft:tripwire_hook'))
+    .duration(100)
+    .EUt(4)
+    .buildAndRegister()
+
+RecyclingHelper.removeRecyclingRecipes(item('minecraft:trapped_chest'))
+RecyclingHelper.handleRecycling(item('minecraft:trapped_chest'), [item('minecraft:chest'), ore('ringIron'), ore('springSmallIron'), ore('stickWood'), ore('dustRedstone'), ore('cobblestone')])
 
 crafting.replaceShaped('quark:iron_rod', item('quark:iron_rod'), [
     [null, ore('stickIron'), null],
@@ -215,9 +236,9 @@ crafting.replaceShaped('minecraft:redstone_lamp', item('minecraft:redstone_lamp'
 ])
 
 crafting.replaceShaped('minecraft:dropper', item('minecraft:dropper'), [
-	[ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
-	[ore('cobblestone'), metaitem('electric.piston.lv'), null],
-	[ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
+    [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
+    [ore('cobblestone'), metaitem('electric.piston.lv'), null],
+    [ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
 ])
 
 crafting.replaceShaped('minecraft:repeater', item('minecraft:repeater'), [
@@ -347,21 +368,21 @@ crafting.addShaped('minecraft:torchCarbonDust', item('minecraft:torch') * 8, [
 ])
 
 crafting.addShaped('gregtech:chad_from_wood', metaitem('dustPaper') * 4, [
-		[ore('dustWood'), ore('dustWood'), ore('dustWood')],
-		[ore('dustWood'), ore('dustWood'), ore('dustWood')],
-		[null, fluid('water') * 1000, null]
+        [ore('dustWood'), ore('dustWood'), ore('dustWood')],
+        [ore('dustWood'), ore('dustWood'), ore('dustWood')],
+        [null, fluid('water') * 1000, null]
 ])
 
 crafting.addShaped('gregtech:washing_rotten_flesh', metaitem('washed_rotten_flesh') * 8, [
-		[item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh')],
-		[item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh')],
-		[item('minecraft:rotten_flesh'), fluid('water') * 1000, item('minecraft:rotten_flesh')]
+        [item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh')],
+        [item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh'), item('minecraft:rotten_flesh')],
+        [item('minecraft:rotten_flesh'), fluid('water') * 1000, item('minecraft:rotten_flesh')]
 ])
 
 crafting.addShaped('gregtech:curing_rotten_flesh', item('minecraft:leather') * 6, [
-		[metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh')],
-		[metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh')],
-		[metaitem('washed_rotten_flesh'), fluid('creosote') * 1000, metaitem('washed_rotten_flesh')]
+        [metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh')],
+        [metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh'), metaitem('washed_rotten_flesh')],
+        [metaitem('washed_rotten_flesh'), fluid('creosote') * 1000, metaitem('washed_rotten_flesh')]
 ])
 
 /*
@@ -374,6 +395,9 @@ crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
 
 //GT Machines recipes
 //Assembler
+
+// Bow * 1
+mods.gregtech.assembler.removeByInput(4, [item('minecraft:string') * 3 * 3, item('minecraft:stick') * 3 * 3], null)
 
 // Redstone Repeater * 1
 mods.gregtech.assembler.removeByInput(10, [item('minecraft:redstone_torch') * 2, item('minecraft:redstone')], [fluid('concrete') * 144])
@@ -409,7 +433,7 @@ mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('wireFineRedAlloy'))
     .outputs(item('minecraft:golden_rail') * 12)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 mods.gregtech.arc_furnace.recipeBuilder()
@@ -418,7 +442,7 @@ mods.gregtech.arc_furnace.recipeBuilder()
     .outputs(metaitem('ingotBrass') * 6)
     .outputs(metaitem('nuggetRedAlloy'))
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
@@ -489,33 +513,33 @@ mods.gregtech.assembler.recipeBuilder()
 //Autoclave
 
 mods.gregtech.autoclave.recipeBuilder()
-		.inputs(ore('dustWood'))
-		.fluidInputs(fluid('distilled_water') * 100)
-		.outputs(metaitem('dustPaper'))
-		.duration(200)
-		.EUt(4)
-		.buildAndRegister()
+        .inputs(ore('dustWood'))
+        .fluidInputs(fluid('distilled_water') * 100)
+        .outputs(metaitem('dustPaper'))
+        .duration(200)
+        .EUt(4)
+        .buildAndRegister()
 
 mods.gregtech.autoclave.recipeBuilder()
-		.inputs(ore('dustWood'))
-		.fluidInputs(fluid('water') * 100)
-		.outputs(metaitem('dustPaper'))
-		.duration(200)
-		.EUt(4)
-		.buildAndRegister()
+        .inputs(ore('dustWood'))
+        .fluidInputs(fluid('water') * 100)
+        .outputs(metaitem('dustPaper'))
+        .duration(200)
+        .EUt(4)
+        .buildAndRegister()
 
 //Centrifuge
 // Blaze Powder * 1
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:magma_cream')], null)
 
 mods.gregtech.centrifuge.recipeBuilder()
-		.inputs(metaitem('sugar_cane_dust') * 1)
-		.fluidInputs(fluid('water') * 250)
-		.outputs(metaitem('dustWood') * 1)
-		.fluidOutputs(fluid('sugary_water') * 250)
-		.duration(100)
-		.EUt(7)
-		.buildAndRegister()
+        .inputs(metaitem('sugar_cane_dust') * 1)
+        .fluidInputs(fluid('water') * 250)
+        .outputs(metaitem('dustWood') * 1)
+        .fluidOutputs(fluid('sugary_water') * 250)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
 
 //Chemical bath
 // Eye of Ender * 1
@@ -532,51 +556,51 @@ mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustWood')], [fluid('wat
 mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustWood')], [fluid('distilled_water') * 100])
 
 mods.gregtech.chemical_bath.recipeBuilder()
-		.inputs(item('minecraft:rotten_flesh'))
-		.fluidInputs(fluid('water') * 100)
-		.outputs(metaitem('washed_rotten_flesh'))
-		.duration(200)
-		.EUt(4)
-		.buildAndRegister()
+        .inputs(item('minecraft:rotten_flesh'))
+        .fluidInputs(fluid('water') * 100)
+        .outputs(metaitem('washed_rotten_flesh'))
+        .duration(200)
+        .EUt(4)
+        .buildAndRegister()
 
 mods.gregtech.chemical_bath.recipeBuilder()
-		.inputs(item('minecraft:rotten_flesh'))
-		.fluidInputs(fluid('distilled_water') * 100)
-		.outputs(metaitem('washed_rotten_flesh'))
-		.duration(200)
-		.EUt(4)
-		.buildAndRegister()
+        .inputs(item('minecraft:rotten_flesh'))
+        .fluidInputs(fluid('distilled_water') * 100)
+        .outputs(metaitem('washed_rotten_flesh'))
+        .duration(200)
+        .EUt(4)
+        .buildAndRegister()
 
 mods.gregtech.chemical_bath.recipeBuilder()
-		.inputs(metaitem('washed_rotten_flesh'))
-		.fluidInputs(fluid('creosote') * 50)
-		.outputs(item('minecraft:leather'))
-		.duration(200)
-		.EUt(4)
-		.buildAndRegister()
+        .inputs(metaitem('washed_rotten_flesh'))
+        .fluidInputs(fluid('creosote') * 50)
+        .outputs(item('minecraft:leather'))
+        .duration(200)
+        .EUt(4)
+        .buildAndRegister()
 
 //Crystallizer
 
-recipemap('crystallizer').recipeBuilder()
-		.fluidInputs(fluid('clarified_sugary_water') * 1000)
-		.outputs(item('minecraft:sugar') * 6)
-		.duration(200)
-		.EUt(7)
-		.buildAndRegister()
+CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('clarified_sugary_water') * 1000)
+        .outputs(item('minecraft:sugar') * 6)
+        .duration(200)
+        .EUt(VA[ULV])
+        .buildAndRegister()
 
-recipemap('crystallizer').recipeBuilder()
-		.fluidInputs(fluid('sugary_water') * 1000)
-		.outputs(item('minecraft:sugar') * 3)
-		.duration(300)
-		.EUt(7)
-		.buildAndRegister()
+CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('sugary_water') * 1000)
+        .outputs(item('minecraft:sugar') * 3)
+        .duration(300)
+        .EUt(VA[ULV])
+        .buildAndRegister()
 
 //Extractor
 mods.gregtech.extractor.recipeBuilder()
     .inputs(item('quark:glass_shards:0'))
     .fluidOutputs(fluid('glass') * 36)
     .duration(20)
-    .EUt(7)
+    .EUt(VA[ULV])
     .buildAndRegister()
 
 //Macerator
@@ -585,11 +609,11 @@ mods.gregtech.extractor.recipeBuilder()
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:reeds')], null)
 
 mods.gregtech.macerator.recipeBuilder()
-		.inputs(item('minecraft:reeds'))
-		.outputs(metaitem('sugar_cane_dust'))
-		.duration(400)
-		.EUt(2)
-		.buildAndRegister()
+        .inputs(item('minecraft:reeds'))
+        .outputs(metaitem('sugar_cane_dust'))
+        .duration(400)
+        .EUt(2)
+        .buildAndRegister()
 
 //Mixer
 // Fermented Spider Eye * 1
@@ -607,72 +631,72 @@ mods.gregtech.mixer.recipeBuilder()
     .inputs(ore('dustMagnesium'))
     .outputs(item('minecraft:fire_charge') * 3)
     .duration(20)
-    .EUt(7)
+    .EUt(VA[ULV])
     .buildAndRegister()
 
 mods.gregtech.mixer.recipeBuilder()
-		.inputs(ore('dustQuicklime'))
-		.fluidInputs(fluid('sugary_water') * 10000)
-		.fluidOutputs(fluid('clarified_sugary_water') * 10000)
-		.duration(400)
-		.EUt(7)
-		.buildAndRegister()
+        .inputs(ore('dustQuicklime'))
+        .fluidInputs(fluid('sugary_water') * 10000)
+        .fluidOutputs(fluid('clarified_sugary_water') * 10000)
+        .duration(400)
+        .EUt(VA[ULV])
+        .buildAndRegister()
 
 crafting.replaceShaped('minecraft:cobblestone_slab', item('minecraft:stone_slab', 3) * 6, [
-		[null, null, null],
-		[ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
-		[null, null, null]
+        [null, null, null],
+        [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
+        [null, null, null]
 ])
 
 crafting.replaceShaped('minecraft:trapdoor', item('minecraft:trapdoor') * 4, [
-		[item('minecraft:planks'), item('minecraft:planks'), ore('craftingToolHardHammer')],
-		[item('minecraft:planks'), item('minecraft:planks'), null],
-		[ore('craftingToolSaw'), null, null]
+        [item('minecraft:planks'), item('minecraft:planks'), ore('craftingToolHardHammer')],
+        [item('minecraft:planks'), item('minecraft:planks'), null],
+        [ore('craftingToolSaw'), null, null]
 ])
 
 crafting.replaceShaped('minecraft:iron_trapdoor', item('minecraft:iron_trapdoor'), [
-		[metaitem('plateIron'), metaitem('plateIron'), ore('craftingToolHardHammer')],
-		[metaitem('plateIron'), metaitem('plateIron'), null],
-		[ore('craftingToolSaw'), null, null]
+        [metaitem('plateIron'), metaitem('plateIron'), ore('craftingToolHardHammer')],
+        [metaitem('plateIron'), metaitem('plateIron'), null],
+        [ore('craftingToolSaw'), null, null]
 ])
 
 crafting.replaceShaped('quark:spruce_trapdoor', item('quark:spruce_trapdoor') * 4, [
-		[item('minecraft:planks', 1), item('minecraft:planks', 1), ore('craftingToolHardHammer')],
-		[item('minecraft:planks', 1), item('minecraft:planks', 1), null],
-		[ore('craftingToolSaw'), null, null]
+        [item('minecraft:planks', 1), item('minecraft:planks', 1), ore('craftingToolHardHammer')],
+        [item('minecraft:planks', 1), item('minecraft:planks', 1), null],
+        [ore('craftingToolSaw'), null, null]
 ])
 
 crafting.replaceShaped('quark:birch_trapdoor', item('quark:birch_trapdoor') * 4, [
-		[item('minecraft:planks', 2), item('minecraft:planks', 2), ore('craftingToolHardHammer')],
-		[item('minecraft:planks', 2), item('minecraft:planks', 2), null],
-		[ore('craftingToolSaw'), null, null]
+        [item('minecraft:planks', 2), item('minecraft:planks', 2), ore('craftingToolHardHammer')],
+        [item('minecraft:planks', 2), item('minecraft:planks', 2), null],
+        [ore('craftingToolSaw'), null, null]
 ])
 
 crafting.replaceShaped('quark:jungle_trapdoor', item('quark:jungle_trapdoor') * 4, [
-		[item('minecraft:planks', 3), item('minecraft:planks', 3), ore('craftingToolHardHammer')],
-		[item('minecraft:planks', 3), item('minecraft:planks', 3), null],
-		[ore('craftingToolSaw'), null, null]
+        [item('minecraft:planks', 3), item('minecraft:planks', 3), ore('craftingToolHardHammer')],
+        [item('minecraft:planks', 3), item('minecraft:planks', 3), null],
+        [ore('craftingToolSaw'), null, null]
 ])
 
 crafting.replaceShaped('quark:acacia_trapdoor', item('quark:acacia_trapdoor') * 4, [
-		[item('minecraft:planks', 4), item('minecraft:planks', 4), ore('craftingToolHardHammer')],
-		[item('minecraft:planks', 4), item('minecraft:planks', 4), null],
-		[ore('craftingToolSaw'), null, null]
+        [item('minecraft:planks', 4), item('minecraft:planks', 4), ore('craftingToolHardHammer')],
+        [item('minecraft:planks', 4), item('minecraft:planks', 4), null],
+        [ore('craftingToolSaw'), null, null]
 ])
 
 crafting.replaceShaped('quark:dark_oak_trapdoor', item('quark:dark_oak_trapdoor') * 4, [
-		[item('minecraft:planks', 5), item('minecraft:planks', 5), ore('craftingToolHardHammer')],
-		[item('minecraft:planks', 5), item('minecraft:planks', 5), null],
-		[ore('craftingToolSaw'), null, null]
+        [item('minecraft:planks', 5), item('minecraft:planks', 5), ore('craftingToolHardHammer')],
+        [item('minecraft:planks', 5), item('minecraft:planks', 5), null],
+        [ore('craftingToolSaw'), null, null]
 ])
 
 crafting.replaceShaped('minecraft:stone_slab', item('minecraft:stone_slab') * 6, [
-		[null, null, null],
-		[ore('stone'), ore('stone'), ore('stone')],
-		[null, null, null]
+        [null, null, null],
+        [ore('stone'), ore('stone'), ore('stone')],
+        [null, null, null]
 ])
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
         .inputs([
                 metaitem('platePolytetrafluoroethylene') * 2,
                 metaitem('plateStainlessSteel'),
@@ -685,26 +709,24 @@ recipemap('assembler').recipeBuilder()
         .buildAndRegister();
 
 crafting.replaceShaped('minecraft:leather_helmet', item('minecraft:leather_helmet'), [
-		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
-		[metaitem('bound_leather'), null, metaitem('bound_leather')],
-		[null, null, null]])
-		
-		
+        [metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [null, null, null]])
+        
 crafting.replaceShaped('minecraft:leather_chestplate', item('minecraft:leather_chestplate'), [
-		[metaitem('bound_leather'), null, metaitem('bound_leather')],
-		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
-		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')]])
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
+        [metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')]])
 
 crafting.replaceShaped('minecraft:leather_leggings', item('minecraft:leather_leggings'), [
-		[metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
-		[metaitem('bound_leather'), null, metaitem('bound_leather')],
-		[metaitem('bound_leather'), null, metaitem('bound_leather')]])
+        [metaitem('bound_leather'), metaitem('bound_leather'), metaitem('bound_leather')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')]])
 
 crafting.replaceShaped('minecraft:leather_boots', item('minecraft:leather_boots'), [
-		[null, null, null],
-		[metaitem('bound_leather'), null, metaitem('bound_leather')],
-		[metaitem('bound_leather'), null, metaitem('bound_leather')]])
-
+        [null, null, null],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')],
+        [metaitem('bound_leather'), null, metaitem('bound_leather')]])
 
 crafting.remove("quark:chainmail_helmet");
 crafting.remove("quark:chainmail_chestplate");
@@ -721,36 +743,36 @@ crafting.remove("gregtech:diamond_chestplate");
 crafting.remove("gregtech:diamond_leggings");
 crafting.remove("gregtech:diamond_boots");
 
-crafting.replaceShaped('gregtech:iron_helmet', item('minecraft:iron_helmet'), [
-		[ore('screwIron'), ore('plateIron'), ore('screwIron')],
-		[ore('plateIron'), ore('leather'), ore('plateIron')],
-		[null, null, null]])
+RecyclingHelper.replaceShaped('gregtech:iron_helmet', item('minecraft:iron_helmet'), [
+        [ore('screwIron'), ore('plateIron'), ore('screwIron')],
+        [ore('plateIron'), ore('leather'), ore('plateIron')],
+        [null, null, null]])
 
-crafting.replaceShaped('gregtech:iron_chestplate', item('minecraft:iron_chestplate'), [
-		[ore('screwIron'), null, ore('screwIron')],
-		[ore('plateIron'), ore('leather'), ore('plateIron')],
-		[ore('plateIron'), ore('plateIron'), ore('plateIron')]])
+RecyclingHelper.replaceShaped('gregtech:iron_chestplate', item('minecraft:iron_chestplate'), [
+        [ore('screwIron'), null, ore('screwIron')],
+        [ore('plateIron'), ore('leather'), ore('plateIron')],
+        [ore('plateIron'), ore('plateIron'), ore('plateIron')]])
 
-crafting.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings'), [
-		[ore('screwIron'), ore('plateIron'), ore('screwIron')],
-		[ore('plateIron'), ore('leather'), ore('plateIron')],
-		[ore('plateIron'), null, ore('plateIron')]])
+RecyclingHelper.replaceShaped('gregtech:iron_leggings', item('minecraft:iron_leggings'), [
+        [ore('screwIron'), ore('plateIron'), ore('screwIron')],
+        [ore('plateIron'), ore('leather'), ore('plateIron')],
+        [ore('plateIron'), null, ore('plateIron')]])
 
 for (int i = 0; i < 16; i++) {
-	recipemap('mixer').recipeBuilder()
-			.fluidInputs(fluid('water') * 100)
-			.inputs(item('minecraft:concrete_powder', i))
-			.outputs(item('minecraft:concrete', i))
-			.duration(40)
-			.EUt(16)
-			.buildAndRegister()
+    MIXER.recipeBuilder()
+            .fluidInputs(fluid('water') * 100)
+            .inputs(item('minecraft:concrete_powder', i))
+            .outputs(item('minecraft:concrete', i))
+            .duration(40)
+            .EUt(16)
+            .buildAndRegister()
 }
 
 crafting.addShaped('minecraft:arrow_from_paper', item('minecraft:arrow') * 8, [
-		[null, item('minecraft:flint'), null],
-		[null, ore('stickWood'), null],
-		[null, item('minecraft:paper'), null]])
-		
+        [null, item('minecraft:flint'), null],
+        [null, ore('stickWood'), null],
+        [null, item('minecraft:paper'), null]])
+        
 // Make gunpowder recipe shorter
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCarbon') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
@@ -759,50 +781,50 @@ mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem(
 mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 mods.gregtech.blender.removeByInput(7, [metaitem('dustSaltpeter') * 2, metaitem('dustSulfur'), metaitem('dustCharcoal') * 3, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
-recipemap('mixer').recipeBuilder()
-			.inputs(ore('dustSaltpeter') * 2)
-			.inputs(ore('dustSulfur'))
-			.inputs(ore('dustCoal') * 3)
-			.outputs(item('minecraft:gunpowder') * 6)
-			.duration(150)
-			.EUt(16)
-			.buildAndRegister()
+MIXER.recipeBuilder()
+            .inputs(ore('dustSaltpeter') * 2)
+            .inputs(ore('dustSulfur'))
+            .inputs(ore('dustCoal') * 3)
+            .outputs(item('minecraft:gunpowder') * 6)
+            .duration(150)
+            .EUt(16)
+            .buildAndRegister()
 
-recipemap('mixer').recipeBuilder()
-			.inputs(ore('dustSaltpeter') * 2)
-			.inputs(ore('dustSulfur'))
-			.inputs(ore('dustLignite') * 3)
-			.outputs(item('minecraft:gunpowder') * 6)
-			.duration(150)
-			.EUt(16)
-			.buildAndRegister()
+MIXER.recipeBuilder()
+            .inputs(ore('dustSaltpeter') * 2)
+            .inputs(ore('dustSulfur'))
+            .inputs(ore('dustLignite') * 3)
+            .outputs(item('minecraft:gunpowder') * 6)
+            .duration(150)
+            .EUt(16)
+            .buildAndRegister()
 
-recipemap('mixer').recipeBuilder()
-			.inputs(ore('dustSaltpeter') * 2)
-			.inputs(ore('dustSulfur'))
-			.inputs(ore('dustAnthracite') * 3)
-			.outputs(item('minecraft:gunpowder') * 6)
-			.duration(150)
-			.EUt(16)
-			.buildAndRegister()
+MIXER.recipeBuilder()
+            .inputs(ore('dustSaltpeter') * 2)
+            .inputs(ore('dustSulfur'))
+            .inputs(ore('dustAnthracite') * 3)
+            .outputs(item('minecraft:gunpowder') * 6)
+            .duration(150)
+            .EUt(16)
+            .buildAndRegister()
 
-recipemap('mixer').recipeBuilder()
-			.inputs(ore('dustSaltpeter') * 2)
-			.inputs(ore('dustSulfur'))
-			.inputs(ore('dustCharcoal') * 3)
-			.outputs(item('minecraft:gunpowder') * 6)
-			.duration(150)
-			.EUt(16)
-			.buildAndRegister()
+MIXER.recipeBuilder()
+            .inputs(ore('dustSaltpeter') * 2)
+            .inputs(ore('dustSulfur'))
+            .inputs(ore('dustCharcoal') * 3)
+            .outputs(item('minecraft:gunpowder') * 6)
+            .duration(150)
+            .EUt(16)
+            .buildAndRegister()
 
-recipemap('mixer').recipeBuilder()
-			.inputs(ore('dustSaltpeter') * 2)
-			.inputs(ore('dustSulfur'))
-			.inputs(ore('dustCarbon') * 3)
-			.outputs(item('minecraft:gunpowder') * 6)
-			.duration(150)
-			.EUt(16)
-			.buildAndRegister()
+MIXER.recipeBuilder()
+            .inputs(ore('dustSaltpeter') * 2)
+            .inputs(ore('dustSulfur'))
+            .inputs(ore('dustCarbon') * 3)
+            .outputs(item('minecraft:gunpowder') * 6)
+            .duration(150)
+            .EUt(16)
+            .buildAndRegister()
 
 // Gold Dust * 8
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_apple')], null)
@@ -820,7 +842,7 @@ mods.gregtech.mixer.recipeBuilder()
     .fluidInputs(fluid('salt_water') * 1000)
     .outputs(item('minecraft:slime_ball') * 9)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 mods.gregtech.mixer.recipeBuilder()
@@ -829,7 +851,7 @@ mods.gregtech.mixer.recipeBuilder()
     .fluidInputs(fluid('salt_water') * 1000)
     .outputs(item('minecraft:slime_ball') * 3)
     .duration(100)
-    .EUt(30)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 crafting.addShaped("tnt_block", item('minecraft:tnt'), [
@@ -839,3 +861,74 @@ crafting.addShaped("tnt_block", item('minecraft:tnt'), [
 ]);
 
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_rail')], null)
+
+// Make stair recipes in assembler equivalent to crafting table
+
+// Oak Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks') * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Cobblestone Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:mossy_cobblestone:*') * 6 * 6], null)
+// Brick Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:brick_block') * 6 * 6], null)
+// Stone Brick Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:stonebrick') * 6 * 6], null)
+// Nether Brick Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:nether_brick') * 6 * 6], null)
+// Sandstone Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:sandstone') * 6 * 6], null)
+// Spruce Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 1) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Birch Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 2) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Jungle Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 3) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Quartz Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:quartz_block') * 6 * 6], null)
+// Acacia Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 4) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Dark Oak Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:planks', 5) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Purpur Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [metaitem('circuit.integrated').withNbt(['Configuration': 7]), item('minecraft:purpur_block') * 6 * 6], null)
+// Rubber Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('gregtech:planks') * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Treated Wood Stairs * 4
+mods.gregtech.assembler.removeByInput(1, [item('gregtech:planks', 1) * 6 * 6, metaitem('circuit.integrated').withNbt(['Configuration': 7])], null)
+// Small Pile of Stone Dust * 6
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:sandstone_stairs')], null)
+// Small Pile of Stone Dust * 6
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:red_sandstone_stairs')], null)
+
+def stairVariants = [
+        [block: item('minecraft:planks'), stair: item('minecraft:oak_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:cobblestone'), stair: item('minecraft:stone_stairs'), dust: metaitem('dustSmallStone')],
+        [block: item('minecraft:brick_block'), stair: item('minecraft:brick_stairs'), dust: metaitem('dustBrick')],
+        [block: item('minecraft:stonebrick'), stair: item('minecraft:stone_brick_stairs'), dust: metaitem('dustSmallStone')],
+        [block: item('minecraft:nether_brick'), stair: item('minecraft:nether_brick_stairs'), dust: metaitem('dustNetherrack')],
+        [block: item('minecraft:sandstone'), stair: item('minecraft:sandstone_stairs')],
+        [block: item('minecraft:planks', 1), stair: item('minecraft:spruce_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:planks', 2), stair: item('minecraft:birch_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:planks', 3), stair: item('minecraft:jungle_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:quartz_block'), stair: item('minecraft:quartz_stairs'), dust: metaitem('dustNetherQuartz')],
+        [block: item('minecraft:planks', 4), stair: item('minecraft:acacia_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:planks', 5), stair: item('minecraft:dark_oak_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('minecraft:red_sandstone'), stair: item('minecraft:red_sandstone_stairs')],
+        [block: item('minecraft:purpur_block'), stair: item('minecraft:purpur_stairs')],
+        [block: item('gregtech:planks'), stair: item('gregtech:rubber_wood_stairs'), dust: metaitem('dustSmallWood')],
+        [block: item('gregtech:planks', 2), stair: item('gregtech:treated_wood_stairs'), dust: metaitem('dustSmallTreatedWood')],
+]
+
+stairVariants.each {material ->
+    ASSEMBLER.recipeBuilder()
+            .circuitMeta(7)
+            .inputs(material.block * 6)
+            .outputs(material.stair * 8)
+            .duration(100)
+            .EUt(1)
+            .buildAndRegister()
+
+    if (material.dust != null) {
+        RecyclingHelper.removeRecyclingRecipes(material.stair)
+        RecyclingHelper.handleRecycling(material.stair, [material.dust * 3])
+    }
+}

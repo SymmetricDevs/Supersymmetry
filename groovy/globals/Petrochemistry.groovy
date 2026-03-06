@@ -1,18 +1,13 @@
 package globals
 
+import groovy.transform.TupleConstructor
+
 class Petrochemistry {
-
-    public static void main (String[] args) {}
-
+    @TupleConstructor
     public static class Oil {
         String name
         String brine
 
-        Oil(String name, String brine) {
-            this.name = name
-            this.brine = brine
-        }
-        
         def getDiluted(int amount) {
             return fluid('diluted_' + this.name) * amount
         }
@@ -104,10 +99,20 @@ class Petrochemistry {
         boolean strippable = true
     }
 
+    trait Naphthenic {
+        boolean naphthenic = true
+        int naphthenic_acid_content // L of NA per 1kL of fraction
+
+        def getAlkaliTreated(int amount) {
+            return fluid('alkali_treated_' + this.name) * amount
+        }
+    }
+
     public static class OilFraction {
         String name
         boolean strippable = false
         boolean sulfuric = false
+        boolean naphthenic = false
 
         OilFraction(String name) {
             this.name = name
@@ -149,12 +154,13 @@ class Petrochemistry {
 
     public static fractions = [
         heavy_gas_oil : new OilFraction('heavy_gas_oil').withTraits(Sulfuric, Heatable, Strippable),
-        light_gas_oil : new OilFraction('light_gas_oil').withTraits(Sulfuric, Heatable, Strippable),
-        kerosene : new OilFraction('kerosene').withTraits(Sulfuric, Heatable, Strippable),
+        light_gas_oil : new OilFraction('light_gas_oil').withTraits(Sulfuric, Heatable, Strippable, Naphthenic).tap { naphthenic_acid_content = 1 },
+        kerosene : new OilFraction('kerosene').withTraits(Sulfuric, Heatable, Strippable, Naphthenic).tap { naphthenic_acid_content = 25 },
         heavy_naphtha : new OilFraction('heavy_naphtha').withTraits(Sulfuric, Heatable),
         light_cycle_oil : new OilFraction('light_cycle_oil').withTraits(Sulfuric, Heatable),
         naphtha : new OilFraction('naphtha').withTraits(Crude),
         light_naphtha : new OilFraction('light_naphtha').withTraits(Sulfuric, Heatable),
+        medium_liquefaction_oil : new OilFraction('medium_liquefaction_oil').withTraits(Sulfuric, Heatable)
     ]
 
     public static crackables = [

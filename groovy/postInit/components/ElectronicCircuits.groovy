@@ -1,4 +1,6 @@
-import gregtech.api.recipes.ingredients.GTRecipeItemInput;
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+import gregtech.api.recipes.ingredients.GTRecipeItemInput
 
 // Diode * 2
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineAnnealedCopper') * 4, metaitem('dustSmallGalliumArsenide')], [fluid('glass') * 144])
@@ -33,165 +35,176 @@ mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic
 //Remove steel plates from electronic circuits since they were unnecessary
 
 crafting.replaceShaped("gregtech:electronic_circuit_lv", metaitem('circuit.electronic'), [
-        [metaitem('component.resistor'), ore('craftingToolWireCutter'), metaitem('component.resistor')],
-        [metaitem('circuit.vacuum_tube'), metaitem('circuit_board.basic'), metaitem('circuit.vacuum_tube')],
-        [ore('wireGtSingleCopper'), ore('wireGtSingleCopper'), ore('wireGtSingleCopper')]])
+    [metaitem('component.resistor'), ore('craftingToolWireCutter'), metaitem('component.resistor')],
+    [metaitem('circuit.vacuum_tube'), metaitem('circuit_board.basic'), metaitem('circuit.vacuum_tube')],
+    [ore('wireGtSingleCopper'), ore('wireGtSingleCopper'), ore('wireGtSingleCopper')]])
 
 mods.gregtech.circuit_assembler.recipeBuilder().EUt(16).duration(200)
-        .inputs(ore('circuitUlv') * 2)
-        .inputs(ore('componentResistor') * 2)
-        .inputs(metaitem('circuit_board.basic'))
-        .inputs(ore('wireGtSingleCopper') * 2)
-        .outputs(metaitem('circuit.electronic') * 2)
-        .buildAndRegister();
+    .inputs(ore('circuitUlv') * 2)
+    .inputs(ore('componentResistor') * 2)
+    .inputs(metaitem('circuit_board.basic'))
+    .inputs(ore('wireGtSingleCopper') * 2)
+    .outputs(metaitem('circuit.electronic') * 2)
+    .buildAndRegister();
 
 crafting.replaceShaped("gregtech:electronic_circuit_mv", metaitem('circuit.good_electronic'), [
-        [metaitem('component.diode'), ore('craftingToolWireCutter'), metaitem('component.diode')],
-        [metaitem('circuit.electronic'), metaitem('circuit_board.good'), metaitem('circuit.electronic')],
-        [ore('wireGtSingleCopper'), metaitem('circuit.electronic'), ore('wireGtSingleCopper')]])
+    [metaitem('component.diode'), ore('craftingToolWireCutter'), metaitem('component.diode')],
+    [metaitem('circuit.electronic'), metaitem('circuit_board.good'), metaitem('circuit.electronic')],
+    [ore('wireGtSingleCopper'), metaitem('circuit.electronic'), ore('wireGtSingleCopper')]])
 
 crafting.removeByOutput(metaitem('component.resistor')) 
 
 carbons = new ItemStack[]{
-        metaitem('dustCoal'),
-        metaitem('dustCharcoal'),
-        metaitem('dustCarbon'),
-        metaitem('dustHighPurityCarbon'),
-        metaitem('dustAnthracite'),
-        metaitem('dustCoke')
+    metaitem('dustCoal'),
+    metaitem('dustCharcoal'),
+    metaitem('dustCarbon'),
+    metaitem('dustHighPurityCarbon'),
+    metaitem('dustAnthracite'),
+    metaitem('dustCoke')
 }
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .input(new GTRecipeItemInput(carbons, 1))
-        .inputs(ore('wireFineCopper') * 4)
-        .outputs(metaitem('component.resistor') * 2)
-        .duration(160)
-        .EUt(6)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('glue') * 100)
+    .input(new GTRecipeItemInput(carbons, 1))
+    .inputs(ore('wireFineCopper') * 4)
+    .outputs(metaitem('component.resistor') * 2)
+    .duration(160)
+    .EUt(VA[ULV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glue') * 100)
-        .input(new GTRecipeItemInput(carbons, 1))
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .outputs(metaitem('component.resistor') * 4)
-        .duration(160)
-        .EUt(6)
-        .buildAndRegister();        
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('glue') * 100)
+    .input(new GTRecipeItemInput(carbons, 1))
+    .inputs(ore('wireFineAnnealedCopper') * 4)
+    .outputs(metaitem('component.resistor') * 4)
+    .duration(160)
+    .EUt(VA[ULV])
+    .buildAndRegister();
 
-crafting.shapedBuilder()               
-        .name('resistor_wire')            
-        .output(metaitem('component.resistor') * 2)      
-        .matrix('RPR',                      
-                'WCW',                 
-                ' P ')
-        .key('R', metaitem('rubber_drop'))  
-        .key('P', item('minecraft:paper'))         
-        .key('W', ore('wireGtSingleCopper') | ore('wireFineCopper'))  
-        .key('C', ore('dustAnthracite') | ore('dustCoke') | ore('dustCarbon') | ore('dustCoal') | ore('dustCharcoal'))             
-        .register() 
+crafting.shapedBuilder()
+    .name('resistor_wire')
+    .output(metaitem('component.resistor') * 2)
+    .matrix('RPR',
+        'WCW',
+        ' P ')
+    .key('R', metaitem('rubber_drop'))
+    .key('P', item('minecraft:paper'))
+    .key('W', ore('wireGtSingleCopper') | ore('wireFineCopper'))
+    .key('C', ore('dustAnthracite') | ore('dustCoke') | ore('dustCarbon') | ore('dustCoal') | ore('dustCharcoal'))
+    .register() 
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineCopper') * 4)
-        .inputs(ore('dustSmallGalena') * 1)
-        .outputs(metaitem('component.diode'))
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('glass') * 144)
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(ore('dustSmallGalena') * 1)
+    .outputs(metaitem('component.diode'))
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .inputs(ore('dustSmallGalena') * 1)
-        .outputs(metaitem('component.diode') * 2)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('glass') * 144)
+    .inputs(ore('wireFineAnnealedCopper') * 4)
+    .inputs(ore('dustSmallGalena') * 1)
+    .outputs(metaitem('component.diode') * 2)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
-        .outputs(metaitem('component.diode') * 3)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('glass') * 144)
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(ore('dustSmallGalliumArsenide') * 1)
+    .outputs(metaitem('component.diode') * 3)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('glass') * 144)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
-        .outputs(metaitem('component.diode') * 4)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('glass') * 144)
+    .inputs(ore('wireFineAnnealedCopper') * 4)
+    .inputs(ore('dustSmallGalliumArsenide') * 1)
+    .outputs(metaitem('component.diode') * 4)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('wireFineCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
-        .outputs(metaitem('component.diode') * 6)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(ore('dustSmallGalliumArsenide') * 1)
+    .outputs(metaitem('component.diode') * 6)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .inputs(ore('dustSmallGalliumArsenide') * 1)
-        .outputs(metaitem('component.diode') * 8)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('wireFineAnnealedCopper') * 4)
+    .inputs(ore('dustSmallGalliumArsenide') * 1)
+    .outputs(metaitem('component.diode') * 8)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('wireFineCopper') * 4)
-        .inputs(metaitem('wafer.silicon') * 1)
-        .outputs(metaitem('component.diode') * 12)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('wireFineCopper') * 4)
+    .inputs(metaitem('wafer.silicon') * 1)
+    .outputs(metaitem('component.diode') * 12)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('wireFineAnnealedCopper') * 4)
-        .inputs(metaitem('wafer.silicon') * 1)
-        .outputs(metaitem('component.diode') * 16)
-        .duration(400)
-        .EUt(30)
-        .buildAndRegister();
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('wireFineAnnealedCopper') * 4)
+    .inputs(metaitem('wafer.silicon') * 1)
+    .outputs(metaitem('component.diode') * 16)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.mixer.recipeBuilder()
-        .inputs(ore('dustInvar') * 15)
-        .inputs(ore('dustCobalt') * 3)
-        .outputs(metaitem('dustKovar') * 18)
-        .circuitMeta(2)
-        .duration(220)
-        .EUt(16)
-        .buildAndRegister();
+MIXER.recipeBuilder()
+    .inputs(ore('dustInvar') * 15)
+    .inputs(ore('dustCobalt') * 3)
+    .outputs(metaitem('dustKovar') * 18)
+    .circuitMeta(2)
+    .duration(220)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
 // This is faster, and the previous recipe catches people not paying attention. :)
 
-mods.gregtech.mixer.recipeBuilder()
-        .inputs(ore('dustIron') * 10)
-        .inputs(ore('dustNickel') * 5)
-        .inputs(ore('dustCobalt') * 3)
-        .outputs(metaitem('dustKovar') * 18)
-        .circuitMeta(3)
-        .duration(800)
-        .EUt(16)
-        .buildAndRegister();
+MIXER.recipeBuilder()
+    .inputs(ore('dustIron') * 10)
+    .inputs(ore('dustNickel') * 5)
+    .inputs(ore('dustCobalt') * 3)
+    .outputs(metaitem('dustKovar') * 18)
+    .circuitMeta(4)
+    .duration(800)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
-mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('circuitIv') * 4)
-        .inputs(metaitem('cover.screen'))
-        .inputs(ore('wireFineGold') * 8)
-        .inputs(metaitem('circuit_board.plastic'))
-        .outputs(metaitem('susy:code_breacher'))
-        .fluidInputs(fluid('soldering_alloy') * 144)
-        .duration(400)
-        .EUt(2048)
-        .buildAndRegister();
-        
+//Kovar AAF recipes because GCYM somehow generated a conflicted recipe with invar
+
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(ore('dustIron') * 2)
+    .inputs(ore('dustNickel'))
+    .inputs(ore('dustCobalt'))
+    .circuitMeta(19)
+    .fluidInputs(fluid('nitrogen') * 4000)
+    .fluidOutputs(fluid('kovar') * 576)
+    .duration(45)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(ore('dustIron') * 2)
+    .inputs(ore('dustNickel'))
+    .inputs(ore('dustCobalt'))
+    .circuitMeta(9)
+    .fluidOutputs(fluid('kovar') * 576)
+    .duration(67)
+    .EUt(VA[MV])
+    .buildAndRegister()

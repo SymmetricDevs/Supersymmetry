@@ -13,6 +13,7 @@
         }
       },
       "name:8": "susy.quest.db.410.title",
+      "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
   },

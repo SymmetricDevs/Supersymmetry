@@ -1,7 +1,5 @@
-import globals.Globals
-
-ROASTER = recipemap('roaster')
-REACTION_FURNACE = recipemap('reaction_furnace')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustEuropiumIiSulfate') * 12)
@@ -9,7 +7,7 @@ ROASTER.recipeBuilder()
     .outputs(metaitem('dustEuropiumIiiOxide') * 5)
     .fluidOutputs(fluid('sulfur_trioxide') * 2000)
     .duration(80)
-    .EUt(120)
+    .EUt(VA[MV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
@@ -19,5 +17,5 @@ REACTION_FURNACE.recipeBuilder()
     .outputs(metaitem('dustEuropium') * 2)
     .outputs(metaitem('dustLanthanumOxide') * 5)
     .duration(200)
-    .EUt(480)
+    .EUt(VA[HV])
     .buildAndRegister()

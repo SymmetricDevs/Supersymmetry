@@ -1,18 +1,5 @@
-import globals.Globals
-
-FF = recipemap('froth_flotation')
-GRAVITY_SEPARATOR = recipemap('gravity_separator')
-ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
-ROASTER = recipemap('roaster')
-AUTOCLAVE = recipemap('autoclave')
-ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
-FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
-BR = recipemap('batch_reactor')
-MIXER = recipemap('mixer')
-CLARIFIER = recipemap('clarifier')
-CHEMICAL_BATH = recipemap('chemical_bath')
-REACTION_FURNACE = recipemap('reaction_furnace')
-MIXER_SETTLER = recipemap('mixer_settler')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Beneficiation
 
@@ -24,7 +11,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Pyrochlore
     .outputs(metaitem('dustSiftedPyrochlore'))
     .chancedOutput(metaitem('dustLimestoneTailings'), 2500, 0)
     .chancedOutput(metaitem('dustCalcite'), 2500, 0)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(40)
     .buildAndRegister()
 
@@ -33,7 +20,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Pyrochlore Concentrate
     .outputs(metaitem('dustConcentratePyrochlore'))
     .chancedOutput(metaitem('dustLimestoneTailings'), 2500, 0)
     .chancedOutput(metaitem('dustCalcite'), 2500, 0)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(20)
     .buildAndRegister()
 
@@ -41,19 +28,19 @@ MIXER.recipeBuilder() // Impure Pyrochlore Slurry
     .inputs(ore('dustConcentratePyrochlore') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_pyrochlore_slurry') * 2000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder() // Pyrochlore Slurry
-    .notConsumable(ore('dustOxalicAcid'))
+FROTH_FLOTATION.recipeBuilder() // Pyrochlore Slurry
+    .notConsumable(ore('dustOxalicAcid') * 8)
     .fluidInputs(fluid('impure_pyrochlore_slurry') * 2000)
     .notConsumable(fluid('hexafluorosilicic_acid') * 100)
     .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)
     .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
     .fluidOutputs(fluid('pyrochlore_slurry') * 1000)
     .fluidOutputs(fluid('limestone_tailing_slurry') * 1000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
@@ -62,7 +49,7 @@ CLARIFIER.recipeBuilder() // Flotated Pyrochlore
     .outputs(metaitem('dustFlotatedPyrochlore') * 16)
     .fluidOutputs(fluid('wastewater') * 1000)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 ROASTER.recipeBuilder() // Roasted Pyrochlore
@@ -70,7 +57,7 @@ ROASTER.recipeBuilder() // Roasted Pyrochlore
     .inputs(ore('dustQuicklime'))
     .outputs(metaitem('dustRoastedPyrochlore') * 16)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
@@ -79,29 +66,29 @@ CHEMICAL_BATH.recipeBuilder() // Digested Pyrochlore
     .outputs(metaitem('dustDigestedPyrochlore') * 16)
     .fluidOutputs(fluid('sulfuric_acid') * 1000)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder() // Ferroniobium-tantalum
     .inputs(ore('dustIronIiiOxide') * 5)
-    .inputs(ore('dustDigestedPyrochlore') * 2)
-    .inputs(ore('dustAnyPurityAluminium') * 12)
-    .fluidInputs(fluid('sodium_nitrate') * 720)
-    .outputs(metaitem('dustFerroniobiumTantalum') * 5)
-    .outputs(metaitem('dustAlumina') * 30)
-    .outputs(metaitem('dustCalcium') * 4)
-    .fluidOutputs(fluid('sodium_nitrite') * 576)
+    .inputs(ore('dustDigestedPyrochlore') * 4)
+    .inputs(ore('dustAnyPurityAluminium') * 22)
+    .fluidInputs(fluid('sodium_nitrate') * 1440)
+    .outputs(metaitem('dustFerroniobiumTantalum') * 10)
+    .outputs(metaitem('dustAlumina') * 55)
+    .outputs(metaitem('dustCalcium') * 8)
+    .fluidOutputs(fluid('sodium_nitrite') * 1152)
     .duration(800)
-    .EUt(Globals.voltAmps[4])
+    .EUt(VA[EV])
     .buildAndRegister()
 
-// Fe2O3 + 2 Ca2Nb1.75Ta0.25O7 + 12 Al + NaNO3 -> 0.5 Fe2Nb7Ta + 6 Al2O3 + 4 Ca + 1 NaNO2
+// Fe2O3 + 4 Ca2Nb1.75Ta0.25O7 + 22 Al + 2 NaNO3 -> Fe2Nb7Ta + 11 Al2O3 + 8 Ca + 2 NaNO2
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('sodium_nitrite') * 144)
     .outputs(metaitem('dustSodiumNitrite'))
     .duration(40)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder() // Impure Niobium Pentachloride
@@ -112,22 +99,22 @@ REACTION_FURNACE.recipeBuilder() // Impure Niobium Pentachloride
     .fluidOutputs(fluid('iron_iii_chloride') * 576)
     .fluidOutputs(fluid('impure_niobium_pentachloride') * 4000)
     .duration(400)
-    .EUt(Globals.voltAmps[4])
+    .EUt(VA[EV])
     .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder() // Niobium Pentachloride
+DT.recipeBuilder() // Niobium Pentachloride
     .fluidInputs(fluid('impure_niobium_pentachloride') * 8000)
     .fluidOutputs(fluid('tantalum_pentachloride') * 1000)
     .fluidOutputs(fluid('niobium_pentachloride') * 7000)
     .duration(100)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister()
 
-FLUID_SOLIDIFIER.recipeBuilder()
+SOLIDIFIER.recipeBuilder()
     .fluidInputs(fluid('niobium_pentachloride') * 1000)
     .outputs(metaitem('dustNiobiumPentachloride') * 6)
     .duration(100)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder() // Niobium Oxide Dihydrate
@@ -136,7 +123,7 @@ BR.recipeBuilder() // Niobium Oxide Dihydrate
     .outputs(metaitem('dustNiobiumOxideDihydrate') * 9)
     .fluidOutputs(fluid('hydrochloric_acid') * 10000)
     .duration(200)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Columbite
@@ -147,7 +134,7 @@ GRAVITY_SEPARATOR.recipeBuilder() // Sifted Columbite
     .outputs(metaitem('dustSiftedColumbite'))
     .chancedOutput(metaitem('dustPegmatiteTailings'), 2500, 0)
     .chancedOutput(metaitem('dustNetherQuartz'), 2500, 0)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(40)
     .buildAndRegister()
 
@@ -156,7 +143,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder() // Columbite Concentrate
     .outputs(metaitem('dustConcentrateColumbite'))
     .chancedOutput(metaitem('dustPegmatiteTailings'), 2500, 0)
     .chancedOutput(metaitem('dustNetherQuartz'), 2500, 0)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(20)
     .buildAndRegister()
 
@@ -164,11 +151,11 @@ MIXER.recipeBuilder() // Impure Columbite Slurry
     .inputs(ore('dustConcentrateColumbite') * 8)
     .fluidInputs(fluid('distilled_water') * 2000)
     .fluidOutputs(fluid('impure_columbite_slurry') * 2000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
-FF.recipeBuilder() // Columbite Slurry
+FROTH_FLOTATION.recipeBuilder() // Columbite Slurry
     .notConsumable(ore('dustSodiumFluorosilicate'))
     .fluidInputs(fluid('impure_columbite_slurry') * 2000)
     .notConsumable(fluid('one_amidoethyl_two_alkyl_two_imidazoline') * 100)
@@ -176,7 +163,7 @@ FF.recipeBuilder() // Columbite Slurry
     .notConsumable(fluid('hydrochloric_acid') * 100)
     .fluidOutputs(fluid('columbite_slurry') * 1000)
     .fluidOutputs(fluid('pegmatite_tailing_slurry') * 1000)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .duration(80)
     .buildAndRegister()
 
@@ -185,7 +172,7 @@ CLARIFIER.recipeBuilder() // Flotated Columbite
     .outputs(metaitem('dustFlotatedColumbite') * 16)
     .fluidOutputs(fluid('wastewater') * 1000)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 AUTOCLAVE.recipeBuilder() // Impure Fluoroniobic Acid Solution
@@ -194,7 +181,7 @@ AUTOCLAVE.recipeBuilder() // Impure Fluoroniobic Acid Solution
     .fluidInputs(fluid('diluted_sulfuric_acid') * 2000)
     .fluidOutputs(fluid('impure_fluoroniobic_acid_solution') * 1000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 MIXER_SETTLER.recipeBuilder() // Niobium-rich Extract
@@ -203,7 +190,7 @@ MIXER_SETTLER.recipeBuilder() // Niobium-rich Extract
     .fluidOutputs(fluid('niobium_rich_extract') * 6000)
     .fluidOutputs(fluid('metal_sulfate_waste') * 1000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(4)
     .buildAndRegister()
 
@@ -212,7 +199,7 @@ MIXER_SETTLER.recipeBuilder() // Scrubbed Niobium-rich Extract
     .notConsumable(fluid('sulfuric_acid') * 6000)
     .fluidOutputs(fluid('scrubbed_niobium_rich_extract') * 6000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
 
@@ -222,7 +209,7 @@ MIXER_SETTLER.recipeBuilder() // Fluoroniobic Acid Solution
     .fluidOutputs(fluid('diluted_tantalum_extract') * 6000)
     .fluidOutputs(fluid('fluoroniobic_acid_solution') * 6000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
 
@@ -232,7 +219,7 @@ MIXER_SETTLER.recipeBuilder() // Purified Fluoroniobic Acid Solution
     .fluidOutputs(fluid('purified_fluoroniobic_acid_solution') * 6000)
     .fluidOutputs(fluid('niobium_rich_extract') * 1500)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
 
@@ -243,7 +230,7 @@ BR.recipeBuilder() // Niobium Oxide Dihydrate (2 H2NbF7 + 14 NH3 + 5 H2O --> 14 
     .chancedOutput(metaitem('dustNiobiumOxideDihydrate') * 9, 6750, 0)
     .fluidOutputs(fluid('ammonium_fluoride_solution') * 9450)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
@@ -251,7 +238,7 @@ ROASTER.recipeBuilder()
     .inputs(ore('dustAmmoniumFluoride') * 6)
     .fluidOutputs(fluid('ammonia') * 1000)
     .fluidOutputs(fluid('hydrogen_fluoride') * 1000)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .duration(20)
     .buildAndRegister()
 
@@ -260,7 +247,7 @@ ROASTER.recipeBuilder() // Niobium Oxide
     .outputs(metaitem('dustNiobiumOxide') * 7)
     .fluidOutputs(fluid('dense_steam') * 2000)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 ADVANCED_ARC_FURNACE.recipeBuilder() // Niobium
@@ -269,7 +256,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder() // Niobium
     .outputs(metaitem('dustAlumina') * 25)
     .fluidOutputs(fluid('niobium') * 864)
     .duration(240)
-    .EUt(Globals.voltAmps[4])
+    .EUt(VA[EV])
     .buildAndRegister()
 
 // From tantalite
@@ -279,7 +266,7 @@ MIXER_SETTLER.recipeBuilder()
     .fluidOutputs(fluid('methyl_isobutyl_ketone') * 9000)
     .fluidOutputs(fluid('purified_fluoroniobic_acid_solution') * 1000)
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .requiredCells(4)
     .buildAndRegister()
 
@@ -289,5 +276,5 @@ ROASTER.recipeBuilder()
     .chancedOutput(metaitem('dustIronSulfate') * 6, 5000, 0)
     .chancedOutput(metaitem('dustManganeseIiSulfate') * 6, 5000, 0)
     .duration(80)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()

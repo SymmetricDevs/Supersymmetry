@@ -1,107 +1,131 @@
-import globals.Globals
-
-CSTR = recipemap('continuous_stirred_tank_reactor')
-BCR = recipemap('bubble_column_reactor')
-FBR = recipemap('fixed_bed_reactor')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // TODO: move other organic solvents (THF etc.) here
 
-// DMC (dimethyl carbonate)
+// Carbonate esters
 
-CSTR.recipeBuilder()
+    // DMC (dimethyl carbonate)
+
+    CSTR.recipeBuilder()
         .fluidInputs(fluid('phosgene') * 50)
         .fluidInputs(fluid('methanol') * 100)
         .fluidOutputs(fluid('dimethyl_carbonate') * 50)
         .fluidOutputs(fluid('hydrogen_chloride') * 100)
         .duration(1)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
-// EC (ethylene carbonate)
+    // EC (ethylene carbonate)
 
-BCR.recipeBuilder()
+    BCR.recipeBuilder()
         .fluidInputs(fluid('ethylene_oxide') * 50)
         .fluidInputs(fluid('carbon_dioxide') * 50)
         .fluidOutputs(fluid('ethylene_carbonate') * 50)
         .duration(5)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
-/*
- * Organochlorines
- */
+// Organosulfur solvents
 
-// EDC (ethylene dichloride / 1,2-dichloroethane / Freon 150)
-// direct chlorination
-FBR.recipeBuilder()
+    // DMS
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedAlumina'))
+        .fluidInputs(fluid('methanol') * 100)
+        .fluidInputs(fluid('hydrogen_sulfide') * 50)
+        .fluidOutputs(fluid('dimethyl_sulfide') * 50)
+        .fluidOutputs(fluid('water') * 100)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // DMSO
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedCupricOxide'))
+        .fluidInputs(fluid('dimethyl_sulfide') * 50)
+        .fluidInputs(fluid('oxygen') * 50)
+        .fluidOutputs(fluid('dimethyl_sulfoxide') * 50)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+// Organochlorine solvents
+
+    // EDC (ethylene dichloride / 1,2-dichloroethane / Freon 150)
+
+    FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 100)
         .fluidInputs(fluid('ethylene') * 50)
         .notConsumable(ore('catalystBedIronIiiOxide'))
         .fluidOutputs(fluid('one_two_dichloroethane') * 50)
-        .EUt(30)
+        .EUt(VA[LV])
         .duration(10)
         .buildAndRegister()
-// oxychlorination
-FBR.recipeBuilder()
+
+    FIXED_BR.recipeBuilder()
         .fluidInputs(fluid('ethylene') * 50)
         .fluidInputs(fluid('hydrochloric_acid') * 100)
         .fluidInputs(fluid('oxygen') * 50)
         .notConsumable(ore('catalystBedCopperIiChloride'))
         .fluidOutputs(fluid('one_two_dichloroethane') * 50)
         .fluidOutputs(fluid('water') * 150)
-        .EUt(30)
+        .EUt(VA[LV])
         .duration(10)
         .buildAndRegister()
 
-// TeCA (1,1,2,2-tetrachloroethane / R130)
+    // TeCA (1,1,2,2-tetrachloroethane / R130)
 
-CSTR.recipeBuilder()
+    CSTR.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(fluid('one_two_dichloroethane') * 50)
         .fluidInputs(fluid('chlorine') * 200)
         .fluidOutputs(fluid('one_one_two_two_tetrachloroethane') * 50)
         .fluidOutputs(fluid('hydrogen_chloride') * 100)
         .duration(5)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
-// TCE (trichloroethylene)
+    // TCE (trichloroethylene)
 
-CSTR.recipeBuilder()
+    CSTR.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('one_two_dichloroethane') * 50)
         .fluidInputs(fluid('chlorine') * 200)
         .fluidOutputs(fluid('trichloroethylene') * 50)
         .fluidOutputs(fluid('hydrogen_chloride') * 150)
         .duration(10)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister()
 
-// Isopropyl Amine
+// Amines
 
-FBR.recipeBuilder()
+    // Isopropyl Amine
+
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedNickel'))
         .fluidInputs(fluid('acetone') * 50)
         .fluidInputs(fluid('hydrogen') * 100)
         .fluidInputs(fluid('ammonia') * 50)
         .fluidOutputs(fluid('isopropylamine_solution') * 100)
         .duration(5)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister()
 
-FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedNickel'))
         .fluidInputs(fluid('isopropyl_alcohol') * 50)
         .fluidInputs(fluid('ammonia') * 50)
         .fluidOutputs(fluid('isopropylamine_solution') * 100)
         .duration(5)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister()
 
-DT.recipeBuilder()
+    DT.recipeBuilder()
         .fluidInputs(fluid('isopropylamine_solution') * 2000)
         .fluidOutputs(fluid('water') * 1000)
         .fluidOutputs(fluid('isopropylamine') * 1000)
         .duration(200)
-        .EUt(120)
+        .EUt(VA[MV])
         .buildAndRegister()
