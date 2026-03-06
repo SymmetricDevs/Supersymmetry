@@ -6,7 +6,7 @@ import supersymmetry.api.recipes.SuSyRecipeMaps
 import trackapi.lib.Gauges
 import static prePostInit.Recipemaps.*
 
-recipemap('assembler').recipeBuilder()
+ASSEMBLER.recipeBuilder()
     .inputs(item('gregtech:machine', 989))
     .inputs(item('gregtech:meta_item_1', 190) * 2)
     .inputs(item('gregtech:meta_item_2', 3026))
