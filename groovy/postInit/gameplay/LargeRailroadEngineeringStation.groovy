@@ -10,11 +10,11 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('gregtech:machine', 989))
     .inputs(item('gregtech:meta_item_1', 190) * 2)
     .inputs(item('gregtech:meta_item_2', 3026))
-    .inputs(item('gregtech:meta_plate_double', 323) * 2)
+    .inputs(item('gregtech:meta_plate_double', 323) * 2) // stainless steel for controller
     .inputs(item('gregtech:meta_item_1', 160) * 2)
-    .outputs(item('gregtech:machine', 18520))
-    .duration(200)
-    .EUt(VA[EV])
+    .outputs(item('gregtech:machine', 18520)) // in susy recipe maps Java
+    .duration(1000)
+    .EUt(VA[HV])
     .buildAndRegister();
 
 Globals.solders.each { key, val ->
