@@ -26,9 +26,7 @@ Globals.solders.each { key, val ->
 	cam72cam.mod.item.ItemStack is1 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
 	is1.setTagCompound(tag1);
 
-	// https://en.wikipedia.org/wiki/Transporter_erector
-	// https://positron96.gitlab.io/projects/soyuz-transporter/
-	recipemap('large_railroad_engineering_station').recipeBuilder()
+	LARGE_RAILROAD_ENGINEERING_STATION.recipeBuilder()
 		.circuitMeta(1)
 		.inputs(ore('plateHsla980X') * 64) 
 		.inputs(ore('frameGtHsla980X') * 64) 
