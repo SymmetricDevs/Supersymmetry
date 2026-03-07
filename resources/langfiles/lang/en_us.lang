@@ -3283,6 +3283,7 @@ metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel C
 // Rocketry
 
 metaitem.fuel_injector.name=Fuel Injector
+metaitem.augmented_spark_igniter.name=Augmented Spark Igniter
 
 ## Dimension Display Items
 metaitem.display.overworld.name=Overworld

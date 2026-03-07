@@ -457,6 +457,7 @@ eventManager.listen { PostMaterialEvent event ->
         // Rocketry Components 10421-10440
 
         addItem(10421, "fuel_injector")
+        addItem(10422, "augmented_spark_igniter")
     }
 
     log.infoMC("Finished adding metaitems")
