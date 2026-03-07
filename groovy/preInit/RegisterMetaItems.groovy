@@ -453,6 +453,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10409, "lamp.mercury.hp.unfilled")
         addItem(10410, "lamp.mercury.hp")
         addItem(10411, "lamp.mercury.lp")
+
+        // Rocketry Components 10421-10440
+
+        addItem(10421, "fuel_injector")
     }
 
     log.infoMC("Finished adding metaitems")
