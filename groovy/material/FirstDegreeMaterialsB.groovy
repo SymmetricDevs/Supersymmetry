@@ -709,7 +709,7 @@ class FirstDegreeMaterialsB {
 
         MARM246 = new Material.Builder(8770, SuSyUtility.susyId('mar_m_246'))
                 .ingot().liquid(new FluidBuilder().temperature(1558))
-                .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW, SUPERALLOY)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW, SUPERALLOY)
                 .components(Nickel * 29, Chrome * 5, Cobalt  * 5, Tungsten * 5, Aluminium * 3, Molybdenum * 1, Titanium * 1, Tantalum * 1)
                 .rotorStats(9.0f, 4.0f, 2048)
                 .iconSet(SHINY)
