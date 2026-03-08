@@ -1562,14 +1562,14 @@ BENDER.recipeBuilder()
 
 // Engine Parts
 
-/*ASSEMBLER.recipeBuilder()
+ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeLargeFluidMonel500'))
     .inputs(metaitem('nozzle.boron_nitride') * 8)
     .inputs(metaitem('plateIncoloy908') * 4)
     .outputs(metaitem('fuel_injector'))
     .EUt(VA[EV])
     .duration(20)
-    .buildAndRegister()*/
+    .buildAndRegister()
 
 MILLING.recipeBuilder()
         .circuitMeta(1)
@@ -1628,5 +1628,54 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('pipeLargeFluidStainlessSteel') * 9)
         .outputs(item('susy:rocket_combustion_chamber', 2)) // Oxidiser Combustion Chamber
         .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+// Fuel Tank
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('doublePlateAluminiumAlloy2219') * 6)
+        .inputs(metaitem('stickLongAluminiumAlloy2219') * 12)
+        .outputs(metaitem('susy:rocket_tank_shell'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
+// Fairing & Interstage
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('slapper_detonator'))
+        .inputs(metaitem('plateTitanium') * 6)
+        .inputs(metaitem('stickLongTitanium') * 2)
+        .inputs(metaitem('boltTitanium'))
+        .inputs(metaitem('dustRdx') * 4)
+        .outputs(metaitem('frangible_nut'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateDoubleAluminiumAlloy7075') * 6)
+        .inputs(metaitem('stickLongAluminiumAlloy7075') * 4)
+        .outputs(item('susy:rocket_fairing.al_7075'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('plateAluminiumAlloy7075') * 6)
+        .inputs(metaitem('frangible_nut') * 4)
+        .outputs(item('susy:rocket_fairing_connector.al_7075'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(metaitem('plateAluminiumAlloy7075') * 6)
+        .inputs(metaitem('frangible_nut') * 4)
+        .outputs(item('susy:rocket_interstage.al_7075'))
+        .EUt[VA[EV]]
         .duration(20)
         .buildAndRegister()
