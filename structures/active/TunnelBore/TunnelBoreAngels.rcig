@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "TunnelBoreAngels",
+  "items": [
+    {
+      "weight": 2.540874481201172,
+      "min": 7,
+      "max": 16,
+      "item": {
+        "id": "biomesoplenty:hard_ice",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 10,
+      "max": 23,
+      "item": {
+        "id": "minecraft:ice",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 8,
+      "max": 17,
+      "item": {
+        "id": "minecraft:snow",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 4,
+      "max": 15,
+      "item": {
+        "id": "minecraft:packed_ice",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "minecraft:snow_layer",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "minecraft:snowball",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

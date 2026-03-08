@@ -119,7 +119,7 @@ ROASTER.recipeBuilder()
 //Phosphoric Acid batch
 
 BR.recipeBuilder()
-    .inputs(ore('dustPhosphorusPentoxide'))
+    .inputs(ore('dustPhosphorusPentoxide') * 14)
     .fluidInputs(fluid('water') * 6000)
     .fluidOutputs(fluid('phosphoric_acid') * 4000)
     .duration(40)
@@ -1427,7 +1427,7 @@ BCR.recipeBuilder()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('ammonium_nitrate_solution') * 1000)
-    .outputs(metaitem('dustAmmoniumNitrate') * 2)
+    .outputs(metaitem('dustAmmoniumNitrate') * 9)
     .fluidOutputs(fluid('water') * 1000)
     .EUt(90)
     .duration(300)
@@ -1662,13 +1662,6 @@ MIXER.recipeBuilder()
 
 // fix conflict
 mods.gregtech.fluid_heater.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('air') * 1000])
-FLUID_HEATER.recipeBuilder()
-    .circuitMeta(2)
-    .fluidInputs(fluid('air') * 1000)
-    .fluidOutputs(fluid('hot_air') * 1000)
-    .duration(20)
-    .EUt(VA[LV])
-    .buildAndRegister()
 
 DRYER.recipeBuilder()
     .fluidInputs(fluid('cellulose_acetate_solution') * 2000)
@@ -2386,7 +2379,7 @@ BCR.recipeBuilder()
 MIXER.recipeBuilder()
     .fluidInputs(fluid('ammonia_solution') * 1000)
     .fluidInputs(fluid('water') * 1000)
-    .fluidOutputs(fluid('diluted_ammonia_solution') * 1000)
+    .fluidOutputs(fluid('diluted_ammonia_solution') * 2000)
     .duration(20)
     .EUt(VA[LV])
     .buildAndRegister()
@@ -2584,17 +2577,6 @@ MIXER.recipeBuilder()
     .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
     .EUt(VA[LV])
     .duration(120)
-    .buildAndRegister()
-
-//PATCH PHOSPHORUS DUPE
-mods.gregtech.batch_reactor.removeByInput(30, [metaitem('dustPhosphorusPentoxide')], [fluid('water') * 6000])
-
-BR.recipeBuilder()
-    .inputs(ore('dustPhosphorusPentoxide') * 14)
-    .fluidInputs(fluid('water') * 4000)
-    .fluidOutputs(fluid('phosphoric_acid') * 4000)
-    .EUt(VA[LV])
-    .duration(40)
     .buildAndRegister()
 
 //AMMONIUM THIOCYANATE

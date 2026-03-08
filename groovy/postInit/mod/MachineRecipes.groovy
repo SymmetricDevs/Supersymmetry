@@ -171,8 +171,6 @@ def refractories = [item('gregtech:metal_casing', 1), item('gregtech:metal_casin
                     item('susy:susy_multiblock_casing', 9), item('susy:susy_multiblock_casing', 9), item('susy:susy_multiblock_casing', 9),
                     item('susy:susy_multiblock_casing', 9), item('susy:susy_multiblock_casing', 9)]
 
-log.infoMC("Adding Vulcanizing Press Craft")
-
 //Vulcanizing Press
 RecyclingHelper.addShaped("gregtech:vulcanizing_press.ulv", metaitem('susy:vulcanizing_press.bronze'), [
     [ore('springSmallSteel'), ore('stickSteel'), ore('springSmallSteel')],
@@ -200,8 +198,6 @@ RecyclingHelper.addShaped("gregtech:vulcanizing_press.ev", metaitem('susy:vulcan
     [ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')]
 ])
 
-log.infoMC("Adding Roaster Craft")
-
 //Roaster
 RecyclingHelper.addShaped("gregtech:roaster.ulv", metaitem('susy:roaster.bronze'), [
     [ore('pipeSmallFluidBronze'), ore('rotorBronze'), ore('pipeSmallFluidBronze')],
@@ -216,8 +212,6 @@ for (i = 1; i <= 8; i++) {
         [tieredCables[i], tieredWires[i], tieredCables[i]]
     ])
 }
-
-log.infoMC("Adding Latex Collector Craft")
 
 //Latex Collector
 RecyclingHelper.addShaped("gregtech:latex_collector.ulv", metaitem('susy:latex_collector.bronze'), [
@@ -234,16 +228,12 @@ for (i = 1; i <= 4; i++) {
     ])
 }
 
-log.infoMC("Adding Steam Mixer Craft")
-
 //Mixer
 RecyclingHelper.addShaped("gregtech:mixer.ulv", metaitem('susy:mixer.bronze'), [
     [ore('blockGlass'), ore('rotorBronze'), ore('blockGlass')],
     [ore('blockGlass'), ore('stickBronze'), ore('blockGlass')],
     [ore('pipeSmallFluidBronze'), item('gregtech:steam_casing'), ore('pipeSmallFluidBronze')]
 ])
-
-log.infoMC("Adding Coagulation Tank Craft")
 
 //Coagulation Tank
 RecyclingHelper.addShaped("gregtech:coagulation_tank", metaitem('susy:coagulation_tank'), [
@@ -257,63 +247,11 @@ RecyclingHelper.addShaped("gregtech:coagulation_tank_wall", item('susy:coagulati
     [ore('plankTreatedWood'), ore('boltSteel'), ore('plankTreatedWood')]
 ])
 
-//Nerf arc furnaces, add graphite rod chain
-
-MIXER.recipeBuilder()
-        .inputs(ore('dustPitch'))
-        .inputs(ore('dustHeatedGreenCoke') * 9)
-        .outputs(metaitem('carbon_paste') * 10)
-        .EUt(VA[LV])
-        .duration(60)
-        .buildAndRegister()
-
-MIXER.recipeBuilder()
-        .inputs(ore('dustPitch'))
-        .inputs(ore('dustCoke') * 9)
-        .outputs(metaitem('carbon_paste') * 5)
-        .EUt(VA[LV])
-        .duration(60)
-        .buildAndRegister()
-
-EXTRUDER.recipeBuilder()
-        .notConsumable(metaitem('shape.extruder.rod'))
-        .inputs(metaitem('carbon_paste'))
-        .outputs(metaitem('raw_electrode'))
-        .EUt(VA[LV])
-        .duration(200)
-        .buildAndRegister()
-
-// Preferably extrusion but can't be asked atm
-SINTERING_OVEN.recipeBuilder()
-        .fluidInputs(fluid('monoxide_rich_syngas') * 100)
-        .fluidInputs(fluid('air') * 100)
-        .inputs(metaitem('carbon_paste') * 3)
-        .fluidOutputs(fluid('carbon_dioxide') * 50)
-        .notConsumable(metaitem('shape.mold.crucible'))
-        .outputs(metaitem('raw_carbon_crucible'))
-        .info('recipe.graphite_electrode')
-        .EUt(VA[LV])
-        .duration(1440)
-        .buildAndRegister()
-
-MIXER.recipeBuilder()
-        .fluidInputs(fluid('water') * 100)
-        .inputs(metaitem('dustFireclay'))
-        .inputs(metaitem('dustGraphite'))
-        .outputs(metaitem('clay_graphite_paste'))
-        .EUt(VA[LV])
-        .duration(50)
-        .buildAndRegister()
-
-SINTERING_OVEN.recipeBuilder()
-        .inputs(metaitem('clay_graphite_paste') * 3)
-        .notConsumable(metaitem('shape.mold.crucible'))
-        .outputs(metaitem('raw_clay_graphite_crucible'))
-        .EUt(VA[LV])
-        .duration(1440)
-        .buildAndRegister()
-
-
+RecyclingHelper.addShaped("susy:cupola_furnace", metaitem('susy:cupola_furnace'), [
+    [metaitem('gregtech:brick.fireclay'), metaitem('gregtech:brick.fireclay'), metaitem('gregtech:brick.fireclay')],
+    [ore('craftingToolFile'), ore('blockGlass'), ore('craftingToolHardHammer')],
+    [metaitem('gregtech:brick.fireclay'), metaitem('gregtech:brick.fireclay'), metaitem('gregtech:brick.fireclay')]
+])
 
 for (i = 1; i <= 8; i++) {
     RecyclingHelper.removeByOutput(metaitem('arc_furnace.' + Globals.voltageTiers[i]))
@@ -1047,11 +985,12 @@ RecyclingHelper.addShaped("gregtech:high_temperature_distillation_tower", metait
     [circuits[3], item('gregtech:wire_coil'), circuits[3]]
 ]);
 
-RecyclingHelper.addShaped("susy:mixer_settler", metaitem('susy:mixer_settler'), [
+RecyclingHelper.addShaped("susy:mixer_settler", metaitem('susy:mixer_settler_v2'), [
     [motors[3], circuits[3], motors[3]],
     [rotors[3], hulls[3], rotors[3]],
     [pumps[3], tieredCables[3], pumps[3]]
-])
+]);
+crafting.addShapeless("susy:mixer_settler_convert", metaitem("susy:mixer_settler_v2"), [metaitem("susy:mixer_settler")]);
 
 RecyclingHelper.addShaped("susy:induction_furnace", metaitem('susy:induction_furnace'), [
         [ore('cableGtQuadrupleTin'), tieredPlates[1], ore('cableGtQuadrupleTin')],

@@ -35,12 +35,12 @@ Deposition.generateEvaporationRecipe('wafer.quartz.at_cut.tuned', 'component.qua
 // Piezoelectric ceramics
 
     // Barium Titanate
-
-    AUTOCLAVE.recipeBuilder()
+    
+    REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustBariumCarbonate') * 5)
-        .inputs(ore('dustRutile') * 3)
-        .fluidInputs(fluid('water') * 1000)
-        .outputs(metaitem('gemExquisiteBariumTitanate'))
+        .inputs(ore('dustTitaniumDioxide') * 3)
+        .outputs(metaitem('dustBariumTitanate') * 5)
+        .fluidOutputs(fluid('carbon_dioxide') * 1000)
         .duration(200)
         .EUt(VA[MV])
         .buildAndRegister()
@@ -119,7 +119,7 @@ Deposition.generateEvaporationRecipe('wafer.quartz.at_cut.tuned', 'component.qua
         .buildAndRegister()
 
     FORMING_PRESS.recipeBuilder()
-        .inputs(ore('dustLeadZirconateTitanate') * 10)
+        .inputs(ore('dustLeadZirconateTitanate'))
         .notConsumable(metaitem('shape.mold.ball'))
         .outputs(metaitem('gemLeadZirconateTitanate'))
         .duration(500)

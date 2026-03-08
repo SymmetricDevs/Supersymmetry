@@ -1,18 +1,14 @@
 import classes.*;
 import static gregtech.api.GTValues.*
+import globals.Globals
+import postInit.utils.RecyclingHelper
 
 //REMOVALS
 
-def name_removals = [
-        'gregtech:field_generator_lv',
-        'gregtech:field_generator_mv',
-        'gregtech:field_generator_hv',
-        'gregtech:field_generator_ev',
-        'gregtech:field_generator_iv'
-]
+for (i = 1; i <= 5; i++) {
+    crafting.remove('gregtech:field_generator_' + Globals.voltageTiers[i])
+    RecyclingHelper.removeRecyclingRecipes(metaitem('field.generator.' + Globals.voltageTiers[i]))
 
-for (name in name_removals) {
-    crafting.remove(name)
 }
 
 // LV Field Generator * 1

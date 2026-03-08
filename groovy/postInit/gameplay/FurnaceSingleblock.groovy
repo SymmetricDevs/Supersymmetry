@@ -68,7 +68,8 @@ def nonMetals = [
         [input: metaitem('raw_electrode'), output: metaitem('carbon_electrode')],
         [input: metaitem('raw_carbon_crucible'), output: metaitem('carbon_crucible')],
         [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('clay_graphite_crucible')],
-        [input: metaitem('component.resistor.unfired_carbon_composite'), output: metaitem('component.resistor.fired_carbon_composite')]
+        [input: metaitem('component.resistor.unfired_carbon_composite'), output: metaitem('component.resistor.fired_carbon_composite')],
+        [input: ore('blockGreenCarbon'), output: ore('blockBakedCarbon').first()]
 ]
 
 nonMetals += mapRange('susy:susy_stone_cobble', 'susy:susy_stone_smooth', 0..11)
@@ -182,6 +183,16 @@ RESISTANCE_FURNACE.recipeBuilder()
         .notConsumable(ore('insulatingCarbon') * 16)
         .notConsumable(metaitem('graphite_electrode'))
         .outputs(metaitem('crucible.graphite'))
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+RESISTANCE_FURNACE.recipeBuilder()
+        .inputs(ore('blockBakedCarbon'))
+        .inputs(ore('insulatingCarbon') * 4)
+        .notConsumable(ore('insulatingCarbon') * 16)
+        .notConsumable(metaitem('graphite_electrode'))
+        .outputs(metaitem('blockGraphite'))
         .duration(200)
         .EUt(VA[LV])
         .buildAndRegister()

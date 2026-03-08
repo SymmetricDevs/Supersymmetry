@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import globals.Sintering
 
 CVD.recipeBuilder()
         .notConsumable(metaitem('wafer.silicon'))

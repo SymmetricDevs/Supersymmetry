@@ -1031,7 +1031,7 @@ class SecondDegreeMaterials {
 
         AmmoniumDihydrogenPhosphateSolution = new Material.Builder(13167, SuSyUtility.susyId('ammonium_dihydrogen_phosphate_solution'))
                 .liquid()
-                .components(AmmoniumDihydrogenPhosphate, Water)
+                .components(AmmoniumDihydrogenPhosphate * 2, Water)
                 .colorAverage()
                 .build()
 
