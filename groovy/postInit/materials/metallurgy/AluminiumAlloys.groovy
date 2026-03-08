@@ -32,4 +32,14 @@ INDUCTION_FURNACE.recipeBuilder()
         .duration(9600)
         .buildAndRegister()
 
-
+// 92.8 % Al 6 % Cu 0.3 % Fe 0.3 % Mn 0.2 % Si 0.2 % Zn 0.1 % V 0.1 % Ti
+INDUCTION_FURNACE.recipeBuilder()
+        .fluidInputs(fluid('molten.aluminium') * 14832)
+        .inputs(ore('dustTinyCopper') * 60)
+        .inputs(ore('dustTinyIron') * 3)
+        .inputs(ore('dustTinyManganese') * 3)
+        .inputs(ore('dustTinySilicon') * 2)
+        .inputs(ore('dustTinyZinc') * 2)
+        .inputs(ore('dustTinyVanadium') * 1)
+        .inputs(ore('dustTinyTitanium') * 1)
+        .fluidOutputs(fluid('aluminium_alloy_2219') * 15984)
