@@ -296,3 +296,13 @@ DISTILLERY.recipeBuilder()
     .EUt(VA[MV])
     .duration(80)
     .buildAndRegister()
+
+// Phosphorized copper for copper electroplating anodes
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustCopper') * 64)
+    .inputs(ore('dustTinyPhosphorus'))
+    .outputs(metaitem('dustPhosphorizedCopper') * 64)
+    .EUt(VA[LV])
+    .duration(160)
+    .buildAndRegister()

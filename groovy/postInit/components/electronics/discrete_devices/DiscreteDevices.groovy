@@ -59,3 +59,22 @@ MIXER.recipeBuilder()
         .duration(120)
         .EUt(VA[ULV])
         .buildAndRegister();
+
+// SMD Contacts: BeCu, Ni-plated.
+
+FORMING_PRESS.recipeBuilder()
+    .notConsumable(metaitem('shape.mold.pin'))
+    .inputs(ore('plateBerylliumCopper'))
+    .outputs(metaitem('pinBerylliumCopper') * 64)
+    .duration(60)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ELECTROLYTIC_CELL.recipeBuilder()
+    .notConsumable(fluid('watts_bath_electrolyte') * 1000)
+    .inputs(ore('foilNickel'))
+    .inputs(inputs(ore('pinBerylliumCopper') * 64))
+    .outputs(metaitem('component.smd.contact') * 64)
+    .duration(160)
+    .EUt(VA[LV])
+    .buildAndRegister()

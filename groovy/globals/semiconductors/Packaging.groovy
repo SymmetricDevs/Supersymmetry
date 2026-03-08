@@ -19,14 +19,8 @@ class Packaging {
             .buildAndRegister();
     }
 
-    static void generateBackgrindingRecipe(String input, String product, int duration, int voltageTier) {
-        GRINDING_MACHINE.recipeBuilder() // Backgrinding
-            .inputs(metaitem(input))
-            .outputs(metaitem(product))
-            .cleanroom(CleanroomType.CLEANROOM)
-            .duration(duration)
-            .EUt(VA[voltageTier])
-            .buildAndRegister();
+    static void generateWireBondingRecipe(String input, String product, int duration, int voltageTier) {
+        // smth goes here
     }
 
 }

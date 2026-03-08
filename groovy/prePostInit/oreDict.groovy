@@ -9,28 +9,37 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
-//Prevent TechGuns from crashing servers
+// Prevent TechGuns from crashing servers
 ore('ingotCopper').remove(item('techguns:itemshared', 79))
 ore('ingotTin').remove(item('techguns:itemshared', 80))
 ore('ingotSteel').remove(item('techguns:itemshared', 83))
 ore('ingotTitanium').remove(item('techguns:itemshared', 85))
 
-//Force stick to exist
+// Force stick to exist
 ore('stickWood').add(item('minecraft:stick'))
 
-//Light oredict
+// Light oredict
 ore('gtLight').add(metaitem('incandescent_light'))
 ore('gtLight').add(metaitem('halogen_light'))
 ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
-
-//Coke block
+// Carbon
 
 ore('blockCoalCoke').add(metaitem('blockCoke'))
+ore('highGradeCarbon').add(metaitem('dustHighPurityCarbon'))
+ore('highGradeCarbon').add(metaitem('dustCarbon'))
+ore('highGradeCarbon').add(metaitem('dustCoke'))
 
-//Circuit oredict
+// Silicas
+
+oreDict.add('silicaSource', metaitem('dustSiliconDioxide'))
+oreDict.add('silicaSource', metaitem('dustQuartzite'))
+oreDict.add('silicaSource', metaitem('dustNetherQuartz'))
+oreDict.add('silicaSource', metaitem('dustCertusQuartz'))
+
+// Circuit oredict
 
 ore('circuitZpm').add(metaitem('circuit.gooware_processor'))
 
@@ -76,7 +85,7 @@ ore('circuitUxv').add(metaitem('circuit.suprachronal.uxv'))
 ore('circuitOpv').add(metaitem('circuit.suprachronal.opv'))
 ore('circuitMax').add(metaitem('circuit.suprachronal.max'))
 
-//Dyes
+// Dyes
 
 ore('dyeBrown').add(metaitem('dustSienna'))
 ore('dyeRed').add(metaitem('dustBurntSienna'))
@@ -88,7 +97,7 @@ ore('dyeWhite').add(metaitem('dustLeadNitrate'))
 ore('dyeBlack').add(metaitem('dustCarbon'))
 ore('dyeGreen').add(metaitem('gregtechfoodoption:cupric_hydrogen_arsenite_dust'))
 
-//Add ore dict to non traditional ore blocks 
+// Add ore dict to non traditional ore blocks 
 
 ore('oreBauxite').add(item('susy:resource_block:0'))
 ore('oreCaliche').add(item('susy:resource_block:1'))
@@ -118,7 +127,7 @@ ore('oreHydrothermalDeposit').add(item('susy:deposit_block:3'))
 ore('oreAlluvialDeposit').add(item('susy:deposit_block:4'))
 ore('oreMagmaticHydrothermalDeposit').add(item('susy:deposit_block:5'))
 
-//Concrete
+// Concrete
 
 ore('dustCement').add(metaitem('cement.dust'))
 ore('blockConcrete').add(item('industrialrenewal:concrete'))

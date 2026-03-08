@@ -1465,35 +1465,6 @@ FIXED_BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-//gamma-Butyrolactone
-
-FIXED_BR.recipeBuilder()
-    .fluidInputs(fluid('butanediol') * 50)
-    .notConsumable(ore('catalystBedChromiumTrioxide') * 1)
-    .fluidOutputs(fluid('gamma_butyrolactone') * 50)
-    .fluidOutputs(fluid('hydrogen') * 200)
-    .duration(20)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-//N-methyl-2-pyrrolidone
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('gamma_butyrolactone') * 50)
-    .fluidInputs(fluid('methylamine') * 50)
-    .fluidOutputs(fluid('diluted_n_methyl_two_pyrrolidone') * 100)
-    .EUt(VA[LV])
-    .duration(10)
-    .buildAndRegister()
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('diluted_n_methyl_two_pyrrolidone') * 2000)
-    .fluidOutputs(fluid('n_methyl_two_pyrrolidone') * 1000)
-    .fluidOutputs(fluid('water') * 1000)
-    .EUt(90)
-    .duration(450)
-    .buildAndRegister()
-
 //1-bromobutane
 
 CSTR.recipeBuilder()
@@ -3441,5 +3412,59 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('hydrogen_peroxide_solution') * 2000)
     .fluidOutputs(fluid('peracetic_acid_solution') * 2000)  
     .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Bis-sulfopropyl disulfide
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('allyl_chloride') * 50)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 50)
+    .fluidOutputs(fluid('allyl_alcohol_solution') * 100)
+    .duration(5)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('allyl_alcohol_solution') * 2000)
+    .outputs(metaitem('dustSalt') * 2)
+    .fluidOutputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('allyl_alcohol') * 1000)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+LCR.recipeBuilder()
+    .fluidInputs(fluid('allyl_alcohol') * 2000)
+    .fluidInputs(fluid('sodium_bisulfite_solution') * 2000)
+    .fluidInputs(fluid('sulfuric_acid') * 1000)
+    .fluidOutputs(fluid('propane_one_three_sultone_solution') * 5000) // m.p. 304K
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('propane_one_three_sultone_solution') * 5000)
+    .outputs(metaitem('dustSodiumSulfate') * 7)
+    .fluidOutputs(fluid('propane_one_three_sultone') * 144)
+    .fluidOutputs(fluid('water') * 4000)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(ore('dustPropaneOneThreeSultone'))
+    .fluidInputs(fluid('sodium_hydrosulfide_solution') * 2000)
+    .fluidInputs(fluid('oxygen') * 1000)
+    .fluidOutputs(fluid('bis_sulfopropyl_disulfide_solution') * 3000)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('bis_sulfopropyl_disulfide_solution') * 3000)
+    .outputs(metaitem('dustBisSodiumSulfopropylDisulfide') * 10)
+    .fluidOutputs(fluid('water') * 2000)
+    .duration(100)
     .EUt(VA[LV])
     .buildAndRegister()

@@ -84,6 +84,7 @@ def metals = [
         [input: metaitem('dustBatteryAlloy'), output: fluid('battery_alloy')],
         [input: metaitem('dustSolderingAlloy'), output: fluid('soldering_alloy')],
         [input: metaitem('dustCopper'), output: fluid('copper')],
+        [input: metaitem('dustPhosphorizedCopper'), output: fluid('phosphorized_copper')],
         [input: metaitem('dustBronze'), output: fluid('bronze')],
         [input: metaitem('dustBrass'), output: fluid('brass')],
         [input: metaitem('dustCupronickel'), output: fluid('cupronickel')],

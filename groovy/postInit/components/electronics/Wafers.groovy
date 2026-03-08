@@ -129,6 +129,19 @@ CRYSTALLIZER.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('high_purity_gallium') * 2592)
+    .fluidInputs(fluid('high_purity_arsenic') * 2592)
+    .notConsumable(fluid('boron_trioxide') * 720)
+    .inputs(metaitem('seed_crystal.gallium_arsenide'))
+    .notConsumable(metaitem('crucible.boron.nitride'))
+    .outputs(metaitem('boule.gallium_arsenide'))
+    .duration(240)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+
+
 // Wafer preparation
 
 public static class Wafer {

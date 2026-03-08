@@ -7,6 +7,8 @@ import globals.Deposition
 import globals.Packaging
 import globals.Doping
 
+oreDict.add('componentTransistor', metaitem('component.transistor.alloy_junction'))
+
 // Alloy-junction bipolar transistor (MV)
 
 Packaging.generateDicingRecipe('wafer.germanium', 'die.alloy_junction_transistor.step_one', 4, 400, LV)
@@ -44,8 +46,8 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-// Power Si-MOSFET
+// Power Si-MOSFET (VDMOS for power, LDMOS for RF/high-speed)
 
 // Power SiC-MOSFET
 
-// IGBT
+// IGBT (power electronics)

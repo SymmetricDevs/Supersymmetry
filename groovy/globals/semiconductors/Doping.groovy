@@ -35,6 +35,7 @@ class Doping {
         new IonSource("boron_trifluoride", "boron"),
         new IonSource("phosphine", "phosphorus"),
         new IonSource("arsine", "arsenic")
+        new IonSource("purified_antimony_trioxide", "antimony")
     ]
 
     static void generateIonImplantationRecipes(Spring input, String product, int duration, String sourceName) {
@@ -93,4 +94,6 @@ class Doping {
             .EUt(VA[HV])
             .buildAndRegister();
     }
+
+    
 }

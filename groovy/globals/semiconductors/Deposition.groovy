@@ -63,7 +63,6 @@ class Deposition {
         }
     }
 
-
     /* Sputtering
      Data for important applications
     // Ti-Ni/Pd-Ag metallization for n-doped substrates.
@@ -115,7 +114,7 @@ class Deposition {
 
     public static final sputteringTargets = [
         new SputteringTarget("aluminium", "MV", 0.025),
-        new SputteringTarget("copper", "EV", 0.025),
+        new SputteringTarget("copper", "HV", 0.025),
         new SputteringTarget("titanium", "HV", 0.00375),
         new SputteringTarget("nickel", "HV", 0.008),
         new SputteringTarget("silver", "HV", 0.0375),
@@ -171,3 +170,4 @@ class Deposition {
     }
 }
 
+// CVD SECTION

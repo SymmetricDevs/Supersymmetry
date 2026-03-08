@@ -80,6 +80,15 @@ FLUID_COMPRESSOR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+FLUID_COMPRESSOR.recipeBuilder()
+    .fluidInputs(fluid('deaerated_water') * 1000)
+    .notConsumable(metaitem('membrane.polysulfone'))
+    .fluidOutputs(fluid('ro_water') * 800)
+    .fluidOutputs(fluid('wastewater') * 200)
+    .duration(75)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 // Deionization occurs between these two steps
 
 UV_LIGHT_BOX.recipeBuilder()

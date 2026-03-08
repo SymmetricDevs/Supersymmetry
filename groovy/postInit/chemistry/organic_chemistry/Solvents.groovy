@@ -195,3 +195,48 @@ import static gregtech.api.GTValues.*
         .EUt(VA[LV])
         .buildAndRegister()
     
+    // γ-Butyrolactone
+
+    FIXED_BR.recipeBuilder()
+        .fluidInputs(fluid('butanediol') * 50)
+        .notConsumable(ore('catalystBedSupportedCopper'))
+        .fluidOutputs(fluid('gamma_butyrolactone') * 50)
+        .fluidOutputs(fluid('hydrogen') * 200)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // N-methyl-2-pyrrolidone (NMP)
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('gamma_butyrolactone') * 50)
+        .fluidInputs(fluid('water') * 50)
+        .fluidInputs(fluid('methylamine') * 50)
+        .fluidOutputs(fluid('n_methyl_two_pyrrolidone_solution') * 150)
+        .EUt(VA[LV])
+        .duration(10)
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('n_methyl_two_pyrrolidone_solution') * 3000)
+        .fluidOutputs(fluid('n_methyl_two_pyrrolidone') * 1000)
+        .fluidOutputs(fluid('water') * 2000)
+        .EUt(90)
+        .duration(450)
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('gamma_butyrolactone') * 50)
+        .fluidInputs(fluid('ammonia_solution') * 50)
+        .fluidOutputs(fluid('diluted_two_pyrrolidone') * 150)
+        .EUt(VA[LV])
+        .duration(10)
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('diluted_two_pyrrolidone') * 3000)
+        .fluidOutputs(fluid('two_pyrrolidone') * 1000)
+        .fluidOutputs(fluid('water') * 2000)
+        .EUt(90)
+        .duration(450)
+        .buildAndRegister()

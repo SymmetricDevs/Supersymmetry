@@ -16,13 +16,14 @@ class Lithography {
         String exposureRecipeMap
         int timeUsed
 
-        Resist(String resistName, String ebrName, String developerName, String solventName, String voltageTier, String exposureRecipeMap, int timeUsed) {
+        Resist(String resistName, String ebrName, String developerName, String solventName, String voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false) {
             this.resistName = resistName
             this.solventName = solventName
             this.developerName = developerName
             this.voltageTier = voltageTier
             this.exposureRecipeMap = exposureRecipeMap
             this.timeUsed = timeUsed
+            this.liftoff = liftoff
         }
 
         def generateCoatingRecipe(String input, boolean hmds = false, int circuit = null) {
@@ -40,7 +41,7 @@ class Lithography {
             coatingRecipe.buildAndRegister()
         }
         
-        def generateDevelopmentRecipe(String input, String nonConsumable = null) {
+        def generateExposureRecipe(String input, String nonConsumable = null) {
             def exposureRecipe = exposureRecipeMap.recipeBuilder()
                 .inputs(metaitem(input + ".coated"))
                 .outputs(metaitem(input + ".exposed"))
@@ -53,20 +54,31 @@ class Lithography {
         }
 
         def generateDevelopmentRecipe(String input, String product) {
-            RESIST_PROCESSOR.recipeBuilder()
-                .inputs(metaitem(input + ".exposed"))
-                .fluidInputs(fluid(this.developerName) * 100)
-                .outputs(metaitem(product))
-                .cleanroom(CleanroomType.CLEANROOM)
-                .duration(this.timeUsed)
-                .EUt(VA[this.voltageTier]);
-                .buildAndRegister()
+            if (!liftoff) {
+                RESIST_PROCESSOR.recipeBuilder()
+                    .inputs(metaitem(input + ".exposed"))
+                    .fluidInputs(fluid(this.developerName) * 100)
+                    .outputs(metaitem(product))
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .duration(this.timeUsed)
+                    .EUt(VA[this.voltageTier]);
+                    .buildAndRegister()
+            } else {
+                RESIST_PROCESSOR.recipeBuilder()
+                    .inputs(metaitem(input + ".deposited"))
+                    .fluidInputs(fluid(this.developerName) * 100)
+                    .outputs(metaitem(product))
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .duration(this.timeUsed)
+                    .EUt(VA[this.voltageTier]);
+                    .buildAndRegister()
+            }
         }
     }
 
     public static final photoresists = [
         new Photoresist("novolac_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300),
-        new Photoresist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300),
+        new Photoresist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300, true),
         new Photoresist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", "EV", recipemap("LASER_ENGRAVER"), 200)
     ]
 
@@ -94,24 +106,38 @@ class Lithography {
         }
     }
 
-    static void generateResistStrippingRecipes(String input, String product, int voltageTier, int timeMultiplier) {
-        RESIST_PROCESSOR.recipeBuilder()
-            .inputs(metaitem(input))
-            .fluidInputs(fluid('n_methyl_pyrridoline') * 100)
-            .outputs(metaitem(input + '.stripped'))
-            .duration(400 * timeMultiplier)
-            .EUt(VA[voltageTier]);
-            .cleanroom(CleanroomType.CLEANROOM)
-            .buildAndRegister()
+    static void generateResistStrippingRecipes(String input, String product, int timeMultiplier, boolean rie, boolean solvent = false) {
+        if (solvent) {
+            RESIST_PROCESSOR.recipeBuilder()
+                .inputs(metaitem(input))
+                .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
+                .outputs(metaitem(input + '.stripped'))
+                .duration(400 * timeMultiplier)
+                .EUt(VA[HV]);
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister()
+
+            input = input + '.stripped'
+        }
 
         PLASMA_ASHER.recipeBuilder()
-            .inputs(metaitem(input + '.stripped'))
+            .inputs(metaitem(input))
             .fluidInputs(fluid('oxygen') * 100)
-            .outputs(metaitem(product))
+            if (rie) {fluidInputs(fluid('carbon_tetrafluoride') * 25); ashed = input + '.ashed'} else {ashed = product}
+            .outputs(metaitem(ashed))
             .duration(200 * timeMultiplier)
-            .EUt(VA[voltageTier]);
+            .EUt(VA[HV]);
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
+        if (rie) {
+            RESIST_PROCESSOR.recipeBuilder()
+                .inputs(metaitem(ashed))
+                .fluidInputs(fluid('ultrapure_water') * 100)
+                .outputs(metaitem(product))
+                .duration(400 * timeMultiplier)
+                .EUt(VA[HV]);
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister()
     }
 }

@@ -82,6 +82,46 @@ SINTERING_OVEN.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Silica supports
+
+    // AlCl3
+
+    DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('aluminium_chloride_solution') * 3000)
+        .outputs(metaitem('dustAluminiumChloride') * 4)
+        .fluidOutputs(fluid('water') * 3000)
+        .EUt(VA[LV])
+        .duration(20)
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustTinyAluminiumChloride'))
+        .fluidInputs(fluid('toluene') * 100)
+        .inputs(ore('dustSilicaGel'))
+        .outputs(metaitem('dustSupportedAluminiumChloride'))
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Copper
+
+    CHEMICAL_BATH.recipeBuilder()
+        .fluidInputs(fluid('copper_ii_nitrate_solution') * 250)
+        .inputs(ore('dustSilicaGel'))
+        .outputs(metaitem('dustCopperImpregnatedSilica'))
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    REACTION_FURNACE.recipeBuilder()
+        .inputs(ore('dustCopperImpregnatedSilica'))
+        .fluidInputs(fluid('hydrogen') * 500)
+        .outputs(metaitem('dustSupportedCopper'))
+        .fluidOutputs(fluid('water') * 250)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
 // Activated carbon supports
 
     // Pd/C
@@ -187,23 +227,6 @@ BR.recipeBuilder()
         .fluidOutputs(fluid('acetylacetone') * 1000)
         .fluidOutputs(fluid('ethylene') * 2000)
         .duration(160)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('aluminium_chloride_solution') * 3000)
-        .outputs(metaitem('dustAluminiumChloride') * 4)
-        .fluidOutputs(fluid('water') * 3000)
-        .EUt(VA[LV])
-        .duration(20)
-        .buildAndRegister()
-    
-    BR.recipeBuilder()
-        .inputs(ore('dustTinyAluminiumChloride'))
-        .fluidInputs(fluid('toluene') * 100)
-        .inputs(ore('dustSilicaGel'))
-        .outputs(metaitem('dustSupportedAluminiumChloride'))
-        .duration(100)
         .EUt(VA[LV])
         .buildAndRegister()
 

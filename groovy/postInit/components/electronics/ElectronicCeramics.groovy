@@ -14,7 +14,7 @@ AUTOCLAVE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-CUTTING_SAW.recipeBuilder()
+CUTTER.recipeBuilder()
     .circuitMeta(1)  // AT-cut angle (35°15')
     .inputs(ore('gemExquisiteNetherQuartz'))
     .outputs(metaitem('wafer.quartz.at_cut') * 24)

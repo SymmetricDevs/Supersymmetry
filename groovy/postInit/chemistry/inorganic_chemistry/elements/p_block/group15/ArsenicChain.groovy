@@ -86,7 +86,7 @@ ERF.recipeBuilder()
 
 //NOTE: PROUSTITE CANNOT BE PYROMETALLURGICALLY TREATED TO FORM SIGNIFICANT QUANTITES OF ARSENIC TRIOXIDE.
 
-//ARSENOPYRITE AND COBALTITE ACID LEACHING
+//ARSENOPYRITE AND COBALTITE ACID LEACHING 3CoAsS + 13HNO3 + 3H2O -> 3Co(NO3)2 + 3HAsO4 + 3S + 7NO
 def tab_MAsS = ["Cobaltite", "Arsenopyrite"]
 for (ore in tab_MAsS) {
     def metal = null
@@ -99,7 +99,7 @@ for (ore in tab_MAsS) {
     BR.recipeBuilder()
         .inputs(metaitem('dust' + ore) * 3)
         .fluidInputs(fluid('nitric_acid') * 13000)
-        .fluidInputs(fluid('distilled_water') * 3000)
+        .fluidInputs(fluid('distilled_water') * 1000)
         .outputs(metaitem('dustSulfur') * 3)
         .fluidOutputs(fluid(ore.toLowerCase() + "_leach_solution") * 1000)
         .fluidOutputs(fluid('nitric_oxide') * 7000)
@@ -110,7 +110,7 @@ for (ore in tab_MAsS) {
     ELECTROLYTIC_CELL.recipeBuilder()
         .notConsumable(metaitem('stick' + metal))
         .notConsumable(metaitem('graphite_electrode'))
-        .fluidInputs(fluid(ore.toLowerCase() + "_leach_solution") * 1000)
+        .fluidInputs(fluid(ore.toLowerCase() + "_leach_solution") * 3000)
         .outputs(metaitem('dust' + metal) * 3)
         .fluidOutputs(fluid('oxygen') * 3000)
         .fluidOutputs(fluid('acidic_arsenate_v_solution') * 1000)

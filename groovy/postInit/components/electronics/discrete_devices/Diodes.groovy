@@ -6,6 +6,7 @@ import globals.Etching
 import globals.Deposition
 import globals.Packaging
 import globals.Doping
+import globals.Mechanicals
 
 // SMD Diode * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
@@ -92,10 +93,10 @@ ASSEMBLER.recipeBuilder()
 // Planar diodes
 
 // Generate SiO2 doping mask and etch holes into it for doped regions
-Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.n_doped.', 'wafer.diode.planar.step_one', 400, true)
-Lithography.generatePhotolithographyRecipes('wafer.diode.planar.step_one', 'wafer.diode.planar.step_two', 'novolacs_resist', 'mask.diode')
-Etching.generateWetEtchingRecipes('wafer.diode.planar.step_two', 'wafer.diode.planar.step_three', 'silicon_dioxide', 100, false, false)
-Lithography.generateResistStrippingRecipes('wafer.diode.planar.step_three', 'wafer.diode.planar.step_four', 'HV', 1)
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.n_doped', 'wafer.diode.planar.step_one', 400, true)
+Lithography.generatePhotolithographyRecipes('wafer.diode.planar.step_one', 'wafer.diode.planar.step_two', 'novolacs_resist', 'mask.diode.planar')
+Etching.generateWetEtchingRecipe('wafer.diode.planar.step_two', 'wafer.diode.planar.step_three', 'silicon_dioxide', 100, false)
+Lithography.generateResistStrippingRecipes('wafer.diode.planar.step_three', 'wafer.diode.planar.step_four', 1, false, true)
 
 // Doping of boron and drive-in
 Doping.generateBoronDiffusionDopingRecipes('wafer.diode.planar.step_four', 'wafer.diode.planar.step_five', 400)
@@ -109,7 +110,7 @@ Doping.generateIonImplantationRecipes('wafer.diode.planar.step_four', 'wafer.dio
 Deposition.generateSputteringRecipes('wafer.diode.planar.step_six', 'wafer.diode.planar.step_seven', 400, 'aluminium')
 
 // Cathode (n-side) backgrinding and metallization
-Packaging.generateBackgrindingRecipe('wafer.diode.planar.step_seven', 'wafer.diode.planar.step_eight', 400, HV)
+Mechanicals.generateBackgrindingRecipe('wafer.diode.planar.step_seven', 'wafer.diode.planar.step_eight', 400, HV)
 Deposition.generateSputteringRecipes('wafer.diode.planar.step_eight', 'wafer.diode.planar.step_nine', [ 'titanium' : 100, 'nickel' : 200, 'silver' : 100 ])
 Deposition.generateSinteringRecipe('wafer.diode.planar.step_nine', 'wafer.diode.planar.step_ten', 400, HV)
 Packaging.generateDicingRecipe('wafer.diode.planar.step_ten', 'die.diode.planar', 32, 400, HV)
@@ -117,9 +118,10 @@ Packaging.generateDicingRecipe('wafer.diode.planar.step_ten', 'die.diode.planar'
 ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineCopper') * 2)
     .inputs(metaitem('die.diode.planar'))
-    .fluidInputs(fluid('epoxy_molding_compound') * 72)
-    .fluidInputs(fluid('high_temperature_solder') * 36)
-    .outputs(metaitem('component.diode'))
+    .inputs(metaitem('component.smd.contact') * 2)
+    .fluidInputs(fluid('epoxy_molding_compound') * 36)
+    .fluidInputs(fluid('high_temperature_solder') * 18)
+    .outputs(metaitem('component.smd.diode'))
     .duration(50)
     .EUt(VA[HV])
     .cleanroom(CleanroomType.CLEANROOM)
@@ -128,35 +130,70 @@ ASSEMBLER.recipeBuilder()
 // Planar power diodes (mesa diodes w/ drift layer)
 
 // Deposit drift layer and dope p-side
-Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.n_doped.small', 'wafer.power_diode.step_one', "n_minus_silicon", 400)
-Doping.generateIonImplantationRecipes('wafer.power_diode.step_one', 'wafer.power_diode.step_two', 1200, 'boron_trifluoride')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.n_doped.small', 'wafer.diode.drift.step_one', "n_minus_silicon", 400)
+Doping.generateIonImplantationRecipes('wafer.diode.drift.step_one', 'wafer.diode.power.step_two', 1200, 'boron_trifluoride')
 
 // Mask mesa/contact and etch
-Deposition.generateChemicalVaporDepositionRecipe('wafer.power_diode.step_two', 'wafer.power_diode.step_three', "silicon_nitride", 400)
-Lithography.generatePatterningRecipes('wafer.power_diode.step_three', 'wafer.power_diode.step_four', 'novolacs_resist', 'mask.power_diode_set')
-Etching.generateWetEtchingRecipes('wafer.power_diode.step_four', 'wafer.power_diode.step_five', 'silicon_nitride', 400, false, false)
-Lithography.generateResistStrippingRecipes('wafer.power_diode.step_five', 'wafer.power_diode.step_six', 'HV', 1)
-Etching.generateWetEtchingRecipes('wafer.power_diode.step_six', 'wafer.power_diode.step_seven', 'silicon', 400, false, false)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', "silicon_nitride.silane", 400)
+Lithography.generatePatterningRecipes('wafer.diode.power.step_three', 'wafer.diode.power.step_four', 'novolacs_resist', 'mask_set.diode.power')
+Etching.generateWetEtchingRecipe('wafer.diode.power.step_four', 'wafer.diode.power.step_five', 'silicon_nitride.silane', 400, false)
+Lithography.generateResistStrippingRecipes('wafer.diode.power.step_five', 'wafer.diode.power.step_six', 1, false, true)
+Etching.generateWetEtchingRecipe('wafer.diode.power.step_six', 'wafer.diode.power.step_seven', 'silicon', 400, false)
 
 // Grow passivation oxide
-Deposition.generateSiliconDioxideGrowthRecipe('wafer.power_diode.step_seven', 'wafer.power_diode.step_eight', 400, true)
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.diode.power.step_seven', 'wafer.diode.power.step_eight', 400, true)
 
 // Metallization
-Etching.generateWetEtchingRecipes('wafer.power_diode.step_eight', 'wafer.power_diode.step_nine', 'silicon_nitride', 400, false, false)
-Lithography.generatePatterningRecipes('wafer.power_diode.step_nine', 'wafer.power_diode.step_ten', 'novolacs_liftoff_resist', 'mask.power_diode_set')
-Deposition.generateSputteringRecipes('wafer.power_diode.step_ten', 'wafer.power_diode.step_eleven', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
-Lithography.generateResistStrippingRecipes('wafer.power_diode.step_eleven', 'wafer.power_diode.step_twelve', 'HV', 1)
-Packaging.generateBackgrindingRecipe('wafer.power_diode.step_twelve', 'wafer.power_diode.step_thirteen', 400, HV)
-Deposition.generateSputteringRecipes('wafer.power_diode.step_thirteen', 'wafer.power_diode.step_fourteen', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
-Deposition.generateSinteringRecipe('wafer.power_diode.step_fourteen', 'wafer.power_diode.step_fifteen', 400, HV)
-Packaging.generateDicingRecipe('wafer.power_diode.step_fifteen', 'die.power_diode', 4, 400, HV)
+Etching.generateWetEtchingRecipe('wafer.diode.power.step_eight', 'wafer.diode.power.step_nine', 'silicon_nitride.silane', 400, false)
+Lithography.generatePatterningRecipes('wafer.diode.power.step_nine', 'wafer.diode.power.step_ten', 'novolacs_liftoff_resist', 'mask_set.diode.power')
+Deposition.generateSputteringRecipes('wafer.diode.power.step_nine.exposed', 'wafer.diode.power.step_nine.sputtered', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
+Lithography.generateResistStrippingRecipes('wafer.diode.power.step_ten', 'wafer.diode.power.step_eleven', 1, false, true)
+Mechanicals.generateBackgrindingRecipe('wafer.diode.power.step_eleven', 'wafer.diode.power.step_twelve', 400, HV)
+Deposition.generateSputteringRecipes('wafer.diode.power.step_twelve', 'wafer.diode.power.step_thirteen', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
+Deposition.generateSinteringRecipe('wafer.diode.power.step_thirteen', 'wafer.diode.power.step_fourteen', 400, HV)
+Packaging.generateDicingRecipe('wafer.diode.power.step_fourteen', 'die.diode.power', 4, 400, HV)
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('wireGold') * 2)
-    .inputs(metaitem('die.power_diode'))
+    .inputs(metaitem('die.diode.power'))
     .fluidInputs(fluid('epoxy_molding_compound') * 144)
     .fluidInputs(fluid('high_temperature_solder') * 72)
-    .outputs(metaitem('component.power_diode'))
+    .outputs(metaitem('component.diode.power'))
+    .duration(50)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister();
+
+// Schottky diodes
+
+// n- epi layer, p+ guard ring
+Lithography.generatePatterningRecipes('wafer.diode.drift.step_one', 'wafer.diode.schottky.step_two', 'novolacs_resist', 'mask_set.diode.schottky')
+Doping.generateIonImplantationRecipes('wafer.diode.schottky.step_two', 'wafer.diode.schottky.step_three', 100, 'boron_trifluoride')
+Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_three', 'wafer.diode.schottky.step_four', 1, false, true)
+
+// Deposit passivation oxide
+Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.schottky.step_four', 'wafer.diode.schottky.step_five', "silicon_dioxide.silane", 400)
+Lithography.generatePatterningRecipes('wafer.diode.schottky.step_five', 'wafer.diode.schottky.step_six', 'novolacs_resist', 'mask_set.diode.schottky')
+Etching.generateWetEtchingRecipe('wafer.diode.schottky.step_six', 'wafer.diode.schottky.step_seven', 'silicon_dioxide', 400, false)
+Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_seven', 'wafer.diode.schottky.step_eight', 1, false, true)
+
+// Anode metallization with titanium for Schottky barrier
+Lithography.generatePatterningRecipes('wafer.diode.schottky.step_eight', 'wafer.diode.schottky.step_nine', 'novolacs_liftoff_resist', 'mask_set.diode.schottky')
+Deposition.generateSputteringRecipes('wafer.diode.schottky.step_eight.exposed', 'wafer.diode.schottky.step_eight.sputtered', ['titanium': 200, 'nickel' : 400, 'silver' : 200])
+Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_nine', 'wafer.diode.schottky.step_ten', 1, false, true)
+
+// Cathode metallization
+Mechanicals.generateBackgrindingRecipe('wafer.diode.schottky.step_ten', 'wafer.diode.schottky.step_eleven', 400, HV)
+Deposition.generateSputteringRecipes('wafer.diode.schottky.step_eleven', 'wafer.diode.schottky.step_twelve', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
+Deposition.generateSinteringRecipe('wafer.diode.schottky.step_twelve', 'wafer.diode.schottky.step_thirteen', 400, HV)
+Packaging.generateDicingRecipe('wafer.diode.schottky.step_thirteen', 'die.diode.schottky', 32, 400, HV)
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('wireFineCopper') * 2)
+    .inputs(metaitem('die.diode.schottky'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 72)
+    .fluidInputs(fluid('high_temperature_solder') * 36)
+    .outputs(metaitem('component.diode.schottky'))
     .duration(50)
     .EUt(VA[HV])
     .cleanroom(CleanroomType.CLEANROOM)

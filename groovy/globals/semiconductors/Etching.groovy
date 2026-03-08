@@ -106,40 +106,40 @@ class Etching {
     ]
 
 
-    static void generateWetEtchingRecipe(String input, String product, String materialEtched, int duration, boolean cleanroom, boolean anisotropic) {
+    static void generateWetEtchingRecipe(String input, String product, String materialEtched, int duration, boolean anisotropic) {
         if (!etchants.containsKey(materialEtched)) {    
             log.warn("Attempted adding etching recipe with no matching etchant: " + materialEtched + ". No recipe is generated");
             return;
         }
         for (etchant in etchants[materialEtched]) {
             if (anisotropic == etchant.anisotropic && !etchant.isPlasma) {
-                def baseRecipeBuilder = CHEMICAL_BATH.recipeBuilder()
-                            .inputs(metaitem(input))
-                            .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
-                            .outputs(metaitem(product))
-                            .duration((int) (etchant.etchingRate * duration))
-                            .EUt(VA[etchant.voltageTier]);
-                if (cleanroom) {baseRecipeBuilder = baseRecipeBuilder.cleanroom(CleanroomType.CLEANROOM)}
-                baseRecipeBuilder.buildAndRegister()
+                CHEMICAL_BATH.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
+                    .outputs(metaitem(product))
+                    .duration((int) (etchant.etchingRate * duration))
+                    .EUt(VA[etchant.voltageTier]);
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .buildAndRegister()
             }
         }
     }
 
-    static void generateReactiveIonEtchingRecipe(String input, String product, String materialEtched, int duration, boolean cleanroom) {
+    static void generateReactiveIonEtchingRecipe(String input, String product, String materialEtched, int duration) {
         if (!etchants.containsKey(materialEtched)) {    
             log.warn("Attempted adding etching recipe with no matching etchant: " + materialEtched + ". No recipe is generated");
             return;
         }
         for (etchant in etchants[materialEtched]) {
             if (etchant.isPlasma) {
-                def baseRecipeBuilder = REACTIVE_ION_ETCHER.recipeBuilder()
-                            .inputs(metaitem(input))
-                            .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
-                            .outputs(metaitem(product))
-                            .duration((int) (etchant.etchingRate * duration))
-                            .EUt(VA[etchant.voltageTier]);
-                if (cleanroom) {baseRecipeBuilder = baseRecipeBuilder.cleanroom(CleanroomType.CLEANROOM)}
-                baseRecipeBuilder.buildAndRegister()
+                REACTIVE_ION_ETCHER.recipeBuilder()
+                    .inputs(metaitem(input))
+                    .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
+                    .outputs(metaitem(product))
+                    .duration((int) (etchant.etchingRate * duration))
+                    .EUt(VA[etchant.voltageTier]);
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .buildAndRegister()
             }
         }
     }

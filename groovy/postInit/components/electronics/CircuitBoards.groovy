@@ -70,7 +70,7 @@ UV_LIGHT_BOX.recipeBuilder()
         .buildAndRegister();
 
 // Etched
-Etching.generateWetEtchingRecipes("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true, false)
+Etching.generateWetEtchingRecipe("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true, false)
 
 // Drilled
 MILLING.recipeBuilder()
@@ -136,11 +136,10 @@ LCR.recipeBuilder()
 // Reference for the mixture: https://patents.google.com/patent/US4242181A/en
 ELECTROLYTIC_CELL.recipeBuilder()
         .inputs(metaitem('board.epoxy.electroless'))
-        .fluidInputs(fluid('sulfuric_acid') * 2000)
-        .fluidInputs(fluid('copper_sulfate_solution') * 600)
+        .inputs(ore('foilPhosphorizedCopper'))
+        .notConsumable(fluid('diluted_sulfuric_acid') * 4000)
+        .notConsumable(fluid('copper_sulfate_solution') * 600)
         .outputs(metaitem('board.epoxy.electrolytic'))
-        .fluidOutputs(fluid('sulfuric_acid') * 2600)
-        .fluidOutputs(fluid('oxygen') * 600)
         .EUt(VA[MV])
         .duration(400)
         .cleanroom(CleanroomType.CLEANROOM)

@@ -462,5 +462,8 @@ RecipeMaps.LARGE_CHEMICAL_RECIPES
     .modifyMaxInputs(4)
     .modifyMaxFluidInputs(6)
 
-RecipeMaps.ASSEBLER_RECIPES
+RecipeMaps.ASSEMBLER_RECIPES
     .modifyMaxFluidInputs(3)
+
+RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES
+    .modifyMaxInputs(9)
