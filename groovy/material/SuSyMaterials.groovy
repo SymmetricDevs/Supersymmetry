@@ -1650,6 +1650,7 @@ class SuSyMaterials {
     public static Material BakedCarbon
     public static Material GRCop84
     public static Material MARM246
+    public static Material AluminiumAlloy2219
 
     // HP Materials
 
