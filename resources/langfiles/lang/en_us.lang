@@ -3286,6 +3286,7 @@ metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel C
 metaitem.fuel_injector.name=Fuel Injector
 metaitem.augmented_spark_igniter.name=Augmented Spark Igniter
 metaitem.slapper_detonator.name=Slapper Detonator
+metaitem.frangible_nut.name=Frangible Nut
 
 ## Dimension Display Items
 metaitem.display.overworld.name=Overworld
