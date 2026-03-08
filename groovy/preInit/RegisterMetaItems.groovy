@@ -458,6 +458,7 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(10421, "fuel_injector")
         addItem(10422, "augmented_spark_igniter")
+        addItem(10423, "slapper_detonator")
     }
 
     log.infoMC("Finished adding metaitems")
