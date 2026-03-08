@@ -1557,3 +1557,76 @@ BENDER.recipeBuilder()
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
+
+// Space Stuff
+
+// Engine Parts
+
+/*ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('pipeLargeFluidMonel500'))
+    .inputs(metaitem('nozzle.boron_nitride') * 8)
+    .inputs(metaitem('plateIncoloy908') * 4)
+    .outputs(metaitem('fuel_injector'))
+    .EUt(VA[EV])
+    .duration(20)
+    .buildAndRegister()*/
+
+MILLING.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('ingotMonel500') * 4)
+        .outputs(metaitem('fuel_injector'))
+        .EUt(VA[HV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'oxygen', 'Amount': 1000]]))
+        .inputs(metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'methane', 'Amount': 1000]]))
+        .inputs(metaitem('electric.pump.ev'))
+        .inputs(metaitem('engine.spark_plug.iridium'))
+        .inputs(metaitem('pipeSmallFluidStainlessSteel'))
+        .outputs(metaitem('augmented_spark_igniter'))
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateInconel718') * 6)
+        .inputs(metaitem('plateGrcop84') * 6)
+        .outputs(item('susy:rocket_nozzle')) // Bell Rocket Nozzle Shell
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('rotorMarM246'))
+        .inputs(metaitem('stickLongIncoloy908'))
+        .inputs(metaitem('pipeLargeFluidStainlessSteel') * 8)
+        .fluidInputs(fluid('supreme_lubricant') * 2000)
+        .outputs(item('susy:rocket_turbopump')) // Basic Rocket Turbopump
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('turbine_rotor').withNbt(['GT.PartStats': ['Material': 'susy:mar_m_246']]))
+        .inputs(metaitem('augmented_spark_igniter'))
+        .inputs(metaitem('plateDoubleIncoloy908') * 6)
+        .inputs(metaitem('stickLongIncoloy908') * 2)
+        .inputs(metaitem('drum.titanium'))
+        .inputs(metaitem('pipeLargeFluidStainlessSteel') * 5)
+        .fluidInputs(fluid('supreme_lubricant') * 4000)
+        .outputs(item('susy:rocket_engine_gas_generator')) // Gas Generator + Turbine
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('fuel_injector'))
+        .inputs(metaitem('plateDoubleIncoloy908') * 12)
+        .inputs(metaitem('pipeLargeFluidStainlessSteel') * 9)
+        .outputs(item('susy:rocket_combustion_chamber', 2)) // Oxidiser Combustion Chamber
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
