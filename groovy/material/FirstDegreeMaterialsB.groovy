@@ -722,7 +722,7 @@ class FirstDegreeMaterialsB {
                 //.color(0xa984ff)
                 .colorAverage()
                 .flags(DISABLE_DECOMPOSITION, CONTINOUSLY_CAST, GENERATE_FINE_WIRE)
-                .components(Aluminium * 927, Copper * 60, Iron * 3, Manganese * 3, Silicon * 2, Zinc * 2, Vanadium * 1, Titanium * 1,)
+                .components(Aluminium * 927, Copper * 60, Iron * 3, Manganese * 3, Silicon * 2, Zinc * 2, Vanadium * 1, Titanium * 1)
                 .build()
     }
 }
