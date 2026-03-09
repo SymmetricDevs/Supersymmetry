@@ -718,10 +718,17 @@ class FirstDegreeMaterialsB {
                 .build()
 
         AluminiumAlloy2219 = new Material.Builder(8771, SuSyUtility.susyId('aluminium_alloy_2219'))
-                .ingot().liquid(new FluidBuilder(temperature(0)))
+                .ingot().liquid(new FluidBuilder())
                 .colorAverage()
                 .flags(DISABLE_DECOMPOSITION, CONTINOUSLY_CAST, GENERATE_FINE_WIRE)
                 .components(Aluminium * 1661, Copper * 60, Manganese * 18, Vanadium * 1, Zirconium * 2, Titanium * 1)
+                .build()
+
+        AluminiumAlloy2195 = new Material.Builder(8772, SuSyUtility.susyId('aluminium_alloy_2195'))
+                .ingot().liquid(new FluidBuilder())
+                .colorAverage()
+                .flags(DISABLE_DECOMPOSITION, CONTINOUSLY_CAST, GENERATE_FINE_WIRE)
+                .components(Aluminium * 2012, Copper * 36, Lithium * 90, Magnesium * 18, Silver * 3, Zirconium * 1)
                 .build()
     }
 }
