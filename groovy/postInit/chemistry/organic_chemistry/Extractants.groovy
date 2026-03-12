@@ -679,7 +679,7 @@ import static gregtech.api.GTValues.*
     BR.recipeBuilder()
         .notConsumable(metaitem('beads.strong_acidic_cation_exchange')) 
         //dry sulfonic acid ion exchange resin like Amberlyst 15 or zeolite-based catalysts
-        .notConsumable(fluid('tert_butyl_alcohol') * 100) //1 to 30 wt %
+        .notConsumable(fluid('tert_butanol') * 100) //1 to 30 wt %
         .notConsumable(fluid('isooctane') * 100) //diluent, 90% isooctane and 10% isododecane/2,2,4,4,6 pentamethyl heptane
         .fluidInputs(fluid('isobutylene') * 1000)
         .fluidOutputs(fluid('diisobutylene_mixture') * 1000)
@@ -688,7 +688,7 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     SIEVE_DT.recipeBuilder() //90% yield converted to diisobutytlene?
-        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
+        .notConsumable(fluid('tert_butanol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
         .fluidInputs(fluid('diisobutylene_mixture') * 1000)
         .fluidOutputs(fluid('isobutylene') * 90)
         .fluidOutputs(fluid('diisobutylene') * 400)
@@ -1053,9 +1053,9 @@ import static gregtech.api.GTValues.*
 
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('roundCrosslinkedPolystyrene') * 32)
-        .fluidInputs(fluid('oleum') * 1100)
+        .fluidInputs(fluid('oleum') * 300)
         .outputs(metaitem('beads.strong_acidic_cation_exchange'))
-        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('sulfuric_acid') * 200)
         .EUt(VA[MV])
         .duration(200)
         .buildAndRegister()
@@ -1082,26 +1082,26 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     CSTR.recipeBuilder()
-        .fluidInputs(fluid('sulfuric_acid') * 50)
-        .fluidInputs(fluid('sulfur_trioxide') * 5)
-        .fluidOutputs(fluid('oleum') * 55)
+        .fluidInputs(fluid('sulfuric_acid') * 100)
+        .fluidInputs(fluid('sulfur_trioxide') * 50)
+        .fluidOutputs(fluid('oleum') * 150)
         .duration(4)
         .EUt(VA[LV])
         .buildAndRegister()
 
     MIXER.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .fluidInputs(fluid('sulfur_trioxide') * 100)
-        .fluidOutputs(fluid('oleum') * 1100)
+        .fluidInputs(fluid('sulfur_trioxide') * 500)
+        .fluidOutputs(fluid('oleum') * 1500)
         .duration(80)
         .EUt(VA[MV])
         .buildAndRegister()
 
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('roundPalladiumDopedCrosslinkedPolystyrene') * 32)
-        .fluidInputs(fluid('oleum') * 1100)
+        .fluidInputs(fluid('oleum') * 300)
         .outputs(metaitem('beads.amberlyst_ch'))
-        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('sulfuric_acid') * 200)
         .EUt(VA[MV])
         .duration(200)
         .buildAndRegister()

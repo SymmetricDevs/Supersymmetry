@@ -1361,13 +1361,13 @@ class OrganicChemistryMaterials {
                 .color(0xcff5ff)
                 .build()
 
-        TertButylAlcohol = new Material.Builder(15218, SuSyUtility.susyId('tert_butyl_alcohol'))
+        TertButanol = new Material.Builder(15218, SuSyUtility.susyId('tert_butanol'))
                 .liquid()
                 .components(Carbon * 4, Hydrogen * 10, Oxygen * 1)
                 .colorAverage()
                 .build()
 
-        TertButylAlcohol.setFormula('(CH3)3COH', true)
+        TertButanol.setFormula('(CH3)3COH', true)
 
         ButylatedHydroxytoluene = new Material.Builder(15219, SuSyUtility.susyId('butylated_hydroxytoluene'))
                 .liquid()
@@ -3333,4 +3333,4 @@ class OrganicChemistryMaterials {
                 .color(0x040714)
                 .build()
     }
-}
+}       

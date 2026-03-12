@@ -546,9 +546,9 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
     BR.recipeBuilder()
         .inputs(ore('dustDodecylbenzene'))
-        .fluidInputs(fluid('oleum') * 11000)
+        .fluidInputs(fluid('oleum') * 3000)
         .outputs(metaitem('dustDodecylbenzenesulfonicAcid'))
-        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .fluidOutputs(fluid('sulfuric_acid') * 2000)
         .duration(200)
         .EUt(VA[MV])
         .buildAndRegister()
@@ -776,9 +776,9 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
     BR.recipeBuilder()
         .inputs(ore('dustDidodecylbenzene'))
-        .fluidInputs(fluid('oleum') * 11000)
+        .fluidInputs(fluid('oleum') * 3000)
         .outputs(metaitem('dustDidodecylbenzenesulfonicAcid'))
-        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .fluidOutputs(fluid('sulfuric_acid') * 2000)
         .duration(100)
         .EUt(VA[MV])
         .buildAndRegister()

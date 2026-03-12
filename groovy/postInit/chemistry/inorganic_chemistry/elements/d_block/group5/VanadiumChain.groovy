@@ -219,7 +219,7 @@ MIXER.recipeBuilder()
 
 BR.recipeBuilder()
         .inputs(ore('dustTitaniaSlag'))
-        .fluidInputs(fluid('oleum') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
         .outputs(metaitem('dustSiliconDioxide'))
         .fluidOutputs(fluid('titanyl_sulfate_solution') * 1000)
         .EUt(VA[MV])

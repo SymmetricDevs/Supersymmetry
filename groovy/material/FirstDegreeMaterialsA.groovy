@@ -2265,7 +2265,7 @@ class FirstDegreeMaterialsA {
 
         Oleum = new Material.Builder(8425, SuSyUtility.susyId('oleum'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(SulfuricAcid * 10, SulfurTrioxide)
+                .components(SulfuricAcid * 2, SulfurTrioxide)
                 .color(0xe8c3a5)
                 .build()
 

@@ -71,7 +71,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
 // Sulfate Process
 
 BR.recipeBuilder()
-        .fluidInputs(fluid('oleum') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
         .inputs(ore('dustIlmenite'))
         .fluidOutputs(fluid('titanyl_sulfate_solution') * 1000)
         .outputs(metaitem('dustUltramaficTailings'))

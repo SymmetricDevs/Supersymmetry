@@ -2090,7 +2090,7 @@ class SuSyMaterials {
     public static Material TributylPhosphate
     public static Material NHexadecylamine
     public static Material NHexadecylammoniumAcetate
-    public static Material TertButylAlcohol
+    public static Material TertButanol
     public static Material ButylatedHydroxytoluene
     public static Material DimethylTertButylphenol
     public static Material AluminiumPhenolate
