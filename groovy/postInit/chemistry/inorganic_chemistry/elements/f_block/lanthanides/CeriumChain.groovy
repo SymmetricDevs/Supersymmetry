@@ -5,7 +5,7 @@ import static gregtech.api.GTValues.*
 // 2Ce(NO3)4 + H2O2 -> 2Ce(NO3)3 + O2 + 2HNO3
 MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('cerium_extract') * 20000)
-    .fluidInputs(fluid('hydrogen_peroxide_solution') * 500)
+    .fluidInputs(fluid('hydrogen_peroxide_solution') * 1000)
     .fluidOutputs(fluid('cerium_iii_nitrate_solution') * 1500)
     .fluidOutputs(fluid('tributyl_phosphate_extraction_mixture') * 20000)
     .fluidOutputs(fluid('oxygen') * 1000)

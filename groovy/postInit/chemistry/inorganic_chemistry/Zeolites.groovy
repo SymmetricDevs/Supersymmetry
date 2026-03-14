@@ -224,7 +224,7 @@ ION_EXCHANGE.recipeBuilder()
 
 BR.recipeBuilder()
     .notConsumable(metaitem('emitter.lv'))
-    .notConsumable(fluid('hydrogen_peroxide_solution') * 50)
+    .notConsumable(fluid('hydrogen_peroxide_solution') * 100)
     .fluidInputs(fluid('hydrobromic_acid') * 1000)
     .fluidInputs(fluid('propene') * 1000)
     .fluidOutputs(fluid('n_bromopropane') * 1000)

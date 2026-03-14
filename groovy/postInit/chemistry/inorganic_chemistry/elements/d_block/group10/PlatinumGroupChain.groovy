@@ -208,7 +208,7 @@ for (metal in metals) {
 
         CSTR.recipeBuilder()
             .fluidInputs(fluid('os_ru_solution') * 640)
-            .fluidInputs(fluid('hydrogen_peroxide_solution') * 50)
+            .fluidInputs(fluid('hydrogen_peroxide_solution') * 100)
             .fluidOutputs(fluid('hexachlororuthenic_acid_solution') * 690)
             .fluidOutputs(fluid('osmium_tetroxide') * 10)
             .duration(200)

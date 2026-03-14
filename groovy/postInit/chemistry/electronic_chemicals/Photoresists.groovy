@@ -650,15 +650,31 @@ DT.recipeBuilder()
 
     // KrF resist final formulation
 
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .inputs(ore('dustProtectedPolyhydroxystyrene') * 5) // Polymer
         .inputs(ore('dustTinyTriphenylsulfoniumNonaflate')) // PAG
-        .fluidInputs(fluid('triethanolamine') * 110) // Base quencher
-        .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 34990) // Solvent
-        .fluidOutputs(fluid('polyhydroxystyrene_resist') * 40000)
+        .fluidInputs(fluid('triethanolamine') * 10) // Base quencher
+        .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 27000) // Solvent
+        .fluidInputs(fluid('propylene_glycol_methyl_ether') * 9900) // Cosolvent
+        .fluidOutputs(fluid('polyhydroxystyrene_resist') * 42000)
         .duration(500)
         .EUt(VA[LV])
         .buildAndRegister()
+
+    // Bottom antireflective coating
+
+        // Maleic anhydride copolymers with 2-aminoanthracene
+
+        BR.recipeBuilder()
+            .inputs(ore('dustPhthalicAnhydride') * 15)
+            .fluidInputs(fluid('chlorobenzene') * 1000)
+            .outputs(metaitem('dustTwoChloroanthraquinone'))
+            .fluidOutputs(fluid('water') * 1000)
+            .duration(200)
+            .EUt(VA[LV])
+            .buildAndRegister();
+
+        // Hexamethoxymethyl melamine
 
 // Acrylate-based photoresists (DUV/ArF, 193 nm)
 

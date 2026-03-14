@@ -1921,63 +1921,6 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// 2-EAQ
-
-BR.recipeBuilder()
-    .inputs(ore("dustPhthalicAnhydride") * 15)
-    .fluidInputs(fluid("ethylbenzene") * 1000)
-    .fluidOutputs(fluid("two_ethylanthraquinone") * 1000)
-    .fluidOutputs(fluid("water") * 1000)
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-// 2-EAHQ
-
-FIXED_BR.recipeBuilder()
-    .fluidInputs(fluid('two_ethylanthraquinone') * 50)
-    .fluidInputs(fluid('hydrogen') * 100)
-    .notConsumable(ore('catalystBedPalladium') * 1)
-    .fluidOutputs(fluid('two_ethylanthrahydroquinone') * 50)
-    .duration(20)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-// Hydrogen Peroxide
-
-BCR.recipeBuilder()
-    .fluidInputs(fluid("two_ethylanthrahydroquinone") * 50)
-    .fluidInputs(fluid("hot_hp_oxygen") * 100)
-    .fluidOutputs(fluid("two_ethylanthraquinone_solution") * 200)
-    .duration(100) // Adjust the duration as needed
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid("two_ethylanthraquinone_solution") * 200)
-    .fluidInputs(fluid("water") * 150)
-    .fluidOutputs(fluid("two_ethylanthraquinone") * 50)
-    .fluidOutputs(fluid("hydrogen_peroxide_solution") * 300)
-    .duration(10)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-VACUUM_DT.recipeBuilder()
-    .fluidInputs(fluid('hydrogen_peroxide_solution') * 2000)
-    .fluidOutputs(fluid('hydrogen_peroxide') * 1000)
-    .fluidOutputs(fluid('water') * 1000)
-    .duration(40)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('water') * 1000)
-    .fluidInputs(fluid('hydrogen_peroxide') * 1000)
-    .fluidOutputs(fluid('hydrogen_peroxide_solution') * 2000)
-    .EUt(VA[ULV])
-    .duration(40)
-    .buildAndRegister()
-
 // Butanone
 
 FIXED_BR.recipeBuilder()
