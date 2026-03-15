@@ -196,41 +196,41 @@ DT.recipeBuilder()
     BR.recipeBuilder()
         .inputs(ore('dustTwoThreeFourTrihydroxybenzophenone'))
         .inputs(ore('dustDiazonaphthoquinoneFiveSulfonylChloride') * 3)
-        .fluidInputs(fluid('acetone') * 1000)
-        .fluidOutputs(fluid('diazonaphthoquinone_five_sulfonate_ester_solution') * 1000)
+        .fluidInputs(fluid('acetone') * 3000)
+        .fluidOutputs(fluid('diazonaphthoquinone_five_sulfonate_ester_solution') * 3000)
         .duration(100)
         .EUt(VA[LV])
         .buildAndRegister();
 
     DT.recipeBuilder()
         .fluidInputs(fluid('diazonaphthoquinone_five_sulfonate_ester_solution') * 1000)
-        .outputs(metaitem('dustDiazonaphthoquinoneFiveSulfonateEster'))
+        .outputs(metaitem('dustDiazonaphthoquinoneFiveSulfonateEster') * 29)
         .fluidOutputs(fluid('acetone') * 1000)
-        .fluidOutputs(fluid('hydrogen_chloride') * 3000)
-        .duration(100)
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(30)
         .EUt(VA[LV])
         .buildAndRegister();
 
     // Novolac positive resist
 
-    MIXER.recipeBuilder()
-        .inputs(ore('dustTinyDiazonaphthoquinoneFiveSulfonateEster'))
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustDiazonaphthoquinoneFiveSulfonateEster') * 10)
         .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 8750)
         .fluidInputs(fluid('ethyl_lactate') * 4900)
         .fluidInputs(fluid('phenolic_novolac_oligomer') * 6250)
         .fluidOutputs(fluid('novolac_resist') * 20000)
-        .duration(1000)
-        .EUt(VA[LV])
+        .duration(400)
+        .EUt(VA[HV])
         .buildAndRegister();
 
     // EBR Solvent, 70/30 
 
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .fluidInputs(fluid('propylene_glycol_methyl_ether') * 770)
         .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 230)
         .fluidOutputs(fluid('novolac_ebr_solvent') * 1000)
         .duration(50)
-        .EUt(VA[LV])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     // Bis-azide crosslinker (2,6-bis(4-azidobenzylidene)-4-methylcyclohexanone)
@@ -308,7 +308,7 @@ DT.recipeBuilder()
 
         CRYSTALLIZER.recipeBuilder()
             .fluidInputs(fluid('bis_azide_crosslinker_solution') * 3000)
-            .outputs(metaitem('dustBisAzideCrosslinker'))
+            .outputs(metaitem('dustBisAzideCrosslinker') * 64)
             .fluidOutputs(fluid('wastewater') * 3000)
             .duration(120)
             .EUt(VA[MV])
@@ -316,14 +316,14 @@ DT.recipeBuilder()
 
     // Novolac negative liftoff resist
 
-    MIXER.recipeBuilder()
-        .inputs(ore('dustTinyBisAzideCrosslinker'))
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustBisAzideCrosslinker') * 5)
         .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 8750)
         .fluidInputs(fluid('ethyl_lactate') * 4900)
         .fluidInputs(fluid('phenolic_novolac_resin') * 6250)
         .fluidOutputs(fluid('novolac_liftoff_resist') * 20000)
-        .duration(1000)
-        .EUt(VA[LV])
+        .duration(400)
+        .EUt(VA[HV])
         .buildAndRegister();
 
 // Acrylate dry-film photoresists
@@ -435,7 +435,7 @@ DT.recipeBuilder()
 
     // Final acrylate resist assembly
 
-    MIXER.recipeBuilder()
+    BLENDER.recipeBuilder()
         .inputs(ore('dustSmallMichlersKetone'))
         .inputs(ore('dustPolymethylMethacrylate') * 3)
         .fluidInputs(fluid('dye_blue') * 100)
@@ -443,7 +443,7 @@ DT.recipeBuilder()
         .fluidInputs(fluid('methyl_ethyl_ketone') * 8000)
         .fluidOutputs(fluid('acrylate_resist_mixture') * 10000)
         .duration(500)
-        .EUt(VA[LV])
+        .EUt(VA[HV])
         .buildAndRegister();
 
     DRYER.recipeBuilder()
@@ -503,7 +503,7 @@ DT.recipeBuilder()
         .buildAndRegister()
 
     POLYMERIZATION_TANK.recipeBuilder()
-        .notConsumable(ore('dustTinyAzobisisobutyronitrile'))
+        .inputs(ore('dustTinyAzobisisobutyronitrile'))
         .inputs(ore('dustParaVinylphenol'))
         .fluidInputs(fluid('dimethylformamide') * 1000)
         .fluidOutputs(fluid('polyhydroxystyrene_solution') * 1000)
@@ -614,18 +614,34 @@ DT.recipeBuilder()
 
         BR.recipeBuilder()
             .fluidInputs(fluid('perfluorobutanesulfonyl_fluoride') * 1000)
-            .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
-            .fluidOutputs(fluid('sodium_nonaflate_solution') * 2000)
+            .fluidInputs(fluid('distilled_water') * 2000)
+            .fluidOutputs(fluid('nonaflic_acid_solution') * 2000)
             .duration(200)
-            .EUt(VA[LV])
+            .EUt(VA[LV]) 
+            .buildAndRegister()
+
+        DT.recipeBuilder()
+            .fluidInputs(fluid('nonaflic_acid_solution') * 2000)
+            .fluidOutputs(fluid('nonaflic_acid') * 1000)
+            .fluidOutputs(fluid('hydrofluoric_acid') * 1000)
+            .duration(200)
+            .EUt(VA[LV]) 
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .inputs(ore('dustSodiumHydroxide') * 3)
+            .fluidInputs(fluid('nonaflic_acid') * 1000)
+            .fluidOutputs(fluid('sodium_nonaflate_solution') * 1000)
+            .duration(200)
+            .EUt(VA[LV]) 
             .buildAndRegister()
 
         DISTILLERY.recipeBuilder()
-            .fluidInputs(fluid('sodium_nonaflate_solution') * 2000)
+            .fluidInputs(fluid('sodium_nonaflate_solution') * 1000)
             .outputs(metaitem('dustSodiumNonaflate') * 18)
-            .fluidOutputs(fluid('water') * 2000)
+            .fluidOutputs(fluid('water') * 1000)
             .duration(200)
-            .EUt(VA[LV])
+            .EUt(VA[LV]) 
             .buildAndRegister()
 
         // Synthesis of triphenylsulfonium methanesulfonate + metathesis
@@ -658,29 +674,141 @@ DT.recipeBuilder()
         .fluidInputs(fluid('propylene_glycol_methyl_ether') * 9900) // Cosolvent
         .fluidOutputs(fluid('polyhydroxystyrene_resist') * 42000)
         .duration(500)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+// KrF bottom antireflective coating (BARC)
+
+    // Maleic anhydride copolymers with 2-aminoanthracene
+
+    BR.recipeBuilder()
+        .inputs(ore('dustPhthalicAnhydride') * 15)
+        .fluidInputs(fluid('chlorobenzene') * 1000)
+        .outputs(metaitem('dustTwoChloroanthraquinone'))
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore('dustTwoChloroanthraquinone'))
+        .fluidInputs(fluid('ammonia_solution') * 2000)
+        .outputs(metaitem('dustTwoAminoanthraquinone'))
+        .fluidOutputs(fluid('diluted_ammonium_chloride_solution') * 2000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder()
+        .inputs(ore('dustTwoAminoanthraquinone'))
+        .inputs(ore('dustZinc') * 2)
+        .fluidInputs(fluid('ammonia_solution') * 4000)
+        .outputs(metaitem('dustTwoAminoanthracene'))
+        .fluidOutputs(fluid('wastewater') * 4000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    POLYMERIZATION_TANK.recipeBuilder()
+        .inputs(ore('dustTinyAzobisisobutyronitrile'))
+        .inputs(ore('dustMaleicAnhydride') * 9)
+        .fluidInputs(fluid('styrene') * 1000)
+        .fluidInputs(fluid('dimethylformamide') * 1000)
+        .fluidOutputs(fluid('styrene_maleic_anhydride_solution') * 1000)
+        .duration(400)
         .EUt(VA[LV])
         .buildAndRegister()
 
-    // Bottom antireflective coating
+    BR.recipeBuilder()
+        .notConsumable(ore('springCupronickel'))
+        .inputs(ore('dustTwoAminoanthracene'))
+        .fluidInputs(fluid('styrene_maleic_anhydride_solution') * 1000)
+        .fluidOutputs(fluid('styrene_anthracenyl_maleimide_solution') * 2000)
+        .duration(400)
+        .EUt(VA[LV])
+        .buildAndRegister()
 
-        // Maleic anhydride copolymers with 2-aminoanthracene
+    DT.recipeBuilder()
+        .fluidInputs(fluid('styrene_anthracenyl_maleimide_solution') * 2000)
+        .outputs(metaitem('dustStyreneAnthracenylMaleimide'))
+        .fluidOutputs(fluid('dimethylformamide') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
 
-        BR.recipeBuilder()
-            .inputs(ore('dustPhthalicAnhydride') * 15)
-            .fluidInputs(fluid('chlorobenzene') * 1000)
-            .outputs(metaitem('dustTwoChloroanthraquinone'))
-            .fluidOutputs(fluid('water') * 1000)
-            .duration(200)
-            .EUt(VA[LV])
-            .buildAndRegister();
+    // Hexamethoxymethylmelamine
 
-        // Hexamethoxymethyl melamine
+    BR.recipeBuilder()
+        .inputs(ore('dustMelamine'))
+        .fluidInputs(fluid('formaldehyde') * 6000)
+        .fluidInputs(fluid('methanol') * 6000)
+        .outputs(metaitem('dustHexamethoxymethylmelamine') * 57)
+        .fluidOutputs(fluid('wastewater') * 6000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Thermal acid generator: tripropylammonium triflate    
+
+    ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(metaitem('plateNickel'))
+        .notConsumable(metaitem('plateCobalt'))
+        .fluidInputs(fluid('methanesulfonic_acid') * 1000)
+        .fluidInputs(fluid('hydrogen_fluoride') * 4000)
+        .fluidOutputs(fluid('fluorinated_methanesulfonic_acid_mixture') * 2000)
+        .fluidOutputs(fluid('hydrogen') * 6000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('fluorinated_methanesulfonic_acid_mixture') * 2000)
+        .fluidOutputs(fluid('trifluoromethanesulfonyl_fluoride') * 900)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('trifluoromethanesulfonyl_fluoride') * 1000)
+        .fluidInputs(fluid('distilled_water') * 2000)
+        .fluidOutputs(fluid('triflic_acid_solution') * 2000)
+        .duration(200)
+        .EUt(VA[LV]) 
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('triflic_acid_solution') * 2000)
+        .fluidOutputs(fluid('triflic_acid') * 1000)
+        .fluidOutputs(fluid('hydrofluoric_acid') * 1000)
+        .duration(200)
+        .EUt(VA[LV]) 
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('tripropylamine') * 1000)
+        .fluidInputs(fluid('triflic_acid') * 1000)
+        .outputs(metaitem('dustTripropylamineTriflate') * 40)
+        .duration(200)
+        .EUt(VA[LV]) 
+        .buildAndRegister()
+
+BLENDER.recipeBuilder
+    .inputs(ore('dustTinyStyreneAnthracenylMaleimide') * 3)
+    .inputs(ore('dustTripropylamineTriflate'))
+    .inputs(ore('dustHexamethoxymethylmelamine') * 8)
+    .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 25500)
+    .fluidOutputs(fluid('krf_barc') * 26000)
+    .duration(520)
+    .EUt(VA[LV]) 
+    .buildAndRegister()
 
 // Acrylate-based photoresists (DUV/ArF, 193 nm)
 
 // (EUV/tin plasma resists, 13.5 nm)
 
-// SU-8 photoresist (MEMS)
+// SU-8 photoresist (MEMS, i-line)
 
     // Bisphenol A Novolac Epoxy
 
@@ -815,13 +943,13 @@ Total: 667.62 mmol.
     0.617% Triarylsulfonium Hexafluoroantimonate
 */
 
-LCR.recipeBuilder()
+BLENDER.recipeBuilder()
     .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate'))
     .inputs(ore('dustBisphenolANovolacEpoxy') * 7)
     .fluidInputs(fluid('propylene_carbonate') * 200)
     .fluidInputs(fluid('gamma_butyrolactone') * 4800)
     .fluidOutputs(fluid('su_eight') * 5000)
-    .duration(670)
+    .duration(100)
     .EUt(VA[EV])
     .buildAndRegister()
 

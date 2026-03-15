@@ -95,8 +95,17 @@ DT.recipeBuilder()
 // Urea
 
 CSTR.recipeBuilder()
+    .notConsumable(ore('springCupronickel'))
     .fluidInputs(fluid('ammonia') * 100)
     .fluidInputs(fluid('carbon_dioxide') * 50)
+    .fluidOutputs(fluid('urea_solution') * 50)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .notConsumable(ore('springCupronickel'))
+    .fluidInputs(fluid('ammonia_carbon_dioxide_mixture') * 150)
     .fluidOutputs(fluid('urea_solution') * 50)
     .duration(10)
     .EUt(VA[LV])
@@ -142,3 +151,22 @@ FIXED_BR.recipeBuilder()
     .duration(5)
     .EUt(VA[MV])
     .buildAndRegister();
+
+// Melamine
+
+FLUIDIZED_BR.recipeBuilder()
+    .notConsumable(ore('dustAmorphousSilicaAlumina'))
+    .fluidInputs(fluid('urea') * 1728)
+    .fluidInputs(fluid('ammonia_carbon_dioxide_mixture') * 2250)
+    .fluidInputs(fluid('melamine_offgas') * 4750)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('melamine_offgas') * 4750)
+    .chancedOutputs(metaitem('dustMelamine'), 2500, 0)
+    .fluidOutputs(fluid('ammonia_carbon_dioxide_mixture') * 4500)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
