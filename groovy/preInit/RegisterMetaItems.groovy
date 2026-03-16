@@ -141,7 +141,31 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(1100, "steam.piston")
         addItem(1101, "steam.motor")
 
-        addItem(2000, "spaceship.me.scrap")
+        // 1500-1599: various scrap items
+        addItem(1500, "scrap.military")
+        addItem(1501, "scrap.supply")
+        addItem(1502, "scrap.commercial")
+        addItem(1503, "scrap.parts")
+
+        addItem(1504, "scrap.commercial.lootbox")
+        addItem(1505, "scrap.commercial.food")
+        addItem(1506, "scrap.commercial.data")
+
+        addItem(1507, "scrap.supply.wiring")
+        addItem(1508, "scrap.supply.component")
+        addItem(1509, "scrap.supply.circuitry")
+        addItem(1510, "scrap.supply.chemical")
+        addItem(1511, "scrap.supply.alloy")
+        addItem(1512, "scrap.supply.biological")
+
+        addItem(1513, "scrap.military.unknown")
+        addItem(1514, "scrap.military.armor")
+        addItem(1515, "scrap.military.ammo")
+
+        addItem(1516, "scrap.parts.life_support")
+        addItem(1517, "scrap.parts.engine")
+        addItem(1518, "scrap.parts.cladding")
+        addItem(1519, "scrap.parts.energy")
 
         addItem(2001, "wafer.pattern.processor")
         addItem(2002, "wafer.pattern.memory")
