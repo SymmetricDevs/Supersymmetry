@@ -1,3 +1,28 @@
+# UPDATE 0.1.16.2
+## Mod Changes
+### Mod Updates
+We've got a lot of mod updates. Here are some highlights:
+- Had Enough Items 4.29.8 → 4.29.15
+- 籁/Sound Physics Remixin 1.1.12 → 1.1.17
+- Fugue 0.21.0 → 0.23.1
+- Inventory Bogo Sorter 1.5.0 → 1.6.2
+- Scape and Run: Parasites 1.12.2v1.9.21 → 1.10.2
+- Gregic Probe: CEu 1.4.4 → 1.4.5
+- GroovyScript 1.3.1 → 1.3.4
+- ModularUI 3.0.3 → 3.1.3
+- SusyCore v0.1.95 → v0.1.96
+- Better Questing Unofficial 4.2.6 → 4.2.7
+- Fluidlogged API API-v3.1.1-mc1.12.2 → API-v3.2.0-mc1.12.2
+## Changes
+### New Features
+- Something that isn't important :) (#1814 by @oliwier509)
+- [Susy-Core] Mixer-settlers are now twice as space-efficient! You can continue using the old structure or craft the controller into the new version.. (#619 by @Crindigo)
+### Fixes
+- Cleanroom/OptiFine is now compatible again! (#1816 by @trainvoi)
+- Gauges and Switches switches actually control redstone again!
+- [Susy-Core] Rotational generators now output flue gas more consistently! (#617 by @Crindigo)
+- [Susy-Core] Singleblock combustion engines no longer void fluids! (#618, #623 by @ThisMightBeNoah)
+Of course, thanks to @whoisyp and @Fiery36 for also helping to keep the pack stable.
 # UPDATE 0.1.16.1
 ## Mod Changes
 ### Mod Updates

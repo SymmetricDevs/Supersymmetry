@@ -73,10 +73,10 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
     ])
 
     RecyclingManager.addRecyclingGroovy(metaitem('engine.piston'), [
-        ore('plateDoubleStainlessSteel'),
-        ore('boltStainlessSteel'),
-        ore('ringStainlessSteel') * 4,
-        ore('ingotStainlessSteel'),
+        ore('plateDoubleSteel'),
+        ore('boltSteel'),
+        ore('ringSteel') * 4,
+        ore('ingotSteel'),
     ])
 
     RecyclingManager.addRecyclingGroovy(metaitem('engine.crankshaft'), [

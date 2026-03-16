@@ -985,11 +985,12 @@ RecyclingHelper.addShaped("gregtech:high_temperature_distillation_tower", metait
     [circuits[3], item('gregtech:wire_coil'), circuits[3]]
 ]);
 
-RecyclingHelper.addShaped("susy:mixer_settler", metaitem('susy:mixer_settler'), [
+RecyclingHelper.addShaped("susy:mixer_settler", metaitem('susy:mixer_settler_v2'), [
     [motors[3], circuits[3], motors[3]],
     [rotors[3], hulls[3], rotors[3]],
     [pumps[3], tieredCables[3], pumps[3]]
-])
+]);
+crafting.addShapeless("susy:mixer_settler_convert", metaitem("susy:mixer_settler_v2"), [metaitem("susy:mixer_settler")]);
 
 RecyclingHelper.addShaped("susy:induction_furnace", metaitem('susy:induction_furnace'), [
         [ore('cableGtQuadrupleTin'), tieredPlates[1], ore('cableGtQuadrupleTin')],
