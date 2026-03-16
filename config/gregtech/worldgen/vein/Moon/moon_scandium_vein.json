@@ -15,7 +15,6 @@
     "prefix": "oreAnorthosite"
   },
   "primary_ore": "scandium",
-  "secondary_ore": "iron",
-  "inbetween_ore": "thorium",
-  "sporadic_ore": "titanium"
+  "secondary_ore": "ilmenite",
+  "inbetween_ore": "thorium"
 }
