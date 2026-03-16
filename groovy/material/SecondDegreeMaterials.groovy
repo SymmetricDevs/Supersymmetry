@@ -1094,5 +1094,30 @@ class SecondDegreeMaterials {
                 .components(CopperIINitrate, Water)
                 .colorAverage()
                 .build()
+        
+        YttriumNitrate = new Material.Builder(13182, SuSyUtility.susyId('yttrium_nitrate'))
+                .dust()
+                .components(Yttrium, Nitrate * 3)
+                .color(0xF4F8D4)
+                .build()
+        
+        YttriumNitrate.setFormula('Y(NO3)3', true)
+
+        YttriumNitrateSolution = new Material.Builder(13183, SuSyUtility.susyId('yttrium_nitrate_solution'))
+                .liquid()
+                .components(YttriumNitrate * 2, Water * 3)
+                .color(0xF4F8D4)
+                .build()
+        
+        YttriumNitrateSolution.setFormula('(Y(NO3)3)2(H2O)3', true)
+
+        NdYttriumAluminiumGarnet = new Material.Builder(13184, SuSyUtility.susyId('Nd_yag'))
+                .dust()
+                .flags(CRYSTALLIZABLE)
+                .components(Yttrium * 3, Aluminium * 5, Oxygen * 12, Neodymium * 1)
+                .color(0xDDDDDD)
+                .build()
+        
+        YttriumAluminiumGarnet.setFormula('Y2.97Nd0.03Al5O12', true)
     }
 }
