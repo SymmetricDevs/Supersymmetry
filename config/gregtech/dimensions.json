@@ -12,13 +12,17 @@
       "dimID": -1,
       "dimName": "Nether"
     },
-	{
+    {
       "dimID": 8,
       "dimName": "Luna"
     },
     {
       "dimID": 10,
       "dimName": "Beneath"
+    },
+    {
+      "dimID": 800,
+      "dimName": "Moon"
     }
   ]
 }

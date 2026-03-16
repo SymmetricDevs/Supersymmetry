@@ -1,0 +1,21 @@
+{
+  "vein_name": "moon_scandium",
+  "weight": 20,
+  "density": 0.3,
+  "min_height": 10,
+  "max_height": 56,
+  "dimension_filter": {
+    "type": "whitelist",
+    "dimensions": [
+      800
+    ]
+  },
+  "filler": {
+    "type": "ore",
+    "prefix": "oreAnorthosite"
+  },
+  "primary_ore": "scandium",
+  "secondary_ore": "iron",
+  "inbetween_ore": "thorium",
+  "sporadic_ore": "titanium"
+}
