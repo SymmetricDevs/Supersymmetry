@@ -1110,14 +1110,5 @@ class SecondDegreeMaterials {
                 .build()
         
         YttriumNitrateSolution.setFormula('(Y(NO3)3)2(H2O)3', true)
-
-        NdYttriumAluminiumGarnet = new Material.Builder(13184, SuSyUtility.susyId('Nd_yag'))
-                .dust()
-                .flags(CRYSTALLIZABLE)
-                .components(Yttrium * 3, Aluminium * 5, Oxygen * 12, Neodymium * 1)
-                .color(0xDDDDDD)
-                .build()
-        
-        YttriumAluminiumGarnet.setFormula('Y2.97Nd0.03Al5O12', true)
     }
 }

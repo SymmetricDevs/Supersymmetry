@@ -708,9 +708,18 @@ class FirstDegreeMaterialsB {
         
         ThoriatedTungsten.setFormula('W98(ThO2)2', true)
 
-        ThoriatedTungstenMixture = new Material.Builder(8773, SuSyUtility.susyId('unprocessed_thoriated_tungsten'))
+        ThoriatedTungstenMixture = new Material.Builder(8770, SuSyUtility.susyId('unprocessed_thoriated_tungsten'))
                 .dust()
                 .color(0x121212)
                 .build()
+
+        NdYttriumAluminiumGarnet = new Material.Builder(8771, SuSyUtility.susyId('Nd_yag'))
+                .dust()
+                .flags(CRYSTALLIZABLE)
+                .components(Yttrium * 3, Aluminium * 5, Oxygen * 12, Neodymium * 1)
+                .color(0xDDDDDD)
+                .build()
+        
+        YttriumAluminiumGarnet.setFormula('Y2.97Nd0.03Al5O12', true)
     }
 }
