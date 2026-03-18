@@ -1632,7 +1632,7 @@ class SuSyMaterials {
     public static Material ThoriatedTungsten
     public static Material YttriumNitrate
     public static Material YttriumNitrateSolution
-    public static Material NDYttriumAluminiumGarnet
+    public static Material NeodymiumYttriumAluminiumGarnet
     public static Material AmmoniumHydroxide
     public static Material ChromiumIIINitrateSolution
     public static Material ChromiumIIICarbonate

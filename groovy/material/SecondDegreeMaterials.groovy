@@ -1094,16 +1094,8 @@ class SecondDegreeMaterials {
                 .components(CopperIINitrate, Water)
                 .colorAverage()
                 .build()
-        
-        YttriumNitrate = new Material.Builder(13182, SuSyUtility.susyId('yttrium_nitrate'))
-                .dust()
-                .components(Yttrium, Nitrate * 3)
-                .color(0xF4F8D4)
-                .build()
-        
-        YttriumNitrate.setFormula('Y(NO3)3', true)
 
-        YttriumNitrateSolution = new Material.Builder(13183, SuSyUtility.susyId('yttrium_nitrate_solution'))
+        YttriumNitrateSolution = new Material.Builder(13182, SuSyUtility.susyId('yttrium_nitrate_solution'))
                 .liquid()
                 .components(YttriumNitrate * 2, Water * 3)
                 .color(0xF4F8D4)
