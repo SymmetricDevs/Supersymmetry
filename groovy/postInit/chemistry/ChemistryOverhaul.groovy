@@ -2741,7 +2741,7 @@ PHASE_SEPARATOR.recipeBuilder()
     .buildAndRegister()
 
 FIXED_BR.recipeBuilder()
-    .notConsumable(ore('catalystBedPalladium'))
+    .notConsumable(ore('catalystBedSupportedPalladium'))
     .fluidInputs(fluid('nitrobenzene') * 50)
     .fluidInputs(fluid('hot_hp_hydrogen') * 150)
     .fluidOutputs(fluid('gtfo_aniline') * 50)

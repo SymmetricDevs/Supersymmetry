@@ -627,15 +627,6 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     BR.recipeBuilder()
-        .fluidInputs(fluid('bromooctane') * 2000)
-        .inputs(ore('dustLithium'))
-        .inputs(ore('dustCopper'))
-        .fluidOutputs(fluid('lithium_dioctylcopper') * 1000)
-        .duration(160)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
         .fluidInputs(fluid('capric_acid') * 1000)
         .fluidInputs(fluid('thionyl_chloride') * 1000)
         .fluidOutputs(fluid('decanoyl_chloride') * 1000)
