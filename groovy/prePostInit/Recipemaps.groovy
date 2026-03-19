@@ -103,7 +103,9 @@ class Recipemaps {
     static final def REVERBERATORY_FURNACE = recipemap('reverberatory_furnace')
     static final def ROASTER = recipemap('roaster')
     static final def ROTARY_KILN = recipemap('rotary_kiln')
+    static final def SALVAGING = recipemap('salvaging') // Intended for orbital salvage
     static final def SEMI_FLUID_GENERATOR = recipemap('semi_fluid_generator')
+    static final def SCRAP_RECYCLER = recipemap('scrap_recycler')
     static final def SIEVE_DT = recipemap('sieve_distillation')
     static final def SIFTER = recipemap('sifter')
     static final def SINGLE_COLUMN_CRYO_DT = recipemap('single_column_cryogenic_distillation')
