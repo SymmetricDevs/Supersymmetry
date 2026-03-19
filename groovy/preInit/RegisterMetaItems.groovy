@@ -354,6 +354,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7003, "seed_crystal.beryllium_oxide")
         addItem(7004, "seed_crystal.emerald")
         addItem(7005, "seed_crystal.lithium_niobate")
+        addItem(7006, "seed_crystal.neodymium_yttrium_aluminium_garnet")
 
         //Boules 7500-8000
 
@@ -367,6 +368,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7507, "boule.ruby")
         addItem(7508, "boule.silicon_germanium")
         addItem(7509, "boule.lithium_niobate")
+        addItem(7510, "boule.neodymium_yttrium_aluminium_garnet")
 
         //Wafers 8000-9000
 

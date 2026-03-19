@@ -176,3 +176,30 @@ FORMING_PRESS.recipeBuilder()
         .duration(500)
         .EUt(VA[LV])
         .buildAndRegister()
+
+// Nd:YAG
+
+SOLIDIFIER.recipeBuilder()
+        .fluidInputs(fluid('neodymium_yttrium_aluminium_garnet') * 36)
+        .notConsumable(metaitem('shape.mold.ball'))
+        .chancedOutput(metaitem('seed_crystal.neodymium_yttrium_aluminium_garnet'), 1000, 1000)
+        .duration(200)
+        .EUt(240)
+        .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .inputs(metaitem('seed_crystal.neodymium_yttrium_aluminium_garnet'))
+        .inputs(ore('dustNeodymiumYttriumAluminiumGarnet'))
+        .fluidInputs(fluid('neodymium_yttrium_aluminium_garnet') * 4608)
+        .outputs(metaitem('boule.neodymium_yttrium_aluminium_garnet'))
+        .duration(200)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+LATHE.recipeBuilder()
+        .inputs(metaitem('boule.neodymium_yttrium_aluminium_garnet'))
+        .outputs(metaitem('stickNeodymiumYttriumAluminiumGarnet'))
+        .duration(60)
+        .EUt(VA[HV])
+        .buildAndRegister()
+

@@ -715,12 +715,13 @@ class FirstDegreeMaterialsB {
 
         NeodymiumYttriumAluminiumGarnet = new Material.Builder(8771, SuSyUtility.susyId('neodymium_yttrium_aluminium_garnet'))
                 .dust()
-                .flags(CRYSTALLIZABLE)
+                .flags(GENERATE_ROD, NO_UNIFICATION)
                 .components(Yttrium * 3, Aluminium * 5, Oxygen * 12, Neodymium * 1)
-                .color(0xDDDDDD)
+                .color(0xcb88ba)
+                .liquid(new FluidBuilder().temperature(2200))
                 .build()
         
-        NeodymiumYttriumAluminiumGarnet.setFormula('Y2.97Nd0.03Al5O12', true)
+        NeodymiumYttriumAluminiumGarnet.setFormula('Y2.97Nd0.03Al5O12', true) // the decimal points are weird here
 
         YttriumNitrate = new Material.Builder(8772, SuSyUtility.susyId('yttrium_nitrate'))
                 .dust()

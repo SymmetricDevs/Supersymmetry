@@ -236,7 +236,6 @@ susy.material.zinc_dithionite_solution=Zinc Dithionite Solution
 susy.material.sodium_dithionite=Sodium Dithionite
 susy.material.sodium_dithionite_solution=Sodium Dithionite Solution
 susy.material.zinc_hydroxide=Zinc Hydroxide
-
 # Solids
 
 susy.material.pig_iron=Pig Iron
@@ -379,6 +378,10 @@ susy.material.phosphorus=White Phosphorus
 susy.material.hydroxyapatite=Hydroxyapatite
 susy.material.calcium_metasilicate=Calcium Metasilicate
 susy.material.pyrazine=Pyrazine
+
+susy.material.thoriated_tungsten=Thoriated Tungsten
+susy.material.thoriated_tungsten_mixture=Thorium-Tungsten Mixture
+susy.material.neodymium_yttrium_aluminium_garnet=Nd-Doped Yttrium Aluminium Garnet
 
 # Fluids
 
@@ -2675,6 +2678,8 @@ susy.material.trimethyl_gallium=Trimethylgallium
 susy.material.trimethyl_indium=Trimethylindium
 susy.material.yttrium_aluminium_garnet_cerium=Ce-Doped Yttrium Aluminium Garnet
 susy.material.delithiated_salar_brine=Delithiated Salar Brine
+susy.material.yttrium_nitrate=Yttrium Nitrate
+
 
 # Isotopes
 
@@ -3151,11 +3156,13 @@ metaitem.boule.sapphire.name=Sapphire Boule
 metaitem.boule.ruby.name=Ruby Boule
 metaitem.boule.silicon_germanium.name=Silicon-Germanium Boule
 metaitem.boule.lithium_niobate.name=Lithium Niobate Boule
+metaitem.boule.neodymium_yttrium_aluminium_garnet=Nd-YAG Boule
 
 metaitem.seed_crystal.alumina.name=Alumina Seed Crystal
 metaitem.seed_crystal.beryllium_oxide.name=Beryllium Oxide Seed Crystal
 metaitem.seed_crystal.emerald.name=Emerald Seed Crystal
 metaitem.seed_crystal.lithium_niobate.name=Lithium Niobate Seed Crystal
+metaitem.seed_crystal.neodymium_yttrium_aluminium_garnet=Nd-YAG Seed Crystal
 
 metaitem.thick_film_substrate_wafer.name=Thick-Film Substrate Wafer
 metaitem.patterned_thick_film_substrate_wafer.name=Patterned Thick-Film Substrate Wafer
