@@ -38,7 +38,7 @@ class Doping {
         new IonSource("purified_antimony_trioxide", "antimony")
     ]
 
-    static void generateIonImplantationRecipes(Spring input, String product, int duration, String sourceName) {
+    static void generateIonImplantationRecipes(String input, String product, int duration, String sourceName) {
         for (ionSource in ionSources) {
             if (ionSource.sourceName == sourceName)
                 ionSource.generateRecipe(input, product, duration)
