@@ -34,7 +34,7 @@ class Doping {
     public static final ionSources = [
         new IonSource("boron_trifluoride", "boron"),
         new IonSource("phosphine", "phosphorus"),
-        new IonSource("arsine", "arsenic")
+        new IonSource("arsine", "arsenic"),
         new IonSource("purified_antimony_trioxide", "antimony")
     ]
 

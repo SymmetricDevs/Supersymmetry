@@ -61,7 +61,7 @@ class Lithography {
                     .outputs(metaitem(product))
                     .cleanroom(CleanroomType.CLEANROOM)
                     .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier]);
+                    .EUt(VA[this.voltageTier])
                     .buildAndRegister()
             } else {
                 RESIST_PROCESSOR.recipeBuilder()

@@ -142,7 +142,9 @@ class Deposition {
             .outputs(metaitem(product))
             .cleanroom(CleanroomType.CLEANROOM)
         
-        for (material, duration in targetDurationMap) {
+        for (pair in targetDurationMap) {
+            String material = pair.key
+            int duration = pair.value
             totalDuration += duration
 
             for (sputteringTarget in sputteringTargets) {

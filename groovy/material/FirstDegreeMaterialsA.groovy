@@ -88,7 +88,7 @@ class FirstDegreeMaterialsA {
         HighPurityPalladium = generatePurifiedElement(Palladium, 8035, false, false)
         HighPuritySilver = generatePurifiedElement(Silver, 8036, false, false)
         HighPurityCadmium = generatePurifiedElement(Cadmium, 8037, false, false)
-        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, true).addFlags(GENERATE_PLATE, GENERATE_NUGGET)
+        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, true).addFlags(GENERATE_PLATE)
         HighPurityTin = generatePurifiedElement(Tin, 8039, false, false)
         HighPurityAntimony = generatePurifiedElement(Antimony, 8040, false, false)
         HighPurityTellurium = generatePurifiedElement(Tellurium, 8041, false, true)

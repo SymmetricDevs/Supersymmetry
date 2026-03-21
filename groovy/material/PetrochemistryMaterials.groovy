@@ -163,7 +163,7 @@ class PetrochemistryMaterials {
                 .build()
 
         SlackWax = new Material.Builder(20025, SuSyUtility.susyId('slack_wax'))
-                .liquid(new FluidBuilder().temperature(35W3))
+                .liquid(new FluidBuilder().temperature(353))
                 .color(0x7d7b59)
                 .flags(FLAMMABLE)
                 .build()
