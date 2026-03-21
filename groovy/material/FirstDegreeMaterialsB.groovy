@@ -705,7 +705,7 @@ class FirstDegreeMaterialsB {
                 .build()
 
         LacticAcidSolution = new Material.Builder(8770, SuSyUtility.susyId('lactic_acid_solution'))
-                .dust()
+                .liquid()
                 .components(LacticAcid, Water)
                 .colorAverage()
                 .build()
