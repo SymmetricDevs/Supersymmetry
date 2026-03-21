@@ -1,4 +1,4 @@
-package globals
+package globals.semiconductors
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -9,7 +9,7 @@ class Deposition {
 
     // Thermal oxidation of silicon dioxide
 
-    static void generateSiliconDioxideGrowthRecipe(String input, Strirng output, int duration, boolean wet) {
+    static void generateSiliconDioxideGrowthRecipe(String input, String output, int duration, boolean wet) {
         def growthRecipe = RESISTANCE_FURNACE.recipeBuilder()
             .inputs(ore(input))
             .fluidInputs(fluid('oxygen') * 100)

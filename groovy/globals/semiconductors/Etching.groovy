@@ -1,4 +1,4 @@
-package globals
+package globals.semiconductors
 import globals.Globals
 
 import static prePostInit.Recipemaps.*
@@ -137,7 +137,7 @@ class Etching {
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
                     .duration((int) (etchant.etchingRate * duration))
-                    .EUt(VA[etchant.voltageTier]);
+                    .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()
             }

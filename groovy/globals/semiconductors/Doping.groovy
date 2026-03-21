@@ -1,6 +1,6 @@
-package globals
+package globals.semiconductors
 import globals.Globals
-import globals.Etching
+import globals.semiconductors.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*

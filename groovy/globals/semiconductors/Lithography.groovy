@@ -1,4 +1,4 @@
-package globals
+package globals.semiconductors
 import globals.Globals
 
 import static prePostInit.Recipemaps.*
@@ -70,7 +70,7 @@ class Lithography {
                     .outputs(metaitem(product))
                     .cleanroom(CleanroomType.CLEANROOM)
                     .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier]);
+                    .EUt(VA[this.voltageTier])
                     .buildAndRegister()
             }
         }
