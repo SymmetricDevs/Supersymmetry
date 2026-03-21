@@ -126,4 +126,5 @@ class Recipemaps {
     static final def REACTIVE_ION_ETCHER = recipemap('reactive_ion_etching')
     static final def RESIST_PROCESSOR = recipemap('resist_processing')
     static final def PLASMA_ASHER = recipemap('plasma_ashing')
+    static final def ELECTRON_BEAM_LITHOGRAPHY = recipemap('electron_beam_lithography')
 }
