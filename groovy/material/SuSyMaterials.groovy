@@ -813,6 +813,7 @@ class SuSyMaterials {
     public static Material NitrileRubberPrecursorEmulsion
     public static Material NitrileRubberEmulsion
     public static Material NitrileRubberLatex
+    public static Material BlackSteel;
 
     // Petrochem Materials
 
@@ -1963,6 +1964,7 @@ class SuSyMaterials {
     public static Material Dichloromethane
     public static Material CarbonTetrachloride
     public static Material PolytetrafluoroethyleneSolution
+    public static Material Polytetrafluoroethylene
     public static Material AcidicChloronitrobenzeneMixture
     public static Material MixedDichlorobenzeneSolution
     public static Material Novolacs
@@ -2222,6 +2224,7 @@ class SuSyMaterials {
     public static Material StyreneIsopreneRubber
     public static Material HydrogenatedStyreneIsopreneRubber
     public static Material HydrogenatedStyreneButadieneRubber
+    public static Material StyreneButadieneRubber
     public static Material Dodecylphenol
     public static Material CalciumPhenate
     public static Material Dodecylbenzene

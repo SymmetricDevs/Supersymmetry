@@ -21,10 +21,12 @@ import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
 import static material.SuSyMaterials.*
+import static material.FirstDegreeMaterialsA.*
 
 import supercritical.api.unification.material.properties.FissionFuelProperty
 import supercritical.api.unification.material.properties.ModeratorProperty
 import supercritical.api.unification.material.properties.SCPropertyKey
+import gregtech.api.recipes.RecipeMap
 
 //eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
