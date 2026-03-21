@@ -124,4 +124,6 @@ class Recipemaps {
     static final def CUPOLA_FURNACE = recipemap('cupola_furnace')
     static final def SPUTTERER = recipemap('sputtering')
     static final def REACTIVE_ION_ETCHER = recipemap('reactive_ion_etching')
+    static final def RESIST_PROCESSOR = recipemap('resist_processing')
+    static final def PLASMA_ASHER = recipemap('plasma_ashing')
 }

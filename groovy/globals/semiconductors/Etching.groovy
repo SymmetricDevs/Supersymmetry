@@ -32,7 +32,7 @@ class Etching {
         boolean anisotropic
         boolean isPlasma
 
-        Etchant(String fluidName, String voltageTier, int amountUsed, double etchingRate, boolean anisotropic, boolean isPlasma) {
+        Etchant(String fluidName, int voltageTier, int amountUsed, double etchingRate, boolean anisotropic, boolean isPlasma) {
             this.fluidName = fluidName
             this.voltageTier = voltageTier
             this.amountUsed = amountUsed

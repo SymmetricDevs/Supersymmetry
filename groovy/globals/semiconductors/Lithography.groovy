@@ -77,13 +77,13 @@ class Lithography {
     }
 
     public static final photoresists = [
-        new Photoresist("novolac_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300),
-        new Photoresist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300, true),
-        new Photoresist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", "EV", recipemap("LASER_ENGRAVER"), 200)
+        new Resist("novolac_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300),
+        new Resist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300, true),
+        new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", "EV", recipemap("LASER_ENGRAVER"), 200)
     ]
 
     public static final electronBeamResists = [
-        new Photoresist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", "EV", recipemap("ELECTRON_BEAM_LITHOGRAPHY"), 1000)
+        new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", "EV", recipemap("ELECTRON_BEAM_LITHOGRAPHY"), 1000)
     ]
 
     static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, int circ = null) {
@@ -113,20 +113,26 @@ class Lithography {
                 .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
                 .outputs(metaitem(input + '.stripped'))
                 .duration(400 * timeMultiplier)
-                .EUt(VA[HV]);
+                .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
 
             input = input + '.stripped'
         }
 
-        PLASMA_ASHER.recipeBuilder()
+        def ashed = "";
+        def tmp_builder = PLASMA_ASHER.recipeBuilder()
             .inputs(metaitem(input))
             .fluidInputs(fluid('oxygen') * 100)
-            if (rie) {fluidInputs(fluid('carbon_tetrafluoride') * 25); ashed = input + '.ashed'} else {ashed = product}
-            .outputs(metaitem(ashed))
+        if (rie) {
+            tmp_builder = tmp_builder.fluidInputs(fluid('carbon_tetrafluoride') * 25);
+            ashed = input + '.ashed'
+        } else {
+            ashed = product
+        }
+        tmp_builder.outputs(metaitem(ashed))
             .duration(200 * timeMultiplier)
-            .EUt(VA[HV]);
+            .EUt(VA[HV])
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
@@ -136,8 +142,9 @@ class Lithography {
                 .fluidInputs(fluid('ultrapure_water') * 100)
                 .outputs(metaitem(product))
                 .duration(400 * timeMultiplier)
-                .EUt(VA[HV]);
+                .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
+        }
     }
 }
