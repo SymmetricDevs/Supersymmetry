@@ -813,6 +813,8 @@ class SuSyMaterials {
     public static Material NitrileRubberPrecursorEmulsion
     public static Material NitrileRubberEmulsion
     public static Material NitrileRubberLatex
+    public static Material LacticAcidBroth
+    public static Material FilteredLacticAcidBroth
 
     // Petrochem Materials
 
@@ -1646,6 +1648,8 @@ class SuSyMaterials {
     public static Material BariumFluoride
     public static Material GreenCarbon
     public static Material BakedCarbon
+    public static Material LacticAcid
+    public static Material LacticAcidSolution
 
     // HP Materials
 

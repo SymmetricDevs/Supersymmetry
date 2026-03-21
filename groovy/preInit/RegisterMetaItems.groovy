@@ -68,6 +68,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(171, "membrane.cellulose_acetate")
         addItem(172, "mesh.platinum")
         addItem(173, "mesh.platinum_rhodium")
+        addItem(174, "membrane.polysulfone")
+        addItem(175, "membrane.cation_exchange")
+        addItem(176, "membrane.anion_exchange")
 
         addItem(177, "membrane.support.alumina")
         addItem(178, "membrane.zeolite")

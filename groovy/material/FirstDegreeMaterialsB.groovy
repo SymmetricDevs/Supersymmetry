@@ -697,5 +697,17 @@ class FirstDegreeMaterialsB {
                 .components(Carbon)
                 .color(0x353535)
                 .build()
+
+        LacticAcid = new Material.Builder(8769, SuSyUtility.susyId('lactic_acid'))
+                .dust()
+                .components(Carbon * 3, Hydrogen * 6, Oxygen * 3)
+                .colorAverage()
+                .build()
+
+        LacticAcidSolution = new Material.Builder(8770, SuSyUtility.susyId('lactic_acid_solution'))
+                .dust()
+                .components(LacticAcid, Water)
+                .colorAverage()
+                .build()
     }
 }
