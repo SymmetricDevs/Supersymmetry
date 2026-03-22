@@ -709,5 +709,13 @@ class FirstDegreeMaterialsB {
                 .components(LacticAcid, Water)
                 .colorAverage()
                 .build()
+
+        BerylliumCopper = new Material.Builder(8771, SuSyUtility.susyId('beryllium_copper'))
+                .ingot().liquid(new FluidBuilder().temperature(1139))
+                .iconSet(SHINY)
+                .flags(GENERATE_PLATE)
+                .components(Beryllium * 3, Copper * 97)
+                .colorAverage()
+                .build()
     }
 }

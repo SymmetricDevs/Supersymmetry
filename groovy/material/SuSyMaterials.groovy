@@ -1650,6 +1650,7 @@ class SuSyMaterials {
     public static Material BakedCarbon
     public static Material LacticAcid
     public static Material LacticAcidSolution
+    public static Material BerylliumCopper
 
     // HP Materials
 
@@ -1885,6 +1886,8 @@ class SuSyMaterials {
     public static Material ReactiveAlumina
     public static Material SodiumDithioniteSolution
     public static Material HoopesElectrolyte
+    public static Material SupportedCobalt
+    public static Material SupportedSilver
 
     // Organic Chemistry Materials
 
@@ -2144,6 +2147,9 @@ class SuSyMaterials {
     public static Material Isodecanal
     public static Material Isodecanol
     public static Material Trioctylamine
+    public static Material Adamantane
+    public static Material Adamantanone
+
     //public static Material NButylamine
     public static Material Ethyltoluene
     public static Material VinylbenzylChloride
@@ -2549,6 +2555,7 @@ class SuSyMaterials {
     public static Material TetrasodiumEthylenediaminetetraacetateSolution
     public static Material OneNaphtholTwoDiazoniumChlorideSolution
     public static Material BenzenediazoniumFluorideSolution
+    public static Material BisAzideCrossLinker
 
     // Thermodynamics Materials
 

@@ -2446,7 +2446,11 @@ class OrganicChemistryMaterials {
                 .color(0x279630)
                 .build()
 
-        // FREE ID: 15385
+        Adamantane = new Material.Builder(15384, SuSyUtility.susyId('adamantane'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 16)
+                .colorAverage()
+                .build()
 
         Crotonaldehyde = new Material.Builder(15386, SuSyUtility.susyId('crotonaldehyde'))
                 .liquid()
@@ -2523,7 +2527,11 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 15396
+        Adamantanone = new Material.Builder(15396, SuSyUtility.susyId('adamantanone'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 14, Oxygen * 1)
+                .colorAverage()
+                .build()
             
         Polycarbonate = new Material.Builder(15397, SuSyUtility.susyId('polycarbonate'))
                 .polymer()

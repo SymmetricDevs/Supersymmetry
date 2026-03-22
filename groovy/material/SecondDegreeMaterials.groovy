@@ -802,8 +802,20 @@ class SecondDegreeMaterials {
                 .components(SodiumDithionite, Water)
                 .colorAverage()
                 .build()
+        
+        SupportedCobalt = new Material.Builder(13125, SuSyUtility.susyId('supported_cobalt'))
+                .dust()
+                .components(Cobalt, Alumina)
+                .colorAverage()
+                .build()
 
-        // FREE ID: 13125-13129
+        SupportedSilver = new Material.Builder(13126, SuSyUtility.susyId('supported_silver'))
+                .dust()
+                .components(Silver, Alumina)
+                .colorAverage()
+                .build()
+
+        // FREE ID: 13126-13129
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))

@@ -38,8 +38,8 @@ crafting.addShapeless('susy:brush.unfired', metaitem('component.brush.unfired'),
 furnace.add(metaitem('component.brush.unfired'), metaitem('component.brush'))
 
 crafting.addShaped('susy:electric_motor_lv', metaitem('electric.motor.lv'), [
-    [metaitem('plateSteelMagnetic'), metaitem('wireGtFineCopper'), metaitem('cableGtSingleTin')],
-    [metaitem('component.brush'), metaitem('stickSteel'), metaitem('wireGtFineCopper')],
+    [metaitem('plateSteelMagnetic'), metaitem('wireFineCopper'), metaitem('cableGtSingleTin')],
+    [metaitem('component.brush'), metaitem('stickSteel'), metaitem('wireFineCopper')],
     [metaitem('component.commutator'), metaitem('component.brush'), metaitem('plateSteelMagnetic')]
 ])
 

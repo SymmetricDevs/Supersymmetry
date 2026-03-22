@@ -4,7 +4,7 @@ import static gregtech.api.GTValues.*
 // Grignard reagents
 
 BR.recipeBuilder()
-    .inputs(ore('dustAnyMagnesium'))
+    .inputs(ore('dustAnyPurityMagnesium'))
     .fluidInputs(fluid('chloromethane') * 2000)
     .fluidInputs(fluid('tetrahydrofuran') * 3000)
     .fluidOutputs(fluid('methylmagnesium_chloride_solution') * 1000)
