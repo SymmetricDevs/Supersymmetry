@@ -1648,6 +1648,8 @@ class SuSyMaterials {
     public static Material BariumFluoride
     public static Material GreenCarbon
     public static Material BakedCarbon
+    public static Material ScandiumAlloy
+    public static Material LithiumPeroxide
 
     // HP Materials
 

@@ -697,5 +697,20 @@ class FirstDegreeMaterialsB {
                 .components(Carbon)
                 .color(0x353535)
                 .build()
+
+        // space-recipes: 8769-8772
+
+        ScandiumAlloy = new Material.Builder(8773, SuSyUtility.susyId('scandium_alloy'))
+                .dust()
+                .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_SPRING)
+                .components(Aluminium * 12, Scandium * 3, Erbium, Zirconium)
+                .color(0xffbfbf)
+                .iconSet(SHINY)
+                .build()
+
+        LithiumPeroxide = new Material.Builder(8774, SuSyUtility.susyId('lithium_peroxide'))
+                .dust()
+                .components(Lithium * 2, Oxygen * 2)
+                .build()
     }
 }

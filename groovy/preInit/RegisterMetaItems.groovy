@@ -165,7 +165,7 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(1513, "scrap.military.unknown")
         addItem(1514, "scrap.military.armor")
-        addItem(1515, "scrap.military.ammo")
+        addItem(1515, "scrap.military.weaponry")
 
         addItem(1516, "scrap.parts.life_support")
         addItem(1517, "scrap.parts.engine")
