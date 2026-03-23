@@ -722,6 +722,7 @@ class FirstDegreeMaterialsB {
                 .dust()
                 .components(Sodium * 2, Sulfur * 3)
                 .color(0x630c04)
-                .setFormula("Na2S3")
+                .build()
+        SodiumPolysulfide.setFormula("Na2S3")
     }
 }

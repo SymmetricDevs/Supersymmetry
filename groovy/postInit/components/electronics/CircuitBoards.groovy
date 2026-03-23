@@ -53,7 +53,7 @@ FORMING_PRESS.recipeBuilder()
 
 FORMING_PRESS.recipeBuilder()
         .inputs(metaitem('board.epoxy.copper_clad'))
-        .inputs(ore('foilDryFilmPhotoresist') * 2)
+        .inputs(metaitem('dry_film_photoresist') * 2)
         .outputs(metaitem('board.epoxy.resist'))
         .EUt(VA[MV])
         .duration(100)

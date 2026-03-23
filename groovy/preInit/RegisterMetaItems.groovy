@@ -75,6 +75,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(177, "membrane.support.alumina")
         addItem(178, "membrane.zeolite")
 
+        addItem(179, "dry_film_photoresist")
+
         addItem(180, "patterned_thick_film_substrate_wafer")
         addItem(181, "thick_film_resistor_wafer")
         addItem(182, "metallized_plastic_film")

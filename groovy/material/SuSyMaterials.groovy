@@ -1890,6 +1890,9 @@ class SuSyMaterials {
     public static Material HoopesElectrolyte
     public static Material SupportedCobalt
     public static Material SupportedSilver
+    public static Material SupportedAluminumChloride
+    public static Material SupportedCopper
+    public static Material CopperImpregnatedSilica
     public static Material SodiumTriflateSolution
     public static Material SodiumTriflate
     public static Material TriflicAcidSolution
@@ -2418,7 +2421,7 @@ class SuSyMaterials {
     public static Material FluorinatedMethanesulfonicAcidMixture
     public static Material TrifluoromethanesulfonylFluoride
     public static Material ProtectedPolyhydroxystyrene
-    public static Material ProtectedPolyhydroxystereneSolution
+    public static Material ProtectedPolyhydroxystyreneSolution
     public static Material DiTertButylDicarbonate
     public static Material DiTertButylDicarbonateSolution
     public static Material PotassiumTertButoxide
@@ -2426,7 +2429,6 @@ class SuSyMaterials {
     public static Material ParaEthylbenzenesulfonicAcidSolution
     public static Material ParaEthylphenol
     public static Material ParaVinylphenol
-    public static Material DryFilmPhotoresist
     public static Material AcrylateResistMixture
     public static Material DimethylAniline
     public static Material DimethylAnilineSolution
@@ -2453,16 +2455,19 @@ class SuSyMaterials {
     public static Material SodiumOneNaphtholFiveSulfonate
     public static Material TwoNitrosoOneNaphtholFiveSulfonicAcidSolution
     public static Material DiaminonaphthoquinoneSulfonicAcidSolution
-    public static Material DiazonaphthoquinoneSulfonicAcidSolution
-    public static Material DiazonaphthoquinoneSulfonicAcid
-    public static Material DiazonaphthoquinoneSulfonylChloride
+    public static Material DiazonaphthoquinoneFiveSulfonicAcidSolution
+    public static Material DiazonaphthoquinoneFiveSulfonicAcid
+    public static Material DiazonaphthoquinoneFiveSulfonylChloride
     public static Material GallicAcidSolution
     public static Material GallicAcid
     public static Material Pyrogallol
     public static Material TwoThreeFourTrihydroxybenzophenone
     public static Material DiazonaphthoquinoneFiveSulfonateEsterSolution
     public static Material DiazonaphthoquinoneFiveSulfonateEster
-
+    public static Material BisAzideCrossLinker
+    public static Material Polyhydroxystyrene
+    public static Material PolyhydroxystyreneSolution
+    public static Material MichlersKetone
 
     // Third Degree Materials
 
@@ -2610,7 +2615,6 @@ class SuSyMaterials {
     public static Material TetrasodiumEthylenediaminetetraacetateSolution
     public static Material OneNaphtholTwoDiazoniumChlorideSolution
     public static Material BenzenediazoniumFluorideSolution
-    public static Material BisAzideCrossLinker
 
     // Thermodynamics Materials
 

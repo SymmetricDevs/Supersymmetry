@@ -815,7 +815,23 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13126-13129
+        SupportedAluminumChloride = new Material.Builder(13127,SuSyUtility.susyId('supported_aluminum_chloride'))
+                .dust()
+                .components(AluminumChloride, Alumina)
+                .colorAverage()
+                .build()
+
+        SupportedCopper = new Material.Builder(13128, SuSyUtility.susyId('supported_copper'))
+                .dust()
+                .components(Copper, Alumina)
+                .colorAverage()
+                .build()
+
+        CopperImpregnatedSilica = new Material.Builder(13129, SuSyUtility.susyId('copper_impregnated_silica'))
+                .dust()
+                .components(Copper, Silicon, Oxygen * 2)
+                .colorAverage()
+                .build()
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
