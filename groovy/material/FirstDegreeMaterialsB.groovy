@@ -704,18 +704,24 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .build()
 
-        LacticAcidSolution = new Material.Builder(8770, SuSyUtility.susyId('lactic_acid_solution'))
-                .liquid()
-                .components(LacticAcid, Water)
-                .colorAverage()
-                .build()
-
-        BerylliumCopper = new Material.Builder(8771, SuSyUtility.susyId('beryllium_copper'))
+        BerylliumCopper = new Material.Builder(8770, SuSyUtility.susyId('beryllium_copper'))
                 .ingot().liquid(new FluidBuilder().temperature(1139))
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_PINS)
                 .components(Beryllium * 3, Copper * 97)
                 .colorAverage()
                 .build()
+
+        TriflicAcid = new Material.Builder(8771, SuSyUtility.susyId("triflic_acid"))
+                .liquid()
+                .components(Fluorine * 3, Carbon * 1, Sulfur * 1, Oxygen * 3, Hydrogen * 1)
+                .colorAverage()
+                .build()
+
+        SodiumPolysulfide = new Material.Builder(8772, SuSyUtility.susyId('sodium_polysulfide'))
+                .dust()
+                .components(Sodium * 2, Sulfur * 3)
+                .color(0x630c04)
+                .setFormula("Na2S3")
     }
 }

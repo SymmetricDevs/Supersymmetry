@@ -1106,5 +1106,29 @@ class SecondDegreeMaterials {
                 .components(CopperIINitrate, Water)
                 .colorAverage()
                 .build()
+
+        SodiumTriflate = new Material.Builder(13182, SuSyUtility.susyId('sodium_triflate'))
+                .dust()
+                .components(TriflicAcid, SodiumHydroxide)
+                .colorAverage()
+                .build()
+
+        SodiumTriflateSolution = new Material.Builder(13183, SuSyUtility.susyId('sodium_triflate_solution'))
+                .liquid()
+                .components(SodiumTriflate, Water)
+                .colorAverage()
+                .build()
+
+        TriflicAcidSolution = new Material.Builder(13184, SuSyUtility.susyId('triflic_acid_solution'))
+                .liquid()
+                .components(TriflicAcid, Water)
+                .colorAverage()
+                .build()
+
+        LacticAcidSolution = new Material.Builder(13185, SuSyUtility.susyId('lactic_acid_solution'))
+                .liquid()
+                .components(LacticAcid, Water)
+                .colorAverage()
+                .build()
     }
 }

@@ -1842,7 +1842,6 @@ class UnknownCompositionMaterials {
 
         MolybdenumDialkyldithiophosphate.setFormula("Mo[(S2P(OR)2]2", true)
 
-        // FREE IDs: 4391
         LacticAcidBroth = new Material.Builder(4389, SuSyUtility.susyId("lactic_acid_broth"))
                 .liquid()
                 .color(0x1f423d)
@@ -1851,6 +1850,11 @@ class UnknownCompositionMaterials {
         FilteredLacticAcidBroth = new Material.Builder(4390, SuSyUtility.susyId("filtered_lactic_acid_broth"))
                 .liquid()
                 .color(0x567f64)
+                .build()
+
+        SpentSulfoniumPreparationMixture = new Material.Builder(4391, SuSyUtility.susyId("spent_sulfonium_preparation_mixture"))
+                .liquid()
+                .color(0x756e4b)
                 .build()
 
         DinitrobenzeneMixture = new Material.Builder(4392, SuSyUtility.susyId("dinitrobenzene_mixture"))
