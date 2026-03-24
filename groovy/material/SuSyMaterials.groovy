@@ -311,7 +311,6 @@ class SuSyMaterials {
     public static Material ZincFlue
     public static Material CrudeZinc
     public static Material CadmiumRichZinc
-    public static Material AmorphousSilicaAlumina
     public static Material ImpureSmithsoniteSlurry
     public static Material SmithsoniteSlurry
     public static Material ZincLeach
@@ -1669,6 +1668,7 @@ class SuSyMaterials {
     public static Material SodiumPolysulfide
     public static Material SodiumAzide
     public static Material PhosphorizedCopper
+    public static Material SulfamicAcid
 
     // HP Materials
 
@@ -1906,7 +1906,7 @@ class SuSyMaterials {
     public static Material HoopesElectrolyte
     public static Material SupportedCobalt
     public static Material SupportedSilver
-    public static Material SupportedAluminumChloride
+    public static Material SupportedAluminiumChloride
     public static Material SupportedCopper
     public static Material CopperImpregnatedSilica
     public static Material SodiumTriflateSolution
@@ -2477,7 +2477,7 @@ class SuSyMaterials {
     public static Material SodiumOneNaphtholFiveSulfonate
     public static Material TwoNitrosoOneNaphtholFiveSulfonicAcidSolution
     public static Material DiaminonaphthoquinoneSulfonicAcidSolution
-    public static Material DiazonaphthoquinoneFiveSulfonicAcidSolution
+    public static Material DiazonaphthoquinoneSulfonicAcidSolution
     public static Material DiazonaphthoquinoneFiveSulfonicAcid
     public static Material DiazonaphthoquinoneFiveSulfonylChloride
     public static Material GallicAcidSolution
@@ -2505,8 +2505,15 @@ class SuSyMaterials {
     public static Material Sulfolane
     public static Material NonaflicAcid
     public static Material NonaflicAcidSolution
+    public static Material TwoAminoanthracene
     public static Material StyreneAnthracenylMaleimide
     public static Material StyreneAnthracenylMaleimideSolution
+    public static Material StyreneMaleicAnhydrideSolution
+    public static Material TertButylbenzene
+    public static Material AcidicParaTertButylnitrobenzeneMixture
+    public static Material ParaTertButylnitrobenzeneMixture
+    public static Material ParaTertButylaniline
+    public static Material ParaTertbutyliodobenzeneSolution
     public static Material MetaChloroperoxybenzoicAcid
     public static Material AlphaBromoGammaButyrolactone
     public static Material AllylAlcoholSolution
@@ -2527,7 +2534,6 @@ class SuSyMaterials {
     public static Material TwoAminoanthraquinone
     public static Material TwoEthylOneThreeHexanediol
     public static Material TwoEthylOneThreeHexanediolMixture
-    public static Material BoronExtractionMixture
 
     // Third Degree Materials
 
@@ -2678,6 +2684,7 @@ class SuSyMaterials {
     public static Material AluminiumEtchant
     public static Material BufferedOxideEtchant
     public static Material PhotographicEmulsion
+    public static Material BoronExtractionMixture
 
     // Thermodynamics Materials
 

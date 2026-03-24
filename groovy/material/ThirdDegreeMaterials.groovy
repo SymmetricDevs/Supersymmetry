@@ -80,7 +80,7 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        BufferedOxideEtchant = Material.Builder(24010, SuSyUtility.susyId('buffered_oxide_etchant'))
+        BufferedOxideEtchant = new Material.Builder(24010, SuSyUtility.susyId('buffered_oxide_etchant'))
                 .liquid()
                 .components(AmmoniumFluoride * 3, UltrapureHydrofluoricAcid, UltrapureWater * 13)
                 .colorAverage()
@@ -644,7 +644,7 @@ class ThirdDegreeMaterials {
 
         FourAminophenolSolution.setFormula('(C6H7NO)(C3H8O)(H2O)2', true)
 
-        PhotographicEmulsion = Material.Builder(24102, SuSyUtility.susyId('photographic_emulsion'))
+        PhotographicEmulsion = new Material.Builder(24102, SuSyUtility.susyId('photographic_emulsion'))
                 .liquid()
                 .components(Gelatin, SilverNitrateSolution * 2, SodiumBromideSolution * 2)
                 .colorAverage()
@@ -904,7 +904,7 @@ class ThirdDegreeMaterials {
 
         OneNaphtholTwoDiazoniumChlorideSolution.setFormula('(C10H8ON2Cl)(NaCl)(H2O)4', true)
 
-        AluminiumEtchant = Material.Builder(24145, SuSyUtility.susyId('aluminium_etchant'))
+        AluminiumEtchant = new Material.Builder(24145, SuSyUtility.susyId('aluminium_etchant'))
                 .liquid()
                 .components(UltrapureWater, PhosphoricAcid * 12, NitricAcid * 2, AceticAcid * 35)
                 .colorAverage()

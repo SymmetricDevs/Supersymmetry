@@ -1289,22 +1289,19 @@ class UnknownCompositionMaterials {
                 .color(0xe5b9b5)
                 .build()
 
-        BoraxLiquor = Material.Builder(4248, SuSyUtility.susyId('borax_liquor'))
+        BoraxLiquor = new Material.Builder(4248, SuSyUtility.susyId('borax_liquor'))
                 .liquid()
-                .components(Borax, SulfuricAcid)
-                .colorAverage()
+                .color(0xcea688)
                 .build()
 
-        ColemaniteLiquor = Material.Builder(4249, SuSyUtility.susyId('colemanite_liquor'))
+        ColemaniteLiquor = new Material.Builder(4249, SuSyUtility.susyId('colemanite_liquor'))
                 .liquid()
-                .components(Colemanite, SulfuricAcid)
-                .colorAverage()
+                .color(0xe0e54e)
                 .build()
 
-        KerniteLiquor = Material.Builder(4250, SuSyUtility.susyId('kernite_liquor'))
+        KerniteLiquor = new Material.Builder(4250, SuSyUtility.susyId('kernite_liquor'))
                 .liquid()
-                .components(Kernite, SulfuricAcid)
-                .colorAverage()
+                .color(0xd8b786)
                 .build()
 
         PegmatiteTailingSlurry = new Material.Builder(4251, SuSyUtility.susyId('pegmatite_tailing_slurry'))
@@ -1324,8 +1321,7 @@ class UnknownCompositionMaterials {
 
         MelamineOffgas = new Material.Builder(4254, SuSyUtility.susyId('melamine_offgas'))
                 .gas()
-                .components(Melamine, Air)
-                .colorAverage()
+                .color(0xd0afed)
                 .build()
 
         //FREE ID: 4255
@@ -1335,12 +1331,12 @@ class UnknownCompositionMaterials {
                 .color(0x68695d)
                 .build()
 
-        CrudeAzide = Material.Builder(4257, SuSyUtility.susyId('crude_azide'))
+        CrudeAzide = new Material.Builder(4257, SuSyUtility.susyId('crude_azide'))
                 .dust()
                 .color(0x2b4b6d)
                 .build()
 
-        CrudeAzideSolution = Material.Builder(4258, SuSyUtility.susyId('crude_azide_solution'))
+        CrudeAzideSolution = new Material.Builder(4258, SuSyUtility.susyId('crude_azide_solution'))
                 .liquid()
                 .components(CrudeAzide, Water)
                 .colorAverage()
@@ -1417,28 +1413,24 @@ class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .build()
 
-        ClarifiedBoraxLiquor = Material.Builder(4272, SuSyUtility.susyId('clarified_borax_liquor'))
+        ClarifiedBoraxLiquor = new Material.Builder(4272, SuSyUtility.susyId('clarified_borax_liquor'))
                 .liquid()
-                .components(BoraxLiquor, DistilledWater) // not figuring out the colours myself
-                .colorAverage()
+                .color(0xf7ceaf)
                 .build()
 
-        ClarifiedColemaniteLiquor = Material.Builder(4273, SuSyUtility.susyId('clarified_colemanite_liquor'))
+        ClarifiedColemaniteLiquor = new Material.Builder(4273, SuSyUtility.susyId('clarified_colemanite_liquor'))
                 .liquid()
-                .components(ColemaniteLiquor, DistilledWater)
-                .colorAverage()
+                .color(0xedefa2)
                 .build()
 
-        ClarifiedKerniteLiquor = Material.Builder(4274, SuSyUtility.susyId('clarified_kernite_liquor'))
+        ClarifiedKerniteLiquor = new Material.Builder(4274, SuSyUtility.susyId('clarified_kernite_liquor'))
                 .liquid()
-                .components(KerniteLiquor, DistilledWater)
-                .colorAverage()
+                .color(0xead5b4)
                 .build()
         
-        BoricAcidConcentrate = Material.Builder(4275, SuSyUtility.susyId('boric_acid_concentrate'))
+        BoricAcidConcentrate = new Material.Builder(4275, SuSyUtility.susyId('boric_acid_concentrate'))
                 .liquid()
-                .components(BoronExtract, DistilledWater)
-                .color()
+                .color(0xfc887e)
                 .build()
 
         CalcinedScheelite = new Material.Builder(4276, SuSyUtility.susyId('calcined_scheelite'))
@@ -3389,8 +3381,7 @@ class UnknownCompositionMaterials {
 
         ChlorosilaneMixture = new Material.Builder(4718, SuSyUtility.susyId('chlorosilane_mixture'))
                 .liquid()
-                .components(Silicon, HydrogenChloride)
-                .colorAverage()
+                .color(0x8be288)
                 .build()
 
         GaseousChlorosilaneMixture = new Material.Builder(4719, SuSyUtility.susyId('gaseous_chlorosilane_mixture'))
@@ -3401,8 +3392,7 @@ class UnknownCompositionMaterials {
 
         SiliconCVDOffgas = new Material.Builder(4720, SuSyUtility.susyId('silicon_cvd_offgas'))
                 .gas()
-                .components(Trichlorosilane, Hydrogen)
-                .colorAverage()
+                .color(0xdcf2d2)
                 .build()
     }
 }
