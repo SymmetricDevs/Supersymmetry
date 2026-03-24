@@ -2,28 +2,6 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 // TODO: move other organic solvents (THF etc.) here
-
-// Ketones
-
-    // Methyl Ethyl Ketone (MEK)
-
-    FIXED_BR.recipeBuilder()
-        .notConsumable(ore('catalystBedCopper'))
-        .fluidInputs(fluid('two_butanol') * 50)
-        .fluidOutputs(fluid('methyl_ethyl_ketone_solution') * 100)
-        .duration(5)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    SIEVE_DT.recipeBuilder()
-        .notConsumable(fluid('toluene') * 100)
-        .fluidInputs(fluid('methyl_ethyl_ketone_solution') * 2000)
-        .fluidOutputs(fluid('water') * 1000)
-        .fluidOutputs(fluid('methyl_ethyl_ketone') * 1000)
-        .duration(200)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
 // Glycols
 
     // Ethylene glycol
