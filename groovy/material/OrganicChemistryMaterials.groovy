@@ -3941,5 +3941,24 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
         TwoAminoanthraquinone.setFormula("C14H9NO2")
+        
+        TwoEthylOneThreeHexanediol = Material.Builder(15615, SuSyUtility.susyId('two_ethyl_one_three_hexanediol'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 18, Oxygen * 2)
+                .colorAverage()
+                .build()
+        TwoEthylOneThreeHexanediol.setFormula("C8H18O2")
+        
+        TwoEthylOneThreeHexanediolMixture = Material.Builder(15616, SuSyUtility.susyId('two_ethyl_one_three_hexanediol_mixture'))
+                .liquid()
+                .components(Water, TwoEthylOneThreeHexanediol)
+                .colorAverage()
+                .build()
+
+        BoronExtractionMixture = Material.Builder(15617, SuSyUtility.susyId('boron_extraction_mixture'))
+                .liquid()
+                .components(TwoEthylOneThreeHexanediol, Kerosene)
+                .colorAverage()
+                .build()
     }
 }       

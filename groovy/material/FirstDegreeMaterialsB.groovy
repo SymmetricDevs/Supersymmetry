@@ -732,5 +732,17 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .build()
         SodiumAzide.setFormula("NaN3")
+
+        PhosphorizedCopper = Material.Builder(8774, SuSyUtility.susyId('phosphorized_copper'))
+                .components(Copper)
+                .flags(GENERATE_DUST, GENERATE_FOIL, GENERATE_LIQUID)
+                .color(0xed9436)
+                .build()
+
+        SulfamicAcid = Material.Builder(8775, SuSyUtility.susyId('sulfamic_acid'))
+                .dust()
+                .components(Sulfur, Oxygen * 3, Hydrogen * 3, Nitrogen)
+                .colorAverage()
+                .build()
     }
 }

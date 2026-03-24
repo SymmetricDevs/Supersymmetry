@@ -865,7 +865,17 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13134-13135
+        BoricAcidSolution = Material.Builder(13134, SuSyUtility.susyId('boric_acid_solution'))
+                .liquid()
+                .components(BoricAcid, Water)
+                .colorAverage()
+                .build()
+
+        DilutedMagnesiumChlorideSolution = Material.Builder(13135, SuSyUtility.susyId('diluted_magnesium_chloride_solution'))
+                .liquid()
+                .components(MagnesiumChlorideSolution, DistilledWater)
+                .colorAverage()
+                .build()
 
         SodiumHydrosulfideSolution = new Material.Builder(13136, SuSyUtility.susyId('sodium_hydrosulfide_solution'))
                 .fluid()
@@ -1109,8 +1119,14 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE IDs: 13175-13177
-      
+        BoronMixture = Material.Builder(13175, SuSyUtility.susyId('boron_mixture'))
+                .dust()
+                .components(BoronTrioxide * 5, Magnesium * 3)
+                .colorAverage()
+                .build()
+
+        // FREE IDs: 13176-13177
+
         YttriumAluminiumGarnetCerium = new Material.Builder(13178, SuSyUtility.susyId('yttrium_aluminium_garnet_cerium'))
                 .dust()
                 .color(0xfff1a8)

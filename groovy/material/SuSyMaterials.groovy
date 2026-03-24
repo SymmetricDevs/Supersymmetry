@@ -816,6 +816,20 @@ class SuSyMaterials {
     public static Material NitrileRubberLatex
     public static Material LacticAcidBroth
     public static Material FilteredLacticAcidBroth
+    public static Material BoronExtract
+    public static Material BoraxLiquor
+    public static Material ColemaniteLiquor
+    public static Material KerniteLiquor
+    public static Material ClarifiedBoraxLiquor
+    public static Material ClarifiedColemaniteLiquor
+    public static Material ClarifiedKerniteLiquor
+    public static Material BoricAcidConcentrate
+    public static Material ChlorosilaneMixture
+    public static Material GaseousChlorosilaneMixture
+    public static Material SiliconCVDOffgas
+    public static Material MelamineOffgas
+    public static Material CrudeAzide
+    public static Material CrudeAzideSolution
 
     // Petrochem Materials
 
@@ -1654,6 +1668,7 @@ class SuSyMaterials {
     public static Material TriflicAcid
     public static Material SodiumPolysulfide
     public static Material SodiumAzide
+    public static Material PhosphorizedCopper
 
     // HP Materials
 
@@ -1901,6 +1916,9 @@ class SuSyMaterials {
     public static Material AmorphousSilicaAlumina
     public static Material UltrapureHydrofluoricAcid
     public static Material UltrapureIronIiiChlorideSolution
+    public static Material BoricAcidSolution
+    public static Material BoronMixture
+    public static Material DilutedMagnesiumChlorideSolution
 
     // Organic Chemistry Materials
 
@@ -2507,6 +2525,9 @@ class SuSyMaterials {
     public static Material TwoMethylTwoAdamantanolSolution
     public static Material TwoMethylTwoAdamantylMethacrylate
     public static Material TwoAminoanthraquinone
+    public static Material TwoEthylOneThreeHexanediol
+    public static Material TwoEthylOneThreeHexanediolMixture
+    public static Material BoronExtractionMixture
 
     // Third Degree Materials
 
