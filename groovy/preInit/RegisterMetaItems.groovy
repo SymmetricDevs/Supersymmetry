@@ -25,7 +25,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(101, "hot.cement.clinker")
         addItem(102, "cement.dust")
 
-        // Free ID: 103
+        addItem(103, "laminated_dry_film_photoresist")
 
         addItem(104, "shape.mold.rod")
         addItem(105, "shape.mold.crucible")

@@ -80,7 +80,11 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 24010
+        BufferedOxideEtchant = Material.Builder(24010, SuSyUtility.susyId('buffered_oxide_etchant'))
+                .liquid()
+                .components(AmmoniumFluoride * 3, UltrapureHydrofluoricAcid, UltrapureWater * 13)
+                .colorAverage()
+                .build()
 
         SodiumEthoxideSolution = new Material.Builder(24011, SuSyUtility.susyId('sodium_ethoxide_solution'))
                 .liquid()
@@ -640,7 +644,11 @@ class ThirdDegreeMaterials {
 
         FourAminophenolSolution.setFormula('(C6H7NO)(C3H8O)(H2O)2', true)
 
-        // FREE ID: 24102
+        PhotographicEmulsion = Material.Builder(24102, SuSyUtility.susyId('photographic_emulsion'))
+                .liquid()
+                .components(Gelatin, SilverNitrateSolution * 2, SodiumBromideSolution * 2)
+                .colorAverage()
+                .build()
 
         IsopropylamineSolution = new Material.Builder(24103, SuSyUtility.susyId('isopropylamine_solution'))
                 .liquid()
@@ -896,8 +904,12 @@ class ThirdDegreeMaterials {
 
         OneNaphtholTwoDiazoniumChlorideSolution.setFormula('(C10H8ON2Cl)(NaCl)(H2O)4', true)
 
-        // FREE ID: 24145
-        
+        AluminiumEtchant = Material.Builder(24145, SuSyUtility.susyId('aluminium_etchant'))
+                .liquid()
+                .components(UltrapureWater, PhosphoricAcid * 12, NitricAcid * 2, AceticAcid * 35)
+                .colorAverage()
+                .build()
+
         BenzenediazoniumFluorideSolution = new Material.Builder(24146, SuSyUtility.susyId('benzenediazonium_fluoride_solution'))
                 .liquid()
                 .components(BenzenediazoniumFluoride, SodiumFluoride, Water * 4)

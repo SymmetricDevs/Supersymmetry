@@ -717,6 +717,7 @@ class FirstDegreeMaterialsB {
                 .components(Fluorine * 3, Carbon * 1, Sulfur * 1, Oxygen * 3, Hydrogen * 1)
                 .colorAverage()
                 .build()
+        TriflicAcid.setFormula("CF3SO3H")
 
         SodiumPolysulfide = new Material.Builder(8772, SuSyUtility.susyId('sodium_polysulfide'))
                 .dust()
@@ -724,5 +725,12 @@ class FirstDegreeMaterialsB {
                 .color(0x630c04)
                 .build()
         SodiumPolysulfide.setFormula("Na2S3")
+
+        SodiumAzide = Material.Builder(8773, SuSyUtility.susyId('sodium_azide'))
+                .dust()
+                .components(Sodium, Nitrogen * 3)
+                .colorAverage()
+                .build()
+        SodiumAzide.setFormula("NaN3")
     }
 }

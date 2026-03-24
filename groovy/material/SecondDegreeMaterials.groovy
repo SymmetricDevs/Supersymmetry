@@ -805,24 +805,28 @@ class SecondDegreeMaterials {
         
         SupportedCobalt = new Material.Builder(13125, SuSyUtility.susyId('supported_cobalt'))
                 .dust()
+                .flags(GENERATE_CATALYST_BED)
                 .components(Cobalt, Alumina)
                 .colorAverage()
                 .build()
 
         SupportedSilver = new Material.Builder(13126, SuSyUtility.susyId('supported_silver'))
                 .dust()
+                .flags(GENERATE_CATALYST_BED)
                 .components(Silver, Alumina)
                 .colorAverage()
                 .build()
 
-        SupportedAluminumChloride = new Material.Builder(13127,SuSyUtility.susyId('supported_aluminum_chloride'))
+        SupportedAluminiumChloride = new Material.Builder(13127,SuSyUtility.susyId('supported_aluminium_chloride'))
                 .dust()
+                .flags(GENERATE_CATALYST_BED)
                 .components(AluminumChloride, Alumina)
                 .colorAverage()
                 .build()
 
         SupportedCopper = new Material.Builder(13128, SuSyUtility.susyId('supported_copper'))
                 .dust()
+                .flags(GENERATE_CATALYST_BED)
                 .components(Copper, Alumina)
                 .colorAverage()
                 .build()
@@ -1097,8 +1101,15 @@ class SecondDegreeMaterials {
                 .liquid()
                 .color(0xd6d1a9)
                 .build()
+        
+        AmorphousSilicaAlumina = Material.Builder(13174 , SuSyUtility.susyId('amorphous_silica_alumina'))
+                .dust()
+                .flag(GENERATE_CATALYST_BED)
+                .components(Silicon, Oxygen * 2, Alumina)
+                .colorAverage()
+                .build()
 
-        // FREE IDs: 13174-13177
+        // FREE IDs: 13175-13177
       
         YttriumAluminiumGarnetCerium = new Material.Builder(13178, SuSyUtility.susyId('yttrium_aluminium_garnet_cerium'))
                 .dust()
@@ -1145,6 +1156,19 @@ class SecondDegreeMaterials {
                 .liquid()
                 .components(LacticAcid, Water)
                 .colorAverage()
+                .build()
+
+        UltrapureHydrofluoricAcid = Material.Builder(13186, SuSyUtility.susyId('ultrapure_hydrofluoric_acid'))
+                .liquid()
+                .components(Hydrogen, Fluorine, Water)
+                .color(0x0fc3d4)
+                .build()
+        UltrapureHydrofluoricAcid.setFormula("HF")
+
+        UltrapureIronIiiChlorideSolution = Material.Builder(13187, SuSyUtility.susyId('ultrapure_iron_iii_chloride_solution'))
+                .liquid()
+                .components(Iron, Chlorine * 3, Water)
+                .color(0x472500)
                 .build()
     }
 }

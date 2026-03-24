@@ -1653,6 +1653,7 @@ class SuSyMaterials {
     public static Material BerylliumCopper
     public static Material TriflicAcid
     public static Material SodiumPolysulfide
+    public static Material SodiumAzide
 
     // HP Materials
 
@@ -1897,6 +1898,9 @@ class SuSyMaterials {
     public static Material SodiumTriflate
     public static Material TriflicAcidSolution
     public static Material LacticAcidSolution
+    public static Material AmorphousSilicaAlumina
+    public static Material UltrapureHydrofluoricAcid
+    public static Material UltrapureIronIiiChlorideSolution
 
     // Organic Chemistry Materials
 
@@ -2430,8 +2434,8 @@ class SuSyMaterials {
     public static Material ParaEthylphenol
     public static Material ParaVinylphenol
     public static Material AcrylateResistMixture
-    public static Material DimethylAniline
-    public static Material DimethylAnilineSolution
+    public static Material Dimethylaniline
+    public static Material DimethylanilineSolution
     public static Material NovolacLiftoffResist
     public static Material PropyleneGlycol
     public static Material PropyleneGlycolMethylEther
@@ -2443,8 +2447,8 @@ class SuSyMaterials {
     public static Material BisAzideCrosslinker
     public static Material BisAzideCrosslinkerSolution
     public static Material FourMethylcyclohexanone
-    public static Material ParaAzidoBenzaldehyde
-    public static Material ParaAzidoBenzaldehydeSolution
+    public static Material ParaAzidobenzaldehyde
+    public static Material ParaAzidobenzaldehydeSolution
     public static Material ParaDiazoBenzaldehydeChlorideSolution
     public static Material ParaAminobenzaldehyde
     public static Material NovolacEBRSolvent
@@ -2468,6 +2472,41 @@ class SuSyMaterials {
     public static Material Polyhydroxystyrene
     public static Material PolyhydroxystyreneSolution
     public static Material MichlersKetone
+    public static Material Sulfolene
+    public static Material TripropylamineTriflate
+    public static Material MethylmagnesiumChlorideSolution
+    public static Material Hexamethyldisilazane
+    public static Material HexamethyldisilazaneSolution
+    public static Material ParaTertbutyliodobenzene
+    public static Material Tricyclodecane
+    public static Material TriphenylsulfoniumTriflate
+    public static Material PolyhydroxystyreneResist
+    public static Material TwoMethylTwoAdamantanol
+    public static Material AlphaHydroxyGammaButyrolactone
+    public static Material TwoChloroanthraquinone
+    public static Material Sulfolane
+    public static Material NonaflicAcid
+    public static Material NonaflicAcidSolution
+    public static Material StyreneAnthracenylMaleimide
+    public static Material StyreneAnthracenylMaleimideSolution
+    public static Material MetaChloroperoxybenzoicAcid
+    public static Material AlphaBromoGammaButyrolactone
+    public static Material AllylAlcoholSolution
+    public static Material BisSodiumSulfopropylDisulfide
+    public static Material BisSulfopropylDisulfideSolution
+    public static Material PropaneOneThreeSultone
+    public static Material PropaneOneThreeSultoneSolution
+    public static Material DiFourTertButylphenyliodoniumNonaflate
+    public static Material FluorinatedSulfolaneMixture
+    public static Material Hexamethoxymethylmelamine
+    public static Material KRF_BARC
+    public static Material Melamine
+    public static Material ParaAminobenzaldehydeSolution
+    public static Material PerfluorobutanesulfonylFluoride
+    public static Material TrimethylsilylChloride
+    public static Material TwoMethylTwoAdamantanolSolution
+    public static Material TwoMethylTwoAdamantylMethacrylate
+    public static Material TwoAminoanthraquinone
 
     // Third Degree Materials
 
@@ -2615,6 +2654,9 @@ class SuSyMaterials {
     public static Material TetrasodiumEthylenediaminetetraacetateSolution
     public static Material OneNaphtholTwoDiazoniumChlorideSolution
     public static Material BenzenediazoniumFluorideSolution
+    public static Material AluminiumEtchant
+    public static Material BufferedOxideEtchant
+    public static Material PhotographicEmulsion
 
     // Thermodynamics Materials
 
