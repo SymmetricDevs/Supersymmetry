@@ -58,7 +58,7 @@ class FirstDegreeMaterialsA {
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
         HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true)
         HighPurityAluminium.addFlags(GENERATE_FOIL)
-        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false)
+        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, true)
         HighPuritySilicon.addFlags(GENERATE_ROD, FORCE_GENERATE_BLOCK)
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)
@@ -834,7 +834,7 @@ class FirstDegreeMaterialsA {
                 .build()
 
         PurifiedAntimonyTrioxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_trioxide'))
-                .dust()
+                .dust().gas(new FluidBuilder().temperature(1698))
                 .components(Antimony * 2, Oxygen * 3)
                 .color(0x92d1d4)
                 .build()

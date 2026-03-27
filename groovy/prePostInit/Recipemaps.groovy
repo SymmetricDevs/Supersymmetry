@@ -127,4 +127,6 @@ class Recipemaps {
     static final def RESIST_PROCESSOR = recipemap('resist_processing')
     static final def PLASMA_ASHER = recipemap('plasma_ashing')
     static final def ELECTRON_BEAM_LITHOGRAPHY = recipemap('electron_beam_lithography')
+    static final def EVAPORATION = recipemap('evaporation_deposition')
+    static final def WIRE_BONDING = recipemap('wire_bonding') // ball bonding?
 }

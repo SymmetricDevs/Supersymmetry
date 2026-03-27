@@ -915,5 +915,11 @@ class ThirdDegreeMaterials {
                 .components(BenzenediazoniumFluoride, SodiumFluoride, Water * 4)
                 .colorAverage()
                 .build()
+
+        BoronExtractionMixture = new Material.Builder(24147, SuSyUtility.susyId('boron_extraction_mixture'))
+                .liquid()
+                .components(TwoEthylOneThreeHexanediol, Kerosene)
+                .colorAverage()
+                .build()
     }
 }

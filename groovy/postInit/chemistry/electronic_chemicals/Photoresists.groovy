@@ -149,7 +149,7 @@ DT.recipeBuilder()
     BR.recipeBuilder()
         .inputs(ore('dustDiazonaphthoquinoneFiveSulfonicAcid'))
         .fluidInputs(fluid('chlorosulfuric_acid') * 1000)
-        .outputs(ore('dustDiazonaphthoquinoneFiveSulfonylChloride'))
+        .outputs(metaitem('dustDiazonaphthoquinoneFiveSulfonylChloride'))
         .fluidOutputs(fluid('hydrogen_chloride') * 1000)
         .duration(100)
         .EUt(VA[LV])
@@ -744,7 +744,7 @@ DT.recipeBuilder()
 
     // Final mixing
 
-    BLENDER.recipeBuilder
+    BLENDER.recipeBuilder()
         .inputs(ore('dustTinyStyreneAnthracenylMaleimide') * 3)
         .inputs(ore('dustTripropylamineTriflate'))
         .inputs(ore('dustHexamethoxymethylmelamine') * 8)

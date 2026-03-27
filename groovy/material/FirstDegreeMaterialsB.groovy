@@ -713,7 +713,7 @@ class FirstDegreeMaterialsB {
                 .build()
 
         TriflicAcid = new Material.Builder(8771, SuSyUtility.susyId("triflic_acid"))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Fluorine * 3, Carbon * 1, Sulfur * 1, Oxygen * 3, Hydrogen * 1)
                 .colorAverage()
                 .build()
@@ -743,6 +743,36 @@ class FirstDegreeMaterialsB {
         SulfamicAcid = new Material.Builder(8775, SuSyUtility.susyId('sulfamic_acid'))
                 .dust()
                 .components(Sulfur, Oxygen * 3, Hydrogen * 3, Nitrogen)
+                .colorAverage()
+                .build()
+
+        GammaIronThreeOxide = new Material.Builder(8776, SuSyUtility.susyId('gamma_iron_three_oxide'))
+                .dust()
+                .build()
+
+        Dumet = new Material.Builder(8777, SuSyUtility.susyId('dumet'))
+                .flags(GENERATE_FINE_WIRE)
+                .build()
+
+        Permendur = new Material.Builder(8778, SuSyUtility.susyId('permendur'))
+                .flags(GENERATE_BOLT_SCREW)
+                .build()
+
+        FormingGas = new Material.Builder(8779, SuSyUtility.susyId('forming_gas'))
+                .gas()
+                .components(Hydrogen, Nitrogen * 19)
+                .colorAverage()
+                .build()
+
+        GermaniumTetrahydride = new Material.Builder(8780, SuSyUtility.susyId('germanium_tetrahydride'))
+                .gas()
+                .components(Germanium, Hydrogen * 4)
+                .colorAverage()
+                .build()
+
+        TungstenHexafluoride = new Material.Builder(8781, SuSyUtility.susyId('tungsten_hexafluoride'))
+                .gas(new FluidBuilder.attribute(FluidAttributes.ACID))
+                .components(Tungsten, Fluorine * 6)
                 .colorAverage()
                 .build()
     }

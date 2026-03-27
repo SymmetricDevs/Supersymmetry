@@ -26,7 +26,7 @@ class Etching {
 
     static class Etchant {
         String fluidName
-        String voltageTier
+        int voltageTier
         int amountUsed
         double etchingRate
         boolean anisotropic
@@ -117,7 +117,7 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (etchant.etchingRate * duration))
+                    .duration((int) (1/etchant.etchingRate * duration))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()
@@ -136,7 +136,7 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (etchant.etchingRate * duration))
+                    .duration((int) (1/etchant.etchingRate * duration))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()

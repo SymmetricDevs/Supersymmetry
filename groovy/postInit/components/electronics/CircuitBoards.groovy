@@ -1,5 +1,5 @@
 import globals.Globals
-import globals.Etching
+import globals.semiconductors.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -60,17 +60,18 @@ FORMING_PRESS.recipeBuilder()
         .cleanroom(CleanroomType.CLEANROOM)
         .buildAndRegister();
 
+/*
 UV_LIGHT_BOX.recipeBuilder()
         .inputs(metaitem('board.epoxy.resist'))
         .notConsumable(metaitem('mask.pcb'))
         .outputs(metaitem('board.epoxy.patterned'))
-        .duration(photoresist.timeUsed * timeMultiplier)
-        .EUt(VA[voltageTier]);
+        .duration(photoresist.timeUsed * timeMultiplier) // FIXME: idk what should be done here since it only looks like one type of photoresist is used
+        .EUt(VA[voltageTier])
         .cleanroom(CleanroomType.CLEANROOM)
-        .buildAndRegister();
+        .buildAndRegister();*/
 
 // Etched
-Etching.generateWetEtchingRecipe("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true, false)
+Etching.generateWetEtchingRecipe("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true) //, false) ? extra argument
 
 // Drilled
 MILLING.recipeBuilder()

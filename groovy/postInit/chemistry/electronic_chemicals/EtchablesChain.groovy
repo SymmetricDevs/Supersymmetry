@@ -1,6 +1,6 @@
 import globals.Globals
-import globals.Photolithography
-import globals.Etchants
+import globals.semiconductors.Photolithography
+import globals.semiconductors.Etchants
 import globals.PDopants
 import globals.NDopants
 

@@ -1,11 +1,11 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.cleanroom.CleanroomType
-import globals.Lithography
-import globals.Etchants
-import globals.Deposition
-import globals.Packaging
-import globals.Doping
+import globals.semiconductors.Lithography
+import globals.semiconductors.Etchants
+import globals.semiconductors.Deposition
+import globals.semiconductors.Packaging
+import globals.semiconductors.Doping
 
 oreDict.add('componentTransistor', metaitem('component.transistor.alloy_junction'))
 

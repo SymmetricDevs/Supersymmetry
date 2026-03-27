@@ -229,14 +229,14 @@ BR.recipeBuilder()
 
 // Azides
 
-BCR.recipeBuilder()
+/*BCR.recipeBuilder()
     .fluidInputs(fluid('sodium_amide') * 1152)
     .fluidInputs(fluid('nitrous_oxide') * 1000)
-    .outputs(metaitem('crude_azide') * 4)
+    .fluidOutput(fluid('crude_azide') * 4) // FIXME: BCR doesn't allow solid output, but crude azide should be solid
     .fluidOutputs(fluid('ammonia') * 1000)
     .EUt(VA[MV])
     .duration(200)
-    .buildAndRegister()
+    .buildAndRegister()*/
 
 BR.recipeBuilder()
     .inputs(ore('dustCrudeAzide') * 7)

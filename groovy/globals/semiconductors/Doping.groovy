@@ -48,8 +48,7 @@ class Doping {
     // Diffusion doping
 
     static void generateBoronDiffusionDopingRecipes(String input, String product, int duration) {
-        RESISTANCE_FURNACE.recipeBuilder() // BCl3 gaseous diffusion doping
-            .notConsumable(metaitem('tube.quartz'))
+        TUBE_FURNACE.recipeBuilder() // BCl3 gaseous diffusion doping
             .inputs(metaitem(input))
             .fluidInputs(fluid('boron_trichloride') * 50)
             .fluidInputs(fluid('oxygen') * 300)
@@ -66,8 +65,7 @@ class Doping {
     }
 
     static void generatePhosphorusDiffusionDopingRecipes(String input, String product, int duration) {
-        RESISTANCE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
-            .notConsumable(metaitem('tube.quartz'))
+        TUBE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
             .inputs(metaitem(input))
             .fluidInputs(fluid('phosphoryl_chloride') * 50)
             .fluidInputs(fluid('oxygen') * 300)
@@ -84,7 +82,7 @@ class Doping {
     }
 
     static void generateDriveInRecipe(String input, String product, int duration) {
-        RESISTANCE_FURNACE.recipeBuilder() // Drive-in of diffusant
+        TUBE_FURNACE.recipeBuilder() // Drive-in of diffusant
             .notConsumable(ore('springCupronickel'))
             .fluidInputs(fluid('nitrogen') * 100)
             .inputs(metaitem(input))

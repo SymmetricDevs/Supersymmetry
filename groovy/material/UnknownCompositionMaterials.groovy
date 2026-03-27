@@ -1324,7 +1324,9 @@ class UnknownCompositionMaterials {
                 .color(0xd0afed)
                 .build()
 
-        //FREE ID: 4255
+        EpoxyResin = new Material.Builder(4255, SuSyUtility.susyId('epoxy_resin'))
+                .liquid()
+                .build()
 
         LimestoneTailingSlurry = new Material.Builder(4256, SuSyUtility.susyId('limestone_tailing_slurry'))
                 .liquid()
@@ -3393,6 +3395,22 @@ class UnknownCompositionMaterials {
         SiliconCVDOffgas = new Material.Builder(4720, SuSyUtility.susyId('silicon_cvd_offgas'))
                 .gas()
                 .color(0xdcf2d2)
+                .build()
+
+        BurnedGas = new Material.Builder(4721, SuSyUtility.susyId('burned_gas'))
+                .gas()
+                .build()
+
+        CorrosiveGas = new Material.Builder(4722, SuSyUtility.susyId('corrosive_gas'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .build()
+
+        MagneticLiningSlurry = new Material.Builder(4723, SuSyUtility.susyId('magnetic_lining_slurry'))
+                .liquid()
+                .build()
+
+        CarbonCompound = new Material.Builder(4724, SuSyUtility.susyId('carbon_compound'))
+                .dust()
                 .build()
     }
 }

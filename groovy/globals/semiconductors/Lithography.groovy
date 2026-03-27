@@ -27,7 +27,7 @@ class Lithography {
             this.liftoff = liftoff
         }
 
-        def generateCoatingRecipe(String input, boolean hmds = false, int circuit = null) {
+        def generateCoatingRecipe(String input, boolean hmds = false, Integer circuit = null) {
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid(this.resistName) * 50)
@@ -37,7 +37,7 @@ class Lithography {
                 .duration(this.timeUsed)
                 .EUt(VA[this.voltageTier])
 
-            if (circ != null) {coatingRecipe.circuitMeta(circ)}
+            if (circuit != null) {coatingRecipe.circuitMeta(circuit)}
             if (hmds) {coatingRecipe.fluidInputs(fluid('hexamethyldisilazane') * 10)}
             coatingRecipe.buildAndRegister()
         }
@@ -87,7 +87,7 @@ class Lithography {
         new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", "EV", "electron_beam_lithography", 1000)
     ]
 
-    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, int circ = null) {
+    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, Integer circ = null) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 photoresist.generateCoatingRecipe(input, hmds, circ)
@@ -97,7 +97,7 @@ class Lithography {
         }
     }
 
-    static void generateElectronBeamLithographyRecipes(String input, String product, String resistNeeded, int circ = null) {
+    static void generateElectronBeamLithographyRecipes(String input, String product, String resistNeeded, Integer circ = null) {
         for (resist in electronBeamResists) {
             if (resist.resistName == resistNeeded) {
                 resist.generateCoatingRecipe(input, false, circ)
@@ -112,13 +112,11 @@ class Lithography {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
-                .outputs(metaitem(input + '.stripped'))
+                .outputs(metaitem(product))
                 .duration(400 * timeMultiplier)
                 .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
-
-            input = input + '.stripped'
         }
 
         def ashed = "";

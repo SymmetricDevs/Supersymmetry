@@ -68,7 +68,7 @@ def nonMetals = [
         [input: metaitem('raw_electrode'), output: metaitem('carbon_electrode')],
         [input: metaitem('raw_carbon_crucible'), output: metaitem('carbon_crucible')],
         [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('clay_graphite_crucible')],
-        [input: metaitem('component.resistor.unfired_carbon_composite'), output: metaitem('component.resistor.fired_carbon_composite')],
+        [input: metaitem('component.resistor.carbon_composite.unfired'), output: metaitem('component.resistor.carbon_composite.fired')],
         [input: ore('blockGreenCarbon'), output: ore('blockBakedCarbon').first()]
 ]
 

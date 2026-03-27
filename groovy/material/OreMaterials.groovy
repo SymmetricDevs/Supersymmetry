@@ -719,5 +719,12 @@ class OreMaterials {
                 .color(0xcad7e8)
                 .components(Magnesium, Sulfur, Oxygen * 4, Water * 7)
                 .build()
+
+        Dolime = new Material.Builder(7095, SuSyUtility.susyId('dolime'))
+                .dust()
+                .flags(NO_UNIFICATION)
+                .color(0xb2ac9b)
+                .components(Calcium, Magnesium, Oxygen * 2) //mixture of CaO and MgO
+                .build()
     }
 }

@@ -178,7 +178,7 @@ class ChangeFlags {
         Nickel.addFlags("generate_catalyst_bed");
         Magnesia.addFlags("generate_catalyst_bed");
         CupricOxide.addFlags("generate_catalyst_bed");
-        Brass.addFlags("generate_ring");
+        Brass.addFlags("generate_ring", "generate_pins");
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");

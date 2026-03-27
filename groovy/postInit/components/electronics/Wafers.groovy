@@ -1,6 +1,8 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-import gregtech.api.recipes.chance.output.ChancedOutputLogic;
+
+import gregtech.api.recipes.chance.output.ChancedOutputLogic
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 // Seed crystal from Bridgman-Stockbarger growth
 
@@ -35,56 +37,64 @@ CRYSTALLIZER.recipeBuilder()
 // Doped mixtures
 
 // Float zone refining process (Small pieces, needed MV+)
+def induction_coils = [
+    metaitem('coated_copper_coil'),
+    metaitem('cured_coated_coil'),
+    metaitem('copper_coil')
+]
 
-ZONE_REFINER.recipeBuilder()
-    .notConsumable(metaitem('induction_coil'))
-    .notConsumable(metaitem('electric.pump.mv'))
-    .fluidInputs(fluid('phosphine'))
-    .inputs(ore('seed_crystal.silicon'))
-    .inputs(ore('blockHighPuritySilicon'))
-    .outputs(metaitem('boule.silicon.fz.n_doped'))
-    .duration(9600)
-    .EUt(VA[MV])
-    .buildAndRegister()
+for (induction_coil in induction_coils) {
+// FIXME: none of these recipes work due to zone refiner having max 1 solid input
+    ZONE_REFINER.recipeBuilder()
+        .notConsumable(induction_coil)
+        .notConsumable(metaitem('electric.pump.mv'))
+        .fluidInputs(fluid('phosphine'))
+        .inputs(ore('seed_crystal.silicon'))
+        .inputs(ore('blockHighPuritySilicon'))
+        .outputs(metaitem('boule.silicon.fz.n_doped'))
+        .duration(9600)
+        .EUt(VA[MV])
+        .buildAndRegister()
 
-ZONE_REFINER.recipeBuilder()
-    .notConsumable(metaitem('induction_coil'))
-    .notConsumable(fluid('argon') * 100)
-    .fluidInputs(fluid('phosphine'))
-    .inputs(ore('seed_crystal.silicon'))
-    .inputs(ore('blockHighPuritySilicon'))
-    .outputs(metaitem('boule.silicon.fz.n_doped'))
-    .duration(1200)
-    .EUt(VA[MV])
-    .buildAndRegister()
+    ZONE_REFINER.recipeBuilder()
+        .notConsumable(induction_coil)
+        .notConsumable(fluid('argon') * 100)
+        .fluidInputs(fluid('phosphine'))
+        .inputs(ore('seed_crystal.silicon'))
+        .inputs(ore('blockHighPuritySilicon'))
+        .outputs(metaitem('boule.silicon.fz.n_doped'))
+        .duration(1200)
+        .EUt(VA[MV])
+        .buildAndRegister()
 
-ZONE_REFINER.recipeBuilder()
-    .notConsumable(metaitem('induction_coil'))
-    .notConsumable(metaitem('electric.pump.mv'))
-    .fluidInputs(fluid('phosphine') * 100)
-    .inputs(ore('seed_crystal.silicon'))
-    .inputs(ore('blockHighPuritySilicon'))
-    .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
-    .duration(9600)
-    .EUt(VA[MV])
-    .buildAndRegister()
+    ZONE_REFINER.recipeBuilder()
+        .notConsumable(induction_coil)
+        .notConsumable(metaitem('electric.pump.mv'))
+        .fluidInputs(fluid('phosphine') * 100)
+        .inputs(ore('seed_crystal.silicon'))
+        .inputs(ore('blockHighPuritySilicon'))
+        .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
+        .duration(9600)
+        .EUt(VA[MV])
+        .buildAndRegister()
 
-ZONE_REFINER.recipeBuilder()
-    .notConsumable(metaitem('induction_coil'))
-    .notConsumable(fluid('argon') * 100)
-    .fluidInputs(fluid('phosphine') * 100)
-    .inputs(ore('seed_crystal.silicon'))
-    .inputs(ore('blockHighPuritySilicon'))
-    .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
-    .duration(1200)
-    .EUt(VA[MV])
-    .buildAndRegister()
+    ZONE_REFINER.recipeBuilder()
+        .notConsumable(induction_coil)
+        .notConsumable(fluid('argon') * 100)
+        .fluidInputs(fluid('phosphine') * 100)
+        .inputs(ore('seed_crystal.silicon'))
+        .inputs(ore('blockHighPuritySilicon'))
+        .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
+        .duration(1200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+}
 
 // Small scale Czochiralski process
 
 CRYSTALLIZER.recipeBuilder()
     .fluidInputs(fluid('phosphine'))    
-    .notConsumable(metaitem('crucible.graphite'))
+    .notConsumable(metaitem('crucible.graphite')) // this one has too many inputs as well; remove pump input?
     .notConsumable(metaitem('electric.pump.mv'))
     .inputs(ore('seed_crystal.germanium'))
     .inputs(ore('blockHighPurityGermanium'))
@@ -144,7 +154,7 @@ CRYSTALLIZER.recipeBuilder()
 
 // Wafer preparation
 
-public static class Wafer {
+class Wafer {
     String boule_name
     String wafer_name
     String seed_name
@@ -186,7 +196,7 @@ public static class Wafer {
     }
 }
 
-public static final wafers = [
+def wafers = [
     new Wafer('boule.silicon.cz', 'wafer.silicon', 'seed_crystal.silicon', false),
     new Wafer('boule.silicon.cz.p_doped', 'wafer.silicon.p_doped', 'seed_crystal.silicon', false),
     new Wafer('boule.silicon.cz.n_doped', 'wafer.silicon.n_doped', 'seed_crystal.silicon', false),
@@ -311,7 +321,6 @@ for (wafer in wafers) {
     def treatmentRecipe = CHEMICAL_BATH.recipeBuilder()
         .inputs(wafer.getPolishedWafer())
         .outputs(wafer.getWafer())
-        .buildAndRegister()
 
     if (wafer.isSmall()) {
         treatmentRecipe.fluidInputs(fluid('standard_clean_one') * 50)
@@ -326,4 +335,6 @@ for (wafer in wafers) {
         treatmentRecipe.fluidOutputs(fluid('acidic_wastewater') * 600)
         treatmentRecipe.duration(600).EUt(VA[HV])
     }
+
+    treatmentRecipe.buildAndRegister()
 }

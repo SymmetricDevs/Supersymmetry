@@ -7,6 +7,47 @@ import gregtech.api.items.metaitem.ElectricStats
 import gregtech.api.items.metaitem.StandardMetaItem
 import gregtech.api.unification.material.event.PostMaterialEvent
 
+def wordsFromNumber(int num) {
+    def ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    def teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'] // allocate it every time whatever
+    def tens = ['', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+    def hundreds = ['', 'one_hundred']
+    String out = ""
+    if (num < 10 && num > 0) {
+        return ones[num];
+    } else if (num >= 10 && num < 20) {
+        return teens[num - 10]
+    } else if (num < 100) {
+        if (num % 10 == 0) {
+            return tens[num / 10]
+        }
+        return tens[num / 10] + '_' + ones[num % 10];
+    } else {
+        if (num % 100 == 0) {
+            return hundreds[num / 100];
+        } else {
+            return hundreds[num / 100] + '_' + wordsFromNumber(hundreds % 100);
+        }
+    }
+}
+
+def registerCircuitMetaitems(int id_start, String name, int step_count, int start_num=2, boolean finish=true) {
+    new StandardMetaItem(2 as short).with {
+        setRegistryName("meta_item_2") // what the hell man
+        def current_id = id_start;
+        for (int i=start_num; i <= step_count; i++) {
+//            log.infoMC("adding metaitem " + "wafer." + name + ".step_" + wordsFromNumber(i))
+            addItem(current_id, "wafer." + name + ".step_" + wordsFromNumber(i))
+            current_id ++
+        }
+        addItem(current_id, "mask_set." + name)
+        if (finish) {
+            addItem(current_id + 1, "die." + name)
+            addItem(current_id + 2, "die." + name + ".bonded")
+        }
+    }
+}
+
 eventManager.listen { PostMaterialEvent event ->
 
     log.infoMC("Adding metaitems...")
@@ -34,6 +75,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(109, "shape.mold.long_rod")
         addItem(110, "shape.mold.ring")
         addItem(111, "crucible.tantalum")
+        addItem(112, "shape.mold.pin")
+        addItem(113, "shape.mold.leadframe")
+        addItem(114, "shape.mold.bolt")
 
         addItem(150, "mudbrick_mix")
         addItem(151, "slaked_lime")
@@ -110,9 +154,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(213, "glass_fibers")
         addItem(214, "titanium_cylinder");
 
-        addItem(215, "commutator")
-        addItem(216, "brush.unfired")
-        addItem(217, "brush")
+        addItem(215, "component.commutator")
+        addItem(216, "component.brush.unfired")
+        addItem(217, "component.brush")
 
         addItem(250, "beads.amberlyst_ch")
         addItem(251, "beads.strong_acidic_cation_exchange")
@@ -160,6 +204,74 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2007, "storage.segment")
 
         addItem(2500, "gun.barrel.steel")
+
+        // circuit overhaul metaitems: 2750 - 3000
+        addItem(2750, "componentCapacitorMedium")
+        addItem(2751, "componentDiodeSignal")
+        addItem(2752, "componentOpAmp")
+        addItem(2753, "componentResistorMedium")
+        addItem(2754, "componentTransistorMedium")
+        addItem(2755, "resistorCarbon")
+        addItem(2756, "component.transistor.alloy_junction")
+        addItem(2757, "plate.ultra_low_power_integrated_circuit")
+        addItem(2758, "plate.low_power_integrated_circuit")
+        addItem(2759, "plate.power_integrated_circuit")
+        addItem(2760, "plate.high_power_integrated_circuit")
+        addItem(2761, "component.quartz_oscillator")
+        addItem(2762, "component.bjt_lpic")
+        addItem(2763, "component.bjt_pic")
+        addItem(2764, "component.bjt_ulpic")
+        addItem(2765, "component.clock_generator")
+        addItem(2766, "component.crystal_oscillator")
+        addItem(2767, "component.diode.schottky")
+        addItem(2768, "component.floppy_controller")
+        addItem(2769, "component.floppy_disk")
+        addItem(2770, "component.floppy_drive")
+        addItem(2771, "component.floppy_head")
+        addItem(2772, "component.heat_sink")
+        addItem(2773, "component.lead_frame")
+        addItem(2774, "component.nmos_bus_controller")
+        addItem(2775, "component.nmos_cpu")
+        addItem(2776, "component.nmos_dram")
+        addItem(2777, "component.nmos_expansion_bus")
+        addItem(2778, "component.nmos_mask_rom")
+        addItem(2779, "component.nmos_sram")
+        addItem(2780, "component.nmos_uart")
+        addItem(2781, "component.solenoid")
+        addItem(2782, "component.capacitor.film")
+        addItem(2783, "component.fuse.hv")
+        addItem(2784, "component.op_amp")
+        addItem(2785, "component.protector_circuit")
+        addItem(2786, "component.resistor.carbon_film")
+        addItem(2787, "component.zener_diode")
+        addItem(2788, "component.relay")
+        addItem(2789, "component.capacitor.film.core")
+        addItem(2790, "component.capacitor.film.metallized_film")
+        addItem(2791, "component.capacitor.film.metallized_film.impregnated")
+        addItem(2792, "component.capacitor.silver_mica")
+        addItem(2793, "component.diode.alloy_junction")
+        addItem(2794, "component.diode.planar")
+        addItem(2795, "component.diode.power")
+        addItem(2796, "component.smd.contact")
+        addItem(2797, "component.resistor.carbon_composite")
+        addItem(2798, "component.resistor.carbon_composite.fired")
+        addItem(2799, "component.resistor.carbon_composite.unfired")
+        addItem(2800, "component.resistor.carbon_film.core")
+        addItem(2801, "component.resistor.carbon_film.cut_substrate")
+        addItem(2802, "component.transistor.alloy_junction.core")
+        addItem(2803, "circuit.power.mv")
+        addItem(2804, "circuit.power.hv")
+        addItem(2805, "circuit.power.ev")
+
+        // circuit overhaul dies 2950 - 3000
+        addItem(2954, "die.diode.alloy")
+        addItem(2955, "die.diode.planar")
+        addItem(2956, "die.diode.power")
+        addItem(2957, "die.diode.schottky")
+        addItem(2958, "die.zener_diode.alloy")
+        addItem(2959, "die.alloy_junction_transistor.step_one")
+        addItem(2960, "die.alloy_junction_transistor.step_two")
+        addItem(2961, "die.alloy_junction_transistor.step_three")
 
         //Placeholders until GCYS is available
         addItem(3000, "circuit.gooware_processor")
@@ -283,6 +395,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5807, "board.epoxy.wet_masked");
         addItem(5808, "board.epoxy.mask_affixed"); 
         addItem(5809, "circuit_board.fr4");
+        addItem(5810, "board.epoxy.resist")
 
 
         //Good Circuit Components 5900-6000
@@ -359,6 +472,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7003, "seed_crystal.beryllium_oxide")
         addItem(7004, "seed_crystal.emerald")
         addItem(7005, "seed_crystal.lithium_niobate")
+        addItem(7006, "seed_crystal.germanium")
 
         //Boules 7500-8000
 
@@ -372,6 +486,15 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7507, "boule.ruby")
         addItem(7508, "boule.silicon_germanium")
         addItem(7509, "boule.lithium_niobate")
+        addItem(7510, "boule.germanium.n_doped")
+        // overhaul boules
+        addItem(7511, "boule.silicon.cz")
+        addItem(7512, "boule.silicon.cz.n_doped")
+        addItem(7513, "boule.silicon.cz.p_doped")
+        addItem(7514, "boule.silicon.fz.n_doped")
+        addItem(7515, "boule.silicon.fz.heavily_n_doped")
+        addItem(7516, "boule.germanium.n_doped")
+        addItem(7517, "boule.gallium_arsenide.n_doped")
 
         //Wafers 8000-9000
 
@@ -391,6 +514,75 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8013, "wafer.gallium_arsenide")
         addItem(8014, "wafer.raw.silicon")
         addItem(8015, "wafer.treated.silicon")
+
+        // new wafers in overhaul; not going to delete any already existing materials
+        addItem(8016, "wafer.quartz.at_cut.tuned")
+        addItem(8017, "wafer.quartz.at_cut")
+        addItem(8018, "wafer.diode.alloy.step_one")
+        addItem(8019, "wafer.silicon.small.heavily_n_doped")
+        addItem(8020, "wafer.silicon.small.n_doped")
+        addItem(8021, "wafer.zener_diode.alloy.step_one")
+
+        addItem(8022, "wafer.silicon")
+        addItem(8023, "wafer.silicon.polished")
+        addItem(8024, "wafer.silicon.raw")
+        addItem(8025, "wafer.silicon.p_doped")
+        addItem(8026, "wafer.silicon.p_doped.polished")
+        addItem(8027, "wafer.silicon.p_doped.raw")
+        addItem(8028, "wafer.silicon.n_doped")
+        addItem(8029, "wafer.silicon.n_doped.polished")
+        addItem(8030, "wafer.silicon.n_doped.raw")
+        addItem(8031, "wafer.small.silicon.n_doped")
+        addItem(8032, "wafer.small.silicon.n_doped.polished")
+        addItem(8033, "wafer.small.silicon.n_doped.raw")
+        addItem(8034, "wafer.small.silicon.heavily_n_doped")
+        addItem(8035, "wafer.small.silicon.heavily_n_doped.polished")
+        addItem(8036, "wafer.small.silicon.heavily_n_doped.raw")
+        addItem(8037, "wafer.germanium.n_doped")
+        addItem(8038, "wafer.germanium.n_doped.polished")
+        addItem(8039, "wafer.germanium.n_doped.raw")
+        addItem(8040, "wafer.gallium_arsenide.n_doped")
+        addItem(8041, "wafer.gallium_arsenide.n_doped.polished")
+        addItem(8042, "wafer.gallium_arsenide.n_doped.raw")
+
+        addItem(8043, "wafer.nmos.step_one") // the suffering begins
+        registerCircuitMetaitems(8044, "nmos_cpu", 24)
+        registerCircuitMetaitems(8070, "nmos_sram", 24)
+        registerCircuitMetaitems(8096, "nmos_uart", 24)
+        registerCircuitMetaitems(8122, "nmos_mask_rom", 24)
+        registerCircuitMetaitems(8148, "nmos_bus_controller", 24)
+        registerCircuitMetaitems(8175, "nmos_dram", 22)
+        registerCircuitMetaitems(8199, "bjt_pic_base", 17, 1, false)
+        registerCircuitMetaitems(8216, "bjt_ulpic", 5, 1)
+        registerCircuitMetaitems(8224, "bjt_lpic", 14, 1)
+        registerCircuitMetaitems(8241, "bjt_pic", 12, 1)
+        // its cmos time baby
+        addItem(8255, "wafer.cmos.step_one")
+        addItem(8256, "wafer.cmos.step_two")
+        registerCircuitMetaitems(8257, "cmos_cpu", 75, 3, false)
+        registerCircuitMetaitems(8329, "cmos_cpu.beol_one", 7, 1, false)
+        registerCircuitMetaitems(8336, "cmos_cpu.beol_two", 7, 1, false)
+        registerCircuitMetaitems(8343, "cmos_cpu.beol_three", 7, 1, false)
+        registerCircuitMetaitems(8350, "cmos_cpu.beol_four", 7, 1, false)
+        registerCircuitMetaitems(8357, "cmos_cpu.beol_five", 7, 1, false)
+        registerCircuitMetaitems(8364, "cmos_cpu.beol_six", 7, 1, false)
+        registerCircuitMetaitems(8371, "cmos_cpu.beol_seven", 7, 1, false)
+        registerCircuitMetaitems(8378, "cmos_cpu.beol_eight", 7, 1, false)
+        registerCircuitMetaitems(8385, "cmos_cpu.beol_nine", 7, 1, false)
+        registerCircuitMetaitems(8392, "cmos_cpu", 159, 148)
+
+        // 8975-9000 sputtering targets
+        addItem(8975, "target.aluminium")
+        addItem(8976, "target.copper")
+        addItem(8977, "target.titanium")
+        addItem(8978, "target.nickel")
+        addItem(8979, "target.silver")
+        addItem(8980, "target.gold")
+        addItem(8981, "target.palladium")
+        addItem(8982, "target.tungsten")
+        addItem(8983, "target.antimony")
+        addItem(8984, "target.silicon")
+
 
         //Crops 9000-10000
 

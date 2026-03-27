@@ -1,12 +1,12 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.cleanroom.CleanroomType
-import globals.Lithography
-import globals.Etching
-import globals.Deposition
-import globals.Packaging
-import globals.Doping
-import globals.Mechanicals
+import globals.semiconductors.Lithography
+import globals.semiconductors.Etching
+import globals.semiconductors.Deposition
+import globals.semiconductors.Packaging
+import globals.semiconductors.Doping
+import globals.semiconductors.Mechanicals
 
 // SMD Diode * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])

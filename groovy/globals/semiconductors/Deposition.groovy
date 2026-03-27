@@ -10,7 +10,7 @@ class Deposition {
     // Thermal oxidation of silicon dioxide
 
     static void generateSiliconDioxideGrowthRecipe(String input, String output, int duration, boolean wet) {
-        def growthRecipe = RESISTANCE_FURNACE.recipeBuilder()
+        def growthRecipe = TUBE_FURNACE.recipeBuilder()
             .inputs(ore(input))
             .fluidInputs(fluid('oxygen') * 100)
             .outputs(metaitem(output))
@@ -19,7 +19,7 @@ class Deposition {
             .EUt(VA[HV])
 
         if (wet) {
-            growthRecipe.fluidInputs(fluid('ultrapure_steam') * 200)
+            growthRecipe.fluidInputs(fluid('dense_steam') * 200)
             growthRecipe.fluidOutputs(fluid('hydrogen') * 200)
         }
         
@@ -30,9 +30,9 @@ class Deposition {
 
     public static class EvaporationSource {
         String material
-        String voltageTier
+        int voltageTier
 
-        EvaporationSource(String material, String voltageTier) {
+        EvaporationSource(String material, int voltageTier) {
             this.material = material
             this.voltageTier = voltageTier
         }
@@ -51,9 +51,9 @@ class Deposition {
     }
 
     public static final evaporationSources = [
-        new EvaporationSource("aluminium", "MV"),
-        new EvaporationSource("gold_antimony", "MV"),
-        new EvaporationSource("silver", "HV"),
+        new EvaporationSource("aluminium", MV),
+        new EvaporationSource("gold_antimony", MV),
+        new EvaporationSource("silver", HV),
     ]
 
     static void generateEvaporationRecipe(String input, String product, int duration, String targetMaterial, boolean cleanroom) {
@@ -84,10 +84,10 @@ class Deposition {
 
     public static class SputteringTarget {
         String targetMaterial
-        String voltageTier
+        int voltageTier
         float consumptionRate
 
-        SputteringTarget(String targetMaterial, String voltageTier, float consumptionRate) {
+        SputteringTarget(String targetMaterial, int voltageTier, float consumptionRate) {
             this.targetMaterial = targetMaterial
             this.voltageTier = voltageTier
             this.consumptionRate = consumptionRate // per tick of duration
@@ -113,16 +113,16 @@ class Deposition {
     }
 
     public static final sputteringTargets = [
-        new SputteringTarget("aluminium", "MV", 0.025),
-        new SputteringTarget("copper", "HV", 0.025),
-        new SputteringTarget("titanium", "HV", 0.00375),
-        new SputteringTarget("nickel", "HV", 0.008),
-        new SputteringTarget("silver", "HV", 0.0375),
-        new SputteringTarget("gold", "MV", 0.0375),
-        new SputteringTarget("palladium", "EV", 0.0375),
-        new SputteringTarget("tungsten", "EV", 0.00375),
-        new SputteringTarget("antimony", "MV", 0.025),
-        new SputteringTarget("silicon", "MV", 0.05)
+        new SputteringTarget("aluminium", MV, 0.025),
+        new SputteringTarget("copper", HV, 0.025),
+        new SputteringTarget("titanium", HV, 0.00375),
+        new SputteringTarget("nickel", HV, 0.008),
+        new SputteringTarget("silver", HV, 0.0375),
+        new SputteringTarget("gold", MV, 0.0375),
+        new SputteringTarget("palladium", EV, 0.0375),
+        new SputteringTarget("tungsten", EV, 0.00375),
+        new SputteringTarget("antimony", MV, 0.025),
+        new SputteringTarget("silicon", MV, 0.05)
     ]
 
     static void generateSputteringRecipe(String input, String product, int duration, String targetMaterial) {
@@ -160,7 +160,7 @@ class Deposition {
     }
 
     static void generateSinteringRecipe(String input, String product, int duration, int voltageTier) {
-        RESISTANCE_FURNACE.recipeBuilder()
+        SINTERING_OVEN.recipeBuilder()
             .notConsumable(ore('springCupronickel'))
             .inputs(metaitem(input))
             .fluidInputs(fluid('forming_gas') * 100)
@@ -169,6 +169,27 @@ class Deposition {
             .duration(duration)
             .EUt(VA[voltageTier])
             .buildAndRegister();
+    }
+
+    static void generateChemicalVaporDepositionRecipe(String input, String product, int duration, Map sources, Map offgases, int voltageTier) {
+        def tmp = CVD.recipeBuilder()
+            .inputs(metaitem(input));
+        for (gas in sources) {
+            tmp.fluidInputs(fluid(gas.key) * gas.value)
+        }
+        for (offgas in offgases) {
+            tmp.fluidOutputs(fluid(offgas.key) * offgas.value)
+        }
+
+        tmp.outputs(metaitem(product))
+            .duration(duration)
+            .EUt(VA[voltageTier])
+            .buildAndRegister()
+    }
+
+    // ALD; implement ts
+    static void generateAtomicLayerDepositionRecipe(String input, String output, int duration, String depositMaterial) {
+        // IMPLEMENT
     }
 }
 

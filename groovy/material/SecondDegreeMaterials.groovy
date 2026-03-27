@@ -1125,7 +1125,13 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE IDs: 13176-13177
+        AmmoniaCarbonDioxideMixture = new Material.Builder(13176, SuSyUtility.susyId('ammonia_carbon_dioxide_mixture'))
+                .gas()
+                .components(Ammonia, CarbonDioxide)
+                .colorAverage()
+                .build()
+
+        // FREE ID: 13177
 
         YttriumAluminiumGarnetCerium = new Material.Builder(13178, SuSyUtility.susyId('yttrium_aluminium_garnet_cerium'))
                 .dust()
@@ -1185,6 +1191,38 @@ class SecondDegreeMaterials {
                 .liquid()
                 .components(Iron, Chlorine * 3, Water)
                 .color(0x472500)
+                .build()
+
+        HighTemperatureSolder = new Material.Builder(13188, SuSyUtility.susyId('high_temperature_solder'))
+                .dust().liquid(new FluidBuilder().temperature(309))
+                .build()
+
+        CopperSuperfillElectrolyte = new Material.Builder(13189, SuSyUtility.susyId('copper_superfill_electrolyte'))
+                .liquid()
+                .build()
+
+        EnamelledCopper = new Material.Builder(13190, SuSyUtility.susyId('enamelled_copper'))
+                .flags(GENERATE_FINE_WIRE)
+                .build()
+
+        EnamelledGold = new Material.Builder(13191, SuSyUtility.susyId('enamelled_gold'))
+                .flags(GENERATE_FINE_WIRE)
+                .build()
+
+        EnamelledGrapheneCoatedGold = new Material.Builder(13192, SuSyUtility.susyId('enamelled_graphene_coated_gold'))
+                .flags(GENERATE_FINE_WIRE)
+                .build()
+
+        GrapheneCoatedGold = new Material.Builder(13193, SuSyUtility.susyId('graphene_coated_gold'))
+                .flags(GENERATE_FINE_WIRE)
+                .build()
+
+        StandardCleanOne = new Material.Builder(13194, SuSyUtility.susyId('standard_clean_one'))
+                .liquid()
+                .build()
+
+        StandardCleanTwo = new Material.Builder(13195, SuSyUtility.susyId('standard_clean_two'))
+                .liquid()
                 .build()
     }
 }

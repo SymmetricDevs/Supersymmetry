@@ -1,6 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-//import gregtech.api.recipes.chance.output.ChancedOutputLogic;
+import gregtech.api.recipes.chance.output.ChancedOutputLogic
 
 // From copper electrorefining
 // Composition of slime: 15% Se, 5% Te, 40% Ag/Au, 40% Cu

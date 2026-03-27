@@ -122,6 +122,7 @@ class SuSyMaterials {
     public static Material AlluvialPGMSand
     public static Material Bertrandite
     public static Material Epsomite
+    public static Material Dolime
 
     // Deposits for scanning
 
@@ -829,6 +830,11 @@ class SuSyMaterials {
     public static Material MelamineOffgas
     public static Material CrudeAzide
     public static Material CrudeAzideSolution
+    public static Material BurnedGas
+    public static Material CorrosiveGas
+    public static Material MagneticLiningSlurry
+    public static Material CarbonCompound
+    public static Material EpoxyResin
 
     // Petrochem Materials
 
@@ -1669,6 +1675,12 @@ class SuSyMaterials {
     public static Material SodiumAzide
     public static Material PhosphorizedCopper
     public static Material SulfamicAcid
+    public static Material GammaIronThreeOxide
+    public static Material Dumet
+    public static Material Permendur
+    public static Material FormingGas
+    public static Material GermaniumTetrahydride
+    public static Material TungstenHexafluoride
 
     // HP Materials
 
@@ -1919,6 +1931,15 @@ class SuSyMaterials {
     public static Material BoricAcidSolution
     public static Material BoronMixture
     public static Material DilutedMagnesiumChlorideSolution
+    public static Material AmmoniaCarbonDioxideMixture
+    public static Material HighTemperatureSolder
+    public static Material CopperSuperfillElectrolyte
+    public static Material EnamelledCopper
+    public static Material EnamelledGold
+    public static Material EnamelledGrapheneCoatedGold
+    public static Material GrapheneCoatedGold
+    public static Material StandardCleanOne
+    public static Material StandardCleanTwo
 
     // Organic Chemistry Materials
 
@@ -2534,6 +2555,51 @@ class SuSyMaterials {
     public static Material TwoAminoanthraquinone
     public static Material TwoEthylOneThreeHexanediol
     public static Material TwoEthylOneThreeHexanediolMixture
+    public static Material GuanidiniumChloride
+    public static Material GuanidiniumChlorideSolution
+    public static Material OxidizedTwoEthylanthraquinoneSolution
+    public static Material TrisTwoEthylhexylPhosphate
+    public static Material TwoEthylanthrahydroquinoneSolution
+    public static Material Benzotrichloride
+    public static Material DichloropropanolMixture
+    public static Material MetaChlorobenzoylChloride
+    public static Material Butyraldol
+    public static Material ButyraldolSolution
+    public static Material LithiumDiisopropylamideSolution
+    public static Material DilutedTwoPyrrolidone
+    public static Material Dimethoxymethane
+    public static Material DimethoxymethaneSolution
+    public static Material NMethylTwoPyrrolidoneSolution
+    public static Material DodecylsulfuricAcid
+    public static Material TertOctylphenol
+    public static Material TritonXOneHundred
+    public static Material TritonXOneHundredSolution
+    public static Material FurfuralBTEXExtract
+    public static Material MetaCresol
+    public static Material DisproportionatedTolueneMixture
+    public static Material PolysulfoneSolution
+    public static Material PolyesterResin
+    public static Material OligomericPolyesterMixture
+    public static Material PhenolNovolacsOligomer
+    public static Material Perfluorobutyltetrahydrofuran
+    public static Material FluorinatedOctanoylFluorideMixture
+    public static Material TwoAminoethylHydrogenSulfateSolution
+    public static Material PolyvinylpyrrolidoneSolution
+    public static Material PolyethylenimineSolution
+    public static Material PolyethyleneGlycolSolution
+    public static Material NeutralizedPolyethyleneGlycolSolution
+    public static Material NVinylpyrrolidone
+    public static Material EthylenimineSolution
+    public static Material Ethylenimine
+    public static Material CrudePolyethylenimine
+    public static Material Polyvinylpyrrolidone
+    public static Material EpoxyMoldingCompound
+    public static Material PolyesterMelt
+    public static Material AllylAlcohol
+    public static Material BenzoylChloride
+    public static Material ParaCresol
+    public static Material TwoPyrrolidone
+    public static Material Polyethylenimine
 
     // Third Degree Materials
 
