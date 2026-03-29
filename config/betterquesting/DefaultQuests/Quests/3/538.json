@@ -1,15 +1,21 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
   "preRequisites:11": [
-    537
+    537,
+    1481636455
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.538.desc",
       "icon:10": {
-        "Damage:2": 80,
+        "Damage:2": 13092,
         "id:8": "gregtech:meta_catalyst_bed"
       },
-      "name:8": "susy.quest.db.538.title"
+      "name:8": "susy.quest.db.538.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 538,
@@ -19,12 +25,12 @@
         "0:10": {
           "Count:3": 1,
           "Damage:2": 80,
-          "id:8": "gregtech:meta_catalyst_bed"
+          "id:8": "gregtech:meta_dust"
         },
         "1:10": {
           "Count:3": 1,
           "Damage:2": 77,
-          "id:8": "gregtech:meta_catalyst_bed"
+          "id:8": "gregtech:meta_dust"
         }
       },
       "taskID:8": "bq_standard:retrieval"

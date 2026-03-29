@@ -1,20 +1,24 @@
 import static prePostInit.Recipemaps.*
 import globals.Sintering
+import globals.Carbons
+
 
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.MarkerMaterials;
 import static gregtech.api.unification.ore.OrePrefix.dye;
 
-ADVANCED_ARC_FURNACE.recipeBuilder()
-    .inputs(ore('dustChromite'))
-    .inputs(ore('dustAnyPurityCarbon') * 4)
-    .inputs(ore('dustTinyQuicklime'))
-    .outputs(metaitem('dustFerrochromium') * 3)
-    .fluidOutputs(fluid('carbon_monoxide') * 4000)
-    .duration(200)
-    .EUt(VA[MV])
-    .buildAndRegister()
+for (highPurityCombustible in Carbons.highPurityCombustibles()) {
+    ADVANCED_ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustChromite'))
+        .inputs(ore('dustTinyQuicklime'))
+        .inputs(ore(highPurityCombustible.name) * highPurityCombustible.equivalent(4))
+        .outputs(metaitem('dustFerrochromium') * 3)
+        .fluidOutputs(fluid('carbon_monoxide') * 4000)
+        .duration(200 * highPurityCombustible.duration)
+        .EUt(VA[MV])
+        .buildAndRegister()
+}
 
 Sintering.nonPlasmaFuels().each { fuel ->
     ROTARY_KILN.recipeBuilder()

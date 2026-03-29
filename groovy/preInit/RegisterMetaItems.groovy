@@ -201,8 +201,18 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(3035, "wafer.advanced_random_access_memory")
         addItem(3036, "plate.advanced_random_access_memory")
 
-        //Organics 3500-4000
+        //Organics 3500-3900
         addItem(3500, "copra")
+
+        // Battery hulls 3900-4000
+        addItem(3900, "battery.primitivehull.lv")
+        addItem(3901, "battery.primitivehull.mv")
+        addItem(3902, "battery.steel_hull.lv")
+        addItem(3903, "battery.steel_hull.mv")
+        addItem(3904, "battery.steel_hull.hv")
+        addItem(3905, "battery.ni_fe_hull.lv")
+        addItem(3906, "battery.ni_fe_hull.mv")
+        addItem(3907, "battery.ni_fe_hull.hv")
 
         //Batteries 4000-4100
         Batteries['lead_acid'].register(it, 4000)
@@ -210,16 +220,16 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4002, "anode.lead")
         addItem(4003, "cathode.lead_paste")
         addItem(4004, "cathode.lead_frame")
-        Batteries['ni_fe'].register(it, 4005)
+        Batteries['lead_acid.mv'].register(it,4005)
         addItem(4006, "electrode.steel_frame")
         addItem(4007, "electrode.nickeled_steel_frame")
         Batteries['ni_zn.mv'].register(it, 4008)
         Batteries['ni_zn.hv'].register(it, 4009)
         addItem(4010, "anode.zinc_oxide")
         addItem(4011, "cathode.nioh2")
-        // Battery hulls 4090-4100
-        addItem(4090, "battery.primitivehull.lv")
-        addItem(4091, "battery.primitivehull.mv")
+        Batteries['ni_fe.lv'].register(it, 4012)
+        Batteries['ni_fe'].register(it, 4013)
+        Batteries['ni_fe.hv'].register(it, 4014)
 
         addItem(4101, "vacuum_tube_components")
 

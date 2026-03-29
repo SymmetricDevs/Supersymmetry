@@ -44,7 +44,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
 //DOWNS CELL PROCESSES
 ELECTROLYZER.recipeBuilder()
-        .notConsumable(metaitem('stickNickel'))
+        .notConsumable(metaitem('graphite_electrode'))
         .notConsumable(metaitem('stickIron'))
         .fluidInputs(fluid('salt') * 288)
         .fluidOutputs(fluid('chlorine') * 1000)

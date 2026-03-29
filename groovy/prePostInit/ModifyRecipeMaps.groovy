@@ -338,10 +338,6 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustYellowLimonite') * 4],
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustBrownLimonite') * 4], null)
 // Baking Soda Solution * 1000
 mods.gregtech.mixer.removeByInput(8, [metaitem('dustSodiumBicarbonate')], [fluid('water') * 1000])
-// Crushed Bauxite Ore * 1
-mods.gregtech.forge_hammer.removeByInput(16, [item('gregtech:ore_bauxite_0')], null)
-// Crushed Bauxite Ore * 2
-mods.gregtech.macerator.removeByInput(2, [item('gregtech:ore_bauxite_0')], null)
 // Flower Pot * 1
 mods.gregtech.assembler.removeByInput(2, [item('minecraft:brick') * 3], null)
 // Tungsten Steel * 2
@@ -461,3 +457,6 @@ RecipeMaps.FORGE_HAMMER_RECIPES
 RecipeMaps.LARGE_CHEMICAL_RECIPES
     .modifyMaxInputs(4)
     .modifyMaxFluidInputs(6)
+
+RecipeMaps.DISTILLERY_RECIPES
+    .modifyMaxFluidInputs(2)

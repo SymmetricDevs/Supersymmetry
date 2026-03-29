@@ -128,8 +128,8 @@ Batteries[HV].each { battery ->
         .name("gregtech:hv_magnet_${battery.name}")
         .output(battery.imprintCapacity(metaitem('item_magnet.hv')))
         .shape([
-            [ore('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), ore('stickNeodymiumAlloyMagnetic')],
-            [ore('stickNeodymiumAlloyMagnetic'), battery.fetchMetaitem().mark('battery'), ore('stickNeodymiumAlloyMagnetic')],
+            [ore('stickAlnicoMagnetic'), ore('toolWrench'), ore('stickAlnicoMagnetic')],
+            [ore('stickAlnicoMagnetic'), battery.fetchMetaitem().mark('battery'), ore('stickAlnicoMagnetic')],
             [ore('wireGtSingleGold'), ore('plateStainlessSteel'), ore('wireGtSingleGold')]
         ])
         .recipeFunction(setChargeFromBatteryFn)
@@ -235,19 +235,14 @@ crafting.addShaped('gregtech:electric_jetpack_advanced2', metaitem('advanced_ele
 // HV Item magnets non-reworked batteries
 
 crafting.replaceShaped('gregtech:magnet_hv_battery.re.hv.lithium', metaitem('item_magnet.hv'), [
-    [metaitem('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('stickNeodymiumAlloyMagnetic'), metaitem('battery.re.hv.lithium'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('wireGtSingleGold'), metaitem('plateStainlessSteel'), metaitem('wireGtSingleGold')]
+    [ore('stickAlnicoMagnetic'), ore('toolWrench'), ore('stickAlnicoMagnetic')],
+    [ore('stickAlnicoMagnetic'), metaitem('battery.re.hv.lithium'), ore('stickAlnicoMagnetic')],
+    [ore('wireGtSingleGold'), ore('plateStainlessSteel'), ore('wireGtSingleGold')]
 ])
 
 crafting.replaceShaped('gregtech:magnet_hv_battery.re.hv.cadmium', metaitem('item_magnet.hv'), [
-    [metaitem('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('stickNeodymiumAlloyMagnetic'), metaitem('battery.re.hv.cadmium'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('wireGtSingleGold'), metaitem('plateStainlessSteel'), metaitem('wireGtSingleGold')]
+    [ore('stickAlnicoMagnetic'), ore('toolWrench'), ore('stickAlnicoMagnetic')],
+    [ore('stickAlnicoMagnetic'), metaitem('battery.re.hv.cadmium'), ore('stickAlnicoMagnetic')],
+    [ore('wireGtSingleGold'), ore('plateStainlessSteel'), ore('wireGtSingleGold')]
 ])
 
-crafting.replaceShaped('gregtech:magnet_hv_energy_crystal', metaitem('item_magnet.hv'), [
-    [metaitem('stickNeodymiumAlloyMagnetic'), ore('toolWrench'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('stickNeodymiumAlloyMagnetic'), metaitem('energy_crystal'), metaitem('stickNeodymiumAlloyMagnetic')],
-    [metaitem('wireGtSingleGold'), metaitem('plateStainlessSteel'), metaitem('wireGtSingleGold')]
-])

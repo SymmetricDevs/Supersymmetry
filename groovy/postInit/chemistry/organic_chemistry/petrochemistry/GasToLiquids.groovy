@@ -79,6 +79,61 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
+// Acetylene-syngas coproduction
+
+REACTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('hot_hp_natural_gas') * 1000)
+    .fluidInputs(fluid('hot_hp_oxygen') * 1210)
+    .fluidOutputs(fluid('cracked_natural_gas') * 4735)
+    .duration(10)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('cracked_natural_gas') * 4735)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('quenched_cracked_natural_gas') * 4465)
+    .fluidOutputs(fluid('wastewater') * 1270)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+SIEVE_DT.recipeBuilder()
+    .fluidInputs(fluid('quenched_cracked_natural_gas') * 4465)
+    .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 210)
+    .fluidOutputs(fluid('stripped_cracked_natural_gas') * 4255)
+    .fluidOutputs(fluid('acetylene_solution') * 210)
+    .duration(10)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+VACUUM_DT.recipeBuilder()
+    .fluidInputs(fluid('acetylene_solution') * 210)
+    .fluidOutputs(fluid('n_methyl_two_pyrrolidone') * 210)
+    .fluidOutputs(fluid('acetylene') * 210)
+    .duration(10)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+SIFTER.recipeBuilder()
+    .inputs(ore('dustMolecularSieveX') * 5)
+    .fluidInputs(fluid('stripped_cracked_natural_gas') * 4255)
+    .fluidOutputs(fluid('crude_syngas') * 4155)
+    .outputs(metaitem('dustCarbonatedMolecularSieveX') * 5)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+HIGH_PRESSURE_CRYO_DT.recipeBuilder()
+    .fluidInputs(fluid('crude_syngas') * 4155)
+    .fluidInputs(fluid('carbon_monoxide') * 70) // Makeup CO to reach composition
+    .fluidOutputs(fluid('ethylene') * 15)
+    .fluidOutputs(fluid('methane') * 160)
+    .fluidOutputs(fluid('monoxide_rich_syngas') * 4050)
+    .duration(10)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
 // Syngas utilization
 
     // LT Fischer Tropsch

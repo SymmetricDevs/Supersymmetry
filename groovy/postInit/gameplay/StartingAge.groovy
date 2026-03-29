@@ -19,14 +19,6 @@ event_manager.listen { BlockEvent.HarvestDropsEvent event ->
 
 log.infoMC("Running StartingAge.groovy...")
 
-mods.jei.ingredient.yeet(
-        item('minecraft:stone_sword'),
-        item('minecraft:stone_shovel'),
-        item('minecraft:stone_pickaxe'),
-        item('minecraft:stone_axe'),
-        item('minecraft:stone_hoe')
-)
-
 crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('craftingToolMortar'),
         ore('ingotClay')

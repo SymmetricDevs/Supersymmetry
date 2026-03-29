@@ -118,10 +118,10 @@ SOLIDIFIER.recipeBuilder()
     .buildAndRegister()
 
 BR.recipeBuilder() // Niobium Oxide Dihydrate
-    .inputs(ore('dustNiobiumPentachloride') * 12)
-    .fluidInputs(fluid('distilled_water') * 17000)
-    .outputs(metaitem('dustNiobiumOxideDihydrate') * 9)
-    .fluidOutputs(fluid('hydrochloric_acid') * 10000)
+    .inputs(ore('dustNiobiumPentachloride') * 6)
+    .fluidInputs(fluid('distilled_water') * 8500)
+    .chancedOutput(metaitem('dustNiobiumOxideDihydrate') * 9, 5000, 0)
+    .fluidOutputs(fluid('hydrochloric_acid') * 5000)
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()
@@ -247,7 +247,7 @@ ROASTER.recipeBuilder() // Niobium Oxide
     .outputs(metaitem('dustNiobiumOxide') * 7)
     .fluidOutputs(fluid('dense_steam') * 2000)
     .duration(80)
-    .EUt(VA[HV])
+    .EUt(VA[MV])
     .buildAndRegister()
 
 ADVANCED_ARC_FURNACE.recipeBuilder() // Niobium

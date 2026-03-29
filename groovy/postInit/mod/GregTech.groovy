@@ -1946,3 +1946,6 @@ LATHE.recipeBuilder()
 
 RecyclingHelper.removeRecyclingRecipes(metaitem('stickStone'))
 RecyclingHelper.handleRecycling(metaitem('stickStone'), [metaitem('dustSmallStone')])
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('gearStone'))
+RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 5])
