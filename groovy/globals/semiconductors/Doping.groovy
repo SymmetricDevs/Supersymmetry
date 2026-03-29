@@ -61,7 +61,7 @@ class Doping {
             .buildAndRegister();
 
         // Remove BSG
-        Etching.generateEtchingRecipes(input + '.bsg', product, 'silicon_dioxide', LV, 1, false)
+        Etching.generateWetEtchingRecipe(input + '.bsg', product, 'silicon_dioxide', 100, false)
     }
 
     static void generatePhosphorusDiffusionDopingRecipes(String input, String product, int duration) {
@@ -78,7 +78,7 @@ class Doping {
             .buildAndRegister();
 
         // Remove PSG
-        Etching.generateEtchingRecipes(input + '.psg', product, 'silicon_dioxide', LV, 1, false)
+        Etching.generateWetEtchingRecipe(input + '.psg', product, 'silicon_dioxide', 100, false)
     }
 
     static void generateDriveInRecipe(String input, String product, int duration) {

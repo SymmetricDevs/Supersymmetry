@@ -38,7 +38,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
 // Heat sink
 
-BENDING_MACHINE.recipeBuilder()
+BENDER.recipeBuilder()
     .circuitMeta(5)
     .inputs(ore('plateAluminium'))
     .outputs(metaitem('component.heat_sink') * 2)

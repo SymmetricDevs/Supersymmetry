@@ -288,9 +288,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2800, "component.resistor.carbon_film.core")
         addItem(2801, "component.resistor.carbon_film.cut_substrate")
         addItem(2802, "component.transistor.alloy_junction.core")
-        addItem(2803, "circuit.power.mv")
-        addItem(2804, "circuit.power.hv")
-        addItem(2805, "circuit.power.ev")
+        addItem(2803, "circuit.power.lv")
+        addItem(2804, "circuit.power.mv")
+        addItem(2805, "circuit.power.hv")
+        addItem(2806, "circuit.power.ev")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -423,9 +424,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5806, "board.epoxy.electrolytic");
         addItem(5807, "board.epoxy.wet_masked");
         addItem(5808, "board.epoxy.mask_affixed"); 
-        addItem(5809, "circuit_board.fr4");
+        addItem(5809, "circuit_board.fr4")
         addItem(5810, "board.epoxy.resist")
-
 
         //Good Circuit Components 5900-6000
         addItem(5900, "op_amp")
@@ -591,6 +591,21 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8250, "wafer.cmos.step_two.coated")
         addItem(8251, "wafer.cmos.step_two.exposed")
         registerCMOSMetaitems(8252, "cmos_cpu")
+
+        addItem(8465, "wafer.diode.alloy.step_two")
+        addItem(8566, "wafer.zener_diode.alloy.step_two")
+        registerCircuitMetaitems(8567, "diode.planar", 10, 1, false)
+        registerCircuitMetaitems(8578, "diode.power", 14, 2, false)
+        addItem(8592, "wafer.diode.drift.step_one")
+        registerCircuitMetaitems(8593, "diode.schottky", 13, 2, false)
+        addItem(8605, "wafer.diode.planar.step_four.bsg")
+        addItem(8606, "wafer.diode.power.step_three.coated")
+        addItem(8607, "wafer.diode.power.step_three.exposed")
+        addItem(8608, "wafer.diode.power.step_nine.coated")
+        addItem(8609, "wafer.diode.power.step_nine.deposited")
+        addItem(8611, "wafer.diode.planar.step_one.coated")
+        addITem(8612, "wafer.diode.planar.step_one.exposed")
+
         // 8975-9000 sputtering targets
         addItem(8975, "target.aluminium")
         addItem(8976, "target.copper")

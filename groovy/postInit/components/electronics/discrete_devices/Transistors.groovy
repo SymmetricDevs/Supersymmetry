@@ -1,6 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-import gregtech.api.cleanroom.CleanroomType
+import gregtech.api.metatileentity.multiblock.CleanroomType
 import globals.semiconductors.Lithography
 import globals.semiconductors.Etchants
 import globals.semiconductors.Deposition

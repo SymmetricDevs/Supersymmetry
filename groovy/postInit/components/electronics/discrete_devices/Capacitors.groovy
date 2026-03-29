@@ -33,7 +33,7 @@ ASSEMBLER.recipeBuilder()
 oreDict.add('capacitorFilm', metaitem('mylar'))
 oreDict.add('capacitorFilm', metaitem('foilPolypropylene'))
 
-EVAPORATOR.recipeBuilder()
+EVAPORATION.recipeBuilder()
     .inputs(ore('nuggetAluminium'))
     .inputs(ore('capacitorFilm') * 8)
     .outputs(metaitem('component.capacitor.film.metallized_film'))

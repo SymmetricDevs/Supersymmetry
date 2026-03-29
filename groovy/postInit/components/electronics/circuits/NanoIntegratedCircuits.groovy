@@ -43,7 +43,7 @@ def generateCMOSFabrication(String componentName, int circ) {
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 'silicon', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 1, true)
     Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_six', 'wafer.' + componentName + '.step_seven', 400, true) // Protective oxide growth after trench etching to repair etch damage
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_seven', 'wafer.' + componentName + '.step_eight', 400, ['tetraethoxysilane' : 50], ['carbon_dioxide' : 25, 'steam' : 10], EV) // Fill trenches, TEOS has better gap-filling properties
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_seven', 'wafer.' + componentName + '.step_eight', 400, ['tetraethoxysilane' : 50], ['carbon_dioxide' : 25, 'steam' : 10], HV) // Fill trenches, TEOS has better gap-filling properties
     Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_eight', 'wafer.' + componentName + '.step_nine', 400, HV) // CMP to planarize wafer
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_nine', 'wafer.' + componentName + '.step_ten', 'silicon_nitride', 400, false) // Etch away silicon nitride CMP stop layer
 
@@ -126,7 +126,7 @@ def generateCMOSFabrication(String componentName, int circ) {
     
     // Plug formation
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_six', 'wafer.' + componentName + '.step_sixty_seven', 400, ['silane' : 50, 'ammonia' : 50], ['hydrogen' : 150], EV) // Deposit CMP stop layer
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_seven', 'wafer.' + componentName + '.step_sixty_eight', 400, ['silane' : 50, 'oxygen' : 75], ['steam' : 25], EV) // Deposit interlayer dielectric
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_seven', 'wafer.' + componentName + '.step_sixty_eight', 400, ['silane' : 50, 'oxygen' : 75], ['steam' : 25], HV) // Deposit interlayer dielectric
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_sixty_eight', 'wafer.' + componentName + '.step_sixty_nine', 'acrylate_resist_mixture', 'mask_set.' + componentName, true) // Define plug pattern
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_sixty_nine', 'wafer.' + componentName + '.step_seventy', 'silicon_dioxide', 400) // CH3F
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_seventy', 'wafer.' + componentName + '.step_seventy_one', 'silicon_nitride', 400) // CH3F
