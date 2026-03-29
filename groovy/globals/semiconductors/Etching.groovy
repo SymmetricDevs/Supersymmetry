@@ -102,6 +102,12 @@ class Etching {
         titanium_nitride: [
             new Etchant("nitric_acid", MV, 50, 0.002, false, false),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 50, 0.004, false, false),
+        ],
+        hafnium_dioxide: [
+            new Etchant("ultrapure_hydrofluoric_acid", HV, 10, 0.002, false, false)
+        ],
+        nickel_silicide: [
+            new Etchant("phosphoric_acid", HV, 50, 0.01, false, false)
         ]
     ]
 
@@ -117,7 +123,7 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (1/etchant.etchingRate * duration))
+                    .duration((int) (duration)) // just ignore etching rate entirely i guess
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()
@@ -136,7 +142,7 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (1/etchant.etchingRate * duration))
+                    .duration((int) (duration))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()

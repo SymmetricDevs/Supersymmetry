@@ -26,7 +26,7 @@ def wordsFromNumber(int num) {
         if (num % 100 == 0) {
             return hundreds[num / 100];
         } else {
-            return hundreds[num / 100] + '_' + wordsFromNumber(hundreds % 100);
+            return hundreds[num / 100] + '_' + wordsFromNumber(num % 100);
         }
     }
 }
@@ -44,6 +44,35 @@ def registerCircuitMetaitems(int id_start, String name, int step_count, int star
         if (finish) {
             addItem(current_id + 1, "die." + name)
             addItem(current_id + 2, "die." + name + ".bonded")
+        }
+    }
+}
+
+def registerCMOSMetaitems(int id_start, String name) {
+    new StandardMetaItem(2 as short).with {
+        setRegistryName("meta_item_2")
+        registerCircuitMetaitems(id_start, name, 75, 3, false)
+        id_start += 73
+        for (int i=1; i<=9; i++) {
+            registerCircuitMetaitems(id_start, name + ".beol_" + wordsFromNumber(i), 7, 1, false)
+            id_start += 8
+            addItem(id_start, "wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
+            addItem(id_start + 1, "wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
+            id_start += 2
+        }
+        registerCircuitMetaitems(id_start, "" + name + "", 160, 148)
+        id_start += 14
+        def ashed_steps = [5, 12, 16, 27, 31, 35, 38, 42, 54, 71, 157]
+        for (step in ashed_steps) {
+            addItem(id_start, "wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
+            id_start += 1
+        }
+        
+        def photoresist_steps = [10, 14, 23, 28, 32, 37, 40, 52, 60, 68, 149, 154]
+        for (step in photoresist_steps) {
+            addItem(id_start, "wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
+            addItem(id_start + 1, "wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
+            id_start += 2
         }
     }
 }
@@ -547,30 +576,21 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(8043, "wafer.nmos.step_one") // the suffering begins
         registerCircuitMetaitems(8044, "nmos_cpu", 24)
-        registerCircuitMetaitems(8070, "nmos_sram", 24)
-        registerCircuitMetaitems(8096, "nmos_uart", 24)
-        registerCircuitMetaitems(8122, "nmos_mask_rom", 24)
-        registerCircuitMetaitems(8148, "nmos_bus_controller", 24)
-        registerCircuitMetaitems(8175, "nmos_dram", 22)
-        registerCircuitMetaitems(8199, "bjt_pic_base", 17, 1, false)
-        registerCircuitMetaitems(8216, "bjt_ulpic", 5, 1)
-        registerCircuitMetaitems(8224, "bjt_lpic", 14, 1)
-        registerCircuitMetaitems(8241, "bjt_pic", 12, 1)
+        registerCircuitMetaitems(8069, "nmos_sram", 24)
+        registerCircuitMetaitems(8094, "nmos_uart", 24)
+        registerCircuitMetaitems(8119, "nmos_mask_rom", 24)
+        registerCircuitMetaitems(8144, "nmos_bus_controller", 24)
+        registerCircuitMetaitems(8169, "nmos_dram", 22)
+        registerCircuitMetaitems(8192, "bjt_pic_base", 17, 1, false)
+        registerCircuitMetaitems(8210, "bjt_ulpic", 5, 1)
+        registerCircuitMetaitems(8216, "bjt_lpic", 14, 1)
+        registerCircuitMetaitems(8233, "bjt_pic", 12, 1)
         // its cmos time baby
-        addItem(8255, "wafer.cmos.step_one")
-        addItem(8256, "wafer.cmos.step_two")
-        registerCircuitMetaitems(8257, "cmos_cpu", 75, 3, false)
-        registerCircuitMetaitems(8329, "cmos_cpu.beol_one", 7, 1, false)
-        registerCircuitMetaitems(8336, "cmos_cpu.beol_two", 7, 1, false)
-        registerCircuitMetaitems(8343, "cmos_cpu.beol_three", 7, 1, false)
-        registerCircuitMetaitems(8350, "cmos_cpu.beol_four", 7, 1, false)
-        registerCircuitMetaitems(8357, "cmos_cpu.beol_five", 7, 1, false)
-        registerCircuitMetaitems(8364, "cmos_cpu.beol_six", 7, 1, false)
-        registerCircuitMetaitems(8371, "cmos_cpu.beol_seven", 7, 1, false)
-        registerCircuitMetaitems(8378, "cmos_cpu.beol_eight", 7, 1, false)
-        registerCircuitMetaitems(8385, "cmos_cpu.beol_nine", 7, 1, false)
-        registerCircuitMetaitems(8392, "cmos_cpu", 159, 148)
-
+        addItem(8248, "wafer.cmos.step_one")
+        addItem(8249, "wafer.cmos.step_two")
+        addItem(8250, "wafer.cmos.step_two.coated")
+        addItem(8251, "wafer.cmos.step_two.exposed")
+        registerCMOSMetaitems(8252, "cmos_cpu")
         // 8975-9000 sputtering targets
         addItem(8975, "target.aluminium")
         addItem(8976, "target.copper")
@@ -582,7 +602,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8982, "target.tungsten")
         addItem(8983, "target.antimony")
         addItem(8984, "target.silicon")
-
+        addItem(8985, "target.platinum")
+        addItem(8986, "target.tantalum")
+        addItem(8987, "target.chromium")
 
         //Crops 9000-10000
 

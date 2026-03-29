@@ -113,23 +113,24 @@ class Deposition {
     }
 
     public static final sputteringTargets = [
-        new SputteringTarget("aluminium", MV, 0.025),
-        new SputteringTarget("copper", HV, 0.025),
-        new SputteringTarget("titanium", HV, 0.00375),
-        new SputteringTarget("nickel", HV, 0.008),
-        new SputteringTarget("silver", HV, 0.0375),
-        new SputteringTarget("gold", MV, 0.0375),
-        new SputteringTarget("palladium", EV, 0.0375),
-        new SputteringTarget("tungsten", EV, 0.00375),
-        new SputteringTarget("antimony", MV, 0.025),
-        new SputteringTarget("silicon", MV, 0.05)
+        'aluminium': new SputteringTarget("aluminium", MV, 0.025),
+        'copper': new SputteringTarget("copper", HV, 0.025),
+        'titanium': new SputteringTarget("titanium", HV, 0.00375),
+        'nickel': new SputteringTarget("nickel", HV, 0.008),
+        'silver': new SputteringTarget("silver", HV, 0.0375),
+        'gold': new SputteringTarget("gold", MV, 0.0375),
+        'palladium': new SputteringTarget("palladium", EV, 0.0375),
+        'tungsten': new SputteringTarget("tungsten", EV, 0.00375),
+        'antimony': new SputteringTarget("antimony", MV, 0.025),
+        'silicon': new SputteringTarget("silicon", MV, 0.05),
+
+        'platinum': new SputteringTarget("platinum", EV, 0.025), // all of these numbers are made up by me double check if its balanced pls
+        'tantalum': new SputteringTarget("tantalum", EV, 0.03),
+        'chromium': new SputteringTarget("chromium", MV, 0.05)
     ]
 
     static void generateSputteringRecipe(String input, String product, int duration, String targetMaterial) {
-        for (sputteringTarget in sputteringTargets) {
-            if (sputteringTarget.targetMaterial == targetMaterial)
-                sputteringTarget.generateRecipe(input, product, duration)
-        }
+        sputteringTargets[targetMaterial].generateRecipe(input, product, duration)
     }
 
     // feed keys as material paired with duration, for co-sputtering and sequential sputtering
@@ -146,14 +147,14 @@ class Deposition {
             String material = pair.key
             int duration = pair.value
             totalDuration += duration
-
-            for (sputteringTarget in sputteringTargets) {
-                if (sputteringTarget.targetMaterial == material) {
-                    power = Math.max(power, VA[sputteringTarget.voltageTier])
-                    sputteringRecipe.inputs(metaitem('target.' + material))
-                    sputteringRecipe.chancedOutput(metaitem('target.' + material), sputteringTarget.calculateReuseChance(duration), 0)
-                }
+            
+            def sputteringTarget = sputteringTargets[material]
+            if (sputteringTarget == null) {
+                log.infoMC("Material " + material + " not defined as a sputtering target")
             }
+            power = Math.max(power, VA[sputteringTarget.voltageTier])
+            sputteringRecipe.inputs(metaitem('target.' + material))
+            sputteringRecipe.chancedOutput(metaitem('target.' + material), sputteringTarget.calculateReuseChance(duration), 0)
         }
 
         sputteringRecipe.duration(totalDuration).EUt(power).buildAndRegister();

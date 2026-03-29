@@ -1681,6 +1681,7 @@ class SuSyMaterials {
     public static Material FormingGas
     public static Material GermaniumTetrahydride
     public static Material TungstenHexafluoride
+    public static Material Tetraethoxysilane
 
     // HP Materials
 

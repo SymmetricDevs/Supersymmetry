@@ -771,8 +771,14 @@ class FirstDegreeMaterialsB {
                 .build()
 
         TungstenHexafluoride = new Material.Builder(8781, SuSyUtility.susyId('tungsten_hexafluoride'))
-                .gas(new FluidBuilder.attribute(FluidAttributes.ACID))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Tungsten, Fluorine * 6)
+                .colorAverage()
+                .build()
+
+        Tetraethoxysilane = new Material.Builder(8782, SuSyUtility.susyId('tetraethoxysilane'))
+                .liquid()
+                .components(Silicon, Carbon * 8, Hydrogen * 20, Oxygen * 4)
                 .colorAverage()
                 .build()
     }

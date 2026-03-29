@@ -12,12 +12,12 @@ class Lithography {
         String resistName
         String solventName
         String developerName
-        String voltageTier
+        int voltageTier
         String exposureRecipeMap
         int timeUsed
         boolean liftoff
 
-        Resist(String resistName, String developerName, String solventName, String voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false) {
+        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false) {
             this.resistName = resistName
             this.solventName = solventName
             this.developerName = developerName
@@ -31,7 +31,7 @@ class Lithography {
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid(this.resistName) * 50)
-                .fluidInputs(fluid(this.ebrName) * 100)
+                .fluidInputs(fluid(this.solventName) * 100)
                 .outputs(metaitem(input + ".coated"))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(this.timeUsed)
@@ -78,13 +78,14 @@ class Lithography {
     }
 
     public static final photoresists = [
-        new Resist("novolac_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", "uv_light_box", 300),
-        new Resist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", "uv_light_box", 300, true),
-        new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", "EV", "laser_engraver", 200)
+        new Resist("novolac_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300),
+        new Resist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300, true),
+        new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "laser_engraver", 200),
+        new Resist("acrylate_resist_mixture", "cyclohexanone", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300)
     ]
 
     public static final electronBeamResists = [
-        new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", "EV", "electron_beam_lithography", 1000)
+        new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", EV, "electron_beam_lithography", 1000)
     ]
 
     static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, Integer circ = null) {

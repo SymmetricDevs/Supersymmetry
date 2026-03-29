@@ -44,12 +44,10 @@ def induction_coils = [
 ]
 
 for (induction_coil in induction_coils) {
-// FIXME: none of these recipes work due to zone refiner having max 1 solid input
     ZONE_REFINER.recipeBuilder()
         .notConsumable(induction_coil)
-        .notConsumable(metaitem('electric.pump.mv'))
         .fluidInputs(fluid('phosphine'))
-        .inputs(ore('seed_crystal.silicon'))
+        .inputs(metaitem('seed_crystal.silicon'))
         .inputs(ore('blockHighPuritySilicon'))
         .outputs(metaitem('boule.silicon.fz.n_doped'))
         .duration(9600)
@@ -60,7 +58,7 @@ for (induction_coil in induction_coils) {
         .notConsumable(induction_coil)
         .notConsumable(fluid('argon') * 100)
         .fluidInputs(fluid('phosphine'))
-        .inputs(ore('seed_crystal.silicon'))
+        .inputs(metaitem('seed_crystal.silicon'))
         .inputs(ore('blockHighPuritySilicon'))
         .outputs(metaitem('boule.silicon.fz.n_doped'))
         .duration(1200)
@@ -69,9 +67,8 @@ for (induction_coil in induction_coils) {
 
     ZONE_REFINER.recipeBuilder()
         .notConsumable(induction_coil)
-        .notConsumable(metaitem('electric.pump.mv'))
         .fluidInputs(fluid('phosphine') * 100)
-        .inputs(ore('seed_crystal.silicon'))
+        .inputs(metaitem('seed_crystal.silicon'))
         .inputs(ore('blockHighPuritySilicon'))
         .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
         .duration(9600)
@@ -82,7 +79,7 @@ for (induction_coil in induction_coils) {
         .notConsumable(induction_coil)
         .notConsumable(fluid('argon') * 100)
         .fluidInputs(fluid('phosphine') * 100)
-        .inputs(ore('seed_crystal.silicon'))
+        .inputs(metaitem('seed_crystal.silicon'))
         .inputs(ore('blockHighPuritySilicon'))
         .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
         .duration(1200)

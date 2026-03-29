@@ -32,4 +32,14 @@ class Packaging {
             .buildAndRegister();
     }
 
+    static void generateBackgrindingRecipe(String input, String product, int duration, int voltageTier) {
+        POLISHING_MACHINE.recipeBuilder()
+            .inputs(metaitem(input))
+            .fluidInputs(fluid('ultrapure_water') * 100)
+            .outputs(metaitem(product))
+            .fluidOutputs(fluid('silicon_dioxide_slurry') * 100)
+            .duration(duration)
+            .EUt(VA[voltageTier])
+            .buildAndRegister()
+    }
 }

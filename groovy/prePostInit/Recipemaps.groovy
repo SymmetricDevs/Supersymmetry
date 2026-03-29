@@ -122,7 +122,7 @@ class Recipemaps {
     static final def WEAPONS_FACTORY = recipemap('weapons_factory')
     static final def ZONE_REFINER = recipemap('zone_refiner')
     static final def CUPOLA_FURNACE = recipemap('cupola_furnace')
-    static final def SPUTTERER = recipemap('sputtering')
+    static final def SPUTTERER = recipemap('sputter_deposition')
     static final def REACTIVE_ION_ETCHER = recipemap('reactive_ion_etching')
     static final def RESIST_PROCESSOR = recipemap('resist_processing')
     static final def PLASMA_ASHER = recipemap('plasma_ashing')
