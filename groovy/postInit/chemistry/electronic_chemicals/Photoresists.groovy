@@ -958,7 +958,7 @@ DT.recipeBuilder()
                 .buildAndRegister()
 
 
-// (EUV/tin plasma resists, 13.5 nm)
+// EUV-optimized photoresists (tin plasma, 13.5 nm)
 
 // SU-8 photoresist (MEMS, i-line)
 

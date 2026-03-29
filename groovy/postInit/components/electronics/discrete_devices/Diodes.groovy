@@ -146,7 +146,7 @@ Deposition.generateSiliconDioxideGrowthRecipe('wafer.diode.power.step_seven', 'w
 // Metallization
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_eight', 'wafer.diode.power.step_nine', 'silicon_nitride.silane', 400, false)
 Lithography.generatePatterningRecipes('wafer.diode.power.step_nine', 'wafer.diode.power.step_ten', 'novolacs_liftoff_resist', 'mask_set.diode.power')
-Deposition.generateSputteringRecipes('wafer.diode.power.step_nine.exposed', 'wafer.diode.power.step_nine.sputtered', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
+Deposition.generateSputteringRecipes('wafer.diode.power.step_nine.exposed', 'wafer.diode.power.step_nine.deposited', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
 Lithography.generateResistStrippingRecipes('wafer.diode.power.step_ten', 'wafer.diode.power.step_eleven', 1, false, true)
 Mechanicals.generateBackgrindingRecipe('wafer.diode.power.step_eleven', 'wafer.diode.power.step_twelve', 400, HV)
 Deposition.generateSputteringRecipes('wafer.diode.power.step_twelve', 'wafer.diode.power.step_thirteen', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
