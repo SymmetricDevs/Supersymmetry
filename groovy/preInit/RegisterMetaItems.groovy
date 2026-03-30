@@ -31,49 +31,38 @@ def wordsFromNumber(int num) {
     }
 }
 
-def registerCircuitMetaitems(int id_start, String name, int step_count, int start_num=2, boolean finish=true) {
-    new StandardMetaItem(2 as short).with {
-        setRegistryName("meta_item_2") // what the hell man
-        def current_id = id_start;
+toadd_list = []
+
+def registerCircuitMetaitems(String name, int step_count, int start_num=2, boolean finish=true, boolean generateMask = true) {
         for (int i=start_num; i <= step_count; i++) {
-//            log.infoMC("adding metaitem " + "wafer." + name + ".step_" + wordsFromNumber(i))
-            addItem(current_id, "wafer." + name + ".step_" + wordsFromNumber(i))
-            current_id ++
+            toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(i))
         }
-        addItem(current_id, "mask_set." + name)
+        if (generateMask) {
+            toadd_list.add("mask_set." + name)
+        }
         if (finish) {
-            addItem(current_id + 1, "die." + name)
-            addItem(current_id + 2, "die." + name + ".bonded")
+            toadd_list.add("die." + name)
+            toadd_list.add("die." + name + ".bonded")
         }
-    }
 }
 
-def registerCMOSMetaitems(int id_start, String name) {
-    new StandardMetaItem(2 as short).with {
-        setRegistryName("meta_item_2")
-        registerCircuitMetaitems(id_start, name, 75, 3, false)
-        id_start += 73
-        for (int i=1; i<=9; i++) {
-            registerCircuitMetaitems(id_start, name + ".beol_" + wordsFromNumber(i), 7, 1, false)
-            id_start += 8
-            addItem(id_start, "wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
-            addItem(id_start + 1, "wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
-            id_start += 2
-        }
-        registerCircuitMetaitems(id_start, "" + name + "", 160, 148)
-        id_start += 14
-        def ashed_steps = [5, 12, 16, 27, 31, 35, 38, 42, 54, 71, 157]
-        for (step in ashed_steps) {
-            addItem(id_start, "wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
-            id_start += 1
-        }
-        
-        def photoresist_steps = [10, 14, 23, 28, 32, 37, 40, 52, 60, 68, 149, 154]
-        for (step in photoresist_steps) {
-            addItem(id_start, "wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
-            addItem(id_start + 1, "wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
-            id_start += 2
-        }
+def registerCMOSMetaitems(String name) {
+    registerCircuitMetaitems(name, 75, 3, false, false)
+    for (int i=1; i<=9; i++) {
+        registerCircuitMetaitems(name + ".beol_" + wordsFromNumber(i), 7, 1, false)
+        toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
+        toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
+    }
+    registerCircuitMetaitems(name, 160, 148)
+    def ashed_steps = [5, 12, 16, 27, 31, 35, 38, 42, 54, 71, 157]
+    for (step in ashed_steps) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
+    }
+    
+    def photoresist_steps = [10, 14, 23, 28, 32, 37, 40, 52, 60, 68, 149, 154]
+    for (step in photoresist_steps) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
     }
 }
 
@@ -575,37 +564,51 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8042, "wafer.gallium_arsenide.n_doped.raw")
 
         addItem(8043, "wafer.nmos.step_one") // the suffering begins
-        registerCircuitMetaitems(8044, "nmos_cpu", 24)
-        registerCircuitMetaitems(8069, "nmos_sram", 24)
-        registerCircuitMetaitems(8094, "nmos_uart", 24)
-        registerCircuitMetaitems(8119, "nmos_mask_rom", 24)
-        registerCircuitMetaitems(8144, "nmos_bus_controller", 24)
-        registerCircuitMetaitems(8169, "nmos_dram", 22)
-        registerCircuitMetaitems(8192, "bjt_pic_base", 17, 1, false)
-        registerCircuitMetaitems(8210, "bjt_ulpic", 5, 1)
-        registerCircuitMetaitems(8216, "bjt_lpic", 14, 1)
-        registerCircuitMetaitems(8233, "bjt_pic", 12, 1)
         // its cmos time baby
-        addItem(8248, "wafer.cmos.step_one")
-        addItem(8249, "wafer.cmos.step_two")
-        addItem(8250, "wafer.cmos.step_two.coated")
-        addItem(8251, "wafer.cmos.step_two.exposed")
-        registerCMOSMetaitems(8252, "cmos_cpu")
+        addItem(8044, "wafer.cmos.step_one")
+        addItem(8045, "wafer.cmos.step_two")
+        addItem(8046, "wafer.cmos.step_two.coated")
+        addItem(8047, "wafer.cmos.step_two.exposed")
 
-        addItem(8465, "wafer.diode.alloy.step_two")
-        addItem(8566, "wafer.zener_diode.alloy.step_two")
-        registerCircuitMetaitems(8567, "diode.planar", 10, 1, false)
-        registerCircuitMetaitems(8578, "diode.power", 14, 2, false)
-        addItem(8592, "wafer.diode.drift.step_one")
-        registerCircuitMetaitems(8593, "diode.schottky", 13, 2, false)
-        addItem(8605, "wafer.diode.planar.step_four.bsg")
-        addItem(8606, "wafer.diode.power.step_three.coated")
-        addItem(8607, "wafer.diode.power.step_three.exposed")
-        addItem(8608, "wafer.diode.power.step_nine.coated")
-        addItem(8609, "wafer.diode.power.step_nine.deposited")
-        addItem(8611, "wafer.diode.planar.step_one.coated")
-        addITem(8612, "wafer.diode.planar.step_one.exposed")
+        registerCircuitMetaitems("nmos_cpu", 24)
+        registerCircuitMetaitems("nmos_sram", 24)
+        registerCircuitMetaitems("nmos_uart", 24)
+        registerCircuitMetaitems("nmos_mask_rom", 24)
+        registerCircuitMetaitems("nmos_bus_controller", 24)
+        registerCircuitMetaitems("nmos_dram", 22)
+        registerCircuitMetaitems("bjt_pic_base", 17, 1, false)
+        registerCircuitMetaitems("bjt_ulpic", 5, 1)
+        registerCircuitMetaitems("bjt_lpic", 14, 1)
+        registerCircuitMetaitems("bjt_pic", 12, 1)
+        registerCMOSMetaitems("cmos_cpu")
+        registerCircuitMetaitems("diode.planar", 10, 1, false)
+        registerCircuitMetaitems("diode.power", 14, 2, false)
+        registerCircuitMetaitems("diode.schottky", 13, 2, false)
 
+        addItem(8048, "wafer.diode.alloy.step_two")
+        addItem(8049, "wafer.zener_diode.alloy.step_two")
+        addItem(8050, "wafer.diode.drift.step_one")
+        addItem(8051, "wafer.diode.planar.step_four.bsg")
+        addItem(8052, "wafer.diode.power.step_three.coated")
+        addItem(8053, "wafer.diode.power.step_three.exposed")
+        addItem(8054, "wafer.diode.power.step_nine.coated")
+        addItem(8055, "wafer.diode.power.step_nine.exposed")
+        addItem(8056, "wafer.diode.power.step_nine.deposited")
+        addItem(8057, "wafer.diode.planar.step_one.coated")
+        addItem(8058, "wafer.diode.planar.step_one.exposed")
+        addItem(8059, "wafer.diode.schottky.step_eight.coated")
+        addItem(8060, "wafer.diode.schotky.step_eight.exposed")
+        addItem(8061, "wafer.diode.schottky.step_eight.deposited")
+        addItem(8062, "wafer.diode.power.step_none.exposed")
+        addItem(8063, "wafer.diode.schottky.step_eight.exposed")
+
+        log.infoMC("adding " + toadd_list.size() + " wafer metaitems")
+        def start = 8250
+        for (name in toadd_list) {
+            addItem(start, name)
+            start++
+        }
+        
         // 8975-9000 sputtering targets
         addItem(8975, "target.aluminium")
         addItem(8976, "target.copper")

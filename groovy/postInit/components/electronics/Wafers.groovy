@@ -65,7 +65,7 @@ for (induction_coil in induction_coils) {
         .EUt(VA[MV])
         .buildAndRegister()
 
-    ZONE_REFINER.recipeBuilder()
+/*    ZONE_REFINER.recipeBuilder()
         .notConsumable(induction_coil)
         .fluidInputs(fluid('phosphine') * 100)
         .inputs(metaitem('seed_crystal.silicon'))
@@ -84,7 +84,7 @@ for (induction_coil in induction_coils) {
         .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
         .duration(1200)
         .EUt(VA[MV])
-        .buildAndRegister()
+        .buildAndRegister()*/ // ?? the same as before
 }
 
 // Small scale Czochiralski process

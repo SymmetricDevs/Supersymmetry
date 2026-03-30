@@ -758,9 +758,9 @@ class OrganicChemistryMaterials {
 
         Polyurethane = new Material.Builder(15124, SuSyUtility.susyId('polyurethane'))
                 .dust()
+                .flags(GENERATE_PLATE, FORCE_GENERATE_BLOCK, NO_UNIFICATION)
                 .components(Carbon * 17, Hydrogen * 16, Nitrogen * 2, Oxygen * 4)
                 .color(0xd1d1d1)
-                .flags(NO_UNIFICATION, GENERATE_PLATE, FORCE_GENERATE_BLOCK)
                 .build()
 
         Polyurethane.setFormula('(C15H10N2O2)(C2H6O2)', true)

@@ -1,6 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-
+// TODO: actually implement silicone recipes
+/*
 // Polydimethylsiloxane
 
 FLUIDIZED_BR.recipeBuilder()
@@ -71,4 +72,4 @@ POLYMERIZATION_TANK.recipeBuilder()
     .buildAndRegister()
 
 // Liquid Polydimethylsiloxane * 144
-mods.gregtech.extractor.removeByInput(30, [metaitem('dustPolydimethylsiloxane')], null)
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustPolydimethylsiloxane')], null)*/

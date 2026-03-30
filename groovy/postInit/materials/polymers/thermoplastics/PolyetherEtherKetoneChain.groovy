@@ -105,7 +105,7 @@ BR.recipeBuilder()
     .buildAndRegister();
 
 BR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedAluminiumChloride'))
+    .notConsumable(metaitem('catalystBedSupportedAluminiumChloride'))
     .fluidInputs(fluid('para_fluorobenzoyl_chloride') * 1000)
     .fluidInputs(fluid('fluorobenzene') * 1000)
     .fluidInputs(fluid('hexane') * 1000)

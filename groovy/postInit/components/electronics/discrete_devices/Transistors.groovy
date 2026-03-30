@@ -1,17 +1,14 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
-import globals.semiconductors.Lithography
-import globals.semiconductors.Etchants
 import globals.semiconductors.Deposition
 import globals.semiconductors.Packaging
-import globals.semiconductors.Doping
 
 oreDict.add('componentTransistor', metaitem('component.transistor.alloy_junction'))
 
 // Alloy-junction bipolar transistor (MV)
 
-Packaging.generateDicingRecipe('wafer.germanium', 'die.alloy_junction_transistor.step_one', 4, 400, LV)
+Packaging.generateDicingRecipe('wafer.germanium.n_doped', 'die.alloy_junction_transistor.step_one', 4, 400, LV)
 
 RESISTANCE_FURNACE.recipeBuilder()
     .notConsumable(ore('springCupronickel'))

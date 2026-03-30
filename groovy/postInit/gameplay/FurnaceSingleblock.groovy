@@ -61,7 +61,7 @@ def nonMetals = [
         [input: metaitem('stickIron'), output: metaitem('hot_iron_rod')],
         [input: metaitem('stickSteel'), output: metaitem('hot_steel_rod')],
         [input: metaitem('plateSteel'), output: metaitem('hot_steel_plate')],
-        [input: metaitem('brush.unfired'), output: metaitem('brush')],
+        [input: metaitem('component.brush.unfired'), output: metaitem('component.brush')],
         [input: item('minecraft:cactus'), output: item('minecraft:dye', 2)],
         [input: item('biomesoplenty:plant_1', 6), output: item('minecraft:dye', 2)],
         [input: metaitem('gregtechfoodoption:component.coconut'), output: metaitem('copra')],

@@ -44,7 +44,7 @@ MIXER.recipeBuilder()
 
 COMPRESSOR.recipeBuilder()
     .inputs(ore('dustCarbonCompound'))
-    .nonConsumable(metaitem('shape.mold.nugget'))
+    .notConsumable(metaitem('shape.mold.nugget'))
     .outputs(metaitem('component.resistor.carbon_composite.unfired') * 8)
     .duration(80)
     .EUt(VA[LV])

@@ -186,8 +186,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     // Floppy disks
 
     ROASTER.recipeBuilder()
-        .inputs(ore('dustPurifiedIronTwoThreeOxide') * 14)
-        .fluidInputs(fluid('oxygen') * 1000)
+        .inputs(ore('dustPurifiedIronIiiOxide') * 15)
         .outputs(metaitem('dustGammaIronThreeOxide') * 15)
         .duration(200)
         .EUt(VA[LV])

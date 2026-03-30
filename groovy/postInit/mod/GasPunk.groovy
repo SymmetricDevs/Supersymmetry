@@ -127,7 +127,7 @@ CSTR.recipeBuilder()
     .buildAndRegister();
 
 FIXED_BR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedAluminiumChloride'))
+    .notConsumable(metaitem('catalystBedSupportedAluminiumChloride'))
     .fluidInputs(fluid('ethylene_oxide') * 50)
     .fluidInputs(fluid('diisopropylamine') * 50)
     .fluidOutputs(fluid('diisopropylaminoethanol') * 50)
