@@ -172,20 +172,46 @@ class Deposition {
             .buildAndRegister();
     }
 
-    static void generateChemicalVaporDepositionRecipe(String input, String product, int duration, Map sources, Map offgases, int voltageTier) {
-        def tmp = CVD.recipeBuilder()
-            .inputs(metaitem(input));
-        for (gas in sources) {
-            tmp.fluidInputs(fluid(gas.key) * gas.value)
-        }
-        for (offgas in offgases) {
-            tmp.fluidOutputs(fluid(offgas.key) * offgas.value)
+    public static class CVDReagents {
+        Map inputs
+        Map offgases
+        int voltageTier
+
+        CVDReagents(Map in, Map out, Map vt) {
+            inputs = in
+            offgases = out
+            voltageTier = vt
         }
 
-        tmp.outputs(metaitem(product))
-            .duration(duration)
-            .EUt(VA[voltageTier])
-            .buildAndRegister()
+        static void generateRecipe(String input, String product, int duration) {
+            def tmp = CVD.recipeBuailder()
+                .inputs(metaitem(input));
+            for (gas in inputs) {
+                tmp.fluidInputs(fluid(gas.key) * gas.value)
+            }
+            for (offgas in offgases) {
+                tmp.fluidOutputs(fluid(offgas.key) * offgas.value)
+            }
+
+            tmp.outputs(metaitem(product))
+                .duration(duration)
+                .EUt(VA[voltageTier])
+                .buildAndRegister()
+        }
+    }
+
+    public static final cvdRecipes = [
+        "silicon_nitride.silane": CVDReagents(['silane' : 100, 'ammonia' : 100], ['hydrogen' : 350], HV)
+        "silicon.silane": CVDReagents(['silane':150], ['hydrogen' : 300], HV)
+    ]
+
+    static void generateChemicalVaporDepositionRecipe(String input, String product, int duration, String recipe) {
+        def cvd_process = cvdRecipes[recipe]
+        if (cvd_process == null) {
+            log.infoMC("cvd recipe for " + recipe + " does not exist")
+        } else {
+            cvd_process.generateRecipe(input, product, duration)
+        }
     }
 
     // ALD; implement ts
