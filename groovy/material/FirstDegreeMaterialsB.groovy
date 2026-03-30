@@ -781,5 +781,11 @@ class FirstDegreeMaterialsB {
                 .components(Silicon, Carbon * 8, Hydrogen * 20, Oxygen * 4)
                 .colorAverage()
                 .build()
+
+        UltrapureSteam = new Material.Builder(8783, SuSyUtility.susyId('ultrapure_steam'))
+                .gas()
+                .components(Hydrogen * 2, Oxygen)
+                .color(0xf0f0ff)
+                .build()
     }
 }

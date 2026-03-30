@@ -1682,6 +1682,7 @@ class SuSyMaterials {
     public static Material GermaniumTetrahydride
     public static Material TungstenHexafluoride
     public static Material Tetraethoxysilane
+    public static Material UltrapureSteam
 
     // HP Materials
 

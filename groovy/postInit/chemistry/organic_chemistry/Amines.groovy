@@ -156,7 +156,7 @@ FIXED_BR.recipeBuilder()
 
 FLUIDIZED_BR.recipeBuilder()
     .notConsumable(ore('dustAmorphousSilicaAlumina'))
-    .fluidInputs(fluid('urea_solution') * 1728)
+    .fluidInputs(fluid('urea') * 1728)
     .fluidInputs(fluid('ammonia_carbon_dioxide_mixture') * 2250)
     .fluidInputs(fluid('melamine_offgas') * 4750)
     .duration(200)

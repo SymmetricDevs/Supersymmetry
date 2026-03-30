@@ -19,7 +19,7 @@ class Deposition {
             .EUt(VA[HV])
 
         if (wet) {
-            growthRecipe.fluidInputs(fluid('dense_steam') * 200)
+            growthRecipe.fluidInputs(fluid('ultrapure_steam') * 200)
             growthRecipe.fluidOutputs(fluid('hydrogen') * 200)
         }
         
