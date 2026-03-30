@@ -201,8 +201,16 @@ class Deposition {
     }
 
     public static final cvdRecipes = [
-        "silicon_nitride.silane": CVDReagents(['silane' : 100, 'ammonia' : 100], ['hydrogen' : 350], HV)
-        "silicon.silane": CVDReagents(['silane':150], ['hydrogen' : 300], HV)
+        "silicon_nitride.silane": CVDReagents(['silane' : 100, 'ammonia' : 100], ['hydrogen' : 100, 'silicon_cvd_offgas' : 150], HV),
+        "silicon": CVDReagents(['silane':100], ['hydrogen' : 50, 'silicon_cvd_offgas' : 150], HV),
+        "silicon_dioxide.teos": CVDReagents(['tetraethoxysilane' : 25], ['diethyl_ether' : 50], EV),
+        "silicon_germanium": CVDReagents(['germanium_tetrahydride':50, 'silane' : 50], ['hydrogen' : 100, 'silicon_cvd_offgas' : 100], EV),
+        "tungsten": CVDReagents(['tungsten_hexafluoride' : 50, 'hydrogen' : 150], ['hydrogen_fluoride' : 300], EV),
+        "fluorosilicate_glass": CVDReagents(['tetraethoxysilane' : 30, 'silicon_tetrafluoride' : 10], ['diethyl_ether' : 60], HV),
+        "n_doped_silicon": CVDReagents(['silane' : 50, 'phosphine' : 2], ['hydrogen' : 75, 'silicon_cvd_offgas' : 125], HV),
+        "phosphosilicate_glass": CVDReagents(['tetraethoxysilane' : 50, 'phosphine' : 10], ['hydrogen' : 50, 'silicon_cvd_offgas' : 100], HV),
+        "silicon_dioxide.silane": CVDReagents(['silane' : 100, 'oxygen' : 100], ['steam' : 50, 'silicon_cvd_offgas' : 50], HV),
+        "titanium_nitride": CVDReagents(['titanium_tetrachloride' : 30, 'ammonia' : 40], ['hydrogen_chloride' : 120], EV)
     ]
 
     static void generateChemicalVaporDepositionRecipe(String input, String product, int duration, String recipe) {

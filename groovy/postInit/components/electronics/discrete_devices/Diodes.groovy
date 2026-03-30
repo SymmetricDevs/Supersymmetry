@@ -130,11 +130,11 @@ ASSEMBLER.recipeBuilder()
 // Planar power diodes (mesa diodes w/ drift layer)
 
 // Deposit drift layer and dope p-side
-Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.small.n_doped', 'wafer.diode.drift.step_one', 400, ['silane' : 50, 'phosphine' : 10], ['hydrogen' : 100], HV)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.small.n_doped', 'wafer.diode.drift.step_one', 400, 'phosphosilicate_glass')
 Doping.generateIonImplantationRecipes('wafer.diode.drift.step_one', 'wafer.diode.power.step_two', 1200, 'boron_trifluoride')
 
 // Mask mesa/contact and etch
-Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', 400, ['silane':50, 'ammonia':50], ['hydrogen' : 175], HV)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', 400, 'silicon_nitride')
 Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_three', 'wafer.diode.power.step_four', 'novolacs_resist', 'mask_set.diode.power', false)
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_four', 'wafer.diode.power.step_five', 'silicon_nitride', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.power.step_five', 'wafer.diode.power.step_six', 1, false, true)
@@ -172,7 +172,7 @@ Doping.generateIonImplantationRecipes('wafer.diode.schottky.step_two', 'wafer.di
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_three', 'wafer.diode.schottky.step_four', 1, false, true)
 
 // Deposit passivation oxide
-Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.schottky.step_four', 'wafer.diode.schottky.step_five', 400, ['silane' : 50, 'oxygen' : 75], ['steam' : 25], HV)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.schottky.step_four', 'wafer.diode.schottky.step_five', 400, 'silicon_dioxide.silane')
 Lithography.generatePhotolithographyRecipes('wafer.diode.schottky.step_five', 'wafer.diode.schottky.step_six', 'novolacs_resist', 'mask_set.diode.schottky', false)
 Etching.generateWetEtchingRecipe('wafer.diode.schottky.step_six', 'wafer.diode.schottky.step_seven', 'silicon_dioxide', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_seven', 'wafer.diode.schottky.step_eight', 1, false, true)
