@@ -145,7 +145,7 @@ BCR.recipeBuilder()
         .fluidInputs(fluid('dense_steam') * 20)
         .fluidInputs(fluid('air') * 980)
         .fluidOutputs(fluid('gtfo_moist_air') * 1000)
-        .duration(1)
+        .duration(5)
         .EUt(VA[LV])
         .buildAndRegister()
 
