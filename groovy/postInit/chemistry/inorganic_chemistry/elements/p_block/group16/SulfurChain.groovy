@@ -137,7 +137,7 @@ BCR.recipeBuilder()
         .circuitMeta(10)
         .fluidInputs(fluid('water') * 1000)
         .fluidOutputs(fluid('dense_steam') * 1000)
-        .duration(50)
+        .duration(80)
         .EUt(VA[LV])
         .buildAndRegister()
 
