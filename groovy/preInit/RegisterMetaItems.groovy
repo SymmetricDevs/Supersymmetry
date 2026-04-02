@@ -213,9 +213,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(3905, "battery.ni_fe_hull.lv")
         addItem(3906, "battery.ni_fe_hull.mv")
         addItem(3907, "battery.ni_fe_hull.hv")
-        addItem(3908, "battery.stainless_steel_hull.hv")
-        addItem(3909, "battery.stainless_steel_hull.ev")
-        addItem(3910, "battery.stainless_steel_hull.iv")
 
         //Batteries 4000-4100
         Batteries['lead_acid'].register(it, 4000)
@@ -229,20 +226,6 @@ eventManager.listen { PostMaterialEvent event ->
         Batteries['ni_fe.lv'].register(it, 4008)
         Batteries['ni_fe'].register(it, 4009)
         Batteries['ni_fe.hv'].register(it, 4010)
-        addItem(4011, "cathode.nioh2")
-        Batteries['ni_cd.hv'].register(it, 4012)
-        Batteries['ni_cd.ev'].register(it, 4013)
-        Batteries['ni_cd.iv'].register(it, 4014)
-        addItem(4015, "anode.cadmium_oxide")
-        Batteries['ni_mh.ev'].register(it, 4016)
-        Batteries['ni_mh.iv'].register(it, 4017)
-        Batteries['ni_mh.luv'].register(it, 4018)
-        addItem(4019, "anode.metal_hydride")
-        addItem(4020, "electrode.nickeled_steel_foil")
-        addItem(4021, "membrane.caprolatam")
-        addItem(4022, "membrane.caprolatam_wet")
-        addItem(4023, "membrane.caprolatam_quenched")
-        addItem(4024, "membrane.caprolatam_casted")
 
         addItem(4101, "vacuum_tube_components")
 

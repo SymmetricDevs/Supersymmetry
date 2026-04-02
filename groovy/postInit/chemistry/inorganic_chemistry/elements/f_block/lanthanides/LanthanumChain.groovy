@@ -105,16 +105,3 @@ MIXER.recipeBuilder()
     .duration(120)
     .EUt(VA[HV])
     .buildAndRegister()
-
-// AB5 Metal Hydride
-
-ADVANCED_ARC_FURNACE.recipeBuilder()
-        .inputs(ore('dustLanthanum') * 8)
-        .inputs(ore('dustHighPurityZirconium') * 2)
-        .inputs(ore('dustAnyPurityNickel') * 45)
-        .inputs(ore('dustAnyPurityAluminium') * 5)
-        .fluidInputs(fluid('argon') * 4000)
-        .fluidOutputs(fluid('AB5_metal_hydride') * 8640)
-        .duration(845)
-        .EUt(VA[EV])
-        .buildAndRegister()
