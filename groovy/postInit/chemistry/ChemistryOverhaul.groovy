@@ -2097,16 +2097,7 @@ BCR.recipeBuilder()
     .duration(10)
     .EUt(VA[LV])
     .buildAndRegister()
-
-// Lithium Hydride
-ROASTER.recipeBuilder()
-    .inputs(ore('dustAnyPurityLithium') * 1)
-    .fluidInputs(fluid('hydrogen') * 1000)
-    .outputs(metaitem('dustLithiumHydride') * 2)
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
+    
 // Tetramethylammonium hydroxide
 BR.recipeBuilder()
     .inputs(ore('dustTetramethylammoniumChloride') * 6)

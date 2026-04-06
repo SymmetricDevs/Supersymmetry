@@ -764,7 +764,7 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .build()
 
-        GermaniumTetrahydride = new Material.Builder(8780, SuSyUtility.susyId('germanium_tetrahydride'))
+        Germane = new Material.Builder(8780, SuSyUtility.susyId('germane'))
                 .gas()
                 .components(Germanium, Hydrogen * 4)
                 .colorAverage()
@@ -776,11 +776,7 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .build()
 
-        Tetraethoxysilane = new Material.Builder(8782, SuSyUtility.susyId('tetraethoxysilane'))
-                .liquid()
-                .components(Silicon, Carbon * 8, Hydrogen * 20, Oxygen * 4)
-                .colorAverage()
-                .build()
+        // FREE ID: 8782
 
         UltrapureSteam = new Material.Builder(8783, SuSyUtility.susyId('ultrapure_steam'))
                 .gas()

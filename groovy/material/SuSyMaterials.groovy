@@ -1679,9 +1679,8 @@ class SuSyMaterials {
     public static Material Dumet
     public static Material Permendur
     public static Material FormingGas
-    public static Material GermaniumTetrahydride
+    public static Material Germane
     public static Material TungstenHexafluoride
-    public static Material Tetraethoxysilane
     public static Material UltrapureSteam
 
     // HP Materials

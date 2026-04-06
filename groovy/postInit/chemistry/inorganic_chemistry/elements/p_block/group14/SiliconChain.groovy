@@ -221,16 +221,28 @@ Sintering.nonPlasmaFuels().each { fuel ->
     }
 }
 
-// TEOS
+// CVD Precursors
 
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('silicon_tetrachloride') * 50)
-    .fluidInputs(fluid('ethanol') * 200)
-    .fluidOutputs(fluid('tetraethyl_orthosilicate') * 50)
-    .fluidOutputs(fluid('hydrogen_chloride') * 200)
-    .duration(5)
-    .EUt(VA[MV])
-    .buildAndRegister()
+    // TEOS
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('silicon_tetrachloride') * 50)
+        .fluidInputs(fluid('ethanol') * 200)
+        .fluidOutputs(fluid('tetraethyl_orthosilicate') * 50)
+        .fluidOutputs(fluid('hydrogen_chloride') * 200)
+        .duration(5)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // SiF4
+
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustSodiumHexafluorosilicate') * 9)
+        .outputs(metaitem('dustSodiumFluoride') * 4)
+        .fluidOutputs(fluid('silicon_tetrafluoride') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
 
 // Silicates
 

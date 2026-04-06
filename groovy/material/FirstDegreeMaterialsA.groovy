@@ -103,7 +103,7 @@ class FirstDegreeMaterialsA {
         HighPurityLanthanum = generatePurifiedElement(Lanthanum, 8045, false, false)
         HighPurityHafnium = generatePurifiedElement(Hafnium, 8046, false, false)
         HighPurityTantalum = generatePurifiedElement(Tantalum, 8047, false, false)
-        HighPurityTungsten = generatePurifiedElement(Tungsten, 8048, false, false)
+        HighPurityTungsten = generatePurifiedElement(Tungsten, 8048, false, true)
         HighPurityRhenium = generatePurifiedElement(Rhenium, 8049, false, false)
         HighPurityOsmium = generatePurifiedElement(Osmium, 8050, false, false)
         HighPurityIridium = generatePurifiedElement(Iridium, 8051, false, false)
