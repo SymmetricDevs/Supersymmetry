@@ -4,12 +4,14 @@
     "density": 0.35,
     "min_height": 6,
     "max_height": 38,
-    "dimension_filter": {
-        "type": "whitelist",
-        "dimensions": [
-            800
-        ]
-    },
+    "dimension_filter": [
+        {
+            "type": "whitelist",
+            "dimensions": [
+                800
+            ]
+        }
+    ],
     "filler": {
         "type": "ore",
         "prefix": "oreAnorthosite"

@@ -4,12 +4,14 @@
     "density": 0.28,
     "min_height": 4,
     "max_height": 40,
-    "dimension_filter": {
-        "type": "whitelist",
-        "dimensions": [
-            800
-        ]
-    },
+    "dimension_filter": [
+        {
+            "type": "whitelist",
+            "dimensions": [
+                800
+            ]
+        }
+    ],
     "filler": {
         "type": "ore",
         "prefix": "oreBasalt"

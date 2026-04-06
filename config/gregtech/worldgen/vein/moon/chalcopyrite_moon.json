@@ -14,6 +14,14 @@
             20
         ]
     },
+    "dimension_filter": [
+        {
+            "type": "whitelist",
+            "dimensions": [
+                800
+            ]
+        }
+    ],
     "filler": {
         "type": "ore",
         "prefix": "oreAnorthosite"
