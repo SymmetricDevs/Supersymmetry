@@ -1,0 +1,24 @@
+{
+    "vein_name": "moon_olivine",
+    "weight": 22,
+    "density": 0.33,
+    "min_height": 8,
+    "max_height": 72,
+    "dimension_filter": {
+        "type": "whitelist",
+        "dimensions": [
+            800
+        ]
+    },
+    "filler": {
+        "type": "ore",
+        "prefix": "oreBasalt"
+    },
+    "primary_ore": "olivine",
+    "secondary_ores": [
+        "pyroxene"
+    ],
+    "tertiary_ores": [
+        "chromite"
+    ]
+}

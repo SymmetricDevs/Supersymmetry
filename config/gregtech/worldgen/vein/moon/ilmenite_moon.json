@@ -1,0 +1,24 @@
+{
+    "vein_name": "moon_ilmenite",
+    "weight": 32,
+    "density": 0.42,
+    "min_height": 8,
+    "max_height": 52,
+    "dimension_filter": {
+        "type": "whitelist",
+        "dimensions": [
+            800
+        ]
+    },
+    "filler": {
+        "type": "ore",
+        "prefix": "oreBasalt"
+    },
+    "primary_ore": "ilmenite",
+    "secondary_ores": [
+        "magnetite"
+    ],
+    "tertiary_ores": [
+        "titanomagnetite"
+    ]
+}

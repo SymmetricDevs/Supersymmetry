@@ -1,0 +1,24 @@
+{
+    "vein_name": "moon_anorthite",
+    "weight": 40,
+    "density": 0.45,
+    "min_height": 30,
+    "max_height": 120,
+    "dimension_filter": {
+        "type": "whitelist",
+        "dimensions": [
+            800
+        ]
+    },
+    "filler": {
+        "type": "ore",
+        "prefix": "oreAnorthosite"
+    },
+    "primary_ore": "anorthite",
+    "secondary_ores": [
+        "feldspar"
+    ],
+    "tertiary_ores": [
+        "quartz"
+    ]
+}
