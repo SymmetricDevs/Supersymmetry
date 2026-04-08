@@ -134,6 +134,15 @@ HIGH_PRESSURE_CRYO_DT.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+PSA.recipeBuilder()
+    .fluidInputs(fluid('crude_syngas') * 4155)
+    .notConsumable(metaitem('membrane.zeolite'))
+    .fluidOutputs(fluid('hydrogen') * 3240)
+    .fluidOutputs(fluid('chilled_flue_gas') * 915)
+    .duration(80)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
 // Syngas utilization
 
     // LT Fischer Tropsch

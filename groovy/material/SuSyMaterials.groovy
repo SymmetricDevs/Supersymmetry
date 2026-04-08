@@ -821,6 +821,7 @@ class SuSyMaterials {
     public static Material NitricAcidMotherLiquor
     public static Material DilutedNitricAcidMotherLiquor
     public static Material AdipicNitricAcidMotherLiquor
+    public static Material BauxiteLeach
 
     // Petrochem Materials
 

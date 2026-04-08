@@ -1,7 +1,8 @@
 {
   "betterquesting:10": {
     "editmode:1": 0,
-    "home_image:8": "supersymmetry:textures/gui/title_card.png"
+    "home_image:8": "supersymmetry:textures/gui/title_card.png",
+    "pack_version:1": 1733493
   },
   "format:8": "2.1.0"
 }

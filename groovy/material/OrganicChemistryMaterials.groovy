@@ -2988,7 +2988,7 @@ class OrganicChemistryMaterials {
 
         AcidicEthylAcetateWaterMixture = new Material.Builder(15470, SuSyUtility.susyId('acidic_ethyl_acetate_water_mixture'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(EthylAcetate * 1, SulfuricAcid * 1, Water * 1)
+                .components(EthylAcetate * 1, SulfuricAcid * 1, Water * 2)
                 .colorAverage()
                 .build()
 

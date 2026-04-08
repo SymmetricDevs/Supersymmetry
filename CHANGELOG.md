@@ -1,3 +1,30 @@
+# UPDATE 0.1.16.4.1
+## Mod Changes
+### Mod Updates
+- Better Questing Unofficial 4.2.7 → 4.3.1
+- Supercritical 0.2.4 → 0.2.5
+## Changes
+### Changed Features
+- Quests are now updated automatically! You'll never have to run /bq_admin default load again.
+- In order to remove a gallium dupe, the Bayer process has been slightly modified. You may need to flush out some machines and/or change filters.
+### Fixes
+- Green vitriol is no longer a pile of steaming garbage
+- Wood/stone quests work properly with all wood/stone types
+# UPDATE 0.1.16.4
+## Mod Changes
+### Mod Updates
+- Universal Tweaks 1.12.2-1.18.0 → 1.12.2-1.19.1
+- Better Questing Unofficial 4.2.7 → 4.3.0
+- Bubbles 2.4.9 → 2.4.10
+- SusyCore v0.1.97 → v0.1.98
+- CraftPresence 2.7.0+1.12.2-forge → 2.7.1+1.12.2-forge
+## Changes
+### Changed Features
+- Sulfuric acid is now properly Gregified (TM)! Run /bq_admin default load to see the new quests. (#1803 by @obihz6, #1830 by @planetme)
+- Acetic anhydride, acetaldehyde, acetic acid, and many other ace chemicals have updated recipes! (#1819 by @Fiery36)
+### Fixes
+- BQu teams now work properly. (#1833 by @planetme)
+- CraftPresence should no longer count you as playing when you're not. (#1833 by @planetme)
 # UPDATE 0.1.16.3
 ## Mod Changes
 ### Mod Updates

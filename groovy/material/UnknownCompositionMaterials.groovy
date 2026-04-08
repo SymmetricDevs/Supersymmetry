@@ -3356,5 +3356,10 @@ class UnknownCompositionMaterials {
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xba9447)
                 .build()
+
+        BauxiteLeach = new Material.Builder(4728, SuSyUtility.susyId('bauxite_leach'))
+                .liquid(new FluidBuilder().temperature(450))
+                .color(0x5e2613)
+                .build()
     }
 }

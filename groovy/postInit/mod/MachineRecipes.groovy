@@ -212,6 +212,13 @@ RecyclingHelper.addShaped("gregtech:vulcanizing_press.ev", metaitem('susy:vulcan
     [ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')]
 ])
 
+//Roaster
+RecyclingHelper.addShaped("gregtech:roaster.ulv", metaitem('susy:roaster.bronze'), [
+    [ore('pipeSmallFluidBronze'), ore('rotorBronze'), ore('pipeSmallFluidBronze')],
+    [ore('pipeSmallFluidBronze'), ore('plateBronze'), ore('pipeSmallFluidBronze')],
+    [ore('pipeSmallFluidBronze'), item('gregtech:steam_casing', 1), ore('pipeSmallFluidBronze')]
+])
+
 for (i = 1; i <= 8; i++) {
     RecyclingHelper.addShaped("gregtech:roaster." + Globals.voltageTiers[i], metaitem('susy:roaster.' + Globals.voltageTiers[i]), [
         [circuits[i], rotors[i], circuits[i]],

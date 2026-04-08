@@ -438,6 +438,7 @@ susy.material.steamcracked_light_gas_oil=Steam Cracked Light Gas Oil
 susy.material.steamcracked_heavy_gas_oil=Steam Cracked Heavy Gas Oil
 susy.material.impure_sodium_aluminate_solution=Impure Sodium Aluminate Solution
 susy.material.sodium_aluminate_solution=Sodium Aluminate Solution
+susy.material.bauxite_leach=Bauxite Leach
 susy.material.red_mud=Red Mud
 susy.material.impure_soda_ash_solution=Impure Soda Ash Solution
 susy.material.impure_sodium_hydroxide_solution=Impure Sodium Hydroxide Solution
@@ -1115,6 +1116,7 @@ susy.material.hot_nitrogen=Hot Nitrogen
 susy.material.ethylene_glycol=Ethylene Glycol
 susy.material.carbon_disulfide=Carbon Disulfide
 susy.material.iron_sulfate=Iron Sulfate
+susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.copper_chloride=Copper Chloride
 susy.material.trichlorosilane=Trichlorosilane
 susy.material.purified_trichlorosilane=Purified Trichlorosilane
@@ -3387,10 +3389,6 @@ gregtech.machine.electric_blast_furnace.name=Electric Resistance Furnace
 gregtech.multiblock.electric_blast_furnace.description=The Electric Resistance Furnace (ERF) is a multiblock structure used for smelting alloys, cooking metals and refining ores. It is required for obtaining high-tier alloys and metals, such as aluminium, stainless steel, titanium, and naquadah alloy.
 gregtech.advancement.medium_voltage.31_mv_energy_hatch.name=Upgrade Your ERF
 recipemap.electric_blast_furnace.name=Resistance Furnace
-susy.machine.batch_reactor.bronze.name=Steam Batch reactor
-susy.machine.batch_reactor.steel.name=High Pressure Steam Batch reactor
-susy.machine.distiller.bronze.name=Steam Distiller
-susy.machine.distiller.steel.name=High Pressure Steam Distiller
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
