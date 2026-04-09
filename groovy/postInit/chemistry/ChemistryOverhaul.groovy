@@ -417,44 +417,6 @@ DRYER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// Chlorofluoromethanes
-
-ROASTER.recipeBuilder()
-    .fluidInputs(fluid('chlorine') * 3000)
-    .inputs(ore('dustAnyPurityAntimony'))
-    .outputs(metaitem('dustAntimonyTrichloride') * 4)
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('antimony_trichloride') * 72)
-    .fluidInputs(fluid('chlorine') * 250)
-    .fluidOutputs(fluid('antimony_pentachloride') * 125)
-    .duration(10)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('carbon_tetrachloride') * 150)
-    .fluidInputs(fluid('hydrogen_fluoride') * 300)
-    .fluidInputs(fluid('antimony_pentachloride') * 50)
-    .fluidOutputs(fluid('chlorofluoromethane_mix') * 500)
-    .duration(5)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('chlorofluoromethane_mix') * 5000)
-    .fluidOutputs(fluid('antimony_pentachloride') * 500)
-    .fluidOutputs(fluid('trichlorofluoromethane') * 500)
-    .fluidOutputs(fluid('dichlorodifluoromethane') * 500)
-    .fluidOutputs(fluid('chlorotrifluoromethane') * 500)
-    .fluidOutputs(fluid('hydrogen_chloride') * 3000)
-    .duration(160)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 // Synthetic methane
 
 REACTION_FURNACE.recipeBuilder()

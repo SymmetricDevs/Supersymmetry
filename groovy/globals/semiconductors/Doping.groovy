@@ -82,7 +82,7 @@ class Doping {
     }
 
     static void generateDriveInRecipe(String input, String product, int duration) {
-        TUBE_FURNACE.recipeBuilder() // Drive-in of diffusant
+        RESISTANCE_FURNACE.recipeBuilder() // Drive-in of diffusant
             .notConsumable(ore('springCupronickel'))
             .fluidInputs(fluid('nitrogen') * 100)
             .inputs(metaitem(input))

@@ -104,7 +104,7 @@ class Etching {
             new Etchant("ultrapure_hydrofluoric_acid", MV, 50, 0.004, false, false),
         ],
         hafnium_dioxide: [
-            new Etchant("ultrapure_hydrofluoric_acid", HV, 10, 0.002, false, false)
+            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.008, true, true),
         ],
         nickel_silicide: [
             new Etchant("phosphoric_acid", HV, 50, 0.01, false, false)
@@ -112,7 +112,7 @@ class Etching {
     ]
 
 
-    static void generateWetEtchingRecipe(String input, String product, String materialEtched, int duration, boolean anisotropic) {
+    static void generateWetEtchingRecipe(String input, String product, String materialEtched, int depth, boolean anisotropic) {
         if (!etchants.containsKey(materialEtched)) {    
             log.warn("Attempted adding etching recipe with no matching etchant: " + materialEtched + ". No recipe is generated");
             return;
@@ -123,7 +123,7 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (duration)) // just ignore etching rate entirely i guess
+                    .duration((int) (depth / etchant.etchingRate))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()
@@ -142,7 +142,7 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (duration))
+                    .duration((int) (depth / etchant.etchingRate))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()
