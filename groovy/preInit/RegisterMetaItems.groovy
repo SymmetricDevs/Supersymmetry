@@ -623,6 +623,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8985, "target.platinum")
         addItem(8986, "target.tantalum")
         addItem(8987, "target.chromium")
+        addItem(8988, "target.tantalum_nitride")
 
         //Crops 9000-10000
 
