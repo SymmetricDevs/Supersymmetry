@@ -51,9 +51,6 @@ DT.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-// Small Pile of Mercury II Chloride Dust * 1
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('crude_gallium_trichloride') * 432])
-
 BR.recipeBuilder()
     .fluidInputs(fluid('gallium_trichloride') * 1000)
     .fluidInputs(fluid('hydrogen') * 3000)

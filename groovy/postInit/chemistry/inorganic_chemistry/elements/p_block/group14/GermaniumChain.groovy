@@ -15,9 +15,6 @@ CHEMICAL_BATH.recipeBuilder()
 
 // Zinc hydrometallurgy route (primitive)
 
-oreDict.add('dustZincResidues', metaitem('dustZincHydrochloricLeachResidue'))
-oreDict.add('dustZincResidues', metaitem('dustZincLeachResidue'))
-
 carbons = new ItemStack[]{
         metaitem('dustCarbon'),
         metaitem('dustHighPurityCarbon'),

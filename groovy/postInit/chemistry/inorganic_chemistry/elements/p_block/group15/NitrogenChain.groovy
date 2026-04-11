@@ -187,6 +187,14 @@ CSTR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+ROASTER.recipeBuilder() // Decomposition
+    .fluidInputs(fluid('nitrous_oxide') * 1000)
+    .fluidOutputs(fluid('nitric_oxide') * 500)
+    .fluidOutputs(fluid('nitrogen') * 500)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 // Hydrogen cyanide
 
 REACTION_FURNACE.recipeBuilder()

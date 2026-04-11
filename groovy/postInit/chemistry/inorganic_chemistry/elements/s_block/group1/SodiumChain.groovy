@@ -48,7 +48,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 // Downs cell process
 
 ELECTROLYZER.recipeBuilder()
-    .notConsumable(metaitem('stickNickel'))
+    .notConsumable(metaitem('graphite_electrode'))
     .notConsumable(metaitem('stickIron'))
     .fluidInputs(fluid('salt') * 288)
     .fluidOutputs(fluid('chlorine') * 1000)
@@ -110,11 +110,11 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .inputs(ore('dustSodiumSulfate') * 14)
     .circuitMeta(1)
-    .outputs(metaitem('dustSodiumOxide') * 6)
+    .inputs(ore('dustSodiumSulfate') * 7)
+    .outputs(metaitem('dustSodiumOxide') * 3)
     .fluidOutputs(fluid('sulfur_trioxide_reaction_mixture') * 2000)
-    .duration(400)
+    .duration(200)
     .EUt(VA[MV])
     .buildAndRegister()
 

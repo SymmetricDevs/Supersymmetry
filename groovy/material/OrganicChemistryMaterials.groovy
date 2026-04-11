@@ -12,6 +12,7 @@ import supersymmetry.api.util.SuSyUtility
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 import supersymmetry.api.unification.material.properties.FiberProperty
 
+import static gregtechfoodoption.GTFOMaterialHandler.*
 import static gregtech.api.unification.material.info.MaterialIconSet.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
 import static gregtech.api.unification.material.Materials.*
@@ -280,11 +281,13 @@ class OrganicChemistryMaterials {
 
         TrimethylBorate.setFormula("B(OCH3)3", true)
 
-        MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
+        AcidicMethylAcetateWaterMixture = new Material.Builder(15039, SuSyUtility.susyId('acidic_methyl_acetate_water_mixture'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(SulfuricAcid * 1, MethylAcetate * 1, Water * 1)
+                .components(MethylAcetate * 1, SulfuricAcid * 1, Water * 2)
                 .colorAverage()
                 .build()
+
+        AcidicMethylAcetateWaterMixture.setFormula("(C3H6O2)(H2SO4)(H2O)", true)
 
         TwoChloronitrobenzene = new Material.Builder(15040, SuSyUtility.susyId('two_chloronitrobenzene'))
                 .dust().liquid(new FluidBuilder().temperature(306))
@@ -791,12 +794,11 @@ class OrganicChemistryMaterials {
 
         Dimethylformamide.setFormula('(CH3)2NCH', true)
 
-        CativaCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_catalyst'))
+        Adamantanone = new Material.Builder(15128, SuSyUtility.susyId('adamantanone'))
                 .dust()
-                .color(0x695449)
+                .components(Carbon * 10, Hydrogen * 14, Oxygen * 1)
+                .colorAverage()
                 .build()
-
-        CativaCatalyst.setFormula('[PPN][IrI2(CO)2]', true)
 
         TwoEthylanthraquinone = new Material.Builder(15129, SuSyUtility.susyId('two_ethylanthraquinone'))
                 .dust()
@@ -1816,12 +1818,14 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        BistriphenylphosphineiminiumChloride = new Material.Builder(15287, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
-                .dust()
-                .components(Carbon * 36, Hydrogen * 30, Chlorine * 1, Nitrogen * 1, Phosphorus * 2)
+        AceticAcidEthanolMixture = new Material.Builder(15287, SuSyUtility.susyId("acetic_acid_ethanol_mixture"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Ethanol * 1, AceticAcid * 1, SulfuricAcid * 1, Water * 4)
                 .colorAverage()
                 .build()
 
+        AceticAcidEthanolMixture.setFormula("(C2H4O2)(C2H6O)(H2SO4)", true)
+        
         DimethylTerephthalate = new Material.Builder(15288, SuSyUtility.susyId('dimethyl_terephthalate'))
                 .dust().liquid(new FluidBuilder().temperature(533))
                 .components(Carbon * 10, Hydrogen * 10, Oxygen * 4)
@@ -2543,12 +2547,14 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        Adamantanone = new Material.Builder(15396, SuSyUtility.susyId('adamantanone'))
-                .dust()
-                .components(Carbon * 10, Hydrogen * 14, Oxygen * 1)
+        MethylIodideSolution = new Material.Builder(15396, SuSyUtility.susyId("methyl_iodide_solution"))
+                .liquid()
+                .components(Carbon, Hydrogen * 3, Iodine, Water)
                 .colorAverage()
                 .build()
-            
+
+        MethylIodideSolution.setFormula("(CH3I)(H2O)", true)
+
         Polycarbonate = new Material.Builder(15397, SuSyUtility.susyId('polycarbonate'))
                 .polymer()
                 .flags(GENERATE_PLATE)
@@ -3000,11 +3006,13 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        MethanesulfonicAcidSolution = new Material.Builder(15470, SuSyUtility.susyId('methanesulfonic_acid_solution'))
-                .liquid()
-                .components(MethanesulfonicAcid, Water)
+        AcidicEthylAcetateWaterMixture = new Material.Builder(15470, SuSyUtility.susyId('acidic_ethyl_acetate_water_mixture'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(EthylAcetate * 1, SulfuricAcid * 1, Water * 2)
                 .colorAverage()
                 .build()
+
+        AcidicEthylAcetateWaterMixture.setFormula("(C4H8O2)(H2SO4)(H2O)", true)
 
         BenzenesulfonicAcid = new Material.Builder(15471, SuSyUtility.susyId('benzenesulfonic_acid'))
                 .liquid()
@@ -3361,14 +3369,20 @@ class OrganicChemistryMaterials {
                 .color(0x040714)
                 .build()
 
-        TrifluoromethanesulfonylFluoride = new Material.Builder(15524, SuSyUtility.susyId('trifluoromethanesulfonyl_fluoride'))
-                .liquid()
-                .components(Carbon * 1, Fluorine * 4, Sulfur * 1, Oxygen * 2)
+        AceticAcidMethanolMixture = new Material.Builder(15524, SuSyUtility.susyId('acetic_acid_methanol_mixture'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(AceticAcid * 1, Methanol * 1, SulfuricAcid * 1, Water * 4)
                 .colorAverage()
                 .build()
-        TrifluoromethanesulfonylFluoride.setFormula('CF4SO2')
 
-        FluorinatedMethanesulfonicAcidMixture = genSolution(15525, 'fluorinated_methanesulfonic_acid_mixture', MethanesulfonicAcid, HydrogenFluoride, true)
+        AceticAcidMethanolMixture.setFormula("(CH3COOH)(CH3OH)(H2SO4)", true)
+
+        Cyclohexanol = new Material.Builder(15525, SuSyUtility.susyId('cyclohexanol'))
+                .liquid(new FluidBuilder().temperature(434))
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 1)
+                .flags(FLAMMABLE)
+                .color(0xd4c97a)
+                .build()
         
         Polyhydroxystyrene = new Material.Builder(15526, SuSyUtility.susyId('polyhydroxystyrene'))
                 .dust()
@@ -3671,6 +3685,12 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
         ParaTertbutyliodobenzene.setFormula("C10H13I")
+
+        MethanesulfonicAcidSolution = new Material.Builder(15577, SuSyUtility.susyId('methanesulfonic_acid_solution'))
+                .liquid()
+                .components(MethanesulfonicAcid, Water)
+                .colorAverage()
+                .build()
     }
 
     static void register2() {
@@ -3846,7 +3866,7 @@ class OrganicChemistryMaterials {
                 .build()
         Hexamethoxymethylmelamine.setFormula("C15H30N6O6")
 
-        KRF_BARC = new Material.Builder(15606, SuSyUtility.susyId('krf_barc'))
+        KrFBottomAntireflectiveCoating = new Material.Builder(15606, SuSyUtility.susyId('krf_barc'))
                 .liquid()
                 .components(StyreneAnthracenylMaleimide, TripropylamineTriflate, Hexamethoxymethylmelamine, PropyleneGlycolMethylEtherAcetate)
                 .colorAverage()
@@ -4084,5 +4104,28 @@ class OrganicChemistryMaterials {
         Polyethylenimine = new Material.Builder(15662, SuSyUtility.susyId('polyethylenimine'))
                 .liquid()
                 .build()
+
+        LacticAcid = new Material.Builder(15663, SuSyUtility.susyId('lactic_acid'))
+                .dust()
+                .components(Carbon * 3, Hydrogen * 6, Oxygen * 3)
+                .colorAverage()
+                .build()
+
+        TriflicAcid = new Material.Builder(15664, SuSyUtility.susyId("triflic_acid"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Fluorine * 3, Carbon * 1, Sulfur * 1, Oxygen * 3, Hydrogen * 1)
+                .colorAverage()
+                .build()
+                
+        TriflicAcid.setFormula("CF3SO3H")
+
+        TrifluoromethanesulfonylFluoride = new Material.Builder(15665, SuSyUtility.susyId('trifluoromethanesulfonyl_fluoride'))
+                .liquid()
+                .components(Carbon * 1, Fluorine * 4, Sulfur * 1, Oxygen * 2)
+                .colorAverage()
+                .build()
+        TrifluoromethanesulfonylFluoride.setFormula('CF4SO2')
+
+        FluorinatedMethanesulfonicAcidMixture = genSolution(15666, 'fluorinated_methanesulfonic_acid_mixture', MethanesulfonicAcid, HydrogenFluoride, true)
     }
 }       

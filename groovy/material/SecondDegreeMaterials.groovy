@@ -147,9 +147,9 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        WackerCatalyst = new Material.Builder(13020, SuSyUtility.susyId('wacker_catalyst'))
-                .dust()
-                .components(PalladiumChloride * 1, CopperIIChloride * 1)
+        WackerCatalystSolution = new Material.Builder(13020, SuSyUtility.susyId('wacker_catalyst_solution'))
+                .liquid()
+                .components(PalladiumChlorideDihydrate, CopperIIChloride, Water)
                 .colorAverage()
                 .build()
 
@@ -528,7 +528,7 @@ class SecondDegreeMaterials {
 
         AmmoniumThiocyanateSolution = new Material.Builder(13082, SuSyUtility.susyId('ammonium_thiocyanate_solution'))
                 .liquid()
-                .components(AmmoniumThiocyanate, Water)
+                .components(AmmoniumThiocyanate, Water * 2)
                 .colorAverage()
                 .build()
 
@@ -576,15 +576,18 @@ class SecondDegreeMaterials {
 
         AlluvialDivalentPalladiumSolution.setFormula('(H2PdCl4)(ZnCl2)(HCl)4(H2O)14', true)
 
-        PlatinumPrecursorSolution = new Material.Builder(13091, SuSyUtility.susyId('platinum_precursor_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(AmmoniumHexachloroplatinate, PhosphoricAcid * 1)
+        SupportedPlatinumChloride = new Material.Builder(13091, SuSyUtility.susyId('supported_platinum_chloride'))
+                .dust()
+                .components(Hydrogen * 2, Platinum, Chlorine * 6, Water * 6, Alumina * 9)
                 .colorAverage()
+                .flags(GENERATE_CATALYST_BED)
                 .build()
+
+        SupportedPlatinumChloride.setFormula('(H2PtCl6)(H2O)6(Al2O3)9', true)
 
         SupportedPlatinum = new Material.Builder(13092, SuSyUtility.susyId('supported_platinum'))
                 .dust()
-                .components(Alumina, Platinum, Chlorine * 4)
+                .components(Alumina * 9, Platinum)
                 .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
@@ -655,15 +658,18 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        PalladiumPrecursorSolution = new Material.Builder(13103, SuSyUtility.susyId("palladium_precursor_solution"))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(PalladiumChloride, PhosphoricAcid)
+        SupportedPalladiumChloride = new Material.Builder(13103, SuSyUtility.susyId("supported_palladium_chloride"))
+                .dust()
+                .components(Hydrogen * 2, Palladium, Chlorine * 4, Water * 8, Alumina * 9)
+                .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
 
+        SupportedPalladiumChloride.setFormula('(H2PdCl4)(H2O)8(Al2O3)9', true)
+
         SupportedPalladium = new Material.Builder(13104, SuSyUtility.susyId("supported_palladium"))
                 .dust()
-                .components(PalladiumChloride, Alumina)
+                .components(Palladium, Alumina * 9)
                 .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
@@ -810,38 +816,7 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        SupportedSilver = new Material.Builder(13126, SuSyUtility.susyId('supported_silver'))
-                .dust()
-                .flags(GENERATE_CATALYST_BED)
-                .components(Silver, Alumina)
-                .colorAverage()
-                .build()
-
-        SupportedAluminiumChloride = new Material.Builder(13127,SuSyUtility.susyId('supported_aluminium_chloride'))
-                .dust()
-                .flags(GENERATE_CATALYST_BED)
-                .components(AluminiumChloride, Alumina)
-                .colorAverage()
-                .build()
-
-        SupportedCopper = new Material.Builder(13128, SuSyUtility.susyId('supported_copper'))
-                .dust()
-                .flags(GENERATE_CATALYST_BED)
-                .components(Copper, Alumina)
-                .colorAverage()
-                .build()
-
-        CopperImpregnatedSilica = new Material.Builder(13129, SuSyUtility.susyId('copper_impregnated_silica'))
-                .dust()
-                .components(Copper, Silicon, Oxygen * 2)
-                .colorAverage()
-                .build()
-
-        HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(HexachloroiridicAcid * 1, Water * 2)
-                .colorAverage()
-                .build()
+        // FREE ID: 13125-13130
 
         HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -924,6 +899,8 @@ class SecondDegreeMaterials {
                 .components(CopperIIChloride, Water)
                 .colorAverage()
                 .build()
+
+        CopperIIChlorideSolution.setFormula("(CuCl2)2(H2O)7", true)
 
         AmmoniumCarbonateSolution = new Material.Builder(13143, SuSyUtility.susyId('ammonium_carbonate_solution'))
                 .liquid()
@@ -1071,6 +1048,8 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
+        LithiumHydroxideMonohydrate.setFormula("LiOH*H2O", true)
+
         AmmoniumDihydrogenPhosphateSolution = new Material.Builder(13167, SuSyUtility.susyId('ammonium_dihydrogen_phosphate_solution'))
                 .liquid()
                 .components(AmmoniumDihydrogenPhosphate * 2, Water)
@@ -1156,72 +1135,86 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        SodiumTriflate = new Material.Builder(13182, SuSyUtility.susyId('sodium_triflate'))
+        CopperIIAcetateSolution = new Material.Builder(13182, SuSyUtility.susyId('copper_ii_acetate_solution'))
+                .liquid()
+                .components(CopperIIAcetateMonohydrate * 1, Water * 2)
+                .colorAverage()
+                .build()
+
+        CopperIIAcetateSolution.setFormula("Cu(C2H3O2)2(H2O)3", true)
+
+        LeadChamberReactionMixture = new Material.Builder(13183, SuSyUtility.susyId('lead_chamber_reaction_mixture'))
+                .liquid()
+                .components(SulfurDioxide, NitrogenDioxide, Water)
+                .colorAverage()
+                .build()
+
+        SodiumTriflate = new Material.Builder(13184, SuSyUtility.susyId('sodium_triflate'))
                 .dust()
                 .components(TriflicAcid, SodiumHydroxide)
                 .colorAverage()
                 .build()
 
-        SodiumTriflateSolution = new Material.Builder(13183, SuSyUtility.susyId('sodium_triflate_solution'))
+        SodiumTriflateSolution = new Material.Builder(13185, SuSyUtility.susyId('sodium_triflate_solution'))
                 .liquid()
                 .components(SodiumTriflate, Water)
                 .colorAverage()
                 .build()
 
-        TriflicAcidSolution = new Material.Builder(13184, SuSyUtility.susyId('triflic_acid_solution'))
+        TriflicAcidSolution = new Material.Builder(13186, SuSyUtility.susyId('triflic_acid_solution'))
                 .liquid()
                 .components(TriflicAcid, Water)
                 .colorAverage()
                 .build()
 
-        LacticAcidSolution = new Material.Builder(13185, SuSyUtility.susyId('lactic_acid_solution'))
+        LacticAcidSolution = new Material.Builder(13187, SuSyUtility.susyId('lactic_acid_solution'))
                 .liquid()
                 .components(LacticAcid, Water)
                 .colorAverage()
                 .build()
 
-        UltrapureHydrofluoricAcid = new Material.Builder(13186, SuSyUtility.susyId('ultrapure_hydrofluoric_acid'))
+        UltrapureHydrofluoricAcid = new Material.Builder(13188, SuSyUtility.susyId('ultrapure_hydrofluoric_acid'))
                 .liquid()
                 .components(Hydrogen, Fluorine, Water)
                 .color(0x0fc3d4)
                 .build()
         UltrapureHydrofluoricAcid.setFormula("HF")
 
-        UltrapureIronIiiChlorideSolution = new Material.Builder(13187, SuSyUtility.susyId('ultrapure_iron_iii_chloride_solution'))
+        UltrapureIronIiiChlorideSolution = new Material.Builder(13189, SuSyUtility.susyId('ultrapure_iron_iii_chloride_solution'))
                 .liquid()
                 .components(Iron, Chlorine * 3, Water)
                 .color(0x472500)
                 .build()
 
-        HighTemperatureSolder = new Material.Builder(13188, SuSyUtility.susyId('high_temperature_solder'))
+        HighTemperatureSolder = new Material.Builder(13190, SuSyUtility.susyId('high_temperature_solder'))
                 .dust().liquid(new FluidBuilder().temperature(309))
                 .build()
 
-        CopperSuperfillElectrolyte = new Material.Builder(13189, SuSyUtility.susyId('copper_superfill_electrolyte'))
+        CopperSuperfillElectrolyte = new Material.Builder(13191, SuSyUtility.susyId('copper_superfill_electrolyte'))
                 .liquid()
                 .build()
 
-        EnamelledCopper = new Material.Builder(13190, SuSyUtility.susyId('enamelled_copper'))
+        EnamelledCopper = new Material.Builder(13192, SuSyUtility.susyId('enamelled_copper'))
                 .flags(GENERATE_FINE_WIRE)
                 .build()
 
-        EnamelledGold = new Material.Builder(13191, SuSyUtility.susyId('enamelled_gold'))
+        EnamelledGold = new Material.Builder(13193, SuSyUtility.susyId('enamelled_gold'))
                 .flags(GENERATE_FINE_WIRE)
                 .build()
 
-        EnamelledGrapheneCoatedGold = new Material.Builder(13192, SuSyUtility.susyId('enamelled_graphene_coated_gold'))
+        EnamelledGrapheneCoatedGold = new Material.Builder(13194, SuSyUtility.susyId('enamelled_graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
                 .build()
 
-        GrapheneCoatedGold = new Material.Builder(13193, SuSyUtility.susyId('graphene_coated_gold'))
+        GrapheneCoatedGold = new Material.Builder(13195, SuSyUtility.susyId('graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
                 .build()
 
-        StandardCleanOne = new Material.Builder(13194, SuSyUtility.susyId('standard_clean_one'))
+        StandardCleanOne = new Material.Builder(13196, SuSyUtility.susyId('standard_clean_one'))
                 .liquid()
                 .build()
 
-        StandardCleanTwo = new Material.Builder(13195, SuSyUtility.susyId('standard_clean_two'))
+        StandardCleanTwo = new Material.Builder(13197, SuSyUtility.susyId('standard_clean_two'))
                 .liquid()
                 .build()
     }

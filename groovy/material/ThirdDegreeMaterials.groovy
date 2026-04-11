@@ -44,11 +44,7 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        WackerCatalystSolution = new Material.Builder(24004, SuSyUtility.susyId('wacker_catalyst_solution'))
-                .liquid()
-                .components(WackerCatalyst, Water)
-                .colorAverage()
-                .build()
+        // FREE ID: 24004
 
         TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .liquid()
@@ -916,7 +912,26 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        BoronExtractionMixture = new Material.Builder(24147, SuSyUtility.susyId('boron_extraction_mixture'))
+        IsopropylAlcoholSolution = new Material.Builder(24147, SuSyUtility.susyId('isopropyl_alcohol_solution'))
+                .liquid()
+                .components(IsopropylAlcohol, Water)
+                .colorAverage()
+                .build()
+
+        KetoneAlcoholOil = new Material.Builder(24148, SuSyUtility.susyId('ketone_alcohol_oil'))
+                .liquid()
+                .components(Cyclohexanol * 7, Cyclohexanone * 2)
+                .flags(FLAMMABLE)
+                .colorAverage()
+                .build()
+
+        AcetyleneSolution = new Material.Builder(24149, SuSyUtility.susyId('acetylene_solution'))
+                .liquid()
+                .components(NMethylTwoPyrrolidone * 1, Acetylene * 1)
+                .colorAverage()
+                .build()
+
+        BoronExtractionMixture = new Material.Builder(24150, SuSyUtility.susyId('boron_extraction_mixture'))
                 .liquid()
                 .components(TwoEthylOneThreeHexanediol, Kerosene)
                 .colorAverage()

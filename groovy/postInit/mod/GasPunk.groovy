@@ -250,23 +250,6 @@ DT.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('propene') * 50)
-    .fluidInputs(fluid('water') * 100)
-    .fluidInputs(fluid('sulfuric_acid') * 50)
-    .fluidOutputs(fluid('hydrated_propene') * 150)
-    .duration(3)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('hydrated_propene') * 3000)
-    .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
-    .fluidOutputs(fluid('isopropyl_alcohol') * 1000)
-    .duration(200)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
 FIXED_BR.recipeBuilder()
     .notConsumable(metaitem('catalystBedAlumina'))
     .fluidInputs(fluid('ethanol') * 300)
