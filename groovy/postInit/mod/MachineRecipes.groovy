@@ -1751,6 +1751,13 @@ ASSEMBLER.recipeBuilder()
 
 // Spacecraft Component Cleanroom Recipes
 
+RecyclingHelper.addShaped('susy.machine.building_cleanroom', metaitem('susy:building_cleanroom'), [
+        [metaitem('item_filter'), metaitem('item_filter'), metaitem('item_filter')],
+        [metaitem('rotorTitanium'), metaitem('hull.ev'), metaitem('rotorTitanium')],
+        [metaitem('electric.motor.ev'), ore('circuitEV'), metaitem('electric.motor.ev')]
+])
+
+
 ASSEMBLER.recipeBuilder()
         .inputs(fluid('plastic') * 288)
         .inputs(item('gregtech:metal_casing.steel_solid'))
