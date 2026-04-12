@@ -1664,7 +1664,7 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('plateDoubleAluminiumAlloy7075') * 6)
+        .inputs(metaitem('plateAluminiumAlloy7075') * 6)
         .inputs(metaitem('stickLongAluminiumAlloy7075') * 4)
         .outputs(item('susy:rocket_fairing.al_7075'))
         .EUt(VA[EV])
