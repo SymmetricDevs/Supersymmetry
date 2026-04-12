@@ -1688,3 +1688,63 @@ ASSEMBLER.recipeBuilder()
         .EUt[VA[EV]]
         .duration(20)
         .buildAndRegister()
+
+// Other Spacecraft Recipes
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('batteryHv') * 16)
+        .inputs(ore('circuitEv'))
+        .inputs(metaitem('cableGtHexAluminium') * 2)
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameGtStainlessSteel'))
+        .outputs('susy:spacecraft_instrument.battery')
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('sensor.ev') * 16)
+        .inputs(ore('circuitEv') * 4)
+        .inputs(metaitem('cableGtHexAluminium') * 2)
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameGtStainlessSteel'))
+        .outputs(item('susy:spacecraft_instrument.position'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('electric.piston.ev') * 2)
+        .inputs(metaitem('gearTitanium') * 4)
+        .inputs(metaitem('gearSmallTitanium') * 8)
+        .inputs(metaitem('stickLongTitanium') * 4)
+        .inputs(metaitem('stickTitanium') * 8)
+        .inputs(ore('circuitEv') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 16)
+        .inputs(metaitem('plateStyreneIsopreneRubber') * 2)
+        .outputs(item('susy:spacecraft_instrument.arm'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateAluminium') *  6)
+        .outputs(metaitem('honeycomb_shock_absorber.aluminium'))
+        .EUt[VA[HV]]
+        .duration(20)
+        .buildAndRegister()
+
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('electric.motor.ev') * 4)
+        .inputs(metaitem('longStickTitanium') * 8)
+        .inputs(metaitem('springTitanium') * 4)
+        .inputs(metaitem('honeycomb_shock_absorber.aluminium') * 16)
+        .inputs(metaitem('plateDoubleTitanium') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 4)
+        .outputs(item('susy:spacecraft_instrument.lander'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
