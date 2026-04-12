@@ -1748,3 +1748,48 @@ ASSEMBLER.recipeBuilder()
         .EUt[VA[EV]]
         .duration(20)
         .buildAndRegister()
+
+// Spacecraft Component Cleanroom Recipes
+
+ASSEMBLER.recipeBuilder()
+        .inputs(fluid('plastic') * 288)
+        .inputs(item('gregtech:metal_casing.steel_solid'))
+        .outputs(item('susy:rocket_multiblock_casing.aerospace_gasket'))
+        .EUt[VA[HV]]
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(fluid('polyvinyl_chloride') * 144)
+        .inputs(item('gregtech:metal_casing.steel_solid'))
+        .outputs(item('susy:rocket_multiblock_casing.vinyl_composite_flooring'))
+        .EUt[VA[HV]]
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(fluid('polyvinyl_chloride') * 144)
+        .inputs(metaitem('plateDoubleSteel') * 2)
+        .inputs(ore('frameGtAluminium'))
+        .outputs(item('susy:rocket_multiblock_casing.vinyl_ceiling_tile'))
+        .EUt[VA[HV]]
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(fluid('polyvinyl_chloride') * 144)
+        .inputs(metaitem('plateDoubleSteel') * 2)
+        .inputs(metaitem('hepa_filter'))
+        .inputs(ore('frameGtAluminium'))
+        .outputs(item('susy:rocket_multiblock_casing.ceiling_grid_filter_unit'))
+        .EUt[VA[HV]]
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateDoubleSteel') * 4)
+        .inputs(metaitem('dustPolystyrene') * 9)
+        .outputs(item('susy:metallurgy_2.polystyrene_wall'))
+        .EUt[VA[HV]]
+        .duration(1)
+        .buildAndRegister()
