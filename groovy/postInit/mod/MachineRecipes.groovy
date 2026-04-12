@@ -1759,7 +1759,7 @@ RecyclingHelper.addShaped('susy.machine.building_cleanroom', metaitem('susy:buil
 
 
 ASSEMBLER.recipeBuilder()
-        .inputs(fluid('plastic') * 288)
+        .inputs(ore('foilNitrileRubber') * 8)
         .inputs(item('gregtech:metal_casing.steel_solid'))
         .outputs(item('susy:rocket_multiblock_casing.aerospace_gasket'))
         .EUt(VA[HV])
