@@ -1634,18 +1634,18 @@ ASSEMBLER.recipeBuilder()
 // Fuel Tanks
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('doublePlateAluminiumAlloy2219') * 6)
-        .inputs(metaitem('stickLongAluminiumAlloy2219') * 12)
-        .outputs(metaitem('susy:rocket_tank_shell.al_2219'))
-        .EUt[VA[EV]]
+        .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
+        .inputs(ore('stickLongAluminiumAlloy2219') * 12)
+        .outputs(item('susy:rocket_tank_shell'))
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('doublePlateSteel') * 6)
+        .inputs(metaitem('plateDoubleSteel') * 6)
         .inputs(metaitem('stickLongSteel') * 12)
-        .outputs(metaitem('susy:rocket_tank_shell.steel'))
-        .EUt[VA[EV]]
+        .outputs(item('susy:rocket_tank_shell', 6))
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
@@ -1659,7 +1659,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('boltTitanium'))
         .inputs(metaitem('dustRdx') * 4)
         .outputs(metaitem('frangible_nut'))
-        .EUt[VA[EV]]
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
@@ -1667,7 +1667,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateDoubleAluminiumAlloy7075') * 6)
         .inputs(metaitem('stickLongAluminiumAlloy7075') * 4)
         .outputs(item('susy:rocket_fairing.al_7075'))
-        .EUt[VA[EV]]
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
@@ -1676,7 +1676,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateAluminiumAlloy7075') * 6)
         .inputs(metaitem('frangible_nut') * 4)
         .outputs(item('susy:rocket_fairing_connector.al_7075'))
-        .EUt[VA[EV]]
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
@@ -1685,7 +1685,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateAluminiumAlloy7075') * 6)
         .inputs(metaitem('frangible_nut') * 4)
         .outputs(item('susy:rocket_interstage.al_7075'))
-        .EUt[VA[EV]]
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
@@ -1710,7 +1710,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateDoubleStainlessSteel') * 6)
         .inputs(metaitem('frameGtStainlessSteel'))
         .outputs(item('susy:spacecraft_instrument.position'))
-        .EUt[VA[EV]]
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
@@ -1725,14 +1725,14 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('cableGtDoubleAluminium') * 16)
         .inputs(metaitem('plateStyreneIsopreneRubber') * 2)
         .outputs(item('susy:spacecraft_instrument.arm'))
-        .EUt[VA[EV]]
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateAluminium') *  6)
         .outputs(metaitem('honeycomb_shock_absorber.aluminium'))
-        .EUt[VA[HV]]
+        .EUt(VA[HV])
         .duration(20)
         .buildAndRegister()
 
@@ -1745,7 +1745,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateDoubleTitanium') * 4)
         .inputs(metaitem('cableGtDoubleAluminium') * 4)
         .outputs(item('susy:spacecraft_instrument.lander'))
-        .EUt[VA[EV]]
+        .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
 
@@ -1762,7 +1762,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(fluid('plastic') * 288)
         .inputs(item('gregtech:metal_casing.steel_solid'))
         .outputs(item('susy:rocket_multiblock_casing.aerospace_gasket'))
-        .EUt[VA[HV]]
+        .EUt(VA[HV])
         .duration(1)
         .buildAndRegister()
 
@@ -1770,7 +1770,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(fluid('polyvinyl_chloride') * 144)
         .inputs(item('gregtech:metal_casing.steel_solid'))
         .outputs(item('susy:rocket_multiblock_casing.vinyl_composite_flooring'))
-        .EUt[VA[HV]]
+        .EUt(VA[HV])
         .duration(1)
         .buildAndRegister()
 
@@ -1779,7 +1779,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateDoubleSteel') * 2)
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing.vinyl_ceiling_tile'))
-        .EUt[VA[HV]]
+        .EUt(VA[HV])
         .duration(1)
         .buildAndRegister()
 
@@ -1789,7 +1789,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('hepa_filter'))
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing.ceiling_grid_filter_unit'))
-        .EUt[VA[HV]]
+        .EUt(VA[HV])
         .duration(1)
         .buildAndRegister()
 
@@ -1797,6 +1797,6 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateDoubleSteel') * 4)
         .inputs(metaitem('dustPolystyrene') * 9)
         .outputs(item('susy:metallurgy_2.polystyrene_wall'))
-        .EUt[VA[HV]]
+        .EUt(VA[HV])
         .duration(1)
         .buildAndRegister()
