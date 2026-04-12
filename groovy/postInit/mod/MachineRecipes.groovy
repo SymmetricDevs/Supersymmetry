@@ -1631,15 +1631,24 @@ ASSEMBLER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-// Fuel Tank
+// Fuel Tanks
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('doublePlateAluminiumAlloy2219') * 6)
         .inputs(metaitem('stickLongAluminiumAlloy2219') * 12)
-        .outputs(metaitem('susy:rocket_tank_shell'))
+        .outputs(metaitem('susy:rocket_tank_shell.al_2219'))
         .EUt[VA[EV]]
         .duration(20)
         .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('doublePlateSteel') * 6)
+        .inputs(metaitem('stickLongSteel') * 12)
+        .outputs(metaitem('susy:rocket_tank_shell.steel'))
+        .EUt[VA[EV]]
+        .duration(20)
+        .buildAndRegister()
+
 
 // Fairing & Interstage
 
