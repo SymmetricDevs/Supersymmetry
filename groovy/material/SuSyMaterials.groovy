@@ -1651,6 +1651,7 @@ class SuSyMaterials {
     public static Material GRCop84
     public static Material MARM246
     public static Material AluminiumAlloy2219
+    public static Material AluminiumAlloy2195
 
     // HP Materials
 
