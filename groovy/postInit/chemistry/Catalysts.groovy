@@ -90,11 +90,6 @@ SINTERING_OVEN.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-SINTERING_OVEN.recipeBuilder()
-    .inputs(ore('dustAlumina') * 5)
-    .fluidInputs(fluid('cobalt_ii_nitrate_solution') * 1000)
-    .outputs(metaitem('dustSupportedCobalt'))
-
 // Silica supports
 
     // AlCl3

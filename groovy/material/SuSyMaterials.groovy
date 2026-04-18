@@ -1942,7 +1942,7 @@ class SuSyMaterials {
     public static Material HoopesElectrolyte
     public static Material CopperIIAcetateSolution
     public static Material LeadChamberReactionMixture
-    public static Material SupportedCobalt
+    //public static Material SupportedCobalt
     public static Material SupportedSilver
     public static Material SupportedAluminiumChloride
     public static Material SupportedCopper

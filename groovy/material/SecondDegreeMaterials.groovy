@@ -809,14 +809,14 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
         
-        SupportedCobalt = new Material.Builder(13125, SuSyUtility.susyId('supported_cobalt'))
+        /*SupportedCobalt = new Material.Builder(13125, SuSyUtility.susyId('supported_cobalt'))
                 .dust()
                 .flags(GENERATE_CATALYST_BED)
                 .components(Cobalt, Alumina)
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13125-13130
+        // FREE ID: 13125-13130*/
 
         HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
