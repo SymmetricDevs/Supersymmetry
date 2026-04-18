@@ -3515,28 +3515,12 @@ class OrganicChemistryMaterials {
         SodiumOneNaphtholFiveSulfonate = new Material.Builder(15559, SuSyUtility.susyId('sodium_one_naphthol_five_sulfonate'))
                 .dust()
                 .components(Carbon * 10, Hydrogen * 7, Oxygen * 4, Sulfur * 1, Sodium)
-                .colorAverage()
+                .color(0x3e7278)
                 .build()
 
         SodiumOneNaphtholFiveSulfonate.setFormula("C10H6OHSO3Na", true)
 
-        TwoNitrosoOneNaphtholFiveSulfonicAcidSolution = new Material.Builder(15560, SuSyUtility.susyId('two_nitroso_one_naphthol_five_sulfonic_acid_solution'))
-                .liquid()
-                .components(Carbon * 10, Hydrogen * 7, Sulfur * 2, Oxygen * 5, Nitrogen, Water * 25)
-                .colorAverage()
-                .build()
-
-        DiaminonaphthoquinoneSulfonicAcidSolution = new Material.Builder(15561, SuSyUtility.susyId('diaminonaphthoquinone_sulfonic_acid_solution'))
-                .liquid()
-                .components(TwoNitrosoOneNaphtholFiveSulfonicAcidSolution * 3, SodiumNitrite, DilutedSulfuricAcid)
-                .colorAverage()
-                .build()
-
-        DiazonaphthoquinoneSulfonicAcidSolution = new Material.Builder(15562, SuSyUtility.susyId('diazonaphthoquinone_sulfonic_acid_solution'))
-                .liquid()
-                .components(DiaminonaphthoquinoneSulfonicAcidSolution * 100, SodiumNitrite * 36, CopperSulfate)
-                .colorAverage()
-                .build()
+        // FREE IDs: 15560-15562
 
         DiazonaphthoquinoneFiveSulfonicAcid = new Material.Builder(15563, SuSyUtility.susyId('diazonaphthoquinone_five_sulfonic_acid'))
                 .dust()

@@ -1202,5 +1202,28 @@ class ThirdDegreeMaterials {
 
         TwoEthylanthrahydroquinoneSolution.setFormula('(C16H14O2)(C8H17O4P)(C8H18O4P)', true)
 
+        TwoNitrosoOneNaphtholFiveSulfonicAcidSolution = new Material.Builder(15560, SuSyUtility.susyId('two_nitroso_one_naphthol_five_sulfonic_acid_solution'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 6, Nitrogen, Oxygen * 5, Sulfur, SodiumBisulfateSolution, Water)
+                .color(0x5a878c)
+                .build()
+
+        TwoNitrosoOneNaphtholFiveSulfonicAcidSolution.setFormula('(C10H6NO5S)(NaHSO4)(H2O)2', true)
+
+        TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution = new Material.Builder(15561, SuSyUtility.susyId('two_amino_one_naphthalenone_five_sulfonic_acid_solution'))
+                .liquid()
+                .components(Carbon * 20, Hydrogen * 16, Nitrogen * 4, Oxygen * 8, Sulfur * 2, SodiumThiosulfate, SodiumBisulfateSolution * 4, Water)
+                .colorAverage()
+                .build()
+
+        TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution.setFormula('(C10H8N2SO4)2(Na2S2O3)(NaHSO4)4(H2O)5', true)
+
+        DiazonaphthoquinoneSulfonicAcidSolution = new Material.Builder(15562, SuSyUtility.susyId('diazonaphthoquinone_sulfonic_acid_solution'))
+                .liquid()
+                .components(DiazonaphthoquinoneSulfonicAcid * 2, SodiumThiosulfate, SodiumBisulfateSolution * 4, Water * 5)
+                .colorAverage()
+                .build()
+
+        DiazonaphthoquinoneSulfonicAcidSolution.setFormula('(?)(C10H7N3O5S)2(Na2S2O3)(NaHSO4)4(H2O)5', true)
         }
 }

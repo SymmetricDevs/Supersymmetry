@@ -115,16 +115,25 @@ DT.recipeBuilder()
         .inputs(ore('dustSodiumNitrite') * 4)
         .fluidInputs(fluid('sulfuric_acid') * 1000)
         .fluidInputs(fluid('water') * 1000)
-        .fluidOutputs(fluid('two_nitroso_one_naphthol_five_sulfonic_acid_solution') * 1000)
+        .fluidOutputs(fluid('two_nitroso_one_naphthol_five_sulfonic_acid_solution') * 2000)
         .duration(100)
         .EUt(VA[LV])
         .buildAndRegister();
 
     BR.recipeBuilder()
-        .inputs(ore('dustSodiumSulfide') * 3)
-        .fluidInputs(fluid('two_nitroso_one_naphthol_five_sulfonic_acid_solution') * 2000)
+        .inputs(metaitem('dustSodiumOneNaphtholFiveSulfonate'))
+        .inputs(ore('dustSodiumNitrite') * 4)
         .fluidInputs(fluid('diluted_sulfuric_acid') * 2000)
-        .fluidOutputs(fluid('diaminonaphthoquinone_sulfonic_acid_solution') * 2000)
+        .fluidOutputs(fluid('two_nitroso_one_naphthol_five_sulfonic_acid_solution') * 2000) // 1 NNSA, 1 NaHSO4, 2 H2O
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    BR.recipeBuilder() // ArNO + Na2S + 3/2 H2O -> ArNH2 + 1/2 Na2S2O3 + NaOH, followed by enol->keto tautomerization
+        .inputs(ore('dustSodiumSulfide') * 4) 
+        .fluidInputs(fluid('diluted_sulfuric_acid') * 2000)
+        .fluidInputs(fluid('two_nitroso_one_naphthol_five_sulfonic_acid_solution') * 2000)
+        .fluidOutputs(fluid('two_amino_one_naphthalenone_five_sulfonic_acid_solution') * 2500) // 1 ANSA, 2 NaHSO4, 1/2 Na2S2O3, 5/2 H2O
         .duration(100)
         .EUt(VA[LV])
         .buildAndRegister();
@@ -132,16 +141,16 @@ DT.recipeBuilder()
     BR.recipeBuilder()
         .inputs(ore('dustSodiumNitrite') * 4)
         .inputs(ore('dustTinyCopperSulfate'))
-        .fluidInputs(fluid('diaminonaphthoquinone_sulfonic_acid_solution') * 1000)
-        .fluidOutputs(fluid('diazonaphthoquinone_sulfonic_acid_solution') * 2000)
+        .fluidInputs(fluid('two_amino_one_naphthalenone_five_sulfonic_acid_solution') * 2500)
+        .fluidOutputs(fluid('diazonaphthoquinone_sulfonic_acid_solution') * 4500)
         .duration(80)
         .EUt(VA[MV])
         .buildAndRegister();
 
     CRYSTALLIZER.recipeBuilder()
-        .fluidInputs(fluid('diazonaphthoquinone_sulfonic_acid_solution') * 2000)
+        .fluidInputs(fluid('diazonaphthoquinone_sulfonic_acid_solution') * 4500)
         .outputs(metaitem('dustDiazonaphthoquinoneFiveSulfonicAcid'))
-        .fluidOutputs(fluid('acidic_wastewater') * 2000)
+        .fluidOutputs(fluid('acidic_wastewater') * 4500)
         .duration(100)
         .EUt(VA[LV])
         .buildAndRegister();

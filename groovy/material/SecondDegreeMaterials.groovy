@@ -809,10 +809,10 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
         
-        /*SupportedCobalt = new Material.Builder(13125, SuSyUtility.susyId('supported_cobalt'))
+        SupportedSilver = new Material.Builder(13125, SuSyUtility.susyId('supported_silver'))
                 .dust()
                 .flags(GENERATE_CATALYST_BED)
-                .components(Cobalt, Alumina)
+                .components(Silver, Alumina)
                 .colorAverage()
                 .build()
 

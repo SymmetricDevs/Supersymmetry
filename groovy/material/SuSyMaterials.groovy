@@ -2504,9 +2504,6 @@ class SuSyMaterials {
     public static Material ParaAminobenzaldehyde
     public static Material OneFiveNaphthalenedisulfonicAcid
     public static Material SodiumOneNaphtholFiveSulfonate
-    public static Material TwoNitrosoOneNaphtholFiveSulfonicAcidSolution
-    public static Material DiaminonaphthoquinoneSulfonicAcidSolution
-    public static Material DiazonaphthoquinoneSulfonicAcidSolution
     public static Material DiazonaphthoquinoneFiveSulfonicAcid
     public static Material DiazonaphthoquinoneFiveSulfonylChloride
     public static Material GallicAcid
@@ -2774,6 +2771,9 @@ class SuSyMaterials {
     public static Material PolyethyleneGlycolSolution
     public static Material NeutralizedPolyethyleneGlycolSolution
     public static Material EthylenimineSolution
+    public static Material TwoNitrosoOneNaphtholFiveSulfonicAcidSolution
+    public static Material TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution
+    public static Material DiazonaphthoquinoneSulfonicAcidSolution
 
     // Thermodynamics Materials
 
