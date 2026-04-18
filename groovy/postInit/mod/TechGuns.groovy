@@ -390,12 +390,10 @@ crafting.replaceShaped("techguns:sawedoff", item('techguns:sawedoff'), [
         [null, item('techguns:itemshared', 2), item('techguns:itemshared', 42)]
 ]);
 
-crafting.replaceShaped("techguns:pistolrounds", item('techguns:itemshared', 1) * 4, [
-    [ore('plateBrass'), ore('gunpowder'), ore('roundLead')],
-])
-
 crafting.replaceShaped("techguns:shotgunrounds", item('techguns:itemshared', 2) * 8, [
-        [ore('plateSteel'), ore('gunpowder'), ore('roundLead')],
+        [null, ore('plateBrass'), null],
+        [ore('craftingToolHardHammer'), ore('gunpowder'), ore('roundLead')],
+        [null, ore('plateBrass'), null],
 ])
 
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
@@ -877,11 +875,11 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .inputs(ore('plateBrass') * 2)
+    .inputs(ore('plateBrass'))
     .inputs(ore('dustGunpowder'))
-    .inputs(ore('roundLead') * 3)
+    .inputs(ore('roundLead') )
     .circuitMeta(2)
-    .outputs(item('techguns:itemshared', 2) * 5)
+    .outputs(item('techguns:itemshared', 2) * 8)
     .duration(10)
     .EUt(VA[LV])
     .buildAndRegister();

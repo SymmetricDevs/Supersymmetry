@@ -398,25 +398,7 @@ class UnknownCompositionMaterials {
                 .color(0x222418)
                 .build()
 
-        ConcentratedBrine = new Material.Builder(4076, SuSyUtility.susyId('concentrated_brine'))
-                .liquid()
-                .color(0xa6a444)
-                .build()
-
-        BoronFreeBrine = new Material.Builder(4078, SuSyUtility.susyId('boron_free_brine'))
-                .liquid()
-                .color(0xa68a44)
-                .build()
-
-        LithiumFreeBrine = new Material.Builder(4079, SuSyUtility.susyId('lithium_free_brine'))
-                .liquid()
-                .color(0xa17a4c)
-                .build()
-
-        ChlorinatedBrine = new Material.Builder(4080, SuSyUtility.susyId('chlorinated_brine'))
-                .liquid()
-                .color(0xa3b560)
-                .build()
+        // Free IDs 4076-4080
 
         ImpureBromine = new Material.Builder(4081, SuSyUtility.susyId('impure_bromine'))
                 .gas(new FluidBuilder().temperature(373))
@@ -436,12 +418,9 @@ class UnknownCompositionMaterials {
         WoodAsh = new Material.Builder(4084, SuSyUtility.susyId('wood_ash'))
                 .dust()
                 .color(0x242221)
-                .build()
-
-        VeryConcentratedBrine = new Material.Builder(4085, SuSyUtility.susyId('very_concentrated_brine'))
-                .liquid()
-                .color(0xb5b226)
-                .build()
+                .build();
+        
+        // Free ID 4085
 
         LangbeiniteLeach = new Material.Builder(4086, SuSyUtility.susyId('langbeinite_leach'))
                 .liquid()

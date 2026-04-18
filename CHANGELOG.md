@@ -1,3 +1,16 @@
+# UPDATE 0.1.16.5
+## Mod Changes
+### Mod Updates
+- Had Enough Items 4.29.15 → 4.30.2
+- SusyCore v0.1.98 → v0.1.99
+## Changes
+### New Features
+- You can now use a new LV multiblock, the greenhouse, to harvest crops! (The MV greenhouse has been renamed the "arboretum.") (#1843 by @WideMann)
+### Fixes
+- Acetic anhydride catalyst is no longer lost. (#1838 by @Fiery36)
+- Cellulose acetate mesh is now craftable without silicon wafers. (#1841 by @WideMann)
+- Fix conflicting recipes (#1842 by @WideMann)
+And thanks to @whoisyp and @unitazer for additional work on keeping the pack stable.
 # UPDATE 0.1.16.4.1
 ## Mod Changes
 ### Mod Updates

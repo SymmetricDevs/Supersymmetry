@@ -1592,3 +1592,9 @@ BENDER.recipeBuilder()
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
+
+RecyclingHelper.addShaped("gregtech:greenhouse", metaitem('susy:greenhouse'), [
+        [metaitem('sensor.lv'), metaitem('gregtechfoodoption:cover.sprinkler'), metaitem('sensor.lv')],
+        [metaitem('robot.arm.lv'), metaitem('hull.lv'), metaitem('robot.arm.lv')],
+        [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')],
+])

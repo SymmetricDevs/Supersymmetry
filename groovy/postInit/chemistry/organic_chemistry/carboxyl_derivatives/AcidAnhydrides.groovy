@@ -69,7 +69,7 @@ CSTR.recipeBuilder()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('acetic_acid_anhydride_mixture') * 1850)
-    .outputs(metaitem('dustTinyAceticAnhydrideCatalyst'))
+    .outputs(metaitem('dustTinyAceticAnhydrideCatalyst') * 10)
     .fluidOutputs(fluid('gtfo_acetic_anhydride') * 150)
     .fluidOutputs(fluid('acetic_acid') * 100)
     .fluidOutputs(fluid('water') * 150)

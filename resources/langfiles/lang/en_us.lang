@@ -138,6 +138,7 @@ susy.material.green_vitriol=Green Vitriol
 susy.material.nitrosylsulfuric_acid=Nitrosylsulfuric Acid
 susy.material.lead_chamber_reaction_mixture=Lead Chamber Reaction Mixture
 
+susy.material.iron_ii_sulfide=Iron II Sulfide
 susy.material.potassium_bisulfate=Potassium Bisulfate
 susy.material.potassium_sulfate=Potassium Sulfate
 susy.material.wet_antimony_trifluoride=Wet Antimony Trifluoride
@@ -740,12 +741,6 @@ susy.material.pyridine=Pyridine
 susy.material.quinoline=Quinoline
 
 susy.material.soda_ash=Soda Ash (Sodium Carbonate)
-
-susy.material.concentrated_brine=Concentrated Brine
-susy.material.brine_evaporite=Brine Evaporite
-susy.material.boron_free_brine=Boron-Free Brine
-susy.material.lithium_free_brine=Lithium-Free Brine
-susy.material.chlorinated_brine=Chlorinated Brine
 susy.material.impure_bromine=Impure Bromine
 susy.material.concentrated_salt_water=Concentrated Salt Water
 susy.material.hypersaline_water=Hypersaline Water
@@ -761,7 +756,6 @@ susy.material.magnesium_chloride_solution=Magnesium Chloride Solution
 susy.material.wood_ash=Wood Ash
 susy.material.potassium_carbonate_solution=Potassium Carbonate Solution
 susy.material.magnesium_sulfate=Magnesium Sulfate
-susy.material.very_concentrated_brine=Very Concentrated Brine
 susy.material.langbeinite_leach=Langbeinite Leach
 susy.material.polyhalite_leach=Polyhalite Leach
 susy.material.concentrated_polyhalite_leach=Concentrated Polyhalite Leach
@@ -1881,6 +1875,7 @@ susy.material.unsaturated_polyalphaolefin=Unsaturated Polyalphaolefin
 susy.material.n_butanol_waste=n-Butanol Waste
 susy.material.palladium_precursor_solution=Palladium Precursor Solution
 susy.material.supported_palladium=Supported Palladium
+susy.material.supported_palladium_chloride=Supported Palladium Chloride
 susy.material.polyalphaolefin=Polyalphaolefin (PAO)
 susy.material.polybutene_mixture=Polybutene Mixture
 susy.material.polybutene=Polybutene
@@ -3385,6 +3380,8 @@ gregtech.machine.electric_blast_furnace.name=Electric Resistance Furnace
 gregtech.multiblock.electric_blast_furnace.description=The Electric Resistance Furnace (ERF) is a multiblock structure used for smelting alloys, cooking metals and refining ores. It is required for obtaining high-tier alloys and metals, such as aluminium, stainless steel, titanium, and naquadah alloy.
 gregtech.advancement.medium_voltage.31_mv_energy_hatch.name=Upgrade Your ERF
 recipemap.electric_blast_furnace.name=Resistance Furnace
+gregtechfoodoption.machine.greenhouse.name=Arboretum
+recipemap.greenhouse.name=Arboretum
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp

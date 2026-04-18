@@ -229,16 +229,10 @@ class SuSyMaterials {
     public static Material AnthraceneExtract
     public static Material CrudeQuinoliniumSulfate
     public static Material ImpureQuinoline
-    public static Material ConcentratedBrine
-    public static Material BrineEvaporite
-    public static Material BoronFreeBrine
-    public static Material LithiumFreeBrine
-    public static Material ChlorinatedBrine
     public static Material ImpureBromine
     public static Material ChilledLava
     public static Material ChilledFlueGas
     public static Material WoodAsh
-    public static Material VeryConcentratedBrine
     public static Material LangbeiniteLeach
     public static Material PolyhaliteLeach
     public static Material CarnalliteLeach
