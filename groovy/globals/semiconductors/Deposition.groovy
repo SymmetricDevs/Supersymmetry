@@ -175,15 +175,15 @@ class Deposition {
         Map inputs
         Map offgases
         int voltageTier
-        int thickness
+        int duration
         int molar_volume
         double moles
 
-        cvdRecipe(Map in, Map out, int vt, int dur, int mv, double moles) {
+        cvdRecipe(Map in, Map out, int vt, int duration, int mv, double moles) {
             this.inputs = in
             this.offgases = out
             this.voltageTier = vt
-            this.duration = dur
+            this.duration = duration
             this.molar_volume = mv
             this.moles = moles
         }
@@ -230,7 +230,7 @@ class Deposition {
     public static class aldRecipe extends cvdRecipe {
         Map purgeGas
 
-        aldRecipe(Map in, Map out, String purgeGas, int vt, int dur, int mv, double moles) {
+        aldRecipe(Map in, Map out, Map purgeGas, int vt, int dur, int mv, double moles) {
             super(in, out, vt, dur, mv, moles)
             this.purgeGas = purgeGas
         }
@@ -240,7 +240,9 @@ class Deposition {
                 .inputs(metaitem(input));
             for (gas in this.inputs) {
                 tmp.fluidInputs(fluid(gas.key) * (int) (gas.value * thickness / this.molar_volume))
-                tmp.fluidInputs(fluid(this.purgeGas) * (int) (gas.value * thickness / this.molar_volume))
+                for (purge in this.purgeGas) {
+                    tmp.fluidInputs(fluid(purge.key) * (int) (purge.value * thickness / this.molar_volume))
+                }
             }
             for (offgas in this.offgases) {
                 tmp.fluidOutputs(fluid(offgas.key) * (int) (offgas.value * thickness / this.molar_volume))
@@ -254,8 +256,8 @@ class Deposition {
     }
 
     public static final aldRecipes = [
-        "titanium_nitride": new aldRecipe(['titanium_tetrachloride' : 3, 'ammonia' : 4], ['corrosive_gas' : 60], ['nitrogen' : 48], EV, 200, 12, 0.003) // ALD via TiCl4 and NH3 reaction
-        "titanium_aluminide": new aldRecipe(['titanium_tetrachloride' : 5, 'trimethylaluminium' : 5], ['corrosive_gas' : 65], ['nitrogen' : 50], EV, 200, 12, 0.003) // ALD via TiCl4 and TMA reaction
+        "titanium_nitride": new aldRecipe(['titanium_tetrachloride' : 3, 'ammonia' : 4], ['corrosive_gas' : 60], ['nitrogen' : 48], EV, 200, 12, 0.003), // ALD via TiCl4 and NH3 reaction
+        "titanium_aluminide": new aldRecipe(['titanium_tetrachloride' : 5, 'trimethylaluminium' : 5], ['corrosive_gas' : 65], ['nitrogen' : 50], EV, 200, 12, 0.003), // ALD via TiCl4 and TMA reaction
         "hafnium_dioxide" : new aldRecipe(['tetrakis_dimethylamido_hafnium' : 5, 'water' : 10], ['dimethylamine' : 20, 'nitrogen' : 50], ['nitrogen' : 50], EV, 200, 12, 0.003) // ALD via Hf(NMe2)4 and H2O reaction
     ]
 

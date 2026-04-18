@@ -830,7 +830,7 @@ class FirstDegreeMaterialsB {
                 .build()
 
         Dumet = new Material.Builder(8787, SuSyUtility.susyId('dumet'))
-                .flags(GENERATE_FINE_WIRE)
+                .flags(GENERATE_FINE_WIRE, DISABLE_DECOMPOSITION)
                 .components(Copper, Invar)
                 .color(0xe0d3ad)
                 .build()
@@ -870,7 +870,7 @@ class FirstDegreeMaterialsB {
                 .color(0x7a7350)
                 .build()
 
-        CarbonCompound = new Material.Builder(8794c, SuSyUtility.susyId('carbon_compound'))
+        CarbonCompound = new Material.Builder(8794, SuSyUtility.susyId('carbon_compound'))
                 .dust()
                 .components(Carbon, Clay)
                 .colorAverage()

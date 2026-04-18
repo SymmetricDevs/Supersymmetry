@@ -987,7 +987,7 @@ class ThirdDegreeMaterials {
 
         NovolacLiftoffResist = new Material.Builder(24171, SuSyUtility.susyId('novolac_liftoff_resist'))
                 .liquid()
-                .components(PhenolicNovolacResin, EthylLactate, PropyleneGlycolMethylEtherAcetate, BisAzideCrosslinker)
+                .components(PhenolicNovolacsResin, EthylLactate, PropyleneGlycolMethylEtherAcetate, BisAzideCrosslinker)
                 .colorAverage()
                 .build()
 
@@ -1007,13 +1007,13 @@ class ThirdDegreeMaterials {
 
         DiazonaphthoquinoneFiveSulfonateEsterSolution = new Material.Builder(24174, SuSyUtility.susyId('diazonaphthoquinone_five_sulfonate_ester_solution'))
                 .liquid()
-                .components(DiazeonaphthoquinoneFiveSulfonateEster, Acetone)
+                .components(DiazonaphthoquinoneFiveSulfonateEster, Acetone)
                 .colorAverage()
                 .build()
 
         NovolacResist = new Material.Builder(24175, SuSyUtility.susyId('novolac_resist'))
                 .liquid()
-                .components(DiazonaphthoquinoneFiveSulfonateEster * 10, PropyleneGlycolMethylEtherAcetate * 88, EthylLactate * 49, PhenolicNovolacResin * 63)
+                .components(DiazonaphthoquinoneFiveSulfonateEster * 10, PropyleneGlycolMethylEtherAcetate * 88, EthylLactate * 49, PhenolicNovolacsResin * 63)
                 .colorAverage()
                 .build()
 
@@ -1079,21 +1079,11 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        TwoEthylOneThreeHexanediolMixture = genSolution(24189, "two_ethyl_one_three_hexanediol_mixture", TwoEthylOneThreeHexanediol, Water, false)
-
         OxidizedTwoEthylanthraquinoneSolution = new Material.Builder(24190, SuSyUtility.susyId('oxidized_two_ethylanthraquinone_solution'))
                 .liquid()
                 .components(TwoEthylanthraquinone, HydrogenPeroxide, TrisTwoEthylhexylPhosphate, Xylene)
                 .colorAverage()
                 .build()
-
-        TwoEthylanthrahydroquinoneSolution = new Material.Builder(24190, SuSyUtility.susyId('two_ethylanthrahydroquinone_solution'))
-                .liquid()
-                .components(TwoEthylAnthraquinone, Hydrogen * 2, TrisTwoEthylhexylPhosphate, Xylene)
-                .colorAverage()
-                .build()
-
-        TwoEthylanthrahydroquinoneSolution.setFormula('(C16H14O2)(C8H17O4P)(C8H18O4P)', true)
 
         ButyraldolSolution = new Material.Builder(24191, SuSyUtility.susyId('butyraldol_solution'))
                 .liquid()
@@ -1153,54 +1143,64 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        DimethoxymethaneSolution = new Material.Builder(24190, SuSyUtility.susyId('dimethoxymethane_solution'))
+        DimethoxymethaneSolution = new Material.Builder(24200, SuSyUtility.susyId('dimethoxymethane_solution'))
                 .liquid()
                 .components(Dimethoxymethane, SulfuricAcid, Water)
                 .colorAverage()
                 .build()
 
-        DilutedTwoPyrrolidone = new Material.Builder(24191, SuSyUtility.susyId('diluted_two_pyrrolidone'))
+        DilutedTwoPyrrolidone = new Material.Builder(24201, SuSyUtility.susyId('diluted_two_pyrrolidone'))
                 .liquid()
                 .components(TwoPyrrolidone, Water * 2)
                 .colorAverage()
                 .build()
 
-        NMethylTwoPyrrolidoneSolution = new Material.Builder(24192, SuSyUtility.susyId('n_methyl_two_pyrrolidone_solution'))
+        NMethylTwoPyrrolidoneSolution = new Material.Builder(24202, SuSyUtility.susyId('n_methyl_two_pyrrolidone_solution'))
                 .liquid()
                 .components(NMethylTwoPyrrolidone, Water * 2)
                 .colorAverage()
                 .build()
 
-        PolysulfoneSolution = new Material.Builder(24193, SuSyUtility.susyId('polysulfone_solution'))
+        PolysulfoneSolution = new Material.Builder(24203, SuSyUtility.susyId('polysulfone_solution'))
                 .liquid()
-                .compopnents(Polysulfone, NMethylTwoPyrrolidone)
+                .components(Polysulfone, NMethylTwoPyrrolidone)
                 .build()
 
-        EthylenimineSolution = new Material.Builder(24194, SuSyUtility.susyId('ethylenimine_solution'))
+        EthylenimineSolution = new Material.Builder(24204, SuSyUtility.susyId('ethylenimine_solution'))
                 .liquid()
                 .components(Ethylenimine, SodiumSulfate, Water * 2)
                 .colorAverage()
                 .build()
 
-        FluorinatedMethanesulfonicAcidMixture = genSolution(24195, 'fluorinated_methanesulfonic_acid_mixture', MethanesulfonicAcid, HydrogenFluoride, true)
+        FluorinatedMethanesulfonicAcidMixture = genSolution(24205, 'fluorinated_methanesulfonic_acid_mixture', MethanesulfonicAcid, HydrogenFluoride, true)
         
-        SodiumTriflateSolution = new Material.Builder(24196, SuSyUtility.susyId('sodium_triflate_solution'))
+        SodiumTriflateSolution = new Material.Builder(24206, SuSyUtility.susyId('sodium_triflate_solution'))
                 .liquid()
                 .components(SodiumTriflate, Water)
                 .colorAverage()
                 .build()
 
-        TriflicAcidSolution = new Material.Builder(24197, SuSyUtility.susyId('triflic_acid_solution'))
+        TriflicAcidSolution = new Material.Builder(24207, SuSyUtility.susyId('triflic_acid_solution'))
                 .liquid()
                 .components(TriflicAcid, Water)
                 .colorAverage()
                 .build()
 
-        LacticAcidSolution = new Material.Builder(24198, SuSyUtility.susyId('lactic_acid_solution'))
+        LacticAcidSolution = new Material.Builder(24208, SuSyUtility.susyId('lactic_acid_solution'))
                 .liquid()
                 .components(LacticAcid, Water)
                 .colorAverage()
                 .build()
+
+        TwoEthylOneThreeHexanediolMixture = genSolution(24209, "two_ethyl_one_three_hexanediol_mixture", TwoEthylOneThreeHexanediol, Water, false)
+
+        TwoEthylanthrahydroquinoneSolution = new Material.Builder(24210, SuSyUtility.susyId('two_ethylanthrahydroquinone_solution'))
+                .liquid()
+                .components(TwoEthylanthraquinone, Hydrogen * 2, TrisTwoEthylhexylPhosphate, Xylene)
+                .colorAverage()
+                .build()
+
+        TwoEthylanthrahydroquinoneSolution.setFormula('(C16H14O2)(C8H17O4P)(C8H18O4P)', true)
 
         }
 }

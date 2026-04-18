@@ -3641,7 +3641,7 @@ class OrganicChemistryMaterials {
 
         TriphenylsulfoniumTriflate = new Material.Builder(15578 , SuSyUtility.susyId('triphenylsulfonium_triflate'))
                 .dust()
-                .components(Carbon * 18, Hydrogen * 15, Sulfur, TriflicAcid)
+                .components(Carbon * 19, Hydrogen * 15, Sulfur * 2, Fluorine * 3, Oxygen * 3)
                 .color(0x32a898)
                 .build()
 
@@ -3751,7 +3751,7 @@ class OrganicChemistryMaterials {
 
         DiFourTertButylphenyliodoniumNonaflate = new Material.Builder(15603, SuSyUtility.susyId('di_four_tert_butylphenyliodonium_nonaflate'))
                 .dust()
-                .components(ParaTertbutyliodobenzene, NonaflicAcid, MetaChloroperoxybenzoicAcid)
+                .components(ParaTertbutyliodobenzene, NonaflicAcid)
                 .colorAverage()
                 .build()
                 

@@ -131,7 +131,7 @@ class Etching {
         }
     }
 
-    static void generateReactiveIonEtchingRecipe(String input, String product, String materialEtched, int duration) {
+    static void generateReactiveIonEtchingRecipe(String input, String product, String materialEtched, int depth) {
         if (!etchants.containsKey(materialEtched)) {    
             log.warn("Attempted adding etching recipe with no matching etchant: " + materialEtched + ". No recipe is generated");
             return;
