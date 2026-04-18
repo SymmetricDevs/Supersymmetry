@@ -407,3 +407,23 @@ ROASTER.recipeBuilder()
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Triphenylphosphine
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('phosphorus_trichloride') * 1000)
+    .fluidInputs(fluid('chlorobenzene') * 3000)
+    .inputs(ore('dustAnyPuritySodium') * 6)
+    .outputs(metaitem('dustTriphenylphosphine'))
+    .outputs(metaitem('dustSalt') * 12)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustTriphenylphosphine'))
+    .fluidInputs(fluid('chlorine') * 2000)
+    .outputs(metaitem('dustTriphenylphosphineDichloride'))
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()

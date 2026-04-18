@@ -1149,38 +1149,17 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        SodiumTriflate = new Material.Builder(13184, SuSyUtility.susyId('sodium_triflate'))
-                .dust()
-                .components(TriflicAcid, SodiumHydroxide)
-                .colorAverage()
-                .build()
-
-        SodiumTriflateSolution = new Material.Builder(13185, SuSyUtility.susyId('sodium_triflate_solution'))
-                .liquid()
-                .components(SodiumTriflate, Water)
-                .colorAverage()
-                .build()
-
-        TriflicAcidSolution = new Material.Builder(13186, SuSyUtility.susyId('triflic_acid_solution'))
-                .liquid()
-                .components(TriflicAcid, Water)
-                .colorAverage()
-                .build()
-
-        LacticAcidSolution = new Material.Builder(13187, SuSyUtility.susyId('lactic_acid_solution'))
-                .liquid()
-                .components(LacticAcid, Water)
-                .colorAverage()
-                .build()
+        // FREE IDs: 13184-13187
 
         UltrapureHydrofluoricAcid = new Material.Builder(13188, SuSyUtility.susyId('ultrapure_hydrofluoric_acid'))
                 .liquid()
                 .components(Hydrogen, Fluorine, Water)
                 .color(0x0fc3d4)
                 .build()
-        UltrapureHydrofluoricAcid.setFormula("HF")
 
-        UltrapureIronIiiChlorideSolution = new Material.Builder(13189, SuSyUtility.susyId('ultrapure_iron_iii_chloride_solution'))
+        UltrapureHydrofluoricAcid.setFormula("(HF)(H2O)")
+
+        UltrapureIronIIIChlorideSolution = new Material.Builder(13189, SuSyUtility.susyId('ultrapure_iron_iii_chloride_solution'))
                 .liquid()
                 .components(Iron, Chlorine * 3, Water)
                 .color(0x472500)
@@ -1188,34 +1167,45 @@ class SecondDegreeMaterials {
 
         HighTemperatureSolder = new Material.Builder(13190, SuSyUtility.susyId('high_temperature_solder'))
                 .dust().liquid(new FluidBuilder().temperature(309))
+                .components(Lead * 97, Silver * 2, Tin)
                 .build()
 
-        CopperSuperfillElectrolyte = new Material.Builder(13191, SuSyUtility.susyId('copper_superfill_electrolyte'))
-                .liquid()
-                .build()
+        // FREE ID: 13191
 
         EnamelledCopper = new Material.Builder(13192, SuSyUtility.susyId('enamelled_copper'))
                 .flags(GENERATE_FINE_WIRE)
+                .components(Copper)
+                .color(0xe8ab5a)
+                .ingotSmeltInto(Copper)
+                .arcSmeltInto(Copper)
+                .macerateInto(Copper)
                 .build()
 
         EnamelledGold = new Material.Builder(13193, SuSyUtility.susyId('enamelled_gold'))
                 .flags(GENERATE_FINE_WIRE)
+                .components(Gold)
+                .color(0xe8d574)
+                .ingotSmeltInto(Gold)
+                .arcSmeltInto(Gold)
+                .macerateInto(Gold)
                 .build()
 
         EnamelledGrapheneCoatedGold = new Material.Builder(13194, SuSyUtility.susyId('enamelled_graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
+                .components(Gold, Graphene)
+                .color(0xad9c4c)
+                .ingotSmeltInto(Gold)
+                .arcSmeltInto(Gold)
+                .macerateInto(Gold)
                 .build()
 
         GrapheneCoatedGold = new Material.Builder(13195, SuSyUtility.susyId('graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
-                .build()
-
-        StandardCleanOne = new Material.Builder(13196, SuSyUtility.susyId('standard_clean_one'))
-                .liquid()
-                .build()
-
-        StandardCleanTwo = new Material.Builder(13197, SuSyUtility.susyId('standard_clean_two'))
-                .liquid()
+                .components(Gold, Graphene)
+                .color(0xa38c21)
+                .ingotSmeltInto(Gold)
+                .arcSmeltInto(Gold)
+                .macerateInto(Gold)
                 .build()
     }
 }

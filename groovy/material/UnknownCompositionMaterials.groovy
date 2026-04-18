@@ -1333,7 +1333,7 @@ class UnknownCompositionMaterials {
                 .components(CrudeAzide, Water)
                 .colorAverage()
                 .build()
-                
+
         //FREE IDs: 4257-4258
 
         ImpureChalcopyriteSlurry = new Material.Builder(4259, SuSyUtility.susyId('impure_chalcopyrite_slurry'))
@@ -3245,12 +3245,12 @@ class UnknownCompositionMaterials {
                 .color(0xe7e3eb)
                 .build()
         
-        ResolResinMixture = new Material.Builder(4693, SuSyUtility.susyId('resol_resin_mixture'))
+        PhenolicResolResin = new Material.Builder(4693, SuSyUtility.susyId('phenolic_resol_resin'))
                 .liquid()
                 .color(0xad9478)
                 .build()
         
-        ResolResinInfiltrant = new Material.Builder(4694, SuSyUtility.susyId('resol_resin_infiltrant'))
+        ResolInfiltrant = new Material.Builder(4694, SuSyUtility.susyId('resol_infiltrant'))
                 .liquid()
                 .color(0x4e2f0a)
                 .build()
@@ -3456,6 +3456,46 @@ class UnknownCompositionMaterials {
         MagneticLiningSlurry = new Material.Builder(4734, SuSyUtility.susyId('magnetic_lining_slurry'))
                 .liquid()
                 .color(0x1a1a1a)
+                .build()
+
+        FluorinatedSulfolaneMixture = new Material.Builder(4735, SuSyUtility.susyId('fluorinated_sulfolane_mixture'))
+                .liquid()
+                .color(0xdeeb52)
+                .build()
+
+        EpoxyMoldingCompound = new Material.Builder(4736, SuSyUtility.susyId('epoxy_molding_compound'))
+                .liquid()
+                .color(0x70553a)
+                .build()
+
+        OligomericPolyesterMixture = new Material.Builder(4737, SuSyUtility.susyId('oligomeric_polyester_mixture'))
+                .liquid()
+                .color(0xe8ffee)
+                .build()
+
+        PolyesterMelt = new Material.Builder(4738, SuSyUtility.susyId('polyester_melt'))
+                .liquid()
+                .color(0xb8dbc1)
+                .build()
+
+        PolyesterResin = new Material.Builder(4739, SuSyUtility.susyId('polyester_resin'))
+                .liquid()
+                .color(0xa5f2b9)
+                .build()
+
+        CopperSuperfillElectrolyte = new Material.Builder(4740, SuSyUtility.susyId('copper_superfill_electrolyte'))
+                .liquid()
+                .color(0xcf9e80)
+                .build()
+
+        StandardCleanOne = new Material.Builder(13196, SuSyUtility.susyId('standard_clean_one'))
+                .liquid()
+                .color(0x2180a3)
+                .build()
+
+        StandardCleanTwo = new Material.Builder(13197, SuSyUtility.susyId('standard_clean_two'))
+                .liquid()
+                .color(0x3749ad)
                 .build()
     }
 }

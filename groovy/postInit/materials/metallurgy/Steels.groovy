@@ -99,13 +99,12 @@ SOLIDIFIER.recipeBuilder()
 
 // Manganese steel
 
-MIXER.recipeBuilder()
-    .circuitMeta(1)
-    .inputs(ore('dustSteel') * 14)
-    .inputs(ore('dustManganese') * 2)
-    .outputs(metaitem('dustManganeseSteel') * 16)
-    .duration(100)
-    .EUt(VA[LV] * 2)
+INDUCTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustManganese') * 8)
+    .inputs(ore('dustIron') * 16)
+    .fluidOutputs(fluid('molten.manganese_steel') * 11520) // 80 ingot
+    .EUt(VA[IV])
+    .duration(12000)
     .buildAndRegister()
 
 // Tungsten steel

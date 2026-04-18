@@ -77,7 +77,7 @@ BCR.recipeBuilder()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('absorbed_methacrolein') * 2500)
-    .fluidOutputs(fluid('diluted_acetic_acid') * 2000)
+    .fluidOutputs(fluid('methacrylic_acid_solution') * 2000)
     .fluidOutputs(fluid('gaseous_methacrolein_mixture') * 500)
     .duration(200)
     .EUt(VA[LV])

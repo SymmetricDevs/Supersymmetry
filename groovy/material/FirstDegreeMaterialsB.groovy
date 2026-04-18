@@ -870,7 +870,7 @@ class FirstDegreeMaterialsB {
                 .color(0x7a7350)
                 .build()
 
-        CarbonCompound = new Material.Builder(8794, SuSyUtility.susyId('carbon_compound'))
+        CarbonCompound = new Material.Builder(8794c, SuSyUtility.susyId('carbon_compound'))
                 .dust()
                 .components(Carbon, Clay)
                 .colorAverage()

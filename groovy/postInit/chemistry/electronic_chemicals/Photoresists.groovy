@@ -523,10 +523,18 @@ DT.recipeBuilder()
 
     BR.recipeBuilder()
         .inputs(ore('dustAnyPurityPotassium'))
-        .fluidInputs(fluid('tert_butanol') * 1000)
-        .outputs(metaitem('dustPotassiumTertButoxide') * 15)
+        .fluidInputs(fluid('tert_butanol') * 2000)
+        .fluidOutputs(fluid('potassium_tert_butoxide_solution') * 1000)
         .fluidOutputs(fluid('hydrogen') * 1000)
         .duration(80)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('potassium_tert_butoxide_solution') * 1000)
+        .outputs(metaitem('dustPotassiumTertButoxide') * 15)
+        .fluidOutputs(fluid('tert_butanol') * 1000)
+        .duration(20)
         .EUt(VA[LV])
         .buildAndRegister()
 
@@ -549,7 +557,7 @@ DT.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-        // t-BOC protection
+    // t-BOC protection
 
     BR.recipeBuilder()
         .inputs(ore('dustPolyhydroxystyrene') * 4)

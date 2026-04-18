@@ -55,7 +55,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('fluorinated_octanoyl_fluoride_mixture') * 1000)
-    .fluidOutputs(fluid('perfluorobutyltetrahydrofuran') * 200)
+    .fluidOutputs(fluid('perfluorobutyltetrahydrofuran') * 200) // FIXME: Use for submerged computer cooling (FC-75)
     .fluidOutputs(fluid('perfluorooctanoyl_fluoride') * 150)
     .duration(200)
     .EUt(VA[LV])

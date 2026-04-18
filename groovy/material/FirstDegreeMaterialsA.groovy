@@ -2141,13 +2141,13 @@ class FirstDegreeMaterialsA {
 
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic)
 
-        CobaltNitrateSolution = new Material.Builder(8406, SuSyUtility.susyId('cobalt_nitrate_solution'))
+        CobaltIINitrateSolution = new Material.Builder(8406, SuSyUtility.susyId('cobalt_ii_nitrate_solution'))
                 .liquid()
                 .components(Cobalt, Nitrogen * 2, Oxygen * 6, Water)
-                .colorAverage()
+                .color(0x6e0909)
                 .build()
 
-        CobaltNitrateSolution.setFormula("(Co(NO3)2)(H2O)", true)
+        CobaltIINitrateSolution.setFormula("(Co(NO3)2)(H2O)", true)
 
         Dichlorosilane = new Material.Builder(8407, SuSyUtility.susyId('dichlorosilane'))
                 .gas()

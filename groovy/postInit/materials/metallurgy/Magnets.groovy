@@ -79,6 +79,59 @@ crafting.addShaped('MagneticPlateVoltaic',metaitem('plateSteelMagnetic'), magnet
 crafting.addShaped('MagneticSteelRodVoltaic',metaitem('stickSteelMagnetic'), steel_magnetic_rod_ingredients)
 crafting.addShaped('VoltaicPileCrafting',metaitem('voltaic_pile'), voltaic_pile_ingredients)
 
+// Ferrite soft magnets
+
+ERF.recipeBuilder()
+    .inputs(ore('dustPurifiedIronIiiOxide') * 10)
+    .inputs(ore('dustZincOxide') * 2)
+    .inputs(ore('dustNickelIiOxide') * 2)
+    .outputs(metaitem('ingotNickelZincFerrite') * 14)
+    .blastFurnaceTemp(1200)
+    .duration(300)
+    .EUt(60)
+    .buildAndRegister()
+
+ERF.recipeBuilder()
+    .inputs(ore('dustPurifiedIronIiiOxide') * 10)
+    .inputs(ore('dustZincOxide') * 2)
+    .inputs(ore('dustManganeseIiOxide') * 2)
+    .outputs(metaitem('ingotManganeseZincFerrite') * 14)
+    .blastFurnaceTemp(1200)
+    .duration(300)
+    .EUt(60)
+    .buildAndRegister()
+
+ERF.recipeBuilder()
+    .inputs(ore('dustPurifiedIronIiiOxide') * 30)
+    .inputs(ore('dustBariumCarbonate') * 5)
+    .outputs(metaitem('ingotBariumFerrite') * 32)
+    .fluidOutputs(fluid('carbon_dioxide') * 1000)
+    .blastFurnaceTemp(1200)
+    .duration(100)
+    .EUt(60)
+    .buildAndRegister()
+
+ERF.recipeBuilder()
+    .inputs(ore('dustPurifiedIronIiiOxide') * 30)
+    .inputs(ore('dustStrontiumCarbonate') * 5)
+    .outputs(metaitem('ingotStrontiumFerrite') * 32)
+    .fluidOutputs(fluid('carbon_dioxide') * 1000)
+    .blastFurnaceTemp(1200)
+    .duration(100)
+    .EUt(60)
+    .buildAndRegister()
+
+// Permendur
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('molten.iron') * 3204)
+    .fluidInputs(fluid('molten.cobalt') * 3060)
+    .inputs(ore('dustVanadium'))
+    .fluidOutputs(fluid('molten.permendur') * 6408)
+    .EUt(VA[MV])
+    .duration(160)
+    .buildAndRegister()
+
 // Alnico (HV-EV)
 
 MIXER.recipeBuilder()

@@ -3,7 +3,7 @@ import static gregtech.api.GTValues.*
 
 // Peroxides
 
-// 2-EAQ meddiato
+// 2-EAQ
 
 BR.recipeBuilder()
     .inputs(ore('dustPhthalicAnhydride') * 15)
@@ -38,25 +38,33 @@ MIXER.recipeBuilder()
 
 FIXED_BR.recipeBuilder()
     .notConsumable(ore('catalystBedSupportedPalladium'))
-    .fluidInputs(fluid('two_ethylanthraquinone_solution') * 1000)
-    .fluidInputs(fluid('hydrogen') * 2000)
-    .fluidOutputs(fluid('two_ethylanthrahydroquinone_solution') * 1000)
+    .fluidInputs(fluid('two_ethylanthraquinone_solution') * 100)
+    .fluidInputs(fluid('hydrogen') * 100)
+    .fluidOutputs(fluid('two_ethylanthrahydroquinone_solution') * 100)
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister()
 
 BCR.recipeBuilder()
-    .fluidInputs(fluid('two_ethylanthrahydroquinone') * 1000)
-    .fluidInputs(fluid('air') * 10000)
-    .fluidOutputs(fluid('oxidized_two_ethylanthraquinone_solution') * 1000)
+    .fluidInputs(fluid('two_ethylanthrahydroquinone') * 100)
+    .fluidInputs(fluid('air') * 500)
+    .fluidOutputs(fluid('oxidized_two_ethylanthraquinone_solution') * 100)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('two_ethylanthrahydroquinone') * 100)
+    .fluidInputs(fluid('oxygen') * 100)
+    .fluidOutputs(fluid('oxidized_two_ethylanthraquinone_solution') * 100)
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister();
 
 CSTR.recipeBuilder()
-    .fluidInputs(fluid('oxidized_two_ethylanthraquinone_solution') * 50)
+    .fluidInputs(fluid('oxidized_two_ethylanthraquinone_solution') * 100)
     .fluidInputs(fluid('water') * 50)
-    .fluidOutputs(fluid('two_ethylanthraquinone_solution') * 50)
+    .fluidOutputs(fluid('two_ethylanthraquinone_solution') * 100)
     .fluidOutputs(fluid('hydrogen_peroxide_solution') * 100)
     .duration(10)
     .EUt(VA[LV])
