@@ -816,7 +816,27 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13125-13130*/
+        SupportedAluminiumChloride = new Material.Builder(13126, SuSyUtility.susyId('supported_aluminium_chloride'))
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .components(AluminiumChloride, SiliconDioxide * 9)
+                .colorAverage()
+                .build()
+
+        CopperImpregnatedSilica = new Material.Builder(13127, SuSyUtility.susyId('copper_impregnated_silica'))
+                .dust()
+                .components(CopperIINitrate, Water, SiliconDioxide * 4)
+                .colorAverage()
+                .build()
+
+        SupportedCopper = new Material.Builder(13128, SuSyUtility.susyId('supported_copper'))
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .components(Copper, SiliconDioxide * 4)
+                .colorAverage()
+                .build()
+
+        // FREE ID: 13129-13130
 
         HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -1172,7 +1192,7 @@ class SecondDegreeMaterials {
 
         // FREE ID: 13191
 
-        EnamelledCopper = new Material.Builder(13192, SuSyUtility.susyId('enamelled_copper'))
+        EnameledCopper = new Material.Builder(13192, SuSyUtility.susyId('enameled_copper'))
                 .flags(GENERATE_FINE_WIRE)
                 .components(Copper)
                 .color(0xe8ab5a)
@@ -1181,7 +1201,7 @@ class SecondDegreeMaterials {
                 .macerateInto(Copper)
                 .build()
 
-        EnamelledGold = new Material.Builder(13193, SuSyUtility.susyId('enamelled_gold'))
+        EnameledGold = new Material.Builder(13193, SuSyUtility.susyId('enameled_gold'))
                 .flags(GENERATE_FINE_WIRE)
                 .components(Gold)
                 .color(0xe8d574)
@@ -1190,7 +1210,7 @@ class SecondDegreeMaterials {
                 .macerateInto(Gold)
                 .build()
 
-        EnamelledGrapheneCoatedGold = new Material.Builder(13194, SuSyUtility.susyId('enamelled_graphene_coated_gold'))
+        EnameledGrapheneCoatedGold = new Material.Builder(13194, SuSyUtility.susyId('enameled_graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
                 .components(Gold, Graphene)
                 .color(0xad9c4c)

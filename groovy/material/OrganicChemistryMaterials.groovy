@@ -3582,14 +3582,8 @@ class OrganicChemistryMaterials {
 
         Sulfolene.setFormula("C4H6O2S", true)
 
-        TripropylamineTriflate = new Material.Builder(15573, SuSyUtility.susyId('tripropylamine_triflate'))
-                .dust()
-                .components(Tripropylamine, TriflicAcid)
-                .colorAverage()
-                .build()
+        // FREE ID: 15618
         
-        TripropylamineTriflate.setFormula("(C9H21N)(CF3SO3H)", true)
-
         MethylmagnesiumChlorideSolution = new Material.Builder(15574 , SuSyUtility.susyId('methylmagnesium_chloride_solution'))
                 .liquid()
                 .components(Carbon, Hydrogen * 3, Magnesium, Chlorine, Tetrahydrofuran * 6)
@@ -3971,5 +3965,27 @@ class OrganicChemistryMaterials {
                 .build()
 
         SodiumTriflate.setFormula("CF3SO3Na", true)
+
+        TripropylamineTriflate = new Material.Builder(15687, SuSyUtility.susyId('tripropylamine_triflate'))
+                .dust()
+                .components(Tripropylamine, TriflicAcid)
+                .colorAverage()
+                .build()
+
+        TripropylamineTriflate.setFormula("(C9H22N)(CF3SO3)", true)
+
+        TetrakisDimethylamidoHafnium = new Material.Builder(15688, SuSyUtility.susyId('tetrakis_dimethylamido_hafnium'))
+                .liquid(new FluidBuilder().temperature(302))
+                .components(Hafnium, Nitrogen * 4, Carbon * 8, Hydrogen * 24)
+                .color(0xd4c87a)
+                .build()
+
+        TetrakisDimethylamidoHafnium.setFormula('Hf(N(CH3)2)4', true)
+
+        Tetrafluoroethane = new Material.Builder(15689, SuSyUtility.susyId('tetrafluoroethane'))
+                .gas()
+                .components(Carbon * 2, Hydrogen * 2, Fluorine * 4)
+                .colorAverage()
+                .build()
     }
 }       

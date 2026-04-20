@@ -1013,7 +1013,8 @@ class SuSyMaterials {
     public static Material SlackWax
     public static Material Resin
     public static Material UncatalyzedSulfurousGases
-    public static Material BtexExtract
+    public static Material FurfuralBtexExtract
+    public static Material SulfolaneBtexExtract
     public static Material BTEX
     public static Material ClarifiedSlurryOil
     public static Material CrudeLubricatingOil
@@ -1959,9 +1960,9 @@ class SuSyMaterials {
     public static Material DilutedMagnesiumChlorideSolution
     public static Material AmmoniaCarbonDioxideMixture
     public static Material HighTemperatureSolder
-    public static Material EnamelledCopper
-    public static Material EnamelledGold
-    public static Material EnamelledGrapheneCoatedGold
+    public static Material EnameledCopper
+    public static Material EnameledGold
+    public static Material EnameledGrapheneCoatedGold
     public static Material GrapheneCoatedGold
 
     // Organic Chemistry Materials
@@ -1986,6 +1987,7 @@ class SuSyMaterials {
     public static Material ChloromethaneSolution
     public static Material OneTwoDichloroethylene
     public static Material AcidicTetrafluoroethylene
+    public static Material Tetrafluoroethane
     public static Material TrinitromethaneSolution
     public static Material TetranitronmethaneSolution
     public static Material ImpureDimethyldichlorosilane
@@ -2551,7 +2553,6 @@ class SuSyMaterials {
     public static Material DodecylsulfuricAcid
     public static Material FourTertOctylphenol
     public static Material TritonXOneHundred
-    public static Material FurfuralBTEXExtract
     public static Material MetaCresol
     public static Material PhenolNovolacOligomer
     public static Material Perfluorobutyltetrahydrofuran
@@ -2566,6 +2567,7 @@ class SuSyMaterials {
     public static Material Polyethylenimine
     public static Material LacticAcid
     public static Material TriflicAcid
+    public static Material TetrakisDimethylamidoHafnium
 
     // Third Degree Materials
 
@@ -2773,7 +2775,12 @@ class SuSyMaterials {
     public static Material EthylenimineSolution
     public static Material TwoNitrosoOneNaphtholFiveSulfonicAcidSolution
     public static Material TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution
-    public static Material DiazonaphthoquinoneSulfonicAcidSolution
+    public static Material DiazonaphthoquinoneFiveSulfonicAcidSolution
+    public static Material PotassiumTertButoxideSolution
+    public static Material LithiumDimethylamideSolution
+    public static Material TetrakisDimethylamidoHafniumSolution
+    public static Material LithiumAluminiumHydrideSolution
+    public static Material TetrafluoroethaneMixture
 
     // Thermodynamics Materials
 

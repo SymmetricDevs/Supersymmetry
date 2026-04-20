@@ -769,41 +769,6 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// Tetrafluoroethylene
-
-BCR.recipeBuilder()
-    .fluidInputs(fluid('chloroform') * 50)
-    .fluidInputs(fluid('hydrogen_fluoride') * 100)
-    .fluidOutputs(fluid('acidic_chlorodifluoromethane') * 150)
-    .duration(5)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-BCR.recipeBuilder()
-    .fluidInputs(fluid('acidic_chlorodifluoromethane') * 150)
-    .fluidInputs(fluid('water') * 100)
-    .fluidOutputs(fluid('chlorodifluoromethane') * 50)
-    .fluidOutputs(fluid('hydrochloric_acid') * 100)
-    .duration(5)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-PYROLYSE_OVEN.recipeBuilder()
-    .fluidInputs(fluid('acidic_chlorodifluoromethane') * 6000)
-    .fluidOutputs(fluid('acidic_tetrafluoroethylene') * 5000)
-    .duration(200)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-BCR.recipeBuilder()
-    .fluidInputs(fluid('acidic_tetrafluoroethylene') * 125)
-    .fluidInputs(fluid('water') * 150)
-    .fluidOutputs(fluid('tetrafluoroethylene') * 25)
-    .fluidOutputs(fluid('hydrochloric_acid') * 150)
-    .duration(5)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 // Tetranitromethane
 
 CSTR.recipeBuilder()

@@ -1202,7 +1202,7 @@ class ThirdDegreeMaterials {
 
         TwoEthylanthrahydroquinoneSolution.setFormula('(C16H14O2)(C8H17O4P)(C8H18O4P)', true)
 
-        TwoNitrosoOneNaphtholFiveSulfonicAcidSolution = new Material.Builder(15560, SuSyUtility.susyId('two_nitroso_one_naphthol_five_sulfonic_acid_solution'))
+        TwoNitrosoOneNaphtholFiveSulfonicAcidSolution = new Material.Builder(24211, SuSyUtility.susyId('two_nitroso_one_naphthol_five_sulfonic_acid_solution'))
                 .liquid()
                 .components(Carbon * 10, Hydrogen * 6, Nitrogen, Oxygen * 5, Sulfur, SodiumBisulfateSolution, Water)
                 .color(0x5a878c)
@@ -1210,7 +1210,7 @@ class ThirdDegreeMaterials {
 
         TwoNitrosoOneNaphtholFiveSulfonicAcidSolution.setFormula('(C10H6NO5S)(NaHSO4)(H2O)2', true)
 
-        TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution = new Material.Builder(15561, SuSyUtility.susyId('two_amino_one_naphthalenone_five_sulfonic_acid_solution'))
+        TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution = new Material.Builder(24212, SuSyUtility.susyId('two_amino_one_naphthalenone_five_sulfonic_acid_solution'))
                 .liquid()
                 .components(Carbon * 20, Hydrogen * 16, Nitrogen * 4, Oxygen * 8, Sulfur * 2, SodiumThiosulfate, SodiumBisulfateSolution * 4, Water)
                 .colorAverage()
@@ -1218,12 +1218,46 @@ class ThirdDegreeMaterials {
 
         TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution.setFormula('(C10H8N2SO4)2(Na2S2O3)(NaHSO4)4(H2O)5', true)
 
-        DiazonaphthoquinoneSulfonicAcidSolution = new Material.Builder(15562, SuSyUtility.susyId('diazonaphthoquinone_sulfonic_acid_solution'))
+        DiazonaphthoquinoneFiveSulfonicAcidSolution = new Material.Builder(24213, SuSyUtility.susyId('diazonaphthoquinone_five_sulfonic_acid_solution'))
                 .liquid()
-                .components(DiazonaphthoquinoneSulfonicAcid * 2, SodiumThiosulfate, SodiumBisulfateSolution * 4, Water * 5)
+                .components(DiazonaphthoquinoneFiveSulfonicAcid * 2, SodiumThiosulfate, SodiumBisulfateSolution * 4, Water * 5)
                 .colorAverage()
                 .build()
 
-        DiazonaphthoquinoneSulfonicAcidSolution.setFormula('(?)(C10H7N3O5S)2(Na2S2O3)(NaHSO4)4(H2O)5', true)
+        DiazonaphthoquinoneFiveSulfonicAcidSolution.setFormula('(?)(C10H7N3O5S)2(Na2S2O3)(NaHSO4)4(H2O)5', true)
+
+        PotassiumTertButoxideSolution = genSolution(24214, 'potassium_tert_butoxide_solution', PotassiumTertButoxide, TertButanol, false)
+
+        LithiumDimethylamideSolution = new Material.Builder(24215, SuSyUtility.susyId('lithium_dimethylamide_solution'))
+                .liquid()
+                .components(Lithium, Carbon * 2, Hydrogen * 6, Nitrogen, DiethylEther)
+                .color(0x8fd4e0)
+                .build()
+
+        LithiumDimethylamideSolution.setFormula('(LiN(CH3)2)(C4H10O)', true)
+
+        TetrakisDimethylamidoHafniumSolution = new Material.Builder(24216, SuSyUtility.susyId('tetrakis_dimethylamido_hafnium_solution'))
+                .liquid()
+                .components(Hafnium, Nitrogen * 4, Carbon * 8, Hydrogen * 24, DiethylEther * 4)
+                .color(0xe0c97a)
+                .build()
+
+        TetrakisDimethylamidoHafniumSolution.setFormula('(Hf(N(CH3)2)4)(C4H10O)4', true)
+
+        LithiumAluminiumHydrideSolution = new Material.Builder(24217, SuSyUtility.susyId('lithium_aluminium_hydride_solution'))
+                .liquid()
+                .components(Lithium, Aluminium, Hydrogen * 4, DiethylEther)
+                .color(0xd4d4b8)
+                .build()
+
+        LithiumAluminiumHydrideSolution.setFormula('(LiAlH4)(C4H10O)', true)
+
+        GuanidiniumChlorideSolution = genSolution(24218, 'guanidinium_chloride_solution', GuanidiniumChloride, Water, false)
+
+        TetrafluoroethaneMixture = new Material.Builder(24219, SuSyUtility.susyId('tetrafluoroethane_mixture'))
+                .gas()
+                .components(Tetrafluoroethane * 4, HydrogenChloride * 3)
+                .colorAverage()
+                .build()
         }
 }

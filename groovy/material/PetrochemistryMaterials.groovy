@@ -185,7 +185,7 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        BtexExtract = new Material.Builder(20029, SuSyUtility.susyId('btex_extract'))
+        FurfuralBtexExtract = new Material.Builder(20029, SuSyUtility.susyId('furfural_btex_extract'))
                 .liquid()
                 .color(0xa8a87d)
                 .flags(FLAMMABLE)
@@ -215,7 +215,11 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        // FREE ID: 20034
+        SulfolaneBtexExtract = new Material.Builder(20034, SuSyUtility.susyId('sulfolane_btex_extract'))
+                .liquid()
+                .color(0xd6d67c)
+                .flags(FLAMMABLE)
+                .build()
 
         SteamcrackedLightGasOil = new Material.Builder(20035, SuSyUtility.susyId('steamcracked_light_gas_oil'))
                 .gas(new FluidBuilder().temperature(1223))

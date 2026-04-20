@@ -1,8 +1,6 @@
 import globals.Globals
-import globals.semiconductors.Photolithography
-import globals.semiconductors.Etchants
-import globals.PDopants
-import globals.NDopants
+import globals.semiconductors.Lithography
+import globals.semiconductors.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -78,6 +76,7 @@ mods.gregtech.cutter.removeByInput(192, [metaitem('wafer.nor_memory_chip')], [fl
 // NOR * 16
 mods.gregtech.cutter.removeByInput(192, [metaitem('wafer.nor_memory_chip')], [fluid('water') * 540])
 
+/*
 def generateCuttingRecipes(input, product, productMultiplier, voltageTier, boolean cleanroom) {
     if (cleanroom) {
         CUTTER.recipeBuilder()
@@ -404,3 +403,4 @@ EVAPORATION.recipeBuilder()
     .duration(400)
     .EUt(VA[HV])
     .buildAndRegister()
+*/

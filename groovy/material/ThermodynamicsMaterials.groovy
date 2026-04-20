@@ -269,6 +269,8 @@ class ThermodynamicsMaterials {
 
         generateThermoRefrigerant(Chlorodifluoromethane, 22180)
 
+        generateThermoRefrigerant(Tetrafluoroethane, 22185)
+
         generateCoolant(Water, 22300)
 
         generateCoolant(EthyleneGlycol, 22305)

@@ -45,6 +45,7 @@ def induction_coils = [
 
 for (induction_coil in induction_coils) {
     ZONE_REFINER.recipeBuilder()
+        .circuitMeta(1)
         .notConsumable(induction_coil)
         .fluidInputs(fluid('phosphine'))
         .inputs(metaitem('seed_crystal.silicon'))
@@ -55,6 +56,7 @@ for (induction_coil in induction_coils) {
         .buildAndRegister()
 
     ZONE_REFINER.recipeBuilder()
+        .circuitMeta(2)
         .notConsumable(induction_coil)
         .notConsumable(fluid('argon') * 100)
         .fluidInputs(fluid('phosphine'))
@@ -65,7 +67,8 @@ for (induction_coil in induction_coils) {
         .EUt(VA[MV])
         .buildAndRegister()
 
-/*    ZONE_REFINER.recipeBuilder()
+    ZONE_REFINER.recipeBuilder()
+        .circuitMeta(1) 
         .notConsumable(induction_coil)
         .fluidInputs(fluid('phosphine') * 100)
         .inputs(metaitem('seed_crystal.silicon'))
@@ -76,6 +79,7 @@ for (induction_coil in induction_coils) {
         .buildAndRegister()
 
     ZONE_REFINER.recipeBuilder()
+        .circuitMeta(2)
         .notConsumable(induction_coil)
         .notConsumable(fluid('argon') * 100)
         .fluidInputs(fluid('phosphine') * 100)
@@ -84,14 +88,14 @@ for (induction_coil in induction_coils) {
         .outputs(metaitem('boule.silicon.fz.heavily_n_doped'))
         .duration(1200)
         .EUt(VA[MV])
-        .buildAndRegister()*/ // ?? the same as before
+        .buildAndRegister()
 }
 
 // Small scale Czochiralski process
 
 CRYSTALLIZER.recipeBuilder()
-    .fluidInputs(fluid('phosphine'))    
-    .notConsumable(metaitem('crucible.graphite')) // this one has too many inputs as well; remove pump input?
+    .fluidInputs(fluid('phosphine'))
+    .notConsumable(metaitem('crucible.graphite'))
     .notConsumable(metaitem('electric.pump.mv'))
     .inputs(ore('seed_crystal.germanium'))
     .inputs(ore('blockHighPurityGermanium'))
@@ -146,8 +150,6 @@ CRYSTALLIZER.recipeBuilder()
     .duration(240)
     .EUt(VA[LV])
     .buildAndRegister()
-
-
 
 // Wafer preparation
 
