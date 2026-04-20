@@ -1,0 +1,33 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
+  "preRequisites:11": [
+    1355947275,
+    1706791533
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1341084380.desc",
+      "icon:10": {
+        "Damage:2": 11,
+        "id:8": "susy:resource_block"
+      },
+      "name:8": "susy.quest.db.1341084380.title"
+    }
+  },
+  "questID:3": 1341084380,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8299,
+          "id:8": "gregtech:meta_wire_fine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

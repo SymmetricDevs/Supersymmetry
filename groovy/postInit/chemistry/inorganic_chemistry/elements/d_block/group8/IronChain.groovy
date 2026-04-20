@@ -48,6 +48,18 @@ class ReductantIron {
     }
 }
 
+class ReductantCarbon {
+    String name
+    int consumption
+    float duration_multiplier
+    ReductantCarbon(String name, int consumption, float multiplier) {
+        this.name = name
+        this.consumption = consumption
+        this.duration_multiplier = multiplier
+    }
+}
+
+
 def blastables = [
     new BlastableIron('dustMagnetite', 2, 6, 4, 80),
     new BlastableIron('dustBandedIron', 2, 4, 3, 80),
@@ -181,6 +193,29 @@ for (blastable in blastables) {
         .duration(100)
         .circuitMeta(2)
         .buildAndRegister()
+
+def carbon_reductants = [
+        new ReductantCarbon("charcoal", 9, 1),
+        new ReductantCarbon("gemCoal", 8, 1), // Standard consumption, 10 = 8 + 2
+        new ReductantCarbon("gemLigniteCoke", 9, 1.2),
+        new ReductantCarbon("gemCoke", 6, 0.8),
+        new ReductantCarbon("gemAnthracite", 6, 0.75),
+        new ReductantCarbon("dustCharcoal", 9, 0.95),
+        new ReductantCarbon("dustCoal", 8, 0.9),
+        new ReductantCarbon("dustLigniteCoke", 9, 1),
+        new ReductantCarbon("dustCoke", 6, 0.75),
+        new ReductantCarbon("dustAnthracite", 6, 0.7)
+]
+    for (carbon_reductant in carbon_reductants) {
+        //cast iron in cupola furnace; primitive age
+        CUPOLA_FURNACE.recipeBuilder()
+            .inputs(ore('ingotPigIron') * 8)
+            .inputs(ore('dustSmallLimestone'))
+            .inputs(ore(carbon_reductant.name) * carbon_reductant.consumption)
+            .outputs(item('minecraft:iron_ingot') * 8)
+            .duration((200 * carbon_reductant.duration_multiplier).toInteger())
+            .buildAndRegister()
+    }
 
     METALLURGICAL_CONVERTER.recipeBuilder()
         .inputs(ore('ingotPigIron') * 10)
@@ -393,7 +428,44 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('sulfur_dioxide') * 1000)
     .fluidOutputs(fluid('sulfur_trioxide') * 1000)
     .duration(200)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustIronIiSulfide') * 4)
+    .fluidInputs(fluid('oxygen') * 7000)
+    .outputs(metaitem('dustIronIiiOxide') * 5)
+    .fluidOutputs(fluid('sulfur_dioxide') * 2000)
+    .duration(200)
     .EUt(VA[LV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustIronIiSulfide') * 2)
+    .fluidInputs(fluid('air') * 5250)
+    .chancedOutput(metaitem('dustIronIiiOxide') * 5, 5000, 0)
+    .fluidOutputs(fluid('sulfur_dioxide') * 1000)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(ore('dustPyrite'))
+    .fluidInputs(fluid('oxygen') * 5500)
+    .chancedOutput(metaitem('dustIronIiiOxide') * 5, 5000, 0)
+    .fluidOutputs(fluid('sulfur_dioxide') * 2000)
+    .duration(160)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustSmallPyrite') * 2)
+    .fluidInputs(fluid('air') * 4125)
+    .chancedOutput(metaitem('dustIronIiiOxide') * 5, 2500, 0)
+    .fluidOutputs(fluid('sulfur_dioxide') * 1000)
+    .duration(80)
+    .EUt(VA[ULV])
     .buildAndRegister()
 
 // FeSO4

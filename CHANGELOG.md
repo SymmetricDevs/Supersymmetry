@@ -1,3 +1,104 @@
+# UPDATE 0.1.16.5
+## Mod Changes
+### Mod Updates
+- Had Enough Items 4.29.15 → 4.30.2
+- SusyCore v0.1.98 → v0.1.99
+## Changes
+### New Features
+- You can now use a new LV multiblock, the greenhouse, to harvest crops! (The MV greenhouse has been renamed the "arboretum.") (#1843 by @WideMann)
+### Fixes
+- Acetic anhydride catalyst is no longer lost. (#1838 by @Fiery36)
+- Cellulose acetate mesh is now craftable without silicon wafers. (#1841 by @WideMann)
+- Fix conflicting recipes (#1842 by @WideMann)
+And thanks to @whoisyp and @unitazer for additional work on keeping the pack stable.
+# UPDATE 0.1.16.4.1
+## Mod Changes
+### Mod Updates
+- Better Questing Unofficial 4.2.7 → 4.3.1
+- Supercritical 0.2.4 → 0.2.5
+## Changes
+### Changed Features
+- Quests are now updated automatically! You'll never have to run /bq_admin default load again.
+- In order to remove a gallium dupe, the Bayer process has been slightly modified. You may need to flush out some machines and/or change filters.
+### Fixes
+- Green vitriol is no longer a pile of steaming garbage
+- Wood/stone quests work properly with all wood/stone types
+# UPDATE 0.1.16.4
+## Mod Changes
+### Mod Updates
+- Universal Tweaks 1.12.2-1.18.0 → 1.12.2-1.19.1
+- Better Questing Unofficial 4.2.7 → 4.3.0
+- Bubbles 2.4.9 → 2.4.10
+- SusyCore v0.1.97 → v0.1.98
+- CraftPresence 2.7.0+1.12.2-forge → 2.7.1+1.12.2-forge
+## Changes
+### Changed Features
+- Sulfuric acid is now properly Gregified (TM)! Run /bq_admin default load to see the new quests. (#1803 by @obihz6, #1830 by @planetme)
+- Acetic anhydride, acetaldehyde, acetic acid, and many other ace chemicals have updated recipes! (#1819 by @Fiery36)
+### Fixes
+- BQu teams now work properly. (#1833 by @planetme)
+- CraftPresence should no longer count you as playing when you're not. (#1833 by @planetme)
+# UPDATE 0.1.16.3
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.96 → v0.1.97
+## Changes
+### New Features
+- Batteries included! Lead-acid and nickel-iron batteries now have large variants. (#1825 by @Fiery36)
+### Changes
+- Many useless ores have been removed from HEI. (#1826 by @Fiery36)
+### Fixes
+- Move scattered oredict definitions into oreDict.groovy (#1822 by @Crindigo)
+- The preheated air recipe has been restored! (#1824 by @Crindigo)
+- HV Magnets are now actually craftable at HV! (#1828 by @Fiery36)
+- Misspellings have been thoroughly removed from the questbook. (#1827 by @whoisyp)
+And thanks to @whoisyp, @Crindigo, and @Fiery36 for keeping the pack stable.
+# UPDATE 0.1.16.2
+## Mod Changes
+### Mod Updates
+We've got a lot of mod updates. Here are some highlights:
+- Had Enough Items 4.29.8 → 4.29.15
+- 籁/Sound Physics Remixin 1.1.12 → 1.1.17
+- Fugue 0.21.0 → 0.23.1
+- Inventory Bogo Sorter 1.5.0 → 1.6.2
+- Scape and Run: Parasites 1.12.2v1.9.21 → 1.10.2
+- Gregic Probe: CEu 1.4.4 → 1.4.5
+- GroovyScript 1.3.1 → 1.3.4
+- ModularUI 3.0.3 → 3.1.3
+- SusyCore v0.1.95 → v0.1.96
+- Better Questing Unofficial 4.2.6 → 4.2.7
+- Fluidlogged API API-v3.1.1-mc1.12.2 → API-v3.2.0-mc1.12.2
+## Changes
+### New Features
+- Something that isn't important :) (#1814 by @oliwier509)
+- [Susy-Core] Mixer-settlers are now twice as space-efficient! You can continue using the old structure or craft the controller into the new version.. (#619 by @Crindigo)
+### Fixes
+- Cleanroom/OptiFine is now compatible again! (#1816 by @trainvoi)
+- Gauges and Switches switches actually control redstone again!
+- [Susy-Core] Rotational generators now output flue gas more consistently! (#617 by @Crindigo)
+- [Susy-Core] Singleblock combustion engines no longer void fluids! (#618, #623 by @ThisMightBeNoah)
+Of course, thanks to @whoisyp and @Fiery36 for also helping to keep the pack stable.
+# UPDATE 0.1.16.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.94 → v0.1.95
+### Mod Additions
+- BiomeTweaker → 1.12.2-3.2.369
+## Changes
+### New Features
+- [Susy-Core] Supersymmetry now has an external recipe viewer! Go to https://symmetricdevs.github.io/RecipeViewer to get started. (#615 by @bruberu)
+- Produce cast iron using the Cupola Furnace! It's blazingly fast (just like rust) (#1801 by @aliu-here)
+### Changed Features
+- Graphite blocks now require similar processing to graphite electrodes. (#1804 by @Fiery36)
+- Incinerators now have their own quest! (#1805 by @Sentrymon)
+### Fixes
+- All BOP biomes now spawn again (#1808 by @Fiery36)
+- COFFEE MV FIX (actual PR title produced by SUSY devs) (#1806 by @Brebexe)
+- [Susy-Core] Turbines no longer produce negative power. (#610 by @aliu-here)
+- [Susy-Core] Drones now actually stick around for more than five seconds (#612 by @Zalgo239)
+- [Susy-Core] BDSM crates no longer crash servers. (#613 by @bruberu)
+- Many QB updates and stoichiometry fixes... (#1812 by @Fiery36) (#1796 by @whoisyp) (#1809 by @Crindigo)
+I also give welcome to our new contributor @Sentrymon.
 # UPDATE 0.1.16.0
 ## Mod Changes
 ### Mod Updates

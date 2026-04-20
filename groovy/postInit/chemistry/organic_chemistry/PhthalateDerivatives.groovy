@@ -120,14 +120,6 @@ SIFTER.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-DT.recipeBuilder()
-    .fluidInputs(fluid('diluted_acetic_acid') * 2000)
-    .fluidOutputs(fluid('acetic_acid') * 1000)
-    .fluidOutputs(fluid('water') * 1000)
-    .EUt(VA[MV])
-    .duration(100)
-    .buildAndRegister()
-
 // Amoco purification process
 
 MIXER.recipeBuilder()

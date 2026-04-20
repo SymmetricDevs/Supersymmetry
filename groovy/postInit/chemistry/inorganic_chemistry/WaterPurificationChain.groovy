@@ -8,10 +8,6 @@ import gregtech.api.unification.stack.UnificationEntry
 // Salt * 2
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('salt_water') * 1000])
 
-oreDict.add('dustFlocculant', metaitem('dustPotassiumAlum'))
-oreDict.add('dustFlocculant', metaitem('dustSodiumAlum'))
-oreDict.add('dustFlocculant', metaitem('dustAluminiumSulfate'))
-
 // Wastewater treatment
 FLUID_HEATER.recipeBuilder()
     .fluidInputs(fluid('wastewater') * 1000)

@@ -44,11 +44,7 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        WackerCatalystSolution = new Material.Builder(24004, SuSyUtility.susyId('wacker_catalyst_solution'))
-                .liquid()
-                .components(WackerCatalyst * 1, Water * 1)
-                .colorAverage()
-                .build()
+        // FREE ID: 24004
 
         TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .liquid()
@@ -905,6 +901,25 @@ class ThirdDegreeMaterials {
         BenzenediazoniumFluorideSolution = new Material.Builder(24146, SuSyUtility.susyId('benzenediazonium_fluoride_solution'))
                 .liquid()
                 .components(BenzenediazoniumFluoride, SodiumFluoride, Water * 4)
+                .colorAverage()
+                .build()
+
+        IsopropylAlcoholSolution = new Material.Builder(24147, SuSyUtility.susyId('isopropyl_alcohol_solution'))
+                .liquid()
+                .components(IsopropylAlcohol, Water)
+                .colorAverage()
+                .build()
+
+        KetoneAlcoholOil = new Material.Builder(24148, SuSyUtility.susyId('ketone_alcohol_oil'))
+                .liquid()
+                .components(Cyclohexanol * 7, Cyclohexanone * 2)
+                .flags(FLAMMABLE)
+                .colorAverage()
+                .build()
+
+        AcetyleneSolution = new Material.Builder(24149, SuSyUtility.susyId('acetylene_solution'))
+                .liquid()
+                .components(NMethylTwoPyrrolidone * 1, Acetylene * 1)
                 .colorAverage()
                 .build()
     }
