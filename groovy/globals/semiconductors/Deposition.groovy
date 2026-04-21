@@ -11,7 +11,7 @@ class Deposition {
 
     static void generateSiliconDioxideGrowthRecipe(String input, String output, int duration, boolean wet) {
         def growthRecipe = TUBE_FURNACE.recipeBuilder()
-            .inputs(ore(input))
+            .inputs(metaitem(input))
             .fluidInputs(fluid('oxygen') * 100)
             .outputs(metaitem(output))
             .cleanroom(CleanroomType.CLEANROOM)
@@ -40,7 +40,7 @@ class Deposition {
         def generateRecipe(String input, String product, int duration, boolean cleanroom) {
             def evaporationRecipe = EVAPORATION.recipeBuilder()
                 .inputs(metaitem(input))
-                .inputs(ore('nugget' + this.material.capitalize()))
+                .inputs(ore('nugget' + this.material.split('_').collect { it.capitalize() }.join('')))
                 .outputs(metaitem(product))
                 .duration(duration)
                 .EUt(VA[this.voltageTier])

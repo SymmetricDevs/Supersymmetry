@@ -836,7 +836,13 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13129-13130
+        GoldAntimony = new Material.Builder(13129, SuSyUtility.susyId('gold_antimony'))
+                .ingot().fluid(new FluidBuilder().temperature(1273))
+                .components(Gold * 19, Antimony)
+                .colorAverage()
+                .build()
+
+        // FREE ID: 13130
 
         HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))

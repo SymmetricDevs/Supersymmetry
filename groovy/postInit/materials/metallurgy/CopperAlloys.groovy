@@ -12,6 +12,16 @@ INDUCTION_FURNACE.recipeBuilder()
     .duration(10)
     .buildAndRegister()
 
+INDUCTION_FURNACE.recipeBuilder()
+    .notConsumable(fluid('argon') * 1000)
+    .fluidInputs(fluid('copper') * 720)
+    .inputs(ore('dustBeryllium'))
+    .fluidOutputs(fluid('beryllium_copper') * 864)
+    .EUt(VA[MV])
+    .duration(10)
+    .buildAndRegister()
+
+
 // Phosphorized copper for copper electroplating anodes
 
 TUBE_FURNACE.recipeBuilder()

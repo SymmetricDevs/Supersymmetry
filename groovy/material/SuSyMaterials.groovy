@@ -1965,6 +1965,7 @@ class SuSyMaterials {
     public static Material EnameledGold
     public static Material EnameledGrapheneCoatedGold
     public static Material GrapheneCoatedGold
+    public static Material GoldAntimony
 
     // Organic Chemistry Materials
 
