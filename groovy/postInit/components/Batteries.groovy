@@ -175,6 +175,7 @@ crafting.addShaped('primitive_battery_hull_lv', metaitem('battery.primitivehull.
 ])
 
 ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(metaitem('cableGtSingleTin') * 2)
         .inputs(ore('plateEbonite') * 6)
         .outputs(metaitem('battery.primitivehull.lv'))
@@ -183,11 +184,12 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
+        .circuitMeta(2)
         .inputs(metaitem('cableGtSingleCopper') * 2)
         .inputs(ore('plateEbonite') * 8)
         .outputs(metaitem('battery.primitivehull.mv'))
-        .duration(80)
-        .EUt(VA[ULV])
+        .duration(160)
+        .EUt(VA[LV])
         .buildAndRegister()
 
 crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
