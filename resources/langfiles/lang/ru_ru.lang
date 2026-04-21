@@ -437,7 +437,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=Нечистый полутяж�
 susy.material.impure_heavy_hydrogen_sulfide=Нечистый тяжелый сероводород
 susy.material.sea_water=Морская вода
 
-susy.material.novolacs=Фенольная смола Novolac фоторезиста
+susy.material.novolacs_resist=Фенольная смола Novolac фоторезиста
 susy.material.silicon_tetrachloride=Тетрахлорид кремния
 susy.material.purified_silicon_tetrachloride=Очищенный тетрахлорид кремния
 

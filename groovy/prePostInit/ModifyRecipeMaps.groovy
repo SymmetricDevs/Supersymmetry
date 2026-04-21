@@ -463,6 +463,10 @@ RecipeMaps.ASSEMBLER_RECIPES
 
 RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES
     .modifyMaxInputs(12)
+    .modifyMaxFluidInputs(3)
     
 RecipeMaps.DISTILLERY_RECIPES
     .modifyMaxFluidInputs(2)
+
+RecipeMaps.COMPRESSOR_RECIPES
+    .modifyMaxInputs(2)

@@ -62,7 +62,7 @@ Sintering.blankets.each { blanket ->
     if (blanket.tier >= 2) {
         SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustBoronCarbide'))
-        .fluidInputs(fluid('novolacs') * 100)
+        .fluidInputs(fluid('phenolic_novolacs_resin') * 100)
         .notConsumable(metaitem('shape.mold.rod'))
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('stickBoronCarbide') * 2)
@@ -79,7 +79,7 @@ Sintering.blankets.each { blanket ->
     if (blanket.tier >= 2) {
         SINTERING_OVEN.recipeBuilder()
             .inputs(ore('dustBoronCarbide'))
-            .fluidInputs(fluid('novolacs') * 100)
+            .fluidInputs(fluid('phenolic_novolacs_resin') * 100)
             .notConsumable(metaitem('shape.mold.long_rod'))
             .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
             .outputs(metaitem('stickLongBoronCarbide'))

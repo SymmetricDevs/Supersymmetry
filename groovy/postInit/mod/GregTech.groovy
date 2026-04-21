@@ -1665,7 +1665,7 @@ ASSEMBLER.recipeBuilder()
 
 // Jet Wingpack recipes
 // Wing panel
-AUTOCLAVE.recipeBuilder()
+ASSEMBLER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
     .inputs(ore('foilPolyethyleneTerephthalate'))
     .inputs(metaitem('carbon.fibers') * 16)

@@ -124,10 +124,10 @@ ERF.recipeBuilder()
 // Permendur
 
 INDUCTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('molten.iron') * 3204)
-    .fluidInputs(fluid('molten.cobalt') * 3060)
+    .fluidInputs(fluid('iron') * 3204)
+    .fluidInputs(fluid('cobalt') * 3060)
     .inputs(ore('dustVanadium'))
-    .fluidOutputs(fluid('molten.permendur') * 6408)
+    .fluidOutputs(fluid('permendur') * 6408)
     .EUt(VA[MV])
     .duration(160)
     .buildAndRegister()

@@ -125,7 +125,8 @@ class Deposition {
         'silicon': new SputteringTarget("silicon", MV, 0.05),
         'platinum': new SputteringTarget("platinum", EV, 0.025),
         'tantalum': new SputteringTarget("tantalum", EV, 0.00375),
-        'chromium': new SputteringTarget("chromium", MV, 0.01)
+        'chromium': new SputteringTarget("chromium", MV, 0.01),
+        'tantalum_nitride': new SputteringTarget("tantalum_nitride", EV, 0.0075)
     ]
 
     static void generateSputteringRecipe(String input, String product, int duration, String targetMaterial) {

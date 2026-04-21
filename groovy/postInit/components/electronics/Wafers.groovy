@@ -68,7 +68,7 @@ for (induction_coil in induction_coils) {
         .buildAndRegister()
 
     ZONE_REFINER.recipeBuilder()
-        .circuitMeta(1) 
+        .circuitMeta(3) 
         .notConsumable(induction_coil)
         .fluidInputs(fluid('phosphine') * 100)
         .inputs(metaitem('seed_crystal.silicon'))
@@ -79,7 +79,7 @@ for (induction_coil in induction_coils) {
         .buildAndRegister()
 
     ZONE_REFINER.recipeBuilder()
-        .circuitMeta(2)
+        .circuitMeta(4)
         .notConsumable(induction_coil)
         .notConsumable(fluid('argon') * 100)
         .fluidInputs(fluid('phosphine') * 100)

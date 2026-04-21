@@ -3,6 +3,7 @@ package prePostInit
 class Recipemaps {
     static final def ADV_STEAM_TURBINE = recipemap('advanced_steam_turbine')
     static final def ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
+    static final def ALD = recipemap('atomic_layer_deposition')
     static final def ALLOY_SMELTER = recipemap('alloy_smelter')
     static final def ARBORETUM = recipemap('greenhouse')
     static final def ARC_FURNACE = recipemap('arc_furnace')

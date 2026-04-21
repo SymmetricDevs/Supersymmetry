@@ -459,7 +459,7 @@ susy.material.partially_deionized_sea_water=Eau de Mer Partiellement Désionisé
 susy.material.deionized_sea_water=Eau de Mer Désionisée
 susy.material.depleted_hydrogen_sulfide=Sulfure d'Hydrogène Appauvri
 
-susy.material.novolacs=Photorésist à Base de Novolaque
+susy.material.novolac_resist=Photorésist à Base de Novolaque
 susy.material.silicon_tetrachloride=Tétrachlorure de Silicium
 susy.material.purified_silicon_tetrachloride=Tétrachlorure de Silicium Purifié
 

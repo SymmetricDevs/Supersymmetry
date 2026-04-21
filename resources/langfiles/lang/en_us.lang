@@ -505,7 +505,7 @@ susy.material.partially_deionized_sea_water=Partially Deionized Sea Water
 susy.material.deionized_sea_water=Deionized Sea Water
 susy.material.depleted_hydrogen_sulfide=Depleted Hydrogen Sulfide
 
-susy.material.novolacs=Novolacs Photoresist
+susy.material.novolacs_resist=Novolacs Photoresist
 susy.material.silicon_tetrachloride=Silicon Tetrachloride
 susy.material.purified_silicon_tetrachloride=Purified Silicon Tetrachloride
 
@@ -3029,6 +3029,7 @@ susy.material.two_three_four_trihydroxybenzophenone=2,3,4-Trihydroxybenzophenone
 susy.material.ultrapure_hydrofluoric_acid=Ultrapure Hydrofluoric Acid
 susy.material.ultrapure_iron_iii_chloride_solution=Ultrapure Iron III Chloride Solution
 susy.material.ultrapure_steam=Ultrapure Steam
+susy.material.hydrogen_chloride_sulfur_dioxide_mixture=Hydrogen Chloride-Sulfur Dioxide Mixture
 
 # Isotopes
 

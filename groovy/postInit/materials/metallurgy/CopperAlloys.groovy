@@ -5,7 +5,7 @@ import static gregtech.api.GTValues.*
 
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('nitrogen') * 1000)
-    .fluidInputs(fluid('molten.copper') * 720)
+    .fluidInputs(fluid('copper') * 720)
     .inputs(ore('dustBeryllium'))
     .fluidOutputs(fluid('beryllium_copper') * 864)
     .EUt(VA[MV])

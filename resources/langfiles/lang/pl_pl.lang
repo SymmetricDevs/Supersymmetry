@@ -448,7 +448,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=Zanieczyszczony Półciężki Si
 susy.material.impure_heavy_hydrogen_sulfide=Zanieczyszczony Ciężki Siarkowodór
 susy.material.sea_water=Woda Morska
 
-susy.material.novolacs=Nowolakowy Fotorezyst
+susy.material.novolacs_resist=Nowolakowy Fotorezyst
 susy.material.silicon_tetrachloride=Tetrachlorek Krzemu
 susy.material.purified_silicon_tetrachloride=Tetrachlorek Krzemu Ultraczysty
 

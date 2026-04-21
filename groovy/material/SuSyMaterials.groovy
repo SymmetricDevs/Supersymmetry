@@ -1960,6 +1960,7 @@ class SuSyMaterials {
     public static Material DilutedMagnesiumChlorideSolution
     public static Material AmmoniaCarbonDioxideMixture
     public static Material HighTemperatureSolder
+    public static Material HydrogenChlorideSulfurDioxideMixture
     public static Material EnameledCopper
     public static Material EnameledGold
     public static Material EnameledGrapheneCoatedGold

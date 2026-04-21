@@ -1190,7 +1190,11 @@ class SecondDegreeMaterials {
                 .components(Lead * 97, Silver * 2, Tin)
                 .build()
 
-        // FREE ID: 13191
+        HydrogenChlorideSulfurDioxideMixture = new Material.Builder(13191, SuSyUtility.susyId('hydrogen_chloride_sulfur_dioxide_mixture'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(HydrogenChloride, SulfurDioxide)
+                .colorAverage()
+                .build()
 
         EnameledCopper = new Material.Builder(13192, SuSyUtility.susyId('enameled_copper'))
                 .flags(GENERATE_FINE_WIRE)
