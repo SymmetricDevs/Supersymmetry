@@ -2736,7 +2736,7 @@ class SuSyMaterials {
     public static Material BisAzideCrosslinkerSolution
     public static Material ParaAzidobenzaldehydeSolution
     public static Material ParaDiazoBenzaldehydeChlorideSolution
-    public static Material NovolacEBRSolvent
+    public static Material EBRSolvent
     public static Material NovolacResist
     public static Material NaphthalenedisulfonicAcidSolution
     public static Material SodiumNaphtholSulfonateSolution

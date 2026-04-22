@@ -47,19 +47,19 @@ def registerCircuitMetaitems(String name, int step_count, int start_num=2, boole
 }
 
 def registerCMOSMetaitems(String name) {
-    registerCircuitMetaitems(name, 75, 3, false, false)
+    registerCircuitMetaitems(name, 77, 3, false, false)
     for (int i=1; i<=9; i++) {
-        registerCircuitMetaitems(name + ".beol_" + wordsFromNumber(i), 7, 1, false)
+        registerCircuitMetaitems(name + ".beol_" + wordsFromNumber(i), 8, 1, false)
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
     }
-    registerCircuitMetaitems(name, 160, 148)
-    def ashed_steps = [5, 12, 16, 27, 31, 35, 38, 42, 54, 71, 157]
+    registerCircuitMetaitems(name, 162, 150)
+    def ashed_steps = [6, 13, 17, 28, 32, 36, 40, 44, 56, 73, 159]
     for (step in ashed_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
     }
     
-    def photoresist_steps = [10, 14, 23, 28, 32, 37, 40, 52, 60, 68, 149, 154]
+    def photoresist_steps = [11, 15, 24, 29, 33, 38, 42, 54, 62, 70, 151, 156]
     for (step in photoresist_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")

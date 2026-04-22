@@ -237,7 +237,7 @@ DT.recipeBuilder()
     BLENDER.recipeBuilder()
         .fluidInputs(fluid('propylene_glycol_methyl_ether') * 770)
         .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 230)
-        .fluidOutputs(fluid('novolac_ebr_solvent') * 1000)
+        .fluidOutputs(fluid('ebr_solvent') * 1000)
         .duration(50)
         .EUt(VA[HV])
         .buildAndRegister();

@@ -164,7 +164,7 @@ DT.recipeBuilder()
 // Siemens Process
 
 CVD.recipeBuilder() // Bootstrap. 25% single-pass conversion
-    .notConsumable(ore('graphite_electrode') * 3)
+    .notConsumable(metaitem('graphite_electrode') * 3)
     .fluidInputs(fluid('trichlorosilane') * 4800)
     .fluidInputs(fluid('hydrogen') * 4800)
     .chancedOutput(metaitem('dustHighPuritySilicon'), 875, 0)

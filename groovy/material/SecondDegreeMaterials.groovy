@@ -837,7 +837,7 @@ class SecondDegreeMaterials {
                 .build()
 
         GoldAntimony = new Material.Builder(13129, SuSyUtility.susyId('gold_antimony'))
-                .ingot().fluid(new FluidBuilder().temperature(1273))
+                .ingot().liquid(new FluidBuilder().temperature(1273))
                 .components(Gold * 19, Antimony)
                 .colorAverage()
                 .build()
