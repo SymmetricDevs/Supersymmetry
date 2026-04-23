@@ -1024,6 +1024,7 @@ class SecondDegreeMaterials {
                 .components(LithiumHydroxide, Water * 8)
                 .colorAverage()
                 .build()
+                .fluidMolar(8000)
 
         LithiumHydroxideMonohydrate = new Material.Builder(13166, SuSyUtility.susyId('lithium_hydroxide_monohydrate'))
                 .dust()

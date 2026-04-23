@@ -83,6 +83,7 @@ ROASTER.recipeBuilder()
         .outputs(metaitem('dustPalladiumOnCarbon') * 4)
         .fluidOutputs(fluid('acidic_wastewater') * 1100)
         .duration(120)
+        .nonStoichiometric()
         .EUt(VA[LV])
         .buildAndRegister()
 

@@ -880,5 +880,12 @@ class ChangeFlags {
         // Mill balls
         Steel.setProperty(SuSyPropertyKey.MILL_BALL, new MillBallProperty(7680));
         StainlessSteel.setProperty(SuSyPropertyKey.MILL_BALL, new MillBallProperty(17280));
+
+        // Stoichiometry
+        Calcite.itemMolar(5)
+        Salt.itemMolar(2)
+        RockSalt.itemMolar(2)
+        DilutedSulfuricAcid.fluidMolar(3000)
+        DilutedHydrochloricAcid.fluidMolar(2000)
     }
 }

@@ -17,6 +17,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*
 import static gregtech.api.unification.material.Materials.*
 
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*
+import static dev.tianmi.sussypatches.api.unification.SusMaterialFlags.*
 
 class UnknownCompositionMaterials {
 
@@ -306,6 +307,7 @@ class UnknownCompositionMaterials {
         Wastewater = new Material.Builder(4056, SuSyUtility.susyId('wastewater'))
                 .liquid()
                 .color(0x2d402f)
+                .flags(NON_STOICHIOMETRIC)
                 .build()
 
         HeatedWastewater = new Material.Builder(4057, SuSyUtility.susyId('heated_wastewater'))
@@ -1183,6 +1185,7 @@ class UnknownCompositionMaterials {
         AcidicWastewater = new Material.Builder(4233, SuSyUtility.susyId('acidic_wastewater'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xc88a41)
+                .flags(NON_STOICHIOMETRIC)
                 .build()
 
         AcidicWastewater.setFormula('(H2O)(?)', true)
