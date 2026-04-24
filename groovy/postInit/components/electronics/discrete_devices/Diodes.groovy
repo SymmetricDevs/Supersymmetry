@@ -130,11 +130,11 @@ ASSEMBLER.recipeBuilder()
 // Planar power diodes (mesa diodes w/ drift layer)
 
 // Deposit drift layer and dope p-side
-Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.small.n_doped', 'wafer.diode.drift.step_one', 400, 'phosphosilicate_glass')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.small.n_doped', 'wafer.diode.drift.step_one', 1, 'phosphosilicate_glass')
 Doping.generateIonImplantationRecipes('wafer.diode.drift.step_one', 'wafer.diode.power.step_two', 1200, 'boron_trifluoride')
 
 // Mask mesa/contact and etch
-Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', 400, 'silicon_nitride')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', 1, 'silicon_nitride.silane')
 Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_three', 'wafer.diode.power.step_four', 'novolacs_resist', 'mask_set.diode.power', false)
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_four', 'wafer.diode.power.step_five', 'silicon_nitride', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.power.step_five', 'wafer.diode.power.step_six', 1, false, true)
