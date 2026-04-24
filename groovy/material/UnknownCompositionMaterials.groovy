@@ -3476,5 +3476,35 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x3749ad)
                 .build()
+                
+        PineResin = new Material.Builder(4743, SuSyUtility.susyId('pine_resin'))
+                .liquid(new FluidBuilder().temperature(293))
+                .color()
+                .build()
+
+        RosinDust = new Material.Builder(4744, SuSyUtility.susyId('rosin'))
+                .dust()
+                .color()
+                .build()
+
+        DiethylammoniumChloride = new Material.Builder(4745, SuSyUtility.susyId('diethylammonium_chloride'))
+                .dust()
+                .color()
+                .build()
+
+        DiethylammoniumChlorideSolution = new Material.Builder(4746, SuSyUtility.susyId('diethylammonium_chloride_solution'))
+                .liquid(new FluidBuilder().temperature(293))
+                .color()
+                .build()
+
+        MildlyActivatedSolderFluxMixture = new Material.Builder(4747, SuSyUtility.susyId('mildly_activated_solder_flux_mixture'))
+                .liquid(new FluidBuilder().temperature(293))
+                .color()
+                .build()
+
+        LeadFreeSolderPaste = new Material.Builder(4748, SuSyUtility.susyId('lead_free_solder_paste'))
+                .liquid(new FluidBuilder().temperature(293))
+                .color()
+                .build()
     }
 }

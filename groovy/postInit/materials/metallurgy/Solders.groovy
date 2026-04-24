@@ -58,3 +58,32 @@ crafting.addShapeless("susy:high_temperature_solder", metaitem('dustHighTemperat
     ore('dustTinySilver') * 6,
     ore('dustTinyTin') * 4
 ])
+
+INDUCTION_FURNACE.recipeBuilder()
+        .notConsumable(fluid('nitrogen') * 1000)
+        .inputs(ore('dustCopper') * 1)
+        .inputs(ore('dustSilver') * 2)
+        .fluidInputs(fluid('tin') * 16560)
+        .fluidOutputs(fluid('lead_free_solder') * 16560)
+        .EUt(VA[MV])
+        .duration(1000)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustRosin') * 4)
+        .inputs(ore('dustSmallAdipicAcid'))
+        .inputs(ore('dustTinyDiethylammoniumChloride'))
+        .fluidInputs(fluid('isopropyl_alcohol') * 5000)
+        .fluidInputs(fluid('steric_acid') * 10)
+        .fluidOutputs(fluid('mildly_activated_solder_flux_mixture') * 5000)
+        .duration(100)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustLeadFreeSolder') * 9)
+        .fluidIuputs(fluid('mildly_activated_solder_flux_mixture') * 1000)
+        .fluidOutputs(fluid('LeadFreeSolderPaste') * 1440)
+        .duration(400)
+        .EUt(VA[HV])
+        .buildAndRegister()

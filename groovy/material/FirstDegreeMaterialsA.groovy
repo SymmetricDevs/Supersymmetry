@@ -1730,8 +1730,8 @@ class FirstDegreeMaterialsA {
                 .build()
 
         LeadFreeSolder = new Material.Builder(8346, SuSyUtility.susyId('lead_free_solder'))
-                .ingot().liquid(new FluidBuilder().temperature(411))
-                .components(Bismuth * 6, Tin * 4)
+                .ingot().liquid(new FluidBuilder().temperature(490))
+                .components(Tin * 115, Silver * 2, Copper * 1)
                 .colorAverage()
                 .build()
 
