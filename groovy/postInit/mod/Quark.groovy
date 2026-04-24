@@ -15,7 +15,11 @@ def name_removals = [
     'quark:bark_2',
     'quark:bark_3',
     'quark:bark_4',
-    'quark:bark_5'
+    'quark:bark_5',
+    'quark:gravisand',
+    'quark:ender_watcher',
+    'quark:redstone_inductor',
+    'quark:golden_frog_leg',
 ]
 
 for (name in name_removals) {
@@ -88,3 +92,33 @@ for (i in 0..3) {
 
 crafting.addShapeless('quark:bark_4', item('quark:bark', 4), [item('minecraft:log2')])
 crafting.addShapeless('quark:bark_5', item('quark:bark', 5), [item('minecraft:log2', 1)])
+
+crafting.replaceShaped('quark:rain_detector', item('quark:rain_detector'), [
+        [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')],
+        [ore('plateNetherQuartz'), ore('plateNetherQuartz'), ore('plateNetherQuartz')],
+        [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')]
+])
+
+crafting.replaceShaped('quark:iron_ladder', item('quark:iron_ladder') * 16, [
+        [ore('stickIron'), ore('craftingToolHardHammer'), ore('stickIron')],
+        [ore('stickIron'), ore('stickIron'), ore('stickIron')],
+        [ore('stickIron'), ore('craftingToolFile'), ore('stickIron')]
+])
+
+crafting.replaceShaped('quark:paper_lantern', item('quark:paper_lantern'), [
+        [ore('paper'), ore('stickWood'), ore('paper')],
+        [ore('paper'), item('minecraft:torch'), ore('paper')],
+        [ore('paper'), ore('stickWood'), ore('paper')]
+])
+
+crafting.replaceShaped('quark:framed_glass', item('quark:framed_glass') * 4, [
+        [ore('blockGlassColorless'), ore('stickIron'), ore('blockGlassColorless')],
+        [ore('stickIron'), ore('blockGlassColorless'), ore('stickIron')],
+        [ore('blockGlassColorless'), ore('stickIron'), ore('blockGlassColorless')]
+])
+
+crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
+        [ore('ringIron'), null, null],
+        [null, ore('ringIron'), null],
+        [null, null, ore('ringIron')]
+])

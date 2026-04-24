@@ -1,6 +1,6 @@
-package globals
+package globals.semiconductors
 import globals.Globals
-import globals.Etching
+import globals.semiconductors.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -34,11 +34,11 @@ class Doping {
     public static final ionSources = [
         new IonSource("boron_trifluoride", "boron"),
         new IonSource("phosphine", "phosphorus"),
-        new IonSource("arsine", "arsenic")
+        new IonSource("arsine", "arsenic"),
         new IonSource("purified_antimony_trioxide", "antimony")
     ]
 
-    static void generateIonImplantationRecipes(Spring input, String product, int duration, String sourceName) {
+    static void generateIonImplantationRecipes(String input, String product, int duration, String sourceName) {
         for (ionSource in ionSources) {
             if (ionSource.sourceName == sourceName)
                 ionSource.generateRecipe(input, product, duration)
@@ -48,8 +48,7 @@ class Doping {
     // Diffusion doping
 
     static void generateBoronDiffusionDopingRecipes(String input, String product, int duration) {
-        RESISTANCE_FURNACE.recipeBuilder() // BCl3 gaseous diffusion doping
-            .notConsumable(metaitem('tube.quartz'))
+        TUBE_FURNACE.recipeBuilder() // BCl3 gaseous diffusion doping
             .inputs(metaitem(input))
             .fluidInputs(fluid('boron_trichloride') * 50)
             .fluidInputs(fluid('oxygen') * 300)
@@ -62,12 +61,11 @@ class Doping {
             .buildAndRegister();
 
         // Remove BSG
-        Etching.generateEtchingRecipes(input + '.bsg', product, 'silicon_dioxide', LV, 1, false)
+        Etching.generateWetEtchingRecipe(input + '.bsg', product, 'silicon_dioxide', 100, false)
     }
 
     static void generatePhosphorusDiffusionDopingRecipes(String input, String product, int duration) {
-        RESISTANCE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
-            .notConsumable(metaitem('tube.quartz'))
+        TUBE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
             .inputs(metaitem(input))
             .fluidInputs(fluid('phosphoryl_chloride') * 50)
             .fluidInputs(fluid('oxygen') * 300)
@@ -80,7 +78,7 @@ class Doping {
             .buildAndRegister();
 
         // Remove PSG
-        Etching.generateEtchingRecipes(input + '.psg', product, 'silicon_dioxide', LV, 1, false)
+        Etching.generateWetEtchingRecipe(input + '.psg', product, 'silicon_dioxide', 100, false)
     }
 
     static void generateDriveInRecipe(String input, String product, int duration) {

@@ -85,7 +85,6 @@ class ChangeFlags {
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         Rubber.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(593, 6, true, false, false, false));
 
-        
         setupFluidType(AntimonyTrifluoride, FluidStorageKeys.LIQUID, 565)
         setupFluidType(LithiumChloride, FluidStorageKeys.LIQUID, 890)
         setupFluidType(SiliconDioxide, FluidStorageKeys.LIQUID, 1986)
@@ -173,13 +172,12 @@ class ChangeFlags {
         Titanium.addFlags("generate_fine_wire");
         ChromiumTrioxide.addFlags("generate_catalyst_bed");
         Iron3Chloride.addFlags("generate_catalyst_bed");
-        Platinum.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
         Nickel.addFlags("generate_catalyst_bed");
         Magnesia.addFlags("generate_catalyst_bed");
         CupricOxide.addFlags("generate_catalyst_bed");
-        Brass.addFlags("generate_ring");
+        Brass.addFlags("generate_ring", "generate_pins");
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");
@@ -238,7 +236,7 @@ class ChangeFlags {
         Pitchblende.setFormula("(?)UO2", true);
         Bastnasite.setFormula("(REE)CO3F", true);
         Monazite.setFormula("(REE,Th)PO4", true);
-        Gypsum.setFormula("(CaSO4)(H2O)2", true);
+        Gypsum.setFormula("(CaSO4)*(H2O)2", true);
         Polyethylene.setFormula("[C2H4]n", true);
         PolyvinylChloride.setFormula("[C2H3Cl]n", true);
         Rubber.setFormula("[C5H8]n", true);

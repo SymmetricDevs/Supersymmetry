@@ -96,7 +96,7 @@ FERMENTER.recipeBuilder()
 
 FERMENTER.recipeBuilder()
     .inputs(item('minecraft:sugar') * 24)
-    .notConsumable(metaitem('gtfo_lactic_acid_bacteria'))
+    .notConsumable(fluid('gtfo_lactic_acid_bacteria'))
     .fluidInputs(fluid('water') * 16000)
     .fluidOutputs(fluid('lactic_acid_broth') * 16000)
     .circuitMeta(3)

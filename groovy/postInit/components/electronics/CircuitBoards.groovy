@@ -1,5 +1,5 @@
 import globals.Globals
-import globals.Etching
+import globals.semiconductors.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -53,24 +53,25 @@ FORMING_PRESS.recipeBuilder()
 
 FORMING_PRESS.recipeBuilder()
         .inputs(metaitem('board.epoxy.copper_clad'))
-        .inputs(ore('foilDryFilmPhotoresist') * 2)
+        .inputs(metaitem('dry_film_photoresist') * 2)
         .outputs(metaitem('board.epoxy.resist'))
         .EUt(VA[MV])
         .duration(100)
         .cleanroom(CleanroomType.CLEANROOM)
         .buildAndRegister();
 
+/*
 UV_LIGHT_BOX.recipeBuilder()
         .inputs(metaitem('board.epoxy.resist'))
         .notConsumable(metaitem('mask.pcb'))
         .outputs(metaitem('board.epoxy.patterned'))
-        .duration(photoresist.timeUsed * timeMultiplier)
-        .EUt(VA[voltageTier]);
+        .duration(photoresist.timeUsed * timeMultiplier) // FIXME: idk what should be done here since it only looks like one type of photoresist is used
+        .EUt(VA[voltageTier])
         .cleanroom(CleanroomType.CLEANROOM)
-        .buildAndRegister();
+        .buildAndRegister();*/
 
 // Etched
-Etching.generateWetEtchingRecipe("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true, false)
+Etching.generateWetEtchingRecipe("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true) //, false) ? extra argument
 
 // Drilled
 MILLING.recipeBuilder()
@@ -89,14 +90,14 @@ MILLING.recipeBuilder()
 // Base reaction: HCHO + 3OH- + Cu+2 --EDTA-> HCOO- + 2H2O + Cu° 
 LCR.recipeBuilder()
         .inputs(metaitem('board.epoxy.drilled') * 4)
-        .inputs(ore('dustTinyPalladiumChloride'))
+        .inputs(ore('dustTinyPalladiumChlorideDihydrate'))
         .fluidInputs(fluid('distilled_water') * 100)
         .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 50)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
         .fluidInputs(fluid('copper_sulfate_solution') * 1000)
         .fluidInputs(fluid('formaldehyde') * 1000)
         .outputs(metaitem('board.epoxy.electroless') * 4)
-        .fluidOutputs(fluid('wastewater') * 6100)
+        .fluidOutputs(fluid('wastewater') * 6144)
         .EUt(VA[MV])
         .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -104,14 +105,14 @@ LCR.recipeBuilder()
 
 LCR.recipeBuilder()
         .inputs(metaitem('board.epoxy.drilled') * 4)
-        .inputs(ore('dustTinyPalladiumChloride'))
+        .inputs(ore('dustTinyPalladiumChlorideDihydrate'))
         .inputs(ore('dustCopperIiChloride') * 3)
         .fluidInputs(fluid('distilled_water') * 100)
         .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 50)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
         .fluidInputs(fluid('formaldehyde') * 1000)
         .outputs(metaitem('board.epoxy.electroless') * 4)
-        .fluidOutputs(fluid('wastewater') * 5100)
+        .fluidOutputs(fluid('wastewater') * 5144)
         .EUt(VA[MV])
         .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -119,14 +120,14 @@ LCR.recipeBuilder()
         
 LCR.recipeBuilder()
         .inputs(metaitem('board.epoxy.drilled') * 4)
-        .inputs(ore('dustTinyPalladiumChloride'))
+        .inputs(ore('dustTinyPalladiumChlorideDihydrate'))
         .inputs(ore('dustCopperIiNitrate') * 9)
         .fluidInputs(fluid('distilled_water') * 100)
         .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 50)
         .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
         .fluidInputs(fluid('formaldehyde') * 1000)
         .outputs(metaitem('board.epoxy.electroless') * 4)
-        .fluidOutputs(fluid('wastewater') * 5100)
+        .fluidOutputs(fluid('wastewater') * 5144)
         .EUt(VA[MV])
         .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)

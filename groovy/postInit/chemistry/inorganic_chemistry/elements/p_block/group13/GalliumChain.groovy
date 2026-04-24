@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import gregtech.api.recipes.chance.output.ChancedOutputLogic;
 
 //FROM BAUXITE
 ELECTROLYZER.recipeBuilder()
@@ -50,25 +51,11 @@ DT.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-// Small Pile of Mercury II Chloride Dust * 1
-mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('crude_gallium_trichloride') * 432])
-
 BR.recipeBuilder()
     .fluidInputs(fluid('gallium_trichloride') * 1000)
     .fluidInputs(fluid('hydrogen') * 3000)
     .outputs(metaitem('dustHighPurityGallium'))
     .fluidOutputs(fluid('hydrogen_chloride') * 3000)
-    .duration(120)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-ELECTROLYZER.recipeBuilder()
-    .notConsumable(metaitem('stickIron'))
-    .notConsumable(metaitem('graphite_electrode'))
-    .notConsumable(fluid('water') * 1000)
-    .inputs(ore('dustMercuryIiChloride') * 3)
-    .fluidOutputs(fluid('chlorine') * 2000)
-    .fluidOutputs(fluid('mercury') * 1000)
     .duration(120)
     .EUt(VA[MV])
     .buildAndRegister()

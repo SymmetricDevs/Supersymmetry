@@ -56,8 +56,10 @@ class FirstDegreeMaterialsA {
         HighPurityCarbon = generatePurifiedElement(Carbon, 8003, false, false)
         HighPuritySodium = generatePurifiedElement(Sodium, 8004, false, false)
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
-        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true).addFlags(GENERATE_FOIL)
-        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false).addFlags(GENERATE_ROD, FORCE_GENERATE_BLOCK)
+        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true)
+        HighPurityAluminium.addFlags(GENERATE_FOIL)
+        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, true)
+        HighPuritySilicon.addFlags(GENERATE_ROD, FORCE_GENERATE_BLOCK)
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)
         HighPurityPotassium = generatePurifiedElement(Potassium, 8010, false, false)
@@ -70,14 +72,16 @@ class FirstDegreeMaterialsA {
         HighPurityIron = generatePurifiedElement(Iron, 8017, false, false)
         HighPurityNickel = generatePurifiedElement(Cobalt, 8018, false, false)
         HighPurityCobalt = generatePurifiedElement(Nickel, 8019, false, false)
-        HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false).addFlags(GENERATE_FOIL)
+        HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false)
+        HighPurityCopper.addFlags(GENERATE_FOIL)
         HighPurityZinc = generatePurifiedElement(Zinc, 8021, false, false)
         HighPurityGallium = generatePurifiedElement(Gallium, 8022, true, false)
-        HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, true).addFlags(FORCE_GENERATE_BLOCK)
+        HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, true)
+        HighPurityGermanium.addFlags(FORCE_GENERATE_BLOCK)
         HighPurityArsenic = generatePurifiedElement(Arsenic, 8024, true, false)
         HighPuritySelenium = generatePurifiedElement(Selenium, 8025, true, false)
         HighPurityRubidium = generatePurifiedElement(Rubidium, 8026, false, false)
-        HighPurityStronium = generatePurifiedElement(Strontium, 8027, false, false)
+        HighPurityStrontium = generatePurifiedElement(Strontium, 8027, false, false)
         HighPurityYttrium = generatePurifiedElement(Yttrium, 8028, false, false)
         HighPurityZirconium = generatePurifiedElement(Zirconium, 8029, false, false)
         HighPurityNiobium = generatePurifiedElement(Niobium, 8030, false, false)
@@ -88,7 +92,8 @@ class FirstDegreeMaterialsA {
         HighPurityPalladium = generatePurifiedElement(Palladium, 8035, false, false)
         HighPuritySilver = generatePurifiedElement(Silver, 8036, false, false)
         HighPurityCadmium = generatePurifiedElement(Cadmium, 8037, false, false)
-        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, true).addFlags(GENERATE_PLATE, GENERATE_NUGGET)
+        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, true)
+        HighPurityIndium.addFlags(GENERATE_PLATE)
         HighPurityTin = generatePurifiedElement(Tin, 8039, false, false)
         HighPurityAntimony = generatePurifiedElement(Antimony, 8040, false, false)
         HighPurityTellurium = generatePurifiedElement(Tellurium, 8041, false, true)
@@ -98,12 +103,13 @@ class FirstDegreeMaterialsA {
         HighPurityLanthanum = generatePurifiedElement(Lanthanum, 8045, false, false)
         HighPurityHafnium = generatePurifiedElement(Hafnium, 8046, false, false)
         HighPurityTantalum = generatePurifiedElement(Tantalum, 8047, false, false)
-        HighPurityTungsten = generatePurifiedElement(Tungsten, 8048, false, false)
+        HighPurityTungsten = generatePurifiedElement(Tungsten, 8048, false, true)
         HighPurityRhenium = generatePurifiedElement(Rhenium, 8049, false, false)
         HighPurityOsmium = generatePurifiedElement(Osmium, 8050, false, false)
         HighPurityIridium = generatePurifiedElement(Iridium, 8051, false, false)
         HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, false)
-        HighPurityGold = generatePurifiedElement(Gold, 8053, false, true).addFlags(GENERATE_FOIL, GENERATE_PLATE)
+        HighPurityGold = generatePurifiedElement(Gold, 8053, false, true)
+        HighPurityGold.addFlags(GENERATE_FOIL, GENERATE_PLATE)
         HighPurityThallium = generatePurifiedElement(Thallium, 8054, false, false)
         HighPurityLead = generatePurifiedElement(Lead, 8055, false, false)
         HighPurityBismuth = generatePurifiedElement(Bismuth, 8056, false, false)
@@ -742,19 +748,21 @@ class FirstDegreeMaterialsA {
                 .color(0x696e62)
                 .build()
 
-        PalladiumChloride = new Material.Builder(8196, SuSyUtility.susyId('palladium_chloride'))
+        PalladiumChlorideDihydrate = new Material.Builder(8196, SuSyUtility.susyId('palladium_chloride_dihydrate'))
                 .dust()
-                .iconSet(SHINY)
-                .components(Palladium, Chlorine * 2)
+                .components(Palladium, Chlorine * 2, Water * 2)
                 .colorAverage()
                 .build()
 
-        HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
-                .dust()
-                .iconSet(SHINY)
-                .components(Hydrogen * 2, Iridium, Chlorine * 6)
-                .colorAverage()
+        PalladiumChlorideDihydrate.setFormula("PdCl2*(H2O)2", true)
+
+        HexachloroiridicIVAcidSolution = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_iv_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Hydrogen * 2, Iridium, Chlorine * 6, Water * 2)
+                .color(0x040429)
                 .build()
+
+        HexachloroiridicIVAcidSolution.setFormula("(H2IrCl6)(H2O)2", true)
 
         PotassiumIodide = new Material.Builder(8198, SuSyUtility.susyId('potassium_iodide'))
                 .dust()
@@ -762,11 +770,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        IridiumIodide = new Material.Builder(8199, SuSyUtility.susyId('iridium_iodide'))
-                .dust()
-                .components(Iridium, Iodine * 4)
-                .colorAverage()
-                .build()
+        //FREE ID: 8199
 
         PhosphorusTrichloride = new Material.Builder(8200, SuSyUtility.susyId('phosphorus_trichloride'))
                 .liquid()
@@ -828,7 +832,7 @@ class FirstDegreeMaterialsA {
                 .build()
 
         PurifiedAntimonyTrioxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_trioxide'))
-                .dust()
+                .dust().gas(new FluidBuilder().temperature(1698))
                 .components(Antimony * 2, Oxygen * 3)
                 .color(0x92d1d4)
                 .build()
@@ -1421,7 +1425,7 @@ class FirstDegreeMaterialsA {
                 .ingot()
                 .components(Gold, Steel)
                 .color(0xb8a639)
-                .flags(GENERATE_FINE_WIRE)
+                .flags(GENERATE_FINE_WIRE, DISABLE_DECOMPOSITION)
                 .build()
 
         GoldConcentrate = new Material.Builder(8300, SuSyUtility.susyId('gold_concentrate'))
@@ -2137,13 +2141,13 @@ class FirstDegreeMaterialsA {
 
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic)
 
-        CobaltNitrateSolution = new Material.Builder(8406, SuSyUtility.susyId('cobalt_nitrate_solution'))
+        CobaltIINitrateSolution = new Material.Builder(8406, SuSyUtility.susyId('cobalt_ii_nitrate_solution'))
                 .liquid()
                 .components(Cobalt, Nitrogen * 2, Oxygen * 6, Water)
-                .colorAverage()
+                .color(0x6e0909)
                 .build()
 
-        CobaltNitrateSolution.setFormula("(Co(NO3)2)(H2O)", true)
+        CobaltIINitrateSolution.setFormula("(Co(NO3)2)(H2O)", true)
 
         Dichlorosilane = new Material.Builder(8407, SuSyUtility.susyId('dichlorosilane'))
                 .gas()
@@ -2379,11 +2383,7 @@ class FirstDegreeMaterialsA {
 
         HighPurityPhosphorusVaporMixture.setFormula("(P)(H2O)", true)
 
-        PotassiumAmylXanthate = new Material.Builder(8443, SuSyUtility.susyId('potassium_amyl_xanthate'))
-                .dust()
-                .components(Carbon * 6, Hydrogen * 11, Potassium, Oxygen, Sulfur * 2)
-                .colorAverage()
-                .build()
+        //FREE ID: 8443
 
         GoldAmalgam = new Material.Builder(8444, SuSyUtility.susyId('gold_amalgam'))
                 .liquid()
@@ -2404,10 +2404,10 @@ class FirstDegreeMaterialsA {
                 .build()
         CadmiumSulfateSolution.setFormula("(CdSO4)(H2O)", true)
 
-        MercuryOxide = new Material.Builder(8447, SuSyUtility.susyId('mercury_oxide'))
+        MercuryIIOxide = new Material.Builder(8447, SuSyUtility.susyId('mercury_ii_oxide'))
                 .dust()
                 .components(Mercury, Oxygen)
-                .colorAverage()
+                .color(0xf7980a)
                 .build()
 
         IndiumChloride = new Material.Builder(8448, SuSyUtility.susyId('indium_chloride'))
@@ -2443,11 +2443,7 @@ class FirstDegreeMaterialsA {
                 .color(0xad552f)
                 .build()
 
-        EntrainedEthanolWaterAzeotrope = new Material.Builder(8453, SuSyUtility.susyId('entrained_ethanol_water_azeotrope'))
-                .liquid()
-                .components(Ethanol * 91, Water * 9, Toluene * 10)
-                .colorAverage()
-                .build()
+        // FREE ID: 8453
 
         CalciumSulfite = new Material.Builder(8454, SuSyUtility.susyId('calcium_sulfite'))
                 .dust()
@@ -3097,7 +3093,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        NiobiumOxideDihydrate.setFormula("Nb2O5 * (H2O)2", true)
+        NiobiumOxideDihydrate.setFormula("Nb2O5*(H2O)2", true)
 
         PurifiedFluoroniobicAcidSolution = new Material.Builder(8556, SuSyUtility.susyId('purified_fluoroniobic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -3226,13 +3222,13 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        CobaltIIAcetate = new Material.Builder(8577, SuSyUtility.susyId("cobalt_ii_acetate"))
+        CobaltIIAcetateTetrahydrate = new Material.Builder(8577, SuSyUtility.susyId("cobalt_ii_acetate_tetrahydrate"))
                 .dust()
                 .components(Cobalt, Carbon * 4, Oxygen * 6, Hydrogen * 4, Water * 4)
                 .color(0xfc7e89)
                 .build()
 
-        CobaltIIAcetate.setFormula("Co(C2H3O2)2", true)
+        CobaltIIAcetateTetrahydrate.setFormula("Co(C2H3O2)2*(H2O)4", true)
 
         PotassiumPyrosulfate = new Material.Builder(8578, SuSyUtility.susyId("potassium_pyrosulfate"))
                 .dust()
@@ -3387,6 +3383,8 @@ class FirstDegreeMaterialsA {
                 .components(Iron, Carbon * 2, Oxygen * 4, Water * 2)
                 .colorAverage()
                 .build()
+
+        IronOxalateDihydrate.setFormula("FeC2O4*(H2O)2", true)
 
         IndiumIIISulfateSolution = new Material.Builder(8603, SuSyUtility.susyId('indium_iii_sulfate_solution'))
                 .liquid()
@@ -3674,16 +3672,18 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        CopperCarbonate = new Material.Builder(8642, SuSyUtility.susyId("copper_carbonate"))
+        BasicCopperCarbonate = new Material.Builder(8642, SuSyUtility.susyId("basic_copper_carbonate"))
                 .dust()
-                .components(Copper, Carbon, Oxygen * 3)
-                .colorAverage()
+                .components(Copper * 2, Carbon, Oxygen * 5, Hydrogen * 2)
+                .color(0x8ed6e6)
                 .build()
+
+        BasicCopperCarbonate.setFormula('Cu2(OH)2CO3', true)
 
         AmmoniumHexachlororuthenate = new Material.Builder(8643, SuSyUtility.susyId('ammonium_hexachlororuthenate'))
                 .dust()
                 .components(Nitrogen * 2, Hydrogen * 8, Ruthenium * 1, Chlorine * 6, Water * 1)
-                .colorAverage()
+                .color(0xf59c8e)
                 .build()
 
         AmmoniumHexachlororuthenate.setFormula('(NH4)2[RuCl6]', true)
@@ -3691,7 +3691,7 @@ class FirstDegreeMaterialsA {
         PotassiumOsmate = new Material.Builder(8644, SuSyUtility.susyId('potassium_osmate'))
                 .dust()
                 .components(Potassium * 2, Osmium, Oxygen * 6, Hydrogen * 4)
-                .color(0xbf21a0)
+                .color(0x2b0f14)
                 .build()
 
         PotassiumOsmate.setFormula("K2[OsO2(OH)4]", true)
@@ -3699,7 +3699,7 @@ class FirstDegreeMaterialsA {
         AmmoniumHexachlororhodate = new Material.Builder(8645, SuSyUtility.susyId('ammonium_hexachlororhodate'))
                 .dust()
                 .components(Nitrogen * 3, Hydrogen * 12, Rhodium * 1, Chlorine * 6)
-                .colorAverage()
+                .color(0xcc3939)
                 .build()
 
         AmmoniumHexachlororhodate.setFormula('(NH4)3(RhCl6)', true)
@@ -3707,7 +3707,7 @@ class FirstDegreeMaterialsA {
         AmmoniumHexachloroiridate = new Material.Builder(8646, SuSyUtility.susyId('ammonium_hexachloroiridate'))
                 .dust()
                 .components(Nitrogen * 3, Hydrogen * 12, Iridium * 1, Chlorine * 6)
-                .colorAverage()
+                .color(0x403c21)
                 .build()
 
         AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true)

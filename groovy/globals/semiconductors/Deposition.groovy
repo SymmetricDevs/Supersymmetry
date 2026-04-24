@@ -1,4 +1,4 @@
-package globals
+package globals.semiconductors
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -9,9 +9,9 @@ class Deposition {
 
     // Thermal oxidation of silicon dioxide
 
-    static void generateSiliconDioxideGrowthRecipe(String input, Strirng output, int duration, boolean wet) {
-        def growthRecipe = RESISTANCE_FURNACE.recipeBuilder()
-            .inputs(ore(input))
+    static void generateSiliconDioxideGrowthRecipe(String input, String output, int duration, boolean wet) {
+        def growthRecipe = TUBE_FURNACE.recipeBuilder()
+            .inputs(metaitem(input))
             .fluidInputs(fluid('oxygen') * 100)
             .outputs(metaitem(output))
             .cleanroom(CleanroomType.CLEANROOM)
@@ -30,9 +30,9 @@ class Deposition {
 
     public static class EvaporationSource {
         String material
-        String voltageTier
+        int voltageTier
 
-        EvaporationSource(String material, String voltageTier) {
+        EvaporationSource(String material, int voltageTier) {
             this.material = material
             this.voltageTier = voltageTier
         }
@@ -40,7 +40,7 @@ class Deposition {
         def generateRecipe(String input, String product, int duration, boolean cleanroom) {
             def evaporationRecipe = EVAPORATION.recipeBuilder()
                 .inputs(metaitem(input))
-                .inputs(ore('nugget' + this.material.capitalize()))
+                .inputs(ore('nugget' + this.material.split('_').collect { it.capitalize() }.join('')))
                 .outputs(metaitem(product))
                 .duration(duration)
                 .EUt(VA[this.voltageTier])
@@ -51,9 +51,9 @@ class Deposition {
     }
 
     public static final evaporationSources = [
-        new EvaporationSource("aluminium", "MV"),
-        new EvaporationSource("gold_antimony", "MV"),
-        new EvaporationSource("silver", "HV"),
+        new EvaporationSource("aluminium", MV),
+        new EvaporationSource("gold_antimony", MV),
+        new EvaporationSource("silver", HV),
     ]
 
     static void generateEvaporationRecipe(String input, String product, int duration, String targetMaterial, boolean cleanroom) {
@@ -84,10 +84,10 @@ class Deposition {
 
     public static class SputteringTarget {
         String targetMaterial
-        String voltageTier
+        int voltageTier
         float consumptionRate
 
-        SputteringTarget(String targetMaterial, String voltageTier, float consumptionRate) {
+        SputteringTarget(String targetMaterial, int voltageTier, float consumptionRate) {
             this.targetMaterial = targetMaterial
             this.voltageTier = voltageTier
             this.consumptionRate = consumptionRate // per tick of duration
@@ -113,23 +113,24 @@ class Deposition {
     }
 
     public static final sputteringTargets = [
-        new SputteringTarget("aluminium", "MV", 0.025),
-        new SputteringTarget("copper", "HV", 0.025),
-        new SputteringTarget("titanium", "HV", 0.00375),
-        new SputteringTarget("nickel", "HV", 0.008),
-        new SputteringTarget("silver", "HV", 0.0375),
-        new SputteringTarget("gold", "MV", 0.0375),
-        new SputteringTarget("palladium", "EV", 0.0375),
-        new SputteringTarget("tungsten", "EV", 0.00375),
-        new SputteringTarget("antimony", "MV", 0.025),
-        new SputteringTarget("silicon", "MV", 0.05)
+        'aluminium': new SputteringTarget("aluminium", MV, 0.025), // corresponds to ~300 hours irl
+        'copper': new SputteringTarget("copper", HV, 0.025),
+        'titanium': new SputteringTarget("titanium", HV, 0.00375),
+        'nickel': new SputteringTarget("nickel", HV, 0.008),
+        'silver': new SputteringTarget("silver", HV, 0.0375),
+        'gold': new SputteringTarget("gold", MV, 0.0375),
+        'palladium': new SputteringTarget("palladium", EV, 0.0375),
+        'tungsten': new SputteringTarget("tungsten", EV, 0.00375),
+        'antimony': new SputteringTarget("antimony", MV, 0.025),
+        'silicon': new SputteringTarget("silicon", MV, 0.05),
+        'platinum': new SputteringTarget("platinum", EV, 0.025),
+        'tantalum': new SputteringTarget("tantalum", EV, 0.00375),
+        'chromium': new SputteringTarget("chromium", MV, 0.01),
+        'tantalum_nitride': new SputteringTarget("tantalum_nitride", EV, 0.0075)
     ]
 
     static void generateSputteringRecipe(String input, String product, int duration, String targetMaterial) {
-        for (sputteringTarget in sputteringTargets) {
-            if (sputteringTarget.targetMaterial == targetMaterial)
-                sputteringTarget.generateRecipe(input, product, duration)
-        }
+        sputteringTargets[targetMaterial].generateRecipe(input, product, duration)
     }
 
     // feed keys as material paired with duration, for co-sputtering and sequential sputtering
@@ -142,16 +143,18 @@ class Deposition {
             .outputs(metaitem(product))
             .cleanroom(CleanroomType.CLEANROOM)
         
-        for (material, duration in targetDurationMap) {
+        for (pair in targetDurationMap) {
+            String material = pair.key
+            int duration = pair.value
             totalDuration += duration
-
-            for (sputteringTarget in sputteringTargets) {
-                if (sputteringTarget.targetMaterial == material) {
-                    power = Math.max(power, VA[sputteringTarget.voltageTier])
-                    sputteringRecipe.inputs(metaitem('target.' + material))
-                    sputteringRecipe.chancedOutput(metaitem('target.' + material), sputteringTarget.calculateReuseChance(duration), 0)
-                }
+            
+            def sputteringTarget = sputteringTargets[material]
+            if (sputteringTarget == null) {
+                log.infoMC("Material " + material + " not defined as a sputtering target")
             }
+            power = Math.max(power, VA[sputteringTarget.voltageTier])
+            sputteringRecipe.inputs(metaitem('target.' + material))
+            sputteringRecipe.chancedOutput(metaitem('target.' + material), sputteringTarget.calculateReuseChance(duration), 0)
         }
 
         sputteringRecipe.duration(totalDuration).EUt(power).buildAndRegister();
@@ -168,6 +171,104 @@ class Deposition {
             .EUt(VA[voltageTier])
             .buildAndRegister();
     }
-}
 
-// CVD SECTION
+    public static class cvdRecipe {
+        Map inputs
+        Map offgases
+        int voltageTier
+        int duration
+        int molar_volume
+        double moles
+
+        cvdRecipe(Map in, Map out, int vt, int duration, int mv, double moles) {
+            this.inputs = in
+            this.offgases = out
+            this.voltageTier = vt
+            this.duration = duration
+            this.molar_volume = mv
+            this.moles = moles
+        }
+
+        def generateRecipe(String input, String product, int thickness) {
+            def tmp = CVD.recipeBuilder()
+                .inputs(metaitem(input));
+            for (gas in this.inputs) {
+                tmp.fluidInputs(fluid(gas.key) * (int) (gas.value * thickness / this.molar_volume))
+            }
+            for (offgas in this.offgases) {
+                tmp.fluidOutputs(fluid(offgas.key) * (int) (offgas.value * thickness / this.molar_volume))
+            }
+
+            tmp.outputs(metaitem(product))
+                .duration((int) (duration * thickness / this.molar_volume))
+                .EUt(VA[this.voltageTier])
+                .buildAndRegister()
+        }
+    }
+
+    public static final cvdRecipes = [
+        "silicon": new cvdRecipe(['silane' : 5, 'hydrogen' : 50], ['hydrogen' : 70], HV, 50, 12, 0.005), // LPCVD in H2 carrier gas
+        "n_doped_silicon": new cvdRecipe(['silane' : 49, 'phosphine' : 1, 'hydrogen' : 501], ['hydrogen' : 700], HV, 500, 12, 0.05), // LPCVD in H2 carrier gas with 2% PH3 for n-type doping
+        "silicon_germanium": new cvdRecipe(['germane' : 5, 'silane' : 5, 'hydrogen' : 100], ['hydrogen' : 140], EV, 200, 13, 0.01), // SiGe LPCVD in H2 carrier gas
+        "silicon_nitride.silane": new cvdRecipe(['silane' : 15, 'ammonia' : 20, 'hydrogen' : 350], ['hydrogen' : 470], HV, 300, 44, 0.005), // Silane LPCVD in H2 carrier gas with NH3
+        "silicon_dioxide.teos": new cvdRecipe(['tetraethyl_orthosilicate' : 5], ['diethyl_ether' : 10], EV, 100, 23, 0.005), // LPCVD via TEOS decomposition
+        "silicon_dioxide.silane": new cvdRecipe(['silane' : 5, 'oxygen' : 20], ['steam' : 10], HV, 50, 23, 0.005),  // LPCVD in O2 carrier gas via silane oxidation
+        "fluorosilicate_glass": new cvdRecipe(['silane' : 15, 'silicon_tetrafluoride' : 5, 'oxygen' : 90], ['corrosive_gas' : 100], HV, 100, 23, 0.01), // PECVD in O2 carrier gas, SiF4 as fluorine source
+        "phosphosilicate_glass": new cvdRecipe(['silane' : 18, 'phosphine' : 2, 'oxygen' : 80], ['steam' : 39], HV, 200, 23, 0.02), // PECVD in O2 carrier gas, PH3 as phosphorus source
+        "tungsten": new cvdRecipe(['tungsten_hexafluoride' : 5, 'hydrogen' : 50], ['corrosive_gas' : 50], EV, 100, 10, 0.005), //  LPCVD via WF6 reduction in H2 carrier gas
+
+    ]
+
+    static void generateChemicalVaporDepositionRecipe(String input, String product, int duration, String recipe) {
+        def cvd_process = cvdRecipes[recipe]
+        if (cvd_process == null) {
+            log.infoMC("cvd recipe for " + recipe + " does not exist")
+        } else {
+            cvd_process.generateRecipe(input, product, duration)
+        }
+    }
+
+    public static class aldRecipe extends cvdRecipe {
+        Map purgeGas
+
+        aldRecipe(Map in, Map out, Map purgeGas, int vt, int dur, int mv, double moles) {
+            super(in, out, vt, dur, mv, moles)
+            this.purgeGas = purgeGas
+        }
+
+        def generateRecipe(String input, String product, int thickness) {
+            def tmp = ALD.recipeBuilder()
+                .inputs(metaitem(input));
+            for (gas in this.inputs) {
+                tmp.fluidInputs(fluid(gas.key) * (int) (gas.value * thickness / this.molar_volume))
+                for (purge in this.purgeGas) {
+                    tmp.fluidInputs(fluid(purge.key) * (int) (purge.value * thickness / this.molar_volume))
+                }
+            }
+            for (offgas in this.offgases) {
+                tmp.fluidOutputs(fluid(offgas.key) * (int) (offgas.value * thickness / this.molar_volume))
+            }
+
+            tmp.outputs(metaitem(product))
+                .duration((int) (duration * thickness / this.molar_volume))
+                .EUt(VA[this.voltageTier])
+                .buildAndRegister()
+        }
+    }
+
+    public static final aldRecipes = [
+        "titanium_nitride": new aldRecipe(['titanium_tetrachloride' : 3, 'ammonia' : 4], ['corrosive_gas' : 60], ['nitrogen' : 48], EV, 200, 12, 0.003), // ALD via TiCl4 and NH3 reaction
+        "titanium_aluminide": new aldRecipe(['titanium_tetrachloride' : 5, 'trimethylaluminium' : 5], ['corrosive_gas' : 65], ['nitrogen' : 50], EV, 200, 12, 0.003), // ALD via TiCl4 and TMA reaction
+        "hafnium_dioxide" : new aldRecipe(['tetrakis_dimethylamido_hafnium' : 5, 'water' : 10], ['dimethylamine' : 20, 'nitrogen' : 50], ['nitrogen' : 50], EV, 200, 12, 0.003) // ALD via Hf(NMe2)4 and H2O reaction
+    ]
+
+    // ALD
+    static void generateAtomicLayerDepositionRecipe(String input, String product, int duration, String recipe) {
+        def ald_process = aldRecipes[recipe]
+        if (ald_process == null) {
+            log.infoMC("ald recipe for " + recipe + " does not exist")
+        } else {
+            ald_process.generateRecipe(input, product, duration)
+        }
+    }
+}

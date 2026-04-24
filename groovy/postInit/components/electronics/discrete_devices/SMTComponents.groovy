@@ -8,11 +8,6 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wir
 // Inductor * 4
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
 
-// SMD Inductor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
-// SMD Inductor * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
-
 // SMD Capacitor * 8
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
 // SMD Capacitor * 12
@@ -604,46 +599,6 @@ CHEMICAL_BATH.recipeBuilder()
         .outputs(metaitem('component.smd.capacitor') * 8)
         .duration(40)
         .EUt(240)
-        .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 10)
-        .inputs(ore('dustZincOxide') * 2)
-        .inputs(ore('dustNickelIiOxide') * 2)
-        .outputs(metaitem('ingotNickelZincFerrite') * 14)
-        .blastFurnaceTemp(1200)
-        .duration(300)
-        .EUt(60)
-        .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 10)
-        .inputs(ore('dustZincOxide') * 2)
-        .inputs(ore('dustManganeseIiOxide') * 2)
-        .outputs(metaitem('ingotManganeseZincFerrite') * 14)
-        .blastFurnaceTemp(1200)
-        .duration(300)
-        .EUt(60)
-        .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 30)
-        .inputs(ore('dustBariumCarbonate') * 5)
-        .outputs(metaitem('ingotBariumFerrite') * 32)
-        .fluidOutputs(fluid('carbon_dioxide') * 1000)
-        .blastFurnaceTemp(1200)
-        .duration(100)
-        .EUt(60)
-        .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 30)
-        .inputs(ore('dustStrontiumCarbonate') * 5)
-        .outputs(metaitem('ingotStrontiumFerrite') * 32)
-        .fluidOutputs(fluid('carbon_dioxide') * 1000)
-        .blastFurnaceTemp(1200)
-        .duration(100)
-        .EUt(60)
         .buildAndRegister()
         
 ROASTER.recipeBuilder()

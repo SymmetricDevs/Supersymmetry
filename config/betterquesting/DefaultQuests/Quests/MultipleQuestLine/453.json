@@ -22,7 +22,7 @@
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,
-          "FluidName:8": "novolacs"
+          "FluidName:8": "phenolic_novolacs_resin"
         }
       },
       "taskID:8": "bq_standard:fluid"

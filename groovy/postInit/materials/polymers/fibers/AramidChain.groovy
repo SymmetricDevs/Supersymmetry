@@ -30,7 +30,7 @@ BR.recipeBuilder()
 // p-Phenylenediamine
 
 BCR.recipeBuilder()
-    .notConsumable(ore('catalystBedPalladium'))
+    .notConsumable(ore('catalystBedSupportedPalladium'))
     .fluidInputs(fluid('four_nitroaniline_solution') * 50)
     .fluidInputs(fluid('hydrogen') * 300)
     .fluidOutputs(fluid('para_phenylenediamine_solution') * 150)

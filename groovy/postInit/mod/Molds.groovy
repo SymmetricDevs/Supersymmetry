@@ -42,7 +42,7 @@ FORMING_PRESS.recipeBuilder()
 
 // Leadframe mold
 
-crafting.addShaped("mold_pin", metaitem('shape.mold.leadframe'), [
+crafting.addShaped("mold_leadframe", metaitem('shape.mold.leadframe'), [
     [null, null, metaitem('shape.empty')],
     [null, null, null],
     [null, null, ore('craftingToolWireCutter')]

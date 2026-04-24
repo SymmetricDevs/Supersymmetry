@@ -1,3 +1,58 @@
+# UPDATE 0.1.16.5
+## Mod Changes
+### Mod Updates
+- Had Enough Items 4.29.15 → 4.30.2
+- SusyCore v0.1.98 → v0.1.99
+## Changes
+### New Features
+- You can now use a new LV multiblock, the greenhouse, to harvest crops! (The MV greenhouse has been renamed the "arboretum.") (#1843 by @WideMann)
+### Fixes
+- Acetic anhydride catalyst is no longer lost. (#1838 by @Fiery36)
+- Cellulose acetate mesh is now craftable without silicon wafers. (#1841 by @WideMann)
+- Fix conflicting recipes (#1842 by @WideMann)
+And thanks to @whoisyp and @unitazer for additional work on keeping the pack stable.
+# UPDATE 0.1.16.4.1
+## Mod Changes
+### Mod Updates
+- Better Questing Unofficial 4.2.7 → 4.3.1
+- Supercritical 0.2.4 → 0.2.5
+## Changes
+### Changed Features
+- Quests are now updated automatically! You'll never have to run /bq_admin default load again.
+- In order to remove a gallium dupe, the Bayer process has been slightly modified. You may need to flush out some machines and/or change filters.
+### Fixes
+- Green vitriol is no longer a pile of steaming garbage
+- Wood/stone quests work properly with all wood/stone types
+# UPDATE 0.1.16.4
+## Mod Changes
+### Mod Updates
+- Universal Tweaks 1.12.2-1.18.0 → 1.12.2-1.19.1
+- Better Questing Unofficial 4.2.7 → 4.3.0
+- Bubbles 2.4.9 → 2.4.10
+- SusyCore v0.1.97 → v0.1.98
+- CraftPresence 2.7.0+1.12.2-forge → 2.7.1+1.12.2-forge
+## Changes
+### Changed Features
+- Sulfuric acid is now properly Gregified (TM)! Run /bq_admin default load to see the new quests. (#1803 by @obihz6, #1830 by @planetme)
+- Acetic anhydride, acetaldehyde, acetic acid, and many other ace chemicals have updated recipes! (#1819 by @Fiery36)
+### Fixes
+- BQu teams now work properly. (#1833 by @planetme)
+- CraftPresence should no longer count you as playing when you're not. (#1833 by @planetme)
+# UPDATE 0.1.16.3
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.96 → v0.1.97
+## Changes
+### New Features
+- Batteries included! Lead-acid and nickel-iron batteries now have large variants. (#1825 by @Fiery36)
+### Changes
+- Many useless ores have been removed from HEI. (#1826 by @Fiery36)
+### Fixes
+- Move scattered oredict definitions into oreDict.groovy (#1822 by @Crindigo)
+- The preheated air recipe has been restored! (#1824 by @Crindigo)
+- HV Magnets are now actually craftable at HV! (#1828 by @Fiery36)
+- Misspellings have been thoroughly removed from the questbook. (#1827 by @whoisyp)
+And thanks to @whoisyp, @Crindigo, and @Fiery36 for keeping the pack stable.
 # UPDATE 0.1.16.2
 ## Mod Changes
 ### Mod Updates

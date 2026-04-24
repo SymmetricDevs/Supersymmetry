@@ -15,9 +15,6 @@ CHEMICAL_BATH.recipeBuilder()
 
 // Zinc hydrometallurgy route (primitive)
 
-oreDict.add('dustZincResidues', metaitem('dustZincHydrochloricLeachResidue'))
-oreDict.add('dustZincResidues', metaitem('dustZincLeachResidue'))
-
 carbons = new ItemStack[]{
         metaitem('dustCarbon'),
         metaitem('dustHighPurityCarbon'),
@@ -211,5 +208,16 @@ ZONE_REFINER.recipeBuilder()
     .inputs(ore('ingotGermanium'))
     .outputs(metaitem('ingotHighPurityGermanium'))
     .duration(160)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Germane (CVD precursor)
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('germanium_tetrachloride') * 50)
+    .fluidInputs(fluid('lithium_aluminium_hydride_solution') * 50)
+    .fluidOutputs(fluid('germane') * 50)
+    .fluidOutputs(fluid('wastewater') * 50)
+    .duration(8)
     .EUt(VA[MV])
     .buildAndRegister()

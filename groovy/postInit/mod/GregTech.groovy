@@ -1665,10 +1665,11 @@ ASSEMBLER.recipeBuilder()
 
 // Jet Wingpack recipes
 // Wing panel
-AUTOCLAVE.recipeBuilder()
+ASSEMBLER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
     .inputs(ore('foilPolyethyleneTerephthalate'))
-    .fluidInputs(fluid('reinforced_epoxy_resin') * 288)
+    .inputs(metaitem('carbon.fibers') * 16)
+    .fluidInputs(fluid('epoxy') * 288)
     .outputs(metaitem('wing_panel.fiber_reinforced_epoxy'))
     .duration(600)
     .EUt(VA[HV])
@@ -1905,3 +1906,6 @@ LATHE.recipeBuilder()
 
 RecyclingHelper.removeRecyclingRecipes(metaitem('stickStone'))
 RecyclingHelper.handleRecycling(metaitem('stickStone'), [metaitem('dustSmallStone')])
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('gearStone'))
+RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 5])

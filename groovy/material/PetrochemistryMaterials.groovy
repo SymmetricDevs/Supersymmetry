@@ -163,7 +163,7 @@ class PetrochemistryMaterials {
                 .build()
 
         SlackWax = new Material.Builder(20025, SuSyUtility.susyId('slack_wax'))
-                .liquid(new FluidBuilder().temperature(35W3))
+                .liquid(new FluidBuilder().temperature(353))
                 .color(0x7d7b59)
                 .flags(FLAMMABLE)
                 .build()
@@ -185,7 +185,7 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        BtexExtract = new Material.Builder(20029, SuSyUtility.susyId('btex_extract'))
+        FurfuralBtexExtract = new Material.Builder(20029, SuSyUtility.susyId('furfural_btex_extract'))
                 .liquid()
                 .color(0xa8a87d)
                 .flags(FLAMMABLE)
@@ -215,7 +215,11 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        // FREE ID: 20034
+        SulfolaneBtexExtract = new Material.Builder(20034, SuSyUtility.susyId('sulfolane_btex_extract'))
+                .liquid()
+                .color(0xd6d67c)
+                .flags(FLAMMABLE)
+                .build()
 
         SteamcrackedLightGasOil = new Material.Builder(20035, SuSyUtility.susyId('steamcracked_light_gas_oil'))
                 .gas(new FluidBuilder().temperature(1223))
@@ -942,6 +946,30 @@ class PetrochemistryMaterials {
         AlkaliTreatedLightGasOil = new Material.Builder(20158, SuSyUtility.susyId('alkali_treated_light_gas_oil'))
                 .liquid()
                 .color(0x999648)
+                .flags(FLAMMABLE)
+                .build()
+
+        CrackedNaturalGas = new Material.Builder(20159, SuSyUtility.susyId('cracked_natural_gas'))
+                .gas()
+                .color(0xc8d8e0)
+                .flags(FLAMMABLE)
+                .build()
+
+        QuenchedCrackedNaturalGas = new Material.Builder(20160, SuSyUtility.susyId('quenched_cracked_natural_gas'))
+                .gas()
+                .color(0xb8ccd6)
+                .flags(FLAMMABLE)
+                .build()
+
+        StrippedCrackedNaturalGas = new Material.Builder(20161, SuSyUtility.susyId('stripped_cracked_natural_gas'))
+                .gas()
+                .color(0xd0e4ec)
+                .flags(FLAMMABLE)
+                .build()
+
+        CrudeSyngas = new Material.Builder(20162, SuSyUtility.susyId('crude_syngas'))
+                .gas()
+                .color(0xa8c4d4)
                 .flags(FLAMMABLE)
                 .build()
     }

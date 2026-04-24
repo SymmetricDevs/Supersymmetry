@@ -4,7 +4,7 @@ import static gregtech.api.GTValues.*
 // Grignard reagents
 
 BR.recipeBuilder()
-    .inputs(ore('dustAnyMagnesium'))
+    .inputs(ore('dustAnyPurityMagnesium'))
     .fluidInputs(fluid('chloromethane') * 2000)
     .fluidInputs(fluid('tetrahydrofuran') * 3000)
     .fluidOutputs(fluid('methylmagnesium_chloride_solution') * 1000)
@@ -32,5 +32,15 @@ BR.recipeBuilder()
         .fluidInputs(fluid('diisopropylamine') * 1000)
         .fluidInputs(fluid('tetrahydrofuran') * 3000)
         .fluidOutputs(fluid('lithium_diisopropylamide_solution') * 1000)
+        .duration(160)
+        .EUt(VA[MV])
+
+    // Lithium dimethylamide (LDM), for organometallic complexes
+
+    BR.recipeBuilder()
+        .inputs(ore('dustLithium'))
+        .fluidInputs(fluid('dimethylamine') * 1000)
+        .fluidInputs(fluid('diethyl_ether') * 1000)
+        .fluidOutputs(fluid('lithium_dimethylamide_solution') * 1000)
         .duration(160)
         .EUt(VA[MV])

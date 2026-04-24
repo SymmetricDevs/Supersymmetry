@@ -165,7 +165,7 @@ FLUIDIZED_BR.recipeBuilder()
 
 CRYSTALLIZER.recipeBuilder()
     .fluidInputs(fluid('melamine_offgas') * 4750)
-    .chancedOutputs(metaitem('dustMelamine'), 2500, 0)
+    .chancedOutput(metaitem('dustMelamine'), 2500, 0)
     .fluidOutputs(fluid('ammonia_carbon_dioxide_mixture') * 4500)
     .duration(200)
     .EUt(VA[MV])

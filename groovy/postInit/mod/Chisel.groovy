@@ -1,6 +1,17 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
+def name_removals = [
+    'chisel:uncraft_blockcopper',
+    'chisel:uncraft_blocksteel',
+    'chisel:uncraft_blocktin',
+    'chisel:uncraft_blockbronze',
+]
+
+for (name in name_removals) {
+    crafting.remove(name)
+}
+
 crafting.replaceShaped('chisel:chisel_iron', item('chisel:chisel_iron'), [
     [null, null, ore('plateIron')],
     [null, ore('plateIron'), null],

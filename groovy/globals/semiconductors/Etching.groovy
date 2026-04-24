@@ -1,4 +1,4 @@
-package globals
+package globals.semiconductors
 import globals.Globals
 
 import static prePostInit.Recipemaps.*
@@ -26,13 +26,13 @@ class Etching {
 
     static class Etchant {
         String fluidName
-        String voltageTier
+        int voltageTier
         int amountUsed
         double etchingRate
         boolean anisotropic
         boolean isPlasma
 
-        Etchant(String fluidName, String voltageTier, int amountUsed, double etchingRate, boolean anisotropic, boolean isPlasma) {
+        Etchant(String fluidName, int voltageTier, int amountUsed, double etchingRate, boolean anisotropic, boolean isPlasma) {
             this.fluidName = fluidName
             this.voltageTier = voltageTier
             this.amountUsed = amountUsed
@@ -102,11 +102,17 @@ class Etching {
         titanium_nitride: [
             new Etchant("nitric_acid", MV, 50, 0.002, false, false),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 50, 0.004, false, false),
+        ],
+        hafnium_dioxide: [
+            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.008, true, true),
+        ],
+        nickel_silicide: [
+            new Etchant("phosphoric_acid", HV, 50, 0.01, false, false)
         ]
     ]
 
 
-    static void generateWetEtchingRecipe(String input, String product, String materialEtched, int duration, boolean anisotropic) {
+    static void generateWetEtchingRecipe(String input, String product, String materialEtched, int depth, boolean anisotropic) {
         if (!etchants.containsKey(materialEtched)) {    
             log.warn("Attempted adding etching recipe with no matching etchant: " + materialEtched + ". No recipe is generated");
             return;
@@ -117,15 +123,15 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (etchant.etchingRate * duration))
-                    .EUt(VA[etchant.voltageTier]);
+                    .duration((int) (depth / etchant.etchingRate))
+                    .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()
             }
         }
     }
 
-    static void generateReactiveIonEtchingRecipe(String input, String product, String materialEtched, int duration) {
+    static void generateReactiveIonEtchingRecipe(String input, String product, String materialEtched, int depth) {
         if (!etchants.containsKey(materialEtched)) {    
             log.warn("Attempted adding etching recipe with no matching etchant: " + materialEtched + ". No recipe is generated");
             return;
@@ -136,8 +142,8 @@ class Etching {
                     .inputs(metaitem(input))
                     .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
                     .outputs(metaitem(product))
-                    .duration((int) (etchant.etchingRate * duration))
-                    .EUt(VA[etchant.voltageTier]);
+                    .duration((int) (depth / etchant.etchingRate))
+                    .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
                     .buildAndRegister()
             }

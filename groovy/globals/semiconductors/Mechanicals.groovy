@@ -1,4 +1,4 @@
-package globals
+package globals.semiconductors
 import globals.Globals
 
 import static prePostInit.Recipemaps.*

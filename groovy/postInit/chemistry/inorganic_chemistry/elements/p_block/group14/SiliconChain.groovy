@@ -131,7 +131,7 @@ DT.recipeBuilder()
 
 FIXED_BR.recipeBuilder()
     .fluidInputs(fluid('dichlorosilane') * 2000)
-    .notConsumable(metaitem('catalystBedAluminiumChloride'))
+    .notConsumable(metaitem('catalystBedSupportedAluminiumChloride'))
     .fluidOutputs(fluid('disproportionated_dichlorosilane') * 2000)
     .duration(100)
     .EUt(VA[MV])
@@ -147,7 +147,7 @@ DT.recipeBuilder()
 
 FIXED_BR.recipeBuilder()
     .fluidInputs(fluid('chlorosilane') * 2000)
-    .notConsumable(metaitem('catalystBedAluminiumChloride'))
+    .notConsumable(metaitem('catalystBedSupportedAluminiumChloride'))
     .fluidOutputs(fluid('disproportionated_chlorosilane') * 2000)
     .duration(100)
     .EUt(VA[MV])
@@ -164,7 +164,7 @@ DT.recipeBuilder()
 // Siemens Process
 
 CVD.recipeBuilder() // Bootstrap. 25% single-pass conversion
-    .notConsumable(ore('graphite_electrode') * 3)
+    .notConsumable(metaitem('graphite_electrode') * 3)
     .fluidInputs(fluid('trichlorosilane') * 4800)
     .fluidInputs(fluid('hydrogen') * 4800)
     .chancedOutput(metaitem('dustHighPuritySilicon'), 875, 0)
@@ -221,16 +221,28 @@ Sintering.nonPlasmaFuels().each { fuel ->
     }
 }
 
-// TEOS
+// CVD Precursors
 
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('silicon_tetrachloride') * 50)
-    .fluidInputs(fluid('ethanol') * 200)
-    .fluidOutputs(fluid('tetraethyl_orthosilicate') * 50)
-    .fluidOutputs(fluid('hydrogen_chloride') * 200)
-    .duration(5)
-    .EUt(VA[MV])
-    .buildAndRegister()
+    // TEOS
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('silicon_tetrachloride') * 50)
+        .fluidInputs(fluid('ethanol') * 200)
+        .fluidOutputs(fluid('tetraethyl_orthosilicate') * 50)
+        .fluidOutputs(fluid('hydrogen_chloride') * 200)
+        .duration(5)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // SiF4
+
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustSodiumHexafluorosilicate') * 9)
+        .outputs(metaitem('dustSodiumFluoride') * 4)
+        .fluidOutputs(fluid('silicon_tetrafluoride') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
 
 // Silicates
 

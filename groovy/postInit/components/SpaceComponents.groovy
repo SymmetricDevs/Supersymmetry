@@ -41,7 +41,7 @@ ASSEMBLER.recipeBuilder()
 
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('carbon.mesh'))
-        .fluidInputs(fluid('resol_resin_infiltrant') * 4000)
+        .fluidInputs(fluid('resol_infiltrant') * 4000)
         .outputs(metaitem('carbon.mesh.phenolic.moist'))
         .duration(200)
         .EUt(VA[MV])

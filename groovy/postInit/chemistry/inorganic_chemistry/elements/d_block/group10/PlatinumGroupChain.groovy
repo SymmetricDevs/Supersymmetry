@@ -442,7 +442,7 @@ for (metal in metals) {
         MIXER_SETTLER.recipeBuilder()
             .fluidInputs(fluid('iridium_extract') * 10000)
             .fluidInputs(fluid('diluted_hydrochloric_acid') * 1000)
-            .fluidOutputs(fluid('hexachloroiridic_acid_solution') * 2000)
+            .fluidOutputs(fluid('hexachloroiridic_iv_acid_solution') * 2000)
             .fluidOutputs(fluid('tributyl_phosphate_extraction_mixture') * 10000)
             .duration(500)
             .EUt(VA[MV])
@@ -452,7 +452,7 @@ for (metal in metals) {
         //H2IrCl6 + 2NH4Cl -> (NH4)2(IrCl6) + 2HCl
 
         CRYSTALLIZER.recipeBuilder()
-            .fluidInputs(fluid('hexachloroiridic_acid_solution') * 2000)
+            .fluidInputs(fluid('hexachloroiridic_iv_acid_solution') * 2000)
             .fluidInputs(fluid('ammonium_chloride_solution') * 2000)
             .outputs(metaitem('dustAmmoniumHexachloroiridate') * 17)
             .fluidOutputs(fluid('diluted_hydrochloric_acid') * 4000)
@@ -486,9 +486,9 @@ for (metal in metals) {
 
         CRYSTALLIZER.recipeBuilder()
             .fluidInputs(fluid('hexachlororhodic_acid_solution') * 8950)
-            .inputs(ore('dustAmmoniumChloride') * 9)
+            .fluidInputs(fluid('ammonium_chloride_solution') * 1500)
             .chancedOutput(metaitem('dustAmmoniumHexachlororhodate') * 21, 5000, 0)
-            .fluidOutputs(fluid('acidic_wastewater') * 8950)
+            .fluidOutputs(fluid('acidic_wastewater') * 10450)
             .duration(200)
             .EUt(VA[MV])
             .buildAndRegister()

@@ -14,8 +14,13 @@ AUTOCLAVE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// removing gemExquisiteNetherQuartz -> gemFlawlessNetherQuartz recipes
+mods.gregtech.cutter.removeByInput(16, [metaitem('gemExquisiteNetherQuartz')], [fluid("lubricant") * 1])
+mods.gregtech.cutter.removeByInput(16, [metaitem('gemExquisiteNetherQuartz')], [fluid("water") * 4])
+mods.gregtech.cutter.removeByInput(16, [metaitem('gemExquisiteNetherQuartz')], [fluid("distilled_water") * 3])
+
 CUTTER.recipeBuilder()
-    .circuitMeta(1)  // AT-cut angle (35°15')
+//    .circuitMeta(1)  // AT-cut angle (35°15') circuits not allowed in cutters
     .inputs(ore('gemExquisiteNetherQuartz'))
     .outputs(metaitem('wafer.quartz.at_cut') * 24)
     .duration(400)
@@ -23,7 +28,7 @@ CUTTER.recipeBuilder()
     .buildAndRegister()
 
 LATHE.recipeBuilder()
-    .circuitMeta(1)  // Target frequency
+//    .circuitMeta(1)  // Target frequency
     .inputs(metaitem('wafer.quartz.at_cut'))
     .outputs(metaitem('wafer.quartz.at_cut.tuned'))
     .duration(400)

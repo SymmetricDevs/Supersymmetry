@@ -1,7 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-// Caprolactam
+// Hydroxylamine for oxime formation
 
 FIXED_BR.recipeBuilder()
     .fluidInputs(fluid('nitric_oxide') * 50)
@@ -12,24 +12,68 @@ FIXED_BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-FIXED_BR.recipeBuilder()
-    .fluidInputs(fluid('cyclohexane') * 50)
-    .fluidInputs(fluid('oxygen') * 100)
-    .notConsumable(ore('catalystBedSupportedCobalt'))
-    .fluidOutputs(fluid('cyclohexanone') * 50)
-    .fluidOutputs(fluid('water') * 50)
-    .duration(5)    
-    .EUt(VA[LV])
-    .buildAndRegister()
+// Cyclohexanone/cyclohexanol for caprolactam production
 
-FIXED_BR.recipeBuilder()
-    .notConsumable(ore('catalystBedSupportedNickel'))
-    .fluidInputs(fluid('phenol') * 50)
-    .fluidInputs(fluid('hydrogen') * 200)
-    .fluidOutputs(fluid('cyclohexanone') * 50)
-    .duration(5)    
-    .EUt(VA[LV])
-    .buildAndRegister()
+    // By oxidation of cyclohexane
+
+    BR.recipeBuilder()
+        .inputs(ore('dustTinyCobaltIiAcetateTetrahydrate'))
+        .fluidInputs(fluid('cyclohexane') * 9000)
+        .fluidInputs(fluid('oxygen') * 11000)
+        .fluidOutputs(fluid('crude_ketone_alcohol_oil') * 11000) // 7 parts alcohol, 2 part ketone, 2 part water
+        .duration(400) 
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CENTRIFUGE.recipeBuilder() // Removal of catalyst, organic acid side products, water
+        .fluidInputs(fluid('crude_ketone_alcohol_oil') * 11000)
+        .fluidInputs(fluid('soda_ash_solution') * 500)
+        .fluidOutputs(fluid('ketone_alcohol_oil') * 9000)
+        .fluidOutputs(fluid('wastewater') * 2500)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('ketone_alcohol_oil') * 9000)
+        .fluidOutputs(fluid('cyclohexanol') * 7000)
+        .fluidOutputs(fluid('cyclohexanone') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Oxidation of cyclohexanol to cyclohexanone
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedNickel'))
+        .fluidInputs(fluid('cyclohexanol') * 50)
+        .fluidOutputs(fluid('cyclohexanone') * 50)
+        .fluidOutputs(fluid('hydrogen') * 100)
+        .duration(10)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // By hydrogenation of phenol
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedNickel'))
+        .fluidInputs(fluid('phenol') * 50)
+        .fluidInputs(fluid('hydrogen') * 300)
+        .fluidOutputs(fluid('cyclohexanol') * 50)
+        .duration(15)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedPalladium'))
+        .fluidInputs(fluid('phenol') * 50)
+        .fluidInputs(fluid('hydrogen') * 200)
+        .fluidOutputs(fluid('cyclohexanone') * 50)
+        .duration(15)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+// Final processing
 
 BR.recipeBuilder()
     .fluidInputs(fluid('cyclohexanone') * 1000)

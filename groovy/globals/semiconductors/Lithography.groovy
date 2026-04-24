@@ -1,4 +1,4 @@
-package globals
+package globals.semiconductors
 import globals.Globals
 
 import static prePostInit.Recipemaps.*
@@ -12,11 +12,12 @@ class Lithography {
         String resistName
         String solventName
         String developerName
-        String voltageTier
+        int voltageTier
         String exposureRecipeMap
         int timeUsed
+        boolean liftoff
 
-        Resist(String resistName, String ebrName, String developerName, String solventName, String voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false) {
+        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false) {
             this.resistName = resistName
             this.solventName = solventName
             this.developerName = developerName
@@ -26,23 +27,23 @@ class Lithography {
             this.liftoff = liftoff
         }
 
-        def generateCoatingRecipe(String input, boolean hmds = false, int circuit = null) {
+        def generateCoatingRecipe(String input, boolean hmds = false, Integer circuit = null) {
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid(this.resistName) * 50)
-                .fluidInputs(fluid(this.ebrName) * 100)
+                .fluidInputs(fluid(this.solventName) * 100)
                 .outputs(metaitem(input + ".coated"))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(this.timeUsed)
                 .EUt(VA[this.voltageTier])
 
-            if (circ != null) {coatingRecipe.circuitMeta(circ)}
+            if (circuit != null) {coatingRecipe.circuitMeta(circuit)}
             if (hmds) {coatingRecipe.fluidInputs(fluid('hexamethyldisilazane') * 10)}
             coatingRecipe.buildAndRegister()
         }
         
         def generateExposureRecipe(String input, String nonConsumable = null) {
-            def exposureRecipe = exposureRecipeMap.recipeBuilder()
+            def exposureRecipe = recipemap(exposureRecipeMap).recipeBuilder()
                 .inputs(metaitem(input + ".coated"))
                 .outputs(metaitem(input + ".exposed"))
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -61,7 +62,7 @@ class Lithography {
                     .outputs(metaitem(product))
                     .cleanroom(CleanroomType.CLEANROOM)
                     .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier]);
+                    .EUt(VA[this.voltageTier])
                     .buildAndRegister()
             } else {
                 RESIST_PROCESSOR.recipeBuilder()
@@ -70,23 +71,24 @@ class Lithography {
                     .outputs(metaitem(product))
                     .cleanroom(CleanroomType.CLEANROOM)
                     .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier]);
+                    .EUt(VA[this.voltageTier])
                     .buildAndRegister()
             }
         }
     }
 
     public static final photoresists = [
-        new Photoresist("novolac_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300),
-        new Photoresist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", "HV", recipemap("UV_LIGHT_BOX"), 300, true),
-        new Photoresist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", "EV", recipemap("LASER_ENGRAVER"), 200)
+        new Resist("novolac_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300),
+        new Resist("novolac_liftoff_resist", "novolac_ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300, true),
+        new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "laser_engraver", 200),
+        new Resist("acrylate_resist_mixture", "cyclohexanone", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300)
     ]
 
     public static final electronBeamResists = [
-        new Photoresist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", "EV", recipemap("ELECTRON_BEAM_LITHOGRAPHY"), 1000)
+        new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", EV, "electron_beam_lithography", 1000)
     ]
 
-    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, int circ = null) {
+    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, Integer circ = null) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 photoresist.generateCoatingRecipe(input, hmds, circ)
@@ -96,7 +98,7 @@ class Lithography {
         }
     }
 
-    static void generateElectronBeamLithographyRecipes(String input, String product, String resistNeeded, int circ = null) {
+    static void generateElectronBeamLithographyRecipes(String input, String product, String resistNeeded, Integer circ = null) {
         for (resist in electronBeamResists) {
             if (resist.resistName == resistNeeded) {
                 resist.generateCoatingRecipe(input, false, circ)
@@ -111,22 +113,26 @@ class Lithography {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
-                .outputs(metaitem(input + '.stripped'))
+                .outputs(metaitem(product))
                 .duration(400 * timeMultiplier)
-                .EUt(VA[HV]);
+                .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
-
-            input = input + '.stripped'
         }
 
-        PLASMA_ASHER.recipeBuilder()
+        def ashed = "";
+        def tmp_builder = PLASMA_ASHER.recipeBuilder()
             .inputs(metaitem(input))
             .fluidInputs(fluid('oxygen') * 100)
-            if (rie) {fluidInputs(fluid('carbon_tetrafluoride') * 25); ashed = input + '.ashed'} else {ashed = product}
-            .outputs(metaitem(ashed))
+        if (rie) {
+            tmp_builder = tmp_builder.fluidInputs(fluid('carbon_tetrafluoride') * 25);
+            ashed = input + '.ashed'
+        } else {
+            ashed = product
+        }
+        tmp_builder.outputs(metaitem(ashed))
             .duration(200 * timeMultiplier)
-            .EUt(VA[HV]);
+            .EUt(VA[HV])
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
@@ -136,8 +142,9 @@ class Lithography {
                 .fluidInputs(fluid('ultrapure_water') * 100)
                 .outputs(metaitem(product))
                 .duration(400 * timeMultiplier)
-                .EUt(VA[HV]);
+                .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
+        }
     }
 }

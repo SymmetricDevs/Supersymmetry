@@ -16,6 +16,19 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 class ThirdDegreeMaterials {
+
+    static Material genSolution(int id, String name, Material solute, Material solvent, boolean is_acid) {
+        def builder = new Material.Builder(id, SuSyUtility.susyId(name))
+                .components(solute, solvent)
+                .colorAverage()
+        if (is_acid) {
+            builder = builder.liquid(new FluidBuilder().attributes(FluidAttributes.ACID))
+        } else {
+            builder = builder.liquid();
+        }
+        return builder.build()
+    }
+
     static void register() {
 
         log.infoMC('Registering Third Degree Materials!')
@@ -44,15 +57,11 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        WackerCatalystSolution = new Material.Builder(24004, SuSyUtility.susyId('wacker_catalyst_solution'))
-                .liquid()
-                .components(WackerCatalyst, Water)
-                .colorAverage()
-                .build()
+        // FREE ID: 24004
 
         TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .liquid()
-                .components(TwoEthylanthraquinone, HydrogenPeroxide * 3)
+                .components(TwoEthylanthraquinone, TrisTwoEthylhexylPhosphate, Xylene)
                 .colorAverage()
                 .build()
 
@@ -80,7 +89,11 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 24010
+        BufferedOxideEtchant = new Material.Builder(24010, SuSyUtility.susyId('buffered_oxide_etchant'))
+                .liquid()
+                .components(AmmoniumFluoride * 3, UltrapureHydrofluoricAcid, UltrapureWater * 13)
+                .colorAverage()
+                .build()
 
         SodiumEthoxideSolution = new Material.Builder(24011, SuSyUtility.susyId('sodium_ethoxide_solution'))
                 .liquid()
@@ -640,7 +653,11 @@ class ThirdDegreeMaterials {
 
         FourAminophenolSolution.setFormula('(C6H7NO)(C3H8O)(H2O)2', true)
 
-        // FREE ID: 24102
+        PhotographicEmulsion = new Material.Builder(24102, SuSyUtility.susyId('photographic_emulsion'))
+                .liquid()
+                .components(Gelatin, SilverNitrateSolution * 2, SodiumBromideSolution * 2)
+                .colorAverage()
+                .build()
 
         IsopropylamineSolution = new Material.Builder(24103, SuSyUtility.susyId('isopropylamine_solution'))
                 .liquid()
@@ -896,12 +913,351 @@ class ThirdDegreeMaterials {
 
         OneNaphtholTwoDiazoniumChlorideSolution.setFormula('(C10H8ON2Cl)(NaCl)(H2O)4', true)
 
-        // FREE ID: 24145
-        
+        AluminiumEtchant = new Material.Builder(24145, SuSyUtility.susyId('aluminium_etchant'))
+                .liquid()
+                .components(UltrapureWater, PhosphoricAcid * 12, NitricAcid * 2, AceticAcid * 35)
+                .colorAverage()
+                .build()
+
         BenzenediazoniumFluorideSolution = new Material.Builder(24146, SuSyUtility.susyId('benzenediazonium_fluoride_solution'))
                 .liquid()
                 .components(BenzenediazoniumFluoride, SodiumFluoride, Water * 4)
                 .colorAverage()
                 .build()
-    }
+
+        IsopropylAlcoholSolution = new Material.Builder(24147, SuSyUtility.susyId('isopropyl_alcohol_solution'))
+                .liquid()
+                .components(IsopropylAlcohol, Water)
+                .colorAverage()
+                .build()
+
+        KetoneAlcoholOil = new Material.Builder(24148, SuSyUtility.susyId('ketone_alcohol_oil'))
+                .liquid()
+                .components(Cyclohexanol * 7, Cyclohexanone * 2)
+                .flags(FLAMMABLE)
+                .colorAverage()
+                .build()
+
+        AcetyleneSolution = new Material.Builder(24149, SuSyUtility.susyId('acetylene_solution'))
+                .liquid()
+                .components(NMethylTwoPyrrolidone * 1, Acetylene * 1)
+                .colorAverage()
+                .build()
+
+        BoronExtractionMixture = new Material.Builder(24150, SuSyUtility.susyId('boron_extraction_mixture'))
+                .liquid()
+                .components(TwoEthylOneThreeHexanediol, Kerosene)
+                .colorAverage()
+                .build()
+
+        PolyhydroxystyreneSolution = genSolution(24151, 'polyhydroxystyrene_solution', Polyhydroxystyrene, Dimethylformamide, false)
+        DiTertButylDicarbonateSolution = genSolution(24152, 'di_tert_butyl_dicarbonate_solution', DiTertButylDicarbonate, PotassiumChlorideSolution, false)
+        ParaEthylbenzenesulfonicAcidSolution = genSolution(24153, 'para_ethylbenzenesulfonic_acid_solution', ParaEthylbenzenesulfonicAcid, Water, true)
+        PropyleneGlycolMethylEtherAcetateSolution = genSolution(24154, 'propylene_glycol_methyl_ether_acetate_solution', PropyleneGlycolMethylEtherAcetate, Water, false)
+        EthylLactateSolution = genSolution(24155, 'ethyl_lactate_solution', EthylLactate, Water, false)
+        BisAzideCrosslinkerSolution = genSolution(24156, 'bis_azide_crosslinker_solution', BisAzideCrosslinker, Water, false)
+        ParaAzidobenzaldehydeSolution = genSolution(24157, 'para_azidobenzaldehyde_solution', ParaAzidobenzaldehyde, SaltWater, false)
+        NaphthalenedisulfonicAcidSolution = genSolution(24158, 'naphthalenedisulfonic_acid_solution', Naphthalene, Oleum, true)
+        SodiumNaphtholSulfonateSolution = genSolution(24159, "sodium_naphthol_sulfonate_solution", SodiumOneNaphtholFiveSulfonate, Water, false)
+        GallicAcidSolution = genSolution(24166, 'gallic_acid_solution', GallicAcid, Water, true)
+
+        StyreneAnthracenylMaleimideSolution = new Material.Builder(24167, SuSyUtility.susyId('styrene_anthracenyl_maleimide_solution'))
+                .liquid()
+                .components(StyreneAnthracenylMaleimide, Water, Dimethylformamide)
+                .colorAverage()
+                .build()
+
+        ProtectedPolyhydroxystyreneSolution = new Material.Builder(24168, SuSyUtility.susyId('protected_polyhydroxystyrene_solution'))
+                .liquid()
+                .components(ProtectedPolyhydroxystyrene, Tetrahydrofuran, Pyridine)
+                .colorAverage()
+                .build()
+
+        AcrylateResistMixture = new Material.Builder(24169, SuSyUtility.susyId('acrylate_resist_mixture'))
+                .liquid()
+                .components(MichlersKetone, PolymethylMethacrylate, TrimethylolpropaneTriacrylate, Butanone)
+                .color(0x5794d1)
+                .build()
+
+        DimethylanilineSolution = new Material.Builder(24170, SuSyUtility.susyId('dimethylaniline_solution'))
+                .liquid()
+                .components(Dimethylaniline, Water * 2, SulfuricAcid)
+                .colorAverage()
+                .build()
+
+        NovolacLiftoffResist = new Material.Builder(24171, SuSyUtility.susyId('novolac_liftoff_resist'))
+                .liquid()
+                .components(PhenolicNovolacsResin, EthylLactate, PropyleneGlycolMethylEtherAcetate, BisAzideCrosslinker)
+                .colorAverage()
+                .build()
+
+        ParaDiazoBenzaldehydeChlorideSolution = new Material.Builder(24172, SuSyUtility.susyId('para_diazobenzaldehyde_chloride_solution'))
+                .liquid()
+                .components(Carbon * 7, Nitrogen * 2, Hydrogen * 5, Oxygen * 1, Chlorine, Water * 8)
+                .color(0xad9d58)
+                .build()
+
+        ParaDiazoBenzaldehydeChlorideSolution.setFormula("ClC7H5N2O", true)
+
+        NovolacEBRSolvent = new Material.Builder(24173, SuSyUtility.susyId('novolac_ebr_solvent'))
+                .liquid()
+                .components(PropyleneGlycolMethylEther * 7, PropyleneGlycolMethylEtherAcetate * 3)
+                .colorAverage()
+                .build()
+
+        DiazonaphthoquinoneFiveSulfonateEsterSolution = new Material.Builder(24174, SuSyUtility.susyId('diazonaphthoquinone_five_sulfonate_ester_solution'))
+                .liquid()
+                .components(DiazonaphthoquinoneFiveSulfonateEster, Acetone)
+                .colorAverage()
+                .build()
+
+        NovolacResist = new Material.Builder(24175, SuSyUtility.susyId('novolac_resist'))
+                .liquid()
+                .components(DiazonaphthoquinoneFiveSulfonateEster * 10, PropyleneGlycolMethylEtherAcetate * 88, EthylLactate * 49, PhenolicNovolacsResin * 63)
+                .colorAverage()
+                .build()
+
+        MethanesulfonicAcidSolution = new Material.Builder(24176, SuSyUtility.susyId('methanesulfonic_acid_solution'))
+                .liquid()
+                .components(MethanesulfonicAcid, Water)
+                .colorAverage()
+                .build()
+
+        HexamethyldisilazaneSolution = genSolution(24177, "hexamethyldisilazane_solution", Hexamethyldisilazane, Hexane, false)
+
+        PolyhydroxystyreneResist = new Material.Builder(24178, SuSyUtility.susyId('polyhydroxystyrene_resist'))
+                .liquid()
+                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate, Triethanolamine)
+                .colorAverage()
+                .build()
+
+        StyreneMaleicAnhydrideSolution = new Material.Builder(24179, SuSyUtility.susyId('styrene_maleic_anhydride_solution'))
+                .liquid()
+                .components(Azobisisobutyronitrile, MaleicAnhydride, Styrene, Dimethylformamide)
+                .colorAverage()
+                .build()
+
+        AcidicParaTertButylnitrobenzeneMixture = new Material.Builder(24180, SuSyUtility.susyId('acidic_para_tert_butylnitrobenzene_mixture'))
+                .liquid()
+                .components(TertButylbenzene, NitrationMixture)
+                .colorAverage()
+                .build()
+
+        ParaTertButylnitrobenzeneMixture = new Material.Builder(24181, SuSyUtility.susyId('para_tert_butylnitrobenzene_mixture'))
+                .liquid()
+                .components(TertButylbenzene, NitricAcid)
+                .colorAverage()
+                .build()
+
+        ParaTertbutyliodobenzeneSolution = new Material.Builder(24182, SuSyUtility.susyId('para_tertbutyliodobenzene_solution'))
+                .liquid()
+                .components(ParaTertButylaniline, PotassiumIodide, SodiumNitrite, HydrochloricAcid)
+                .colorAverage()
+                .build()
+
+        AllylAlcoholSolution = new Material.Builder(24183, SuSyUtility.susyId('allyl_alcohol_solution'))
+                .liquid()
+                .components(AllylAlcohol, Salt, Water)
+                .colorAverage()
+                .build()
+
+        BisSulfopropylDisulfideSolution = genSolution(24184, "bis_sulfopropyl_disulfide_solution", BisSodiumSulfopropylDisulfide, Water, false)
+        PropaneOneThreeSultoneSolution = genSolution(24185, "propane_one_three_sultone_solution", PropaneOneThreeSultone, Water, false)
+        NonaflicAcidSolution = genSolution(24186, "nonaflic_acid_solution", NonaflicAcid, HydrofluoricAcid, true)
+
+        KrFBottomAntireflectiveCoating = new Material.Builder(24187, SuSyUtility.susyId('krf_barc'))
+                .liquid()
+                .components(StyreneAnthracenylMaleimide, TripropylamineTriflate, Hexamethoxymethylmelamine, PropyleneGlycolMethylEtherAcetate)
+                .colorAverage()
+                .build()
+
+        ParaAminobenzaldehydeSolution = genSolution(24188, "para_aminobenzaldehyde_solution", ParaAminobenzaldehyde, Water, false)
+        
+        TwoMethylTwoAdamantanolSolution = new Material.Builder(24189, SuSyUtility.susyId('two_methyl_two_adamantanol_solution'))
+                .liquid()
+                .components(TwoMethylTwoAdamantanol * 5, MagnesiumChlorideSolution * 2, Tetrahydrofuran * 3)
+                .colorAverage()
+                .build()
+
+        OxidizedTwoEthylanthraquinoneSolution = new Material.Builder(24190, SuSyUtility.susyId('oxidized_two_ethylanthraquinone_solution'))
+                .liquid()
+                .components(TwoEthylanthraquinone, HydrogenPeroxide, TrisTwoEthylhexylPhosphate, Xylene)
+                .colorAverage()
+                .build()
+
+        ButyraldolSolution = new Material.Builder(24191, SuSyUtility.susyId('butyraldol_solution'))
+                .liquid()
+                .components(Butyraldol, SodiumHydroxide, Water)
+                .colorAverage()
+                .build()
+
+        LithiumDiisopropylamideSolution = new Material.Builder(24192, SuSyUtility.susyId('lithium_diisopropylamide_solution'))
+                .liquid()
+                .components(Lithium, Carbon * 6, Hydrogen * 14, Nitrogen, Tetrahydrofuran * 3)
+                .color(0xa2e0df)
+                .build()
+
+        LithiumDiisopropylamideSolution.setFormula('(C6H14NLi)(C4H8O)3', true)
+
+        TritonXOneHundredSolution = new Material.Builder(24193, SuSyUtility.susyId('triton_x_one_hundred_solution'))
+                .liquid()
+                .components(TritonXOneHundred * 2, SodiumHydroxide * 2, Water * 2, EthyleneOxide)
+                .colorAverage()
+                .build()
+
+        TwoAminoethylHydrogenSulfateSolution = new Material.Builder(24194, SuSyUtility.susyId('two_aminoethyl_hydrogen_sulfate_solution'))
+                .liquid()
+                .components(Ethanolamine, SulfuricAcid, Water)
+                .colorAverage()
+                .build()
+
+        TwoAminoethylHydrogenSulfateSolution.setFormula('(C2H8NSO3)(H2O)', true)
+
+        PolyvinylpyrrolidoneSolution = new Material.Builder(24195, SuSyUtility.susyId('polyvinylpyrrolidone_solution'))
+                .liquid()
+                .components(Polyvinylpyrrolidone, Water)
+                .colorAverage()
+                .build()
+
+        PolyethylenimineSolution = new Material.Builder(24196, SuSyUtility.susyId('polyethylenimine_solution'))
+                .liquid()
+                .components(Polyethylenimine, SulfuricAcid, Water)
+                .colorAverage()
+                .build()
+
+        PolyethyleneGlycolSolution = new Material.Builder(24197, SuSyUtility.susyId('polyethylene_glycol_solution'))
+                .liquid()
+                .components(PolyethyleneGlycol, SodiumHydroxide, Water)
+                .colorAverage()
+                .build()
+
+        NeutralizedPolyethyleneGlycolSolution = new Material.Builder(24198, SuSyUtility.susyId('neutralized_polyethylene_glycol_solution'))
+                .liquid()
+                .components(PolyethyleneGlycol, DisodiumPhosphate, Water * 2)
+                .colorAverage()
+                .build()
+
+        DisproportionatedTolueneMixture = new Material.Builder(24199, SuSyUtility.susyId('disproportionated_toluene_mixture'))
+                .liquid()
+                .components(Toluene * 2, Benzene, Xylene)
+                .colorAverage()
+                .build()
+
+        DimethoxymethaneSolution = new Material.Builder(24200, SuSyUtility.susyId('dimethoxymethane_solution'))
+                .liquid()
+                .components(Dimethoxymethane, SulfuricAcid, Water)
+                .colorAverage()
+                .build()
+
+        DilutedTwoPyrrolidone = new Material.Builder(24201, SuSyUtility.susyId('diluted_two_pyrrolidone'))
+                .liquid()
+                .components(TwoPyrrolidone, Water * 2)
+                .colorAverage()
+                .build()
+
+        NMethylTwoPyrrolidoneSolution = new Material.Builder(24202, SuSyUtility.susyId('n_methyl_two_pyrrolidone_solution'))
+                .liquid()
+                .components(NMethylTwoPyrrolidone, Water * 2)
+                .colorAverage()
+                .build()
+
+        PolysulfoneSolution = new Material.Builder(24203, SuSyUtility.susyId('polysulfone_solution'))
+                .liquid()
+                .components(Polysulfone, NMethylTwoPyrrolidone)
+                .build()
+
+        EthylenimineSolution = new Material.Builder(24204, SuSyUtility.susyId('ethylenimine_solution'))
+                .liquid()
+                .components(Ethylenimine, SodiumSulfate, Water * 2)
+                .colorAverage()
+                .build()
+
+        FluorinatedMethanesulfonicAcidMixture = genSolution(24205, 'fluorinated_methanesulfonic_acid_mixture', MethanesulfonicAcid, HydrogenFluoride, true)
+        
+        SodiumTriflateSolution = new Material.Builder(24206, SuSyUtility.susyId('sodium_triflate_solution'))
+                .liquid()
+                .components(SodiumTriflate, Water)
+                .colorAverage()
+                .build()
+
+        TriflicAcidSolution = new Material.Builder(24207, SuSyUtility.susyId('triflic_acid_solution'))
+                .liquid()
+                .components(TriflicAcid, Water)
+                .colorAverage()
+                .build()
+
+        LacticAcidSolution = new Material.Builder(24208, SuSyUtility.susyId('lactic_acid_solution'))
+                .liquid()
+                .components(LacticAcid, Water)
+                .colorAverage()
+                .build()
+
+        TwoEthylOneThreeHexanediolMixture = genSolution(24209, "two_ethyl_one_three_hexanediol_mixture", TwoEthylOneThreeHexanediol, Water, false)
+
+        TwoEthylanthrahydroquinoneSolution = new Material.Builder(24210, SuSyUtility.susyId('two_ethylanthrahydroquinone_solution'))
+                .liquid()
+                .components(TwoEthylanthraquinone, Hydrogen * 2, TrisTwoEthylhexylPhosphate, Xylene)
+                .colorAverage()
+                .build()
+
+        TwoEthylanthrahydroquinoneSolution.setFormula('(C16H14O2)(C8H17O4P)(C8H18O4P)', true)
+
+        TwoNitrosoOneNaphtholFiveSulfonicAcidSolution = new Material.Builder(24211, SuSyUtility.susyId('two_nitroso_one_naphthol_five_sulfonic_acid_solution'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 6, Nitrogen, Oxygen * 5, Sulfur, SodiumBisulfateSolution, Water)
+                .color(0x5a878c)
+                .build()
+
+        TwoNitrosoOneNaphtholFiveSulfonicAcidSolution.setFormula('(C10H6NO5S)(NaHSO4)(H2O)2', true)
+
+        TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution = new Material.Builder(24212, SuSyUtility.susyId('two_amino_one_naphthalenone_five_sulfonic_acid_solution'))
+                .liquid()
+                .components(Carbon * 20, Hydrogen * 16, Nitrogen * 4, Oxygen * 8, Sulfur * 2, SodiumThiosulfate, SodiumBisulfateSolution * 4, Water)
+                .colorAverage()
+                .build()
+
+        TwoAminoOneNaphthalenoneFiveSulfonicAcidSolution.setFormula('(C10H8N2SO4)2(Na2S2O3)(NaHSO4)4(H2O)5', true)
+
+        DiazonaphthoquinoneFiveSulfonicAcidSolution = new Material.Builder(24213, SuSyUtility.susyId('diazonaphthoquinone_five_sulfonic_acid_solution'))
+                .liquid()
+                .components(DiazonaphthoquinoneFiveSulfonicAcid * 2, SodiumThiosulfate, SodiumBisulfateSolution * 4, Water * 5)
+                .colorAverage()
+                .build()
+
+        DiazonaphthoquinoneFiveSulfonicAcidSolution.setFormula('(?)(C10H7N3O5S)2(Na2S2O3)(NaHSO4)4(H2O)5', true)
+
+        PotassiumTertButoxideSolution = genSolution(24214, 'potassium_tert_butoxide_solution', PotassiumTertButoxide, TertButanol, false)
+
+        LithiumDimethylamideSolution = new Material.Builder(24215, SuSyUtility.susyId('lithium_dimethylamide_solution'))
+                .liquid()
+                .components(Lithium, Carbon * 2, Hydrogen * 6, Nitrogen, DiethylEther)
+                .color(0x8fd4e0)
+                .build()
+
+        LithiumDimethylamideSolution.setFormula('(LiN(CH3)2)(C4H10O)', true)
+
+        TetrakisDimethylamidoHafniumSolution = new Material.Builder(24216, SuSyUtility.susyId('tetrakis_dimethylamido_hafnium_solution'))
+                .liquid()
+                .components(Hafnium, Nitrogen * 4, Carbon * 8, Hydrogen * 24, DiethylEther * 4)
+                .color(0xe0c97a)
+                .build()
+
+        TetrakisDimethylamidoHafniumSolution.setFormula('(Hf(N(CH3)2)4)(C4H10O)4', true)
+
+        LithiumAluminiumHydrideSolution = new Material.Builder(24217, SuSyUtility.susyId('lithium_aluminium_hydride_solution'))
+                .liquid()
+                .components(Lithium, Aluminium, Hydrogen * 4, DiethylEther)
+                .color(0xd4d4b8)
+                .build()
+
+        LithiumAluminiumHydrideSolution.setFormula('(LiAlH4)(C4H10O)', true)
+
+        GuanidiniumChlorideSolution = genSolution(24218, 'guanidinium_chloride_solution', GuanidiniumChloride, Water, false)
+
+        TetrafluoroethaneMixture = new Material.Builder(24219, SuSyUtility.susyId('tetrafluoroethane_mixture'))
+                .gas()
+                .components(Tetrafluoroethane * 4, HydrogenChloride * 3)
+                .colorAverage()
+                .build()
+        }
 }

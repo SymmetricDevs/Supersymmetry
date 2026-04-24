@@ -162,20 +162,12 @@ class UnknownCompositionMaterials {
                 .color(0xacbbac)
                 .build()
 
-        ImpureAcetaldehyde = new Material.Builder(4027, SuSyUtility.susyId('impure_acetaldehyde'))
-                .liquid()
-                .color(0x6e6e6e)
+        AceticAcidAnhydrideMixture = new Material.Builder(4027, SuSyUtility.susyId("acetic_acid_anhydride_mixture"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xc47e70)
                 .build()
 
-        CativaCatalystPreparation = new Material.Builder(4028, SuSyUtility.susyId('cativa_catalyst_preparation'))
-                .liquid()
-                .color(0x9c8275)
-                .build()
-
-        CativaCatalystSolution = new Material.Builder(4029, SuSyUtility.susyId('cativa_catalyst_solution'))
-                .liquid()
-                .color(0x75665e)
-                .build()
+        //FREE IDs: 4028-4029
 
         CrudeCumene = new Material.Builder(4030, SuSyUtility.susyId('crude_cumene'))
                 .liquid()
@@ -406,25 +398,7 @@ class UnknownCompositionMaterials {
                 .color(0x222418)
                 .build()
 
-        ConcentratedBrine = new Material.Builder(4076, SuSyUtility.susyId('concentrated_brine'))
-                .liquid()
-                .color(0xa6a444)
-                .build()
-
-        BoronFreeBrine = new Material.Builder(4078, SuSyUtility.susyId('boron_free_brine'))
-                .liquid()
-                .color(0xa68a44)
-                .build()
-
-        LithiumFreeBrine = new Material.Builder(4079, SuSyUtility.susyId('lithium_free_brine'))
-                .liquid()
-                .color(0xa17a4c)
-                .build()
-
-        ChlorinatedBrine = new Material.Builder(4080, SuSyUtility.susyId('chlorinated_brine'))
-                .liquid()
-                .color(0xa3b560)
-                .build()
+        // Free IDs 4076-4080
 
         ImpureBromine = new Material.Builder(4081, SuSyUtility.susyId('impure_bromine'))
                 .gas(new FluidBuilder().temperature(373))
@@ -444,12 +418,9 @@ class UnknownCompositionMaterials {
         WoodAsh = new Material.Builder(4084, SuSyUtility.susyId('wood_ash'))
                 .dust()
                 .color(0x242221)
-                .build()
-
-        VeryConcentratedBrine = new Material.Builder(4085, SuSyUtility.susyId('very_concentrated_brine'))
-                .liquid()
-                .color(0xb5b226)
-                .build()
+                .build();
+        
+        // Free ID 4085
 
         LangbeiniteLeach = new Material.Builder(4086, SuSyUtility.susyId('langbeinite_leach'))
                 .liquid()
@@ -1283,8 +1254,26 @@ class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x25296e)
                 .build()
+        
+        BoronExtract = new Material.Builder(4247, SuSyUtility.susyId('boron_extract'))
+                .liquid()
+                .color(0xe5b9b5)
+                .build()
 
-        //FREE IDs: 4247-4250
+        BoraxLiquor = new Material.Builder(4248, SuSyUtility.susyId('borax_liquor'))
+                .liquid()
+                .color(0xcea688)
+                .build()
+
+        ColemaniteLiquor = new Material.Builder(4249, SuSyUtility.susyId('colemanite_liquor'))
+                .liquid()
+                .color(0xe0e54e)
+                .build()
+
+        KerniteLiquor = new Material.Builder(4250, SuSyUtility.susyId('kernite_liquor'))
+                .liquid()
+                .color(0xd8b786)
+                .build()
 
         PegmatiteTailingSlurry = new Material.Builder(4251, SuSyUtility.susyId('pegmatite_tailing_slurry'))
                 .liquid()
@@ -1301,11 +1290,27 @@ class UnknownCompositionMaterials {
                 .color(0xadaa32)
                 .build()
 
-        //FREE IDs: 4254-4255
+        MelamineOffgas = new Material.Builder(4254, SuSyUtility.susyId('melamine_offgas'))
+                .gas()
+                .color(0xd0afed)
+                .build()
+
+        // FREE ID: 4255
 
         LimestoneTailingSlurry = new Material.Builder(4256, SuSyUtility.susyId('limestone_tailing_slurry'))
                 .liquid()
                 .color(0x68695d)
+                .build()
+
+        CrudeAzide = new Material.Builder(4257, SuSyUtility.susyId('crude_azide'))
+                .dust()
+                .color(0x2b4b6d)
+                .build()
+
+        CrudeAzideSolution = new Material.Builder(4258, SuSyUtility.susyId('crude_azide_solution'))
+                .liquid()
+                .components(CrudeAzide, Water)
+                .colorAverage()
                 .build()
 
         //FREE IDs: 4257-4258
@@ -1380,7 +1385,25 @@ class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .build()
 
-        // FREE IDs: 4272-4275
+        ClarifiedBoraxLiquor = new Material.Builder(4272, SuSyUtility.susyId('clarified_borax_liquor'))
+                .liquid()
+                .color(0xf7ceaf)
+                .build()
+
+        ClarifiedColemaniteLiquor = new Material.Builder(4273, SuSyUtility.susyId('clarified_colemanite_liquor'))
+                .liquid()
+                .color(0xedefa2)
+                .build()
+
+        ClarifiedKerniteLiquor = new Material.Builder(4274, SuSyUtility.susyId('clarified_kernite_liquor'))
+                .liquid()
+                .color(0xead5b4)
+                .build()
+        
+        BoricAcidConcentrate = new Material.Builder(4275, SuSyUtility.susyId('boric_acid_concentrate'))
+                .liquid()
+                .color(0xfc887e)
+                .build()
 
         CalcinedScheelite = new Material.Builder(4276, SuSyUtility.susyId('calcined_scheelite'))
                 .dust()
@@ -1842,7 +1865,20 @@ class UnknownCompositionMaterials {
 
         MolybdenumDialkyldithiophosphate.setFormula("Mo[(S2P(OR)2]2", true)
 
-        // FREE IDs: 4389-4391
+        LacticAcidBroth = new Material.Builder(4389, SuSyUtility.susyId("lactic_acid_broth"))
+                .liquid()
+                .color(0x1f423d)
+                .build()
+
+        FilteredLacticAcidBroth = new Material.Builder(4390, SuSyUtility.susyId("filtered_lactic_acid_broth"))
+                .liquid()
+                .color(0x567f64)
+                .build()
+
+        SpentSulfoniumPreparationMixture = new Material.Builder(4391, SuSyUtility.susyId("spent_sulfonium_preparation_mixture"))
+                .liquid()
+                .color(0x756e4b)
+                .build()
 
         DinitrobenzeneMixture = new Material.Builder(4392, SuSyUtility.susyId("dinitrobenzene_mixture"))
                 .dust()
@@ -3188,12 +3224,12 @@ class UnknownCompositionMaterials {
                 .color(0xe7e3eb)
                 .build()
         
-        ResolResinMixture = new Material.Builder(4693, SuSyUtility.susyId('resol_resin_mixture'))
+        PhenolicResolResin = new Material.Builder(4693, SuSyUtility.susyId('phenolic_resol_resin'))
                 .liquid()
                 .color(0xad9478)
                 .build()
         
-        ResolResinInfiltrant = new Material.Builder(4694, SuSyUtility.susyId('resol_resin_infiltrant'))
+        ResolInfiltrant = new Material.Builder(4694, SuSyUtility.susyId('resol_infiltrant'))
                 .liquid()
                 .color(0x4e2f0a)
                 .build()
@@ -3313,6 +3349,132 @@ class UnknownCompositionMaterials {
         DelithiatedSalarBrine = new Material.Builder(4717, SuSyUtility.susyId('delithiated_salar_brine'))
                 .liquid()
                 .color(0xd4b97a)
+                .build()
+
+        ChamberAcid = new Material.Builder(4718, SuSyUtility.susyId('chamber_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(333))
+                .color(0xa12828)
+                .build()
+
+        GloverTowerMixture = new Material.Builder(4719, SuSyUtility.susyId('glover_tower_mixture'))
+                .gas()
+                .color(0xa8c830)
+                .build()
+
+        ImpureAceticAcid = new Material.Builder(4720, SuSyUtility.susyId('impure_acetic_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xb4a08c)
+                .build()
+
+        MonsantoProcessCatalyst = new Material.Builder(4721, SuSyUtility.susyId('monsanto_process_catalyst'))
+                .liquid()
+                .color(0xc8a840)
+                .build()
+
+        CativaProcessCatalyst = new Material.Builder(4722, SuSyUtility.susyId('cativa_process_catalyst'))
+                .liquid()
+                .color(0xd4c050)
+                .build()
+
+        AceticAnhydrideCatalyst = new Material.Builder(4723, SuSyUtility.susyId('acetic_anhydride_catalyst'))
+                .dust()
+                .color(0xa284b5)
+                .build()
+
+        CrudeKetoneAlcoholOil = new Material.Builder(4724, SuSyUtility.susyId('crude_ketone_alcohol_oil'))
+                .liquid()
+                .flags(FLAMMABLE)
+                .color(0x80784a)
+                .build()
+
+        NitricAcidMotherLiquor = new Material.Builder(4725, SuSyUtility.susyId('nitric_acid_mother_liquor'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xb39b54)
+                .build()
+
+        DilutedNitricAcidMotherLiquor = new Material.Builder(4726, SuSyUtility.susyId('diluted_nitric_acid_mother_liquor'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xe3db7f)
+                .build()
+
+        AdipicNitricAcidMotherLiquor = new Material.Builder(4727, SuSyUtility.susyId('adipic_nitric_acid_mother_liquor'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xba9447)
+                .build()
+
+        BauxiteLeach = new Material.Builder(4728, SuSyUtility.susyId('bauxite_leach'))
+                .liquid(new FluidBuilder().temperature(450))
+                .color(0x5e2613)
+                .build()
+
+        ChlorosilaneMixture = new Material.Builder(4729, SuSyUtility.susyId('chlorosilane_mixture'))
+                .liquid()
+                .color(0x8be288)
+                .build()
+
+        GaseousChlorosilaneMixture = new Material.Builder(4730, SuSyUtility.susyId('gaseous_chlorosilane_mixture'))
+                .gas()
+                .color(0x68cc90)
+                .build()
+
+        SiliconCVDOffgas = new Material.Builder(4731, SuSyUtility.susyId('silicon_cvd_offgas'))
+                .gas()
+                .color(0xdcf2d2)
+                .build()
+
+        BurnedGas = new Material.Builder(4732, SuSyUtility.susyId('burned_gas'))
+                .gas()
+                .color(0x363d39)
+                .build()
+
+        CorrosiveGas = new Material.Builder(4733, SuSyUtility.susyId('corrosive_gas'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x3f4d45)
+                .build()
+
+        MagneticLiningSlurry = new Material.Builder(4734, SuSyUtility.susyId('magnetic_lining_slurry'))
+                .liquid()
+                .color(0x1a1a1a)
+                .build()
+
+        FluorinatedSulfolaneMixture = new Material.Builder(4735, SuSyUtility.susyId('fluorinated_sulfolane_mixture'))
+                .liquid()
+                .color(0xdeeb52)
+                .build()
+
+        EpoxyMoldingCompound = new Material.Builder(4736, SuSyUtility.susyId('epoxy_molding_compound'))
+                .liquid()
+                .color(0x70553a)
+                .build()
+
+        OligomericPolyesterMixture = new Material.Builder(4737, SuSyUtility.susyId('oligomeric_polyester_mixture'))
+                .liquid()
+                .color(0xe8ffee)
+                .build()
+
+        PolyesterMelt = new Material.Builder(4738, SuSyUtility.susyId('polyester_melt'))
+                .liquid()
+                .color(0xb8dbc1)
+                .build()
+
+        PolyesterResin = new Material.Builder(4739, SuSyUtility.susyId('polyester_resin'))
+                .liquid()
+                .color(0xa5f2b9)
+                .build()
+
+        CopperSuperfillElectrolyte = new Material.Builder(4740, SuSyUtility.susyId('copper_superfill_electrolyte'))
+                .liquid()
+                .color(0xcf9e80)
+                .build()
+
+        StandardCleanOne = new Material.Builder(13196, SuSyUtility.susyId('standard_clean_one'))
+                .liquid()
+                .color(0x2180a3)
+                .build()
+
+        StandardCleanTwo = new Material.Builder(13197, SuSyUtility.susyId('standard_clean_two'))
+                .liquid()
+                .color(0x3749ad)
                 .build()
     }
 }
