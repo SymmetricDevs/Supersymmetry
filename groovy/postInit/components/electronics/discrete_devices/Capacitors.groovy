@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import gregtech.api.tileentity.multiblock.CleanroomType
 
 oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
 oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.film'))
@@ -133,4 +134,56 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem('component.capacitor.edlc'))
     .duration(300)
     .EUt(VA[EV])
+    .buildAndRegister()
+
+//MLCC
+MIXER.recipeBuilder()
+    .inputs(ore('dustBariumTitanate') * 10)
+    .fluidInputs(fluid('polyethylene_glycol') * 10)
+    .fluidInputs(fluid('polyvinyl_alcohol_binder') * 50)
+    .outputs(metaitem('barium_titanate_paste') * 5)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+dopants = ["Yttrium", "Dysprosium", "Holmium"]
+
+for (dopant in dopants) {
+    MIXER.recipeBuilder()
+        .inputs(ore('dustBariumTitanate') * 10)
+        .inputs(ore('dustTinyHighPurity' + dopant))
+        .fluidInputs(fluid('polyethylene_glycol') * 10)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 50)
+        .outputs(metaitem('doped_barium_titanate_paste') * 5)
+        .duration(100)
+        .EUt(VA[MV])
+        .buildAndRegister()
+}
+
+EXTRUDER.recipeBuilder()
+    .inputs(metaitem('barium_titanate_paste'))
+    .nonConsumable(metaitem('shape.extruder.foil'))
+    .outputs(metaitem('sheet.barium_titanate') * 1)
+    .duration(50)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+SCREEN_PRINTER.recipeBuilder()
+    .inputs(metaitem('sheet.barium_titanate') * 1)
+    .nonConsumable(metaitem('screen_printing.mold.mlcc') * 1)
+    .fluidInputs(fluid('nickel_conductive_ink') * 50)
+    .outputs(metaitem('component.bme_cap.layer'))
+    .duration(104)
+    .cleanroom(CleanroomType.CLEANROOM)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+SCREEN_PRINTER.recipeBuilder()
+    .inputs(metaitem('sheet.barium_titanate') * 1)
+    .nonConsumable(metaitem('screen_printing.mold.mlcc') * 1)
+    .fluidInputs(fluid('silver_conductive_ink') * 50)
+    .outputs(metaitem('component.pme_cap.layer'))
+    .duration(104)
+    .cleanroom(CleanroomType.CLEANROOM)
+    .EUt(VA[HV])
     .buildAndRegister()
