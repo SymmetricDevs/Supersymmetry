@@ -114,3 +114,13 @@ HOT_ISOSTATIC_PRESS.recipeBuilder()
     .duration(600)
     .EUt(VA[HV])
     .buildAndRegister()
+
+// Dielectric ceramic casing
+
+SINTERING_OVEN.recipeBuilder()
+        .nonConsumable(.notConsumable(metaitem('shape.mold.block')))
+        .inputs(ore('dustAlumina') * 9)
+        .outputs(metaitem('ceramic_casing'))
+        .EUt(VA[HV])
+        .duration(2000)
+        .buildAndRegister()

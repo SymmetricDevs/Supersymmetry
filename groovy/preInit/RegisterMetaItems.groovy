@@ -197,6 +197,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(403, "engine.spark_plug.palladium")
 
         addItem(500, "sintered_alumina.insulator")
+        addItem(501, "ceramic_casing")
 
         addItem(1000, "chunk.magnetite")
         addItem(1001, "hot_iron_rod")
@@ -281,6 +282,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2804, "circuit.power.mv")
         addItem(2805, "circuit.power.hv")
         addItem(2806, "circuit.power.ev")
+        addItem(2807, "component.thyristor.assembly")
+        addItem(2808, "component.thyristor")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -611,6 +614,25 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8061, "wafer.diode.schottky.step_eight.deposited")
         addItem(8062, "wafer.diode.power.step_none.exposed")
         addItem(8063, "wafer.diode.schottky.step_eight.exposed")
+
+        addItem(8064, "wafer.thyristor")
+        addItem(8065, "wafer.thyristor.step_one")
+        addItem(8066, "wafer.thyristor.step_one.coated")
+        addItem(8067, "wafer.thyristor.step_one.exposed")
+        addItem(8068, "wafer.thyristor.step_two")
+        addItem(8069, "wafer.thyristor.step_three")
+        addItem(8070, "wafer.thyristor.step_four")
+        addItem(8071, "wafer.thyristor.step_four.coated")
+        addItem(8072, "wafer.thyristor.step_four.exposed")
+        addItem(8073, "wafer.thyristor.step_five")
+        addItem(8074, "wafer.thyristor.step_six")
+        addItem(8075, "wafer.thyristor.step_seven")
+        addItem(8076, "wafer.thyristor.step_eight")
+        addItem(8077, "wafer.thyristor.step_eight.coated")
+        addItem(8078, "wafer.thyristor.step_eight.exposed")
+        addItem(8079, "wafer.thyristor.step_nine")
+        addItem(8080, "wafer.thyristor.step_ten")
+        addItem(8081, "wafer.thyristor.step_eleven")
 
         log.infoMC("adding " + toadd_list.size() + " wafer metaitems")
         def start = 8250
