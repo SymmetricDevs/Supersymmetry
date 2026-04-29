@@ -1,5 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import globals.semiconductors.Packaging
+import globals.Sintering
 import gregtech.api.tileentity.multiblock.CleanroomType
 
 oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
@@ -177,6 +179,49 @@ SCREEN_PRINTER.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .EUt(VA[HV])
     .buildAndRegister()
+
+COMPRESSOR.recipeBuilder()
+    .inputs(metaitem('sheet.barium_titanate') * 2)
+    .inputs(metaitem('component.bme_cap.layer') * 10)
+    .outputs(metaitem('component.bme_cap.wafer') * 1)
+    .duration(50)
+    .cleanroom(CleanroomType.CLEANROOM)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+Packaging.generateDicingRecipe("component.bme_cap.wafer", "component.bme_cap.unfired", 32, 100, HV);
+
+Sintering.blankets.each { blanket ->
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(metaitem('component.bme_cap.unfired') * 32)
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('component.bme_cap.fired') * 32)
+        .duration(blanket.duration)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(metaitem('component.pme_cap.unfired') * 32)
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('component.pme_cap.fired') * 32)
+        .duration(blanket.duration)
+        .EUt(VA[HV])
+        .buildAndRegister()
+}
+
+Sintering.nonPlasmaFuels().each { fuel ->
+    Sintering.comburents.each { comburent ->
+        SINTERING_OVEN.recipeBuilder()
+            .inputs(metaitem('component.pme_cap.unfired') * 4)
+            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+            .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+            .outputs(metaitem('component.pme_cap.fired') * 4)
+            .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+            .duration(fuel.duration + comburent.duration)
+            .EUt(VA[MV])
+            .buildAndRegister()
+    }
+}
 
 SCREEN_PRINTER.recipeBuilder()
     .inputs(metaitem('sheet.barium_titanate') * 1)
