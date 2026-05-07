@@ -999,7 +999,7 @@ class ThirdDegreeMaterials {
 
         ParaDiazoBenzaldehydeChlorideSolution.setFormula("ClC7H5N2O", true)
 
-        NovolacEBRSolvent = new Material.Builder(24173, SuSyUtility.susyId('novolac_ebr_solvent'))
+        EBRSolvent = new Material.Builder(24173, SuSyUtility.susyId('ebr_solvent'))
                 .liquid()
                 .components(PropyleneGlycolMethylEther * 7, PropyleneGlycolMethylEtherAcetate * 3)
                 .colorAverage()

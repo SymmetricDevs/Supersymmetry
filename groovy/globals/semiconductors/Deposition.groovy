@@ -189,33 +189,34 @@ class Deposition {
             this.moles = moles
         }
 
-        def generateRecipe(String input, String product, int thickness) {
+        def generateRecipe(String input, String product, double thickness) {
             def tmp = CVD.recipeBuilder()
                 .inputs(metaitem(input));
             for (gas in this.inputs) {
-                tmp.fluidInputs(fluid(gas.key) * (int) (gas.value * thickness / this.molar_volume))
+                tmp.fluidInputs(fluid(gas.key) * (int) (max(gas.value * thickness / this.molar_volume, 1)))
             }
             for (offgas in this.offgases) {
-                tmp.fluidOutputs(fluid(offgas.key) * (int) (offgas.value * thickness / this.molar_volume))
+                tmp.fluidOutputs(fluid(offgas.key) * (int) (max(offgas.value * thickness / this.molar_volume, 1)))
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness / this.molar_volume))
+                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }
     }
 
     public static final cvdRecipes = [
-        "silicon": new cvdRecipe(['silane' : 5, 'hydrogen' : 50], ['hydrogen' : 70], HV, 50, 12, 0.005), // LPCVD in H2 carrier gas
-        "n_doped_silicon": new cvdRecipe(['silane' : 49, 'phosphine' : 1, 'hydrogen' : 501], ['hydrogen' : 700], HV, 500, 12, 0.05), // LPCVD in H2 carrier gas with 2% PH3 for n-type doping
-        "silicon_germanium": new cvdRecipe(['germane' : 5, 'silane' : 5, 'hydrogen' : 100], ['hydrogen' : 140], EV, 200, 13, 0.01), // SiGe LPCVD in H2 carrier gas
-        "silicon_nitride.silane": new cvdRecipe(['silane' : 15, 'ammonia' : 20, 'hydrogen' : 350], ['hydrogen' : 470], HV, 300, 44, 0.005), // Silane LPCVD in H2 carrier gas with NH3
-        "silicon_dioxide.teos": new cvdRecipe(['tetraethyl_orthosilicate' : 5], ['diethyl_ether' : 10], EV, 100, 23, 0.005), // LPCVD via TEOS decomposition
-        "silicon_dioxide.silane": new cvdRecipe(['silane' : 5, 'oxygen' : 20], ['steam' : 10], HV, 50, 23, 0.005),  // LPCVD in O2 carrier gas via silane oxidation
-        "fluorosilicate_glass": new cvdRecipe(['silane' : 15, 'silicon_tetrafluoride' : 5, 'oxygen' : 90], ['corrosive_gas' : 100], HV, 100, 23, 0.01), // PECVD in O2 carrier gas, SiF4 as fluorine source
-        "phosphosilicate_glass": new cvdRecipe(['silane' : 18, 'phosphine' : 2, 'oxygen' : 80], ['steam' : 39], HV, 200, 23, 0.02), // PECVD in O2 carrier gas, PH3 as phosphorus source
+        "silicon": new cvdRecipe(['silane' : 5, 'hydrogen' : 50], ['hydrogen' : 70], HV, 10, 12, 0.005), // LPCVD in H2 carrier gas
+        "n_doped_silicon": new cvdRecipe(['silane' : 49, 'phosphine' : 1, 'hydrogen' : 501], ['hydrogen' : 700], HV, 100, 12, 0.05), // LPCVD in H2 carrier gas with 2% PH3 for n-type doping
+        "silicon_germanium": new cvdRecipe(['germane' : 5, 'silane' : 5, 'hydrogen' : 100], ['hydrogen' : 140], EV, 20, 13, 0.01), // SiGe LPCVD in H2 carrier gas
+        "silicon_nitride.silane": new cvdRecipe(['silane' : 15, 'ammonia' : 20, 'hydrogen' : 350], ['hydrogen' : 470], HV, 50, 44, 0.005), // Silane LPCVD in H2 carrier gas with NH3
+        "silicon_dioxide.teos": new cvdRecipe(['tetraethyl_orthosilicate' : 5], ['diethyl_ether' : 10], EV, 5, 23, 0.005), // LPCVD via TEOS decomposition
+        "silicon_dioxide.silane": new cvdRecipe(['silane' : 5, 'oxygen' : 20], ['steam' : 10], HV, 15, 23, 0.005),  // LPCVD in O2 carrier gas via silane oxidation
+        "fluorosilicate_glass": new cvdRecipe(['silane' : 15, 'silicon_tetrafluoride' : 5, 'oxygen' : 90], ['corrosive_gas' : 100], HV, 20, 23, 0.01), // PECVD in O2 carrier gas, SiF4 as fluorine source
+        "phosphosilicate_glass": new cvdRecipe(['silane' : 18, 'phosphine' : 2, 'oxygen' : 80], ['steam' : 39], HV, 40, 23, 0.02), // PECVD in O2 carrier gas, PH3 as phosphorus source
         "tungsten": new cvdRecipe(['tungsten_hexafluoride' : 5, 'hydrogen' : 50], ['corrosive_gas' : 50], EV, 100, 10, 0.005), //  LPCVD via WF6 reduction in H2 carrier gas
+        "titanium_nitride": new cvdRecipe(['titanium_tetrachloride' : 3, 'ammonia' : 4], ['corrosive_gas' : 60], ['nitrogen' : 48], HV, 80, 12, 0.003) // CVD via TiCl4 and NH3 reaction, with N2 carrier
 
     ]
 
@@ -236,13 +237,13 @@ class Deposition {
             this.purgeGas = purgeGas
         }
 
-        def generateRecipe(String input, String product, int thickness) {
+        def generateRecipe(String input, String product, double thickness) {
             def tmp = ALD.recipeBuilder()
                 .inputs(metaitem(input));
             for (gas in this.inputs) {
-                tmp.fluidInputs(fluid(gas.key) * (int) (gas.value * thickness / this.molar_volume))
+                tmp.fluidInputs(fluid(gas.key) * (int) (max(gas.value * thickness / this.molar_volume, 1)))
                 for (purge in this.purgeGas) {
-                    tmp.fluidInputs(fluid(purge.key) * (int) (purge.value * thickness / this.molar_volume))
+                    tmp.fluidInputs(fluid(purge.key) * (int) (max(purge.value * thickness / this.molar_volume, 1)))
                 }
             }
             for (offgas in this.offgases) {
@@ -250,7 +251,7 @@ class Deposition {
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness / this.molar_volume))
+                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }
