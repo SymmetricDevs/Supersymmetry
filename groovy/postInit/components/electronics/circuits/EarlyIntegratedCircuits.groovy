@@ -359,7 +359,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
 // Power Integrated Circuits
 
-    // BJT PMIC Fabrication
+    // BJT PIC Fabrication
 
     // N+ collector formation
     Lithography.generatePhotolithographyRecipes('wafer.silicon.p_doped', 'wafer.bjt_pic_base.step_one', 'novolacs_resist', 'mask_set.bjt_pic_base', true)
@@ -408,52 +408,72 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     Lithography.generatePhotolithographyRecipes('wafer.bjt_pic_base.step_seventeen', 'wafer.bjt_lpic.step_one', 'novolacs_resist', 'mask_set.bjt_lpic', true)
     Doping.generateIonImplantationRecipes('wafer.bjt_lpic.step_one', 'wafer.bjt_lpic.step_two', 400, 'boron_trifluoride')
     Lithography.generateResistStrippingRecipes('wafer.bjt_lpic.step_two', 'wafer.bjt_lpic.step_three', 1, false, true)
-    Doping.generateDriveInRecipe('wafer.bjt_lpic.step_three', 'wafer.bjt_lpic.step_four', 50)
-    
+
+    // Polysilicon resistor formation (shared by LPIC and PIC)
+
+    // Deposit polysilicon, dope it to adjust sheet resistance, then pattern. Drive-in is deferred so it can co-anneal with the PNP body implant.
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_lpic.step_three', 'wafer.bjt_lpic.step_four', 0.5, 'silicon')
+    Doping.generateIonImplantationRecipes('wafer.bjt_lpic.step_four', 'wafer.bjt_lpic.step_five', 100, 'phosphine')
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_five', 'wafer.bjt_lpic.step_six', 'novolacs_resist', 'mask_set.bjt_lpic', true)
+    Etching.generateWetEtchingRecipe('wafer.bjt_lpic.step_six', 'wafer.bjt_lpic.step_seven', 'silicon', 400, false)
+    Lithography.generateResistStrippingRecipes('wafer.bjt_lpic.step_seven', 'wafer.bjt_lpic.step_eight', 1, false, true)
+
+    // Combined drive-in: activates both the lateral PNP P+ implant and the poly resistor phosphorus in one thermal step
+    Doping.generateDriveInRecipe('wafer.bjt_lpic.step_eight', 'wafer.bjt_lpic.step_nine', 100)
+
     // LPIC BEOL
 
     // Deposit dielectric
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_lpic.step_four', 'wafer.bjt_lpic.step_five', 3.0, 'phosphosilicate_glass')
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_five', 'wafer.bjt_lpic.step_six', 'novolacs_resist', 'mask_set.bjt_lpic', true)
-    Etching.generateWetEtchingRecipe('wafer.bjt_lpic.step_six', 'wafer.bjt_lpic.step_seven', 'silicon_dioxide', 400, false)
-    Lithography.generateResistStrippingRecipes('wafer.bjt_lpic.step_seven', 'wafer.bjt_lpic.step_eight', 1, false, true)
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_lpic.step_nine', 'wafer.bjt_lpic.step_ten', 3.0, 'phosphosilicate_glass')
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_ten', 'wafer.bjt_lpic.step_eleven', 'novolacs_resist', 'mask_set.bjt_lpic', true)
+    Etching.generateWetEtchingRecipe('wafer.bjt_lpic.step_eleven', 'wafer.bjt_lpic.step_twelve', 'silicon_dioxide', 400, false)
+    Lithography.generateResistStrippingRecipes('wafer.bjt_lpic.step_twelve', 'wafer.bjt_lpic.step_thirteen', 1, false, true)
 
     // Deposit diffusion barrier
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_lpic.step_eight', 'wafer.bjt_lpic.step_nine', 1.0, 'titanium_nitride') // Needs PECVD; not specified
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_lpic.step_thirteen', 'wafer.bjt_lpic.step_fourteen', 1.0, 'titanium_nitride')
 
-    // Sputter deposit aluminium and etch to form interconnects 
-    Deposition.generateSputteringRecipe('wafer.bjt_lpic.step_nine', 'wafer.bjt_lpic.step_ten', [ 'aluminium' : 398, 'copper' : 2 ])
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_ten', 'wafer.bjt_lpic.step_eleven', 'novolacs_resist', 'mask_set.bjt_lpic', true)
-    Etching.generateWetEtchingRecipe('wafer.bjt_lpic.step_eleven', 'wafer.bjt_lpic.step_twelve', 'aluminium', 400, false)
-    Lithography.generateResistStrippingRecipes('wafer.bjt_lpic.step_twelve', 'wafer.bjt_lpic.step_thirteen', 1, false, true)
-    Deposition.generateSinteringRecipe('wafer.bjt_lpic.step_thirteen', 'wafer.bjt_lpic.step_fourteen', 400, HV)
+    // Sputter deposit aluminium and etch to form interconnects
+    Deposition.generateSputteringRecipe('wafer.bjt_lpic.step_fourteen', 'wafer.bjt_lpic.step_fifteen', [ 'aluminium' : 398, 'copper' : 2 ])
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_fifteen', 'wafer.bjt_lpic.step_sixteen', 'novolacs_resist', 'mask_set.bjt_lpic', true)
+    Etching.generateWetEtchingRecipe('wafer.bjt_lpic.step_sixteen', 'wafer.bjt_lpic.step_seventeen', 'aluminium', 400, false)
+    Lithography.generateResistStrippingRecipes('wafer.bjt_lpic.step_seventeen', 'wafer.bjt_lpic.step_eighteen', 1, false, true)
+    Deposition.generateSinteringRecipe('wafer.bjt_lpic.step_eighteen', 'wafer.bjt_lpic.step_nineteen', 400, HV)
 
     // Packaging
-    Packaging.generateDicingRecipe('wafer.bjt_lpic.step_fourteen', 'die.bjt_lpic', 16, 400, HV)
+    Packaging.generateDicingRecipe('wafer.bjt_lpic.step_nineteen', 'die.bjt_lpic', 16, 400, HV)
     Packaging.generateWireBondingRecipe('die.bjt_lpic', 'die.bjt_lpic.bonded', 'gold', 50, HV)
 
-    // PIC BEOL Extension
+    // PIC BEOL Extension (branches from LPIC after via etch, before metallization, to allow integrated Schottky formation)
 
-    // Etch BEOL to support PWM logic
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_ten', 'wafer.bjt_pic.step_one', 'novolacs_resist', 'mask_set.bjt_pic', true)
-    Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_one', 'wafer.bjt_pic.step_two', 'aluminium', 400, false)
-    Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_two', 'wafer.bjt_pic.step_three', 1, false, true)
+    // Schottky barrier formation: blanket Pt sputter, sinter to form PtSi on exposed silicon, strip unreacted Pt with aqua regia
+    Deposition.generateSputteringRecipe('wafer.bjt_lpic.step_thirteen', 'wafer.bjt_pic.step_one', 100, 'platinum')
+    Deposition.generateSinteringRecipe('wafer.bjt_pic.step_one', 'wafer.bjt_pic.step_two', 200, HV)
+    Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_two', 'wafer.bjt_pic.step_three', 'platinum', 50, false)
 
-    // Interlayer dielectric deposition
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_pic.step_three', 'wafer.bjt_pic.step_four', 3.0, 'phosphosilicate_glass')
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_four', 'wafer.bjt_pic.step_five', 'novolacs_resist', 'mask_set.bjt_pic', true)
-    Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_five', 'wafer.bjt_pic.step_six', 'silicon_dioxide', 400, false)
-    Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_six', 'wafer.bjt_pic.step_seven', 1, false, true)
+    // Diffusion barrier
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_pic.step_three', 'wafer.bjt_pic.step_four', 1.0, 'titanium_nitride')
 
-    // Deposit second BEOL layer
-    Deposition.generateSputteringRecipe('wafer.bjt_pic.step_seven', 'wafer.bjt_pic.step_eight', [ 'aluminium' : 398, 'copper' : 2 ])
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_eight', 'wafer.bjt_pic.step_nine', 'novolacs_resist', 'mask_set.bjt_pic', true)
-    Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_nine', 'wafer.bjt_pic.step_ten', 'aluminium', 400, false)
-    Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_ten', 'wafer.bjt_pic.step_eleven', 1, false, true)
-    Deposition.generateSinteringRecipe('wafer.bjt_pic.step_eleven', 'wafer.bjt_pic.step_twelve', 400, HV)
+    // First metal layer (M1)
+    Deposition.generateSputteringRecipe('wafer.bjt_pic.step_four', 'wafer.bjt_pic.step_five', [ 'aluminium' : 398, 'copper' : 2 ])
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_five', 'wafer.bjt_pic.step_six', 'novolacs_resist', 'mask_set.bjt_pic', true)
+    Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_six', 'wafer.bjt_pic.step_seven', 'aluminium', 400, false)
+    Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_seven', 'wafer.bjt_pic.step_eight', 1, false, true)
+
+    // Interlayer dielectric (ILD)
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_pic.step_eight', 'wafer.bjt_pic.step_nine', 3.0, 'phosphosilicate_glass')
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_nine', 'wafer.bjt_pic.step_ten', 'novolacs_resist', 'mask_set.bjt_pic', true)
+    Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_ten', 'wafer.bjt_pic.step_eleven', 'silicon_dioxide', 400, false)
+    Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_eleven', 'wafer.bjt_pic.step_twelve', 1, false, true)
+
+    // Second metal layer (M2)
+    Deposition.generateSputteringRecipe('wafer.bjt_pic.step_twelve', 'wafer.bjt_pic.step_thirteen', [ 'aluminium' : 398, 'copper' : 2 ])
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_thirteen', 'wafer.bjt_pic.step_fourteen', 'novolacs_resist', 'mask_set.bjt_pic', true)
+    Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_fourteen', 'wafer.bjt_pic.step_fifteen', 'aluminium', 400, false)
+    Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_fifteen', 'wafer.bjt_pic.step_sixteen', 1, false, true)
+    Deposition.generateSinteringRecipe('wafer.bjt_pic.step_sixteen', 'wafer.bjt_pic.step_seventeen', 400, HV)
 
     // Packaging
-    Packaging.generateDicingRecipe('wafer.bjt_pic.step_twelve', 'die.bjt_pic', 4, 400, HV)
+    Packaging.generateDicingRecipe('wafer.bjt_pic.step_seventeen', 'die.bjt_pic', 4, 400, HV)
     Packaging.generateWireBondingRecipe('die.bjt_pic', 'die.bjt_pic.bonded', 'gold', 50, HV)
 
 ASSEMBLER.recipeBuilder()

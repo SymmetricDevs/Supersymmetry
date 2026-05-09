@@ -199,4 +199,4 @@ def generateCMOSFabrication(String componentName, int circ) {
     Packaging.generateWireBondingRecipe('die.' + componentName, 'die.' + componentName + '.bonded', 'gold', 50, HV)
 }
 
-generateCMOSFabrication('cmos_cpu', 1)
+generateCMOSFabrication('cmos_cpu', 1) // Includes on die SRAM
