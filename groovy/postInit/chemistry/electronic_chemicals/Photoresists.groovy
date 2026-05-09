@@ -354,7 +354,7 @@ DT.recipeBuilder()
             .notConsumable(ore('dustAcrylicCatalyst'))
             .fluidInputs(fluid('acetylene') * 1000)
             .fluidInputs(fluid('carbon_monoxide') * 1000)
-            .fluidInputs(fluid('water') * 1000)
+            .fluidInputs(fluid('distilled_water') * 1000)
             .fluidOutputs(fluid('acrylic_acid') * 1000)
             .duration(200)
             .EUt(VA[MV])
@@ -771,9 +771,9 @@ DT.recipeBuilder()
         .EUt(VA[LV]) 
         .buildAndRegister()
 
-// Acrylate-based photoresists (DUV/ArF, 193 nm)
+// Methacrylate-based photoresists (DUV/ArF, 193 nm)
 
-    // Di(4-t-butyl)phenyliodinium nonaflate
+    // Bis(4-t-butyl)phenyliodinium nonaflate
         
         // Nonaflate source
 
@@ -889,14 +889,14 @@ DT.recipeBuilder()
             .fluidInputs(fluid('para_tertbutyliodobenzene') * 500)
             .fluidInputs(fluid('nonaflic_acid') * 500)
             .inputs(ore('dustTinyMetaChloroperoxybenzoicAcid'))
-            .outputs(metaitem('dustDiFourTertButylphenyliodoniumNonaflate') * 42)
+            .outputs(metaitem('dustBisFourTertButylphenyliodoniumNonaflate') * 42)
             .duration(200)
             .EUt(VA[MV])
             .buildAndRegister()
 
-    // Acrylate polymer
+    // Methacrylate terpolymer
 
-        // 2-methyl-2-adamantyl methacrylate (MAMA)
+        // 2-methyl-2-adamantyl methacrylate (MAMA, acid labile group, dissolution switch)
 
         FIXED_BR.recipeBuilder()
             .notConsumable(ore('catalystBedSupportedPlatinum'))
@@ -948,12 +948,12 @@ DT.recipeBuilder()
             .fluidInputs(fluid('methacrylic_acid') * 1000)
             .fluidInputs(fluid('sulfuric_acid') * 1000)
             .fluidOutputs(fluid('two_methyl_two_adamantyl_methacrylate') * 1000)
-            .fluidOutputs(fluid('diluted_sulfuric_acid') * 200)
-            .duration(10)
+            .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+            .duration(200)
             .EUt(VA[LV])
             .buildAndRegister()
 
-        // γ-butyrolactone methacrylate
+        // γ-butyrolactone methacrylate (dissolution inhibitor)
 
             // α-hydroxy-γ-butyrolactone
 
@@ -974,6 +974,98 @@ DT.recipeBuilder()
                 .EUt(VA[LV])
                 .buildAndRegister()
 
+            // Methacrylation
+
+            BR.recipeBuilder()
+                .fluidInputs(fluid('alpha_hydroxy_gamma_butyrolactone') * 1000)
+                .fluidInputs(fluid('methacrylic_acid') * 1000)
+                .fluidInputs(fluid('sulfuric_acid') * 1000)
+                .fluidOutputs(fluid('alpha_methacryloxy_gamma_butyrolactone_solution') * 3000)
+                .duration(200)
+                .EUt(VA[LV])
+                .buildAndRegister()
+
+            DISTILLERY.recipeBuilder()
+                .fluidInputs(fluid('alpha_methacryloxy_gamma_butyrolactone_solution') * 3000)
+                .fluidOutputs(fluid('alpha_methacryloxy_gamma_butyrolactone') * 1000)
+                .fluidOutputs(fluid('acidic_wastewater') * 2000)
+                .duration(100)
+                .EUt(VA[LV])
+                .buildAndRegister()
+
+        // 1-adamantyl methacrylate (etch resistance)
+
+        BR.recipeBuilder()
+            .notConsumable(metaitem('lamp.mercury.lp'))
+            .inputs(ore('dustAdamantane'))
+            .fluidInputs(fluid('bromine') * 2000)
+            .outputs(metaitem('dustOneBromoadamantane'))
+            .fluidOutputs(fluid('hydrogen_bromide') * 1000)
+            .duration(100)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .inputs(ore('dustOneBromoadamantane'))
+            .fluidInputs(fluid('ultrapure_water') * 2000)
+            .outputs(metaitem('dustOneHydroxyadamantane'))
+            .fluidOutputs(fluid('hydrobromic_acid') * 1000)
+            .duration(100)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .inputs(ore('dustOneHydroxyadamantane'))
+            .fluidInputs(fluid('methacrylic_acid') * 1000)
+            .fluidInputs(fluid('sulfuric_acid') * 1000)
+            .outputs(metaitem('dustOneAdamantylMethacrylate'))
+            .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+            .duration(200)
+            .EUt(VA[LV])
+            .buildAndRegister()
+
+        // Final assembly of acrylate copolymer
+
+        FBR.recipeBuilder()
+            .fluidInputs(fluid('isopropyl_alcohol') * 50)
+            .fluidInputs(fluid('hydrogen_sulfide') * 50)
+            .fluidOutputs(fluid('isopropyl_thiol') * 50)
+            .fluidOutputs(fluid('water') * 50)
+            .duration(20)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        POLYMERIZATION_TANK.recipeBuilder()
+            .inputs(ore('dustTinyAzobisisobutyronitrile'))
+            .fluidInputs(fluid('butanone') * 1000)
+            .fluidInputs(fluid('isopropyl_thiol') * 50)
+            .fluidInputs(fluid('alpha_methacryloxy_gamma_butyrolactone') * 1000)
+            .inputs(ore('dustTwoMethylTwoAdamantylMethacrylate'))
+            .inputs(ore('dustOneAdamantylMethacrylate'))
+            .fluidOutputs(fluid('methacrylate_copolymer_solution') * 1000)
+            .duration(400)
+            .EUt(VA[LV])
+            .buildAndRegister()
+
+        CENTRIFUGE.recipeBuilder()
+            .fluidInputs(fluid('methacrylate_copolymer_solution') * 1000)
+            .fluidInputs(fluid('hexane') * 1000)
+            .outputs(metaitem('dustMethacrylateCopolymer'))
+            .fluidOutputs(fluid('wastewater') * 2000)
+            .duration(200)
+            .EUt(VA[LV])
+            .buildAndRegister()
+
+        BLENDER.recipeBuilder()
+            .inputs(ore('dustMethacrylateCopolymer'))
+            .inputs(ore('dustBisFourTertButylphenyliodoniumNonaflate') * 3)
+            .fluidInputs(fluid('trioctylamine') * 40)
+            .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 40000)
+            .fluidInputs(fluid('propylene_glycol_methyl_ether') * 15000)
+            .fluidOutputs(fluid('methacrylate_resist') * 55000)
+            .duration(500)
+            .EUt(VA[EV])
+            .buildAndRegister()
 
 // EUV-optimized photoresists (tin plasma, 13.5 nm)
 

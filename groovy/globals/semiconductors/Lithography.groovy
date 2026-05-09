@@ -80,8 +80,9 @@ class Lithography {
     public static final photoresists = [
         new Resist("novolac_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300),
         new Resist("novolac_liftoff_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300, true),
-        new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "laser_engraver", 200),
-        new Resist("acrylate_resist_mixture", "cyclohexanone", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300)
+        new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "uv_light_box", 200),
+        new Resist("polyhydroxystyrene_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200),
+        new Resist("methacrylate_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300)
     ]
 
     public static final electronBeamResists = [

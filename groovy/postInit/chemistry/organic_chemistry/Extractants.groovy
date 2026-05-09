@@ -680,7 +680,7 @@ import static gregtech.api.GTValues.*
 
     //source for trimethylpentylphosphinic acid WO2013083047A1
     BR.recipeBuilder()
-        .notConsumable(metaitem('emitter.lv'))
+        .notConsumable(metaitem('lamp.mercury.lp'))
         .fluidInputs(fluid('sodium_hypophosphite_solution') * 1000)
         .fluidInputs(fluid('acetone') * 100)
         .fluidInputs(fluid('diisobutylene') * 500) //material
@@ -735,7 +735,7 @@ import static gregtech.api.GTValues.*
     //C6H14S + C6H13Br -> C12H26S + HBr
 
     CSTR.recipeBuilder()
-        .notConsumable(metaitem('emitter.lv'))
+        .notConsumable(metaitem('lamp.mercury.lp'))
         .fluidInputs(fluid('one_hexene') * 50)
         .fluidInputs(fluid('hydrogen_bromide') * 50)
         .fluidOutputs(fluid('one_bromohexane') * 50)
@@ -764,6 +764,15 @@ import static gregtech.api.GTValues.*
         .fluidInputs(fluid('one_bromohexane') * 1000)
         .outputs(metaitem('dustSodiumBromide') * 2)
         .fluidOutputs(fluid('one_hexanethiol') * 1000)
+        .duration(20)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    FBR.recipeBuilder()
+        .fluidInputs(fluid('n_hexanol') * 50)
+        .fluidInputs(fluid('hydrogen_sulfide') * 50)
+        .fluidOutputs(fluid('one_hexanethiol') * 50)
+        .fluidOutputs(fluid('water') * 50)
         .duration(20)
         .EUt(VA[MV])
         .buildAndRegister()

@@ -2537,7 +2537,7 @@ class SuSyMaterials {
     public static Material AlphaBromoGammaButyrolactone
     public static Material BisSodiumSulfopropylDisulfide
     public static Material PropaneOneThreeSultone
-    public static Material DiFourTertButylphenyliodoniumNonaflate
+    public static Material BisFourTertButylphenyliodoniumNonaflate
     public static Material Hexamethoxymethylmelamine
     public static Material Melamine
     public static Material PerfluorobutanesulfonylFluoride
@@ -2570,6 +2570,12 @@ class SuSyMaterials {
     public static Material LacticAcid
     public static Material TriflicAcid
     public static Material TetrakisDimethylamidoHafnium
+    public static Material OneBromoadamantane
+    public static Material OneHydroxyadamantane
+    public static Material OneAdamantylMethacrylate
+    public static Material AlphaMethacryloxyGammaButyrolactone
+    public static Material IsopropylThiol
+    public static Material MethacrylateCopolymer
 
     // Third Degree Materials
 
@@ -2783,6 +2789,9 @@ class SuSyMaterials {
     public static Material TetrakisDimethylamidoHafniumSolution
     public static Material LithiumAluminiumHydrideSolution
     public static Material TetrafluoroethaneMixture
+    public static Material AlphaMethacryloxyGammaButyrolactoneSolution
+    public static Material MethacrylateCopolymerSolution
+    public static Material MethacrylateResist
 
     // Thermodynamics Materials
 

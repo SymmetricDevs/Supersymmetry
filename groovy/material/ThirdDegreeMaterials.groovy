@@ -57,7 +57,11 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 24004
+        AlphaMethacryloxyGammaButyrolactoneSolution = new Material.Builder(24004, SuSyUtility.susyId('alpha_methacryloxy_gamma_butyrolactone_solution'))
+                .liquid()
+                .components(AlphaMethacryloxyGammaButyrolactone, Water, SulfuricAcid)
+                .colorAverage()
+                .build()
 
         TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .liquid()
@@ -1027,9 +1031,11 @@ class ThirdDegreeMaterials {
 
         PolyhydroxystyreneResist = new Material.Builder(24178, SuSyUtility.susyId('polyhydroxystyrene_resist'))
                 .liquid()
-                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate, Triethanolamine)
+                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, Triethanolamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
                 .colorAverage()
                 .build()
+
+        PolyhydroxystyreneResist.setFormula('(?)(C6H10O3)3(C4H10O2)', true)
 
         StyreneMaleicAnhydrideSolution = new Material.Builder(24179, SuSyUtility.susyId('styrene_maleic_anhydride_solution'))
                 .liquid()
@@ -1259,5 +1265,20 @@ class ThirdDegreeMaterials {
                 .components(Tetrafluoroethane * 4, HydrogenChloride * 3)
                 .colorAverage()
                 .build()
+
+        MethacrylateCopolymerSolution = new Material.Builder(24220, SuSyUtility.susyId('methacrylate_copolymer_solution'))
+                .liquid()
+                .components(MethacrylateCopolymer, PropyleneGlycolMethylEtherAcetate)
+                .colorAverage()
+                .build()
+
+        MethacrylateResist = new Material.Builder(24221, SuSyUtility.susyId('methacrylate_resist'))
+                .liquid()
+                .components(MethacrylateCopolymer, BisFourTertButylphenyliodoniumNonaflate, Trioctylamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
+                .colorAverage()
+                .build()
+
+        MethacrylateResist.setFormula('(?)(C6H12O3)3(C4H10O2)', true)
+
         }
 }

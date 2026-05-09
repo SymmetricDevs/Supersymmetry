@@ -23,7 +23,7 @@ BCR.recipeBuilder()
     .buildAndRegister()
 
 BCR.recipeBuilder()
-    .notConsumable(metaitem('emitter.lv'))
+    .notConsumable(metaitem('lamp.mercury.lp'))
     .fluidInputs(fluid('one_one_dichloroethane') * 50)
     .fluidInputs(fluid('hydrogen_chloride') * 50)
     .fluidOutputs(fluid('one_one_one_trichloroethane') * 50)

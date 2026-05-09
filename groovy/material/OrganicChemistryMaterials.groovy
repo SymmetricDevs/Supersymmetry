@@ -3663,7 +3663,13 @@ class OrganicChemistryMaterials {
 
         NonaflicAcid.setFormula('C4F9SO3H', true)
 
-        // FREE ID: 15585
+        OneBromoadamantane = new Material.Builder(15585, SuSyUtility.susyId('one_bromoadamantane'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 15, Bromine)
+                .color(0xc4b58c)
+                .build()
+
+        OneBromoadamantane.setFormula('C10H15Br', true)
 
         TwoAminoanthracene = new Material.Builder(15588, SuSyUtility.susyId('two_aminoanthracene'))
                 .dust()
@@ -3727,13 +3733,13 @@ class OrganicChemistryMaterials {
                 
         // FREE ID: 15602
 
-        DiFourTertButylphenyliodoniumNonaflate = new Material.Builder(15603, SuSyUtility.susyId('di_four_tert_butylphenyliodonium_nonaflate'))
+        BisFourTertButylphenyliodoniumNonaflate = new Material.Builder(15603, SuSyUtility.susyId('bis_four_tert_butylphenyliodonium_nonaflate'))
                 .dust()
                 .components(ParaTertbutyliodobenzene, NonaflicAcid)
                 .colorAverage()
                 .build()
                 
-        DiFourTertButylphenyliodoniumNonaflate.setFormula("(C20H26I)(C2F9SO3)")
+        BisFourTertButylphenyliodoniumNonaflate.setFormula("(C20H26I)(C2F9SO3)")
 
         // FREE ID: 15604
 
@@ -3751,7 +3757,11 @@ class OrganicChemistryMaterials {
                 .color(0x86b8d9)
                 .build()
 
-        // FREE ID: 15608
+        AlphaMethacryloxyGammaButyrolactone = new Material.Builder(15608, SuSyUtility.susyId('alpha_methacryloxy_gamma_butyrolactone'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 10, Oxygen * 4)
+                .color(0x648b8c)
+                .build()
         
         PerfluorobutanesulfonylFluoride = new Material.Builder(15609, SuSyUtility.susyId('perfluorobutanesulfonyl_fluoride'))
                 .liquid()
@@ -3767,7 +3777,13 @@ class OrganicChemistryMaterials {
                 .color(0x6e7a66)
                 .build()
 
-        // FREE ID: 15611
+        OneHydroxyadamantane = new Material.Builder(15611, SuSyUtility.susyId('one_hydroxyadamantane'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 16, Oxygen)
+                .color(0x9bb8a8)
+                .build()
+
+        OneHydroxyadamantane.setFormula('C10H15OH', true)
 
         TwoMethylTwoAdamantylMethacrylate = new Material.Builder(15612, SuSyUtility.susyId('two_methyl_two_adamantyl_methacrylate'))
                 .liquid()
@@ -3775,7 +3791,11 @@ class OrganicChemistryMaterials {
                 .color(0x5a967f)
                 .build()
 
-        // FREE ID: 15613
+        OneAdamantylMethacrylate = new Material.Builder(15613, SuSyUtility.susyId('one_adamantyl_methacrylate'))
+                .liquid()
+                .components(Carbon * 14, Hydrogen * 20, Oxygen * 2)
+                .color(0x65a08e)
+                .build()
 
         TwoAminoanthraquinone = new Material.Builder(15614, SuSyUtility.susyId('two_aminoanthraquinone'))
                 .dust()
@@ -3788,8 +3808,14 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 8, Hydrogen * 18, Oxygen * 2)
                 .color(0x95a7cf)
                 .build()
-        
-        // FREE ID: 15616
+
+        IsopropylThiol = new Material.Builder(15616, SuSyUtility.susyId('isopropyl_thiol'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 8, Sulfur)
+                .color(0xddd86e)
+                .build()
+
+        IsopropylThiol.setFormula('(CH3)2CHSH', true)
 
         GuanidiniumChloride = new Material.Builder(15656, SuSyUtility.susyId('guanidinium_chloride'))
                 .dust()
@@ -3797,7 +3823,15 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 15657-15658
+        MethacrylateCopolymer = new Material.Builder(15657, SuSyUtility.susyId('methacrylate_copolymer'))
+                .dust()
+                .components(OneAdamantylMethacrylate, TwoMethylTwoAdamantylMethacrylate, AlphaMethacryloxyGammaButyrolactone)
+                .color(0x4fdba2)
+                .build()
+
+        MethacrylateCopolymer.setFormula('[(C14H20O2)(C15H22O2)(C4H6O2)]n', true)
+
+        // FREE ID: 15658
 
         TrisTwoEthylhexylPhosphate = new Material.Builder(15659, SuSyUtility.susyId('tris_two_ethylhexyl_phosphate'))
                 .liquid()

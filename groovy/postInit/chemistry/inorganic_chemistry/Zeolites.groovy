@@ -223,7 +223,7 @@ ION_EXCHANGE.recipeBuilder()
 // ZSM-5 (pentasil high SAR zeolite, methanol to gasoline, various catalysts)
 
 BR.recipeBuilder()
-    .notConsumable(metaitem('emitter.lv'))
+    .notConsumable(metaitem('lamp.mercury.lp'))
     .notConsumable(fluid('hydrogen_peroxide_solution') * 50)
     .fluidInputs(fluid('hydrobromic_acid') * 1000)
     .fluidInputs(fluid('propene') * 1000)
