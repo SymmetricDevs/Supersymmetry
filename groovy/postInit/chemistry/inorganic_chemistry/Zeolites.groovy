@@ -227,17 +227,17 @@ BR.recipeBuilder()
     .notConsumable(fluid('hydrogen_peroxide_solution') * 50)
     .fluidInputs(fluid('hydrobromic_acid') * 1000)
     .fluidInputs(fluid('propene') * 1000)
-    .fluidOutputs(fluid('n_bromopropane') * 1000)
+    .fluidOutputs(fluid('one_bromopropane') * 1000)
     .fluidOutputs(fluid('water') * 1000)
-    .duration(5)
+    .duration(200)
     .EUt(VA[MV])
     .buildAndRegister();
 
 BR.recipeBuilder()
-    .fluidInputs(fluid('n_bromopropane') * 1000)
+    .fluidInputs(fluid('one_bromopropane') * 1000)
     .fluidInputs(fluid('tripropylamine') * 1000)
     .outputs(metaitem('dustTetrapropylammoniumBromide'))
-    .duration(5)
+    .duration(200)
     .EUt(VA[MV])
     .buildAndRegister();
 

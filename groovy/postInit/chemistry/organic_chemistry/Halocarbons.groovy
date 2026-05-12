@@ -27,6 +27,52 @@ BCR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Fluorotelomers
+
+    // Pentafluoroiodoethane building block
+
+    ROASTER.recipeBuilder()
+        .inputs(ore('dustAnyPurityIodine'))
+        .fluidInputs(fluid('fluorine') * 5000)
+        .fluidOutputs(fluid('iodine_pentafluoride') * 1000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustAnyPurityIodine') * 2)
+        .fluidInputs(fluid('tetrafluoroethylene') * 5000)
+        .fluidInputs(fluid('iodine_pentafluoride') * 1000)
+        .fluidOutputs(fluid('pentafluoroiodoethane') * 1000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Nonafluorobutyl iodide
+
+    CSTR.recipeBuilder()
+        .notConsumable(metaitem('lamp.mercury.lp'))
+        .fluidInputs(fluid('pentafluoroiodoethane') * 50)
+        .fluidInputs(fluid('tetrafluoroethylene') * 50)
+        .fluidOutputs(fluid('nonafluorobutyl_iodide') * 50)
+        .duration(10)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+// Fluorinated solvents
+
+    // Novec/HFE-7100
+
+    LCR.recipeBuilder()
+        .inputs(ore('dustSodiumMethoxide') * 6)
+        .notConsumable(fluid('dimethylformamide') * 1000)
+        .fluidInputs(fluid('nonafluorobutyl_iodide') * 1000)
+        .outputs(metaitem('dustSodiumIodide') * 2)
+        .fluidOutputs(fluid('methoxyperfluorobutane') * 1000)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
 // Refridgerants
 
     // Chlorofluoromethanes (I eated the ozone layer)

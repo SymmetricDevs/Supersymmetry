@@ -2202,7 +2202,7 @@ class SuSyMaterials {
     public static Material ParaXylene
     public static Material MetaParaXyleneMixture
     public static Material Tripropylamine
-    public static Material NBromopropane
+    public static Material OneBromobutane
     public static Material TetrapropylammoniumBromide
     public static Material Propionaldehyde
     public static Material Triethylenetetramine
@@ -2252,7 +2252,7 @@ class SuSyMaterials {
     public static Material TriphenylphosphineOxide
     public static Material Methyltrichlorosilane
     public static Material Methyldichlorosilane
-    public static Material Chlorotrimethylsilane
+    public static Material Trimethylsilane
     public static Material DilutedSodiumCarbonateSolution
     public static Material DimethylTerephthalate
     public static Material PolyethyleneTerephthalate
@@ -2518,7 +2518,7 @@ class SuSyMaterials {
     public static Material Polyhydroxystyrene
     public static Material MichlersKetone
     public static Material Sulfolene
-    public static Material TripropylamineTriflate
+    public static Material TetrapropylammoniumTriflate
     public static Material MethylmagnesiumChlorideSolution
     public static Material Hexamethyldisilazane
     public static Material ParaTertbutyliodobenzene
@@ -2575,7 +2575,9 @@ class SuSyMaterials {
     public static Material OneAdamantylMethacrylate
     public static Material AlphaMethacryloxyGammaButyrolactone
     public static Material IsopropylThiol
-    public static Material MethacrylateCopolymer
+    public static Material MethacrylateTerpolymer
+    public static Material ParaTertButylnitrobenzeneMixture
+
 
     // Third Degree Materials
 
@@ -2755,7 +2757,6 @@ class SuSyMaterials {
     public static Material StyreneAnthracenylMaleimideSolution
     public static Material StyreneMaleicAnhydrideSolution
     public static Material AcidicParaTertButylnitrobenzeneMixture
-    public static Material ParaTertButylnitrobenzeneMixture
     public static Material ParaTertbutyliodobenzeneSolution
     public static Material AllylAlcoholSolution
     public static Material BisSulfopropylDisulfideSolution
@@ -2790,7 +2791,7 @@ class SuSyMaterials {
     public static Material LithiumAluminiumHydrideSolution
     public static Material TetrafluoroethaneMixture
     public static Material AlphaMethacryloxyGammaButyrolactoneSolution
-    public static Material MethacrylateCopolymerSolution
+    public static Material MethacrylateTerpolymerSolution
     public static Material MethacrylateResist
 
     // Thermodynamics Materials

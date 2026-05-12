@@ -57,11 +57,7 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        AlphaMethacryloxyGammaButyrolactoneSolution = new Material.Builder(24004, SuSyUtility.susyId('alpha_methacryloxy_gamma_butyrolactone_solution'))
-                .liquid()
-                .components(AlphaMethacryloxyGammaButyrolactone, Water, SulfuricAcid)
-                .colorAverage()
-                .build()
+        // FREE ID: 24004
 
         TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .liquid()
@@ -984,7 +980,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         DimethylanilineSolution = new Material.Builder(24170, SuSyUtility.susyId('dimethylaniline_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Dimethylaniline, Water * 2, SulfuricAcid)
                 .colorAverage()
                 .build()
@@ -1022,7 +1018,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         MethanesulfonicAcidSolution = new Material.Builder(24176, SuSyUtility.susyId('methanesulfonic_acid_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(MethanesulfonicAcid, Water)
                 .colorAverage()
                 .build()
@@ -1044,19 +1040,15 @@ class ThirdDegreeMaterials {
                 .build()
 
         AcidicParaTertButylnitrobenzeneMixture = new Material.Builder(24180, SuSyUtility.susyId('acidic_para_tert_butylnitrobenzene_mixture'))
-                .liquid()
-                .components(TertButylbenzene, NitrationMixture)
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(ParaTertButylnitrobenzeneMixture, SulfuricAcid, Water)
                 .colorAverage()
                 .build()
 
-        ParaTertButylnitrobenzeneMixture = new Material.Builder(24181, SuSyUtility.susyId('para_tert_butylnitrobenzene_mixture'))
-                .liquid()
-                .components(TertButylbenzene, NitricAcid)
-                .colorAverage()
-                .build()
+        // FREE ID: 24181
 
         ParaTertbutyliodobenzeneSolution = new Material.Builder(24182, SuSyUtility.susyId('para_tertbutyliodobenzene_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(ParaTertButylaniline, PotassiumIodide, SodiumNitrite, HydrochloricAcid)
                 .colorAverage()
                 .build()
@@ -1073,9 +1065,11 @@ class ThirdDegreeMaterials {
 
         KrFBottomAntireflectiveCoating = new Material.Builder(24187, SuSyUtility.susyId('krf_barc'))
                 .liquid()
-                .components(StyreneAnthracenylMaleimide, TripropylamineTriflate, Hexamethoxymethylmelamine, PropyleneGlycolMethylEtherAcetate)
+                .components(StyreneAnthracenylMaleimide, TetrapropylammoniumTriflate, Hexamethoxymethylmelamine, PropyleneGlycolMethylEtherAcetate)
                 .colorAverage()
                 .build()
+
+        KrFBottomAntireflectiveCoating.setFormula('(?)(C7H8O2)', true)
 
         ParaAminobenzaldehydeSolution = genSolution(24188, "para_aminobenzaldehyde_solution", ParaAminobenzaldehyde, Water, false)
         
@@ -1266,15 +1260,15 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        MethacrylateCopolymerSolution = new Material.Builder(24220, SuSyUtility.susyId('methacrylate_copolymer_solution'))
+        MethacrylateTerpolymerSolution = new Material.Builder(24220, SuSyUtility.susyId('methacrylate_terpolymer_solution'))
                 .liquid()
-                .components(MethacrylateCopolymer, PropyleneGlycolMethylEtherAcetate)
+                .components(MethacrylateTerpolymer, PropyleneGlycolMethylEtherAcetate)
                 .colorAverage()
                 .build()
 
         MethacrylateResist = new Material.Builder(24221, SuSyUtility.susyId('methacrylate_resist'))
                 .liquid()
-                .components(MethacrylateCopolymer, BisFourTertButylphenyliodoniumNonaflate, Trioctylamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
+                .components(MethacrylateTerpolymer, BisFourTertButylphenyliodoniumNonaflate, Trioctylamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
                 .colorAverage()
                 .build()
 

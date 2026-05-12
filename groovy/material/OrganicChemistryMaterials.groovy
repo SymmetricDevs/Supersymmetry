@@ -412,16 +412,16 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        Chlorotrimethylsilane = new Material.Builder(15063, SuSyUtility.susyId("chlorotrimethylsilane"))
+        Trimethylsilane = new Material.Builder(15063, SuSyUtility.susyId('trimethylsilane'))
                 .liquid()
-                .components(Carbon * 3, Hydrogen * 9, Silicon * 1, Chlorine * 1)
+                .components(Carbon * 3, Hydrogen * 9, Silicon * 1)
                 .color(0xd9dddc)
                 .build()
 
-        Chlorotrimethylsilane.setFormula("(CH3)3SiCl", true)
+        Trimethylsilane.setFormula("(CH3)3SiH", true)
 
         Methyldichlorosilane = new Material.Builder(15064, SuSyUtility.susyId("methyldichlorosilane"))
-                .liquid()
+                .gas()
                 .components(Carbon * 1, Hydrogen * 4, Chlorine * 2, Silicon * 1)
                 .color(0xd9dddc)
                 .build()
@@ -1559,7 +1559,7 @@ class OrganicChemistryMaterials {
                 .color(0x90b846)
                 .build()
 
-        NBromopropane = new Material.Builder(15246, SuSyUtility.susyId('n_bromopropane'))
+        OneBromobutane = new Material.Builder(15246, SuSyUtility.susyId('one_bromobutane'))
                 .liquid()
                 .components(Carbon * 3, Hydrogen * 7, Bromine * 1)
                 .color(0x9e833f)
@@ -3749,7 +3749,11 @@ class OrganicChemistryMaterials {
                 .color(0x5b91a8)
                 .build()
 
-        // FREE ID: 15606
+        ParaTertButylnitrobenzeneMixture = new Material.Builder(15606, SuSyUtility.susyId('para_tert_butylnitrobenzene_mixture'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 13, Nitrogen, Oxygen * 2)
+                .colorAverage()
+                .build()
 
         Melamine = new Material.Builder(15607, SuSyUtility.susyId('melamine'))
                 .dust()
@@ -3823,13 +3827,13 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        MethacrylateCopolymer = new Material.Builder(15657, SuSyUtility.susyId('methacrylate_copolymer'))
+        MethacrylateTerpolymer = new Material.Builder(15657, SuSyUtility.susyId('methacrylate_terpolymer'))
                 .dust()
                 .components(OneAdamantylMethacrylate, TwoMethylTwoAdamantylMethacrylate, AlphaMethacryloxyGammaButyrolactone)
                 .color(0x4fdba2)
                 .build()
 
-        MethacrylateCopolymer.setFormula('[(C14H20O2)(C15H22O2)(C4H6O2)]n', true)
+        MethacrylateTerpolymer.setFormula('[(C14H20O2)(C15H22O2)(C4H6O2)]n', true)
 
         // FREE ID: 15658
 
@@ -4000,13 +4004,13 @@ class OrganicChemistryMaterials {
 
         SodiumTriflate.setFormula("CF3SO3Na", true)
 
-        TripropylamineTriflate = new Material.Builder(15687, SuSyUtility.susyId('tripropylamine_triflate'))
+        TetrapropylammoniumTriflate = new Material.Builder(15687, SuSyUtility.susyId('tetrapropylammonium_triflate'))
                 .dust()
-                .components(Tripropylamine, TriflicAcid)
+                .components(Carbon * 13, Hydrogen * 28, Nitrogen, Sulfur, Oxygen * 3)
                 .colorAverage()
                 .build()
 
-        TripropylamineTriflate.setFormula("(C9H22N)(CF3SO3)", true)
+        TetrapropylammoniumTriflate.setFormula("(C12H28N)(CF3SO3)", true)
 
         TetrakisDimethylamidoHafnium = new Material.Builder(15688, SuSyUtility.susyId('tetrakis_dimethylamido_hafnium'))
                 .liquid(new FluidBuilder().temperature(302))

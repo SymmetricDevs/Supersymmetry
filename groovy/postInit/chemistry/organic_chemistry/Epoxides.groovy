@@ -103,6 +103,24 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Glycidol
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('allyl_alcohol') * 50)
+    .fluidInputs(fluid('peracetic_acid_solution') * 50)
+    .fluidOutputs(fluid('glycidol_solution') * 150)
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+DT.recipeBuilder()
+    .fluidInputs(fluid('glycidol_solution') * 3000)
+    .fluidOutputs(fluid('glycidol') * 1000)
+    .fluidOutputs(fluid('diluted_acetic_acid') * 2000)
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 // meta-chloroperoxybenzoic acid (mCPBA) for epoxide synthesis
 
 CSTR.recipeBuilder()

@@ -117,3 +117,108 @@ DT.recipeBuilder()
     .duration(200)
     .EUt(VA[MV])
     .buildAndRegister()
+
+// Novec FC-4430 Fluorosurfactant
+
+    // Fluoromonomer
+
+    BCR.recipeBuilder()
+        .fluidInputs(fluid('ethylene_oxide') * 50)
+        .fluidInputs(fluid('methylamine') * 50)
+        .fluidinputs(fluid('distilled_water') * 50)
+        .fluidOutputs(fluid('n_methylethanolamine_solution') * 100)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('n_methylethanolamine_solution') * 100)
+        .fluidOutputs(fluid('n_methylethanolamine') * 50)
+        .fluidOutputs(fluid('water') * 50)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    LCR.recipeBuilder()
+        .notConsumable(fluid('acetonitrile') * 1000)
+        .inputs(ore('dustPotassiumCarbonate') * 3)
+        .fluidInputs(fluid('perfluorobutanesulfonyl_fluoride') * 1000)
+        .fluidInputs(fluid('n_methylethanolamine') * 1000)
+        .outputs(metaitem('dustPotassiumFluoride') * 2)
+        .outputs(metaitem('dustNHydroxyethylNMethylPerfluorobutanesulfonamide'))
+        .fluidOutputs(fluid('carbon_dioxide') * 500)
+        .duration(400)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('acrylic_acid') * 50)
+        .fluidInputs(fluid('thionyl_chloride') * 50)
+        .fluidOutputs(fluid('acryloyl_chloride') * 50)
+        .fluidOutputs(fluid('hydrogen_chloride_sulfur_dioxide_mixture') * 100)
+        .duration(8)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    LCR.recipeBuilder()
+        .notConsumable(fluid('pyridine') * 1000)
+        .inputs(ore('dustNHydroxyethylNMethylPerfluorobutanesulfonamide'))
+        .fluidInputs(fluid('acryloyl_chloride') * 1000)
+        .outputs(metaitem('dustNAcryloxyNMethylPerfluorobutanesulfonamide'))
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Crosslinker
+
+    LCR.recipeBuilder()
+        .notConsumable(fluid('pyridine') * 1000)
+        .fluidInputs(fluid('polyethylene_glycol') * 5000) // avg chain length: 5 ethylene glycol units
+        .fluidInputs(fluid('acryloyl_chloride') * 1000)
+        .fluidOutputs(fluid('polyethylene_glycol_diacrylate') * 1000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Chain transfer agent
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSodiumHydrosulfide'))
+        .fluidInputs(fluid('glycidol') * 1000)
+        .fluidInputs(fluid('distilled_water') * 2000)
+        .fluidOutputs(fluid('thioglycerol_solution') * 2000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('thioglycerol_solution') * 2000)
+        .outputs(metaitem('dustSodiumHydroxide') * 3)
+        .fluidOutputs(fluid('thioglycerol') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Polymerization
+
+    POLYMERIZATION_TANK.recipeBuilder()
+        .inputs(ore('dustTinyAzobisisobutyronitrile'))
+        .inputs(ore('dustNAcryloxyNMethylPerfluorobutanesulfonamide'))
+        .fluidInputs(fluid('polyethylene_glycol_diacrylate') * 100)
+        .fluidInputs(fluid('thioglycerol') * 300)
+        .fluidInputs(fluid('butanone') * 1000)
+        .fluidOutputs(fluid('nonionic_fluorosurfactant_solution') * 2000)
+        .duration(400)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('nonionic_fluorosurfactant_solution') * 2000)
+        .fluidOutputs(fluid('nonionic_fluorosurfactant') * 1000)
+        .fluidOutputs(fluid('butanone') * 1000)
+        .duration(40)
+        .EUt(VA[LV])
+        .buildAndRegister()

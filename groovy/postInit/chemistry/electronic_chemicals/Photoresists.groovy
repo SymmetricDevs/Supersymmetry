@@ -674,7 +674,7 @@ DT.recipeBuilder()
         .fluidInputs(fluid('propylene_glycol_methyl_ether') * 9900) // Cosolvent
         .fluidOutputs(fluid('polyhydroxystyrene_resist') * 42000)
         .duration(500)
-        .EUt(VA[EV])
+        .EUt(VA[HV])
         .buildAndRegister()
 
 // KrF bottom antireflective coating (BARC)
@@ -749,26 +749,45 @@ DT.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-    // Thermal acid generator: tripropylammonium triflate
+    // Thermal acid generator: tetrapropylammonium triflate
 
-    BR.recipeBuilder()
-        .fluidInputs(fluid('tripropylamine') * 1000)
-        .fluidInputs(fluid('triflic_acid') * 1000)
-        .outputs(metaitem('dustTripropylamineTriflate') * 40)
+    ION_EXCHANGE.recipeBuilder()
+        .notConsumable(metaitem('beads.strong_basic_anion_exchange'))
+        .inputs(ore('dustTetrapropylammoniumBromide'))
+        .fluidInputs(fluid('distilled_water') * 1000)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('tetrapropylammonium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('sodium_bromide_solution') * 1000)
         .duration(200)
-        .EUt(VA[LV]) 
-        .buildAndRegister()
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('tetrapropylammonium_hydroxide_solution') * 50)
+        .fluidInputs(fluid('triflic_acid') * 50)
+        .fluidOutputs(fluid('tetrapropylammonium_triflate_solution') * 100)
+        .duration(10)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+    DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('tetrapropylammonium_triflate_solution') * 2000)
+        .outputs(metaitem('dustTetrapropylammoniumTriflate') * 49)
+        .fluidOutputs(fluid('water') * 2000)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister();
 
     // Final mixing
 
     BLENDER.recipeBuilder()
         .inputs(ore('dustTinyStyreneAnthracenylMaleimide') * 3)
-        .inputs(ore('dustTripropylamineTriflate'))
+        .inputs(ore('dustTetrapropylammoniumTriflate'))
         .inputs(ore('dustHexamethoxymethylmelamine') * 8)
         .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 25500)
         .fluidOutputs(fluid('krf_barc') * 26000)
-        .duration(520)
-        .EUt(VA[LV]) 
+        .duration(500)
+        .EUt(VA[HV]) 
         .buildAndRegister()
 
 // Methacrylate-based photoresists (DUV/ArF, 193 nm)
@@ -896,6 +915,17 @@ DT.recipeBuilder()
 
     // Methacrylate terpolymer
 
+        // Methacryloyl chloride
+
+        CSTR.recipeBuilder()
+            .fluidInputs(fluid('methacrylic_acid') * 50)
+            .fluidInputs(fluid('thionyl_chloride') * 50)
+            .fluidOutputs(fluid('methacryloyl_chloride') * 50)
+            .fluidOutputs(fluid('hydrogen_chloride_sulfur_dioxide_mixture') * 100)
+            .duration(8)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
         // 2-methyl-2-adamantyl methacrylate (MAMA, acid labile group, dissolution switch)
 
         FIXED_BR.recipeBuilder()
@@ -943,14 +973,14 @@ DT.recipeBuilder()
             .EUt(VA[MV])
             .buildAndRegister()
 
-        BR.recipeBuilder()
+        LCR.recipeBuilder()
+            .notConsumable(fluid('pyridine') * 1000)
             .inputs(ore('dustTwoMethylTwoAdamantanol'))
-            .fluidInputs(fluid('methacrylic_acid') * 1000)
-            .fluidInputs(fluid('sulfuric_acid') * 1000)
+            .fluidInputs(fluid('methacryloyl_chloride') * 1000)
             .fluidOutputs(fluid('two_methyl_two_adamantyl_methacrylate') * 1000)
-            .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+            .fluidOutputs(fluid('hydrogen_chloride') * 1000)
             .duration(200)
-            .EUt(VA[LV])
+            .EUt(VA[MV])
             .buildAndRegister()
 
         // γ-butyrolactone methacrylate (dissolution inhibitor)
@@ -976,21 +1006,14 @@ DT.recipeBuilder()
 
             // Methacrylation
 
-            BR.recipeBuilder()
+            LCR.recipeBuilder() // combined reaction & distillation
+                .notConsumable(fluid('pyridine') * 1000)
                 .fluidInputs(fluid('alpha_hydroxy_gamma_butyrolactone') * 1000)
-                .fluidInputs(fluid('methacrylic_acid') * 1000)
-                .fluidInputs(fluid('sulfuric_acid') * 1000)
-                .fluidOutputs(fluid('alpha_methacryloxy_gamma_butyrolactone_solution') * 3000)
-                .duration(200)
-                .EUt(VA[LV])
-                .buildAndRegister()
-
-            DISTILLERY.recipeBuilder()
-                .fluidInputs(fluid('alpha_methacryloxy_gamma_butyrolactone_solution') * 3000)
+                .fluidInputs(fluid('methacryloyl_chloride') * 1000)
                 .fluidOutputs(fluid('alpha_methacryloxy_gamma_butyrolactone') * 1000)
-                .fluidOutputs(fluid('acidic_wastewater') * 2000)
-                .duration(100)
-                .EUt(VA[LV])
+                .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+                .duration(200)
+                .EUt(VA[MV])
                 .buildAndRegister()
 
         // 1-adamantyl methacrylate (etch resistance)
@@ -1014,14 +1037,14 @@ DT.recipeBuilder()
             .EUt(VA[MV])
             .buildAndRegister()
 
-        BR.recipeBuilder()
+        LCR.recipeBuilder()
+            .notConsumable(fluid('pyridine') * 1000)
             .inputs(ore('dustOneHydroxyadamantane'))
-            .fluidInputs(fluid('methacrylic_acid') * 1000)
-            .fluidInputs(fluid('sulfuric_acid') * 1000)
+            .fluidInputs(fluid('methacryloyl_chloride') * 1000)
             .outputs(metaitem('dustOneAdamantylMethacrylate'))
-            .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+            .fluidOutputs(fluid('hydrogen_chloride') * 1000)
             .duration(200)
-            .EUt(VA[LV])
+            .EUt(VA[MV])
             .buildAndRegister()
 
         // Final assembly of acrylate copolymer
@@ -1050,14 +1073,14 @@ DT.recipeBuilder()
         CENTRIFUGE.recipeBuilder()
             .fluidInputs(fluid('methacrylate_copolymer_solution') * 1000)
             .fluidInputs(fluid('hexane') * 1000)
-            .outputs(metaitem('dustMethacrylateCopolymer'))
+            .outputs(metaitem('dustMethacrylateTerpolymer'))
             .fluidOutputs(fluid('wastewater') * 2000)
             .duration(200)
             .EUt(VA[LV])
             .buildAndRegister()
 
         BLENDER.recipeBuilder()
-            .inputs(ore('dustMethacrylateCopolymer'))
+            .inputs(ore('dustMethacrylateTerpolymer'))
             .inputs(ore('dustBisFourTertButylphenyliodoniumNonaflate') * 3)
             .fluidInputs(fluid('trioctylamine') * 40)
             .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 40000)
@@ -1066,6 +1089,148 @@ DT.recipeBuilder()
             .duration(500)
             .EUt(VA[EV])
             .buildAndRegister()
+
+// ArF TARC/topcoat for immersion lithography
+
+    // HFIP-methacrylate
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedAluminiumChloride'))
+        .fluidInputs(fluid('hexafluoropropylene_oxide') * 50)
+        .fluidOutputs(fluid('hexafluoroacetone') * 50)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedPlatinum'))
+        .fluidInputs(fluid('hexafluoroacetone') * 50)
+        .fluidInputs(fluid('hydrogen') * 100)
+        .fluidOutputs(fluid('hexafluoroisopropanol') * 50)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    LCR.recipeBuilder()
+        .notConsumable(fluid('triethylamine') * 1000)
+        .fluidInputs(fluid('hexafluoroisopropanol') * 1000)
+        .fluidInputs(fluid('methacryloyl_chloride') * 1000)
+        .fluidOutputs(fluid('hexafluoroisopropyl_methacrylate') * 1000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // TFE-methacrylate
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedPlatinum'))
+        .fluidInputs(fluid('triflic_acid') * 50)
+        .fluidInputs(fluid('hydrogen') * 200)
+        .fluidOutputs(fluid('trifluoroethanol') * 50)
+        .duration(10)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    LCR.recipeBuilder()
+        .notConsumable(fluid('triethylamine') * 1000)
+        .fluidInputs(fluid('trifluoroethanol') * 1000)
+        .fluidInputs(fluid('methacryloyl_chloride') * 1000)
+        .fluidOutputs(fluid('trifluoroethyl_methacrylate') * 1000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Fluorinated methacrylate polymer synthesis
+
+    POLYMERIZATION_TANK.recipeBuilder()
+        .inputs(ore('dustTinyAzobisisobutyronitrile'))
+        .fluidInputs(fluid('tetrahydrofuran') * 1000)
+        .fluidInputs(fluid('isopropyl_thiol') * 50)
+        .fluidInputs(fluid('hexafluoroisopropyl_methacrylate') * 1000)
+        .fluidInputs(fluid('trifluoroethyl_methacrylate') * 1000)
+        .fluidOutputs(fluid('fluorinated_methacrylate_copolymer_solution') * 1000)
+        .duration(400)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('fluorinated_methacrylate_copolymer_solution') * 1000)
+        .fluidInputs(fluid('ultrapure_water') * 1000)
+        .outputs(metaitem('dustFluorinatedMethacrylateCopolymer'))
+        .fluidOutputs(fluid('wastewater') * 2000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustTinyFluorinatedMethacrylateCopolymer'))
+        .fluidInputs(fluid('nonionic_fluorosurfactant') * 10)
+        .fluidInputs(fluid('methoxyperfluorobutane') * 9000)
+        .fluidOutputs(fluid('arf_tarc') * 9000)
+        .duration(500)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+// ArF BARC
+
+    // Benzyl methacrylate
+
+    BR.recipeBuilder()
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidInputs(fluid('benzyl_alcohol') * 1000)
+        .fluidInputs(fluid('methacrylic_acid') * 1000)
+        .fluidOutputs(fluid('benzyl_methacrylate') * 1000)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 2000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Hydroxypropyl methacrylate
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('methacrylic_acid') * 50)
+        .fluidInputs(fluid('propylene_oxide' * 50))
+        .fluidOutputs(fluid('hydroxypropyl_methacrylate') * 50)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // BARC polymer synthesis
+
+    POLYMERIZATION_TANK.recipeBuilder()
+        .inputs(ore('dustTinyAzobisisobutyronitrile'))
+        .fluidInputs(fluid('butanone') * 1000)
+        .fluidInputs(fluid('isopropyl_thiol') * 50)
+        .fluidInputs(fluid('benzyl_methacrylate') * 1500)
+        .fluidInputs(fluid('hydroxypropyl_methacrylate') * 500)
+        .fluidOutputs(fluid('absorbing_methacrylate_copolymer_solution') * 1000)
+        .duration(400)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('absorbing_methacrylate_copolymer_solution') * 1000)
+        .fluidInputs(fluid('hexane') * 1000)
+        .outputs(metaitem('dustAbsorbingMethacrylateCopolymer'))
+        .fluidOutputs(fluid('wastewater') * 2000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // BARC final formulation
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustSmallAbsorbingMethacrylateCopolymer') * 3)
+        .inputs(ore('dustTetrapropylammoniumTriflate') * 2)
+        .inputs(ore('dustHexamethoxymethylmelamine') * 10)
+        .fluidInputs(fluid('nonionic_fluorosurfactant') * 20)
+        .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 64000)
+        .fluidOutputs(fluid('arf_barc') * 64000)
+        .duration(500)
+        .EUt(VA[EV])
+        .buildAndRegister()
 
 // EUV-optimized photoresists (tin plasma, 13.5 nm)
 

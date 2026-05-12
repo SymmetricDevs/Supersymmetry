@@ -24,7 +24,7 @@ DT.recipeBuilder()
     .buildAndRegister()
 
 //Methyltrichlorosilane can be used as a water repellent when put on a surface with water
-//Chlorotrimethylsilane has some uses but mostly in reactions that are not relevant to this
+//Chlorotrimethylsilane (TMSCl) has some uses but mostly in reactions that are not relevant to this
 
 // PDMS & Silicone Rubber
 
