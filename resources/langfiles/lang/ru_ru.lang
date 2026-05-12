@@ -2454,7 +2454,7 @@ metaitem.shape.mold.rod.name=Форма (стержень)
 metaitem.shape.mold.long_rod.name=Форма (длинный стержень)
 metaitem.shape.mold.ring.name=Форма (Кольцо)
 
-metaitem.assemblymanganesephosphide.name=Сборка фосфида марганца
+metaitem.tubemanganesephosphide.name=Сборка фосфида марганца
 metaitem.basemanganesephosphide.name=База сверхпроводника на основе фосфида марганца
 metaitem.cannedmagnesiumdiboride.name=Консервированный диборид магния
 metaitem.tubemagnesiumdiboride.name=Трубка из диборида магния

@@ -2515,7 +2515,7 @@ metaitem.shape.mold.rod.name=Form (Stab)
 metaitem.shape.mold.long_rod.name=Form (Langer Stab)
 metaitem.shape.mold.ring.name=Form (Ring)
 
-metaitem.assemblymanganesephosphide.name=Manganphosphid-Baugruppe
+metaitem.tubemanganesephosphide.name=Manganphosphid-Baugruppe
 metaitem.basemanganesephosphide.name=Basis-Manganphosphid-Supraleiter
 metaitem.cannedmagnesiumdiboride.name=Magnesiumdiborid-Dose
 metaitem.tubemagnesiumdiboride.name=Magnesiumdiborid-Röhre

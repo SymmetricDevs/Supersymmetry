@@ -3129,7 +3129,7 @@ metaitem.shape.mold.rod.name=Mold (Rod)
 metaitem.shape.mold.long_rod.name=Mold (Long Rod)
 metaitem.shape.mold.ring.name=Mold (Ring)
 
-metaitem.assemblymanganesephosphide.name=Manganese Phosphide Assembly
+metaitem.tubemanganesephosphide.name=Manganese Phosphide Tube
 metaitem.basemanganesephosphide.name=Base Manganese Phosphide Superconductor
 metaitem.cannedmagnesiumdiboride.name=Canned Magnesium Diboride
 metaitem.tubemagnesiumdiboride.name=Magnesium Diboride Tube
@@ -3150,6 +3150,7 @@ metaitem.assemblyenrichednaquadahtriniumeuropiumduranide.name=Enriched Naquadah 
 metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah Trinium Europium Duranide Superconductor
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
+metaitem.cannedmanganesephosphide.name=Canned Manganese Phosphide
 
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
@@ -3341,6 +3342,7 @@ metaitem.fused_quartz_bulb.name=Fused Quartz Bulb
 metaitem.lamp.mercury.hp.unfilled.name=Unfilled Mercury Vapor Lamp
 metaitem.lamp.mercury.hp.name=High Pressure Mercury Vapor Lamp
 metaitem.lamp.mercury.lp.name=Ultraviolet Mercury Vapor Lamp
+metaitem.fused_quartz_tube.name=Fused Quartz Tube
 metaitem.carbon.mesh.phenolic.moist.name=Moist Phenolic Carbon Mesh
 metaitem.carbon.mesh.phenolic.treated.name=Treated Phenolic Carbon Mesh
 metaitem.carbon.tile.phenolic.treated.name=Treated Phenolic Carbon Tile
