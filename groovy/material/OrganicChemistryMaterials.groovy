@@ -1559,11 +1559,7 @@ class OrganicChemistryMaterials {
                 .color(0x90b846)
                 .build()
 
-        OneBromobutane = new Material.Builder(15246, SuSyUtility.susyId('one_bromobutane'))
-                .liquid()
-                .components(Carbon * 3, Hydrogen * 7, Bromine * 1)
-                .color(0x9e833f)
-                .build()
+        // FREE ID: 15246
 
         Triethylenetetramine = new Material.Builder(15247, SuSyUtility.susyId('triethylenetetramine'))
                 .liquid()
@@ -4024,6 +4020,184 @@ class OrganicChemistryMaterials {
                 .gas()
                 .components(Carbon * 2, Hydrogen * 2, Fluorine * 4)
                 .colorAverage()
+                .build()
+
+        // Surfactants and ArF photoresist chemistry
+
+        MethacryloylChloride = new Material.Builder(15690, SuSyUtility.susyId('methacryloyl_chloride'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 5, Chlorine, Oxygen)
+                .color(0x55ad8a)
+                .build()
+
+        MethacryloylChloride.setFormula('CH2C(CH3)COCl', true)
+
+        Hexafluoroacetone = new Material.Builder(15691, SuSyUtility.susyId('hexafluoroacetone'))
+                .gas()
+                .components(Carbon * 3, Fluorine * 6, Oxygen)
+                .color(0x584f82)
+                .build()
+
+        Hexafluoroacetone.setFormula('(CF3)2CO', true)
+
+        Hexafluoroisopropanol = new Material.Builder(15692, SuSyUtility.susyId('hexafluoroisopropanol'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 2, Fluorine * 6, Oxygen)
+                .color(0x6b50a6)
+                .build()
+
+        Hexafluoroisopropanol.setFormula('(CF3)2CHOH', true)
+
+        HexafluoroisopropylMethacrylate = new Material.Builder(15693, SuSyUtility.susyId('hexafluoroisopropyl_methacrylate'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 6, Fluorine * 6, Oxygen * 2)
+                .color(0x6374bf)
+                .build()
+
+        HexafluoroisopropylMethacrylate.setFormula('CH2C(CH3)CO2CH(CF3)2', true)
+
+        Trifluoroethanol = new Material.Builder(15694, SuSyUtility.susyId('trifluoroethanol'))
+                .liquid()
+                .components(Carbon * 2, Hydrogen * 3, Fluorine * 3, Oxygen)
+                .color(0xcfe6da)
+                .build()
+
+        Trifluoroethanol.setFormula('CF3CH2OH', true)
+
+        TrifluoroethylMethacrylate = new Material.Builder(15695, SuSyUtility.susyId('trifluoroethyl_methacrylate'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 7, Fluorine * 3, Oxygen * 2)
+                .color(0x9ec9b1)
+                .build()
+
+        TrifluoroethylMethacrylate.setFormula('CH2C(CH3)CO2CH2CF3', true)
+
+        FluorinatedMethacrylateCopolymer = new Material.Builder(15696, SuSyUtility.susyId('fluorinated_methacrylate_copolymer'))
+                .dust()
+                .components(HexafluoroisopropylMethacrylate, TrifluoroethylMethacrylate)
+                .color(0x44735c)
+                .build()
+
+        FluorinatedMethacrylateCopolymer.setFormula('[(C7H6F6O2)(C6H7F3O2)]n', true)
+
+        BenzylMethacrylate = new Material.Builder(15697, SuSyUtility.susyId('benzyl_methacrylate'))
+                .liquid()
+                .components(Carbon * 11, Hydrogen * 12, Oxygen * 2)
+                .color(0x859668)
+                .build()
+
+        BenzylMethacrylate.setFormula('C6H5CH2O2CC(CH3)CH2', true)
+
+        HydroxypropylMethacrylate = new Material.Builder(15698, SuSyUtility.susyId('hydroxypropyl_methacrylate'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 12, Oxygen * 3)
+                .color(0x909654)
+                .build()
+
+        HydroxypropylMethacrylate.setFormula('CH2C(CH3)CO2CH2CH(OH)CH3', true)
+
+        AbsorbingMethacrylateCopolymer = new Material.Builder(15699, SuSyUtility.susyId('absorbing_methacrylate_copolymer'))
+                .dust()
+                .components(BenzylMethacrylate * 3, HydroxypropylMethacrylate)
+                .color(0x667046)
+                .build()
+
+        AbsorbingMethacrylateCopolymer.setFormula('[(C11H12O2)3(C7H12O3)]n', true)
+
+        BenzylAlcohol = new Material.Builder(15700, SuSyUtility.susyId('benzyl_alcohol'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 8, Oxygen)
+                .color(0xad6a45)
+                .build()
+
+        BenzylAlcohol.setFormula('C6H5CH2OH', true)
+
+        Glycidol = new Material.Builder(15701, SuSyUtility.susyId('glycidol'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 6, Oxygen * 2)
+                .color(0xacd65e)
+                .build()
+
+        Glycidol.setFormula('C3H6O2', true)
+
+        // FREE ID: 15702
+
+        Pentafluoroiodoethane = new Material.Builder(15703, SuSyUtility.susyId('pentafluoroiodoethane'))
+                .liquid()
+                .components(Carbon * 2, Fluorine * 5, Iodine)
+                .color(0x561cc9)
+                .build()
+
+        Pentafluoroiodoethane.setFormula('C2F5I', true)
+
+        NonafluorobutylIodide = new Material.Builder(15704, SuSyUtility.susyId('nonafluorobutyl_iodide'))
+                .liquid()
+                .components(Carbon * 4, Fluorine * 9, Iodine)
+                .color(0x5121a3)
+                .build()
+
+        NonafluorobutylIodide.setFormula('C4F9I', true)
+
+        Methoxyperfluorobutane = new Material.Builder(15705, SuSyUtility.susyId('methoxyperfluorobutane'))
+                .liquid()
+                .components(Carbon * 5, Hydrogen * 3, Fluorine * 9, Oxygen)
+                .color(0x825991)
+                .build()
+
+        Methoxyperfluorobutane.setFormula('C4F9OCH3', true)
+
+        NMethylethanolamine = new Material.Builder(15706, SuSyUtility.susyId('n_methylethanolamine'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 9, Nitrogen, Oxygen)
+                .color(0x6180ad)
+                .build()
+
+        NMethylethanolamine.setFormula('CH3NHCH2CH2OH', true)
+
+        NHydroxyethylNMethylPerfluorobutanesulfonamide = new Material.Builder(15707, SuSyUtility.susyId('n_hydroxyethyl_n_methyl_perfluorobutanesulfonamide'))
+                .dust()
+                .components(Carbon * 7, Hydrogen * 8, Fluorine * 9, Nitrogen, Oxygen * 3, Sulfur)
+                .color(0xb5c4d6)
+                .build()
+
+        NHydroxyethylNMethylPerfluorobutanesulfonamide.setFormula('C4F9SO2N(CH3)CH2CH2OH', true)
+
+        NAcryloxyethylNMethylPerfluorobutanesulfonamide = new Material.Builder(15708, SuSyUtility.susyId('n_acryloxyethyl_n_methyl_perfluorobutanesulfonamide'))
+                .dust()
+                .components(Carbon * 9, Hydrogen * 11, Fluorine * 9, Nitrogen, Oxygen * 4, Sulfur)
+                .color(0x8ab5c4)
+                .build()
+
+        NAcryloxyethylNMethylPerfluorobutanesulfonamide.setFormula('C4F9SO2N(CH3)CH2CH2OCOCHCH2', true)
+
+        AcryloylChloride = new Material.Builder(15709, SuSyUtility.susyId('acryloyl_chloride'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 3, Chlorine, Oxygen)
+                .color(0xb5a87a)
+                .build()
+
+        AcryloylChloride.setFormula('CH2CHCOCl', true)
+
+        PolyethyleneGlycolDiacrylate = new Material.Builder(15710, SuSyUtility.susyId('polyethylene_glycol_diacrylate'))
+                .liquid()
+                .components(PolyethyleneGlycol * 5, AcrylicAcid * 2)
+                .colorAverage()
+                .build()
+
+        PolyethyleneGlycolDiacrylate.setFormula('(CH2CHCO)O(C2H4O)nCO(CHCH2)', true)
+
+        Thioglycerol = new Material.Builder(15711, SuSyUtility.susyId('thioglycerol'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 8, Oxygen * 2, Sulfur)
+                .color(0xc8d984)
+                .build()
+
+        Thioglycerol.setFormula('HSCH2CH(OH)CH2OH', true)
+
+        NonionicFluorosurfactant = new Material.Builder(15712, SuSyUtility.susyId('nonionic_fluorosurfactant'))
+                .liquid()
+                .components(NAcryloxyethylNMethylPerfluorobutanesulfonamide * 10, PolyethyleneGlycolDiacrylate, Thioglycerol * 3)
+                .color(0x00bdff)
                 .build()
     }
 }       

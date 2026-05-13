@@ -1706,6 +1706,8 @@ class SuSyMaterials {
     public static Material UltrapureSteam
     public static Material CopperIPhosphide
     public static Material CarbonCompound
+    public static Material IodinePentafluoride
+
 
     // HP Materials
 
@@ -2202,7 +2204,6 @@ class SuSyMaterials {
     public static Material ParaXylene
     public static Material MetaParaXyleneMixture
     public static Material Tripropylamine
-    public static Material OneBromobutane
     public static Material TetrapropylammoniumBromide
     public static Material Propionaldehyde
     public static Material Triethylenetetramine
@@ -2577,6 +2578,28 @@ class SuSyMaterials {
     public static Material IsopropylThiol
     public static Material MethacrylateTerpolymer
     public static Material ParaTertButylnitrobenzeneMixture
+    public static Material MethacryloylChloride
+    public static Material Hexafluoroacetone
+    public static Material Hexafluoroisopropanol
+    public static Material HexafluoroisopropylMethacrylate
+    public static Material Trifluoroethanol
+    public static Material TrifluoroethylMethacrylate
+    public static Material FluorinatedMethacrylateCopolymer
+    public static Material BenzylMethacrylate
+    public static Material HydroxypropylMethacrylate
+    public static Material AbsorbingMethacrylateCopolymer
+    public static Material BenzylAlcohol
+    public static Material Glycidol
+    public static Material Pentafluoroiodoethane
+    public static Material NonafluorobutylIodide
+    public static Material Methoxyperfluorobutane
+    public static Material NMethylethanolamine
+    public static Material NHydroxyethylNMethylPerfluorobutanesulfonamide
+    public static Material NAcryloxyethylNMethylPerfluorobutanesulfonamide
+    public static Material AcryloylChloride
+    public static Material PolyethyleneGlycolDiacrylate
+    public static Material Thioglycerol
+    public static Material NonionicFluorosurfactant
 
 
     // Third Degree Materials
@@ -2793,6 +2816,16 @@ class SuSyMaterials {
     public static Material AlphaMethacryloxyGammaButyrolactoneSolution
     public static Material MethacrylateTerpolymerSolution
     public static Material MethacrylateResist
+    public static Material TetrapropylammoniumHydroxideSolution
+    public static Material TetrapropylammoniumTriflateSolution
+    public static Material FluorinatedMethacrylateCopolymerSolution
+    public static Material AbsorbingMethacrylateCopolymerSolution
+    public static Material GlycidolSolution
+    public static Material NMethylethanolamineSolution
+    public static Material ThioglycerolSolution
+    public static Material NonionicFluorosurfactantSolution
+    public static Material ArFTopcoat
+    public static Material ArFBottomAntireflectiveCoating
 
     // Thermodynamics Materials
 

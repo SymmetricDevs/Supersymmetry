@@ -1274,5 +1274,51 @@ class ThirdDegreeMaterials {
 
         MethacrylateResist.setFormula('(?)(C6H12O3)3(C4H10O2)', true)
 
+        // Surfactants and ArF photoresist solutions/formulations
+
+        TetrapropylammoniumHydroxideSolution = new Material.Builder(24222, SuSyUtility.susyId('tetrapropylammonium_hydroxide_solution'))
+                .liquid()
+                .components(Carbon * 12, Hydrogen * 29, Nitrogen, Oxygen, Water)
+                .color(0x9c7a3a)
+                .build()
+
+        TetrapropylammoniumHydroxideSolution.setFormula('(C12H28NOH)(H2O)', true)
+
+        TetrapropylammoniumTriflateSolution = genSolution(24223, 'tetrapropylammonium_triflate_solution', TetrapropylammoniumTriflate, Water, false)
+
+        FluorinatedMethacrylateCopolymerSolution = new Material.Builder(24224, SuSyUtility.susyId('fluorinated_methacrylate_copolymer_solution'))
+                .liquid()
+                .components(HexafluoroisopropylMethacrylate, TrifluoroethylMethacrylate, Tetrahydrofuran)
+                .colorAverage()
+                .build()
+
+        AbsorbingMethacrylateCopolymerSolution = new Material.Builder(24225, SuSyUtility.susyId('absorbing_methacrylate_copolymer_solution'))
+                .liquid()
+                .components(BenzylMethacrylate * 3, HydroxypropylMethacrylate, Butanone * 2)
+                .colorAverage()
+                .build()
+
+        GlycidolSolution = genSolution(24226, 'glycidol_solution', Glycidol, AceticAcid, true)
+
+        NMethylethanolamineSolution = genSolution(24227, 'n_methylethanolamine_solution', NMethylethanolamine, Water, false)
+
+        ThioglycerolSolution = genSolution(24228, 'thioglycerol_solution', Thioglycerol, Water, false)
+
+        NonionicFluorosurfactantSolution = genSolution(24229, 'nonionic_fluorosurfactant_solution', NonionicFluorosurfactant, Butanone, false)
+
+        ArFTopcoat = new Material.Builder(24230, SuSyUtility.susyId('arf_topcoat'))
+                .liquid()
+                .components(Methoxyperfluorobutane * 9, FluorinatedMethacrylateCopolymer, NonionicFluorosurfactant)
+                .colorAverage()
+                .build()
+
+        ArFBottomAntireflectiveCoating = new Material.Builder(24231, SuSyUtility.susyId('arf_barc'))
+                .liquid()
+                .components(PropyleneGlycolMethylEtherAcetate * 64, AbsorbingMethacrylateCopolymer, TetrapropylammoniumTriflate, Hexamethoxymethylmelamine, NonionicFluorosurfactant)
+                .colorAverage()
+                .build()
+
+        ArFBottomAntireflectiveCoating.setFormula('(?)(C6H12O3)', true)
+
         }
 }

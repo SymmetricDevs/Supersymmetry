@@ -875,5 +875,13 @@ class FirstDegreeMaterialsB {
                 .components(Carbon, Clay)
                 .colorAverage()
                 .build()
+
+        IodinePentafluoride = new Material.Builder(8795, SuSyUtility.susyId('iodine_pentafluoride'))
+                .liquid()
+                .components(Iodine, Fluorine * 5)
+                .color(0xe5c98a)
+                .build()
+
+        IodinePentafluoride.setFormula('IF5', true)
     }
 }
