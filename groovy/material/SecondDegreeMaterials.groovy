@@ -1175,7 +1175,32 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE IDs: 13184-13187
+        SupportedVanadiumPentoxide = new Material.Builder(13184, SuSyUtility.susyId('supported_vanadium_pentoxide'))
+                .dust().liquid()
+                .components(VanadiumPentoxide, PotassiumSulfate * 2, SiliconDioxide * 63)
+                .colorAverage()
+                .flags(GENERATE_CATALYST_BED)
+                .build()
+      
+        DimethylDioxaneSolution = new Material.Builder(13185, SuSyUtility.susyId('dimethyl_dioxane_solution'))
+                .liquid()
+                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
+                .colorAverage()
+                .build()
+
+        IsopreneSolution = new Material.Builder(13186, SuSyUtility.susyId('isoprene_solution'))
+                .liquid()
+                .components(Water, Isoprene, Formaldehyde)
+                .colorAverage()
+                .build()
+        
+        MetalHydrideMixAnode = new Material.Builder(13187, SuSyUtility.susyId('metal_hydride_mix_anode'))
+                .dust()
+                .components(AnnealedAB2MetalAlloy * 6, AnnealedAB5MetalAlloy * 3, Copper)
+                .colorAverage()
+                .iconSet(METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
 
         UltrapureHydrofluoricAcid = new Material.Builder(13188, SuSyUtility.susyId('ultrapure_hydrofluoric_acid'))
                 .liquid()
@@ -1236,6 +1261,5 @@ class SecondDegreeMaterials {
                 .ingotSmeltInto(Gold)
                 .arcSmeltInto(Gold)
                 .macerateInto(Gold)
-                .build()
     }
 }

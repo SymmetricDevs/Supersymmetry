@@ -1045,7 +1045,12 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 24181
+        PolycaprolactamSolution = new Material.Builder(24181, SuSyUtility.susyId('polycaprolactam_solution'))
+                .liquid()
+                .components(Caprolactam * 1, Tetrahydrofuran * 1)
+                .color(0x66696e)
+                .colorAverage()
+                .build()
 
         ParaTertbutyliodobenzeneSolution = new Material.Builder(24182, SuSyUtility.susyId('para_tertbutyliodobenzene_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))

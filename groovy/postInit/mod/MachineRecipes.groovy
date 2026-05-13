@@ -999,7 +999,7 @@ RecyclingHelper.addShaped("gregtech:coking_tower", metaitem('susy:coking_tower')
     [metaitem('pipeHugeFluidSteel'), pumps[3], metaitem('pipeHugeFluidSteel')]
 ]);
 
-RecyclingHelper.addShaped("gregtech:rotary_kiln", metaitem('susy:rotary_kiln'), [
+RecyclingHelper.addShaped("gregtech:rotary_kiln", metaitem('susy:rotary_kiln_v2'), [
     [circuits[2], null, tieredCables[2]],
     [metaitem('pipeHugeFluidSteel'), hulls[2], metaitem('pipeHugeFluidSteel')],
     [circuits[2], motors[2], tieredCables[2]]
@@ -1310,8 +1310,7 @@ ASSEMBLER.recipeBuilder()
 
 crafting.addShapeless('susy:combustion_generator.lv_convert', metaitem('susy:combustion_generator.lv'), [metaitem('combustion_generator.lv')])
 
-RecyclingHelper.removeRecyclingRecipes(metaitem('combustion_generator.lv'))
-RecyclingHelper.handleRecycling(metaitem('combustion_generator.lv'), [
+RecyclingHelper.handleRecycling(metaitem('susy:combustion_generator.lv'), [
     metaitem('hull.lv'),
     ore('springCopper'),
     ore('springSmallCopper'),
@@ -1339,8 +1338,7 @@ ASSEMBLER.recipeBuilder()
 
 crafting.addShapeless('susy:combustion_generator.mv_convert', metaitem('susy:combustion_generator.mv'), [metaitem('combustion_generator.mv')])
 
-RecyclingHelper.removeRecyclingRecipes(metaitem('combustion_generator.mv'))
-RecyclingHelper.handleRecycling(metaitem('combustion_generator.mv'), [
+RecyclingHelper.handleRecycling(metaitem('susy:combustion_generator.mv'), [
     metaitem('hull.mv'),
     ore('springCopper'),
     ore('springSmallCopper'),
@@ -1368,8 +1366,7 @@ ASSEMBLER.recipeBuilder()
 
 crafting.addShapeless('susy:combustion_generator.hv_convert', metaitem('susy:combustion_generator.hv'), [metaitem('combustion_generator.hv')])
 
-RecyclingHelper.removeRecyclingRecipes(metaitem('combustion_generator.hv'))
-RecyclingHelper.handleRecycling(metaitem('combustion_generator.hv'), [
+RecyclingHelper.handleRecycling(metaitem('susy:combustion_generator.hv'), [
     metaitem('hull.hv'),
     ore('springCopper'),
     ore('springSmallCopper'),

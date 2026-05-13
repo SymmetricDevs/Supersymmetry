@@ -2679,6 +2679,11 @@ susy.material.trimethyl_gallium=Trimethylgallium
 susy.material.trimethyl_indium=Trimethylindium
 susy.material.yttrium_aluminium_garnet_cerium=Ce-Doped Yttrium Aluminium Garnet
 susy.material.delithiated_salar_brine=Delithiated Salar Brine
+susy.material.dimethyl_one_three_dioxane=4,4-Dimethyl-1,3-Dioxane
+susy.material.methylbutynol=Methylbutynol
+susy.material.methylbutenol=Methylbutenol
+susy.material.dimethyl_dioxane_solution=4,4-Dimethyl-1,3-Dioxane Solution
+susy.material.isoprene_solution=Isoprene Solution
 
 # Isotopes
 
@@ -3071,6 +3076,16 @@ susy.material.thioglycerol_solution=Thioglycerol Solution
 susy.material.thioglycerol=Thioglycerol
 susy.material.nonionic_fluorosurfactant_solution=Nonionic Fluorosurfactant Solution
 susy.material.nonionic_fluorosurfactant=Nonionic Fluorosurfactant
+susy.material.metal_hydride_mix_anode=Metal-Hydride Mix Anode
+susy.material.annealed_ab_5_metal_alloy=Annealed AB-5 Metal Alloy
+susy.material.annealed_ab_2_metal_alloy=Annealed AB-2 Metal Alloy
+susy.material.ab_5_metal_alloy=AB-5 Metal Alloy
+susy.material.ab_2_metal_alloy=AB-2 Metal Alloy
+susy.material.cadmium_oxide=Cadmium Oxide
+susy.material.polycaprolactam_solution=Polycaprolactam Solution
+susy.material.rp_1=RP-1
+susy.material.one_naphthol_two_diazonium_chloride=1-Napthol-2-Diazonium Chloride
+susy.material.supported_vanadium_pentoxide=Supported Vanadium Pentoxide
 
 # Isotopes
 
@@ -3186,6 +3201,25 @@ metaitem.battery.ni_zn.mv.name=Nickel-Zinc MV Battery
 metaitem.battery.ni_zn.hv.name=Nickel-Zinc HV Battery
 metaitem.anode.zinc_oxide.name=Zinc Oxide Anode
 metaitem.cathode.nioh2.name=Nickel Hydroxide Cathode
+
+metaitem.membrane.caprolactam.name=Caprolactam Membrane
+metaitem.membrane.cast_film.name=Cast Microporous Film Membrane
+metaitem.membrane.caprolactam_wet.name=Wet Caprolactam Membrane
+metaitem.anode.mh.name=Metal-Hydride Anode
+metaitem.electrode.nickeled_steel_foil.name=Nickel-plated Steel Electrode Foil
+metaitem.anode.cadmium_oxide.name=Cadmium Oxide Anode
+metaitem.anode.metal_hydride.name=Metal-Hydride Anode
+
+metaitem.battery.stainless_steel_hull.hv.name=Small Stainless Steel Battery Hull
+metaitem.battery.stainless_steel_hull.ev.name=Medium Stainless Steel Battery Hull
+metaitem.battery.stainless_steel_hull.iv.name=Large Stainless Steel Battery Hull
+
+metaitem.battery.ni_cd.mv.name=Nickel-Cadmium MV Battery
+metaitem.battery.ni_cd.hv.name=Nickel-Cadmium HV Battery
+metaitem.battery.ni_cd.ev.name=Nickel-Cadmium EV Battery
+metaitem.battery.ni_mh.hv.name=Nickel-Metal-Hydride HV Battery
+metaitem.battery.ni_mh.ev.name=Nickel-Metal-Hydride EV Battery
+metaitem.battery.ni_mh.iv.name=Nickel-Metal-Hydride IV Battery
 
 metaitem.battery.primitivehull.lv.name=Medium Ebonite Battery Hull
 metaitem.battery.primitivehull.mv.name=Large Ebonite Battery Hull
