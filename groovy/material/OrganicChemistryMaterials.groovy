@@ -2529,11 +2529,11 @@ class OrganicChemistryMaterials {
 
         MethylIodideSolution = new Material.Builder(15396, SuSyUtility.susyId("methyl_iodide_solution"))
                 .liquid()
-                .components(Carbon, Hydrogen * 3, Iodine, Water)
+                .components(Carbon, Hydrogen * 3, Iodine, Water * 2)
                 .colorAverage()
                 .build()
 
-        MethylIodideSolution.setFormula("(CH3I)(H2O)", true)
+        MethylIodideSolution.setFormula("(CH3I)(H2O)2", true)
 
         Polycarbonate = new Material.Builder(15397, SuSyUtility.susyId('polycarbonate'))
                 .polymer()

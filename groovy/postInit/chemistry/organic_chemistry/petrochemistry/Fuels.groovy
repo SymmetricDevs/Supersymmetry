@@ -103,7 +103,7 @@ def minor_solvents = [
         .buildAndRegister()
 
     DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('diisopropyl_para_phenylenediamine_solution') * 1000)
+        .fluidInputs(fluid('diisopropyl_para_phenylenediamine_solution') * 2000)
         .outputs(metaitem('dustDiisopropylParaPhenylenediamine') * 36)
         .fluidOutputs(fluid('wastewater') * 2000)
         .duration(20)

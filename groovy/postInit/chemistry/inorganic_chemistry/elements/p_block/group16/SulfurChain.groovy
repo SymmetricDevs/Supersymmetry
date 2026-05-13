@@ -231,3 +231,15 @@ BCR.recipeBuilder()
             .duration(160)
             .EUt(VA[ULV])
             .buildAndRegister()
+
+    // Contact process
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('springCupronickel'))
+        .notConsumable(ore('catalystBedSupportedVanadiumPentoxide'))
+        .fluidInputs(fluid('oxygen') * 50)
+        .fluidInputs(fluid('sulfur_dioxide') * 50)
+        .fluidOutputs(fluid('sulfur_trioxide') * 50)
+        .duration(4)
+        .EUt(VA[LV])
+        .buildAndRegister()

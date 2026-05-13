@@ -1938,14 +1938,26 @@ crafting.addShapeless('gregtech:glass_flint_dust_full', metaitem('dustGlass') * 
         metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand')])
 
 LATHE.recipeBuilder()
-        .inputs(ore('stone'))
-        .outputs(metaitem('stickStone') * 4)
-        .duration(20)
-        .EUt(VA[ULV])
-        .buildAndRegister()
+    .inputs(ore('stone'))
+    .outputs(metaitem('stickStone') * 4)
+    .duration(20)
+    .EUt(VA[ULV])
+    .buildAndRegister()
 
 RecyclingHelper.removeRecyclingRecipes(metaitem('stickStone'))
 RecyclingHelper.handleRecycling(metaitem('stickStone'), [metaitem('dustSmallStone')])
 
 RecyclingHelper.removeRecyclingRecipes(metaitem('gearStone'))
 RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 5])
+
+// Moist Air * 1000
+mods.gregtech.mixer.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
+
+MIXER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('steam') * 100)
+    .fluidInputs(fluid('air') * 900)
+    .fluidOutputs(fluid('gtfo_moist_air') * 1000)
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()

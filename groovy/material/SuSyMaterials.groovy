@@ -1662,9 +1662,19 @@ class SuSyMaterials {
     public static Material TetrachloropalladicIIAcidSolution
     public static Material GreenVitriol
     public static Material NitrosylsulfuricAcid
+    public static Material AB2MetalAlloy
+    public static Material AB5MetalAlloy
     public static Material AcetaldehydeSolution
     public static Material GammaAlumina
     public static Material FineGammaAlumina
+    public static Material DimethylOneThreeDioxane
+    public static Material Methylbutynol
+    public static Material Methylbutenol
+    public static Material DimethylDioxaneSolution
+    public static Material IsopreneSolution
+    public static Material AnnealedAB2MetalAlloy
+    public static Material AnnealedAB5MetalAlloy
+    public static Material CadmiumOxide
 
     // HP Materials
 
@@ -1902,6 +1912,8 @@ class SuSyMaterials {
     public static Material HoopesElectrolyte
     public static Material CopperIIAcetateSolution
     public static Material LeadChamberReactionMixture
+    public static Material MetalHydrideMixAnode
+    public static Material SupportedVanadiumPentoxide
 
     // Organic Chemistry Materials
 
@@ -2572,6 +2584,7 @@ class SuSyMaterials {
     public static Material IsopropylAlcoholSolution
     public static Material KetoneAlcoholOil
     public static Material AcetyleneSolution
+    public static Material PolycaprolactamSolution
 
     // Thermodynamics Materials
 

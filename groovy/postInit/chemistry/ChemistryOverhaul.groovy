@@ -1075,18 +1075,6 @@ ROASTER.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister()
 
-// Sulfur Trioxide
-
-ROASTER.recipeBuilder()
-    .fluidInputs(fluid('oxygen') * 1000)
-    .fluidInputs(fluid('sulfur_dioxide') * 1000)
-    .notConsumable(ore('dustVanadiumPentoxide'))
-    .fluidOutputs(fluid('sulfur_trioxide') * 1000)
-
-    .duration(200)
-    .EUt(VA[ULV])
-    .buildAndRegister()
-
 // Saltpeter and Sodium Hydroxide Solution
 
 MIXER.recipeBuilder()

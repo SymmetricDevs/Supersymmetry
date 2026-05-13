@@ -999,7 +999,7 @@ RecyclingHelper.addShaped("gregtech:coking_tower", metaitem('susy:coking_tower')
     [metaitem('pipeHugeFluidSteel'), pumps[3], metaitem('pipeHugeFluidSteel')]
 ]);
 
-RecyclingHelper.addShaped("gregtech:rotary_kiln", metaitem('susy:rotary_kiln'), [
+RecyclingHelper.addShaped("gregtech:rotary_kiln", metaitem('susy:rotary_kiln_v2'), [
     [circuits[2], null, tieredCables[2]],
     [metaitem('pipeHugeFluidSteel'), hulls[2], metaitem('pipeHugeFluidSteel')],
     [circuits[2], motors[2], tieredCables[2]]

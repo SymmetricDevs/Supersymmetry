@@ -661,3 +661,28 @@ Globals.solders.each { key, val ->
         .EUt(VA[LV])
         .buildAndRegister();
 }
+//surface to air missile
+Globals.solders.each { key, val ->
+    for (s_fuel in solidfuels) {
+        for (l_oxy in liquidoxys) {
+
+            LARGE_WEAPONS_FACTORY.recipeBuilder()
+                    .inputs([
+                            ore('stickStainlessSteel') * 2,
+                            ore('ringStainlessSteel'),
+                            ore('plateStainlessSteel'),
+                            ore('foilStainlessSteel') * 8,
+                            s_fuel * 8,
+                            item('icbmclassic:explosives:0'),
+                            ore('circuitMv') * 2,
+                            metaitem('sensor.mv')
+                    ])
+                    .fluidInputs(fluid(key) * (val / 2))
+                    .fluidInputs(l_oxy * 1000)
+                    .outputs(item('icbmclassic:surface_to_air_missile'))
+                    .duration(100)
+                    .EUt(VA[MV])
+                    .buildAndRegister();
+        }
+    }
+}

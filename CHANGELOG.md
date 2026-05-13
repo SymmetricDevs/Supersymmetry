@@ -1,3 +1,42 @@
+# UPDATE 0.1.16.7.1
+## Changes
+### Fixes
+- Actually remember to add the thing
+- Oh by the way greenhouses are good now
+# UPDATE 0.1.16.7
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.100 → v0.1.103
+### Mod Additions
+- Keyboard Wizard → 1.12.2-1.7.3
+## Changes
+### New Features
+- HATE. Let me tell you how we've added a new faction system to SUSY! Raids are now significantly more tied to your progression than before.
+- You now have two new ways to manufacture isoprene! (#1840 by @WideMann)
+### Changed Features
+- Pentlandite drilling is now available at MV. (#1856 by @TheFriedEgg618)
+- Drop pods can now be targeted by ICBM radars.
+### Fixes
+- The battery dupe has been fixed. (#1853 by @The-ExZombie)
+- The contact process uses a fixed bed reactor rather than a fluidized bed reactor (oops)
+# UPDATE 0.1.16.6
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.99 → v0.1.100
+- GroovyScript 1.3.4 → 1.4.3
+- Had Enough Items 4.30.2 → 4.30.1
+## Changes
+### New Features
+- [Susy-Core] The rotary kiln is animated and looking better than ever! Convert your rotary kiln into the new version (or don't). (#632 by @planetme)
+- You can now filter recipes in HEI!
+### Changed Features
+- The contact process has been buffed! (#1845 by @planetme)
+- Kovar ingots can now be made in the alloy smelter (finally) (#1852 by @TheFriedEgg618)
+- Do check your Cativa catalysts and Monsanto catalysts; the quantity required has increased.
+### Fixes
+- PTFE no longer has a chlorine dupe (probably) (#1848 by @The-ExZombie)
+- The incinerator quest is no longer... weird. (#1849 by @Fiery36)
+And thanks to @trainvoi, @The-ExZombie and @Fiery36 for helping to keep the pack stable and up-to-date.
 # UPDATE 0.1.16.5
 ## Mod Changes
 ### Mod Updates
