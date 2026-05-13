@@ -325,16 +325,16 @@ TUBE_FURNACE.recipeBuilder()
         .circuitMeta(1)
         .inputs(metaitem('cannedmanganesephosphide'))
         .outputs(metaitem('tubemanganesephosphide'))
-        .duration(1008)
+        .duration(1006)
         .EUt(VA[LV])
         .buildAndRegister();
 
 TUBE_FURNACE.recipeBuilder()
         .circuitMeta(2)
         .inputs(metaitem('cannedmanganesephosphide'))
-        .fluidInputs(fluid('nitrogen') * 1000)
+        .fluidInputs(fluid('nitrogen') * 500)
         .outputs(metaitem('tubemanganesephosphide'))
-        .duration(675)
+        .duration(670)
         .EUt(VA[LV])
         .buildAndRegister();
 
