@@ -244,7 +244,7 @@ Sintering.nonPlasmaFuels().each { fuel ->
         .EUt(VA[MV])
         .buildAndRegister()
 
-    // Trimethylsilane
+    // Trimethylsilane (unused for now, useful later?)
 
     CSTR.recipeBuilder()
         .fluidInputs(fluid('trimethylsilyl_chloride') * 50)
@@ -252,6 +252,19 @@ Sintering.nonPlasmaFuels().each { fuel ->
         .fluidOutputs(fluid('trimethylsilane') * 50)
         .fluidOutputs(fluid('wastewater') * 50)
         .duration(5)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // Diethoxymethylsilane
+
+    LCR.recipeBuilder()
+        .notConsumable(ore('dustUrea'))
+        .notConsumable(fluid('hexane') * 1000)
+        .fluidInputs(fluid('dimethyldichlorosilane') * 1000)
+        .fluidInputs(fluid('ethanol') * 2000)
+        .fluidOutputs(fluid('diethoxymethylsilane') * 1000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+        .duration(200)
         .EUt(VA[MV])
         .buildAndRegister()
 

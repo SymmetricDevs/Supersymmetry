@@ -64,10 +64,10 @@ BCR.recipeBuilder()
     // Novec/HFE-7100
 
     LCR.recipeBuilder()
-        .inputs(ore('dustSodiumMethoxide') * 6)
+        .inputs(ore('dustPotassiumMethoxide') * 6)
         .notConsumable(fluid('dimethylformamide') * 1000)
         .fluidInputs(fluid('nonafluorobutyl_iodide') * 1000)
-        .outputs(metaitem('dustSodiumIodide') * 2)
+        .outputs(metaitem('dustPotassiumIodide') * 2)
         .fluidOutputs(fluid('methoxyperfluorobutane') * 1000)
         .duration(5)
         .EUt(VA[LV])

@@ -1,7 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-// TODO: actually implement silicone recipes
-/*
+
 // Polydimethylsiloxane
 
 FLUIDIZED_BR.recipeBuilder()
@@ -53,8 +52,21 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION_TANK.recipeBuilder()
+// Cyclization equilibration & distillation
+
+BR.recipeBuilder()
+    .notConsumable(ore('dustPotassiumHydroxide'))
+    .notConsumable(ore('springKanthal'))
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
+    .fluidOutputs(fluid('octamethylcyclotetrasiloxane') * 250)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Ring opening polymerization (ROMP)
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .fluidInputs(fluid('octamethylcyclotetrasiloxane') * 250)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustSiliconDioxide'))
     .fluidOutputs(fluid('silicone_rubber') * 144)
@@ -72,4 +84,4 @@ POLYMERIZATION_TANK.recipeBuilder()
     .buildAndRegister()
 
 // Liquid Polydimethylsiloxane * 144
-mods.gregtech.extractor.removeByInput(30, [metaitem('dustPolydimethylsiloxane')], null)*/
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustPolydimethylsiloxane')], null)

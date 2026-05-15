@@ -191,18 +191,6 @@ DT.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-// Butylamines
-
-FIXED_BR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedAlumina'))
-    .fluidInputs(fluid('ammonia') * 50)
-    .fluidInputs(fluid('n_butanol') * 150)
-    .fluidOutputs(fluid('tributylamine') * 50)
-    .fluidOutputs(fluid('water') * 150)
-    .duration(5)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
 // Melamine
 
 FLUIDIZED_BR.recipeBuilder()

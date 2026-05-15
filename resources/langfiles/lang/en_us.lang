@@ -3069,7 +3069,8 @@ susy.material.nonafluorobutyl_iodide=Nonafluorobutyl Iodide
 susy.material.methoxyperfluorobutane=Methoxyperfluorobutane
 susy.material.n_methylethanolamine_solution=N-Methylethanolamine Solution
 susy.material.n_methylethanolamine=N-Methylethanolamine
-susy.material.n_hydroxyethyl_n_methyl_perfluorobutanesulfonamide=N-Hydroxyethyl-N-Methyl Perfluorobutanesulfonamide
+susy.material.n_hydroxyethyl_n_methyl_perfluorobutanesulfonamide=N-Hydroxyethyl-N-Methylperfluorobutanesulfonamide
+susy.material.n_acryloxyethyl_n_methyl_perfluorobutanesulfonamide=N-Acryloxyethyl-N-Methylperfluorobutanesulfonamide
 susy.material.acryloyl_chloride=Acryloyl Chloride
 susy.material.polyethylene_glycol_diacrylate=Polyethylene Glycol Diacrylate
 susy.material.thioglycerol_solution=Thioglycerol Solution
@@ -3086,6 +3087,9 @@ susy.material.polycaprolactam_solution=Polycaprolactam Solution
 susy.material.rp_1=RP-1
 susy.material.one_naphthol_two_diazonium_chloride=1-Napthol-2-Diazonium Chloride
 susy.material.supported_vanadium_pentoxide=Supported Vanadium Pentoxide
+susy.material.one_bromopropane=1-Bromopropane
+susy.material.octamethylcyclotetrasiloxane=Octamethylcyclotetrasiloxane (OMCTS)
+susy.material.diethoxymethylsilane=Diethoxymethylsilane (DEMS)
 
 # Isotopes
 
@@ -3683,6 +3687,7 @@ item.susy.material.kevlar.plate=Woven Kevlar
 item.gregtech.material.polytetrafluoroethylene.fiber=Expanded Polytetrafluoroethylene Fiber
 item.gregtech.material.polytetrafluoroethylene.thread=Expanded Polytetrafluoroethylene Thread
 gregtech.material.chrome=Chromium
+gregtech.material.polydimethylsiloxane=Polydimethylsiloxane Mixture
 gregtech.material.nether_quartz=Quartz
 gregtech.material.carbon=Carbon Black
 gregtech.material.cupric_oxide=Copper II Oxide

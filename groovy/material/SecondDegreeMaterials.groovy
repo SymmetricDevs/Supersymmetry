@@ -622,6 +622,8 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
+        log.infoMC('debug4')
+
         ImpureBariumSulfideSolution = new Material.Builder(13097, SuSyUtility.susyId("impure_barium_sulfide_solution"))
                 .liquid()
                 .components(ImpureBariumSulfide, Water)
@@ -1194,6 +1196,8 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
         
+        log.infoMC('debug3')
+
         MetalHydrideMixAnode = new Material.Builder(13187, SuSyUtility.susyId('metal_hydride_mix_anode'))
                 .dust()
                 .components(AnnealedAB2MetalAlloy * 6, AnnealedAB5MetalAlloy * 3, Copper)
@@ -1215,6 +1219,8 @@ class SecondDegreeMaterials {
                 .components(Iron, Chlorine * 3, Water)
                 .color(0x472500)
                 .build()
+
+        log.infoMC('debug2')
 
         HighTemperatureSolder = new Material.Builder(13190, SuSyUtility.susyId('high_temperature_solder'))
                 .dust().liquid(new FluidBuilder().temperature(309))
@@ -1254,6 +1260,8 @@ class SecondDegreeMaterials {
                 .macerateInto(Gold)
                 .build()
 
+        log.infoMC('debug1')
+
         GrapheneCoatedGold = new Material.Builder(13195, SuSyUtility.susyId('graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
                 .components(Gold, Graphene)
@@ -1261,5 +1269,6 @@ class SecondDegreeMaterials {
                 .ingotSmeltInto(Gold)
                 .arcSmeltInto(Gold)
                 .macerateInto(Gold)
+                .build()
     }
 }

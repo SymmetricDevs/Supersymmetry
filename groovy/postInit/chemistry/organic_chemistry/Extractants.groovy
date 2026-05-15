@@ -768,7 +768,8 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedAlumina'))
         .fluidInputs(fluid('n_hexanol') * 50)
         .fluidInputs(fluid('hydrogen_sulfide') * 50)
         .fluidOutputs(fluid('one_hexanethiol') * 50)

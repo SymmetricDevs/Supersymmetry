@@ -1559,7 +1559,11 @@ class OrganicChemistryMaterials {
                 .color(0x90b846)
                 .build()
 
-        // FREE ID: 15246
+        OneBromopropane = new Material.Builder(15246, SuSyUtility.susyId('one_bromopropane'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 7, Bromine * 1)
+                .color(0x9e833f)
+                .build()
 
         Triethylenetetramine = new Material.Builder(15247, SuSyUtility.susyId('triethylenetetramine'))
                 .liquid()
@@ -3377,7 +3381,11 @@ class OrganicChemistryMaterials {
 
         Polyhydroxystyrene.setFormula('[C8H7OH]n', true)
 
-        // FREE ID: 15527
+        Benzaldehyde = new Material.Builder(15527, SuSyUtility.susyId('benzaldehyde'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 6, Oxygen)
+                .color(0x9c7b4f)
+                .build()
 
         PotassiumTertButoxide = new Material.Builder(15528, SuSyUtility.susyId('potassium_tert_butoxide'))
                 .dust()
@@ -3391,7 +3399,11 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 15530
+        Octamethylcyclotetrasiloxane = new Material.Builder(15530, SuSyUtility.susyId('octamethylcyclotetrasiloxane'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 24, Oxygen * 4, Silicon * 4)
+                .color(0x484f42)
+                .build()
 
         ProtectedPolyhydroxystyrene = new Material.Builder(15531, SuSyUtility.susyId('protected_polyhydroxystyrene'))
                 .dust()
@@ -3399,7 +3411,11 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 15532
+        Diethoxymethylsilane = new Material.Builder(15532, SuSyUtility.susyId('diethoxymethylsilane'))
+                .liquid()
+                .components(Carbon * 5, Hydrogen * 14, Oxygen * 2, Silicon)
+                .color(0x69f564)
+                .build()
 
         ParaEthylbenzenesulfonicAcid = new Material.Builder(15533, SuSyUtility.susyId('para_ethylbenzenesulfonic_acid'))
                 .dust()
@@ -3792,7 +3808,7 @@ class OrganicChemistryMaterials {
                 .build()
 
         OneAdamantylMethacrylate = new Material.Builder(15613, SuSyUtility.susyId('one_adamantyl_methacrylate'))
-                .liquid()
+                .dust()
                 .components(Carbon * 14, Hydrogen * 20, Oxygen * 2)
                 .color(0x65a08e)
                 .build()

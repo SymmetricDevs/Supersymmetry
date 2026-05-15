@@ -2216,6 +2216,7 @@ class SuSyMaterials {
     public static Material ParaXylene
     public static Material MetaParaXyleneMixture
     public static Material Tripropylamine
+    public static Material OneBromopropane
     public static Material TetrapropylammoniumBromide
     public static Material Propionaldehyde
     public static Material Triethylenetetramine
@@ -2612,7 +2613,9 @@ class SuSyMaterials {
     public static Material PolyethyleneGlycolDiacrylate
     public static Material Thioglycerol
     public static Material NonionicFluorosurfactant
-
+    public static Material Octamethylcyclotetrasiloxane
+    public static Material Benzaldehyde
+    public static Material Diethoxymethylsilane
 
     // Third Degree Materials
 
