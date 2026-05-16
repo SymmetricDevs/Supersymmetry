@@ -68,9 +68,9 @@ oreDict.add('componentCapacitorAdvanced', metaitem('component.capacitor.edlc'))
 
 // --- Electrode chain (book section 4.13) ---
 
-// Ball mill the dry electrode mix: activated carbon + PVDF binder (~10 wt%)
+// Mix the dry electrode mix: activated carbon + PVDF binder (~10 wt%)
 // + conductive carbon black (~10 wt%)
-BALL_MILL.recipeBuilder()
+MIXER.recipeBuilder()
     .inputs(ore('dustActivatedCarbon') * 8)
     .inputs(ore('dustPolyvinylideneFluoride'))
     .inputs(ore('dustCarbon'))
@@ -79,7 +79,7 @@ BALL_MILL.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister()
 
-// Disperse the milled powder in isopropyl alcohol to form the coating slurry
+// Disperse the powder in isopropyl alcohol to form the coating slurry
 MIXER.recipeBuilder()
     .inputs(metaitem('edlc_electrode_powder') * 4)
     .fluidInputs(fluid('isopropyl_alcohol') * 1000)
