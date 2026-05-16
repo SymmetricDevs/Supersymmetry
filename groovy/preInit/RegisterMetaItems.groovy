@@ -58,7 +58,7 @@ def registerCMOSMetaitems(String name) {
     for (step in ashed_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
     }
-    
+
     def photoresist_steps = [11, 15, 24, 29, 33, 38, 42, 54, 62, 70, 151, 156]
     for (step in photoresist_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
@@ -281,6 +281,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2804, "circuit.power.mv")
         addItem(2805, "circuit.power.hv")
         addItem(2806, "circuit.power.ev")
+        addItem(2807, "edlc_electrode_powder")
+        addItem(2808, "edlc_electrode_coated")
+        addItem(2809, "edlc_electrode")
+        addItem(2810, "component.capacitor.edlc")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -434,7 +438,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5805, "board.epoxy.electroless");
         addItem(5806, "board.epoxy.electrolytic");
         addItem(5807, "board.epoxy.wet_masked");
-        addItem(5808, "board.epoxy.mask_affixed"); 
+        addItem(5808, "board.epoxy.mask_affixed");
         addItem(5809, "circuit_board.fr4")
         addItem(5810, "board.epoxy.resist")
 
@@ -630,7 +634,7 @@ eventManager.listen { PostMaterialEvent event ->
             addItem(start, name)
             start++
         }
-        
+
         // 8975-9000 sputtering targets
         addItem(8975, "target.aluminium")
         addItem(8976, "target.copper")
@@ -670,7 +674,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10203, 'display.moon')
         addItem(10204, 'display.mercury')
         addItem(10205, 'display.mars')
-        
+
         // Space Components 10250-10300
         addItem(10250, "parachute.drogue")
         addItem(10251, "parachute.main")
@@ -699,7 +703,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10330, "cac_clinker")
         addItem(10331, "hot_cac_clinker")
         addItem(10332, "cac_dust")
-      
+
         // Lighting Components 10400-10420
 
         addItem(10401, "carbon_filament")
