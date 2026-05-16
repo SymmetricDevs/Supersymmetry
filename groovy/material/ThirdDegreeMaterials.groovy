@@ -57,7 +57,11 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 24004
+        DimethylDioxaneSolution = new Material.Builder(24004, SuSyUtility.susyId('dimethyl_dioxane_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
+                .colorAverage()
+                .build()
 
         TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .liquid()
@@ -1325,5 +1329,11 @@ class ThirdDegreeMaterials {
 
         ArFBottomAntireflectiveCoating.setFormula('(?)(C6H12O3)', true)
 
+        IsopreneSolution = new Material.Builder(24232, SuSyUtility.susyId('isoprene_solution'))
+                .liquid()
+                .components(Water, Isoprene, Formaldehyde)
+                .colorAverage()
+                .build()
+        
         }
 }
