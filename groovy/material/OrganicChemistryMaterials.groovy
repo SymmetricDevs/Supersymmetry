@@ -4216,10 +4216,9 @@ class OrganicChemistryMaterials {
                 .color(0x00bdff)
                 .build()
 
-                // Electrode slurry for EDLC supercapacitor manufacture
         EDLCElectrodeSlurry = new Material.Builder(15713, SuSyUtility.susyId('edlc_electrode_slurry'))
                 .liquid()
-                .components(ActivatedCarbon * 4, PolyvinylideneFluoride * 1, Carbon * 1, IsopropylAlcohol * 4)
+                .components(ActivatedCarbon * 4, PolyvinylideneFluoride, Carbon, IsopropylAlcohol * 4)
                 .color(0x2b2b2b)
                 .build()
     }

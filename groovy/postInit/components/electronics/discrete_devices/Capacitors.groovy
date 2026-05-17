@@ -61,15 +61,14 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 // Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
-// Manufacturing chain matched to Misra, "Supercapacitors: Concepts and advances"
+// "Supercapacitors: Concepts and advances"
 // (IOP, 2025), sections 4.13, 5.6, 5.7.
 
-oreDict.add('componentCapacitorAdvanced', metaitem('component.capacitor.edlc'))
+oreDict.add('componentSupercapacitor', metaitem('component.capacitor.edlc'))
 
 // --- Electrode chain (book section 4.13) ---
 
-// Mix the dry electrode mix: activated carbon + PVDF binder (~10 wt%)
-// + conductive carbon black (~10 wt%)
+// Mix the dry electrode mix
 MIXER.recipeBuilder()
     .inputs(ore('dustActivatedCarbon') * 8)
     .inputs(ore('dustPolyvinylideneFluoride'))
@@ -101,15 +100,12 @@ CURTAIN_COATER.recipeBuilder()
 DRYER.recipeBuilder()
     .inputs(metaitem('edlc_electrode_coated'))
     .outputs(metaitem('edlc_electrode'))
-    .fluidOutputs(fluid('isopropyl_alcohol') * 40)
+    .fluidOutputs(fluid('isopropyl_alcohol') * 250)
     .duration(160)
     .EUt(VA[EV])
     .buildAndRegister()
 
 // --- Cell assembly (book sections 4.13, 5.6) ---
-// Two electrodes wound around a mica separator with copper terminals, soldered
-// and filled with an aqueous electrolyte. Mica separator per book 5.6
-// (aqueous devices use mica/glass/ceramics).
 
 // Sulfuric acid electrolyte variant
 ASSEMBLER.recipeBuilder()
@@ -118,6 +114,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineAnnealedCopper') * 2)
     .fluidInputs(fluid('sulfuric_acid') * 250)
     .fluidInputs(fluid('soldering_alloy') * 72)
+    .fluidInputs(fluid('epoxy') * 16)
     .outputs(metaitem('component.capacitor.edlc'))
     .duration(300)
     .EUt(VA[EV])
@@ -130,6 +127,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineAnnealedCopper') * 2)
     .fluidInputs(fluid('potassium_hydroxide_solution') * 250)
     .fluidInputs(fluid('soldering_alloy') * 72)
+    .fluidInputs(fluid('epoxy') * 16)
     .outputs(metaitem('component.capacitor.edlc'))
     .duration(300)
     .EUt(VA[EV])
