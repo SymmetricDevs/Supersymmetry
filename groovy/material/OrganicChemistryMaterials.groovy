@@ -4215,8 +4215,20 @@ class OrganicChemistryMaterials {
                 .components(NAcryloxyethylNMethylPerfluorobutanesulfonamide * 10, PolyethyleneGlycolDiacrylate, Thioglycerol * 3)
                 .color(0x00bdff)
                 .build()
+                
+        Methylbutynol = new Material.Builder(15713, SuSyUtility.susyId('methylbutynol'))
+                .liquid()
+                .components(Carbon * 5, Hydrogen * 8, Oxygen)
+                .colorAverage()
+                .build()
 
-        EDLCElectrodeSlurry = new Material.Builder(15713, SuSyUtility.susyId('edlc_electrode_slurry'))
+        Methylbutenol = new Material.Builder(15714, SuSyUtility.susyId('methylbutenol'))
+                .liquid()
+                .components(Carbon * 5, Hydrogen * 10, Oxygen)
+                .colorAverage()
+                .build()
+
+        EDLCElectrodeSlurry = new Material.Builder(15715, SuSyUtility.susyId('edlc_electrode_slurry'))
                 .liquid()
                 .components(ActivatedCarbon * 4, PolyvinylideneFluoride, Carbon, IsopropylAlcohol * 4)
                 .color(0x2b2b2b)
