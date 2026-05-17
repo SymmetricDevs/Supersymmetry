@@ -3422,7 +3422,7 @@ class UnknownCompositionMaterials {
                 .color(0xdcf2d2)
                 .build()
 
-        BurnedGas = new Material.Builder(4732, SuSyUtility.susyId('burned_gas'))
+        WasteGas = new Material.Builder(4732, SuSyUtility.susyId('waste_gas'))
                 .gas()
                 .color(0x363d39)
                 .build()

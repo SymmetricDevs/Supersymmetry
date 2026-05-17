@@ -833,7 +833,7 @@ class SuSyMaterials {
     public static Material MelamineOffgas
     public static Material CrudeAzide
     public static Material CrudeAzideSolution
-    public static Material BurnedGas
+    public static Material WasteGas
     public static Material CorrosiveGas
     public static Material MagneticLiningSlurry
     public static Material FluorinatedSulfolaneMixture

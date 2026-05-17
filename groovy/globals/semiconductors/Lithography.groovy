@@ -17,7 +17,7 @@ class Lithography {
         int timeUsed
         boolean liftoff
 
-        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false) {
+        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false, String topcoat = null, String barc = null) {
             this.resistName = resistName
             this.solventName = solventName
             this.developerName = developerName
@@ -25,13 +25,17 @@ class Lithography {
             this.exposureRecipeMap = exposureRecipeMap
             this.timeUsed = timeUsed
             this.liftoff = liftoff
+            this.topcoat = topcoat
+            this.barc = barc
         }
 
-        def generateCoatingRecipe(String input, boolean hmds = false, Integer circuit = null) {
+        def generateCoatingRecipe(String input, boolean hmds, Integer circuit = null) {
+            solvent_amount = 100 + (this.topcoat ? 20 : 0) + (this.barc ? 50 : 0)
+            
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid(this.resistName) * 50)
-                .fluidInputs(fluid(this.solventName) * 100)
+                .fluidInputs(fluid(this.solventName) * solvent_amount)
                 .outputs(metaitem(input + ".coated"))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(this.timeUsed)
@@ -39,6 +43,8 @@ class Lithography {
 
             if (circuit != null) {coatingRecipe.circuitMeta(circuit)}
             if (hmds) {coatingRecipe.fluidInputs(fluid('hexamethyldisilazane') * 10)}
+            if (this.topcoat) {coatingRecipe.fluidInputs(fluid(this.topcoat) * 10)}
+            if (this.barc) {coatingRecipe.fluidInputs(fluid(this.barc) * 25)}
             coatingRecipe.buildAndRegister()
         }
         
@@ -81,18 +87,23 @@ class Lithography {
         new Resist("novolac_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300),
         new Resist("novolac_liftoff_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300, true),
         new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "uv_light_box", 200),
-        new Resist("polyhydroxystyrene_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200),
-        new Resist("methacrylate_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300)
+        new Resist("polyhydroxystyrene_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, false, null, "krf_barc"),
+        new Resist("methacrylate_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, false, "arf_topcoat", "arf_barc")
     ]
 
     public static final electronBeamResists = [
         new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", EV, "electron_beam_lithography", 1000)
     ]
 
-    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, Integer circ = null) {
+    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc, Integer circ = null) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
-                photoresist.generateCoatingRecipe(input, hmds, circ)
+                if (ibarc) {
+                    Deposition.generateChemicalVaporDepositionRecipe(input, input + ".ibarc", 0.25, "silicon_oxynitride")
+                    input = input + ".ibarc"
+                }
+
+                photoresist.generateCoatingRecipe(input, hmds, ibarc, circ)
                 photoresist.generateExposureRecipe(input, nonConsumable)
                 photoresist.generateDevelopmentRecipe(input, product)
             }
