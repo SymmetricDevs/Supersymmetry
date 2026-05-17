@@ -1709,12 +1709,6 @@ class SuSyMaterials {
     public static Material CopperIPhosphide
     public static Material CarbonCompound
     public static Material IodinePentafluoride
-
-    public static Material DimethylOneThreeDioxane
-    public static Material Methylbutynol
-    public static Material Methylbutenol
-    public static Material DimethylDioxaneSolution
-    public static Material IsopreneSolution
     public static Material AnnealedAB2MetalAlloy
     public static Material AnnealedAB5MetalAlloy
     public static Material CadmiumOxide
@@ -2241,8 +2235,7 @@ class SuSyMaterials {
     public static Material Trioctylamine
     public static Material Adamantane
     public static Material Adamantanone
-
-    //public static Material NButylamine
+    public static Material DimethylOneThreeDioxane
     public static Material Ethyltoluene
     public static Material VinylbenzylChloride
     public static Material Cyclohexylamine
@@ -2617,6 +2610,8 @@ class SuSyMaterials {
     public static Material Octamethylcyclotetrasiloxane
     public static Material Benzaldehyde
     public static Material Diethoxymethylsilane
+    public static Material Methylbutynol
+    public static Material Methylbutenol
 
     // Third Degree Materials
 
@@ -2843,6 +2838,8 @@ class SuSyMaterials {
     public static Material ArFTopcoat
     public static Material ArFBottomAntireflectiveCoating
     public static Material PolycaprolactamSolution
+    public static Material DimethylDioxaneSolution
+    public static Material IsopreneSolution
 
     // Thermodynamics Materials
 

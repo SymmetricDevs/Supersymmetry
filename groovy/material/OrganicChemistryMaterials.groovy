@@ -3425,7 +3425,11 @@ class OrganicChemistryMaterials {
 
         ParaEthylbenzenesulfonicAcid.setFormula('C8H10O3S', true)
 
-        // FREE ID: 15534
+        DimethylOneThreeDioxane = new Material.Builder(15534, SuSyUtility.susyId('dimethyl_one_three_dioxane'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 2)
+                .colorAverage()
+                .build()
 
         ParaEthylphenol = new Material.Builder(15535, SuSyUtility.susyId('para_ethylphenol'))
                 .dust()
@@ -4215,7 +4219,7 @@ class OrganicChemistryMaterials {
                 .components(NAcryloxyethylNMethylPerfluorobutanesulfonamide * 10, PolyethyleneGlycolDiacrylate, Thioglycerol * 3)
                 .color(0x00bdff)
                 .build()
-                
+
         Methylbutynol = new Material.Builder(15713, SuSyUtility.susyId('methylbutynol'))
                 .liquid()
                 .components(Carbon * 5, Hydrogen * 8, Oxygen)

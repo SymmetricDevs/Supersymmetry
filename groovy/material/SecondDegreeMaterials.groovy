@@ -622,8 +622,6 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        log.infoMC('debug4')
-
         ImpureBariumSulfideSolution = new Material.Builder(13097, SuSyUtility.susyId("impure_barium_sulfide_solution"))
                 .liquid()
                 .components(ImpureBariumSulfide, Water)
@@ -1156,7 +1154,7 @@ class SecondDegreeMaterials {
                 .components(Alumina)
                 .color(0xf1f2fa)
                 .build()
-      
+
         CopperIINitrateSolution = new Material.Builder(13181, SuSyUtility.susyId('copper_ii_nitrate_solution'))
                 .liquid()
                 .components(CopperIINitrate, Water)
@@ -1184,19 +1182,7 @@ class SecondDegreeMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .build()
       
-        DimethylDioxaneSolution = new Material.Builder(13185, SuSyUtility.susyId('dimethyl_dioxane_solution'))
-                .liquid()
-                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
-                .colorAverage()
-                .build()
-
-        IsopreneSolution = new Material.Builder(13186, SuSyUtility.susyId('isoprene_solution'))
-                .liquid()
-                .components(Water, Isoprene, Formaldehyde)
-                .colorAverage()
-                .build()
-        
-        log.infoMC('debug3')
+        // FREE ID: 13185-13186
 
         MetalHydrideMixAnode = new Material.Builder(13187, SuSyUtility.susyId('metal_hydride_mix_anode'))
                 .dust()
@@ -1219,8 +1205,6 @@ class SecondDegreeMaterials {
                 .components(Iron, Chlorine * 3, Water)
                 .color(0x472500)
                 .build()
-
-        log.infoMC('debug2')
 
         HighTemperatureSolder = new Material.Builder(13190, SuSyUtility.susyId('high_temperature_solder'))
                 .dust().liquid(new FluidBuilder().temperature(309))
@@ -1259,8 +1243,6 @@ class SecondDegreeMaterials {
                 .arcSmeltInto(Gold)
                 .macerateInto(Gold)
                 .build()
-
-        log.infoMC('debug1')
 
         GrapheneCoatedGold = new Material.Builder(13195, SuSyUtility.susyId('graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
