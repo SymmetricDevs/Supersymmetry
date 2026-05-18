@@ -95,7 +95,7 @@ class Lithography {
         new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", EV, "electron_beam_lithography", 1000)
     ]
 
-    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc, Integer circ = null) {
+    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc = false, Integer circ = null) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 if (ibarc) {
