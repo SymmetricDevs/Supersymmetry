@@ -103,7 +103,7 @@ class Lithography {
                     input = input + ".ibarc"
                 }
 
-                photoresist.generateCoatingRecipe(input, hmds, ibarc, circ)
+                photoresist.generateCoatingRecipe(input, hmds, circ)
                 photoresist.generateExposureRecipe(input, nonConsumable)
                 photoresist.generateDevelopmentRecipe(input, product)
             }
