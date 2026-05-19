@@ -1724,11 +1724,6 @@ class SuSyMaterials {
     public static Material CopperIPhosphide
     public static Material CarbonCompound
     public static Material IodinePentafluoride
-    public static Material DimethylOneThreeDioxane
-    public static Material Methylbutynol
-    public static Material Methylbutenol
-    public static Material DimethylDioxaneSolution
-    public static Material IsopreneSolution
     public static Material AnnealedAB2MetalAlloy
     public static Material AnnealedAB5MetalAlloy
     public static Material CadmiumOxide
