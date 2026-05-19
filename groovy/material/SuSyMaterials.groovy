@@ -2243,6 +2243,7 @@ class SuSyMaterials {
     public static Material Cyanamide
     public static Material Dicyandiamide
     public static Material TwoMethylimidazole
+    public static Material EDLCElectrodeSlurry
     public static Material FlameRetardantEpoxy
     public static Material PropyleneChlorohydrin
     public static Material PropyleneOxide

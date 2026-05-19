@@ -34,7 +34,7 @@ susy.material.isobutylene=Isobutylene
 susy.material.iron_iii_chloride_solution=Iron III Chloride Solution
 susy.material.n_methyl_two_pyrrolidone=N-methyl-2-pyrrolidone
 susy.material.salty_n_methyl_two_pyrrolidone=Salty N-methyl-2-pyrrolidone
-susy.material.trimethyl_borate=Trimethyl Borate 
+susy.material.trimethyl_borate=Trimethyl Borate
 susy.material.acidic_methyl_acetate_water_mixture=Acidic Methyl Acetate-Water Mixture
 susy.material.two_chloronitrobenzene=2-Chloronitrobenzene
 susy.material.chloronitrobenzene_mixture=Chloronitrobenzene Mixture
@@ -1185,7 +1185,7 @@ item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
 item.susy.material.non_marine_evaporite_deposit.ore=Non Marine Evaporite Deposit
 item.susy.material.halide_evaporite_deposit.ore=Halide Evaporite Deposit
-item.susy.material.carbonate_evaporite_deposit.ore=Carbonate Evaporite Deposit 
+item.susy.material.carbonate_evaporite_deposit.ore=Carbonate Evaporite Deposit
 item.susy.material.sulfate_evaporite_deposit.ore=Sulfate Evaporite Deposit
 item.susy.material.platinum_placer_deposit.ore=Platinum Placer Deposit
 item.susy.material.phosphorite_deposit.ore=Phosphorite Deposit
@@ -1526,7 +1526,7 @@ susy.material.premium_gasoline=Premium Gasoline
 susy.material.supreme_gasoline=Supreme Gasoline
 susy.material.titanyl_sulfate_solution=Titanyl Sulfate Solution
 susy.material.acidic_wastewater=Acidic Wastewater
-susy.material.sodium_borohydride=Sodium Borohydride 
+susy.material.sodium_borohydride=Sodium Borohydride
 susy.material.sodium_hydride=Sodium Hydride
 susy.material.ultramafic_tailing_slurry=Ultramafic Tailing Slurry
 susy.material.rutile_slurry=Rutile Slurry
@@ -2684,6 +2684,7 @@ susy.material.methylbutynol=Methylbutynol
 susy.material.methylbutenol=Methylbutenol
 susy.material.dimethyl_dioxane_solution=4,4-Dimethyl-1,3-Dioxane Solution
 susy.material.isoprene_solution=Isoprene Solution
+susy.material.edlc_electrode_slurry=EDLC Electrode Slurry
 
 # Isotopes
 
@@ -3635,6 +3636,11 @@ metaitem.lamp.mercury.lp.name=Ultraviolet Mercury Vapor Lamp
 metaitem.carbon.mesh.phenolic.moist.name=Moist Phenolic Carbon Mesh
 metaitem.carbon.mesh.phenolic.treated.name=Treated Phenolic Carbon Mesh
 metaitem.carbon.tile.phenolic.treated.name=Treated Phenolic Carbon Tile
+
+metaitem.edlc_electrode_powder.name=EDLC Electrode Powder
+metaitem.edlc_electrode_coated.name=Coated EDLC Electrode
+metaitem.edlc_electrode.name=EDLC Carbon Electrode
+metaitem.component.capacitor.edlc.name=Supercapacitor (EDLC)
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand

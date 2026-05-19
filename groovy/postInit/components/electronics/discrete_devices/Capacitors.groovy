@@ -59,3 +59,78 @@ ASSEMBLER.recipeBuilder()
     .duration(40)
     .EUt(VA[MV])
     .buildAndRegister()
+
+// Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
+// "Supercapacitors: Concepts and advances"
+// (IOP, 2025), sections 4.13, 5.6, 5.7.
+
+oreDict.add('componentSupercapacitor', metaitem('component.capacitor.edlc'))
+
+// --- Electrode chain (book section 4.13) ---
+
+// Mix the dry electrode mix
+MIXER.recipeBuilder()
+    .inputs(ore('dustActivatedCarbon') * 10)
+    .inputs(ore('dustPolyvinylideneFluoride'))
+    .inputs(ore('dustCarbon'))
+    .outputs(metaitem('edlc_electrode_powder') * 10)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Disperse the powder in isopropyl alcohol to form the coating slurry
+MIXER.recipeBuilder()
+    .inputs(metaitem('edlc_electrode_powder') * 2)
+    .fluidInputs(fluid('isopropyl_alcohol') * 1000)
+    .fluidOutputs(fluid('edlc_electrode_slurry') * 1000)
+    .duration(160)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Calendaring: coat the slurry onto an aluminium current collector
+CURTAIN_COATER.recipeBuilder()
+    .inputs(ore('foilAluminium'))
+    .fluidInputs(fluid('edlc_electrode_slurry') * 250)
+    .outputs(metaitem('edlc_electrode_coated'))
+    .duration(120)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+// Dry the coated electrode at high temperature, recovering solvent
+DRYER.recipeBuilder()
+    .inputs(metaitem('edlc_electrode_coated'))
+    .outputs(metaitem('edlc_electrode'))
+    .fluidOutputs(fluid('isopropyl_alcohol') * 250)
+    .duration(160)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// --- Cell assembly (book sections 4.13, 5.6) ---
+
+// Sulfuric acid electrolyte variant
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('edlc_electrode') * 5)
+    .inputs(ore('foilPolytetrafluoroethylene'))
+    .inputs(ore('wireFineAnnealedCopper') * 2)
+    .inputs(ore('foilAluminium'))
+    .fluidInputs(fluid('diluted_sulfuric_acid') * 250)
+    .fluidInputs(fluid('soldering_alloy') * 72)
+    .fluidInputs(fluid('epoxy') * 16)
+    .outputs(metaitem('component.capacitor.edlc'))
+    .duration(300)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+// Potassium hydroxide electrolyte variant
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('edlc_electrode') * 5)
+    .inputs(ore('foilPolytetrafluoroethylene'))
+    .inputs(ore('wireFineAnnealedCopper') * 2)
+    .inputs(ore('foilAluminium'))
+    .fluidInputs(fluid('diluted_potassium_hydroxide_solution') * 250)
+    .fluidInputs(fluid('soldering_alloy') * 72)
+    .fluidInputs(fluid('epoxy') * 16)
+    .outputs(metaitem('component.capacitor.edlc'))
+    .duration(300)
+    .EUt(VA[EV])
+    .buildAndRegister()
