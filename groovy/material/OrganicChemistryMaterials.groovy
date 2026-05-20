@@ -3274,7 +3274,7 @@ class OrganicChemistryMaterials {
                 .color(0x424242)
                 .build()
 
-        TrimethylGalliumSolution.setFormula('Ga(CH3)33(C6H5CH3)', true)
+        TrimethylGalliumSolution.setFormula('Ga(CH3)3(C6H5CH3)', true)
 
         TrimethylIndiumSolution = new Material.Builder(15513, SuSyUtility.susyId('trimethyl_indium_solution'))
                 .liquid()
