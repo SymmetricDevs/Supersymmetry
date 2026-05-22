@@ -719,7 +719,7 @@ class FirstDegreeMaterialsB {
         AluminiumAlloy2219 = new Material.Builder(8771, SuSyUtility.susyId('aluminium_alloy_2219'))
                 .ingot().liquid(new FluidBuilder().temperature(640))
                 .colorAverage()
-                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .components(Aluminium * 1661, Copper * 60, Manganese * 18, Vanadium * 1, Zirconium * 2, Titanium * 1)
                 .build()
 
