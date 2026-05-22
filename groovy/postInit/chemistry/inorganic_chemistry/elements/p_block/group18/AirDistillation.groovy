@@ -59,7 +59,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
     VACUUM_CHAMBER.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('dustCarbonatedMolecularSieveX'))
-        .notConsumable(metaitem('springKanthal'))
+        .notConsumable(metaitem('springCupronickel'))
         .outputs(metaitem('dustMolecularSieveX'))
         .fluidOutputs(fluid('carbon_dioxide') * 20)
         .duration(4)
@@ -172,7 +172,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
         .buildAndRegister()
 
     PHASE_SEPARATOR.recipeBuilder()
-        .fluidInputs(fluid('partially_liquified_air') * 150)
+        .fluidInputs(fluid('partially_liquefied_air') * 150)
         .fluidOutputs(fluid('liquid_air_feedstock') * 50)
         .fluidOutputs(fluid('gaseous_air_feedstock') * 100)
         .duration(114)

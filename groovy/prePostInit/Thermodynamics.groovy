@@ -702,28 +702,28 @@ for (fluid_fuel in FluidFuels) {
 }
 
 FLUID_HEATER.recipeBuilder()
-        .circuitMeta(1)
+        .circuitMeta(2)
         .fluidInputs(fluid('air') * 1000)
         .fluidOutputs(fluid('preheated_air') * 1000)
-        .duration(5)
-        .EUt(VA[EV])
+        .duration(40)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 // Combined Cycle
 // Flue gas is 10,000 EU/mol or 10 EU/L
 HEAT_EXCHANGER.recipeBuilder()
-        .fluidInputs(fluid('deionized_water') * 640) 
+        .fluidInputs(fluid('deionized_water') * 160) 
         .fluidInputs(fluid('desulfurized_flue_gas') * 32768)
-        .fluidOutputs(fluid('hp_steam') * 640)
+        .fluidOutputs(fluid('hp_steam') * 160)
         .fluidOutputs(fluid('chilled_flue_gas') * 32768)
         .duration(5)
         .info('recipe.power_generation.combined_cycle')
         .buildAndRegister();
 
 HEAT_EXCHANGER.recipeBuilder()
-        .fluidInputs(fluid('deionized_water') * 640)
+        .fluidInputs(fluid('deionized_water') * 160)
         .fluidInputs(fluid('flue_gas') * 32768)
-        .fluidOutputs(fluid('hp_steam') * 640)
+        .fluidOutputs(fluid('hp_steam') * 160)
         .fluidOutputs(fluid('chilled_flue_gas') * 32768)
         .duration(5)
         .info('recipe.power_generation.combined_cycle')
@@ -831,17 +831,17 @@ FLUID_HEATER.recipeBuilder()
         .buildAndRegister();
 
 HEAT_EXCHANGER.recipeBuilder()
-        .fluidInputs(liquid('hot_pressurized_water') * 1536)
+        .fluidInputs(liquid('hot_pressurized_water') * 400)
         .fluidInputs(liquid('deionized_water') * 1640)
-        .fluidOutputs(liquid('deionized_water') * 1536)
+        .fluidOutputs(liquid('deionized_water') * 400)
         .fluidOutputs(fluid('hp_steam') * 1640)
         .duration(1)
         .buildAndRegister();
 
 HEAT_EXCHANGER.recipeBuilder()
-        .fluidInputs(liquid('hot_pressurized_heavy_water') * 1536)
+        .fluidInputs(liquid('hot_pressurized_heavy_water') * 384)
         .fluidInputs(liquid('deionized_water') * 1490)
-        .fluidOutputs(liquid('tritiated_heavy_water') * 1536)
+        .fluidOutputs(liquid('tritiated_heavy_water') * 384)
         .fluidOutputs(fluid('hp_steam') * 1490)
         .duration(1)
         .buildAndRegister();
@@ -862,7 +862,7 @@ FLUID_HEATER.recipeBuilder()
 ADV_STEAM_TURBINE.recipeBuilder()
         .fluidInputs(liquid('hp_steam') * 40)
         .fluidOutputs(liquid('hp_exhaust_steam') * 40)
-        .duration(10)
+        .duration(40)
         .EUt(2048)
         .buildAndRegister()
 
@@ -870,7 +870,7 @@ ADV_STEAM_TURBINE.recipeBuilder()
 ADV_STEAM_TURBINE.recipeBuilder()
         .fluidInputs(liquid('hp_wet_steam') * 40)
         .fluidOutputs(liquid('hp_wet_exhaust_steam') * 40)
-        .duration(10)
+        .duration(40)
         .EUt(2048)
         .buildAndRegister()
 
@@ -900,6 +900,6 @@ FLUID_HEATER.recipeBuilder()
         .circuitMeta(1)
         .fluidInputs(liquid('air') * 1000)
         .fluidOutputs(liquid('hot_air') * 1000)
-        .duration(40)
+        .duration(20)
         .EUt(VA[LV])
         .buildAndRegister();

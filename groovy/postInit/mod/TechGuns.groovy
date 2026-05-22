@@ -5,6 +5,18 @@ import techguns.items.guns.GenericGun
 import techguns.plugins.crafttweaker.EnumGunStat
 import techguns.TGArmors
 import techguns.TGItems
+import techguns.util.ItemStackOreDict
+
+mods.jei.category.hideCategory('techguns.ammopress')
+mods.jei.category.hideCategory('techguns.metalpress')
+mods.jei.category.hideCategory('techguns.chemlab')
+mods.jei.category.hideCategory('techguns.fabricator')
+mods.jei.category.hideCategory('techguns.chargingstation')
+mods.jei.category.hideCategory('techguns.reactionchamber')
+mods.jei.category.hideCategory('techguns.oredrill')
+mods.jei.category.hideCategory('techguns.blastfurnace')
+mods.jei.category.hideCategory('techguns.grinder')
+mods.jei.category.hideCategory('techguns.camobench')
 
 def name_removals = [
     "techguns:basicmachine_0_ammo_press",
@@ -71,6 +83,7 @@ def name_removals = [
     "techguns:thompson_alt",
     "techguns:ak47",
     "techguns:ak47_alt",
+    "techguns:boltaction",
     "techguns:m4",
     "techguns:m4_alt",
     "techguns:m4_infiltrator",
@@ -221,6 +234,10 @@ mods.jei.ingredient.yeet( // hide techguns plates, ingots, and ores
     item('techguns:itemshared', 85)  //Titanium Ingot
 )
 
+for (i in 0..7) {
+    mods.jei.ingredient.yeet(item('techguns:orecluster', i))
+}
+
 ore_dict.remove('oreCopper', item('techguns:basicore'))
 ore_dict.remove('oreTin', item('techguns:basicore', 1))
 ore_dict.remove('oreLead', item('techguns:basicore', 2))
@@ -367,24 +384,16 @@ crafting.replaceShaped("techguns:revolver", item('techguns:revolver'), [
     [ore('craftingToolFile'), item('techguns:itemshared', 42), item('techguns:itemshared', 1)]
 ])
 
-crafting.replaceShaped("techguns:boltaction", item('techguns:boltaction'), [
-    [null, ore('craftingToolWrench'), item('techguns:itemshared', 3)],
-    [ore('plateGlass'), ore('ringIron'), ore('plateGlass')],
-    [item('techguns:itemshared', 38), item('techguns:itemshared', 33), item('techguns:itemshared', 42)]
-])
-
 crafting.replaceShaped("techguns:sawedoff", item('techguns:sawedoff'), [
         [ore('springSmallSteel'), metaitem('gun.barrel.steel'), null],
         [metaitem('gun.barrel.steel'), item('techguns:itemshared', 33), item('techguns:itemshared', 2)],
         [null, item('techguns:itemshared', 2), item('techguns:itemshared', 42)]
 ]);
 
-crafting.replaceShaped("techguns:pistolrounds", item('techguns:itemshared', 1) * 4, [
-    [ore('plateBrass'), ore('gunpowder'), ore('roundLead')],
-])
-
 crafting.replaceShaped("techguns:shotgunrounds", item('techguns:itemshared', 2) * 8, [
-        [ore('plateSteel'), ore('gunpowder'), ore('roundLead')],
+        [null, ore('plateBrass'), null],
+        [ore('craftingToolHardHammer'), ore('gunpowder'), ore('roundLead')],
+        [null, ore('plateBrass'), null],
 ])
 
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
@@ -661,14 +670,6 @@ Globals.solders.each { key, val ->
         .EUt(VA[MV])
         .buildAndRegister();
 
-    CANNER.recipeBuilder()
-        .fluidInputs(fluid('napalm') * 250)
-        .inputs(item('techguns:itemshared', 28))
-        .outputs(item('techguns:itemshared', 27))
-        .duration(80)
-        .EUt(VA[ULV])
-        .buildAndRegister();
-
     WEAPONS_FACTORY.recipeBuilder()
         .inputs(item('techguns:itemshared', 72))
         .inputs(item('techguns:itemshared', 33))
@@ -874,11 +875,11 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .inputs(ore('plateBrass') * 2)
+    .inputs(ore('plateBrass'))
     .inputs(ore('dustGunpowder'))
-    .inputs(ore('roundLead') * 3)
+    .inputs(ore('roundLead') )
     .circuitMeta(2)
-    .outputs(item('techguns:itemshared', 2) * 5)
+    .outputs(item('techguns:itemshared', 2) * 8)
     .duration(10)
     .EUt(VA[LV])
     .buildAndRegister();
@@ -1406,33 +1407,6 @@ WEAPONS_FACTORY.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister();
 
-// Repair bench materials
-
-TGArmors.t1_miner_Helmet.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.5f, 2)
-TGArmors.t1_miner_Chestplate.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.5f, 4)
-TGArmors.t1_miner_Leggings.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.333f, 2)
-TGArmors.t1_miner_Boots.setRepairMats(item('gregtech:meta_plate', 51), TGItems.HEAVY_CLOTH, 0.5f, 2)
-
-TGArmors.t1_combat_Helmet.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.5f, 2)
-TGArmors.t1_combat_Chestplate.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.5f, 4)
-TGArmors.t1_combat_Leggings.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.333f, 3)
-TGArmors.t1_combat_Boots.setRepairMats(item('gregtech:meta_plate', 324), TGItems.HEAVY_CLOTH, 0.5f, 2)
-
-TGArmors.t2_combat_Helmet.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-TGArmors.t2_combat_Chestplate.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 4)
-TGArmors.t2_combat_Leggings.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.333f, 3)
-TGArmors.t2_combat_Boots.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-
-TGArmors.t2_riot_Helmet.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-TGArmors.t2_riot_Chestplate.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f,  4)
-TGArmors.t2_riot_Leggings.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.333f, 3)
-TGArmors.t2_riot_Boots.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15154),  0.5f, 2)
-
-TGArmors.t2_commando_Helmet.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.5f, 2)
-TGArmors.t2_commando_Chestplate.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.5f, 4)
-TGArmors.t2_commando_Leggings.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.333f, 3)
-TGArmors.t2_commando_Boots.setRepairMats(item('gregtech:meta_plate', 8273), item('gregtech:meta_plate', 15380), 0.5f, 2)
-
 //Compressed air
 
 CANNER.recipeBuilder()
@@ -1440,6 +1414,14 @@ CANNER.recipeBuilder()
     .fluidInputs(fluid('hp_air') * 1000)
     .outputs(item('techguns:itemshared:23'))
     .duration(100)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+    
+CANNER.recipeBuilder()
+    .fluidInputs(fluid('napalm') * 250)
+    .inputs(item('techguns:itemshared', 28))
+    .outputs(item('techguns:itemshared', 27))
+    .duration(80)
     .EUt(VA[ULV])
     .buildAndRegister();
 

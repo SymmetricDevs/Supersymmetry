@@ -103,7 +103,7 @@ def minor_solvents = [
         .buildAndRegister()
 
     DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('diisopropyl_para_phenylenediamine_solution') * 1000)
+        .fluidInputs(fluid('diisopropyl_para_phenylenediamine_solution') * 2000)
         .outputs(metaitem('dustDiisopropylParaPhenylenediamine') * 36)
         .fluidOutputs(fluid('wastewater') * 2000)
         .duration(20)
@@ -345,7 +345,7 @@ BR.recipeBuilder()
         .buildAndRegister();
 
     BR.recipeBuilder()
-        .inputs(ore("dustPhthalicAnhydride") * 13)
+        .inputs(ore("dustPhthalicAnhydride") * 15)
         .fluidInputs(fluid('dihexadecylamine') * 2000)
         .notConsumable(fluid('sulfuric_acid') * 50)
         .outputs(metaitem('dustDihexadecylaminePhthalateAmide'))

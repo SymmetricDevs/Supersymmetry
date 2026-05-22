@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import postInit.utils.RecyclingHelper
 import static gregtech.api.GTValues.*
 import gregtechfoodoption.utils.GTFOUtils
+import gregtechfoodoption.item.GTFOMetaItem
 
 // MACHINE RECIPES
 
@@ -518,7 +519,45 @@ PYROLYSE_OVEN.recipeBuilder()
     .duration(80)
     .EUt(VA[MV])
     .buildAndRegister()
-    
+//Removing old recipes for coffee bean washing and drying
+
+mods.gregtech.chemical_bath.removeByInput(60, [metaitem('gregtechfoodoption:basic_coffee_small_gem_chipped') * 64], [fluid('water') * 16000])
+mods.gregtech.chemical_bath.removeByInput(60, [metaitem('gregtechfoodoption:basic_coffee_large_gem_chipped') * 32], [fluid('water') * 16000])
+mods.gregtech.dryer.removeByInput(30, [metaitem('gregtechfoodoption:wet_coffee_large_gem_chipped') * 32], null)
+mods.gregtech.dryer.removeByInput(30, [metaitem('gregtechfoodoption:wet_coffee_small_gem_chipped') * 64], null)
+
+//Re-added coffee bean washing and drying
+CHEMICAL_BATH.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1029') * 32)
+    .fluidInputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1027') * 32)
+    .duration(3600)
+    .EUt(60)
+    .buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1028') * 64)
+    .fluidInputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1026') * 64)
+    .duration(3600)
+    .EUt(60)
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1027') * 32)
+    .fluidOutputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1025') * 32)
+    .duration(3600)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(item('gregtechfoodoption:gtfo_oredict_item:1026') * 64)
+    .fluidOutputs(fluid('water') * 8000)
+    .outputs(item('gregtechfoodoption:gtfo_oredict_item:1024') * 64)
+    .duration(3600)
+    .EUt(VA[LV])
+    .buildAndRegister()
 // Force GTFO skewers to be made with only long rods
 // Skewer * 16
 mods.gregtech.lathe.removeByInput(200, [metaitem('stickTitanium')], null)
@@ -545,3 +584,20 @@ VACUUM_FREEZER.recipeBuilder()
 	.EUt(5)
 	.duration(200)
 	.buildAndRegister()
+
+// Dried Ditalini * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.ditalini')], null)
+// Dried Rigatoni * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.rigatoni')], null)
+// Dried Lasagna * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.lasagna')], null)
+// Dried Spaghetti * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.spaghetti')], null)
+// Dried Tagliatelle * 1
+mods.gregtech.electric_furnace.removeByInput(16, [metaitem('gregtechfoodoption:component.pasta.raw.tagliatelle')], null)
+
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_DITALINI.getStackForm(), GTFOMetaItem.DRIED_DITALINI.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_RIGATONI.getStackForm(), GTFOMetaItem.DRIED_RIGATONI.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_LASAGNA.getStackForm(), GTFOMetaItem.DRIED_LASAGNA.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_SPAGHETTI.getStackForm(), GTFOMetaItem.DRIED_SPAGHETTI.getStackForm(), 800, 310, 1);
+GTFOUtils.addBakingOvenRecipes(GTFOMetaItem.RAW_TAGLIATELLE.getStackForm(), GTFOMetaItem.DRIED_TAGLIATELLE.getStackForm(), 800, 310, 1);

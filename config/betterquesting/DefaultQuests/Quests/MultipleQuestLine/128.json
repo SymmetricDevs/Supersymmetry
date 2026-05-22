@@ -1,6 +1,6 @@
 {
   "preRequisites:11": [
-    115
+    105
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -46,16 +46,6 @@
           "Count:3": 1,
           "Damage:2": 14634,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 41,
-          "Damage:2": 4,
-          "id:8": "gregtech:metal_casing"
-        },
-        "2:10": {
-          "Count:3": 12,
-          "Damage:2": 1,
-          "id:8": "gregtech:boiler_casing"
         }
       },
       "taskID:8": "bq_standard:retrieval"

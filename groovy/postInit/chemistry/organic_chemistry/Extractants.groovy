@@ -450,7 +450,7 @@ import static gregtech.api.GTValues.*
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
         .fluidInputs(fluid('butyraldehyde') * 2000)
         .fluidOutputs(fluid('two_ethyl_two_hexenal') * 3000)
-        .fluidOutputs(fluid('diluted_sodium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('diluted_sodium_hydroxide_solution') * 2000)
         .duration(60)
         .EUt(VA[MV])
         .buildAndRegister()
@@ -552,15 +552,6 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     //DIBUTYL CARBITOL (DBC)
-
-    FIXED_BR.recipeBuilder()
-        .notConsumable(metaitem('catalystBedPlatinum'))
-        .fluidInputs(fluid('butyraldehyde') * 50)
-        .fluidInputs(fluid('hydrogen') * 100)
-        .fluidOutputs(fluid('n_butanol') * 50)
-        .duration(5)
-        .EUt(VA[MV])
-        .buildAndRegister()
 
     CSTR.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 50)
@@ -788,7 +779,7 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     BR.recipeBuilder()
-        .inputs(ore('dustSodiumMethoxide') * 6)
+        .inputs(ore('dustSodiumMethoxide') * 18)
         .fluidInputs(fluid('phosphorus_trichloride') * 1000)
         .outputs(metaitem('dustSalt') * 6)
         .fluidOutputs(fluid('trimethyl_phosphite') * 1000)

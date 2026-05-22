@@ -203,6 +203,9 @@ DT.recipeBuilder()
 // Kroll Process
 
 for (inertGas in Globals.inertGases) {
+        if (inertGas.tier < 2) {
+                continue
+        }
         ERF.recipeBuilder()
                 .circuitMeta(2)
                 .fluidInputs(fluid('titanium_tetrachloride') * 3600)

@@ -12,6 +12,7 @@ import supersymmetry.api.util.SuSyUtility
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 import supersymmetry.api.unification.material.properties.FiberProperty
 
+import static gregtechfoodoption.GTFOMaterialHandler.*
 import static gregtech.api.unification.material.info.MaterialIconSet.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
 import static gregtech.api.unification.material.Materials.*
@@ -264,11 +265,13 @@ class OrganicChemistryMaterials {
 
         TrimethylBorate.setFormula("B(OCH3)3", true)
 
-        MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
+        AcidicMethylAcetateWaterMixture = new Material.Builder(15039, SuSyUtility.susyId('acidic_methyl_acetate_water_mixture'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(SulfuricAcid * 1, MethylAcetate * 1, Water * 1)
+                .components(MethylAcetate * 1, SulfuricAcid * 1, Water * 2)
                 .colorAverage()
                 .build()
+
+        AcidicMethylAcetateWaterMixture.setFormula("(C3H6O2)(H2SO4)(H2O)", true)
 
         TwoChloronitrobenzene = new Material.Builder(15040, SuSyUtility.susyId('two_chloronitrobenzene'))
                 .dust().liquid(new FluidBuilder().temperature(306))
@@ -775,12 +778,7 @@ class OrganicChemistryMaterials {
 
         Dimethylformamide.setFormula('(CH3)2NCH', true)
 
-        CativaCatalyst = new Material.Builder(15128, SuSyUtility.susyId('cativa_catalyst'))
-                .dust()
-                .color(0x695449)
-                .build()
-
-        CativaCatalyst.setFormula('[PPN][IrI2(CO)2]', true)
+        // FREE ID: 15130
 
         TwoEthylanthraquinone = new Material.Builder(15129, SuSyUtility.susyId('two_ethylanthraquinone'))
                 .liquid()
@@ -1800,12 +1798,14 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        BistriphenylphosphineiminiumChloride = new Material.Builder(15287, SuSyUtility.susyId('bistriphenylphosphineiminium_chloride'))
-                .dust()
-                .components(Carbon * 36, Hydrogen * 30, Chlorine * 1, Nitrogen * 1, Phosphorus * 2)
+        AceticAcidEthanolMixture = new Material.Builder(15287, SuSyUtility.susyId("acetic_acid_ethanol_mixture"))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Ethanol * 1, AceticAcid * 1, SulfuricAcid * 1, Water * 4)
                 .colorAverage()
                 .build()
 
+        AceticAcidEthanolMixture.setFormula("(C2H4O2)(C2H6O)(H2SO4)", true)
+        
         DimethylTerephthalate = new Material.Builder(15288, SuSyUtility.susyId('dimethyl_terephthalate'))
                 .dust().liquid(new FluidBuilder().temperature(533))
                 .components(Carbon * 10, Hydrogen * 10, Oxygen * 4)
@@ -2527,7 +2527,13 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 15396
+        MethylIodideSolution = new Material.Builder(15396, SuSyUtility.susyId("methyl_iodide_solution"))
+                .liquid()
+                .components(Carbon, Hydrogen * 3, Iodine, Water * 2)
+                .colorAverage()
+                .build()
+
+        MethylIodideSolution.setFormula("(CH3I)(H2O)2", true)
 
         Polycarbonate = new Material.Builder(15397, SuSyUtility.susyId('polycarbonate'))
                 .polymer()
@@ -2980,7 +2986,13 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 15470
+        AcidicEthylAcetateWaterMixture = new Material.Builder(15470, SuSyUtility.susyId('acidic_ethyl_acetate_water_mixture'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(EthylAcetate * 1, SulfuricAcid * 1, Water * 2)
+                .colorAverage()
+                .build()
+
+        AcidicEthylAcetateWaterMixture.setFormula("(C4H8O2)(H2SO4)(H2O)", true)
 
         BenzenesulfonicAcid = new Material.Builder(15471, SuSyUtility.susyId('benzenesulfonic_acid'))
                 .liquid()
@@ -3254,6 +3266,102 @@ class OrganicChemistryMaterials {
                 .liquid()
                 .components(Carbon * 14, Hydrogen * 20, Oxygen * 4)
                 .color(0x2dad80)
+                .build()
+
+        TrimethylGalliumSolution = new Material.Builder(15512, SuSyUtility.susyId('trimethyl_gallium_solution'))
+                .liquid()
+                .components(Gallium * 1, Carbon * 3, Hydrogen * 9, Toluene * 1)
+                .color(0x424242)
+                .build()
+
+        TrimethylGalliumSolution.setFormula('Ga(CH3)3(C6H5CH3)', true)
+
+        TrimethylIndiumSolution = new Material.Builder(15513, SuSyUtility.susyId('trimethyl_indium_solution'))
+                .liquid()
+                .components(Indium * 1, Carbon * 3, Hydrogen * 9, Toluene * 1)
+                .color(0x3b2f61)
+                .build()
+
+        TrimethylIndiumSolution.setFormula('In(CH3)3(C6H5CH3)', true)
+
+        TrimethylGallium = new Material.Builder(15514, SuSyUtility.susyId('trimethyl_gallium'))
+                .liquid()
+                .components(Gallium * 1, Carbon * 3, Hydrogen * 9)
+                .color(0xb3bab7)
+                .build()
+
+        TrimethylGallium.setFormula('Ga(CH3)3', true)
+
+        TrimethylIndium = new Material.Builder(15515, SuSyUtility.susyId('trimethyl_indium'))
+                .liquid()
+                .components(Indium * 1, Carbon * 3, Hydrogen * 9)
+                .color(0x7c60d6)
+                .build()
+                
+        TrimethylIndium.setFormula('In(CH3)3', true)
+
+        OneTetralone = new Material.Builder(15516, SuSyUtility.susyId('one_tetralone'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 10, Oxygen)
+                .colorAverage()
+                .build()
+
+        OneNaphthol = new Material.Builder(15517, SuSyUtility.susyId('one_naphthol'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 8, Oxygen)
+                .colorAverage()
+                .build()
+
+        TwoNitroOneNaphthol = new Material.Builder(15518, SuSyUtility.susyId('two_nitro_one_naphthol'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 7, Oxygen * 3, Nitrogen)
+                .colorAverage()
+                .build()
+
+        TwoAminoOneNaphthol = new Material.Builder(15519, SuSyUtility.susyId('two_amino_one_naphthol'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 9, Oxygen, Nitrogen)
+                .colorAverage()
+                .build()
+
+        OneNaphtholTwoDiazoniumChloride = new Material.Builder(15520, SuSyUtility.susyId('one_naphthol_two_diazonium_chloride'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 7, Oxygen, Nitrogen * 2, Chlorine)
+                .colorAverage()
+                .build()
+
+        Diazonaphthoquinone = new Material.Builder(15521, SuSyUtility.susyId('diazonaphthoquinone'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 6, Oxygen, Nitrogen * 2)
+                .colorAverage()
+                .build()
+
+        RawNitrileRubber = new Material.Builder(15522, SuSyUtility.susyId('raw_nitrile_rubber'))
+                .dust()
+                .components(Acrylonitrile * 3, Butadiene * 7)
+                .color(0x0a0e1f)
+                .build()
+
+        NitrileRubber = new Material.Builder(15523, SuSyUtility.susyId('nitrile_rubber'))
+                .polymer()
+                .components(Acrylonitrile * 3, Butadiene * 7)
+                .flags(GENERATE_FOIL, GENERATE_RING)
+                .color(0x040714)
+                .build()
+
+        AceticAcidMethanolMixture = new Material.Builder(15524, SuSyUtility.susyId('acetic_acid_methanol_mixture'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(AceticAcid * 1, Methanol * 1, SulfuricAcid * 1, Water * 4)
+                .colorAverage()
+                .build()
+
+        AceticAcidMethanolMixture.setFormula("(CH3COOH)(CH3OH)(H2SO4)", true)
+
+        Cyclohexanol = new Material.Builder(15525, SuSyUtility.susyId('cyclohexanol'))
+                .liquid(new FluidBuilder().temperature(434))
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 1)
+                .flags(FLAMMABLE)
+                .color(0xd4c97a)
                 .build()
     }
 }

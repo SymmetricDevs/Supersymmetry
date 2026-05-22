@@ -17,13 +17,13 @@
     "0:10": {
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 24,
-          "id:8": "susy:coagulation_tank_wall"
-        },
-        "1:10": {
           "Count:3": 1,
           "Damage:2": 14501,
           "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "susy:coagulation_tank_wall"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -2,6 +2,8 @@ import static prePostInit.Recipemaps.*
 import globals.Sintering
 import static gregtech.api.GTValues.*
 
+import postInit.utils.RecyclingHelper
+
 // PEMFCs
 
 // Carbon Fiber Mesh * 1
@@ -99,13 +101,13 @@ TUBE_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // YSZ electrolyte
-
 Sintering.blankets.each { blanket ->
     SINTERING_OVEN.recipeBuilder()
         .circuitMeta(1)
         .notConsumable(metaitem('shape.extruder.plate'))
         .inputs(ore('dustYttriaStabilizedZirconia'))
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 50)
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('plateYttriaStabilizedZirconia'))
         .duration(blanket.duration)
         .EUt(VA[MV])
@@ -121,12 +123,12 @@ Sintering.blankets.each { blanket ->
         .inputs(ore('dustNickelIiOxide') * 2)
         .inputs(ore('dustYttriaStabilizedZirconia') * 6)
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 400)
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('plateNickelYttriaStabilizedZirconia') * 8)
         .duration(blanket.duration)
         .EUt(VA[MV])
         .buildAndRegister()
 }
-
 // LSC interconnects
 
 TUBE_FURNACE.recipeBuilder()
@@ -154,6 +156,8 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister()
 
+RecyclingHelper.handleRecycling(metaitem('susy:fuel_cell.ev'), [metaitem('hull.ev'), metaitem('electric.pump.ev') * 2, ore('pipeSmallFluidTitanium') * 4, ore('plateStainlessSteel') * 16])
+
 ASSEMBLER.recipeBuilder()
     .inputs(ore('plateLanthanumStrontiumManganite') * 16)
     .inputs(ore('plateYttriaStabilizedZirconia') * 16)
@@ -167,3 +171,5 @@ ASSEMBLER.recipeBuilder()
     .duration(1000)
     .EUt(VA[EV])
     .buildAndRegister()
+
+RecyclingHelper.handleRecycling(metaitem('susy:fuel_cell.iv'), [metaitem('hull.iv'), metaitem('electric.pump.iv') * 2, ore('pipeSmallFluidTungstenSteel') * 4])

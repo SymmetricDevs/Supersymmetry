@@ -7,6 +7,8 @@ import gregtech.common.blocks.MetaBlocks
 import gregtech.common.blocks.MetaBlocks.*
 import gregtechfoodoption.worldgen.trees.GTFOTrees
 import net.minecraft.init.Blocks
+import net.minecraft.block.BlockLog
+
 
 log.infoMC("Running GregTech.groovy...")
 
@@ -96,6 +98,10 @@ mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustGlass')], null)
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustOpal')], null)
 // Silicon Dioxide Dust * 1
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustFlint')], null)
+// Stone Rod * 2
+mods.gregtech.lathe.removeByInput(7, [item('minecraft:stone')], null)
+// Stone Rod * 2
+mods.gregtech.lathe.removeByInput(7, [item('minecraft:cobblestone')], null)
 
 def name_removals = [
     'gregtech:cover_fluid_voiding',
@@ -696,15 +702,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister();
 
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('cableGtSingleTin') * 2)
-    .inputs(metaitem('graphite_electrode'))
-    .inputs(metaitem('component.glass.tube') * 8)
-    .outputs(metaitem('carbon_arc_lamp') * 8)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 //Ore Recipes
 
 MACERATOR.recipeBuilder()
@@ -1281,7 +1278,9 @@ LATEX_COLLECTOR.recipeBuilder()
 LATEX_COLLECTOR.recipeBuilder()
     .notConsumable(fluid('hot_hp_air') * 10)
     .fluidOutputs(fluid('gtfo_rainbow_sap') * 100)
-    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState)
+    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState, 
+        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Y),
+        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z))
     .duration(20)
     .EUt(VA[ULV])
     .buildAndRegister();
@@ -1500,6 +1499,7 @@ crafting.replaceShaped("gregtech:casing_steel_firebox", item('gregtech:boiler_fi
 
 // Tapes
 ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('foilPlastic') * 4)
     .fluidInputs(fluid('glue') * 250)
     .outputs(metaitem('basic_tape') * 8)
@@ -1913,5 +1913,51 @@ ALLOY_SMELTER.recipeBuilder()
     .inputs(item('minecraft:clay_ball'))
     .outputs(metaitem('brick.coke'))
     .duration(40)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(metaitem('dustFlint'))
+    .inputs(metaitem('dustQuartzite') * 16)
+    .outputs(metaitem('dustGlass') * 20)
+    .duration(160)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(metaitem('dustFlint'))
+    .inputs(metaitem('dustQuartzSand') * 16)
+    .outputs(metaitem('dustGlass') * 16)
+    .duration(200)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+    
+crafting.addShapeless('gregtech:glass_flint_dust_full', metaitem('dustGlass') * 8, [
+        metaitem('dustFlint'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
+        metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
+        metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand')])
+
+LATHE.recipeBuilder()
+    .inputs(ore('stone'))
+    .outputs(metaitem('stickStone') * 4)
+    .duration(20)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('stickStone'))
+RecyclingHelper.handleRecycling(metaitem('stickStone'), [metaitem('dustSmallStone')])
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('gearStone'))
+RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 5])
+
+// Moist Air * 1000
+mods.gregtech.mixer.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
+
+MIXER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('steam') * 100)
+    .fluidInputs(fluid('air') * 900)
+    .fluidOutputs(fluid('gtfo_moist_air') * 1000)
+    .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()

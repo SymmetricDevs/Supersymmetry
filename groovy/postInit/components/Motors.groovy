@@ -153,7 +153,6 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('circuitMv'))
     .inputs(metaitem('circuit_board.good'))
     .outputs(metaitem('electric.motor.mv') * 6)
-    .info('recipe.motor.brushless')
     .duration(160)
     .EUt(VA[MV])
     .buildAndRegister();

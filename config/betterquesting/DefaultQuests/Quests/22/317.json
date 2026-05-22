@@ -3,7 +3,8 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.317.desc",
       "icon:10": {
-        "id:8": "betterquesting:placeholder"
+        "Damage:2": 79,
+        "id:8": "gregtech:meta_dust"
       },
       "name:8": "susy.quest.db.317.title"
     }
@@ -11,7 +12,14 @@
   "questID:3": 317,
   "tasks:9": {
     "0:10": {
-      "taskID:8": "bq_standard:checkbox"
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 79,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

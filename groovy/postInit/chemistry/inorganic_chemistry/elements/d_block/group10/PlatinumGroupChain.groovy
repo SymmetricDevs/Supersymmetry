@@ -1,6 +1,15 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
+// Hot Platinum Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPlatinum'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Hot Platinum Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPlatinum'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('nitrogen') * 1000])
+// Hot Palladium Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Hot Palladium Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('nitrogen') * 1000])
+
 // Pt/Pd FROM SECONDARY ORES (TIER 1)
 
     MACERATOR.recipeBuilder()
@@ -75,22 +84,31 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
+def metals = [
+    'Platinum',
+    'Palladium'
+]
+
+for (metal in metals) {
     ERF.recipeBuilder()
         .circuitMeta(1)
-        .inputs(metaitem('dustPlatinum'))
-        .outputs(metaitem('ingotPlatinum'))
+        .inputs(metaitem('dust' + metal))
+        .outputs(metaitem('ingot' + metal))
+        .blastFurnaceTemp(2000)
         .duration(240)
         .EUt(VA[HV])
         .buildAndRegister()
 
     ERF.recipeBuilder()
         .circuitMeta(2)
-        .inputs(metaitem('dustPlatinum'))
+        .inputs(metaitem('dust' + metal))
         .fluidInputs(fluid('nitrogen') * 1000)
-        .outputs(metaitem('ingotPlatinum'))
+        .outputs(metaitem('ingot' + metal))
+        .blastFurnaceTemp(2000)
         .duration(160)
         .EUt(VA[HV])
         .buildAndRegister()
+}
 
     BR.recipeBuilder()
         .notConsumable(ore('springCupronickel'))
@@ -424,7 +442,7 @@ import static gregtech.api.GTValues.*
         MIXER_SETTLER.recipeBuilder()
             .fluidInputs(fluid('iridium_extract') * 10000)
             .fluidInputs(fluid('diluted_hydrochloric_acid') * 1000)
-            .fluidOutputs(fluid('hexachloroiridic_acid_solution') * 2000)
+            .fluidOutputs(fluid('hexachloroiridic_iv_acid_solution') * 2000)
             .fluidOutputs(fluid('tributyl_phosphate_extraction_mixture') * 10000)
             .duration(500)
             .EUt(VA[MV])
@@ -434,7 +452,7 @@ import static gregtech.api.GTValues.*
         //H2IrCl6 + 2NH4Cl -> (NH4)2(IrCl6) + 2HCl
 
         CRYSTALLIZER.recipeBuilder()
-            .fluidInputs(fluid('hexachloroiridic_acid_solution') * 2000)
+            .fluidInputs(fluid('hexachloroiridic_iv_acid_solution') * 2000)
             .fluidInputs(fluid('ammonium_chloride_solution') * 2000)
             .outputs(metaitem('dustAmmoniumHexachloroiridate') * 17)
             .fluidOutputs(fluid('diluted_hydrochloric_acid') * 4000)
@@ -468,9 +486,9 @@ import static gregtech.api.GTValues.*
 
         CRYSTALLIZER.recipeBuilder()
             .fluidInputs(fluid('hexachlororhodic_acid_solution') * 8950)
-            .inputs(ore('dustAmmoniumChloride') * 9)
+            .fluidInputs(fluid('ammonium_chloride_solution') * 1500)
             .chancedOutput(metaitem('dustAmmoniumHexachlororhodate') * 21, 5000, 0)
-            .fluidOutputs(fluid('acidic_wastewater') * 8950)
+            .fluidOutputs(fluid('acidic_wastewater') * 10450)
             .duration(200)
             .EUt(VA[MV])
             .buildAndRegister()

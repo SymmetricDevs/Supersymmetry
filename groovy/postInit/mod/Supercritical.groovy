@@ -78,12 +78,12 @@ import static gregtech.api.unification.material.Materials.*;
 // Fission Fuel
 
 def fuels = [
-    //'ThoriumDioxide',
-    'Leu235Dioxide',
-    'Haleu235Dioxide',
-    'Heu235Dioxide',
-    'MixedOxideFuel',
-    'Bismuth'
+    //'ThoriumDioxide' : 3,
+    'Leu235Dioxide' : 3,
+    'Haleu235Dioxide' : 3,
+    'Heu235Dioxide' : 3,
+    'MixedOxideFuel' : 3,
+    'Bismuth' : 1
 ]
 
     // Fuel Cladding
@@ -102,29 +102,29 @@ def fuels = [
         ore('roundStainlessSteel') * 2]
     )
 
-for (fuel in fuels) {
-    FORMING_PRESS.recipeBuilder()
-        .inputs(ore('dust' + fuel) * 3)
-        .outputs(metaitem('fuelPelletRaw' + fuel))
-        .duration(25)
-        .EUt(VA[HV])
-        .buildAndRegister()
+    fuels.each { fuel, amount ->
+        FORMING_PRESS.recipeBuilder()
+            .inputs(ore('dust' + fuel) * amount)
+            .outputs(metaitem('fuelPelletRaw' + fuel))
+            .duration(25)
+            .EUt(VA[HV])
+            .buildAndRegister()
 
-    SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('fuelPelletRaw' + fuel))
-        .outputs(metaitem('fuelPellet' + fuel))
-        .duration(15)
-        .EUt(VA[HV])
-        .buildAndRegister()
+        SINTERING_OVEN.recipeBuilder()
+            .inputs(ore('fuelPelletRaw' + fuel))
+            .outputs(metaitem('fuelPellet' + fuel))
+            .duration(15)
+            .EUt(VA[HV])
+            .buildAndRegister()
 
-    CANNER.recipeBuilder()
-        .inputs(ore('fuelPellet' + fuel) * 16)
-        .inputs(item('supercritical:supercritical_meta_item', 1))
-        .outputs(metaitem('fuelRod' + fuel))
-        .duration(300)
-        .EUt(VA[HV])
-        .buildAndRegister()
-}
+        CANNER.recipeBuilder()
+            .inputs(ore('fuelPellet' + fuel) * 16)
+            .inputs(item('supercritical:supercritical_meta_item', 1))
+            .outputs(metaitem('fuelRod' + fuel))
+            .duration(300)
+            .EUt(VA[HV])
+            .buildAndRegister()
+    }
 
 // Fission Reactor Controller
 
@@ -351,6 +351,17 @@ RecyclingHelper.handleRecycling(metaitem('supercritical:control_rod_moderated'),
     ore('dustGraphite')
 ])
 
+// Moderator Port
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.ev'))
+    .inputs(ore('frameGtReactorSteel'))
+    .inputs(ore('screwReactorSteel') * 16)
+    .circuitMeta(3)
+    .outputs(metaitem('supercritical:moderator_port'))
+    .duration(160)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
 // Anode Basket
 ASSEMBLER.recipeBuilder()
     .inputs(ore('ringTitanium') * 2)
@@ -433,7 +444,7 @@ RecyclingHelper.handleRecycling(metaitem('supercritical:basket.anode'),
 
 // Fuel Rod Decay
 
-for (fuel in fuels) {
+fuels.each { fuel, _ ->
     SPENT_FUEL_POOL.recipeBuilder()
         .inputs(metaitem('fuelRodHotDepleted' + fuel))
         .outputs(metaitem('fuelRodDepleted' + fuel))

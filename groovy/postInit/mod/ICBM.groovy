@@ -83,9 +83,6 @@ def name_removals = [
     "icbmclassic:grenades/colors",
     "icbmclassic:grenades/smoke",
     "icbmclassic:antidote",
-    "icbmclassic:concrete",
-    "icbmclassic:concrete.1",
-    "icbmclassic:concrete.2",
     "icbmclassic:grenade:0",
     "icbmclassic:launcher/support",
     "icbmclassic:launcher/base",
@@ -374,57 +371,6 @@ Globals.solders.each { key, val ->
                 .buildAndRegister();
     }
 }
-
-//Concrete
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(1)
-    .fluidInputs(fluid('water') * 500)
-    .inputs(ore('dustObsidian'))
-    .inputs(ore('dustCement'))
-    .inputs(ore('dustStone') * 4)
-    .outputs(item('icbmclassic:concrete', 0) * 4)
-    .duration(160)
-    .EUt(24)
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(2)
-    .fluidInputs(fluid('water') * 500)
-    .inputs(ore('dustObsidian'))
-    .inputs(ore('dustPolypropylene'))
-    .inputs(ore('dustCement'))
-    .inputs(ore('dustStone') * 4)
-    .inputs(ore('frameGtSteel'))
-    .outputs(item('icbmclassic:concrete', 1) * 4)
-    .duration(160)
-    .EUt(96)
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(3)
-    .fluidInputs(fluid('water') * 500)
-    .inputs(ore('dustObsidian'))
-    .inputs(ore('dustBoronNitride'))
-    .inputs(ore('dustCement'))
-    .inputs(ore('dustStone') * 4)
-    .inputs(ore('frameGtStainlessSteel'))
-    .outputs(item('icbmclassic:concrete', 2) * 4)
-    .duration(160)
-    .EUt(384)
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(3)
-    .fluidInputs(fluid('water') * 500)
-    .inputs(ore('dustObsidian'))
-    .inputs(ore('dustBorosilicateGlass'))
-    .inputs(ore('dustCement'))
-    .inputs(ore('dustStone') * 4)
-    .inputs(ore('frameGtStainlessSteel'))
-    .outputs(item('icbmclassic:concrete', 2) * 4)
-    .duration(160)
-    .EUt(384)
-    .buildAndRegister();
 
 //Launchers
 ASSEMBLER.recipeBuilder()
@@ -715,3 +661,43 @@ Globals.solders.each { key, val ->
         .EUt(VA[LV])
         .buildAndRegister();
 }
+//surface to air missile
+Globals.solders.each { key, val ->
+    for (s_fuel in solidfuels) {
+        for (l_oxy in liquidoxys) {
+
+            LARGE_WEAPONS_FACTORY.recipeBuilder()
+                    .inputs([
+                            ore('stickStainlessSteel') * 2,
+                            ore('ringStainlessSteel'),
+                            ore('plateStainlessSteel'),
+                            ore('foilStainlessSteel') * 8,
+                            s_fuel * 8,
+                            item('icbmclassic:explosives:0'),
+                            ore('circuitMv') * 2,
+                            metaitem('sensor.mv')
+                    ])
+                    .fluidInputs(fluid(key) * (val / 2))
+                    .fluidInputs(l_oxy * 1000)
+                    .outputs(item('icbmclassic:surface_to_air_missile'))
+                    .duration(100)
+                    .EUt(VA[MV])
+                    .buildAndRegister();
+        }
+    }
+}
+
+//radar
+WEAPONS_FACTORY.recipeBuilder()
+    .inputs([
+        ore('wireFineCopper') * 64,
+        ore('circuitHv') * 2,
+        metaitem('sensor.hv'),
+        metaitem('emitter.hv'),
+        metaitem('electric.motor.hv'),
+        metaitem('hull.hv')
+    ])
+    .outputs(item('icbmclassic:radarstation:0'))
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister();

@@ -355,7 +355,8 @@ mods.jei.ingredient.yeet(
         item('forge:bucketfilled').withNbt(['FluidName': 'pyroberry_wine', 'Amount': 1000]),
         item('forge:bucketfilled').withNbt(['FluidName': 'gloamberry_wine', 'Amount': 1000]),
         item('forge:bucketfilled').withNbt(['FluidName': 'freckleberry_wine', 'Amount': 1000]),
-        item('pyrotech:pile_ash')
+        item('pyrotech:pile_ash'),
+        item('pyrotech:material', 27)
 )
 
 def furnace_removals = [
@@ -620,17 +621,10 @@ crafting.replaceShaped("pyrotech:bucket/bucket_clay_unfired", item('pyrotech:buc
 ])
 
 // Gears
-RecyclingHelper.addShapeless("susy:cog_stone", item('pyrotech:cog_stone'), [metaitem('gearStone')])
 RecyclingHelper.replaceShapeless("pyrotech:tech/machine/cog_iron", item('pyrotech:cog_iron'), [metaitem('gearIron')])
 RecyclingHelper.replaceShapeless("pyrotech:tech/machine/cog_gold", item('pyrotech:cog_gold'), [metaitem('gearGold')])
 RecyclingHelper.replaceShapeless("pyrotech:tech/machine/cog_diamond", item('pyrotech:cog_diamond'), [metaitem('gearDiamond')])
 
-oreDict.add("gearStone", item('pyrotech:cog_stone'))
-oreDict.add("gearIron", item('pyrotech:cog_iron'))
-oreDict.add("gearGold", item('pyrotech:cog_gold'))
-oreDict.add("gearDiamond", item('pyrotech:cog_diamond'))
-
-crafting.addShapeless("susy:cog_stone_to_gear", metaitem('gearStone'), [item('pyrotech:cog_stone')])
 crafting.addShapeless("susy:cog_iron_to_gear", metaitem('gearIron'), [item('pyrotech:cog_iron')])
 crafting.addShapeless("susy:cog_gold_to_gear", metaitem('gearGold'), [item('pyrotech:cog_gold')])
 crafting.addShapeless("susy:cog_diamond_to_gear", metaitem('gearDiamond'), [item('pyrotech:cog_diamond')])
@@ -1167,7 +1161,7 @@ def reductants = [
         new Reductant("charcoal", 12, 1),
         new Reductant("gemCoal", 10, 1), // Standard consumption, 10 = 8 + 2
         new Reductant("gemLigniteCoke", 12, 1.2),
-        new Reductant("fuelCoke", 8, 0.8),
+        new Reductant("gemCoke", 8, 0.8),
         new Reductant("gemAnthracite", 8, 0.75),
         new Reductant("dustCharcoal", 12, 0.95),
         new Reductant("dustCoal", 10, 0.9),

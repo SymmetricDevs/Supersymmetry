@@ -27,22 +27,12 @@
           "id:8": "gregtech:machine"
         },
         "1:10": {
-          "Count:3": 57,
-          "Damage:2": 5,
-          "id:8": "gregtech:turbine_casing"
-        },
-        "2:10": {
-          "Count:3": 3,
+          "Count:3": 1,
           "id:8": "susy:alternator_coil"
         },
-        "3:10": {
-          "Count:3": 4,
-          "id:8": "susy:turbine_rotor"
-        },
-        "4:10": {
+        "2:10": {
           "Count:3": 1,
-          "Damage:2": 16001,
-          "id:8": "gregtech:machine"
+          "id:8": "susy:turbine_rotor"
         }
       },
       "taskID:8": "bq_standard:retrieval"

@@ -107,7 +107,7 @@ alcohols.forEach { alcohol ->
     // Catalytic transesterification
     grade1Lipids.forEach { lipid ->
         BR.recipeBuilder()
-        .inputs(ore('dustSodiumHydroxide'))
+        .inputs(ore('dustSodiumHydroxide') * 3)
         .fluidInputs(lipid.get())
         .fluidInputs(alcohol.get(6000)) // Optimal condition of 6 eq. alcohol
         .fluidOutputs(alcohol.getGlycerolSolution(3500))

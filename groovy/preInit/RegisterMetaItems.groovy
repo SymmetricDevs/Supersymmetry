@@ -31,7 +31,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(105, "shape.mold.crucible")
         addItem(106, "crucible.boron.nitride")
         addItem(107, "crucible.quartz")
-        addItem(108, "crucible.graphite")
         addItem(109, "shape.mold.long_rod")
         addItem(110, "shape.mold.ring")
         addItem(111, "crucible.tantalum")
@@ -52,9 +51,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(160, "red_mud_slag")
         addItem(161, "leached_red_mud_slag")
 
-        addItem(162, "pitch_binder")
-        addItem(163, "raw_electrode")
-        addItem(164, "graphite_electrode")
+        addItem(162, "carbon_paste")
 
         addItem(165, "rydberg_atom_array")
 
@@ -204,8 +201,21 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(3035, "wafer.advanced_random_access_memory")
         addItem(3036, "plate.advanced_random_access_memory")
 
-        //Organics 3500-4000
+        //Organics 3500-3900
         addItem(3500, "copra")
+
+        // Battery hulls 3900-4000
+        addItem(3900, "battery.primitivehull.lv")
+        addItem(3901, "battery.primitivehull.mv")
+        addItem(3902, "battery.steel_hull.lv")
+        addItem(3903, "battery.steel_hull.mv")
+        addItem(3904, "battery.steel_hull.hv")
+        addItem(3905, "battery.ni_fe_hull.lv")
+        addItem(3906, "battery.ni_fe_hull.mv")
+        addItem(3907, "battery.ni_fe_hull.hv")
+        addItem(3908, "battery.stainless_steel_hull.hv")
+        addItem(3909, "battery.stainless_steel_hull.ev")
+        addItem(3910, "battery.stainless_steel_hull.iv")
 
         //Batteries 4000-4100
         Batteries['lead_acid'].register(it, 4000)
@@ -213,16 +223,25 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4002, "anode.lead")
         addItem(4003, "cathode.lead_paste")
         addItem(4004, "cathode.lead_frame")
-        Batteries['ni_fe'].register(it, 4005)
+        Batteries['lead_acid.mv'].register(it, 4005)
         addItem(4006, "electrode.steel_frame")
         addItem(4007, "electrode.nickeled_steel_frame")
-        Batteries['ni_zn.mv'].register(it, 4008)
-        Batteries['ni_zn.hv'].register(it, 4009)
-        addItem(4010, "anode.zinc_oxide")
+        Batteries['ni_fe.lv'].register(it, 4008)
+        Batteries['ni_fe'].register(it, 4009)
+        Batteries['ni_fe.hv'].register(it, 4010)
         addItem(4011, "cathode.nioh2")
-        // Battery hulls 4090-4100
-        addItem(4090, "battery.primitivehull.lv")
-        addItem(4091, "battery.primitivehull.mv")
+        Batteries['ni_cd.mv'].register(it, 4012)
+        Batteries['ni_cd.hv'].register(it, 4013)
+        Batteries['ni_cd.ev'].register(it, 4014)
+        addItem(4015, "anode.cadmium_oxide")
+        Batteries['ni_mh.hv'].register(it, 4016)
+        Batteries['ni_mh.ev'].register(it, 4017)
+        Batteries['ni_mh.iv'].register(it, 4018)
+        addItem(4019, "electrode.nickeled_steel_foil")
+        addItem(4020, "membrane.caprolactam")
+        addItem(4021, "membrane.caprolactam_wet")
+        addItem(4022, "anode.mh")
+        addItem(4023, "membrane.cast_film")
 
         addItem(4101, "vacuum_tube_components")
 
@@ -422,11 +441,40 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10254, "carbon.mesh.phenolic.treated")
         addItem(10255, "carbon.tile.phenolic.treated")
 
-        // Induction Furnace
-        addItem(10301, "coated_copper_coil")
-        addItem(10302, "cured_coated_coil")
-        addItem(10303, "induction_coil")
+        // Induction Furnace 10300-10310
+        addItem(10300, "coated_copper_coil")
+        addItem(10301, "cured_coated_coil")
+        addItem(10302, "copper_coil")
 
+        // Graphite Crucibles and Electrodes 10310-10330
+        addItem(10310, "raw_electrode")
+        addItem(10311, "carbon_electrode")
+        addItem(10312, "graphite_electrode")
+        addItem(10313, "raw_carbon_crucible")
+        addItem(10314, "carbon_crucible")
+        addItem(10315, "crucible.graphite")
+        addItem(10316, "clay_graphite_paste")
+        addItem(10317, "clay_graphite_crucible")
+        addItem(10318, "raw_clay_graphite_crucible")
+
+        // Alumina Refractories 10330-10340
+        addItem(10330, "cac_clinker")
+        addItem(10331, "hot_cac_clinker")
+        addItem(10332, "cac_dust")
+      
+        // Lighting Components 10400-10420
+
+        addItem(10401, "carbon_filament")
+        addItem(10402, "gallium_nitride_buffer_wafer")
+        addItem(10403, "raw_led_wafer")
+        addItem(10404, "patterned_led_wafer")
+        addItem(10405, "etched_led_wafer")
+        addItem(10406, "metallized_led_wafer")
+        addItem(10407, "led_chip")
+        addItem(10408, "fused_quartz_bulb")
+        addItem(10409, "lamp.mercury.hp.unfilled")
+        addItem(10410, "lamp.mercury.hp")
+        addItem(10411, "lamp.mercury.lp")
     }
 
     log.infoMC("Finished adding metaitems")

@@ -23,16 +23,6 @@
           "Count:3": 1,
           "Damage:2": 15060,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 27,
-          "Damage:2": 3,
-          "id:8": "gregtech:metal_casing"
-        },
-        "2:10": {
-          "Count:3": 2,
-          "Damage:2": 1,
-          "id:8": "gregtech:boiler_casing"
         }
       },
       "taskID:8": "bq_standard:retrieval"

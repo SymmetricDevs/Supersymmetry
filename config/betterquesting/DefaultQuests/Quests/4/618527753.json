@@ -6,7 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.618527753.desc",
       "icon:10": {
-        "Damage:2": 4169,
+        "Damage:2": 18,
         "id:8": "gregtech:meta_dust"
       },
       "name:8": "susy.quest.db.618527753.title"
@@ -18,7 +18,7 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 16,
-          "Damage:2": 4169,
+          "Damage:2": 18,
           "id:8": "gregtech:meta_dust"
         }
       },

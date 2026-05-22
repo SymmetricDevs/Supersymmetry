@@ -1,3 +1,260 @@
+# UPDATE 0.1.16.7.1
+## Changes
+### Fixes
+- Actually remember to add the thing
+- Oh by the way greenhouses are good now
+# UPDATE 0.1.16.7
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.100 → v0.1.103
+### Mod Additions
+- Keyboard Wizard → 1.12.2-1.7.3
+## Changes
+### New Features
+- HATE. Let me tell you how we've added a new faction system to SUSY! Raids are now significantly more tied to your progression than before.
+- You now have two new ways to manufacture isoprene! (#1840 by @WideMann)
+### Changed Features
+- Pentlandite drilling is now available at MV. (#1856 by @TheFriedEgg618)
+- Drop pods can now be targeted by ICBM radars.
+### Fixes
+- The battery dupe has been fixed. (#1853 by @The-ExZombie)
+- The contact process uses a fixed bed reactor rather than a fluidized bed reactor (oops)
+# UPDATE 0.1.16.6
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.99 → v0.1.100
+- GroovyScript 1.3.4 → 1.4.3
+- Had Enough Items 4.30.2 → 4.30.1
+## Changes
+### New Features
+- [Susy-Core] The rotary kiln is animated and looking better than ever! Convert your rotary kiln into the new version (or don't). (#632 by @planetme)
+- You can now filter recipes in HEI!
+### Changed Features
+- The contact process has been buffed! (#1845 by @planetme)
+- Kovar ingots can now be made in the alloy smelter (finally) (#1852 by @TheFriedEgg618)
+- Do check your Cativa catalysts and Monsanto catalysts; the quantity required has increased.
+### Fixes
+- PTFE no longer has a chlorine dupe (probably) (#1848 by @The-ExZombie)
+- The incinerator quest is no longer... weird. (#1849 by @Fiery36)
+And thanks to @trainvoi, @The-ExZombie and @Fiery36 for helping to keep the pack stable and up-to-date.
+# UPDATE 0.1.16.5
+## Mod Changes
+### Mod Updates
+- Had Enough Items 4.29.15 → 4.30.2
+- SusyCore v0.1.98 → v0.1.99
+## Changes
+### New Features
+- You can now use a new LV multiblock, the greenhouse, to harvest crops! (The MV greenhouse has been renamed the "arboretum.") (#1843 by @WideMann)
+### Fixes
+- Acetic anhydride catalyst is no longer lost. (#1838 by @Fiery36)
+- Cellulose acetate mesh is now craftable without silicon wafers. (#1841 by @WideMann)
+- Fix conflicting recipes (#1842 by @WideMann)
+And thanks to @whoisyp and @unitazer for additional work on keeping the pack stable.
+# UPDATE 0.1.16.4.1
+## Mod Changes
+### Mod Updates
+- Better Questing Unofficial 4.2.7 → 4.3.1
+- Supercritical 0.2.4 → 0.2.5
+## Changes
+### Changed Features
+- Quests are now updated automatically! You'll never have to run /bq_admin default load again.
+- In order to remove a gallium dupe, the Bayer process has been slightly modified. You may need to flush out some machines and/or change filters.
+### Fixes
+- Green vitriol is no longer a pile of steaming garbage
+- Wood/stone quests work properly with all wood/stone types
+# UPDATE 0.1.16.4
+## Mod Changes
+### Mod Updates
+- Universal Tweaks 1.12.2-1.18.0 → 1.12.2-1.19.1
+- Better Questing Unofficial 4.2.7 → 4.3.0
+- Bubbles 2.4.9 → 2.4.10
+- SusyCore v0.1.97 → v0.1.98
+- CraftPresence 2.7.0+1.12.2-forge → 2.7.1+1.12.2-forge
+## Changes
+### Changed Features
+- Sulfuric acid is now properly Gregified (TM)! Run /bq_admin default load to see the new quests. (#1803 by @obihz6, #1830 by @planetme)
+- Acetic anhydride, acetaldehyde, acetic acid, and many other ace chemicals have updated recipes! (#1819 by @Fiery36)
+### Fixes
+- BQu teams now work properly. (#1833 by @planetme)
+- CraftPresence should no longer count you as playing when you're not. (#1833 by @planetme)
+# UPDATE 0.1.16.3
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.96 → v0.1.97
+## Changes
+### New Features
+- Batteries included! Lead-acid and nickel-iron batteries now have large variants. (#1825 by @Fiery36)
+### Changes
+- Many useless ores have been removed from HEI. (#1826 by @Fiery36)
+### Fixes
+- Move scattered oredict definitions into oreDict.groovy (#1822 by @Crindigo)
+- The preheated air recipe has been restored! (#1824 by @Crindigo)
+- HV Magnets are now actually craftable at HV! (#1828 by @Fiery36)
+- Misspellings have been thoroughly removed from the questbook. (#1827 by @whoisyp)
+And thanks to @whoisyp, @Crindigo, and @Fiery36 for keeping the pack stable.
+# UPDATE 0.1.16.2
+## Mod Changes
+### Mod Updates
+We've got a lot of mod updates. Here are some highlights:
+- Had Enough Items 4.29.8 → 4.29.15
+- 籁/Sound Physics Remixin 1.1.12 → 1.1.17
+- Fugue 0.21.0 → 0.23.1
+- Inventory Bogo Sorter 1.5.0 → 1.6.2
+- Scape and Run: Parasites 1.12.2v1.9.21 → 1.10.2
+- Gregic Probe: CEu 1.4.4 → 1.4.5
+- GroovyScript 1.3.1 → 1.3.4
+- ModularUI 3.0.3 → 3.1.3
+- SusyCore v0.1.95 → v0.1.96
+- Better Questing Unofficial 4.2.6 → 4.2.7
+- Fluidlogged API API-v3.1.1-mc1.12.2 → API-v3.2.0-mc1.12.2
+## Changes
+### New Features
+- Something that isn't important :) (#1814 by @oliwier509)
+- [Susy-Core] Mixer-settlers are now twice as space-efficient! You can continue using the old structure or craft the controller into the new version.. (#619 by @Crindigo)
+### Fixes
+- Cleanroom/OptiFine is now compatible again! (#1816 by @trainvoi)
+- Gauges and Switches switches actually control redstone again!
+- [Susy-Core] Rotational generators now output flue gas more consistently! (#617 by @Crindigo)
+- [Susy-Core] Singleblock combustion engines no longer void fluids! (#618, #623 by @ThisMightBeNoah)
+Of course, thanks to @whoisyp and @Fiery36 for also helping to keep the pack stable.
+# UPDATE 0.1.16.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.94 → v0.1.95
+### Mod Additions
+- BiomeTweaker → 1.12.2-3.2.369
+## Changes
+### New Features
+- [Susy-Core] Supersymmetry now has an external recipe viewer! Go to https://symmetricdevs.github.io/RecipeViewer to get started. (#615 by @bruberu)
+- Produce cast iron using the Cupola Furnace! It's blazingly fast (just like rust) (#1801 by @aliu-here)
+### Changed Features
+- Graphite blocks now require similar processing to graphite electrodes. (#1804 by @Fiery36)
+- Incinerators now have their own quest! (#1805 by @Sentrymon)
+### Fixes
+- All BOP biomes now spawn again (#1808 by @Fiery36)
+- COFFEE MV FIX (actual PR title produced by SUSY devs) (#1806 by @Brebexe)
+- [Susy-Core] Turbines no longer produce negative power. (#610 by @aliu-here)
+- [Susy-Core] Drones now actually stick around for more than five seconds (#612 by @Zalgo239)
+- [Susy-Core] BDSM crates no longer crash servers. (#613 by @bruberu)
+- Many QB updates and stoichiometry fixes... (#1812 by @Fiery36) (#1796 by @whoisyp) (#1809 by @Crindigo)
+I also give welcome to our new contributor @Sentrymon.
+# UPDATE 0.1.16.0
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.93 → v0.1.94
+## Changes
+### Changed Features
+- [Susy-Core] ULV energy hatches no longer appear in JEI previews to annoy you. (#604 by @Crindigo)
+- PWRs are now ~4x as effective to match BWRs. (#1798 by @aliu-here)
+### Fixes
+- [Susy-Core] Drone pad resets if drone despawns (#605 by @Zalgo239)
+- Certain dupes/lossy vanilla-related recipes have been fixed. (#1794 by @aliu-here, #1799, #1800 by @Fiery36)
+# UPDATE 0.1.16-rc2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.91 → v0.1.93
+### Mod Removals
+- AssetMover
+## Changes
+### Fixes
+- This fixes some item ID shifts introduced by the last update. The culprits will be injected with Xenotimic Rare Earth Nitrates Solution.
+- The ball mill model and recipe logic have been slightly tweaked.
+- Both Acheson process recipes for graphite electrodes are now available.
+# UPDATE 0.1.16-rc1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.88 → v0.1.91
+- Universal Tweaks 1.12.2-1.17.0 → 1.12.2-1.18.0
+- GregTech Food Option 1.12.2-1.12.7.1 → 1.12.2-1.12.8
+### Mod Removals
+- Climate Control/Geographicraft
+## Changes
+### New Features
+- The nitrile-butadiene rubber chain is here! (#1756 by @aliu-here)
+- Large boilers now accept a redstone control hatch! Control your multiblock even more. (sc#589 by @unitazer)
+- The eccentric roll crusher (jaw crusher) and ball mill have been added! Use these to greatly speed up your ore processing. (sc#592 by @MCTian-mi)
+- You may now make high-purity aluminium! (#1735 by @Fiery36)
+### Changed Features
+- Nuclear power output is now 32x higher. (#1791 by @planetme)
+- Bismuth fuel rods are now 3x cheaper, making polonium easier to obtain.
+- Sugarcane is now affected by sprinklers.
+### Fixes
+- Worlds now correctly load on CurseForge launcher! (But we had to remove Geographicraft for it.)
+- The questbook has been improved thanks to @whoisyp and @Fiery36.
+- You now receive the correct singleblock combustion generators from crafting. (#1781 by @Fiery36)
+- [Susy-Core] Barrels no longer crash servers! (sc#595 by @bruberu)
+- [Susy-Core] CPU lag from Project Red has also decreased. (sc#597 by @bruberu)
+But don't worry about all of the other code we merged lately from @Engineerboy2998, @xnossisx, @Suharakimi, @1minus4, @loxoDev, @aluminium0316, @unitazer and @ThisMightBeNoah.
+That's definitely not leading to anything.
+Of course, thanks to our new contributors @1minus4 and @aliu-here! Although we're still trying to figure out who @aliu-here is on Discord...
+# UPDATE 0.1.15.14
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.87 → v0.1.88
+## Changes
+### New Features
+- [Susy-Core] You can now see which LittleTiles blocks have loot in TOP! Never miss those random GTFO food items again. (#585 by @aluminium0316)
+### Changed Features
+- [Susy-Core] Singleblock combustion generators now accept manual insertion of coolant. (#586 by @ThisMightBeNoah)
+### Fixes
+- Iron armor no longer causes dupes. (#1766 by @koukopuff)
+- Yet another step has been taken towards stoichiometric perfection... (#1772 by @Crindigo)
+- [Susy-Core] Combustion generator UIs are now more accurate. (#584 by @aluminium0316)
+And thanks to @Fiery36, @whoisyp, and @Syriusz171 for fixing issues in the questbook.
+I also want to highlight our new contributors: @ThisMightBeNoah, @Engineerboy2998, and @aluminium0316! Thank you for joining us.
+# UPDATE 0.1.15.13
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.86 → v0.1.87
+## Changes
+### Fixes
+- Reverted TechGuns repairing recipes to the default (to prevent server errors) (#1760 by @Fiery36)
+- BrainTech Aerospace Tape(tm) is now available again! (#1762 by @Fiery36)
+- The zirconium chain now preserves chlorine. (#1764 by @whoisyp)
+- [Susy-Core] Have you experienced issues with freezing while joining a server? That's fixed now! It turns out drone pad sounds were the issue... (#583 by @bruberu)
+While we're still working on things in the background, I hope you enjoy this small, gift-sized little update. Also, thanks to @whoisyp for their first contribution!
+# UPDATE 0.1.15.12
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.85 → v0.1.86
+- Supercritical 0.2.3 → 0.2.4
+## Changes
+### Changed Features
+- Masonry bricks can now be automated! (#1755 by @Fiery36)
+- [Susy-Core] The AFC multiblock is now more symmetrical. (#582 by @koukopuff)
+- Multiblock quests no longer require all blocks simultaneously. (#1753 by @Fiery36)
+### Fixes
+- Replaced the deprecated blocks (#1751 by @oliwier509)
+- [Susy-Core] The flying shear is now actually required, and strands are no longer deleted. (#581 by @bruberu)
+And thanks to @Fiery36 and @oliwier509 for maintaining the pack.
+We're mostly working on space, circuits, and finals, so expect visible progress to be slow... until it isn't.
+# UPDATE 0.1.15.11.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.84 → v0.1.85
+## Changes
+This fixes the ERF recipe, the brine treatment lines, and the DNQ line, thanks to planetme, trainvoi, and Fiery.
+# UPDATE 0.1.15.11
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.82 → v0.1.84
+- SussyPatches 1.9.0 → 1.9.2
+### Mod Removals
+- FluxLoading
+## Changes
+### New Features
+- Electric furnaces have been replaced by the better singleblock resistance furnace! Craft your current electric furnaces directly into them to get started. (#1725 by @Fiery36)
+- Lights of all types are now craftable! (#1729 by @PatRat2)
+- DNQ photoresist is now availab (#1740 by @WideMann)
+- Copper and the aluminium alloys are now continually castable. (#1736 by @Rick8484)
+### Changed Features
+- Brine processing has been mildly SUSY-fied **with some breaking changes**. (#1745 by @planetme)
+- The Periodic Table chapter has been brought up-to-date! (#1739 by @Engineerboy2998)
+- Added recipes for glass dust from full flint dusts (#1741 by @Leninus)
+- You will no longer be accosted by BOP hives. (#1742 by @koukopuff (first contribution!!!))
+### Fixes
+- Several multiblock infos, such as the evaporation pool's and the turning zone's, are now visible again. (#572 by @MCTian-mi)
+And thanks to @Rick8484, @Fiery36, @planetme, @Crindigo, and @MCTian-mi for helping to keep the pack stable.
 # UPDATE 0.1.15.10.1
 ## Mod Changes
 ### Mod Updates

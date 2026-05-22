@@ -48,6 +48,32 @@ fractions.each { _, fraction ->
     }
 }
 
+// DCL light liquefaction oil hydrotreating to naphtha
+
+FLUID_HEATER.recipeBuilder()
+    .fluidInputs(fluid('light_liquefaction_oil') * 1000)
+    .fluidOutputs(fluid('heated_light_liquefaction_oil') * 1000)
+    .duration(40)
+    .EUt(VA[LV])
+    .buildAndRegister()
+        
+FIXED_BR.recipeBuilder()
+    .fluidInputs(fluid('heated_light_liquefaction_oil') * 1000)
+    .fluidInputs(fluid('hydrogen') * 200)
+    .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))
+    .fluidOutputs(fluid('treated_sulfuric_naphtha') * 1000)
+    .duration(15)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+SIEVE_DT.recipeBuilder()
+    .fluidInputs(fluid('treated_sulfuric_naphtha') * 1000)
+    .fluidOutputs(fluid('naphtha') * 1000)
+    .fluidOutputs(fluid('sour_gas') * 200)
+    .duration(50)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 // Sour gas processing
 
 BCR.recipeBuilder()

@@ -13,18 +13,6 @@
     }
   },
   "questID:3": 194,
-  "rewards:9": {
-    "0:10": {
-      "rewardID:8": "bq_standard:item",
-      "rewards:9": {
-        "0:10": {
-          "Count:3": 2,
-          "Damage:2": 157,
-          "id:8": "gregtech:meta_item_1"
-        }
-      }
-    }
-  },
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {

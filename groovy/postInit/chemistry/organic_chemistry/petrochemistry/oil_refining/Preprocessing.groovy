@@ -23,7 +23,7 @@ oils.each { _, oil -> {
         CENTRIFUGE.recipeBuilder()
             .fluidInputs(oil.getBrine(1000))
             .fluidOutputs(oil.getDesalted(200))
-            .fluidOutputs(fluid('salt_water') * 1000)
+            .fluidOutputs(fluid('brine') * 1000)
             .duration(20)
             .EUt(VA[LV])
             .buildAndRegister()
