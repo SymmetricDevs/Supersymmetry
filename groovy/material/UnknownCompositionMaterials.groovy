@@ -3467,16 +3467,16 @@ class UnknownCompositionMaterials {
                 .color(0xcf9e80)
                 .build()
 
-        StandardCleanOne = new Material.Builder(13196, SuSyUtility.susyId('standard_clean_one'))
+        StandardCleanOne = new Material.Builder(4741, SuSyUtility.susyId('standard_clean_one'))
                 .liquid()
                 .color(0x2180a3)
                 .build()
 
-        StandardCleanTwo = new Material.Builder(13197, SuSyUtility.susyId('standard_clean_two'))
+        StandardCleanTwo = new Material.Builder(4742, SuSyUtility.susyId('standard_clean_two'))
                 .liquid()
                 .color(0x3749ad)
                 .build()
-                
+
         PineResin = new Material.Builder(4743, SuSyUtility.susyId('pine_resin'))
                 .liquid(new FluidBuilder().temperature(293))
                 .color()
