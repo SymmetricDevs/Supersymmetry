@@ -1692,6 +1692,29 @@ ASSEMBLER.recipeBuilder()
 // Other Spacecraft Recipes
 
 ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('sensor.ev') * 8)
+        .inputs(ore('circuitEv') * 4)
+        .inputs(metaitem('cableGtOctalAluminium') * 2)
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameStainlessSteel'))
+        .outputs(item('susy:spacecraft_instrument')) // Sensor
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('robot.arm.ev') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 4)
+        .inputs(metaitem('crate.Titanium'))
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameStainlessSteel'))
+        .inputs(ore('circuitEv') * 4)
+        .outputs(item('susy:spacecraft_instrument', 1)) // Collector
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
         .inputs(ore('batteryHv') * 16)
         .inputs(ore('circuitEv'))
         .inputs(metaitem('cableGtHexAluminium') * 2)
@@ -1701,7 +1724,6 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
-
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('electric.piston.ev') * 2)
