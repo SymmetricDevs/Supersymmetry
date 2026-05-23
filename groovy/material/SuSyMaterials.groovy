@@ -844,6 +844,12 @@ class SuSyMaterials {
     public static Material CopperSuperfillElectrolyte
     public static Material StandardCleanOne
     public static Material StandardCleanTwo
+    public static Material GumTurpentine
+    public static Material PineResin
+    public static Material Rosin
+    public static Material MildlyActivatedSolderFluxMixture
+    public static Material LeadFreeSolderPaste
+
 
     // Petrochem Materials
 
@@ -2612,6 +2618,11 @@ class SuSyMaterials {
     public static Material Diethoxymethylsilane
     public static Material Methylbutynol
     public static Material Methylbutenol
+    public static Material AlphaPinene
+    public static Material AlphaTerpinene
+    public static Material Limonene
+    public static Material DiethylammoniumChloride
+    public static Material TerpineneMixture
 
     // Third Degree Materials
 
@@ -2840,6 +2851,7 @@ class SuSyMaterials {
     public static Material PolycaprolactamSolution
     public static Material DimethylDioxaneSolution
     public static Material IsopreneSolution
+    public static Material DiethylammoniumChlorideSolution
 
     // Thermodynamics Materials
 

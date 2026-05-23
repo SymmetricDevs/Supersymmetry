@@ -343,6 +343,9 @@ eventManager.listen { PostMaterialEvent event ->
 
         //Organics 3500-3900
         addItem(3500, "copra")
+        addItem(3501, "zest.orange")
+        addItem(3502, "zest.lemon")
+        addItem(3503, "zest.lime")
 
         // Battery hulls 3900-4000
         addItem(3900, "battery.primitivehull.lv")

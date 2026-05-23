@@ -133,6 +133,10 @@ ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.orange'))
 ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.lemon'))
 ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.lime'))
 
+ore('zest').add(metaitem('zest.orange'))
+ore('zest').add(metaitem('zest.lemon'))
+ore('zest').add(metaitem('zest.lime'))
+
 // Add ore dict to non traditional ore blocks
 ore('oreCaliche').add(item('susy:resource_block:1'))
 

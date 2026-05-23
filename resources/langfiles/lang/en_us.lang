@@ -3033,8 +3033,8 @@ susy.material.one_bromoadamantane=1-Bromoadamantane
 susy.material.one_hydroxyadamantane=1-Hydroxyadamantane
 susy.material.one_adamantyl_methacrylate=1-Adamantyl Methacrylate
 susy.material.isopropyl_thiol=Isopropyl Thiol
-susy.material.methacrylate_copolymer=Methacrylate Copolymer
-susy.material.methacrylate_copolymer_solution=Methacrylate Copolymer Solution
+susy.material.methacrylate_terpolymer=Methacrylate Terpolymer
+susy.material.methacrylate_terpolymer_solution=Methacrylate Terpolymer Solution
 susy.material.methacrylate_resist=Methacrylate Resist
 susy.material.alpha_methacryloxy_gamma_butyrolactone=alpha-Methacryloxy-gamma-Butyrolactone
 susy.material.two_nitroso_one_naphthol_five_sulfonic_acid_solution=2-Nitroso-1-Naphthol-5-Sulfonic Acid Solution
@@ -3091,6 +3091,19 @@ susy.material.supported_vanadium_pentoxide=Supported Vanadium Pentoxide
 susy.material.one_bromopropane=1-Bromopropane
 susy.material.octamethylcyclotetrasiloxane=Octamethylcyclotetrasiloxane (OMCTS)
 susy.material.diethoxymethylsilane=Diethoxymethylsilane (DEMS)
+susy.material.gum_turpentiine=Gum Turpentine
+susy.material.alpha_pinene=alpha-Pinene
+susy.material.alpha_terpinene=alpha-Terpinene
+susy.material.limonene=Limonene
+susy.material.pine_resin=Pine Resin
+susy.material.rosin=Rosin
+susy.material.mildly_activated_solder_flux_mixture=Mildly Activated Solder Flux Mixture
+susy.material.lead_free_solder_paste=Lead-Free Solder Paste
+susy.material.terpinene_mixture=Terpinene Mixture
+susy.material.gum_turpentine=Gum Turpentine
+susy.material.terpene_mixture=Terpene Mixture
+susy.material.diethylammonium_chloride=Diethylammonium Chloride
+susy.material.diethylammonium_chloride_solution=Diethylammonium Chloride Solution
 
 # Isotopes
 
@@ -3709,6 +3722,7 @@ item.gregtech.material.rock_salt.dust=Sylvite Dust
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
 susy.block_group_members.extractable_logs_2.name=Acacia and Dark Oak Log
+susy.block_group_members.pine_logs.name=Pine Log
 
 susy.block_group_members.rainbowwood_logs.name=Rainbowwood Log
 susy.block_group_members.latex_logs.name=Rubber Log

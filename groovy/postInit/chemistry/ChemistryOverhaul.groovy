@@ -1899,6 +1899,7 @@ SOLIDIFIER.recipeBuilder()
     .buildAndRegister();
 
 // Tetramethylammonium chloride
+
 LCR.recipeBuilder()
     .fluidInputs(fluid('trimethylamine') * 1000)
     .fluidInputs(fluid('chloromethane') * 1000)
