@@ -729,5 +729,10 @@ class FirstDegreeMaterialsB {
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Aluminium * 2012, Copper * 36, Lithium * 90, Magnesium * 18, Silver * 3, Zirconium * 1)
                 .build()
+
+        LithiumPeroxide = new Material.Builder(8774, SuSyUtility.susyId('lithium_peroxide'))
+                .dust()
+                .components(Lithium * 2, Oxygen * 2)
+                .build()
     }
 }
