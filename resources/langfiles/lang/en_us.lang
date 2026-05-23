@@ -3100,6 +3100,10 @@ susy.material.rosin=Rosin
 susy.material.mildly_activated_solder_flux_mixture=Mildly Activated Solder Flux Mixture
 susy.material.lead_free_solder_paste=Lead-Free Solder Paste
 susy.material.terpinene_mixture=Terpinene Mixture
+susy.material.gum_turpentine=Gum Turpentine
+susy.material.terpene_mixture=Terpene Mixture
+susy.material.diethylammonium_chloride=Diethylammonium Chloride
+susy.material.diethylammonium_chloride_solution=Diethylammonium Chloride Solution
 
 # Isotopes
 
