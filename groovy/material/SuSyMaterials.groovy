@@ -1652,6 +1652,8 @@ class SuSyMaterials {
     public static Material MARM246
     public static Material AluminiumAlloy2219
     public static Material AluminiumAlloy2195
+    public static Material LithiumPeroxide
+    public static Material LithiumHydroperoxide
 
     // HP Materials
 

@@ -738,5 +738,6 @@ class FirstDegreeMaterialsB {
         LithiumHydroperoxide = new Material.Builder(8775, SuSyUtility.susyId('lithium_hydroperoxide'))
                 .dust()
                 .components(Lithium * 2, Oxygen * 2, Hydrogen * 1)
+                .build()
     }
 }
