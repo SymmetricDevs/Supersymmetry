@@ -1689,7 +1689,7 @@ ASSEMBLER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-// Other Spacecraft Recipes
+// Instrument Recipes
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('sensor.ev') * 8)
@@ -1746,7 +1746,6 @@ ASSEMBLER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('electric.motor.ev') * 4)
         .inputs(metaitem('stickLongTitanium') * 8)
@@ -1758,6 +1757,8 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
+
+// Other Spacecraft Recipes
 
 // Spacecraft Component Cleanroom Recipes
 
