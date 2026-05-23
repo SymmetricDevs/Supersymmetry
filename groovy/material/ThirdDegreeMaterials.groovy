@@ -1334,6 +1334,7 @@ class ThirdDegreeMaterials {
                 .components(Water, Isoprene, Formaldehyde)
                 .colorAverage()
                 .build()
-        
+
+        DiethylammoniumChlorideSolution = genSolution(24233, 'diethylammonium_chloride_solution', DiethylammoniumChloride, Water, false)
         }
 }

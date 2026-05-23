@@ -1,5 +1,13 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import biomesoplenty.common.block.BlockBOPLog
+import biomesoplenty.api.enums.BOPWoods
+import net.minecraftforge.fml.common.registry.ForgeRegistries
+import net.minecraft.util.ResourceLocation
+import net.minecraft.init.Blocks
+import net.minecraft.block.BlockLog
+import gregtech.common.blocks.MetaBlocks
+import gregtechfoodoption.worldgen.trees.GTFOTrees
 
 //REMOVALS
 furnace.removeByInput(item('minecraft:slime_ball'))
@@ -8,9 +16,9 @@ mods.gregtech.fluid_solidifier.removeByInput(8, [metaitem('shape.mold.ball')], [
 
 //LATEX COLLECTOR RECIPES
 
-def pineLogBlock = (BlockBOPLog) Block.REGISTRY.getObject(new ResourceLocation('biomesoplenty', 'log_2'))
+def pineLogBlock = (BlockBOPLog) ForgeRegistries.BLOCKS.getValue(new ResourceLocation('biomesoplenty', 'log_2'))
 def pineBase = pineLogBlock.getDefaultState()
-    .withProperty(pineLogBlock.variantProperty(), BOPWoods.PINE)
+    .withProperty(pineLogBlock.variantProperty, BOPWoods.PINE)
 
 LATEX_COLLECTOR.recipeBuilder()
     .notConsumable(fluid('water') * 10)
@@ -38,18 +46,7 @@ LATEX_COLLECTOR.recipeBuilder()
     .buildAndRegister();
 
 LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('distilled_water') * 10)
-    .fluidOutputs(fluid('pine_resin') * 100)
-    .blockStates("pine_logs",
-        pineBase.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.X),
-        pineBase.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Y),
-        pineBase.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z),)
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('lubricant') * 10)
+    .notConsumable(fluid('diluted_sulfuric_acid') * 10)
     .fluidOutputs(fluid('pine_resin') * 100)
     .blockStates("pine_logs",
         pineBase.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.X),

@@ -161,6 +161,24 @@ DT.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
+    // Diethylammonium chloride
+    
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('diethylamine') * 1000)
+        .fluidInputs(fluid('hydrochloric_acid') * 1000)
+        .fluidOutputs(fluid('diethylammonium_chloride_solution') * 1000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('diethylammonium_chloride_solution') * 1000)
+        .outputs(metaitem('dustDiethylammoniumChloride') * 18)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
 // Propylamines
 
 FIXED_BR.recipeBuilder()

@@ -3481,33 +3481,24 @@ class UnknownCompositionMaterials {
                 .build()
 
         PineResin = new Material.Builder(4743, SuSyUtility.susyId('pine_resin'))
-                .liquid(new FluidBuilder().temperature(293))
-                .color()
+                .liquid()
+                .color(0x572e09)
                 .build()
 
-        RosinDust = new Material.Builder(4744, SuSyUtility.susyId('rosin'))
+        Rosin = new Material.Builder(4744, SuSyUtility.susyId('rosin'))
                 .dust()
-                .color()
+                .iconSet(DULL)
+                .color(0x5e1d05)
                 .build()
 
-        DiethylammoniumChloride = new Material.Builder(4745, SuSyUtility.susyId('diethylammonium_chloride'))
-                .dust()
-                .color()
+        MildlyActivatedSolderFluxMixture = new Material.Builder(4745, SuSyUtility.susyId('mildly_activated_solder_flux_mixture'))
+                .liquid()
+                .color(0x2d5c0d)
                 .build()
 
-        DiethylammoniumChlorideSolution = new Material.Builder(4746, SuSyUtility.susyId('diethylammonium_chloride_solution'))
-                .liquid(new FluidBuilder().temperature(293))
-                .color()
-                .build()
-
-        MildlyActivatedSolderFluxMixture = new Material.Builder(4747, SuSyUtility.susyId('mildly_activated_solder_flux_mixture'))
-                .liquid(new FluidBuilder().temperature(293))
-                .color()
-                .build()
-
-        LeadFreeSolderPaste = new Material.Builder(4748, SuSyUtility.susyId('lead_free_solder_paste'))
-                .liquid(new FluidBuilder().temperature(293))
-                .color()
+        LeadFreeSolderPaste = new Material.Builder(4746, SuSyUtility.susyId('lead_free_solder_paste'))
+                .liquid()
+                .color(0x4d4946)
                 .build()
     }
 }

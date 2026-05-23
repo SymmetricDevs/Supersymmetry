@@ -13,7 +13,7 @@ DISTILLERY.recipeBuilder()
 
 // From citrus peels
 
-DISTILLERY.builder()
+DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('dense_steam') * 1000)
     .inputs(ore('zest') * 20)
     .fluidOutputs(fluid('limonene') * 1000)
@@ -46,7 +46,7 @@ DISTILLERY.builder()
 
     // From α-pinene isomerization
 
-    FBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .notConsumable(ore('catalystBedManganeseDioxide'))
         .fluidInputs(fluid('alpha_pinene') * 50)
         .fluidOutputs(fluid('terpinene_mixture') * 50)

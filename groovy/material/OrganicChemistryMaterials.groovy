@@ -4238,22 +4238,36 @@ class OrganicChemistryMaterials {
                 .color(0x2b2b2b)
                 .build()
 
-        AlphaPinene = new Material.Builder(1571, SuSyUtility.susyId('alpha_pinene'))
+        AlphaPinene = new Material.Builder(15716, SuSyUtility.susyId('alpha_pinene'))
                 .liquid()
                 .components(Carbon * 10, Hydrogen * 16)
                 .color(0xad6615)
                 .build()
 
-        AlphaTerpinene = new Material.Builder(1571, SuSyUtility.susyId('alpha_pinene'))
+        AlphaTerpinene = new Material.Builder(15717, SuSyUtility.susyId('alpha_terpinene'))
                 .liquid()
                 .components(Carbon * 10, Hydrogen * 16)
                 .color(0xd4cd85)
                 .build()
 
-        Limonene = new Material.Builder(1571, SuSyUtility.susyId('limonene'))
+        Limonene = new Material.Builder(15718, SuSyUtility.susyId('limonene'))
                 .liquid()
                 .components(Carbon * 10, Hydrogen * 16)
                 .color(0x87d463)
+                .build()
+
+        DiethylammoniumChloride = new Material.Builder(15719, SuSyUtility.susyId('diethylammonium_chloride'))
+                .dust()
+                .components(Carbon * 4, Hydrogen * 12, Nitrogen, Chlorine)
+                .color(0x0d5c5a)
+                .build()
+
+        DiethylammoniumChloride.setFormula('(C2H5)2NH2Cl', true)
+
+        TerpineneMixture = new Material.Builder(15720, SuSyUtility.susyId('terpinene_mixture'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 16)
+                .color(0xbab150)
                 .build()
     }
 }

@@ -3095,6 +3095,11 @@ susy.material.gum_turpentiine=Gum Turpentine
 susy.material.alpha_pinene=alpha-Pinene
 susy.material.alpha_terpinene=alpha-Terpinene
 susy.material.limonene=Limonene
+susy.material.pine_resin=Pine Resin
+susy.material.rosin=Rosin
+susy.material.mildly_activated_solder_flux_mixture=Mildly Activated Solder Flux Mixture
+susy.material.lead_free_solder_paste=Lead-Free Solder Paste
+susy.material.terpinene_mixture=Terpinene Mixture
 
 # Isotopes
 
@@ -3713,6 +3718,7 @@ item.gregtech.material.rock_salt.dust=Sylvite Dust
 # Resin Logs
 susy.block_group_members.extractable_logs_1.name=Birch, Jungle, Oak, and Spruce Log
 susy.block_group_members.extractable_logs_2.name=Acacia and Dark Oak Log
+susy.block_group_members.pine_logs.name=Pine Log
 
 susy.block_group_members.rainbowwood_logs.name=Rainbowwood Log
 susy.block_group_members.latex_logs.name=Rubber Log

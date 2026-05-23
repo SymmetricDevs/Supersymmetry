@@ -16,6 +16,8 @@ class Lithography {
         String exposureRecipeMap
         int timeUsed
         boolean liftoff
+        String topcoat
+        String barc
 
         Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, boolean liftoff = false, String topcoat = null, String barc = null) {
             this.resistName = resistName
@@ -30,7 +32,7 @@ class Lithography {
         }
 
         def generateCoatingRecipe(String input, boolean hmds, Integer circuit = null) {
-            solvent_amount = 100 + (this.topcoat ? 20 : 0) + (this.barc ? 50 : 0)
+            def solvent_amount = 100 + (this.topcoat ? 20 : 0) + (this.barc ? 50 : 0)
             
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
