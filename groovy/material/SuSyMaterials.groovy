@@ -844,6 +844,7 @@ class SuSyMaterials {
     public static Material CopperSuperfillElectrolyte
     public static Material StandardCleanOne
     public static Material StandardCleanTwo
+    public static Material GumTurpentine
 
     // Petrochem Materials
 
@@ -2612,6 +2613,9 @@ class SuSyMaterials {
     public static Material Diethoxymethylsilane
     public static Material Methylbutynol
     public static Material Methylbutenol
+    public static Material AlphaPinene
+    public static Material AlphaTerpinene
+    public static Material Limonene
 
     // Third Degree Materials
 

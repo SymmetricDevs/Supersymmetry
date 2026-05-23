@@ -4237,5 +4237,23 @@ class OrganicChemistryMaterials {
                 .components(ActivatedCarbon * 4, PolyvinylideneFluoride, Carbon, IsopropylAlcohol * 4)
                 .color(0x2b2b2b)
                 .build()
+
+        AlphaPinene = new Material.Builder(1571, SuSyUtility.susyId('alpha_pinene'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 16)
+                .color(0xad6615)
+                .build()
+
+        AlphaTerpinene = new Material.Builder(1571, SuSyUtility.susyId('alpha_pinene'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 16)
+                .color(0xd4cd85)
+                .build()
+
+        Limonene = new Material.Builder(1571, SuSyUtility.susyId('limonene'))
+                .liquid()
+                .components(Carbon * 10, Hydrogen * 16)
+                .color(0x87d463)
+                .build()
     }
 }

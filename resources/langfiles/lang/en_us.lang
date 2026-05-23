@@ -3091,6 +3091,10 @@ susy.material.supported_vanadium_pentoxide=Supported Vanadium Pentoxide
 susy.material.one_bromopropane=1-Bromopropane
 susy.material.octamethylcyclotetrasiloxane=Octamethylcyclotetrasiloxane (OMCTS)
 susy.material.diethoxymethylsilane=Diethoxymethylsilane (DEMS)
+susy.material.gum_turpentiine=Gum Turpentine
+susy.material.alpha_pinene=alpha-Pinene
+susy.material.alpha_terpinene=alpha-Terpinene
+susy.material.limonene=Limonene
 
 # Isotopes
 

@@ -2052,6 +2052,7 @@ class FirstDegreeMaterialsA {
         ManganeseDioxide = new Material.Builder(8395, SuSyUtility.susyId('manganese_dioxide'))
                 .dust()
                 .iconSet('SHINY')
+                .flags(GENERATE_CATALYST_BED)
                 .components(Manganese, Oxygen * 2)
                 .color(0x38251e)
                 .build()

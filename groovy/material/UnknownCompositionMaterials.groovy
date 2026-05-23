@@ -1295,7 +1295,10 @@ class UnknownCompositionMaterials {
                 .color(0xd0afed)
                 .build()
 
-        // FREE ID: 4255
+        GumTurpentine = new Material.Builder(4255, SuSyUtility.susyId('gum_turpentine'))
+                .liquid()
+                .color(0xe0bf5c)
+                .build()
 
         LimestoneTailingSlurry = new Material.Builder(4256, SuSyUtility.susyId('limestone_tailing_slurry'))
                 .liquid()
