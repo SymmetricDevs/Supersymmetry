@@ -339,7 +339,7 @@ for (cap_type in cap_types) {
     ASSEMBLER.recipeBuilder()
         .inputs(metaitem('component.' + cap_type + '.plated') * 16)
         .fluidInputs(fluid('soldering_alloy') * 160)
-        .outputs(metaitem('component.' + cap_type))
+        .outputs(metaitem('component.' + cap_type) * 16)
         .duration(40)
         .EUt(VA[MV])
         .buildAndRegister()
