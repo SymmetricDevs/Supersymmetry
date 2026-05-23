@@ -25,17 +25,24 @@ Etchants used:
 class Etching {
 
     static class Etchant {
-        String fluidName
+        Map fluidArr
         int voltageTier
-        int amountUsed
         double etchingRate
         boolean anisotropic
         boolean isPlasma
 
         Etchant(String fluidName, int voltageTier, int amountUsed, double etchingRate, boolean anisotropic, boolean isPlasma) {
-            this.fluidName = fluidName
+            this.fluidArr = [fluidName : amountUsed]
             this.voltageTier = voltageTier
             this.amountUsed = amountUsed
+            this.etchingRate = etchingRate
+            this.anisotropic = anisotropic
+            this.isPlasma = isPlasma
+        }
+
+        Etchant(Map fluidArr, int voltageTier, double etchingRate, boolean anisotropic, boolean isPlasma) {
+            this.fluidArr = fluidArr
+            this.voltageTier = voltageTier
             this.etchingRate = etchingRate
             this.anisotropic = anisotropic
             this.isPlasma = isPlasma
@@ -121,7 +128,7 @@ class Etching {
             if (anisotropic == etchant.anisotropic && !etchant.isPlasma) {
                 CHEMICAL_BATH.recipeBuilder()
                     .inputs(metaitem(input))
-                    .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
+                    .fluidInputs(fluid(etchant.fluidArr.keySet().first()) * etchant.fluidArr.values().first())
                     .outputs(metaitem(product))
                     .duration((int) (depth / etchant.etchingRate))
                     .EUt(VA[etchant.voltageTier])
@@ -140,7 +147,7 @@ class Etching {
             if (etchant.isPlasma) {
                 REACTIVE_ION_ETCHER.recipeBuilder()
                     .inputs(metaitem(input))
-                    .fluidInputs(fluid(etchant.fluidName) * etchant.amountUsed)
+                    .fluidInputs(fluid(etchant.fluidArr.keySet().first()) * etchant.fluidArr.values().first())
                     .outputs(metaitem(product))
                     .duration((int) (depth / etchant.etchingRate))
                     .EUt(VA[etchant.voltageTier])
