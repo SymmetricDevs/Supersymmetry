@@ -180,7 +180,7 @@ Sintering.nonPlasmaFuels().each { fuel ->
             .inputs(metaitem('component.thick_film_resistor.wafer.printed_coating'))
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
             .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-            .outputs(metaitem('component.thick_film_resistor.wafer.coated'))
+            .outputs(metaitem('component.thick_film_resistor.wafer'))
             .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
             .duration(fuel.duration + comburent.duration)
             .EUt(240)
@@ -226,7 +226,7 @@ SCREEN_PRINTING.recipeBuilder()
     .buildAndRegister()
 
 LASER_ENGRAVER.recipeBuilder()
-    .inputs(metaitem('component.thick_film_resistor.wafer.printed'))
+    .inputs(metaitem('component.thick_film_resistor.wafer.fired'))
     .outputs(metaitem('component.thick_film_resistor.wafer.etched'))
     .duration(200)
     .EUt(VA[EV])
@@ -236,15 +236,23 @@ SCREEN_PRINTING.recipeBuilder()
     .notConsumable(metaitem('screen_printing.pattern.resistor'))
     .inputs(metaitem('component.thick_film_resistor.wafer.etched'))
     .inputs(metaitem('dustTinyGlass') * 5)
-    .outputs(metaitem('component.thick_film_resistor.wafer'))
+    .outputs(metaitem('component.thick_film_resistor.wafer.printed_coating'))
     .duration(104)
     .EUt(VA[HV])
     .buildAndRegister()
 
 Packaging.generateDicingRecipe("component.thick_film_resistor.wafer", "component.thick_film_resistor.unterminated", 32, 100, HV)
 
-Deposition.generateSputteringRecipes("component.resistor.wafer.pads", "component.thin_film_resistor.wafer", {'chromium' : 300, 'nickel' : 300}) // NiCr vacuum deposition
-Packaging.generateDicingRecipe("component.thin_film_resistor.wafer", "component.thin_film_resistor.unterminated", 32, 100, HV)
+Deposition.generateSputteringRecipes("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.coated", {'chromium' : 300, 'nickel' : 300}) // NiCr vacuum deposition
+
+LASER_ENGRAVER.recipeBuilder()
+    .inputs(metaitem('component.thin_film_resistor.wafer.coated'))
+    .outputs(metaitem('component.thin_film_resistor.wafer.etched'))
+    .duration(200)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+Packaging.generateDicingRecipe("component.thin_film_resistor.wafer.etched", "component.thin_film_resistor.unterminated", 32, 100, HV)
 
 types = ["thick_film_resistor", "thin_film_resistor"]
 for (type in types) {
@@ -272,8 +280,8 @@ for (type in types) {
         .buildAndRegister()
 
     BALL_MILL.recipeBuilder()
-        .inputs(metaitem('component.' + type + ".fired") * 16)
-        .outputs(metaitem('component.' + type + ".unterminated") * 16)
+        .inputs(metaitem('component.' + type + ".unterminated") * 16)
+        .outputs(metaitem('component.' + type + ".polished") * 16)
         .duration(20)
         .EUt(VA[LV])
         .buildAndRegister()
