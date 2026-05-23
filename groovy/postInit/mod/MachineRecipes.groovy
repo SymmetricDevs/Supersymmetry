@@ -1562,18 +1562,9 @@ BENDER.recipeBuilder()
 
 // Engine Parts
 
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('pipeLargeFluidMonel500'))
-        .inputs(metaitem('nozzle.boron_nitride') * 8)
-        .inputs(metaitem('plateIncoloy908') * 4)
-        .outputs(metaitem('fuel_injector'))
-        .EUt(VA[EV])
-        .duration(20)
-        .buildAndRegister()
-
 MILLING.recipeBuilder()
         .circuitMeta(1)
-        .inputs(metaitem('ingotMonel500') * 4)
+        .inputs(metaitem('ingotStainlessSteel') * 4)
         .outputs(metaitem('fuel_injector'))
         .EUt(VA[HV])
         .duration(20)
@@ -1759,6 +1750,9 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 // Other Spacecraft Recipes
+
+ASSEMBLER.recipeBuilder()
+        .inputs('')
 
 // Spacecraft Component Cleanroom Recipes
 
