@@ -1749,10 +1749,22 @@ ASSEMBLER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
-// Other Spacecraft Recipes
+BR.recipeBuilder()
+        .inputs(metaitem('dustLithiumHydroxide'))
+        .fluidInputs(fluid('hydrogen_peroxide') * 1000)
+        .outputs(metaitem('dustLithiumHydroperoxide'))
+        .fluidOutputs(fluid('water') * 1000)
+        .EUt(VA[HV])
+        .duration(5)
+        .buildAndRegister()
 
-ASSEMBLER.recipeBuilder()
-        .inputs('')
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustLithiumHydroperoxide') * 2)
+        .outputs(metaitem('dustLithiumPeroxide'))
+        .fluidOutputs(fluid('hydrogen_peroxide') * 1000)
+        .buildAndRegister()
+
+// Other Spacecraft Recipes
 
 // Spacecraft Component Cleanroom Recipes
 
