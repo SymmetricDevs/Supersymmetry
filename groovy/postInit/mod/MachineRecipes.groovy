@@ -1625,6 +1625,7 @@ ASSEMBLER.recipeBuilder()
 // Fuel Tanks
 
 ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
         .inputs(ore('stickLongAluminiumAlloy2219') * 12)
         .outputs(item('susy:rocket_tank_shell')) // Al-2219 tank shell
@@ -1787,6 +1788,15 @@ ASSEMBLER.recipeBuilder()
         .outputs(item('susy:spacecraft_room_padding'))
         .EUt(VA[EV])
         .duration(5)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
+        .inputs(ore('stickLongAluminiumAlloy2219') * 12)
+        .outputs(item('susy:spacecraft_hull'))
+        .EUt(VA[EV])
+        .duration(20)
         .buildAndRegister()
 
 // Spacecraft Component Cleanroom Recipes
