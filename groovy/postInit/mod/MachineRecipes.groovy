@@ -1749,6 +1749,8 @@ ASSEMBLER.recipeBuilder()
         .duration(20)
         .buildAndRegister()
 
+// Other Spacecraft Recipes
+
 BR.recipeBuilder()
         .inputs(metaitem('dustLithiumHydroxide'))
         .fluidInputs(fluid('hydrogen_peroxide') * 1000)
@@ -1762,9 +1764,21 @@ ROASTER.recipeBuilder()
         .inputs(metaitem('dustLithiumHydroperoxide') * 2)
         .outputs(metaitem('dustLithiumPeroxide'))
         .fluidOutputs(fluid('hydrogen_peroxide') * 1000)
+        .EUt(VA[HV])
+        .duration(5)
         .buildAndRegister()
 
-// Other Spacecraft Recipes
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('dustLithiumPeroxide') * 16)
+        .inputs(metaitem('dustLithiumHydroxide') * 16)
+        .inputs(metaitem('wireGtQuadrupleNichrome') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 4)
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameStainlessSteel'))
+        .outputs(item('susy:spacecraft_life_support')) // Oxygen Regenerator
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
 
 // Spacecraft Component Cleanroom Recipes
 
