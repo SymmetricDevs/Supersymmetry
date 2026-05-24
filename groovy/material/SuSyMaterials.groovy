@@ -833,7 +833,7 @@ class SuSyMaterials {
     public static Material MelamineOffgas
     public static Material CrudeAzide
     public static Material CrudeAzideSolution
-    public static Material BurnedGas
+    public static Material WasteGas
     public static Material CorrosiveGas
     public static Material MagneticLiningSlurry
     public static Material FluorinatedSulfolaneMixture
@@ -844,6 +844,12 @@ class SuSyMaterials {
     public static Material CopperSuperfillElectrolyte
     public static Material StandardCleanOne
     public static Material StandardCleanTwo
+    public static Material GumTurpentine
+    public static Material PineResin
+    public static Material Rosin
+    public static Material MildlyActivatedSolderFluxMixture
+    public static Material LeadFreeSolderPaste
+
 
     // Petrochem Materials
 
@@ -1689,6 +1695,8 @@ class SuSyMaterials {
     public static Material TetrachloropalladicIIAcidSolution
     public static Material GreenVitriol
     public static Material NitrosylsulfuricAcid
+    public static Material AB2MetalAlloy
+    public static Material AB5MetalAlloy
     public static Material AcetaldehydeSolution
     public static Material GammaAlumina
     public static Material FineGammaAlumina
@@ -1706,6 +1714,10 @@ class SuSyMaterials {
     public static Material UltrapureSteam
     public static Material CopperIPhosphide
     public static Material CarbonCompound
+    public static Material IodinePentafluoride
+    public static Material AnnealedAB2MetalAlloy
+    public static Material AnnealedAB5MetalAlloy
+    public static Material CadmiumOxide
 
     // HP Materials
 
@@ -1966,6 +1978,8 @@ class SuSyMaterials {
     public static Material EnameledGrapheneCoatedGold
     public static Material GrapheneCoatedGold
     public static Material GoldAntimony
+    public static Material MetalHydrideMixAnode
+    public static Material SupportedVanadiumPentoxide
 
     // Organic Chemistry Materials
 
@@ -2202,7 +2216,7 @@ class SuSyMaterials {
     public static Material ParaXylene
     public static Material MetaParaXyleneMixture
     public static Material Tripropylamine
-    public static Material NBromopropane
+    public static Material OneBromopropane
     public static Material TetrapropylammoniumBromide
     public static Material Propionaldehyde
     public static Material Triethylenetetramine
@@ -2227,8 +2241,7 @@ class SuSyMaterials {
     public static Material Trioctylamine
     public static Material Adamantane
     public static Material Adamantanone
-
-    //public static Material NButylamine
+    public static Material DimethylOneThreeDioxane
     public static Material Ethyltoluene
     public static Material VinylbenzylChloride
     public static Material Cyclohexylamine
@@ -2236,6 +2249,7 @@ class SuSyMaterials {
     public static Material Cyanamide
     public static Material Dicyandiamide
     public static Material TwoMethylimidazole
+    public static Material EDLCElectrodeSlurry
     public static Material FlameRetardantEpoxy
     public static Material PropyleneChlorohydrin
     public static Material PropyleneOxide
@@ -2252,7 +2266,7 @@ class SuSyMaterials {
     public static Material TriphenylphosphineOxide
     public static Material Methyltrichlorosilane
     public static Material Methyldichlorosilane
-    public static Material Chlorotrimethylsilane
+    public static Material Trimethylsilane
     public static Material DilutedSodiumCarbonateSolution
     public static Material DimethylTerephthalate
     public static Material PolyethyleneTerephthalate
@@ -2518,7 +2532,7 @@ class SuSyMaterials {
     public static Material Polyhydroxystyrene
     public static Material MichlersKetone
     public static Material Sulfolene
-    public static Material TripropylamineTriflate
+    public static Material TetrapropylammoniumTriflate
     public static Material MethylmagnesiumChlorideSolution
     public static Material Hexamethyldisilazane
     public static Material ParaTertbutyliodobenzene
@@ -2537,7 +2551,7 @@ class SuSyMaterials {
     public static Material AlphaBromoGammaButyrolactone
     public static Material BisSodiumSulfopropylDisulfide
     public static Material PropaneOneThreeSultone
-    public static Material DiFourTertButylphenyliodoniumNonaflate
+    public static Material BisFourTertButylphenyliodoniumNonaflate
     public static Material Hexamethoxymethylmelamine
     public static Material Melamine
     public static Material PerfluorobutanesulfonylFluoride
@@ -2570,6 +2584,45 @@ class SuSyMaterials {
     public static Material LacticAcid
     public static Material TriflicAcid
     public static Material TetrakisDimethylamidoHafnium
+    public static Material OneBromoadamantane
+    public static Material OneHydroxyadamantane
+    public static Material OneAdamantylMethacrylate
+    public static Material AlphaMethacryloxyGammaButyrolactone
+    public static Material IsopropylThiol
+    public static Material MethacrylateTerpolymer
+    public static Material ParaTertButylnitrobenzeneMixture
+    public static Material MethacryloylChloride
+    public static Material Hexafluoroacetone
+    public static Material Hexafluoroisopropanol
+    public static Material HexafluoroisopropylMethacrylate
+    public static Material Trifluoroethanol
+    public static Material TrifluoroethylMethacrylate
+    public static Material FluorinatedMethacrylateCopolymer
+    public static Material BenzylMethacrylate
+    public static Material HydroxypropylMethacrylate
+    public static Material AbsorbingMethacrylateCopolymer
+    public static Material BenzylAlcohol
+    public static Material Glycidol
+    public static Material Pentafluoroiodoethane
+    public static Material NonafluorobutylIodide
+    public static Material Methoxyperfluorobutane
+    public static Material NMethylethanolamine
+    public static Material NHydroxyethylNMethylPerfluorobutanesulfonamide
+    public static Material NAcryloxyethylNMethylPerfluorobutanesulfonamide
+    public static Material AcryloylChloride
+    public static Material PolyethyleneGlycolDiacrylate
+    public static Material Thioglycerol
+    public static Material NonionicFluorosurfactant
+    public static Material Octamethylcyclotetrasiloxane
+    public static Material Benzaldehyde
+    public static Material Diethoxymethylsilane
+    public static Material Methylbutynol
+    public static Material Methylbutenol
+    public static Material AlphaPinene
+    public static Material AlphaTerpinene
+    public static Material Limonene
+    public static Material DiethylammoniumChloride
+    public static Material TerpineneMixture
 
     // Third Degree Materials
 
@@ -2749,7 +2802,6 @@ class SuSyMaterials {
     public static Material StyreneAnthracenylMaleimideSolution
     public static Material StyreneMaleicAnhydrideSolution
     public static Material AcidicParaTertButylnitrobenzeneMixture
-    public static Material ParaTertButylnitrobenzeneMixture
     public static Material ParaTertbutyliodobenzeneSolution
     public static Material AllylAlcoholSolution
     public static Material BisSulfopropylDisulfideSolution
@@ -2783,6 +2835,23 @@ class SuSyMaterials {
     public static Material TetrakisDimethylamidoHafniumSolution
     public static Material LithiumAluminiumHydrideSolution
     public static Material TetrafluoroethaneMixture
+    public static Material AlphaMethacryloxyGammaButyrolactoneSolution
+    public static Material MethacrylateTerpolymerSolution
+    public static Material MethacrylateResist
+    public static Material TetrapropylammoniumHydroxideSolution
+    public static Material TetrapropylammoniumTriflateSolution
+    public static Material FluorinatedMethacrylateCopolymerSolution
+    public static Material AbsorbingMethacrylateCopolymerSolution
+    public static Material GlycidolSolution
+    public static Material NMethylethanolamineSolution
+    public static Material ThioglycerolSolution
+    public static Material NonionicFluorosurfactantSolution
+    public static Material ArFTopcoat
+    public static Material ArFBottomAntireflectiveCoating
+    public static Material PolycaprolactamSolution
+    public static Material DimethylDioxaneSolution
+    public static Material IsopreneSolution
+    public static Material DiethylammoniumChlorideSolution
 
     // Thermodynamics Materials
 

@@ -343,3 +343,16 @@ DT.recipeBuilder() //SCHULZ FLORY DISTRIBUTION, p = 0.73, ROUNDED TO NEAREST 5s,
     .duration(166)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Aromatic alcohols
+
+    // Benzyl alcohol
+
+    TBR.recipeBuilder()
+        .notConsumable(ore('dustActivatedRaneyNickel'))
+        .fluidInputs(fluid('benzaldehyde') * 50)
+        .fluidInputs(fluid('hydrogen') * 100)
+        .fluidOutputs(fluid('benzyl_alcohol') * 50)
+        .duration(10)
+        .EUt(VA[MV])
+        .buildAndRegister()

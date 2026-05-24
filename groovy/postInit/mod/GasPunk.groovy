@@ -232,43 +232,6 @@ MIXER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-FIXED_BR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedCopperIOxide'))
-    .fluidInputs(fluid('acetone') * 100)
-    .fluidInputs(fluid('hydrogen') * 400)
-    .fluidInputs(fluid('ammonia') * 50)
-    .fluidOutputs(fluid('diluted_diisopropylamine') * 150)
-    .duration(3)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('diluted_diisopropylamine') * 3000)
-    .fluidOutputs(fluid('water') * 2000)
-    .fluidOutputs(fluid('diisopropylamine') * 1000)
-    .duration(200)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
-FIXED_BR.recipeBuilder()
-    .notConsumable(metaitem('catalystBedAlumina'))
-    .fluidInputs(fluid('ethanol') * 300)
-    .fluidInputs(fluid('ammonia') * 150)
-    .fluidOutputs(fluid('ethylamine_mix') * 450)
-    .duration(5)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('ethylamine_mix') * 9000)
-    .fluidOutputs(fluid('water') * 6000)
-    .fluidOutputs(fluid('triethylamine') * 1000)
-    .fluidOutputs(fluid('diethylamine') * 1000)
-    .fluidOutputs(fluid('ethylamine') * 1000)
-    .duration(300)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
 CSTR.recipeBuilder()
     .fluidInputs(fluid('triethylamine') * 800)
     .fluidInputs(fluid('ethanol') * 800)

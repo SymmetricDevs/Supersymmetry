@@ -58,7 +58,7 @@ def registerCMOSMetaitems(String name) {
     for (step in ashed_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
     }
-    
+
     def photoresist_steps = [11, 15, 24, 29, 33, 38, 42, 54, 62, 70, 151, 156]
     for (step in photoresist_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
@@ -282,8 +282,12 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2804, "circuit.power.mv")
         addItem(2805, "circuit.power.hv")
         addItem(2806, "circuit.power.ev")
-        addItem(2807, "component.thyristor.assembly")
-        addItem(2808, "component.thyristor")
+        addItem(2807, "edlc_electrode_powder")
+        addItem(2808, "edlc_electrode_coated")
+        addItem(2809, "edlc_electrode")
+        addItem(2810, "component.capacitor.edlc")
+        addItem(2811, "component.thyristor.assembly")
+        addItem(2812, "component.thyristor")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -342,6 +346,9 @@ eventManager.listen { PostMaterialEvent event ->
 
         //Organics 3500-3900
         addItem(3500, "copra")
+        addItem(3501, "zest.orange")
+        addItem(3502, "zest.lemon")
+        addItem(3503, "zest.lime")
 
         // Battery hulls 3900-4000
         addItem(3900, "battery.primitivehull.lv")
@@ -352,6 +359,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(3905, "battery.ni_fe_hull.lv")
         addItem(3906, "battery.ni_fe_hull.mv")
         addItem(3907, "battery.ni_fe_hull.hv")
+        addItem(3908, "battery.stainless_steel_hull.hv")
+        addItem(3909, "battery.stainless_steel_hull.ev")
+        addItem(3910, "battery.stainless_steel_hull.iv")
 
         //Batteries 4000-4100
         Batteries['lead_acid'].register(it, 4000)
@@ -359,16 +369,25 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4002, "anode.lead")
         addItem(4003, "cathode.lead_paste")
         addItem(4004, "cathode.lead_frame")
-        Batteries['lead_acid.mv'].register(it,4005)
+        Batteries['lead_acid.mv'].register(it, 4005)
         addItem(4006, "electrode.steel_frame")
         addItem(4007, "electrode.nickeled_steel_frame")
-        Batteries['ni_zn.mv'].register(it, 4008)
-        Batteries['ni_zn.hv'].register(it, 4009)
-        addItem(4010, "anode.zinc_oxide")
+        Batteries['ni_fe.lv'].register(it, 4008)
+        Batteries['ni_fe'].register(it, 4009)
+        Batteries['ni_fe.hv'].register(it, 4010)
         addItem(4011, "cathode.nioh2")
-        Batteries['ni_fe.lv'].register(it, 4012)
-        Batteries['ni_fe'].register(it, 4013)
-        Batteries['ni_fe.hv'].register(it, 4014)
+        Batteries['ni_cd.mv'].register(it, 4012)
+        Batteries['ni_cd.hv'].register(it, 4013)
+        Batteries['ni_cd.ev'].register(it, 4014)
+        addItem(4015, "anode.cadmium_oxide")
+        Batteries['ni_mh.hv'].register(it, 4016)
+        Batteries['ni_mh.ev'].register(it, 4017)
+        Batteries['ni_mh.iv'].register(it, 4018)
+        addItem(4019, "electrode.nickeled_steel_foil")
+        addItem(4020, "membrane.caprolactam")
+        addItem(4021, "membrane.caprolactam_wet")
+        addItem(4022, "anode.mh")
+        addItem(4023, "membrane.cast_film")
 
         addItem(4101, "vacuum_tube_components")
 
@@ -425,7 +444,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5805, "board.epoxy.electroless");
         addItem(5806, "board.epoxy.electrolytic");
         addItem(5807, "board.epoxy.wet_masked");
-        addItem(5808, "board.epoxy.mask_affixed"); 
+        addItem(5808, "board.epoxy.mask_affixed");
         addItem(5809, "circuit_board.fr4")
         addItem(5810, "board.epoxy.resist")
 
@@ -591,8 +610,8 @@ eventManager.listen { PostMaterialEvent event ->
         registerCircuitMetaitems("nmos_dram", 22)
         registerCircuitMetaitems("bjt_pic_base", 17, 1, false)
         registerCircuitMetaitems("bjt_ulpic", 5, 1)
-        registerCircuitMetaitems("bjt_lpic", 14, 1)
-        registerCircuitMetaitems("bjt_pic", 12, 1)
+        registerCircuitMetaitems("bjt_lpic", 19, 1)
+        registerCircuitMetaitems("bjt_pic", 17, 1)
         registerCMOSMetaitems("cmos_cpu")
         registerCircuitMetaitems("diode.planar", 10, 1, false)
         registerCircuitMetaitems("diode.power", 14, 2, false)
@@ -630,7 +649,7 @@ eventManager.listen { PostMaterialEvent event ->
             addItem(start, name)
             start++
         }
-        
+
         // 8975-9000 sputtering targets
         addItem(8975, "target.aluminium")
         addItem(8976, "target.copper")
@@ -670,7 +689,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10203, 'display.moon')
         addItem(10204, 'display.mercury')
         addItem(10205, 'display.mars')
-        
+
         // Space Components 10250-10300
         addItem(10250, "parachute.drogue")
         addItem(10251, "parachute.main")
@@ -699,7 +718,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10330, "cac_clinker")
         addItem(10331, "hot_cac_clinker")
         addItem(10332, "cac_dust")
-      
+
         // Lighting Components 10400-10420
 
         addItem(10401, "carbon_filament")

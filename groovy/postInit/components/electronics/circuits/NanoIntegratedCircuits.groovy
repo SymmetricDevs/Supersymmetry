@@ -28,7 +28,7 @@ BLENDER.recipeBuilder()
 // CMOS 45nm process fabrication chain
 
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.p_doped', 'wafer.cmos.step_one', 400, true) // Protecting layer for P/NMOS well formation
-Deposition.generateChemicalVaporDepositionRecipe('wafer.cmos.step_one', 'wafer.cmos.step_two', 400, 'silicon_nitride.silane') // CMP stop layer for STI formation
+Deposition.generateChemicalVaporDepositionRecipe('wafer.cmos.step_one', 'wafer.cmos.step_two', 2.0, 'silicon_nitride.silane') // CMP stop layer for STI formation
 
 def generateCMOSFabrication(String componentName, int circ) {
     // Lookup table for int to string conversion
@@ -43,7 +43,7 @@ def generateCMOSFabrication(String componentName, int circ) {
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 'silicon', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_six', 'wafer.' + componentName + '.step_seven', 1, true)
     Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_seven', 'wafer.' + componentName + '.step_eight', 400, true) // Protective oxide growth after trench etching to repair etch damage
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_eight', 'wafer.' + componentName + '.step_nine', 400, 'silicon_dioxide.teos') // Fill trenches, TEOS has better gap-filling properties
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_eight', 'wafer.' + componentName + '.step_nine', 3.0, 'silicon_dioxide.teos') // Fill trenches, TEOS has better gap-filling properties
     Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_nine', 'wafer.' + componentName + '.step_ten', 400, HV) // CMP to planarize wafer
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_ten', 'wafer.' + componentName + '.step_eleven', 'silicon_nitride', 400, false) // Etch away silicon nitride CMP stop layer
 
@@ -62,9 +62,9 @@ def generateCMOSFabrication(String componentName, int circ) {
     // Dummy gate formation
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_nineteen', 'wafer.' + componentName + '.step_twenty', 'silicon_dioxide', 400, false) // Remove protective oxide layer to expose silicon surface for gate formation
     Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_twenty', 'wafer.' + componentName + '.step_twenty_one', 400, false) // Grow SiO2 interfacial layer for HfO2
-    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_twenty_one', 'wafer.' + componentName + '.step_twenty_two', 400, 'hafnium_dioxide') // Gate oxide deposition
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_twenty_two', 'wafer.' + componentName + '.step_twenty_three', 400, 'silicon') // Grow dummy gate
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 400, 'silicon_nitride.silane') // Hard mask layer for dummy gate
+    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_twenty_one', 'wafer.' + componentName + '.step_twenty_two', 0.1, 'hafnium_dioxide') // Gate oxide deposition
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_twenty_two', 'wafer.' + componentName + '.step_twenty_three', 3.0, 'silicon') // Grow dummy gate
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 1.0, 'silicon_nitride.silane') // Hard mask layer for dummy gate
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty_four', 'wafer.' + componentName + '.step_twenty_five', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define gate pattern
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twenty_five', 'wafer.' + componentName + '.step_twenty_six', 'silicon_nitride', 400)
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twenty_six', 'wafer.' + componentName + '.step_twenty_seven', 'silicon', 400)
@@ -84,7 +84,7 @@ def generateCMOSFabrication(String componentName, int circ) {
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_thirty_six', 'wafer.' + componentName + '.step_thirty_seven', 1, true)
 
     // Spacer formation, reduces short channel effects, parasitic capacitances, strain engineering for NMOS.
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_thirty_seven', 'wafer.' + componentName + '.step_thirty_eight', 400, 'silicon_nitride.silane') // NOTE: original line specified TEOS for silicon nitride but this doesn't make sense?
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_thirty_seven', 'wafer.' + componentName + '.step_thirty_eight', 1.0, 'silicon_nitride.silane') // NOTE: original line specified TEOS for silicon nitride but this doesn't make sense?
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_thirty_eight', 'wafer.' + componentName + '.step_thirty_nine', 'methacrylate_resist', 'mask_set.' + componentName, true)
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_thirty_nine', 'wafer.' + componentName + '.step_forty', 'silicon_nitride', 400)
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_forty', 'wafer.' + componentName + '.step_forty_one', 1, true)
@@ -95,7 +95,7 @@ def generateCMOSFabrication(String componentName, int circ) {
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_forty_three', 'wafer.' + componentName + '.step_forty_four', 'silicon_dioxide', 400) // Anisotropic etch to expose PMOS source/drain areas
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_forty_four', 'wafer.' + componentName + '.step_forty_five', 1, true)
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_forty_five', 'wafer.' + componentName + '.step_forty_six', 'silicon', 400) // Etch into silicon to form recesses for SiGe deposition
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_forty_six', 'wafer.' + componentName + '.step_forty_seven', 400, 'silicon_germanium') // Epitaxial deposition of SiGe in PMOS source/drain recesses
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_forty_six', 'wafer.' + componentName + '.step_forty_seven', 1.0, 'silicon_germanium') // Epitaxial deposition of SiGe in PMOS source/drain recesses
     Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_forty_seven', 'wafer.' + componentName + '.step_forty_eight', 400, 'boron_trifluoride') // Dope SiGe for good ohmic contact
     Doping.generateDriveInRecipe('wafer.' + componentName + '.step_forty_eight', 'wafer.' + componentName + '.step_forty_nine', 100) // Drive in dopants in SiGe
 
@@ -106,33 +106,33 @@ def generateCMOSFabrication(String componentName, int circ) {
     Deposition.generateSinteringRecipe('wafer.' + componentName + '.step_fifty_two', 'wafer.' + componentName + '.step_fifty_three', 400, HV) // High temperature anneal to transform Ni2Si into low resistivity NiSi
 
     // T-CESL for NMOS strain engineering, interlayer dielectric.
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_fifty_three', 'wafer.' + componentName + '.step_fifty_four', 400, 'silicon_nitride.silane') // T-CESL
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_fifty_three', 'wafer.' + componentName + '.step_fifty_four', 1.0, 'silicon_nitride.silane') // T-CESL
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_fifty_four', 'wafer.' + componentName + '.step_fifty_five', 'methacrylate_resist', 'mask_set.' + componentName, true) // Remove T-CESL from PMOS areas
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_fifty_five', 'wafer.' + componentName + '.step_fifty_six', 'silicon_nitride', 400)
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_fifty_six', 'wafer.' + componentName + '.step_fifty_seven', 1, true)
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_fifty_seven', 'wafer.' + componentName + '.step_fifty_eight', 400, 'silicon') // Interlayer dielectric
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_fifty_seven', 'wafer.' + componentName + '.step_fifty_eight', 2.0, 'silicon') // Interlayer dielectric
 
     // Gate formation
     Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_fifty_eight', 'wafer.' + componentName + '.step_fifty_nine', 400, HV) // CMP to planarize down to dummy gate hardmask
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_fifty_nine', 'wafer.' + componentName + '.step_sixty', 'silicon_nitride', 400, false) // Etch hardmask
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_sixty', 'wafer.' + componentName + '.step_sixty_one', 'silicon', 400, true) // TMAH etch of dummy gate
-    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_sixty_one', 'wafer.' + componentName + '.step_sixty_two', 400, 'titanium_nitride') // Deposit PMOS workfunction metal
+    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_sixty_one', 'wafer.' + componentName + '.step_sixty_two', 0.1, 'titanium_nitride') // Deposit PMOS workfunction metal
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_sixty_two', 'wafer.' + componentName + '.step_sixty_three', 'methacrylate_resist', 'mask_set.' + componentName, true) // Mask PMOS areas to implant NMOS workfunction metal
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_sixty_three', 'wafer.' + componentName + '.step_sixty_four', 'titanium_nitride', 400, false) // Etch titanium nitride from PMOS areas
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_sixty_four', 'wafer.' + componentName + '.step_sixty_five', 1, false)
-    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_sixty_five', 'wafer.' + componentName + '.step_sixty_six', 400, 'titanium_aluminide') // Deposit PMOS/NMOS workfunction metal
+    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_sixty_five', 'wafer.' + componentName + '.step_sixty_six', 0.1, 'titanium_aluminide') // Deposit PMOS/NMOS workfunction metal
     Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_sixty_six', 'wafer.' + componentName + '.step_sixty_seven', 400, 'aluminium') // Deposit aluminium gate fill
     Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_sixty_seven', 'wafer.' + componentName + '.step_sixty_eight', 400, HV) // CMP to planarize down to gate level
     
     // Plug formation
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_eight', 'wafer.' + componentName + '.step_sixty_nine', 400, 'silicon_nitride.silane') // Deposit CMP stop layer
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_nine', 'wafer.' + componentName + '.step_seventy', 400, 'silicon_dioxide.silane') // Deposit interlayer dielectric
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_eight', 'wafer.' + componentName + '.step_sixty_nine', 2.0, 'silicon_nitride.silane') // Deposit CMP stop layer
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_nine', 'wafer.' + componentName + '.step_seventy', 2.0, 'silicon_dioxide.silane') // Deposit interlayer dielectric
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_seventy', 'wafer.' + componentName + '.step_seventy_one', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define plug pattern
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_seventy_one', 'wafer.' + componentName + '.step_seventy_two', 'silicon_dioxide', 400) // CH3F
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_seventy_two', 'wafer.' + componentName + '.step_seventy_three', 'silicon_nitride', 400) // CH3F
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_seventy_three', 'wafer.' + componentName + '.step_seventy_four', 1, true)
-    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_seventy_four', 'wafer.' + componentName + '.step_seventy_five', 400, 'titanium_aluminide') // Barrier layer deposition for tungsten plugs
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_seventy_five', 'wafer.' + componentName + '.step_seventy_six', 400, 'tungsten') // Tungsten hexafluoride plug fill
+    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_seventy_four', 'wafer.' + componentName + '.step_seventy_five', 0.1, 'titanium_aluminide') // Barrier layer deposition for tungsten plugs
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_seventy_five', 'wafer.' + componentName + '.step_seventy_six', 2.0, 'tungsten') // Tungsten hexafluoride plug fill
     Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_seventy_six', 'wafer.' + componentName + '.step_seventy_seven', 400, HV) // CMP to planarize down to ILD level
 
     // Damascene copper BEOL, 9 layers
@@ -199,4 +199,4 @@ def generateCMOSFabrication(String componentName, int circ) {
     Packaging.generateWireBondingRecipe('die.' + componentName, 'die.' + componentName + '.bonded', 'gold', 50, HV)
 }
 
-generateCMOSFabrication('cmos_cpu', 1)
+generateCMOSFabrication('cmos_cpu', 1) // Includes on die SRAM

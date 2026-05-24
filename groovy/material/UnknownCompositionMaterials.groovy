@@ -1295,7 +1295,10 @@ class UnknownCompositionMaterials {
                 .color(0xd0afed)
                 .build()
 
-        // FREE ID: 4255
+        GumTurpentine = new Material.Builder(4255, SuSyUtility.susyId('gum_turpentine'))
+                .liquid()
+                .color(0xe0bf5c)
+                .build()
 
         LimestoneTailingSlurry = new Material.Builder(4256, SuSyUtility.susyId('limestone_tailing_slurry'))
                 .liquid()
@@ -3422,7 +3425,7 @@ class UnknownCompositionMaterials {
                 .color(0xdcf2d2)
                 .build()
 
-        BurnedGas = new Material.Builder(4732, SuSyUtility.susyId('burned_gas'))
+        WasteGas = new Material.Builder(4732, SuSyUtility.susyId('waste_gas'))
                 .gas()
                 .color(0x363d39)
                 .build()
@@ -3467,14 +3470,35 @@ class UnknownCompositionMaterials {
                 .color(0xcf9e80)
                 .build()
 
-        StandardCleanOne = new Material.Builder(13196, SuSyUtility.susyId('standard_clean_one'))
+        StandardCleanOne = new Material.Builder(4741, SuSyUtility.susyId('standard_clean_one'))
                 .liquid()
                 .color(0x2180a3)
                 .build()
 
-        StandardCleanTwo = new Material.Builder(13197, SuSyUtility.susyId('standard_clean_two'))
+        StandardCleanTwo = new Material.Builder(4742, SuSyUtility.susyId('standard_clean_two'))
                 .liquid()
                 .color(0x3749ad)
+                .build()
+
+        PineResin = new Material.Builder(4743, SuSyUtility.susyId('pine_resin'))
+                .liquid()
+                .color(0x572e09)
+                .build()
+
+        Rosin = new Material.Builder(4744, SuSyUtility.susyId('rosin'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x5e1d05)
+                .build()
+
+        MildlyActivatedSolderFluxMixture = new Material.Builder(4745, SuSyUtility.susyId('mildly_activated_solder_flux_mixture'))
+                .liquid()
+                .color(0x2d5c0d)
+                .build()
+
+        LeadFreeSolderPaste = new Material.Builder(4746, SuSyUtility.susyId('lead_free_solder_paste'))
+                .liquid()
+                .color(0x4d4946)
                 .build()
     }
 }

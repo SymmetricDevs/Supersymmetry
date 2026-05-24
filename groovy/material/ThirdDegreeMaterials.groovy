@@ -57,7 +57,11 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 24004
+        DimethylDioxaneSolution = new Material.Builder(24004, SuSyUtility.susyId('dimethyl_dioxane_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
+                .colorAverage()
+                .build()
 
         TwoEthylanthraquinoneSolution = new Material.Builder(24005, SuSyUtility.susyId('two_ethylanthraquinone_solution'))
                 .liquid()
@@ -980,7 +984,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         DimethylanilineSolution = new Material.Builder(24170, SuSyUtility.susyId('dimethylaniline_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(Dimethylaniline, Water * 2, SulfuricAcid)
                 .colorAverage()
                 .build()
@@ -999,7 +1003,7 @@ class ThirdDegreeMaterials {
 
         ParaDiazoBenzaldehydeChlorideSolution.setFormula("ClC7H5N2O", true)
 
-        NovolacEBRSolvent = new Material.Builder(24173, SuSyUtility.susyId('novolac_ebr_solvent'))
+        EBRSolvent = new Material.Builder(24173, SuSyUtility.susyId('ebr_solvent'))
                 .liquid()
                 .components(PropyleneGlycolMethylEther * 7, PropyleneGlycolMethylEtherAcetate * 3)
                 .colorAverage()
@@ -1018,7 +1022,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         MethanesulfonicAcidSolution = new Material.Builder(24176, SuSyUtility.susyId('methanesulfonic_acid_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(MethanesulfonicAcid, Water)
                 .colorAverage()
                 .build()
@@ -1027,9 +1031,11 @@ class ThirdDegreeMaterials {
 
         PolyhydroxystyreneResist = new Material.Builder(24178, SuSyUtility.susyId('polyhydroxystyrene_resist'))
                 .liquid()
-                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate, Triethanolamine)
+                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, Triethanolamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
                 .colorAverage()
                 .build()
+
+        PolyhydroxystyreneResist.setFormula('(?)(C6H10O3)3(C4H10O2)', true)
 
         StyreneMaleicAnhydrideSolution = new Material.Builder(24179, SuSyUtility.susyId('styrene_maleic_anhydride_solution'))
                 .liquid()
@@ -1038,19 +1044,20 @@ class ThirdDegreeMaterials {
                 .build()
 
         AcidicParaTertButylnitrobenzeneMixture = new Material.Builder(24180, SuSyUtility.susyId('acidic_para_tert_butylnitrobenzene_mixture'))
-                .liquid()
-                .components(TertButylbenzene, NitrationMixture)
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(ParaTertButylnitrobenzeneMixture, SulfuricAcid, Water)
                 .colorAverage()
                 .build()
 
-        ParaTertButylnitrobenzeneMixture = new Material.Builder(24181, SuSyUtility.susyId('para_tert_butylnitrobenzene_mixture'))
+        PolycaprolactamSolution = new Material.Builder(24181, SuSyUtility.susyId('polycaprolactam_solution'))
                 .liquid()
-                .components(TertButylbenzene, NitricAcid)
+                .components(Caprolactam * 1, Tetrahydrofuran * 1)
+                .color(0x66696e)
                 .colorAverage()
                 .build()
 
         ParaTertbutyliodobenzeneSolution = new Material.Builder(24182, SuSyUtility.susyId('para_tertbutyliodobenzene_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(ParaTertButylaniline, PotassiumIodide, SodiumNitrite, HydrochloricAcid)
                 .colorAverage()
                 .build()
@@ -1067,9 +1074,11 @@ class ThirdDegreeMaterials {
 
         KrFBottomAntireflectiveCoating = new Material.Builder(24187, SuSyUtility.susyId('krf_barc'))
                 .liquid()
-                .components(StyreneAnthracenylMaleimide, TripropylamineTriflate, Hexamethoxymethylmelamine, PropyleneGlycolMethylEtherAcetate)
+                .components(StyreneAnthracenylMaleimide, TetrapropylammoniumTriflate, Hexamethoxymethylmelamine, PropyleneGlycolMethylEtherAcetate)
                 .colorAverage()
                 .build()
+
+        KrFBottomAntireflectiveCoating.setFormula('(?)(C7H8O2)', true)
 
         ParaAminobenzaldehydeSolution = genSolution(24188, "para_aminobenzaldehyde_solution", ParaAminobenzaldehyde, Water, false)
         
@@ -1259,5 +1268,73 @@ class ThirdDegreeMaterials {
                 .components(Tetrafluoroethane * 4, HydrogenChloride * 3)
                 .colorAverage()
                 .build()
+
+        MethacrylateTerpolymerSolution = new Material.Builder(24220, SuSyUtility.susyId('methacrylate_terpolymer_solution'))
+                .liquid()
+                .components(MethacrylateTerpolymer, PropyleneGlycolMethylEtherAcetate)
+                .colorAverage()
+                .build()
+
+        MethacrylateResist = new Material.Builder(24221, SuSyUtility.susyId('methacrylate_resist'))
+                .liquid()
+                .components(MethacrylateTerpolymer, BisFourTertButylphenyliodoniumNonaflate, Trioctylamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
+                .colorAverage()
+                .build()
+
+        MethacrylateResist.setFormula('(?)(C6H12O3)3(C4H10O2)', true)
+
+        // Surfactants and ArF photoresist solutions/formulations
+
+        TetrapropylammoniumHydroxideSolution = new Material.Builder(24222, SuSyUtility.susyId('tetrapropylammonium_hydroxide_solution'))
+                .liquid()
+                .components(Carbon * 12, Hydrogen * 29, Nitrogen, Oxygen, Water)
+                .color(0x9c7a3a)
+                .build()
+
+        TetrapropylammoniumHydroxideSolution.setFormula('(C12H28NOH)(H2O)', true)
+
+        TetrapropylammoniumTriflateSolution = genSolution(24223, 'tetrapropylammonium_triflate_solution', TetrapropylammoniumTriflate, Water, false)
+
+        FluorinatedMethacrylateCopolymerSolution = new Material.Builder(24224, SuSyUtility.susyId('fluorinated_methacrylate_copolymer_solution'))
+                .liquid()
+                .components(HexafluoroisopropylMethacrylate, TrifluoroethylMethacrylate, Tetrahydrofuran)
+                .colorAverage()
+                .build()
+
+        AbsorbingMethacrylateCopolymerSolution = new Material.Builder(24225, SuSyUtility.susyId('absorbing_methacrylate_copolymer_solution'))
+                .liquid()
+                .components(BenzylMethacrylate * 3, HydroxypropylMethacrylate, Butanone * 2)
+                .colorAverage()
+                .build()
+
+        GlycidolSolution = genSolution(24226, 'glycidol_solution', Glycidol, AceticAcid, true)
+
+        NMethylethanolamineSolution = genSolution(24227, 'n_methylethanolamine_solution', NMethylethanolamine, Water, false)
+
+        ThioglycerolSolution = genSolution(24228, 'thioglycerol_solution', Thioglycerol, Water, false)
+
+        NonionicFluorosurfactantSolution = genSolution(24229, 'nonionic_fluorosurfactant_solution', NonionicFluorosurfactant, Butanone, false)
+
+        ArFTopcoat = new Material.Builder(24230, SuSyUtility.susyId('arf_topcoat'))
+                .liquid()
+                .components(Methoxyperfluorobutane * 9, FluorinatedMethacrylateCopolymer, NonionicFluorosurfactant)
+                .colorAverage()
+                .build()
+
+        ArFBottomAntireflectiveCoating = new Material.Builder(24231, SuSyUtility.susyId('arf_barc'))
+                .liquid()
+                .components(PropyleneGlycolMethylEtherAcetate * 64, AbsorbingMethacrylateCopolymer, TetrapropylammoniumTriflate, Hexamethoxymethylmelamine, NonionicFluorosurfactant)
+                .colorAverage()
+                .build()
+
+        ArFBottomAntireflectiveCoating.setFormula('(?)(C6H12O3)', true)
+
+        IsopreneSolution = new Material.Builder(24232, SuSyUtility.susyId('isoprene_solution'))
+                .liquid()
+                .components(Water, Isoprene, Formaldehyde)
+                .colorAverage()
+                .build()
+
+        DiethylammoniumChlorideSolution = genSolution(24233, 'diethylammonium_chloride_solution', DiethylammoniumChloride, Water, false)
         }
 }

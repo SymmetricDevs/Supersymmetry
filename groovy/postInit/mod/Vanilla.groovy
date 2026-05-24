@@ -908,7 +908,7 @@ def stairVariants = [
         [block: item('minecraft:red_sandstone'), stair: item('minecraft:red_sandstone_stairs')],
         [block: item('minecraft:purpur_block'), stair: item('minecraft:purpur_stairs')],
         [block: item('gregtech:planks'), stair: item('gregtech:rubber_wood_stairs'), dust: metaitem('dustSmallWood')],
-        [block: item('gregtech:planks', 2), stair: item('gregtech:treated_wood_stairs'), dust: metaitem('dustSmallTreatedWood')],
+        [block: item('gregtech:planks', 1), stair: item('gregtech:treated_wood_stairs'), dust: metaitem('dustSmallTreatedWood')],
 ]
 
 stairVariants.each {material ->
@@ -916,8 +916,8 @@ stairVariants.each {material ->
             .circuitMeta(7)
             .inputs(material.block * 6)
             .outputs(material.stair * 8)
-            .duration(100)
-            .EUt(1)
+            .duration(20)
+            .EUt(VA[ULV])
             .buildAndRegister()
 
     if (material.dust != null) {

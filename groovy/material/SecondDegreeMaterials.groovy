@@ -1154,7 +1154,7 @@ class SecondDegreeMaterials {
                 .components(Alumina)
                 .color(0xf1f2fa)
                 .build()
-      
+
         CopperIINitrateSolution = new Material.Builder(13181, SuSyUtility.susyId('copper_ii_nitrate_solution'))
                 .liquid()
                 .components(CopperIINitrate, Water)
@@ -1175,7 +1175,22 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE IDs: 13184-13187
+        SupportedVanadiumPentoxide = new Material.Builder(13184, SuSyUtility.susyId('supported_vanadium_pentoxide'))
+                .dust().liquid()
+                .components(VanadiumPentoxide, PotassiumSulfate * 2, SiliconDioxide * 63)
+                .colorAverage()
+                .flags(GENERATE_CATALYST_BED)
+                .build()
+      
+        // FREE ID: 13185-13186
+
+        MetalHydrideMixAnode = new Material.Builder(13187, SuSyUtility.susyId('metal_hydride_mix_anode'))
+                .dust()
+                .components(AnnealedAB2MetalAlloy * 6, AnnealedAB5MetalAlloy * 3, Copper)
+                .colorAverage()
+                .iconSet(METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
 
         UltrapureHydrofluoricAcid = new Material.Builder(13188, SuSyUtility.susyId('ultrapure_hydrofluoric_acid'))
                 .liquid()
