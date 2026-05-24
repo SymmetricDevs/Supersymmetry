@@ -1734,7 +1734,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateAluminium') *  6)
         .outputs(metaitem('honeycomb.aluminium'))
         .EUt(VA[HV])
-        .duration(10)
+        .duration(5)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1778,6 +1778,15 @@ ASSEMBLER.recipeBuilder()
         .outputs(item('susy:spacecraft_life_support')) // Oxygen Regenerator
         .EUt(VA[EV])
         .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('honeycomb.aluminium') * 8)
+        .inputs(metaitem('plateAluminium') * 4)
+        .inputs(metaitem('plateReinforcedEpoxyResin') * 8)
+        .outputs(item('susy:spacecraft_room_padding'))
+        .EUt(VA[EV])
+        .duration(5)
         .buildAndRegister()
 
 // Spacecraft Component Cleanroom Recipes
