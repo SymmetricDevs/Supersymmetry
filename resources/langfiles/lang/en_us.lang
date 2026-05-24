@@ -3290,7 +3290,7 @@ metaitem.fuel_injector.name=Fuel Injector
 metaitem.augmented_spark_igniter.name=Augmented Spark Igniter
 metaitem.slapper_detonator.name=Slapper Detonator
 metaitem.frangible_nut.name=Frangible Nut
-metaitem.honeycomb.aluminium=Aluminium Honeycomb
+metaitem.honeycomb.aluminium.name=Aluminium Honeycomb
 
 ## Dimension Display Items
 metaitem.display.overworld.name=Overworld
