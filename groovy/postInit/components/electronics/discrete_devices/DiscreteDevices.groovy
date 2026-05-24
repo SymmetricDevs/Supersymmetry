@@ -1,5 +1,9 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import groovy.postInit.semiconductors.Lithography
+import groovy.postInit.semiconductors.Doping
+import groovy.postInit.semiconductors.Deposition
+import groovy.postInit.semiconductors.Mechanicals
 
 // Packaging
 
@@ -83,44 +87,40 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
 // Thyristor
 
-def generateThyristorFabrication(String componentName, int circ) {
+// P doping sandwich
+Lithography.generatePhotolithographyRecipes('wafer.silicon.n_doped', 'wafer.thyristor.step_one', 'novolac_resist', 'mask_set.thyristor', true)
+Doping.generateIonImplantationRecipes('wafer.thyristor.step_one', 'wafer.thyristor.step_two', 400, 'boron')
+Lithography.generateResistStrippingRecipes('wafer.thyristor.step_two', 'wafer.thyristor.step_three', 1)
 
-    // P doping Sandwich
-    Lithography.generatePhotolithographyRecipes('wafer.silicon.n_doped', 'wafer.' + componentName + '.step_one', 'novolac_resist', 'mask_set.' + componentName, true)
-    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_one', 'wafer.' + componentName + '.step_two', 400, 'boron')
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_two', 'wafer.' + componentName + '.step_three', 1)
+// Cathode N doping
+Lithography.generatePhotolithographyRecipes('wafer.thyristor.step_three', 'wafer.thyristor.step_four', 'novolac_resist', 'mask_set.thyristor', true)
+Doping.generateIonImplantationRecipes('wafer.thyristor.step_four', 'wafer.thyristor.step_five', 400, 'phosphorus')
+Lithography.generateResistStrippingRecipes('wafer.thyristor.step_five', 'wafer.thyristor.step_six', 1)
+Doping.generateDriveInRecipe('wafer.thyristor.step_six', 'wafer.thyristor.step_seven', 100) // Drive-in Process
 
-    // Cathode N doping
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_three', 'wafer.' + componentName + '.step_four', 'novolac_resist', 'mask_set.' + componentName, true)
-    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_four', 'wafer.' + componentName + '.step_five', 400, 'phosphorus')
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 1)
-    Doping.generateDriveInRecipe('wafer.' + componentName + '.step_six', 'wafer.' + componentName + '.step_seven', 100) // Drive-in Process
-
-    // Contact pad
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_seven', 'wafer.' + componentName + '.step_eight', 'novolac_resist', 'mask_set.' + componentName, true)
-    Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_eight', 'wafer.' + componentName + '.step_nine', 400, 'aluminium') // Aluminium Metallization
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_nine', 'wafer.' + componentName + '.step_ten', 1)
-    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_ten', 'wafer.' + componentName + '.step_eleven', 400, HV) // CMP for electrode contact
-    Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_eleven', 'wafer.' + componentName, 400, true) // Passivation
-
-}
-
-generateThyristorFabrication('thyristor', 1)
+// Contact pad
+Lithography.generatePhotolithographyRecipes('wafer.thyristor.step_seven', 'wafer.thyristor.step_eight', 'novolac_resist', 'mask_set.thyristor', true)
+Deposition.generateSputteringRecipe('wafer.thyristor.step_eight', 'wafer.thyristor.step_nine', 400, 'aluminium') // Aluminium Metallization
+Lithography.generateResistStrippingRecipes('wafer.thyristor.step_nine', 'wafer.thyristor.step_ten', 1)
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.thyristor.step_ten', 'wafer.thyristor.step_eleven', 400, HV) // CMP for electrode contact
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.thyristor.step_eleven', 'wafer.thyristor', 400, true) // Passivation
 
 FORMING_PRESS.recipeBuilder()
-        .inputs(ore('wafer.thyristor'))
-        .inputs(ore('plateMolybdenum') * 2)
-        .inputs(ore('plateCopper') * 2)
-        .outputs(metaitem('component.thyristor.assembly'))
-        .duration(80)
-        .EUt(VA[HV])
-        .buildAndRegister()
-    
+    .inputs(metaitem('wafer.thyristor'))
+    .inputs(ore('plateMolybdenum') * 2)
+    .inputs(ore('plateCopper') * 2)
+    .outputs(metaitem('component.thyristor.assembly'))
+    .duration(80)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
 VACUUM_CHAMBER.recipeBuilder()
-    .inputs(metaitem('thyristor_assembly'))
+    .inputs(metaitem('component.thyristor.assembly'))
     .inputs(metaitem('ceramic_casing'))
     .fluidInputs(fluid('nitrogen') * 1000)
     .outputs(metaitem('component.thyristor'))
-    .EUt(VA[HV])
     .duration(200)
+    .EUt(VA[MV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()

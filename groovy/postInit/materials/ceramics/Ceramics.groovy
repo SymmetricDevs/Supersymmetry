@@ -29,12 +29,22 @@ Sintering.blankets.each { blanket ->
 
     SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustAlumina') * 5)
-        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 200)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 100)
         .notConsumable(metaitem('shape.mold.bolt'))
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('boltAlumina') * 20)
         .duration(blanket.duration)
         .EUt(VA[MV])
+        .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 9)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
+        .nonConsumable(metaitem('shape.mold.block'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('ceramic_casing'))
+        .EUt(VA[MV])
+        .duration(blanket.duration)
         .buildAndRegister()
 }
 
@@ -114,13 +124,3 @@ HOT_ISOSTATIC_PRESS.recipeBuilder()
     .duration(600)
     .EUt(VA[HV])
     .buildAndRegister()
-
-// Dielectric ceramic casing
-
-SINTERING_OVEN.recipeBuilder()
-        .nonConsumable(.notConsumable(metaitem('shape.mold.block')))
-        .inputs(ore('dustAlumina') * 9)
-        .outputs(metaitem('ceramic_casing'))
-        .EUt(VA[HV])
-        .duration(2000)
-        .buildAndRegister()
