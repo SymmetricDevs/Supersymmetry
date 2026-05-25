@@ -97,7 +97,7 @@ class Lithography {
         new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", EV, "electron_beam_lithography", 1000)
     ]
 
-    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc = false, Integer circ = null) {
+    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc = false) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 if (ibarc) {
@@ -105,9 +105,40 @@ class Lithography {
                     input = input + ".ibarc"
                 }
 
-                photoresist.generateCoatingRecipe(input, hmds, circ)
+                photoresist.generateCoatingRecipe(input, hmds)
                 photoresist.generateExposureRecipe(input, nonConsumable)
                 photoresist.generateDevelopmentRecipe(input, product)
+            }
+        }
+    }
+
+    static void generateSplitPhotolithographyRecipes(String input, String intermediate, String product, String photoresistNeeded, String nonConsumable, boolean hmds) {
+        for (photoresist in photoresists) {
+            if (photoresist.resistName == photoresistNeeded) {
+                def exposureRecipe = recipemap(photoresist.exposureRecipeMap).recipeBuilder()
+                .inputs(metaitem(input + ".coated"))
+                .outputs(metaitem(intermediate + ".exposed"))
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(photoresist.timeUsed)
+                .EUt(VA[photoresist.voltageTier])
+
+                if (nonConsumable != null) {exposureRecipe.notConsumable(metaitem(nonConsumable))}
+                exposureRecipe.buildAndRegister();
+
+                photoresist.generateDevelopmentRecipe(intermediate, product)
+            }
+        }
+    }
+
+    static void generateCoatingRecipe(String input, String photoresistNeeded, boolean hmds, boolean ibarc = false) {
+        for (photoresist in photoresists) {
+            if (photoresist.resistName == photoresistNeeded) {
+                if (ibarc) {
+                    Deposition.generateChemicalVaporDepositionRecipe(input, input + ".ibarc", 0.25, "silicon_oxynitride")
+                    input = input + ".ibarc"
+                }
+
+                photoresist.generateCoatingRecipe(input, hmds)
             }
         }
     }
@@ -144,13 +175,14 @@ class Lithography {
         } else {
             ashed = product
         }
+
         tmp_builder.outputs(metaitem(ashed))
             .duration(200 * timeMultiplier)
             .EUt(VA[HV])
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
-        if (rie) {
+        if (rie && !solvent) {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(ashed))
                 .fluidInputs(fluid('ultrapure_water') * 100)

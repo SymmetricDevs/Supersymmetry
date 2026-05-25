@@ -33,7 +33,7 @@ def wordsFromNumber(int num) {
 
 toadd_list = []
 
-def registerCircuitMetaitems(String name, int step_count, int start_num=2, boolean finish=true, boolean generateMask = true) {
+def registerCircuitMetaitems(String name, int step_count, int start_num=2, boolean finish = true, boolean generateMask = true) {
         for (int i=start_num; i <= step_count; i++) {
             toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(i))
         }
@@ -64,6 +64,18 @@ def registerCMOSMetaitems(String name) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
     }
+}
+
+def addPhotoresistVariants(String name, List photoresist_steps) {
+    for (step in photoresist_steps) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
+    }
+}
+
+def registerNMOSMetaitems(String name, int step_count = 24, List photoresist_steps = [6, 11, 14, 20]) {
+    registerCircuitMetaitems(name, step_count)
+    addPhotoresistVariants(name, photoresist_steps)
 }
 
 eventManager.listen { PostMaterialEvent event ->
@@ -197,6 +209,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(403, "engine.spark_plug.palladium")
 
         addItem(500, "sintered_alumina.insulator")
+        addItem(501, "ceramic_casing")
 
         addItem(1000, "chunk.magnetite")
         addItem(1001, "hot_iron_rod")
@@ -224,12 +237,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2500, "gun.barrel.steel")
 
         // circuit overhaul metaitems: 2750 - 3000
-        addItem(2750, "componentCapacitorMedium")
-        addItem(2751, "componentDiodeSignal")
-        addItem(2752, "componentOpAmp")
-        addItem(2753, "componentResistorMedium")
-        addItem(2754, "componentTransistorMedium")
-        addItem(2755, "resistorCarbon")
+        // FREE ID: 2750 - 2755
         addItem(2756, "component.transistor.alloy_junction")
         addItem(2757, "plate.ultra_low_power_integrated_circuit")
         addItem(2758, "plate.low_power_integrated_circuit")
@@ -285,6 +293,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2808, "edlc_electrode_coated")
         addItem(2809, "edlc_electrode")
         addItem(2810, "component.capacitor.edlc")
+        addItem(2811, "component.thyristor.assembly")
+        addItem(2812, "component.thyristor")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -410,6 +420,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5027, "mask.nand")
         addItem(5028, "mask.nor")
         addItem(5029, "mask.advanced")
+        addItem(5030, "mask.diode.planar")
+        addItem(5031, "mask_set.diode.power")
+        addItem(5032, "mask_set.diode.schottky")
         addItem(5100, "patterned.ic")
         addItem(5101, "patterned.cpu")
         addItem(5102, "patterned.ram")
@@ -597,43 +610,74 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8044, "wafer.cmos.step_one")
         addItem(8045, "wafer.cmos.step_two")
         addItem(8046, "wafer.cmos.step_two.coated")
-        addItem(8047, "wafer.cmos.step_two.exposed")
+        addItem(8047, "wafer.cmos_cpu.step_two.exposed")
+        addItem(8048, "wafer.cmos_gpu.step_two.exposed")
 
-        registerCircuitMetaitems("nmos_cpu", 24)
-        registerCircuitMetaitems("nmos_sram", 24)
-        registerCircuitMetaitems("nmos_uart", 24)
-        registerCircuitMetaitems("nmos_mask_rom", 24)
-        registerCircuitMetaitems("nmos_bus_controller", 24)
-        registerCircuitMetaitems("nmos_dram", 22)
+        registerNMOSMetaitems("nmos_cpu")
+        registerNMOSMetaitems("nmos_sram")
+        registerNMOSMetaitems("nmos_uart")
+        registerNMOSMetaitems("nmos_mask_rom")
+        registerNMOSMetaitems("nmos_bus_controller")
+        registerNMOSMetaitems("nmos_dram", 22, [9, 12, 18])
         registerCircuitMetaitems("bjt_pic_base", 17, 1, false)
+        addPhotoresistVariants("bjt_pic_base", [5, 9, 13, 17])
         registerCircuitMetaitems("bjt_ulpic", 5, 1)
+        addPhotoresistVariants("bjt_ulpic", [1])
         registerCircuitMetaitems("bjt_lpic", 19, 1)
+        addPhotoresistVariants("bjt_lpic", [5, 10, 15])
         registerCircuitMetaitems("bjt_pic", 17, 1)
+        addPhotoresistVariants("bjt_pic", [5, 9, 13])
         registerCMOSMetaitems("cmos_cpu")
         registerCircuitMetaitems("diode.planar", 10, 1, false)
         registerCircuitMetaitems("diode.power", 14, 2, false)
         registerCircuitMetaitems("diode.schottky", 13, 2, false)
+        registerCircuitMetaitems("thyristor", 11, 1, false)
+        registerCMOSMetaitems("cmos_gpu")
 
-        addItem(8048, "wafer.diode.alloy.step_two")
-        addItem(8049, "wafer.zener_diode.alloy.step_two")
-        addItem(8050, "wafer.diode.drift.step_one")
-        addItem(8051, "wafer.diode.planar.step_four.bsg")
-        addItem(8052, "wafer.diode.power.step_three.coated")
-        addItem(8053, "wafer.diode.power.step_three.exposed")
-        addItem(8054, "wafer.diode.power.step_nine.coated")
-        addItem(8055, "wafer.diode.power.step_nine.exposed")
-        addItem(8056, "wafer.diode.power.step_nine.deposited")
-        addItem(8057, "wafer.diode.planar.step_one.coated")
-        addItem(8058, "wafer.diode.planar.step_one.exposed")
-        addItem(8059, "wafer.diode.schottky.step_eight.coated")
-        addItem(8060, "wafer.diode.schotky.step_eight.exposed")
-        addItem(8061, "wafer.diode.schottky.step_eight.deposited")
-        addItem(8062, "wafer.diode.power.step_none.exposed")
-        addItem(8063, "wafer.diode.schottky.step_eight.exposed")
+        addItem(8049, "wafer.diode.alloy.step_two")
+        addItem(8050, "wafer.zener_diode.alloy.step_two")
+        addItem(8051, "wafer.diode.drift.step_one")
+        addItem(8052, "wafer.diode.planar.step_four.bsg")
+        addItem(8053, "wafer.diode.power.step_three.coated")
+        addItem(8054, "wafer.diode.power.step_three.exposed")
+        addItem(8055, "wafer.diode.power.step_nine.coated")
+        addItem(8056, "wafer.diode.power.step_nine.exposed")
+        addItem(8057, "wafer.diode.power.step_nine.deposited")
+        addItem(8058, "wafer.diode.planar.step_one.coated")
+        addItem(8059, "wafer.diode.planar.step_one.exposed")
+        addItem(8060, "wafer.diode.schottky.step_eight.coated")
+        addItem(8061, "wafer.diode.schottky.step_eight.exposed")
+        addItem(8062, "wafer.diode.schottky.step_eight.deposited")
+        addItem(8063, "wafer.diode.power.step_nine.exposed")
+        // FREE ID: 8064
+        addItem(8065, "wafer.silicon.n_doped.coated")
+        addItem(8066, "wafer.silicon.n_doped.exposed")
+        addItem(8067, "wafer.thyristor.step_one.coated")
+        addItem(8068, "wafer.thyristor.step_one.exposed")
+        addItem(8069, "wafer.thyristor.step_three.coated")
+        addItem(8070, "wafer.thyristor.step_three.exposed")
+        addItem(8073, "wafer.thyristor.step_seven.coated")
+        addItem(8074, "wafer.thyristor.step_seven.exposed")
+        addItem(8075, "wafer.thyristor.step_seven.deposited")
+        addItem(8076, "wafer.thyristor")
+        addItem(8077, "wafer.nmos.step_one.coated")
+        addItem(8078, "wafer.nmos_cpu.step_one.exposed")
+        addItem(8079, "wafer.nmos_sram.step_one.exposed")
+        addItem(8080, "wafer.nmos_uart.step_one.exposed")
+        addItem(8081, "wafer.nmos_mask_rom.step_one.exposed")
+        addItem(8082, "wafer.nmos_bus_controller.step_one.exposed")
+        addItem(8083, "wafer.nmos_dram.step_one.exposed")
+        addItem(8084, "wafer.silicon.p_doped.coated")
+        addItem(8085, "wafer.silicon.p_doped.exposed")
+        addItem(8086, "wafer.diode.drift.step_one.coated")
+        addItem(8087, "wafer.diode.drift.step_one.exposed")
+        addItem(8088, "wafer.diode.schottky.step_five.coated")
+        addItem(8089, "wafer.diode.schottky.step_five.exposed")
 
         log.infoMC("adding " + toadd_list.size() + " wafer metaitems")
         def start = 8250
         for (name in toadd_list) {
+            if (start == 8975) start = 11000 // skip reserved 8975-9000 (sputtering targets + crops)
             addItem(start, name)
             start++
         }
