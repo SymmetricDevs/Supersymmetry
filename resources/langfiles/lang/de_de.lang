@@ -446,7 +446,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=Verunreinigter halbschwerer Schw
 susy.material.impure_heavy_hydrogen_sulfide=Verunreinigter schwerer Schwefelwasserstoff
 susy.material.sea_water=Meerwasser
 
-susy.material.novolacs_resist=Novolacs Photoresist
+susy.material.novolac_resist=Novolac Photoresist
 susy.material.silicon_tetrachloride=Siliciumtetrachlorid
 susy.material.purified_silicon_tetrachloride=Gereinigtes Siliciumtetrachlorid
 

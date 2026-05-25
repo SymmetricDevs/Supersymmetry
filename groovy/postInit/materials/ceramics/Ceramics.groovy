@@ -40,7 +40,7 @@ Sintering.blankets.each { blanket ->
     SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustAlumina') * 9)
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
-        .nonConsumable(metaitem('shape.mold.block'))
+        .notConsumable(metaitem('shape.mold.block'))
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('ceramic_casing'))
         .EUt(VA[MV])

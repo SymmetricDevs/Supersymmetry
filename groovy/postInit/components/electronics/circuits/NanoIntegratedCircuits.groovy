@@ -29,6 +29,7 @@ BLENDER.recipeBuilder()
 
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.p_doped', 'wafer.cmos.step_one', 400, true) // Protecting layer for P/NMOS well formation
 Deposition.generateChemicalVaporDepositionRecipe('wafer.cmos.step_one', 'wafer.cmos.step_two', 2.0, 'silicon_nitride.silane') // CMP stop layer for STI formation
+Lithography.generateCoatingRecipe('wafer.cmos.step_two', 'methacrylate_resist', true) // Coat with photoresist for STI patterning
 
 def generateCMOSFabrication(String componentName, int circ) {
     // Lookup table for int to string conversion
@@ -37,7 +38,7 @@ def generateCMOSFabrication(String componentName, int circ) {
     // FEOL
     
     // Shallow trench isolation
-    Lithography.generatePhotolithographyRecipes('wafer.cmos.step_two', 'wafer.' + componentName + '.step_three', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define STI pattern
+    Lithography.generateSplitPhotolithographyRecipes('wafer.cmos.step_two', 'wafer.' + componentName + '.step_two', 'wafer.' + componentName + '.step_three', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define STI pattern
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_three', 'wafer.' + componentName + '.step_four', 'silicon_nitride', 400) // Etch into silicon to form trenches
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_four', 'wafer.' + componentName + '.step_five', 'silicon_dioxide', 400)
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 'silicon', 400, false)
@@ -146,7 +147,7 @@ def generateCMOSFabrication(String componentName, int circ) {
         Deposition.generateChemicalVaporDepositionRecipe(input, 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 400, 'fluorosilicate_glass') // Deposit low-k dielectric
         Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', resist, 'mask_set.' + componentName, true) // Define via and trench pattern for each metal layer
         Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'silicon_dioxide', 400) // Etch vias and trenches
-        Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 1, false, (resist == 'novolacs_resist'))
+        Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 1, false, (resist == 'novolac_resist'))
         Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_five', ['tantalum_nitride' : 50]) // Barrier layer deposition for copper interconnects
         Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_five', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_six', ['tantalum' : 100, 'copper' : 100]) // Adhesion layer for copper, seed layer
 
@@ -200,3 +201,4 @@ def generateCMOSFabrication(String componentName, int circ) {
 }
 
 generateCMOSFabrication('cmos_cpu', 1) // Includes on die SRAM
+generateCMOSFabrication('cmos_gpu', 2)
