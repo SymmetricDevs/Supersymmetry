@@ -1427,13 +1427,13 @@ class ThirdDegreeMaterials {
 
         SilverFritInk = new Material.Builder(24243, SuSyUtility.susyId('silver_frit_ink'))
                 .liquid()
-                .components(Silver, Glass, PolyvinylpyrrolidoneSolution)
+                .components(Silver, Glass)
                 .colorAverage()
                 .build()
 
         CopperFritInk = new Material.Builder(24244, SuSyUtility.susyId('copper_frit_ink'))
                 .liquid()
-                .components(Copper, Glass, PolyvinylpyrrolidoneSolution)
+                .components(Copper, Glass)
                 .colorAverage()
                 .build()
 
