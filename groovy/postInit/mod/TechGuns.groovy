@@ -11,7 +11,7 @@ mods.jei.category.hideCategory('techguns.ammopress')
 mods.jei.category.hideCategory('techguns.metalpress')
 mods.jei.category.hideCategory('techguns.chemlab')
 mods.jei.category.hideCategory('techguns.fabricator')
-// mods.jei.category.hideCategory('techguns.chargingstation')
+mods.jei.category.hideCategory('techguns.chargingstation')
 mods.jei.category.hideCategory('techguns.reactionchamber')
 mods.jei.category.hideCategory('techguns.oredrill')
 mods.jei.category.hideCategory('techguns.blastfurnace')
@@ -26,7 +26,7 @@ def name_removals = [
     "techguns:basicmachine_3_turret",
     "techguns:simplemachine2_8_grinder",
     "techguns:simplemachine_11_blast_furnace",
-    // "techguns:simplemachine_10_charging_station",
+    "techguns:simplemachine_10_charging_station",
     "techguns:multiblockmachine_0_fabricator_housing",
     "techguns:multiblockmachine_1_fabricator_glass",
     "techguns:multiblockmachine_2_fabricator_controller",
@@ -269,13 +269,7 @@ crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
     [item('minecraft:piston'), item('techguns:nethermetal'), item('minecraft:piston')],
     [item('techguns:nethermetal'), item('techguns:nethermetal'), item('techguns:nethermetal')]
 ])
-
-crafting.replaceShaped("techguns:simplemachine_10_charging_station", item('techguns:simplemachine', 10), [
-    [item('techguns:itemshared', 65), item('techguns:itemshared', 65), item('techguns:itemshared', 65)],
-    [ore('plateSteel'), item('gregtech:machine', 1316), ore('plateSteel')],
-    [ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]
-])
-
+    
 crafting.replaceShaped("techguns:simplemachine_8_camo_bench", item('techguns:simplemachine', 8), [
     [ore('dye'), ore('dye'), ore('dye')],
     [ore('plateIron'), ore('workbench'), ore('plateIron')],
