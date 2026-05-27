@@ -1,3 +1,6 @@
+package postInit.gameplay;
+
+import static globals.Globals.*
 // Ore Removal
 // total = unused ores and material
 // partial = ores that are unused but the material can be obtained
@@ -162,18 +165,7 @@ def oreMap = [
         [name: 'Pitchblende', type: 'default'],
 ]
 
-elements = [
-        'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Sodium', 'Magnesium', 'Aluminium', 'Silicon',
-        'Phosphorus', 'Sulfur', 'Potassium', 'Calcium', 'Scandium', 'Titanium', 'Vanadium', 'Chrome',
-        'Manganese', 'Iron', 'Cobalt', 'Nickel', 'Copper', 'Zinc', 'Gallium', 'Germanium', 'Arsenic',
-        'Selenium', 'Rubidium', 'Strontium', 'Yttrium', 'Ruthenium', 'Zirconium', 'Niobium', 'Molybdenum', 'Technetium',
-        'Rhenium', 'Rhodium', 'Palladium', 'Silver', 'Cadmium', 'Indium', 'Tin', 'Antimony', 'Tellurium',
-        'Iodine', 'Caesium', 'Barium', 'Lanthanum', 'Hafnium', 'Tantalum', 'Tungsten', 'Osmium',
-        'Iridium', 'Platinum', 'Gold', 'Thallium', 'Lead', 'Bismuth', 'Cerium', 'Praseodymium',
-        'Neodymium', 'Samarium', 'Europium', 'Gadolinium', 'Terbium', 'Dysprosium', 'Holmium', 'Erbium',
-        'Thulium', 'Ytterbium', 'Lutetium', 'Thorium'
-] // copy it over since it's not declared public in oreDict
-def elementMap = elements.collect { [name: it, type: 'partial'] } // Piggybacks of the list of elements from OreDict.groovy
+def elementMap = elementList.collect { [name: it, type: 'partial'] } // Piggybacks of the list of elements from OreDict.groovy
 oreMap.addAll(elementMap)
 
 oreMap.each { material ->
