@@ -132,31 +132,9 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 // thick/thin-film resistors
-Sintering.plasmaFuels().each { fuel ->
-    SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustAlumina'))
-        .notConsumable(metaitem('shape.mold.plate'))
-        .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-        .outputs(metaitem('plateAlumina'))
-        .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-        .duration(fuel.duration)
-        .EUt(240)
-        .buildAndRegister()
-}
 
 Sintering.nonPlasmaFuels().each { fuel ->
     Sintering.comburents.each { comburent ->
-        SINTERING_OVEN.recipeBuilder()
-            .inputs(ore('dustAlumina'))
-            .notConsumable(metaitem('shape.mold.plate'))
-            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-            .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-            .outputs(metaitem('plateAlumina'))
-            .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-            .duration(fuel.duration + comburent.duration)
-            .EUt(240)
-            .buildAndRegister()
-
         SINTERING_OVEN.recipeBuilder()
             .inputs(metaitem('component.resistor.wafer.printed_pads'))
             .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
