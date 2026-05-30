@@ -1776,6 +1776,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('cableGtDoubleAluminium') * 4)
         .inputs(metaitem('plateDoubleStainlessSteel') * 6)
         .inputs(metaitem('frameStainlessSteel'))
+        .inputs(metaitem('hull.ev'))
         .outputs(item('susy:spacecraft_life_support')) // Oxygen Regenerator
         .EUt(VA[EV])
         .duration(20)
