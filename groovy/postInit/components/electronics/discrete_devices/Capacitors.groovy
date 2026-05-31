@@ -178,7 +178,7 @@ dopants = ["Yttrium", "Dysprosium", "Holmium"]
 for (dopant in dopants) {
     MIXER.recipeBuilder()
         .inputs(ore('dustBariumTitanate') * 10)
-        .inputs(ore('dustTinyHighPurity' + dopant))
+        .inputs(ore('dustTiny' + dopant + "IiiOxide"))
         .fluidInputs(fluid('polyethylene_glycol') * 10)
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 50)
         .outputs(metaitem('doped_barium_titanate_paste') * 5)

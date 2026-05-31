@@ -1345,7 +1345,7 @@ class SuSyMaterials {
     public static Material NickelIINitrate
     public static Material ZincNitrate
     public static Material MagnesiumNitrate
-    public static Material YttriumOxide
+    public static Material YttriumIiiOxide
     public static Material NeodymiumOxide
     public static Material Bromooctane
     public static Material LithiumDioctylcopper
@@ -1731,6 +1731,8 @@ class SuSyMaterials {
     public static Material ExpandedPolytetrafluoroethylene
     public static Material SilverNanoparticle
     public static Material NickelNanoparticle
+    public static Material DysprosiumIiiOxide
+    public static Material HolmiumIiiOxide
 
     // HP Materials
 

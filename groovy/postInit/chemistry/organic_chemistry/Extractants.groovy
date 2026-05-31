@@ -543,7 +543,7 @@ import static gregtech.api.GTValues.*
     //N1923 (NO USE)
 
     MIXER.recipeBuilder()
-        .inputs(ore('dustYttriumOxide') * 5)
+        .inputs(ore('dustYttriumIiiOxide') * 5)
         .inputs(ore('dustNeodymiumOxide') * 5)
         .inputs(ore('dustManganeseDioxide') * 3)
         .outputs(metaitem('dustRareEarthCatalystYNd') * 13)

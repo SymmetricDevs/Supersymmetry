@@ -30,7 +30,7 @@ REACTION_FURNACE.recipeBuilder()
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustYttriumHydroxide') * 14)
-    .outputs(metaitem('dustYttriumOxide') * 5)
+    .outputs(metaitem('dustYttriumIiiOxide') * 5)
     .fluidOutputs(fluid('dense_steam') * 3000)
     .duration(100)
     .EUt(VA[MV])

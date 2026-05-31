@@ -964,5 +964,17 @@ class FirstDegreeMaterialsB {
                 .components(Nickel)
                 .color(0x262321)
                 .build()
+
+        HolmiumIiiOxide = new Material.Builder(8806, SuSyUtility.susyId('holmium_iii_oxide'))
+                .dust()
+                .components(Holmium * 2, Oxygen * 3)
+                .color(0xf4dfa6)
+                .build()
+
+        DysprosiumIiiOxide = new Material.Builder(8807, SuSyUtility.susyId('dysprosium_iii_oxide'))
+                .dust()
+                .components(Dysprosium * 2, Oxygen * 3)
+                .color(0xdaffaf)
+                .build()
     }
 }
