@@ -470,3 +470,6 @@ RecipeMaps.DISTILLERY_RECIPES
 
 RecipeMaps.COMPRESSOR_RECIPES
     .modifyMaxInputs(2)
+    
+RecipeMaps.ASSEMBLER_RECIPES
+    .modifyMaxFluidInputs(2)

@@ -1338,5 +1338,44 @@ class ThirdDegreeMaterials {
                 .build()
 
         DiethylammoniumChlorideSolution = genSolution(24233, 'diethylammonium_chloride_solution', DiethylammoniumChloride, Water, false)
-        }
+      
+        NafionDispersion = new Material.Builder(24234, SuSyUtility.susyId('nafion_dispersion'))
+                .liquid()
+                .components(Nafion, IsopropylAlcohol)
+                .color(0xcfccb0)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        TrimethylGalliumSolution = new Material.Builder(24235, SuSyUtility.susyId('trimethyl_gallium_solution'))
+                .liquid()
+                .components(TrimethylGallium, Toluene)
+                .color(0x424242)
+                .build()
+
+        TrimethylGalliumSolution.setFormula('Ga(CH3)33(C6H5CH3)', true)
+
+        TrimethylIndiumSolution = new Material.Builder(24236, SuSyUtility.susyId('trimethyl_indium_solution'))
+                .liquid()
+                .components(TrimethylIndium, Toluene)
+                .color(0x3b2f61)
+                .build()
+
+        TrimethylIndiumSolution.setFormula('In(CH3)3(C6H5CH3)', true)
+
+        DiallyldimethylammoniumChlorideSolution = new Material.Builder(24237, SuSyUtility.susyId('diallyldimethylammonium_chloride_solution'))
+                .liquid()
+                .components(DiallyldimethylammoniumChloride, Water)
+                .colorAverage()
+                .build()
+
+        DiallyldimethylammoniumChlorideSolution.setFormula('(C8H16NCl)(H2O)', true)
+        
+        PolydiallyldimethylammoniumChlorideSolution = new Material.Builder(24238, SuSyUtility.susyId('polydiallyldimethylammonium_chloride_solution'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine, Water)
+                .color(0x77FFA9)
+                .build()
+
+        PolydiallyldimethylammoniumChlorideSolution.setFormula('([C8H16NCl]n)(H2O)', true)
+    }
 }

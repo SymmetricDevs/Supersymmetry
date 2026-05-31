@@ -3500,5 +3500,79 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x4d4946)
                 .build()
+                
+        ExpandableGraphite = new Material.Builder(4747, SuSyUtility.susyId('expandable_graphite'))
+                .dust()
+                .iconSet("SHINY")
+                .color(0x5B5B5B)
+                .build()
+
+        // FREE ID: 4748
+
+        /*VanadiumElectrolyteSlurry = new Material.Builder(4749, SuSyUtility.susyId('vanadium_electrolyte_slurry'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xE05F3E)
+                .build()
+
+        CrystallizedVanadiumElectrolyte = new Material.Builder(4750, SuSyUtility.susyId('crystallized_vanadium_electrolyte'))
+                .dust()
+                .iconSet("BRIGHT")
+                .color(0xE05F3E)
+                .build()
+
+        VanadiumBatteryElectrolyte = new Material.Builder(4751, SuSyUtility.susyId('vanadium_battery_electrolyte'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xFF6C47)
+                .build()*/
+
+        GrapheneOxideDispersion = new Material.Builder(4752, SuSyUtility.susyId('graphene_oxide_dispersion'))
+                .liquid()
+                .color(0x4C2015)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+        
+        GrapheneOxide = new Material.Builder(4753, SuSyUtility.susyId('graphene_oxide'))
+                .dust()
+                .iconSet("QUARTZ")
+                .color(0x4C2015)
+                .build()
+
+        GrapheneOxideTungstateSolution = new Material.Builder(4754, SuSyUtility.susyId('graphene_oxide_tungstate_solution'))
+                .liquid()
+                .color(0xFF00B2)
+                .build()
+
+        AcidifiedGrapheneOxideTungstateSolution = new Material.Builder(4755, SuSyUtility.susyId('acidified_graphene_oxide_tungstate_solution'))
+                .liquid()
+                .color(0x7A0055)
+                .build()
+
+        AcidifiedGrapheneOxideTungstate = new Material.Builder(4756, SuSyUtility.susyId('acidified_graphene_oxide_tungstate'))
+                .dust()
+                .iconSet("DIAMOND")
+                .color(0x7A0055)
+                .build()
+
+        TungstenModifiedGrapheneOxideNanosheet = new Material.Builder(4757, SuSyUtility.susyId('tungsten_modified_graphene_oxide_nanosheet'))
+                .dust()
+                .iconSet("METALLIC")
+                .color(0xAD0079)
+                .build()
+
+        NanoparticleModifiedNafion = new Material.Builder(4758, SuSyUtility.susyId('nanoparticle_modified_nafion'))
+                .dust()
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
+                .iconSet("SHINY")
+                .color(0x99947A)
+                .build()
+                
+        NanoparticleModifiedNafion.setFormula('[(C2F4)(C7HF13O5S)]n', true)
+
+        NanoparticleModifiedNafionDispersion = new Material.Builder(4759, SuSyUtility.susyId('nanoparticle_modified_nafion_dispersion'))
+                .liquid()
+                .color(0x99947A)
+                .build()
+
+        NanoparticleModifiedNafionDispersion.setFormula('([(C2F4)(C7HF13O5S)]n)((CH3)2CHOH)', true)
     }
 }

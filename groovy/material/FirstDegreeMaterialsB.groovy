@@ -797,7 +797,8 @@ class FirstDegreeMaterialsB {
                 .iconSet(METALLIC)
                 .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
-                .setFormula("(Zr0.8Ti0.2)(V0.6Mn0.3Pd0.1Ni0.8Fe0.2)", true)
+                
+        AB2MetalAlloy.setFormula("(Zr0.8Ti0.2)(V0.6Mn0.3Pd0.1Ni0.8Fe0.2)", true)
 
         AB5MetalAlloy = new Material.Builder(8782, SuSyUtility.susyId('AB_5_metal_alloy'))
                 .ingot().liquid(new FluidBuilder().temperature(1500))
@@ -806,7 +807,8 @@ class FirstDegreeMaterialsB {
                 .iconSet(METALLIC)
                 .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
-                .setFormula("(La0.8Zr0.2)(Ni4.5Al0.5)", true)
+
+        AB5MetalAlloy.setFormula("(La0.8Zr0.2)(Ni4.5Al0.5)", true)
 
         AnnealedAB2MetalAlloy = new Material.Builder(8783, SuSyUtility.susyId('annealed_AB_2_metal_alloy'))
                 .ingot().liquid(new FluidBuilder().temperature(1500))
@@ -836,7 +838,19 @@ class FirstDegreeMaterialsB {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
       
-        // FREE IDs: 8786-8788
+        /*VanadiumTrioxide = new Material.Builder(8786, SuSyUtility.susyId('vanadium_trioxide'))
+                .dust()
+                .components(Vanadium * 2, Oxygen * 3)
+                .colorAverage()
+                .build()*/
+        
+        ExpandedPolytetrafluoroethylene = new Material.Builder(8787, SuSyUtility.susyId('expanded_polytetrafluoroethylene'))
+                .polymer(1)
+                .color(0x634F4F)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, NO_UNIFICATION)
+                .components(Carbon * 2, Fluorine * 4)
+                .macerateInto(Polytetrafluoroethylene)
+                .build();
 
         FormingGas = new Material.Builder(8789, SuSyUtility.susyId('forming_gas'))
                 .gas()

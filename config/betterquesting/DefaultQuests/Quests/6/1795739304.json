@@ -1,0 +1,71 @@
+{
+  "preRequisites:11": [
+    445426581,
+    1399178319,
+    813,
+    878,
+    357396976,
+    825
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1795739304.desc",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 1041,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "Power Overwhelming"
+    }
+  },
+  "questID:3": 1795739304,
+  "rewards:9": {
+    "0:10": {
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 255,
+            "TrophyColorGreen:3": 238,
+            "TrophyColorRed:3": 127,
+            "TrophyEarnedAt:4": 1779038215,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 1041,
+              "id:8": "gregtech:machine"
+            },
+            "TrophyName:8": "Power Overwhelming",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 1041,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 14,
+          "Damage:2": 11,
+          "id:8": "gregtech:metal_casing"
+        },
+        "2:10": {
+          "Count:3": 41,
+          "Damage:2": 2,
+          "id:8": "gregtech:transparent_casing"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

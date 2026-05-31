@@ -11,7 +11,6 @@ mods.jei.category.hideCategory('techguns.ammopress')
 mods.jei.category.hideCategory('techguns.metalpress')
 mods.jei.category.hideCategory('techguns.chemlab')
 mods.jei.category.hideCategory('techguns.fabricator')
-mods.jei.category.hideCategory('techguns.chargingstation')
 mods.jei.category.hideCategory('techguns.reactionchamber')
 mods.jei.category.hideCategory('techguns.oredrill')
 mods.jei.category.hideCategory('techguns.blastfurnace')
@@ -26,7 +25,6 @@ def name_removals = [
     "techguns:basicmachine_3_turret",
     "techguns:simplemachine2_8_grinder",
     "techguns:simplemachine_11_blast_furnace",
-    "techguns:simplemachine_10_charging_station",
     "techguns:multiblockmachine_0_fabricator_housing",
     "techguns:multiblockmachine_1_fabricator_glass",
     "techguns:multiblockmachine_2_fabricator_controller",
@@ -69,6 +67,8 @@ def name_removals = [
     "techguns:itemshared_104_rcheatray",
     "techguns:itemshared_117_rocket_nuke",
     "techguns:itemshared_118_tacticalnukewarhead",
+    "techguns:itemshared_125_redstone_battery",
+    "techguns:itemshared_125_redstone_battery_alt",
     "techguns:itemshared_134_oredrillsmall_steel",
     "techguns:itemshared_135_oredrillsmall_obsidiansteel",
     "techguns:itemshared_136_oredrillsmall_carbon",
@@ -269,7 +269,13 @@ crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
     [item('minecraft:piston'), item('techguns:nethermetal'), item('minecraft:piston')],
     [item('techguns:nethermetal'), item('techguns:nethermetal'), item('techguns:nethermetal')]
 ])
-    
+
+crafting.replaceShaped("techguns:simplemachine_10_charging_station", item('techguns:simplemachine', 10), [
+    [ore('circuitIv'), metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), ore('circuitIv')],
+    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 126), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
+    [metaitem('plateTungstenSteel'), metaitem('battery_buffer.iv.4'), metaitem('plateTungstenSteel')]
+])
+
 crafting.replaceShaped("techguns:simplemachine_8_camo_bench", item('techguns:simplemachine', 8), [
     [ore('dye'), ore('dye'), ore('dye')],
     [ore('plateIron'), ore('workbench'), ore('plateIron')],
@@ -407,6 +413,20 @@ crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
     ore('sand'),
     ore('sand')
 ])
+
+/*
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('battery.stainless_steel_hull.iv'))
+    .inputs(metaitem('wireGtSingleSamariumIronArsenicOxide') * 2)
+    .inputs(metaitem('foilPolytetrafluoroethylene') * 4)
+    .inputs(metaitem('anode.cadmium_oxide') * 4)
+    .inputs(metaitem('cathode.nioh2') * 4)
+    .fluidInputs(fluid('potassium_hydroxide_solution') * 4050)
+    .outputs(item('techguns:itemshared', 126))
+    .duration(200)
+    .EUt(VA[EV])
+    .buildAndRegister()
+ */
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))

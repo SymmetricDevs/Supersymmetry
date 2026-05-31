@@ -3133,6 +3133,8 @@ class OrganicChemistryMaterials {
 
         Polyacrylonitrile = new Material.Builder(15489, SuSyUtility.susyId('polyacrylonitrile'))
                 .dust()
+                .polymer(1)
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .components(Carbon * 3, Hydrogen * 3, Nitrogen)
                 .color(0x44703e)
                 .build()
@@ -3277,21 +3279,7 @@ class OrganicChemistryMaterials {
                 .color(0x2dad80)
                 .build()
 
-        TrimethylGalliumSolution = new Material.Builder(15512, SuSyUtility.susyId('trimethyl_gallium_solution'))
-                .liquid()
-                .components(Gallium * 1, Carbon * 3, Hydrogen * 9, Toluene * 1)
-                .color(0x424242)
-                .build()
-
-        TrimethylGalliumSolution.setFormula('Ga(CH3)33(C6H5CH3)', true)
-
-        TrimethylIndiumSolution = new Material.Builder(15513, SuSyUtility.susyId('trimethyl_indium_solution'))
-                .liquid()
-                .components(Indium * 1, Carbon * 3, Hydrogen * 9, Toluene * 1)
-                .color(0x3b2f61)
-                .build()
-
-        TrimethylIndiumSolution.setFormula('In(CH3)3(C6H5CH3)', true)
+        // FREE IDs: 15512-15513
 
         TrimethylGallium = new Material.Builder(15514, SuSyUtility.susyId('trimethyl_gallium'))
                 .liquid()
@@ -4268,6 +4256,11 @@ class OrganicChemistryMaterials {
                 .liquid()
                 .components(Carbon * 10, Hydrogen * 16)
                 .color(0xbab150)
+                .build()
+        DiallyldimethylammoniumChloride = new Material.Builder(15721, SuSyUtility.susyId('diallyldimethylammonium_chloride'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine)
+                .color(0x30FF7F)
                 .build()
     }
 }

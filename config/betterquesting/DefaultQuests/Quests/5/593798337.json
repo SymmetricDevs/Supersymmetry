@@ -1,0 +1,54 @@
+{
+  "preRequisites:11": [
+    550
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "No Description",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 4019,
+        "id:8": "gregtech:meta_item_2",
+        "tag:10": {
+          "Charge:4": 7168000
+        }
+      },
+      "name:8": "New Quest"
+    }
+  },
+  "questID:3": 593798337,
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "OR",
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 4018,
+          "id:8": "gregtech:meta_item_2",
+          "tag:10": {
+            "Charge:4": 2560000
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 4019,
+          "id:8": "gregtech:meta_item_2",
+          "tag:10": {
+            "Charge:4": 7168000
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 4020,
+          "id:8": "gregtech:meta_item_2",
+          "tag:10": {
+            "Charge:4": 20480000
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}
