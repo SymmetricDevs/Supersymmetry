@@ -1377,5 +1377,15 @@ class ThirdDegreeMaterials {
                 .build()
 
         PolydiallyldimethylammoniumChlorideSolution.setFormula('([C8H16NCl]n)(H2O)', true)
+
+        PyridiniumTosylateSolution = genSolution(24239, 'pyridinium_tosylate_solution', PyridiniumTosylate, Water, false)
+
+        SpinOnCarbon = new Material.Builder(24240, SuSyUtility.susyId('spin_on_carbon'))
+                .liquid()
+                .components(PropyleneGlycolMethylEtherAcetate * 27, NaphtholModifiedPhenolicNovolacsOligomer * 7, Hexamethoxymethylmelamine, NonionicFluorosurfactant, PyridiniumTosylate)
+                .colorAverage()
+                .build()
+
+        SpinOnCarbon.setFormula('(?)(C6H12O3)', true)
     }
 }

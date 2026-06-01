@@ -2538,6 +2538,10 @@ class SuSyMaterials {
     public static Material PropyleneGlycolMethylEtherAcetate
     public static Material EthylLactate
     public static Material PhenolicNovolacsOligomer
+    public static Material TwoNaphthol
+    public static Material SodiumNaphthaleneTwoSulfonate
+    public static Material NaphtholModifiedPhenolicNovolacsOligomer
+    public static Material PyridiniumTosylate
     public static Material BisAzideCrosslinker
     public static Material FourMethylcyclohexanone
     public static Material ParaAzidobenzaldehyde
@@ -2882,6 +2886,8 @@ class SuSyMaterials {
     public static Material DiallyldimethylammoniumChlorideSolution
     public static Material PolydiallyldimethylammoniumChlorideSolution
     public static Material NafionDispersion
+    public static Material PyridiniumTosylateSolution
+    public static Material SpinOnCarbon
 
     // Thermodynamics Materials
 

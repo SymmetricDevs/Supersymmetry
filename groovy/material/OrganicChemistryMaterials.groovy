@@ -3306,7 +3306,7 @@ class OrganicChemistryMaterials {
         OneNaphthol = new Material.Builder(15517, SuSyUtility.susyId('one_naphthol'))
                 .dust()
                 .components(Carbon * 10, Hydrogen * 8, Oxygen)
-                .colorAverage()
+                .color(0xcf9f93)
                 .build()
 
         TwoNitroOneNaphthol = new Material.Builder(15518, SuSyUtility.susyId('two_nitro_one_naphthol'))
@@ -4268,5 +4268,30 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 4, Fluorine * 8)
                 .color(0x3e6573)
                 .build()
+
+        TwoNaphthol = new Material.Builder(15723, SuSyUtility.susyId('two_naphthol'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 8, Oxygen)
+                .color(0xb07f72)
+                .build()
+
+        SodiumNaphthaleneTwoSulfonate = new Material.Builder(15724, SuSyUtility.susyId('sodium_naphthalene_two_sulfonate'))
+                .dust()
+                .components(Carbon * 10, Hydrogen * 7, Sodium, Sulfur, Oxygen * 3)
+                .color(0xb09a72)
+                .build()
+
+        NaphtholModifiedPhenolicNovolacsOligomer = new Material.Builder(15725, SuSyUtility.susyId('naphthol_modified_phenolic_novolacs_oligomer'))
+                .liquid()
+                .color(0x8a5a2b)
+                .build()
+
+        PyridiniumTosylate = new Material.Builder(15726, SuSyUtility.susyId('pyridinium_tosylate'))
+                .dust()
+                .components(Carbon * 12, Hydrogen * 13, Nitrogen, Oxygen * 3, Sulfur)
+                .color(0x84a862)
+                .build()
+
+        PyridiniumTosylate.setFormula('(C5H5NH)(C7H7SO3)', true)
     }
 }

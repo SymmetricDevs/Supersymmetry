@@ -145,7 +145,7 @@ def generateCMOSFabrication(String componentName) {
         def resist = l <= 3 ? 'methacrylate_resist' : (l <= 6 ? 'polyhydroxystyrene_resist' : 'novolac_resist')
 
         Deposition.generateChemicalVaporDepositionRecipe(input, 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 400, 'silicon_oxycarbide_hydride') // Deposit low-k dielectric
-        Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', resist, 'mask_set.' + componentName, true) // Define via and trench pattern for each metal layer FIXME: change to use ibarc.
+        Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', resist, 'mask_set.' + componentName, true) // Define via and trench pattern for each metal layer FIXME: change steps 1-3 to use ibarc.
         Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'silicon_dioxide', 400) // Etch vias and trenches
         Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 1, false, (resist == 'novolac_resist'))
         Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_five', ['tantalum_nitride' : 50]) // Barrier layer deposition for copper interconnects
@@ -257,7 +257,13 @@ def generateBCDFabrication(String componentName) {
     // CMOS well formation (N-well)
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty_nine', 'wafer.' + componentName + '.step_thirty', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define N-well pattern for PMOS devices
     Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_thirty', 'wafer.' + componentName + '.step_thirty_one', 400, 'phosphine')
-    
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_thirty_one', 'wafer.' + componentName + '.step_thirty_two', 1, true)
+
+    // CMOS well formation (P-well)
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_thirty_two', 'wafer.' + componentName + '.step_thirty_three', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define P-well pattern for NMOS devices
+    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_thirty_three', 'wafer.' + componentName + '.step_thirty_four', 400, 'boron_trifluoride')
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_thirty_four', 'wafer.' + componentName + '.step_thirty_five', 1, true)
+    Doping.generateDriveInRecipe('wafer.' + componentName + '.step_thirty_five', 'wafer.' + componentName + '.step_thirty_six', 100) // Shared drive-in of NMOS/PMOS wells
 
     */
 
