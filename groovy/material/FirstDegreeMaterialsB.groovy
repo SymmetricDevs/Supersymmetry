@@ -729,11 +729,20 @@ class FirstDegreeMaterialsB {
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Aluminium * 2012, Copper * 36, Lithium * 90, Magnesium * 18, Silver * 3, Zirconium * 1)
                 .build()
-
+      
+        ScandiumAlloy = new Material.Builder(8773, SuSyUtility.susyId('scandium_alloy'))
+                .dust()
+                .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_SPRING)
+                .components(Aluminium * 12, Scandium * 3, Erbium, Zirconium)
+                .color(0xffbfbf)
+                .iconSet(SHINY)
+                .build()
+      
         LithiumPeroxide = new Material.Builder(8774, SuSyUtility.susyId('lithium_peroxide'))
                 .dust()
                 .components(Lithium * 2, Oxygen * 2)
                 .build()
+
 
         LithiumHydroperoxide = new Material.Builder(8775, SuSyUtility.susyId('lithium_hydroperoxide'))
                 .dust()

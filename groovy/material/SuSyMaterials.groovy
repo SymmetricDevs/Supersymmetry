@@ -1648,6 +1648,8 @@ class SuSyMaterials {
     public static Material BariumFluoride
     public static Material GreenCarbon
     public static Material BakedCarbon
+    public static Material ScandiumAlloy
+    public static Material LithiumPeroxide
     public static Material GRCop84
     public static Material MARM246
     public static Material AluminiumAlloy2219
