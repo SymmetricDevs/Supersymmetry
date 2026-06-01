@@ -1,6 +1,7 @@
 import static prePostInit.Recipemaps.*
 import globals.Globals
 import postInit.utils.RecyclingHelper
+import static gregtech.api.GTValues.*
 
 static def removeItemsOfAlloy(String itemCategory) {
     mods.jei.ingredient.removeAndHide(metaitem('ingot' + itemCategory));
@@ -68,6 +69,33 @@ mods.gregtech.assembler.removeByInput(16, [metaitem('plateHastelloyX') * 6, meta
                                            metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateTitaniumTungstenCarbide') * 6, metaitem('frameTitanium'),
                                            metaitem('circuit.integrated').withNbt(["Configuration": 6])], null)
+
+// GRCop-84
+
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('dustGrcop84')], [fluid('oxygen') * 63])
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustGrcop84')], null)
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustCopper') * 19)
+        .inputs(metaitem('dustChrome') * 2)
+        .inputs(metaitem('dustNiobium'))
+        .outputs(metaitem('dustGrcop84') * 22)
+        .duration(5)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+// MAR-M246
+
+mods.gregtech.assembler.removeByInput(400, [metaitem('turbineBladeMarM246') * 8, metaitem('stickLongMagnalium')], null)
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('turbineBladeMarM246') * 8)
+    .inputs(metaitem('stickLongIncoloy908'))
+    .outputs(metaitem('turbine_rotor').withNbt(['GT.PartStats': ['Material': 'susy:mar_m_246']]))
+    .duration(1000)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
 
 // Secure Maceration Casing
 RecyclingHelper.replaceShaped('gcym:casing_large_macerator', item('gcym:large_multiblock_casing') * 2, [

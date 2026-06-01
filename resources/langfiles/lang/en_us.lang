@@ -2790,6 +2790,12 @@ susy.material.manganese_steel=Manganese Steel
 susy.material.hoopes_electrolyte=Hoopes Electrolyte
 susy.material.green_carbon=Green Carbon
 susy.material.baked_carbon=Baked Carbon
+susy.material.grcop_84=GRCop-84
+susy.material.mar_m_246=MAR-M246
+susy.material.aluminium_alloy_2219=Aluminium Alloy 2219
+susy.material.aluminium_alloy_2195=Aluminium Alloy 2195
+susy.material.lithium_peroxide=Lithium Peroxide
+susy.material.lithium_hydroperoxide=Lithium Hydroperoxide
 
 # Isotopes
 
@@ -3277,6 +3283,14 @@ metaitem.circuit_board.fr4.tooltip=An Advanced Circuit Board/nDouble-sided FR-4 
 metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
 metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel Cell (PEMFC)
+
+// Rocketry
+
+metaitem.fuel_injector.name=Fuel Injector
+metaitem.augmented_spark_igniter.name=Augmented Spark Igniter
+metaitem.slapper_detonator.name=Slapper Detonator
+metaitem.frangible_nut.name=Frangible Nut
+metaitem.honeycomb.aluminium.name=Aluminium Honeycomb
 
 ## Dimension Display Items
 metaitem.display.overworld.name=Overworld

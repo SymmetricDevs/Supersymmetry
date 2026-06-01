@@ -1558,3 +1558,306 @@ BENDER.recipeBuilder()
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
+
+// Space Stuff
+
+// Engine Parts
+
+MILLING.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('ingotStainlessSteel') * 4)
+        .outputs(metaitem('fuel_injector'))
+        .EUt(VA[HV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'oxygen', 'Amount': 1000]]))
+        .inputs(metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'methane', 'Amount': 1000]]))
+        .inputs(metaitem('electric.pump.ev'))
+        .inputs(metaitem('engine.spark_plug.iridium'))
+        .inputs(metaitem('pipeSmallFluidStainlessSteel'))
+        .outputs(metaitem('augmented_spark_igniter'))
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateInconel718') * 6)
+        .inputs(metaitem('plateGrcop84') * 6)
+        .outputs(item('susy:rocket_nozzle')) // Bell Rocket Nozzle Shell
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('rotorMarM246'))
+        .inputs(metaitem('stickLongIncoloy908'))
+        .inputs(metaitem('pipeLargeFluidStainlessSteel') * 8)
+        .fluidInputs(fluid('supreme_lubricant') * 2000)
+        .outputs(item('susy:rocket_turbopump')) // Basic Rocket Turbopump
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('turbine_rotor').withNbt(['GT.PartStats': ['Material': 'susy:mar_m_246']]))
+        .inputs(metaitem('augmented_spark_igniter'))
+        .inputs(metaitem('plateDoubleIncoloy908') * 6)
+        .inputs(metaitem('stickLongIncoloy908') * 2)
+        .inputs(metaitem('drum.titanium'))
+        .inputs(metaitem('pipeLargeFluidStainlessSteel') * 5)
+        .fluidInputs(fluid('supreme_lubricant') * 4000)
+        .outputs(item('susy:rocket_engine_gas_generator')) // Gas Generator + Turbine
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('fuel_injector'))
+        .inputs(metaitem('plateDoubleIncoloy908') * 12)
+        .inputs(metaitem('pipeLargeFluidStainlessSteel') * 9)
+        .outputs(item('susy:rocket_combustion_chamber', 2)) // Oxidiser Combustion Chamber
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+// Fuel Tanks
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
+        .inputs(ore('stickLongAluminiumAlloy2219') * 12)
+        .outputs(item('susy:rocket_tank_shell')) // Al-2219 tank shell
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateDoubleSteel') * 6)
+        .inputs(metaitem('stickLongSteel') * 12)
+        .outputs(item('susy:rocket_tank_shell', 6)) // Steel tank shell
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+
+// Fairing & Interstage
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('slapper_detonator'))
+        .inputs(metaitem('plateTitanium') * 6)
+        .inputs(metaitem('stickLongTitanium') * 2)
+        .inputs(metaitem('boltTitanium'))
+        .inputs(metaitem('dustRdx') * 4)
+        .outputs(metaitem('frangible_nut'))
+        .EUt(VA[EV])
+        .duration(10)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateAluminiumAlloy7075') * 6)
+        .inputs(metaitem('stickLongAluminiumAlloy7075') * 4)
+        .outputs(item('susy:rocket_fairing'))
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('plateAluminiumAlloy7075') * 6)
+        .inputs(metaitem('frangible_nut') * 4)
+        .outputs(item('susy:rocket_fairing_connector'))
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(metaitem('plateAluminiumAlloy7075') * 6)
+        .inputs(metaitem('frangible_nut') * 4)
+        .outputs(item('susy:rocket_interstage'))
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+// Instrument Recipes
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('sensor.ev') * 8)
+        .inputs(ore('circuitEv') * 4)
+        .inputs(metaitem('cableGtOctalAluminium') * 2)
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameStainlessSteel'))
+        .outputs(item('susy:spacecraft_instrument')) // Sensor
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('robot.arm.ev') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 4)
+        .inputs(metaitem('crate.Titanium'))
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameStainlessSteel'))
+        .inputs(ore('circuitEv') * 4)
+        .outputs(item('susy:spacecraft_instrument', 1)) // Collector
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('batteryHv') * 16)
+        .inputs(ore('circuitEv'))
+        .inputs(metaitem('cableGtHexAluminium') * 2)
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameStainlessSteel'))
+        .outputs(item('susy:spacecraft_instrument', 4)) // Battery
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('electric.piston.ev') * 2)
+        .inputs(metaitem('gearTitanium') * 4)
+        .inputs(metaitem('gearSmallTitanium') * 8)
+        .inputs(metaitem('stickLongTitanium') * 4)
+        .inputs(metaitem('stickTitanium') * 8)
+        .inputs(ore('circuitEv') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 16)
+        .inputs(metaitem('plateStyreneIsopreneRubber') * 2)
+        .outputs(item('susy:spacecraft_instrument', 5)) // Arm
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateAluminium') *  6)
+        .outputs(metaitem('honeycomb.aluminium'))
+        .EUt(VA[HV])
+        .duration(5)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('electric.motor.ev') * 4)
+        .inputs(metaitem('stickLongTitanium') * 8)
+        .inputs(metaitem('springTitanium') * 4)
+        .inputs(metaitem('honeycomb.aluminium') * 16)
+        .inputs(metaitem('plateDoubleTitanium') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 4)
+        .outputs(item('susy:spacecraft_instrument', 6)) // Lander
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+// Other Spacecraft Recipes
+
+BR.recipeBuilder()
+        .inputs(metaitem('dustLithiumHydroxide'))
+        .fluidInputs(fluid('hydrogen_peroxide') * 1000)
+        .outputs(metaitem('dustLithiumHydroperoxide'))
+        .fluidOutputs(fluid('water') * 1000)
+        .EUt(VA[HV])
+        .duration(5)
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .inputs(metaitem('dustLithiumHydroperoxide') * 2)
+        .outputs(metaitem('dustLithiumPeroxide'))
+        .fluidOutputs(fluid('hydrogen_peroxide') * 1000)
+        .EUt(VA[HV])
+        .duration(5)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('dustLithiumPeroxide') * 16)
+        .inputs(metaitem('dustLithiumHydroxide') * 16)
+        .inputs(metaitem('wireGtQuadrupleNichrome') * 4)
+        .inputs(metaitem('cableGtDoubleAluminium') * 4)
+        .inputs(metaitem('plateDoubleStainlessSteel') * 6)
+        .inputs(metaitem('frameStainlessSteel'))
+        .inputs(metaitem('hull.ev'))
+        .outputs(item('susy:spacecraft_life_support')) // Oxygen Regenerator
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('platePolyurethane') * 16)
+        .inputs(metaitem('threadRayon') * 16)
+        .inputs(metaitem('springSmallStainlessSteel') * 8)
+        .outputs(metaitem('susy:padding_cloth'))
+        .EUt(VA[EV])
+        .duration(5)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('honeycomb.aluminium') * 8)
+        .inputs(metaitem('plateAluminium') * 4)
+        .inputs(metaitem('plateReinforcedEpoxyResin') * 8)
+        .outputs(item('susy:spacecraft_room_padding'))
+        .EUt(VA[EV])
+        .duration(5)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
+        .inputs(ore('stickLongAluminiumAlloy2219') * 12)
+        .outputs(item('susy:spacecraft_hull'))
+        .EUt(VA[EV])
+        .duration(20)
+        .buildAndRegister()
+
+// Spacecraft Component Cleanroom Recipes
+
+RecyclingHelper.addShaped('susy.machine.building_cleanroom', metaitem('susy:building_cleanroom'), [
+        [metaitem('item_filter'), metaitem('item_filter'), metaitem('item_filter')],
+        [metaitem('rotorTitanium'), metaitem('hull.ev'), metaitem('rotorTitanium')],
+        [metaitem('electric.motor.ev'), ore('circuitEV'), metaitem('electric.motor.ev')]
+])
+
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('foilNitrileRubber') * 8)
+        .inputs(item('gregtech:metal_casing', 4))
+        .outputs(item('susy:rocket_multiblock_casing', 3)) // Aerospace Gasket
+        .EUt(VA[HV])
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .fluidInputs(fluid('polyvinyl_chloride') * 144)
+        .inputs(item('gregtech:metal_casing', 4))
+        .outputs(item('susy:rocket_multiblock_casing', 2)) // Vinyl Composite Flooring
+        .EUt(VA[HV])
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .fluidInputs(fluid('polyvinyl_chloride') * 144)
+        .inputs(metaitem('plateDoubleSteel') * 2)
+        .inputs(ore('frameGtAluminium'))
+        .outputs(item('susy:rocket_multiblock_casing')) // Vinyl Ceiling Tile
+        .EUt(VA[HV])
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .fluidInputs(fluid('polyvinyl_chloride') * 144)
+        .inputs(metaitem('plateDoubleSteel') * 2)
+        .inputs(metaitem('hepa_filter'))
+        .inputs(ore('frameGtAluminium'))
+        .outputs(item('susy:rocket_multiblock_casing', 1)) // Ceiling Grid Filter Unit
+        .EUt(VA[HV])
+        .duration(1)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateDoubleSteel') * 4)
+        .inputs(metaitem('dustPolystyrene') * 9)
+        .outputs(item('susy:metallurgy_2', 4)) // Polystyrene Wall
+        .EUt(VA[HV])
+        .duration(1)
+        .buildAndRegister()

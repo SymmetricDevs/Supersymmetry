@@ -336,7 +336,7 @@ Globals.solders.each { key, val ->
     for (FACTORYS in WEAPON_FACTORYS) {
         FACTORYS.recipeBuilder()
                 .inputs([
-                        ore('componentCapacitor') * 8,
+                        metaitem('slapper_detonator') * 8,
                         ore('wireFinePlatinum') * 32,
                         ore('dustCompositionB') * 64,
                         ore('dustBaratol') * 64,
@@ -354,7 +354,7 @@ Globals.solders.each { key, val ->
 
         FACTORYS.recipeBuilder()
                 .inputs([
-                        ore('componentCapacitor') * 8,
+                        metaitem('slapper_detonator') * 8,
                         ore('wireFinePlatinum') * 8,
                         ore('dustCompositionB') * 16,
                         ore('dustBaratol') * 16,
