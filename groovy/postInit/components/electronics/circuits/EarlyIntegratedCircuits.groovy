@@ -389,7 +389,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     Lithography.generateResistStrippingRecipes('wafer.bjt_pic_base.step_fifteen', 'wafer.bjt_pic_base.step_sixteen', 1, false, true)
     Doping.generateDriveInRecipe('wafer.bjt_pic_base.step_sixteen', 'wafer.bjt_pic_base.step_seventeen', 100)
 
-    // ULPIC (MV) BEOL
+    // ULPIC (MV) BEOL, NPN-BJT only, transistor-transistor-logic (TTL), control only
 
     // Sputter deposit aluminium and etch to form interconnects 
     Deposition.generateSputteringRecipe('wafer.bjt_pic_base.step_seventeen', 'wafer.bjt_ulpic.step_one', [ 'aluminium' : 396, 'silicon' : 4 ])
@@ -403,7 +403,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     Packaging.generateDicingRecipe('wafer.bjt_ulpic.step_five', 'die.bjt_ulpic', 32, 400, HV)
     Packaging.generateWireBondingRecipe('die.bjt_ulpic', 'die.bjt_ulpic.bonded', 'gold', 50, HV)
 
-    // LPIC FEOL Extension
+    // LPIC (HV) FEOL, NPN/PNP BJT extension + polysi resistors for transistor-resistor logic (TRL), control only
 
     // Additional P doping for lateral PNP transistor body
     Lithography.generatePhotolithographyRecipes('wafer.bjt_pic_base.step_seventeen', 'wafer.bjt_lpic.step_one', 'novolac_resist', 'mask_set.bjt_lpic', true)
@@ -422,7 +422,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     // Combined drive-in: activates both the lateral PNP P+ implant and the poly resistor phosphorus in one thermal step
     Doping.generateDriveInRecipe('wafer.bjt_lpic.step_eight', 'wafer.bjt_lpic.step_nine', 100)
 
-    // LPIC BEOL
+    // LPIC (HV) BEOL
 
     // Deposit dielectric
     Deposition.generateChemicalVaporDepositionRecipe('wafer.bjt_lpic.step_nine', 'wafer.bjt_lpic.step_ten', 3.0, 'phosphosilicate_glass')
@@ -444,7 +444,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     Packaging.generateDicingRecipe('wafer.bjt_lpic.step_nineteen', 'die.bjt_lpic', 16, 400, HV)
     Packaging.generateWireBondingRecipe('die.bjt_lpic', 'die.bjt_lpic.bonded', 'gold', 50, HV)
 
-    // PIC BEOL Extension (branches from LPIC after via etch, before metallization, to allow integrated Schottky formation)
+    // PIC (EV) BEOL Extension (branches from LPIC after via etch, before metallization, to allow integrated Schottky formation)
 
     // Schottky barrier formation: blanket Pt sputter, sinter to form PtSi on exposed silicon, strip unreacted Pt with aqua regia
     Deposition.generateSputteringRecipe('wafer.bjt_lpic.step_thirteen', 'wafer.bjt_pic.step_one', 100, 'platinum')
@@ -466,7 +466,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_ten', 'wafer.bjt_pic.step_eleven', 'silicon_dioxide', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_eleven', 'wafer.bjt_pic.step_twelve', 1, false, true)
 
-    // Second metal layer (M2)
+    // Second metal layer (M2) allows formation of capacitors and accomodates additional routing for the more complex PIC design
     Deposition.generateSputteringRecipe('wafer.bjt_pic.step_twelve', 'wafer.bjt_pic.step_thirteen', [ 'aluminium' : 398, 'copper' : 2 ])
     Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_thirteen', 'wafer.bjt_pic.step_fourteen', 'novolac_resist', 'mask_set.bjt_pic', true)
     Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_fourteen', 'wafer.bjt_pic.step_fifteen', 'aluminium', 400, false)

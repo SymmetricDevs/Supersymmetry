@@ -4262,5 +4262,11 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine)
                 .color(0x30FF7F)
                 .build()
+
+        Octafluorocyclobutane = new Material.Builder(15722, SuSyUtility.susyId('octafluorocyclobutane'))
+                .gas()
+                .components(Carbon * 4, Fluorine * 8)
+                .color(0x3e6573)
+                .build()
     }
 }

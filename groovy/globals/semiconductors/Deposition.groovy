@@ -209,6 +209,7 @@ class Deposition {
     public static final cvdRecipes = [
         "silicon": new cvdRecipe(['silane' : 5, 'hydrogen' : 50], ['hydrogen' : 70], HV, 10, 12, 0.005), // LPCVD in H2 carrier gas
         "n_doped_silicon": new cvdRecipe(['silane' : 49, 'phosphine' : 1, 'hydrogen' : 501], ['hydrogen' : 700], HV, 100, 12, 0.05), // LPCVD in H2 carrier gas with 2% PH3 for n-type doping
+        "p_doped_silicon": new cvdRecipe(['silane' : 99, 'diborane' : 1, 'hydrogen' : 998], ['hydrogen' : 1400], HV, 100, 12, 0.1), // LPCVD in H2 carrier gas with 2% B2H6 for p-type doping
         "silicon_germanium": new cvdRecipe(['germane' : 5, 'silane' : 5, 'hydrogen' : 100], ['hydrogen' : 140], EV, 20, 13, 0.01), // SiGe LPCVD in H2 carrier gas
         "silicon_nitride.silane": new cvdRecipe(['silane' : 15, 'ammonia' : 20, 'hydrogen' : 350], ['hydrogen' : 470], HV, 50, 44, 0.005), // Silane LPCVD in H2 carrier gas with NH3
         "silicon_dioxide.teos": new cvdRecipe(['tetraethyl_orthosilicate' : 5], ['diethyl_ether' : 10], EV, 5, 23, 0.005), // LPCVD via TEOS decomposition

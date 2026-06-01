@@ -67,6 +67,9 @@ class Etching {
             new Etchant("tetramethylammonium_hydroxide_solution", MV, 40, 0.004, true, false),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 40, 0.002, false, false)
         ],
+        silicon_bosch: [
+            new Etchant(["sulfur_hexafluoride" : 50, "octafluorocyclobutane" : 25], EV, 4, true, true)
+        ]
         silicon_dioxide: [
             new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
             new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),

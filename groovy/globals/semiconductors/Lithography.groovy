@@ -153,7 +153,7 @@ class Lithography {
         }
     }
 
-    static void generateResistStrippingRecipes(String input, String product, int timeMultiplier, boolean rie, boolean solvent = false) {
+    static void generateResistStrippingRecipes(String input, String product, int timeMultiplier, boolean bombarded, boolean solvent = false) {
         if (solvent) {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
@@ -169,7 +169,7 @@ class Lithography {
         def tmp_builder = PLASMA_ASHER.recipeBuilder()
             .inputs(metaitem(input))
             .fluidInputs(fluid('oxygen') * 100)
-        if (rie) {
+        if (bombarded) {
             tmp_builder = tmp_builder.fluidInputs(fluid('carbon_tetrafluoride') * 25);
             ashed = input + '.ashed'
         } else {
@@ -182,7 +182,7 @@ class Lithography {
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
-        if (rie && !solvent) {
+        if (bombarded && !solvent) {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(ashed))
                 .fluidInputs(fluid('ultrapure_water') * 100)

@@ -61,3 +61,13 @@ BCR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 */
+
+// Octafluorocyclobutane (C4F8) for deep reactive ion etches
+
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('tetrafluoroethylene') * 2000)
+    .fluidOutputs(fluid('octafluorocyclobutane') * 1000)
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(200)
+    .EUt(VA[HV])
+    .buildAndRegister()

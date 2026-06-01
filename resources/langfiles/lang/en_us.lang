@@ -3112,6 +3112,7 @@ susy.material.arf_topcoat=ArF Topcoat
 susy.material.diallyldimethylammonium_chloride=Diallyldimethylammonium Chloride (DADMAC)
 susy.material.diallyldimethylammonium_chloride_solution=Diallyldimethylammonium Chloride (DADMAC) Solution
 susy.material.polydiallyldimethylammonium_chloride_solution=Polydiallyldimethylammonium Chloride (PolyDADMAC) Solution
+susy.material.octafluorocyclobutane=Octafluorocyclobutane
 susy.material.vanadium_trioxide=Vanadium Trioxide
 susy.material.graphene_oxide_dispersion=Graphene Oxide Dispersion
 susy.material.nafion_dispersion=Nafion Dispersion

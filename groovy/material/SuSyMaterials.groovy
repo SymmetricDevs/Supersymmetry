@@ -2460,6 +2460,7 @@ class SuSyMaterials {
     public static Material DiphenylSulfone
     public static Material PolyetherEtherKetone
     public static Material Hexafluoropropylene
+    public static Material Octafluorocyclobutane
     public static Material Viton
     public static Material SodiumEthoxide
     public static Material ParaNitrotoluene
