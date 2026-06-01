@@ -69,7 +69,7 @@ class Etching {
         ],
         silicon_bosch: [
             new Etchant(["sulfur_hexafluoride" : 50, "octafluorocyclobutane" : 25], EV, 4, true, true)
-        ]
+        ],
         silicon_dioxide: [
             new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
             new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),
