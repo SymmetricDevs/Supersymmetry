@@ -1901,9 +1901,9 @@ SOLIDIFIER.recipeBuilder()
 // Tetramethylammonium chloride
 
 LCR.recipeBuilder()
+    .notConsumable(fluid('ethanol') * 4000)
     .fluidInputs(fluid('trimethylamine') * 1000)
     .fluidInputs(fluid('chloromethane') * 1000)
-    .fluidInputs(fluid('ethanol') * 4000) //FIXME: wtf
     .outputs(metaitem('dustTetramethylammoniumChloride') * 6)
     .duration(200)
     .EUt(VA[LV])
