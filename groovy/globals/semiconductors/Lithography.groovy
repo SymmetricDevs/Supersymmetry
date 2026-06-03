@@ -92,6 +92,9 @@ class Lithography {
         new Resist("polyhydroxystyrene_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, ["krf_barc" : 25]),
         new Resist("methacrylate_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10, "arf_barc" : 25]),
         new Resist("methacrylate_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10], false, true)
+        // Trilayers should be used for highly reflective substrates, i.e. metal as organic BARCs will no longer be sufficient to minimize internal reflection of patterning light,
+        // which cause poor resolution. It is also useful for very high aspect ratio patterning where the addition of a SOC hardmask allows good etching selectivity.
+        // The hardmask also is useful for patterning on substrates with severe topography and critical dimension uniformity.
     ]
 
     public static final electronBeamResists = [
@@ -117,6 +120,8 @@ class Lithography {
 
                 if (ibarc) hmds = true; // SiON surfaces are hydrophilic, so HMDS is needed for photoresist adherence.
 
+                // HMDS should be used for application of positive tone resists to hydrophilic surfaces, particularly with exposed silanols,
+                // i.e. SiO2, Si3N4, bare Si, surfaces after CMP. HMDS is not used on metals, over organic BARCs, negative tone resists, SiOCH.
                 photoresist.generateCoatingRecipe(input, hmds)
                 photoresist.generateExposureRecipe(input, nonConsumable)
                 photoresist.generateDevelopmentRecipe(input, product)
@@ -160,7 +165,7 @@ class Lithography {
                 }
 
                 if (ibarc) hmds = true; // SiON surfaces are hydrophilic, so HMDS is needed for photoresist adherence.
-                
+
                 photoresist.generateCoatingRecipe(input, hmds)
             }
         }
