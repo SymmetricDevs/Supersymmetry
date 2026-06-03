@@ -145,7 +145,7 @@ def generateCMOSFabrication(String componentName) {
         def resist = l <= 3 ? 'methacrylate_resist' : (l <= 6 ? 'polyhydroxystyrene_resist' : 'novolac_resist')
 
         Deposition.generateChemicalVaporDepositionRecipe(input, 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 400, 'silicon_oxycarbide_hydride') // Deposit low-k dielectric
-        Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', resist, 'mask_set.' + componentName, true) // Define via and trench pattern for each metal layer FIXME: change steps 1-3 to use ibarc.
+        Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', resist, 'mask_set.' + componentName, false) // Define via and trench pattern for each metal layer FIXME: change steps 1-3 to use ibarc.
         Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'silicon_dioxide', 400) // Etch vias and trenches
         Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 1, false, (resist == 'novolac_resist'))
         Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_five', ['tantalum_nitride' : 50]) // Barrier layer deposition for copper interconnects
@@ -172,7 +172,7 @@ def generateCMOSFabrication(String componentName) {
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_one_hundred_fifty_two', 'wafer.' + componentName + '.step_one_hundred_fifty_three', 'silicon_dioxide', 400, false) // Etch silicon dioxide passivation layer
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_one_hundred_fifty_three', 'wafer.' + componentName + '.step_one_hundred_fifty_four', 1, false)
     Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_one_hundred_fifty_four', 'wafer.' + componentName + '.step_one_hundred_fifty_five', ['chromium' : 200, 'copper' : 200]) // Deposit under-bump metallization layers for solder bump attachment
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_one_hundred_fifty_five', 'wafer.' + componentName + '.step_one_hundred_fifty_six', 'novolac_resist', 'mask_set.' + componentName, true) // Define solder bump pattern
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_one_hundred_fifty_five', 'wafer.' + componentName + '.step_one_hundred_fifty_six', 'novolac_resist', 'mask_set.' + componentName, false) // Define solder bump pattern
 
     ELECTROLYTIC_CELL.recipeBuilder()
         .notConsumable(fluid('diluted_sulfuric_acid') * 4000)

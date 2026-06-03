@@ -95,7 +95,7 @@ def generateNMOSFabrication(String componentName, int circ) {
     // BEOL
 
     Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_nineteen', 'wafer.' + componentName + '.step_twenty', [ 'aluminium' : 396, 'silicon' : 4 ])
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty', 'wafer.' + componentName + '.step_twenty_one', 'novolac_resist', 'mask_set.' + componentName, true)
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty', 'wafer.' + componentName + '.step_twenty_one', 'novolac_resist', 'mask_set.' + componentName, false)
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_twenty_one', 'wafer.' + componentName + '.step_twenty_two', 'aluminium', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_twenty_two', 'wafer.' + componentName + '.step_twenty_three', 1, false, true)
     Deposition.generateSinteringRecipe('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 400, HV)
@@ -150,7 +150,7 @@ Doping.generateDriveInRecipe('wafer.nmos_dram.step_sixteen', 'wafer.nmos_dram.st
 // BEOL
 
 Deposition.generateSputteringRecipe('wafer.nmos_dram.step_seventeen', 'wafer.nmos_dram.step_eighteen', [ 'aluminium' : 396, 'silicon' : 4 ])
-Lithography.generatePhotolithographyRecipes('wafer.nmos_dram.step_eighteen', 'wafer.nmos_dram.step_nineteen', 'novolac_resist', 'mask_set.nmos_dram', true)
+Lithography.generatePhotolithographyRecipes('wafer.nmos_dram.step_eighteen', 'wafer.nmos_dram.step_nineteen', 'novolac_resist', 'mask_set.nmos_dram', false)
 Etching.generateWetEtchingRecipe('wafer.nmos_dram.step_nineteen', 'wafer.nmos_dram.step_twenty', 'aluminium', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.nmos_dram.step_twenty', 'wafer.nmos_dram.step_twenty_one', 1, false, true)
 Deposition.generateSinteringRecipe('wafer.nmos_dram.step_twenty_one', 'wafer.nmos_dram.step_twenty_two', 400, HV)
@@ -393,7 +393,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
     // Sputter deposit aluminium and etch to form interconnects 
     Deposition.generateSputteringRecipe('wafer.bjt_pic_base.step_seventeen', 'wafer.bjt_ulpic.step_one', [ 'aluminium' : 396, 'silicon' : 4 ])
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_ulpic.step_one', 'wafer.bjt_ulpic.step_two', 'novolac_resist', 'mask_set.bjt_ulpic', true)
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_ulpic.step_one', 'wafer.bjt_ulpic.step_two', 'novolac_resist', 'mask_set.bjt_ulpic', false)
     Etching.generateWetEtchingRecipe('wafer.bjt_ulpic.step_two', 'wafer.bjt_ulpic.step_three', 'aluminium', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.bjt_ulpic.step_three', 'wafer.bjt_ulpic.step_four', 1, false, true)
     Deposition.generateSinteringRecipe('wafer.bjt_ulpic.step_four', 'wafer.bjt_ulpic.step_five', 400, HV)
@@ -435,7 +435,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
     // Sputter deposit aluminium and etch to form interconnects
     Deposition.generateSputteringRecipe('wafer.bjt_lpic.step_fourteen', 'wafer.bjt_lpic.step_fifteen', [ 'aluminium' : 398, 'copper' : 2 ])
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_fifteen', 'wafer.bjt_lpic.step_sixteen', 'novolac_resist', 'mask_set.bjt_lpic', true)
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_lpic.step_fifteen', 'wafer.bjt_lpic.step_sixteen', 'novolac_resist', 'mask_set.bjt_lpic', false)
     Etching.generateWetEtchingRecipe('wafer.bjt_lpic.step_sixteen', 'wafer.bjt_lpic.step_seventeen', 'aluminium', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.bjt_lpic.step_seventeen', 'wafer.bjt_lpic.step_eighteen', 1, false, true)
     Deposition.generateSinteringRecipe('wafer.bjt_lpic.step_eighteen', 'wafer.bjt_lpic.step_nineteen', 400, HV)
@@ -456,7 +456,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
     // First metal layer (M1)
     Deposition.generateSputteringRecipe('wafer.bjt_pic.step_four', 'wafer.bjt_pic.step_five', [ 'aluminium' : 398, 'copper' : 2 ])
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_five', 'wafer.bjt_pic.step_six', 'novolac_resist', 'mask_set.bjt_pic', true)
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_five', 'wafer.bjt_pic.step_six', 'novolac_resist', 'mask_set.bjt_pic', false)
     Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_six', 'wafer.bjt_pic.step_seven', 'aluminium', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_seven', 'wafer.bjt_pic.step_eight', 1, false, true)
 
@@ -468,7 +468,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
     // Second metal layer (M2) allows formation of capacitors and accomodates additional routing for the more complex PIC design
     Deposition.generateSputteringRecipe('wafer.bjt_pic.step_twelve', 'wafer.bjt_pic.step_thirteen', [ 'aluminium' : 398, 'copper' : 2 ])
-    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_thirteen', 'wafer.bjt_pic.step_fourteen', 'novolac_resist', 'mask_set.bjt_pic', true)
+    Lithography.generatePhotolithographyRecipes('wafer.bjt_pic.step_thirteen', 'wafer.bjt_pic.step_fourteen', 'novolac_resist', 'mask_set.bjt_pic', false)
     Etching.generateWetEtchingRecipe('wafer.bjt_pic.step_fourteen', 'wafer.bjt_pic.step_fifteen', 'aluminium', 400, false)
     Lithography.generateResistStrippingRecipes('wafer.bjt_pic.step_fifteen', 'wafer.bjt_pic.step_sixteen', 1, false, true)
     Deposition.generateSinteringRecipe('wafer.bjt_pic.step_sixteen', 'wafer.bjt_pic.step_seventeen', 400, HV)

@@ -94,7 +94,7 @@ ASSEMBLER.recipeBuilder()
 
 // Generate SiO2 doping mask and etch holes into it for doped regions
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.n_doped', 'wafer.diode.planar.step_one', 400, true)
-Lithography.generatePhotolithographyRecipes('wafer.diode.planar.step_one', 'wafer.diode.planar.step_two', 'novolac_resist', 'mask.diode.planar', false)
+Lithography.generatePhotolithographyRecipes('wafer.diode.planar.step_one', 'wafer.diode.planar.step_two', 'novolac_resist', 'mask.diode.planar', true)
 Etching.generateWetEtchingRecipe('wafer.diode.planar.step_two', 'wafer.diode.planar.step_three', 'silicon_dioxide', 100, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.planar.step_three', 'wafer.diode.planar.step_four', 1, false, true)
 
@@ -135,7 +135,7 @@ Doping.generateIonImplantationRecipes('wafer.diode.drift.step_one', 'wafer.diode
 
 // Mask mesa/contact and etch
 Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', 1, 'silicon_nitride.silane')
-Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_three', 'wafer.diode.power.step_four', 'novolac_resist', 'mask_set.diode.power', false)
+Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_three', 'wafer.diode.power.step_four', 'novolac_resist', 'mask_set.diode.power', true)
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_four', 'wafer.diode.power.step_five', 'silicon_nitride', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.power.step_five', 'wafer.diode.power.step_six', 1, false, true)
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_six', 'wafer.diode.power.step_seven', 'silicon', 400, false)
@@ -145,7 +145,7 @@ Deposition.generateSiliconDioxideGrowthRecipe('wafer.diode.power.step_seven', 'w
 
 // Metallization
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_eight', 'wafer.diode.power.step_nine', 'silicon_nitride', 400, false)
-Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_nine', 'wafer.diode.power.step_ten', 'novolacs_liftoff_resist', 'mask_set.diode.power', false)
+Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_nine', 'wafer.diode.power.step_ten', 'novolacs_liftoff_resist', 'mask_set.diode.power', true)
 Deposition.generateSputteringRecipe('wafer.diode.power.step_nine.exposed', 'wafer.diode.power.step_nine.deposited', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
 Lithography.generateResistStrippingRecipes('wafer.diode.power.step_ten', 'wafer.diode.power.step_eleven', 1, false, true)
 Mechanicals.generateBackgrindingRecipe('wafer.diode.power.step_eleven', 'wafer.diode.power.step_twelve', 400, HV)
@@ -167,13 +167,13 @@ ASSEMBLER.recipeBuilder()
 // Schottky diodes
 
 // n- epi layer, p+ guard ring
-Lithography.generatePhotolithographyRecipes('wafer.diode.drift.step_one', 'wafer.diode.schottky.step_two', 'novolac_resist', 'mask_set.diode.schottky', false)
+Lithography.generatePhotolithographyRecipes('wafer.diode.drift.step_one', 'wafer.diode.schottky.step_two', 'novolac_resist', 'mask_set.diode.schottky', true)
 Doping.generateIonImplantationRecipes('wafer.diode.schottky.step_two', 'wafer.diode.schottky.step_three', 100, 'boron_trifluoride')
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_three', 'wafer.diode.schottky.step_four', 1, false, true)
 
 // Deposit passivation oxide
 Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.schottky.step_four', 'wafer.diode.schottky.step_five', 1, 'silicon_dioxide.silane')
-Lithography.generatePhotolithographyRecipes('wafer.diode.schottky.step_five', 'wafer.diode.schottky.step_six', 'novolac_resist', 'mask_set.diode.schottky', false)
+Lithography.generatePhotolithographyRecipes('wafer.diode.schottky.step_five', 'wafer.diode.schottky.step_six', 'novolac_resist', 'mask_set.diode.schottky', true)
 Etching.generateWetEtchingRecipe('wafer.diode.schottky.step_six', 'wafer.diode.schottky.step_seven', 'silicon_dioxide', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_seven', 'wafer.diode.schottky.step_eight', 1, false, true)
 
