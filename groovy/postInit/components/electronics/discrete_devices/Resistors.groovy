@@ -168,8 +168,8 @@ Sintering.nonPlasmaFuels().each { fuel ->
 }
 
 UV_LIGHT_BOX.recipeBuilder()
-    .inputs(metaitem('mesh.stainless_steel') * 1)
-    .fluidInputs(fluid('methyl_methacrylate_emulsion') * 50)
+    .inputs(metaitem('mesh.stainless_steel'))
+    .fluidInputs(fluid('acrylate_resist_mixture') * 50)
     .outputs(metaitem('screen_printing.pattern.resistor'))
     .circuitMeta(5)
     .duration(200)
@@ -177,8 +177,8 @@ UV_LIGHT_BOX.recipeBuilder()
     .buildAndRegister()
 
 UV_LIGHT_BOX.recipeBuilder()
-    .inputs(metaitem('mesh.stainless_steel') * 1)
-    .fluidInputs(fluid('methyl_methacrylate_emulsion') * 50)
+    .inputs(metaitem('mesh.stainless_steel'))
+    .fluidInputs(fluid('acrylate_resist_mixture') * 50)
     .outputs(metaitem('screen_printing.pattern.resistor_pads'))
     .circuitMeta(6)
     .duration(200)
@@ -225,10 +225,12 @@ SCREEN_PRINTING.recipeBuilder()
 
 Packaging.generateDicingRecipe("component.thick_film_resistor.wafer", "component.thick_film_resistor.unterminated", 32, 100, HV)
 
-Deposition.generateSputteringRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.coated", ['chromium' : 300, 'nickel' : 300]) // NiCr vacuum deposition
+Lithography.generatePhotolithographyRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.patterned", "acrylate_resist_mixture", "screen_printing.pattern.resistor", false)
+Deposition.generateSputteringRecipe("component.resistor.wafer.pads.patterned", "component.thin_film_resistor.wafer.deposited", ['chromium' : 300, 'nickel' : 300]) // NiCr vacuum deposition
+Lithography.generateResistStrippingRecipes("component.thin_film_resistor.wafer.deposited", "component.thin_film_resistor.wafer.unetched", 10, false, true) // don't know what timeMultiplier means
 
 LASER_ENGRAVER.recipeBuilder()
-    .inputs(metaitem('component.thin_film_resistor.wafer.coated'))
+    .inputs(metaitem('component.thin_film_resistor.wafer.unetched'))
     .outputs(metaitem('component.thin_film_resistor.wafer.etched'))
     .duration(200)
     .EUt(VA[EV])
@@ -269,8 +271,9 @@ for (type in types) {
         .buildAndRegister()
 
     ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(fluid('watts_bath_electrolyte') * 1000)
+        .inputs(ore('foilNickel'))
         .inputs(metaitem('component.' + type + '.terminated') * 16)
-        .fluidInputs(fluid('watts_bath_electrolyte') * 1000)
         .outputs(metaitem('component.' + type + '.plated') * 16)
         .duration(160)
         .EUt(VA[LV])
