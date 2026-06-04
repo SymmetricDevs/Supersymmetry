@@ -2,7 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import globals.semiconductors.Packaging
 import globals.Sintering
-import gregtech.api.tileentity.multiblock.CleanroomType
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 // SMD Capacitor * 8
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
@@ -155,12 +155,13 @@ ASSEMBLER.recipeBuilder()
     .duration(160)
     .buildAndRegister()
 
-UV_BOX.recipeBuilder()
+UV_LIGHT_BOX.recipeBuilder()
     .inputs(metaitem('mesh.stainless_steel') * 1)
     .fluidInputs(fluid('methyl_methacrylate_emulsion') * 50)
     .outputs(metaitem('screen_printing.pattern.mlcc'))
     .circuitMeta(4)
     .duration(200)
+    .EUt(VA[HV])
     .buildAndRegister()
 
 MIXER.recipeBuilder()
@@ -188,15 +189,15 @@ for (dopant in dopants) {
 
 EXTRUDER.recipeBuilder()
     .inputs(metaitem('doped_barium_titanate_paste'))
-    .nonConsumable(metaitem('shape.extruder.foil'))
+    .notConsumable(metaitem('shape.extruder.foil'))
     .outputs(metaitem('sheet.doped_barium_titanate') * 1)
     .duration(50)
     .EUt(VA[HV])
     .buildAndRegister()
 
-SCREEN_PRINTER.recipeBuilder()
+SCREEN_PRINTING.recipeBuilder()
     .inputs(metaitem('sheet.doped_barium_titanate') * 1)
-    .nonConsumable(metaitem('screen_printing.pattern.mlcc') * 1)
+    .notConsumable(metaitem('screen_printing.pattern.mlcc') * 1)
     .fluidInputs(fluid('nickel_conductive_ink') * 50)
     .outputs(metaitem('component.bme_cap.layer'))
     .duration(104)
@@ -221,7 +222,7 @@ Sintering.blankets.each { blanket ->
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('component.bme_cap.fired') * 32)
         .duration(blanket.duration)
-        .EUt(VA[HV])
+        .EUt(VA[EV])
         .buildAndRegister()
 
     SINTERING_OVEN.recipeBuilder()
@@ -229,7 +230,7 @@ Sintering.blankets.each { blanket ->
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('component.pme_cap.fired') * 32)
         .duration(blanket.duration)
-        .EUt(VA[HV])
+        .EUt(VA[EV])
         .buildAndRegister()
 
     SINTERING_OVEN.recipeBuilder()
@@ -237,7 +238,7 @@ Sintering.blankets.each { blanket ->
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('component.bme_cap.terminated') * 32)
         .duration(blanket.duration)
-        .EUt(VA[HV])
+        .EUt(VA[EV])
         .buildAndRegister()
 
     SINTERING_OVEN.recipeBuilder()
@@ -245,7 +246,7 @@ Sintering.blankets.each { blanket ->
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('component.pme_cap.terminated') * 32)
         .duration(blanket.duration)
-        .EUt(VA[HV])
+        .EUt(VA[EV])
         .buildAndRegister()
 }
 
@@ -258,7 +259,7 @@ Sintering.nonPlasmaFuels().each { fuel ->
             .outputs(metaitem('component.pme_cap.fired') * 4)
             .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
             .duration(fuel.duration + comburent.duration)
-            .EUt(VA[MV])
+            .EUt(VA[HV])
             .buildAndRegister()
 
         SINTERING_OVEN.recipeBuilder()
@@ -268,22 +269,22 @@ Sintering.nonPlasmaFuels().each { fuel ->
             .outputs(metaitem('component.pme_cap.terminated') * 4)
             .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
             .duration(fuel.duration + comburent.duration)
-            .EUt(VA[MV])
+            .EUt(VA[HV])
             .buildAndRegister()
     }
 }
 
 EXTRUDER.recipeBuilder()
     .inputs(metaitem('barium_titanate_paste'))
-    .nonConsumable(metaitem('shape.extruder.foil'))
+    .notConsumable(metaitem('shape.extruder.foil'))
     .outputs(metaitem('sheet.barium_titanate') * 1)
     .duration(50)
     .EUt(VA[HV])
     .buildAndRegister()
 
-SCREEN_PRINTER.recipeBuilder()
+SCREEN_PRINTING.recipeBuilder()
     .inputs(metaitem('sheet.barium_titanate') * 1)
-    .nonConsumable(metaitem('screen_printing.pattern.mlcc') * 1)
+    .notConsumable(metaitem('screen_printing.pattern.mlcc') * 1)
     .fluidInputs(fluid('silver_conductive_ink') * 50)
     .outputs(metaitem('component.pme_cap.layer'))
     .duration(104)
@@ -301,24 +302,24 @@ COMPRESSOR.recipeBuilder()
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('component.bme.polished') * 16)
+    .inputs(metaitem('component.bme_cap.polished') * 16)
     .fluidInputs(fluid('copper_frit_ink') * 10)
-    .outputs(metaitem('component.bme.dipped') * 16)
+    .outputs(metaitem('component.bme_cap.dipped') * 16)
     .duration(40)
     .cleanroom(CleanroomType.CLEANROOM)
     .EUt(VA[MV])
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('component.pme.polished') * 16)
+    .inputs(metaitem('component.pme_cap.polished') * 16)
     .fluidInputs(fluid('silver_frit_ink') * 10)
-    .outputs(metaitem('component.pme.dipped') * 16)
+    .outputs(metaitem('component.pme_cap.dipped') * 16)
     .duration(40)
     .cleanroom(CleanroomType.CLEANROOM)
     .EUt(VA[MV])
     .buildAndRegister()
 
-cap_types = ["bme", "pme"]
+cap_types = ["bme_cap", "pme_cap"]
 for (cap_type in cap_types) {
     BALL_MILL.recipeBuilder()
         .inputs(metaitem('component.' + cap_type + ".fired") * 16)
@@ -333,11 +334,11 @@ for (cap_type in cap_types) {
         .outputs(metaitem('component.' + cap_type + '.plated') * 16)
         .duration(160)
         .EUt(VA[LV])
-        .buildAndy()
+        .buildAndRegister()
 
     ASSEMBLER.recipeBuilder()
         .inputs(metaitem('component.' + cap_type + '.plated') * 16)
-        .fluidInputs(fluid(soldering_alloy) * 160)
+        .fluidInputs(fluid('soldering_alloy') * 160)
         .outputs(metaitem('component.' + cap_type))
         .duration(40)
         .EUt(VA[MV])
