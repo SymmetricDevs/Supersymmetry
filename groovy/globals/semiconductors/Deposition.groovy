@@ -263,6 +263,7 @@ class Deposition {
         "titanium_nitride": new aldRecipe(['titanium_tetrachloride' : 3, 'ammonia' : 4], ['corrosive_gas' : 60], ['nitrogen' : 48], EV, 200, 12, 0.003), // ALD via TiCl4 and NH3 reaction
         "titanium_aluminide": new aldRecipe(['titanium_tetrachloride' : 5, 'trimethylaluminium' : 5], ['corrosive_gas' : 65], ['nitrogen' : 50], EV, 200, 12, 0.003), // ALD via TiCl4 and TMA reaction
         "hafnium_dioxide" : new aldRecipe(['tetrakis_dimethylamido_hafnium' : 5, 'water' : 10], ['dimethylamine' : 20, 'nitrogen' : 50], ['nitrogen' : 50], EV, 200, 12, 0.003) // ALD via Hf(NMe2)4 and H2O reaction
+        "silicon_nitride": new aldRecipe(['bis_diethylamino_silane' : 3, 'ammonia' : 4], ['diethylamine' : 6, 'hydrogen' : 6], ['nitrogen' : 48], EV, 200, 12, 0.003) // ALD via H2Si(NEt2)2 and NH3 reaction
     ]
 
     // ALD

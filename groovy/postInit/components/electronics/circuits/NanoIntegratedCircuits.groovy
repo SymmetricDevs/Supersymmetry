@@ -268,3 +268,69 @@ def generateBCDFabrication(String componentName) {
     */
 
 // Cheaper clock generator
+
+// DRAM 45nm 6F2 process fabrication chain
+
+def generateDRAMFabrication(String componentName, int circ) {
+
+    // Burried Transistor Trenching
+    RESIST_PROCESSOR.recipeBuilder() // Carbon Hardmask
+        .inputs(metaitem('wafer.cmos.step_ten'))
+        .fluidInputs(fluid("spin_on_carbon") * 100)
+        .fluidInputs(fluid("ebr_solvent") * 200)
+        .outputs(metaitem('wafer.' + componentName + '.step_eleven' + '.hardmasked'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(300)
+        .EUt(VA[EV])
+        .buildAndRegister()
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_eleven' + '.hardmasked', 'wafer.' + componentName + '.step_eleven' + '.ibarc', 0.25, "silicon_oxynitride") // Adhesion layer for Si mandrel
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_eleven' + '.ibarc', 'wafer.' + componentName + '.step_eleven', 2.0, 'silicon') // Si Mandrel deposition
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_eleven', 'wafer.' + componentName + '.step_twelve', 'methacrylate_resist', 'mask_set.' + componentName, true) // Patterning Si mandrel
+    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twelve', 'wafer.' + componentName + '.step_thirteen', 'silicon', 400) // Etch Si mandrel pattern
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_thirteen', 'wafer.' + componentName + '.step_fourteen', 1, true)
+    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_fourteen', 'wafer.' + componentName + '.step_fifteen', 23, 'silicon_nitride') // ALD SiN Spacer
+    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_fifteen', 'wafer.' + componentName + '.step_sixteen', 'silicon_nitride', 25) // Under-etch SiN to form 0.5f spacer
+    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_sixteen', 'wafer.' + componentName + '.step_seventeen', 'silicon', 400) // Etch remaining Si mandrel
+    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_seventeen', 'wafer.' + componentName + '.step_eighteen', 'silicon_oxynitride', 25) // Punch through SiNO ibarc
+    REACTIVE_ION_ETCHER.recipeBuilder() // O2 Ashing SOC
+        .inputs(metaitem('wafer.' + componentName + '.step_eighteen'))
+        .fluidInputs(fluid(plasma.oxygen) * 10)
+        .outputs(metaitem('wafer.' + componentName + '.step_nineteen'))
+        .duration((int) (100 / 0.0125))
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+    
+    REACTIVE_ION_ETCHER.recipeBuilder() // SiN SiO2 co-etching
+        .inputs(metaitem('wafer.' + componentName + '.step_nineteen'))
+        .fluidInputs(fluid(plasma.carbon_tetrafluoride) * 30)
+        .fluidInputs(fluid(plasma.oxygen) * 10)
+        .fluidInputs(fluid(plasma.argon) * 60)
+        .outputs(metaitem('wafer.' + componentName + '.step_twenty'))
+        .duration((int) (2.0 / 0.0167))
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+    
+    REACTIVE_ION_ETCHER.recipeBuilder() // Si SiO2 co-etching
+        .inputs(metaitem('wafer.' + componentName + '.step_twenty'))
+        .fluidInputs(fluid(plasma.carbon_tetrafluoride) * 20)
+        .fluidInputs(fluid(plasma.hydrogen) * 20)
+        .fluidInputs(fluid(plasma.argon) * 60)
+        .outputs(metaitem('wafer.' + componentName + '.step_twenty_one'))
+        .duration((int) (550 / 0.0167))
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twenty_one', 'wafer.' + componentName + '.step_twenty_two', 'silicon_dioxide', 50) // Saddle-fin formation
+    REACTIVE_ION_ETCHER.recipeBuilder() // O2 Ashing Exposed SOC
+        .inputs(metaitem('wafer.' + componentName + '.step_twenty_two'))
+        .fluidInputs(fluid(plasma.oxygen) * 10)
+        .outputs(metaitem('wafer.' + componentName + '.step_twenty_three'))
+        .duration((int) (100 / 0.0125))
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+    Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 400, false) // Protective oxide growth after trench etching to repair etch damage
+    Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_twenty_four', 'wafer.' + componentName + '.step_twenty_five', 'silicon_dioxide', 400, false) // Clean and Remove protective oxide layer to expose silicon surface for writeline formation
+}
