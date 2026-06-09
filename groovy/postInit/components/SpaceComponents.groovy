@@ -39,27 +39,9 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister();
 
-CSTR.recipeBuilder()
-        .circuitMeta(2)
-        .fluidInputs(fluid('formaldehyde') * 75)
-        .fluidInputs(fluid('phenol') * 25)
-        .notConsumable(fluid('sodium_hydroxide_solution') * 50)
-        .fluidOutputs(fluid('resol_resin_mixture') * 100)
-        .duration(4)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
-CSTR.recipeBuilder()
-        .fluidInputs(fluid('isopropyl_alcohol') * 75)
-        .fluidInputs(fluid('resol_resin_mixture') * 25)
-        .fluidOutputs(fluid('resol_resin_infiltrant') * 100)
-        .duration(2)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('carbon.mesh'))
-        .fluidInputs(fluid('resol_resin_infiltrant') * 4000)
+        .fluidInputs(fluid('resol_infiltrant') * 4000)
         .outputs(metaitem('carbon.mesh.phenolic.moist'))
         .duration(200)
         .EUt(VA[MV])

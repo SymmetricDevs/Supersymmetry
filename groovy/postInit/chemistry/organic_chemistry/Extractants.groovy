@@ -403,6 +403,49 @@ import static gregtech.api.GTValues.*
         .EUt(VA[HV])
         .buildAndRegister()
 
+    //2-ethyl-1,3-hexanediol
+
+    BR.recipeBuilder()
+        .inputs(ore('dustSodiumHydroxide') * 3)
+        .fluidInputs(fluid('butyraldehyde') * 2000)
+        .fluidOutputs(fluid('butyraldol_solution') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('butyraldol_solution') * 2000)
+        .outputs(metaitem('dustSodiumHydroxide') * 3)
+        .fluidOutputs(fluid('butyraldol') * 1000)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedPlatinum'))
+        .fluidInputs(fluid('butyraldol') * 50)
+        .fluidInputs(fluid('hydrogen') * 100)
+        .fluidOutputs(fluid('two_ethyl_one_three_hexanediol_mixture') * 100)
+        .duration(5)
+        .EUt(VA[LV])
+        .buildAndRegister()
+        
+    PHASE_SEPARATOR.recipeBuilder()
+        .fluidInputs(fluid('two_ethyl_one_three_hexanediol_mixture') * 1000)
+        .fluidOutputs(fluid('two_ethyl_one_three_hexanediol') * 500)
+        .fluidOutputs(fluid('water') * 500)
+        .duration(20)
+        .buildAndRegister()
+
+    MIXER.recipeBuilder()
+        .fluidInputs(fluid('two_ethyl_one_three_hexanediol') * 2000)
+        .fluidInputs(fluid('kerosene') * 8000)
+        .fluidOutputs(fluid('boron_extraction_mixture') * 10000)
+        .duration(400)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
     //TRIOCTYLAMINE
 
     TBR.recipeBuilder()
@@ -574,22 +617,12 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
-    BR.recipeBuilder()
-        .fluidInputs(fluid('bromooctane') * 2000)
-        .inputs(ore('dustLithium'))
-        .inputs(ore('dustCopper'))
-        .fluidOutputs(fluid('lithium_dioctylcopper') * 1000)
-        .duration(160)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .fluidInputs(fluid('capric_acid') * 1000)
-        .fluidInputs(fluid('thionyl_chloride') * 1000)
-        .fluidOutputs(fluid('decanoyl_chloride') * 1000)
-        .fluidOutputs(fluid('hydrogen_chloride') * 1000)
-        .fluidOutputs(fluid('sulfur_dioxide') * 1000)
-        .duration(160)
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('capric_acid') * 50)
+        .fluidInputs(fluid('thionyl_chloride') * 50)
+        .fluidOutputs(fluid('decanoyl_chloride') * 50)
+        .fluidOutputs(fluid('hydrogen_chloride_sulfur_dioxide_mixture') * 100)
+        .duration(8)
         .EUt(VA[MV])
         .buildAndRegister()
 
@@ -627,7 +660,7 @@ import static gregtech.api.GTValues.*
     BR.recipeBuilder()
         .notConsumable(metaitem('beads.strong_acidic_cation_exchange')) 
         //dry sulfonic acid ion exchange resin like Amberlyst 15 or zeolite-based catalysts
-        .notConsumable(fluid('tert_butyl_alcohol') * 100) //1 to 30 wt %
+        .notConsumable(fluid('tert_butanol') * 100) //1 to 30 wt %
         .notConsumable(fluid('isooctane') * 100) //diluent, 90% isooctane and 10% isododecane/2,2,4,4,6 pentamethyl heptane
         .fluidInputs(fluid('isobutylene') * 1000)
         .fluidOutputs(fluid('diisobutylene_mixture') * 1000)
@@ -636,7 +669,7 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     SIEVE_DT.recipeBuilder() //90% yield converted to diisobutytlene?
-        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
+        .notConsumable(fluid('tert_butanol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
         .fluidInputs(fluid('diisobutylene_mixture') * 1000)
         .fluidOutputs(fluid('isobutylene') * 90)
         .fluidOutputs(fluid('diisobutylene') * 400)
@@ -647,7 +680,7 @@ import static gregtech.api.GTValues.*
 
     //source for trimethylpentylphosphinic acid WO2013083047A1
     BR.recipeBuilder()
-        .notConsumable(metaitem('emitter.lv'))
+        .notConsumable(metaitem('lamp.mercury.lp'))
         .fluidInputs(fluid('sodium_hypophosphite_solution') * 1000)
         .fluidInputs(fluid('acetone') * 100)
         .fluidInputs(fluid('diisobutylene') * 500) //material
@@ -702,7 +735,7 @@ import static gregtech.api.GTValues.*
     //C6H14S + C6H13Br -> C12H26S + HBr
 
     CSTR.recipeBuilder()
-        .notConsumable(metaitem('emitter.lv'))
+        .notConsumable(metaitem('lamp.mercury.lp'))
         .fluidInputs(fluid('one_hexene') * 50)
         .fluidInputs(fluid('hydrogen_bromide') * 50)
         .fluidOutputs(fluid('one_bromohexane') * 50)
@@ -731,6 +764,16 @@ import static gregtech.api.GTValues.*
         .fluidInputs(fluid('one_bromohexane') * 1000)
         .outputs(metaitem('dustSodiumBromide') * 2)
         .fluidOutputs(fluid('one_hexanethiol') * 1000)
+        .duration(20)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedAlumina'))
+        .fluidInputs(fluid('n_hexanol') * 50)
+        .fluidInputs(fluid('hydrogen_sulfide') * 50)
+        .fluidOutputs(fluid('one_hexanethiol') * 50)
+        .fluidOutputs(fluid('water') * 50)
         .duration(20)
         .EUt(VA[MV])
         .buildAndRegister()
@@ -1001,9 +1044,9 @@ import static gregtech.api.GTValues.*
 
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('roundCrosslinkedPolystyrene') * 32)
-        .fluidInputs(fluid('oleum') * 1100)
+        .fluidInputs(fluid('oleum') * 300)
         .outputs(metaitem('beads.strong_acidic_cation_exchange'))
-        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('sulfuric_acid') * 200)
         .EUt(VA[MV])
         .duration(200)
         .buildAndRegister()
@@ -1030,26 +1073,26 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     CSTR.recipeBuilder()
-        .fluidInputs(fluid('sulfuric_acid') * 50)
-        .fluidInputs(fluid('sulfur_trioxide') * 5)
-        .fluidOutputs(fluid('oleum') * 55)
+        .fluidInputs(fluid('sulfuric_acid') * 100)
+        .fluidInputs(fluid('sulfur_trioxide') * 50)
+        .fluidOutputs(fluid('oleum') * 150)
         .duration(4)
         .EUt(VA[LV])
         .buildAndRegister()
 
     MIXER.recipeBuilder()
         .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .fluidInputs(fluid('sulfur_trioxide') * 100)
-        .fluidOutputs(fluid('oleum') * 1100)
+        .fluidInputs(fluid('sulfur_trioxide') * 500)
+        .fluidOutputs(fluid('oleum') * 1500)
         .duration(80)
         .EUt(VA[MV])
         .buildAndRegister()
 
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('roundPalladiumDopedCrosslinkedPolystyrene') * 32)
-        .fluidInputs(fluid('oleum') * 1100)
+        .fluidInputs(fluid('oleum') * 300)
         .outputs(metaitem('beads.amberlyst_ch'))
-        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('sulfuric_acid') * 200)
         .EUt(VA[MV])
         .duration(200)
         .buildAndRegister()
@@ -1132,7 +1175,9 @@ import static gregtech.api.GTValues.*
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('roundFunctionalizableCrosslinkedPolystyrene') * 32)
         .fluidInputs(fluid('trimethylamine') * 100)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 100)
         .outputs(metaitem('beads.strong_basic_anion_exchange'))
+        .fluidOutputs(fluid('salt_water') * 100)
         .EUt(VA[MV])
         .duration(200)
         .buildAndRegister()

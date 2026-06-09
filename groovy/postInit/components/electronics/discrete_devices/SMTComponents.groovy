@@ -8,14 +8,6 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wir
 // Inductor * 4
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
 
-// SMD Inductor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
-// SMD Inductor * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
-
-// SMD Resistor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineElectrum') * 4], [fluid('plastic') * 288])
-
 // SMD Capacitor * 8
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
 // SMD Capacitor * 12
@@ -29,11 +21,6 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
 // SMD Transistor * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineTantalum') * 8], [fluid('plastic') * 144])
-// SMD Resistor * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
-
-// SMD Diode * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
 
 // Ferrite Mixture Dust * 6
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
@@ -71,7 +58,7 @@ CRYSTALLIZER.recipeBuilder()
         .buildAndRegister()
 
 CUTTER.recipeBuilder()
-        .inputs(metaitem('boule.alumina'))
+        .inputs(metaitem('boule.alumina')) 
         .outputs(metaitem('seed_crystal.alumina'))
         .outputs(metaitem('wafer.alumina') * 32)
         .duration(400)
@@ -613,110 +600,7 @@ CHEMICAL_BATH.recipeBuilder()
         .duration(40)
         .EUt(240)
         .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 10)
-        .inputs(ore('dustZincOxide') * 2)
-        .inputs(ore('dustNickelIiOxide') * 2)
-        .outputs(metaitem('ingotNickelZincFerrite') * 14)
-        .blastFurnaceTemp(1200)
-        .duration(300)
-        .EUt(60)
-        .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 10)
-        .inputs(ore('dustZincOxide') * 2)
-        .inputs(ore('dustManganeseIiOxide') * 2)
-        .outputs(metaitem('ingotManganeseZincFerrite') * 14)
-        .blastFurnaceTemp(1200)
-        .duration(300)
-        .EUt(60)
-        .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 30)
-        .inputs(ore('dustBariumCarbonate') * 5)
-        .outputs(metaitem('ingotBariumFerrite') * 32)
-        .fluidOutputs(fluid('carbon_dioxide') * 1000)
-        .blastFurnaceTemp(1200)
-        .duration(100)
-        .EUt(60)
-        .buildAndRegister()
-
-ERF.recipeBuilder()
-        .inputs(ore('dustPurifiedIronIiiOxide') * 30)
-        .inputs(ore('dustStrontiumCarbonate') * 5)
-        .outputs(metaitem('ingotStrontiumFerrite') * 32)
-        .fluidOutputs(fluid('carbon_dioxide') * 1000)
-        .blastFurnaceTemp(1200)
-        .duration(100)
-        .EUt(60)
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 36)
-        .inputs(ore('ringManganeseZincFerrite'))
-        .inputs(ore('wireFineCopper') * 2)
-        .outputs(metaitem('component.inductor') * 4)
-        .duration(320)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 36)
-        .inputs(ore('ringManganeseZincFerrite'))
-        .inputs(ore('wireFineAnnealedCopper') * 2)
-        .outputs(metaitem('component.inductor') * 8)
-        .duration(320)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('ringManganeseZincFerrite'))
-        .inputs(ore('wireFineCupronickel') * 4)
-        .outputs(metaitem('component.smd.inductor') * 8)
-        .duration(400)
-        .EUt(240)
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('ringNickelZincFerrite'))
-        .inputs(ore('wireFineCupronickel') * 4)
-        .outputs(metaitem('component.smd.inductor') * 8)
-        .duration(400)
-        .EUt(240)
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('ringCobaltFerrite'))
-        .inputs(ore('wireFineCupronickel') * 4)
-        .outputs(metaitem('component.smd.inductor') * 12)
-        .duration(200)
-        .EUt(240)
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('ringBariumFerrite'))
-        .inputs(ore('wireFineCupronickel') * 4)
-        .outputs(metaitem('component.smd.inductor') * 16)
-        .duration(100)
-        .EUt(240)
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .fluidInputs(fluid('plastic') * 144)
-        .inputs(ore('ringStrontiumFerrite'))
-        .inputs(ore('wireFineCupronickel') * 4)
-        .outputs(metaitem('component.smd.inductor') * 20)
-        .duration(40)
-        .EUt(240)
-        .buildAndRegister()
-
+        
 ROASTER.recipeBuilder()
         .inputs(metaitem('wafer.silicon'))
         .fluidInputs(fluid('oxygen') * 1000)

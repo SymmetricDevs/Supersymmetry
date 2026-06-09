@@ -932,47 +932,6 @@ FORGE_HAMMER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-SIFTER.recipeBuilder()
-    .inputs(ore('dustNonMarineEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustBorax'), 7000, 250)
-    .chancedOutput(metaitem('dustTrona'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustSulfateEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustGypsum'), 5000, 250)
-    .chancedOutput(metaitem('dustKieserite'), 5000, 250)
-    .chancedOutput(metaitem('dustLangbeinite'), 5000, 250)
-    .chancedOutput(metaitem('dustPolyhalite'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustCarbonateEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustDolomite'), 5000, 250)
-    .chancedOutput(metaitem('dustCalcite'), 5000, 250)
-    .chancedOutput(metaitem('dustMagnesite'), 5000, 250)
-    .chancedOutput(metaitem('dustTrona'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustHalideEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustCarnallite'), 7000, 250)
-    .chancedOutput(metaitem('dustKainite'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 CENTRIFUGE.recipeBuilder()
     .inputs(ore('dustLimestone'))
     .outputs(metaitem('dustCalcite'))
@@ -1249,41 +1208,6 @@ RecyclingHelper.addShaped('gregtech:electrolytic_cell', metaitem('susy:electroly
     [ore('wireGtQuadrupleTin'), metaitem('hull.lv'), ore('wireGtQuadrupleTin')],
     [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
 ])
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('water') * 10)
-    .fluidOutputs(fluid('latex') * 100)
-    .blockStates("latex_logs", MetaBlocks.RUBBER_LOG.getBlockState())
-    .info('recipe.latex_extraction')
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('distilled_water') * 10)
-    .fluidOutputs(fluid('resin') * 100)
-    .blockStates("extractable_logs_1", Blocks.LOG.getBlockState())
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('lubricant') * 10)
-    .fluidOutputs(fluid('resin') * 100)
-    .blockStates("extractable_logs_2", Blocks.LOG2.getBlockState())
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('hot_hp_air') * 10)
-    .fluidOutputs(fluid('gtfo_rainbow_sap') * 100)
-    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState, 
-        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Y),
-        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z))
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
 
 // Construction Foam * 8000
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
@@ -1706,10 +1630,11 @@ ASSEMBLER.recipeBuilder()
 
 // Jet Wingpack recipes
 // Wing panel
-AUTOCLAVE.recipeBuilder()
+ASSEMBLER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
     .inputs(ore('foilPolyethyleneTerephthalate'))
-    .fluidInputs(fluid('reinforced_epoxy_resin') * 288)
+    .inputs(metaitem('carbon.fibers') * 16)
+    .fluidInputs(fluid('epoxy') * 288)
     .outputs(metaitem('wing_panel.fiber_reinforced_epoxy'))
     .duration(600)
     .EUt(VA[HV])

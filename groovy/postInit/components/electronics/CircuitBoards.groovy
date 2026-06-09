@@ -1,6 +1,5 @@
 import globals.Globals
-import globals.Photoresists
-import globals.Etchants
+import globals.semiconductors.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -51,10 +50,28 @@ FORMING_PRESS.recipeBuilder()
         .buildAndRegister();
 
 // Patterned
-Photoresists.generatePatterningRecipes("board.epoxy.copper_clad", "board.epoxy.patterned", "mask.pcb", EV, 2 /* double sided */, 1, 1, true)
+
+FORMING_PRESS.recipeBuilder()
+        .inputs(metaitem('board.epoxy.copper_clad'))
+        .inputs(metaitem('dry_film_photoresist') * 2)
+        .outputs(metaitem('board.epoxy.resist'))
+        .EUt(VA[MV])
+        .duration(100)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+/*
+UV_LIGHT_BOX.recipeBuilder()
+        .inputs(metaitem('board.epoxy.resist'))
+        .notConsumable(metaitem('mask.pcb'))
+        .outputs(metaitem('board.epoxy.patterned'))
+        .duration(photoresist.timeUsed * timeMultiplier) // FIXME: idk what should be done here since it only looks like one type of photoresist is used
+        .EUt(VA[voltageTier])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();*/
 
 // Etched
-Etchants.generateEtchingRecipes("board.epoxy.patterned", "board.epoxy.etched", "copper", EV, 2 /* double sided */, true)
+Etching.generateWetEtchingRecipe("board.epoxy.patterned", "board.epoxy.etched", "copper", 100, true) //, false) ? extra argument
 
 // Drilled
 MILLING.recipeBuilder()
@@ -120,11 +137,10 @@ LCR.recipeBuilder()
 // Reference for the mixture: https://patents.google.com/patent/US4242181A/en
 ELECTROLYTIC_CELL.recipeBuilder()
         .inputs(metaitem('board.epoxy.electroless'))
-        .fluidInputs(fluid('sulfuric_acid') * 2000)
-        .fluidInputs(fluid('copper_sulfate_solution') * 600)
+        .inputs(ore('foilPhosphorizedCopper'))
+        .notConsumable(fluid('diluted_sulfuric_acid') * 4000)
+        .notConsumable(fluid('copper_sulfate_solution') * 600)
         .outputs(metaitem('board.epoxy.electrolytic'))
-        .fluidOutputs(fluid('sulfuric_acid') * 2600)
-        .fluidOutputs(fluid('oxygen') * 600)
         .EUt(VA[MV])
         .duration(400)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -133,7 +149,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 // Masking
 MIXER.recipeBuilder()
         .inputs(ore('dyeGreen'))
-        .inputs(ore('dustBenzenediazoniumChloride'))
+        .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate'))
         .fluidInputs(fluid('epoxycyclohexane_carboxylate') * 8000)
         .fluidOutputs(fluid('green_epoxy_pcb_coating') * 8000)
         .EUt(VA[LV])

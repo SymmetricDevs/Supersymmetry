@@ -1,0 +1,61 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
+// SMD Inductor * 16
+mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
+// SMD Inductor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
+
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 36)
+    .inputs(ore('ringManganeseZincFerrite'))
+    .inputs(ore('wireFineAnnealedCopper') * 2)
+    .outputs(metaitem('component.inductor'))
+    .duration(320)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('ringManganeseZincFerrite'))
+    .inputs(ore('wireFineCupronickel') * 4)
+    .outputs(metaitem('component.smd.inductor') * 8)
+    .duration(400)
+    .EUt(240)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('ringNickelZincFerrite'))
+    .inputs(ore('wireFineCupronickel') * 4)
+    .outputs(metaitem('component.smd.inductor') * 8)
+    .duration(400)
+    .EUt(240)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('ringCobaltFerrite'))
+    .inputs(ore('wireFineCupronickel') * 4)
+    .outputs(metaitem('component.smd.inductor') * 12)
+    .duration(200)
+    .EUt(240)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('ringBariumFerrite'))
+    .inputs(ore('wireFineCupronickel') * 4)
+    .outputs(metaitem('component.smd.inductor') * 16)
+    .duration(100)
+    .EUt(240)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 144)
+    .inputs(ore('ringStrontiumFerrite'))
+    .inputs(ore('wireFineCupronickel') * 4)
+    .outputs(metaitem('component.smd.inductor') * 20)
+    .duration(40)
+    .EUt(240)
+    .buildAndRegister()

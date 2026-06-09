@@ -716,7 +716,7 @@ class UnknownCompositionMaterials {
 
         CrosslinkedPolystyrene = new Material.Builder(4141, SuSyUtility.susyId('crosslinked_polystyrene'))
                 .ingot().liquid(new FluidBuilder().temperature(513))
-                .flags(GENERATE_ROUND)
+                .flags(GENERATE_ROUND, GENERATE_PLATE)
                 .color(0xa7a9d6)
                 .build()
 
@@ -815,6 +815,7 @@ class UnknownCompositionMaterials {
         AmorphousSilicaAlumina = new Material.Builder(4160, SuSyUtility.susyId('amorphous_silica_alumina'))
                 .dust()
                 .color(0x7ea3ed)
+                .flags(GENERATE_CATALYST_BED)
                 .iconSet(DULL)
                 .build()
 
@@ -1253,8 +1254,26 @@ class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x25296e)
                 .build()
+        
+        BoronExtract = new Material.Builder(4247, SuSyUtility.susyId('boron_extract'))
+                .liquid()
+                .color(0xe5b9b5)
+                .build()
 
-        //FREE IDs: 4247-4250
+        BoraxLiquor = new Material.Builder(4248, SuSyUtility.susyId('borax_liquor'))
+                .liquid()
+                .color(0xcea688)
+                .build()
+
+        ColemaniteLiquor = new Material.Builder(4249, SuSyUtility.susyId('colemanite_liquor'))
+                .liquid()
+                .color(0xe0e54e)
+                .build()
+
+        KerniteLiquor = new Material.Builder(4250, SuSyUtility.susyId('kernite_liquor'))
+                .liquid()
+                .color(0xd8b786)
+                .build()
 
         PegmatiteTailingSlurry = new Material.Builder(4251, SuSyUtility.susyId('pegmatite_tailing_slurry'))
                 .liquid()
@@ -1271,11 +1290,30 @@ class UnknownCompositionMaterials {
                 .color(0xadaa32)
                 .build()
 
-        //FREE IDs: 4254-4255
+        MelamineOffgas = new Material.Builder(4254, SuSyUtility.susyId('melamine_offgas'))
+                .gas()
+                .color(0xd0afed)
+                .build()
+
+        GumTurpentine = new Material.Builder(4255, SuSyUtility.susyId('gum_turpentine'))
+                .liquid()
+                .color(0xe0bf5c)
+                .build()
 
         LimestoneTailingSlurry = new Material.Builder(4256, SuSyUtility.susyId('limestone_tailing_slurry'))
                 .liquid()
                 .color(0x68695d)
+                .build()
+
+        CrudeAzide = new Material.Builder(4257, SuSyUtility.susyId('crude_azide'))
+                .dust()
+                .color(0x2b4b6d)
+                .build()
+
+        CrudeAzideSolution = new Material.Builder(4258, SuSyUtility.susyId('crude_azide_solution'))
+                .liquid()
+                .components(CrudeAzide, Water)
+                .colorAverage()
                 .build()
 
         //FREE IDs: 4257-4258
@@ -1350,7 +1388,25 @@ class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .build()
 
-        // FREE IDs: 4272-4275
+        ClarifiedBoraxLiquor = new Material.Builder(4272, SuSyUtility.susyId('clarified_borax_liquor'))
+                .liquid()
+                .color(0xf7ceaf)
+                .build()
+
+        ClarifiedColemaniteLiquor = new Material.Builder(4273, SuSyUtility.susyId('clarified_colemanite_liquor'))
+                .liquid()
+                .color(0xedefa2)
+                .build()
+
+        ClarifiedKerniteLiquor = new Material.Builder(4274, SuSyUtility.susyId('clarified_kernite_liquor'))
+                .liquid()
+                .color(0xead5b4)
+                .build()
+        
+        BoricAcidConcentrate = new Material.Builder(4275, SuSyUtility.susyId('boric_acid_concentrate'))
+                .liquid()
+                .color(0xfc887e)
+                .build()
 
         CalcinedScheelite = new Material.Builder(4276, SuSyUtility.susyId('calcined_scheelite'))
                 .dust()
@@ -1527,7 +1583,7 @@ class UnknownCompositionMaterials {
 
         FunctionalizableCrosslinkedPolystyrene = new Material.Builder(4334, SuSyUtility.susyId('functionalizable_crosslinked_polystyrene'))
                 .ingot().liquid(new FluidBuilder().temperature(513))
-                .flags(GENERATE_ROUND)
+                .flags(GENERATE_ROUND, GENERATE_PLATE)
                 .color(0x8689cf)
                 .build()
 
@@ -1812,7 +1868,20 @@ class UnknownCompositionMaterials {
 
         MolybdenumDialkyldithiophosphate.setFormula("Mo[(S2P(OR)2]2", true)
 
-        // FREE IDs: 4389-4391
+        LacticAcidBroth = new Material.Builder(4389, SuSyUtility.susyId("lactic_acid_broth"))
+                .liquid()
+                .color(0x1f423d)
+                .build()
+
+        FilteredLacticAcidBroth = new Material.Builder(4390, SuSyUtility.susyId("filtered_lactic_acid_broth"))
+                .liquid()
+                .color(0x567f64)
+                .build()
+
+        SpentSulfoniumPreparationMixture = new Material.Builder(4391, SuSyUtility.susyId("spent_sulfonium_preparation_mixture"))
+                .liquid()
+                .color(0x756e4b)
+                .build()
 
         DinitrobenzeneMixture = new Material.Builder(4392, SuSyUtility.susyId("dinitrobenzene_mixture"))
                 .dust()
@@ -2050,7 +2119,7 @@ class UnknownCompositionMaterials {
         NickelCobaltSulfate = new Material.Builder(4438, SuSyUtility.susyId("nickel_cobalt_sulfate"))
                 .dust()
                 .color(0xe60e0e)
-                .components(Nickel * 1, Cobalt * 1, Sulfur, Oxygen * 4)
+                .components(Nickel, Cobalt, Sulfur, Oxygen * 4)
                 .build()
 
         NickelCobaltSulfate.setFormula('(Ni,Co)(SO4)', true)
@@ -3158,12 +3227,12 @@ class UnknownCompositionMaterials {
                 .color(0xe7e3eb)
                 .build()
         
-        ResolResinMixture = new Material.Builder(4693, SuSyUtility.susyId('resol_resin_mixture'))
+        PhenolicResolResin = new Material.Builder(4693, SuSyUtility.susyId('phenolic_resol_resin'))
                 .liquid()
                 .color(0xad9478)
                 .build()
         
-        ResolResinInfiltrant = new Material.Builder(4694, SuSyUtility.susyId('resol_resin_infiltrant'))
+        ResolInfiltrant = new Material.Builder(4694, SuSyUtility.susyId('resol_infiltrant'))
                 .liquid()
                 .color(0x4e2f0a)
                 .build()
@@ -3341,67 +3410,156 @@ class UnknownCompositionMaterials {
                 .color(0x5e2613)
                 .build()
 
-        ExpandableGraphite = new Material.Builder(4729, SuSyUtility.susyId('expandable_graphite'))
+        ChlorosilaneMixture = new Material.Builder(4729, SuSyUtility.susyId('chlorosilane_mixture'))
+                .liquid()
+                .color(0x8be288)
+                .build()
+
+        GaseousChlorosilaneMixture = new Material.Builder(4730, SuSyUtility.susyId('gaseous_chlorosilane_mixture'))
+                .gas()
+                .color(0x68cc90)
+                .build()
+
+        SiliconCVDOffgas = new Material.Builder(4731, SuSyUtility.susyId('silicon_cvd_offgas'))
+                .gas()
+                .color(0xdcf2d2)
+                .build()
+
+        WasteGas = new Material.Builder(4732, SuSyUtility.susyId('waste_gas'))
+                .gas()
+                .color(0x363d39)
+                .build()
+
+        CorrosiveGas = new Material.Builder(4733, SuSyUtility.susyId('corrosive_gas'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0x3f4d45)
+                .build()
+
+        MagneticLiningSlurry = new Material.Builder(4734, SuSyUtility.susyId('magnetic_lining_slurry'))
+                .liquid()
+                .color(0x1a1a1a)
+                .build()
+
+        FluorinatedSulfolaneMixture = new Material.Builder(4735, SuSyUtility.susyId('fluorinated_sulfolane_mixture'))
+                .liquid()
+                .color(0xdeeb52)
+                .build()
+
+        EpoxyMoldingCompound = new Material.Builder(4736, SuSyUtility.susyId('epoxy_molding_compound'))
+                .liquid()
+                .color(0x70553a)
+                .build()
+
+        OligomericPolyesterMixture = new Material.Builder(4737, SuSyUtility.susyId('oligomeric_polyester_mixture'))
+                .liquid()
+                .color(0xe8ffee)
+                .build()
+
+        PolyesterMelt = new Material.Builder(4738, SuSyUtility.susyId('polyester_melt'))
+                .liquid()
+                .color(0xb8dbc1)
+                .build()
+
+        PolyesterResin = new Material.Builder(4739, SuSyUtility.susyId('polyester_resin'))
+                .liquid()
+                .color(0xa5f2b9)
+                .build()
+
+        CopperSuperfillElectrolyte = new Material.Builder(4740, SuSyUtility.susyId('copper_superfill_electrolyte'))
+                .liquid()
+                .color(0xcf9e80)
+                .build()
+
+        StandardCleanOne = new Material.Builder(4741, SuSyUtility.susyId('standard_clean_one'))
+                .liquid()
+                .color(0x2180a3)
+                .build()
+
+        StandardCleanTwo = new Material.Builder(4742, SuSyUtility.susyId('standard_clean_two'))
+                .liquid()
+                .color(0x3749ad)
+                .build()
+
+        PineResin = new Material.Builder(4743, SuSyUtility.susyId('pine_resin'))
+                .liquid()
+                .color(0x572e09)
+                .build()
+
+        Rosin = new Material.Builder(4744, SuSyUtility.susyId('rosin'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x5e1d05)
+                .build()
+
+        MildlyActivatedSolderFluxMixture = new Material.Builder(4745, SuSyUtility.susyId('mildly_activated_solder_flux_mixture'))
+                .liquid()
+                .color(0x2d5c0d)
+                .build()
+
+        LeadFreeSolderPaste = new Material.Builder(4746, SuSyUtility.susyId('lead_free_solder_paste'))
+                .liquid()
+                .color(0x4d4946)
+                .build()
+                
+        ExpandableGraphite = new Material.Builder(4747, SuSyUtility.susyId('expandable_graphite'))
                 .dust()
                 .iconSet("SHINY")
                 .color(0x5B5B5B)
                 .build()
 
-        // FREE ID: 4730
+        // FREE ID: 4748
 
-        /*VanadiumElectrolyteSlurry = new Material.Builder(4731, SuSyUtility.susyId('vanadium_electrolyte_slurry'))
+        /*VanadiumElectrolyteSlurry = new Material.Builder(4749, SuSyUtility.susyId('vanadium_electrolyte_slurry'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xE05F3E)
                 .build()
 
-        CrystallizedVanadiumElectrolyte = new Material.Builder(4732, SuSyUtility.susyId('crystallized_vanadium_electrolyte'))
+        CrystallizedVanadiumElectrolyte = new Material.Builder(4750, SuSyUtility.susyId('crystallized_vanadium_electrolyte'))
                 .dust()
                 .iconSet("BRIGHT")
                 .color(0xE05F3E)
                 .build()
 
-        VanadiumBatteryElectrolyte = new Material.Builder(4733, SuSyUtility.susyId('vanadium_battery_electrolyte'))
+        VanadiumBatteryElectrolyte = new Material.Builder(4751, SuSyUtility.susyId('vanadium_battery_electrolyte'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xFF6C47)
                 .build()*/
 
-        GrapheneOxideDispersion = new Material.Builder(4734, SuSyUtility.susyId('graphene_oxide_dispersion'))
+        GrapheneOxideDispersion = new Material.Builder(4752, SuSyUtility.susyId('graphene_oxide_dispersion'))
                 .liquid()
                 .color(0x4C2015)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
         
-        GrapheneOxide = new Material.Builder(4735, SuSyUtility.susyId('graphene_oxide'))
+        GrapheneOxide = new Material.Builder(4753, SuSyUtility.susyId('graphene_oxide'))
                 .dust()
                 .iconSet("QUARTZ")
                 .color(0x4C2015)
                 .build()
 
-        GrapheneOxideTungstateSolution = new Material.Builder(4736, SuSyUtility.susyId('graphene_oxide_tungstate_solution'))
+        GrapheneOxideTungstateSolution = new Material.Builder(4754, SuSyUtility.susyId('graphene_oxide_tungstate_solution'))
                 .liquid()
                 .color(0xFF00B2)
                 .build()
 
-        AcidifiedGrapheneOxideTungstateSolution = new Material.Builder(4737, SuSyUtility.susyId('acidified_graphene_oxide_tungstate_solution'))
+        AcidifiedGrapheneOxideTungstateSolution = new Material.Builder(4755, SuSyUtility.susyId('acidified_graphene_oxide_tungstate_solution'))
                 .liquid()
                 .color(0x7A0055)
                 .build()
 
-        AcidifiedGrapheneOxideTungstate = new Material.Builder(4738, SuSyUtility.susyId('acidified_graphene_oxide_tungstate'))
+        AcidifiedGrapheneOxideTungstate = new Material.Builder(4756, SuSyUtility.susyId('acidified_graphene_oxide_tungstate'))
                 .dust()
                 .iconSet("DIAMOND")
                 .color(0x7A0055)
                 .build()
 
-        TungstenModifiedGrapheneOxideNanosheet = new Material.Builder(4739, SuSyUtility.susyId('tungsten_modified_graphene_oxide_nanosheet'))
+        TungstenModifiedGrapheneOxideNanosheet = new Material.Builder(4757, SuSyUtility.susyId('tungsten_modified_graphene_oxide_nanosheet'))
                 .dust()
                 .iconSet("METALLIC")
                 .color(0xAD0079)
                 .build()
 
-        // FREE ID: 4740
-
-        NanoparticleModifiedNafion = new Material.Builder(4741, SuSyUtility.susyId('nanoparticle_modified_nafion'))
+        NanoparticleModifiedNafion = new Material.Builder(4758, SuSyUtility.susyId('nanoparticle_modified_nafion'))
                 .dust()
                 .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .iconSet("SHINY")
@@ -3410,14 +3568,11 @@ class UnknownCompositionMaterials {
                 
         NanoparticleModifiedNafion.setFormula('[(C2F4)(C7HF13O5S)]n', true)
 
-        NanoparticleModifiedNafionDispersion = new Material.Builder(4742, SuSyUtility.susyId('nanoparticle_modified_nafion_dispersion'))
+        NanoparticleModifiedNafionDispersion = new Material.Builder(4759, SuSyUtility.susyId('nanoparticle_modified_nafion_dispersion'))
                 .liquid()
                 .color(0x99947A)
                 .build()
 
         NanoparticleModifiedNafionDispersion.setFormula('([(C2F4)(C7HF13O5S)]n)((CH3)2CHOH)', true)
-
-
-
     }
 }

@@ -85,7 +85,6 @@ class ChangeFlags {
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         Rubber.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(593, 6, true, false, false, false));
 
-        
         setupFluidType(AntimonyTrifluoride, FluidStorageKeys.LIQUID, 565)
         setupFluidType(LithiumChloride, FluidStorageKeys.LIQUID, 890)
         setupFluidType(SiliconDioxide, FluidStorageKeys.LIQUID, 1986)
@@ -100,6 +99,7 @@ class ChangeFlags {
         //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
 
         setupFluidType(Sodium, FluidStorageKeys.LIQUID, 371)
+        setupFluidType(Sulfur, FluidStorageKeys.LIQUID, 388)
         setupFluidType(SodiumHydroxide, FluidStorageKeys.LIQUID, 591)
         setupFluidType(Polydimethylsiloxane, FluidStorageKeys.LIQUID, 293)
         setupFluidType(Glass, FluidStorageKeys.LIQUID, 1800)
@@ -177,7 +177,7 @@ class ChangeFlags {
         Nickel.addFlags("generate_catalyst_bed");
         Magnesia.addFlags("generate_catalyst_bed");
         CupricOxide.addFlags("generate_catalyst_bed");
-        Brass.addFlags("generate_ring");
+        Brass.addFlags("generate_ring", "generate_pins");
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");

@@ -43,7 +43,7 @@ def minor_solvents = [
         .fluidInputs(fluid('isobutylene') * 50)
         .fluidInputs(fluid('water') * 50)
         .notConsumable(fluid('sulfuric_acid') * 50)
-        .fluidOutputs(fluid('tert_butyl_alcohol') * 50)
+        .fluidOutputs(fluid('tert_butanol') * 50)
         .duration(5)
         .EUt(VA[MV])
         .buildAndRegister()
@@ -380,7 +380,7 @@ def OxygenateMap = [
     'isopropyl_alcohol': 750,
     'n_butanol': 500,
     'isobutyl_alcohol': 500,
-    'tert_butyl_alcohol': 250,
+    'tert_butanol': 250,
     'methyl_tert_butyl_ether': 125
 ]
 

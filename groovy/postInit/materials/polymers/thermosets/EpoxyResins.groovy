@@ -42,60 +42,6 @@ EXTRACTOR.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-// Epichlorohydrin
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('glycerol') * 50)
-    .fluidInputs(fluid('hydrogen_chloride') * 100)
-    .fluidInputs(fluid('acetic_acid') * 10)
-    .fluidOutputs(fluid('chlorinated_glycerol') * 160)
-    .duration(5)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('chlorinated_glycerol') * 3200)
-    .inputs(ore('dustSodiumHydroxide') * 3)
-    .fluidOutputs(fluid('epichlorohydrin_solution') * 4200)
-    .duration(120)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('epichlorohydrin_solution') * 4200)
-    .fluidOutputs(fluid('acetic_acid') * 200)
-    .fluidOutputs(fluid('epichlorohydrin') * 1000)
-    .fluidOutputs(fluid('water') * 3000)
-    .outputs(metaitem('dustSalt') * 2)
-    .duration(120)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-BCR.recipeBuilder()
-    .fluidInputs(fluid('allyl_chloride') * 50)
-    .fluidInputs(fluid('hypochlorous_acid') * 50)
-    .fluidOutputs(fluid('allyl_alcohol_mix') * 50)
-    .duration(5)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('allyl_alcohol_mix') * 1000)
-    .inputs(ore('dustSodiumHydroxide') * 3)
-    .fluidOutputs(fluid('diluted_epichlorohydrin') * 2000)
-    .duration(120)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('diluted_epichlorohydrin') * 2000)
-    .fluidOutputs(fluid('epichlorohydrin') * 1000)
-    .fluidOutputs(fluid('water') * 1000)
-    .outputs(metaitem('dustSalt') * 2)
-    .duration(160)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 // Unmodified DGEBA
 
 for (curingAgent in curingAgents) {
@@ -163,10 +109,22 @@ VACUUM_CHAMBER.recipeBuilder()
         .buildAndRegister()
 
     // Bromination
+
+    BR.recipeBuilder()
+        .inputs(ore('dustBisphenolA'))
+        .notConsumable(ore('dustBisphenolBrominationCatalyst'))
+        .fluidInputs(fluid('one_two_dichloroethane') * 6000)
+        .fluidInputs(fluid('hydrogen_peroxide_solution') * 4000)
+        .fluidInputs(fluid('bromine') * 4000)
+        .fluidOutputs(fluid('impure_brominated_bisphenol_emulsion') * 10000)
+        .duration(160)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
     PHASE_SEPARATOR.recipeBuilder()
         .fluidInputs(fluid('impure_brominated_bisphenol_emulsion') * 10000)
         .fluidOutputs(fluid('impure_brominated_bisphenol_solution') * 6000)
-        .fluidOutputs(fluid('water') * 4000)
+        .fluidOutputs(fluid('wastewater') * 4000)
         .duration(160)
         .buildAndRegister()
 
@@ -178,22 +136,11 @@ VACUUM_CHAMBER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-    BR.recipeBuilder()
-        .inputs(ore('dustBisphenolA'))
-        .notConsumable(ore('dustBisphenolBrominationCatalyst'))
-        .fluidInputs(fluid('one_two_dichloroethane') * 6000)
-        .fluidInputs(fluid('hydrogen_peroxide_solution') * 2000)
-        .fluidInputs(fluid('bromine') * 4000)
-        .fluidOutputs(fluid('impure_brominated_bisphenol_emulsion') * 10000)
-        .duration(160)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
     CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('impure_brominated_bisphenol_solution') * 6000)
         .fluidInputs(fluid('diluted_sodium_sulfite_solution') * 7000)
         .fluidOutputs(fluid('tetrabromobisphenol_a_solution') * 6000)
-        .fluidOutputs(fluid('water') * 7000)
+        .fluidOutputs(fluid('wastewater') * 7000)
         .duration(100)
         .EUt(VA[LV])
         .buildAndRegister()
@@ -220,7 +167,7 @@ FIXED_BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-ROASTER.recipeBuilder()
+DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('tetrabromobisphenol_a_solution') * 6000)
     .outputs(metaitem('dustTetrabromobisphenolA'))
     .fluidOutputs(fluid('one_two_dichloroethane') * 6000)
@@ -284,45 +231,6 @@ VACUUM_CHAMBER.recipeBuilder()
     .duration(25)
     .EUt(VA[LV])
     .buildAndRegister()
-
-// Curing agents
-    // Dicyanimide
-    BR.recipeBuilder()
-        .inputs(ore('dustCalciumCyanamide') * 4)
-        .fluidInputs(fluid('distilled_water') * 1000)
-        .fluidInputs(fluid('carbon_dioxide') * 1000)
-        .outputs(metaitem('dustCalcite') * 5)
-        .outputs(metaitem('dustCyanamide') * 5)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .inputs(ore('dustCyanamide') * 10)
-        .notConsumable(fluid('sodium_hydroxide_solution') * 1000)
-        .outputs(metaitem('dustDicyandiamide') * 10)
-        .duration(200)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    // 2-methylimidazole (Debus–Radziszewski imidazole synthesis)
-    LCR.recipeBuilder()
-        .fluidInputs(fluid('gtfo_glyoxal') * 1000)
-        .fluidInputs(fluid('ammonia') * 2000)
-        .fluidInputs(fluid('gtfo_acetaldehyde') * 1000)
-        .outputs(metaitem('dustTwoMethylimidazole') * 12)
-        .duration(200)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    MIXER.recipeBuilder()
-        .inputs(ore('dustTwoMethylimidazole'))
-        .inputs(ore('dustDicyandiamide') * 2)
-        .inputs(ore('dustPhthalicAnhydride'))
-        .outputs(metaitem('dustEpoxyCuringMixture'))
-        .duration(20)
-        .EUt(VA[LV])
-        .buildAndRegister()
 
     POLYMERIZATION_TANK.recipeBuilder()
         .inputs(ore('dustTetrabromobisphenolA') * 4)
@@ -388,165 +296,6 @@ VACUUM_CHAMBER.recipeBuilder()
         .EUt(VA[MV])
         .duration(160)
         .buildAndRegister()
-
-// SU-8 photoresist
-    // Bisphenol A Novolac Epoxy
-    POLYMERIZATION_TANK.recipeBuilder()
-        .fluidInputs(fluid('epoxy') * 1008)
-        .fluidInputs(fluid('formaldehyde') * 3000)
-        .outputs(metaitem('dustBisphenolANovolacEpoxy') * 7)
-        .duration(100)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-    // Propylene Carbonate
-    CSTR.recipeBuilder()
-        .fluidInputs(fluid('propene') * 100)
-        .fluidInputs(fluid('chlorine') * 100)
-        .fluidInputs(fluid('water') * 50)
-        .fluidOutputs(fluid('propylene_chlorohydrin') * 100)
-        .duration(5)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .inputs(ore('dustCalciumHydroxide') * 5)
-        .fluidInputs(fluid('propylene_chlorohydrin') * 2000)
-        .fluidOutputs(fluid('propylene_oxide_solution') * 2000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    DT.recipeBuilder()
-        .fluidInputs(fluid('propylene_oxide_solution') * 2000)
-        .outputs(metaitem('dustCalciumChloride') * 3)
-        .fluidOutputs(fluid('water') * 2000)
-        .fluidOutputs(fluid('propylene_oxide') * 2000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BCR.recipeBuilder()
-        .fluidInputs(fluid('propylene_oxide') * 50)
-        .fluidInputs(fluid('carbon_dioxide') * 50)
-        .fluidOutputs(fluid('propylene_carbonate') * 50)
-        .duration(5)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    // Triarylsulfonium Hexafluoroantimonate
-    BR.recipeBuilder()
-        .fluidInputs(fluid('antimony_trifluoride') * 576)
-        .fluidInputs(fluid('fluorine') * 2000)
-        .fluidOutputs(fluid('antimony_pentafluoride') * 1000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .inputs(ore('dustSodiumFluoride') * 2)
-        .fluidInputs(fluid('antimony_pentafluoride') * 1000)
-        .outputs(metaitem('dustSodiumHexafluoroantimonate') * 8)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .inputs(ore('dustSulfur') * 2)
-        .fluidInputs(fluid('chlorine') * 2000)
-        .fluidOutputs(fluid('disulfur_dichloride') * 1000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .fluidInputs(fluid('benzene') * 2000)
-        .fluidInputs(fluid('disulfur_dichloride') * 1000)
-        .outputs(metaitem('dustSulfur'))
-        .outputs(metaitem('dustDiphenylSulfide'))
-        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .notConsumable(ore('dustAluminiumChloride'))
-        .fluidInputs(fluid('benzene') * 2000)
-        .fluidInputs(fluid('sulfur_dioxide') * 1000)
-        .outputs(metaitem('dustDiphenylSulfoxide'))
-        .duration(80)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .inputs(ore('dustTinyPotassiumPersulfate'))
-        .fluidInputs(fluid('methane') * 1000)
-        .fluidInputs(fluid('oleum') * 11000)
-        .fluidOutputs(fluid('methanesulfonic_acid') * 1000)
-        .fluidOutputs(fluid('sulfuric_acid') * 10000)
-        .duration(100)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
-    MIXER.recipeBuilder()
-        .inputs(ore('dustPhosphorusPentoxide'))
-        .fluidInputs(fluid('methanesulfonic_acid') * 4000)
-        .fluidOutputs(fluid('sulfonium_preparation_mixture') * 4000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    BR.recipeBuilder()
-        .inputs(ore('dustDiphenylSulfoxide'))
-        .inputs(ore('dustDiphenylSulfide'))
-        .inputs(ore('dustSodiumHexafluoroantimonate') * 8)
-        .notConsumable(fluid('sulfonium_preparation_mixture') * 28000)
-        .outputs(metaitem('dustTriarylsulfoniumHexafluoroantimonate') * 52)
-        .duration(100)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
-/*
-Bisphenol-A Novolac Epoxy
-    Average Molar Mass: "430" g/mol (not real)
-    Percent Weight: 50%
-Gamma-Butyrolactone
-    Molar Mass: 86.090 g/mol
-    Percent Weight: 45%
-Propylene Carbonate
-    Molar Mass: 102.089 g/mol
-    Percent Weight: 2.5%
-Triarylsulfonium Hexafluoroantimonate
-    Molar Mass: 607.29 g/mol
-    Percent Weight: 2.5%
-
-Assume 100g of material.
-    50g Novolac
-    45g Gamma Butyrolactone
-    2.5g Propylene Carbonate
-    2.5g Triarylsulfonium Hexafluoroantimonate
-
-    116 mmol Bisphenol-A Novolac Epoxy
-    523 mmol Gamma-Butyrolactone
-    24.5 mmol Propylene Carbonate
-    4.12 mmol Triarylsulfonium Hexafluoroantimonate
-
-Total: 667.62 mmol.
-    17.4% Bisphenol-A Novolac Epoxy
-    78.3% Gamma-Butyrolactone
-    3.67% Propylene Carbonate
-    0.617% Triarylsulfonium Hexafluoroantimonate
-*/
-
-LCR.recipeBuilder()
-    .inputs(ore('dustTriarylsulfoniumHexafluoroantimonate'))
-    .inputs(ore('dustBisphenolANovolacEpoxy') * 7)
-    .fluidInputs(fluid('propylene_carbonate') * 200)
-    .fluidInputs(fluid('gamma_butyrolactone') * 4800)
-    .fluidOutputs(fluid('su_eight') * 5000)
-    .duration(670)
-    .EUt(VA[EV])
-    .buildAndRegister()
 
 // Cycloaliphatic Epoxy Resins
 

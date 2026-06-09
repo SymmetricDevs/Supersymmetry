@@ -17,13 +17,13 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('dimethyldichlorosilane') * 800)
     .fluidOutputs(fluid('methyltrichlorosilane') * 100)
     .fluidOutputs(fluid('methyldichlorosilane') * 50)
-    .fluidOutputs(fluid('chlorotrimethylsilane') * 50)
+    .fluidOutputs(fluid('trimethylsilyl_chloride') * 50)
     .duration(400)
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
 //Methyltrichlorosilane can be used as a water repellent when put on a surface with water
-//Chlorotrimethylsilane has some uses but mostly in reactions that are not relevant to this
+//Chlorotrimethylsilane (TMSCl) has some uses but mostly in reactions that are not relevant to this
 
 // PDMS & Silicone Rubber
 
@@ -52,8 +52,21 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-POLYMERIZATION_TANK.recipeBuilder()
+// Cyclization equilibration & distillation
+
+BR.recipeBuilder()
+    .notConsumable(ore('dustPotassiumHydroxide'))
+    .notConsumable(ore('springKanthal'))
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
+    .fluidOutputs(fluid('octamethylcyclotetrasiloxane') * 250)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Ring opening polymerization (ROMP)
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .fluidInputs(fluid('octamethylcyclotetrasiloxane') * 250)
     .fluidInputs(fluid('di_tert_butyl_peroxide') * 50)
     .inputs(ore('dustSiliconDioxide'))
     .fluidOutputs(fluid('silicone_rubber') * 144)

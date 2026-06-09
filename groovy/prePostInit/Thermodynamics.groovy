@@ -275,6 +275,13 @@ ChlorodifluoromethaneRefrigerant.setDurationRadiator(2);
 ChlorodifluoromethaneRefrigerant.setAmountToUse(1000);
 ChlorodifluoromethaneRefrigerant.setTimeFactor(2);
 
+def TetrafluoroethaneRefrigerant = new Refrigerant("tetrafluoroethane", 'hot_compressed_tetrafluoroethane', 'compressed_tetrafluoroethane', 'cold_tetrafluoroethane');
+TetrafluoroethaneRefrigerant.setPowerToCompress(180);
+TetrafluoroethaneRefrigerant.setDurationToCompress(4);
+TetrafluoroethaneRefrigerant.setDurationRadiator(2);
+TetrafluoroethaneRefrigerant.setAmountToUse(1000);
+TetrafluoroethaneRefrigerant.setTimeFactor(1);
+
 def Refrigerants = [
         AmmoniaRefrigerant,
         PropaneRefrigerant,
@@ -282,7 +289,8 @@ def Refrigerants = [
         TrichlorofluoromethaneRefrigerant,
         DichlorodifluoromethaneRefrigerant,
         ChlorotrifluoromethaneRefrigerant,
-        ChlorodifluoromethaneRefrigerant
+        ChlorodifluoromethaneRefrigerant,
+        TetrafluoroethaneRefrigerant
 ];
 
 def CarbonDioxideSupercritical = new SupercriticalFluid("compressed_carbon_dioxide", "supercritical_carbon_dioxide");

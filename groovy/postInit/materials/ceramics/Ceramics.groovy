@@ -14,6 +14,8 @@ MIXER.recipeBuilder()
 
 // Alumina
 
+mods.jei.ingredient.yeet(metaitem('screwAlumina'))
+
 Sintering.blankets.each { blanket ->
     SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustAlumina') * 10)
@@ -24,16 +26,36 @@ Sintering.blankets.each { blanket ->
         .duration(blanket.duration)
         .EUt(VA[MV])
         .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 5)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 100)
+        .notConsumable(metaitem('shape.mold.bolt'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('boltAlumina') * 20)
+        .duration(blanket.duration)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 9)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
+        .notConsumable(metaitem('shape.mold.block'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('ceramic_casing'))
+        .EUt(VA[MV])
+        .duration(blanket.duration)
+        .buildAndRegister()
 }
 
 SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustAlumina') * 5)
-        .inputs(ore('dustSmallGraphite'))    
-        .notConsumable(metaitem('shape.mold.plate'))
-        .outputs(metaitem('membrane.support.alumina'))
-        .duration(300)
-        .EUt(VA[MV])
-        .buildAndRegister()
+    .inputs(ore('dustAlumina') * 5)
+    .inputs(ore('dustSmallGraphite'))    
+    .notConsumable(metaitem('shape.mold.plate'))
+    .outputs(metaitem('membrane.support.alumina'))
+    .duration(300)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
 // Boron carbide
 
@@ -50,7 +72,7 @@ Sintering.blankets.each { blanket ->
     if (blanket.tier >= 2) {
         SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustBoronCarbide'))
-        .fluidInputs(fluid('novolacs') * 100)
+        .fluidInputs(fluid('phenolic_novolacs_resin') * 100)
         .notConsumable(metaitem('shape.mold.rod'))
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('stickBoronCarbide') * 2)
@@ -67,7 +89,7 @@ Sintering.blankets.each { blanket ->
     if (blanket.tier >= 2) {
         SINTERING_OVEN.recipeBuilder()
             .inputs(ore('dustBoronCarbide'))
-            .fluidInputs(fluid('novolacs') * 100)
+            .fluidInputs(fluid('phenolic_novolacs_resin') * 100)
             .notConsumable(metaitem('shape.mold.long_rod'))
             .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
             .outputs(metaitem('stickLongBoronCarbide'))

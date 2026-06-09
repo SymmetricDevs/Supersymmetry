@@ -1,8 +1,6 @@
 import globals.Globals
-import globals.Photoresists
-import globals.Etchants
-import globals.PDopants
-import globals.NDopants
+import globals.semiconductors.Lithography
+import globals.semiconductors.Etching
 
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
@@ -78,6 +76,7 @@ mods.gregtech.cutter.removeByInput(192, [metaitem('wafer.nor_memory_chip')], [fl
 // NOR * 16
 mods.gregtech.cutter.removeByInput(192, [metaitem('wafer.nor_memory_chip')], [fluid('water') * 540])
 
+/*
 def generateCuttingRecipes(input, product, productMultiplier, voltageTier, boolean cleanroom) {
     if (cleanroom) {
         CUTTER.recipeBuilder()
@@ -113,27 +112,6 @@ def generateCuttingRecipes(input, product, productMultiplier, voltageTier, boole
                 .buildAndRegister()
     }
 }
-
-//NOVOLACS
-
-CSTR.recipeBuilder()
-        .fluidInputs(fluid('formaldehyde') * 75)
-        .fluidInputs(fluid('ammonia_solution') * 50)
-        .fluidOutputs(fluid('hexamethylenetetramine_solution') * 50)
-        .duration(50)
-        .EUt(VA[ULV])
-        .buildAndRegister()
-
-CSTR.recipeBuilder()
-        .circuitMeta(1)
-        .fluidInputs(fluid('formaldehyde') * 50)
-        .fluidInputs(fluid('phenol') * 50)
-        .fluidInputs(fluid('hexamethylenetetramine_solution') * 5)
-        .notConsumable(fluid('sodium_hydroxide_solution') * 50)
-        .fluidOutputs(fluid('novolacs') * 100)
-        .duration(10)
-        .EUt(VA[ULV])
-        .buildAndRegister()
 
 //DOPING
 
@@ -183,22 +161,22 @@ for (pdopant in PDopants.pdopants) {
 
 //WAFERS
 
-Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', MV, 4, 1, 1, false)
-Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ulpic', 'mask.ulpic', MV, 4, 1, 2, false)
-Photoresists.generatePatterningRecipes('wafer.silicon', 'patterned.ic', 'mask.ic', MV, 4, 1, 3, false)
+Photolithography.generatePatterningRecipes('wafer.silicon', 'patterned.ram', 'mask.ram', MV, 4, 1, 1, false)
+Photolithography.generatePatterningRecipes('wafer.silicon', 'patterned.ulpic', 'mask.ulpic', MV, 4, 1, 2, false)
+Photolithography.generatePatterningRecipes('wafer.silicon', 'patterned.ic', 'mask.ic', MV, 4, 1, 3, false)
 
-Photoresists.generatePatterningRecipes('wafer.doped.silicon', 'patterned.ram', 'mask.ram', MV, 4, 2, 1, false)
-Photoresists.generatePatterningRecipes('wafer.doped.silicon', 'patterned.cpu', 'mask.cpu', MV, 4, 1, 2, false)
-Photoresists.generatePatterningRecipes('wafer.doped.silicon', 'patterned.ulpic', 'mask.ulpic', MV, 4, 2, 3, false)
-Photoresists.generatePatterningRecipes('wafer.doped.silicon', 'patterned.lpic', 'mask.lpic', HV, 4, 1, 4, false)
-Photoresists.generatePatterningRecipes('wafer.doped.silicon', 'patterned.ic', 'mask.ic', MV, 4, 2, 5, false)
+Photolithography.generatePatterningRecipes('wafer.doped.silicon', 'patterned.ram', 'mask.ram', MV, 4, 2, 1, false)
+Photolithography.generatePatterningRecipes('wafer.doped.silicon', 'patterned.cpu', 'mask.cpu', MV, 4, 1, 2, false)
+Photolithography.generatePatterningRecipes('wafer.doped.silicon', 'patterned.ulpic', 'mask.ulpic', MV, 4, 2, 3, false)
+Photolithography.generatePatterningRecipes('wafer.doped.silicon', 'patterned.lpic', 'mask.lpic', HV, 4, 1, 4, false)
+Photolithography.generatePatterningRecipes('wafer.doped.silicon', 'patterned.ic', 'mask.ic', MV, 4, 2, 5, false)
 
-Photoresists.generatePatterningRecipes('wafer.silicon_dioxide', 'patterned.silicon_dioxide', 'mask.advanced', HV, 4, 1, 1, true)
-Photoresists.generatePatterningRecipes('wafer.polysilicon', 'patterned.polysilicon', 'mask.advanced', HV, 4, 1, 1, true)
-Photoresists.generatePatterningRecipes('wafer.silicon_nitride', 'patterned.silicon_nitride', 'mask.advanced', HV, 4, 1, 1, true)
-Photoresists.generatePatterningRecipes('wafer.nickel', 'patterned.nand', 'mask.nand', HV, 4, 1, 1, true)
-Photoresists.generatePatterningRecipes('wafer.nickel', 'patterned.nor', 'mask.nor', HV, 4, 1, 2, true)
-Photoresists.generatePatterningRecipes('raw_led_wafer', 'patterned_led_wafer', 'mask.advanced', HV, 4, 1, 2, true)
+Photolithography.generatePatterningRecipes('wafer.silicon_dioxide', 'patterned.silicon_dioxide', 'mask.advanced', HV, 4, 1, 1, true)
+Photolithography.generatePatterningRecipes('wafer.polysilicon', 'patterned.polysilicon', 'mask.advanced', HV, 4, 1, 1, true)
+Photolithography.generatePatterningRecipes('wafer.silicon_nitride', 'patterned.silicon_nitride', 'mask.advanced', HV, 4, 1, 1, true)
+Photolithography.generatePatterningRecipes('wafer.nickel', 'patterned.nand', 'mask.nand', HV, 4, 1, 1, true)
+Photolithography.generatePatterningRecipes('wafer.nickel', 'patterned.nor', 'mask.nor', HV, 4, 1, 2, true)
+Photolithography.generatePatterningRecipes('raw_led_wafer', 'patterned_led_wafer', 'mask.advanced', HV, 4, 1, 2, true)
 
 Etchants.generateEtchingRecipes('patterned.ic', 'etched.ic', 'silicon', LV, 1, false)
 Etchants.generateEtchingRecipes('patterned.cpu', 'etched.cpu', 'silicon', LV, 1,false)
@@ -278,7 +256,7 @@ FORMING_PRESS.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-Photoresists.generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', LV, 1, 1, 0, false)
+Photolithography.generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', LV, 1, 1, 0, false)
 Etchants.generateEtchingRecipes('patterned.board.phenolic', 'circuit_board.good', 'copper', LV, 1, false)
 
 //PLASTIC CIRCUIT BOARD (TIER 3)
@@ -315,7 +293,7 @@ FORMING_PRESS.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-Photoresists.generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', MV, 1, 1, 0, false)
+Photolithography.generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', MV, 1, 1, 0, false)
 Etchants.generateEtchingRecipes('patterned.board.plastic', 'circuit_board.plastic', 'copper', MV, 1, false)
 
 //NAND AND NOR
@@ -417,8 +395,7 @@ CVD.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-//Gotta move this to a Physical Vapor Deposition machine when that's available
-CVD.recipeBuilder()
+EVAPORATION.recipeBuilder()
     .inputs(metaitem('etched_led_wafer'))
     .inputs(metaitem('foilHighPurityAluminium'))
     .outputs(metaitem('metallized_led_wafer'))
@@ -426,3 +403,4 @@ CVD.recipeBuilder()
     .duration(400)
     .EUt(VA[HV])
     .buildAndRegister()
+*/

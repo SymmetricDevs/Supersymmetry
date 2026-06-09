@@ -9,6 +9,7 @@ import gregtech.api.unification.stack.UnificationEntry
 mods.gregtech.centrifuge.removeByInput(30, null, [fluid('salt_water') * 1000])
 
 // Wastewater treatment
+
 FLUID_HEATER.recipeBuilder()
     .fluidInputs(fluid('wastewater') * 1000)
     .fluidOutputs(fluid('heated_wastewater') * 1000)
@@ -34,6 +35,7 @@ CLARIFIER.recipeBuilder()
     .buildAndRegister()
 
 // Deionized water
+
 ION_EXCHANGE.recipeBuilder()
     .notConsumable(metaitem('beads.strong_acidic_cation_exchange'))
     .fluidInputs(fluid('ro_water') * 12800)
@@ -75,6 +77,7 @@ ION_EXCHANGE.recipeBuilder()
     .buildAndRegister()
 
 // Ultrapure water for semiconductors
+
 SIFTER.recipeBuilder()
     .fluidInputs(fluid('water') * 1000)
     .notConsumable(ore('dustActivatedCarbon') * 4)
@@ -92,12 +95,22 @@ VACUUM_CHAMBER.recipeBuilder()
     .buildAndRegister()
 
 // Reverse osmosis
+
 FLUID_COMPRESSOR.recipeBuilder()
     .fluidInputs(fluid('deaerated_water') * 1000)
     .notConsumable(metaitem('membrane.cellulose_acetate'))
     .fluidOutputs(fluid('ro_water') * 800)
     .fluidOutputs(fluid('wastewater') * 200)
     .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+FLUID_COMPRESSOR.recipeBuilder()
+    .fluidInputs(fluid('deaerated_water') * 1000)
+    .notConsumable(metaitem('membrane.polysulfone'))
+    .fluidOutputs(fluid('ro_water') * 800)
+    .fluidOutputs(fluid('wastewater') * 200)
+    .duration(75)
     .EUt(VA[LV])
     .buildAndRegister()
 

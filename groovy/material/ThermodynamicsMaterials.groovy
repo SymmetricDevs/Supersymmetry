@@ -269,6 +269,8 @@ class ThermodynamicsMaterials {
 
         generateThermoRefrigerant(Chlorodifluoromethane, 22180)
 
+        generateThermoRefrigerant(Tetrafluoroethane, 22185)
+
         generateCoolant(Water, 22300)
 
         generateCoolant(EthyleneGlycol, 22305)
@@ -622,14 +624,14 @@ class ThermodynamicsMaterials {
                 .liquid(new FluidBuilder().temperature(548))
                 .color(0x0b2a8f)
                 .flags(DISABLE_DECOMPOSITION)
-                .components(Deuterium * 2, Oxygen * 1)
+                .components(Deuterium * 2, Oxygen)
                 .build()
 
         HotPressurizedHeavyWater = new Material.Builder(22867, SuSyUtility.susyId("hot_pressurized_heavy_water"))
                 .liquid(new FluidBuilder().temperature(588))
                 .color(0x153499)
                 .flags(DISABLE_DECOMPOSITION)
-                .components(Deuterium * 2, Oxygen * 1)
+                .components(Deuterium * 2, Oxygen)
                 .build()
 
         PressurizedHeavyWater.setProperty(SCPropertyKey.COOLANT, new CoolantProperty(PressurizedHeavyWater, HotPressurizedHeavyWater, FluidStorageKeys.LIQUID, 4, 1000, 558, 2294000, 4228).setAccumulatesHydrogen(true)
@@ -641,7 +643,7 @@ class ThermodynamicsMaterials {
                 .liquid(new FluidBuilder().temperature(548))
                 .color(0x1f5a7b)
                 .flags(DISABLE_DECOMPOSITION)
-                .components(Tritium * 2, Oxygen * 1)
+                .components(Tritium * 2, Oxygen)
                 .build()
 
         TritiatedSteam = new Material.Builder(22869, SuSyUtility.susyId("tritiated_steam"))

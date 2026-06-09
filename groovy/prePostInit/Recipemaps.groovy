@@ -3,6 +3,7 @@ package prePostInit
 class Recipemaps {
     static final def ADV_STEAM_TURBINE = recipemap('advanced_steam_turbine')
     static final def ADVANCED_ARC_FURNACE = recipemap('advanced_arc_furnace')
+    static final def ALD = recipemap('atomic_layer_deposition')
     static final def ALLOY_SMELTER = recipemap('alloy_smelter')
     static final def ARBORETUM = recipemap('greenhouse')
     static final def ARC_FURNACE = recipemap('arc_furnace')
@@ -123,4 +124,11 @@ class Recipemaps {
     static final def WEAPONS_FACTORY = recipemap('weapons_factory')
     static final def ZONE_REFINER = recipemap('zone_refiner')
     static final def CUPOLA_FURNACE = recipemap('cupola_furnace')
+    static final def SPUTTERER = recipemap('sputter_deposition')
+    static final def REACTIVE_ION_ETCHER = recipemap('reactive_ion_etching')
+    static final def RESIST_PROCESSOR = recipemap('resist_processing')
+    static final def PLASMA_ASHER = recipemap('plasma_ashing')
+    static final def ELECTRON_BEAM_LITHOGRAPHY = recipemap('electron_beam_lithography')
+    static final def EVAPORATION = recipemap('evaporation_deposition')
+    static final def WIRE_BONDING = recipemap('wire_bonding') // ball bonding?
 }
