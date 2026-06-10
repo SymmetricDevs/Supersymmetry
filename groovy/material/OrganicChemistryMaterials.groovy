@@ -3336,5 +3336,83 @@ class OrganicChemistryMaterials {
                 .flags(GENERATE_FOIL, GENERATE_RING)
                 .color(0x040714)
                 .build()
+
+        DichlorobuteneMixture = new Material.Builder(15524, SuSyUtility.susyId('dichlorobutene_mixture'))
+                .gas()
+                .components(Carbon * 8, Hydrogen * 12, Chlorine * 4)
+                .color(0x609B7D)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        DichlorobuteneMixture.setFormula('(C4H6Cl2)(C4H6Cl2)', true)
+
+        ThreeFourDichloroOneButene = new Material.Builder(15525, SuSyUtility.susyId('three_four_dichloro_one_butene'))
+                .gas()
+                .components(Carbon * 4, Hydrogen * 6, Chlorine * 2)
+                .color(0x469968)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        Neoprene = new Material.Builder(15526, SuSyUtility.susyId('neoprene'))
+                .polymer()
+                .components(Carbon * 4, Hydrogen * 5, Chlorine)
+                .flags(GENERATE_FOIL, GENERATE_RING, GENERATE_PLATE)
+                .iconSet(METALLIC)
+                .color(0x469968)
+                .build()
+
+        Neoprene.setFormula('[C4H5Cl]n', true)
+
+        ButylAcrylate = new Material.Builder(15527, SuSyUtility.susyId('butyl_acrylate'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 12, Oxygen * 2)
+                .color(0x5A9399)
+                .build()
+
+        Benzotrichloride = new Material.Builder(15528, SuSyUtility.susyId('benzotrichloride'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 5, Chlorine * 3)
+                .color(0x76990D)
+                .build()
+
+        BenzoylChloride = new Material.Builder(15529, SuSyUtility.susyId('benzoyl_chloride'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 5, Oxygen * 1, Chlorine * 1)
+                .color(0x76990D)
+                .build()
+
+        BenzoylChloride.setFormula('C6H5COCl', true)
+
+        BenzoylPeroxide = new Material.Builder(15530, SuSyUtility.susyId('benzoyl_peroxide'))
+                .dust()
+                .components(Carbon * 14, Hydrogen * 10, Oxygen * 4)
+                .color(0x990200)
+                .iconSet(WOOD)
+                .build()
+
+        BenzoylPeroxide.setFormula('(C6H5CO2)2', true)
+
+        ButylAcrylateAcrylicAcidCopolymer = new Material.Builder(15531, SuSyUtility.susyId('butyl_acrylate_acrylic_acid_copolymer'))
+                .dust()
+                .components(ButylAcrylate * 9, AcrylicAcid * 4)
+                .iconSet(METALLIC)
+                .color(0x725299)
+                .build()
+
+        SwollenButylAcrylateAcrylicAcidCopolymer = new Material.Builder(15532, SuSyUtility.susyId('swollen_butyl_acrylate_acrylic_acid_copolymer'))
+                .dust()
+                .components(ButylAcrylate * 9, AcrylicAcid * 4)
+                .iconSet(DULL)
+                .color(0x725299)
+                .build()
+
+        SodiumPolyacrylate = new Material.Builder(15533, SuSyUtility.susyId('sodium_polyacrylate'))
+                .dust()
+                .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
+                .iconSet(SHINY)
+                .color(0x4E7D99)
+                .build()
+
+        SodiumPolyacrylate.setFormula('[C3H3NaO2]n', true)
     }
 }
