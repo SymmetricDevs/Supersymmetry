@@ -2,6 +2,8 @@ import static prePostInit.Recipemaps.*
 import globals.Sintering
 import static gregtech.api.GTValues.*
 
+import postInit.utils.RecyclingHelper
+
 // PEMFCs
 
 // Carbon Fiber Mesh * 1
@@ -154,6 +156,8 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister()
 
+RecyclingHelper.handleRecycling(metaitem('susy:fuel_cell.ev'), [metaitem('hull.ev'), metaitem('electric.pump.ev') * 2, ore('pipeSmallFluidTitanium') * 4, ore('plateStainlessSteel') * 16])
+
 ASSEMBLER.recipeBuilder()
     .inputs(ore('plateLanthanumStrontiumManganite') * 16)
     .inputs(ore('plateYttriaStabilizedZirconia') * 16)
@@ -167,3 +171,5 @@ ASSEMBLER.recipeBuilder()
     .duration(1000)
     .EUt(VA[EV])
     .buildAndRegister()
+
+RecyclingHelper.handleRecycling(metaitem('susy:fuel_cell.iv'), [metaitem('hull.iv'), metaitem('electric.pump.iv') * 2, ore('pipeSmallFluidTungstenSteel') * 4])

@@ -4,6 +4,8 @@ import cam72cam.immersiverailroading.IRItems
 import cam72cam.mod.serialization.TagCompound
 import supersymmetry.api.recipes.SuSyRecipeMaps
 import trackapi.lib.Gauges
+import static prePostInit.Recipemaps.*
+
 
 log.infoMC("Running ImmersiveRailroading.groovy...")
 
@@ -62,6 +64,14 @@ crafting.replaceShaped("immersiverailroading:item_rail", item('immersiverailroad
 		[metaitem('stickSteel'), item('minecraft:paper'), metaitem('stickSteel')],
 		[metaitem('screwSteel'), metaitem('stickSteel'), metaitem('screwSteel')]
 ]);
+
+BENDER.recipeBuilder()
+	.inputs(ore('plateSteel'))
+	.circuitMeta(3)
+	.outputs(item('immersiverailroading:item_rail_part') * 10)
+	.EUt(24)
+	.duration(100)
+	.buildAndRegister()
 
 crafting.replaceShaped("immersiverailroading:item_radio_control_card", item('immersiverailroading:item_radio_control_card'), [
 		[null, item('opencomputers:component', 3), null],

@@ -427,94 +427,6 @@ dyes.each { dye, number ->
         .buildAndRegister()
 }
 
-//Custom Susy Blocks for Black Mesa style Research Facility
-
-//Industrial Concrete
-def concretes = [1, 2, 3]
-
-concretes.each { number ->
-    ASSEMBLER.recipeBuilder()
-        .circuitMeta(number)
-        .inputs(metaitem('frameSteel'))
-        .inputs(metaitem('dustStone'))
-        .fluidInputs(fluid('concrete') * 144)
-        .outputs(item('susy:random_concrete', number) * 8)
-        .duration(80)
-        .EUt(VA[LV])
-        .buildAndRegister()
-}
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(4)
-    .inputs(metaitem('frameSteel')) 
-    .inputs(metaitem('dustStone'))
-    .fluidInputs(fluid('concrete') * 144) 
-    .outputs(item('susy:random_concrete') * 8) 
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(5)
-    .inputs(metaitem('frameSteel')) 
-    .inputs(metaitem('dustStone'))
-    .fluidInputs(fluid('concrete') * 144) 
-    .outputs(item('susy:susy_stone_smooth', 9) * 8)
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-//Dotted Panels
-def panels = [4, 5, 6, 7]
-
-panels.each { number ->
-    ASSEMBLER.recipeBuilder()
-        .circuitMeta(number)
-        .inputs(metaitem('plateWroughtIron') * 4)
-        .inputs(metaitem('screwWroughtIron') * 2)
-        .outputs(item('susy:random_concrete', number) * 8)
-        .duration(80)
-        .EUt(VA[LV])
-        .buildAndRegister()
-}
-
-//Industrial Cinder Bricks
-def cinders = [8, 9, 10, 11, 12, 13]
-
-cinders.each { number ->
-    EXTRUDER.recipeBuilder()
-        .circuitMeta(number)
-        .notConsumable(metaitem('shape.extruder.block'))
-        .fluidInputs(fluid('concrete') * 144)
-        .outputs(item('susy:random_concrete', number) * 8)
-        .duration(80)
-        .EUt(VA[LV])
-        .buildAndRegister()
-} 
-
-//Smooth Industrial Concretes
-def smooths = [14, 15]
-
-smooths.each { number ->
-    EXTRUDER.recipeBuilder()
-        .circuitMeta(number)
-        .inputs(metaitem('frameSteel'))
-        .fluidInputs(fluid('concrete') * 144)
-        .outputs(item('susy:random_concrete', number) * 8)
-        .duration(80)
-        .EUt(VA[LV])
-        .buildAndRegister()
-} 
-
-EXTRUDER.recipeBuilder()
-    .circuitMeta(16)
-    .inputs(metaitem('frameSteel'))
-    .fluidInputs(fluid('concrete') * 144)
-    .outputs(item('susy:random_concrete1') * 8)
-    .duration(80)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 ASSEMBLER.recipeBuilder()
     .inputs(ore('circuitIv') * 4)
     .inputs(metaitem('cover.screen'))
@@ -525,3 +437,70 @@ ASSEMBLER.recipeBuilder()
     .duration(400)
     .EUt(VA[EV])
     .buildAndRegister();
+
+// Decoration Blocks
+
+crafting.addShaped('susy:gabbro_bricks', item('susy:susy_stone_bricks') * 4, [
+        [ore('stoneGabbro'), ore('stoneGabbro')],
+        [ore('stoneGabbro'), ore('stoneGabbro')]
+])
+
+crafting.addShaped('susy:gneiss_bricks', item('susy:susy_stone_bricks', 1) * 4, [
+        [ore('stoneGneiss'), ore('stoneGneiss')],
+        [ore('stoneGneiss'), ore('stoneGneiss')]
+])
+
+crafting.addShaped('susy:limestone_bricks', item('susy:susy_stone_bricks', 2) * 4, [
+        [ore('stoneLimestone'), ore('stoneLimestone')],
+        [ore('stoneLimestone'), ore('stoneLimestone')]
+])
+
+crafting.addShaped('susy:phyllite_bricks', item('susy:susy_stone_bricks', 3) * 4, [
+        [ore('stonePhyllite'), ore('stonePhyllite')],
+        [ore('stonePhyllite'), ore('stonePhyllite')]
+])
+
+crafting.addShaped('susy:quartzite_bricks', item('susy:susy_stone_bricks', 4) * 4, [
+        [ore('stoneQuartzite'), ore('stoneQuartzite')],
+        [ore('stoneQuartzite'), ore('stoneQuartzite')]
+])
+
+crafting.addShaped('susy:shale_bricks', item('susy:susy_stone_bricks', 5) * 4, [
+        [ore('stoneShale'), ore('stoneShale')],
+        [ore('stoneShale'), ore('stoneShale')]
+])
+
+crafting.addShaped('susy:slate_bricks', item('susy:susy_stone_bricks', 6) * 4, [
+        [ore('stoneSlate'), ore('stoneSlate')],
+        [ore('stoneSlate'), ore('stoneSlate')]
+])
+
+crafting.addShaped('susy:soapstone_bricks', item('susy:susy_stone_bricks', 7) * 4, [
+        [ore('stoneSoapstone'), ore('stoneSoapstone')],
+        [ore('stoneSoapstone'), ore('stoneSoapstone')]
+])
+
+crafting.addShaped('susy:kimberlite_bricks', item('susy:susy_stone_bricks', 8) * 4, [
+        [ore('stoneKimberlite'), ore('stoneKimberlite')],
+        [ore('stoneKimberlite'), ore('stoneKimberlite')]
+])
+
+//Dotted Panels
+def panels = [4, 5, 6, 7]
+
+panels.each { number ->
+    ASSEMBLER.recipeBuilder()
+            .circuitMeta(number)
+            .inputs(metaitem('plateWroughtIron') * 4)
+            .inputs(metaitem('screwWroughtIron') * 2)
+            .outputs(item('susy:random_concrete', number) * 8)
+            .duration(80)
+            .EUt(VA[LV])
+            .buildAndRegister()
+}
+
+crafting.addShapeless('marble_conversion', item('gregtech:stone_smooth', 2), [item('chisel:marble2', 7)])
+
+//add custom sheets to chisel group
+mods.chisel.carving.addVariation("gt_metal_sheet", item('susy:custom_sheets', 0))
+mods.chisel.carving.addVariation("gt_metal_sheet", item('susy:custom_sheets', 1))

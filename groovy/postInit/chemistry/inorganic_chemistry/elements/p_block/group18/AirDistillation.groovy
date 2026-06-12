@@ -59,7 +59,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
     VACUUM_CHAMBER.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('dustCarbonatedMolecularSieveX'))
-        .notConsumable(metaitem('springKanthal'))
+        .notConsumable(metaitem('springCupronickel'))
         .outputs(metaitem('dustMolecularSieveX'))
         .fluidOutputs(fluid('carbon_dioxide') * 20)
         .duration(4)
