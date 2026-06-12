@@ -31,7 +31,8 @@ class Lithography {
         }
 
         def generateCoatingRecipe(String input, boolean hmds, Integer circuit = null) {
-            def solvent_amount = 100 + ((this.additionalFluids.values().sum()) * 2)
+            def solvent_amount = 100
+            if (additionalFluids.size() != 0) { solvent_amount += ((this.additionalFluids.values().sum()) * 2) }
             
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
