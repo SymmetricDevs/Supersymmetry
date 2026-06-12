@@ -910,40 +910,18 @@ class ThirdDegreeMaterials {
 
         ChloropreneSolution = new Material.Builder(24147, SuSyUtility.susyId('chloroprene_solution'))
                 .liquid()
-                .components(Chloroprene, Water)
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1, Water * 1)
                 .colorAverage()
                 .build()
+
+        ChloropreneSolution.setFormula('(C4H5Cl)(H2O)', true)
 
         NeopreneSolution = new Material.Builder(24148, SuSyUtility.susyId('neoprene_solution'))
                 .liquid()
-                .components(Neoprene, Water)
+                .components(Neoprene * 1, Water * 1)
                 .colorAverage()
                 .build()
 
-        NeopreneCoatedNylon = new Material.Builder(24149, SuSyUtility.susyId('neoprene_coated_nylon'))
-                .polymer()
-                .components(Neoprene, Nylon)
-                .color(0x16998B)
-                .iconSet(METALLIC)
-                .flags(GENERATE_FOIL)
-                .build()
 
-        CrudeButylAcrylateMixture = new Material.Builder(24150, SuSyUtility.susyId('crude_butyl_acrylate_mixture'))
-                .liquid()
-                .components(ButylAcrylate * 10, Water * 10, NButanol * 3)
-                .colorAverage()
-                .build()
-
-        ButylAcrylateAcrylicAcidMixture = new Material.Builder(24151, SuSyUtility.susyId('butyl_acrylate_acrylic_acid_mixture'))
-                .liquid()
-                .components(ButylAcrylate * 9, AcrylicAcid * 4)
-                .colorAverage()
-                .build()
-
-        ButylAcrylateAcrylicAcidPolymerSolution = new Material.Builder(24152, SuSyUtility.susyId('butyl_acrylate_acrylic_acid_polymer_solution'))
-                .liquid()
-                .components(ButylAcrylate * 9, AcrylicAcid * 4, Water * 7, )
-                .colorAverage()
-                .build()
     }
 }

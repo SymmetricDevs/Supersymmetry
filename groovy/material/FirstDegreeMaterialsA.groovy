@@ -12,6 +12,9 @@ import gregtech.api.fluids.store.FluidStorage
 import gregtech.api.unification.material.properties.*
 import gregtech.api.GTValues
 import supersymmetry.api.util.SuSyUtility
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey
+import supersymmetry.api.unification.material.properties.FiberProperty
+
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
@@ -149,6 +152,8 @@ class FirstDegreeMaterialsA {
                 .components(Sodium * 2, Silicon, Oxygen * 3)
                 .colorAverage()
                 .build()
+
+        SodiumSilicate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
 
         SodiumAluminate = new Material.Builder(8104, SuSyUtility.susyId('sodium_aluminate'))
                 .dust()

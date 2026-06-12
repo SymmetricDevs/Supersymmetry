@@ -2796,6 +2796,13 @@ susy.material.aluminium_alloy_2219=Aluminium Alloy 2219
 susy.material.aluminium_alloy_2195=Aluminium Alloy 2195
 susy.material.lithium_peroxide=Lithium Peroxide
 susy.material.lithium_hydroperoxide=Lithium Hydroperoxide
+susy.material.neoprene=Neoprene
+susy.material.sodium_polyacrylate=Sodium Polyacrylate
+susy.material.dichlorobutene_mixture=Dichlorobutene Mixture
+susy.material.three_four_dichloro_one_butene=3,4-Dichloro-1-butene
+susy.material.chloroprene_solution=Chloroprene Solution
+susy.material.neoprene_solution=Neoprene Solution
+
 
 # Isotopes
 
@@ -3322,6 +3329,30 @@ metaitem.lamp.mercury.lp.name=Ultraviolet Mercury Vapor Lamp
 metaitem.carbon.mesh.phenolic.moist.name=Moist Phenolic Carbon Mesh
 metaitem.carbon.mesh.phenolic.treated.name=Treated Phenolic Carbon Mesh
 metaitem.carbon.tile.phenolic.treated.name=Treated Phenolic Carbon Tile
+metaitem.sheet.aluminized_mylar.name=Aluminized Mylar Sheet
+metaitem.sheet.aluminized_kapton.name=Aluminized Kapton Sheet
+metaitem.sheet.beta_cloth.name=Beta Cloth
+metaitem.sheet.beta_cloth.tooltip=I Can't Believe It's Not Asbestos!
+metaitem.sheet.teflon_coated_beta_cloth.name=PTFE-Coated Beta Cloth
+metaitem.sheet.nichrome_fabric.name=Woven Nichrome Fabric Sheet
+metaitem.sheet.gold_coated_polysulfone.name=Gold-Coated Polysulfone Sheet
+metaitem.sheet.neoprene_coated_nylon.name=Neoprene-Coated Nylon Sheet
+metaitem.space_suit.cooling.boots.name=Liquid Cooling Garment Socks
+metaitem.space_suit.cooling.chest.name=Liquid Cooling Garment Shirt
+metaitem.space_suit.cooling.leggings.name=Liquid Cooling Garment Pants
+metaitem.space_suit.mag.name=Maximum Absorbency Garment™
+metaitem.space_suit.mag.tooltip=It's a diaper.
+metaitem.space_suit.plss.name=Portable Life Support System (PLSS)
+metaitem.space_suit.pressure.boots.name=Pressure Garment Socks
+metaitem.space_suit.pressure.chest.name=Pressure Garment Shirt
+metaitem.space_suit.pressure.gloves.name=Pressure Garment Gloves
+metaitem.space_suit.pressure.helmet.name=Pressure Garment Helmet
+metaitem.space_suit.pressure.leggings.name=Pressure Garment Pants
+metaitem.space_suit.thermal.boots.name=Integrated Thermal Micrometeoroid Garment (ITMG) Boots
+metaitem.space_suit.thermal.chest.name=Integrated Thermal Micrometeoroid Garment (ITMG) Chestplate
+metaitem.space_suit.thermal.gloves.name=Integrated Thermal Micrometeoroid Garment (ITMG) Gloves
+metaitem.space_suit.thermal.helmet.name=Lunar Extravehicular Visor Assembly (LEVA)
+metaitem.space_suit.thermal.leggings.name=Integrated Thermal Micrometeoroid Garment (ITMG) Leggings
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand

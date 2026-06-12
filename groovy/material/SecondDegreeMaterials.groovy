@@ -1094,12 +1094,5 @@ class SecondDegreeMaterials {
                 .components(CopperIINitrate, Water)
                 .colorAverage()
                 .build()
-
-        BetaCloth = new Material.Builder(13182, SuSyUtility.susyId('beta_cloth'))
-                .dust()
-                .components(SiliconDioxide)
-                .flags(GENERATE_FOIL)
-                .color(0x9E979A)
-                .build()
     }
 }

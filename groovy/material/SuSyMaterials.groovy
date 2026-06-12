@@ -1890,7 +1890,6 @@ class SuSyMaterials {
     public static Material ReactiveAlumina
     public static Material SodiumDithioniteSolution
     public static Material HoopesElectrolyte
-    public static Material BetaCloth
 
     // Organic Chemistry Materials
 
@@ -2412,12 +2411,6 @@ class SuSyMaterials {
     public static Material DichlorobuteneMixture
     public static Material ThreeFourDichloroOneButene
     public static Material Neoprene
-    public static Material ButylAcrylate
-    public static Material Benzotrichloride
-    public static Material BenzoylChloride
-    public static Material BenzoylPeroxide
-    public static Material ButylAcrylateAcrylicAcidCopolymer
-    public static Material SwollenButylAcrylateAcrylicAcidCopolymer
     public static Material SodiumPolyacrylate
 
 
@@ -2571,12 +2564,6 @@ class SuSyMaterials {
     public static Material ChloropreneSolution
     public static Material NeopreneSolution
     public static Material NeopreneCoatedNylon
-    public static Material CrudeButylAcrylateMixture
-    public static Material ButylAcrylateAcrylicAcidMixture
-    public static Material ButylAcrylateAcrylicAcidPolymerSolution
-    public static Material SwollenButylAcrylateAcrylicAcidCopolymerSolution
-    public static Material SodiumPolyacrylateSolution
-    public static Material WetSodiumPolyacrylate
 
     // Thermodynamics Materials
 

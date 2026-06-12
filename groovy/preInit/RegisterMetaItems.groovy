@@ -511,6 +511,33 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10423, "slapper_detonator")
         addItem(10424, "frangible_nut")
         addItem(10425, "honeycomb.aluminium")
+
+        // Spacesuit Components 10441-10480
+
+        addItem(10441, "sheet.aluminized_mylar")
+        addItem(10442, "sheet.neoprene_coated_nylon")
+        addItem(10443, "sheet.beta_cloth")
+        addItem(10444, "sheet.aluminized_kapton")
+        addItem(10445, "sheet.teflon_coated_beta_cloth")
+        addItem(10446, "sheet.nichrome_fabric")
+        addItem(10447, "sheet.gold_coated_polysulfone")
+        addItem(10448, "space_suit.pressure.helmet")
+        addItem(10449, "space_suit.pressure.chest")
+        addItem(10450, "space_suit.pressure.leggings")
+        addItem(10451, "space_suit.pressure.boots")
+        addItem(10452, "space_suit.pressure.gloves")
+        addItem(10453, "space_suit.cooling.chest")
+        addItem(10454, "space_suit.cooling.leggings")
+        addItem(10455, "space_suit.thermal.helmet")
+        addItem(10456, "space_suit.thermal.chest")
+        addItem(10457, "space_suit.thermal.leggings")
+        addItem(10458, "space_suit.thermal.boots")
+        addItem(10459, "space_suit.thermal.gloves")
+        addItem(10460, "space_suit.plss")
+        addItem(10461, "space_suit.mag")
+
+
+
     }
 
     log.infoMC("Finished adding metaitems")
