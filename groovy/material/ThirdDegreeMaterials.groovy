@@ -1437,7 +1437,7 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        ThickFilmResistorInk = new Material.Builder(24238, SuSyUtility.susyId('thick_film_resistor_ink'))
+        ThickFilmResistorInk = new Material.Builder(24245, SuSyUtility.susyId('thick_film_resistor_ink'))
                 .liquid()
                 .color(0x0d0a18)
                 .build()
