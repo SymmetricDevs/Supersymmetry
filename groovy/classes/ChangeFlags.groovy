@@ -175,7 +175,6 @@ class ChangeFlags {
         Titanium.addFlags("generate_fine_wire");
         ChromiumTrioxide.addFlags("generate_catalyst_bed");
         Iron3Chloride.addFlags("generate_catalyst_bed");
-        Platinum.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
         Nickel.addFlags("generate_catalyst_bed");
@@ -200,8 +199,8 @@ class ChangeFlags {
         Copper.addFlags("continuously_cast");
         AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod")
         Nichrome.addFlags("generate_fine_wire");
-
-
+        Graphite.addFlags("generate_plate");
+        
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
         MagnesiumDiboride.addFlags("no_smashing", "no_smelting")
@@ -243,7 +242,7 @@ class ChangeFlags {
         Pitchblende.setFormula("(?)UO2", true);
         Bastnasite.setFormula("(REE)CO3F", true);
         Monazite.setFormula("(REE,Th)PO4", true);
-        Gypsum.setFormula("(CaSO4)(H2O)2", true);
+        Gypsum.setFormula("(CaSO4)*(H2O)2", true);
         Polyethylene.setFormula("[C2H4]n", true);
         PolyvinylChloride.setFormula("[C2H3Cl]n", true);
         Rubber.setFormula("[C5H8]n", true);

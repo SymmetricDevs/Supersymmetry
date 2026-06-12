@@ -42,6 +42,14 @@ FORMING_PRESS.recipeBuilder()
     .duration(180)
     .buildAndRegister()
 
+EXTRUDER.recipeBuilder()
+    .notConsumable(metaitem('shape.extruder.plate'))
+    .inputs(metaitem('carbon_paste'))
+    .outputs(metaitem('raw_carbon_plate'))
+    .EUt(VA[LV])
+    .duration(120)
+    .buildAndRegister()
+
 // Graphite Dust
 
 // Graphite Dust * 9

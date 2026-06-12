@@ -120,14 +120,6 @@ SIFTER.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-DT.recipeBuilder()
-    .fluidInputs(fluid('diluted_acetic_acid') * 2000)
-    .fluidOutputs(fluid('acetic_acid') * 1000)
-    .fluidOutputs(fluid('water') * 1000)
-    .EUt(VA[MV])
-    .duration(100)
-    .buildAndRegister()
-
 // Amoco purification process
 
 MIXER.recipeBuilder()
@@ -321,7 +313,7 @@ DISTILLERY.recipeBuilder()
 // Terephthaloyl chloride
 
 BR.recipeBuilder()
-    .inputs(ore('dustTerephthalicAcid') * 3)
+    .inputs(ore('dustTerephthalicAcid') * 18)
     .fluidInputs(fluid('bistrichloromethylbenzene') * 1000)
     .outputs(metaitem('dustTerephthaloylChloride') * 32)
     .fluidOutputs(fluid('hydrogen_chloride') * 2000)
