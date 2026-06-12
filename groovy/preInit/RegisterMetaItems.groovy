@@ -53,13 +53,13 @@ def registerCMOSMetaitems(String name) {
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
     }
-    registerCircuitMetaitems(name, 162, 150)
-    def ashed_steps = [6, 13, 16, 27, 31, 35, 39, 43, 55, 72, 159]
+    registerCircuitMetaitems(name, 161, 149)
+    def ashed_steps = [6, 13, 16, 27, 31, 35, 39, 43, 55, 72, 158]
     for (step in ashed_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
     }
 
-    def photoresist_steps = [11, 14, 23, 28, 32, 37, 41, 53, 61, 69, 151, 156]
+    def photoresist_steps = [11, 14, 23, 28, 32, 37, 41, 53, 61, 69, 150, 155]
     for (step in photoresist_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
