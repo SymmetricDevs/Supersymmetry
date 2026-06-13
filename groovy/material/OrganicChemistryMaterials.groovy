@@ -820,7 +820,6 @@ class OrganicChemistryMaterials {
                 .polymer(1)
                 .components(Carbon * 22, Hydrogen * 10, Nitrogen * 2, Oxygen * 5)
                 .color(0xfabe19)
-                .flags(GENERATE_FOIL)
                 .build()
         
         KaptonK.setFormula('[C22H10N2O5]n', true)
