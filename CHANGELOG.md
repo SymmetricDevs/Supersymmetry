@@ -1,3 +1,21 @@
+# UPDATE 0.1.16.9
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.105 → v0.1.107
+- Had Enough Items 4.31.1 → 4.31.2
+## Changes
+### New Features
+- The power substation is now available! Use 64A EV input/dynamo hatches. (#1863 by @lanicerine)
+- EV-tier turbine blades are now made just as if you were Siemens. This involves a new Electric Discharge Machine multiblock! (#1872 by @lanicerine)
+- Fluid bars now appear on lead/brass drums and BDS&M barrels too! (#1887 by @unitazer)
+### Changed Features
+- Old arboretum recipes were removed, and greenhouse recipes have been nerfed to match the farmer. (#1884 by @WideMann)
+- [Susy-Core] The drill head model now looks like a drill head. (#651 by @lanicerine)
+### Fixes
+- That one groovy error. (#1878 by @TheFriedEgg618)
+- The rotary kiln quest is now fixed. (#1891 by @Fiery36)
+- [Susy-Core] HATE properly persists on player death. (#644 by @oliwier509)
+Thanks to our new contributor @lanicerine, who is single-handedly saving the pack rn. And also to @h3tR, @whoisyp, @Crindigo, @oliwier509, and @The-ExZombie for helping to keep the pack stable.
 # UPDATE 0.1.16.8
 ## Mod Changes
 ### Mod Updates

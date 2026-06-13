@@ -102,7 +102,7 @@ class FirstDegreeMaterialsA {
         HighPurityRhenium = generatePurifiedElement(Rhenium, 8049, false, false)
         HighPurityOsmium = generatePurifiedElement(Osmium, 8050, false, false)
         HighPurityIridium = generatePurifiedElement(Iridium, 8051, false, false)
-        HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, false)
+        HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, false).addIngot()
         HighPurityGold = generatePurifiedElement(Gold, 8053, false, true).addFlags(GENERATE_FOIL, GENERATE_PLATE)
         HighPurityThallium = generatePurifiedElement(Thallium, 8054, false, false)
         HighPurityLead = generatePurifiedElement(Lead, 8055, false, false)

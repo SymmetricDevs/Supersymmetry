@@ -7,7 +7,7 @@
       "desc:8": "susy.quest.db.31.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Damage:2": 1,
+        "Damage:2": 18302,
         "id:8": "gregtech:machine"
       },
       "ismain:1": 1,

@@ -816,6 +816,21 @@ class SuSyMaterials {
     public static Material DilutedNitricAcidMotherLiquor
     public static Material AdipicNitricAcidMotherLiquor
     public static Material BauxiteLeach
+    public static Material InvestmentCastingCeramicSlurry
+    public static Material InvestmentCastingMixture
+    //public static Material VanadiumElectrolyteSlurry
+    //public static Material CrystallizedVanadiumElectrolyte
+    //public static Material VanadiumBatteryElectrolyte
+    public static Material GrapheneOxideDispersion
+    public static Material GrapheneOxide
+    public static Material GrapheneOxideTungstateSolution
+    public static Material AcidifiedGrapheneOxideTungstateSolution
+    public static Material AcidifiedGrapheneOxideTungstate
+    public static Material TungstenModifiedGrapheneOxideNanosheet
+    public static Material NanoparticleModifiedNafionDispersion
+    public static Material NanoparticleModifiedNafion
+    public static Material ExpandableGraphite
+
 
     // Petrochem Materials
 
@@ -1675,6 +1690,12 @@ class SuSyMaterials {
     public static Material AnnealedAB2MetalAlloy
     public static Material AnnealedAB5MetalAlloy
     public static Material CadmiumOxide
+    public static Material CopperTungstenAlloy
+    public static Material LanthanumZirconiumOxide
+
+    //public static Material VanadiumTrioxide
+    public static Material ExpandedPolytetrafluoroethylene
+
 
     // HP Materials
 
@@ -1914,6 +1935,16 @@ class SuSyMaterials {
     public static Material LeadChamberReactionMixture
     public static Material MetalHydrideMixAnode
     public static Material SupportedVanadiumPentoxide
+    public static Material RawInvestmentCastingMixture
+    public static Material SilicaCoatedInvestmentCastingMixture
+    public static Material DriedSilicaCoatedInvestmentCastingMixture
+
+    public static Material HalophosphatePhosphor
+    public static Material HalophosphatePhosphorSolution
+    public static Material YttriumAluminiumGarnetCerium
+    public static Material VanadiumIIISulfateSolution
+    public static Material DilutedVanadiumIIISulfateSolution
+    public static Material VanadylSulfateSolution
 
     // Organic Chemistry Materials
 
@@ -2434,6 +2465,13 @@ class SuSyMaterials {
     public static Material Diazonaphthoquinone
     public static Material RawNitrileRubber
     public static Material NitrileRubber
+    public static Material Norbornene
+    public static Material PetroleumResin
+    public static Material HydrogenatedPetroleumResin
+
+    public static Material TrimethylGallium
+    public static Material TrimethylIndium
+    public static Material DiallyldimethylammoniumChloride
 
     // Third Degree Materials
 
@@ -2585,6 +2623,12 @@ class SuSyMaterials {
     public static Material KetoneAlcoholOil
     public static Material AcetyleneSolution
     public static Material PolycaprolactamSolution
+    public static Material PetroleumResinSolution
+    public static Material TrimethylGalliumSolution
+    public static Material TrimethylIndiumSolution
+    public static Material DiallyldimethylammoniumChlorideSolution
+    public static Material PolydiallyldimethylammoniumChlorideSolution
+    public static Material NafionDispersion
 
     // Thermodynamics Materials
 
@@ -2647,15 +2691,7 @@ class SuSyMaterials {
     public static Material HotPressurizedHeavyWater
     public static Material TritiatedHeavyWater
     public static Material TritiatedSteam
-    public static Material ChilledWater
-    public static Material HalophosphatePhosphor
-    public static Material HalophosphatePhosphorSolution
-    public static Material TrimethylGalliumSolution
-    public static Material TrimethylIndiumSolution
-    public static Material TrimethylGallium
-    public static Material TrimethylIndium
-    public static Material YttriumAluminiumGarnetCerium
-
+    public static Material ChilledWater    
 
     public static void changeFormulas() {
         log.infoMC("Changing Formulas!")
