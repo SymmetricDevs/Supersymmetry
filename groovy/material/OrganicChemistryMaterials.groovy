@@ -3338,18 +3338,54 @@ class OrganicChemistryMaterials {
                 .color(0x040714)
                 .build()
 
+        AceticAcidMethanolMixture = new Material.Builder(15524, SuSyUtility.susyId('acetic_acid_methanol_mixture'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(AceticAcid * 1, Methanol * 1, SulfuricAcid * 1, Water * 4)
+                .colorAverage()
+                .build()
+
+        AceticAcidMethanolMixture.setFormula("(CH3COOH)(CH3OH)(H2SO4)", true)
+
+        Cyclohexanol = new Material.Builder(15525, SuSyUtility.susyId('cyclohexanol'))
+                .liquid(new FluidBuilder().temperature(434))
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 1)
+                .flags(FLAMMABLE)
+                .color(0xd4c97a)
+                .build()
+
+        DiallyldimethylammoniumChloride = new Material.Builder(15526, SuSyUtility.susyId('diallyldimethylammonium_chloride'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine)
+                .color(0x30FF7F)
+                .build()
+
+
+        Norbornene = new Material.Builder(15527, SuSyUtility.susyId('norbornene'))
+                .dust()
+                .iconSet(ROUGH)
+                .components(Carbon * 7, Hydrogen * 10)
+                .color(0xfffff0)
+                .build()
+
+
+        PetroleumResin = new Material.Builder(15528, SuSyUtility.susyId('petroleum_resin'))
+                .polymer(1)
+                .iconSet(ROUGH)
+                .color(0xA8B277)
+                .build()
 
         PetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true)
 
-        HydrogenatedPetroleumResin = new Material.Builder(15524, SuSyUtility.susyId('hydrogenated_petroleum_resin'))
+
+        HydrogenatedPetroleumResin = new Material.Builder(15529, SuSyUtility.susyId('hydrogenated_petroleum_resin'))
                 .polymer(1)
                 .iconSet(DIAMOND)
                 .color(0xA8B277)
                 .build()
 
-        HydrogenatedPetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true) //should there be more hydrogen here?
+        HydrogenatedPetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true)
 
-        DichlorobuteneMixture = new Material.Builder(15525, SuSyUtility.susyId('dichlorobutene_mixture'))
+        DichlorobuteneMixture = new Material.Builder(15530, SuSyUtility.susyId('dichlorobutene_mixture'))
                 .gas()
                 .components(Carbon * 8, Hydrogen * 12, Chlorine * 4)
                 .color(0x609B7D)
@@ -3358,14 +3394,14 @@ class OrganicChemistryMaterials {
 
         DichlorobuteneMixture.setFormula('(C4H6Cl2)(C4H6Cl2)', true)
 
-        ThreeFourDichloroOneButene = new Material.Builder(15526, SuSyUtility.susyId('three_four_dichloro_one_butene'))
+        ThreeFourDichloroOneButene = new Material.Builder(15531, SuSyUtility.susyId('three_four_dichloro_one_butene'))
                 .gas()
                 .components(Carbon * 4, Hydrogen * 6, Chlorine * 2)
                 .color(0x469968)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
 
-        Neoprene = new Material.Builder(15527, SuSyUtility.susyId('neoprene'))
+        Neoprene = new Material.Builder(15532, SuSyUtility.susyId('neoprene'))
                 .polymer()
                 .components(Carbon * 4, Hydrogen * 5, Chlorine)
                 .flags(GENERATE_FOIL, GENERATE_RING, GENERATE_PLATE)
@@ -3375,7 +3411,7 @@ class OrganicChemistryMaterials {
 
         Neoprene.setFormula('[C4H5Cl]n', true)
 
-        SodiumPolyacrylate = new Material.Builder(15528, SuSyUtility.susyId('sodium_polyacrylate'))
+        SodiumPolyacrylate = new Material.Builder(15533, SuSyUtility.susyId('sodium_polyacrylate'))
                 .dust()
                 .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
                 .iconSet(SHINY)

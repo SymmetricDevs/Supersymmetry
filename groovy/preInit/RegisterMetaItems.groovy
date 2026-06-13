@@ -306,6 +306,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4209, "preform.lubricated_ptfe")
         addItem(4210, "foil.extruded_ptfe")
         addItem(4211, "foil.stretched_ptfe")
+        addItem(4212, "fiber.extruded_ptfe")
+        addItem(4213, "fiber.stretched_ptfe")
 
         //Dusts & Pulps 4500-4999
 
@@ -591,11 +593,11 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(10441, "sheet.aluminized_mylar")
         addItem(10442, "sheet.neoprene_coated_nylon")
-        addItem(10443, "sheet.beta_cloth")
-        addItem(10444, "sheet.aluminized_kapton")
-        addItem(10445, "sheet.teflon_coated_beta_cloth")
-        addItem(10446, "sheet.nichrome_fabric")
-        addItem(10447, "sheet.gold_coated_polysulfone")
+        addItem(10443, "sheet.ortho_fabric")
+        addItem(10444, "sheet.urethane_coated_nylon")
+        //addItem(10445, "sheet.teflon_coated_beta_cloth")
+        //addItem(10446, "sheet.nichrome_fabric")
+        //addItem(10447, "sheet.gold_coated_polysulfone")
         addItem(10448, "space_suit.pressure.helmet")
         addItem(10449, "space_suit.pressure.chest")
         addItem(10450, "space_suit.pressure.leggings")
@@ -603,6 +605,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10452, "space_suit.pressure.gloves")
         addItem(10453, "space_suit.cooling.chest")
         addItem(10454, "space_suit.cooling.leggings")
+        addItem(10447, "space_suit.cooling.boots")
         addItem(10455, "space_suit.thermal.helmet")
         addItem(10456, "space_suit.thermal.chest")
         addItem(10457, "space_suit.thermal.leggings")

@@ -126,7 +126,6 @@ class ChangeFlags {
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
         Asbestos.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
-        SiliconDioxide.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(true, true, false))
 
         //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
 
@@ -197,8 +196,7 @@ class ChangeFlags {
         Polycaprolactam.addFlags("generate_foil");
         Palladium.addFlags("generate_bolt_screw");
         Copper.addFlags("continuously_cast");
-        AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod")
-        Nichrome.addFlags("generate_fine_wire");
+        AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
         Graphite.addFlags("generate_plate");
         
         /*

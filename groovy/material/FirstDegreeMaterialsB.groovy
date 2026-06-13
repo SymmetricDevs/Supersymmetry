@@ -19,6 +19,8 @@ import gregtech.api.unification.material.properties.BlastProperty.GasTier
 import static gregtechfoodoption.GTFOMaterialHandler.*
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*
 import static gregtech.api.fluids.FluidConstants.*
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey
+import supersymmetry.api.unification.material.properties.FiberProperty
 
 import supercritical.api.unification.material.properties.FissionFuelProperty
 import supercritical.api.unification.material.properties.SCPropertyKey
@@ -862,7 +864,9 @@ class FirstDegreeMaterialsB {
                 .components(Carbon * 2, Fluorine * 4)
                 .macerateInto(Polytetrafluoroethylene)
                 .build();
-      
+
+        ExpandedPolytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
+
         CopperTungstenAlloy = new Material.Builder(8790, SuSyUtility.susyId('copper_tungsten_alloy'))
                 .dust()
                 .flags(GENERATE_ROD, NO_UNIFICATION)

@@ -153,8 +153,6 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        SodiumSilicate.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
-
         SodiumAluminate = new Material.Builder(8104, SuSyUtility.susyId('sodium_aluminate'))
                 .dust()
                 .components(Sodium, Aluminium, Oxygen * 2)
