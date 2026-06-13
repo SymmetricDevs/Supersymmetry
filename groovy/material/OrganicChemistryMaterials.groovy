@@ -3411,7 +3411,24 @@ class OrganicChemistryMaterials {
 
         Neoprene.setFormula('[C4H5Cl]n', true)
 
-        SodiumPolyacrylate = new Material.Builder(15533, SuSyUtility.susyId('sodium_polyacrylate'))
+        PolyacrylicAcid = new Material.Builder(15533, SuSyUtility.susyId('polyacrylic_acid'))
+                .fluid()
+                .components(Carbon * 3, Hydrogen * 4, Oxygen * 2)
+                .color(0x5DD890)
+                .build()
+
+        PolyacrylicAcid.setFormula('[C3H4O2]n', true)
+
+        WetSodiumPolyacrylate = new Material.Builder(15534, SuSyUtility.susyId('wet_sodium_polyacrylate'))
+                .dust()
+                .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
+                .iconSet(DULL)
+                .color(0xB98AA0)
+                .build()
+
+        WetSodiumPolyacrylate.setFormula('[C3H3NaO2]n.H2O', true)
+
+        SodiumPolyacrylate = new Material.Builder(15535, SuSyUtility.susyId('sodium_polyacrylate'))
                 .dust()
                 .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
                 .iconSet(SHINY)
@@ -3419,5 +3436,6 @@ class OrganicChemistryMaterials {
                 .build()
 
         SodiumPolyacrylate.setFormula('[C3H3NaO2]n', true)
+
     }
 }

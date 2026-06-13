@@ -995,6 +995,10 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-
+        SodiumPolyacrylateSolution = new Material.Builder(24159, SuSyUtility.susyId('sodium_polyacrylate_solution'))
+                .liquid()
+                .components(SodiumPolyacrylate * 1, Water * 1)
+                .colorAverage()
+                .build()
     }
 }

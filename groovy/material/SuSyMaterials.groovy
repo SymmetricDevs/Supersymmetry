@@ -818,9 +818,6 @@ class SuSyMaterials {
     public static Material BauxiteLeach
     public static Material InvestmentCastingCeramicSlurry
     public static Material InvestmentCastingMixture
-    //public static Material VanadiumElectrolyteSlurry
-    //public static Material CrystallizedVanadiumElectrolyte
-    //public static Material VanadiumBatteryElectrolyte
     public static Material GrapheneOxideDispersion
     public static Material GrapheneOxide
     public static Material GrapheneOxideTungstateSolution
@@ -2475,12 +2472,12 @@ class SuSyMaterials {
     public static Material DichlorobuteneMixture
     public static Material ThreeFourDichloroOneButene
     public static Material Neoprene
+    public static Material PolyacrylicAcid
+    public static Material WetSodiumPolyacrylate
     public static Material SodiumPolyacrylate
-
     public static Material Norbornene
     public static Material PetroleumResin
     public static Material HydrogenatedPetroleumResin
-
     public static Material TrimethylGallium
     public static Material TrimethylIndium
     public static Material DiallyldimethylammoniumChloride
@@ -2644,6 +2641,7 @@ class SuSyMaterials {
     public static Material DiallyldimethylammoniumChlorideSolution
     public static Material PolydiallyldimethylammoniumChlorideSolution
     public static Material NafionDispersion
+    public static Material SodiumPolyacrylateSolution
 
     // Thermodynamics Materials
 
