@@ -92,4 +92,50 @@ CUTTER.recipeBuilder()
         .EUt(VA[EV])
         .buildAndRegister();*/
 
+MIXER.recipeBuilder()
+        .inputs(metaitem('cac_dust') * 2)
+        .fluidInputs(fluid('water') * 500)
+        .fluidOutputs(fluid('calcium_aluminate_concrete') * 144)
+        .duration(30)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('stickSteel') * 4)
+        .fluidInputs(fluid('calcium_aluminate_concrete') * 144)
+        .outputs(item('susy:rocket_assembler_casing', 1))
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('susy:rocket_assembler_casing', 1))
+        .inputs(metaitem('boltStainlessSteel') * 4)
+        .inputs(metaitem('ingotTabularAluminaRefractory') * 4)
+        .fluidInputs(fluid('epoxy') * 144)
+        .outputs(item('susy:rocket_assembler_casing'))
+        .duration(35)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('stickLongSteel') * 4)
+        .inputs(metaitem('plateStainlessSteel') * 2)
+        .outputs(item('susy:rocket_assembler_casing', 3))
+        .circuitMeta(1)
+        .duration(15)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('stickLongVanadiumSteel') * 8)
+        .inputs(metaitem('plateStainlessSteel') * 2)
+        .inputs(metaitem('stickStainlessSteel') * 4)
+        .outputs(item('susy:rocket_assembler_casing', 2))
+        .circuitMeta(1)
+        .duration(40)
+        .EUt(VA[HV])
+        .buildAndRegister();
+
+
 
