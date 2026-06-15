@@ -686,14 +686,14 @@ class FirstDegreeMaterialsB {
 
         GreenCarbon = new Material.Builder(8767, SuSyUtility.susyId('green_carbon'))
                 .dust()
-                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION)
+                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION, GENERATE_PLATE)
                 .components(Carbon)
                 .color(0x312b29)
                 .build()
 
         BakedCarbon = new Material.Builder(8768, SuSyUtility.susyId('baked_carbon'))
                 .dust()
-                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION)
+                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION, GENERATE_PLATE)
                 .components(Carbon)
                 .color(0x353535)
                 .build()

@@ -3460,10 +3460,6 @@ metaitem.milled_low_pressure_steam_turbine_blade.name=Milled Low-Pressure Steam 
 metaitem.low_pressure_steam_turbine_blade.name=Low-Pressure Steam Turbine Blade
 metaitem.sputtering_magnetron.name=Sputtering Magnetron
 metaitem.graphite_paper.name=Graphite Paper
-metaitem.raw_carbon_plate=Raw Carbon Plate
-metaitem.carbon_plate=Carbon Plate
-metaitem.graphite_plate.name=Graphite Electrode Plate
-
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand

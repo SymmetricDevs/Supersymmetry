@@ -70,7 +70,7 @@ def nonMetals = [
         [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('clay_graphite_crucible')],
         [input: ore('blockGreenCarbon'), output: ore('blockBakedCarbon').first()],
         [input: metaitem('dustExpandableGraphite'), output: metaitem('expanded_graphite_worms') * 4],
-        [input: metaitem('raw_carbon_plate'), output: metaitem('carbon_plate')]
+        [input: metaitem('plateGreenCarbon'), output: metaitem('plateBakedCarbon')]
 ]
 
 nonMetals += mapRange('susy:susy_stone_cobble', 'susy:susy_stone_smooth', 0..11)
@@ -177,13 +177,15 @@ RESISTANCE_FURNACE.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
+// Graphite Plate * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustGraphite')], null)
+
 RESISTANCE_FURNACE.recipeBuilder()
-        .circuitMeta(2)
-        .inputs(metaitem('carbon_plate'))
+        .inputs(metaitem('plateBakedCarbon'))
         .inputs(ore('insulatingCarbon') * 4)
         .notConsumable(ore('insulatingCarbon') * 16)
         .notConsumable(metaitem('graphite_electrode'))
-        .outputs(metaitem('graphite_electrode'))
+        .outputs(metaitem('plateGraphite'))
         .duration(120)
         .EUt(VA[LV])
         .buildAndRegister()
