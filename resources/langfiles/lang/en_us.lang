@@ -2865,6 +2865,9 @@ susy.material.chloroprene=Chloroprene
 susy.material.benzonitrile=Benzonitrile
 susy.material.bis_benzonitrile_palladium_ii_chloride=Bis(benzonitrile)palladium(II) Chloride
 susy.material.palladium_chloride=Palladium Chloride
+susy.material.chloroprene_emulsion=Chloroprene Emulsion
+susy.material.neoprene_latex=Neoprene Latex
+susy.material.diisopropyl_dixanthogen_disulfide=Diisopropyl Dixanthogen Disulfide
 
 
 susy.material.diallyldimethylammonium_chloride=Diallyldimethylammonium Chloride (DADMAC)

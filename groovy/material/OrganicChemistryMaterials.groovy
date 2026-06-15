@@ -3432,7 +3432,7 @@ class OrganicChemistryMaterials {
                 .build()
 
         DriedChloroprene = new Material.Builder(15535, SuSyUtility.susyId('dried_chloroprene'))
-                .liquid(new FluidBuilder().temperature(263)
+                .liquid(new FluidBuilder().temperature(263))
                 .components(Carbon * 4, Hydrogen * 5, Chlorine * 1)
                 .color(0x2FA003)
                 .build()
@@ -3478,6 +3478,15 @@ class OrganicChemistryMaterials {
                 .build()
 
         SodiumPolyacrylate.setFormula('[C3H3NaO2]n', true)
+
+        DiisopropylDixanthogenDisulfide = new Material.Builder(15541, SuSyUtility.susyId('diisopropyl_dixanthogen_disulfide'))
+                .dust()
+                .components(Sulfur * 4, Carbon * 8, Hydrogen * 14, Oxygen * 2)
+                .iconSet(SHINY)
+                .color(0xBCA93E)
+                .build()
+
+        DiisopropylDixanthogenDisulfide.setFormula('((CH3)2CHOCS2)2', true)
 
     }
 }

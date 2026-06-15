@@ -2487,6 +2487,7 @@ class SuSyMaterials {
     public static Material CrudeChloroprene
     public static Material DriedChloroprene
     public static Material Chloroprene
+    public static Material DiisopropylDixanthogenDisulfide
 
     // Third Degree Materials
 
@@ -2648,6 +2649,8 @@ class SuSyMaterials {
     public static Material PolydiallyldimethylammoniumChlorideSolution
     public static Material NafionDispersion
     public static Material SodiumPolyacrylateSolution
+    public static Material ChloropreneEmulsion
+    public static Material NeopreneLatex
 
     // Thermodynamics Materials
 
