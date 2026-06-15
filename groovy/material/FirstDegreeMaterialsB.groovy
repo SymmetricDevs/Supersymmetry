@@ -644,7 +644,7 @@ class FirstDegreeMaterialsB {
                 .build()
                 .setFormula("PbO2", true)
 
-        SilverNitrate = new Material.Builder(8761, SuSyUtility.susyId('silver_nitrate'))
+        SilverNitrate = new Material.Builder(8799, SuSyUtility.susyId('silver_nitrate'))
                 .dust()
                 .components(Silver, Nitrogen, Oxygen * 3)
                 .color(0xF5F3D0)
@@ -856,16 +856,6 @@ class FirstDegreeMaterialsB {
                 .components(Carbon * 5, Hydrogen * 10, Oxygen)
                 .colorAverage()
                 .build()
-              
-        ExpandedPolytetrafluoroethylene = new Material.Builder(8789, SuSyUtility.susyId('expanded_polytetrafluoroethylene'))
-                .polymer(1)
-                .color(0x634F4F)
-                .flags(GENERATE_PLATE, GENERATE_FOIL, NO_UNIFICATION)
-                .components(Carbon * 2, Fluorine * 4)
-                .macerateInto(Polytetrafluoroethylene)
-                .build();
-
-        ExpandedPolytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
 
         CopperTungstenAlloy = new Material.Builder(8790, SuSyUtility.susyId('copper_tungsten_alloy'))
                 .dust()
@@ -881,12 +871,6 @@ class FirstDegreeMaterialsB {
                 .color(0xB94DA0)
                 .iconSet(DULL)
                 .build()
-        
-        /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
-                .dust()
-                .components(Vanadium * 2, Oxygen * 3)
-                .colorAverage()
-                .build()*/
 
         GRCop84 = new Material.Builder(8792, SuSyUtility.susyId('grcop_84'))
                 .dust()
@@ -939,5 +923,13 @@ class FirstDegreeMaterialsB {
                 .dust()
                 .components(Lithium * 2, Oxygen * 2, Hydrogen * 1)
                 .build()
+
+        PalladiumChloride = new Material.Builder(8800, SuSyUtility.susyId('palladium_chloride'))
+                .dust()
+                .components(Palladium * 1, Chlorine * 2)
+                .color(0x4C1639)
+                .iconSet(SHINY)
+                .build()
+
     }
 }

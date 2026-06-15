@@ -981,14 +981,6 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        ChloropreneSolution = new Material.Builder(24157, SuSyUtility.susyId('chloroprene_solution'))
-                .liquid()
-                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1, Water * 1)
-                .colorAverage()
-                .build()
-
-        ChloropreneSolution.setFormula('(C4H5Cl)(H2O)', true)
-
         NeopreneSolution = new Material.Builder(24158, SuSyUtility.susyId('neoprene_solution'))
                 .liquid()
                 .components(Neoprene * 1, Water * 1)
@@ -1000,5 +992,6 @@ class ThirdDegreeMaterials {
                 .components(SodiumPolyacrylate * 1, Water * 1)
                 .colorAverage()
                 .build()
+
     }
 }

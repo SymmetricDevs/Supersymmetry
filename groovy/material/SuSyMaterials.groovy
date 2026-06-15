@@ -1696,9 +1696,9 @@ class SuSyMaterials {
     public static Material CadmiumOxide
     public static Material CopperTungstenAlloy
     public static Material LanthanumZirconiumOxide
+    public static Material PalladiumChloride
 
     //public static Material VanadiumTrioxide
-    public static Material ExpandedPolytetrafluoroethylene
 
 
     // HP Materials
@@ -2481,6 +2481,12 @@ class SuSyMaterials {
     public static Material TrimethylGallium
     public static Material TrimethylIndium
     public static Material DiallyldimethylammoniumChloride
+    public static Material ExpandedPolytetrafluoroethylene
+    public static Material Benzonitrile
+    public static Material BisBenzonitrilePalladiumIiChloride
+    public static Material CrudeChloroprene
+    public static Material DriedChloroprene
+    public static Material Chloroprene
 
     // Third Degree Materials
 
@@ -2628,7 +2634,7 @@ class SuSyMaterials {
     public static Material OneNaphtholTwoDiazoniumChlorideSolution
     public static Material BenzenediazoniumChlorideSolution
     public static Material BenzenediazoniumFluorideSolution
-    public static Material ChloropreneSolution
+    //public static Material ChloropreneSolution
     public static Material NeopreneSolution
     public static Material NeopreneCoatedNylon
     public static Material IsopropylAlcoholSolution

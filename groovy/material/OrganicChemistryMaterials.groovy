@@ -744,7 +744,7 @@ class OrganicChemistryMaterials {
                 .build()
 
         Polyurethane = new Material.Builder(15124, SuSyUtility.susyId('polyurethane'))
-                .dust()
+                .dust().liquid(new FluidBuilder().temperature(400))
                 .components(Carbon * 17, Hydrogen * 16, Nitrogen * 2, Oxygen * 4)
                 .color(0xd1d1d1)
                 .flags(NO_UNIFICATION, GENERATE_PLATE, FORCE_GENERATE_BLOCK)
@@ -3358,6 +3358,16 @@ class OrganicChemistryMaterials {
                 .color(0x30FF7F)
                 .build()
 
+        ExpandedPolytetrafluoroethylene = new Material.Builder(8789, SuSyUtility.susyId('expanded_polytetrafluoroethylene'))
+                .polymer(1)
+                .color(0x634F4F)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, NO_UNIFICATION)
+                .components(Carbon * 2, Fluorine * 4)
+                .macerateInto(Polytetrafluoroethylene)
+                .build();
+
+        ExpandedPolytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
+        ExpandedPolytetrafluoroethylene.setFormula("[C2F4]n", true)
 
         Norbornene = new Material.Builder(15527, SuSyUtility.susyId('norbornene'))
                 .dust()
@@ -3366,7 +3376,6 @@ class OrganicChemistryMaterials {
                 .color(0xfffff0)
                 .build()
 
-
         PetroleumResin = new Material.Builder(15528, SuSyUtility.susyId('petroleum_resin'))
                 .polymer(1)
                 .iconSet(ROUGH)
@@ -3374,7 +3383,6 @@ class OrganicChemistryMaterials {
                 .build()
 
         PetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true)
-
 
         HydrogenatedPetroleumResin = new Material.Builder(15529, SuSyUtility.susyId('hydrogenated_petroleum_resin'))
                 .polymer(1)
@@ -3385,7 +3393,7 @@ class OrganicChemistryMaterials {
         HydrogenatedPetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true)
 
         DichlorobuteneMixture = new Material.Builder(15530, SuSyUtility.susyId('dichlorobutene_mixture'))
-                .gas()
+                .liquid()
                 .components(Carbon * 8, Hydrogen * 12, Chlorine * 4)
                 .color(0x609B7D)
                 .flags(DISABLE_DECOMPOSITION)
@@ -3394,13 +3402,48 @@ class OrganicChemistryMaterials {
         DichlorobuteneMixture.setFormula('(C4H6Cl2)(C4H6Cl2)', true)
 
         ThreeFourDichloroOneButene = new Material.Builder(15531, SuSyUtility.susyId('three_four_dichloro_one_butene'))
-                .gas()
+                .liquid()
                 .components(Carbon * 4, Hydrogen * 6, Chlorine * 2)
                 .color(0x469968)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
 
-        Neoprene = new Material.Builder(15532, SuSyUtility.susyId('neoprene'))
+        Benzonitrile = new Material.Builder(15532, SuSyUtility.susyId('benzonitrile'))
+                .fluid()
+                .components(Carbon * 7, Hydrogen * 5, Nitrogen * 1)
+                .color(0x9081DB)
+                .build()
+
+        Benzonitrile.setFormula('C6H5CN', true)
+
+        BisBenzonitrilePalladiumIiChloride = new Material.Builder(15533, SuSyUtility.susyId('bis_benzonitrile_palladium_ii_chloride'))
+                .dust()
+                .components(Benzonitrile * 2, Palladium * 1, Chlorine * 2)
+                .iconSet(ROUGH)
+                .color(0x9081DB)
+                .build()
+
+        BisBenzonitrilePalladiumIiChloride.setFormula("(C6H5CN)2PdCl2", true)
+
+        CrudeChloroprene = new Material.Builder(15534, SuSyUtility.susyId('crude_chloroprene'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1)
+                .color(0x237702)
+                .build()
+
+        DriedChloroprene = new Material.Builder(15535, SuSyUtility.susyId('dried_chloroprene'))
+                .liquid(new FluidBuilder().temperature(263)
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1)
+                .color(0x2FA003)
+                .build()
+
+        Chloroprene = new Material.Builder(15536, SuSyUtility.susyId('chloroprene'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1)
+                .color(0x3FD304)
+                .build()
+
+        Neoprene = new Material.Builder(15537, SuSyUtility.susyId('neoprene'))
                 .polymer()
                 .components(Carbon * 4, Hydrogen * 5, Chlorine)
                 .flags(GENERATE_FOIL, GENERATE_RING, GENERATE_PLATE)
@@ -3410,7 +3453,7 @@ class OrganicChemistryMaterials {
 
         Neoprene.setFormula('[C4H5Cl]n', true)
 
-        PolyacrylicAcid = new Material.Builder(15533, SuSyUtility.susyId('polyacrylic_acid'))
+        PolyacrylicAcid = new Material.Builder(15538, SuSyUtility.susyId('polyacrylic_acid'))
                 .fluid()
                 .components(Carbon * 3, Hydrogen * 4, Oxygen * 2)
                 .color(0x5DD890)
@@ -3418,7 +3461,7 @@ class OrganicChemistryMaterials {
 
         PolyacrylicAcid.setFormula('[C3H4O2]n', true)
 
-        WetSodiumPolyacrylate = new Material.Builder(15534, SuSyUtility.susyId('wet_sodium_polyacrylate'))
+        WetSodiumPolyacrylate = new Material.Builder(15539, SuSyUtility.susyId('wet_sodium_polyacrylate'))
                 .dust()
                 .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
                 .iconSet(DULL)
@@ -3427,7 +3470,7 @@ class OrganicChemistryMaterials {
 
         WetSodiumPolyacrylate.setFormula('[C3H3NaO2]n.H2O', true)
 
-        SodiumPolyacrylate = new Material.Builder(15535, SuSyUtility.susyId('sodium_polyacrylate'))
+        SodiumPolyacrylate = new Material.Builder(15540, SuSyUtility.susyId('sodium_polyacrylate'))
                 .dust()
                 .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
                 .iconSet(SHINY)

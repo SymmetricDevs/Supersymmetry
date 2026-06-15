@@ -15,7 +15,7 @@ import postInit.utils.RecyclingHelper
 log.infoMC("Running SpaceSuit.groovy...")
 
 
-VACUUM_CHAMBER.recipeBuilder() //REPLACE WITH EVAPORATION DEPOSITION
+VACUUM_CHAMBER.recipeBuilder() //FIXME: REPLACE WITH EVAPORATION DEPOSITION
         .inputs(metaitem('mylar'))
         .inputs(ore('dustSmallHighPurityAluminium'))
         .outputs(metaitem('sheet.aluminized_mylar'))
@@ -23,23 +23,11 @@ VACUUM_CHAMBER.recipeBuilder() //REPLACE WITH EVAPORATION DEPOSITION
         .EUt(VA[HV])
         .buildAndRegister()
 
-VULCANIZER.recipeBuilder()
+FORMING_PRESS.recipeBuilder()
         .inputs(metaitem('foilPolycaprolactam'))
-        .fluidInputs(fluid('neoprene_solution') * 250)
-        .notConsumable(metaitem('dustZincOxide'))
+        .inputs(metaitem('foilNeoprene'))
         .outputs(metaitem('sheet.neoprene_coated_nylon'))
-        .fluidOutputs(fluid('wastewater') * 250)
-        .duration(100)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
-VULCANIZER.recipeBuilder()
-        .inputs(metaitem('foilPolycaprolactam'))
-        .fluidInputs(fluid('neoprene_solution') * 250)
-        .notConsumable(metaitem('dustMagnesia'))
-        .outputs(metaitem('sheet.neoprene_coated_nylon'))
-        .fluidOutputs(fluid('wastewater') * 250)
-        .duration(100)
+        .duration(20)
         .EUt(VA[MV])
         .buildAndRegister()
 
@@ -54,7 +42,7 @@ ASSEMBLER.recipeBuilder()
 
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('foilPolycaprolactam'))
-        .fluidInputs(fluid('polyurethane_polymerization_mix') * 250)
+        .fluidInputs(fluid('polyurethane') * 36)
         .outputs(metaitem('sheet.urethane_coated_nylon'))
         .duration(120)
         .EUt(VA[MV])
@@ -222,6 +210,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('hepa_filter'))
         .inputs(metaitem('plateReinforcedEpoxyResin') * 6)
         .inputs(metaitem('cableGtSingleAluminium') * 8)
+        .fluidInputs(fluid('water') * 8000)
         .outputs(metaitem('space_suit.plss'))
         .duration(2500)
         .EUt(VA[EV])
