@@ -63,7 +63,7 @@ ASSEMBLER.recipeBuilder()
 TUBE_FURNACE.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
     .inputs(ore('dustGraphite')) // pore former
-    .inputs(ore('dustLanthanumCarbonate') * 28)
+    .inputs(ore('dustLanthanumIiiCarbonate') * 28)
     .inputs(ore('dustStrontiumCarbonate') * 5)
     .inputs(ore('dustManganeseIiCarbonate') * 25)
     .fluidInputs(fluid('argon') * 50)
@@ -133,7 +133,7 @@ Sintering.blankets.each { blanket ->
 
 TUBE_FURNACE.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
-    .inputs(ore('dustLanthanumCarbonate') * 28)
+    .inputs(ore('dustLanthanumIiiCarbonate') * 28)
     .inputs(ore('dustStrontiumCarbonate') * 5)
     .inputs(ore('dustChromiumIiiCarbonate') * 35)
     .fluidInputs(fluid('argon') * 50)

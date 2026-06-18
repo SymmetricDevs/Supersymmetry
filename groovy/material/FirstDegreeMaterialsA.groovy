@@ -3936,15 +3936,15 @@ class FirstDegreeMaterialsA {
 
         YttriumHydroxide.setFormula("Y(OH)3", true)
 
-        LanthanumCarbonate = new Material.Builder(8671, SuSyUtility.susyId('lanthanum_carbonate'))
+        LanthanumIIICarbonate = new Material.Builder(8671, SuSyUtility.susyId('lanthanum_iii_carbonate'))
                 .dust()
                 .components(Lanthanum * 2, Carbon * 3, Oxygen * 9)
                 .color(0x597a7a)
                 .build()
 
-        LanthanumCarbonate.setFormula("La2(CO3)3", true)
+        LanthanumIIICarbonate.setFormula("La2(CO3)3", true)
 
-        LanthanumFluoride = new Material.Builder(8672, SuSyUtility.susyId('lanthanum_fluoride'))
+        LanthanumIIIFluoride = new Material.Builder(8672, SuSyUtility.susyId('lanthanum_iii_fluoride'))
                 .dust()
                 .components(Lanthanum, Fluorine * 3)
                 .color(0x5b8c86)

@@ -49,9 +49,9 @@ class FirstDegreeMaterialsB {
                 .color(0x758f65)
                 .build()
 
-        PraseodymiumIVOxide = new Material.Builder(8679, SuSyUtility.susyId('praseodymium_iv_oxide'))
+        PraseodymiumIIIOxide = new Material.Builder(8679, SuSyUtility.susyId('praseodymium_iii_oxide'))
                 .dust()
-                .components(Praseodymium, Oxygen * 2)
+                .components(Praseodymium * 2, Oxygen * 3)
                 .color(0x210e04)
                 .build()
 

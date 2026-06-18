@@ -8,11 +8,10 @@ import static gregtech.api.GTValues.*
 // PrO2 + 3HF -> PrF3 + 3/2H2O + 1/2O
 
 BR.recipeBuilder()
-    .inputs(ore('dustPraseodymiumIvOxide') * 6)
+    .inputs(ore('dustPraseodymiumIiiOxide') * 5)
     .fluidInputs(fluid('hydrofluoric_acid') * 6000)
     .outputs(metaitem('dustPraseodymiumIiiFluoride') * 8)
-    .fluidOutputs(fluid('water') * 3000)
-    .fluidOutputs(fluid('oxygen') * 1000)
+    .fluidOutputs(fluid('water') * 9000)
     .duration(80)
     .EUt(VA[MV])
     .buildAndRegister()
