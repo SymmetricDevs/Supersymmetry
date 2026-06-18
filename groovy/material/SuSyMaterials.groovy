@@ -1565,7 +1565,7 @@ class SuSyMaterials {
     public static Material DilutedNitricAcid
     public static Material YttriumChloride
     public static Material YttriumHydroxide
-    public static Material LanthanumIiiCarbonate
+    public static Material LanthanumIIICarbonate
     public static Material LanthanumIIIFluoride
     public static Material LanthanumOxide
     public static Material LanthanumNitrate
