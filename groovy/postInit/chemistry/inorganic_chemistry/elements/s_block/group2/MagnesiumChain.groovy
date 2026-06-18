@@ -3,7 +3,7 @@ import globals.Carbons
 import static gregtech.api.GTValues.*
 
 ROASTER.recipeBuilder()
-        .inputs(ore('dustMagnesite') * 10)
+        .inputs(ore('dustMagnesite') * 5)
         .outputs(metaitem('dustMagnesia') * 2)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
         .EUt(VA[LV])

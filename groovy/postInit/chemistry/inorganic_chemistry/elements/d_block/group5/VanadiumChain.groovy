@@ -121,7 +121,7 @@ CLARIFIER.recipeBuilder()
     .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustMagnesite') * 2)
+    .inputs(ore('dustMagnesite'))
     .outputs(metaitem('dustMagnesiumCarbonate'))
     .EUt(VA[LV])
     .duration(160)
