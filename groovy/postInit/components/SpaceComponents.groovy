@@ -93,3 +93,42 @@ CUTTER.recipeBuilder()
         .buildAndRegister();*/
 
 
+EVAPORATION_DEPOSITION.recipeBuilder()
+        .circuitMeta(1)
+        .notConsumable(metaitem('electron_gun'))
+        .inputs(metaitem('dustTitaniumDioxide'))
+        .inputs(metaitem('dustSiliconDioxide'))
+        .outputs(metaitem('spectral_filter.near_ir_bandpass'))
+        .duration(60)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+EVAPORATION_DEPOSITION.recipeBuilder()
+        .circuitMeta(2)
+        .notConsumable(metaitem('electron_gun'))
+        .inputs(metaitem('dustTitaniumDioxide'))
+        .inputs(metaitem('dustSiliconDioxide'))
+        .outputs(metaitem('spectral_filter.mid_ir_bandpass'))
+        .duration(60)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+EVAPORATION_DEPOSITION.recipeBuilder()
+        .circuitMeta(3)
+        .notConsumable(metaitem('electron_gun'))
+        .inputs(metaitem('dustTitaniumDioxide'))
+        .inputs(metaitem('dustSiliconDioxide'))
+        .outputs(metaitem('spectral_filter.visible_ir_bandpass'))
+        .duration(60)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+EVAPORATION_DEPOSITION.recipeBuilder()
+        .circuitMeta(4)
+        .notConsumable(metaitem('electron_gun'))
+        .inputs(metaitem('dustTitaniumDioxide'))
+        .inputs(metaitem('dustSiliconDioxide'))
+        .outputs(metaitem('spectral_filter.near_uv_bandpass'))
+        .duration(60)
+        .EUt(VA[EV])
+        .buildAndRegister();
