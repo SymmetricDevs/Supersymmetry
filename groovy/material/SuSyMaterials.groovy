@@ -1953,6 +1953,7 @@ class SuSyMaterials {
     public static Material VanadiumIIISulfateSolution
     public static Material DilutedVanadiumIIISulfateSolution
     public static Material VanadylSulfateSolution
+    public static Material ManganeseCobaltNickelOxide
 
     // Organic Chemistry Materials
 

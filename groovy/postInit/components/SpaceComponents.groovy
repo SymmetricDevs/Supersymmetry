@@ -137,5 +137,152 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister();
 
+VACUUM_CHAMBER.recipeBuilder() //FIXME: replace with evaporation deposition
+        .inputs(metaitem('fused_quartz'))
+        .inputs(metaitem('dustSmallCaesium'))
+        .inputs(metaitem('dustSmallRubidium'))
+        .inputs(metaitem('dustSmallAntimony'))
+        .outputs(metaitem('bialkali_photocathode'))
+        .duration(300)
+        .EUt(VA[HV])
+        .buildAndRegister();
+
+SPUTTERING.recipeBuilder()
+        .inputs(metaitem('plateStainlessSteel') * 4)
+        .inputs(metaitem('plateBerylliumOxide'))
+        .fluidInputs(fluid('argon') * 1000)
+        .outputs(metaitem('beo_coated_stainless_steel_plate') * 4)
+        .duration(180)
+        .EUt(VA[HV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('bialkali_photocathode'))
+        .inputs(metaitem('beo_coated_stainless_steel_plate') * 4)
+        .inputs(metaitem('plateAnnealedCopper'))
+        .inputs(metaitem('cableGtSingleAluminium') * 4)
+        .outputs(metaitem('photomultiplier_components'))
+        .duration(120)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+VACUUM_CHAMBER.recipeBuilder()
+        .inputs(metaitem('photomultiplier_components'))
+        .inputs(metaitem('ringKovar'))
+        .inputs(metaitem('component.glass.tube'))
+        .outputs(metaitem('photomultiplier_tube'))
+        .duration(80)
+        .EUt(VA[HV])
+        .buildAndRegister();
+
+TUBE_FURNACE.recipeBuilder()
+        .inputs(metaitem('dustManganeseDioxide') * 15)
+        .inputs(metaitem('dustManganeseIiOxide') * 5)
+        .inputs(metaitem('dustCobaltOxide') * 12)
+        .inputs(metaitem('dustNickelIiOxide') * 4)
+        .notConsumable(metaitem('shape.mold.plate'))
+        .outputs(metaitem('plateManganeseCobaltNickelOxide') * 8)
+        .duration(180)
+        .EUt(VA[HV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('ringTitanium') * 10)
+        .inputs(metaitem('roundStainlessSteel') * 24)
+        .inputs(metaitem('electric.motor.ev'))
+        .inputs(metaitem('plateTitanium') * 2)
+        .fluidInputs(fluid('polydimethylsiloxane') * 100)
+        .outputs(metaitem('spacecraft_sensor.gyroscope'))
+        .duration(180)
+        .EUt(VA[HV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateMolybdenum'))
+        .inputs(metaitem('wireFineTungsten') * 16)
+        .inputs(metaitem('plateAluminium') * 2)
+        .inputs(metaitem('cableGtSingleAnnealedCopper') * 2)
+        .outputs(metaitem('spacecraft_sensor.ion_flow'))
+        .duration(280)
+        .EUt(VA[HV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('photomultiplier_tube') * 2)
+        .inputs(metaitem('fused_quartz') * 3)
+        .inputs(metaitem('plateAluminium') * 4)
+        .inputs(metaitem('cableGtSingleCopper') * 2)
+        //FIXME: add photodiode
+        .outputs(metaitem('spacecraft_sensor.sun_star'))
+        .duration(400)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateGermanium'))
+        .inputs(metaitem('plateManganeseCobaltNickelOxide') * 2)
+        .inputs(metaitem('plateTitanium') * 3)
+        .inputs(metaitem('electric.motor.ev'))
+        .inputs(metaitem('cableGtSingleSilver') * 2)
+        .outputs(metaitem('spacecraft_sensor.infrared'))
+        .duration(360)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.ev'))
+        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
+        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
+        .inputs(metaitem('spacecraft_sensor.sun_star'))
+        .inputs(metaitem('spacecraft_sensor.infrared'))
+        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
+        .inputs(metaitem('circuit.nano_computer'))
+        .inputs(metaitem('cableGtDoubleSilver') * 6)
+        .outputs(item('susy:guidance_system'))
+        .duration(800)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.ev'))
+        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
+        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
+        .inputs(metaitem('spacecraft_sensor.sun_star'))
+        .inputs(metaitem('spacecraft_sensor.infrared'))
+        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
+        .inputs(metaitem('circuit.quantum_assembly'))
+        .inputs(metaitem('cableGtDoubleSilver') * 6)
+        .outputs(item('susy:guidance_system'))
+        .duration(800)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.ev'))
+        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
+        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
+        .inputs(metaitem('spacecraft_sensor.sun_star'))
+        .inputs(metaitem('spacecraft_sensor.infrared'))
+        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
+        .inputs(metaitem('circuit.crystal_processor'))
+        .inputs(metaitem('cableGtDoubleSilver') * 6)
+        .outputs(item('susy:guidance_system'))
+        .duration(800)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.ev'))
+        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
+        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
+        .inputs(metaitem('spacecraft_sensor.sun_star'))
+        .inputs(metaitem('spacecraft_sensor.infrared'))
+        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
+        .inputs(metaitem('circuit.suprachronal.iv'))
+        .inputs(metaitem('cableGtDoubleSilver') * 6)
+        .outputs(item('susy:guidance_system'))
+        .duration(800)
+        .EUt(VA[EV])
+        .buildAndRegister();
 
 

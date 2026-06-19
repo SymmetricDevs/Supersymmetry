@@ -642,7 +642,7 @@ class FirstDegreeMaterialsB {
                 .build()
                 .setFormula("PbO2", true)
 
-        SilverNitrate = new Material.Builder(8761, SuSyUtility.susyId('silver_nitrate'))
+        SilverNitrate = new Material.Builder(8799, SuSyUtility.susyId('silver_nitrate'))
                 .dust()
                 .components(Silver, Nitrogen, Oxygen * 3)
                 .color(0xF5F3D0)
