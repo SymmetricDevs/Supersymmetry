@@ -216,6 +216,7 @@ class Deposition {
         "silicon_dioxide.silane": new cvdRecipe(['silane' : 5, 'oxygen' : 20], ['steam' : 10], HV, 15, 23, 0.005),  // LPCVD in O2 carrier gas via silane oxidation
         "fluorosilicate_glass": new cvdRecipe(['silane' : 15, 'silicon_tetrafluoride' : 5, 'oxygen' : 90], ['corrosive_gas' : 100], HV, 20, 23, 0.01), // PECVD in O2 carrier gas, SiF4 as fluorine source
         "phosphosilicate_glass": new cvdRecipe(['silane' : 18, 'phosphine' : 2, 'oxygen' : 80], ['steam' : 39], HV, 40, 23, 0.02), // PECVD in O2 carrier gas, PH3 as phosphorus source
+        "borophosphosilicate_glass": new cvdRecipe(['tetraethyl_orthosilicate': 20, 'triethyl_borate': 2, 'triethyl_phoshpate': 2, 'ozone': 60], ['waste_gas' : 80], EV, 40, 23, 0.024) // PECVD in O2 carrier gas with B2H6 and PH3 for boron and phosphorus doping
         "tungsten": new cvdRecipe(['tungsten_hexafluoride' : 5, 'hydrogen' : 50], ['corrosive_gas' : 50], EV, 100, 10, 0.005), //  LPCVD via WF6 reduction in H2 carrier gas
         "titanium_nitride": new cvdRecipe(['titanium_tetrachloride' : 3, 'ammonia' : 4, 'nitrogen' : 48], ['corrosive_gas' : 60], HV, 80, 12, 0.003), // CVD via TiCl4 and NH3 reaction, with N2 carrier
         "silicon_oxycarbide_hydride": new cvdRecipe(['diethoxymethylsilane' : 5, 'alpha_terpinene' : 5, 'helium' : 50], ['corrosive_gas' : 50], EV, 30, 23, 0.005), // PECVD via OMCTS decomposition in H2 carrier gas.

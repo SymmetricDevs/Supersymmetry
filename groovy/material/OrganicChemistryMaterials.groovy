@@ -4128,7 +4128,11 @@ class OrganicChemistryMaterials {
 
         Glycidol.setFormula('C3H6O2', true)
 
-        // FREE ID: 15702
+        Fluoroform = new Material.Builder(15702, SuSyUtility.susyId('fluoroform'))
+                .gas()
+                .components(Carbon, Hydrogen, Fluorine * 3)
+                .color(0x9ed1c4)
+                .build()
 
         Pentafluoroiodoethane = new Material.Builder(15703, SuSyUtility.susyId('pentafluoroiodoethane'))
                 .liquid()
@@ -4293,5 +4297,77 @@ class OrganicChemistryMaterials {
                 .build()
 
         PyridiniumTosylate.setFormula('(C5H5NH)(C7H7SO3)', true)
+
+        Bromobenzene = new Material.Builder(15727, SuSyUtility.susyId('bromobenzene'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 5, Bromine)
+                .colorAverage()
+                .build()
+
+        Triethylaluminium = new Material.Builder(15728, SuSyUtility.susyId('triethylaluminium'))
+                .liquid()
+                .components(Carbon * 12, Hydrogen * 30, Aluminium * 2)
+                .colorAverage()
+                .build()
+                
+        CarbonTetrabromide = new Material.Builder(15729, SuSyUtility.susyId('carbon_tetrabromide'))
+                .dust()
+                .components(Carbon, Bromine * 4)
+                .colorAverage()
+                .build()
+
+        Bromomethane = new Material.Builder(15730, SuSyUtility.susyId('bromomethane'))
+                .gas()
+                .components(Carbon, Hydrogen * 3, Bromine)
+                .colorAverage()
+                .build()
+
+        Hexachloroethane = new Material.Builder(15731, SuSyUtility.susyId('hexachloroethane'))
+                .dust()
+                .components(Carbon * 2, Chlorine * 6)
+                .color(0x15381f)
+                .build()
+
+        Tetrachloroethylene = new Material.Builder(15732, SuSyUtility.susyId('tetrachloroethylene'))
+                .liquid()
+                .components(Carbon * 2, Chlorine * 4)
+                .color(0x6fad79)
+                .build()
+
+        Trichlorotrifluoroethane = new Material.Builder(15733, SuSyUtility.susyId('trichlorotrifluoroethane'))
+                .liquid()
+                .components(Carbon * 2, Chlorine * 3, Fluorine * 3)
+                .color(0x6fada1)
+                .build()
+
+        Chlorotrifluoroethylene = new Material.Builder(15734, SuSyUtility.susyId('chlorotrifluoroethylene'))
+                .gas()
+                .components(Carbon * 2, Chlorine, Fluorine * 3)
+                .color(0x6bd1bd)
+                .build()
+
+        Dichlorotrifluoroiodoethane = new Material.Builder(15735, SuSyUtility.susyId('dichlorotrifluoroiodoethane'))
+                .liquid()
+                .components(Carbon * 2, Iodine, Chlorine * 2, Fluorine * 3)
+                .color(0x6d6bd1)
+                .build()
+
+        Tetrachlorohexafluorobutane = new Material.Builder(15736, SuSyUtility.susyId('tetrachlorohexafluorobutane'))
+                .liquid()
+                .components(Carbon * 4, Chlorine * 4, Fluorine * 6)
+                .color(0x42d4c5)
+                .build()
+
+        Hexafluorobutadiene = new Material.Builder(15737, SuSyUtility.susyId('hexafluorobutadiene'))
+                .gas()
+                .components(Carbon * 4, Fluorine * 6)
+                .color(0x10a0b0)
+                .build()
+
+        Hexafluorobutyne = new Material.Builder(15738, SuSyUtility.susyId('hexafluorobutyne'))
+                .gas()
+                .components(Carbon * 4, Fluorine * 6)
+                .color(0x067c8a)
+                .build()
     }
 }

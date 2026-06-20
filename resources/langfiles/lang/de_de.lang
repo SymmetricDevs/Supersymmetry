@@ -196,7 +196,7 @@ susy.material.pig_iron=Roheisen
 susy.material.iron_iii_sulfate=Eisen-IIIsulfat
 
 susy.material.aluminium_hydroxide=Aluminiumhydroxid
-susy.material.aluminium_trifluoride=Aluminiumtrifluorid
+susy.material.aluminium_fluoride=Aluminiumfluorid
 susy.material.sodium_fluoride=Natriumfluorid
 
 susy.material.gallium_phosphate=Galliumphosphat
@@ -1873,7 +1873,7 @@ susy.material.gaseous_methacrylic_acid_mixture=Gasförmiges Methacrylsäuregemis
 susy.material.methacrylic_acid_solution=Methacrylsäurelösung
 susy.material.depleted_uranium_dioxide=Abgereichertes Uraniumdioxid
 susy.material.salty_hydrofluoric_acid=Salzige Fluorwasserstoffsäure
-susy.material.supported_molybdenum_vanadium=Geträgertes Molybdän-Vanadium
+susy.material.supported_molybdenum_vanadium_oxide=Geträgertes Molybdän-Vanadiumoxid
 susy.material.acrolein=Acrolein
 susy.material.c_five_fraction=C5-Fraktion
 susy.material.dimerized_c_five_fraction=Dimerisierte C5-Fraktion

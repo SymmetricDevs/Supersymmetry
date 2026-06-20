@@ -252,7 +252,7 @@ susy.material.pig_iron=Чугун
 susy.material.iron_iii_sulfate=Сульфат железа(III)
 
 susy.material.aluminium_hydroxide=Гидроксид алюминия
-susy.material.aluminium_trifluoride=Трифторид алюминия
+susy.material.aluminium_Fluoride=Фторид алюминия
 susy.material.sodium_fluoride=Фторид натрия
 
 susy.material.gallium_phosphate=Фосфат галлия
@@ -1982,7 +1982,7 @@ susy.material.gaseous_methacrylic_acid_mixture=Газообразная смес
 susy.material.methacrylic_acid_solution=Раствор метакриловой кислоты
 susy.material.depleted_uranium_dioxide=Диоксид обеднённого урана
 susy.material.salty_hydrofluoric_acid=Солёная плавиковая кислота
-susy.material.supported_molybdenum_vanadium=Нанесённый молибден-ванадий
+susy.material.supported_molybdenum_vanadium_oxide=Нанесённый молибден-ванадий оксид
 susy.material.acrolein=Акролеин
 susy.material.c_five_fraction=Фракция C5
 susy.material.dimerized_c_five_fraction=Димеризованная фракция C5

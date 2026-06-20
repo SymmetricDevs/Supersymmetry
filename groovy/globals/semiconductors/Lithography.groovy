@@ -222,4 +222,25 @@ class Lithography {
                 .buildAndRegister()
         }
     }
+
+    static void generateSOCStrippingRecipes(String input, String product, int timeMultiplier) {
+        PLASMA_ASHER.recipeBuilder()
+            .inputs(metaitem(input))
+            .fluidInputs(fluid('forming_gas') * 100)
+            .outputs(metaitem(input + ".ashed"))
+            .duration(200 * timeMultiplier)
+            .EUt(VA[HV])
+            .cleanroom(CleanroomType.CLEANROOM)
+            .buildAndRegister()
+
+        RESIST_PROCESSOR.recipeBuilder()
+            .inputs(metaitem(input + ".ashed"))
+            .fluidInputs(fluid('ultrapure_hydrofluoric_acid') * 5)
+            .fluidInputs(fluid('ultrapure_water') * 95)
+            .outputs(metaitem(product))
+            .duration(400 * timeMultiplier)
+            .EUt(VA[HV])
+            .cleanroom(CleanroomType.CLEANROOM)
+            .buildAndRegister()
+    }
 }

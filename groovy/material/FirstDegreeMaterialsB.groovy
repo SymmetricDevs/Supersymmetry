@@ -945,5 +945,11 @@ class FirstDegreeMaterialsB {
                 .ingot().liquid(new FluidBuilder().temperature(1700))
                 .flags(GENERATE_BOLT_SCREW)
                 .build()
+
+        IodineMonochloride = new Material.Builder(8804, SuSyUtility.susyId('iodine_monochloride'))
+                .liquid(new FluidBuilder().temperature(300))
+                .components(Iodine, Chlorine)
+                .color(0x8a3122)
+                .build()
     }
 }

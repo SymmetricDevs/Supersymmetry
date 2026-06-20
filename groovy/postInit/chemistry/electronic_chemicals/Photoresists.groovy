@@ -364,15 +364,6 @@ DT.recipeBuilder()
             .buildAndRegister()
 
         // Propene route
-            
-        REACTION_FURNACE.recipeBuilder()
-            .inputs(ore('dustMolybdenumTrioxide') * 4)
-            .inputs(ore('dustVanadiumPentoxide') * 7)
-            .inputs(ore('dustAlumina') * 5)
-            .outputs(metaitem('dustSupportedMolybdenumVanadium'))
-            .duration(200)
-            .EUt(VA[MV])
-            .buildAndRegister()
 
         FIXED_BR.recipeBuilder()
             .notConsumable(ore('dustPhosphomolybdicAcid'))
@@ -385,7 +376,7 @@ DT.recipeBuilder()
             .buildAndRegister()
 
         FIXED_BR.recipeBuilder()
-            .notConsumable(ore('catalystBedSupportedMolybdenumVanadium'))
+            .notConsumable(ore('catalystBedSupportedMolybdenumVanadiumOxide'))
             .fluidInputs(fluid('acrolein') * 50)
             .fluidInputs(fluid('oxygen') * 50)
             .fluidOutputs(fluid('acrylic_acid') * 50)

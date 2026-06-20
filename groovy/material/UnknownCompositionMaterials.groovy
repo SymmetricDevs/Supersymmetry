@@ -3574,5 +3574,12 @@ class UnknownCompositionMaterials {
                 .build()
 
         NanoparticleModifiedNafionDispersion.setFormula('([(C2F4)(C7HF13O5S)]n)((CH3)2CHOH)', true)
+
+        AluminiumChlorofluoride = new Material.Builder(4760, SuSyUtility.susyId('aluminium_chlorofluoride'))
+                .dust()
+                .color(0x7599c7)
+                .iconSet(DULL)
+                .flags(GENERATE_CATALYST_BED)
+                .build()
     }
 }
