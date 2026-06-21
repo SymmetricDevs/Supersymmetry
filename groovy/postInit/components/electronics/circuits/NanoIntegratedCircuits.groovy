@@ -271,66 +271,112 @@ def generateBCDFabrication(String componentName) {
 
 // DRAM 45nm 6F2 process fabrication chain
 
-def generateDRAMFabrication(String componentName, int circ) {
+// Hardmask Formation
+RESIST_PROCESSOR.recipeBuilder() // Carbon Hardmask
+    .inputs(metaitem('wafer.cmos.step_ten'))
+    .fluidInputs(fluid("spin_on_carbon") * 100)
+    .fluidInputs(fluid("ebr_solvent") * 200)
+    .outputs(metaitem('wafer.dram.step_eleven' + '.hardmasked'))
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(300)
+    .EUt(VA[EV])
+    .buildAndRegister()
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_eleven' + '.hardmasked', 'wafer.dram.step_eleven' + '.ibarc', 0.25, "silicon_oxynitride") // Adhesion layer for Si mandrel
 
-    // Burried Transistor Trenching
-    RESIST_PROCESSOR.recipeBuilder() // Carbon Hardmask
-        .inputs(metaitem('wafer.cmos.step_ten'))
-        .fluidInputs(fluid("spin_on_carbon") * 100)
-        .fluidInputs(fluid("ebr_solvent") * 200)
-        .outputs(metaitem('wafer.' + componentName + '.step_eleven' + '.hardmasked'))
-        .cleanroom(CleanroomType.CLEANROOM)
-        .duration(300)
-        .EUt(VA[EV])
-        .buildAndRegister()
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_eleven' + '.hardmasked', 'wafer.' + componentName + '.step_eleven' + '.ibarc', 0.25, "silicon_oxynitride") // Adhesion layer for Si mandrel
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_eleven' + '.ibarc', 'wafer.' + componentName + '.step_eleven', 2.0, 'silicon') // Si Mandrel deposition
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_eleven', 'wafer.' + componentName + '.step_twelve', 'methacrylate_resist', 'mask_set.' + componentName, true) // Patterning Si mandrel
-    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twelve', 'wafer.' + componentName + '.step_thirteen', 'silicon', 400) // Etch Si mandrel pattern
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_thirteen', 'wafer.' + componentName + '.step_fourteen', 1, true)
-    Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_fourteen', 'wafer.' + componentName + '.step_fifteen', 23, 'silicon_nitride') // ALD SiN Spacer
-    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_fifteen', 'wafer.' + componentName + '.step_sixteen', 'silicon_nitride', 25) // Under-etch SiN to form 0.5f spacer
-    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_sixteen', 'wafer.' + componentName + '.step_seventeen', 'silicon', 400) // Etch remaining Si mandrel
-    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_seventeen', 'wafer.' + componentName + '.step_eighteen', 'silicon_oxynitride', 25) // Punch through SiNO ibarc
-    REACTIVE_ION_ETCHER.recipeBuilder() // O2 Ashing SOC
-        .inputs(metaitem('wafer.' + componentName + '.step_eighteen'))
-        .fluidInputs(fluid(plasma.oxygen) * 10)
-        .outputs(metaitem('wafer.' + componentName + '.step_nineteen'))
-        .duration((int) (100 / 0.0125))
-        .EUt(VA[EV])
-        .cleanroom(CleanroomType.CLEANROOM)
-        .buildAndRegister()
-    
-    REACTIVE_ION_ETCHER.recipeBuilder() // SiN SiO2 co-etching
-        .inputs(metaitem('wafer.' + componentName + '.step_nineteen'))
-        .fluidInputs(fluid(plasma.carbon_tetrafluoride) * 30)
-        .fluidInputs(fluid(plasma.oxygen) * 10)
-        .fluidInputs(fluid(plasma.argon) * 60)
-        .outputs(metaitem('wafer.' + componentName + '.step_twenty'))
-        .duration((int) (2.0 / 0.0167))
-        .EUt(VA[EV])
-        .cleanroom(CleanroomType.CLEANROOM)
-        .buildAndRegister()
-    
-    REACTIVE_ION_ETCHER.recipeBuilder() // Si SiO2 co-etching
-        .inputs(metaitem('wafer.' + componentName + '.step_twenty'))
-        .fluidInputs(fluid(plasma.carbon_tetrafluoride) * 20)
-        .fluidInputs(fluid(plasma.hydrogen) * 20)
-        .fluidInputs(fluid(plasma.argon) * 60)
-        .outputs(metaitem('wafer.' + componentName + '.step_twenty_one'))
-        .duration((int) (550 / 0.0167))
-        .EUt(VA[EV])
-        .cleanroom(CleanroomType.CLEANROOM)
-        .buildAndRegister()
-    Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twenty_one', 'wafer.' + componentName + '.step_twenty_two', 'silicon_dioxide', 50) // Saddle-fin formation
-    REACTIVE_ION_ETCHER.recipeBuilder() // O2 Ashing Exposed SOC
-        .inputs(metaitem('wafer.' + componentName + '.step_twenty_two'))
-        .fluidInputs(fluid(plasma.oxygen) * 10)
-        .outputs(metaitem('wafer.' + componentName + '.step_twenty_three'))
-        .duration((int) (100 / 0.0125))
-        .EUt(VA[EV])
-        .cleanroom(CleanroomType.CLEANROOM)
-        .buildAndRegister()
-    Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 400, false) // Protective oxide growth after trench etching to repair etch damage
-    Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_twenty_four', 'wafer.' + componentName + '.step_twenty_five', 'silicon_dioxide', 400, false) // Clean and Remove protective oxide layer to expose silicon surface for writeline formation
-}
+// Self-Aligned Double Patterning
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_eleven' + '.ibarc', 'wafer.dram.step_eleven', 2.0, 'silicon') // Si Mandrel deposition
+Lithography.generatePhotolithographyRecipes('wafer.dram.step_eleven', 'wafer.dram.step_twelve', 'methacrylate_resist', 'mask_set.' + componentName, true) // Patterning Si mandrel
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_twelve', 'wafer.dram.step_thirteen', 'silicon', 400) // Etch Si mandrel pattern
+Lithography.generateResistStrippingRecipes('wafer.dram.step_thirteen', 'wafer.dram.step_fourteen', 1, true)
+Deposition.generateAtomicLayerDepositionRecipe('wafer.dram.step_fourteen', 'wafer.dram.step_fifteen', 23, 'silicon_nitride') // ALD SiN Spacer
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_fifteen', 'wafer.dram.step_sixteen', 'silicon_nitride', 25) // Under-etch SiN to form 0.5f spacer
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_sixteen', 'wafer.dram.step_seventeen', 'silicon', 400) // Etch remaining Si mandrel
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_seventeen', 'wafer.dram.step_eighteen', 'silicon_oxynitride', 25) // Punch through SiNO ibarc
+Lithography.generateResistStrippingRecipes('wafer.dram.step_eighteen', 'wafer.dram.step_nineteen', 1, false) // O2 Ashing SOC
+
+// Burried Transistor Trenching
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_nineteen', 'wafer.dram.step_twenty', 'silicon_nitride_silica_coetch', 800) // SiN SiO2 co-etching
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_twenty', 'wafer.dram.step_twenty_one', 'silicon_silica_coetch', 240) // SiN SiO2 co-etching (300nm)
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_twenty_one', 'wafer.dram.step_twenty_two', 'silicon_dioxide', 50) // Saddle-fin formation (60nm)
+Lithography.generateResistStrippingRecipes('wafer.dram.step_twenty_two', 'wafer.dram.step_twenty_three', 1, false) // O2 Ashing Exposed SOC
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.dram.step_twenty_three', 'wafer.dram.step_twenty_four', 400, false) // Protective oxide growth after trench etching to repair etch damage
+Etching.generateWetEtchingRecipe('wafer.dram.step_twenty_four', 'wafer.dram.step_twenty_five', 'silicon_dioxide', 400, false) // Clean and Remove protective oxide layer to expose silicon surface for wordline formation
+
+// Wordline Formation
+Deposition.generateAtomicLayerDepositionRecipe('wafer.dram.step_twenty_five', 'wafer.dram.step_twenty_six', 0.1, 'hafnium_dioxide') // HfO2 liner deposition
+Deposition.generateAtomicLayerDepositionRecipe('wafer.dram.step_twenty_six', 'wafer.dram.step_twenty_seven', 0.1, 'titanium_nitride') // Barrier layer deposition for tungsten wordline
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_twenty_seven', 'wafer.dram.step_twenty_eight', 2.0, 'tungsten') // Tungsten hexafluoride wordline fill
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.dram.step_twenty_eight', 'wafer.dram.step_twenty_nine', 400, HV) // Tungsten CMP !!! need recipe
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_twenty_nine', 'wafer.dram.step_thirty', 'tungsten', 50) // Tungsten Etchback
+Etching.generateWetEtchingRecipe('wafer.dram.step_thirty', 'wafer.dram.step_thirty_one', 'titanium_nitride', 400, false) // Remove exposed barrier layer for SiN cap
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_thirty_one', 'wafer.dram.step_thirty_two', 0.3, 'silicon_nitride.silane') // SiN cap layer (60nm)
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.dram.step_thirty_two', 'wafer.dram.step_thirty_three', 400, HV) // SiN CMP
+
+// n-doping
+Lithography.generatePhotolithographyRecipes('wafer.dram.step_thirty_three', 'wafer.dram.step_thirty_four', 'methacrylate_resist', 'mask_set.' + componentName, true)
+Doping.generateIonImplantationRecipes('wafer.dram.step_thirty_four', 'wafer.dram.step_thirty_five', 400, 'phosphine')
+Lithography.generateResistStrippingRecipes('wafer.dram.step_thirty_five', 'wafer.dram.step_thirty_six', 1, true)
+Doping.generateDriveInRecipe('wafer.dram.step_thirty_six', 'wafer.dram.step_thirty_seven', 100)
+
+// M0: BLC and SNC Plug Formation (1fx1f)
+// M0 ILD
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_thirty_seven', 'wafer.dram.step_thirty_seven', 0.4, "borophosphosilicate_glass") // BPSG ILD (100nm)
+Doping.generateDriveInRecipe('wafer.dram.step_thirty_seven', 'wafer.dram.step_thirty_eight', 100) // Annealing for reflow
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.dram.step_thirty_eight', 'wafer.dram.step_thirty_nine', 400, HV) // Oxide Selective CMP !!! need recipe
+
+// LELE (1fx1f, BLC-SNC 0.5f spacing)
+Lithography.generatePhotolithographyRecipes('wafer.dram.step_thirty_nine', 'wafer.dram.step_fourty', 'methacrylate_resist', 'mask_set.' + componentName, true) // BNC (100nm)
+Etching.generateWetEtchingRecipe('wafer.dram.step_fourty', 'wafer.dram.step_step_fourty_one', 'borophosphosilicate_glass', 80, false)
+Lithography.generateResistStrippingRecipes('wafer.dram.step_fourty_one', 'wafer.dram.step_fourty_two', 1, false)
+Lithography.generatePhotolithographyRecipes('wafer.dram.step_fourty_two', 'wafer.dram.step_fourty_three', 'methacrylate_resist', 'mask_set.' + componentName, true) // SNC (100nm)
+Etching.generateWetEtchingRecipe('wafer.dram.step_fourty_three', 'wafer.dram.step_fourty_four', 'borophosphosilicate_glass', 80, false)
+Lithography.generateResistStrippingRecipes('wafer.dram.step_fourty_four', 'wafer.dram.step_fourty_five', 1, false)
+
+// Titanium salicide process for contact formation
+Deposition.generateSputteringRecipe('wafer.dram.step_fourty_five', 'wafer.dram.step_fourty_six', ['titanium' : 1000]) // Deposit titanium for silicidation
+Deposition.generateSinteringRecipe('wafer.dram.step_fourty_six', 'wafer.dram.step_fourty_seven', 100, MV) // Anneal to form initial Ti2Si silicide phase for etch resistance
+Etching.generateWetEtchingRecipe('wafer.dram.step_fourty_seven', 'wafer.dram.step_fourty_eight', 'titanium_silicide', 400, false) // Etch away unreacted titanium !!! need recipe
+Deposition.generateSinteringRecipe('wafer.dram.step_fourty_eight', 'wafer.dram.step_fourty_nine', 400, HV) // High temperature anneal to transform Ti2Si into low resistivity TiSi
+
+// Plug formation
+Deposition.generateSputteringRecipe('wafer.dram.step_fourty_nine', 'wafer.dram.step_fifty', ['titanium' : 1000])
+Deposition.generateAtomicLayerDepositionRecipe('wafer.dram.step_fifty', 'wafer.dram.step_fifty_one', 0.1, 'titanium_nitride') // Barrier layer deposition for tungsten plugs
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_fifty_one', 'wafer.dram.step_fifty_two', 2.0, 'tungsten') // Tungsten hexafluoride plug fill
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.dram.step_fifty_two', 'wafer.dram.step_fifty_three', 400, HV) // Tungsten CMP !!! need recipe
+
+// M1: Bitline (0.5f)
+// M1 ILD
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_fifty_three', 'wafer.dram.step_fifty_four', 0.5, 'silicon_oxycarbide_hydride') // ILD (125nm)
+
+// Self-Aligned Double Patterning
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_fifty_four', 'wafer.dram.step_fifty_five', 0.25, "silicon_dioxide.teos") // Adhesion layer for Si mandrel
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_fifty_five', 'wafer.dram.step_fifty_six', 2.0, 'silicon') // Si Mandrel deposition
+Lithography.generatePhotolithographyRecipes('wafer.dram.step_fifty_six', 'wafer.dram.step_fifty_seven', 'methacrylate_resist', 'mask_set.' + componentName, true) // Patterning Si mandrel
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_fifty_seven', 'wafer.dram.step_fifty_eight', 'silicon', 400) // Etch Si mandrel pattern
+Lithography.generateResistStrippingRecipes('wafer.dram.step_fifty_eight', 'wafer.dram.step_fifty_nine', 1, false) // Resist removal for spacer formation
+Deposition.generateAtomicLayerDepositionRecipe('wafer.dram.step_fifty_nine', 'wafer.dram.step_sixty', 23, 'alumina') // ALD Al2O3 Spacer !!! need recipe
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_sixty', 'wafer.dram.step_sixty_one', 'alumina', 25) // Under-etch Al2O3 to form 0.5f spacer
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_sixty_one', 'wafer.dram.step_sixty_two', 'silicon', 400) // Etch remaining Si mandrel
+
+// Bitline Formation
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_sixty_two', 'wafer.dram.step_sixty_three', 'silicon_dioxide', 25) // Etch adhesion layer
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_sixty_three', 'wafer.dram.step_sixty_four', 'silicon_oxycarbide_hydride', 100) // Etch ILD (125nm)
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_sixty_four', 'wafer.dram.step_sixty_five', 'alumina', 400) // Spacer removal
+Deposition.generateAtomicLayerDepositionRecipe('wafer.dram.step_sixty_five', 'wafer.dram.step_sixty_six', 0.1, 'titanium_nitride') // Barrier layer deposition for tungsten plugs
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_sixty_six', 'wafer.dram.step_sixty_seven', 0.5, 'tungsten') // Tungsten hexafluoride plug fill
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.dram.step_sixty_seven', 'wafer.dram.step_sixty_eight', 400, HV) // Tungsten CMP Overpolish, remove adhesion layer !!! need recipe
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_sixty_eight', 'wafer.dram.step_sixty_nine', 0.1, 'silicon_nitride.silane') // SiN cap layer
+
+// SVC Formation
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_sixty_nine', 'wafer.dram.step_seventy', 0.8, 'silicon_oxycarbide_hydride') // ILD (200nm)
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.dram.step_seventy', 'wafer.dram.step_seventy_one', 400, HV) // Oxide Selective CMP !!! need recipe
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_seventy_one', 'wafer.dram.step_seventy_two', 'silicon_oxycarbide_hydride', 160) // Etch ILD (200nm)
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_seventy_two', 'wafer.dram.step_seventy_three', 'silicon_nitride', 20) // Etch SiN cap
+Etching.generateReactiveIonEtchingRecipe('wafer.dram.step_seventy_three', 'wafer.dram.step_seventy_four', 'silicon_oxycarbide_hydride', 100) // Etch ILD (125nm) Side wall shadowing to block shorting from bitline to SVC
+Deposition.generateAtomicLayerDepositionRecipe('wafer.dram.step_seventy_four', 'wafer.dram.step_seventy_five', 0.1, 'titanium_nitride') // Barrier layer deposition for tungsten plugs
+Deposition.generateChemicalVaporDepositionRecipe('wafer.dram.step_seventy_five', 'wafer.dram.step_seventy_six', 0.5, 'tungsten') // Tungsten hexafluoride plug fill
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.dram.step_seventy_six', 'wafer.dram.step_seventy_seven', 400, HV) // Tungsten CMP !!! need recipe
+
+// M2: MIM 
+
+
