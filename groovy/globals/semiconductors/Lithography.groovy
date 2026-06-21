@@ -101,7 +101,7 @@ class Lithography {
         new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_pyrrolidone", EV, "electron_beam_lithography", 1000)
     ]
 
-    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc = false) {
+    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc = false, boolean mandrel = false) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 if (ibarc) {
@@ -115,7 +115,8 @@ class Lithography {
                         .EUt(VA[photoresist.voltageTier])
 
                     Deposition.generateChemicalVaporDepositionRecipe(input + ".hardmasked", input + ".ibarc", 0.25, "silicon_oxynitride")
-                    input = input + ".ibarc"
+                    if (mandrel) {Deposition.generateChemicalVaporDepositionRecipe(input + ".ibarc", input + ".mandrel", 0.25, "silicon")}
+                    input = mandrel ? input + ".mandrel" : input + ".ibarc"
                 }
 
                 if (ibarc) hmds = true; // SiON surfaces are hydrophilic, so HMDS is needed for photoresist adherence.
@@ -220,5 +221,26 @@ class Lithography {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
         }
+    }
+
+    static void generateSOCStrippingRecipes(String input, String product, int timeMultiplier) {
+        PLASMA_ASHER.recipeBuilder()
+            .inputs(metaitem(input))
+            .fluidInputs(fluid('forming_gas') * 100)
+            .outputs(metaitem(input + ".ashed"))
+            .duration(200 * timeMultiplier)
+            .EUt(VA[HV])
+            .cleanroom(CleanroomType.CLEANROOM)
+            .buildAndRegister()
+
+        RESIST_PROCESSOR.recipeBuilder()
+            .inputs(metaitem(input + ".ashed"))
+            .fluidInputs(fluid('ultrapure_hydrofluoric_acid') * 5)
+            .fluidInputs(fluid('ultrapure_water') * 95)
+            .outputs(metaitem(product))
+            .duration(400 * timeMultiplier)
+            .EUt(VA[HV])
+            .cleanroom(CleanroomType.CLEANROOM)
+            .buildAndRegister()
     }
 }

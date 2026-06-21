@@ -189,7 +189,7 @@ susy.material.pig_iron=Surówka Hutnicza
 susy.material.iron_iii_sulfate=Siarczan Żelaza(III)
 
 susy.material.aluminium_hydroxide=Wodorotlenek Glinu
-susy.material.aluminium_trifluoride=Fluorek Glinu
+susy.material.aluminium_fluoride=Fluorek Glinu
 susy.material.sodium_fluoride=Fluoerk Sodu
 
 susy.material.gallium_phosphate=Fosforan Galu
@@ -1843,7 +1843,7 @@ susy.material.methacrylic_acid_solution=Methacrylic Acid Solution
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
 susy.material.salty_hydrofluoric_acid=Salty Hydrofluoric Acid
-susy.material.supported_molybdenum_vanadium=Supported Molybdenum Vanadium
+susy.material.supported_molybdenum_vanadium_oxide=Supported Molybdenum Vanadium Oxide
 susy.material.acrolein=Acrolein
 susy.material.c_five_fraction=C5 Fraction
 susy.material.dimerized_c_five_fraction=Dimerized C5 Fraction

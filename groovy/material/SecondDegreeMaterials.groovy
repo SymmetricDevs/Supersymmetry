@@ -222,7 +222,7 @@ class SecondDegreeMaterials {
 
         HoopesElectrolyte = new Material.Builder(13032, SuSyUtility.susyId('hoopes_electrolyte'))
                 .dust().liquid(new FluidBuilder().temperature(1273))
-                .components(BariumFluoride, AluminiumTrifluoride * 2, SodiumFluoride * 2)
+                .components(BariumFluoride, AluminiumFluoride * 2, SodiumFluoride * 2)
                 .colorAverage()
                 .build()
 
@@ -458,7 +458,7 @@ class SecondDegreeMaterials {
 
         SupportedNickel = new Material.Builder(13072, SuSyUtility.susyId('supported_nickel'))
                 .dust()
-                .components(NickelIINitrate * 1, Alumina * 1)
+                .components(NickelIINitrate * 1, Alumina * 10)
                 .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
@@ -578,16 +578,16 @@ class SecondDegreeMaterials {
 
         SupportedPlatinumChloride = new Material.Builder(13091, SuSyUtility.susyId('supported_platinum_chloride'))
                 .dust()
-                .components(Hydrogen * 2, Platinum, Chlorine * 6, Water * 6, Alumina * 9)
+                .components(Hydrogen * 2, Platinum, Chlorine * 6, Water * 6, Alumina * 10)
                 .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
 
-        SupportedPlatinumChloride.setFormula('(H2PtCl6)(H2O)6(Al2O3)9', true)
+        SupportedPlatinumChloride.setFormula('(H2PtCl6)(H2O)6(Al2O3)10', true)
 
         SupportedPlatinum = new Material.Builder(13092, SuSyUtility.susyId('supported_platinum'))
                 .dust()
-                .components(Alumina * 9, Platinum)
+                .components(Alumina * 10, Platinum)
                 .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
@@ -660,16 +660,16 @@ class SecondDegreeMaterials {
 
         SupportedPalladiumChloride = new Material.Builder(13103, SuSyUtility.susyId("supported_palladium_chloride"))
                 .dust()
-                .components(Hydrogen * 2, Palladium, Chlorine * 4, Water * 8, Alumina * 9)
+                .components(Hydrogen * 2, Palladium, Chlorine * 4, Water * 8, Alumina * 10)
                 .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
 
-        SupportedPalladiumChloride.setFormula('(H2PdCl4)(H2O)8(Al2O3)9', true)
+        SupportedPalladiumChloride.setFormula('(H2PdCl4)(H2O)8(Al2O3)10', true)
 
         SupportedPalladium = new Material.Builder(13104, SuSyUtility.susyId("supported_palladium"))
                 .dust()
-                .components(Palladium, Alumina * 9)
+                .components(Palladium, Alumina * 10)
                 .flags(GENERATE_CATALYST_BED)
                 .colorAverage()
                 .build()
@@ -688,10 +688,10 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        SupportedMolybdenumVanadium = new Material.Builder(13107, SuSyUtility.susyId("supported_molybdenum_vanadium"))
+        SupportedMolybdenumVanadiumOxide = new Material.Builder(13107, SuSyUtility.susyId("supported_molybdenum_vanadium_oxide"))
                 .dust()
                 .flags(GENERATE_CATALYST_BED)
-                .components(MolybdenumTrioxide, VanadiumPentoxide, Alumina)
+                .components(MolybdenumTrioxide, VanadiumPentoxide, Alumina * 10)
                 .colorAverage()
                 .build()
 
@@ -842,7 +842,12 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13130
+        SupportedChromiumIIIOxide = new Material.Builder(13130, SuSyUtility.susyId('supported_chromium_iii_oxide'))
+                .dust()
+                .flags(GENERATE_CATALYST_BED)
+                .components(ChromiumIIIOxide, Alumina * 20)
+                .colorAverage()
+                .build()
 
         HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))

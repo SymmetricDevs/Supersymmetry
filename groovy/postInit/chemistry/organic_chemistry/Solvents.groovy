@@ -113,11 +113,19 @@ import static gregtech.api.GTValues.*
     CSTR.recipeBuilder()
         .circuitMeta(2)
         .fluidInputs(fluid('one_two_dichloroethane') * 50)
-        .fluidInputs(fluid('chlorine') * 200)
-        .fluidOutputs(fluid('trichloroethylene') * 50)
-        .fluidOutputs(fluid('hydrogen_chloride') * 150)
+        .fluidInputs(fluid('chlorine') * 250)
+        .fluidOutputs(fluid('chloroethylene_mixture') * 50)
+        .fluidOutputs(fluid('hydrogen_chloride') * 175)
         .duration(10)
         .EUt(VA[MV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('chloroethylene_mixture') * 1000)
+        .fluidOutputs(fluid('trichloroethylene') * 500)
+        .fluidOutputs(fluid('tetrachloroethylene') * 500)
+        .duration(20)
+        .EUt(VA[LV])
         .buildAndRegister()
 
 // Amines

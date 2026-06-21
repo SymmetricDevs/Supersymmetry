@@ -1387,5 +1387,29 @@ class ThirdDegreeMaterials {
                 .build()
 
         SpinOnCarbon.setFormula('(?)(C6H12O3)', true)
+
+        CarbonTetrafluorideMixture = new Material.Builder(24241, SuSyUtility.susyId('carbon_tetrafluoride_mixture'))
+                .gas()
+                .components(CarbonTetrafluoride, HydrogenChloride)
+                .color(0x9ec4d1)
+                .build()
+
+        DilutedCarbonTetrafluorideMixture = new Material.Builder(24242, SuSyUtility.susyId('diluted_carbon_tetrafluoride_mixture'))
+                .gas()
+                .components(CarbonTetrafluoride, HydrogenChloride * 2)
+                .color(0xbcd9e0)
+                .build()
+
+        FluoroformMixture = new Material.Builder(24243, SuSyUtility.susyId('fluoroform_mixture'))
+                .gas()
+                .components(Fluoroform, HydrogenChloride * 3)
+                .color(0x9ed1c4)
+                .build()
+
+        ChloroethyleneMixture = new Material.Builder(24244, SuSyUtility.susyId('chloroethylene_mixture'))
+                .gas()
+                .components(Trichloroethylene, Tetrachloroethylene)
+                .color(0xa9c9b0)
+                .build()
     }
 }

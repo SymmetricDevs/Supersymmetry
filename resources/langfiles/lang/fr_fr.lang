@@ -210,7 +210,7 @@ susy.material.pig_iron=Fonte Brute
 susy.material.iron_iii_sulfate=Sulfate de Fer III
 
 susy.material.aluminium_hydroxide=Hydroxyde d'Aluminium
-susy.material.aluminium_trifluoride=Trifluorure d'Aluminium
+susy.material.aluminium_Fluoride=Fluorure d'Aluminium
 susy.material.sodium_fluoride=Fluorure de Sodium
 
 susy.material.gallium_phosphate=Phosphate de Gallium
@@ -1943,7 +1943,7 @@ susy.material.gaseous_methacrylic_acid_mixture=Gaseous Methacrylic Acid Mixture
 susy.material.methacrylic_acid_solution=Methacrylic Acid Solution
 susy.material.depleted_uranium_dioxide=Depleted Uranium Dioxide
 susy.material.salty_hydrofluoric_acid=Salty Hydrofluoric Acid
-susy.material.supported_molybdenum_vanadium=Supported Molybdenum Vanadium
+susy.material.supported_molybdenum_vanadium_oxide=Supported Molybdenum Vanadium Oxide
 susy.material.acrolein=Acrolein
 susy.material.c_five_fraction=C5 Fraction
 susy.material.dimerized_c_five_fraction=Dimerized C5 Fraction

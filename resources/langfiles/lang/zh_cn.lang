@@ -205,7 +205,7 @@ susy.material.pig_iron=生铁
 susy.material.iron_iii_sulfate=硫酸铁
 
 susy.material.aluminium_hydroxide=氢氧化铝
-susy.material.aluminium_trifluoride=氟化铝
+susy.material.aluminium_fluoride=氟化铝
 susy.material.sodium_fluoride=氟化钠
 
 susy.material.gallium_phosphate=磷酸镓
@@ -1908,7 +1908,7 @@ susy.material.gaseous_methacrylic_acid_mixture=气态甲基丙烯酸混合物
 susy.material.methacrylic_acid_solution=甲基丙烯酸溶液
 susy.material.depleted_uranium_dioxide=枯竭二氧化铀
 susy.material.salty_hydrofluoric_acid=含盐氢氟酸
-susy.material.supported_molybdenum_vanadium=氧化铝负载氧化钼-氧化钒（VO-MO）
+susy.material.supported_molybdenum_vanadium_oxide=氧化铝负载氧化钼-氧化钒（VO-MO）
 susy.material.acrolein=丙烯醛
 susy.material.c_five_fraction=C5馏分
 susy.material.dimerized_c_five_fraction=二聚化C5馏分

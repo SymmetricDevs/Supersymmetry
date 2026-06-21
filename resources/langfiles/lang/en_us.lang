@@ -254,7 +254,7 @@ susy.material.pig_iron=Pig Iron
 susy.material.iron_iii_sulfate=Iron III Sulfate
 
 susy.material.aluminium_hydroxide=Aluminium Hydroxide
-susy.material.aluminium_trifluoride=Aluminium Trifluoride
+susy.material.aluminium_fluoride=Aluminium Fluoride
 susy.material.sodium_fluoride=Sodium Fluoride
 
 susy.material.gallium_phosphate=Gallium Phosphate
@@ -1990,7 +1990,7 @@ susy.material.gaseous_methacrylic_acid_mixture=Gaseous Methacrylic Acid Mixture
 susy.material.methacrylic_acid_solution=Methacrylic Acid Solution
 susy.material.depleted_uranium_dioxide=Depleted Uranium Dioxide
 susy.material.salty_hydrofluoric_acid=Salty Hydrofluoric Acid
-susy.material.supported_molybdenum_vanadium=Supported Molybdenum Vanadium
+susy.material.supported_molybdenum_vanadium_oxide=Supported Molybdenum Vanadium Oxide
 susy.material.acrolein=Acrolein
 susy.material.c_five_fraction=C5 Fraction
 susy.material.dimerized_c_five_fraction=Dimerized C5 Fraction
@@ -3062,6 +3062,7 @@ susy.material.arf_barc=ArF Bottom Anti-Reflective Coating
 susy.material.benzyl_alcohol=Benzyl Alcohol
 susy.material.glycidol_solution=Glycidol Solution
 susy.material.glycidol=Glycidol
+susy.material.fluoroform=Fluoroform
 susy.material.iodine_pentafluoride=Iodine Pentafluoride
 susy.material.pentafluoroiodoethane=Pentafluoroiodoethane
 susy.material.nonafluorobutyl_iodide=Nonafluorobutyl Iodide
@@ -3138,6 +3139,22 @@ susy.material.expanded_polytetrafluoroethylene=Expanded Polytetrafluoroethylene 
 susy.material.vanadium_iii_sulfate_solution=Vanadium III Sulfate Solution
 susy.material.diluted_vanadium_iii_sulfate_solution=Diluted Vanadium III Sulfate Solution
 susy.material.vanadyl_sulfate_solution=Vanadyl Sulfate Solution
+susy.material.aluminium_chlorofluoride=Aluminium Chlorofluoride
+susy.material.iodine_monochloride=Iodine Monochloride
+susy.material.supported_chromium_iii_oxide=Supported Chromium III Oxide
+susy.material.hexachloroethane=Hexachloroethane
+susy.material.tetrachloroethylene=Tetrachloroethylene
+susy.material.trichlorotrifluoroethane=1,1,2-Trichloro-1,2,2-trifluoroethane
+susy.material.chlorotrifluoroethylene=Chlorotrifluoroethylene
+susy.material.dichlorotrifluoroiodoethane=1,2-Dichloro-1,1,2-trifluoro-2-iodoethane
+susy.material.tetrachlorohexafluorobutane=1,2,3,4-Tetrachloro-1,1,2,3,4,4-hexafluorobutane
+susy.material.hexafluorobutadiene=Hexafluorobutadiene
+susy.material.hexafluorobutyne=Hexafluoro-2-butyne
+susy.material.carbon_tetrafluoride_mixture=Carbon Tetrafluoride Mixture
+susy.material.diluted_carbon_tetrafluoride_mixture=Diluted Carbon Tetrafluoride Mixture
+susy.material.fluoroform_mixture=Fluoroform Mixture
+susy.material.chloroethylene_mixture=Chloroethylene Mixture
+susy.material.triethyl_borate=Triethyl Borate
 
 # Isotopes
 

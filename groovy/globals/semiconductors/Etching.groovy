@@ -48,7 +48,7 @@ class Etching {
         }
     }
 
-    public static final etchants = [
+    public static final etchants = [ //FIXME: Replace all RIE etchants with proper mixtures
         aluminium: [
             new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
             new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
@@ -66,9 +66,6 @@ class Etching {
             new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
             new Etchant("tetramethylammonium_hydroxide_solution", MV, 40, 0.004, true, false),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 40, 0.002, false, false)
-        ],
-        silicon_bosch: [
-            new Etchant(["sulfur_hexafluoride" : 50, "octafluorocyclobutane" : 25], EV, 4, true, true)
         ],
         silicon_dioxide: [
             new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
@@ -117,7 +114,35 @@ class Etching {
         ],
         nickel_silicide: [
             new Etchant("phosphoric_acid", HV, 50, 0.01, false, false)
-        ]
+        ],
+        silicon_bosch: [
+            new Etchant(["sulfur_hexafluoride" : 50, "octafluorocyclobutane" : 30, "argon" : 20], EV, 4, true, true)
+        ],
+        zirconia: [
+            new Etchant("boron_trichloride", EV, 100, 0.0167, true, true)
+        ],
+        alumina: [
+            new Etchant("boron_trichloride", EV, 100, 0.0167, true, true)
+        ],
+        zirconia_alumina_coetch: [
+            new Etchant(["boron_trichloride" : 60, "chlorine" : 20, "argon" : 20], EV, 10, 0.004, true, true)
+        ],
+        borophosphosilicate_glass: [
+            new Etchant(["octafluorocyclobutane" : 25, "carbon_tetrafluoride" : 20, "oxygen" : 10, "argon" : 45], EV, 10, 0.0167, true, true)
+        ],
+        silicon_oxycarbide_hydride: [
+            new Etchant(["octafluorocyclobutane" : 15, "argon" : 80, "oxygen" : 5], EV, 10, 0.0167, true, true)
+        ],
+        silicon_oxynitride: [
+            new Etchant(["carbon_tetrafluoride" : 30, "fluoroform" : 20, "argon" : 50], EV, 10, 0.0167, true, true)
+        ],
+        silicon_silica_coetch: [
+            new Etchant(["hexafluorobutadiene" : 15, "carbon_tetrafluoride" : 25, "argon" : 50, "oxygen" : 10], EV, 10, 0.004, true, true)
+        ],
+        silicon_nitride_silica_coetch: [
+            new Etchant(["hexafluorobutyne" : 15, "carbon_tetrafluoride" : 25, "argon" : 50, "oxygen" : 10], EV, 10, 0.004, true, true)
+        ],
+
     ]
 
 

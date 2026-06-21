@@ -861,6 +861,7 @@ class SuSyMaterials {
     public static Material NanoparticleModifiedNafionDispersion
     public static Material NanoparticleModifiedNafion
     public static Material ExpandableGraphite
+    public static Material AluminiumChlorofluoride
 
 
     // Petrochem Materials
@@ -1111,7 +1112,7 @@ class SuSyMaterials {
     public static Material HeatedGreenCoke
     public static Material IronIIISulfate
     public static Material AluminiumHydroxide
-    public static Material AluminiumTrifluoride
+    public static Material AluminiumFluoride
     public static Material GalliumPhosphate
     public static Material LithiumNiobate
     public static Material LeadZirconateTitanate
@@ -1156,11 +1157,7 @@ class SuSyMaterials {
     public static Material ActivatedRaneyNickel
     public static Material DicobaltOctacarbonyl
     public static Material BismuthCopper
-    public static Material Bromobenzene
-    public static Material Triethylaluminium
     public static Material HydrogenPeroxide
-    public static Material CarbonTetrabromide
-    public static Material Bromomethane
     public static Material VeryDilutedSulfuricAcid
     public static Material SulfurDichloride
     public static Material ThionylChloride
@@ -1315,7 +1312,6 @@ class SuSyMaterials {
     public static Material PurifiedIronTwoThreeOxide
     public static Material PurifiedIronIIIOxide
     public static Material NickelIIOxide
-    public static Material CarbonTetrafluoride
     public static Material NitrogenTrifluoride
     public static Material CobaltFerrite
     public static Material StrontiumFerrite
@@ -1807,6 +1803,7 @@ class SuSyMaterials {
     public static Material HighPurityYtterbium
     public static Material HighPurityLutetium
     public static Material HighPurityThorium
+    public static Material IodineMonochloride
 
     // Second Degree Materials
 
@@ -1908,7 +1905,7 @@ class SuSyMaterials {
     public static Material DilutedManganeseIIChlorideSolution
     public static Material SupportedPalladium
     public static Material MixedCyanideSolution
-    public static Material SupportedMolybdenumVanadium
+    public static Material SupportedMolybdenumVanadiumOxide
     public static Material ChlorinatedBeryl
     public static Material IndiumChlorideSolution
     public static Material TelluriumLiquor
@@ -2001,6 +1998,7 @@ class SuSyMaterials {
     public static Material VanadiumIIISulfateSolution
     public static Material DilutedVanadiumIIISulfateSolution
     public static Material VanadylSulfateSolution
+    public static Material SupportedChromiumIIIOxide
 
     // Organic Chemistry Materials
 
@@ -2629,6 +2627,7 @@ class SuSyMaterials {
     public static Material AbsorbingMethacrylateCopolymer
     public static Material BenzylAlcohol
     public static Material Glycidol
+    public static Material Fluoroform
     public static Material Pentafluoroiodoethane
     public static Material NonafluorobutylIodide
     public static Material Methoxyperfluorobutane
@@ -2652,6 +2651,20 @@ class SuSyMaterials {
     public static Material TrimethylGallium
     public static Material TrimethylIndium
     public static Material DiallyldimethylammoniumChloride
+    public static Material Bromobenzene
+    public static Material Triethylaluminium
+    public static Material CarbonTetrabromide
+    public static Material Bromomethane
+    public static Material CarbonTetrafluoride
+    public static Material Hexachloroethane
+    public static Material Tetrachloroethylene
+    public static Material Trichlorotrifluoroethane
+    public static Material Chlorotrifluoroethylene
+    public static Material Dichlorotrifluoroiodoethane
+    public static Material Tetrachlorohexafluorobutane
+    public static Material Hexafluorobutadiene
+    public static Material Hexafluorobutyne
+    public static Material TriethylBorate
 
     // Third Degree Materials
 
@@ -2950,7 +2963,11 @@ class SuSyMaterials {
     public static Material HotPressurizedHeavyWater
     public static Material TritiatedHeavyWater
     public static Material TritiatedSteam
-    public static Material ChilledWater    
+    public static Material ChilledWater
+    public static Material CarbonTetrafluorideMixture
+    public static Material DilutedCarbonTetrafluorideMixture
+    public static Material FluoroformMixture
+    public static Material ChloroethyleneMixture
 
     public static void changeFormulas() {
         log.infoMC("Changing Formulas!")
