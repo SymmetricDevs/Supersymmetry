@@ -3154,6 +3154,7 @@ susy.material.carbon_tetrafluoride_mixture=Carbon Tetrafluoride Mixture
 susy.material.diluted_carbon_tetrafluoride_mixture=Diluted Carbon Tetrafluoride Mixture
 susy.material.fluoroform_mixture=Fluoroform Mixture
 susy.material.chloroethylene_mixture=Chloroethylene Mixture
+susy.material.triethyl_borate=Triethyl Borate
 
 # Isotopes
 

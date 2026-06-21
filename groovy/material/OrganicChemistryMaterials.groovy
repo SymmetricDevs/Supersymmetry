@@ -4369,5 +4369,11 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 4, Fluorine * 6)
                 .color(0x067c8a)
                 .build()
+
+        TriethylBorate = new Material.Builder(15739, SuSyUtility.susyId('triethyl_borate'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 15, Boron, Oxygen * 3)
+                .color(0xb5f571)
+                .build()
     }
 }

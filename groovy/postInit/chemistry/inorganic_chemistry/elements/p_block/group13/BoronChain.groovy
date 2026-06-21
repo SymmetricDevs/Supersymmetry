@@ -314,3 +314,14 @@ BR.recipeBuilder()
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Triethyl borate
+
+LCR.recipeBuilder()
+    .notConsumable(fluid('diluted_sulfuric_acid') * 2000)
+    .inputs(ore('dustBoricAcid') * 7)
+    .fluidInputs(fluid('ethanol') * 3000)
+    .fluidOutputs(fluid('triethyl_borate') * 1000)
+    .duration(200)
+    .EUt(VA[HV])
+    .buildAndRegister()

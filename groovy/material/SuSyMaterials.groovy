@@ -2664,6 +2664,7 @@ class SuSyMaterials {
     public static Material Tetrachlorohexafluorobutane
     public static Material Hexafluorobutadiene
     public static Material Hexafluorobutyne
+    public static Material TriethylBorate
 
     // Third Degree Materials
 
