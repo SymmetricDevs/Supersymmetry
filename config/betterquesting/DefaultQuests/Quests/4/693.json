@@ -11,6 +11,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.693.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 8120,
         "id:8": "gregtech:meta_gem"
       },
@@ -20,6 +21,7 @@
   "questID:3": 693,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

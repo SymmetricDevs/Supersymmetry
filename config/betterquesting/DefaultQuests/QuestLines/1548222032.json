@@ -5,6 +5,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.ql.1548222032.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 114,
         "id:8": "gregtech:machine"
       },

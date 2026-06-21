@@ -13,6 +13,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.768746703.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 17002,
         "id:8": "gregtech:machine"
       },
@@ -22,6 +23,7 @@
   "questID:3": 768746703,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

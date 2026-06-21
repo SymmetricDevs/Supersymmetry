@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.720.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "betterquesting:placeholder"
       },
       "name:8": "susy.quest.db.720.title"
@@ -14,6 +15,7 @@
   "questID:3": 720,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

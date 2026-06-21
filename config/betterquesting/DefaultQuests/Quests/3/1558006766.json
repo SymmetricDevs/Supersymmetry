@@ -1,0 +1,66 @@
+{
+  "preRequisites:11": [
+    34144082,
+    400
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "The second battery type is §cNickel-Iron§r. \n\nIt requires the following:\n- §3Nickel-plated Steel§r hull \n- §2Potassium hydroxide§r electrolyte \n- §3Nickel-plated Steel§r electrode frame \n- §2Nickel Hydroxide§r cathode \n- §7Iron Oxide§r anode\n\nNickel Hydroxide§r can be obtained from §7Nickel Chloride§r, while §7Iron Oxide§r can be obtained by roasting Iron. §2Potassium Hydroxide Solution§r is produced in the familiar chloralkali process using §dSylvite§r, which you can get from processing evaporite deposits.\n\nYou can check JEI for more details.",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 4011,
+        "id:8": "gregtech:meta_item_2",
+        "tag:10": {
+          "Charge:4": 448000
+        }
+      },
+      "name:8": "The Edison Battery",
+      "tasklogic:8": "OR"
+    }
+  },
+  "questID:3": 1558006766,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 4010,
+          "id:8": "gregtech:meta_item_2",
+          "tag:10": {
+            "Charge:4": 112000
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 4011,
+          "id:8": "gregtech:meta_item_2",
+          "tag:10": {
+            "Charge:4": 448000
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "2:10": {
+      "index:3": 2,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 4012,
+          "id:8": "gregtech:meta_item_2",
+          "tag:10": {
+            "Charge:4": 1280000
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

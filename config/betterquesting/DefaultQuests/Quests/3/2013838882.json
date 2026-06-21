@@ -1,24 +1,31 @@
 {
   "preRequisites:11": [
-    550
+    537
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.879.desc",
+      "desc:8": "No Description",
       "icon:10": {
-        "Damage:2": 427,
+        "Count:3": 1,
+        "Damage:2": 8053,
         "id:8": "gregtech:meta_dust"
       },
-      "name:8": "susy.quest.db.879.title"
+      "name:8": "Gold and Silver Purification"
     }
   },
-  "questID:3": 879,
+  "questID:3": 2013838882,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 427,
+          "Damage:2": 8053,
+          "id:8": "gregtech:meta_dust"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 8036,
           "id:8": "gregtech:meta_dust"
         }
       },

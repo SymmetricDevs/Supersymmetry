@@ -5,20 +5,20 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.661.desc",
-      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "sperrylite_waste"
         }
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.661.title"
     }
   },
   "questID:3": 661,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

@@ -1,13 +1,14 @@
 {
   "preRequisites:11": [
     190,
-    198
+    199
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.201.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 8119,
         "id:8": "gregtech:meta_dust"
       },
@@ -18,6 +19,7 @@
   "questID:3": 201,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -5,6 +5,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.ql.20.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "immersiverailroading:item_rolling_stock_component",
         "tag:10": {
           "componentType:3": 7,

@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.18.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:grindstone"
       },
       "name:8": "susy.quest.db.18.title"
@@ -14,6 +15,7 @@
   "questID:3": 18,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

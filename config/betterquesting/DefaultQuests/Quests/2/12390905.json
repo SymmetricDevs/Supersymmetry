@@ -1,0 +1,32 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
+  "preRequisites:11": [
+    702158502,
+    388,
+    1427511961
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "This quest will describe the process on how to make §bliquid oxygen§r, but it\u0027s the same for most gases.\n\n§bOxygen§r can be compressed to make §cHot High-Pressure Oxygen§r using a fluid compressor. This only takes 30 EU/t for oxygen, but it\u0027s 200 EU/t or higher for most fluids.\nThe §cHot High Pressure Oxygen §rmust be then cooled down to make§a High Pressure Oxygen§r. This can either be done with a §cRadiator §ror with a §cHeat Exchanger§r, but the Heat Exchanger requires water to work.\nThe§a High Pressure Oxygen §r§r§ris then cooled to make §bCold High Pressure Oxygen§r.\nThis step can only be done in the Heat Exchanger and it requires a §brefrigerant §rto cool it down to -50°C.\n\nA refrigerant can either be §bCold Ammonia, Carbon Dioxide or Cold Propane§r.\n§bCold Carbon Dioxide §rcan be made by first compressing Carbon Dioxide into Hot Compressed CO2, then radiating out the heat using a Radiator, and then decompressing it to make §bCold CO2§r.\n\n§6Decompress §r§1§9Cold High Pressure Oxygen§r into §9Liquid Oxygen§r, §cwhich has a temperature of 85K.§r This is required for making §3§6§7LV§r superconductors.",
+      "icon:10": {
+        "Count:3": 1,
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "liquid_oxygen"
+        }
+      },
+      "name:8": "Thermodynamic Cycling"
+    }
+  },
+  "questID:3": 12390905,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

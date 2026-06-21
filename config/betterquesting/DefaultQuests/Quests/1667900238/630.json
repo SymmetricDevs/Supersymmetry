@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.630.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "techguns:as50",
         "tag:10": {
           "ammo:2": 10,

@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.567.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "openglasses:openglasses",
         "tag:10": {
           "Energy:3": 0,
@@ -30,6 +31,7 @@
   "questID:3": 567,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

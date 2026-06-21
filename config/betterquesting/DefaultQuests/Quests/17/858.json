@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.858.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "tardis:gallifreyan_grass_snow"
       },
       "name:8": "susy.quest.db.858.title"

@@ -7,6 +7,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.775.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "oil"
@@ -18,6 +19,7 @@
   "questID:3": 775,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

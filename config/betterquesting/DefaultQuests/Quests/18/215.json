@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.215.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 6,
         "id:8": "chisel:energizedvoidstone"
       },
@@ -15,6 +16,7 @@
   "questID:3": 215,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

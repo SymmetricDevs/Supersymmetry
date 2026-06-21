@@ -1,23 +1,29 @@
 {
   "preRequisiteTypes:7": [
+    1,
     1
   ],
   "preRequisites:11": [
-    99
+    99,
+    205
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.239.desc",
+      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 521,
         "id:8": "gregtech:meta_item_1"
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.239.title"
     }
   },
   "questID:3": 239,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

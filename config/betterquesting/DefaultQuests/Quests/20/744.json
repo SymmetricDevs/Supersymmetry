@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.744.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "immersiverailroading:item_augment",
         "tag:10": {
           "augment:3": 4,
@@ -18,6 +19,7 @@
   "questID:3": 744,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

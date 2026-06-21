@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.392.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "gregtechfoodoption:rolling_pin",
         "tag:10": {
           "DisallowContainerItem:1": 0,

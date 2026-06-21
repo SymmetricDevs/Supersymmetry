@@ -1,0 +1,33 @@
+{
+  "preRequisites:11": [
+    1093398122,
+    1994347596,
+    829239928
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "To get your first §aBoron§r, first roast §6Boric Acid§r to get §6Boron Trioxide§r.\nFrom here you have two options, but to access the second you need cataylsts that require Boron.\nFor the first route, roast Boron Trioxide with §3Magnesium§r to get §6Amorphous Boron§r and pulverize that for some starting Boron.\nIn the second route, you first need a §3Boron Carbide§r electrode and some §3Liquid Potassium Trifluoroborate§r. The other electrode is simply a §3Graphite Rod§r and some §3Liquid Sodium Fluoride§r as the other catalyst. Electrolyse the Boron Trioxide for §2Electroltic Boron§r and pulverize that like before for a more effecient way to produce §4Boron§r,",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 13,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "Boron",
+      "questlogic:8": "OR"
+    }
+  },
+  "questID:3": 544928264,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 13,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

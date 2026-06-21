@@ -5,11 +5,10 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.422.desc",
-      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "minecraft:glass"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.422.title"
     }
   },

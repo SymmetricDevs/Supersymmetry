@@ -4,23 +4,37 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.513.desc",
+      "desc:8": "The §6Zinc Ferrites§r are needed to create inductors.\n\n§6Zinc §rneeds to be roasted to make §7Zinc Oxide§r.\n\n§\n§1Nickel §rneeds to be roasted with Oxygen to make §aNickel II Oxide§r.\n\nCombine §aNickel II Oxide §rwith §4Purified Iron III Oxide§r and Zincite to make §6Nickel Zinc Ferrite§r.\n\nThe same process to make §6Manganese Zinc Ferrite§r by replacing Nickel with Manganese.",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 8385,
         "id:8": "gregtech:meta_ingot"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.513.title"
+      "name:8": "Zinc Ferrites",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 513,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 8385,
+          "id:8": "gregtech:meta_ingot"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 355,
           "id:8": "gregtech:meta_ingot"
         }
       },

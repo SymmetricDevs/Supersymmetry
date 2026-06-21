@@ -4,8 +4,9 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.682.desc",
+      "desc:8": "You may have noticed that when you view the uses of ores in JEI, you can see an §6\"Ore Byproducts List\"§f page.\n\nThat page shows most of the possible routes you can take to process that ore, to extract as much value as possible while obtaining some nice byproducts.\n\nYou can §cwash ores, centrifuge them, macerate them, or sift them,§f depending on what ore it is.\n\nYou will get tailings as a byproduct, which can be processed further to get stuff like §bcalcite§f or even §aemeralds§f from §2pegmatite tailings.",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 257,
         "id:8": "gregtech:meta_crushed_centrifuged"
       },
@@ -15,6 +16,7 @@
   "questID:3": 682,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

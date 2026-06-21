@@ -9,6 +9,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.640.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "gaspunk:gas_mask"
       },
       "name:8": "susy.quest.db.640.title"
@@ -18,6 +19,7 @@
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

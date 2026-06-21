@@ -6,15 +6,14 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.46.desc",
-      "frame:8": "GATE",
+      "desc:8": "To obtain §aSulfuric Acid§r, first oxidize some §6Pyrite§r with §3Water and Air§r. (You must use small piles for this!)\nThe §6Green Vitriol§r can be decomposed in the §dRoaster§r to get §6Sulfur Trioxide§r. Sulfur Trioxide and §3Water§r can be mixed together to create §4Sulfuric Acid§r. You can use a §dSteam Mixer §ffor this.\n\nSO₃ + H₂O -\u003e H₂SO₄\n\nSince Sulfuric Acid is an acid, it will require §9special equipment§r to handle it. §lBronze/Steel Drums can\u0027t handle Acids.§r You must use a §lLead Drum or Gold Drum§r to transport Sulfuric Acid, as it\u0027s acid-proof.\n\nFor a full list of non-corrosive drums, check the Storage tab.",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "sulfuric_acid"
         }
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.46.title"
     }
   },

@@ -7,6 +7,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.188760209.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 55,
         "id:8": "gregtech:meta_foil"
       },
@@ -17,6 +18,7 @@
   "questID:3": 188760209,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

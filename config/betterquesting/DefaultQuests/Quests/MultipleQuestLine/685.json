@@ -1,11 +1,13 @@
 {
   "preRequisites:11": [
-    169
+    169,
+    516
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.685.desc",
+      "desc:8": "§6Brine §rcan be obtained using a Fluid Drilling Rig. It can be used to extract §aSalt, Bromine, and Iodine§r, among other things.\n\nBrine needs to be calrified twice in a §dClarifier Vat§r to extract §6Decalcified Brine§r. First with §3Calcium Hydroxide Slurry§r, then again with §3Soda Ash Solution§r.\nDecalcified Brine is crystalized to obtain salt and make §6Brine Mother Liquor§r, cristalized again for §6Potassium Rich Mother Liquor§r, and once more for §6Bromine Rich Mother Liquor§r.\n§\n§3Chlorine §ris bubbled into Bromine Rich Mother Liquor to make §2Chlorinated Brine§r, which is then vacuum ejected with §3Steam§r and centrifuged to make §4Bromine and Iodine§r.",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "brine"
@@ -17,7 +19,15 @@
   "questID:3": 685,
   "tasks:9": {
     "0:10": {
-      "taskID:8": "bq_standard:checkbox"
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 49,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

@@ -4,19 +4,19 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.368.desc",
-      "frame:8": "GATE",
+      "desc:8": "§6Copper §rcan be annealed in an §cArc Furnace §rto create §6Annealed Copper§r. This specialized version of copper can be used to create electronic componants §amore efficiently§r.",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 252,
         "id:8": "gregtech:meta_ingot"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.368.title"
     }
   },
   "questID:3": 368,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

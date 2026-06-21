@@ -1,0 +1,25 @@
+{
+  "preRequisites:11": [
+    505
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "§6Sea Water§r can be processed down into lots of §aSalt and Magnesium§r.\n\nCompress the Sea Water through a §3Cellulose Acetate Membrane§r to get 1000L of §6Concentrated Sea Water§r with either 9000L of normal §6Water or Desalinated Sea Water§r.\n\n(It isn\u0027t recommended to use the §dMulti-Stage Flash Distiller§r because of the small amount of Concentrated Sea Water obtained.)\n\nNext evaporate the Concentrated Sea Water for tons of §4Salt§r and some §2Sea Bittern§r.\nCrystallize the Sea Bittern with some Water for some §cEpsomite§r and §2Desulfurized Sea Bittern§r. Epsomite can be roasted for §cMagnesium Sulfide§r, which can be further roasted into §4Magnesite and Sulfur Trioxide§r.\nClorinate your Desulfurized Sea Bittern and vaccum eject it with some §3Steam§r for §2Debrominated Sea Bittern§r and §cImpure Bromine§r, centrifuge this for §4Bromine and Iodine§r.\nCrystalize the Debromated Sea Bittern for §4Carnallite and Magnesium Chloride Solution§r.\n",
+      "icon:10": {
+        "Count:3": 1,
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "sea_water"
+        }
+      },
+      "name:8": "Sea Water Line"
+    }
+  },
+  "questID:3": 2038516957,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

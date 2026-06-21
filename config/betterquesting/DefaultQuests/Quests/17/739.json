@@ -11,6 +11,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.739.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 2,
         "id:8": "chisel:endstone1"
       },
