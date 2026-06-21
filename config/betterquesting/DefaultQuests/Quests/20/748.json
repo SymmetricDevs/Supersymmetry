@@ -7,6 +7,7 @@
       "desc:8": "susy.quest.db.748.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "immersiverailroading:item_rolling_stock",
         "tag:10": {
           "defID:8": "rolling_stock/freight/monorail_item.json",
@@ -20,6 +21,7 @@
   "questID:3": 748,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

@@ -6,16 +6,20 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.698.desc",
+      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 8003,
         "id:8": "gregtech:meta_item_2"
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.698.title"
     }
   },
   "questID:3": 698,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

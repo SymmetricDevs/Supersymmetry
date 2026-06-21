@@ -5,6 +5,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.ql.18.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "littletiles:hammer",
         "tag:10": {}
       },

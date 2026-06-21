@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.736.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "techguns:ballistic_shield"
       },
       "name:8": "susy.quest.db.736.title"

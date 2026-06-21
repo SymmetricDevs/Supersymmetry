@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.597.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "techguns:thompson",
         "tag:10": {
           "ammo:2": 20,
@@ -20,6 +21,7 @@
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

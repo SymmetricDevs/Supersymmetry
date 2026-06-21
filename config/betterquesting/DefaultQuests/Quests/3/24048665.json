@@ -11,6 +11,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.24048665.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "biomesoplenty:blue_fire"
       },
       "name:8": "susy.quest.db.24048665.title",
@@ -20,6 +21,7 @@
   "questID:3": 24048665,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

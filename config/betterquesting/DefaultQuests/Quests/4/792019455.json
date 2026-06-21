@@ -11,6 +11,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.792019455.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 6304,
         "id:8": "gregtech:meta_item_2"
       },
@@ -20,6 +21,7 @@
   "questID:3": 792019455,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

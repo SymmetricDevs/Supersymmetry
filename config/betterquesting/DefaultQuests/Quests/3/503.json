@@ -1,16 +1,20 @@
 {
   "preRequisites:11": [
-    504
+    504,
+    498
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.503.desc",
+      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "carburized_stainless_steel"
         }
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.503.title",
       "tasklogic:8": "OR"
     }
@@ -18,6 +22,7 @@
   "questID:3": 503,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

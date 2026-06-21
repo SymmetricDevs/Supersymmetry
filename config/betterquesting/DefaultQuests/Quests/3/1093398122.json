@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    81
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "§aBoric Acid§r can either be obtained from §1Salar Brine processing§r, or through roasting §6Borax§r for §6Sodium Tetraborate§r, then batch reacting it with §3Distilled Water§r and again with §3Hydrochloric Acid§r.",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 8123,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "Boric Acid"
+    }
+  },
+  "questID:3": 1093398122,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8123,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

@@ -1,27 +1,29 @@
 {
   "preRequisites:11": [
-    673
+    1093398122
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.677.desc",
+      "desc:8": "With §3Boric Acid, Nickel Chloride, and Nickel Sufate§r, you can mix it with §3Distilled Water§r for §4Watts Bath Electrolyte§r. This is needed as a catalyst for the next tier of battery.",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
-          "FluidName:8": "liquid_helium"
+          "FluidName:8": "watts_bath_electrolyte"
         }
       },
-      "name:8": "susy.quest.db.677.title",
+      "name:8": "Watts Bath Electrolyte",
       "tasklogic:8": "OR"
     }
   },
-  "questID:3": 677,
+  "questID:3": 34144082,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,
-          "FluidName:8": "liquid_helium"
+          "FluidName:8": "watts_bath_electrolyte"
         }
       },
       "taskID:8": "bq_standard:fluid"

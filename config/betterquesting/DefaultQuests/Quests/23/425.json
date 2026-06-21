@@ -7,6 +7,7 @@
       "desc:8": "susy.quest.db.425.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 274,
         "id:8": "gregtechfoodoption:gtfo_meta_item"
       },
@@ -17,6 +18,7 @@
   "questID:3": 425,
   "rewards:9": {
     "0:10": {
+      "index:3": 0,
       "rewardID:8": "bq_standard:item",
       "rewards:9": {
         "0:10": {
@@ -29,6 +31,7 @@
   },
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

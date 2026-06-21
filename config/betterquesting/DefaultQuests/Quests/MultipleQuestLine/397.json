@@ -1,17 +1,19 @@
 {
   "preRequisites:11": [
-    396,
-    659
+    396
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.397.desc",
+      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "ethylene"
         }
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.397.title",
       "questlogic:8": "OR",
       "tasklogic:8": "OR"
@@ -20,6 +22,7 @@
   "questID:3": 397,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

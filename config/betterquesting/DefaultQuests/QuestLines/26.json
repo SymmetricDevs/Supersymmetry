@@ -5,6 +5,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.ql.26.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "minecraft:spawn_egg",
         "tag:10": {
           "EntityTag:10": {

@@ -1,0 +1,30 @@
+{
+  "preRequisites:11": [
+    1994347596
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "The §6Lithium Carbide§r byproduct you have from §1Salar Brine processing§r is reacted with §3Hydrochloric Acid§r and extracted for §6Liquid Lithium Chloride§r. This is then electrolyzed in an §dElectrolytic Cell§r with a §3Steel and Graphite Rod§r as the electrodes and §3Liquid Sylvite§r as the catalyst to return the lost §eChlorine§r and obtain pure §4Lithium§r.",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 56,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "Lithium"
+    }
+  },
+  "questID:3": 1536805661,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 56,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

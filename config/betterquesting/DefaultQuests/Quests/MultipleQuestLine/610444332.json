@@ -9,12 +9,15 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.610444332.desc",
+      "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "susy:susy_armor",
         "tag:10": {
           "damage:6": 0.0
         }
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.610444332.title"
     }
   },
@@ -22,6 +25,7 @@
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

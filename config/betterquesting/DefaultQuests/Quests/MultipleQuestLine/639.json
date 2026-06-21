@@ -1,14 +1,13 @@
 {
-  "preRequisiteTypes:7": [
-    1
-  ],
   "preRequisites:11": [
-    243
+    243,
+    1676461834
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.639.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 3,
         "id:8": "gregtech:gt_armor",
         "tag:10": {
@@ -16,6 +15,7 @@
         }
       },
       "name:8": "susy.quest.db.639.title",
+      "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
   },
@@ -23,6 +23,7 @@
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

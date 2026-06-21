@@ -4,8 +4,9 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.504.desc",
+      "desc:8": "§6Pyrolusite §rcan be smelted in an §cERF§r with a §1§3Carbon Source (Coal, Charcoal, Anthracite, Coal Coke, or Carbon Black)§r to get §6Manganese Dust§r.",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 61,
         "id:8": "gregtech:meta_dust"
       },
@@ -15,6 +16,7 @@
   "questID:3": 504,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

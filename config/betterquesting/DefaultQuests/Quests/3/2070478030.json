@@ -1,0 +1,37 @@
+{
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
+  "preRequisites:11": [
+    544928264,
+    829239928,
+    509
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "Mixing §6Magnesium and Boron§r together creates magnesium diboride dust. However, do not attempt to smelt this.\nLike §bManganese Phosphide§r, §aMagnesium Diboride§r needs to be canned and smelted in a §dTube Furnace§r before becoming a superconductor. Only this time you can the blend with a §3Silver Pipe§r. This roasted tube is then extruded like normal.\nTo cool down the base wire you need §3Liquid Nitrogen§r this time, which needs MV compressors. Cooling the §6Magnesium Diboride Tube§r will create §4MV-Tier Superconductors§r.",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 425,
+        "id:8": "gregtech:wire_single"
+      },
+      "name:8": "MV Superconductors"
+    }
+  },
+  "questID:3": 2070478030,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "Damage:2": 425,
+          "id:8": "gregtech:wire_single"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

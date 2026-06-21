@@ -1,15 +1,18 @@
 {
   "preRequisiteTypes:7": [
+    1,
     1
   ],
   "preRequisites:11": [
-    31
+    31,
+    95
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.78.desc",
       "frame:8": "GATE",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 14538,
         "id:8": "gregtech:machine"
       },
@@ -22,6 +25,7 @@
   "questID:3": 78,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

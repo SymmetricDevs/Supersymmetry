@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.171.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "gregtech:drill_lv",
         "tag:10": {
           "Charge:4": 2147483647,
@@ -39,6 +40,7 @@
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

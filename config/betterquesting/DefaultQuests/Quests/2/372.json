@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.372.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "minecraft:iron_ingot"
       },
       "name:8": "susy.quest.db.372.title"
@@ -14,6 +15,7 @@
   "questID:3": 372,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 128,

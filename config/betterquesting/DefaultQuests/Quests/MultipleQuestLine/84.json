@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.84.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 158,
         "id:8": "gregtechfoodoption:gtfo_meta_item"
       },
