@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.599.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 4,
         "id:8": "gregtech:meta_block_frame_20"
       },
@@ -16,7 +15,6 @@
   "questID:3": 599,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

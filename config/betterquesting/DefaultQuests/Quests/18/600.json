@@ -7,7 +7,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.600.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "chisel:auto_chisel"
       },
       "name:8": "susy.quest.db.600.title"
@@ -16,7 +15,6 @@
   "questID:3": 600,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

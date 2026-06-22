@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.445.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "industrialrenewal:fluid_container"
       },
       "name:8": "susy.quest.db.445.title"
@@ -15,7 +14,6 @@
   "questID:3": 445,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

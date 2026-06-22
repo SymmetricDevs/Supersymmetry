@@ -7,7 +7,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.525.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "opencomputers:storage"
       },
       "name:8": "susy.quest.db.525.title",
@@ -17,7 +16,6 @@
   "questID:3": 525,
   "rewards:9": {
     "0:10": {
-      "index:3": 0,
       "rewardID:8": "bq_standard:item",
       "rewards:9": {
         "0:10": {
@@ -1796,7 +1794,6 @@
   },
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

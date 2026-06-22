@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.988736631.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 13,
         "id:8": "susy:susy_armor",
         "tag:10": {
@@ -21,7 +20,6 @@
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

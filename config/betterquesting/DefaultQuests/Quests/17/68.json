@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.68.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 10204,
         "id:8": "gregtech:meta_item_2"
       },
@@ -18,7 +17,6 @@
   "tasks:9": {
     "0:10": {
       "dimension:3": 10,
-      "index:3": 0,
       "name:8": "The Beneath",
       "taskID:8": "bq_standard:location"
     }

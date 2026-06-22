@@ -16,7 +16,6 @@
       "desc:8": "susy.quest.db.64.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 519,
         "id:8": "gregtech:meta_item_1"
       },

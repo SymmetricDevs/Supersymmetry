@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1955643643.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "projectred-integration:gate"
       },
       "name:8": "susy.quest.db.1955643643.title"
@@ -15,7 +14,6 @@
   "questID:3": 1955643643,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

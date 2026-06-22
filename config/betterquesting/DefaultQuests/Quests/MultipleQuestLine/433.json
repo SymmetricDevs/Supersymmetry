@@ -6,9 +6,8 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "Advancements in agricultural technology were some of the most pivotal innovations in history. Using the §6Arboretum§r, you can mass produce any tree.\n\nBy using §6Weed Killer§r and/or §6Pesticide§r, you can improve the yield even further.",
+      "desc:8": "susy.quest.db.433.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "gregtechfoodoption:gtfo_glass_casing"
       },
       "name:8": "susy.quest.db.433.title"
@@ -17,7 +16,6 @@
   "questID:3": 433,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 17,

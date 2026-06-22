@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1571195686.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 15,
         "id:8": "projectred-integration:gate"
       },
@@ -16,7 +15,6 @@
   "questID:3": 1571195686,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

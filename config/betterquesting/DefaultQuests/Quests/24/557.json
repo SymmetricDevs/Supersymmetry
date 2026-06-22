@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.557.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "opensecurity:rfid_card"
       },
       "name:8": "susy.quest.db.557.title"
@@ -15,7 +14,6 @@
   "questID:3": 557,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

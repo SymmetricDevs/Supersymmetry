@@ -5,9 +5,8 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "Combine §6Liquid High Purity Arsenic and Gallium§r in a §dCrystalizer§r with a §3Pyrolytic Boron Nitride Crucible, Silicon Seed Crystal, and liquid Boron Trioxide§r to create a §4Gallium Arsenide Ingot§r. This will have several uses later on.",
+      "desc:8": "susy.quest.db.238.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 351,
         "id:8": "gregtech:meta_dust"
       },
@@ -17,7 +16,6 @@
   "questID:3": 238,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

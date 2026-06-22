@@ -11,9 +11,8 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "A §6Clarifier§r is a multiblock machine that can concentrate certain materials from a liquid. It has multiple uses in §9ore concentration§f, §dbrine processing§r, and §ewastewater treatment§r.§f\n\nThe Clarifier requires:\n§6- 1x Clarifier controller\n- 1x Input Bus\n- 1x Input Hatch\n- 1 Output Bus\n- 1x Output Hatch\n- 1x Maintenance Hatch\n- 1x Energy Hatch\n- 144x Clarifier Vat\n- 12x Steel Frame Box\n- 261x Light Concrete\n- 4x Steel Gearbox Casing\n- 13x Solid Steel Machine Casing\n- 2x Steel Pipe Casing§r",
+      "desc:8": "susy.quest.db.516.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "susy:multiblock_tank"
       },
       "name:8": "susy.quest.db.516.title"
@@ -22,7 +21,6 @@
   "questID:3": 516,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

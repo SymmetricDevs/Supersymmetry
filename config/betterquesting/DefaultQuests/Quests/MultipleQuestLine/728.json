@@ -5,15 +5,14 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "To make §2hydroxylamine§r, react hydrogen and nitric oxide with a platinum catalyst bed.\n\nTo make §5clohexanone§r, two feedstocks are relevant: benzene and phenol.\n\nTo produce §5cyclohexanone§r from §6phenol§r, you can use a supported §7palladium§r catalyst to directly hydrogenate §6phenol§r to §5cyclohexanone§r or you may use a supported nickel catalyst to first hydrogenate to §dcyclohexanol§r and then dehydrogenate §dcyclohexanol§r to §5cyclohexanone§r over supported §bnickel§r.\n\nTo produce cyclohexanone from cyclohexane (which itself is a product of benzene hydrogenation), liquid-phase oxidation using a §ccobalt acetate§r catalyst. This produces a mixture of §dcyclohexanol§r and §5cyclohexanone§r known as §eketone-alcohol oil§r, which needs to be washed with soda ash solution to remove impurities along with byproduct water. The remaining mixture can then be distilled into its components. The §eketone-alcohol oil§r is also used to produce adipic acid, which will be relevant in EV.",
+      "desc:8": "susy.quest.db.728.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "cyclohexanone"
         }
       },
-      "name:8": "Hydroxylamine and Cyclohexanone",
+      "name:8": "susy.quest.db.728.title",
       "tasklogic:8": "OR"
     }
   },

@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.542264610.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "rs_ctr:trigger"
       },
       "name:8": "susy.quest.db.542264610.title"
@@ -15,7 +14,6 @@
   "questID:3": 542264610,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

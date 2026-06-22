@@ -6,18 +6,16 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.538.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 80,
         "id:8": "gregtech:meta_dust"
       },
-      "name:8": "Early Platinum and Palladium",
+      "name:8": "susy.quest.db.538.title",
       "questlogic:8": "OR"
     }
   },
   "questID:3": 538,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

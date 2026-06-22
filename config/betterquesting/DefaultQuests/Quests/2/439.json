@@ -4,9 +4,8 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "There are 6 types of ore deposits: §aOrthomagmatic, Metamorphic, Sedimentary, Magmatic Hydrothermal, Hydrothermal, and Alluvial§r.\n\nThe Ore Sorter offers §9recipes for each power tier§r.\nFor instance, using the HV recipe in the §dOre Sorter§r results in a greater variety of ores being generated compared to the LV recipe.\n\n§6Orthomagmatic§r deposits are found in mountains.\n§6Alluvial§r deposits are found in beaches, deserts and rivers.\n§6Magmatic Hydrothermal§r deposits are found in mountains.\n§6Hydrothermal§r deposits are found in areas near water.\n§6Sedimentary§r deposits are found in swamps, bogs, and mesa biomes.\n§6Metamorphic§r deposits are found close to mountains, but sometimes in plains and forest biomes too.\n§6Evaporite§r deposits are found in deserts, rivers, and mesas.",
+      "desc:8": "susy.quest.db.439.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 3,
         "id:8": "gregtech:meta_item_2"
       },
@@ -16,7 +15,6 @@
   "questID:3": 439,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

@@ -8,7 +8,6 @@
       "desc:8": "susy.quest.db.1399178319.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 1006,
         "id:8": "gregtech:meta_plate"
       },
@@ -19,7 +18,6 @@
   "questID:3": 1399178319,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 8,

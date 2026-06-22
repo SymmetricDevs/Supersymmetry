@@ -11,21 +11,19 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "Like normal §1Brine§r, §6Salar Brine§r can be drilled from a fluid deposit with a §dFluid Drilling Rig§r.\nAnd like Brine, Salar Brine is clarified with §3Calcium Hydroxide Slurry§r and then §3Soda Ash Solution§r. This gives you §6Decalcified Salar Brine§r.\nCompress this with a §3Cellulose Acetate Membrane§r and react it Soda Ash Solution and then again with §3Hydrochloric Acid§r. This will give you §4Lithium Carbonate and Boric Acid§r.",
+      "desc:8": "susy.quest.db.1994347596.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "salar_brine"
         }
       },
-      "name:8": "Salar Brine Processing"
+      "name:8": "susy.quest.db.1994347596.title"
     }
   },
   "questID:3": 1994347596,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

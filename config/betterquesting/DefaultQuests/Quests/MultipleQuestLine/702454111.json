@@ -7,7 +7,6 @@
       "desc:8": "susy.quest.db.702454111.desc",
       "frame:8": "CROSS",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "simple_trophies:trophy",
         "tag:10": {
           "TrophyColorBlue:3": 211,
@@ -25,7 +24,7 @@
                 "Damage:2": 2,
                 "id:8": "gregtech:meta_ingot"
               },
-              "TrophyName:8": "Hall-Héroult",
+              "TrophyName:8": "Hall-H\u00e9roult",
               "TrophyShowsTooltip:1": 1,
               "TrophyVariant:8": "classic"
             }
@@ -41,7 +40,6 @@
   "questID:3": 702454111,
   "rewards:9": {
     "0:10": {
-      "index:3": 0,
       "rewardID:8": "bq_standard:item",
       "rewards:9": {
         "0:10": {
@@ -63,7 +61,7 @@
                   "Damage:2": 2,
                   "id:8": "gregtech:meta_ingot"
                 },
-                "TrophyName:8": "Hall-Héroult",
+                "TrophyName:8": "Hall-H\u00e9roult",
                 "TrophyShowsTooltip:1": 1,
                 "TrophyVariant:8": "classic"
               }
@@ -78,7 +76,6 @@
   },
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 512,

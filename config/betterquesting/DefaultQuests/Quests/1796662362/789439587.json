@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.789439587.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "rs_ctr:signal_probe"
       },
       "name:8": "susy.quest.db.789439587.title",
@@ -16,7 +15,6 @@
   "questID:3": 789439587,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

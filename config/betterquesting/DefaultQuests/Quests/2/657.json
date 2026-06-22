@@ -10,19 +10,17 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "Your first superconductor, §6Manganese Phosphide Wire§f, is made by a more complicated process than just wiremilling an ingot. Mix §3manganese and phosphorous§r to obtain the superconductor blend, then stuff it inside of a §7silicon dioxide tube§r and roast it in a tube furnace. Extrude the resulting tube into base wire. Your first superconductor, §6Manganese Phosphide Wire§f, is made by using a §aChemical Bath§f to immerse the base manganese phosphide wires in §3liquid oxygen§r.\n\nThis process creates 1x wires. As with other wires, you can combine them up to 16x wires for more energy transfer.\n\nSuperconductors have the ability to transfer power §awithout loss§r. Even though these may not shock you and do not need to be insulated by rubber, §cthese superconductors are still susceptible to getting destroyed by overwhelming voltage.§f You will need to create higher-tier superconductors to handle higher-tier voltages.",
+      "desc:8": "susy.quest.db.657.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 424,
         "id:8": "gregtech:wire_single"
       },
-      "name:8": "LV Superconductors"
+      "name:8": "susy.quest.db.657.title"
     }
   },
   "questID:3": 657,
   "rewards:9": {
     "0:10": {
-      "index:3": 0,
       "rewardID:8": "bq_standard:item",
       "rewards:9": {
         "0:10": {
@@ -35,7 +33,6 @@
             "TrophyItem:10": {
               "Count:3": 1,
               "Damage:2": 424,
-              "OreDict:8": "",
               "id:8": "gregtech:wire_single"
             },
             "TrophyName:8": "Colder than Ice",

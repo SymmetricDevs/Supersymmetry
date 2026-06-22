@@ -8,7 +8,6 @@
       "desc:8": "susy.quest.db.549.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "opencomputers:case3"
       },
       "ismain:1": 1,
@@ -18,7 +17,6 @@
   "questID:3": 549,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

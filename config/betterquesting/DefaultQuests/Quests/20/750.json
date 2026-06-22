@@ -7,7 +7,6 @@
       "desc:8": "susy.quest.db.750.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "immersiverailroading:item_radio_control_card",
         "tag:10": {}
       },
@@ -18,7 +17,6 @@
   "questID:3": 750,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

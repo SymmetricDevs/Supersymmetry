@@ -7,7 +7,6 @@
       "desc:8": "susy.quest.db.220.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 5,
         "id:8": "gregtech:warning_sign_1"
       },
@@ -18,7 +17,6 @@
   "questID:3": 220,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

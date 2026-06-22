@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.152.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "minecraft:cooked_beef"
       },
       "name:8": "susy.quest.db.152.title"
@@ -15,7 +14,6 @@
   "questID:3": 152,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

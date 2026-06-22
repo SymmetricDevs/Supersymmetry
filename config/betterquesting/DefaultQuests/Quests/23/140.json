@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.140.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 47,
         "id:8": "gregtechfoodoption:gtfo_meta_item"
       },
@@ -16,7 +15,6 @@
   "questID:3": 140,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

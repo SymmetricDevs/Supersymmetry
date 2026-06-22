@@ -7,7 +7,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1337107364.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 8661,
         "id:8": "gregtech:meta_fuel_pellet"
       },
@@ -18,7 +17,6 @@
   "questID:3": 1337107364,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

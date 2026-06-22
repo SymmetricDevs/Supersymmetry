@@ -7,7 +7,6 @@
       "desc:8": "susy.quest.db.509.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "high_purity_nitrogen"
@@ -21,7 +20,6 @@
   "questID:3": 509,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

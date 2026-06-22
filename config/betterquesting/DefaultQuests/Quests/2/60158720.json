@@ -4,19 +4,17 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "Any §6Apatite Mineral§r can be smelted in an §cERF§r along with §3Carbon Black and Silicon Dioxide§r for §6Phosphorous§r.",
+      "desc:8": "susy.quest.db.60158720.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 78,
         "id:8": "gregtech:meta_dust"
       },
-      "name:8": "Phosphorous"
+      "name:8": "susy.quest.db.60158720.title"
     }
   },
   "questID:3": 60158720,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -8,7 +8,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.4454266581.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 1,
         "id:8": "gregtech:battery_block"
       },
@@ -18,7 +17,6 @@
   "questID:3": 445426581,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

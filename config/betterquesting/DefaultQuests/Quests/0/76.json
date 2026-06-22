@@ -7,7 +7,6 @@
       "desc:8": "susy.quest.db.76.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "minecraft:clock"
       },
       "ismain:1": 1,
@@ -17,7 +16,6 @@
   "questID:3": 76,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

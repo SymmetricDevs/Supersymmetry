@@ -12,7 +12,6 @@
       "desc:8": "susy.quest.db.648.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "ziegler_alfol_mixture"
@@ -27,7 +26,6 @@
   "questID:3": 648,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

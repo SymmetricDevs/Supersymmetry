@@ -4,19 +4,17 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "The §6Tube Furnace§r heats up items to high tempuratures with §cextreme precision§r.",
+      "desc:8": "susy.quest.db.300020640.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 14720,
         "id:8": "gregtech:machine"
       },
-      "name:8": "Tube Furnace"
+      "name:8": "susy.quest.db.300020640.title"
     }
   },
   "questID:3": 300020640,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

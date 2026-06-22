@@ -7,19 +7,17 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "§aMagnesium§r is a byproduct of many things such as:\n- §1Magnesite§r\n- §1Sea Water Processing§r\n- §1Boron Purification§r\n- §1Ultramafic Tailing§r\nThis quest will cover §6Magnesite§r as it is the primary source of Magnesium.\n\nThe best option avalable right now is to first react Magnesite with §3Chlorine and Carbon Monoxide§r in a §dReaction Furnace§r. Then to melt and electrolyse the resulting §6Magnesium Chloride§r with §3Graphite and Steel§r electrodes.",
+      "desc:8": "susy.quest.db.829239928.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 59,
         "id:8": "gregtech:meta_dust"
       },
-      "name:8": "Magnesium"
+      "name:8": "susy.quest.db.829239928.title"
     }
   },
   "questID:3": 829239928,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

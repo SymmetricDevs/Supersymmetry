@@ -4,19 +4,17 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "The §6Canning Machine§r simply stuffs something inside a container.",
+      "desc:8": "susy.quest.db.1710915938.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 170,
         "id:8": "gregtech:machine"
       },
-      "name:8": "Canning Machine"
+      "name:8": "susy.quest.db.1710915938.title"
     }
   },
   "questID:3": 1710915938,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -8,7 +8,6 @@
       "desc:8": "susy.quest.db.1322263999.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 17015,
         "id:8": "gregtech:machine"
       },
@@ -18,7 +17,6 @@
   "questID:3": 1322263999,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }

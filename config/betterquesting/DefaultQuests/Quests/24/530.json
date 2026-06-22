@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.530.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 13,
         "id:8": "opencomputers:material"
       },
@@ -232,13 +231,11 @@
           }
         }
       },
-      "index:3": 0,
       "rewardID:8": "bq_standard:choice"
     }
   },
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

@@ -7,22 +7,20 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "§aEthylene Glycol§r is an important chemical which is incorporated in coolants and is required for §1Coal Tar processing§r.\nReact §6Ethylene and Oxygen§r with a §3Nickel Cataylst Bed§r and distill the result for §6Ethylene Oxide§r. React the Ethylene Oxide and §3Water§r in a §dCSTR§r for §6Ethylene Glycol Mix§r. You can distill a number of products from this mixture, §4Ethylene Glycol§r included.",
+      "desc:8": "susy.quest.db.1520504426.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "ethylene_glycol_mix"
         }
       },
-      "name:8": "Ethylene Glycol Mix",
+      "name:8": "susy.quest.db.1520504426.title",
       "tasklogic:8": "OR"
     }
   },
   "questID:3": 1520504426,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,

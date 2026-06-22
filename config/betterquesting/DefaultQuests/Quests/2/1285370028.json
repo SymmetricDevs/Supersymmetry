@@ -11,9 +11,8 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "Do you §4hate§r finding cows? Are you very annoyed that animals are impossible to find?\n\nLook no further than the §dDrone Pad§r! By putting in a fully charged drone, you can acquire these resources:\n\n- Bones\n- Meats\n- Leather (needed for exploration of the §cmantle§r)\n- Wool\n\nAnd many more! Just charge up a §7drone§r in a charging slot and place it in the drone pad with the right recipe. The pad itself just needs:\n\n- 9 Drone Pads\n- 9 Solid Steel Casings\n- 1 Drone Pad Controller\n- 1 Input Bus, Output Bus, and Energy Hatch (LV+ works)",
+      "desc:8": "susy.quest.db.1285370028.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 4,
         "id:8": "susy:susy_multiblock_casing"
       },
@@ -23,7 +22,6 @@
   "questID:3": 1285370028,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
