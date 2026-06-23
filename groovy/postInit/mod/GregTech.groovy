@@ -1345,6 +1345,16 @@ CUTTER.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+// Stone Dust -> Stone Plate
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustStone')], null)
+
+COMPRESSOR.recipeBuilder()
+    .inputs(metaitem('dustStone'))
+    .outputs(metaitem('plateStone'))
+    .duration(50)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
 GAS_COLLECTOR.recipeBuilder()
     .circuitMeta(4)
     .fluidOutputs(fluid('air') * 10000)
