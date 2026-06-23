@@ -3229,11 +3229,7 @@ class FirstDegreeMaterialsA {
 
         CobaltIIAcetateTetrahydrate.setFormula("Co(C2H3O2)2*(H2O)4", true)
 
-        PotassiumPyrosulfate = new Material.Builder(8578, SuSyUtility.susyId("potassium_pyrosulfate"))
-                .dust()
-                .components(Potassium * 2, Sulfur * 2, Oxygen * 7)
-                .colorAverage()
-                .build()
+        //FREE ID: 8578
 
         IronIIINitrateSolution = new Material.Builder(8579, SuSyUtility.susyId("iron_iii_nitrate_solution"))
                 .liquid()
