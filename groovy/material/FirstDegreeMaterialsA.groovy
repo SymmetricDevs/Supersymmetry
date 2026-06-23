@@ -1861,11 +1861,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        PotassiumSulfide = new Material.Builder(8366, SuSyUtility.susyId('potassium_sulfide'))
-                .dust()
-                .components(Potassium * 2, Sulfur)
-                .color(0xcbcfae)
-                .build()
+        //FREE ID: 8366
 
         WashedMagnesiumChlorideAmmoniate = new Material.Builder(8367, SuSyUtility.susyId('washed_magnesium_chloride_ammoniate'))
                 .dust()

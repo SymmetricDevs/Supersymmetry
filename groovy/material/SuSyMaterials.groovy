@@ -1272,7 +1272,6 @@ class SuSyMaterials {
     public static Material AmmoniumTungstateSolution
     public static Material CopperMonosulfide
     public static Material PotassiumSaltMixture
-    public static Material PotassiumSulfide
     public static Material SaturatedAmmoniacalMethanol
     public static Material MagnesiumChlorideAmmoniate
     public static Material PurifiedMagnesiumChloride
