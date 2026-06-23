@@ -56,9 +56,9 @@ QUARRY.recipeBuilder()
 
 QUARRY.recipeBuilder()
     .notConsumable(ore('dustMica'))
-    .chancedOutput(metaitem('dustMica'), 1000, 500)
+    .outputs(metaitem('dustMica'))
     .dimension(Globals.dimensions["Beneath"])
-    .duration(240)
+    .duration(60)
     .EUt(VA[MV])
     .buildAndRegister();
 

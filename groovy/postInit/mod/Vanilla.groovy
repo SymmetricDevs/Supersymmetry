@@ -400,6 +400,17 @@ mods.gregtech.assembler.recipeBuilder()
     .EUt(16)
     .buildAndRegister()
 
+// Redstone Repeater * 4
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(4)
+    .inputs(ore('plateMica'))
+    .inputs(ore('wireFineRedAlloy') * 4)
+    .inputs(item('minecraft:redstone_torch') * 4)
+    .outputs(item('minecraft:repeater') * 4)
+    .duration(60)
+    .EUt(16)
+    .buildAndRegister()
+
 // Piston Removals
 // Piston * 1
 mods.gregtech.assembler.removeByInput(16, [metaitem('plateBronze'), item('minecraft:planks') * 3, item('minecraft:cobblestone') * 4, item('minecraft:redstone')], null)
