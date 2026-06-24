@@ -25,8 +25,9 @@ Etchants used:
 class Etching {
 
     static class Etchant {
-        Map fluidArr
+        Map fluidArr = [:]
         int voltageTier
+        int amountUsed
         double etchingRate
         boolean anisotropic
         boolean isPlasma

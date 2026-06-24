@@ -2907,6 +2907,7 @@ class SuSyMaterials {
     public static Material NickelConductiveInk
     public static Material SilverFritInk
     public static Material CopperFritInk
+    public static Material ThickFilmResistorInk
 
     // Thermodynamics Materials
 

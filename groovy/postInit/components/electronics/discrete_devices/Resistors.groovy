@@ -1,8 +1,9 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import globals.Sintering
-import globasl.semiconductors.Deposition
+import globals.semiconductors.Deposition
 import globals.semiconductors.Packaging
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 crafting.removeByOutput(metaitem('component.resistor'))
 
@@ -213,6 +214,7 @@ SCREEN_PRINTING.recipeBuilder()
     .outputs(metaitem('component.resistor.wafer.printed_pads'))
     .duration(104)
     .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
 
@@ -223,6 +225,7 @@ SCREEN_PRINTING.recipeBuilder()
     .outputs(metaitem('component.thick_film_resistor.wafer.printed'))
     .duration(104)
     .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
 LASER_ENGRAVER.recipeBuilder()
@@ -239,11 +242,12 @@ SCREEN_PRINTING.recipeBuilder()
     .outputs(metaitem('component.thick_film_resistor.wafer.printed_coating'))
     .duration(104)
     .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
 Packaging.generateDicingRecipe("component.thick_film_resistor.wafer", "component.thick_film_resistor.unterminated", 32, 100, HV)
 
-Deposition.generateSputteringRecipes("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.coated", {'chromium' : 300, 'nickel' : 300}) // NiCr vacuum deposition
+Deposition.generateSputteringRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.coated", ['chromium' : 300, 'nickel' : 300]) // NiCr vacuum deposition
 
 LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem('component.thin_film_resistor.wafer.coated'))

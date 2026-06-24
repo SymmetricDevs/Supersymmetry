@@ -1436,5 +1436,10 @@ class ThirdDegreeMaterials {
                 .components(Copper, Glass, PolyvinylpyrrolidoneSolution)
                 .colorAverage()
                 .build()
+
+        ThickFilmResistorInk = new Material.Builder(24238, SuSyUtility.susyId('thick_film_resistor_ink'))
+                .liquid()
+                .color(0x0d0a18)
+                .build()
         }
 }
