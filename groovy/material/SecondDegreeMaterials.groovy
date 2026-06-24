@@ -879,7 +879,7 @@ class SecondDegreeMaterials {
 
         DilutedMagnesiumChlorideSolution = new Material.Builder(13135, SuSyUtility.susyId('diluted_magnesium_chloride_solution'))
                 .liquid()
-                .components(MagnesiumChlorideSolution, DistilledWater)
+                .components(MagnesiumChlorideSolution, Water)
                 .colorAverage()
                 .build()
 
@@ -1242,7 +1242,7 @@ class SecondDegreeMaterials {
 
         EnameledGrapheneCoatedGold = new Material.Builder(13194, SuSyUtility.susyId('enameled_graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
-                .components(Gold, Graphene)
+                .components(Gold, DriedGraphene)
                 .color(0xad9c4c)
                 .ingotSmeltInto(Gold)
                 .arcSmeltInto(Gold)
@@ -1251,7 +1251,7 @@ class SecondDegreeMaterials {
 
         GrapheneCoatedGold = new Material.Builder(13195, SuSyUtility.susyId('graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
-                .components(Gold, Graphene)
+                .components(Gold, DriedGraphene)
                 .color(0xa38c21)
                 .ingotSmeltInto(Gold)
                 .arcSmeltInto(Gold)

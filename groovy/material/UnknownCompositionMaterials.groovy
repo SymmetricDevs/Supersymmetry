@@ -167,7 +167,15 @@ class UnknownCompositionMaterials {
                 .color(0xc47e70)
                 .build()
 
-        //FREE IDs: 4028-4029
+        NickelNanoparticleSuspension = new Material.Builder(4028, SuSyUtility.susyId("nickel_nanoparticle_suspension"))
+                .liquid()
+                .color(0x1a1716)
+                .build()
+
+        SilverNanoparticleSuspension = new Material.Builder(4029, SuSyUtility.susyId('silver_nanoparticle_suspension'))
+                .liquid()
+                .color(0x0d0c0b)
+                .build()
 
         CrudeCumene = new Material.Builder(4030, SuSyUtility.susyId('crude_cumene'))
                 .liquid()

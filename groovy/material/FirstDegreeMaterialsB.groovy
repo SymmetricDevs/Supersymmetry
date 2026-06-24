@@ -950,6 +950,19 @@ class FirstDegreeMaterialsB {
                 .liquid(new FluidBuilder().temperature(300))
                 .components(Iodine, Chlorine)
                 .color(0x8a3122)
+      
+        SilverNanoparticle = new Material.Builder(8805, SuSyUtility.susyId('silver_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Silver)
+                .color(0x120c07)
+                .build()
+
+        NickelNanoparticle = new Material.Builder(8806, SuSyUtility.susyId('nickel_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Nickel)
+                .color(0x262321)
                 .build()
     }
 }

@@ -8,15 +8,6 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wir
 // Inductor * 4
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
 
-// SMD Capacitor * 8
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
-// SMD Capacitor * 12
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilAluminium')], [fluid('plastic') * 72])
-// SMD Capacitor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilTantalum')], [fluid('plastic') * 72])
-// SMD Capacitor * 24
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilTantalum')], [fluid('plastic') * 72])
-
 // SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
 // SMD Transistor * 32

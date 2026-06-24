@@ -1412,4 +1412,29 @@ class ThirdDegreeMaterials {
                 .color(0xa9c9b0)
                 .build()
     }
+        
+        SilverConductiveInk = new Material.Builder(24241, SuSyUtility.susyId('silver_conductive_ink'))
+                .liquid()
+                .components(SilverNanoparticle, Ethanol)
+                .colorAverage()
+                .build()
+
+        NickelConductiveInk = new Material.Builder(24242, SuSyUtility.susyId('nickel_conductive_ink'))
+                .liquid()
+                .components(NickelNanoparticle, Ethanol)
+                .colorAverage()
+                .build()
+
+        SilverFritInk = new Material.Builder(24243, SuSyUtility.susyId('silver_frit_ink'))
+                .liquid()
+                .components(Silver, Glass, PolyvinylpyrrolidoneSolution)
+                .colorAverage()
+                .build()
+
+        CopperFritInk = new Material.Builder(24244, SuSyUtility.susyId('copper_frit_ink'))
+                .liquid()
+                .components(Copper, Glass, PolyvinylpyrrolidoneSolution)
+                .colorAverage()
+                .build()
+        }
 }

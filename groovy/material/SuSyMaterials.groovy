@@ -862,7 +862,8 @@ class SuSyMaterials {
     public static Material NanoparticleModifiedNafion
     public static Material ExpandableGraphite
     public static Material AluminiumChlorofluoride
-
+    public static Material NickelNanoparticleSuspension
+    public static Material SilverNanoparticleSuspension
 
     // Petrochem Materials
 
@@ -1723,12 +1724,18 @@ class SuSyMaterials {
     public static Material CopperIPhosphide
     public static Material CarbonCompound
     public static Material IodinePentafluoride
+    public static Material DimethylOneThreeDioxane
+    public static Material Methylbutynol
+    public static Material Methylbutenol
+    public static Material DimethylDioxaneSolution
+    public static Material IsopreneSolution
     public static Material AnnealedAB2MetalAlloy
     public static Material AnnealedAB5MetalAlloy
     public static Material CadmiumOxide
     //public static Material VanadiumTrioxide
     public static Material ExpandedPolytetrafluoroethylene
-
+    public static Material SilverNanoparticle
+    public static Material NickelNanoparticle
 
     // HP Materials
 
@@ -2901,6 +2908,10 @@ class SuSyMaterials {
     public static Material NafionDispersion
     public static Material PyridiniumTosylateSolution
     public static Material SpinOnCarbon
+    public static Material SilverConductiveInk
+    public static Material NickelConductiveInk
+    public static Material SilverFritInk
+    public static Material CopperFritInk
 
     // Thermodynamics Materials
 

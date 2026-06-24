@@ -4,6 +4,15 @@ import globals.semiconductors.Packaging
 import globals.Sintering
 import gregtech.api.tileentity.multiblock.CleanroomType
 
+// SMD Capacitor * 8
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
+// SMD Capacitor * 12
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilAluminium')], [fluid('plastic') * 72])
+// SMD Capacitor * 16
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilTantalum')], [fluid('plastic') * 72])
+// SMD Capacitor * 24
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilTantalum')], [fluid('plastic') * 72])
+
 oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
 oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.film'))
 
@@ -138,7 +147,22 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister()
 
-//MLCC
+// MLCC ceramic capacitors
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('wireFineStainlessSteel') * 16)
+    .outputs(metaitem('mesh.stainless_steel'))
+    .EUt(VA[MV])
+    .duration(160)
+    .buildAndRegister()
+
+UV_BOX.recipeBuilder()
+    .inputs(metaitem('mesh.stainless_steel') * 1)
+    .fluidInputs(fluid('methyl_methacrylate_emulsion') * 50)
+    .outputs(metaitem('screen_printing.pattern.mlcc'))
+    .circuitMeta(4)
+    .duration(200)
+    .buildAndRegister()
+
 MIXER.recipeBuilder()
     .inputs(ore('dustBariumTitanate') * 10)
     .fluidInputs(fluid('polyethylene_glycol') * 10)
@@ -172,7 +196,7 @@ EXTRUDER.recipeBuilder()
 
 SCREEN_PRINTER.recipeBuilder()
     .inputs(metaitem('sheet.doped_barium_titanate') * 1)
-    .nonConsumable(metaitem('screen_printing.mold.mlcc') * 1)
+    .nonConsumable(metaitem('screen_printing.pattern.mlcc') * 1)
     .fluidInputs(fluid('nickel_conductive_ink') * 50)
     .outputs(metaitem('component.bme_cap.layer'))
     .duration(104)
