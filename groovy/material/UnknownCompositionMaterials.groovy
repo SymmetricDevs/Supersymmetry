@@ -1324,8 +1324,6 @@ class UnknownCompositionMaterials {
                 .colorAverage()
                 .build()
 
-        //FREE IDs: 4257-4258
-
         ImpureChalcopyriteSlurry = new Material.Builder(4259, SuSyUtility.susyId('impure_chalcopyrite_slurry'))
                 .liquid()
                 .color(0x856119)
@@ -1422,7 +1420,12 @@ class UnknownCompositionMaterials {
                 .iconSet(FLINT)
                 .build()
 
-        // FREE IDs: 4277-4280
+        PalladiumNanoparticleSuspension = new Material.Builder(4277, SuSyUtility.susyId('palladium_nanoparticle_suspension'))
+                .liquid()
+                .color(0x473734)
+                .build()
+    
+        // FREE IDs: 4278-4280
 
         SilicateFreeTungstateSolution = new Material.Builder(4281, SuSyUtility.susyId('silicate_free_tungstate_solution'))
                 .liquid()

@@ -976,5 +976,17 @@ class FirstDegreeMaterialsB {
                 .components(Dysprosium * 2, Oxygen * 3)
                 .color(0xdaffaf)
                 .build()
+
+        PalladiumNanoparticle = new Material.Builder(8808, SuSyUtility.susyId('palladium_nanoparticle'))
+                .dust()
+                .components(Palladium)
+                .color(0xd9cdcd)
+                .build()
+
+        PalladiumNitrateSolution = new Material.Builder(8809, SuSyUtility.susyId('palladium_nitrate_solution'))
+                .liquid()
+                .components(Palladium, Nitrogen, Oxygen * 3, Water)
+                .color(0x7c2111)
+                .build()
     }
 }

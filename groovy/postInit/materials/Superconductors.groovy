@@ -353,7 +353,7 @@ TUBE_FURNACE.recipeBuilder()
         .buildAndRegister();
 
 MIXER.recipeBuilder()
-        .inputs(ore('dustYttriumOxide') * 5)
+        .inputs(ore('dustYttriumIiiOxide') * 5)
         .inputs(ore('dustBariumOxide') * 8)
         .inputs(ore('dustCupricOxide') * 12)
         .outputs(metaitem('dustYttriumBariumCuprate') * 25)

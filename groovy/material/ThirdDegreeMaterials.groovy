@@ -1413,25 +1413,25 @@ class ThirdDegreeMaterials {
                 .build()
     }
         
-        SilverConductiveInk = new Material.Builder(24241, SuSyUtility.susyId('silver_conductive_ink'))
+        AgPdConductiveInk = new Material.Builder(24245, SuSyUtility.susyId('agpd_conductive_ink'))
                 .liquid()
                 .components(SilverNanoparticle, Ethanol)
                 .colorAverage()
                 .build()
 
-        NickelConductiveInk = new Material.Builder(24242, SuSyUtility.susyId('nickel_conductive_ink'))
+        NickelConductiveInk = new Material.Builder(24246, SuSyUtility.susyId('nickel_conductive_ink'))
                 .liquid()
                 .components(NickelNanoparticle, Ethanol)
                 .colorAverage()
                 .build()
 
-        SilverFritInk = new Material.Builder(24243, SuSyUtility.susyId('silver_frit_ink'))
+        SilverFritInk = new Material.Builder(24247, SuSyUtility.susyId('silver_frit_ink'))
                 .liquid()
                 .components(Silver, Glass)
                 .colorAverage()
                 .build()
 
-        CopperFritInk = new Material.Builder(24244, SuSyUtility.susyId('copper_frit_ink'))
+        CopperFritInk = new Material.Builder(24248, SuSyUtility.susyId('copper_frit_ink'))
                 .liquid()
                 .components(Copper, Glass)
                 .colorAverage()

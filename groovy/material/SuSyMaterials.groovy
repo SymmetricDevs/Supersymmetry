@@ -864,6 +864,7 @@ class SuSyMaterials {
     public static Material AluminiumChlorofluoride
     public static Material NickelNanoparticleSuspension
     public static Material SilverNanoparticleSuspension
+    public static Material PalladiumNanoparticleSuspension
 
     // Petrochem Materials
 
@@ -1733,6 +1734,8 @@ class SuSyMaterials {
     public static Material NickelNanoparticle
     public static Material DysprosiumIiiOxide
     public static Material HolmiumIiiOxide
+    public static Material PalladiumNanoparticle
+    public static Material PalladiumNitrateSolution
 
     // HP Materials
 
@@ -2905,7 +2908,7 @@ class SuSyMaterials {
     public static Material NafionDispersion
     public static Material PyridiniumTosylateSolution
     public static Material SpinOnCarbon
-    public static Material SilverConductiveInk
+    public static Material AgPdConductiveInk
     public static Material NickelConductiveInk
     public static Material SilverFritInk
     public static Material CopperFritInk

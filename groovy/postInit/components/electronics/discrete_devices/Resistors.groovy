@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import globals.Sintering
 import globals.semiconductors.Deposition
+import globals.semiconductors.Lithography
 import globals.semiconductors.Packaging
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
@@ -225,8 +226,8 @@ SCREEN_PRINTING.recipeBuilder()
 
 Packaging.generateDicingRecipe("component.thick_film_resistor.wafer", "component.thick_film_resistor.unterminated", 32, 100, HV)
 
-Lithography.generatePhotolithographyRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.patterned", "acrylate_resist_mixture", "screen_printing.pattern.resistor", false)
-Deposition.generateSputteringRecipe("component.resistor.wafer.pads.patterned", "component.thin_film_resistor.wafer.deposited", ['chromium' : 300, 'nickel' : 300]) // NiCr vacuum deposition
+Lithography.generatePhotolithographyRecipes("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.patterned", "acrylate_resist_mixture", "screen_printing.pattern.resistor", false)
+Deposition.generateSputteringRecipe("component.thin_film_resistor.wafer.patterned", "component.thin_film_resistor.wafer.deposited", ['chromium' : 300, 'nickel' : 300]) // NiCr vacuum deposition
 Lithography.generateResistStrippingRecipes("component.thin_film_resistor.wafer.deposited", "component.thin_film_resistor.wafer.unetched", 10, false, true) // don't know what timeMultiplier means
 
 LASER_ENGRAVER.recipeBuilder()
