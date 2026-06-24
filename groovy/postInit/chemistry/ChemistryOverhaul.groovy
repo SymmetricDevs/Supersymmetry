@@ -335,20 +335,10 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .circuitMeta(1)
     .inputs(ore('dustPotassiumBisulfate') * 14)
     .outputs(metaitem('dustPotassiumSulfate') * 7)
     .fluidOutputs(fluid('dense_steam') * 1000)
     .fluidOutputs(fluid('sulfur_trioxide') * 1000)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-ROASTER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(ore('dustPotassiumBisulfate') * 14)
-    .outputs(metaitem('dustPotassiumPyrosulfate') * 11)
-    .fluidOutputs(fluid('dense_steam') * 1000)
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
@@ -630,7 +620,7 @@ CHEMICAL_BATH.recipeBuilder()
     .EUt(540)
     .buildAndRegister()
 
-// Leblanc process
+// Mannheim process
 
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 1000)
@@ -640,6 +630,17 @@ ROASTER.recipeBuilder()
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_acid') * 1000)
+    .inputs(ore('dustRockSalt') * 4)
+    .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+    .outputs(metaitem('dustPotassiumSulfate') * 7)
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Leblanc process
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustSodiumSulfide') * 3)

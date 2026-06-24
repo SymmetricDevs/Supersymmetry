@@ -443,6 +443,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 ARC_FURNACE.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('oxygen') * 1000)
     .inputs(ore('dustCadmium'))
     .outputs(metaitem('dustCadmiumOxide'))
