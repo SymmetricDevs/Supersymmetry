@@ -4,6 +4,7 @@ import globals.Sintering
 import globals.semiconductors.Deposition
 import globals.semiconductors.Lithography
 import globals.semiconductors.Packaging
+import globals.semiconductors.Etching
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
 crafting.removeByOutput(metaitem('component.resistor'))
@@ -170,18 +171,18 @@ Sintering.nonPlasmaFuels().each { fuel ->
 
 UV_LIGHT_BOX.recipeBuilder()
     .inputs(metaitem('mesh.stainless_steel'))
+    .notConsumable(metaitem('stencil.resistor'))
     .fluidInputs(fluid('acrylate_resist_mixture') * 50)
     .outputs(metaitem('screen_printing.pattern.resistor'))
-    .circuitMeta(5)
     .duration(200)
     .EUt(VA[HV])
     .buildAndRegister()
 
 UV_LIGHT_BOX.recipeBuilder()
     .inputs(metaitem('mesh.stainless_steel'))
+    .notConsumable(metaitem('stencil.resistor_pads'))
     .fluidInputs(fluid('acrylate_resist_mixture') * 50)
     .outputs(metaitem('screen_printing.pattern.resistor_pads'))
-    .circuitMeta(6)
     .duration(200)
     .EUt(VA[HV])
     .buildAndRegister()
@@ -226,18 +227,19 @@ SCREEN_PRINTING.recipeBuilder()
 
 Packaging.generateDicingRecipe("component.thick_film_resistor.wafer", "component.thick_film_resistor.unterminated", 32, 100, HV)
 
-Lithography.generatePhotolithographyRecipes("component.resistor.wafer.pads", "component.thin_film_resistor.wafer.patterned", "acrylate_resist_mixture", "screen_printing.pattern.resistor", false)
-Deposition.generateSputteringRecipe("component.thin_film_resistor.wafer.patterned", "component.thin_film_resistor.wafer.deposited", ['chromium' : 300, 'nickel' : 300]) // NiCr vacuum deposition
-Lithography.generateResistStrippingRecipes("component.thin_film_resistor.wafer.deposited", "component.thin_film_resistor.wafer.unetched", 10, false, true) // don't know what timeMultiplier means
+Deposition.generateSputteringRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer", ['chromium' : 120, 'nickel' : 480]) // NiCr vacuum deposition; 80/20 composition
+Lithography.generatePhotolithographyRecipes("component.thin_film_resistor.wafer", "component.thin_film_resistor.wafer.patterned", "novolac_resist", "mask.resistor", false)
+Etching.generateWetEtchingRecipe("component.thin_film_resistor.wafer.patterned", "component.thin_film_resistor.wafer.etched", "nichrome", 400, false)
+Lithography.generateResistStrippingRecipes("component.thin_film_resistor.wafer.etched", "component.thin_film_resistor.wafer.stripped", 1, false, true) // don't know what timeMultiplier means
 
 LASER_ENGRAVER.recipeBuilder()
-    .inputs(metaitem('component.thin_film_resistor.wafer.unetched'))
-    .outputs(metaitem('component.thin_film_resistor.wafer.etched'))
+    .inputs(metaitem('component.thin_film_resistor.wafer.stripped'))
+    .outputs(metaitem('component.thin_film_resistor.wafer.tuned'))
     .duration(200)
     .EUt(VA[EV])
     .buildAndRegister()
 
-Packaging.generateDicingRecipe("component.thin_film_resistor.wafer.etched", "component.thin_film_resistor.unterminated", 32, 100, HV)
+Packaging.generateDicingRecipe("component.thin_film_resistor.wafer.tuned", "component.thin_film_resistor.unterminated", 32, 100, HV)
 
 types = ["thick_film_resistor", "thin_film_resistor"]
 for (type in types) {

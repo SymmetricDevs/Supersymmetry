@@ -143,7 +143,9 @@ class Etching {
         silicon_nitride_silica_coetch: [
             new Etchant(["hexafluorobutyne" : 15, "carbon_tetrafluoride" : 25, "argon" : 50, "oxygen" : 10], EV, 10, 0.004, true, true)
         ],
-
+        nichrome: [
+            new Etchant("ultrapure_iron_iii_chloride_solution", MV, 100, 0.01, false, false)
+        ]
     ]
 
 
