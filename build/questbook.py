@@ -181,7 +181,7 @@ def updateVersion():
         print("questbook info file %s was not found" % (questInfo))
 
     version = int(time.time() / 1024)
-    questKeys["betterquesting:10"]["pack_version:1"] = version
+    questKeys["betterquesting:10"]["pack_version:3"] = version
     print("Questbook version no.", version)
     with open(questInfo, "w", errors="ignore", encoding='utf-8') as file:
         json.dump(questKeys, file, indent=2)

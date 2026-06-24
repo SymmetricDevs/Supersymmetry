@@ -1,20 +1,27 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
   "preRequisites:11": [
-    435
+    702158502,
+    388,
+    1427511961
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.436.desc",
+      "desc:8": "susy.quest.db.12390905.desc",
       "icon:10": {
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
-          "FluidName:8": "cold_hp_oxygen"
+          "FluidName:8": "liquid_oxygen"
         }
       },
-      "name:8": "susy.quest.db.436.title"
+      "name:8": "susy.quest.db.12390905.title"
     }
   },
-  "questID:3": 436,
+  "questID:3": 12390905,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

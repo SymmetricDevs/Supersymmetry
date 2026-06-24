@@ -1,28 +1,28 @@
 {
   "preRequisites:11": [
-    672,
-    882
+    32,
+    42
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.662.desc",
+      "desc:8": "susy.quest.db.472.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Damage:2": 425,
-        "id:8": "gregtech:wire_single"
+        "Damage:2": 274,
+        "id:8": "gregtech:meta_ingot"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.662.title"
+      "name:8": "susy.quest.db.472.title"
     }
   },
-  "questID:3": 662,
+  "questID:3": 472,
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 425,
-          "id:8": "gregtech:wire_single"
+          "Damage:2": 274,
+          "id:8": "gregtech:meta_ingot"
         }
       },
       "taskID:8": "bq_standard:retrieval"

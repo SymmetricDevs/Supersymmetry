@@ -1,20 +1,20 @@
 {
   "preRequisites:11": [
-    432
+    505
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.435.desc",
+      "desc:8": "susy.quest.db.2038516957.desc",
       "icon:10": {
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
-          "FluidName:8": "hp_oxygen"
+          "FluidName:8": "sea_water"
         }
       },
-      "name:8": "susy.quest.db.435.title"
+      "name:8": "susy.quest.db.2038516957.title"
     }
   },
-  "questID:3": 435,
+  "questID:3": 2038516957,
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

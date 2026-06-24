@@ -1,28 +1,31 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
   "preRequisites:11": [
-    876,
-    879,
-    677
+    544928264,
+    829239928,
+    509
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.878.desc",
-      "frame:8": "GATE",
+      "desc:8": "susy.quest.db.2070478030.desc",
       "icon:10": {
-        "Damage:2": 427,
+        "Damage:2": 425,
         "id:8": "gregtech:wire_single"
       },
-      "ismain:1": 1,
-      "name:8": "susy.quest.db.878.title"
+      "name:8": "susy.quest.db.2070478030.title"
     }
   },
-  "questID:3": 878,
+  "questID:3": 2070478030,
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 1,
-          "Damage:2": 427,
+          "Count:3": 16,
+          "Damage:2": 425,
           "id:8": "gregtech:wire_single"
         }
       },
