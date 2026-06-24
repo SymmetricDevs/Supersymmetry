@@ -332,7 +332,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6004, "led_light")
 
         //Superconductors 6100-6200
-        addItem(6100, "assemblymanganesephosphide")
+        addItem(6100, "tubemanganesephosphide")
         addItem(6101, "basemanganesephosphide")
         addItem(6102, "cannedmagnesiumdiboride")
         addItem(6103, "tubemagnesiumdiboride")
@@ -353,6 +353,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6118, "baseenrichednaquadahtriniumeuropiumduranide")
         addItem(6119, "assemblyrutheniumtriniumamericiumneutronate")
         addItem(6120, "baserutheniumtriniumamericiumneutronate")
+        addItem(6121, "cannedmanganesephosphide")
 
         //Metal sponges 6200-6300
         addItem(6200, "sponge.titanium")
@@ -525,6 +526,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10409, "lamp.mercury.hp.unfilled")
         addItem(10410, "lamp.mercury.hp")
         addItem(10411, "lamp.mercury.lp")
+        addItem(10412, "fused_quartz_tube")
     }
 
     log.infoMC("Finished adding metaitems")

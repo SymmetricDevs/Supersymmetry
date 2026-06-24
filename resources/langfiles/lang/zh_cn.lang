@@ -3209,7 +3209,7 @@ metaitem.shape.mold.rod.name=模具（杆）
 metaitem.shape.mold.long_rod.name=模具（长杆）
 metaitem.shape.mold.ring.name=模具（环）
 
-metaitem.assemblymanganesephosphide.name=成缆磷化锰导线
+metaitem.tubemanganesephosphide.name=成缆磷化锰导线
 metaitem.basemanganesephosphide.name=磷化锰超导体基
 metaitem.cannedmagnesiumdiboride.name=装管二硼化镁粉
 metaitem.tubemagnesiumdiboride.name=二硼化镁管
