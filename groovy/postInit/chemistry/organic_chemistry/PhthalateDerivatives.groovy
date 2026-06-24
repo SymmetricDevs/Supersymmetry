@@ -313,7 +313,7 @@ DISTILLERY.recipeBuilder()
 // Terephthaloyl chloride
 
 BR.recipeBuilder()
-    .inputs(ore('dustTerephthalicAcid') * 3)
+    .inputs(ore('dustTerephthalicAcid') * 18)
     .fluidInputs(fluid('bistrichloromethylbenzene') * 1000)
     .outputs(metaitem('dustTerephthaloylChloride') * 32)
     .fluidOutputs(fluid('hydrogen_chloride') * 2000)

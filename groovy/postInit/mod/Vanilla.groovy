@@ -201,12 +201,6 @@ crafting.replaceShaped('minecraft:piston', item('minecraft:piston'),  [
     [ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
 ])
 
-crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
-    [null, ore('stickWood'), ore('craftingToolHardHammer')],
-    [ore('ringIron'), ore('cobblestone'), ore('screwIron')],
-    [null, ore('dustRedstone'), ore('craftingToolScrewdriver')]
-])
-
 RecyclingHelper.replaceShaped('minecraft:tripwire_hook', item('minecraft:tripwire_hook'), [
     [null, ore('ringIron'), null],
     [ore('springSmallIron'), ore('stickWood'), null],
@@ -228,6 +222,23 @@ ASSEMBLER.recipeBuilder()
     .duration(100)
     .EUt(4)
     .buildAndRegister()
+
+crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
+        [null, ore('stickWood'), ore('craftingToolHardHammer')],
+        [ore('ringIron'), ore('cobblestone'), ore('screwIron')],
+        [null, ore('dustRedstone'), ore('craftingToolScrewdriver')]
+])
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickWood'))
+        .inputs(ore('ringIron'))
+        .inputs(ore('cobblestone'))
+        .inputs(ore('screwIron'))
+        .inputs(ore('dustRedstone'))
+        .outputs(item('minecraft:lever'))
+        .duration(100)
+        .EUt(4)
+        .buildAndRegister()
 
 RecyclingHelper.removeRecyclingRecipes(item('minecraft:trapped_chest'))
 RecyclingHelper.handleRecycling(item('minecraft:trapped_chest'), [item('minecraft:chest'), ore('ringIron'), ore('springSmallIron'), ore('stickWood'), ore('dustRedstone'), ore('cobblestone')])
@@ -386,6 +397,17 @@ mods.gregtech.assembler.recipeBuilder()
     .inputs(item('minecraft:redstone_torch') * 2)
     .outputs(item('minecraft:repeater'))
     .duration(20)
+    .EUt(16)
+    .buildAndRegister()
+
+// Redstone Repeater * 4
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(4)
+    .inputs(ore('plateMica'))
+    .inputs(ore('wireFineRedAlloy') * 4)
+    .inputs(item('minecraft:redstone_torch') * 4)
+    .outputs(item('minecraft:repeater') * 4)
+    .duration(60)
     .EUt(16)
     .buildAndRegister()
 

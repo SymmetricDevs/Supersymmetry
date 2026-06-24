@@ -686,3 +686,18 @@ Globals.solders.each { key, val ->
         }
     }
 }
+
+//radar
+WEAPONS_FACTORY.recipeBuilder()
+    .inputs([
+        ore('wireFineCopper') * 64,
+        ore('circuitHv') * 2,
+        metaitem('sensor.hv'),
+        metaitem('emitter.hv'),
+        metaitem('electric.motor.hv'),
+        metaitem('hull.hv')
+    ])
+    .outputs(item('icbmclassic:radarstation:0'))
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister();
