@@ -325,7 +325,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2842, "component.thick_film_resistor.dipped")
         addItem(2843, "component.thick_film_resistor.terminated")
         addItem(2844, "component.thick_film_resistor.plated")
-        addItem(2845, "component.thick_film_resistor.soldered")
         addItem(2846, "component.thick_film_resistor")
         addItem(2847, "component.thin_film_resistor.wafer.coated")
         addItem(2848, "component.thin_film_resistor.wafer.exposed")
@@ -339,7 +338,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2856, "component.thin_film_resistor.dipped")
         addItem(2857, "component.thin_film_resistor.terminated")
         addItem(2858, "component.thin_film_resistor.plated")
-        addItem(2859, "component.thin_film_resistor.soldered")
         addItem(2860, "component.thin_film_resistor")
 
         addItem(2861, "edlc_electrode_powder")

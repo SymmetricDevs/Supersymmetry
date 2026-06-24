@@ -285,13 +285,6 @@ for (type in types) {
     ASSEMBLER.recipeBuilder()
         .inputs(metaitem('component.' + type + '.plated') * 16)
         .fluidInputs(fluid('soldering_alloy') * 160)
-        .outputs(metaitem('component.' + type + '.soldered') * 16)
-        .duration(40)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
-    ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('component.' + type + '.soldered') * 16)
         .fluidInputs(fluid('epoxy') * 160)
         .outputs(metaitem('component.' + type) * 16)
         .duration(40)
