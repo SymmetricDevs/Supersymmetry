@@ -93,6 +93,7 @@ ore('nutrientPotassium').add(metaitem('dustAsh'))
 ore('nutrientPotassium').add(metaitem('dustCharcoal'))
 ore('nutrientPotassium').add(metaitem('dustRockSalt'))
 ore('nutrientPotassium').add(metaitem('dustPotassiumCarbonate'))
+ore('nutrientPotassium').add(metaitem('dustPotassiumSulfate'))
 
 // Phosphorous Nutrients
 ore('nutrientPhosphorous').add(metaitem('dustChlorapatite'))
