@@ -1442,17 +1442,6 @@ CENTRIFUGE.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
-// Light Concrete * 1
-mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
-
-SOLIDIFIER.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.block'))
-    .fluidInputs(fluid('concrete') * 144)
-    .outputs(item('gregtech:stone_smooth', 4))
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
 // Wireless Digital Interface * 1
 mods.gregtech.assembler.removeByInput(480, [metaitem('cover.digital'), metaitem('wireless')], [fluid('plastic') * 144])
 
@@ -1938,11 +1927,57 @@ crafting.addShapeless('gregtech:glass_flint_dust_full', metaitem('dustGlass') * 
         metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand')])
 
 LATHE.recipeBuilder()
-        .inputs(ore('stone'))
-        .outputs(metaitem('stickStone') * 4)
-        .duration(20)
-        .EUt(VA[ULV])
-        .buildAndRegister()
+    .inputs(ore('stone'))
+    .outputs(metaitem('stickStone') * 4)
+    .duration(20)
+    .EUt(VA[ULV])
+    .buildAndRegister()
 
 RecyclingHelper.removeRecyclingRecipes(metaitem('stickStone'))
 RecyclingHelper.handleRecycling(metaitem('stickStone'), [metaitem('dustSmallStone')])
+
+RecyclingHelper.removeRecyclingRecipes(metaitem('gearStone'))
+RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 5])
+
+// Moist Air * 1000
+mods.gregtech.mixer.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
+
+MIXER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('steam') * 100)
+    .fluidInputs(fluid('air') * 900)
+    .fluidOutputs(fluid('gtfo_moist_air') * 1000)
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+//Power Substation
+//Source (controller and casing): I made it the fuck up
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.iv'))
+        .inputs(ore('circuitIv') * 8)
+        .inputs(metaitem('wireGtHexUraniumTriplatinum') * 16)
+        .inputs(metaitem('plate.power_integrated_circuit') * 32)
+        .inputs(ore('plateReinforcedEpoxyResin') * 16)
+        .outputs(metaitem('power_substation'))
+        .duration(450)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('frameGtInconel718'))
+        .inputs(ore('plateReinforcedEpoxyResin') * 6)
+        .fluidInputs(fluid('dye_light_blue') * 288)
+        .outputs(item('gregtech:metal_casing', 11) * 2)
+        .circuitMeta(6)
+        .duration(50)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+//Removing old recipes
+mods.gregtech.macerator.removeByInput(32, [metaitem('power_substation')], null)
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('power_substation')], [fluid('oxygen') * 510])
+crafting.removeByOutput(item('gregtech:metal_casing', 11))
+mods.gregtech.assembler.removeByInput(16, [metaitem('platePalladium') * 6, metaitem('frameIridium'), metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
+mods.gregtech.macerator.removeByInput(32, [item('gregtech:metal_casing', 11)], null)
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:metal_casing', 11)], [fluid('oxygen') * 510])

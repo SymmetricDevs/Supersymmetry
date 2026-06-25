@@ -51,7 +51,7 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('gregtech:meta_dust', 2023), 1000, 500)
     .dimension(Globals.dimensions["Overworld"])
     .duration(200)
-    .EUt(VA[MV])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 QUARRY.recipeBuilder()

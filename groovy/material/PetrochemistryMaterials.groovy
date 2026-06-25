@@ -944,5 +944,29 @@ class PetrochemistryMaterials {
                 .color(0x999648)
                 .flags(FLAMMABLE)
                 .build()
+
+        CrackedNaturalGas = new Material.Builder(20159, SuSyUtility.susyId('cracked_natural_gas'))
+                .gas()
+                .color(0xc8d8e0)
+                .flags(FLAMMABLE)
+                .build()
+
+        QuenchedCrackedNaturalGas = new Material.Builder(20160, SuSyUtility.susyId('quenched_cracked_natural_gas'))
+                .gas()
+                .color(0xb8ccd6)
+                .flags(FLAMMABLE)
+                .build()
+
+        StrippedCrackedNaturalGas = new Material.Builder(20161, SuSyUtility.susyId('stripped_cracked_natural_gas'))
+                .gas()
+                .color(0xd0e4ec)
+                .flags(FLAMMABLE)
+                .build()
+
+        CrudeSyngas = new Material.Builder(20162, SuSyUtility.susyId('crude_syngas'))
+                .gas()
+                .color(0xa8c4d4)
+                .flags(FLAMMABLE)
+                .build()
     }
 }          

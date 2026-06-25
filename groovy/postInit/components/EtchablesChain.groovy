@@ -125,6 +125,7 @@ CSTR.recipeBuilder()
         .buildAndRegister()
 
 CSTR.recipeBuilder()
+        .circuitMeta(1)
         .fluidInputs(fluid('formaldehyde') * 50)
         .fluidInputs(fluid('phenol') * 50)
         .fluidInputs(fluid('hexamethylenetetramine_solution') * 5)

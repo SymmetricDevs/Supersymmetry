@@ -1,3 +1,152 @@
+# UPDATE 0.1.16.9
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.105 → v0.1.107
+- Had Enough Items 4.31.1 → 4.31.2
+## Changes
+### New Features
+- The power substation is now available! Use 64A EV input/dynamo hatches. (#1863 by @lanicerine)
+- EV-tier turbine blades are now made just as if you were Siemens. This involves a new Electric Discharge Machine multiblock! (#1872 by @lanicerine)
+- Fluid bars now appear on lead/brass drums and BDS&M barrels too! (#1887 by @unitazer)
+### Changed Features
+- Old arboretum recipes were removed, and greenhouse recipes have been nerfed to match the farmer. (#1884 by @WideMann)
+- [Susy-Core] The drill head model now looks like a drill head. (#651 by @lanicerine)
+### Fixes
+- That one groovy error. (#1878 by @TheFriedEgg618)
+- The rotary kiln quest is now fixed. (#1891 by @Fiery36)
+- [Susy-Core] HATE properly persists on player death. (#644 by @oliwier509)
+Thanks to our new contributor @lanicerine, who is single-handedly saving the pack rn. And also to @h3tR, @whoisyp, @Crindigo, @oliwier509, and @The-ExZombie for helping to keep the pack stable.
+# UPDATE 0.1.16.8
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.103 → v0.1.105
+## Changes
+### Changed Features
+- The SAM missile tracking range has increased. (#1859 by @oliwier509)
+- The Techguns charging station now has a recipe. (#1865 by @frogicillin)
+- More Russian lang! (#1869 by @kanayaya)
+### Fixes
+- The NiMH IV battery texture is now correct. (#1860 by @The-ExZombie)
+Also, thanks to our new contributor frogicillin (also I have no idea who you are on Discord)! And for @oliwier509, @The-ExZombie and @Fiery36 for helping maintain the pack.
+# UPDATE 0.1.16.7.1
+## Changes
+### Fixes
+- Actually remember to add the thing
+- Oh by the way greenhouses are good now
+# UPDATE 0.1.16.7
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.100 → v0.1.103
+### Mod Additions
+- Keyboard Wizard → 1.12.2-1.7.3
+## Changes
+### New Features
+- HATE. Let me tell you how we've added a new faction system to SUSY! Raids are now significantly more tied to your progression than before.
+- You now have two new ways to manufacture isoprene! (#1840 by @WideMann)
+### Changed Features
+- Pentlandite drilling is now available at MV. (#1856 by @TheFriedEgg618)
+- Drop pods can now be targeted by ICBM radars.
+### Fixes
+- The battery dupe has been fixed. (#1853 by @The-ExZombie)
+- The contact process uses a fixed bed reactor rather than a fluidized bed reactor (oops)
+# UPDATE 0.1.16.6
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.99 → v0.1.100
+- GroovyScript 1.3.4 → 1.4.3
+- Had Enough Items 4.30.2 → 4.30.1
+## Changes
+### New Features
+- [Susy-Core] The rotary kiln is animated and looking better than ever! Convert your rotary kiln into the new version (or don't). (#632 by @planetme)
+- You can now filter recipes in HEI!
+### Changed Features
+- The contact process has been buffed! (#1845 by @planetme)
+- Kovar ingots can now be made in the alloy smelter (finally) (#1852 by @TheFriedEgg618)
+- Do check your Cativa catalysts and Monsanto catalysts; the quantity required has increased.
+### Fixes
+- PTFE no longer has a chlorine dupe (probably) (#1848 by @The-ExZombie)
+- The incinerator quest is no longer... weird. (#1849 by @Fiery36)
+And thanks to @trainvoi, @The-ExZombie and @Fiery36 for helping to keep the pack stable and up-to-date.
+# UPDATE 0.1.16.5
+## Mod Changes
+### Mod Updates
+- Had Enough Items 4.29.15 → 4.30.2
+- SusyCore v0.1.98 → v0.1.99
+## Changes
+### New Features
+- You can now use a new LV multiblock, the greenhouse, to harvest crops! (The MV greenhouse has been renamed the "arboretum.") (#1843 by @WideMann)
+### Fixes
+- Acetic anhydride catalyst is no longer lost. (#1838 by @Fiery36)
+- Cellulose acetate mesh is now craftable without silicon wafers. (#1841 by @WideMann)
+- Fix conflicting recipes (#1842 by @WideMann)
+And thanks to @whoisyp and @unitazer for additional work on keeping the pack stable.
+# UPDATE 0.1.16.4.1
+## Mod Changes
+### Mod Updates
+- Better Questing Unofficial 4.2.7 → 4.3.1
+- Supercritical 0.2.4 → 0.2.5
+## Changes
+### Changed Features
+- Quests are now updated automatically! You'll never have to run /bq_admin default load again.
+- In order to remove a gallium dupe, the Bayer process has been slightly modified. You may need to flush out some machines and/or change filters.
+### Fixes
+- Green vitriol is no longer a pile of steaming garbage
+- Wood/stone quests work properly with all wood/stone types
+# UPDATE 0.1.16.4
+## Mod Changes
+### Mod Updates
+- Universal Tweaks 1.12.2-1.18.0 → 1.12.2-1.19.1
+- Better Questing Unofficial 4.2.7 → 4.3.0
+- Bubbles 2.4.9 → 2.4.10
+- SusyCore v0.1.97 → v0.1.98
+- CraftPresence 2.7.0+1.12.2-forge → 2.7.1+1.12.2-forge
+## Changes
+### Changed Features
+- Sulfuric acid is now properly Gregified (TM)! Run /bq_admin default load to see the new quests. (#1803 by @obihz6, #1830 by @planetme)
+- Acetic anhydride, acetaldehyde, acetic acid, and many other ace chemicals have updated recipes! (#1819 by @Fiery36)
+### Fixes
+- BQu teams now work properly. (#1833 by @planetme)
+- CraftPresence should no longer count you as playing when you're not. (#1833 by @planetme)
+# UPDATE 0.1.16.3
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.96 → v0.1.97
+## Changes
+### New Features
+- Batteries included! Lead-acid and nickel-iron batteries now have large variants. (#1825 by @Fiery36)
+### Changes
+- Many useless ores have been removed from HEI. (#1826 by @Fiery36)
+### Fixes
+- Move scattered oredict definitions into oreDict.groovy (#1822 by @Crindigo)
+- The preheated air recipe has been restored! (#1824 by @Crindigo)
+- HV Magnets are now actually craftable at HV! (#1828 by @Fiery36)
+- Misspellings have been thoroughly removed from the questbook. (#1827 by @whoisyp)
+And thanks to @whoisyp, @Crindigo, and @Fiery36 for keeping the pack stable.
+# UPDATE 0.1.16.2
+## Mod Changes
+### Mod Updates
+We've got a lot of mod updates. Here are some highlights:
+- Had Enough Items 4.29.8 → 4.29.15
+- 籁/Sound Physics Remixin 1.1.12 → 1.1.17
+- Fugue 0.21.0 → 0.23.1
+- Inventory Bogo Sorter 1.5.0 → 1.6.2
+- Scape and Run: Parasites 1.12.2v1.9.21 → 1.10.2
+- Gregic Probe: CEu 1.4.4 → 1.4.5
+- GroovyScript 1.3.1 → 1.3.4
+- ModularUI 3.0.3 → 3.1.3
+- SusyCore v0.1.95 → v0.1.96
+- Better Questing Unofficial 4.2.6 → 4.2.7
+- Fluidlogged API API-v3.1.1-mc1.12.2 → API-v3.2.0-mc1.12.2
+## Changes
+### New Features
+- Something that isn't important :) (#1814 by @oliwier509)
+- [Susy-Core] Mixer-settlers are now twice as space-efficient! You can continue using the old structure or craft the controller into the new version.. (#619 by @Crindigo)
+### Fixes
+- Cleanroom/OptiFine is now compatible again! (#1816 by @trainvoi)
+- Gauges and Switches switches actually control redstone again!
+- [Susy-Core] Rotational generators now output flue gas more consistently! (#617 by @Crindigo)
+- [Susy-Core] Singleblock combustion engines no longer void fluids! (#618, #623 by @ThisMightBeNoah)
+Of course, thanks to @whoisyp and @Fiery36 for also helping to keep the pack stable.
 # UPDATE 0.1.16.1
 ## Mod Changes
 ### Mod Updates

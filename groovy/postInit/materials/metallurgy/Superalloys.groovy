@@ -267,6 +267,26 @@ ASSEMBLER.recipeBuilder()
     .EUt(16)
     .buildAndRegister()
 
+INDUCTION_FURNACE.recipeBuilder()
+        .inputs(metaitem('dustReneN5') * 1)
+        .fluidOutputs(fluid('molten.rene_n_5') * 144)
+        .duration(80)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+        .inputs(metaitem('dustNimonic105') * 1)
+        .fluidOutputs(fluid('molten.nimonic_105') * 144)
+        .duration(80)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+        .inputs(metaitem('dustIncoloy825') * 1)
+        .fluidOutputs(fluid('molten.incoloy_825') * 144)
+        .duration(80)
+        .EUt(VA[HV])
+        .buildAndRegister()
 /*
     Blocks from GT superalloys need to be removed (block, frame, sheeted frame) and liquids
     Recipes for GCYM casings need to be changed to use SuSy superalloys, currently they still have recipes with old ones

@@ -86,3 +86,5 @@ mods.gregtech.advanced_arc_furnace.removeByInput(480, [metaitem('dustBarium') * 
 mods.gregtech.advanced_arc_furnace.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 12])], [fluid('refractory_gunning_mixture') * 200, fluid('argon') * 200])
 // Molten Rhodium Plated Palladium * 576
 mods.gregtech.advanced_arc_furnace.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('refractory_gunning_mixture') * 350])
+// Iron Dust * 8
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustGalvanizedSteel') * 9], null)

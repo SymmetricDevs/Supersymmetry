@@ -634,7 +634,7 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .fluidInputs(fluid('boron_trifluoride') * 10)
         .fluidOutputs(fluid('polyethylene_glycol') * 1000)
         .duration(200)
-        .EUt(240)
+        .EUt(120)
         .buildAndRegister()
 
 // Antiwear
@@ -856,7 +856,7 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .buildAndRegister()
 
     BCR.recipeBuilder()
-        .notConsumable(ore('catalystBedPalladium'))
+        .notConsumable(ore('catalystBedSupportedPalladium'))
         .fluidInputs(fluid('two_nitroaniline_solution') * 50)
         .fluidInputs(fluid('hydrogen') * 300)
         .fluidOutputs(fluid('ortho_phenylenediamine_slurry') * 150)
@@ -1142,6 +1142,20 @@ BLENDER.recipeBuilder()
     .fluidInputs(fluid('polyethylene_glycol') * 100) // Demulsifier
     .fluidInputs(fluid('antifoaming_additive') * 100)
     .inputs(ore('dustTinyCalciumDodecylbenzeneSulfonate')) // Detergent
+    .fluidOutputs(fluid('hydraulic_fluid') * 10000)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+BLENDER.recipeBuilder()
+    .fluidInputs(fluid('polyalphaolefin') * 10000)
+    .fluidInputs(fluid('zinc_dialkyldithiophosphate') * 100)
+    .inputs(ore('dustTinyCalciumDidodecylbenzeneSulfonate'))
+    .inputs(ore('dustNPhenylOneNaphthylamine'))
+    .inputs(ore('dustPolyisobutene'))
+    .fluidInputs(fluid('polyethylene_glycol') * 100)
+    .fluidInputs(fluid('antifoaming_additive') * 100)
+    .inputs(ore('dustTinyCalciumDodecylbenzeneSulfonate'))
     .fluidOutputs(fluid('hydraulic_fluid') * 10000)
     .duration(200)
     .EUt(VA[MV])

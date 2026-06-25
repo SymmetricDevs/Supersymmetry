@@ -419,7 +419,8 @@ RecyclingHelper.handleRecycling(metaitem('supercritical:basket.anode'),
             .buildAndRegister()
 
         RecyclingHelper.handleRecycling(item('supercritical:panelling', i), [
-            ore('plateStainlessSteelSteel') * 6,
+            ore('plateStainlessSteel') * 6,
+            ore('frameGtStainlessSteel'),
             ore('blockConcrete')
         ])
     }

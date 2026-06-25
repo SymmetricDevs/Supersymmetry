@@ -107,7 +107,7 @@ alcohols.forEach { alcohol ->
     // Catalytic transesterification
     grade1Lipids.forEach { lipid ->
         BR.recipeBuilder()
-        .inputs(ore('dustSodiumHydroxide'))
+        .inputs(ore('dustSodiumHydroxide') * 3)
         .fluidInputs(lipid.get())
         .fluidInputs(alcohol.get(6000)) // Optimal condition of 6 eq. alcohol
         .fluidOutputs(alcohol.getGlycerolSolution(3500))
@@ -119,7 +119,7 @@ alcohols.forEach { alcohol ->
 
     // Vacuum Flash Distillation of Glycerol Solutions
     VACUUM_CHAMBER.recipeBuilder()
-        .fluidInputs(fluid('diluted_hydrochloric_acid') * 1000)
+        .fluidInputs(fluid('diluted_hydrochloric_acid') * 2000)
         .fluidInputs(alcohol.getGlycerolSolution(7000))
         .fluidOutputs(fluid('crude_glycerol') * 3000)
         .fluidOutputs(alcohol.get(5000))
@@ -130,7 +130,7 @@ alcohols.forEach { alcohol ->
     // Distillation of Crude Glycerol
     DT.recipeBuilder()
         .fluidInputs(fluid('crude_glycerol') * 3000)
-        .outputs(metaitem('dustSalt'))
+        .outputs(metaitem('dustSalt') * 2)
         .fluidOutputs(fluid('glycerol') * 2000)
         .fluidOutputs(fluid('water') * 1000)
         .duration(20)

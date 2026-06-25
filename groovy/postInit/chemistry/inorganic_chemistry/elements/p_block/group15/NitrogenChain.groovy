@@ -167,3 +167,30 @@ MIXER.recipeBuilder()
     .duration(6)
     .EUt(VA[LV])
     .buildAndRegister();
+
+// Nitrous Oxide
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustAmmoniumNitrate') * 9)
+    .fluidOutputs(fluid('dense_steam') * 2000)
+    .fluidOutputs(fluid('nitrous_oxide') * 1000)
+    .duration(120)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('ammonia') * 100)
+    .fluidInputs(fluid('oxygen') * 250)
+    .fluidOutputs(fluid('dense_steam') * 150)
+    .fluidOutputs(fluid('nitrous_oxide') * 100)
+    .duration(5)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder() // Decomposition
+    .fluidInputs(fluid('nitrous_oxide') * 1000)
+    .fluidOutputs(fluid('nitric_oxide') * 500)
+    .fluidOutputs(fluid('nitrogen') * 500)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
