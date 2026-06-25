@@ -1617,7 +1617,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('fuel_injector'))
         .inputs(metaitem('plateDoubleIncoloy908') * 12)
         .inputs(metaitem('pipeLargeFluidStainlessSteel') * 9)
-        .outputs(item('susy:rocket_combustion_chamber', 2)) // Oxidiser Combustion Chamber
+        .outputs(item('susy:rocket_combustion_chamber')) // Bipropellant Combustion Chamber
         .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
