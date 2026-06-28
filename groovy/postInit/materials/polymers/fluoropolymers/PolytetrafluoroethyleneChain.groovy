@@ -106,3 +106,44 @@ DRYER.recipeBuilder()
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()
+
+//Source (expanded PTFE): https://www.sciencedirect.com/science/chapter/monograph/abs/pii/B9781437778557000055?via%3Dihub
+//Free version: https://sci-hub.st/10.1016/B978-1-4377-7855-7.00005-5
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('light_naphtha') * 90)//ptfe density is 2200 kg/m^3; 1 dust = 2200/9 = 244 kg; source says 17-22% naphtha by weight (i went with 20) -> 61 kg of naphtha; naphtha density is 0.7 -> 87 l of naphtha; round to 90.
+    .inputs(metaitem('dustPolytetrafluoroethylene'))
+    .outputs(metaitem('paste.lubricated_ptfe'))
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+FORMING_PRESS.recipeBuilder()
+    .inputs(metaitem('paste.lubricated_ptfe'))
+    .notConsumable(metaitem('shape.mold.cylinder'))
+    .outputs(metaitem('preform.lubricated_ptfe'))
+    .duration(50)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+EXTRUDER.recipeBuilder()
+    .inputs(metaitem('preform.lubricated_ptfe'))
+    .notConsumable(metaitem('shape.extruder.foil'))//source says 75 um thick after extrusion
+    .outputs(metaitem('foil.extruded_ptfe') * 4)
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .notConsumable(metaitem('springNichrome') * 2)
+    .inputs(metaitem('foil.extruded_ptfe'))
+    .outputs(metaitem('foil.stretched_ptfe'))
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(metaitem('foil.stretched_ptfe'))
+    .outputs(metaitem('foilExpandedPolytetrafluoroethylene'))
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()

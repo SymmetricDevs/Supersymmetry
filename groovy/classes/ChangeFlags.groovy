@@ -194,6 +194,7 @@ class ChangeFlags {
         Polycaprolactam.addFlags("generate_foil");
         Palladium.addFlags("generate_bolt_screw");
         Copper.addFlags("continuously_cast")
+        Graphite.addFlags("generate_plate")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")

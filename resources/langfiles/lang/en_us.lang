@@ -829,7 +829,7 @@ susy.material.filtered_phosphate_pulp=Filtered Phosphate Pulp
 susy.material.phosphate_concentrate=Phosphate Concentrate
 susy.material.silicon_tetrafluoride=Silicon Tetrafluoride
 susy.material.ammonium_fluoroberyllate_solution=Ammonium Fluoroberyllate Solution
-susy.material.sodium_fluoroberyllate_solution=Sodium Fluorosilicate Solution
+susy.material.sodium_fluoroberyllate_solution=Sodium Fluoroberyllate Solution
 susy.material.disassociated_ammonium_fluoride=Disassociated Ammonium Fluoride
 susy.material.beryllium_fluoride=Beryllium Fluoride
 susy.material.ammonium_fluoride_solution=Ammonium Fluoride Solution
@@ -2675,6 +2675,11 @@ susy.material.trimethyl_gallium=Trimethylgallium
 susy.material.trimethyl_indium=Trimethylindium
 susy.material.yttrium_aluminium_garnet_cerium=Ce-Doped Yttrium Aluminium Garnet
 susy.material.delithiated_salar_brine=Delithiated Salar Brine
+susy.material.dimethyl_one_three_dioxane=4,4-Dimethyl-1,3-Dioxane
+susy.material.methylbutynol=Methylbutynol
+susy.material.methylbutenol=Methylbutenol
+susy.material.dimethyl_dioxane_solution=4,4-Dimethyl-1,3-Dioxane Solution
+susy.material.isoprene_solution=Isoprene Solution
 
 # Isotopes
 
@@ -2818,7 +2823,51 @@ susy.material.cracked_natural_gas=Cracked Natural Gas
 susy.material.quenched_cracked_natural_gas=Quenched Cracked Natural Gas
 susy.material.stripped_cracked_natural_gas=Stripped Cracked Natural Gas
 susy.material.crude_syngas=Crude Syngas
+susy.material.metal_hydride_mix_anode=Metal-Hydride Mix Anode
+susy.material.annealed_ab_5_metal_alloy=Annealed AB-5 Metal Alloy
+susy.material.annealed_ab_2_metal_alloy=Annealed AB-2 Metal Alloy
+susy.material.ab_5_metal_alloy=AB-5 Metal Alloy
+susy.material.ab_2_metal_alloy=AB-2 Metal Alloy
+susy.material.cadmium_oxide=Cadmium Oxide
+susy.material.polycaprolactam_solution=Polycaprolactam Solution
+susy.material.rp_1=RP-1
+susy.material.one_naphthol_two_diazonium_chloride=1-Napthol-2-Diazonium Chloride
 susy.material.supported_vanadium_pentoxide=Supported Vanadium Pentoxide
+susy.material.investment_casting_ceramic_slurry=Investment Casting Ceramic Slurry
+susy.material.investment_casting_mixture=Investment Casting Mixture
+susy.material.copper_tungsten_alloy=Copper-Tungsten Alloy
+susy.material.lanthanum_zirconium_oxide=Lanthanum Zirconium Oxide (LZO)
+susy.material.raw_investment_casting_mixture=Raw Investment Casting Mixture
+susy.material.silica_coated_investment_casting_mixture=Silica-Coated Investment Casting Mixture
+susy.material.dried_silica_coated_investment_casting_mixture=Dried Silica-Coated Investment Casting Mixture
+susy.material.norbornene=Norbornene
+susy.material.petroleum_resin_solution=Petroleum Resin Solution
+susy.material.petroleum_resin=Petroleum Resin
+susy.material.hydrogenated_petroleum_resin=Hydrogenated Petroleum Resin
+
+
+susy.material.diallyldimethylammonium_chloride=Diallyldimethylammonium Chloride (DADMAC)
+susy.material.diallyldimethylammonium_chloride_solution=Diallyldimethylammonium Chloride (DADMAC) Solution
+susy.material.polydiallyldimethylammonium_chloride_solution=Polydiallyldimethylammonium Chloride (PolyDADMAC) Solution
+susy.material.vanadium_trioxide=Vanadium Trioxide
+susy.material.graphene_oxide_dispersion=Graphene Oxide Dispersion
+susy.material.nafion_dispersion=Nafion Dispersion
+susy.material.acidified_graphene_oxide_tungstate_solution=Acidified Graphene Oxide-Tungstate Solution
+susy.material.nanoparticle_modified_nafion=Nanoparticle-Modified Nafion
+susy.material.vanadium_electrolyte_slurry=Vanadium Electrolyte Slurry
+susy.material.crystallized_vanadium_electrolyte=Crystallized Vanadium Electrolyte
+susy.material.vanadium_battery_electrolyte=Vanadium Battery Electrolyte
+susy.material.graphene_oxide=Graphene Oxide
+susy.material.graphene_oxide_tungstate_solution=Graphene Oxide-Tungstate Solution
+susy.material.acidified_graphene_oxide_tungstate=Acidified Graphene Oxide-Tungstate
+susy.material.tungsten_modified_graphene_oxide_nanosheet=Tungsten-Modified Graphene Oxide Nanosheet
+susy.material.expandable_graphite=Expandable Graphite
+susy.material.graphite_paper=Graphite Paper
+susy.material.nanoparticle_modified_nafion_dispersion=Nanoparticle-Modified Nafion Dispersion
+susy.material.expanded_polytetrafluoroethylene=Expanded Polytetrafluoroethylene (ePTFE)
+susy.material.vanadium_iii_sulfate_solution=Vanadium III Sulfate Solution
+susy.material.diluted_vanadium_iii_sulfate_solution=Diluted Vanadium III Sulfate Solution
+susy.material.vanadyl_sulfate_solution=Vanadyl Sulfate Solution
 
 # Isotopes
 
@@ -2934,6 +2983,25 @@ metaitem.battery.ni_zn.mv.name=Nickel-Zinc MV Battery
 metaitem.battery.ni_zn.hv.name=Nickel-Zinc HV Battery
 metaitem.anode.zinc_oxide.name=Zinc Oxide Anode
 metaitem.cathode.nioh2.name=Nickel Hydroxide Cathode
+
+metaitem.membrane.caprolactam.name=Caprolactam Membrane
+metaitem.membrane.cast_film.name=Cast Microporous Film Membrane
+metaitem.membrane.caprolactam_wet.name=Wet Caprolactam Membrane
+metaitem.anode.mh.name=Metal-Hydride Anode
+metaitem.electrode.nickeled_steel_foil.name=Nickel-plated Steel Electrode Foil
+metaitem.anode.cadmium_oxide.name=Cadmium Oxide Anode
+metaitem.anode.metal_hydride.name=Metal-Hydride Anode
+
+metaitem.battery.stainless_steel_hull.hv.name=Small Stainless Steel Battery Hull
+metaitem.battery.stainless_steel_hull.ev.name=Medium Stainless Steel Battery Hull
+metaitem.battery.stainless_steel_hull.iv.name=Large Stainless Steel Battery Hull
+
+metaitem.battery.ni_cd.mv.name=Nickel-Cadmium MV Battery
+metaitem.battery.ni_cd.hv.name=Nickel-Cadmium HV Battery
+metaitem.battery.ni_cd.ev.name=Nickel-Cadmium EV Battery
+metaitem.battery.ni_mh.hv.name=Nickel-Metal Hydride HV Battery
+metaitem.battery.ni_mh.ev.name=Nickel-Metal Hydride EV Battery
+metaitem.battery.ni_mh.iv.name=Nickel-Metal Hydride IV Battery
 
 metaitem.battery.primitivehull.lv.name=Medium Ebonite Battery Hull
 metaitem.battery.primitivehull.mv.name=Large Ebonite Battery Hull
@@ -3130,7 +3198,7 @@ metaitem.shape.mold.rod.name=Mold (Rod)
 metaitem.shape.mold.long_rod.name=Mold (Long Rod)
 metaitem.shape.mold.ring.name=Mold (Ring)
 
-metaitem.assemblymanganesephosphide.name=Manganese Phosphide Assembly
+metaitem.tubemanganesephosphide.name=Manganese Phosphide Tube
 metaitem.basemanganesephosphide.name=Base Manganese Phosphide Superconductor
 metaitem.cannedmagnesiumdiboride.name=Canned Magnesium Diboride
 metaitem.tubemagnesiumdiboride.name=Magnesium Diboride Tube
@@ -3151,6 +3219,7 @@ metaitem.assemblyenrichednaquadahtriniumeuropiumduranide.name=Enriched Naquadah 
 metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah Trinium Europium Duranide Superconductor
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
+metaitem.cannedmanganesephosphide.name=Canned Manganese Phosphide
 
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
@@ -3342,9 +3411,57 @@ metaitem.fused_quartz_bulb.name=Fused Quartz Bulb
 metaitem.lamp.mercury.hp.unfilled.name=Unfilled Mercury Vapor Lamp
 metaitem.lamp.mercury.hp.name=High Pressure Mercury Vapor Lamp
 metaitem.lamp.mercury.lp.name=Ultraviolet Mercury Vapor Lamp
+metaitem.fused_quartz_tube.name=Fused Quartz Tube
 metaitem.carbon.mesh.phenolic.moist.name=Moist Phenolic Carbon Mesh
 metaitem.carbon.mesh.phenolic.treated.name=Treated Phenolic Carbon Mesh
 metaitem.carbon.tile.phenolic.treated.name=Treated Phenolic Carbon Tile
+
+metaitem.needle.steel.name=Steel Needle
+metaitem.needle.steel.barbed.name=Barbed Steel Needle
+metaitem.needle_assembly.steel.barbed.name=Barbed Steel Needle Assembly
+metaitem.membrane.vanadium_battery.name=Vanadium Flow Battery Membrane
+metaitem.expanded_graphite_worms.name=Expanded Graphite Worms
+metaitem.foil.punched_polyacrylonitrile.name=Thin Punched Polyacrylonitrile (PAN) Sheet
+metaitem.foil.carbon_felt.name=Carbon Felt
+metaitem.foil.activated_carbon_felt.name=Activated Carbon Felt
+metaitem.paste.lubricated_ptfe.name=Lubricated Polytetrafluoroethylene (PTFE) Paste
+metaitem.preform.lubricated_ptfe.name=Lubricated Polytetrafluoroethylene (PTFE) Preform
+metaitem.foil.extruded_ptfe.name=Extruded Polytetrafluoroethylene (PTFE) Thin Sheet
+metaitem.foil.stretched_ptfe.name=Stretched Polytetrafluoroethylene (PTFE) Thin Sheet
+
+metaitem.turbine_blade_core_die.name=Turbine Blade Core Die Set
+metaitem.turbine_blade_shape_die.name=Turbine Blade Shape Die Set
+metaitem.investment_casting_binder.name=Investment Casting Core Binder
+metaitem.turbine_blade_casting_core.name=Turbine Blade Casting Core
+metaitem.fired_turbine_blade_casting_core.name=Fired Turbine Blade Casting Core
+metaitem.investment_casting_wax.name=Investment Casting Wax
+metaitem.wax_turbine_blade_mold.name=Wax Turbine Blade Mold
+metaitem.ceramic_coated_wax_turbine_blade_mold.name=Ceramic-Coated Wax Turbine Blade Mold
+metaitem.stuccoed_ceramic_turbine_blade_mold.name=Stuccoed Ceramic Turbine Blade Mold
+metaitem.dried_ceramic_turbine_blade_mold.name=Dried Ceramic Turbine Blade Mold
+metaitem.dewaxed_ceramic_turbine_blade_mold.name=Dewaxed Turbine Blade Mold
+metaitem.turbine_blade_mold.name=Turbine Blade Mold
+metaitem.bridgman_furnace.name=Bridgman-Stockbarger Furnace
+metaitem.cast_gas_turbine_blade.name=Cast Gas Turbine Blade
+metaitem.demolded_gas_turbine_blade.name=Demolded Gas Turbine Blade
+metaitem.decored_gas_turbine_blade.name=Decored Gas Turbine Blade
+metaitem.milled_gas_turbine_blade.name=Milled Gas Turbine Blade
+metaitem.surface_finished_gas_turbine_blade.name=Surface-Finished Gas Turbine Blade
+metaitem.platinum_coated_gas_turbine_blade.name=Platinum-Coated Gas Turbine Blade
+metaitem.platinum_aluminide_coated_gas_turbine_blade.name=Platinum Aluminide-Coated Gas Turbine Blade
+metaitem.gas_turbine_blade.name=Gas Turbine Blade
+metaitem.cast_high_pressure_steam_turbine_blade.name=Cast High-Pressure Steam Turbine Blade
+metaitem.demolded_high_pressure_steam_turbine_blade.name=Demolded High-Pressure Steam Turbine Blade
+metaitem.decored_high_pressure_steam_turbine_blade.name=Decored High-Pressure Steam Turbine Blade
+metaitem.milled_high_pressure_steam_turbine_blade.name=Milled High-Pressure Steam Turbine Blade
+metaitem.high_pressure_steam_turbine_blade.name=High-Pressure Steam Turbine Blade
+metaitem.cast_low_pressure_steam_turbine_blade.name=Cast Low-Pressure Steam Turbine Blade
+metaitem.demolded_low_pressure_steam_turbine_blade.name=Demolded Low-Pressure Steam Turbine Blade
+metaitem.decored_low_pressure_steam_turbine_blade.name=Decored Low-Pressure Steam Turbine Blade
+metaitem.milled_low_pressure_steam_turbine_blade.name=Milled Low-Pressure Steam Turbine Blade
+metaitem.low_pressure_steam_turbine_blade.name=Low-Pressure Steam Turbine Blade
+metaitem.sputtering_magnetron.name=Sputtering Magnetron
+metaitem.graphite_paper.name=Graphite Paper
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
@@ -3370,6 +3487,11 @@ gregtech.machine.laser_engraver.opv.name=Legendary Electron Beam Lithographer
 
 recipemap.laser_engraver.name=Electron Beam Lithography
 
+#Substation Renaming
+tile.battery_block.empty_tier_i.name=Empty Tier I Flow Battery Hull
+tile.metal_casing.palladium_substation.name=Power Substation Casing
+tile.battery_block.lapotronic_ev.name=Vanadium Flow Battery
+ 
 # Generic Renaming
 item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
@@ -3387,6 +3509,7 @@ gregtech.advancement.medium_voltage.31_mv_energy_hatch.name=Upgrade Your ERF
 recipemap.electric_blast_furnace.name=Resistance Furnace
 gregtechfoodoption.machine.greenhouse.name=Arboretum
 recipemap.greenhouse.name=Arboretum
+
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp

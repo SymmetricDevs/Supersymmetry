@@ -76,12 +76,23 @@ crafting.addShaped("projectred-core:circuit_plate", item('projectred-core:resour
 ])
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('wireFineRedAlloy') * 3, ore('plateStone') * 3)
+    .inputs(ore('wireFineRedAlloy'), ore('plateStone'))
+    .fluidInputs(fluid("glue") * 25)
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item'))
-    .duration(100)
+    .duration(50)
     .EUt(VA[LV])
     .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('wireFineRedAlloy')*4, ore('plateMica'))
+    .fluidInputs(fluid("glue") * 100)
+    .circuitMeta(7)
+    .outputs(item('projectred-core:resource_item')*4)
+    .duration(150)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 
 // Conductive Plate
 crafting.replaceShaped("projectred-core:parts/conductive_plate", item('projectred-core:resource_item:1'), [
@@ -245,6 +256,16 @@ ASSEMBLER.recipeBuilder()
 
 //Black Insulated Wire
 crafting.addShapeless(item('projectred-transmission:wire:16'), [ore('cableGtSingleRedAlloy')]);
+
+//Bundled Cable
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('projredInsulatedWire')*5)
+    .fluidInputs(fluid('glue') * 200)
+    .outputs(item('projectred-transmission:wire', 17))
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()
 
 crafting.replaceShaped("microblockcbe:diamond_saw", item('microblockcbe:saw_diamond'), [
         [null, null, null],

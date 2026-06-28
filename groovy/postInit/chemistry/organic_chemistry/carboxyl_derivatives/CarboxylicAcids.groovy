@@ -105,7 +105,6 @@ SIEVE_DT.recipeBuilder()
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
-    .circuitMeta(0)
     .fluidInputs(fluid('vinegar') * 2000)
     .fluidOutputs(fluid('diluted_acetic_acid') * 800)
     .duration(80)

@@ -460,3 +460,6 @@ RecipeMaps.LARGE_CHEMICAL_RECIPES
 
 RecipeMaps.DISTILLERY_RECIPES
     .modifyMaxFluidInputs(2)
+
+RecipeMaps.ASSEMBLER_RECIPES
+    .modifyMaxFluidInputs(2)

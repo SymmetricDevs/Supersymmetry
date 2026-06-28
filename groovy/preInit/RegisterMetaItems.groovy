@@ -24,9 +24,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(100, "cement.clinker")
         addItem(101, "hot.cement.clinker")
         addItem(102, "cement.dust")
-
-        // Free ID: 103
-
+        addItem(103, "graphite_paper")
         addItem(104, "shape.mold.rod")
         addItem(105, "shape.mold.crucible")
         addItem(106, "crucible.boron.nitride")
@@ -213,6 +211,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(3905, "battery.ni_fe_hull.lv")
         addItem(3906, "battery.ni_fe_hull.mv")
         addItem(3907, "battery.ni_fe_hull.hv")
+        addItem(3908, "battery.stainless_steel_hull.hv")
+        addItem(3909, "battery.stainless_steel_hull.ev")
+        addItem(3910, "battery.stainless_steel_hull.iv")
 
         //Batteries 4000-4100
         Batteries['lead_acid'].register(it, 4000)
@@ -220,18 +221,41 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4002, "anode.lead")
         addItem(4003, "cathode.lead_paste")
         addItem(4004, "cathode.lead_frame")
-        Batteries['lead_acid.mv'].register(it,4005)
+        Batteries['lead_acid.mv'].register(it, 4005)
         addItem(4006, "electrode.steel_frame")
         addItem(4007, "electrode.nickeled_steel_frame")
-        Batteries['ni_zn.mv'].register(it, 4008)
-        Batteries['ni_zn.hv'].register(it, 4009)
-        addItem(4010, "anode.zinc_oxide")
+        Batteries['ni_fe.lv'].register(it, 4008)
+        Batteries['ni_fe'].register(it, 4009)
+        Batteries['ni_fe.hv'].register(it, 4010)
         addItem(4011, "cathode.nioh2")
-        Batteries['ni_fe.lv'].register(it, 4012)
-        Batteries['ni_fe'].register(it, 4013)
-        Batteries['ni_fe.hv'].register(it, 4014)
+        Batteries['ni_cd.mv'].register(it, 4012)
+        Batteries['ni_cd.hv'].register(it, 4013)
+        Batteries['ni_cd.ev'].register(it, 4014)
+        addItem(4015, "anode.cadmium_oxide")
+        Batteries['ni_mh.hv'].register(it, 4016)
+        Batteries['ni_mh.ev'].register(it, 4017)
+        Batteries['ni_mh.iv'].register(it, 4018)
+        addItem(4019, "electrode.nickeled_steel_foil")
+        addItem(4020, "membrane.caprolactam")
+        addItem(4021, "membrane.caprolactam_wet")
+        addItem(4022, "anode.mh")
+        addItem(4023, "membrane.cast_film")
+
 
         addItem(4101, "vacuum_tube_components")
+        //Flow batteries 4200-4300
+        addItem(4200, "needle.steel")
+        addItem(4201, "needle.steel.barbed")
+        addItem(4202, "needle_assembly.steel.barbed")
+        addItem(4203, "membrane.vanadium_battery")
+        addItem(4204, "expanded_graphite_worms")
+        addItem(4205, "foil.punched_polyacrylonitrile")
+        addItem(4206, "foil.carbon_felt")
+        addItem(4207, "foil.activated_carbon_felt")
+        addItem(4208, "paste.lubricated_ptfe")
+        addItem(4209, "preform.lubricated_ptfe")
+        addItem(4210, "foil.extruded_ptfe")
+        addItem(4211, "foil.stretched_ptfe")
 
         //Dusts & Pulps 4500-4999
 
@@ -308,7 +332,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6004, "led_light")
 
         //Superconductors 6100-6200
-        addItem(6100, "assemblymanganesephosphide")
+        addItem(6100, "tubemanganesephosphide")
         addItem(6101, "basemanganesephosphide")
         addItem(6102, "cannedmagnesiumdiboride")
         addItem(6103, "tubemagnesiumdiboride")
@@ -329,6 +353,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6118, "baseenrichednaquadahtriniumeuropiumduranide")
         addItem(6119, "assemblyrutheniumtriniumamericiumneutronate")
         addItem(6120, "baserutheniumtriniumamericiumneutronate")
+        addItem(6121, "cannedmanganesephosphide")
 
         //Metal sponges 6200-6300
         addItem(6200, "sponge.titanium")
@@ -352,9 +377,47 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6303, "anode_slime.copper")
         addItem(6304, "anode_slime.decopperized")
 
-        // Metallurgy 6400-6500
+        // Metallurgy 6400-6499
         addItem(6400, "work_roll.unfinished")
         addItem(6401, "nozzle.boron_nitride")
+
+        //Turbines 6500-6800
+        addItem(6500, "turbine_blade_core_die")
+        addItem(6501, "turbine_blade_shape_die")
+        addItem(6502, "investment_casting_binder")
+        addItem(6503, "turbine_blade_casting_core")
+        addItem(6504, "fired_turbine_blade_casting_core")
+        addItem(6505, "investment_casting_wax")
+        addItem(6506, "wax_turbine_blade_mold")
+        addItem(6507, "ceramic_coated_wax_turbine_blade_mold")
+        addItem(6508, "stuccoed_ceramic_turbine_blade_mold")
+        addItem(6509, "dried_ceramic_turbine_blade_mold")
+        addItem(6510, "dewaxed_ceramic_turbine_blade_mold")
+        addItem(6511, "turbine_blade_mold")
+        addItem(6512, "bridgman_furnace")
+
+        addItem(6513, "cast_gas_turbine_blade")
+        addItem(6514, "demolded_gas_turbine_blade")
+        addItem(6515, "decored_gas_turbine_blade")
+        addItem(6516, "milled_gas_turbine_blade")
+        addItem(6517, "surface_finished_gas_turbine_blade")
+        addItem(6518, "platinum_coated_gas_turbine_blade")
+        addItem(6519, "platinum_aluminide_coated_gas_turbine_blade")
+        addItem(6520, "gas_turbine_blade")
+        
+        addItem(6521, "cast_high_pressure_steam_turbine_blade")
+        addItem(6522, "demolded_high_pressure_steam_turbine_blade")
+        addItem(6523, "decored_high_pressure_steam_turbine_blade")
+        addItem(6524, "milled_high_pressure_steam_turbine_blade")
+        addItem(6525, "high_pressure_steam_turbine_blade")
+        addItem(6526, "cast_low_pressure_steam_turbine_blade")
+        addItem(6527, "demolded_low_pressure_steam_turbine_blade")
+        addItem(6528, "decored_low_pressure_steam_turbine_blade")
+        addItem(6529, "milled_low_pressure_steam_turbine_blade")
+        addItem(6530, "low_pressure_steam_turbine_blade")
+
+        addItem(6531, "sputtering_magnetron")
+
 
         //Seed crystals 7000-7500
 
@@ -463,6 +526,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10409, "lamp.mercury.hp.unfilled")
         addItem(10410, "lamp.mercury.hp")
         addItem(10411, "lamp.mercury.lp")
+        addItem(10412, "fused_quartz_tube")
     }
 
     log.infoMC("Finished adding metaitems")

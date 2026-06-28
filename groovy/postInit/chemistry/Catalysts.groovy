@@ -103,11 +103,11 @@ ROASTER.recipeBuilder()
 // Contact Process Catalyst
 
 MIXER.recipeBuilder()
-    .inputs(ore('dustTinyVanadiumPentoxide') * 21)
-    .inputs(ore('dustTinyPotassiumSulfate') * 42)
-    .inputs(ore('dustDiatomite') * 21)
-    .outputs(metaitem('dustSupportedVanadiumPentoxide') * 28)
-    .duration(200)
+    .inputs(ore('dustTinyVanadiumPentoxide') * 3)
+    .inputs(ore('dustTinyPotassiumSulfate') * 6)
+    .inputs(ore('dustDiatomite') * 3)
+    .outputs(metaitem('dustSupportedVanadiumPentoxide') * 4)
+    .duration(29)
     .EUt(VA[LV])
     .buildAndRegister()
 
