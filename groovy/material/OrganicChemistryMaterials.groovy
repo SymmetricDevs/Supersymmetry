@@ -4309,6 +4309,8 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 12, Hydrogen * 30, Aluminium * 2)
                 .colorAverage()
                 .build()
+
+        Triethylaluminium.setFormula("Al2(C2H5)6", true)
                 
         CarbonTetrabromide = new Material.Builder(15729, SuSyUtility.susyId('carbon_tetrabromide'))
                 .dust()
@@ -4374,6 +4376,12 @@ class OrganicChemistryMaterials {
                 .liquid()
                 .components(Carbon * 6, Hydrogen * 15, Boron, Oxygen * 3)
                 .color(0xb5f571)
+                .build()
+
+        CarbonTetrafluoride = new Material.Builder(15740, SuSyUtility.susyId('carbon_tetrafluoride'))
+                .gas()
+                .components(Carbon, Fluorine * 4)
+                .colorAverage()
                 .build()
     }
 }

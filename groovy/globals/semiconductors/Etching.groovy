@@ -51,43 +51,43 @@ class Etching {
 
     public static final etchants = [ //FIXME: Replace all RIE etchants with proper mixtures
         aluminium: [
-            new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
-            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
-            new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
+            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
             new Etchant("aluminium_etchant", MV, 50, 0.00125, false, false),
         ],
         gallium_arsenide: [
-            new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
-            new Etchant("plasma.carbon_tetrafluoride",  EV, 10, 0.0167, true, true),
-            new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
+            //new Etchant("plasma.carbon_tetrafluoride",  EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
             new Etchant("ultrapure_hydrogen_peroxide_solution", MV, 50, 0.00125, false, false),
         ],
         silicon: [
-            new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
-            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
+            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
             new Etchant("tetramethylammonium_hydroxide_solution", MV, 40, 0.004, true, false),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 40, 0.002, false, false)
         ],
         silicon_dioxide: [
-            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
-            new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),
             new Etchant("buffered_oxide_etchant", MV, 40, 0.004, false, false),
         ],
         silicon_nitride: [
-            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
-            new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),
             new Etchant("phosphoric_acid", MV, 40, 0.004, false, false),
         ],
         titanium: [
-            new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 40, 0.004, false, false),
         ],
         nickel: [
-            new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 40, 0.004, false, false),
         ],
         tungsten: [
-            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
+            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
             new Etchant("hydrogen_peroxide_solution", MV, 40, 0.004, false, false),
         ],
         copper: [
@@ -111,7 +111,7 @@ class Etching {
             new Etchant("ultrapure_hydrofluoric_acid", MV, 50, 0.004, false, false),
         ],
         hafnium_dioxide: [
-            new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.008, true, true),
+            new Etchant("carbon_tetrafluoride", EV, 10, 0.008, true, true),
         ],
         nickel_silicide: [
             new Etchant("phosphoric_acid", HV, 50, 0.01, false, false)
@@ -126,22 +126,22 @@ class Etching {
             new Etchant("boron_trichloride", EV, 100, 0.0167, true, true)
         ],
         zirconia_alumina_coetch: [
-            new Etchant(["boron_trichloride" : 60, "chlorine" : 20, "argon" : 20], EV, 10, 0.004, true, true)
+            new Etchant(["boron_trichloride" : 60, "chlorine" : 20, "argon" : 20], EV, 0.004, true, true)
         ],
         borophosphosilicate_glass: [
-            new Etchant(["octafluorocyclobutane" : 25, "carbon_tetrafluoride" : 20, "oxygen" : 10, "argon" : 45], EV, 10, 0.0167, true, true)
+            new Etchant(["octafluorocyclobutane" : 25, "carbon_tetrafluoride" : 20, "oxygen" : 10, "argon" : 45], EV, 0.0167, true, true)
         ],
         silicon_oxycarbide_hydride: [
-            new Etchant(["octafluorocyclobutane" : 15, "argon" : 80, "oxygen" : 5], EV, 10, 0.0167, true, true)
+            new Etchant(["octafluorocyclobutane" : 15, "argon" : 80, "oxygen" : 5], EV, 0.0167, true, true)
         ],
         silicon_oxynitride: [
-            new Etchant(["carbon_tetrafluoride" : 30, "fluoroform" : 20, "argon" : 50], EV, 10, 0.0167, true, true)
+            new Etchant(["carbon_tetrafluoride" : 30, "fluoroform" : 20, "argon" : 50], EV, 0.0167, true, true)
         ],
         silicon_silica_coetch: [
-            new Etchant(["hexafluorobutadiene" : 15, "carbon_tetrafluoride" : 25, "argon" : 50, "oxygen" : 10], EV, 10, 0.004, true, true)
+            new Etchant(["hexafluorobutadiene" : 15, "carbon_tetrafluoride" : 25, "argon" : 50, "oxygen" : 10], EV, 0.004, true, true)
         ],
         silicon_nitride_silica_coetch: [
-            new Etchant(["hexafluorobutyne" : 15, "carbon_tetrafluoride" : 25, "argon" : 50, "oxygen" : 10], EV, 10, 0.004, true, true)
+            new Etchant(["hexafluorobutyne" : 15, "carbon_tetrafluoride" : 25, "argon" : 50, "oxygen" : 10], EV, 0.004, true, true)
         ],
         nichrome: [
             new Etchant("ultrapure_iron_iii_chloride_solution", MV, 100, 0.01, false, false)

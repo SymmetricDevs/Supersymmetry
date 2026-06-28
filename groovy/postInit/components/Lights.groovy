@@ -137,7 +137,7 @@ VACUUM_CHAMBER.recipeBuilder()
 //If someone working on the laser rework wants to replace this go ahead just replace the YAG:Ce in the actual LED recipe
 TUBE_FURNACE.recipeBuilder()
     .inputs(metaitem('dustAlumina')*10)
-    .inputs(metaitem('dustYttriumIiiOxide')*6)
+    .inputs(metaitem('dustYttriumOxide')*6)
     .inputs(metaitem('dustTinyCeriumIvOxide'))
     .fluidInputs(fluid('hydrogen') * 40)
     .fluidOutputs(fluid('dense_steam') * 20)

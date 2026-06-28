@@ -864,8 +864,6 @@ class FirstDegreeMaterialsA {
 
         // FREE ID: 8215
 
-        Triethylaluminium.setFormula("Al2(C2H5)6", true)
-
         HydrogenPeroxide = new Material.Builder(8216, SuSyUtility.susyId('hydrogen_peroxide'))
                 .liquid()
                 .components(Hydrogen * 2, Oxygen * 2)
@@ -2202,7 +2200,7 @@ class FirstDegreeMaterialsA {
 
         MagnesiumNitrate.setFormula("Mg(NO3)2", true)
 
-        YttriumIiiOxide = new Material.Builder(8417, SuSyUtility.susyId('yttrium_iii_oxide'))
+        YttriumOxide = new Material.Builder(8417, SuSyUtility.susyId('yttrium_oxide'))
                 .dust()
                 .components(Yttrium * 2, Oxygen * 3)
                 .colorAverage()

@@ -178,11 +178,7 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        ZieglerNattaCatalyst = new Material.Builder(13025, SuSyUtility.susyId('ziegler_natta_catalyst'))
-                .dust()
-                .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
-                .colorAverage()
-                .build()
+        // 13025 HELD BY THIRD DEGREE MATERIAL, IMPORTANT CATALYST
 
         HydrogenPeroxideSolution = new Material.Builder(13026, SuSyUtility.susyId('hydrogen_peroxide_solution'))
                 .liquid()
@@ -1242,7 +1238,7 @@ class SecondDegreeMaterials {
 
         EnameledGrapheneCoatedGold = new Material.Builder(13194, SuSyUtility.susyId('enameled_graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
-                .components(Gold, DriedGraphene)
+                .components(Gold, Carbon)
                 .color(0xad9c4c)
                 .ingotSmeltInto(Gold)
                 .arcSmeltInto(Gold)
@@ -1251,7 +1247,7 @@ class SecondDegreeMaterials {
 
         GrapheneCoatedGold = new Material.Builder(13195, SuSyUtility.susyId('graphene_coated_gold'))
                 .flags(GENERATE_FINE_WIRE)
-                .components(Gold, DriedGraphene)
+                .components(Gold, Carbon)
                 .color(0xa38c21)
                 .ingotSmeltInto(Gold)
                 .arcSmeltInto(Gold)

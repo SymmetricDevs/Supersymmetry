@@ -1346,7 +1346,7 @@ class SuSyMaterials {
     public static Material NickelIINitrate
     public static Material ZincNitrate
     public static Material MagnesiumNitrate
-    public static Material YttriumIiiOxide
+    public static Material YttriumOxide
     public static Material NeodymiumOxide
     public static Material Bromooctane
     public static Material LithiumDioctylcopper
@@ -1732,8 +1732,8 @@ class SuSyMaterials {
     public static Material ExpandedPolytetrafluoroethylene
     public static Material SilverNanoparticle
     public static Material NickelNanoparticle
-    public static Material DysprosiumIiiOxide
-    public static Material HolmiumIiiOxide
+    public static Material DysprosiumOxide
+    public static Material HolmiumOxide
     public static Material PalladiumNanoparticle
     public static Material PalladiumNitrateSolution
 
@@ -1841,7 +1841,6 @@ class SuSyMaterials {
     public static Material SodiumSulfateSolution
     public static Material CopperZincChromiumOxide
     public static Material PhilipsCatalyst
-    public static Material ZieglerNattaCatalyst
     public static Material HydrogenPeroxideSolution
     public static Material AmmoniumAcetateSolution
     public static Material TetramethylammoniumHydroxideSolution
@@ -2913,6 +2912,7 @@ class SuSyMaterials {
     public static Material SilverFritInk
     public static Material CopperFritInk
     public static Material ThickFilmResistorInk
+    public static Material ZieglerNattaCatalyst
 
     // Thermodynamics Materials
 

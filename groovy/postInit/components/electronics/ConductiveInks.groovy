@@ -22,6 +22,7 @@ BR.recipeBuilder()
     .inputs(metaitem('dustPalladium'))
     .fluidInputs(fluid('nitric_acid') * 2000)
     .fluidOutputs(fluid('palladium_nitrate_solution') * 2000)
+    .duration(40)
     .EUt(VA[MV])
     .buildAndRegister()
 
