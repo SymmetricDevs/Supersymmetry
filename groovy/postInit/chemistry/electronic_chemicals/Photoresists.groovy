@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 // HMDS resist adhesion promoter
 

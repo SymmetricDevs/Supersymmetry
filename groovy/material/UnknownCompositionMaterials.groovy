@@ -167,7 +167,15 @@ class UnknownCompositionMaterials {
                 .color(0xc47e70)
                 .build()
 
-        //FREE IDs: 4028-4029
+        NickelNanoparticleSuspension = new Material.Builder(4028, SuSyUtility.susyId("nickel_nanoparticle_suspension"))
+                .liquid()
+                .color(0x1a1716)
+                .build()
+
+        SilverNanoparticleSuspension = new Material.Builder(4029, SuSyUtility.susyId('silver_nanoparticle_suspension'))
+                .liquid()
+                .color(0x0d0c0b)
+                .build()
 
         CrudeCumene = new Material.Builder(4030, SuSyUtility.susyId('crude_cumene'))
                 .liquid()
@@ -1316,8 +1324,6 @@ class UnknownCompositionMaterials {
                 .colorAverage()
                 .build()
 
-        //FREE IDs: 4257-4258
-
         ImpureChalcopyriteSlurry = new Material.Builder(4259, SuSyUtility.susyId('impure_chalcopyrite_slurry'))
                 .liquid()
                 .color(0x856119)
@@ -1414,7 +1420,12 @@ class UnknownCompositionMaterials {
                 .iconSet(FLINT)
                 .build()
 
-        // FREE IDs: 4277-4280
+        PalladiumNanoparticleSuspension = new Material.Builder(4277, SuSyUtility.susyId('palladium_nanoparticle_suspension'))
+                .liquid()
+                .color(0x473734)
+                .build()
+    
+        // FREE IDs: 4278-4280
 
         SilicateFreeTungstateSolution = new Material.Builder(4281, SuSyUtility.susyId('silicate_free_tungstate_solution'))
                 .liquid()

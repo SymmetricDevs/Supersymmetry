@@ -862,7 +862,9 @@ class SuSyMaterials {
     public static Material NanoparticleModifiedNafion
     public static Material ExpandableGraphite
     public static Material AluminiumChlorofluoride
-
+    public static Material NickelNanoparticleSuspension
+    public static Material SilverNanoparticleSuspension
+    public static Material PalladiumNanoparticleSuspension
 
     // Petrochem Materials
 
@@ -1728,7 +1730,12 @@ class SuSyMaterials {
     public static Material CadmiumOxide
     //public static Material VanadiumTrioxide
     public static Material ExpandedPolytetrafluoroethylene
-
+    public static Material SilverNanoparticle
+    public static Material NickelNanoparticle
+    public static Material DysprosiumOxide
+    public static Material HolmiumOxide
+    public static Material PalladiumNanoparticle
+    public static Material PalladiumNitrateSolution
 
     // HP Materials
 
@@ -1834,7 +1841,6 @@ class SuSyMaterials {
     public static Material SodiumSulfateSolution
     public static Material CopperZincChromiumOxide
     public static Material PhilipsCatalyst
-    public static Material ZieglerNattaCatalyst
     public static Material HydrogenPeroxideSolution
     public static Material AmmoniumAcetateSolution
     public static Material TetramethylammoniumHydroxideSolution
@@ -2901,6 +2907,12 @@ class SuSyMaterials {
     public static Material NafionDispersion
     public static Material PyridiniumTosylateSolution
     public static Material SpinOnCarbon
+    public static Material AgPdConductiveInk
+    public static Material NickelConductiveInk
+    public static Material SilverFritInk
+    public static Material CopperFritInk
+    public static Material ThickFilmResistorInk
+    public static Material ZieglerNattaCatalyst
 
     // Thermodynamics Materials
 

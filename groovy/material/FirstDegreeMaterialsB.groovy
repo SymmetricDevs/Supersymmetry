@@ -951,5 +951,43 @@ class FirstDegreeMaterialsB {
                 .components(Iodine, Chlorine)
                 .color(0x8a3122)
                 .build()
+      
+        SilverNanoparticle = new Material.Builder(8805, SuSyUtility.susyId('silver_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Silver)
+                .color(0x120c07)
+                .build()
+
+        NickelNanoparticle = new Material.Builder(8806, SuSyUtility.susyId('nickel_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Nickel)
+                .color(0x262321)
+                .build()
+
+        HolmiumOxide = new Material.Builder(8807, SuSyUtility.susyId('holmium_oxide'))
+                .dust()
+                .components(Holmium * 2, Oxygen * 3)
+                .color(0xf4dfa6)
+                .build()
+
+        DysprosiumOxide = new Material.Builder(8808, SuSyUtility.susyId('dysprosium_oxide'))
+                .dust()
+                .components(Dysprosium * 2, Oxygen * 3)
+                .color(0xdaffaf)
+                .build()
+
+        PalladiumNanoparticle = new Material.Builder(8809, SuSyUtility.susyId('palladium_nanoparticle'))
+                .dust()
+                .components(Palladium)
+                .color(0xd9cdcd)
+                .build()
+
+        PalladiumNitrateSolution = new Material.Builder(8810, SuSyUtility.susyId('palladium_nitrate_solution'))
+                .liquid()
+                .components(Palladium, Nitrogen, Oxygen * 3, Water)
+                .color(0x7c2111)
+                .build()
     }
 }

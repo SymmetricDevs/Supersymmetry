@@ -1,5 +1,11 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import globals.Sintering
+import globals.semiconductors.Deposition
+import globals.semiconductors.Lithography
+import globals.semiconductors.Packaging
+import globals.semiconductors.Etching
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 crafting.removeByOutput(metaitem('component.resistor'))
 
@@ -126,3 +132,162 @@ ASSEMBLER.recipeBuilder()
     .duration(10)
     .EUt(VA[MV])
     .buildAndRegister();
+
+// thick/thin-film resistors
+
+Sintering.nonPlasmaFuels().each { fuel ->
+    Sintering.comburents.each { comburent ->
+        SINTERING_OVEN.recipeBuilder()
+            .inputs(metaitem('component.resistor.wafer.printed_pads'))
+            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+            .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+            .outputs(metaitem('component.resistor.wafer.pads'))
+            .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+            .duration(fuel.duration + comburent.duration)
+            .EUt(240)
+            .buildAndRegister()
+
+        SINTERING_OVEN.recipeBuilder()
+            .inputs(metaitem('component.thick_film_resistor.wafer.printed'))
+            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+            .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+            .outputs(metaitem('component.thick_film_resistor.wafer.fired'))
+            .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+            .duration(fuel.duration + comburent.duration)
+            .EUt(240)
+            .buildAndRegister()
+
+        SINTERING_OVEN.recipeBuilder()
+            .inputs(metaitem('component.thick_film_resistor.wafer.printed_coating'))
+            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+            .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+            .outputs(metaitem('component.thick_film_resistor.wafer'))
+            .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+            .duration(fuel.duration + comburent.duration)
+            .EUt(240)
+            .buildAndRegister()
+    }
+}
+
+UV_LIGHT_BOX.recipeBuilder()
+    .inputs(metaitem('mesh.stainless_steel'))
+    .notConsumable(metaitem('stencil.resistor'))
+    .fluidInputs(fluid('acrylate_resist_mixture') * 50)
+    .outputs(metaitem('screen_printing.pattern.resistor'))
+    .duration(200)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+UV_LIGHT_BOX.recipeBuilder()
+    .inputs(metaitem('mesh.stainless_steel'))
+    .notConsumable(metaitem('stencil.resistor_pads'))
+    .fluidInputs(fluid('acrylate_resist_mixture') * 50)
+    .outputs(metaitem('screen_printing.pattern.resistor_pads'))
+    .duration(200)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+SCREEN_PRINTING.recipeBuilder()
+    .notConsumable(metaitem('screen_printing.pattern.resistor_pads'))
+    .inputs(metaitem('dustTinyCopper') * 5)
+    .inputs(metaitem('plateAlumina'))
+    .outputs(metaitem('component.resistor.wafer.printed_pads'))
+    .duration(104)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+
+SCREEN_PRINTING.recipeBuilder()
+    .notConsumable(metaitem('screen_printing.pattern.resistor'))
+    .inputs(metaitem('component.resistor.wafer.pads'))
+    .fluidInputs(fluid('thick_film_resistor_ink') * 50)
+    .outputs(metaitem('component.thick_film_resistor.wafer.printed'))
+    .duration(104)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+LASER_ENGRAVER.recipeBuilder()
+    .inputs(metaitem('component.thick_film_resistor.wafer.fired'))
+    .outputs(metaitem('component.thick_film_resistor.wafer.etched'))
+    .duration(200)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+SCREEN_PRINTING.recipeBuilder()
+    .notConsumable(metaitem('screen_printing.pattern.resistor'))
+    .inputs(metaitem('component.thick_film_resistor.wafer.etched'))
+    .inputs(metaitem('dustTinyGlass') * 5)
+    .outputs(metaitem('component.thick_film_resistor.wafer.printed_coating'))
+    .duration(104)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+Packaging.generateDicingRecipe("component.thick_film_resistor.wafer", "component.thick_film_resistor.unterminated", 32, 100, HV)
+
+Deposition.generateSputteringRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer", ['chromium' : 120, 'nickel' : 480]) // NiCr vacuum deposition; 80/20 composition
+Lithography.generatePhotolithographyRecipes("component.thin_film_resistor.wafer", "component.thin_film_resistor.wafer.patterned", "novolac_resist", "mask.resistor", false)
+Etching.generateWetEtchingRecipe("component.thin_film_resistor.wafer.patterned", "component.thin_film_resistor.wafer.etched", "nichrome", 400, false)
+Lithography.generateResistStrippingRecipes("component.thin_film_resistor.wafer.etched", "component.thin_film_resistor.wafer.stripped", 1, false, true) // don't know what timeMultiplier means
+
+LASER_ENGRAVER.recipeBuilder()
+    .inputs(metaitem('component.thin_film_resistor.wafer.stripped'))
+    .outputs(metaitem('component.thin_film_resistor.wafer.tuned'))
+    .duration(200)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+Packaging.generateDicingRecipe("component.thin_film_resistor.wafer.tuned", "component.thin_film_resistor.unterminated", 32, 100, HV)
+
+types = ["thick_film_resistor", "thin_film_resistor"]
+for (type in types) {
+    Sintering.nonPlasmaFuels().each { fuel ->
+        Sintering.comburents.each { comburent ->
+            SINTERING_OVEN.recipeBuilder()
+                .inputs(metaitem('component.' + type + '.dipped') * 4)
+                .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
+                .fluidInputs(fluid(comburent.name) * comburent.amountRequired)
+                .outputs(metaitem('component.' + type + '.terminated') * 4)
+                .fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
+                .duration(fuel.duration + comburent.duration)
+                .EUt(VA[HV])
+                .buildAndRegister()
+        }
+    }
+
+    ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('component.' + type + '.polished') * 16)
+        .fluidInputs(fluid('copper_frit_ink') * 10)
+        .outputs(metaitem('component.' + type + '.dipped') * 16)
+        .duration(40)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    BALL_MILL.recipeBuilder()
+        .inputs(metaitem('component.' + type + ".unterminated") * 16)
+        .outputs(metaitem('component.' + type + ".polished") * 16)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(fluid('watts_bath_electrolyte') * 1000)
+        .inputs(ore('foilNickel'))
+        .inputs(metaitem('component.' + type + '.terminated') * 16)
+        .outputs(metaitem('component.' + type + '.plated') * 16)
+        .duration(160)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('component.' + type + '.plated') * 16)
+        .fluidInputs(fluid('soldering_alloy') * 160)
+        .fluidInputs(fluid('epoxy') * 160)
+        .outputs(metaitem('component.' + type) * 16)
+        .duration(40)
+        .EUt(VA[MV])
+        .buildAndRegister()
+}

@@ -12,7 +12,6 @@ import globals.semiconductors.Doping
 import globals.semiconductors.Mechanicals
 
 // Lookup table for int to string conversion
-def numberTab = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
 // Superfill copper electrolyte
 
@@ -35,7 +34,7 @@ Deposition.generateChemicalVaporDepositionRecipe('wafer.cmos.step_one', 'wafer.c
 Lithography.generateCoatingRecipe('wafer.cmos.step_two', 'methacrylate_resist', true) // Coat with photoresist for STI patterning
 
 def generateCMOSFabrication(String componentName) {
-
+    def numberTab = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'] // define it here since otherwise it breaks??
     // FEOL
     
     // Shallow trench isolation
@@ -165,8 +164,8 @@ def generateCMOSFabrication(String componentName) {
 
     // Sealing and final packaging, flip chip.
 
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.beol_nine.step_eight', 'wafer.' + componentName + '.step_one_hundred_fourty_nine', 400, 'silicon_dioxide.silane') // Passivation layer deposition
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_one_hundred_fourty_nine', 'wafer.' + componentName + '.step_one_hundred_fifty', 400, 'silicon_nitride.silane')
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.beol_nine.step_eight', 'wafer.' + componentName + '.step_one_hundred_forty_nine', 400, 'silicon_dioxide.silane') // Passivation layer deposition
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_one_hundred_forty_nine', 'wafer.' + componentName + '.step_one_hundred_fifty', 400, 'silicon_nitride.silane')
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_one_hundred_fifty', 'wafer.' + componentName + '.step_one_hundred_fifty_one', 'novolac_resist', 'mask_set.' + componentName, true) // Define contact hole pattern in passivation layers
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_one_hundred_fifty_one', 'wafer.' + componentName + '.step_one_hundred_fifty_two', 'silicon_nitride', 400, false) // Etch silicon nitride passivation layer
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_one_hundred_fifty_two', 'wafer.' + componentName + '.step_one_hundred_fifty_three', 'silicon_dioxide', 400, false) // Etch silicon dioxide passivation layer

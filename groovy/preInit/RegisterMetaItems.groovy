@@ -53,13 +53,13 @@ def registerCMOSMetaitems(String name) {
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
     }
-    registerCircuitMetaitems(name, 162, 150)
-    def ashed_steps = [6, 13, 16, 27, 31, 35, 39, 43, 55, 72, 159]
+    registerCircuitMetaitems(name, 161, 149)
+    def ashed_steps = [6, 13, 16, 27, 31, 35, 39, 43, 55, 72, 158]
     for (step in ashed_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
     }
 
-    def photoresist_steps = [11, 14, 23, 28, 32, 37, 41, 53, 61, 69, 151, 156]
+    def photoresist_steps = [11, 14, 23, 28, 32, 37, 41, 53, 61, 69, 150, 155]
     for (step in photoresist_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
@@ -287,12 +287,65 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2804, "circuit.power.mv")
         addItem(2805, "circuit.power.hv")
         addItem(2806, "circuit.power.ev")
-        addItem(2807, "edlc_electrode_powder")
-        addItem(2808, "edlc_electrode_coated")
-        addItem(2809, "edlc_electrode")
-        addItem(2810, "component.capacitor.edlc")
-        addItem(2811, "component.thyristor.assembly")
-        addItem(2812, "component.thyristor")
+        addItem(2807, "barium_titanate_paste")
+        addItem(2808, "doped_barium_titanate_paste")
+        addItem(2809, "sheet.barium_titanate")
+        addItem(2810, "sheet.doped_barium_titanate")
+        addItem(2811, "component.bme_cap.layer")
+        addItem(2812, "component.bme_cap.wafer")
+        addItem(2813, "component.bme_cap.unfired")
+        addItem(2814, "component.bme_cap.fired")
+        addItem(2815, "component.bme_cap.polished")
+        addItem(2816, "component.bme_cap.dipped")
+        addItem(2817, "component.bme_cap.terminated")
+        addItem(2818, "component.bme_cap.plated")
+        addItem(2819, "component.bme_cap")
+        addItem(2820, "component.pme_cap.layer")
+        addItem(2821, "component.pme_cap.wafer")
+        addItem(2822, "component.pme_cap.unfired")
+        addItem(2823, "component.pme_cap.fired")
+        addItem(2824, "component.pme_cap.polished")
+        addItem(2825, "component.pme_cap.dipped")
+        addItem(2826, "component.pme_cap.terminated")
+        addItem(2827, "component.pme_cap.plated")
+        addItem(2828, "component.pme_cap")
+        addItem(2829, "screen_printing.pattern.mlcc")
+        addItem(2830, "mesh.stainless_steel")
+        addItem(2831, "screen_printing.pattern.resistor_pads")
+        addItem(2832, "screen_printing.pattern.resistor")
+        addItem(2833, "component.resistor.wafer.printed_pads")
+        addItem(2834, "component.resistor.wafer.pads")
+        addItem(2835, "component.thick_film_resistor.wafer.printed")
+        addItem(2836, "component.thick_film_resistor.wafer.fired")
+        addItem(2837, "component.thick_film_resistor.wafer.etched")
+        addItem(2838, "component.thick_film_resistor.wafer.printed_coating")
+        addItem(2839, "component.thick_film_resistor.wafer")
+        addItem(2840, "component.thick_film_resistor.unterminated")
+        addItem(2841, "component.thick_film_resistor.polished")
+        addItem(2842, "component.thick_film_resistor.dipped")
+        addItem(2843, "component.thick_film_resistor.terminated")
+        addItem(2844, "component.thick_film_resistor.plated")
+        addItem(2846, "component.thick_film_resistor")
+        addItem(2847, "component.thin_film_resistor.wafer.coated")
+        addItem(2848, "component.thin_film_resistor.wafer.exposed")
+        addItem(2849, "component.thin_film_resistor.wafer.patterned")
+        addItem(2850, "component.thin_film_resistor.wafer")
+        addItem(2851, "component.thin_film_resistor.wafer.stripped")
+        addItem(2852, "component.thin_film_resistor.wafer.etched")
+        addItem(2853, "component.thin_film_resistor.wafer.tuned")
+        addItem(2854, "component.thin_film_resistor.unterminated")
+        addItem(2855, "component.thin_film_resistor.polished")
+        addItem(2856, "component.thin_film_resistor.dipped")
+        addItem(2857, "component.thin_film_resistor.terminated")
+        addItem(2858, "component.thin_film_resistor.plated")
+        addItem(2860, "component.thin_film_resistor")
+
+        addItem(2861, "edlc_electrode_powder")
+        addItem(2862, "edlc_electrode_coated")
+        addItem(2863, "edlc_electrode")
+        addItem(2864, "component.capacitor.edlc")
+        addItem(2865, "component.thyristor.assembly")
+        addItem(2866, "component.thyristor")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -303,6 +356,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2959, "die.alloy_junction_transistor.step_one")
         addItem(2960, "die.alloy_junction_transistor.step_two")
         addItem(2961, "die.alloy_junction_transistor.step_three")
+
+
 
         //Placeholders until GCYS is available
         addItem(3000, "circuit.gooware_processor")
@@ -422,6 +477,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5005, "stencil.pcb")
         addItem(5006, "stencil.ulpic")
         addItem(5007, "stencil.lpic")
+        addItem(5008, "stencil.resistor")
+        addItem(5009, "stencil.capacitor")
+        addItem(5010, "stencil.resistor_pads")
+
         addItem(5020, "mask.blank")
         addItem(5021, "mask.ic")
         addItem(5022, "mask.cpu")
@@ -435,6 +494,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5030, "mask.diode.planar")
         addItem(5031, "mask_set.diode.power")
         addItem(5032, "mask_set.diode.schottky")
+        addItem(5033, "mask.resistor")
+
         addItem(5100, "patterned.ic")
         addItem(5101, "patterned.cpu")
         addItem(5102, "patterned.ram")

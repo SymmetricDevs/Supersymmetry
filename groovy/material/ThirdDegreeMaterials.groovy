@@ -1411,5 +1411,41 @@ class ThirdDegreeMaterials {
                 .components(Trichloroethylene, Tetrachloroethylene)
                 .color(0xa9c9b0)
                 .build()
-    }
+        
+        AgPdConductiveInk = new Material.Builder(24245, SuSyUtility.susyId('agpd_conductive_ink'))
+                .liquid()
+                .components(SilverNanoparticle, Ethanol)
+                .colorAverage()
+                .build()
+
+        NickelConductiveInk = new Material.Builder(24246, SuSyUtility.susyId('nickel_conductive_ink'))
+                .liquid()
+                .components(NickelNanoparticle, Ethanol)
+                .colorAverage()
+                .build()
+
+        SilverFritInk = new Material.Builder(24247, SuSyUtility.susyId('silver_frit_ink'))
+                .liquid()
+                .components(Silver, Glass, Polyvinylpyrrolidone, Water)
+                .colorAverage()
+                .build()
+
+        CopperFritInk = new Material.Builder(24248, SuSyUtility.susyId('copper_frit_ink'))
+                .liquid()
+                .components(Copper, Glass, Polyvinylpyrrolidone, Water)
+                .colorAverage()
+                .build()
+
+        ThickFilmResistorInk = new Material.Builder(24249, SuSyUtility.susyId('thick_film_resistor_ink'))
+                .liquid()
+                .components(RutheniumIVOxide, Glass, Polyvinylpyrrolidone, Water)
+                .color(0x0d0a18)
+                .build()
+
+        ZieglerNattaCatalyst = new Material.Builder(13025, SuSyUtility.susyId('ziegler_natta_catalyst'))
+                .dust()
+                .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
+                .colorAverage()
+                .build()
+        }
 }
