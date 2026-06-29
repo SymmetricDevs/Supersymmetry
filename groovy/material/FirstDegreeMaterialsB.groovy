@@ -920,7 +920,7 @@ class FirstDegreeMaterialsB {
                 .build()
       
         ScandiumAlloy = new Material.Builder(8796, SuSyUtility.susyId('scandium_alloy'))
-                .dust()
+                .ingot()
                 .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_SPRING)
                 .components(Aluminium * 12, Scandium * 3, Erbium, Zirconium)
                 .color(0xffbfbf)
