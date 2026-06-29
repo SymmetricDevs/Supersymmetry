@@ -559,7 +559,7 @@ crafting.addShapeless("susy:wood_chips_to_wood_plup", metaitem('dustWood'), [
 
 // Wood pulp compacting
 mods.pyrotech.compacting_bin.remove("pyrotech:pile_wood_chips")
-mods.pyrotech.compacting_bin.add("pyrotech:pile_wood_chips", metaitem('dustWood'), item('pyrotech:pile_wood_chips'), 4)
+mods.pyrotech.compacting_bin.add("pyrotech:pile_wood_chips", metaitem('dustWood') * 4, item('pyrotech:pile_wood_chips'), 2)
 
 // Paper chad from wood pulp
 mods.pyrotech.soaking_pot.recipeBuilder()
@@ -580,7 +580,7 @@ crafting.addShapeless("susy:cutting_wheat", item('pyrotech:material', 2), [
 // Bone block compacting
 crafting.remove("minecraft:bone_block")
 mods.pyrotech.compacting_bin.remove("pyrotech:bone_block")
-mods.pyrotech.compacting_bin.add("pyrotech:bone_block_susy", item('minecraft:dye', 15), item('minecraft:bone_block'), 9)
+mods.pyrotech.compacting_bin.add("pyrotech:bone_block_susy", item('minecraft:dye', 15) * 9, item('minecraft:bone_block'), 2)
 
 crafting.replaceShaped("pyrotech:straw", item('pyrotech:material', 2) * 4, [
         [item('pyrotech:material', 13), item('pyrotech:material', 13), item('pyrotech:material', 13)],
