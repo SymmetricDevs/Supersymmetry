@@ -35,17 +35,6 @@
         }
       },
       "taskID:8": "bq_standard:retrieval"
-    },
-    "2:10": {
-      "index:3": 2,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 9,
-          "id:8": "susy:resource_block"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
     }
   }
 }
