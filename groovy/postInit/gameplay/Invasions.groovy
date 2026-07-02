@@ -813,6 +813,118 @@ new MobHordeEvent((player) -> {
         .setTimer(144000, 216000)
         .minHate("Feds", 185)
 
+/**
+ federation platoon
+ 16–40 people
+ LMG, miniguns, flamethrowers, vectors for conscripts
+ full power armor
+ active combat stims
+ supplemented with conscripts to beef up their numbers
+ A proper expeditionary force unit, though some of their members appear to lack the training.
+ **/
+
+new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
+        .setTimer(144000, 216000)
+        .minHate("Feds", 350)
+
+        //normal raider
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 10;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -10);
+                    outcast.getEntityData().setTag("susy", root);
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Random weapon
+                    String[] possibleWeapons = new String[]{
+                            "techguns:lmg",
+                            "techguns:flamethrower",
+                            "techguns:minigun"
+                    };
+                    String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", chosenWeapon);
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+        //conscript
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 8;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -5);
+                    outcast.getEntityData().setTag("susy", root);
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Armor
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t3_combat_boots",
+                            "techguns:t3_combat_leggings",
+                            "techguns:t3_combat_chestplate",
+                            "techguns:t3_combat_helmet"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+
+                    // vector only
+                    String chosenWeapon = "techguns:vector"
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", chosenWeapon);
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+        .setDistribution(60.0,40.0); //mostly normal feds + a few conscript specialists
+
 /*
 // Commands for pods
 // example code only, templates, etc...
