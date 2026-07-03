@@ -12,8 +12,7 @@
         "id:8": "gregtech:machine"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.451.title",
-      "questlogic:8": "AND"
+      "name:8": "susy.quest.db.451.title"
     }
   },
   "questID:3": 451,
