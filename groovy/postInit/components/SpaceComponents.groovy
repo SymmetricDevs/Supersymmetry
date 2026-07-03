@@ -92,6 +92,17 @@ CUTTER.recipeBuilder()
         .EUt(VA[EV])
         .buildAndRegister();*/
 
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateMolybdenum') * 2)
+        .inputs(metaitem('foilTantalum') * 2)
+        .inputs(metaitem('wireGtSingleTungsten'))
+        .inputs(metaitem('ringMolybdenum'))
+        .inputs(metaitem('sintered_alumina.insulator'))
+        .inputs(metaitem('component.glass.tube'))
+        .outputs(metaitem('electron_gun'))
+        .duration(200)
+        .EUt(VA[EV])
+        .buildAndRegister();
 
 EVAPORATION_DEPOSITION.recipeBuilder()
         .circuitMeta(1)
