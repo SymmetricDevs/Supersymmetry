@@ -13,7 +13,7 @@
       },
       "ismain:1": 1,
       "name:8": "susy.quest.db.451.title",
-      "questlogic:8": "OR"
+      "questlogic:8": "AND"
     }
   },
   "questID:3": 451,
