@@ -12,6 +12,46 @@ for (name in name_removals) {
     crafting.remove(name)
 }
 
+// Engineer's Decor
+def oreRod = [
+        'stickSteel',
+        'stickIron',
+        'stickWroughtIron'
+]
+
+for (name in oreRod) {
+    mods.gregtech.assembler.recipeBuilder()
+            .circuitMeta(2)
+            .fluidInputs(fluid('concrete') * 144)
+            .inputs(ore('dustPolypropylene'))
+            .inputs(ore(name) * 4)
+            .outputs(item('engineersdecor:rebar_concrete') * 2)
+            .duration(40)
+            .EUt(VA[MV])
+            .buildAndRegister();
+}
+
+mods.gregtech.autoclave.recipeBuilder()
+        .fluidInputs(fluid('concrete') * 144)
+        .inputs(ore('dustQuartzite'))
+        .inputs(ore('dustTinyAluminium'))
+        .outputs(item('engineersdecor:gas_concrete') * 8)
+        .duration(80)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+// GregTech
+// Light Concrete * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
+
+SOLIDIFIER.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.block'))
+        .fluidInputs(fluid('concrete') * 144)
+        .outputs(item('gregtech:stone_smooth', 4))
+        .duration(20)
+        .EUt(VA[ULV])
+        .buildAndRegister();
+
 // Industrial Renewal
 ASSEMBLER.recipeBuilder()
         .circuitMeta(6)
@@ -88,17 +128,6 @@ ASSEMBLER.recipeBuilder()
 
 // Supersymmetry
 
-EXTRUDER.recipeBuilder()
-        .inputs(metaitem('frameSteel'))
-        .notConsumable(metaitem('shape.extruder.block'))
-        .fluidInputs(fluid('concrete') * 576)
-        .outputs(item('susy:structural_block') * 32)
-        .duration(200)
-        .EUt(VA[LV])
-        .buildAndRegister();
-
-//Custom Susy Blocks for Black Mesa style Research Facility
-
 //Industrial Concrete
 def concretes = [1, 2, 3]
 
@@ -134,19 +163,10 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-//Dotted Panels
-def panels = [4, 5, 6, 7]
-
-panels.each { number ->
-    ASSEMBLER.recipeBuilder()
-            .circuitMeta(number)
-            .inputs(metaitem('plateWroughtIron') * 4)
-            .inputs(metaitem('screwWroughtIron') * 2)
-            .outputs(item('susy:random_concrete', number) * 8)
-            .duration(80)
-            .EUt(VA[LV])
-            .buildAndRegister()
-}
+crafting.addShaped('susy:industrial_concrete_bricks', item('susy:susy_stone_bricks', 9) * 4, [
+        [item('susy:susy_stone_smooth', 9), item('susy:susy_stone_smooth', 9)],
+        [item('susy:susy_stone_smooth', 9), item('susy:susy_stone_smooth', 9)]
+])
 
 //Industrial Cinder Bricks
 def cinders = [8, 9, 10, 11, 12, 13]
@@ -184,3 +204,21 @@ EXTRUDER.recipeBuilder()
         .duration(80)
         .EUt(VA[LV])
         .buildAndRegister()
+
+EXTRUDER.recipeBuilder()
+        .inputs(metaitem('frameSteel'))
+        .notConsumable(metaitem('shape.extruder.block'))
+        .fluidInputs(fluid('concrete') * 576)
+        .outputs(item('susy:structural_block') * 32)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+//add variants to chisel group
+mods.chisel.carving.addGroup("susy_structural_blocks")
+for (int i = 0; i<16; i++) {
+    mods.chisel.carving.addVariation("susy_structural_blocks", item('susy:structural_block', i))
+}
+for (int i = 0; i<10; i++) {
+    mods.chisel.carving.addVariation("susy_structural_blocks", item('susy:structural_block_1', i))
+}

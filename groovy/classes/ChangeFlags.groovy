@@ -20,13 +20,14 @@ import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
+import static supersymmetry.common.materials.SusyMaterials.*
 import static material.SuSyMaterials.*
 
 import supercritical.api.unification.material.properties.FissionFuelProperty
 import supercritical.api.unification.material.properties.ModeratorProperty
 import supercritical.api.unification.material.properties.SCPropertyKey
 
-//eventManager.listen(EventPriority.LOWEST)
+//eventManager.listen(EventPriority.LOWEST)SS
 class ChangeFlags {
     private static void setupSlurries(Material mat) {
         def property = new FluidProperty()
@@ -193,9 +194,9 @@ class ChangeFlags {
         TungstenCarbide.addFlags("hip_pressed");
         Polycaprolactam.addFlags("generate_foil");
         Palladium.addFlags("generate_bolt_screw");
-        Copper.addFlags("continuously_cast")
-        Graphite.addFlags("generate_plate")
-
+        Copper.addFlags("continuously_cast");
+        AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
+        Graphite.addFlags("generate_plate");
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
         MagnesiumDiboride.addFlags("no_smashing", "no_smelting")

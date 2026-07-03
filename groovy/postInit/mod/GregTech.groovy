@@ -1442,17 +1442,6 @@ CENTRIFUGE.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
-// Light Concrete * 1
-mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
-
-SOLIDIFIER.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.block'))
-    .fluidInputs(fluid('concrete') * 144)
-    .outputs(item('gregtech:stone_smooth', 4))
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
 // Wireless Digital Interface * 1
 mods.gregtech.assembler.removeByInput(480, [metaitem('cover.digital'), metaitem('wireless')], [fluid('plastic') * 144])
 

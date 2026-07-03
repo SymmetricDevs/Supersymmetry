@@ -3341,6 +3341,8 @@ class UnknownCompositionMaterials {
                 .color(0x5e2613)
                 .build()
 
+
+
         ExpandableGraphite = new Material.Builder(4729, SuSyUtility.susyId('expandable_graphite'))
                 .dust()
                 .iconSet("SHINY")
@@ -3402,7 +3404,7 @@ class UnknownCompositionMaterials {
         // FREE ID: 4740
 
         NanoparticleModifiedNafion = new Material.Builder(4741, SuSyUtility.susyId('nanoparticle_modified_nafion'))
-                .dust()
+                .polymer().ingot()
                 .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .iconSet("SHINY")
                 .color(0x99947A)
@@ -3417,7 +3419,16 @@ class UnknownCompositionMaterials {
 
         NanoparticleModifiedNafionDispersion.setFormula('([(C2F4)(C7HF13O5S)]n)((CH3)2CHOH)', true)
 
+        InvestmentCastingCeramicSlurry = new Material.Builder(4743, SuSyUtility.susyId('investment_casting_ceramic_slurry'))
+                .liquid()
+                .color(0x6E4C40)
+                .build()
 
+        InvestmentCastingMixture = new Material.Builder(4744, SuSyUtility.susyId('investment_casting_mixture'))
+                .dust()
+                .iconSet(METALLIC)
+                .color(0xFFE1D8)
+                .build()
 
     }
 }

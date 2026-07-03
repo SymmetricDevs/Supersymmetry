@@ -1,3 +1,5 @@
+import static globals.Globals.*
+
 // Ore Removal
 
 // total = unused ores and material
@@ -61,9 +63,9 @@ def oreMap = [
         [name: 'Salt', type: 'partial'],
         [name: 'Saltpeter', type: 'default'],
         [name: 'Sapphire', type: 'partial'],
-        [name: 'Scheelite', type: 'nether'],
+        [name: 'Scheelite', type: 'both'],
         [name: 'Sodalite', type: 'default'],
-        [name: 'Tantalite', type: 'nether'],
+        [name: 'Tantalite', type: 'both'],
         [name: 'Spessartine', type: 'total'],
         [name: 'Sphalerite', type: 'both'],
         [name: 'Stibnite', type: 'default'],
@@ -81,13 +83,13 @@ def oreMap = [
         [name: 'Bastnasite', type: 'default'],
         [name: 'Pentlandite', type: 'both'],
         [name: 'Spodumene', type: 'both'],
-        [name: 'Lepidolite', type: 'total'],
+        [name: 'Lepidolite', type: 'default'],
         [name: 'GlauconiteSand', type: 'total'],
         [name: 'Malachite', type: 'both'],
-        [name: 'Barite', type: 'nether'],
+        [name: 'Barite', type: 'both'],
         [name: 'Alunite', type: 'nether'],
         [name: 'Kyanite', type: 'partial'],
-        [name: 'Pyrochlore', type: 'nether'],
+        [name: 'Pyrochlore', type: 'both'],
         [name: 'Oilsands', type: 'total'],
         [name: 'Borax', type: 'partial'],
         [name: 'Olivine', type: 'default'],
@@ -163,7 +165,8 @@ def oreMap = [
         [name: 'Pitchblende', type: 'default'],
 ]
 
-def elementMap = elements.collect { [name: it, type: 'partial'] } // Piggybacks of the list of elements from OreDict.groovy
+def elementMap = elementList.collect { [name: it, type: 'partial'] }
+elementMap.find { it.name == 'Silver' }?.put('type', 'default')
 oreMap.addAll(elementMap)
 
 oreMap.each { material ->
@@ -196,7 +199,7 @@ oreMap.each { material ->
         prefixes = ['ore', 'oreEndstone']
     }
     else if (type == 'default') {
-        prefixes = ['oreNetherack', 'oreEndstone']
+        prefixes = ['oreNetherrack', 'oreEndstone']
     }
     else if (type == 'both') {
         prefixes = ['oreEndstone']

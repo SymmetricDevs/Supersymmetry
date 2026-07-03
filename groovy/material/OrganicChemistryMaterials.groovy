@@ -3351,11 +3351,35 @@ class OrganicChemistryMaterials {
                 .flags(FLAMMABLE)
                 .color(0xd4c97a)
                 .build()
-
+      
         DiallyldimethylammoniumChloride = new Material.Builder(15526, SuSyUtility.susyId('diallyldimethylammonium_chloride'))
                 .liquid()
                 .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine)
                 .color(0x30FF7F)
                 .build()
+
+        Norbornene = new Material.Builder(15527, SuSyUtility.susyId('norbornene'))
+                .dust()
+                .iconSet(ROUGH)
+                .components(Carbon * 7, Hydrogen * 10)
+                .color(0xfffff0)
+                .build()
+
+        PetroleumResin = new Material.Builder(15528, SuSyUtility.susyId('petroleum_resin'))
+                .polymer(1)
+                .iconSet(ROUGH)
+                .color(0xA8B277)
+                .build()
+
+        PetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true)
+
+        HydrogenatedPetroleumResin = new Material.Builder(15529, SuSyUtility.susyId('hydrogenated_petroleum_resin'))
+                .polymer(1)
+                .iconSet(DIAMOND)
+                .color(0xA8B277)
+                .build()
+
+        HydrogenatedPetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true) //should there be more hydrogen here?
+
     }
 }

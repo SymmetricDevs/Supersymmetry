@@ -97,7 +97,8 @@ def metals = [
         [input: metaitem('dustAluminiumAlloy7075'), output: fluid('aluminium_alloy_7075')],
         [input: metaitem('dustCadmium'), output: fluid('cadmium')],
         [input: metaitem('dustIndium'), output: fluid('indium')],
-        [input: metaitem('dustRedAlloy'), output: fluid('red_alloy')]
+        [input: metaitem('dustRedAlloy'), output: fluid('red_alloy')],
+        [input: ore('dustGrcop84'), output: fluid('grcop_84')]
 ]
 
 heatingElements.each { heatingElement ->

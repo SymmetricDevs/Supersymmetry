@@ -12,7 +12,6 @@ import gregtech.api.fluids.store.FluidStorage
 import gregtech.api.unification.material.properties.*
 import gregtech.api.GTValues
 import supersymmetry.api.util.SuSyUtility
-
 import static gregtech.api.unification.material.info.MaterialIconSet.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
 import static gregtech.api.unification.material.Materials.*
@@ -855,13 +854,7 @@ class FirstDegreeMaterialsB {
                 .components(Carbon * 5, Hydrogen * 10, Oxygen)
                 .colorAverage()
                 .build()
-
-        /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
-                .dust()
-                .components(Vanadium * 2, Oxygen * 3)
-                .colorAverage()
-                .build()*/
-        
+              
         ExpandedPolytetrafluoroethylene = new Material.Builder(8789, SuSyUtility.susyId('expanded_polytetrafluoroethylene'))
                 .polymer(1)
                 .color(0x634F4F)
@@ -869,6 +862,80 @@ class FirstDegreeMaterialsB {
                 .components(Carbon * 2, Fluorine * 4)
                 .macerateInto(Polytetrafluoroethylene)
                 .build();
+      
+        CopperTungstenAlloy = new Material.Builder(8790, SuSyUtility.susyId('copper_tungsten_alloy'))
+                .dust()
+                .flags(GENERATE_ROD, NO_UNIFICATION)
+                .components(Copper, Tungsten * 3)
+                .color(0xA8591C)
+                .build()
 
+        LanthanumZirconiumOxide = new Material.Builder(8791, SuSyUtility.susyId('lanthanum_zirconium_oxide'))
+                .dust().ingot()
+                .flags(NO_UNIFICATION)
+                .components(Lanthanum * 2, Zirconium * 2, Oxygen * 7)
+                .color(0xB94DA0)
+                .iconSet(DULL)
+                .build()
+        
+        /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
+                .dust()
+                .components(Vanadium * 2, Oxygen * 3)
+                .colorAverage()
+                .build()*/
+
+        GRCop84 = new Material.Builder(8792, SuSyUtility.susyId('grcop_84'))
+                .dust()
+                .ingot().liquid(new FluidBuilder().temperature(1337))
+                .flags(GENERATE_PLATE)
+                .components(Copper * 19, Chrome * 2, Niobium)
+                .iconSet(SHINY)
+                .colorAverage()
+                .build()
+
+        MARM246 = new Material.Builder(8793, SuSyUtility.susyId('mar_m_246'))
+                .ingot().liquid(new FluidBuilder().temperature(1558))
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW, GENERATE_ROTOR, SUPERALLOY)
+                .components(Nickel * 29, Chrome * 5, Cobalt  * 5, Tungsten * 5, Aluminium * 3, Molybdenum * 1, Titanium * 1, Tantalum * 1)
+                .rotorStats(9.0f, 4.0f, 2048)
+                .iconSet(SHINY)
+                .colorAverage()
+                .blastTemp(3800, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .build()
+
+        AluminiumAlloy2219 = new Material.Builder(8794, SuSyUtility.susyId('aluminium_alloy_2219'))
+                .ingot().liquid(new FluidBuilder().temperature(640))
+                .colorAverage()
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .components(Aluminium * 1661, Copper * 60, Manganese * 18, Vanadium * 1, Zirconium * 2, Titanium * 1)
+                .color(0x81afeb)
+                .build()
+
+        AluminiumAlloy2195 = new Material.Builder(8795, SuSyUtility.susyId('aluminium_alloy_2195'))
+                .ingot().liquid(new FluidBuilder().temperature(660))
+                .colorAverage()
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
+                .components(Aluminium * 2012, Copper * 36, Lithium * 90, Magnesium * 18, Silver * 3, Zirconium * 1)
+                .color(0xbfe0e0)
+                .build()
+      
+        ScandiumAlloy = new Material.Builder(8796, SuSyUtility.susyId('scandium_alloy'))
+                .ingot()
+                .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_SPRING)
+                .components(Aluminium * 12, Scandium * 3, Erbium, Zirconium)
+                .color(0xffbfbf)
+                .iconSet(SHINY)
+                .build()
+      
+        LithiumPeroxide = new Material.Builder(8797, SuSyUtility.susyId('lithium_peroxide'))
+                .dust()
+                .components(Lithium * 2, Oxygen * 2)
+                .build()
+
+
+        LithiumHydroperoxide = new Material.Builder(8798, SuSyUtility.susyId('lithium_hydroperoxide'))
+                .dust()
+                .components(Lithium * 2, Oxygen * 2, Hydrogen * 1)
+                .build()
     }
 }

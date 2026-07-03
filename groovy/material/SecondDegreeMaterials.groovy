@@ -1133,7 +1133,7 @@ class SecondDegreeMaterials {
                 .iconSet(METALLIC)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
-
+      
         VanadiumIIISulfateSolution = new Material.Builder(13188, SuSyUtility.susyId('vanadium_iii_sulfate_solution'))
                 .liquid()
                 .components(Vanadium * 2, Sulfur * 3, Oxygen * 12, Water)
@@ -1157,5 +1157,27 @@ class SecondDegreeMaterials {
                 .build()
 
         VanadylSulfateSolution.setFormula("(VOSO4)(H2O)", true)
+      
+        RawInvestmentCastingMixture = new Material.Builder(13191, SuSyUtility.susyId('raw_investment_casting_mixture'))
+                .dust()
+                .color(0x58A0A0)
+                .components(SiliconDioxide * 3, Zircon * 2, SiliconCarbide * 2)
+                .iconSet(SHINY)
+                .build();
+
+        SilicaCoatedInvestmentCastingMixture = new Material.Builder(13192, SuSyUtility.susyId('silica_coated_investment_casting_mixture'))
+                .dust()
+                .color(0x58A0A0)
+                .components(SiliconDioxide * 3, Zircon * 2, SiliconCarbide * 2)
+                .iconSet(LAPIS)
+                .build();
+
+        DriedSilicaCoatedInvestmentCastingMixture = new Material.Builder(13193, SuSyUtility.susyId('dried_silica_coated_investment_casting_mixture'))
+                .dust()
+                .color(0x64B7B7)
+                .components(SiliconDioxide * 3, Zircon * 2, SiliconCarbide * 2)
+                .iconSet(LAPIS)
+                .build();
+
     }
 }

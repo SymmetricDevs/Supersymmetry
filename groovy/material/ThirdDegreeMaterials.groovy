@@ -974,5 +974,11 @@ class ThirdDegreeMaterials {
                 .build()
 
         PolydiallyldimethylammoniumChlorideSolution.setFormula('([C8H16NCl]n)(H2O)', true)
+      
+        PetroleumResinSolution = new Material.Builder(24156, SuSyUtility.susyId('petroleum_resin_solution'))
+                .liquid()
+                .components(PetroleumResin * 1, Benzene * 1)
+                .colorAverage()
+                .build()
     }
 }
