@@ -109,13 +109,13 @@ class Lithography {
         }
     }
 
-    static void generateResistStrippingRecipes(String input, String product, int timeMultiplier, boolean rie, boolean solvent = false) {
+    static void generateResistStrippingRecipes(String input, String product, double timeMultiplier, boolean rie, boolean solvent = false) {
         if (solvent) {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
                 .outputs(metaitem(product))
-                .duration(400 * timeMultiplier)
+                .duration(Math.toIntExact(Math.round(400 * timeMultiplier)))
                 .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
@@ -132,7 +132,7 @@ class Lithography {
             ashed = product
         }
         tmp_builder.outputs(metaitem(ashed))
-            .duration(200 * timeMultiplier)
+            .duration(Math.toIntExact(Math.round(200 * timeMultiplier)))
             .EUt(VA[HV])
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
@@ -142,7 +142,7 @@ class Lithography {
                 .inputs(metaitem(ashed))
                 .fluidInputs(fluid('ultrapure_water') * 100)
                 .outputs(metaitem(product))
-                .duration(400 * timeMultiplier)
+                .duration(Math.toIntExact(Math.round(400 * timeMultiplier)))
                 .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()

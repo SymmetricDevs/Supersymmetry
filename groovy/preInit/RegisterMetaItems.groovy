@@ -606,6 +606,7 @@ eventManager.listen { PostMaterialEvent event ->
         registerCircuitMetaitems("diode.planar", 10, 1, false)
         registerCircuitMetaitems("diode.power", 14, 2, false)
         registerCircuitMetaitems("diode.schottky", 13, 2, false)
+        registerCircuitMetaitems("monosilicon_solar_panel", 16, 1, false)
 
         addItem(8048, "wafer.diode.alloy.step_two")
         addItem(8049, "wafer.zener_diode.alloy.step_two")
@@ -619,10 +620,12 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8057, "wafer.diode.planar.step_one.coated")
         addItem(8058, "wafer.diode.planar.step_one.exposed")
         addItem(8059, "wafer.diode.schottky.step_eight.coated")
-        addItem(8060, "wafer.diode.schotky.step_eight.exposed")
+        addItem(8060, "wafer.diode.schottky.step_eight.exposed")
         addItem(8061, "wafer.diode.schottky.step_eight.deposited")
         addItem(8062, "wafer.diode.power.step_none.exposed")
         addItem(8063, "wafer.diode.schottky.step_eight.exposed")
+        addItem(8064, "wafer.monosilicon_solar_panel.step_four.coated")
+        addItem(8065, "wafer.monosilicon_solar_panel.step_four.exposed")
 
         log.infoMC("adding " + toadd_list.size() + " wafer metaitems")
         def start = 8250
