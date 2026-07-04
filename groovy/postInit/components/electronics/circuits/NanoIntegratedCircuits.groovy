@@ -45,7 +45,7 @@ def generateCMOSFabrication(String componentName) {
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_six', 'wafer.' + componentName + '.step_seven', 1, true)
     Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_seven', 'wafer.' + componentName + '.step_eight', 400, false) // Protective oxide growth after trench etching to repair etch damage
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_eight', 'wafer.' + componentName + '.step_nine', 3.0, 'silicon_dioxide.teos') // Fill trenches, TEOS has better gap-filling properties
-    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_nine', 'wafer.' + componentName + '.step_ten', 400, HV) // CMP to planarize wafer
+    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_nine', 'wafer.' + componentName + '.step_ten', 'basic_cmp_slurry', 400, HV) // CMP to planarize wafer
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_ten', 'wafer.' + componentName + '.step_eleven', 'silicon_nitride', 400, false) // Etch away silicon nitride CMP stop layer
 
     // NMOS well formation
@@ -113,7 +113,7 @@ def generateCMOSFabrication(String componentName) {
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_fifty_six', 'wafer.' + componentName + '.step_fifty_seven', 2.0, 'silicon') // Interlayer dielectric
 
     // Gate formation
-    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_fifty_seven', 'wafer.' + componentName + '.step_fifty_eight', 400, HV) // CMP to planarize down to dummy gate hardmask
+    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_fifty_seven', 'wafer.' + componentName + '.step_fifty_eight', 'basic_cmp_slurry', 400, HV) // CMP to planarize down to dummy gate hardmask
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_fifty_eight', 'wafer.' + componentName + '.step_fifty_nine', 'silicon_nitride', 400, false) // Etch hardmask
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_fifty_nine', 'wafer.' + componentName + '.step_sixty', 'silicon', 400, true) // TMAH etch of dummy gate
     Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_sixty', 'wafer.' + componentName + '.step_sixty_one', 0.1, 'titanium_nitride') // Deposit PMOS workfunction metal
@@ -122,7 +122,7 @@ def generateCMOSFabrication(String componentName) {
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_sixty_three', 'wafer.' + componentName + '.step_sixty_four', 1, false)
     Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_sixty_four', 'wafer.' + componentName + '.step_sixty_five', 0.1, 'titanium_aluminide') // Deposit PMOS/NMOS workfunction metal
     Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_sixty_five', 'wafer.' + componentName + '.step_sixty_six', 400, 'aluminium') // Deposit aluminium gate fill
-    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_sixty_six', 'wafer.' + componentName + '.step_sixty_seven', 400, HV) // CMP to planarize down to gate level
+    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_sixty_six', 'wafer.' + componentName + '.step_sixty_seven', 'basic_cmp_slurry', 400, HV) // CMP to planarize down to gate level
     
     // Plug formation
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_seven', 'wafer.' + componentName + '.step_sixty_eight', 2.0, 'silicon_nitride.silane') // Deposit CMP stop layer
@@ -133,7 +133,7 @@ def generateCMOSFabrication(String componentName) {
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_seventy_two', 'wafer.' + componentName + '.step_seventy_three', 1, true)
     Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_seventy_three', 'wafer.' + componentName + '.step_seventy_four', 0.1, 'titanium_aluminide') // Barrier layer deposition for tungsten plugs
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_seventy_four', 'wafer.' + componentName + '.step_seventy_five', 2.0, 'tungsten') // Tungsten hexafluoride plug fill
-    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_seventy_five', 'wafer.' + componentName + '.step_seventy_six', 400, HV) // CMP to planarize down to ILD level
+    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_seventy_five', 'wafer.' + componentName + '.step_seventy_six', 'oxidative_cmp_slurry', 400, HV) // CMP to planarize down to ILD level
 
     // Damascene copper BEOL, 9 layers
     
@@ -159,7 +159,7 @@ def generateCMOSFabrication(String componentName) {
             .duration(400)
             .buildAndRegister()
 
-        Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_seven', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_eight', 400, HV) // CMP down to ILD level
+        Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_seven', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_eight', 'basic_cmp_slurry', 400, HV) // CMP down to ILD level
     }
 
     // Sealing and final packaging, flip chip.
@@ -236,7 +236,7 @@ def generateBCDFabrication(String componentName) {
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_fourteen', 'wafer.' + componentName + '.step_fifteen', 1, true)
     Deposition.generateSiliconDioxideGrowthRecipe('wafer.' + componentName + '.step_fifteen', 'wafer.' + componentName + '.step_sixteen', 400, false) // Trench liner
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixteen', 'wafer.' + componentName + '.step_seventeen', 4.0, 'silicon') // Trench fill, w/ polysilicon.
-    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_seventeen', 'wafer.' + componentName + '.step_eighteen', 400, HV) // CMP to planarize wafer after trench fill
+    Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_seventeen', 'wafer.' + componentName + '.step_eighteen', 'basic_cmp_slurry', 400, HV) // CMP to planarize wafer after trench fill
     
     // Shallow trench isolation (STI)
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_eighteen', 'wafer.' + componentName + '.step_nineteen', 'methacrylate_resist', 'mask_set.' + componentName, true, true) // Define STI pattern

@@ -865,6 +865,7 @@ class SuSyMaterials {
     public static Material NickelNanoparticleSuspension
     public static Material SilverNanoparticleSuspension
     public static Material PalladiumNanoparticleSuspension
+    public static Material BasicCMPSlurry
 
     // Petrochem Materials
 

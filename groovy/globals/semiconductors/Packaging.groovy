@@ -37,7 +37,7 @@ class Packaging {
             .inputs(metaitem(input))
             .fluidInputs(fluid('ultrapure_water') * 100)
             .outputs(metaitem(product))
-            .fluidOutputs(fluid('silicon_dioxide_slurry') * 100)
+            .fluidOutputs(fluid('basic_cmp_slurry') * 100)
             .duration(duration)
             .EUt(VA[voltageTier])
             .buildAndRegister()

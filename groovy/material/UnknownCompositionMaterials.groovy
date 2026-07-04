@@ -1028,7 +1028,7 @@ class UnknownCompositionMaterials {
                 .flags(GENERATE_WET_DUST, GENERATE_PLATE, GENERATE_FOIL)
                 .build()
 
-        SiliconDioxideSlurry = new Material.Builder(4201, SuSyUtility.susyId('silicon_dioxide_slurry'))
+        BasicCMPSlurry = new Material.Builder(4201, SuSyUtility.susyId('basic_cmp_slurry'))
                 .liquid()
                 .color(0x69675b)
                 .build()
@@ -3591,6 +3591,11 @@ class UnknownCompositionMaterials {
                 .color(0x7599c7)
                 .iconSet(DULL)
                 .flags(GENERATE_CATALYST_BED)
+                .build()
+
+        OxidativeCMPSlurry = new Material.Builder(4761, SuSyUtility.susyId('oxidative_cmp_slurry'))
+                .liquid()
+                .color(0x6a9191)
                 .build()
     }
 }
