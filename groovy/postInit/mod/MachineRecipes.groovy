@@ -1205,6 +1205,16 @@ RecyclingHelper.addShaped("gregtech:phase_separator", metaitem('susy:phase_separ
     [metaitem('pipeSmallFluidSteel'), metaitem('hull.lv'), metaitem('pipeSmallFluidSteel')]
 ])
 
+// Evaporation Deposition Machine
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:evaporation_deposition." + Globals.voltageTiers[i], metaitem('susy:evaporation_deposition.' + Globals.voltageTiers[i]), [
+        [tieredGlass[i], tieredPlates[i], tieredGlass[i]],
+        [circuits[i], hulls[i], circuits[i]],
+        [tieredCables[i], pumps[i], tieredCables[i]]
+    ])
+}
+
 //Multiblocked Machines
 
 /*

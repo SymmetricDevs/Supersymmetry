@@ -2973,6 +2973,12 @@ metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
 
+metaitem.electron_gun.name=Electron Gun
+metaitem.spectral_filter.visible_bandpass.name=Visible Bandpass Spectral Filter
+metaitem.spectral_filter.near_ir_bandpass.name=Near Infrared Bandpass Spectral Filter
+metaitem.spectral_filter.mid_ir_bandpass.name=Mid Infrared Bandpass Spectral Filter
+metaitem.spectral_filter.near_uv_bandpass.name=Near Ultraviolet Bandpass Spectral Filter
+
 metaitem.gun.barrel.steel.name=Steel Barrel
 
 metaitem.cathode.lead_paste.name=Lead Cathode Paste
