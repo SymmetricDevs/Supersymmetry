@@ -156,14 +156,18 @@ class Etching {
         }
         for (etchant in etchants[materialEtched]) {
             if (anisotropic == etchant.anisotropic && !etchant.isPlasma) {
-                CHEMICAL_BATH.recipeBuilder()
+                def etchingRecipe = CHEMICAL_BATH.recipeBuilder()
                     .inputs(metaitem(input))
-                    .fluidInputs(fluid(etchant.fluidArr.keySet().first()) * etchant.fluidArr.values().first())
                     .outputs(metaitem(product))
                     .duration((int) (depth / etchant.etchingRate))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
-                    .buildAndRegister()
+                
+                for (fluid in etchant.fluidArr) {
+                    etchingRecipe.fluidInputs(fluid(fluid.key) * fluid.value)
+                }
+
+                etchingRecipe.buildAndRegister()
             }
         }
     }
