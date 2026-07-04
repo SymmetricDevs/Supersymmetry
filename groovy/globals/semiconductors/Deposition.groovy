@@ -130,7 +130,12 @@ class Deposition {
     ]
 
     static void generateSputteringRecipe(String input, String product, int duration, String targetMaterial) {
-        sputteringTargets[targetMaterial].generateRecipe(input, product, duration)
+        def sputteringTarget = sputteringTargets[targetMaterial]
+        if (sputteringTarget == null) {
+            log.warn("Material " + targetMaterial + " not defined as a sputtering target. No recipe is generated")
+            return
+        }
+        sputteringTarget.generateRecipe(input, product, duration)
     }
 
     // feed keys as material paired with duration, for co-sputtering and sequential sputtering
@@ -150,7 +155,8 @@ class Deposition {
             
             def sputteringTarget = sputteringTargets[material]
             if (sputteringTarget == null) {
-                log.infoMC("Material " + material + " not defined as a sputtering target")
+                log.warn("Material " + material + " not defined as a sputtering target. No recipe is generated")
+                return
             }
             power = Math.max(power, VA[sputteringTarget.voltageTier])
             sputteringRecipe.inputs(metaitem('target.' + material))

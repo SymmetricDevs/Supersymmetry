@@ -212,7 +212,9 @@ class Lithography {
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
-        if (bombarded && !solvent) {
+        // The ashing route always needs the water rinse to finish, even when a solvent strip also exists,
+        // otherwise the '.ashed' intermediate is a dead end
+        if (bombarded) {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(ashed))
                 .fluidInputs(fluid('ultrapure_water') * 100)

@@ -63,19 +63,24 @@ class Etching {
             new Etchant("ultrapure_hydrogen_peroxide_solution", MV, 50, 0.00125, false, false),
         ],
         silicon: [
-            //new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
-            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
+            // HBr/Cl2/O2 in He carrier: standard anisotropic poly-Si/gate etch, ~100:1 selectivity over SiO2.
+            // O2 forms a brominated silicon oxide passivation layer protecting sidewalls and the gate oxide.
+            // Donnelly & Kornblit, JVST A 31, 050825 (2013); US6358859B1; US5007982A
+            new Etchant(["hydrogen_bromide" : 50, "chlorine" : 30, "helium" : 15, "oxygen" : 5], EV, 0.0167, true, true),
             new Etchant("tetramethylammonium_hydroxide_solution", MV, 40, 0.004, true, false),
             new Etchant("ultrapure_hydrofluoric_acid", MV, 40, 0.002, false, false)
         ],
         silicon_dioxide: [
-            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
-            //new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),
+            // CHF3/CF4/Ar: classic anisotropic fluorocarbon oxide etch; CHF3-rich for polymerization and selectivity to Si.
+            // UCSB Nanofab standard SiO2 recipe (CF4/CHF3); Donnelly & Kornblit, JVST A 31, 050825 (2013)
+            new Etchant(["fluoroform" : 35, "carbon_tetrafluoride" : 15, "argon" : 50], EV, 0.0167, true, true),
             new Etchant("buffered_oxide_etchant", MV, 40, 0.004, false, false),
         ],
         silicon_nitride: [
-            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
-            //new Etchant("plasma.nitrogen_trifluoride", EV, 10, 0.0167, true, true),
+            // CHF3/O2 at ~1:3 in He carrier: anisotropic nitride etch selective to Si and SiO2.
+            // Loewenstein, JVST B 2, 684 (1984); US5786276 (optimum ~20 sccm CHF3 : 60 sccm O2).
+            // CH3F/O2 would be the modern higher-selectivity choice if fluoromethane is ever added.
+            new Etchant(["fluoroform" : 20, "oxygen" : 60, "helium" : 20], EV, 0.0167, true, true),
             new Etchant("phosphoric_acid", MV, 40, 0.004, false, false),
         ],
         titanium: [
@@ -156,14 +161,17 @@ class Etching {
         }
         for (etchant in etchants[materialEtched]) {
             if (anisotropic == etchant.anisotropic && !etchant.isPlasma) {
-                CHEMICAL_BATH.recipeBuilder()
+                def etchingRecipe = CHEMICAL_BATH.recipeBuilder()
                     .inputs(metaitem(input))
-                    .fluidInputs(fluid(etchant.fluidArr.keySet().first()) * etchant.fluidArr.values().first())
                     .outputs(metaitem(product))
                     .duration((int) (depth / etchant.etchingRate))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
-                    .buildAndRegister()
+
+                for (entry in etchant.fluidArr) {
+                    etchingRecipe.fluidInputs(fluid(entry.key) * entry.value)
+                }
+                etchingRecipe.buildAndRegister()
             }
         }
     }
@@ -175,14 +183,17 @@ class Etching {
         }
         for (etchant in etchants[materialEtched]) {
             if (etchant.isPlasma) {
-                REACTIVE_ION_ETCHER.recipeBuilder()
+                def etchingRecipe = REACTIVE_ION_ETCHER.recipeBuilder()
                     .inputs(metaitem(input))
-                    .fluidInputs(fluid(etchant.fluidArr.keySet().first()) * etchant.fluidArr.values().first())
                     .outputs(metaitem(product))
                     .duration((int) (depth / etchant.etchingRate))
                     .EUt(VA[etchant.voltageTier])
                     .cleanroom(CleanroomType.CLEANROOM)
-                    .buildAndRegister()
+
+                for (entry in etchant.fluidArr) {
+                    etchingRecipe.fluidInputs(fluid(entry.key) * entry.value)
+                }
+                etchingRecipe.buildAndRegister()
             }
         }
     }
