@@ -2085,6 +2085,8 @@ class FirstDegreeMaterialsA {
                 .blastTemp(1297, GasTier.MID)
                 .build()
 
+        NeodymiumAlloy.setFormula("(Nd,Pr)2Fe14B", true)
+
         TreatedNeodymiumAlloy = new Material.Builder(8401, SuSyUtility.susyId('treated_neodymium_alloy'))
                 .ingot()
                 .color(0x2b2a2a).iconSet(SHINY)
@@ -2094,6 +2096,8 @@ class FirstDegreeMaterialsA {
                 .arcSmeltInto(NeodymiumAlloy)
                 .macerateInto(NeodymiumAlloy)
                 .build()
+
+        TreatedNeodymiumAlloy.setFormula("(Nd,Pr)2Fe14B", true)
 
         NeodymiumAlloyMagnetic = new Material.Builder(8402, SuSyUtility.susyId('neodymium_alloy_magnetic'))
                 .ingot()
@@ -2106,6 +2110,7 @@ class FirstDegreeMaterialsA {
                 .build()
 
         TreatedNeodymiumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(NeodymiumAlloyMagnetic)
+        NeodymiumAlloyMagnetic.setFormula("(Nd,Pr)2Fe14B", true)
 
         SamariumAlloy = new Material.Builder(8403, SuSyUtility.susyId('samarium_alloy'))
                 .dust().ingot().liquid(new FluidBuilder().temperature(1600))
