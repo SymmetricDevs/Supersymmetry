@@ -2081,7 +2081,7 @@ class FirstDegreeMaterialsA {
                 .ingot()
                 .color(0x2b2a2a).iconSet(METALLIC)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, HIP_PRESSED)
-                .components(Neodymium * 2, Iron * 14, Boron)
+                .components(Neodymium, Praseodymium, Iron * 14, Boron)
                 .blastTemp(1297, GasTier.MID)
                 .build()
 
