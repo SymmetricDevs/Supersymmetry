@@ -581,13 +581,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10410, "lamp.mercury.hp")
         addItem(10411, "lamp.mercury.lp")
 
-        // Spectral Filters 10441 - 10445
-
-        addItem(10441, "electron_gun")
-        addItem(10442, "spectral_filter.near_ir_bandpass")
-        addItem(10443, "spectral_filter.mid_ir_bandpass")
-        addItem(10444, "spectral_filter.visible_bandpass")
-        addItem(10445, "spectral_filter.near_uv_bandpass")
         // Rocketry Components 10421-10440
 
         addItem(10421, "fuel_injector")
@@ -626,7 +619,13 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10458, "space_suit.plss")
         addItem(10459, "space_suit.mag")
 
+        // Spectral Filters 10481 - 10485
 
+        addItem(10481, "electron_gun")
+        addItem(10482, "spectral_filter.near_ir_bandpass")
+        addItem(10483, "spectral_filter.mid_ir_bandpass")
+        addItem(10484, "spectral_filter.visible_bandpass")
+        addItem(10485, "spectral_filter.near_uv_bandpass")
 
     }
 
