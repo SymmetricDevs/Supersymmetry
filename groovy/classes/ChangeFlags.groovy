@@ -168,7 +168,7 @@ class ChangeFlags {
         Nickel.addFlags("generate_rod", "generate_foil", "generate_fine_wire");
         Aluminium.addFlags("generate_round", "generate_rotor", "continuously_cast");
         Tungsten.addFlags("generate_fine_wire", "hip_pressed");
-        Molybdenum.addFlags("generate_fine_wire");
+        Molybdenum.addFlags("generate_fine_wire", "generate_ring");
         Tantalum.addFlags("generate_rod", "generate_fine_wire", "generate_catalyst_bed", "generate_plate");
         Titanium.addFlags("generate_fine_wire");
         ChromiumTrioxide.addFlags("generate_catalyst_bed");

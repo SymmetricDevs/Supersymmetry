@@ -2799,6 +2799,7 @@ susy.material.grcop_84=GRCop-84
 susy.material.mar_m_246=MAR-M246
 susy.material.aluminium_alloy_2219=Aluminium Alloy 2219
 susy.material.aluminium_alloy_2195=Aluminium Alloy 2195
+susy.material.scandium_alloy=Scandium Alloy
 susy.material.lithium_peroxide=Lithium Peroxide
 susy.material.lithium_hydroperoxide=Lithium Hydroperoxide
 susy.material.mercury_ii_sulfate=Mercury II Sulfate
@@ -2972,6 +2973,12 @@ metaitem.plate.pattern.memory.name=Pattern RAM Chip
 metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
+
+metaitem.electron_gun.name=Electron Gun
+metaitem.spectral_filter.visible_bandpass.name=Visible Bandpass Spectral Filter
+metaitem.spectral_filter.near_ir_bandpass.name=Near Infrared Bandpass Spectral Filter
+metaitem.spectral_filter.mid_ir_bandpass.name=Mid Infrared Bandpass Spectral Filter
+metaitem.spectral_filter.near_uv_bandpass.name=Near Ultraviolet Bandpass Spectral Filter
 
 metaitem.gun.barrel.steel.name=Steel Barrel
 
