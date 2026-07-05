@@ -80,7 +80,8 @@ class Etching {
             new Etchant("buffered_oxide_etchant", "acidic_wastewater", MV, 40, 0.004, false, false),
         ],
         silicon_nitride: [
-            // CH3F/O2
+            // CH3F/O2 at ~1:3 in He carrier: anisotropic nitride etch highly selective to Si and SiO2.
+            // US5786276 (optimum ~20 sccm CH3F : 60 sccm O2, O2:CH3F > 3:1); Kaler et al., JVST A 34, 041301 (2016)
             new Etchant(["fluoroform" : 20, "oxygen" : 60, "helium" : 20], ["corrosive_gas" : 100], EV, 0.0167, true, true),
             new Etchant("phosphoric_acid", "acidic_wastewater", MV, 40, 0.004, false, false),
         ],
