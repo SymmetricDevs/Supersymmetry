@@ -130,6 +130,11 @@ class Etching {
         nickel_silicide: [
             new Etchant("phosphoric_acid", "acidic_wastewater", HV, 50, 0.01, false, false)
         ],
+        cobalt_silicide: [
+            // Strips unreacted cobalt selectively over CoSi after the first salicide RTA;
+            // nitration mixture stands in for the SPM (H2SO4/H2O2) piranha strip used industrially
+            new Etchant("nitration_mixture", "acidic_wastewater", HV, 50, 0.01, false, false)
+        ],
         silicon_bosch: [
             new Etchant(["sulfur_hexafluoride" : 50, "octafluorocyclobutane" : 30, "argon" : 20], ["corrosive_gas" : 100], EV, 4, true, true)
         ],
