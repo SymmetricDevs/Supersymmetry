@@ -3156,6 +3156,8 @@ susy.material.fluoroform_mixture=Fluoroform Mixture
 susy.material.chloroethylene_mixture=Chloroethylene Mixture
 susy.material.triethyl_borate=Triethyl Borate
 susy.material.oxidative_cmp_slurry=Oxidative CMP Slurry
+susy.material.fluoromethane=Fluoromethane
+susy.material.fluoromethane_mixture=Fluoromethane Mixture
 
 # Isotopes
 

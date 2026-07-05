@@ -1447,5 +1447,11 @@ class ThirdDegreeMaterials {
                 .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
                 .colorAverage()
                 .build()
+
+        FluoromethaneMixture = new Material.Builder(24250, SuSyUtility.susyId('fluoromethane_mixture'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Fluoromethane, HydrogenChloride)
+                .colorAverage()
+                .build()
         }
 }

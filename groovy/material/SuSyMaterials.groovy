@@ -2672,6 +2672,7 @@ class SuSyMaterials {
     public static Material Hexafluorobutadiene
     public static Material Hexafluorobutyne
     public static Material TriethylBorate
+    public static Material Fluoromethane
 
     // Third Degree Materials
 
@@ -2914,6 +2915,7 @@ class SuSyMaterials {
     public static Material CopperFritInk
     public static Material ThickFilmResistorInk
     public static Material ZieglerNattaCatalyst
+    public static Material FluoromethaneMixture
 
     // Thermodynamics Materials
 

@@ -211,6 +211,26 @@ BCR.recipeBuilder()
         .EUt(VA[MV])
         .buildAndRegister()
 
+    // Fluoromethane
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedChromiumIiiOxide'))
+        .fluidInputs(fluid('chloromethane') * 50)
+        .fluidInputs(fluid('hydrogen_fluoride') * 50)
+        .fluidOutputs(fluid('fluoromethane_mixture') * 100)
+        .duration(5)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    BCR.recipeBuilder()
+        .fluidInputs(fluid('fluoromethane_mixture') * 100)
+        .fluidInputs(fluid('water') * 50)
+        .fluidOutputs(fluid('fluoromethane') * 50)
+        .fluidOutputs(fluid('hydrochloric_acid') * 50)
+        .duration(5)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
     // Hexafluorobutadiene (C4F6)
 
     LCR.recipeBuilder()
