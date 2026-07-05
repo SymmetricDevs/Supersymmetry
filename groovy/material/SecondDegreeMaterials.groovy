@@ -1195,7 +1195,7 @@ class SecondDegreeMaterials {
 
         UltrapureHydrofluoricAcid = new Material.Builder(13188, SuSyUtility.susyId('ultrapure_hydrofluoric_acid'))
                 .liquid()
-                .components(Hydrogen, Fluorine, Water)
+                .components(HydrogenFluoride, Water)
                 .color(0x0fc3d4)
                 .build()
 
@@ -1277,5 +1277,11 @@ class SecondDegreeMaterials {
                 .build()
 
         VanadylSulfateSolution.setFormula("(VOSO4)(H2O)", true)
+
+        UltrapureHydrochloricAcid = new Material.Builder(13199, SuSyUtility.susyId('ultrapure_hydrochloric_acid'))
+                .liquid()
+                .components(HydrogenChloride, Water)
+                .color(0x0fd47b)
+                .build()
     }
 }

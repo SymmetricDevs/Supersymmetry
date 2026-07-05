@@ -2006,6 +2006,7 @@ class SuSyMaterials {
     public static Material DilutedVanadiumIIISulfateSolution
     public static Material VanadylSulfateSolution
     public static Material SupportedChromiumIIIOxide
+    public static Material UltrapureHydrochloricAcid
 
     // Organic Chemistry Materials
 
