@@ -115,6 +115,7 @@ class Lithography {
                         .cleanroom(CleanroomType.CLEANROOM)
                         .duration(photoresist.timeUsed)
                         .EUt(VA[photoresist.voltageTier])
+                    coatingRecipe.buildAndRegister()
 
                     Deposition.generateChemicalVaporDepositionRecipe(input + ".hardmasked", input + ".ibarc", 0.25, "silicon_oxynitride")
                     if (mandrel) {Deposition.generateChemicalVaporDepositionRecipe(input + ".ibarc", input + ".mandrel", 0.25, "silicon")}
@@ -163,6 +164,7 @@ class Lithography {
                         .cleanroom(CleanroomType.CLEANROOM)
                         .duration(photoresist.timeUsed)
                         .EUt(VA[photoresist.voltageTier])
+                    coatingRecipe.buildAndRegister()
 
                     Deposition.generateChemicalVaporDepositionRecipe(input + ".hardmasked", input + ".ibarc", 0.25, "silicon_oxynitride")
                     input = input + ".ibarc"
