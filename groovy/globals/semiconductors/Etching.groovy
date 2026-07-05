@@ -99,6 +99,9 @@ class Etching {
             new Etchant("hydrogen_peroxide_solution", "wastewater", MV, 40, 0.004, false, false),
         ],
         copper: [
+            // No plasma etchant on purpose: copper halides are involatile below ~210 C, so Cu cannot be RIE'd
+            // with resist in place. This is why industry uses damascene (etch dielectric, plate Cu, CMP back)
+            // for Cu interconnects, as the CMOS BEOL chain does. Wet etching remains valid at PCB scale.
             new Etchant("ultrapure_iron_iii_chloride_solution", "acidic_wastewater", MV, 100, 0.01, false, false),
             new Etchant("sodium_bisulfate_solution", "wastewater", MV, 100, 0.01, false, false),
         ],
