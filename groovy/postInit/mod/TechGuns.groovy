@@ -7,6 +7,16 @@ import techguns.TGArmors
 import techguns.TGItems
 import techguns.util.ItemStackOreDict
 
+mods.jei.category.hideCategory('techguns.ammopress')
+mods.jei.category.hideCategory('techguns.metalpress')
+mods.jei.category.hideCategory('techguns.chemlab')
+mods.jei.category.hideCategory('techguns.fabricator')
+mods.jei.category.hideCategory('techguns.reactionchamber')
+mods.jei.category.hideCategory('techguns.oredrill')
+mods.jei.category.hideCategory('techguns.blastfurnace')
+mods.jei.category.hideCategory('techguns.grinder')
+mods.jei.category.hideCategory('techguns.camobench')
+
 def name_removals = [
     "techguns:basicmachine_0_ammo_press",
     "techguns:basicmachine_1_metal_press_alt",
@@ -15,7 +25,6 @@ def name_removals = [
     "techguns:basicmachine_3_turret",
     "techguns:simplemachine2_8_grinder",
     "techguns:simplemachine_11_blast_furnace",
-    "techguns:simplemachine_10_charging_station",
     "techguns:multiblockmachine_0_fabricator_housing",
     "techguns:multiblockmachine_1_fabricator_glass",
     "techguns:multiblockmachine_2_fabricator_controller",
@@ -58,6 +67,8 @@ def name_removals = [
     "techguns:itemshared_104_rcheatray",
     "techguns:itemshared_117_rocket_nuke",
     "techguns:itemshared_118_tacticalnukewarhead",
+    "techguns:itemshared_125_redstone_battery",
+    "techguns:itemshared_125_redstone_battery_alt",
     "techguns:itemshared_134_oredrillsmall_steel",
     "techguns:itemshared_135_oredrillsmall_obsidiansteel",
     "techguns:itemshared_136_oredrillsmall_carbon",
@@ -223,6 +234,10 @@ mods.jei.ingredient.yeet( // hide techguns plates, ingots, and ores
     item('techguns:itemshared', 85)  //Titanium Ingot
 )
 
+for (i in 0..7) {
+    mods.jei.ingredient.yeet(item('techguns:orecluster', i))
+}
+
 ore_dict.remove('oreCopper', item('techguns:basicore'))
 ore_dict.remove('oreTin', item('techguns:basicore', 1))
 ore_dict.remove('oreLead', item('techguns:basicore', 2))
@@ -254,7 +269,13 @@ crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
     [item('minecraft:piston'), item('techguns:nethermetal'), item('minecraft:piston')],
     [item('techguns:nethermetal'), item('techguns:nethermetal'), item('techguns:nethermetal')]
 ])
-    
+
+crafting.replaceShaped("techguns:simplemachine_10_charging_station", item('techguns:simplemachine', 10), [
+    [ore('circuitIv'), metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), ore('circuitIv')],
+    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 126), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
+    [metaitem('plateTungstenSteel'), metaitem('battery_buffer.iv.4'), metaitem('plateTungstenSteel')]
+])
+
 crafting.replaceShaped("techguns:simplemachine_8_camo_bench", item('techguns:simplemachine', 8), [
     [ore('dye'), ore('dye'), ore('dye')],
     [ore('plateIron'), ore('workbench'), ore('plateIron')],
@@ -375,12 +396,10 @@ crafting.replaceShaped("techguns:sawedoff", item('techguns:sawedoff'), [
         [null, item('techguns:itemshared', 2), item('techguns:itemshared', 42)]
 ]);
 
-crafting.replaceShaped("techguns:pistolrounds", item('techguns:itemshared', 1) * 4, [
-    [ore('plateBrass'), ore('gunpowder'), ore('roundLead')],
-])
-
 crafting.replaceShaped("techguns:shotgunrounds", item('techguns:itemshared', 2) * 8, [
-        [ore('plateSteel'), ore('gunpowder'), ore('roundLead')],
+        [null, ore('plateBrass'), null],
+        [ore('craftingToolHardHammer'), ore('gunpowder'), ore('roundLead')],
+        [null, ore('plateBrass'), null],
 ])
 
 crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
@@ -394,6 +413,20 @@ crafting.replaceShapeless("techguns:sandbags", item('techguns:sandbags') * 8, [
     ore('sand'),
     ore('sand')
 ])
+
+/*
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('battery.stainless_steel_hull.iv'))
+    .inputs(metaitem('wireGtSingleSamariumIronArsenicOxide') * 2)
+    .inputs(metaitem('foilPolytetrafluoroethylene') * 4)
+    .inputs(metaitem('anode.cadmium_oxide') * 4)
+    .inputs(metaitem('cathode.nioh2') * 4)
+    .fluidInputs(fluid('potassium_hydroxide_solution') * 4050)
+    .outputs(item('techguns:itemshared', 126))
+    .duration(200)
+    .EUt(VA[EV])
+    .buildAndRegister()
+ */
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
@@ -862,11 +895,11 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .inputs(ore('plateBrass') * 2)
+    .inputs(ore('plateBrass'))
     .inputs(ore('dustGunpowder'))
-    .inputs(ore('roundLead') * 3)
+    .inputs(ore('roundLead') )
     .circuitMeta(2)
-    .outputs(item('techguns:itemshared', 2) * 5)
+    .outputs(item('techguns:itemshared', 2) * 8)
     .duration(10)
     .EUt(VA[LV])
     .buildAndRegister();

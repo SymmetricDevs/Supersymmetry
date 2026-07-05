@@ -45,9 +45,12 @@ class Carbons {
             duration = 2
             pyrolysis_product = 'dustCarbon'
         },
-        new CarbonSource('dustGreenCoke', 100, 'dustTinyAsh').withTraits(HighPurityCombustible, Pyrolyzable).tap {
+        new CarbonSource('dustGreenCoke', 100, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 2
             pyrolysis_product = 'dustCarbon'
+        },
+        new CarbonSource('dustHeatedGreenCoke', 100, 'dustTinyAsh').withTraits(HighPurityCombustible).tap {
+            duration = 2
         },
         new CarbonSource('gemAnthracite', 90, 'dustTinyAsh').withTraits(Combustible, Pyrolyzable).tap {
             duration = 2

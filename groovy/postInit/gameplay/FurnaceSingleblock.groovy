@@ -68,7 +68,9 @@ def nonMetals = [
         [input: metaitem('raw_electrode'), output: metaitem('carbon_electrode')],
         [input: metaitem('raw_carbon_crucible'), output: metaitem('carbon_crucible')],
         [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('clay_graphite_crucible')],
-        [input: ore('blockGreenCarbon'), output: ore('blockBakedCarbon').first()]
+        [input: ore('blockGreenCarbon'), output: ore('blockBakedCarbon').first()],
+        [input: metaitem('dustExpandableGraphite'), output: metaitem('expanded_graphite_worms') * 4],
+        [input: metaitem('raw_carbon_plate'), output: metaitem('carbon_plate')]
 ]
 
 nonMetals += mapRange('susy:susy_stone_cobble', 'susy:susy_stone_smooth', 0..11)
@@ -95,7 +97,8 @@ def metals = [
         [input: metaitem('dustAluminiumAlloy7075'), output: fluid('aluminium_alloy_7075')],
         [input: metaitem('dustCadmium'), output: fluid('cadmium')],
         [input: metaitem('dustIndium'), output: fluid('indium')],
-        [input: metaitem('dustRedAlloy'), output: fluid('red_alloy')]
+        [input: metaitem('dustRedAlloy'), output: fluid('red_alloy')],
+        [input: ore('dustGrcop84'), output: fluid('grcop_84')]
 ]
 
 heatingElements.each { heatingElement ->
@@ -167,6 +170,17 @@ RESISTANCE_FURNACE.recipeBuilder()
 RESISTANCE_FURNACE.recipeBuilder()
         .circuitMeta(2)
         .inputs(metaitem('carbon_electrode'))
+        .inputs(ore('insulatingCarbon') * 4)
+        .notConsumable(ore('insulatingCarbon') * 16)
+        .notConsumable(metaitem('graphite_electrode'))
+        .outputs(metaitem('graphite_electrode'))
+        .duration(120)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+RESISTANCE_FURNACE.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(metaitem('carbon_plate'))
         .inputs(ore('insulatingCarbon') * 4)
         .notConsumable(ore('insulatingCarbon') * 16)
         .notConsumable(metaitem('graphite_electrode'))

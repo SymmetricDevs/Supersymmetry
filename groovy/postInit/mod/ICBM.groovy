@@ -336,7 +336,7 @@ Globals.solders.each { key, val ->
     for (FACTORYS in WEAPON_FACTORYS) {
         FACTORYS.recipeBuilder()
                 .inputs([
-                        ore('componentCapacitor') * 8,
+                        metaitem('slapper_detonator') * 8,
                         ore('wireFinePlatinum') * 32,
                         ore('dustCompositionB') * 64,
                         ore('dustBaratol') * 64,
@@ -354,7 +354,7 @@ Globals.solders.each { key, val ->
 
         FACTORYS.recipeBuilder()
                 .inputs([
-                        ore('componentCapacitor') * 8,
+                        metaitem('slapper_detonator') * 8,
                         ore('wireFinePlatinum') * 8,
                         ore('dustCompositionB') * 16,
                         ore('dustBaratol') * 16,
@@ -661,3 +661,43 @@ Globals.solders.each { key, val ->
         .EUt(VA[LV])
         .buildAndRegister();
 }
+//surface to air missile
+Globals.solders.each { key, val ->
+    for (s_fuel in solidfuels) {
+        for (l_oxy in liquidoxys) {
+
+            LARGE_WEAPONS_FACTORY.recipeBuilder()
+                    .inputs([
+                            ore('stickStainlessSteel') * 2,
+                            ore('ringStainlessSteel'),
+                            ore('plateStainlessSteel'),
+                            ore('foilStainlessSteel') * 8,
+                            s_fuel * 8,
+                            item('icbmclassic:explosives:0'),
+                            ore('circuitMv') * 2,
+                            metaitem('sensor.mv')
+                    ])
+                    .fluidInputs(fluid(key) * (val / 2))
+                    .fluidInputs(l_oxy * 1000)
+                    .outputs(item('icbmclassic:surface_to_air_missile'))
+                    .duration(100)
+                    .EUt(VA[MV])
+                    .buildAndRegister();
+        }
+    }
+}
+
+//radar
+WEAPONS_FACTORY.recipeBuilder()
+    .inputs([
+        ore('wireFineCopper') * 64,
+        ore('circuitHv') * 2,
+        metaitem('sensor.hv'),
+        metaitem('emitter.hv'),
+        metaitem('electric.motor.hv'),
+        metaitem('hull.hv')
+    ])
+    .outputs(item('icbmclassic:radarstation:0'))
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister();

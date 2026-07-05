@@ -42,6 +42,8 @@ config/acronym/saved/
 
 config/beneath/blockdeco.json
 
+config/betterquesting/DefaultQuests/QuestSettings.json
+
 #config/biomesoplenty/biomes/defaults/
 
 #config/biomesoplenty/biome_ids.json
@@ -170,3 +172,5 @@ lib/groovy-astbuilder-5.0.0-alpha-1-sources.jar
 lib/groovy-ant-5.0.0-alpha-1.jar
 lib/groovy-ant-5.0.0-alpha-1-sources.jar
 Supersymmetry.iml
+groovy/sideOnlyGenerated.json
+.clawdea/REPO_STATE.md

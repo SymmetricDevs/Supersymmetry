@@ -20,13 +20,14 @@ import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
+import static supersymmetry.common.materials.SusyMaterials.*
 import static material.SuSyMaterials.*
 
 import supercritical.api.unification.material.properties.FissionFuelProperty
 import supercritical.api.unification.material.properties.ModeratorProperty
 import supercritical.api.unification.material.properties.SCPropertyKey
 
-//eventManager.listen(EventPriority.LOWEST)
+//eventManager.listen(EventPriority.LOWEST)SS
 class ChangeFlags {
     private static void setupSlurries(Material mat) {
         def property = new FluidProperty()
@@ -125,6 +126,7 @@ class ChangeFlags {
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
         Asbestos.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
+
         //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
 
         Tantalum.setProperty(PropertyKey.BLAST, new BlastProperty(3293, GasTier.MID, 480, 240, -1, -1));
@@ -167,12 +169,11 @@ class ChangeFlags {
         Nickel.addFlags("generate_rod", "generate_foil", "generate_fine_wire");
         Aluminium.addFlags("generate_round", "generate_rotor", "continuously_cast");
         Tungsten.addFlags("generate_fine_wire", "hip_pressed");
-        Molybdenum.addFlags("generate_fine_wire");
+        Molybdenum.addFlags("generate_fine_wire", "generate_ring");
         Tantalum.addFlags("generate_rod", "generate_fine_wire", "generate_catalyst_bed", "generate_plate");
         Titanium.addFlags("generate_fine_wire");
         ChromiumTrioxide.addFlags("generate_catalyst_bed");
         Iron3Chloride.addFlags("generate_catalyst_bed");
-        Platinum.addFlags("generate_catalyst_bed");
         Alumina.addFlags("generate_catalyst_bed");
         Silver.addFlags("generate_catalyst_bed");
         Nickel.addFlags("generate_catalyst_bed");
@@ -194,8 +195,10 @@ class ChangeFlags {
         TungstenCarbide.addFlags("hip_pressed");
         Polycaprolactam.addFlags("generate_foil");
         Palladium.addFlags("generate_bolt_screw");
-        Copper.addFlags("continuously_cast")
-
+        Copper.addFlags("continuously_cast");
+        AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
+        Graphite.addFlags("generate_plate");
+        Germanium.addFlags("generate_plate");
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
         MagnesiumDiboride.addFlags("no_smashing", "no_smelting")
@@ -237,7 +240,7 @@ class ChangeFlags {
         Pitchblende.setFormula("(?)UO2", true);
         Bastnasite.setFormula("(REE)CO3F", true);
         Monazite.setFormula("(REE,Th)PO4", true);
-        Gypsum.setFormula("(CaSO4)(H2O)2", true);
+        Gypsum.setFormula("(CaSO4)*(H2O)2", true);
         Polyethylene.setFormula("[C2H4]n", true);
         PolyvinylChloride.setFormula("[C2H3Cl]n", true);
         Rubber.setFormula("[C5H8]n", true);
