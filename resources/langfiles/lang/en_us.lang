@@ -2851,7 +2851,7 @@ susy.material.norbornene=Norbornene
 susy.material.petroleum_resin_solution=Petroleum Resin Solution
 susy.material.petroleum_resin=Petroleum Resin
 susy.material.hydrogenated_petroleum_resin=Hydrogenated Petroleum Resin
-
+susy.material.calcium_aluminate_concrete=Calcium Aluminate Concrete
 
 susy.material.diallyldimethylammonium_chloride=Diallyldimethylammonium Chloride (DADMAC)
 susy.material.diallyldimethylammonium_chloride_solution=Diallyldimethylammonium Chloride (DADMAC) Solution
@@ -2875,6 +2875,7 @@ susy.material.expanded_polytetrafluoroethylene=Expanded Polytetrafluoroethylene 
 susy.material.vanadium_iii_sulfate_solution=Vanadium III Sulfate Solution
 susy.material.diluted_vanadium_iii_sulfate_solution=Diluted Vanadium III Sulfate Solution
 susy.material.vanadyl_sulfate_solution=Vanadyl Sulfate Solution
+susy.material.manganese_cobalt_nickel_oxide=Manganese Cobalt Nickel Oxide
 
 # Isotopes
 
@@ -3484,7 +3485,14 @@ metaitem.graphite_paper.name=Graphite Paper
 metaitem.raw_carbon_plate=Raw Carbon Plate
 metaitem.carbon_plate=Carbon Plate
 metaitem.graphite_plate.name=Graphite Electrode Plate
-
+metaitem.spacecraft_sensor.gyroscope.name=Spacecraft Gyroscope
+metaitem.spacecraft_sensor.ion_flow.name=Spacecraft Ion Flow Sensor
+metaitem.spacecraft_sensor.sun_star.name=Spacecraft Sun and Star Location Finder
+metaitem.spacecraft_sensor.infrared.name=Spacecraft Infrared Horizon Finder
+metaitem.photomultiplier_tube.name=Photomultiplier Tube
+metaitem.bialkali_photocathode.name=Bialkali Photocathode
+metaitem.photomultiplier_components.name=Photomultiplier Tube Components
+metaitem.beo_coated_stainless_steel_plate.name=Beryllium Oxide-Coated Stainless Steel Plate
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand

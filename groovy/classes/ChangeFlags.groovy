@@ -197,6 +197,7 @@ class ChangeFlags {
         Copper.addFlags("continuously_cast");
         AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
         Graphite.addFlags("generate_plate");
+        Germanium.addFlags("generate_plate");
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
         MagnesiumDiboride.addFlags("no_smashing", "no_smelting")

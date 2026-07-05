@@ -830,6 +830,7 @@ class SuSyMaterials {
     public static Material NanoparticleModifiedNafionDispersion
     public static Material NanoparticleModifiedNafion
     public static Material ExpandableGraphite
+    public static Material CalciumAluminateConcrete
 
 
     // Petrochem Materials
@@ -1952,6 +1953,7 @@ class SuSyMaterials {
     public static Material VanadiumIIISulfateSolution
     public static Material DilutedVanadiumIIISulfateSolution
     public static Material VanadylSulfateSolution
+    public static Material ManganeseCobaltNickelOxide
 
     // Organic Chemistry Materials
 
