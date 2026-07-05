@@ -839,7 +839,7 @@ class FirstDegreeMaterialsA {
 
         DicobaltOctacarbonyl = new Material.Builder(8210, SuSyUtility.susyId('dicobalt_octacarbonyl'))
                 .dust()
-                .components(Cobalt * 2, Cobalt * 8, Oxygen * 8)
+                .components(Cobalt * 2, Carbon * 8, Oxygen * 8)
                 .colorAverage()
                 .build()
 
@@ -1712,6 +1712,7 @@ class FirstDegreeMaterialsA {
         LeadFreeSolder = new Material.Builder(8346, SuSyUtility.susyId('lead_free_solder'))
                 .ingot().liquid(new FluidBuilder().temperature(490))
                 .components(Tin * 115, Silver * 2, Copper * 1)
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .colorAverage()
                 .build()
 

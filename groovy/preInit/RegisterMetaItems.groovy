@@ -73,7 +73,7 @@ def addPhotoresistVariants(String name, List photoresist_steps) {
     }
 }
 
-def registerNMOSMetaitems(String name, int step_count = 24, List photoresist_steps = [6, 11, 14, 20]) {
+def registerNMOSMetaitems(String name, int step_count = 25, List photoresist_steps = [7, 12, 15, 21]) {
     registerCircuitMetaitems(name, step_count)
     addPhotoresistVariants(name, photoresist_steps)
 }
