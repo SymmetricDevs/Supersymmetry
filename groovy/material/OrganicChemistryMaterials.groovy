@@ -4383,5 +4383,11 @@ class OrganicChemistryMaterials {
                 .components(Carbon, Fluorine * 4)
                 .colorAverage()
                 .build()
+
+        Fluoromethane = new Material.Builder(15741, SuSyUtility.susyId('fluoromethane'))
+                .gas()
+                .components(Carbon, Hydrogen * 3, Fluorine)
+                .color(0x9bd4d4)
+                .build()
     }
 }
