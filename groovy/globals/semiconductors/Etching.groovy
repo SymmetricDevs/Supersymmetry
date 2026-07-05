@@ -77,10 +77,9 @@ class Etching {
             new Etchant("buffered_oxide_etchant", MV, 40, 0.004, false, false),
         ],
         silicon_nitride: [
-            // CHF3/O2 at ~1:3 in He carrier: anisotropic nitride etch selective to Si and SiO2.
-            // Loewenstein, JVST B 2, 684 (1984); US5786276 (optimum ~20 sccm CHF3 : 60 sccm O2).
-            // CH3F/O2 would be the modern higher-selectivity choice if fluoromethane is ever added.
-            new Etchant(["fluoroform" : 20, "oxygen" : 60, "helium" : 20], EV, 0.0167, true, true),
+            // CH3F/O2 at ~1:3 in He carrier: anisotropic nitride etch highly selective to Si and SiO2.
+            // US5786276 (optimum ~20 sccm CH3F : 60 sccm O2, O2:CH3F > 3:1); Kaler et al., JVST A 34, 041301 (2016)
+            new Etchant(["fluoromethane" : 20, "oxygen" : 60, "helium" : 20], EV, 0.0167, true, true),
             new Etchant("phosphoric_acid", MV, 40, 0.004, false, false),
         ],
         titanium: [
