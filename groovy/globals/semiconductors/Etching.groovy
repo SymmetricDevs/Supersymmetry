@@ -54,9 +54,10 @@ class Etching {
 
     public static final etchants = [ //FIXME: Replace all RIE etchants with proper mixtures
         aluminium: [
-            //new Etchant("plasma.chlorine", EV, 10, 0.0125, true, true),
-            //new Etchant("plasma.carbon_tetrafluoride", EV, 10, 0.0167, true, true),
-            //new Etchant("plasma.boron_trichloride", EV, 10, 0.0167, true, true),
+            // Cl2/BCl3/N2: standard anisotropic Al interconnect etch. BCl3 breaks through the native oxide
+            // and scavenges moisture, Cl2 etches Al as volatile AlCl3, N2 forms the sidewall passivation polymer.
+            // Reference recipe ~80:30:15 sccm Cl2:BCl3:N2 (Lee et al., Micromachines 2024); US6248252 (BCl3 15-30, Cl2 50-70, N2 ~20 sccm)
+            new Etchant(["chlorine" : 55, "boron_trichloride" : 25, "nitrogen" : 20], ["corrosive_gas" : 100], EV, 0.0167, true, true),
             new Etchant("aluminium_etchant", "acidic_wastewater", MV, 50, 0.00125, false, false),
         ],
         gallium_arsenide: [
@@ -118,7 +119,10 @@ class Etching {
             new Etchant("ultrapure_hydrofluoric_acid", "acidic_wastewater", MV, 50, 0.004, false, false),
         ],
         hafnium_dioxide: [
-            new Etchant("carbon_tetrafluoride", EV, 10, 0.008, true, true),
+            // BCl3/Cl2/Ar: standard high-k gate dielectric etch, >100:1 selectivity over Si; volatile HfCl4/HfBxCly
+            // products. Fluorocarbons are unsuitable since HfF4 is involatile. Sungauer et al., JVST B 25, 1640 (2007);
+            // Martin & Chang, JVST A 26, 597 (2008)
+            new Etchant(["boron_trichloride" : 60, "chlorine" : 20, "argon" : 20], ["corrosive_gas" : 100], EV, 0.008, true, true),
         ],
         nickel_silicide: [
             new Etchant("phosphoric_acid", "acidic_wastewater", HV, 50, 0.01, false, false)
@@ -127,10 +131,12 @@ class Etching {
             new Etchant(["sulfur_hexafluoride" : 50, "octafluorocyclobutane" : 30, "argon" : 20], ["corrosive_gas" : 100], EV, 4, true, true)
         ],
         zirconia: [
-            new Etchant("boron_trichloride", EV, 100, 0.0167, true, true)
+            // BCl3/Ar with a small Cl2 addition: ZrO2 etch rate peaks at ~30-35% Ar dilution, and minor Cl2
+            // improves selectivity to SiO2/Si3N4. Kim et al., Microelectron. Eng. 84 (2007); Ferroelectrics 384 (2009)
+            new Etchant(["boron_trichloride" : 60, "argon" : 30, "chlorine" : 10], ["corrosive_gas" : 100], EV, 0.0167, true, true)
         ],
         alumina: [
-            new Etchant("boron_trichloride", EV, 100, 0.0167, true, true)
+            new Etchant("boron_trichloride", "corrosive_gas", EV, 100, 0.0167, true, true)
         ],
         zirconia_alumina_coetch: [
             new Etchant(["boron_trichloride" : 60, "chlorine" : 20, "argon" : 20], ["corrosive_gas" : 100], EV, 0.004, true, true)
@@ -173,6 +179,9 @@ class Etching {
                 for (entry in etchant.fluidArr) {
                     etchingRecipe.fluidInputs(fluid(entry.key) * entry.value)
                 }
+                for (entry in etchant.wasteArr) {
+                    etchingRecipe.fluidOutputs(fluid(entry.key) * entry.value)
+                }
                 etchingRecipe.buildAndRegister()
             }
         }
@@ -194,6 +203,9 @@ class Etching {
 
                 for (entry in etchant.fluidArr) {
                     etchingRecipe.fluidInputs(fluid(entry.key) * entry.value)
+                }
+                for (entry in etchant.wasteArr) {
+                    etchingRecipe.fluidOutputs(fluid(entry.key) * entry.value)
                 }
                 etchingRecipe.buildAndRegister()
             }
