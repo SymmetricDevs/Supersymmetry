@@ -100,7 +100,7 @@ MIXER.recipeBuilder()
     .inputs(ore('dustIron') * 28)
     .inputs(ore('dustBoron') * 2)
     .outputs(metaitem('dustNeodymiumAlloy') * 34)
-    .duration(400)
+    .duration(800)
     .EUt(VA[EV])
     .buildAndRegister();
 
