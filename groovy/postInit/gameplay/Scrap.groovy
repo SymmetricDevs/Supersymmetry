@@ -1,7 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.recipes.chance.output.ChancedOutputLogic
-
+import supersymmetry.api.space.Planetoid
 // Earth
 SALVAGING.recipeBuilder()
     .inputs(Planetoid.PLANETOIDS.inverse().get(0).getDisplayItem())
@@ -36,8 +36,8 @@ SALVAGING.recipeBuilder()
 def robotArms = [metaitem('robot.arm.mv'), metaitem('robot.arm.hv'),
                  metaitem('robot.arm.ev'), metaitem('robot.arm.iv'),
                  metaitem('robot.arm.luv'), metaitem('robot.arm.zpm')];
-
 def decreases = [-50, -100, -200, -400, -1000, -2000]
+
 for (def i = 0; i < 6; i++) {
     SCRAP_RECYCLER.recipeBuilder()
         .inputs(metaitem('scrap.military'))
@@ -56,7 +56,7 @@ for (def i = 0; i < 6; i++) {
 
 SCRAP_RECYCLER.recipeBuilder()
     .inputs(metaitem('scrap.military'))
-    .notConsumed(metaitem('sensor.hv'))
+    .notConsumable(metaitem('sensor.hv'))
     .chancedOutput(metaitem('scrap.unusable'), 8500, -50)
     .chancedOutput(metaitem('scrap.military.weaponry'), 4000, 500)
     .chancedOutput(metaitem('scrap.military.unknown'), 1000, 2000)
@@ -69,7 +69,7 @@ SCRAP_RECYCLER.recipeBuilder()
 
 SCRAP_RECYCLER.recipeBuilder()
     .inputs(metaitem('scrap.commercial'))
-    .notConsumed(metaitem('sensor.hv'))
+    .notConsumable(metaitem('sensor.hv'))
     .chancedOutput(metaitem('scrap.commercial.lootbox'), 8700, 10)
     .chancedOutput(metaitem('scrap.unusable'), 3000, -300)
     .chancedOutput(metaitem('scrap.commercial.food'), 7000, 10)    
@@ -81,6 +81,10 @@ SCRAP_RECYCLER.recipeBuilder()
     .buildAndRegister()
 
 void scrapRecipes(Closure recipeBuilder) {
+    def robotArms = [metaitem('robot.arm.mv'), metaitem('robot.arm.hv'),
+                 metaitem('robot.arm.ev'), metaitem('robot.arm.iv'),
+                 metaitem('robot.arm.luv'), metaitem('robot.arm.zpm')];
+    def decreases = [-50, -100, -200, -400, -1000, -2000]
     for (def i = 0; i < 6; i++) {
         recipeBuilder.call(SCRAP_RECYCLER.recipeBuilder()
                 .chancedOutput(metaitem('scrap.unusable'), 1600, decreases[i])
@@ -95,7 +99,7 @@ void scrapRecipes(Closure recipeBuilder) {
     recipeBuilder.call(SCRAP_RECYCLER.recipeBuilder()
                 .chancedOutput(metaitem('scrap.unusable'), 3000, -25)
                 .chancedOutputLogic(ChancedOutputLogic.XOR))
-        .notConsumed(metaitem('sensor.hv'))
+        .notConsumable(metaitem('sensor.hv'))
         .chancedOutput(metaitem('scrap.unusable'), 10000, 0)
         .chancedOutputLogic(ChancedOutputLogic.XOR)
         .EUt(VA[HV])
@@ -105,7 +109,6 @@ void scrapRecipes(Closure recipeBuilder) {
 
 scrapRecipes(builder -> builder
         .inputs(metaitem('scrap.supply'))
-        .chancedOutput(metaitem('scrap.unusable'), 1600, decreases[i])
         .chancedOutput(metaitem('scrap.supply.wiring'), 6000, 0)
         .chancedOutput(metaitem('scrap.supply.alloy'), 7000, 0)    
         .chancedOutput(metaitem('scrap.supply.chemical'), 2000, 0)
@@ -125,13 +128,13 @@ scrapRecipes(builder -> builder
 // TODO: actual lootboxes
 SCRAP_RECYCLER.recipeBuilder()
     .inputs(metaitem('scrap.commercial.lootbox'))
-    .notConsumed(metaitem('robot.arm.lv'))
+    .notConsumable(metaitem('robot.arm.lv'))
     .chancedOutput(metaitem('scrap.unusable'), 6000, 0)
     .chancedOutput(metaitem('food.protein_paste'), 4000, 0)
     .chancedOutput(metaitem('food.cellulose_reformate'), 4000, 0)
     .chancedOutput(metaitem('food.glue_pizza'), 1000, 0)
     .chancedOutput(metaitem('coin.doge'), 1000, 0)
-    .chancedOutput(item('betterquesting:guide_book', 1000, 0))
+    .chancedOutput(item('betterquesting:quest_book'), 1000, 0)
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
@@ -174,16 +177,7 @@ scrapRecipes(builder -> builder
     .chancedOutput(metaitem('component.smd.diode') * 32, 1500, 10)
     .chancedOutput(metaitem('circuit.microprocessor') * 16, 1000, 20)
     .chancedOutput(metaitem('plate.power_integrated_circuit'), 1500, 30)
-    .chancedOutput(metaitem('die.cmos_cpu') * 8, 1500, 40)
-    .chancedOutput(metaitem('circuit.crystal_processor'), 1500, 50)
-    .chancedOutput(metaitem('circuit.crystal_computer'), 200, 60))
-
-scrapRecipes(builder -> builder
-    .inputs(metaitem('scrap.supply.circuitry'))
-    .chancedOutput(metaitem('component.smd.diode') * 32, 1500, 10)
-    .chancedOutput(metaitem('circuit.microprocessor') * 16, 1000, 20)
-    .chancedOutput(metaitem('plate.power_integrated_circuit'), 1500, 30)
-    .chancedOutput(metaitem('die.cmos_cpu') * 8, 1500, 40)
+    //.chancedOutput(metaitem('die.cmos_cpu') * 8, 1500, 40)
     .chancedOutput(metaitem('circuit.crystal_processor'), 1500, 50)
     .chancedOutput(metaitem('circuit.crystal_computer'), 200, 60))
 
@@ -201,7 +195,7 @@ scrapRecipes(builder -> builder
 
 scrapRecipes(builder -> builder
     .inputs(metaitem('scrap.supply.alloy'))
-    .chancedOutput(metaitem('ingotHsla980x') * 64, 2500, 10)
+    .chancedOutput(metaitem('ingotHsla980X') * 64, 2500, 10)
     .chancedOutput(metaitem('ingotMonel500') * 32, 1500, 20)
     .chancedOutput(metaitem('ingotAluminiumAlloy7075') * 32, 1500, 30)
     .chancedOutput(metaitem('ingotZircaloy4') * 32, 1500, 40)
@@ -236,7 +230,7 @@ scrapRecipes(builder -> builder
 scrapRecipes(builder -> builder
     .inputs(metaitem('scrap.parts.energy'))
     .chancedOutput(item('susy:spacecraft_instrument', 6), 4000, 40)
-    .chancedOutput(metaitem('battery.ni_zn.hv') * 3, 4000, 40)
+    .chancedOutput(metaitem('battery.ni_cd.hv') * 3, 4000, 40)
     .chancedOutput(item('susy:spacecraft_instrument', 5), 2000, 40)
     .chancedOutput(metaitem('cover.solar.panel.lv'), 100, 60)
     .chancedOutput(metaitem('cover.solar.panel.mv'), 10, 60)
@@ -246,7 +240,7 @@ scrapRecipes(builder -> builder
 scrapRecipes(builder -> builder
     .inputs(metaitem('scrap.military.weaponry'))
     .chancedOutput(item('techguns:itemshared', 17) * 32, 2000, 40)
-    .chancedOutput(metaitem('battery.ni_zn.hv') * 3, 2000, 40)
+    .chancedOutput(metaitem('battery.ni_cd.hv') * 3, 2000, 40)
     .chancedOutput(item('susy:spacecraft_instrument', 5), 2000, 40)
     .chancedOutput(item('techguns:itemshared', 143) * 32, 2000, 60)
     .chancedOutput(item('openmodularturrets:turret_base', 4), 100, 30))
@@ -278,7 +272,7 @@ for (def i = 0; i < 6; i++) {
 SCRAP_RECYCLER.recipeBuilder()
     .chancedOutput(metaitem('scrap.unusable'), 5000, -25)
     .chancedOutputLogic(ChancedOutputLogic.OR)
-    .notConsumed(metaitem('sensor.hv'))
+    .notConsumable(metaitem('sensor.hv'))
      //.chancedOutput(metaitem('susy:fluix_energy_core'))
     .chancedOutput(item('appliedenergistics2:part:16') * 8, 2000, 50)
     .chancedOutput(item('appliedenergistics2:material:43'), 2000, 50)

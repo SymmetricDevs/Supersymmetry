@@ -2799,6 +2799,7 @@ susy.material.grcop_84=GRCop-84
 susy.material.mar_m_246=MAR-M246
 susy.material.aluminium_alloy_2219=Aluminium Alloy 2219
 susy.material.aluminium_alloy_2195=Aluminium Alloy 2195
+susy.material.scandium_alloy=Scandium Alloy
 susy.material.lithium_peroxide=Lithium Peroxide
 susy.material.lithium_hydroperoxide=Lithium Hydroperoxide
 susy.material.neoprene=Neoprene
@@ -2868,7 +2869,7 @@ susy.material.palladium_chloride=Palladium Chloride
 susy.material.chloroprene_emulsion=Chloroprene Emulsion
 susy.material.neoprene_latex=Neoprene Latex
 susy.material.diisopropyl_dixanthogen_disulfide=Diisopropyl Dixanthogen Disulfide
-
+susy.material.calcium_aluminate_concrete=Calcium Aluminate Concrete
 
 susy.material.diallyldimethylammonium_chloride=Diallyldimethylammonium Chloride (DADMAC)
 susy.material.diallyldimethylammonium_chloride_solution=Diallyldimethylammonium Chloride (DADMAC) Solution
@@ -2892,6 +2893,7 @@ susy.material.expanded_polytetrafluoroethylene=Expanded Polytetrafluoroethylene 
 susy.material.vanadium_iii_sulfate_solution=Vanadium III Sulfate Solution
 susy.material.diluted_vanadium_iii_sulfate_solution=Diluted Vanadium III Sulfate Solution
 susy.material.vanadyl_sulfate_solution=Vanadyl Sulfate Solution
+susy.material.manganese_cobalt_nickel_oxide=Manganese Cobalt Nickel Oxide
 
 # Isotopes
 
@@ -2989,6 +2991,12 @@ metaitem.plate.pattern.memory.name=Pattern RAM Chip
 metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
+
+metaitem.electron_gun.name=Electron Gun
+metaitem.spectral_filter.visible_bandpass.name=Visible Bandpass Spectral Filter
+metaitem.spectral_filter.near_ir_bandpass.name=Near Infrared Bandpass Spectral Filter
+metaitem.spectral_filter.mid_ir_bandpass.name=Mid Infrared Bandpass Spectral Filter
+metaitem.spectral_filter.near_uv_bandpass.name=Near Ultraviolet Bandpass Spectral Filter
 
 metaitem.gun.barrel.steel.name=Steel Barrel
 
@@ -3522,7 +3530,14 @@ metaitem.graphite_paper.name=Graphite Paper
 metaitem.raw_carbon_plate=Raw Carbon Plate
 metaitem.carbon_plate=Carbon Plate
 metaitem.graphite_plate.name=Graphite Electrode Plate
-
+metaitem.spacecraft_sensor.gyroscope.name=Spacecraft Gyroscope
+metaitem.spacecraft_sensor.ion_flow.name=Spacecraft Ion Flow Sensor
+metaitem.spacecraft_sensor.sun_star.name=Spacecraft Sun and Star Location Finder
+metaitem.spacecraft_sensor.infrared.name=Spacecraft Infrared Horizon Finder
+metaitem.photomultiplier_tube.name=Photomultiplier Tube
+metaitem.bialkali_photocathode.name=Bialkali Photocathode
+metaitem.photomultiplier_components.name=Photomultiplier Tube Components
+metaitem.beo_coated_stainless_steel_plate.name=Beryllium Oxide-Coated Stainless Steel Plate
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand

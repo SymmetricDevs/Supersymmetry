@@ -896,6 +896,7 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .components(Aluminium * 1661, Copper * 60, Manganese * 18, Vanadium * 1, Zirconium * 2, Titanium * 1)
+                .color(0x81afeb)
                 .build()
 
         AluminiumAlloy2195 = new Material.Builder(8795, SuSyUtility.susyId('aluminium_alloy_2195'))
@@ -903,10 +904,11 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Aluminium * 2012, Copper * 36, Lithium * 90, Magnesium * 18, Silver * 3, Zirconium * 1)
+                .color(0xbfe0e0)
                 .build()
       
         ScandiumAlloy = new Material.Builder(8796, SuSyUtility.susyId('scandium_alloy'))
-                .dust()
+                .ingot()
                 .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_SPRING)
                 .components(Aluminium * 12, Scandium * 3, Erbium, Zirconium)
                 .color(0xffbfbf)

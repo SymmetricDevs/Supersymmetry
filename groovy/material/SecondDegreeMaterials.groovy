@@ -1179,5 +1179,15 @@ class SecondDegreeMaterials {
                 .iconSet(LAPIS)
                 .build();
 
+        ManganeseCobaltNickelOxide = new Material.Builder(13194, SuSyUtility.susyId('manganese_cobalt_nickel_oxide'))
+                .dust()
+                .color(0x64B7B7)
+                .components(ManganeseDioxide * 10, ManganeseIIOxide * 5, CobaltOxide * 12, NickelIIOxide * 3)
+                .iconSet(DULL)
+                .flags(GENERATE_PLATE, NO_UNIFICATION)
+                .build();
+
+        ManganeseCobaltNickelOxide.setFormula("Mn15Co12Ni3O40", true)
+
     }
 }

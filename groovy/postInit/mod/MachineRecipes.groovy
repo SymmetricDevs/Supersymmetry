@@ -1205,6 +1205,16 @@ RecyclingHelper.addShaped("gregtech:phase_separator", metaitem('susy:phase_separ
     [metaitem('pipeSmallFluidSteel'), metaitem('hull.lv'), metaitem('pipeSmallFluidSteel')]
 ])
 
+// Evaporation Deposition Machine
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:evaporation_deposition." + Globals.voltageTiers[i], metaitem('susy:evaporation_deposition.' + Globals.voltageTiers[i]), [
+        [tieredGlass[i], tieredPlates[i], tieredGlass[i]],
+        [circuits[i], hulls[i], circuits[i]],
+        [tieredCables[i], pumps[i], tieredCables[i]]
+    ])
+}
+
 //Multiblocked Machines
 
 /*
@@ -1698,7 +1708,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('fuel_injector'))
         .inputs(metaitem('plateDoubleIncoloy908') * 12)
         .inputs(metaitem('pipeLargeFluidStainlessSteel') * 9)
-        .outputs(item('susy:rocket_combustion_chamber', 2)) // Oxidiser Combustion Chamber
+        .outputs(item('susy:rocket_combustion_chamber')) // Bipropellant Combustion Chamber
         .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()

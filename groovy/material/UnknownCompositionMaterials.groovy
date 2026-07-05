@@ -3431,5 +3431,11 @@ class UnknownCompositionMaterials {
                 .color(0xFFE1D8)
                 .build()
 
+        CalciumAluminateConcrete = new Material.Builder(4745, SuSyUtility.susyId('calcium_aluminate_concrete'))
+                .dust().liquid(new FluidBuilder().temperature(300))
+                .iconSet(ROUGH)
+                .color(0xADC3FF)
+                .build()
+
     }
 }
