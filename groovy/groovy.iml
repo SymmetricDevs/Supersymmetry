@@ -3,12 +3,16 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/classes" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/globals" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/preInit" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/prePostInit" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/postInit/biology" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/postInit/chemistry" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/postInit/components" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/postInit/gameplay" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/postInit/materials" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/postInit/misc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/postInit/mod" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="groovy-5.0.0" level="project" />
   </component>
 </module>

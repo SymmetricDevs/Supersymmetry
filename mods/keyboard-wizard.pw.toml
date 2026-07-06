@@ -1,0 +1,13 @@
+name = "Keyboard Wizard"
+filename = "keywizard-1.12.2-1.7.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7a2b6c551a18af294db471c1966add0dd85856cc"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2841927
+project-id = 262366
