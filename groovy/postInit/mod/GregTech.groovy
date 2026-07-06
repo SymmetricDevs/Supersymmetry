@@ -1319,7 +1319,7 @@ RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillat
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:cobblestone')], null)
 
 MACERATOR.recipeBuilder()
-    .inputs(ore('cobblestone'))
+    .inputs(ore('defaultCobblestone'))
     .outputs(metaitem('dustStone'))
     .duration(98)
     .EUt(VA[ULV])
