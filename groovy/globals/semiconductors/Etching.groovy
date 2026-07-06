@@ -166,6 +166,9 @@ class Etching {
         ],
         nichrome: [
             new Etchant("ultrapure_iron_iii_chloride_solution", "acidic_wastewater", MV, 100, 0.01, false, false)
+        ],
+        spin_on_carbon: [
+            new Etchant("oxygen", "waste_gas", EV, 100, 0.0167, true, true)
         ]
     ]
 

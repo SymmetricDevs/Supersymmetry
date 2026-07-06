@@ -31,12 +31,12 @@ class Lithography {
             this.ibarc = ibarc
         }
 
-        def generateCoatingRecipe(String input, boolean hmds, Integer circuit = null) {
+        def generateCoatingRecipe(String input, boolean hmds, Integer circuit = null, String overrideInput = null) {
             def solvent_amount = 100
             if (additionalFluids.size() != 0) { solvent_amount += ((this.additionalFluids.values().sum()) * 2) }
             
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
-                .inputs(metaitem(input))
+                .inputs(metaitem(overrideInput ?: input))
                 .fluidInputs(fluid(this.resistName) * 50)
                 .fluidInputs(fluid(this.solventName) * solvent_amount)
                 .outputs(metaitem(input + ".coated"))
@@ -64,7 +64,7 @@ class Lithography {
             exposureRecipe.buildAndRegister();
         }
 
-        def generateDevelopmentRecipe(String input, String product) {
+        def generateDevelopmentRecipe(String input, String product, String overrideProduct = null) {
             if (!liftoff) {
                 RESIST_PROCESSOR.recipeBuilder()
                     .inputs(metaitem(input + ".exposed"))
@@ -78,7 +78,7 @@ class Lithography {
                 RESIST_PROCESSOR.recipeBuilder()
                     .inputs(metaitem(input + ".deposited"))
                     .fluidInputs(fluid(this.developerName) * 100)
-                    .outputs(metaitem(product))
+                    .outputs(metaitem(overrideProduct ?: product))
                     .cleanroom(CleanroomType.CLEANROOM)
                     .duration(this.timeUsed)
                     .EUt(VA[this.voltageTier])
@@ -92,6 +92,7 @@ class Lithography {
         new Resist("novolac_liftoff_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300, [:], true),
         new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "uv_light_box", 200),
         new Resist("polyhydroxystyrene_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, ["krf_barc" : 25]),
+        new Resist("polyhydroxystyrene_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, [:], false, true),
         new Resist("methacrylate_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10, "arf_barc" : 25]),
         new Resist("methacrylate_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10], false, true)
         // Trilayers should be used for highly reflective substrates, i.e. metal as organic BARCs will no longer be sufficient to minimize internal reflection of patterning light,
@@ -103,11 +104,11 @@ class Lithography {
         new Resist("hydrogen_silsesquioxane_photoresist", "tetramethylammonium_hydroxide_solution", "n_methyl_two_pyrrolidone", EV, "electron_beam_lithography", 1000)
     ]
 
-    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean ibarc = false, boolean mandrel = false) {
+    static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean mandrel = false) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
-                if (ibarc) {
-                    def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
+                if (photoresist.ibarc) {
+                    RESIST_PROCESSOR.recipeBuilder()
                         .inputs(metaitem(input))
                         .fluidInputs(fluid("spin_on_carbon") * 100)
                         .fluidInputs(fluid("ebr_solvent") * 200)
@@ -115,21 +116,26 @@ class Lithography {
                         .cleanroom(CleanroomType.CLEANROOM)
                         .duration(photoresist.timeUsed)
                         .EUt(VA[photoresist.voltageTier])
-                    coatingRecipe.buildAndRegister()
+                        .buildAndRegister()
 
                     Deposition.generateChemicalVaporDepositionRecipe(input + ".hardmasked", input + ".ibarc", 0.25, "silicon_oxynitride")
-                    if (mandrel) {Deposition.generateChemicalVaporDepositionRecipe(input + ".ibarc", input + ".mandrel", 0.25, "silicon")}
-                    input = mandrel ? input + ".mandrel" : input + ".ibarc"
-                    coatingRecipe.buildAndRegister()
+                    Etching.generateReactiveIonEtchingRecipe(input + ".developed", input + ".etched", "silicon_oxynitride", 100)
+                    Etching.generateReactiveIonEtchingRecipe(input + ".etched", product, "spin_on_carbon", 200)
+
+                    if (mandrel) {
+                        Deposition.generateChemicalVaporDepositionRecipe(input + ".ibarc", input + ".mandrel", 0.25, "silicon")
+                    }
+
+                    overrideInput = mandrel ? input + ".mandrel" : input + ".ibarc"
                 }
 
-                if (ibarc) hmds = true; // SiON surfaces are hydrophilic, so HMDS is needed for photoresist adherence.
+                if (photoresist.ibarc) hmds = true; // SiON surfaces are hydrophilic, so HMDS is needed for photoresist adherence.
 
                 // HMDS should be used for application of positive tone resists to hydrophilic surfaces, particularly with exposed silanols,
                 // i.e. SiO2, Si3N4, bare Si, surfaces after CMP. HMDS is not used on metals, over organic BARCs, negative tone resists, SiOCH.
-                photoresist.generateCoatingRecipe(input, hmds)
+                photoresist.generateCoatingRecipe(input, hmds, null, overrideInput)
                 photoresist.generateExposureRecipe(input, nonConsumable)
-                photoresist.generateDevelopmentRecipe(input, product)
+                photoresist.generateDevelopmentRecipe(input, product, null, (photoresist.ibarc ? input + ".developed" : null))
             }
         }
     }
@@ -152,11 +158,11 @@ class Lithography {
         }
     }
 
-    static void generateCoatingRecipe(String input, String photoresistNeeded, boolean hmds, boolean ibarc = false) {
+    static void generateCoatingRecipe(String input, String photoresistNeeded, boolean hmds, boolean mandrel = false) {
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
-                if (ibarc) {
-                    def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
+                if (photoresist.ibarc) {
+                    RESIST_PROCESSOR.recipeBuilder()
                         .inputs(metaitem(input))
                         .fluidInputs(fluid("spin_on_carbon") * 100)
                         .fluidInputs(fluid("ebr_solvent") * 200)
@@ -164,16 +170,23 @@ class Lithography {
                         .cleanroom(CleanroomType.CLEANROOM)
                         .duration(photoresist.timeUsed)
                         .EUt(VA[photoresist.voltageTier])
-                    coatingRecipe.buildAndRegister()
+                        .buildAndRegister()
 
                     Deposition.generateChemicalVaporDepositionRecipe(input + ".hardmasked", input + ".ibarc", 0.25, "silicon_oxynitride")
-                    input = input + ".ibarc"
-                    coatingRecipe.buildAndRegister()
+                    Etching.generateReactiveIonEtchingRecipe(input + ".developed", input + ".etched", "silicon_oxynitride", 100)
+                    Etching.generateReactiveIonEtchingRecipe(input + ".etched", product, "spin_on_carbon", 200)
+
+                    if (mandrel) {
+                        Deposition.generateChemicalVaporDepositionRecipe(input + ".ibarc", input + ".mandrel", 0.25, "silicon")
+                    }
+
+                    overrideInput = mandrel ? input + ".mandrel" : input + ".ibarc"
+
                 }
 
-                if (ibarc) hmds = true; // SiON surfaces are hydrophilic, so HMDS is needed for photoresist adherence.
+                if (photoresist.ibarc) hmds = true; // SiON surfaces are hydrophilic, so HMDS is needed for photoresist adherence.
 
-                photoresist.generateCoatingRecipe(input, hmds)
+                photoresist.generateCoatingRecipe(input, hmds, null, overrideInput)
             }
         }
     }
