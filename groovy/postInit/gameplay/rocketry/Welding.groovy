@@ -2,44 +2,31 @@ import static gregtech.api.GTValues.*
 import static prePostInit.Recipemaps.*
 
 MIXER.recipeBuilder()
-    .inputs(ore('dustTungsten') * 11)
+    .inputs(ore('dustTungstenTrioxide') * 44)
     .inputs(ore('dustTinyThoriumDioxide') * 2)
-    .inputs(ore('dustTinyRhenium'))
-    .outputs(metaitem('dustThoriatedTungstenMixture') * 12)
+    .inputs(ore('dustRheniumHeptoxide') * 1)
+    .outputs(metaitem('dustThoriatedTungstenMixture') * 45)
     .EUt(VA[EV])
     .duration(20)
     .buildAndRegister()
 
-REACTION_FURNACE.recipeBuilder()
-    .inputs(ore('dustThoriatedTungstenMixture') * 2)
-    .fluidInputs(fluid('hydrogen') * 16000)
-    .outputs(metaitem('dustThoriatedTungsten') * 2)
+
+HOT_ISOSTATIC_PRESS.recipeBuilder()
+    .notConsumable(metaitem('shape.mold.rod'))
+    .inputs(ore('dustSmallThoriatedTungstenMixture') * 2)
+    .fluidOutputs(fluid('hydrogen') * 754) // 0.7539 mol
+    .outputs(metaitem('stickThoriatedTungsten'))
     .EUt(VA[EV])
     .duration(80)
     .buildAndRegister()
 
-HOT_ISOSTATIC_PRESS.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.ingot'))
-    .inputs(ore('dustThoriatedTungsten'))
-    .outputs(metaitem('ingotThoriatedTungsten'))
-    .EUt(VA[EV])
-    .duration(15)
-    .buildAndRegister()
-
-SINTERING_OVEN.recipeBuilder() // represents DC sintering and rotary forging
-    .notConsumable(metaitem('shape.mold.rod'))
-    .inputs(ore('ingotThoriatedTungsten'))
-    .outputs(metaitem('stickThoriatedTungsten'))
-    .EUt(VA[EV])
-    .duration(50)
-    .buildAndRegister()
-
-ELECTROLYZER.recipeBuilder() // electroplating
-    .notConsumable(ore('stickStainlessSteel'))
+ELECTROLYTIC_CELL.recipeBuilder() // electropolishing
+    .notConsumable(ore('stickTungsten'))
     .inputs(ore('stickThoriatedTungsten'))
     .fluidInputs(fluid('diluted_sodium_hydroxide_solution') * 1000)
+    .fluidOutputs(fluid('wastewater') * 1000) // contains trace WO3 et al, and I'm not bothering with figuring this out
     .outputs(item('susy:meta_item', 12))
-    .EUt(VA[LV])
-    .duration(10)
+    .EUt(VA[MV])
+    .duration(60)
     .buildAndRegister()
 

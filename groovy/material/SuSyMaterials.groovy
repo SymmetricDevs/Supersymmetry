@@ -1084,6 +1084,7 @@ class SuSyMaterials {
     public static Material CopperIIChloride
     public static Material SiliconCarbide
     public static Material TungstenTrioxide
+    public static Material RheniumHeptoxide
     public static Material Alumina
     public static Material BoronCarbide
     public static Material SilverChloride
