@@ -564,7 +564,7 @@ class SecondDegreeMaterials {
 
         AlluvialPalladiumMotherLiquor = new Material.Builder(13089, SuSyUtility.susyId('alluvial_palladium_mother_liquor'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(AmmoniumChloride * 2, ZincChloride, HydrogenChloride * 4, Water * 16)
+                .components(ZincChloride, HydrogenChloride * 6, Water * 16)
                 .colorAverage()
                 .build()
 
