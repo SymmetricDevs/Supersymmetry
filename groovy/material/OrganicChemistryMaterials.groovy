@@ -3367,7 +3367,7 @@ class OrganicChemistryMaterials {
 
         PetroleumResin = new Material.Builder(15528, SuSyUtility.susyId('petroleum_resin'))
                 .polymer(1)
-                .iconSet(ROUGH)
+                .iconSet(DULL)
                 .color(0xA8B277)
                 .build()
 
@@ -3375,7 +3375,7 @@ class OrganicChemistryMaterials {
 
         HydrogenatedPetroleumResin = new Material.Builder(15529, SuSyUtility.susyId('hydrogenated_petroleum_resin'))
                 .polymer(1)
-                .iconSet(DIAMOND)
+                .iconSet(SHINY)
                 .color(0xA8B277)
                 .build()
 
