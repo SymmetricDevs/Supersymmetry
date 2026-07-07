@@ -3349,7 +3349,10 @@ class UnknownCompositionMaterials {
                 .color(0x5B5B5B)
                 .build()
 
-        // FREE ID: 4730
+        Ink = new Material.Builder(4730, SuSyUtility.susyId('ink'))
+                .liquid()
+                .color(0x796571)
+                .build()
 
         /*VanadiumElectrolyteSlurry = new Material.Builder(4731, SuSyUtility.susyId('vanadium_electrolyte_slurry'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))

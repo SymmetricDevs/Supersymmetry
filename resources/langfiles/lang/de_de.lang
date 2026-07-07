@@ -894,6 +894,8 @@ susy.material.lead_ii_hydroxide=Blei(II)-hydroxid
 susy.material.sodium_molybdate_solution=Natriummolybdatlösung
 susy.material.zinc_oxide=Zinkoxid
 
+susy.material.ink=Tinte
+
 # Thermodynamics
 
 susy.material.hot_hp_hydrogen=Heißer Hochdruckwasserstoff
@@ -2673,7 +2675,7 @@ metaitem.turbojet.small.name=Kleines Turbinen-Triebwerk
 metaitem.wing_panel.fiber_reinforced_epoxy.name=Glasfaserverstärkte Epoxidharz (GFEP) Flügelplatte
 metaitem.wing.small.name=Leichter Flügel
 
-metaitem.ink.name=Tinte
+metaitem.ink_bottle.name=Tintenflasche
 
 # Vanilla MC
 tile.hellsand.name=Mineralienreicher Sand

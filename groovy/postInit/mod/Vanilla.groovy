@@ -384,7 +384,7 @@ crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
 */
 
 crafting.addShapeless(item("minecraft:writable_book"), [
-        item("minecraft:book"), item("minecraft:feather"), metaitem("ink"), metaitem("ink"), metaitem("ink")
+        item("minecraft:book"), item("minecraft:feather"), metaitem("ink_bottle"), metaitem("ink_bottle"), metaitem("ink_bottle")
 ])
 
 //GT Machines recipes
@@ -519,12 +519,21 @@ mods.gregtech.assembler.recipeBuilder()
 mods.gregtech.assembler.recipeBuilder()
     .inputs(item("minecraft:book"))
     .inputs(item("minecraft:feather"))
-    .inputs(metaitem("ink") * 3)
+    .inputs(metaitem("ink_bottle") * 3)
     .outputs(item("minecraft:writable_book"))
     .duration(10)
     .EUt(VA[ULV])
     .buildAndRegister()
 
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item("minecraft:book"))
+    .inputs(item("minecraft:feather"))
+    .inputs(item("minecraft:glass_bottle") * 3)
+    .fluidInputs(fluid("ink") * 150)
+    .outputs(item("minecraft:writable_book"))
+    .duration(20)
+    .EUt(VA[ULV])
+    .buildAndRegister()
 
 //Autoclave
 

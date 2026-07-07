@@ -396,19 +396,49 @@ crafting.addShaped("pig_iron_tiny_pile_manual", metaitem('dustTinyPigIron'), [
     [null, metaitem('nuggetPigIron')]
 ]);
 
-// Ink*1
-crafting.addShapeless(metaitem("ink"), [
+// Ink Bottle * 1
+crafting.addShapeless(metaitem("ink_bottle"), [
         item("minecraft:glass_bottle"), item("minecraft:dye", 0)
 ])
 
-// Ink*3
 mods.gregtech.canner.recipeBuilder()
-        .inputs(item("minecraft:glass_bottle") * 3)
-        .inputs(item("minecraft:dye", 0))
-        .outputs(metaitem("ink") * 3)
+        .inputs(item("minecraft:glass_bottle"))
+        .fluidInputs(fluid("ink") * 50)
+        .outputs(metaitem("ink_bottle"))
         .duration(30)
         .EUt(VA[ULV])
         .buildAndRegister()
+
+// Ink * 50L
+
+mods.gregtech.canner.recipeBuilder()
+        .inputs(metaitem("ink_bottle"))
+        .outputs(item("minecraft:glass_bottle"))
+        .fluidOutputs(fluid("ink") * 50)
+        .duration(30)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+// Ink * 150L
+
+mods.gregtech.extractor.recipeBuilder()
+    .inputs(item("minecraft:dye", 0))
+    .fluidOutputs(fluid("ink") * 150)
+    .duration(40)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+// Chemical Black Dye * 288L
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(metaitem("dustSalt") * 2)
+    .fluidInputs(fluid("ink") * 150)
+    .fluidInputs(fluid("sulfuric_acid") * 250)
+    .fluidOutputs(fluid("dye_black") * 288)
+    .duration(160)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 
 //Steam Piston
 
