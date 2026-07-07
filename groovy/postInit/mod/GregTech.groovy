@@ -396,6 +396,20 @@ crafting.addShaped("pig_iron_tiny_pile_manual", metaitem('dustTinyPigIron'), [
     [null, metaitem('nuggetPigIron')]
 ]);
 
+// Ink*1
+crafting.addShapeless(metaitem("ink"), [
+        item("minecraft:glass_bottle"), item("minecraft:dye", 0)
+])
+
+// Ink*3
+mods.gregtech.canner.recipeBuilder()
+        .inputs(item("minecraft:glass_bottle") * 3)
+        .inputs(item("minecraft:dye", 0))
+        .outputs(metaitem("ink") * 3)
+        .duration(30)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
 //Steam Piston
 
 RecyclingHelper.addShaped("gregtech:steam_piston", metaitem('steam.piston'), [

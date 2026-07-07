@@ -383,6 +383,10 @@ crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
 ])
 */
 
+crafting.addShapeless(item("minecraft:writable_book"), [
+        item("minecraft:book"), item("minecraft:feather"), metaitem("ink"), metaitem("ink"), metaitem("ink")
+])
+
 //GT Machines recipes
 //Assembler
 
@@ -510,6 +514,17 @@ mods.gregtech.assembler.recipeBuilder()
     .buildAndRegister()
 // Activator Rail * 12
 //mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
+
+// Book and Quill * 1
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item("minecraft:book"))
+    .inputs(item("minecraft:feather"))
+    .inputs(metaitem("ink") * 3)
+    .outputs(item("minecraft:writable_book"))
+    .duration(10)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 
 //Autoclave
 

@@ -2673,7 +2673,7 @@ metaitem.turbojet.small.name=Kleines Turbinen-Triebwerk
 metaitem.wing_panel.fiber_reinforced_epoxy.name=Glasfaserverstärkte Epoxidharz (GFEP) Flügelplatte
 metaitem.wing.small.name=Leichter Flügel
 
-metaitem.ink.name = Tinte
+metaitem.ink.name=Tinte
 
 # Vanilla MC
 tile.hellsand.name=Mineralienreicher Sand
