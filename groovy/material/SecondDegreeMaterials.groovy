@@ -1179,5 +1179,11 @@ class SecondDegreeMaterials {
                 .iconSet(LAPIS)
                 .build();
 
+        SGlass = new Material.Builder(13194, SuSyUtility.susyId('s_glass'))
+                .dust().liquid(new FluidBuilder().temperature(1800))
+                .color(0xC49FAD)
+                .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
+                .iconSet(BRIGHT)
+                .build();
     }
 }

@@ -3381,5 +3381,11 @@ class OrganicChemistryMaterials {
 
         HydrogenatedPetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true) //should there be more hydrogen here?
 
+        FiberReinforcedNylon = new Material.Builder(15530, SuSyUtility.susyId('fiber_reinforced_nylon'))
+                .polymer(2)
+                .color(0x4C3E44)
+                .flags(GENERATE_PLATE, GENERATE_ROTOR, NO_UNIFICATION)
+                .build()
+
     }
 }
