@@ -475,6 +475,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10100, "turbojet.small")
         addItem(10101, "wing_panel.fiber_reinforced_epoxy")
         addItem(10102, "wing.small")
+        addItem(10103, "ink")
 
         // Dimension Display items 10200-10250
         addItem(10200, 'display.overworld')

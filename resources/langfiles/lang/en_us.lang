@@ -3384,6 +3384,8 @@ metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
 metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel Cell (PEMFC)
 
+metaitem.ink.name = Ink
+
 ## Dimension Display Items
 metaitem.display.overworld.name=Overworld
 metaitem.display.nether.name=Nether
