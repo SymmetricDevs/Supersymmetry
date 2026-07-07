@@ -188,9 +188,9 @@ ASSEMBLER.recipeBuilder()
 
 
 crafting.addShaped("susy:drone_basket", metaitem('susy:drone_deposit_basket'), [
-        [ore('plateMagnalium'), metaitem('wireless'), ore('plateMagnalium')],
+        [ore('platePlastic'), metaitem('wireless'), ore('platePlastic')],
         [ore('stickLongMagnalium'), metaitem('screwMagnalium'), ore('stickLongMagnalium')],
-        [ore('plateMagnalium'), ore('stickLongMagnalium'), ore('plateMagnalium')]
+        [ore('platePlastic'), ore('stickLongMagnalium'), ore('platePlastic')]
 ])
 
 ASSEMBLER.recipeBuilder()
