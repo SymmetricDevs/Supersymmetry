@@ -643,6 +643,14 @@ mods.gregtech.mixer.recipeBuilder()
         .EUt(VA[ULV])
         .buildAndRegister()
 
+mods.gregtech.mixer.recipeBuilder()
+        .inputs(ore('dustSmallQuicklime'))
+        .fluidInputs(fluid('sugary_water') * 2500)
+        .fluidOutputs(fluid('clarified_sugary_water') * 2500)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
 crafting.replaceShaped('minecraft:cobblestone_slab', item('minecraft:stone_slab', 3) * 6, [
         [null, null, null],
         [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
