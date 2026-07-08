@@ -1702,7 +1702,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .inputs(metaitem('electric.motor.mv') * 2)
     .inputs(metaitem('rotorIron') * 4)
-    .inputs(metaitem('pump.module.mv') * 4)
+    .inputs(metaitem('electric.pump.mv') * 4)
     .inputs(ore('circuitMv') * 4)
     .fluidInputs(fluid('lubricant') * 4000)
     .outputs(metaitem('susy:attrition_scrubber'))
@@ -1713,14 +1713,14 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .circuitMeta(4)
     .inputs(ore('plateAluminium') * 4)
-    .inputs(metaitem('gearAluminium') * 2)
-    .inputs(metaitem('frameAluminium') * 1)
-    .outputs(item('susy:aluminium_gearbox'))
+    .inputs(ore('gearAluminium') * 2)
+    .inputs(ore('frameGtAluminium') * 1)
+    .outputs(item('susy:susy_multiblock_casing', 13))
     .EUt(VA[LV])
     .duration(50)
     .buildAndRegister()
 
-crafting.addShaped(metaitem('susy:aluminium_gearbox'),
+crafting.addShaped(item('susy:susy_multiblock_casing', 13),
         [[ore('plateAluminium'),ore('craftingToolHardHammer'),ore('plateAluminium')],
-         [ore('gearAluminium'), ore('frameAluminium'), ore('gearAluminium')],
+         [ore('gearAluminium'), ore('frameGtAluminium'), ore('gearAluminium')],
          [ore('plateAluminium'),ore('craftingToolWrench'),ore('plateAluminium')]])
