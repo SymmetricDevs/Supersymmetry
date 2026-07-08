@@ -387,6 +387,38 @@ def alluvial_tier_4 = [
     'susy:resource_block:6' : 1000
 ]
 
+def evaporite_tier_1 = [
+    //T1
+    'susy:resource_block:3' : 2000,
+    'susy:resource_block:4' : 2000,
+    'susy:resource_block:5' : 2000,
+    'susy:resource_block:6' : 2000
+]
+
+def evaporite_tier_2 = [
+    //T1 but better
+    'susy:resource_block:3' : 3000,
+    'susy:resource_block:4' : 3000,
+    'susy:resource_block:5' : 3000,
+    'susy:resource_block:6' : 3000
+]
+
+def evaporite_tier_3 = [
+    //T1 but better
+    'susy:resource_block:3' : 4000,
+    'susy:resource_block:4' : 4000,
+    'susy:resource_block:5' : 4000,
+    'susy:resource_block:6' : 4000
+]
+
+def evaporite_tier_4 = [
+    //T1 but better
+    'susy:resource_block:3' : 5000,
+    'susy:resource_block:4' : 5000,
+    'susy:resource_block:5' : 5000,
+    'susy:resource_block:6' : 5000
+]
+
 //FORMAT: BASE ROCK, WASHING FLUID, WASTE FLUID, ORE OUTPUT LISTS, STARTING VOLTAGE TIER
 
 def rock_orthomagmatic = new OreRock('rock.orthomagmatic', 'water', 'water', [orthomagmatic_tier_1, orthomagmatic_tier_2, orthomagmatic_tier_3, orthomagmatic_tier_4], LV)
@@ -395,6 +427,7 @@ def rock_metamorphic = new OreRock('rock.metamorphic', 'water', 'water', [metamo
 def rock_magmatic_hydrothermal = new OreRock('rock.magmatic_hydrothermal', 'water', 'water', [magmatic_hydrothermal_tier_1, magmatic_hydrothermal_tier_2, magmatic_hydrothermal_tier_3, magmatic_hydrothermal_tier_4], LV)
 def rock_hydrothermal = new OreRock('rock.hydrothermal', 'water', 'water', [hydrothermal_tier_1, hydrothermal_tier_2, hydrothermal_tier_3, hydrothermal_tier_4], LV)
 def rock_alluvial = new OreRock('rock.alluvial', 'water', 'water', [alluvial_tier_1, alluvial_tier_2, alluvial_tier_3, alluvial_tier_4], LV)
+def rock_evaporite = new OreRock('rock.evaporite', 'water', 'water', [evaporite_tier_1, evaporite_tier_2, evaporite_tier_3, evaporite_tier_4], LV)
 
 def rocks = [
         rock_orthomagmatic,
@@ -403,6 +436,7 @@ def rocks = [
         rock_magmatic_hydrothermal,
         rock_hydrothermal,
         rock_alluvial
+        rock_evaporite
 ]
 
 for (rock in rocks) {

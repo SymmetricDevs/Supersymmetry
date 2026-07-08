@@ -47,7 +47,7 @@ MINING_DRILL.recipeBuilder()
 
 MINING_DRILL.recipeBuilder()
         .notConsumable(item('susy:deposit_block', 7))
-        .outputs(metaitem('rock.magmatic_hydrothermal'))
+        .outputs(metaitem('rock.evaporite'))
         .duration(20)
         .EUt(VA[LV])
         .buildAndRegister()
