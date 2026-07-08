@@ -1694,3 +1694,33 @@ crafting.addShaped(metaitem('susy:electric_discharge_machine'),
         [[ore('circuitEv'),metaitem('plate.power_integrated_circuit'),ore('circuitEv')],
          [metaitem('cableGtOctalSilver'), metaitem('hull.ev'), metaitem('cableGtOctalSilver')],
          [metaitem('electric.motor.hv'),metaitem('rotorTitanium'),metaitem('electric.pump.hv')]])
+
+//Attrition Scrubber
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(13)
+    .inputs(metaitem('hull.mv'))
+    .inputs(metaitem('electric.motor.mv') * 2)
+    .inputs(metaitem('rotorIron') * 4)
+    .inputs(metaitem('pump.module.mv') * 4)
+    .inputs(ore('circuitMv') * 4)
+    .fluidInputs(fluid('lubricant') * 4000)
+    .outputs(metaitem('susy:attrition_scrubber'))
+    .EUt(VA[MV])
+    .duration(600)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(4)
+    .inputs(ore('plateAluminium') * 4)
+    .inputs(metaitem('gearAluminium') * 2)
+    .inputs(metaitem('frameAluminium') * 1)
+    .outputs(item('susy:aluminium_gearbox'))
+    .EUt(VA[LV])
+    .duration(50)
+    .buildAndRegister()
+
+crafting.addShaped(metaitem('susy:aluminium_gearbox'),
+        [[ore('plateAluminium'),ore('craftingToolHardHammer'),ore('plateAluminium')],
+         [ore('gearAluminium'), ore('frameAluminium'), ore('gearAluminium')],
+         [ore('plateAluminium'),ore('craftingToolWrench'),ore('plateAluminium')]])
