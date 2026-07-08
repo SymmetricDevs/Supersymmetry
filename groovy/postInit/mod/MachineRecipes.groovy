@@ -1905,7 +1905,7 @@ ASSEMBLER.recipeBuilder()
 RecyclingHelper.addShaped('susy.machine.building_cleanroom', metaitem('susy:building_cleanroom'), [
         [metaitem('item_filter'), metaitem('item_filter'), metaitem('item_filter')],
         [metaitem('rotorTitanium'), metaitem('hull.ev'), metaitem('rotorTitanium')],
-        [metaitem('electric.motor.ev'), ore('circuitEV'), metaitem('electric.motor.ev')]
+        [metaitem('electric.motor.ev'), ore('circuitEv'), metaitem('electric.motor.ev')]
 ])
 
 
