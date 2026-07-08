@@ -830,6 +830,7 @@ class SuSyMaterials {
     public static Material NanoparticleModifiedNafionDispersion
     public static Material NanoparticleModifiedNafion
     public static Material ExpandableGraphite
+    public static Material Ink
 
 
     // Petrochem Materials

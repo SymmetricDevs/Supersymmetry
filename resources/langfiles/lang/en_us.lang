@@ -983,6 +983,8 @@ susy.material.actinide_separation_mixture=Actinide Separation Mixture
 susy.material.reextracted_reprocessed_uranium_extract=Reextracted Reprocessed Uranium Extract
 susy.material.plutonium_reduction_solution=Plutonium Reduction Solution
 
+susy.material.ink=Ink
+
 # Thermodynamics
 
 susy.material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
@@ -3384,6 +3386,8 @@ metaitem.circuit_board.fr4.tooltip=An Advanced Circuit Board/nDouble-sided FR-4 
 metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
 metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel Cell (PEMFC)
+
+metaitem.ink_bottle.name=Ink Bottle
 
 ## Dimension Display Items
 metaitem.display.overworld.name=Overworld
