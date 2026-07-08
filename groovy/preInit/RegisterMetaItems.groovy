@@ -52,9 +52,16 @@ def registerCMOSMetaitems(String name) {
         registerCircuitMetaitems(name + ".beol_" + wordsFromNumber(i), 8, 1, false)
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
         toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
+        if (i <= 6) { // Layers 1-6 use trilayer (ibarc) resist, which generates SOC/SiON hardmask intermediates
+            toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.hardmasked")
+            toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.ibarc")
+            toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.developed")
+            toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.etched")
+            toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_three.ashed") // SOC ash intermediate before the dry SiON removal
+        }
     }
     registerCircuitMetaitems(name, 159, 147)
-    def ashed_steps = [6, 13, 16, 27, 31, 35, 41, 53, 70, 156]
+    def ashed_steps = [6, 13, 16, 27, 31, 35, 41, 53, 61, 70, 156]
     for (step in ashed_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
     }
@@ -63,6 +70,14 @@ def registerCMOSMetaitems(String name) {
     for (step in photoresist_steps) {
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
         toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
+    }
+
+    def trilayer_steps = [23, 59] // Gate and workfunction-metal masks use trilayer (ibarc) resist (.coated/.exposed already covered above)
+    for (step in trilayer_steps) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".hardmasked")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ibarc")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".developed")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".etched")
     }
 }
 
@@ -680,9 +695,9 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(8043, "wafer.nmos.step_one") // the suffering begins
         // its cmos time baby
-        addItem(8044, "wafer.cmos.step_one")
-        addItem(8045, "wafer.cmos.step_two")
-        addItem(8046, "wafer.cmos.step_two.coated")
+        addItem(8044, "wafer.cmos_base.step_one")
+        addItem(8045, "wafer.cmos_base.step_two")
+        addItem(8046, "wafer.cmos_base.step_two.coated")
         addItem(8047, "wafer.cmos_cpu.step_two.exposed")
         addItem(8048, "wafer.cmos_gpu.step_two.exposed")
 

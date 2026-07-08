@@ -13,6 +13,47 @@ import globals.semiconductors.Mechanicals
 
 // Lookup table for int to string conversion
 
+// Damascene copper BEOL
+
+def generateBEOLProcess(String componentName, String resist, String starter, int beol_step, int iterations, boolean split = false) {
+    def numberTab = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    for (l in 1..iterations) {
+        String input
+        int beol_name = beol_step + l - 1
+        if (l == 1) input = starter
+        else input = 'wafer.' + componentName + '.beol_' + numberTab[beol_name - 1] + '.step_eight'
+
+        if (split && l == 1) {
+            Lithography.generateSplitPhotolithographyRecipes(input, 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_two', resist, 'mask_set.' + componentName, false) // Define via and trench pattern for each metal layer
+        } else {
+            Deposition.generateChemicalVaporDepositionRecipe(input, 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_one', 2.0, 'silicon_oxycarbide_hydride') // Deposit low-k dielectric
+            Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_two', resist, 'mask_set.' + componentName, false) // Define via and trench pattern for each metal layer
+        }
+        
+        Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_two', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_three', 'silicon_oxycarbide_hydride', 400) // Etch vias and trenches
+
+        if (resist.endsWith('_trilayer')) {
+            Lithography.generateSOCStrippingRecipes('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_three', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_four', 1, false) // Trilayer leaves an SOC/SiON hardmask rather than conventional resist
+        } else {
+            Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_three', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_four', 2, false, (resist == 'novolac_resist'))
+        }
+
+        Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_four', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_five', ['tantalum_nitride' : 50]) // Barrier layer deposition for copper interconnects
+        Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_five', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_six', ['tantalum' : 100, 'copper' : 100]) // Adhesion layer for copper, seed layer
+
+        ELECTROLYTIC_CELL.recipeBuilder()
+            .notConsumable(fluid('copper_superfill_electrolyte') * 1000)
+            .inputs(metaitem('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_six'))
+            .inputs(ore('foilPhosphorizedCopper'))
+            .outputs(metaitem('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_seven'))
+            .EUt(VA[MV])
+            .duration(400)
+            .buildAndRegister()
+
+        Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_seven', 'wafer.' + componentName + '.beol_' + numberTab[beol_name] + '.step_eight', 'basic_cmp_slurry', 400, HV) // CMP down to ILD level
+    }
+}
+
 // Superfill copper electrolyte
 
 BLENDER.recipeBuilder()
@@ -29,16 +70,16 @@ BLENDER.recipeBuilder()
 
 // CMOS 45nm process fabrication chain
 
-Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.p_doped', 'wafer.cmos.step_one', 400, true) // Protecting layer for P/NMOS well formation
-Deposition.generateChemicalVaporDepositionRecipe('wafer.cmos.step_one', 'wafer.cmos.step_two', 2.0, 'silicon_nitride.silane') // CMP stop layer for STI formation
-Lithography.generateCoatingRecipe('wafer.cmos.step_two', 'methacrylate_resist', true) // Coat with photoresist for STI patterning
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.p_doped', 'wafer.cmos_base.step_one', 400, true) // Protecting layer for P/NMOS well formation
+Deposition.generateChemicalVaporDepositionRecipe('wafer.cmos_base.step_one', 'wafer.cmos_base.step_two', 2.0, 'silicon_nitride.silane') // CMP stop layer for STI formation
+Lithography.generateCoatingRecipe('wafer.cmos_base.step_two', 'methacrylate_resist', true) // Coat with photoresist for STI patterning
 
 def generateCMOSFabrication(String componentName) {
     def numberTab = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'] // define it here since otherwise it breaks??
     // FEOL
     
     // Shallow trench isolation
-    Lithography.generateSplitPhotolithographyRecipes('wafer.cmos.step_two', 'wafer.' + componentName + '.step_two', 'wafer.' + componentName + '.step_three', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define STI pattern
+    Lithography.generateSplitPhotolithographyRecipes('wafer.cmos_base.step_two', 'wafer.' + componentName + '.step_two', 'wafer.' + componentName + '.step_three', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define STI pattern
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_three', 'wafer.' + componentName + '.step_four', 'silicon_nitride', 400) // Etch into silicon to form trenches
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_four', 'wafer.' + componentName + '.step_five', 'silicon_dioxide', 400)
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 'silicon', 400)
@@ -65,11 +106,11 @@ def generateCMOSFabrication(String componentName) {
     Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_twenty', 'wafer.' + componentName + '.step_twenty_one', 0.1, 'hafnium_dioxide') // Gate oxide deposition
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_twenty_one', 'wafer.' + componentName + '.step_twenty_two', 3.0, 'silicon') // Grow dummy gate
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_twenty_two', 'wafer.' + componentName + '.step_twenty_three', 1.0, 'silicon_nitride.silane') // Hard mask layer for dummy gate
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define gate pattern FIXME: change to use ibarc.
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty_three', 'wafer.' + componentName + '.step_twenty_four', 'methacrylate_resist_trilayer', 'mask_set.' + componentName, true) // Define gate pattern
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twenty_four', 'wafer.' + componentName + '.step_twenty_five', 'silicon_nitride', 400)
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twenty_five', 'wafer.' + componentName + '.step_twenty_six', 'silicon', 400)
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_twenty_six', 'wafer.' + componentName + '.step_twenty_seven', 'hafnium_dioxide', 400)
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_twenty_seven', 'wafer.' + componentName + '.step_twenty_eight', 1, true)
+    Lithography.generateSOCStrippingRecipes('wafer.' + componentName + '.step_twenty_seven', 'wafer.' + componentName + '.step_twenty_eight', 1, true)
 
     // Halo and extension implantation (NMOS)
     Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_twenty_eight', 'wafer.' + componentName + '.step_twenty_nine', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define source/drain pattern for NMOS to form halo and extension implants
@@ -115,9 +156,9 @@ def generateCMOSFabrication(String componentName) {
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_fifty_six', 'wafer.' + componentName + '.step_fifty_seven', 'silicon_nitride', 400, false) // Etch hardmask
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_fifty_seven', 'wafer.' + componentName + '.step_fifty_eight', 'silicon', 400, true) // TMAH etch of dummy gate
     Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_fifty_eight', 'wafer.' + componentName + '.step_fifty_nine', 0.1, 'titanium_nitride') // Deposit PMOS workfunction metal
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_fifty_nine', 'wafer.' + componentName + '.step_sixty', 'methacrylate_resist', 'mask_set.' + componentName, true) // Mask PMOS areas to implant NMOS workfunction metal FIXME: change to use ibarc.
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_fifty_nine', 'wafer.' + componentName + '.step_sixty', 'methacrylate_resist_trilayer', 'mask_set.' + componentName, true) // Mask PMOS areas to implant NMOS workfunction metal
     Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_sixty', 'wafer.' + componentName + '.step_sixty_one', 'titanium_nitride', 400, false) // Etch titanium nitride from PMOS areas
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_sixty_one', 'wafer.' + componentName + '.step_sixty_two', 1, false)
+    Lithography.generateSOCStrippingRecipes('wafer.' + componentName + '.step_sixty_one', 'wafer.' + componentName + '.step_sixty_two', 1, true)
     Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_sixty_two', 'wafer.' + componentName + '.step_sixty_three', 0.1, 'titanium_aluminide') // Deposit PMOS/NMOS workfunction metal
     Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_sixty_three', 'wafer.' + componentName + '.step_sixty_four', 400, 'aluminium') // Deposit aluminium gate fill
     Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_sixty_four', 'wafer.' + componentName + '.step_sixty_five', 'basic_cmp_slurry', 400, HV) // CMP to planarize down to gate level
@@ -125,40 +166,18 @@ def generateCMOSFabrication(String componentName) {
     // ILD0/Plug formation
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_five', 'wafer.' + componentName + '.step_sixty_six', 2.0, 'silicon_nitride.silane') // Deposit etch stop layer
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_sixty_six', 'wafer.' + componentName + '.step_sixty_seven', 2.0, 'borophosphosilicate_glass') // Deposit interlayer dielectric
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_sixty_seven', 'wafer.' + componentName + '.step_sixty_eight', 'methacrylate_resist', 'mask_set.' + componentName, true) // Define plug pattern FIXME: change to use ibarc.
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_sixty_seven', 'wafer.' + componentName + '.step_sixty_eight', 'methacrylate_resist_trilayer', 'mask_set.' + componentName, true) // Define plug pattern
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_sixty_eight', 'wafer.' + componentName + '.step_sixty_nine', 'borophosphosilicate_glass', 400) // CH3F
     Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.step_sixty_nine', 'wafer.' + componentName + '.step_seventy', 'silicon_nitride', 400) // CH3F
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_seventy', 'wafer.' + componentName + '.step_seventy_one', 1, true)
+    Lithography.generateSOCStrippingRecipes('wafer.' + componentName + '.step_seventy', 'wafer.' + componentName + '.step_seventy_one', 1, false)
     Deposition.generateAtomicLayerDepositionRecipe('wafer.' + componentName + '.step_seventy_one', 'wafer.' + componentName + '.step_seventy_two', 0.1, 'titanium_nitride') // Barrier layer deposition for tungsten plugs
     Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_seventy_two', 'wafer.' + componentName + '.step_seventy_three', 4.0, 'tungsten') // Tungsten hexafluoride plug fill
     Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.step_seventy_three', 'wafer.' + componentName + '.step_seventy_four', 'oxidative_cmp_slurry', 400, HV) // CMP to planarize down to ILD level
 
-    // Damascene copper BEOL, 9 layers
-
-    for (l in 1..9) {
-        String input
-        if (l == 1) input = 'wafer.' + componentName + '.step_seventy_four'
-        else input = 'wafer.' + componentName + '.beol_' + numberTab[l-1] + '.step_eight'
-        def resist = l <= 3 ? 'methacrylate_resist' : (l <= 6 ? 'polyhydroxystyrene_resist' : 'novolac_resist')
-
-        Deposition.generateChemicalVaporDepositionRecipe(input, 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 2.0, 'silicon_oxycarbide_hydride') // Deposit low-k dielectric
-        Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_one', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', resist, 'mask_set.' + componentName, false) // Define via and trench pattern for each metal layer FIXME: change steps 1-3 to use ibarc.
-        Etching.generateReactiveIonEtchingRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_two', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'silicon_oxycarbide_hydride', 400) // Etch vias and trenches
-        Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_three', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 1, false, (resist == 'novolac_resist'))
-        Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_four', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_five', ['tantalum_nitride' : 50]) // Barrier layer deposition for copper interconnects
-        Deposition.generateSputteringRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_five', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_six', ['tantalum' : 100, 'copper' : 100]) // Adhesion layer for copper, seed layer
-
-        ELECTROLYTIC_CELL.recipeBuilder()
-            .notConsumable(fluid('copper_superfill_electrolyte') * 1000)
-            .inputs(metaitem('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_six'))
-            .inputs(ore('foilPhosphorizedCopper'))
-            .outputs(metaitem('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_seven'))
-            .EUt(VA[MV])
-            .duration(400)
-            .buildAndRegister()
-
-        Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.' + componentName + '.beol_' + numberTab[l] + '.step_seven', 'wafer.' + componentName + '.beol_' + numberTab[l] + '.step_eight', 'basic_cmp_slurry', 400, HV) // CMP down to ILD level
-    }
+    // BEOL resist definition
+    generateBEOLProcess(componentName, 'methacrylate_resist_trilayer', 'wafer.' + componentName + '.step_seventy_four', 1, 3)
+    generateBEOLProcess(componentName, 'polyhydroxystyrene_resist_trilayer', 'wafer.' + componentName + '.beol_three.step_eight', 4, 3)
+    generateBEOLProcess(componentName, 'novolac_resist', 'wafer.' + componentName + '.beol_six.step_eight', 7, 3)
 
     // Sealing and final packaging, flip chip.
 
@@ -291,37 +310,49 @@ Etching.generateReactiveIonEtchingRecipe('wafer.bcd_base.step_fifty_seven', 'waf
 
 // Source/drain implantation
 Lithography.generatePhotolithographyRecipes('wafer.bcd_base.step_fifty_eight', 'wafer.bcd_base.step_fifty_nine', 'polyhydroxystyrene_resist', 'mask_set.bcd_base', true) // Define source/drain pattern for LV/MV devices
-Doping.generateIonImplantationRecipes('wafer.bcd_base.step_fifty_nine, 'wafer.bcd_base.step_sixty', 400, 'boron_trifluoride')
+Doping.generateIonImplantationRecipes('wafer.bcd_base.step_fifty_nine', 'wafer.bcd_base.step_sixty', 400, 'boron_trifluoride')
 Lithography.generateResistStrippingRecipes('wafer.bcd_base.step_sixty', 'wafer.bcd_base.step_sixty_one', 1, true)
 Lithography.generatePhotolithographyRecipes('wafer.bcd_base.step_sixty_one', 'wafer.bcd_base.step_sixty_two', 'polyhydroxystyrene_resist', 'mask_set.bcd_base', true) // Define source/drain pattern for LV/MV devices
 Doping.generateIonImplantationRecipes('wafer.bcd_base.step_sixty_two', 'wafer.bcd_base.step_sixty_three', 400, 'phosphine')
 Lithography.generateResistStrippingRecipes('wafer.bcd_base.step_sixty_three', 'wafer.bcd_base.step_sixty_four', 1, true)
 
 // Cobalt salicide process for contact formation
-Deposition.generateSputteringRecipe('wafer.bcd_base.step_sixty_three', 'wafer.bcd_base.step_sixty_four', ['cobalt' : 100]) // Deposit cobalt for silicidation, platinum is added to improve thermal stability of silicide
-Deposition.generateSinteringRecipe('wafer.bcd_base.step_sixty_four', 'wafer.bcd_base.step_sixty_five', 100, MV) // Anneal to form initial Co2Si/CoSi silicide phase for etch resistance
-Etching.generateWetEtchingRecipe('wafer.bcd_base.step_sixty_five', 'wafer.bcd_base.step_sixty_six', 'cobalt_silicide', 100, false) // Etch away unreacted cobalt silicide w/ H3PO4
-Deposition.generateSinteringRecipe('wafer.bcd_base.step_sixty_six', 'wafer.bcd_base.step_sixty_seven', 400, HV) // High temperature anneal to transform Co2Si/CoSi into low resistivity CoSi2
+Deposition.generateSputteringRecipe('wafer.bcd_base.step_sixty_four', 'wafer.bcd_base.step_sixty_five', ['cobalt' : 100]) // Deposit cobalt for silicidation
+Deposition.generateSinteringRecipe('wafer.bcd_base.step_sixty_five', 'wafer.bcd_base.step_sixty_six', 100, MV) // Anneal to form initial Co2Si/CoSi silicide phase for etch resistance
+Etching.generateWetEtchingRecipe('wafer.bcd_base.step_sixty_six', 'wafer.bcd_base.step_sixty_seven', 'cobalt_silicide', 100, false) // Etch away unreacted cobalt silicide w/ H3PO4
+Deposition.generateSinteringRecipe('wafer.bcd_base.step_sixty_seven', 'wafer.bcd_base.step_sixty_eight', 400, HV) // High temperature anneal to transform Co2Si/CoSi into low resistivity CoSi2
 
 // Polysilicon resistor formation
-Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_sixty_seven', 'wafer.bcd_base.step_sixty_eight', 0.1, 'silicon') // Polysilicon resistor deposition
-Doping.generateIonImplantationRecipes('wafer.bcd_base.step_sixty_eight', 'wafer.bcd_base.step_sixty_nine', 100, 'phosphine') // Lightly n-dope polysilicon resistor for low resistance
-Lithography.generatePhotolithographyRecipes('wafer.bcd_base.step_sixty_nine', 'wafer.bcd_base.step_seventy', 'polyhydroxystyrene_resist', 'mask_set.bcd_base', true) // Define polysilicon resistor pattern
-Etching.generateReactiveIonEtchingRecipe('wafer.bcd_base.step_seventy', 'wafer.bcd_base.step_seventy_one', 'silicon', 400) // Etch polysilicon resistors
-Lithography.generateResistStrippingRecipes('wafer.bcd_base.step_seventy_one', 'wafer.bcd_base.step_seventy_two', 1, true)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_sixty_eight', 'wafer.bcd_base.step_sixty_nine', 0.1, 'silicon') // Polysilicon resistor deposition
+Doping.generateIonImplantationRecipes('wafer.bcd_base.step_sixty_nine', 'wafer.bcd_base.step_seventy', 100, 'phosphine') // Lightly n-dope polysilicon resistor for low resistance
+Lithography.generatePhotolithographyRecipes('wafer.bcd_base.step_seventy', 'wafer.bcd_base.step_seventy_one', 'polyhydroxystyrene_resist', 'mask_set.bcd_base', true) // Define polysilicon resistor pattern
+Etching.generateReactiveIonEtchingRecipe('wafer.bcd_base.step_seventy_one', 'wafer.bcd_base.step_seventy_two', 'silicon', 400) // Etch polysilicon resistors
+Lithography.generateResistStrippingRecipes('wafer.bcd_base.step_seventy_two', 'wafer.bcd_base.step_seventy_three', 1, true)
 
 // ILD0/Plug formation
-Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_seventy_two', 'wafer.bcd_base.step_seventy_three', 2.0, 'silicon_nitride.silane') // Deposit etch stop layer
-Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_seventy_three', 'wafer.bcd_base.step_seventy_four', 2.0, 'borophosphosilicate_glass') // Deposit interlayer dielectric
-Lithography.generatePhotolithographyRecipes('wafer.bcd_base.step_seventy_four', 'wafer.bcd_base.step_seventy_five', 'polyhydroxystyrene_resist', 'mask_set.bcd_base', true) // Define plug pattern
-Etching.generateReactiveIonEtchingRecipe('wafer.bcd_base.step_seventy_five', 'wafer.bcd_base.step_seventy_six', 'borophosphosilicate_glass', 400) // CH3F
-Etching.generateReactiveIonEtchingRecipe('wafer.bcd_base.step_seventy_six', 'wafer.bcd_base.step_seventy_seven', 'silicon_nitride', 400) // CH3F
-Lithography.generateResistStrippingRecipes('wafer.bcd_base.step_seventy_seven', 'wafer.bcd_base.step_seventy_eight', 1, true)
-Deposition.generateAtomicLayerDepositionRecipe('wafer.bcd_base.step_seventy_eight', 'wafer.bcd_base.step_seventy_nine', 0.1, 'titanium_nitride') // Barrier layer deposition for tungsten plugs
-Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_seventy_nine', 'wafer.bcd_base.step_eighty', 4.0, 'tungsten') // Tungsten hexafluoride plug fill
-Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.bcd_base.step_eighty', 'wafer.bcd_base.step_eighty_one', 'oxidative_cmp_slurry', 400, HV) // CMP to planarize down to ILD level
+Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_seventy_three', 'wafer.bcd_base.step_seventy_four', 2.0, 'silicon_nitride.silane') // Deposit etch stop layer
+Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_seventy_four', 'wafer.bcd_base.step_seventy_five', 2.0, 'borophosphosilicate_glass') // Deposit interlayer dielectric
+Lithography.generatePhotolithographyRecipes('wafer.bcd_base.step_seventy_five', 'wafer.bcd_base.step_seventy_six', 'polyhydroxystyrene_resist', 'mask_set.bcd_base', true) // Define plug pattern
+Etching.generateReactiveIonEtchingRecipe('wafer.bcd_base.step_seventy_six', 'wafer.bcd_base.step_seventy_seven', 'borophosphosilicate_glass', 400) // CH3F
+Etching.generateReactiveIonEtchingRecipe('wafer.bcd_base.step_seventy_seven', 'wafer.bcd_base.step_seventy_eight', 'silicon_nitride', 400) // CH3F
+Lithography.generateResistStrippingRecipes('wafer.bcd_base.step_seventy_eight', 'wafer.bcd_base.step_seventy_nine', 1, true)
+Deposition.generateAtomicLayerDepositionRecipe('wafer.bcd_base.step_seventy_nine', 'wafer.bcd_base.step_eighty', 0.1, 'titanium_nitride') // Barrier layer deposition for tungsten plugs
+Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_eighty', 'wafer.bcd_base.step_eighty_one', 4.0, 'tungsten') // Tungsten hexafluoride plug fill
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.bcd_base.step_eighty_one', 'wafer.bcd_base.step_eighty_two', 'oxidative_cmp_slurry', 400, HV) // CMP to planarize down to ILD level
 
-// BEOL
+// BEOL/MIM capacitor formation
+
+// Shared metallization layers
+generateBEOLProcess('bcd_base', 'polyhydroxystyrene_resist_trilayer', 'wafer.bcd_base.step_eighty_two', 1, 2)
+generateBEOLProcess('bcd_base', 'novolac_resist', 'wafer.bcd_base.beol_two.step_eight', 3, 1)
+
+// M4 BCD branchpoint
+Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.beol_three.step_eight', 'wafer.bcd_base.beol_four.step_one', 2.0, 'silicon_oxycarbide_hydride')
+Lithography.generateCoatingRecipe('wafer.bcd_base.beol_four.step_one', 'novolac_resist', true)
+
+generateBEOLProcess('bcd_hv', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 1, true)
+generateBEOLProcess('bcd_ev', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 2, true)
+generateBEOLProcess('bcd_iv', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 3, true)
 
 
 */

@@ -202,7 +202,7 @@ class Lithography {
     }
 
     static void generateResistStrippingRecipes(String input, String product, int timeMultiplier, boolean bombarded, boolean solvent = false) {
-        if (solvent) {
+        if (solvent && !bombarded) {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
@@ -230,9 +230,7 @@ class Lithography {
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
-        // The ashing route always needs the water rinse to finish, even when a solvent strip also exists,
-        // otherwise the '.ashed' intermediate is a dead end
-        if (bombarded) {
+        if (bombarded && !solvent) {
             RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(ashed))
                 .fluidInputs(fluid('ultrapure_water') * 100)
@@ -241,10 +239,21 @@ class Lithography {
                 .EUt(VA[HV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
+        } else if (bombarded && solvent) {
+            RESIST_PROCESSOR.recipeBuilder()
+                .inputs(metaitem(ashed))
+                .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
+                .outputs(metaitem(product))
+                .duration(400 * timeMultiplier)
+                .EUt(VA[HV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister()
         }
     }
 
-    static void generateSOCStrippingRecipes(String input, String product, int timeMultiplier) {
+    static void generateSOCStrippingRecipes(String input, String product, int timeMultiplier, boolean wetClear = false) {
+        // Forming-gas (reducing) ash strips the spin-on-carbon hardmask without the carbon depletion an O2 ash
+        // would inflict on carbon-doped low-k dielectric.
         PLASMA_ASHER.recipeBuilder()
             .inputs(metaitem(input))
             .fluidInputs(fluid('forming_gas') * 100)
@@ -254,14 +263,22 @@ class Lithography {
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
-        RESIST_PROCESSOR.recipeBuilder()
-            .inputs(metaitem(input + ".ashed"))
-            .fluidInputs(fluid('ultrapure_hydrofluoric_acid') * 5)
-            .fluidInputs(fluid('ultrapure_water') * 95)
-            .outputs(metaitem(product))
-            .duration(400 * timeMultiplier)
-            .EUt(VA[HV])
-            .cleanroom(CleanroomType.CLEANROOM)
-            .buildAndRegister()
+        if (wetClear) {
+            // Wet HF clears the SiON interlayer but also etches SiOCH, so it is only safe over non-low-k
+            // substrates (e.g. FEOL over silicon dioxide).
+            RESIST_PROCESSOR.recipeBuilder()
+                .inputs(metaitem(input + ".ashed"))
+                .fluidInputs(fluid('ultrapure_hydrofluoric_acid') * 5)
+                .fluidInputs(fluid('ultrapure_water') * 95)
+                .outputs(metaitem(product))
+                .duration(400 * timeMultiplier)
+                .EUt(VA[HV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister()
+        } else {
+            // Over low-k, take the SiON off with an anisotropic dry etch instead: it removes the cap with far
+            // less attack on the exposed SiOCH sidewalls than an isotropic HF bath would.
+            Etching.generateReactiveIonEtchingRecipe(input + ".ashed", product, 'silicon_oxynitride', 100 * timeMultiplier)
+        }
     }
 }
