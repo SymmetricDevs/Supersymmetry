@@ -363,7 +363,7 @@ RecyclingHelper.replaceShaped('gregtech:bronze_primitive_blast_furnace', metaite
 
 RecyclingHelper.addShaped('gregtech:reverberatory_furnace', metaitem('susy:reverberatory_furnace'), [
     [ore('craftingToolHardHammer'), ore('plateWroughtIron'), ore('screwWroughtIron')],
-    [ore('blockGlass'), item('gregtech:metal_casing:1'), ore('stickWroughtIron')],
+    [null, item('gregtech:metal_casing:1'), ore('stickWroughtIron')],
     [ore('craftingToolScrewdriver'), ore('plateWroughtIron'), ore('screwWroughtIron')]
 ])
 
@@ -1375,7 +1375,7 @@ RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillat
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:cobblestone')], null)
 
 MACERATOR.recipeBuilder()
-    .inputs(ore('cobblestone'))
+    .inputs(ore('defaultCobblestone'))
     .outputs(metaitem('dustStone'))
     .duration(98)
     .EUt(VA[ULV])
