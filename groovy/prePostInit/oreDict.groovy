@@ -249,6 +249,20 @@ for (type in StoneVariantBlock.StoneType.values()) {
     OreDictionary.registerOre('stone', variant)
 }
 
+ore('defaultCobblestone').add(ore('cobblestone'))
+
+for (i in 0..11) {
+    ore('defaultCobblestone').remove(item('susy:susy_stone_cobble', i))
+}
+
+// Stone Dust
+for (i in 27200..27207) {
+    ore('dustStone').add(item('gregtech:meta_dust', i))
+}
+
+ore('dustStone').add(metaitem('dustQuartzite'))
+ore('dustStone').add(metaitem('dustSoapstone'))
+
 // Misc Fixes
 ore('stickWood').add(item('minecraft:stick'))
 ore('blockCoalCoke').add(metaitem('blockCoke'))
