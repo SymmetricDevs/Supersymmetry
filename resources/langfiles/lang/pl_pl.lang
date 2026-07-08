@@ -1078,6 +1078,7 @@ item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
 item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
 item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
+item.susy.material.evaporite_deposit.ore=Evaporite Deposite
 
 susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
 susy.material.metamorphic_deposit=Metamorphic Deposit
@@ -1085,6 +1086,7 @@ susy.material.sedimentary_deposit=Sedimentary Deposit
 susy.material.hydrothermal_deposit=Hydrothermal Deposit
 susy.material.alluvial_deposit=Alluvial Deposit
 susy.material.magmatic_hydrothermal_deposit=Magmatic Hydrothermal Deposit
+susy.material.evaporite_deposit=Evaporite Deposit
 
 susy.material.corundum=Corundum
 susy.material.tourmaline=Tourmaline
@@ -1914,6 +1916,7 @@ metaitem.rock.magmatic_hydrothermal.name=Magmatic Hydrothermal Rock
 metaitem.rock.sedimentary.name=Sedimentary Rock
 metaitem.rock.hydrothermal.name=Hydrothermal Rock
 metaitem.rock.alluvial.name=Alluvial Rock
+metaitem.rock.evaporite.name=Evaporite Rock
 metaitem.cement.clinker.name=Cement Clinker
 metaitem.hot.cement.clinker.name=Hot Cement Clinker
 metaitem.cement.dust.name=Cement Dust
