@@ -435,7 +435,7 @@ def rocks = [
         rock_sedimentary,
         rock_magmatic_hydrothermal,
         rock_hydrothermal,
-        rock_alluvial
+        rock_alluvial,
         rock_evaporite
 ]
 
