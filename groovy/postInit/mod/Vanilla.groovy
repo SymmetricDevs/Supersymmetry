@@ -535,6 +535,16 @@ mods.gregtech.assembler.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister()
 
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item("minecraft:book"))
+    .inputs(item("minecraft:feather"))
+    .inputs(item("minecraft:glass_bottle") * 3)
+    .fluidInputs(fluid("dye_black") * 150)
+    .outputs(item("minecraft:writable_book"))
+    .duration(20)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 //Autoclave
 
 mods.gregtech.autoclave.recipeBuilder()
