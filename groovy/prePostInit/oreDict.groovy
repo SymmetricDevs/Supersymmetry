@@ -256,12 +256,19 @@ for (i in 0..11) {
 }
 
 // Stone Dust
-for (i in 27200..27207) {
-    ore('dustStone').add(item('gregtech:meta_dust', i))
-}
 
-ore('dustStone').add(metaitem('dustQuartzite'))
-ore('dustStone').add(metaitem('dustSoapstone'))
+// Tiny Pile of Stone Dust * 9
+mods.gregtech.packer.removeByInput(12, [metaitem('dustStone'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Small  of Stone Dust * 4
+mods.gregtech.packer.removeByInput(12, [metaitem('dustStone'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], null)
+
+def dustIds = [340, 393] + (27200..27207)
+
+dustIds.each { i ->
+    ore('dustStone').add(item('gregtech:meta_dust', i))
+    mods.gregtech.packer.removeByInput(12, [item('gregtech:meta_dust', i), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+    mods.gregtech.packer.removeByInput(12, [item('gregtech:meta_dust', i), metaitem('circuit.integrated').withNbt(['Configuration': 2])], null)
+}
 
 // Misc Fixes
 ore('stickWood').add(item('minecraft:stick'))

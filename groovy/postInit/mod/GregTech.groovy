@@ -1001,6 +1001,34 @@ PACKAGER.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+PACKAGER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(metaitem('dustStone'))
+    .outputs(metaitem('dustSmallStone') * 4)
+    .duration(10)
+    .EUt(12)
+    .buildAndRegister();
+
+PACKAGER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(metaitem('dustStone'))
+    .outputs(metaitem('dustTinyStone') * 9)
+    .duration(10)
+    .EUt(12)
+    .buildAndRegister();
+
+crafting.replaceShaped("gregtech:small_dust_disassembling_stone", metaitem('dustSmallStone') * 4, [
+    [null, metaitem('dustStone'), null],
+    [null, null, null],
+    [null, null, null]
+])
+
+crafting.replaceShaped("gregtech:tiny_dust_disassembling_stone", metaitem('dustTinyStone') * 9, [
+    [metaitem('dustStone'), null, null],
+    [null, null, null],
+    [null, null, null]
+])
+
 RecyclingHelper.removeRecyclingRecipes(metaitem('fluid_filter'))
 
 RecyclingHelper.addShaped('gregtech:fluid_filter_brass', metaitem('fluid_filter'), [
