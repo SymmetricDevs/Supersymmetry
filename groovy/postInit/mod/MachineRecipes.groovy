@@ -1923,7 +1923,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
         .outputs(item('susy:rocket_multiblock_casing', 3)) // Aerospace Gasket
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1931,7 +1931,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
         .outputs(item('susy:rocket_multiblock_casing', 2)) // Vinyl Composite Flooring
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1940,7 +1940,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing')) // Vinyl Ceiling Tile
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1950,7 +1950,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing', 1)) // Ceiling Grid Filter Unit
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1958,8 +1958,11 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('dustPolystyrene') * 9)
         .outputs(item('susy:metallurgy_2', 4)) // Polystyrene Wall
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
+
+// Greenhouse
+
 RecyclingHelper.addShaped("gregtech:greenhouse", metaitem('susy:greenhouse'), [
         [metaitem('sensor.lv'), metaitem('gregtechfoodoption:cover.sprinkler'), metaitem('sensor.lv')],
         [metaitem('robot.arm.lv'), metaitem('hull.lv'), metaitem('robot.arm.lv')],
