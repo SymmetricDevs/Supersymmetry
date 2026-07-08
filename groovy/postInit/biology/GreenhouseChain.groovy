@@ -802,7 +802,6 @@ def registerGreenhouseRecipeBySeed (input, output) {
 
     GREENHOUSE.recipeBuilder()
             .notConsumable(input * 8)
-            .circuitMeta(2)
             .inputs(metaitem('fertilizer') * 2)
             .fluidInputs(fluid('water') * 2000)
             .outputs(input * 24)
@@ -824,7 +823,6 @@ def registerGreenhouseRecipeNoSeed (input) {
 
     GREENHOUSE.recipeBuilder()
             .notConsumable(input * 8)
-            .circuitMeta(2)
             .inputs(metaitem('fertilizer') * 2)
             .fluidInputs(fluid('water') * 2000)
             .outputs(input * 32)
@@ -870,7 +868,6 @@ GREENHOUSE.recipeBuilder()
 
 GREENHOUSE.recipeBuilder()
         .notConsumable(item('minecraft:melon_seeds') * 4)
-        .circuitMeta(2)
         .inputs(metaitem('fertilizer') * 2)
         .fluidInputs(fluid('water') * 2000)
         .outputs(item('minecraft:melon_seeds') * 4)
@@ -891,7 +888,6 @@ GREENHOUSE.recipeBuilder()
 
 GREENHOUSE.recipeBuilder()
         .notConsumable(item('minecraft:pumpkin_seeds') * 4)
-        .circuitMeta(2)
         .inputs(metaitem('fertilizer') * 2)
         .fluidInputs(fluid('water') * 2000)
         .outputs(item('minecraft:pumpkin_seeds') * 4)
