@@ -67,7 +67,7 @@ for (i = 1; i < 16; i++) {
 	
 	//inverted block lamps
 	CHEMICAL_BATH.recipeBuilder()
-		.inputs(item('projectred-illumination:lamp',16))
+		.inputs(item('projectred-illumination:lamp', 16))
 		.fluidInputs(fluid('dye_' + dye_colors[i]) * 18)
 		.outputs(item('projectred-illumination:lamp', 16 + i))
 		.duration(20)

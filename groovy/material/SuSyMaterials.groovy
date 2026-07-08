@@ -1937,13 +1937,13 @@ class SuSyMaterials {
     public static Material RawInvestmentCastingMixture
     public static Material SilicaCoatedInvestmentCastingMixture
     public static Material DriedSilicaCoatedInvestmentCastingMixture
-
     public static Material HalophosphatePhosphor
     public static Material HalophosphatePhosphorSolution
     public static Material YttriumAluminiumGarnetCerium
     public static Material VanadiumIIISulfateSolution
     public static Material DilutedVanadiumIIISulfateSolution
     public static Material VanadylSulfateSolution
+    public static Material SGlass
 
     // Organic Chemistry Materials
 
@@ -2467,10 +2467,10 @@ class SuSyMaterials {
     public static Material Norbornene
     public static Material PetroleumResin
     public static Material HydrogenatedPetroleumResin
-
     public static Material TrimethylGallium
     public static Material TrimethylIndium
     public static Material DiallyldimethylammoniumChloride
+    public static Material FiberReinforcedNylon
 
     // Third Degree Materials
 

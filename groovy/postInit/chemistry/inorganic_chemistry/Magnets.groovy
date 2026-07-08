@@ -95,11 +95,12 @@ MIXER.recipeBuilder()
 // Neodymium magnets (IV)
 
 MIXER.recipeBuilder()
-    .inputs(ore('dustNeodymium') * 2)
-    .inputs(ore('dustIron') * 14)
-    .inputs(ore('dustBoron') * 1)
-    .outputs(metaitem('dustNeodymiumAlloy') * 17)
-    .duration(400)
+    .inputs(ore('dustNeodymium') * 3)
+    .inputs(ore('dustPraseodymium'))
+    .inputs(ore('dustIron') * 28)
+    .inputs(ore('dustBoron') * 2)
+    .outputs(metaitem('dustNeodymiumAlloy') * 34)
+    .duration(800)
     .EUt(VA[EV])
     .buildAndRegister();
 
