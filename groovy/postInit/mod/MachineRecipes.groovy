@@ -1908,6 +1908,15 @@ RecyclingHelper.addShaped('susy.machine.building_cleanroom', metaitem('susy:buil
         [metaitem('electric.motor.ev'), ore('circuitEv'), metaitem('electric.motor.ev')]
 ])
 
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('hull.ev'))
+        .inputs(ore('circuitEv') * 4)
+        .inputs(metaitem('sensor.ev') * 4)
+        .inputs(metaitem('cableGtSingleAluminium') * 4)
+        .outputs(item('susy:component_scanner'))
+        .duration(400)
+        .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
         .inputs(ore('foilNitrileRubber') * 8)
