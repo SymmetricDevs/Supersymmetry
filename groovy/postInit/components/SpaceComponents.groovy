@@ -143,3 +143,12 @@ EVAPORATION_DEPOSITION.recipeBuilder()
         .duration(1200)
         .EUt(VA[EV])
         .buildAndRegister();
+
+EVAPORATION_DEPOSITION.recipeBuilder()
+        .notConsumable(metaitem('springRtmAlloy'))
+        .inputs(metaitem('dustSilver'))
+        .inputs(metaitem('mylar'))
+        .outputs(metaitem('foilMetallizedBopet'))
+        .duration(100)
+        .EUt(VA[EV])
+        .buildAndRegister();
