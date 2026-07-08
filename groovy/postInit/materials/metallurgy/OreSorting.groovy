@@ -181,7 +181,6 @@ def sedimentary_tier_3 = [
     'gregtech:ore_magnesite_0' : 2000,
     //T3
     'gregtech:ore_ilmenite_0' : 1000,
-    'susy:resource_block:1' : 1000,
     'gregtech:ore_celestine_0' : 500,
     'gregtech:ore_barite_0' : 2500,
 ]
@@ -202,7 +201,6 @@ def sedimentary_tier_4 = [
     'gregtech:ore_magnesite_0' : 2000,
     //T3
     'gregtech:ore_ilmenite_0' : 1000,
-    'susy:resource_block:1' : 1000,
     'gregtech:ore_celestine_0' : 500,
     'gregtech:ore_barite_0' : 2500,
     //T4
@@ -389,34 +387,40 @@ def alluvial_tier_4 = [
 
 def evaporite_tier_1 = [
     //T1
-    'susy:resource_block:2' : 2000,
-    'susy:resource_block:3' : 2000,
-    'susy:resource_block:4' : 2000,
-    'susy:resource_block:5' : 2000
+    'susy:resource_block:3' : 1500, //HalideEvaporiteDeposit
+    'susy:resource_block:4' : 1500, //SulfateEvaporiteDeposit
+    'susy:resource_block:5' : 1500  //CarbonateEvaporiteDeposit
 ]
 
 def evaporite_tier_2 = [
-    //T1 but better
-    'susy:resource_block:2' : 3000,
-    'susy:resource_block:3' : 3000,
-    'susy:resource_block:4' : 3000,
-    'susy:resource_block:5' : 3000
+    //T1
+    'susy:resource_block:3' : 2000, //HalideEvaporiteDeposit
+    'susy:resource_block:4' : 2000, //SulfateEvaporiteDeposit
+    'susy:resource_block:5' : 2000  //CarbonateEvaporiteDeposit
+    //T2
+    'susy:resource_block:2' : 1000  //NonMarineEvaporiteDeposit
 ]
 
 def evaporite_tier_3 = [
-    //T1 but better
-    'susy:resource_block:2' : 4000,
-    'susy:resource_block:3' : 4000,
-    'susy:resource_block:4' : 4000,
-    'susy:resource_block:5' : 4000
+    //T1
+    'susy:resource_block:3' : 2500, //HalideEvaporiteDeposit
+    'susy:resource_block:4' : 2500, //SulfateEvaporiteDeposit
+    'susy:resource_block:5' : 2500  //CarbonateEvaporiteDeposit
+    //T2
+    'susy:resource_block:2' : 1500, //NonMarineEvaporiteDeposit
+    //T3
+    'susy:resource_block:1' : 1000  //Caliche
 ]
 
 def evaporite_tier_4 = [
-    //T1 but better
-    'susy:resource_block:2' : 5000,
-    'susy:resource_block:3' : 5000,
-    'susy:resource_block:4' : 5000,
-    'susy:resource_block:5' : 5000
+    //T1
+    'susy:resource_block:3' : 3000, //HalideEvaporiteDeposit
+    'susy:resource_block:4' : 3000, //SulfateEvaporiteDeposit
+    'susy:resource_block:5' : 3000  //CarbonateEvaporiteDeposit
+    //T2
+    'susy:resource_block:2' : 2000, //NonMarineEvaporiteDeposit
+    //T3
+    'susy:resource_block:1' : 1000  //Caliche
 ]
 
 //FORMAT: BASE ROCK, WASHING FLUID, WASTE FLUID, ORE OUTPUT LISTS, STARTING VOLTAGE TIER
