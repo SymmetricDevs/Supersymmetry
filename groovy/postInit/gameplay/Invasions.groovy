@@ -537,7 +537,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     double z = (Math.sin(angle) < 0 ? -1 : 1) * Math.pow(Math.abs(Math.sin(angle)), 2/n) * radius;
                     return new MobHordeEvent.Vec2(x, z);
                 },
-                Arrays.asList("#gen SandBags"), //replace with bigger sandbags
+                Arrays.asList("setblock ~ ~ ~ techguns:sandbags"), //replace with bigger sandbags
                 null,
                 null,
         )
@@ -547,7 +547,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                 t -> {
                     return new MobHordeEvent.Vec2(0, 0); //always spawns in the center of the invasion
                 },
-                Arrays.asList("#gen AutoMortar"), //replace with auto-mortar, shells do not destroy blocks before the player launches a rocket
+                Arrays.asList("setblock ~ ~ ~ minecraft:redstone_block"), //replace with auto-mortar, shells do not destroy blocks before the player launches a rocket
                 null,
                 null,
         )
@@ -678,7 +678,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
         .addPattern(
                 //center point
                 t -> {
-                    return new MobHordeEvent.Vec2(5, 0); //defends mortar directly
+                    return new MobHordeEvent.Vec2(0, 0); //defends mortar directly
                 },
                 null,
                 player -> {
@@ -816,11 +816,11 @@ new MobHordeEvent((player) -> {
 /**
  federation platoon
  16–40 people
- LMG, miniguns, flamethrowers, vectors for conscripts
- full power armor
+ LMG, miniguns, flamethrowers, vectors
+ full power armor, conscript armor
  active combat stims
  supplemented with conscripts to beef up their numbers
- A proper expeditionary force unit, though some of their members appear to lack the training.
+ A proper expeditionary force unit, though some of their members appear to lack some training.
  **/
 
 new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
@@ -842,6 +842,7 @@ new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
                     root.setString("faction", "Feds");
                     root.setInteger("hate", -10);
                     outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
                     return outcast;
                 },
                 entity -> {
@@ -882,6 +883,7 @@ new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
                     root.setString("faction", "Feds");
                     root.setInteger("hate", -5);
                     outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 0));
                     return outcast;
                 },
                 entity -> {
@@ -924,6 +926,134 @@ new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
                 }
         )
         .setDistribution(60.0,40.0); //mostly normal feds + a few conscript specialists
+
+
+/**
+ federation flight platoon
+ 45 people
+ LMG, miniguns, flamethrowers, scar
+ full power armor
+ active combat stims
+ direct close air support
+ Standard federation combat unit, usually reserved for breaking open reinforced positions
+ **/
+
+new MobHordeEvent((player) -> null, 50, 50, "fed_flight_platoon")
+        .setTimer(144000, 216000)
+        .minHate("Feds", 750)
+
+//normal raider
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 15;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -10);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Random weapon
+                    String[] possibleWeapons = new String[]{
+                            "techguns:lmg",
+                            "techguns:flamethrower",
+                            "techguns:minigun"
+                    };
+                    String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", chosenWeapon);
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+//sergant
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 2;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -50);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Armor
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t2_beret",
+                            "techguns:t4_power_leggings",
+                            "techguns:t4_power_chestplate",
+                            "techguns:t4_power_helmet"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+
+                    // always scar
+                    String chosenWeapon = "techguns:scar"
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", chosenWeapon);
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+//air support
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 5;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                //WIP, gonna make this a heli later
+                Arrays.asList("setblock ~ ~10 ~ stone"), //summons helicopters above where the drop pod landed so they don't start out on the ground, wip
+                null,
+                null,
+        )
+        .setExactDistribution(44,1,5); //federation soldiers, platoon sergeant, air support
 
 /*
 // Commands for pods
