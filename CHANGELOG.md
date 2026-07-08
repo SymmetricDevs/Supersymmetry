@@ -1,3 +1,17 @@
+# UPDATE 0.1.16.10
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.107 → v0.1.109
+## Changes
+### Changed Features
+- MnP superconductors no longer require assemblies.  (#1857 by @The-ExZombie)
+- Updated Chinese translations are available. (#1894 by @Zixk-0)
+- The cryogenics questbook chapter has been yeeted and scattered. (#1900 by @The-ExZombie)
+- Mica is now 40x cheaper to produce from the quarry. (#1898 by @unitazer)
+- Graphite plates have been migrated. (#1901 by @Fiery36)
+And thanks to @whoisyp9 for continuing to standardize questbook entries!
+### TODO: Uncategorized Changes (Please Categorize)
+- [Susy-Core] Evaporite Deposit Block (#653 by @The-ExZombie)
 # UPDATE 0.1.16.9
 ## Mod Changes
 ### Mod Updates

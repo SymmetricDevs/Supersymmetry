@@ -1298,13 +1298,69 @@ MIXER.recipeBuilder()
     .buildAndRegister();
 
 CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustMagnalium') * 3)
+    .inputs(ore('dustMagnalium') * 20)
     .outputs(metaitem('dustMagnesium'))
-    .outputs(metaitem('dustAluminium') * 2)
-    .duration(72)
+    .outputs(metaitem('dustAluminium') * 19)
+    .duration(480)
     .EUt(VA[LV])
     .buildAndRegister();
 
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotMagnesium'), metaitem('dustAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustMagnesium'), metaitem('ingotAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotMagnesium'), metaitem('ingotAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustMagnesium'), metaitem('dustAluminium') * 2], null)
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .outputs(metaitem('dustMagnalium') * 20)
+        .duration(800)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('ingotMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('ingotAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('ingotMagnesium'))
+        .inputs(ore('ingotAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+mods.gregtech.blender.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+mods.gregtech.advanced_arc_furnace.removeByInput(16, [metaitem('dustMagnesium'), metaitem('dustAluminium') * 2, metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('refractory_gunning_mixture') * 50])
+ADVANCED_ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .fluidInputs(fluid('refractory_gunning_mixture') * 50)
+        .fluidOutputs(fluid('magnalium') * 2880)
+        .circuitMeta(3)
+        .duration(187)
+        .EUt(VA[LV])
+        .buildAndRegister();
 // Fix distillation tower being too difficult (4 EV circuits? Seriously?)
 
 RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillation_tower'), [
@@ -1342,6 +1398,16 @@ CUTTER.recipeBuilder()
     .inputs(ore('cobblestone'))
     .outputs(item('minecraft:stone_slab', 3) * 2)
     .duration(25)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+// Stone Dust -> Stone Plate
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustStone')], null)
+
+COMPRESSOR.recipeBuilder()
+    .inputs(metaitem('dustStone'))
+    .outputs(metaitem('plateStone'))
+    .duration(50)
     .EUt(VA[ULV])
     .buildAndRegister();
 

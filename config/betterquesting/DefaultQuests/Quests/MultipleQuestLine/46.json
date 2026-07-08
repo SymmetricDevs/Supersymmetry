@@ -7,14 +7,12 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.46.desc",
-      "frame:8": "GATE",
       "icon:10": {
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
           "FluidName:8": "sulfuric_acid"
         }
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.46.title"
     }
   },
@@ -30,6 +28,16 @@
         }
       },
       "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8776,
+          "id:8": "gregtech:meta_dust_small"         
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

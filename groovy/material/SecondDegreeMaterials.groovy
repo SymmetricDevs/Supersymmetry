@@ -564,7 +564,7 @@ class SecondDegreeMaterials {
 
         AlluvialPalladiumMotherLiquor = new Material.Builder(13089, SuSyUtility.susyId('alluvial_palladium_mother_liquor'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(AmmoniumChloride * 2, ZincChloride, HydrogenChloride * 4, Water * 16)
+                .components(ZincChloride, HydrogenChloride * 6, Water * 16)
                 .colorAverage()
                 .build()
 
@@ -1179,5 +1179,11 @@ class SecondDegreeMaterials {
                 .iconSet(LAPIS)
                 .build();
 
+        SGlass = new Material.Builder(13194, SuSyUtility.susyId('s_glass'))
+                .dust().liquid(new FluidBuilder().temperature(1800))
+                .color(0xC49FAD)
+                .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
+                .iconSet(BRIGHT)
+                .build();
     }
 }

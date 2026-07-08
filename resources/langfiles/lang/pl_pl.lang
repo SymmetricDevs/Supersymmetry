@@ -2114,7 +2114,7 @@ metaitem.shape.mold.rod.name=Mold (Rod)
 metaitem.shape.mold.long_rod.name=Mold (Long Rod)
 metaitem.shape.mold.ring.name=Mold (Ring)
 
-metaitem.assemblymanganesephosphide.name=Manganese Phosphide Assembly
+metaitem.tubemanganesephosphide.name=Manganese Phosphide Assembly
 metaitem.basemanganesephosphide.name=Base Manganese Phosphide Superconductor
 metaitem.cannedmagnesiumdiboride.name=Canned Magnesium Diboride
 metaitem.tubemagnesiumdiboride.name=Magnesium Diboride Tube

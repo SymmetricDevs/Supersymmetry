@@ -2081,9 +2081,10 @@ class FirstDegreeMaterialsA {
                 .ingot()
                 .color(0x2b2a2a).iconSet(METALLIC)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, HIP_PRESSED)
-                .components(Neodymium * 2, Iron * 14, Boron)
+                .components(Neodymium * 3, Praseodymium, Iron * 28, Boron * 2)
                 .blastTemp(1297, GasTier.MID)
                 .build()
+
 
         TreatedNeodymiumAlloy = new Material.Builder(8401, SuSyUtility.susyId('treated_neodymium_alloy'))
                 .ingot()
@@ -2094,6 +2095,7 @@ class FirstDegreeMaterialsA {
                 .arcSmeltInto(NeodymiumAlloy)
                 .macerateInto(NeodymiumAlloy)
                 .build()
+
 
         NeodymiumAlloyMagnetic = new Material.Builder(8402, SuSyUtility.susyId('neodymium_alloy_magnetic'))
                 .ingot()

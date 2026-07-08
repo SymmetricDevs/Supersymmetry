@@ -52,7 +52,7 @@ RecyclingHelper.handleRecycling(item('susy:separator_rotor') * 5,
 )
 
 ASSEMBLER.recipeBuilder()
-    .circuitMeta(9)
+    .circuitMeta(20)
     .inputs(ore('plateStainlessSteel') * 9)
     .outputs(item('susy:susy_multiblock_casing', 2))
     .duration(240)
