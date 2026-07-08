@@ -537,7 +537,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     double z = (Math.sin(angle) < 0 ? -1 : 1) * Math.pow(Math.abs(Math.sin(angle)), 2/n) * radius;
                     return new MobHordeEvent.Vec2(x, z);
                 },
-                Arrays.asList("#gen SandBags"), //replace with bigger sandbags
+                Arrays.asList("#gen SandBags"),
                 null,
                 null,
         )
@@ -545,9 +545,9 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
         .addPattern(
                 //square
                 t -> {
-                    return new MobHordeEvent.Vec2(5, 0); //defends mortar directly
+                    return new MobHordeEvent.Vec2(0, 0);
                 },
-                rrays.asList("#gen AutoMortar"), //replace with auto-mortar, shells do not destroy blocks before the player launches a rocket
+                rrays.asList("#gen AutoMortar"),
                 null,
                 null,
         )
@@ -678,7 +678,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
         .addPattern(
                 //center point
                 t -> {
-                    return new MobHordeEvent.Vec2(0, 0); //defends mortar directly
+                    return new MobHordeEvent.Vec2(5, 0); //defends mortar directly
                 },
                 null,
                 player -> {
