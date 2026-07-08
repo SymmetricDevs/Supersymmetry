@@ -389,34 +389,34 @@ def alluvial_tier_4 = [
 
 def evaporite_tier_1 = [
     //T1
+    'susy:resource_block:2' : 2000,
     'susy:resource_block:3' : 2000,
     'susy:resource_block:4' : 2000,
-    'susy:resource_block:5' : 2000,
-    'susy:resource_block:6' : 2000
+    'susy:resource_block:5' : 2000
 ]
 
 def evaporite_tier_2 = [
     //T1 but better
+    'susy:resource_block:2' : 3000,
     'susy:resource_block:3' : 3000,
     'susy:resource_block:4' : 3000,
-    'susy:resource_block:5' : 3000,
-    'susy:resource_block:6' : 3000
+    'susy:resource_block:5' : 3000
 ]
 
 def evaporite_tier_3 = [
     //T1 but better
+    'susy:resource_block:2' : 4000,
     'susy:resource_block:3' : 4000,
     'susy:resource_block:4' : 4000,
-    'susy:resource_block:5' : 4000,
-    'susy:resource_block:6' : 4000
+    'susy:resource_block:5' : 4000
 ]
 
 def evaporite_tier_4 = [
     //T1 but better
+    'susy:resource_block:2' : 5000,
     'susy:resource_block:3' : 5000,
     'susy:resource_block:4' : 5000,
-    'susy:resource_block:5' : 5000,
-    'susy:resource_block:6' : 5000
+    'susy:resource_block:5' : 5000
 ]
 
 //FORMAT: BASE ROCK, WASHING FLUID, WASTE FLUID, ORE OUTPUT LISTS, STARTING VOLTAGE TIER
