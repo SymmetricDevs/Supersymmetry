@@ -54,6 +54,43 @@ def generateBEOLProcess(String componentName, String resist, String starter, int
     }
 }
 
+// Sealing and final packaging, flip chip
+def generatePackaging(String componentName, String starter) {
+    Deposition.generateChemicalVaporDepositionRecipe(starter, 'wafer.' + componentName + '.pkg.step_one', 400, 'silicon_dioxide.silane') // Passivation layer deposition
+    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.pkg.step_one', 'wafer.' + componentName + '.pkg.step_two', 400, 'silicon_nitride.silane')
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.pkg.step_two', 'wafer.' + componentName + '.pkg.step_three', 'novolac_resist', 'mask_set.' + componentName, true) // Define contact hole pattern in passivation layers
+    Etching.generateWetEtchingRecipe('wafer.' + componentName + '.pkg.step_three', 'wafer.' + componentName + '.pkg.step_four', 'silicon_nitride', 400, false) // Etch silicon nitride passivation layer
+    Etching.generateWetEtchingRecipe('wafer.' + componentName + '.pkg.step_four', 'wafer.' + componentName + '.pkg.step_five', 'silicon_dioxide', 400, false) // Etch silicon dioxide passivation layer
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.pkg.step_five', 'wafer.' + componentName + '.pkg.step_six', 1, false)
+    Deposition.generateSputteringRecipe('wafer.' + componentName + '.pkg.step_six', 'wafer.' + componentName + '.pkg.step_seven', ['chromium' : 200, 'copper' : 200]) // Deposit under-bump metallization layers for solder bump attachment
+    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.pkg.step_seven', 'wafer.' + componentName + '.pkg.step_eight', 'novolac_resist', 'mask_set.' + componentName, false) // Define solder bump pattern
+
+    ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(fluid('diluted_sulfuric_acid') * 4000)
+        .notConsumable(fluid('copper_sulfate_solution') * 600)
+        .inputs(metaitem('wafer.' + componentName + '.pkg.step_eight'))
+        .inputs(ore('foilPhosphorizedCopper'))
+        .outputs(metaitem('wafer.' + componentName + '.pkg.step_nine'))
+        .EUt(VA[MV])
+        .duration(400)
+        .buildAndRegister()
+
+    ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(fluid('methanesulfonic_acid') * 1000)
+        .inputs(metaitem('wafer.' + componentName + '.pkg.step_nine'))
+        .inputs(ore('foilLeadFreeSolder'))
+        .outputs(metaitem('wafer.' + componentName + '.pkg.step_ten'))
+        .EUt(VA[MV])
+        .duration(400)
+        .buildAndRegister()
+
+    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.pkg.step_ten', 'wafer.' + componentName + '.pkg.step_eleven', 1, true)
+    Deposition.generateSinteringRecipe('wafer.' + componentName + '.pkg.step_eleven', 'wafer.' + componentName + '.pkg.step_twelve', 400, MV) // Reflow solder to form bumps
+    Packaging.generateBackgrindingRecipe('wafer.' + componentName + '.pkg.step_twelve', 'wafer.' + componentName + '.pkg.step_thirteen', 400, MV) // Backgrinding to reduce wafer thickness for flip chip bonding
+    Packaging.generateDicingRecipe('wafer.' + componentName + '.pkg.step_thirteen', 'die.' + componentName, 64, 400, HV) // Dicing wafer into individual dies
+    Packaging.generateWireBondingRecipe('die.' + componentName, 'die.' + componentName + '.bonded', 'gold', 50, HV)
+}
+
 // Superfill copper electrolyte
 
 BLENDER.recipeBuilder()
@@ -180,46 +217,13 @@ def generateCMOSFabrication(String componentName) {
     generateBEOLProcess(componentName, 'novolac_resist', 'wafer.' + componentName + '.beol_six.step_eight', 7, 3)
 
     // Sealing and final packaging, flip chip.
-
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.beol_nine.step_eight', 'wafer.' + componentName + '.step_one_hundred_forty_seven', 400, 'silicon_dioxide.silane') // Passivation layer deposition
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_one_hundred_forty_seven', 'wafer.' + componentName + '.step_one_hundred_forty_eight', 400, 'silicon_nitride.silane')
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_one_hundred_forty_eight', 'wafer.' + componentName + '.step_one_hundred_forty_nine', 'novolac_resist', 'mask_set.' + componentName, true) // Define contact hole pattern in passivation layers
-    Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_one_hundred_forty_nine', 'wafer.' + componentName + '.step_one_hundred_fifty', 'silicon_nitride', 400, false) // Etch silicon nitride passivation layer
-    Etching.generateWetEtchingRecipe('wafer.' + componentName + '.step_one_hundred_fifty', 'wafer.' + componentName + '.step_one_hundred_fifty_one', 'silicon_dioxide', 400, false) // Etch silicon dioxide passivation layer
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_one_hundred_fifty_one', 'wafer.' + componentName + '.step_one_hundred_fifty_two', 1, false)
-    Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_one_hundred_fifty_two', 'wafer.' + componentName + '.step_one_hundred_fifty_three', ['chromium' : 200, 'copper' : 200]) // Deposit under-bump metallization layers for solder bump attachment
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_one_hundred_fifty_three', 'wafer.' + componentName + '.step_one_hundred_fifty_four', 'novolac_resist', 'mask_set.' + componentName, false) // Define solder bump pattern
-
-    ELECTROLYTIC_CELL.recipeBuilder()
-        .notConsumable(fluid('diluted_sulfuric_acid') * 4000)
-        .notConsumable(fluid('copper_sulfate_solution') * 600)
-        .inputs(metaitem('wafer.' + componentName + '.step_one_hundred_fifty_four'))
-        .inputs(ore('foilPhosphorizedCopper'))
-        .outputs(metaitem('wafer.' + componentName + '.step_one_hundred_fifty_five'))
-        .EUt(VA[MV])
-        .duration(400)
-        .buildAndRegister()
-
-    ELECTROLYTIC_CELL.recipeBuilder()
-        .notConsumable(fluid('methanesulfonic_acid') * 1000)
-        .inputs(metaitem('wafer.' + componentName + '.step_one_hundred_fifty_five'))
-        .inputs(ore('foilLeadFreeSolder'))
-        .outputs(metaitem('wafer.' + componentName + '.step_one_hundred_fifty_six'))
-        .EUt(VA[MV])
-        .duration(400)
-        .buildAndRegister()
-
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_one_hundred_fifty_six', 'wafer.' + componentName + '.step_one_hundred_fifty_seven', 1, true)
-    Deposition.generateSinteringRecipe('wafer.' + componentName + '.step_one_hundred_fifty_seven', 'wafer.' + componentName + '.step_one_hundred_fifty_eight', 400, MV) // Reflow solder to form bumps
-    Packaging.generateBackgrindingRecipe('wafer.' + componentName + '.step_one_hundred_fifty_eight', 'wafer.' + componentName + '.step_one_hundred_fifty_nine', 400, MV) // Backgrinding to reduce wafer thickness for flip chip bonding
-    Packaging.generateDicingRecipe('wafer.' + componentName + '.step_one_hundred_fifty_nine', 'die.' + componentName, 64, 400, HV) // Dicing wafer into individual dies
-    Packaging.generateWireBondingRecipe('die.' + componentName, 'die.' + componentName + '.bonded', 'gold', 50, HV)
+    generatePackaging(componentName, 'wafer.' + componentName + '.beol_nine.step_eight')
 }
 
 generateCMOSFabrication('cmos_cpu') // Includes on die SRAM
 generateCMOSFabrication('cmos_gpu')
 
-/* Bipolar-CMOS-DMOS (BCD) process for power management ICs, ~180nm process.
+//Bipolar-CMOS-DMOS (BCD) process for power management ICs, ~180nm process.
 
 // N+ buried layer (NBL) plus epitaxial P- layer for isolation of high voltage devices
 Doping.generateIonImplantationRecipes('wafer.silicon.p_doped', 'wafer.bcd_base.step_one', 400, 'purified_antimony_trioxide')
@@ -354,7 +358,8 @@ generateBEOLProcess('bcd_hv', 'novolac_resist', 'wafer.bcd_base.beol_four.step_o
 generateBEOLProcess('bcd_ev', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 2, true)
 generateBEOLProcess('bcd_iv', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 3, true)
 
-
-*/
+generatePackaging('bcd_hv', 'wafer.bcd_hv.beol_four.step_eight')
+generatePackaging('bcd_ev', 'wafer.bcd_ev.beol_five.step_eight')
+generatePackaging('bcd_iv', 'wafer.bcd_iv.beol_six.step_eight')
 
 // Cheaper clock generator
