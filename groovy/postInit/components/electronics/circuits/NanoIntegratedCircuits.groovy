@@ -354,12 +354,12 @@ generateBEOLProcess('bcd_base', 'novolac_resist', 'wafer.bcd_base.beol_two.step_
 Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.beol_three.step_eight', 'wafer.bcd_base.beol_four.step_one', 2.0, 'silicon_oxycarbide_hydride')
 Lithography.generateCoatingRecipe('wafer.bcd_base.beol_four.step_one', 'novolac_resist', true)
 
-generateBEOLProcess('bcd_hv', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 1, true)
-generateBEOLProcess('bcd_ev', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 2, true)
-generateBEOLProcess('bcd_iv', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 3, true)
+generateBEOLProcess('bcd_lpic', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 1, true)
+generateBEOLProcess('bcd_pic', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 2, true)
+generateBEOLProcess('bcd_hpic', 'novolac_resist', 'wafer.bcd_base.beol_four.step_one', 4, 3, true)
 
-generatePackaging('bcd_hv', 'wafer.bcd_hv.beol_four.step_eight')
-generatePackaging('bcd_ev', 'wafer.bcd_ev.beol_five.step_eight')
-generatePackaging('bcd_iv', 'wafer.bcd_iv.beol_six.step_eight')
+generatePackaging('bcd_lpic', 'wafer.bcd_lpic.beol_four.step_eight')
+generatePackaging('bcd_pic', 'wafer.bcd_pic.beol_five.step_eight')
+generatePackaging('bcd_hpic', 'wafer.bcd_hpic.beol_six.step_eight')
 
 // Cheaper clock generator

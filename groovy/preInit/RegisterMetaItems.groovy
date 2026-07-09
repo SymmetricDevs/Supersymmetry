@@ -107,7 +107,7 @@ def registerBCDMetaitems() {
     toadd_list.add("wafer.bcd_base.beol_four.step_one.coated")
 
     // Tiers diverge at M4 and finish at their top metal layer (HV=4, EV=5, IV=6)
-    def tiers = ['bcd_hv': 4, 'bcd_ev': 5, 'bcd_iv': 6]
+    def tiers = ['bcd_lpic': 4, 'bcd_pic': 5, 'bcd_hpic': 6]
     tiers.each { tier, topLayer ->
         // M4 is the split layer: only step_one.exposed (from the split) plus steps 2-8
         registerWaferSteps(tier + ".beol_four", 8, [start: 2])
