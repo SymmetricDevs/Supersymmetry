@@ -547,7 +547,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                 t -> {
                     return new MobHordeEvent.Vec2(0, 0);
                 },
-                rrays.asList("#gen AutoMortar"),
+                Arrays.asList("#gen AutoMortar"),
                 null,
                 null,
         )
