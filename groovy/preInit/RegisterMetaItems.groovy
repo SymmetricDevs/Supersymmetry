@@ -33,49 +33,92 @@ def wordsFromNumber(int num) {
 
 toadd_list = []
 
-def registerCircuitMetaitems(String name, int step_count, int start_num=2, boolean finish = true, boolean generateMask = true) {
-        for (int i=start_num; i <= step_count; i++) {
-            toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(i))
-        }
-        if (generateMask) {
-            toadd_list.add("mask_set." + name)
-        }
-        if (finish) {
-            toadd_list.add("die." + name)
-            toadd_list.add("die." + name + ".bonded")
-        }
+// Generic wafer-step metaitem registration for a single wafer namespace.
+// opts (all optional): start (first step, default 2); photoresist / ashed / trilayer are arrays of
+// step numbers needing those substep variants; mask + die register the component-level items.
+def registerWaferSteps(String name, int stepCount, Map opts = [:]) {
+    for (int i = opts.get('start', 2); i <= stepCount; i++) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(i))
+    }
+    for (step in opts.get('photoresist', [])) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
+    }
+    for (step in opts.get('ashed', [])) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
+    }
+    for (step in opts.get('trilayer', [])) { // SOC/SiON hardmask (ibarc) lithography intermediates
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".hardmasked")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ibarc")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".developed")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".etched")
+    }
+    for (step in opts.get('mandrel', [])) { // self-aligned Si mandrel on the ibarc hardmask (future pitch-split / spacer patterning); listed alongside trilayer
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".mandrel")
+    }
+    if (opts.get('mask', false)) {
+        toadd_list.add("mask_set." + name)
+    }
+    if (opts.get('die', false)) {
+        toadd_list.add("die." + name)
+        toadd_list.add("die." + name + ".bonded")
+    }
+}
+
+def registerNMOSMetaitems(String name, int stepCount = 25, List photoresist = [7, 12, 15, 21]) {
+    registerWaferSteps(name, stepCount, [photoresist: photoresist, mask: true, die: true])
 }
 
 def registerCMOSMetaitems(String name) {
-    registerCircuitMetaitems(name, 76, 3, false, false)
-    for (int i=1; i<=9; i++) {
-        registerCircuitMetaitems(name + ".beol_" + wordsFromNumber(i), 8, 1, false)
-        toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
-        toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
-    }
-    registerCircuitMetaitems(name, 161, 149)
-    def ashed_steps = [6, 13, 16, 27, 31, 35, 39, 43, 55, 72, 158]
-    for (step in ashed_steps) {
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
+    // FEOL/MEOL shares the main step namespace and carries the component die + mask
+    registerWaferSteps(name, 74, [start: 3, mask: true, die: true,
+        photoresist: [11, 14, 23, 28, 32, 39, 51, 59, 67],
+        ashed:       [6, 13, 16, 27, 31, 35, 41, 53, 61, 70],
+        trilayer:    [23, 59]])
+
+    // 9-layer damascene copper BEOL; layers 1-6 use trilayer (ibarc) resist
+    for (int i = 1; i <= 9; i++) {
+        def opts = (i <= 6) ? [start: 1, photoresist: [1], trilayer: [1], ashed: [3]]
+                            : [start: 1, photoresist: [1]]
+        registerWaferSteps(name + ".beol_" + wordsFromNumber(i), 8, opts)
     }
 
-    def photoresist_steps = [11, 14, 23, 28, 32, 37, 41, 53, 61, 69, 150, 155]
-    for (step in photoresist_steps) {
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
-    }
+    // Sealing and packaging
+    registerWaferSteps(name + ".pkg", 13, [start: 1, photoresist: [2, 7], ashed: [10]])
 }
 
-def addPhotoresistVariants(String name, List photoresist_steps) {
-    for (step in photoresist_steps) {
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
-    }
-}
+def registerBCDMetaitems() {
+    // Shared bcd_base trunk: FEOL/MEOL steps 1-82 (uses mask_set.bcd_base; the trunk itself is never diced)
+    registerWaferSteps("bcd_base", 82, [start: 1, mask: true,
+        photoresist: [2, 5, 11, 20, 27, 31, 34, 39, 43, 47, 50, 53, 58, 61, 70, 75],
+        ashed:       [4, 7, 16, 24, 29, 33, 36, 49, 52, 55, 60, 63, 72, 78],
+        trilayer:    [11],   // DTI patterning
+        mandrel:     [11]])  // DTI patterning uses a self-aligned mandrel
 
-def registerNMOSMetaitems(String name, int step_count = 25, List photoresist_steps = [7, 12, 15, 21]) {
-    registerCircuitMetaitems(name, step_count)
-    addPhotoresistVariants(name, photoresist_steps)
+    // Shared lower metal M1-M3 (M1-M2 trilayer, M3 novolac)
+    for (int i = 1; i <= 3; i++) {
+        def opts = (i <= 2) ? [start: 1, photoresist: [1], trilayer: [1], ashed: [3]]
+                            : [start: 1, photoresist: [1]]
+        registerWaferSteps("bcd_base.beol_" + wordsFromNumber(i), 8, opts)
+    }
+
+    // Shared M4 dielectric + coat: the fork point each tier splits from
+    toadd_list.add("wafer.bcd_base.beol_four.step_one")
+    toadd_list.add("wafer.bcd_base.beol_four.step_one.coated")
+
+    // Tiers diverge at M4 and finish at their top metal layer (HV=4, EV=5, IV=6)
+    def tiers = ['bcd_lpic': 4, 'bcd_pic': 5, 'bcd_hpic': 6]
+    tiers.each { tier, topLayer ->
+        // M4 is the split layer: only step_one.exposed (from the split) plus steps 2-8
+        registerWaferSteps(tier + ".beol_four", 8, [start: 2])
+        toadd_list.add("wafer." + tier + ".beol_four.step_one.exposed")
+        // M5..top are ordinary novolac damascene layers
+        for (int i = 5; i <= topLayer; i++) {
+            registerWaferSteps(tier + ".beol_" + wordsFromNumber(i), 8, [start: 1, photoresist: [1]])
+        }
+        // Sealing/packaging carries this tier's die + mask
+        registerWaferSteps(tier + ".pkg", 13, [start: 1, mask: true, die: true, photoresist: [2, 7], ashed: [10]])
+    }
 }
 
 eventManager.listen { PostMaterialEvent event ->
@@ -680,9 +723,9 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(8043, "wafer.nmos.step_one") // the suffering begins
         // its cmos time baby
-        addItem(8044, "wafer.cmos.step_one")
-        addItem(8045, "wafer.cmos.step_two")
-        addItem(8046, "wafer.cmos.step_two.coated")
+        addItem(8044, "wafer.cmos_base.step_one")
+        addItem(8045, "wafer.cmos_base.step_two")
+        addItem(8046, "wafer.cmos_base.step_two.coated")
         addItem(8047, "wafer.cmos_cpu.step_two.exposed")
         addItem(8048, "wafer.cmos_gpu.step_two.exposed")
 
@@ -692,20 +735,17 @@ eventManager.listen { PostMaterialEvent event ->
         registerNMOSMetaitems("nmos_mask_rom")
         registerNMOSMetaitems("nmos_bus_controller")
         registerNMOSMetaitems("nmos_dram", 22, [9, 12, 18])
-        registerCircuitMetaitems("bjt_pic_base", 17, 1, false)
-        addPhotoresistVariants("bjt_pic_base", [5, 9, 13, 17])
-        registerCircuitMetaitems("bjt_ulpic", 5, 1)
-        addPhotoresistVariants("bjt_ulpic", [1])
-        registerCircuitMetaitems("bjt_lpic", 19, 1)
-        addPhotoresistVariants("bjt_lpic", [5, 10, 15])
-        registerCircuitMetaitems("bjt_pic", 17, 1)
-        addPhotoresistVariants("bjt_pic", [5, 9, 13])
+        registerWaferSteps("bjt_pic_base", 17, [start: 1, mask: true, photoresist: [5, 9, 13, 17]])
+        registerWaferSteps("bjt_ulpic", 5, [start: 1, mask: true, die: true, photoresist: [1]])
+        registerWaferSteps("bjt_lpic", 19, [start: 1, mask: true, die: true, photoresist: [5, 10, 15]])
+        registerWaferSteps("bjt_pic", 17, [start: 1, mask: true, die: true, photoresist: [5, 9, 13]])
         registerCMOSMetaitems("cmos_cpu")
-        registerCircuitMetaitems("diode.planar", 10, 1, false)
-        registerCircuitMetaitems("diode.power", 14, 2, false)
-        registerCircuitMetaitems("diode.schottky", 13, 2, false)
-        registerCircuitMetaitems("thyristor", 11, 1, false)
+        registerWaferSteps("diode.planar", 10, [start: 1, mask: true])
+        registerWaferSteps("diode.power", 14, [mask: true])
+        registerWaferSteps("diode.schottky", 13, [mask: true])
+        registerWaferSteps("thyristor", 11, [start: 1, mask: true])
         registerCMOSMetaitems("cmos_gpu")
+        registerBCDMetaitems() // enable together with the BCD recipe chain (still commented in NanoIntegratedCircuits.groovy)
 
         addItem(8049, "wafer.diode.alloy.step_two")
         addItem(8050, "wafer.zener_diode.alloy.step_two")
