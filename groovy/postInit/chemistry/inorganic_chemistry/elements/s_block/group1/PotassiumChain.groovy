@@ -113,6 +113,13 @@ DISTILLERY.recipeBuilder()
         .duration(160)
         .buildAndRegister()
 
+SOLIDIFIER.recipeBuilder()
+        .fluidInputs(fluid('potassium') * 144)
+        .outputs(metaitem('dustPotassium'))
+        .EUt(VA[LV])
+        .duration(30)
+        .buildAndRegister()
+
 CENTRIFUGE.recipeBuilder()
         .inputs(ore('dustPotashConcentrate') * 8)
         .outputs(metaitem('dustRockSalt') * 2)
