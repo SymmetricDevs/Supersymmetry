@@ -747,6 +747,11 @@ eventManager.listen { PostMaterialEvent event ->
         registerCMOSMetaitems("cmos_gpu")
         registerBCDMetaitems() // enable together with the BCD recipe chain (still commented in NanoIntegratedCircuits.groovy)
 
+        // Monocrystalline silicon photovoltaic cells (mask./cell. naming, not mask_set./die.)
+        registerWaferSteps("monosilicon_photovoltaic", 8, [start: 1, photoresist: [4]])
+        toadd_list.add("mask.monosilicon_photovoltaic")
+        toadd_list.add("cell.monosilicon_photovoltaic")
+
         addItem(8049, "wafer.diode.alloy.step_two")
         addItem(8050, "wafer.zener_diode.alloy.step_two")
         addItem(8051, "wafer.diode.drift.step_one")
