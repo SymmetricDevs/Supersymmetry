@@ -797,7 +797,8 @@ class FirstDegreeMaterialsB {
                 .iconSet(METALLIC)
                 .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
-                .setFormula("(Zr0.8Ti0.2)(V0.6Mn0.3Pd0.1Ni0.8Fe0.2)", true)
+                
+        AB2MetalAlloy.setFormula("(Zr0.8Ti0.2)(V0.6Mn0.3Pd0.1Ni0.8Fe0.2)", true)
 
         AB5MetalAlloy = new Material.Builder(8782, SuSyUtility.susyId('AB_5_metal_alloy'))
                 .ingot().liquid(new FluidBuilder().temperature(1500))
@@ -806,7 +807,8 @@ class FirstDegreeMaterialsB {
                 .iconSet(METALLIC)
                 .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
-                .setFormula("(La0.8Zr0.2)(Ni4.5Al0.5)", true)
+
+        AB5MetalAlloy.setFormula("(La0.8Zr0.2)(Ni4.5Al0.5)", true)
 
         AnnealedAB2MetalAlloy = new Material.Builder(8783, SuSyUtility.susyId('annealed_AB_2_metal_alloy'))
                 .ingot().liquid(new FluidBuilder().temperature(1500))
@@ -836,7 +838,19 @@ class FirstDegreeMaterialsB {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
       
-        // FREE IDs: 8786-8788
+        /*VanadiumTrioxide = new Material.Builder(8786, SuSyUtility.susyId('vanadium_trioxide'))
+                .dust()
+                .components(Vanadium * 2, Oxygen * 3)
+                .colorAverage()
+                .build()*/
+        
+        ExpandedPolytetrafluoroethylene = new Material.Builder(8787, SuSyUtility.susyId('expanded_polytetrafluoroethylene'))
+                .polymer(1)
+                .color(0x634F4F)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, NO_UNIFICATION)
+                .components(Carbon * 2, Fluorine * 4)
+                .macerateInto(Polytetrafluoroethylene)
+                .build();
 
         FormingGas = new Material.Builder(8789, SuSyUtility.susyId('forming_gas'))
                 .gas()
@@ -930,6 +944,50 @@ class FirstDegreeMaterialsB {
         Permendur = new Material.Builder(8803, SuSyUtility.susyId('permendur'))
                 .ingot().liquid(new FluidBuilder().temperature(1700))
                 .flags(GENERATE_BOLT_SCREW)
+                .build()
+
+        IodineMonochloride = new Material.Builder(8804, SuSyUtility.susyId('iodine_monochloride'))
+                .liquid(new FluidBuilder().temperature(300))
+                .components(Iodine, Chlorine)
+                .color(0x8a3122)
+                .build()
+      
+        SilverNanoparticle = new Material.Builder(8805, SuSyUtility.susyId('silver_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Silver)
+                .color(0x120c07)
+                .build()
+
+        NickelNanoparticle = new Material.Builder(8806, SuSyUtility.susyId('nickel_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Nickel)
+                .color(0x262321)
+                .build()
+
+        HolmiumOxide = new Material.Builder(8807, SuSyUtility.susyId('holmium_oxide'))
+                .dust()
+                .components(Holmium * 2, Oxygen * 3)
+                .color(0xf4dfa6)
+                .build()
+
+        DysprosiumOxide = new Material.Builder(8808, SuSyUtility.susyId('dysprosium_oxide'))
+                .dust()
+                .components(Dysprosium * 2, Oxygen * 3)
+                .color(0xdaffaf)
+                .build()
+
+        PalladiumNanoparticle = new Material.Builder(8809, SuSyUtility.susyId('palladium_nanoparticle'))
+                .dust()
+                .components(Palladium)
+                .color(0xd9cdcd)
+                .build()
+
+        PalladiumNitrateSolution = new Material.Builder(8810, SuSyUtility.susyId('palladium_nitrate_solution'))
+                .liquid()
+                .components(Palladium, Nitrogen, Oxygen * 3, Water)
+                .color(0x7c2111)
                 .build()
     }
 }

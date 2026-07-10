@@ -131,4 +131,5 @@ class Recipemaps {
     static final def ELECTRON_BEAM_LITHOGRAPHY = recipemap('electron_beam_lithography')
     static final def EVAPORATION = recipemap('evaporation_deposition')
     static final def WIRE_BONDING = recipemap('wire_bonding') // ball bonding?
+    static final def SCREEN_PRINTING = recipemap('screen_printer')
 }

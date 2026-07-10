@@ -1,3 +1,15 @@
+# UPDATE 0.1.16.8
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.103 → v0.1.105
+## Changes
+### Changed Features
+- The SAM missile tracking range has increased. (#1859 by @oliwier509)
+- The Techguns charging station now has a recipe. (#1865 by @frogicillin)
+- More Russian lang! (#1869 by @kanayaya)
+### Fixes
+- The NiMH IV battery texture is now correct. (#1860 by @The-ExZombie)
+Also, thanks to our new contributor frogicillin (also I have no idea who you are on Discord)! And for @oliwier509, @The-ExZombie and @Fiery36 for helping maintain the pack.
 # UPDATE 0.1.16.7.1
 ## Changes
 ### Fixes

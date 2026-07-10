@@ -1,5 +1,7 @@
-// Ore Removal
+package postInit.gameplay;
 
+import static globals.Globals.*
+// Ore Removal
 // total = unused ores and material
 // partial = ores that are unused but the material can be obtained
 // default = ores that only generate their default ore
@@ -163,7 +165,7 @@ def oreMap = [
         [name: 'Pitchblende', type: 'default'],
 ]
 
-def elementMap = elements.collect { [name: it, type: 'partial'] } // Piggybacks of the list of elements from OreDict.groovy
+def elementMap = elementList.collect { [name: it, type: 'partial'] } // Piggybacks of the list of elements from OreDict.groovy
 oreMap.addAll(elementMap)
 
 oreMap.each { material ->

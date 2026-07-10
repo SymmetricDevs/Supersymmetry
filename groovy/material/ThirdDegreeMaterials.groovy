@@ -1321,6 +1321,8 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
+        ArFTopcoat.setFormula('(?)(C4H3F9)', true)
+
         ArFBottomAntireflectiveCoating = new Material.Builder(24231, SuSyUtility.susyId('arf_barc'))
                 .liquid()
                 .components(PropyleneGlycolMethylEtherAcetate * 64, AbsorbingMethacrylateCopolymer, TetrapropylammoniumTriflate, Hexamethoxymethylmelamine, NonionicFluorosurfactant)
@@ -1334,6 +1336,122 @@ class ThirdDegreeMaterials {
                 .components(Water, Isoprene, Formaldehyde)
                 .colorAverage()
                 .build()
+
+        DiethylammoniumChlorideSolution = genSolution(24233, 'diethylammonium_chloride_solution', DiethylammoniumChloride, Water, false)
+      
+        NafionDispersion = new Material.Builder(24234, SuSyUtility.susyId('nafion_dispersion'))
+                .liquid()
+                .components(Nafion, IsopropylAlcohol)
+                .color(0xcfccb0)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        TrimethylGalliumSolution = new Material.Builder(24235, SuSyUtility.susyId('trimethyl_gallium_solution'))
+                .liquid()
+                .components(TrimethylGallium, Toluene)
+                .color(0x424242)
+                .build()
+
+        TrimethylGalliumSolution.setFormula('Ga(CH3)33(C6H5CH3)', true)
+
+        TrimethylIndiumSolution = new Material.Builder(24236, SuSyUtility.susyId('trimethyl_indium_solution'))
+                .liquid()
+                .components(TrimethylIndium, Toluene)
+                .color(0x3b2f61)
+                .build()
+
+        TrimethylIndiumSolution.setFormula('In(CH3)3(C6H5CH3)', true)
+
+        DiallyldimethylammoniumChlorideSolution = new Material.Builder(24237, SuSyUtility.susyId('diallyldimethylammonium_chloride_solution'))
+                .liquid()
+                .components(DiallyldimethylammoniumChloride, Water)
+                .colorAverage()
+                .build()
+
+        DiallyldimethylammoniumChlorideSolution.setFormula('(C8H16NCl)(H2O)', true)
         
+        PolydiallyldimethylammoniumChlorideSolution = new Material.Builder(24238, SuSyUtility.susyId('polydiallyldimethylammonium_chloride_solution'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine, Water)
+                .color(0x77FFA9)
+                .build()
+
+        PolydiallyldimethylammoniumChlorideSolution.setFormula('([C8H16NCl]n)(H2O)', true)
+
+        PyridiniumTosylateSolution = genSolution(24239, 'pyridinium_tosylate_solution', PyridiniumTosylate, Water, false)
+
+        SpinOnCarbon = new Material.Builder(24240, SuSyUtility.susyId('spin_on_carbon'))
+                .liquid()
+                .components(PropyleneGlycolMethylEtherAcetate * 27, NaphtholModifiedPhenolicNovolacsOligomer * 7, Hexamethoxymethylmelamine, NonionicFluorosurfactant, PyridiniumTosylate)
+                .colorAverage()
+                .build()
+
+        SpinOnCarbon.setFormula('(?)(C6H12O3)', true)
+
+        CarbonTetrafluorideMixture = new Material.Builder(24241, SuSyUtility.susyId('carbon_tetrafluoride_mixture'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(CarbonTetrafluoride, HydrogenChloride)
+                .color(0x9ec4d1)
+                .build()
+
+        DilutedCarbonTetrafluorideMixture = new Material.Builder(24242, SuSyUtility.susyId('diluted_carbon_tetrafluoride_mixture'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(CarbonTetrafluoride, HydrogenChloride * 2)
+                .color(0xbcd9e0)
+                .build()
+
+        FluoroformMixture = new Material.Builder(24243, SuSyUtility.susyId('fluoroform_mixture'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Fluoroform, HydrogenChloride * 3)
+                .color(0x9ed1c4)
+                .build()
+
+        ChloroethyleneMixture = new Material.Builder(24244, SuSyUtility.susyId('chloroethylene_mixture'))
+                .gas()
+                .components(Trichloroethylene, Tetrachloroethylene)
+                .color(0xa9c9b0)
+                .build()
+        
+        AgPdConductiveInk = new Material.Builder(24245, SuSyUtility.susyId('agpd_conductive_ink'))
+                .liquid()
+                .components(SilverNanoparticle, Ethanol)
+                .colorAverage()
+                .build()
+
+        NickelConductiveInk = new Material.Builder(24246, SuSyUtility.susyId('nickel_conductive_ink'))
+                .liquid()
+                .components(NickelNanoparticle, Ethanol)
+                .colorAverage()
+                .build()
+
+        SilverFritInk = new Material.Builder(24247, SuSyUtility.susyId('silver_frit_ink'))
+                .liquid()
+                .components(Silver, Glass, Polyvinylpyrrolidone, Water)
+                .colorAverage()
+                .build()
+
+        CopperFritInk = new Material.Builder(24248, SuSyUtility.susyId('copper_frit_ink'))
+                .liquid()
+                .components(Copper, Glass, Polyvinylpyrrolidone, Water)
+                .colorAverage()
+                .build()
+
+        ThickFilmResistorInk = new Material.Builder(24249, SuSyUtility.susyId('thick_film_resistor_ink'))
+                .liquid()
+                .components(RutheniumIVOxide, Glass, Polyvinylpyrrolidone, Water)
+                .color(0x0d0a18)
+                .build()
+
+        ZieglerNattaCatalyst = new Material.Builder(13025, SuSyUtility.susyId('ziegler_natta_catalyst'))
+                .dust()
+                .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
+                .colorAverage()
+                .build()
+
+        FluoromethaneMixture = new Material.Builder(24250, SuSyUtility.susyId('fluoromethane_mixture'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Fluoromethane, HydrogenChloride)
+                .colorAverage()
+                .build()
         }
 }

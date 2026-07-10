@@ -189,7 +189,7 @@ susy.material.pig_iron=Surówka Hutnicza
 susy.material.iron_iii_sulfate=Siarczan Żelaza(III)
 
 susy.material.aluminium_hydroxide=Wodorotlenek Glinu
-susy.material.aluminium_trifluoride=Fluorek Glinu
+susy.material.aluminium_fluoride=Fluorek Glinu
 susy.material.sodium_fluoride=Fluoerk Sodu
 
 susy.material.gallium_phosphate=Fosforan Galu
@@ -448,7 +448,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=Zanieczyszczony Półciężki Si
 susy.material.impure_heavy_hydrogen_sulfide=Zanieczyszczony Ciężki Siarkowodór
 susy.material.sea_water=Woda Morska
 
-susy.material.novolacs_resist=Nowolakowy Fotorezyst
+susy.material.novolac_resist=Nowolakowy Fotorezyst
 susy.material.silicon_tetrachloride=Tetrachlorek Krzemu
 susy.material.purified_silicon_tetrachloride=Tetrachlorek Krzemu Ultraczysty
 
@@ -1305,7 +1305,7 @@ susy.material.ammonium_dihydrogen_phosphate=Ammonium Dihydrogen Phosphate
 susy.material.iron_carbonate=Iron Carbonate
 susy.material.ammonium_diuranate=Ammonium Diuranate
 susy.material.magnesium_carbonate=Magnesium Carbonate
-susy.material.silicon_dioxide_slurry=Silicon Dioxide Slurry
+susy.material.basic_cmp_slurry=Basic CMP Slurry
 susy.material.vt_slag=Vanadium-Titania Slag
 susy.material.alkali_vt_slag=Alkaline Vanadium-Titania Slag
 susy.material.titania_slag=Titania Slag
@@ -1843,7 +1843,7 @@ susy.material.methacrylic_acid_solution=Methacrylic Acid Solution
 susy.material.uranium_dioxide=Uranium Dioxide
 susy.material.uranium_tetrafluoride=Uranium Tetrafluoride
 susy.material.salty_hydrofluoric_acid=Salty Hydrofluoric Acid
-susy.material.supported_molybdenum_vanadium=Supported Molybdenum Vanadium
+susy.material.supported_molybdenum_vanadium_oxide=Supported Molybdenum Vanadium Oxide
 susy.material.acrolein=Acrolein
 susy.material.c_five_fraction=C5 Fraction
 susy.material.dimerized_c_five_fraction=Dimerized C5 Fraction

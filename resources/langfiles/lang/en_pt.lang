@@ -197,7 +197,7 @@ susy.material.pig_iron=Ferro Gusa
 susy.material.iron_iii_sulfate=Sulfato de Ferro III
 
 susy.material.aluminium_hydroxide=Hidróxido de Alumínio
-susy.material.aluminium_trifluoride=Trifluoreto de Alumínio
+susy.material.aluminium_fluoride=Fluoreto de Alumínio
 susy.material.sodium_fluoride=Fluoreto de Sódio
 
 susy.material.gallium_phosphate=Fosfato de Gálio
@@ -462,7 +462,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=Sulfeto de Hidrogénio Semipesad
 susy.material.impure_heavy_hydrogen_sulfide=Sulfeto de Hidrogénio Pesado Impuro
 susy.material.sea_water=Água do Mar
 
-susy.material.novolacs_resist=Fotorresistente Novolacs
+susy.material.novolac_resist=Fotorresistente Novolac
 susy.material.silicon_tetrachloride=Tetracloreto de Silício
 susy.material.purified_silicon_tetrachloride=Tetracloreto de Silício Purificado
 
@@ -1319,7 +1319,7 @@ susy.material.ammonium_diuranate=Diuranato de Amônio
 susy.material.magnesium_carbonate=Carbonato de Magnésio
 susy.material.impure_vtm_slurry=Polpa de Titanomagnetita Vanadífera Impura
 susy.material.vtm_slurry=Polpa de Titanomagnetita Vanadífera
-susy.material.silicon_dioxide_slurry=Polpa de Dióxido de Silício
+susy.material.basic_cmp_slurry=Polpa Básica de CMP
 susy.material.vtm_concentrate=Concentrado de Titanomagnetita Vanadífera
 susy.material.vt_slag=Escória de Vanádio-Titânia
 susy.material.alkali_vt_slag=Escória Alcalina de Vanádio-Titânia

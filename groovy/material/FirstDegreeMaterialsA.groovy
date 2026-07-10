@@ -262,7 +262,7 @@ class FirstDegreeMaterialsA {
 
         AluminiumHydroxide.setFormula("Al(OH)3", true)
 
-        AluminiumTrifluoride = new Material.Builder(8119, SuSyUtility.susyId('aluminium_trifluoride'))
+        AluminiumFluoride = new Material.Builder(8119, SuSyUtility.susyId('aluminium_fluoride'))
                 .dust()
                 .components(Aluminium, Fluorine * 3)
                 .color(0x3d98bf)
@@ -839,7 +839,7 @@ class FirstDegreeMaterialsA {
 
         DicobaltOctacarbonyl = new Material.Builder(8210, SuSyUtility.susyId('dicobalt_octacarbonyl'))
                 .dust()
-                .components(Cobalt * 2, Cobalt * 8, Oxygen * 8)
+                .components(Cobalt * 2, Carbon * 8, Oxygen * 8)
                 .colorAverage()
                 .build()
 
@@ -854,11 +854,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        Bromobenzene = new Material.Builder(8213, SuSyUtility.susyId('bromobenzene'))
-                .liquid()
-                .components(Carbon * 6, Hydrogen * 5, Bromine)
-                .colorAverage()
-                .build()
+        // FREE ID: 8213
 
         ManganeseIISulfate = new Material.Builder(8214, SuSyUtility.susyId('manganese_ii_sulfate'))
                 .dust()
@@ -866,13 +862,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        Triethylaluminium = new Material.Builder(8215, SuSyUtility.susyId('triethylaluminium'))
-                .liquid()
-                .components(Carbon * 12, Hydrogen * 30, Aluminium * 2)
-                .colorAverage()
-                .build()
-
-        Triethylaluminium.setFormula("Al2(C2H5)6", true)
+        // FREE ID: 8215
 
         HydrogenPeroxide = new Material.Builder(8216, SuSyUtility.susyId('hydrogen_peroxide'))
                 .liquid()
@@ -880,17 +870,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        CarbonTetrabromide = new Material.Builder(8217, SuSyUtility.susyId('carbon_tetrabromide'))
-                .dust()
-                .components(Carbon, Bromine * 4)
-                .colorAverage()
-                .build()
-
-        Bromomethane = new Material.Builder(8218, SuSyUtility.susyId('bromomethane'))
-                .gas()
-                .components(Carbon, Hydrogen * 3, Bromine)
-                .colorAverage()
-                .build()
+        // FREE ID: 8217-8218
 
         VeryDilutedSulfuricAcid = new Material.Builder(8219, SuSyUtility.susyId('very_diluted_sulfuric_acid'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -1730,8 +1710,9 @@ class FirstDegreeMaterialsA {
                 .build()
 
         LeadFreeSolder = new Material.Builder(8346, SuSyUtility.susyId('lead_free_solder'))
-                .ingot().liquid(new FluidBuilder().temperature(411))
-                .components(Bismuth * 6, Tin * 4)
+                .ingot().liquid(new FluidBuilder().temperature(490))
+                .components(Tin * 115, Silver * 2, Copper * 1)
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .colorAverage()
                 .build()
 
@@ -1952,11 +1933,7 @@ class FirstDegreeMaterialsA {
                 .components(Nickel, Oxygen)
                 .build()
 
-        CarbonTetrafluoride = new Material.Builder(8380, SuSyUtility.susyId('carbon_tetrafluoride'))
-                .gas().plasma()
-                .components(Carbon, Fluorine * 4)
-                .colorAverage()
-                .build()
+        // FREE ID: 8380
 
         NitrogenTrifluoride = new Material.Builder(8381, SuSyUtility.susyId('nitrogen_trifluoride'))
                 .gas().plasma()
@@ -2052,6 +2029,7 @@ class FirstDegreeMaterialsA {
         ManganeseDioxide = new Material.Builder(8395, SuSyUtility.susyId('manganese_dioxide'))
                 .dust()
                 .iconSet('SHINY')
+                .flags(GENERATE_CATALYST_BED)
                 .components(Manganese, Oxygen * 2)
                 .color(0x38251e)
                 .build()

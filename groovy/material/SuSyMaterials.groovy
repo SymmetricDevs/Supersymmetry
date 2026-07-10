@@ -833,7 +833,7 @@ class SuSyMaterials {
     public static Material MelamineOffgas
     public static Material CrudeAzide
     public static Material CrudeAzideSolution
-    public static Material BurnedGas
+    public static Material WasteGas
     public static Material CorrosiveGas
     public static Material MagneticLiningSlurry
     public static Material FluorinatedSulfolaneMixture
@@ -844,6 +844,28 @@ class SuSyMaterials {
     public static Material CopperSuperfillElectrolyte
     public static Material StandardCleanOne
     public static Material StandardCleanTwo
+    public static Material GumTurpentine
+    public static Material PineResin
+    public static Material Rosin
+    public static Material MildlyActivatedSolderFluxMixture
+    public static Material LeadFreeSolderPaste
+    //public static Material VanadiumElectrolyteSlurry
+    //public static Material CrystallizedVanadiumElectrolyte
+    //public static Material VanadiumBatteryElectrolyte
+    public static Material GrapheneOxideDispersion
+    public static Material GrapheneOxide
+    public static Material GrapheneOxideTungstateSolution
+    public static Material AcidifiedGrapheneOxideTungstateSolution
+    public static Material AcidifiedGrapheneOxideTungstate
+    public static Material TungstenModifiedGrapheneOxideNanosheet
+    public static Material NanoparticleModifiedNafionDispersion
+    public static Material NanoparticleModifiedNafion
+    public static Material ExpandableGraphite
+    public static Material AluminiumChlorofluoride
+    public static Material NickelNanoparticleSuspension
+    public static Material SilverNanoparticleSuspension
+    public static Material PalladiumNanoparticleSuspension
+    public static Material BasicCMPSlurry
 
     // Petrochem Materials
 
@@ -1093,7 +1115,7 @@ class SuSyMaterials {
     public static Material HeatedGreenCoke
     public static Material IronIIISulfate
     public static Material AluminiumHydroxide
-    public static Material AluminiumTrifluoride
+    public static Material AluminiumFluoride
     public static Material GalliumPhosphate
     public static Material LithiumNiobate
     public static Material LeadZirconateTitanate
@@ -1138,11 +1160,7 @@ class SuSyMaterials {
     public static Material ActivatedRaneyNickel
     public static Material DicobaltOctacarbonyl
     public static Material BismuthCopper
-    public static Material Bromobenzene
-    public static Material Triethylaluminium
     public static Material HydrogenPeroxide
-    public static Material CarbonTetrabromide
-    public static Material Bromomethane
     public static Material VeryDilutedSulfuricAcid
     public static Material SulfurDichloride
     public static Material ThionylChloride
@@ -1297,7 +1315,6 @@ class SuSyMaterials {
     public static Material PurifiedIronTwoThreeOxide
     public static Material PurifiedIronIIIOxide
     public static Material NickelIIOxide
-    public static Material CarbonTetrafluoride
     public static Material NitrogenTrifluoride
     public static Material CobaltFerrite
     public static Material StrontiumFerrite
@@ -1712,6 +1729,14 @@ class SuSyMaterials {
     public static Material AnnealedAB2MetalAlloy
     public static Material AnnealedAB5MetalAlloy
     public static Material CadmiumOxide
+    //public static Material VanadiumTrioxide
+    public static Material ExpandedPolytetrafluoroethylene
+    public static Material SilverNanoparticle
+    public static Material NickelNanoparticle
+    public static Material DysprosiumOxide
+    public static Material HolmiumOxide
+    public static Material PalladiumNanoparticle
+    public static Material PalladiumNitrateSolution
 
     // HP Materials
 
@@ -1786,6 +1811,7 @@ class SuSyMaterials {
     public static Material HighPurityYtterbium
     public static Material HighPurityLutetium
     public static Material HighPurityThorium
+    public static Material IodineMonochloride
 
     // Second Degree Materials
 
@@ -1816,7 +1842,6 @@ class SuSyMaterials {
     public static Material SodiumSulfateSolution
     public static Material CopperZincChromiumOxide
     public static Material PhilipsCatalyst
-    public static Material ZieglerNattaCatalyst
     public static Material HydrogenPeroxideSolution
     public static Material AmmoniumAcetateSolution
     public static Material TetramethylammoniumHydroxideSolution
@@ -1887,7 +1912,7 @@ class SuSyMaterials {
     public static Material DilutedManganeseIIChlorideSolution
     public static Material SupportedPalladium
     public static Material MixedCyanideSolution
-    public static Material SupportedMolybdenumVanadium
+    public static Material SupportedMolybdenumVanadiumOxide
     public static Material ChlorinatedBeryl
     public static Material IndiumChlorideSolution
     public static Material TelluriumLiquor
@@ -1974,6 +1999,14 @@ class SuSyMaterials {
     public static Material GoldAntimony
     public static Material MetalHydrideMixAnode
     public static Material SupportedVanadiumPentoxide
+    public static Material HalophosphatePhosphor
+    public static Material HalophosphatePhosphorSolution
+    public static Material YttriumAluminiumGarnetCerium
+    public static Material VanadiumIIISulfateSolution
+    public static Material DilutedVanadiumIIISulfateSolution
+    public static Material VanadylSulfateSolution
+    public static Material SupportedChromiumIIIOxide
+    public static Material UltrapureHydrochloricAcid
 
     // Organic Chemistry Materials
 
@@ -2243,6 +2276,7 @@ class SuSyMaterials {
     public static Material Cyanamide
     public static Material Dicyandiamide
     public static Material TwoMethylimidazole
+    public static Material EDLCElectrodeSlurry
     public static Material FlameRetardantEpoxy
     public static Material PropyleneChlorohydrin
     public static Material PropyleneOxide
@@ -2432,6 +2466,7 @@ class SuSyMaterials {
     public static Material DiphenylSulfone
     public static Material PolyetherEtherKetone
     public static Material Hexafluoropropylene
+    public static Material Octafluorocyclobutane
     public static Material Viton
     public static Material SodiumEthoxide
     public static Material ParaNitrotoluene
@@ -2509,6 +2544,10 @@ class SuSyMaterials {
     public static Material PropyleneGlycolMethylEtherAcetate
     public static Material EthylLactate
     public static Material PhenolicNovolacsOligomer
+    public static Material TwoNaphthol
+    public static Material SodiumNaphthaleneTwoSulfonate
+    public static Material NaphtholModifiedPhenolicNovolacsOligomer
+    public static Material PyridiniumTosylate
     public static Material BisAzideCrosslinker
     public static Material FourMethylcyclohexanone
     public static Material ParaAzidobenzaldehyde
@@ -2596,6 +2635,7 @@ class SuSyMaterials {
     public static Material AbsorbingMethacrylateCopolymer
     public static Material BenzylAlcohol
     public static Material Glycidol
+    public static Material Fluoroform
     public static Material Pentafluoroiodoethane
     public static Material NonafluorobutylIodide
     public static Material Methoxyperfluorobutane
@@ -2611,6 +2651,29 @@ class SuSyMaterials {
     public static Material Diethoxymethylsilane
     public static Material Methylbutynol
     public static Material Methylbutenol
+    public static Material AlphaPinene
+    public static Material AlphaTerpinene
+    public static Material Limonene
+    public static Material DiethylammoniumChloride
+    public static Material TerpineneMixture
+    public static Material TrimethylGallium
+    public static Material TrimethylIndium
+    public static Material DiallyldimethylammoniumChloride
+    public static Material Bromobenzene
+    public static Material Triethylaluminium
+    public static Material CarbonTetrabromide
+    public static Material Bromomethane
+    public static Material CarbonTetrafluoride
+    public static Material Hexachloroethane
+    public static Material Tetrachloroethylene
+    public static Material Trichlorotrifluoroethane
+    public static Material Chlorotrifluoroethylene
+    public static Material Dichlorotrifluoroiodoethane
+    public static Material Tetrachlorohexafluorobutane
+    public static Material Hexafluorobutadiene
+    public static Material Hexafluorobutyne
+    public static Material TriethylBorate
+    public static Material Fluoromethane
 
     // Third Degree Materials
 
@@ -2839,6 +2902,21 @@ class SuSyMaterials {
     public static Material PolycaprolactamSolution
     public static Material DimethylDioxaneSolution
     public static Material IsopreneSolution
+    public static Material DiethylammoniumChlorideSolution
+    public static Material TrimethylGalliumSolution
+    public static Material TrimethylIndiumSolution
+    public static Material DiallyldimethylammoniumChlorideSolution
+    public static Material PolydiallyldimethylammoniumChlorideSolution
+    public static Material NafionDispersion
+    public static Material PyridiniumTosylateSolution
+    public static Material SpinOnCarbon
+    public static Material AgPdConductiveInk
+    public static Material NickelConductiveInk
+    public static Material SilverFritInk
+    public static Material CopperFritInk
+    public static Material ThickFilmResistorInk
+    public static Material ZieglerNattaCatalyst
+    public static Material FluoromethaneMixture
 
     // Thermodynamics Materials
 
@@ -2902,14 +2980,10 @@ class SuSyMaterials {
     public static Material TritiatedHeavyWater
     public static Material TritiatedSteam
     public static Material ChilledWater
-    public static Material HalophosphatePhosphor
-    public static Material HalophosphatePhosphorSolution
-    public static Material TrimethylGalliumSolution
-    public static Material TrimethylIndiumSolution
-    public static Material TrimethylGallium
-    public static Material TrimethylIndium
-    public static Material YttriumAluminiumGarnetCerium
-
+    public static Material CarbonTetrafluorideMixture
+    public static Material DilutedCarbonTetrafluorideMixture
+    public static Material FluoroformMixture
+    public static Material ChloroethyleneMixture
 
     public static void changeFormulas() {
         log.infoMC("Changing Formulas!")
