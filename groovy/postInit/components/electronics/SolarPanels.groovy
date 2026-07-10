@@ -1,9 +1,7 @@
 import static prePostInit.Recipemaps.*
 import classes.*
 import static gregtech.api.GTValues.*
-import gregtech.api.metatileentity.multiblock.CleanroomType
 
-import globals.Globals
 import globals.semiconductors.Lithography
 import globals.semiconductors.Etching
 import globals.semiconductors.Deposition
@@ -20,13 +18,3 @@ Lithography.generateResistStrippingRecipes('wafer.monosilicon_photovoltaic.step_
 Deposition.generateSputteringRecipe('wafer.monosilicon_photovoltaic.step_six', 'wafer.monosilicon_photovoltaic.step_seven', ['aluminium' : 30, 'titanium' : 30])
 Deposition.generateSinteringRecipe('wafer.monosilicon_photovoltaic.step_seven', 'wafer.monosilicon_photovoltaic.step_eight', 200, MV)
 Packaging.generateDicingRecipe('wafer.monosilicon_photovoltaic.step_eight', 'cell.monosilicon_photovoltaic', 1, 80, MV)
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('cell.monosilicon_photovoltaic'))
-    .inputs(metaitem('plateGlass'))
-    .inputs(metaitem('foilAluminium'))
-    .inputs(metaitem('foilPlastic'))
-    .outputs(metaitem('wafer.' + componentName + '.step_nine'))
-    .duration(45)
-    .EUt(480)
-    .buildAndRegister()
