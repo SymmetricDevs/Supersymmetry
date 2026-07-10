@@ -3090,6 +3090,10 @@ susy.material.supported_vanadium_pentoxide=Supported Vanadium Pentoxide
 susy.material.one_bromopropane=1-Bromopropane
 susy.material.octamethylcyclotetrasiloxane=Octamethylcyclotetrasiloxane (OMCTS)
 susy.material.diethoxymethylsilane=Diethoxymethylsilane (DEMS)
+susy.material.white_epoxy_pcb_coating=White Epoxy PCB Coating
+susy.material.crude_sodium_oxalate_solution=Crude Sodium Oxalate Solution
+susy.material.crude_calcium_oxalate=Crude Calcium Oxalate
+susy.material.crude_oxalic_acid_solution=Crude Oxalic Acid Solution
 
 # Isotopes
 
@@ -3376,10 +3380,10 @@ metaitem.patterned.nand.name=Nickel-Coated Wafer (NAND Pattern)
 metaitem.patterned.nor.name=Nickel-Coated Wafer (NOR Pattern)
 
 metaitem.patterned.board.coated.name=Patterned Coated Circuit Board
-metaitem.patterned.board.phenolic.name=Patterned Phenolic Circuit Board
+metaitem.patterned.board.phenolic.name=Drilled Phenolic Circuit Board
 metaitem.patterned.board.plastic.name=Patterned Plastic Circuit Board
 
-metaitem.laminated.board.phenolic.name=Laminated Phenolic Circuit Board
+metaitem.laminated.board.phenolic.name=Copper-Clad Phenolic Circuit Board
 
 metaitem.etched.ic.name=Etched Integrated Logic Circuit Wafer
 metaitem.etched.cpu.name=Etched CPU Wafer
@@ -3590,6 +3594,7 @@ metaitem.nozzle.boron_nitride.name=Boron Nitride Nozzle
 
 metaitem.board.epoxy.prepreg.name=FR-4 Epoxy Prepreg
 metaitem.board.epoxy.copper_clad.name=FR-4 Copper Clad Laminate
+metaitem.board.epoxy.resist.name=Photoresist-Coated FR-4 Circuit Board
 metaitem.board.epoxy.patterned.name=Patterned FR-4 Circuit Board
 metaitem.board.epoxy.etched.name=Etched FR-4 Circuit Board
 metaitem.board.epoxy.drilled.name=Drilled FR-4 Circuit Board
@@ -3598,8 +3603,22 @@ metaitem.board.epoxy.electrolytic.name=Electrolytic Plated FR-4 Circuit Board
 metaitem.board.epoxy.wet_masked.name=Wet Masked FR-4 Circuit Board
 metaitem.board.epoxy.masked.name=Masked FR-4 Circuit Board
 metaitem.board.epoxy.mask_affixed.name=Mask-Affixed FR-4 Circuit Board
-metaitem.circuit_board.fr4.name=Advanced Circuit Board
-metaitem.circuit_board.fr4.tooltip=An Advanced Circuit Board/nDouble-sided FR-4 Printed Circuit Board
+metaitem.circuit_board.fr4.name=Double-Layer Circuit Board
+metaitem.circuit_board.fr4.tooltip=An Elite Circuit Board/nDouble-sided FR-4 Printed Circuit Board
+
+metaitem.board.hv.prepreg.name=G-10 Epoxy Prepreg
+metaitem.board.hv.copper_clad.name=G-10 Copper Clad Laminate
+metaitem.board.hv.resist.name=Photoresist-Coated G-10 Circuit Board
+metaitem.board.hv.patterned.name=Patterned G-10 Circuit Board
+metaitem.board.hv.etched.name=Etched G-10 Circuit Board
+metaitem.board.hv.drilled.name=Drilled G-10 Circuit Board
+metaitem.board.hv.electroless.name=Electroless Plated G-10 Circuit Board
+metaitem.board.hv.electrolytic.name=Electrolytic Plated G-10 Circuit Board
+metaitem.board.hv.wet_masked.name=Wet Masked G-10 Circuit Board
+metaitem.board.hv.masked.name=Masked G-10 Circuit Board
+metaitem.board.hv.mask_affixed.name=Mask-Affixed G-10 Circuit Board
+metaitem.circuit_board.g10.name=Advanced Circuit Board
+metaitem.circuit_board.g10.tooltip=An Advanced Circuit Board/nG-10 Printed Circuit Board
 
 metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
@@ -3677,6 +3696,7 @@ gregtech.advancement.medium_voltage.31_mv_energy_hatch.name=Upgrade Your ERF
 recipemap.electric_blast_furnace.name=Resistance Furnace
 gregtechfoodoption.machine.greenhouse.name=Arboretum
 recipemap.greenhouse.name=Arboretum
+metaitem.board.phenolic.name=Phenolic Circuit Board Prepreg
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp

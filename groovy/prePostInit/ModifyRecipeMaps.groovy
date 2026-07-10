@@ -440,6 +440,7 @@ RecipeMaps.AUTOCLAVE_RECIPES
     .modifyMaxFluidOutputs(2)
 
 RecipeMaps.CHEMICAL_BATH_RECIPES
+    .modifyMaxInputs(2)
     .modifyMaxOutputs(3)
     .modifyMaxFluidInputs(3)
     .modifyMaxFluidOutputs(3)

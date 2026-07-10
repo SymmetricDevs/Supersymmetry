@@ -271,9 +271,8 @@ VACUUM_CHAMBER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-    CENTRIFUGE.recipeBuilder()
-        .notConsumable(ore('stickSteel'))
-        .inputs(ore('fiberKevlar'))
+    EXTRUDER.recipeBuilder()
+        .notConsumable(metaitem('shape.extruder.wire'))
         .fluidInputs(fluid('e_glass') * 144)
         .outputs(metaitem('glass_fibers'))
         .EUt(VA[MV])
@@ -290,11 +289,21 @@ VACUUM_CHAMBER.recipeBuilder()
         .buildAndRegister()
             
     CHEMICAL_BATH.recipeBuilder()
-        .inputs(metaitem('glass_fibers'))
-        .fluidInputs(fluid('epoxy') * 144)
+            .inputs(metaitem('glass_fibers')) //FIXME: replace with S-glass fibers
+            .inputs(ore('fiberKevlar'))
+            .fluidInputs(fluid('epoxy') * 144)
         .outputs(metaitem('plateReinforcedEpoxyResin'))
         .EUt(VA[MV])
         .duration(160)
+        .buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+        .inputs(metaitem('glass_fibers'))
+        .fluidInputs(fluid('epoxy') * 144)
+        .outputs(metaitem('board.hv.prepreg'))
+        .circuitMeta(1)//FIXME: remove circuit once S-glass is used for the fiber epoxy plate
+        .EUt(VA[MV])
+        .duration(75)
         .buildAndRegister()
 
 // Cycloaliphatic Epoxy Resins

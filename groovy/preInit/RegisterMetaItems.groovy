@@ -438,6 +438,19 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5809, "circuit_board.fr4")
         addItem(5810, "board.epoxy.resist")
 
+        addItem(5811, "board.hv.prepreg")
+        addItem(5812, "board.hv.copper_clad");
+        addItem(5813, "board.hv.resist")
+        addItem(5814, "board.hv.patterned");
+        addItem(5815, "board.hv.etched");
+        addItem(5816, "board.hv.drilled");
+        addItem(5817, "board.hv.electroless");
+        addItem(5818, "board.hv.electrolytic");
+        addItem(5819, "board.hv.wet_masked");
+        addItem(5820, "board.hv.mask_affixed");
+        addItem(5821, "circuit_board.g10")
+
+
         //Good Circuit Components 5900-6000
         addItem(5900, "op_amp")
         addItem(5901, "heat_sink")

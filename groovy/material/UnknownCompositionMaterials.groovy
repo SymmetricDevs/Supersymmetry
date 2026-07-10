@@ -3476,5 +3476,27 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x3749ad)
                 .build()
+
+        WhiteEpoxyPCBCoating = new Material.Builder(4741, SuSyUtility.susyId('white_epoxy_pcb_coating'))
+                .liquid()
+                .color(0xF2F0B8)
+                .build()
+
+        CrudeSodiumOxalateSolution = new Material.Builder(4742, SuSyUtility.susyId('crude_sodium_oxalate_solution'))
+                .liquid()
+                .color(0xEFE977)
+                .build()
+
+        CrudeCalciumOxalate = new Material.Builder(4743, SuSyUtility.susyId('crude_calcium_oxalate'))
+                .dust()
+                .color(0x76ED76)
+                .iconSet(DULL)
+                .build()
+
+        CrudeOxalicAcidSolution = new Material.Builder(4744, SuSyUtility.susyId('crude_oxalic_acid_solution'))
+                .liquid()
+                .color(0xEA75AA)
+                .build()
+
     }
 }

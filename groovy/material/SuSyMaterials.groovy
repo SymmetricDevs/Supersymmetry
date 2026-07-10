@@ -844,6 +844,10 @@ class SuSyMaterials {
     public static Material CopperSuperfillElectrolyte
     public static Material StandardCleanOne
     public static Material StandardCleanTwo
+    public static Material WhiteEpoxyPCBCoating
+    public static Material CrudeSodiumOxalateSolution
+    public static Material CrudeCalciumOxalate
+    public static Material CrudeOxalicAcidSolution
 
     // Petrochem Materials
 
