@@ -16,7 +16,8 @@ mods.jei.ingredient.yeet(
     metaitem('circuit_board.extreme')
 )
 
-//LV circuit board
+// LV circuit board
+
 crafting.removeByOutput(metaitem('circuit_board.basic'))
 mods.gregtech.assembler.removeByInput(7, [metaitem('foilCopper') * 4, metaitem('plateWood')], [fluid('glue') * 100])
 
@@ -36,14 +37,15 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
-//MV circuit board
+// MV circuit board
+
 crafting.removeByOutput(metaitem('circuit_board.good'))
 mods.gregtech.assembler.removeByInput(30, [metaitem('dustWood'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('glue') * 50])
 
-DRYER.recipeBuilder()
+CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('paper'))
+        .inputs(ore('dustSmallHexamethylenetetramine'))
         .fluidInputs(fluid('phenolic_novolacs_oligomer') * 100)
-        .fluidInputs(fluid('hexamethylenetetramine_solution') * 25)
         .outputs(metaitem('board.phenolic'))
         .duration(80)
         .EUt(VA[LV])
@@ -73,7 +75,6 @@ ASSEMBLER.recipeBuilder()
         .duration(100)
         .EUt(VA[LV])
         .buildAndRegister();
-
 
 // Roughly follows https://medium.com/@raypcb/how-are-fr4-pcbs-manufactured-c571fd1e4a29
 
