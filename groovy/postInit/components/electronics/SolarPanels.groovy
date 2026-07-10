@@ -11,25 +11,22 @@ import globals.semiconductors.Packaging
 import globals.semiconductors.Doping
 import globals.semiconductors.Mechanicals
 
-def generateMonoSolarPanelFabrication(String componentName, int circ) {
-    Packaging.generateDicingRecipe('wafer.silicon.p_doped', 'wafer.' + componentName + '.step_one', 1, 80, MV)
-    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_one', 'wafer.' + componentName + '.step_two', 40, 'arsine')
-    Doping.generateIonImplantationRecipes('wafer.' + componentName + '.step_two', 'wafer.' + componentName + '.step_three', 40, 'boron_trifluoride')
-    Deposition.generateChemicalVaporDepositionRecipe('wafer.' + componentName + '.step_three', 'wafer.' + componentName + '.step_four', 1.0, 'silicon_nitride.silane')
-    Lithography.generatePhotolithographyRecipes('wafer.' + componentName + '.step_four', 'wafer.' + componentName + '.step_five',
-            'novolac_resist', 'mask_set.' + componentName, true)
-    Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.step_five', 'wafer.' + componentName + '.step_six', 0.1, false)
-    Deposition.generateSputteringRecipe('wafer.' + componentName + '.step_six', 'wafer.' + componentName + '.step_seven', ['aluminium' : 30, 'titanium' : 30])
-    Doping.generateDriveInRecipe('wafer.' + componentName + '.step_seven', 'wafer.' + componentName + '.step_eight', 60)
+Doping.generateIonImplantationRecipes('wafer.silicon.p_doped', 'wafer.monosilicon_photovoltaic.step_one', 100, 'arsine')
+Doping.generateIonImplantationRecipes('wafer.monosilicon_photovoltaic.step_one', 'wafer.monosilicon_photovoltaic.step_two', 100, 'boron_trifluoride')
+Doping.generateDriveInRecipe('wafer.monosilicon_photovoltaic.step_two', 'wafer.monosilicon_photovoltaic.step_three', 200)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.monosilicon_photovoltaic.step_three', 'wafer.monosilicon_photovoltaic.step_four', 1.0, 'silicon_nitride.silane')
+Lithography.generatePhotolithographyRecipes('wafer.monosilicon_photovoltaic.step_four', 'wafer.monosilicon_photovoltaic.step_five', 'novolac_resist', 'mask.monosilicon_photovoltaic', true)
+Lithography.generateResistStrippingRecipes('wafer.monosilicon_photovoltaic.step_five', 'wafer.monosilicon_photovoltaic.step_six', 1.0, false)
+Deposition.generateSputteringRecipe('wafer.monosilicon_photovoltaic.step_six', 'wafer.monosilicon_photovoltaic.step_seven', ['aluminium' : 30, 'titanium' : 30])
+Deposition.generateSinteringRecipe('wafer.monosilicon_photovoltaic.step_seven', 'wafer.monosilicon_photovoltaic.step_eight', 200, MV)
+Packaging.generateDicingRecipe('wafer.monosilicon_photovoltaic.step_eight', 'cell.monosilicon_photovoltaic', 1, 80, MV)
 
-    ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('wafer.' + componentName + '.step_eight'))
-        .inputs(metaitem('plateGlass'))
-        .inputs(metaitem('foilAluminium'))
-        .inputs(metaitem('foilPlastic'))
-        .outputs(metaitem('wafer.' + componentName + '.step_nine'))
-        .duration(45)
-        .EUt(480)
-        .buildAndRegister()
-}
-generateMonoSolarPanelFabrication('monosilicon_solar_panel', 1)
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('cell.monosilicon_photovoltaic'))
+    .inputs(metaitem('plateGlass'))
+    .inputs(metaitem('foilAluminium'))
+    .inputs(metaitem('foilPlastic'))
+    .outputs(metaitem('wafer.' + componentName + '.step_nine'))
+    .duration(45)
+    .EUt(480)
+    .buildAndRegister()
