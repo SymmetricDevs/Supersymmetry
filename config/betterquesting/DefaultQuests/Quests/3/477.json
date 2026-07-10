@@ -12,7 +12,8 @@
         "id:8": "gregtech:meta_dust"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.477.title"
+      "name:8": "susy.quest.db.477.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 477,

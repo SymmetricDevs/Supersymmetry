@@ -33,36 +33,91 @@ def wordsFromNumber(int num) {
 
 toadd_list = []
 
-def registerCircuitMetaitems(String name, int step_count, int start_num=2, boolean finish=true, boolean generateMask = true) {
-        for (int i=start_num; i <= step_count; i++) {
-            toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(i))
-        }
-        if (generateMask) {
-            toadd_list.add("mask_set." + name)
-        }
-        if (finish) {
-            toadd_list.add("die." + name)
-            toadd_list.add("die." + name + ".bonded")
-        }
+// Generic wafer-step metaitem registration for a single wafer namespace.
+// opts (all optional): start (first step, default 2); photoresist / ashed / trilayer are arrays of
+// step numbers needing those substep variants; mask + die register the component-level items.
+def registerWaferSteps(String name, int stepCount, Map opts = [:]) {
+    for (int i = opts.get('start', 2); i <= stepCount; i++) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(i))
+    }
+    for (step in opts.get('photoresist', [])) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
+    }
+    for (step in opts.get('ashed', [])) {
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
+    }
+    for (step in opts.get('trilayer', [])) { // SOC/SiON hardmask (ibarc) lithography intermediates
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".hardmasked")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ibarc")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".developed")
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".etched")
+    }
+    for (step in opts.get('mandrel', [])) { // self-aligned Si mandrel on the ibarc hardmask (future pitch-split / spacer patterning); listed alongside trilayer
+        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".mandrel")
+    }
+    if (opts.get('mask', false)) {
+        toadd_list.add("mask_set." + name)
+    }
+    if (opts.get('die', false)) {
+        toadd_list.add("die." + name)
+        toadd_list.add("die." + name + ".bonded")
+    }
+}
+
+def registerNMOSMetaitems(String name, int stepCount = 25, List photoresist = [7, 12, 15, 21]) {
+    registerWaferSteps(name, stepCount, [photoresist: photoresist, mask: true, die: true])
 }
 
 def registerCMOSMetaitems(String name) {
-    registerCircuitMetaitems(name, 77, 3, false, false)
-    for (int i=1; i<=9; i++) {
-        registerCircuitMetaitems(name + ".beol_" + wordsFromNumber(i), 8, 1, false)
-        toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.coated")
-        toadd_list.add("wafer." + name + ".beol_" + wordsFromNumber(i) + ".step_one.exposed")
+    // FEOL/MEOL shares the main step namespace and carries the component die + mask
+    registerWaferSteps(name, 74, [start: 3, mask: true, die: true,
+        photoresist: [11, 14, 23, 28, 32, 39, 51, 59, 67],
+        ashed:       [6, 13, 16, 27, 31, 35, 41, 53, 61, 70],
+        trilayer:    [23, 59]])
+
+    // 9-layer damascene copper BEOL; layers 1-6 use trilayer (ibarc) resist
+    for (int i = 1; i <= 9; i++) {
+        def opts = (i <= 6) ? [start: 1, photoresist: [1], trilayer: [1], ashed: [3]]
+                            : [start: 1, photoresist: [1]]
+        registerWaferSteps(name + ".beol_" + wordsFromNumber(i), 8, opts)
     }
-    registerCircuitMetaitems(name, 162, 150)
-    def ashed_steps = [6, 13, 17, 28, 32, 36, 40, 44, 56, 73, 159]
-    for (step in ashed_steps) {
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".ashed")
+
+    // Sealing and packaging
+    registerWaferSteps(name + ".pkg", 13, [start: 1, photoresist: [2, 7], ashed: [10]])
+}
+
+def registerBCDMetaitems() {
+    // Shared bcd_base trunk: FEOL/MEOL steps 1-82 (uses mask_set.bcd_base; the trunk itself is never diced)
+    registerWaferSteps("bcd_base", 82, [start: 1, mask: true,
+        photoresist: [2, 5, 11, 20, 27, 31, 34, 39, 43, 47, 50, 53, 58, 61, 70, 75],
+        ashed:       [4, 7, 16, 24, 29, 33, 36, 49, 52, 55, 60, 63, 72, 78],
+        trilayer:    [11],   // DTI patterning
+        mandrel:     [11]])  // DTI patterning uses a self-aligned mandrel
+
+    // Shared lower metal M1-M3 (M1-M2 trilayer, M3 novolac)
+    for (int i = 1; i <= 3; i++) {
+        def opts = (i <= 2) ? [start: 1, photoresist: [1], trilayer: [1], ashed: [3]]
+                            : [start: 1, photoresist: [1]]
+        registerWaferSteps("bcd_base.beol_" + wordsFromNumber(i), 8, opts)
     }
-    
-    def photoresist_steps = [11, 15, 24, 29, 33, 38, 42, 54, 62, 70, 151, 156]
-    for (step in photoresist_steps) {
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".coated")
-        toadd_list.add("wafer." + name + ".step_" + wordsFromNumber(step) + ".exposed")
+
+    // Shared M4 dielectric + coat: the fork point each tier splits from
+    toadd_list.add("wafer.bcd_base.beol_four.step_one")
+    toadd_list.add("wafer.bcd_base.beol_four.step_one.coated")
+
+    // Tiers diverge at M4 and finish at their top metal layer (HV=4, EV=5, IV=6)
+    def tiers = ['bcd_lpic': 4, 'bcd_pic': 5, 'bcd_hpic': 6]
+    tiers.each { tier, topLayer ->
+        // M4 is the split layer: only step_one.exposed (from the split) plus steps 2-8
+        registerWaferSteps(tier + ".beol_four", 8, [start: 2])
+        toadd_list.add("wafer." + tier + ".beol_four.step_one.exposed")
+        // M5..top are ordinary novolac damascene layers
+        for (int i = 5; i <= topLayer; i++) {
+            registerWaferSteps(tier + ".beol_" + wordsFromNumber(i), 8, [start: 1, photoresist: [1]])
+        }
+        // Sealing/packaging carries this tier's die + mask
+        registerWaferSteps(tier + ".pkg", 13, [start: 1, mask: true, die: true, photoresist: [2, 7], ashed: [10]])
     }
 }
 
@@ -83,9 +138,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(100, "cement.clinker")
         addItem(101, "hot.cement.clinker")
         addItem(102, "cement.dust")
-
-        addItem(103, "laminated_dry_film_photoresist")
-
+        addItem(103, "graphite_paper")
         addItem(104, "shape.mold.rod")
         addItem(105, "shape.mold.crucible")
         addItem(106, "crucible.boron.nitride")
@@ -104,7 +157,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(154, "washed_rotten_flesh")
         addItem(155, "sugar_cane_dust")
 
-        // FREE ID: 156
+        addItem(156, "laminated_dry_film_photoresist")
 
         addItem(157, "hydrocracking_catalyst")
         addItem(158, "paraffin_wax")
@@ -197,6 +250,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(403, "engine.spark_plug.palladium")
 
         addItem(500, "sintered_alumina.insulator")
+        addItem(501, "ceramic_casing")
 
         addItem(1000, "chunk.magnetite")
         addItem(1001, "hot_iron_rod")
@@ -224,12 +278,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2500, "gun.barrel.steel")
 
         // circuit overhaul metaitems: 2750 - 3000
-        addItem(2750, "componentCapacitorMedium")
-        addItem(2751, "componentDiodeSignal")
-        addItem(2752, "componentOpAmp")
-        addItem(2753, "componentResistorMedium")
-        addItem(2754, "componentTransistorMedium")
-        addItem(2755, "resistorCarbon")
+        // FREE ID: 2750 - 2755
         addItem(2756, "component.transistor.alloy_junction")
         addItem(2757, "plate.ultra_low_power_integrated_circuit")
         addItem(2758, "plate.low_power_integrated_circuit")
@@ -281,6 +330,65 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2804, "circuit.power.mv")
         addItem(2805, "circuit.power.hv")
         addItem(2806, "circuit.power.ev")
+        addItem(2807, "barium_titanate_paste")
+        addItem(2808, "doped_barium_titanate_paste")
+        addItem(2809, "sheet.barium_titanate")
+        addItem(2810, "sheet.doped_barium_titanate")
+        addItem(2811, "component.bme_cap.layer")
+        addItem(2812, "component.bme_cap.wafer")
+        addItem(2813, "component.bme_cap.unfired")
+        addItem(2814, "component.bme_cap.fired")
+        addItem(2815, "component.bme_cap.polished")
+        addItem(2816, "component.bme_cap.dipped")
+        addItem(2817, "component.bme_cap.terminated")
+        addItem(2818, "component.bme_cap.plated")
+        addItem(2819, "component.bme_cap")
+        addItem(2820, "component.pme_cap.layer")
+        addItem(2821, "component.pme_cap.wafer")
+        addItem(2822, "component.pme_cap.unfired")
+        addItem(2823, "component.pme_cap.fired")
+        addItem(2824, "component.pme_cap.polished")
+        addItem(2825, "component.pme_cap.dipped")
+        addItem(2826, "component.pme_cap.terminated")
+        addItem(2827, "component.pme_cap.plated")
+        addItem(2828, "component.pme_cap")
+        addItem(2829, "screen_printing.pattern.mlcc")
+        addItem(2830, "mesh.stainless_steel")
+        addItem(2831, "screen_printing.pattern.resistor_pads")
+        addItem(2832, "screen_printing.pattern.resistor")
+        addItem(2833, "component.resistor.wafer.printed_pads")
+        addItem(2834, "component.resistor.wafer.pads")
+        addItem(2835, "component.thick_film_resistor.wafer.printed")
+        addItem(2836, "component.thick_film_resistor.wafer.fired")
+        addItem(2837, "component.thick_film_resistor.wafer.etched")
+        addItem(2838, "component.thick_film_resistor.wafer.printed_coating")
+        addItem(2839, "component.thick_film_resistor.wafer")
+        addItem(2840, "component.thick_film_resistor.unterminated")
+        addItem(2841, "component.thick_film_resistor.polished")
+        addItem(2842, "component.thick_film_resistor.dipped")
+        addItem(2843, "component.thick_film_resistor.terminated")
+        addItem(2844, "component.thick_film_resistor.plated")
+        addItem(2846, "component.thick_film_resistor")
+        addItem(2847, "component.thin_film_resistor.wafer.coated")
+        addItem(2848, "component.thin_film_resistor.wafer.exposed")
+        addItem(2849, "component.thin_film_resistor.wafer.patterned")
+        addItem(2850, "component.thin_film_resistor.wafer")
+        addItem(2851, "component.thin_film_resistor.wafer.stripped")
+        addItem(2852, "component.thin_film_resistor.wafer.etched")
+        addItem(2853, "component.thin_film_resistor.wafer.tuned")
+        addItem(2854, "component.thin_film_resistor.unterminated")
+        addItem(2855, "component.thin_film_resistor.polished")
+        addItem(2856, "component.thin_film_resistor.dipped")
+        addItem(2857, "component.thin_film_resistor.terminated")
+        addItem(2858, "component.thin_film_resistor.plated")
+        addItem(2860, "component.thin_film_resistor")
+
+        addItem(2861, "edlc_electrode_powder")
+        addItem(2862, "edlc_electrode_coated")
+        addItem(2863, "edlc_electrode")
+        addItem(2864, "component.capacitor.edlc")
+        addItem(2865, "component.thyristor.assembly")
+        addItem(2866, "component.thyristor")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -291,6 +399,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2959, "die.alloy_junction_transistor.step_one")
         addItem(2960, "die.alloy_junction_transistor.step_two")
         addItem(2961, "die.alloy_junction_transistor.step_three")
+
+
 
         //Placeholders until GCYS is available
         addItem(3000, "circuit.gooware_processor")
@@ -339,6 +449,9 @@ eventManager.listen { PostMaterialEvent event ->
 
         //Organics 3500-3900
         addItem(3500, "copra")
+        addItem(3501, "zest.orange")
+        addItem(3502, "zest.lemon")
+        addItem(3503, "zest.lime")
 
         // Battery hulls 3900-4000
         addItem(3900, "battery.primitivehull.lv")
@@ -379,7 +492,21 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4022, "anode.mh")
         addItem(4023, "membrane.cast_film")
 
+
         addItem(4101, "vacuum_tube_components")
+        //Flow batteries 4200-4300
+        addItem(4200, "needle.steel")
+        addItem(4201, "needle.steel.barbed")
+        addItem(4202, "needle_assembly.steel.barbed")
+        addItem(4203, "membrane.vanadium_battery")
+        addItem(4204, "expanded_graphite_worms")
+        addItem(4205, "foil.punched_polyacrylonitrile")
+        addItem(4206, "foil.carbon_felt")
+        addItem(4207, "foil.activated_carbon_felt")
+        addItem(4208, "paste.lubricated_ptfe")
+        addItem(4209, "preform.lubricated_ptfe")
+        addItem(4210, "foil.extruded_ptfe")
+        addItem(4211, "foil.stretched_ptfe")
 
         //Dusts & Pulps 4500-4999
 
@@ -393,6 +520,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5005, "stencil.pcb")
         addItem(5006, "stencil.ulpic")
         addItem(5007, "stencil.lpic")
+        addItem(5008, "stencil.resistor")
+        addItem(5009, "stencil.capacitor")
+        addItem(5010, "stencil.resistor_pads")
+
         addItem(5020, "mask.blank")
         addItem(5021, "mask.ic")
         addItem(5022, "mask.cpu")
@@ -403,6 +534,11 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5027, "mask.nand")
         addItem(5028, "mask.nor")
         addItem(5029, "mask.advanced")
+        addItem(5030, "mask.diode.planar")
+        addItem(5031, "mask_set.diode.power")
+        addItem(5032, "mask_set.diode.schottky")
+        addItem(5033, "mask.resistor")
+
         addItem(5100, "patterned.ic")
         addItem(5101, "patterned.cpu")
         addItem(5102, "patterned.ram")
@@ -434,7 +570,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5805, "board.epoxy.electroless");
         addItem(5806, "board.epoxy.electrolytic");
         addItem(5807, "board.epoxy.wet_masked");
-        addItem(5808, "board.epoxy.mask_affixed"); 
+        addItem(5808, "board.epoxy.mask_affixed");
         addItem(5809, "circuit_board.fr4")
         addItem(5810, "board.epoxy.resist")
 
@@ -600,50 +736,78 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(8043, "wafer.nmos.step_one") // the suffering begins
         // its cmos time baby
-        addItem(8044, "wafer.cmos.step_one")
-        addItem(8045, "wafer.cmos.step_two")
-        addItem(8046, "wafer.cmos.step_two.coated")
-        addItem(8047, "wafer.cmos.step_two.exposed")
+        addItem(8044, "wafer.cmos_base.step_one")
+        addItem(8045, "wafer.cmos_base.step_two")
+        addItem(8046, "wafer.cmos_base.step_two.coated")
+        addItem(8047, "wafer.cmos_cpu.step_two.exposed")
+        addItem(8048, "wafer.cmos_gpu.step_two.exposed")
 
-        registerCircuitMetaitems("nmos_cpu", 24)
-        registerCircuitMetaitems("nmos_sram", 24)
-        registerCircuitMetaitems("nmos_uart", 24)
-        registerCircuitMetaitems("nmos_mask_rom", 24)
-        registerCircuitMetaitems("nmos_bus_controller", 24)
-        registerCircuitMetaitems("nmos_dram", 22)
-        registerCircuitMetaitems("bjt_pic_base", 17, 1, false)
-        registerCircuitMetaitems("bjt_ulpic", 5, 1)
-        registerCircuitMetaitems("bjt_lpic", 19, 1)
-        registerCircuitMetaitems("bjt_pic", 17, 1)
+        registerNMOSMetaitems("nmos_cpu")
+        registerNMOSMetaitems("nmos_sram")
+        registerNMOSMetaitems("nmos_uart")
+        registerNMOSMetaitems("nmos_mask_rom")
+        registerNMOSMetaitems("nmos_bus_controller")
+        registerNMOSMetaitems("nmos_dram", 22, [9, 12, 18])
+        registerWaferSteps("bjt_pic_base", 17, [start: 1, mask: true, photoresist: [5, 9, 13, 17]])
+        registerWaferSteps("bjt_ulpic", 5, [start: 1, mask: true, die: true, photoresist: [1]])
+        registerWaferSteps("bjt_lpic", 19, [start: 1, mask: true, die: true, photoresist: [5, 10, 15]])
+        registerWaferSteps("bjt_pic", 17, [start: 1, mask: true, die: true, photoresist: [5, 9, 13]])
         registerCMOSMetaitems("cmos_cpu")
-        registerCircuitMetaitems("diode.planar", 10, 1, false)
-        registerCircuitMetaitems("diode.power", 14, 2, false)
-        registerCircuitMetaitems("diode.schottky", 13, 2, false)
+        registerWaferSteps("diode.planar", 10, [start: 1, mask: true])
+        registerWaferSteps("diode.power", 14, [mask: true])
+        registerWaferSteps("diode.schottky", 13, [mask: true])
+        registerWaferSteps("thyristor", 11, [start: 1, mask: true])
+        registerCMOSMetaitems("cmos_gpu")
+        registerBCDMetaitems() // enable together with the BCD recipe chain (still commented in NanoIntegratedCircuits.groovy)
 
-        addItem(8048, "wafer.diode.alloy.step_two")
-        addItem(8049, "wafer.zener_diode.alloy.step_two")
-        addItem(8050, "wafer.diode.drift.step_one")
-        addItem(8051, "wafer.diode.planar.step_four.bsg")
-        addItem(8052, "wafer.diode.power.step_three.coated")
-        addItem(8053, "wafer.diode.power.step_three.exposed")
-        addItem(8054, "wafer.diode.power.step_nine.coated")
-        addItem(8055, "wafer.diode.power.step_nine.exposed")
-        addItem(8056, "wafer.diode.power.step_nine.deposited")
-        addItem(8057, "wafer.diode.planar.step_one.coated")
-        addItem(8058, "wafer.diode.planar.step_one.exposed")
-        addItem(8059, "wafer.diode.schottky.step_eight.coated")
-        addItem(8060, "wafer.diode.schotky.step_eight.exposed")
-        addItem(8061, "wafer.diode.schottky.step_eight.deposited")
-        addItem(8062, "wafer.diode.power.step_none.exposed")
-        addItem(8063, "wafer.diode.schottky.step_eight.exposed")
+        addItem(8049, "wafer.diode.alloy.step_two")
+        addItem(8050, "wafer.zener_diode.alloy.step_two")
+        addItem(8051, "wafer.diode.drift.step_one")
+        addItem(8052, "wafer.diode.planar.step_four.bsg")
+        addItem(8053, "wafer.diode.power.step_three.coated")
+        addItem(8054, "wafer.diode.power.step_three.exposed")
+        addItem(8055, "wafer.diode.power.step_nine.coated")
+        addItem(8056, "wafer.diode.power.step_nine.exposed")
+        addItem(8057, "wafer.diode.power.step_nine.deposited")
+        addItem(8058, "wafer.diode.planar.step_one.coated")
+        addItem(8059, "wafer.diode.planar.step_one.exposed")
+        addItem(8060, "wafer.diode.schottky.step_eight.coated")
+        addItem(8061, "wafer.diode.schottky.step_eight.exposed")
+        addItem(8062, "wafer.diode.schottky.step_eight.deposited")
+        addItem(8063, "wafer.diode.power.step_nine.exposed")
+        // FREE ID: 8064
+        addItem(8065, "wafer.silicon.n_doped.coated")
+        addItem(8066, "wafer.silicon.n_doped.exposed")
+        addItem(8067, "wafer.thyristor.step_one.coated")
+        addItem(8068, "wafer.thyristor.step_one.exposed")
+        addItem(8069, "wafer.thyristor.step_three.coated")
+        addItem(8070, "wafer.thyristor.step_three.exposed")
+        addItem(8073, "wafer.thyristor.step_seven.coated")
+        addItem(8074, "wafer.thyristor.step_seven.exposed")
+        addItem(8075, "wafer.thyristor.step_seven.deposited")
+        addItem(8076, "wafer.thyristor")
+        addItem(8077, "wafer.nmos.step_one.coated")
+        addItem(8078, "wafer.nmos_cpu.step_one.exposed")
+        addItem(8079, "wafer.nmos_sram.step_one.exposed")
+        addItem(8080, "wafer.nmos_uart.step_one.exposed")
+        addItem(8081, "wafer.nmos_mask_rom.step_one.exposed")
+        addItem(8082, "wafer.nmos_bus_controller.step_one.exposed")
+        addItem(8083, "wafer.nmos_dram.step_one.exposed")
+        addItem(8084, "wafer.silicon.p_doped.coated")
+        addItem(8085, "wafer.silicon.p_doped.exposed")
+        addItem(8086, "wafer.diode.drift.step_one.coated")
+        addItem(8087, "wafer.diode.drift.step_one.exposed")
+        addItem(8088, "wafer.diode.schottky.step_five.coated")
+        addItem(8089, "wafer.diode.schottky.step_five.exposed")
 
         log.infoMC("adding " + toadd_list.size() + " wafer metaitems")
         def start = 8250
         for (name in toadd_list) {
+            if (start == 8975) start = 11000 // skip reserved 8975-9000 (sputtering targets + crops)
             addItem(start, name)
             start++
         }
-        
+
         // 8975-9000 sputtering targets
         addItem(8975, "target.aluminium")
         addItem(8976, "target.copper")
@@ -683,7 +847,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10203, 'display.moon')
         addItem(10204, 'display.mercury')
         addItem(10205, 'display.mars')
-        
+
         // Space Components 10250-10300
         addItem(10250, "parachute.drogue")
         addItem(10251, "parachute.main")
@@ -707,12 +871,15 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10316, "clay_graphite_paste")
         addItem(10317, "clay_graphite_crucible")
         addItem(10318, "raw_clay_graphite_crucible")
+        addItem(10319, "raw_carbon_plate")
+        addItem(10320, "carbon_plate")
+        addItem(10321, "graphite_plate")
 
         // Alumina Refractories 10330-10340
         addItem(10330, "cac_clinker")
         addItem(10331, "hot_cac_clinker")
         addItem(10332, "cac_dust")
-      
+
         // Lighting Components 10400-10420
 
         addItem(10401, "carbon_filament")

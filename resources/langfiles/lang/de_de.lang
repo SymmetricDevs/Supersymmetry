@@ -196,7 +196,7 @@ susy.material.pig_iron=Roheisen
 susy.material.iron_iii_sulfate=Eisen-IIIsulfat
 
 susy.material.aluminium_hydroxide=Aluminiumhydroxid
-susy.material.aluminium_trifluoride=Aluminiumtrifluorid
+susy.material.aluminium_fluoride=Aluminiumfluorid
 susy.material.sodium_fluoride=Natriumfluorid
 
 susy.material.gallium_phosphate=Galliumphosphat
@@ -446,7 +446,7 @@ susy.material.impure_semiheavy_hydrogen_sulfide=Verunreinigter halbschwerer Schw
 susy.material.impure_heavy_hydrogen_sulfide=Verunreinigter schwerer Schwefelwasserstoff
 susy.material.sea_water=Meerwasser
 
-susy.material.novolacs_resist=Novolacs Photoresist
+susy.material.novolac_resist=Novolac Photoresist
 susy.material.silicon_tetrachloride=Siliciumtetrachlorid
 susy.material.purified_silicon_tetrachloride=Gereinigtes Siliciumtetrachlorid
 
@@ -1327,7 +1327,7 @@ susy.material.ammonium_dihydrogen_phosphate=Ammoniumdihydrogenphosphat
 susy.material.iron_carbonate=Eisencarbonat
 susy.material.ammonium_diuranate=Ammoniumdiuranat
 susy.material.magnesium_carbonate=Magnesiumcarbonat
-susy.material.silicon_dioxide_slurry=Siliciumdioxid-Suspension
+susy.material.basic_cmp_slurry=Basische CMP-Suspension
 susy.material.vt_slag=Vanadium-Titan-Schlacke
 susy.material.alkali_vt_slag=Alkalische Vanadium-Titan-Schlacke
 susy.material.titania_slag=Titandioxid-Schlacke
@@ -1873,7 +1873,7 @@ susy.material.gaseous_methacrylic_acid_mixture=Gasförmiges Methacrylsäuregemis
 susy.material.methacrylic_acid_solution=Methacrylsäurelösung
 susy.material.depleted_uranium_dioxide=Abgereichertes Uraniumdioxid
 susy.material.salty_hydrofluoric_acid=Salzige Fluorwasserstoffsäure
-susy.material.supported_molybdenum_vanadium=Geträgertes Molybdän-Vanadium
+susy.material.supported_molybdenum_vanadium_oxide=Geträgertes Molybdän-Vanadiumoxid
 susy.material.acrolein=Acrolein
 susy.material.c_five_fraction=C5-Fraktion
 susy.material.dimerized_c_five_fraction=Dimerisierte C5-Fraktion

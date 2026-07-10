@@ -22,6 +22,39 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Naphthol-modified phenol-formaldehyde novolacs
+
+LCR.recipeBuilder()
+    .fluidInputs(fluid('naphthalene') * 1000)
+    .fluidInputs(fluid('sulfuric_acid') * 1000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+    .inputs(ore('dustSodiumSulfite') * 6)
+    .outputs(metaitem('dustSodiumNaphthaleneTwoSulfonate'))
+    .fluidOutputs(fluid('wastewater') * 2000)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+LCR.recipeBuilder()
+    .inputs(ore('dustSodiumNaphthaleneTwoSulfonate'))
+    .fluidInputs(fluid('sodium_hydroxide') * 864)
+    .fluidInputs(fluid('diluted_sulfuric_acid') * 1000)
+    .outputs(metaitem('dustTwoNaphthol'))
+    .fluidOutputs(fluid('wastewater') * 1500)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+POLYMERIZATION_TANK.recipeBuilder()
+    .inputs(ore('dustTinyOxalicAcid') * 2)
+    .inputs(ore('dustTwoNaphthol') * 1000)
+    .fluidInputs(fluid('formaldehyde') * 1500)
+    .fluidInputs(fluid('phenol') * 1000)
+    .fluidOutputs(fluid('naphthol_modified_phenolic_novolacs_oligomer') * 3500)
+    .duration(300)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 // Resol resins
 
 POLYMERIZATION_TANK.recipeBuilder()

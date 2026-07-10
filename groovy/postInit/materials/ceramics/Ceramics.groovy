@@ -29,12 +29,32 @@ Sintering.blankets.each { blanket ->
 
     SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustAlumina') * 5)
-        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 200)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 100)
         .notConsumable(metaitem('shape.mold.bolt'))
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('boltAlumina') * 20)
         .duration(blanket.duration)
         .EUt(VA[MV])
+        .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 9)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
+        .notConsumable(metaitem('shape.mold.plate'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('ceramic_casing'))
+        .EUt(VA[MV])
+        .duration(blanket.duration)
+        .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 6)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
+        .notConsumable(metaitem('shape.mold.plate'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('plateAlumina'))
+        .EUt(VA[MV])
+        .duration(blanket.duration)
         .buildAndRegister()
 }
 

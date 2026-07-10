@@ -1209,41 +1209,6 @@ RecyclingHelper.addShaped('gregtech:electrolytic_cell', metaitem('susy:electroly
     [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
 ])
 
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('water') * 10)
-    .fluidOutputs(fluid('latex') * 100)
-    .blockStates("latex_logs", MetaBlocks.RUBBER_LOG.getBlockState())
-    .info('recipe.latex_extraction')
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('distilled_water') * 10)
-    .fluidOutputs(fluid('resin') * 100)
-    .blockStates("extractable_logs_1", Blocks.LOG.getBlockState())
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('lubricant') * 10)
-    .fluidOutputs(fluid('resin') * 100)
-    .blockStates("extractable_logs_2", Blocks.LOG2.getBlockState())
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('hot_hp_air') * 10)
-    .fluidOutputs(fluid('gtfo_rainbow_sap') * 100)
-    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState, 
-        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Y),
-        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z))
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
 // Construction Foam * 8000
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
 mods.gregtech.blender.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
@@ -1921,3 +1886,34 @@ MIXER.recipeBuilder()
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
+
+//Power Substation
+//Source (controller and casing): I made it the fuck up
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.iv'))
+        .inputs(ore('circuitIv') * 8)
+        .inputs(metaitem('wireGtHexUraniumTriplatinum') * 16)
+        .inputs(metaitem('plate.power_integrated_circuit') * 32)
+        .inputs(ore('plateReinforcedEpoxyResin') * 16)
+        .outputs(metaitem('power_substation'))
+        .duration(450)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('frameGtInconel718'))
+        .inputs(ore('plateReinforcedEpoxyResin') * 6)
+        .fluidInputs(fluid('dye_light_blue') * 288)
+        .outputs(item('gregtech:metal_casing', 11) * 2)
+        .circuitMeta(6)
+        .duration(50)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+//Removing old recipes
+mods.gregtech.macerator.removeByInput(32, [metaitem('power_substation')], null)
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('power_substation')], [fluid('oxygen') * 510])
+crafting.removeByOutput(item('gregtech:metal_casing', 11))
+mods.gregtech.assembler.removeByInput(16, [metaitem('platePalladium') * 6, metaitem('frameIridium'), metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
+mods.gregtech.macerator.removeByInput(32, [item('gregtech:metal_casing', 11)], null)
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:metal_casing', 11)], [fluid('oxygen') * 510])

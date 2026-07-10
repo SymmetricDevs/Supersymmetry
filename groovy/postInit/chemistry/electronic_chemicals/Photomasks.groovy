@@ -126,6 +126,33 @@ UV_LIGHT_BOX.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister()
 
+crafting.addShaped("smd_resistor", metaitem('stencil.resistor'), [
+    [metaitem('rubylith'), ore('craftingToolKnife'), null],
+    [null, null, null],
+    [null, null, null]
+]);
+
+UV_LIGHT_BOX.recipeBuilder()
+    .inputs(metaitem('stencil.resistor'))
+    .inputs(metaitem('mask.blank'))
+    .outputs(metaitem('mask.resistor'))
+    .duration(200)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+
+crafting.addShaped("smd_capacitor", metaitem('stencil.capacitor'), [
+    [metaitem('rubylith'), null, ore('craftingToolKnife')],
+    [null, null, null],
+    [null, null, null]
+]);
+
+crafting.addShaped("smd_resistor_pads", metaitem('stencil.resistor_pads'), [
+    [metaitem('rubylith'), null, null],
+    [ore('craftingToolKnife'), null, null],
+    [null, null, null]
+]);
+
 // CrO3 photomasks
 
 REACTION_FURNACE.recipeBuilder()

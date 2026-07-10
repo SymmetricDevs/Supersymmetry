@@ -1,6 +1,12 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
+import gregtech.api.metatileentity.multiblock.CleanroomType
+import globals.semiconductors.Lithography
+import globals.semiconductors.Doping
+import globals.semiconductors.Deposition
+import globals.semiconductors.Mechanicals
+
 // Packaging
 
 MIXER.recipeBuilder()
@@ -79,4 +85,44 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .outputs(metaitem('component.smd.contact') * 64)
     .duration(160)
     .EUt(VA[LV])
+    .buildAndRegister()
+
+// Thyristor
+
+// P doping sandwich
+Lithography.generatePhotolithographyRecipes('wafer.silicon.n_doped', 'wafer.thyristor.step_one', 'novolac_resist', 'mask_set.thyristor', true)
+Doping.generateIonImplantationRecipes('wafer.thyristor.step_one', 'wafer.thyristor.step_two', 400, 'boron')
+Lithography.generateResistStrippingRecipes('wafer.thyristor.step_two', 'wafer.thyristor.step_three', 1, false, true)
+
+// Cathode N doping
+Lithography.generatePhotolithographyRecipes('wafer.thyristor.step_three', 'wafer.thyristor.step_four', 'novolac_resist', 'mask_set.thyristor', true)
+Doping.generateIonImplantationRecipes('wafer.thyristor.step_four', 'wafer.thyristor.step_five', 400, 'phosphorus')
+Lithography.generateResistStrippingRecipes('wafer.thyristor.step_five', 'wafer.thyristor.step_six', 1, false, true)
+Doping.generateDriveInRecipe('wafer.thyristor.step_six', 'wafer.thyristor.step_seven', 100) // Drive-in Process
+
+// Contact pad
+Lithography.generatePhotolithographyRecipes('wafer.thyristor.step_seven', 'wafer.thyristor.step_eight', 'novolac_liftoff_resist', 'mask_set.thyristor', false)
+Deposition.generateSputteringRecipe('wafer.thyristor.step_eight', 'wafer.thyristor.step_nine', 400, 'aluminium') // Aluminium metallization & liftoff
+Lithography.generateResistStrippingRecipes('wafer.thyristor.step_nine', 'wafer.thyristor.step_ten', 1, false, true)
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.thyristor.step_ten', 'wafer.thyristor.step_eleven', 400, HV) // CMP for electrode contact
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.thyristor.step_eleven', 'wafer.thyristor', 400, true) // Passivation
+
+FORMING_PRESS.recipeBuilder()
+    .inputs(metaitem('wafer.thyristor'))
+    .inputs(ore('plateMolybdenum') * 2)
+    .inputs(ore('plateCopper') * 2)
+    .outputs(metaitem('component.thyristor.assembly'))
+    .duration(80)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+VACUUM_CHAMBER.recipeBuilder()
+    .inputs(metaitem('component.thyristor.assembly'))
+    .inputs(metaitem('ceramic_casing'))
+    .fluidInputs(fluid('nitrogen') * 1000)
+    .outputs(metaitem('component.thyristor'))
+    .duration(200)
+    .EUt(VA[MV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
