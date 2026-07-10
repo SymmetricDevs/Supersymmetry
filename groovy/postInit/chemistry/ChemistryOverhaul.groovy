@@ -2400,52 +2400,7 @@ DT.recipeBuilder() // SCHULZ-FLORY, p = 0.82, ROUNDED TO NEAREST 5
     .EUt(VA[HV])
     .buildAndRegister()
 
-//OXALIC ACID
-LCR.recipeBuilder()
-    .fluidInputs(fluid('ethylene_glycol') * 1000)
-    .fluidInputs(fluid('oxygen') * 4000)
-    .notConsumable(fluid('nitric_acid') * 800)
-    .notConsumable(ore('dustVanadiumPentoxide') * 7)
-    .notConsumable(ore('dustIronIiiChloride') * 4)
-    .outputs(metaitem('dustOxalicAcid') * 8)
-    .fluidOutputs(fluid('water') * 2000)
-    .duration(120)
-    .EUt(VA[HV])
-    .buildAndRegister()
 
-BR.recipeBuilder()
-        .inputs(ore('dustWood'))
-        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
-        .fluidOutputs(fluid('crude_sodium_oxalate_solution') * 1000)
-        .duration(600) //intentionally terrible to promote use of the LCR recipe
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-MIXER.recipeBuilder()
-        .inputs(ore('dustCalciumHydroxide') * 5)
-        .fluidInputs(fluid('crude_sodium_oxalate_solution') * 1000)
-        .outputs(metaitem('dustCrudeCalciumOxalate'))
-        .fluidOutputs(fluid('wastewater') * 1000)
-        .duration(200)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-CSTR.recipeBuilder()
-        .inputs(ore('dustCrudeCalciumOxalate'))
-        .fluidInputs(fluid('sulfuric_acid') * 2000)
-        .fluidOutputs(fluid('crude_oxalic_acid_solution') * 2000)
-        .duration(300)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-CRYSTALLIZER.recipeBuilder()
-        .fluidInputs(fluid('crude_oxalic_acid_solution') * 2000)
-        .outputs(metaitem('dustOxalicAcid') * 8)
-        .chancedOutput(metaitem('dustCalciumSulfate') * 6, 5000, 0)
-        .fluidOutputs(fluid('sulfuric_acid') * 500)
-        .duration(500)
-        .EUt(VA[MV])
-        .buildAndRegister()
 
 //ANILINE
 CSTR.recipeBuilder()

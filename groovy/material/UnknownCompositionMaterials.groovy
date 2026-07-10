@@ -3501,17 +3501,6 @@ class UnknownCompositionMaterials {
                 .color(0xEFE977)
                 .build()
 
-        CrudeCalciumOxalate = new Material.Builder(4764, SuSyUtility.susyId('crude_calcium_oxalate'))
-                .dust()
-                .color(0x76ED76)
-                .iconSet(DULL)
-                .build()
-
-        CrudeOxalicAcidSolution = new Material.Builder(4765, SuSyUtility.susyId('crude_oxalic_acid_solution'))
-                .liquid()
-                .color(0xEA75AA)
-                .build()
-
         PineResin = new Material.Builder(4743, SuSyUtility.susyId('pine_resin'))
                 .liquid()
                 .color(0x572e09)

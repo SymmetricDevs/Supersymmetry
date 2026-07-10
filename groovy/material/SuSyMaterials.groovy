@@ -846,8 +846,6 @@ class SuSyMaterials {
     public static Material StandardCleanTwo
     public static Material WhiteEpoxyPCBCoating
     public static Material CrudeSodiumOxalateSolution
-    public static Material CrudeCalciumOxalate
-    public static Material CrudeOxalicAcidSolution
     public static Material GumTurpentine
     public static Material PineResin
     public static Material Rosin
@@ -2678,6 +2676,7 @@ class SuSyMaterials {
     public static Material Hexafluorobutyne
     public static Material TriethylBorate
     public static Material Fluoromethane
+    public static Material CalciumOxalate
 
     // Third Degree Materials
 
@@ -2921,6 +2920,8 @@ class SuSyMaterials {
     public static Material ThickFilmResistorInk
     public static Material ZieglerNattaCatalyst
     public static Material FluoromethaneMixture
+    public static Material NitratolacticAcidSolution
+    public static Material NitricOxalicAcidSolution
 
     // Thermodynamics Materials
 
