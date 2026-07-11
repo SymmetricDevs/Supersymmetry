@@ -44,7 +44,7 @@ wykorzystać fenomeny, których Minecraft jeszcze nie widział.
 
 Każdy mod został dostosowany do postępu w Gregtech-u. Przez to automatyzacja oraz masowa produkcja są konieczne, zachęcając do budowy dużych fabryk i systemów logistycznych
 by transportować surowce i produkty.
-Gracz będzie musiał wykorzystać Powierzchnię Ziemii oraz jej zasoby jako pierwsze, następnie rozpocząć stałą obecność w Kosmosie, wtem odkrywać Układ Słoneczny, by ostatecznie wyruszyć w przestrzeń międzygwiezdną, eksplorować wiele różnych planet z ich unikalnymi wyzwaniami, generacją terenu oraz wrogami, z którymi musi się zmierzyć.
+Gracz będzie musiał wykorzystać Powierzchnię Ziemi oraz jej zasoby jako pierwsze, następnie rozpocząć stałą obecność w Kosmosie, wtem odkrywać Układ Słoneczny, by ostatecznie wyruszyć w przestrzeń międzygwiezdną, eksplorować wiele różnych planet z ich unikalnymi wyzwaniami, generacją terenu oraz wrogami, z którymi musi się zmierzyć, by dotrzeć do najbardziej egzotycznych i najrzadszych zasobów w Kosmosie, zaczynając od niczego i budując nawet coś bardziej okazałego od cywilizacji typu III Kardaszewa.
 
 Modpack jest obecnie w fazie beta. Możesz dołączyć do serwera discord tutaj:
 https://discord.gg/BNbbK98rh6.
