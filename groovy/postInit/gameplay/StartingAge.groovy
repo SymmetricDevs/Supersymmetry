@@ -1,18 +1,17 @@
-import Globals.*
-import appeng.api.AEApi;
-import appeng.api.features.IGrinderRegistry;
-import appeng.api.features.IGrinderRecipeBuilder;
-import net.minecraftforge.event.world.BlockEvent;
-import gregtech.api.GTValues;
-import gregtech.common.blocks.BlockSurfaceRock;
+import appeng.api.AEApi
+import appeng.api.features.IGrinderRegistry
+import appeng.api.features.IGrinderRecipeBuilder
+import net.minecraftforge.event.world.BlockEvent
+import static gregtech.api.GTValues.*
+import gregtech.common.blocks.BlockSurfaceRock
 import gregtech.api.unification.material.properties.PropertyKey
 
-final IGrinderRegistry reg = AEApi.instance().registries().grinder();
+final IGrinderRegistry reg = AEApi.instance().registries().grinder()
 
 // Add rocks to ceu surface rock drops, and remove tiny dusts.
 event_manager.listen { BlockEvent.HarvestDropsEvent event ->
     if (event.getState().getBlock() instanceof BlockSurfaceRock) {
-        int amount = 1 + GTValues.RNG.nextInt(2);
+        int amount = 1 + RNG.nextInt(2);
         event.getDrops().clear()
         event.getDrops().add(item('pyrotech:rock') * amount)
     }
@@ -20,19 +19,25 @@ event_manager.listen { BlockEvent.HarvestDropsEvent event ->
 
 log.infoMC("Running StartingAge.groovy...")
 
-mods.jei.ingredient.yeet(
-        item('minecraft:stone_sword'),
-        item('minecraft:stone_shovel'),
-        item('minecraft:stone_pickaxe'),
-        item('minecraft:stone_axe'),
-        item('minecraft:stone_hoe')
-)
-
 crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('craftingToolMortar'),
         ore('ingotClay')
 ])
 
+crafting.replaceShapeless("gregtech:clay_block_to_dust", metaitem('dustClay') * 4, [
+        ore('craftingToolMortar'),
+        ore('blockClay')
+])
+
+crafting.replaceShapeless("gregtech:stick_to_smallwoodpulp", metaitem('dustSmallWood'), [
+        ore('craftingToolMortar'),
+        ore('stickWood')
+])
+
+crafting.replaceShapeless("gregtech:longstick_to_woodpulp", metaitem('dustWood'), [
+        ore('craftingToolMortar'),
+        ore('stickLongWood')
+])
 // 8 * compressed clay
 crafting.addShaped("gregtech:compressed_clay_8", item('gregtech:meta_item_1', 349) * 8, [
         [ore('ingotClay'), ore('ingotClay'), ore('ingotClay')],
@@ -210,7 +215,7 @@ for (int i = 4; i < 8; i++) {
             .outputs(item('biomesoplenty:planks_0', i - 4) * 6)
             .outputs(metaitem('dustWood') * 2)
             .duration(200)
-            .EUt(7)
+            .EUt(VA[ULV])
             .buildAndRegister();
 
     crafting.addShaped("biomesoplenty:wood_cutting_1_" + i, item('biomesoplenty:planks_0', i) * 6, [
@@ -224,7 +229,7 @@ for (int i = 4; i < 8; i++) {
             .outputs(item('biomesoplenty:planks_0', i) * 6)
             .outputs(metaitem('dustWood') * 2)
             .duration(200)
-            .EUt(7)
+            .EUt(VA[ULV])
             .buildAndRegister();
 
     crafting.addShaped("biomesoplenty:wood_cutting_2_" + i, item('biomesoplenty:planks_0', i + 4) * 6, [
@@ -238,7 +243,7 @@ for (int i = 4; i < 8; i++) {
             .outputs(item('biomesoplenty:planks_0', i + 4) * 6)
             .outputs(metaitem('dustWood') * 2)
             .duration(200)
-            .EUt(7)
+            .EUt(VA[ULV])
             .buildAndRegister();
 
     crafting.addShaped("biomesoplenty:wood_cutting_3_" + i, item('biomesoplenty:planks_0', i + 8) * 6, [
@@ -252,10 +257,9 @@ for (int i = 4; i < 8; i++) {
             .outputs(item('biomesoplenty:planks_0', i + 8) * 6)
             .outputs(metaitem('dustWood') * 2)
             .duration(200)
-            .EUt(7)
+            .EUt(VA[ULV])
             .buildAndRegister();
 }
-
 
 crafting.addShapeless("gtfo:wood_crafting_0", item('gregtechfoodoption:gtfo_planks_0') * 4, [item('gregtechfoodoption:gtfo_log_0')])
 crafting.addShapeless("gtfo:wood_crafting_1", item('gregtechfoodoption:gtfo_planks_0:1') * 4, [item('gregtechfoodoption:gtfo_log_0:4')])

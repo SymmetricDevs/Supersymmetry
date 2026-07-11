@@ -1,15 +1,12 @@
-import globals.Globals
-
-BR = recipemap('batch_reactor')
-REACTION_FURNACE = recipemap('reaction_furnace')
-DISTILLERY = recipemap('distillery')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 DISTILLERY.recipeBuilder()
     .fluidInputs(fluid('erbium_sulfate_solution') * 3000)
     .outputs(metaitem('dustErbiumSulfate') * 17)
     .fluidOutputs(fluid('water') * 3000)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -18,7 +15,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustErbiumFluoride') * 4)
     .fluidOutputs(fluid('very_diluted_sulfuric_acid') * 9000)
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()

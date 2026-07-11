@@ -1,0 +1,123 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "RigLifeBoats",
+  "items": [
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:pistol",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 18
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 11,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 3,
+      "max": 8,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 12,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 9,
+      "max": 24,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "industrialrenewal:medkit",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 8,
+      "max": 24,
+      "item": {
+        "id": "minecraft:potion",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Potion": {
+              "nbtType": "string",
+              "nbt": "minecraft:water"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 18,
+      "max": 48,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 325,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

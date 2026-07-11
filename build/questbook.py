@@ -19,7 +19,7 @@ this reduces file size by roughly 50% (eg DJ2 4.2mb -> 2.2mb)
 import argparse
 import json
 import os
-
+import time
 
 def intlist(string):
     return [int(i) for i in string.split(',')]
@@ -93,6 +93,7 @@ uselessProps = {
 
 basePath = os.path.normpath(os.path.abspath(__file__ + "/../../"))
 defaultQuests = basePath + "/config/betterquesting/DefaultQuests"
+questInfo = defaultQuests + "/QuestSettings.json"
 lang = basePath + "/config/betterquesting/resources/supersymmetry/lang"
 
 def convertToLang(line: str) -> str:
@@ -171,6 +172,20 @@ def key(entry):
     """print(entry[14:(-5 if "desc" in entry else -6)])"""
     return ("db" in entry, int(entry[14:(-5 if "desc" in entry else -6)]), "desc" in entry)
 
+def updateVersion():
+    questKeys = {}
+    try:
+        with open(questInfo, "r", errors="ignore", encoding='utf-8') as file:
+            questKeys = json.load(file)
+    except FileNotFoundError:
+        print("questbook info file %s was not found" % (questInfo))
+
+    version = int(time.time() / 1024)
+    questKeys["betterquesting:10"]["pack_version:3"] = version
+    print("Questbook version no.", version)
+    with open(questInfo, "w", errors="ignore", encoding='utf-8') as file:
+        json.dump(questKeys, file, indent=2)
+
 
 def build(args):
     os.makedirs(lang, exist_ok=True)
@@ -186,7 +201,7 @@ def build(args):
         print("Editing quest IDs: %s" % editQuestIds)
     
     try:
-        with open(langFile, "r", errors="ignore") as file:
+        with open(langFile, "r", errors="ignore", encoding='utf-8') as file:
             for line in file.readlines():
                 questKeys[line.split("=", 1)[0]] = line.split("=", 1)[1].rstrip()
     except FileNotFoundError:
@@ -196,7 +211,7 @@ def build(args):
     knowKeys = 0
     for root, dirs, files in os.walk(defaultQuests):
         for filename in files:
-            with open(os.path.join(root, filename), "r") as file:
+            with open(os.path.join(root, filename), "r", encoding='utf-8') as file:
                 currentquest = json.load(file)
                 
             if filename == "QuestSettings.json": 
@@ -216,17 +231,18 @@ def build(args):
                     knowKeys += i18n(output=questKeys, id=entryid, entry=currentquest, place="db", prefix=args.prefix,
                                      reverse=entryid in editQuestIds)
 
-            with open(os.path.join(root, filename), "w", newline='\n') as file:
+            with open(os.path.join(root, filename), "w", newline='\n', encoding='utf-8') as file:
                 json.dump(currentquest, file, indent=2)
     
     
     if (knowKeys > 0):
         print("Already knew %s keys " % knowKeys)
     
-    with open(langFile, "w", newline='\n') as file:
+    with open(langFile, "w", newline='\n', encoding='utf-8') as file:
         for i in sorted(questKeys, key=key):
             file.write(i + "=" + questKeys[i] + "\n")
-
+    
+    updateVersion()
 
 if (__name__ == "__main__"):
     build(parse_args())

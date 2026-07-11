@@ -1,0 +1,48 @@
+package classes
+
+class Coolant {
+    public String cold_coolant = "";
+    public String warm_coolant = "";
+
+    public int duration_radiator = 200;
+    public int amount_to_use = 1000;
+    public int hx_time_factor = 10;
+    public int circuit = 0;
+
+    public Coolant(String coolant_normal, String coolant_warm) {
+        this.cold_coolant = coolant_normal;
+        this.warm_coolant = coolant_warm;
+    }
+
+    public void setDurationRadiator(int time) {
+        this.duration_radiator = time;
+    }
+
+    public void setAmountToUse(int amount) {
+        this.amount_to_use = amount;
+    }
+
+    public void setTimeFactor(int time) {
+        this.hx_time_factor = time;
+    }
+
+    public void setCircuit(int number) {
+        this.circuit = number;
+    }
+
+    public int getTimeFactor() {
+        return hx_time_factor;
+    }
+
+    public String getCoolant() {
+        return cold_coolant;
+    }
+
+    public String getWarmCoolant() {
+        return warm_coolant;
+    }
+
+    public int getCircuit() {
+        return circuit;
+    }
+}

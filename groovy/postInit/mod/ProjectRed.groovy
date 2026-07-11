@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-ASSEMBLER = recipemap('assembler')
-CHEMICAL_BATH = recipemap('chemical_bath')
 
 log.infoMC("Running projectRed.groovy...")
 
@@ -33,6 +32,9 @@ mods.jei.ingredient.yeet(
     item('projectred-integration:gate', 34),            //IC Gate
     item('projectred-transmission:wire', 34),           //Low Load Power Line
     item('projectred-transmission:framed_wire', 34),    //Framed Low Load Power Line
+    item('microblockcbe:saw_stone'),                    //Stone Saw
+    item('microblockcbe:saw_iron'),                     //Iron Saw
+    item('microblockcbe:stone_rod')                     //Stone Rod
 )
 
 def name_removals = [
@@ -74,10 +76,21 @@ crafting.addShaped("projectred-core:circuit_plate", item('projectred-core:resour
 ])
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('wireFineRedAlloy') * 3, ore('plateStone') * 3)
+    .inputs(ore('wireFineRedAlloy'), ore('plateStone'))
+    .fluidInputs(fluid("glue") * 25)
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item'))
-    .duration(100).EUt(VA[LV])
+    .duration(50)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('wireFineRedAlloy')*4, ore('plateMica'))
+    .fluidInputs(fluid("glue") * 100)
+    .circuitMeta(7)
+    .outputs(item('projectred-core:resource_item')*4)
+    .duration(150)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 
@@ -92,7 +105,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('plateRedAlloy'), item('projectred-core:resource_item'))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item:1'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Wired Plate
@@ -106,7 +120,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireGtSingleRedAlloy'), item('projectred-core:resource_item'))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item:2'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Bundled Plate
@@ -120,7 +135,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('projectred-core:resource_item'), ore('projredBundledCable'))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item:3'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Platformed Plate
@@ -134,7 +150,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('projectred-core:resource_item') * 3, item('projectred-core:resource_item', 2) * 2, ore('frameGtWood'))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item:4'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Anode
@@ -148,7 +165,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('projectred-core:resource_item'), ore('plateRedstone'))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item:10'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Cathode
@@ -162,7 +180,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('projectred-core:resource_item'), ore('boltRedAlloy'))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item:11'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Pointer
@@ -176,7 +195,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('circuitUlv'), item('projectred-core:resource_item'))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item:12'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Bus Input Panel
@@ -190,7 +210,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('projectred-core:resource_item:3') * 6, metaitem('cover.screen'), metaitem('cover.screen'))
     .circuitMeta(7)
     .outputs(item('projectred-integration:gate:30'))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Infused Silicon
@@ -201,7 +222,7 @@ CHEMICAL_BATH.recipeBuilder()
     .fluidInputs(fluid('redstone') * 1152)
     .outputs(item('projectred-core:resource_item:320'))
     .duration(400)
-    .EUt(7)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 // Energized Silicon
@@ -212,7 +233,7 @@ CHEMICAL_BATH.recipeBuilder()
     .fluidInputs(fluid('glowstone') * 1152)
     .outputs(item('projectred-core:resource_item:341'))
     .duration(400)
-    .EUt(7)
+    .EUt(VA[ULV])
     .buildAndRegister();
 
 // Silicon Chip
@@ -220,7 +241,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('projectred-core:resource_item') * 3, item('projectred-core:resource_item', 320))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item', 20))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 // Energized Silicon Chip
@@ -228,11 +250,28 @@ ASSEMBLER.recipeBuilder()
     .inputs(item('projectred-core:resource_item') * 3, item('projectred-core:resource_item', 341))
     .circuitMeta(7)
     .outputs(item('projectred-core:resource_item', 21))
-    .duration(100).EUt(VA[LV])
+    .duration(100)
+    .EUt(VA[LV])
     .buildAndRegister()
 
 //Black Insulated Wire
 crafting.addShapeless(item('projectred-transmission:wire:16'), [ore('cableGtSingleRedAlloy')]);
+
+//Bundled Cable
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('projredInsulatedWire')*5)
+    .fluidInputs(fluid('glue') * 200)
+    .outputs(item('projectred-transmission:wire', 17))
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+crafting.replaceShaped("microblockcbe:diamond_saw", item('microblockcbe:saw_diamond'), [
+        [null, null, null],
+        [ore('stickWood'), ore('stickStone'), ore('stickStone')],
+        [ore('stickWood'), item('minecraft:diamond'), ore('stickStone')]
+])
 
 def chemical_dyes = [
     'dye_white',
@@ -259,27 +298,27 @@ for (i = 0; i < 15; i++) {
         .fluidInputs(fluid(chemical_dyes[i]) * 18)
         .outputs(item('projectred-transmission:wire', i+1))
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();
     CHEMICAL_BATH.recipeBuilder()
         .inputs(item('projectred-transmission:wire', i+18))
         .fluidInputs(fluid('acetone') * 100)
         .outputs(item('projectred-transmission:wire:17'))
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('projredBundledCable'))
         .fluidInputs(fluid(chemical_dyes[i]) * 18)
         .outputs(item('projectred-transmission:wire', i+18))
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();
     CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('projredInsFramedWire'))
         .fluidInputs(fluid(chemical_dyes[i]) * 18)
         .outputs(item('projectred-transmission:framed_wire', i+1))
         .duration(20)
-        .EUt(7)
+        .EUt(VA[ULV])
         .buildAndRegister();
 }

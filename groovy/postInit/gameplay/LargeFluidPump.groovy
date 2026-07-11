@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
-
-LARGE_FLUID_PUMP = recipemap('large_fluid_pump')
 
 LARGE_FLUID_PUMP.recipeBuilder()
     .circuitMeta(1)

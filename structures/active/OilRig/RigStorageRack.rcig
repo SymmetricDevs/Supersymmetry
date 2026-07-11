@@ -1,0 +1,187 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "RigStorageRack",
+  "items": [
+    {
+      "weight": 1.290178656578064,
+      "min": 5,
+      "max": 16,
+      "item": {
+        "id": "gregtech:wire_double",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtech:wire_quadruple",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtech:wire_octal",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 6,
+      "max": 10,
+      "item": {
+        "id": "gregtech:meta_gear_small",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:boiler_firebox_casing",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:boiler_casing",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 5,
+      "max": 17,
+      "item": {
+        "id": "gregtech:metal_casing",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 2,
+      "max": 11,
+      "item": {
+        "id": "gregtech:turbine_casing",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 4,
+      "max": 5,
+      "item": {
+        "id": "gregtech:turbine_casing",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 6,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_block_frame_20",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 29,
+      "max": 45,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.124999523162842,
+      "min": 3,
+      "max": 9,
+      "item": {
+        "id": "gregtech:meta_gear",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 12,
+      "max": 20,
+      "item": {
+        "id": "gregtech:meta_bolt",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 8,
+      "max": 20,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 6,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_stick_long",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 11,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_ring",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 5,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_spring",
+        "damage": 324,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_rotor",
+        "damage": 324,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

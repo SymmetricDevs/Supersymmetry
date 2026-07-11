@@ -1,4 +1,5 @@
-ASSEMBLER = recipemap('assembler')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 def name_removals = [
         "rftools:machine_frame",
@@ -279,7 +280,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('screwSteel') * 4)
         .outputs(item('rftools:screen'))
         .duration(100)
-	.EUt(30)
+	.EUt(VA[LV])
 	.buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -287,7 +288,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('minecraft:stone_button') * 4)
         .outputs(item('rftools:elevator_button_module'))
         .duration(100)
-	.EUt(30)
+	.EUt(VA[LV])
 	.buildAndRegister()
 
 crafting.replaceShaped('rftools:elevator', item('rftools:elevator'), [

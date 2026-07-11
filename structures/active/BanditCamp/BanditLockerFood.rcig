@@ -1,0 +1,179 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "BanditLockerFood",
+  "items": [
+    {
+      "weight": 1.6340234279632568,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 122,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 17,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 329,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 36,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 66,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "5dkcap/2/4/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 63,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "5dkcap/2/4/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 88,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 3,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 146,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 130,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 130,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gtfoStats": {
+              "nbtType": "compound",
+              "nbt": {
+                "5dkcap/2/4/": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 5,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 277,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 132,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "minecraft:rotten_flesh",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 64,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

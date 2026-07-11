@@ -1,16 +1,12 @@
-import globals.Globals
-
-DISTILLERY = recipemap('distillery')
-REACTION_FURNACE = recipemap('reaction_furnace')
-BR = recipemap('batch_reactor')
-ROASTER = recipemap('roaster')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 BR.recipeBuilder()
     .inputs(ore('dustYttriumHydroxide') * 7)
     .fluidInputs(fluid('hydrochloric_acid') * 3000)
     .fluidOutputs(fluid('yttrium_chloride_solution') * 6000)
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -18,7 +14,7 @@ DISTILLERY.recipeBuilder()
     .outputs(metaitem('dustYttriumChloride') * 4)
     .fluidOutputs(fluid('water') * 6000)
     .duration(80)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
@@ -29,7 +25,7 @@ REACTION_FURNACE.recipeBuilder()
     .outputs(metaitem('dustYttrium'))
     .outputs(metaitem('dustLithiumChloride') * 6)
     .duration(200)
-    .EUt(Globals.voltAmps[3] * 2)
+    .EUt(VA[HV] * 2)
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
@@ -37,5 +33,5 @@ ROASTER.recipeBuilder()
     .outputs(metaitem('dustYttriumOxide') * 5)
     .fluidOutputs(fluid('dense_steam') * 3000)
     .duration(100)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister()

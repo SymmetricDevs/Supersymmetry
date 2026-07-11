@@ -6,11 +6,9 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.119.desc",
-      "frame:8": "GATE",
       "icon:10": {
         "id:8": "susy:sintering_brick"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.119.title"
     }
   },
@@ -24,7 +22,7 @@
           "id:8": "gregtech:machine"
         },
         "1:10": {
-          "Count:3": 72,
+          "Count:3": 1,
           "id:8": "susy:sintering_brick"
         },
         "2:10": {

@@ -1,8 +1,4 @@
 {
-  "preRequisiteTypes:7": [
-    0,
-    1
-  ],
   "preRequisites:11": [
     242,
     203
@@ -10,7 +6,7 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.243.desc",
-      "frame:8": "GATE",
+      "frame:8": "JAGGED",
       "icon:10": {
         "Damage:2": 987,
         "id:8": "gregtech:machine"

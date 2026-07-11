@@ -1,0 +1,131 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ComplexAmmoBox",
+  "items": [
+    {
+      "weight": 2.7249209880828857,
+      "min": 6,
+      "max": 24,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 8,
+      "max": 20,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 5,
+      "max": 24,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 6,
+      "max": 13,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "techguns:stielgranate",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:pistol",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 18
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:revolver",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 6
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "techguns:fraggrenade",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 4,
+      "max": 6,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 12,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

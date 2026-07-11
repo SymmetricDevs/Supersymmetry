@@ -5,6 +5,7 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.702454111.desc",
+      "frame:8": "CROSS",
       "icon:10": {
         "id:8": "simple_trophies:trophy",
         "tag:10": {
@@ -23,7 +24,7 @@
                 "Damage:2": 2,
                 "id:8": "gregtech:meta_ingot"
               },
-              "TrophyName:8": "Hall-H\u00c3\u0192\u00c6\u2019\u00c3\u2020\u00e2\u20ac\u2122\u00c3\u0192\u00e2\u20ac\u00a0\u00c3\u00a2\u00e2\u201a\u00ac\u00e2\u201e\u00a2\u00c3\u0192\u00c6\u2019\u00c3\u00a2\u00e2\u201a\u00ac\u00c2\u00a0\u00c3\u0192\u00c2\u00a2\u00c3\u00a2\u00e2\u20ac\u0161\u00c2\u00ac\u00c3\u00a2\u00e2\u20ac\u017e\u00c2\u00a2\u00c3\u0192\u00c6\u2019\u00c3\u2020\u00e2\u20ac\u2122\u00c3\u0192\u00c2\u00a2\u00c3\u00a2\u00e2\u20ac\u0161\u00c2\u00ac\u00c3\u2026\u00c2\u00a1\u00c3\u0192\u00c6\u2019\u00c3\u00a2\u00e2\u201a\u00ac\u00c5\u00a1\u00c3\u0192\u00e2\u20ac\u0161\u00c3\u201a\u00c2\u00a9roult",
+              "TrophyName:8": "Hall-H\u00e9roult",
               "TrophyShowsTooltip:1": 1,
               "TrophyVariant:8": "classic"
             }
@@ -60,7 +61,7 @@
                   "Damage:2": 2,
                   "id:8": "gregtech:meta_ingot"
                 },
-                "TrophyName:8": "Hall-H\u00c3\u0192\u00c6\u2019\u00c3\u2020\u00e2\u20ac\u2122\u00c3\u0192\u00e2\u20ac\u00a0\u00c3\u00a2\u00e2\u201a\u00ac\u00e2\u201e\u00a2\u00c3\u0192\u00c6\u2019\u00c3\u00a2\u00e2\u201a\u00ac\u00c2\u00a0\u00c3\u0192\u00c2\u00a2\u00c3\u00a2\u00e2\u20ac\u0161\u00c2\u00ac\u00c3\u00a2\u00e2\u20ac\u017e\u00c2\u00a2\u00c3\u0192\u00c6\u2019\u00c3\u2020\u00e2\u20ac\u2122\u00c3\u0192\u00c2\u00a2\u00c3\u00a2\u00e2\u20ac\u0161\u00c2\u00ac\u00c3\u2026\u00c2\u00a1\u00c3\u0192\u00c6\u2019\u00c3\u00a2\u00e2\u201a\u00ac\u00c5\u00a1\u00c3\u0192\u00e2\u20ac\u0161\u00c3\u201a\u00c2\u00a9roult",
+                "TrophyName:8": "Hall-H\u00e9roult",
                 "TrophyShowsTooltip:1": 1,
                 "TrophyVariant:8": "classic"
               }

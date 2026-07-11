@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "biomes": "minecraft:plains"
+    },
+    {
+      "biomes": "minecraft:savanna"
+    },
+    {
+      "biomes": "minecraft:birch_forest"
+    },
+    {
+      "biomes": "minecraft:roofed_forest"
+    },
+    {
+      "biomes": "minecraft:taiga"
+    },
+    {
+      "biomes": "biomesoplenty:woodland"
+    },
+    {
+      "biomes": "biomesoplenty:pasture"
+    },
+    {
+      "biomes": "biomesoplenty:temperate_rainforest"
+    },
+    {
+      "biomes": "biomesoplenty:grassland"
+    },
+    {
+      "biomes": "biomesoplenty:moor"
+    },
+    {
+      "biomes": "biomesoplenty:rainforest"
+    },
+    {
+      "biomes": "biomesoplenty:seasonal_forest"
+    },
+    {
+      "biomes": "biomesoplenty:grove"
+    }
+  ],
+  "metadata": {
+    "title": "TechBroBiomes",
+    "description": [
+      "Biomes for Techbro"
+    ]
+  }
+}

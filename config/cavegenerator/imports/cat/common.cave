@@ -39,7 +39,7 @@
   # which biomes should be blacklisted
   # by generic features.
   DECORATED_BIOMES: {
-    types: [ "SNOWY", "SANDY", "JUNGLE", "OCEAN", "MUSHROOM" ]
+    types: [ "SNOWY", "SANDY", "JUNGLE", "OCEAN", "MUSHROOM", "VOID" ]
     names: [ "roofed_forest" ]
   }
   # All of the biomes where dense / lush 

@@ -1,4 +1,4 @@
-MIXER = recipemap('mixer')
+import static prePostInit.Recipemaps.*
 
 mods.chisel.carving.addGroup("markings_basic")
 mods.chisel.carving.addGroup("markings_symbolic")
@@ -101,7 +101,6 @@ for (anItem in yellow) {
     mods.chisel.carving.addVariation("markings_yellow", item(anItem))
 }
 
-
 MIXER.recipeBuilder()
     .inputs(ore('dyeWhite') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
@@ -112,7 +111,6 @@ MIXER.recipeBuilder()
     .buildAndRegister()
 
 MIXER.recipeBuilder()
-    .circuitMeta(1)
     .inputs(ore('dyeBlack') * 1)
     .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
     .circuitMeta(1)
@@ -120,6 +118,15 @@ MIXER.recipeBuilder()
     .EUt(8)
     .duration(30)
     .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('ink') * 150)
+        .fluidInputs(fluid('gtfo_raw_soybean_oil') * 25)
+        .circuitMeta(1)
+        .outputs(item('ags_modernmarkings:floor_marking_black_singleline') * 8)
+        .EUt(8)
+        .duration(30)
+        .buildAndRegister()
 
 MIXER.recipeBuilder()
     .inputs(ore('dyeBlue') * 1)
@@ -165,7 +172,6 @@ MIXER.recipeBuilder()
     .EUt(8)
     .duration(30)
     .buildAndRegister()
-
 
 def symbolic = [
     'ags_modernmarkings:wall_marking_number_0',
@@ -281,7 +287,6 @@ def yellow_symbolic = [
     'ags_modernmarkings:wall_marking_symbol_yellow_fire',
     'ags_modernmarkings:wall_marking_symbol_yellow_fluid'
 ]
-
 
 for (anItem in yellow_symbolic) {
     crafting.remove(anItem) // Should all be the same name

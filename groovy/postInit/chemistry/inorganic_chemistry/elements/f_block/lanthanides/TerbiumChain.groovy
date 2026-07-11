@@ -1,6 +1,5 @@
+import static prePostInit.Recipemaps.*
 import globals.Globals
-
-REACTION_FURNACE = recipemap('reaction_furnace')
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('crucible.tantalum'))

@@ -1,5 +1,12 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
   "preRequisites:11": [
+    161,
+    71,
     101
   ],
   "properties:10": {
@@ -22,12 +29,12 @@
           "id:8": "gregtech:machine"
         },
         "1:10": {
-          "Count:3": 9,
+          "Count:3": 1,
           "Damage:2": 4,
           "id:8": "susy:susy_multiblock_casing"
         },
         "2:10": {
-          "Count:3": 9,
+          "Count:3": 1,
           "Damage:2": 4,
           "id:8": "gregtech:metal_casing"
         }

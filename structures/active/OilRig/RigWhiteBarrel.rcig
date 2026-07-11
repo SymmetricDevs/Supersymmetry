@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "RigWhiteBarrel",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1612,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Fluid": {
+              "nbtType": "compound",
+              "nbt": {
+                "FluidName": {
+                  "nbtType": "string",
+                  "nbt": "oil"
+                },
+                "Amount": {
+                  "nbtType": "int",
+                  "nbt": 64000
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

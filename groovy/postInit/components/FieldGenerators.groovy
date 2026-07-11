@@ -1,19 +1,14 @@
-import globals.Globals
 import classes.*;
-import prePostInit.Thermodynamics
+import static gregtech.api.GTValues.*
+import globals.Globals
+import postInit.utils.RecyclingHelper
 
 //REMOVALS
 
-def name_removals = [
-        'gregtech:field_generator_lv',
-        'gregtech:field_generator_mv',
-        'gregtech:field_generator_hv',
-        'gregtech:field_generator_ev',
-        'gregtech:field_generator_iv'
-]
+for (i = 1; i <= 5; i++) {
+    crafting.remove('gregtech:field_generator_' + Globals.voltageTiers[i])
+    RecyclingHelper.removeRecyclingRecipes(metaitem('field.generator.' + Globals.voltageTiers[i]))
 
-for (name in name_removals) {
-    crafting.remove(name)
 }
 
 // LV Field Generator * 1
@@ -32,7 +27,6 @@ mods.gregtech.assembly_line.removeByInput(6000, [metaitem('frameHsss'), metaitem
 mods.gregtech.assembly_line.removeByInput(24000, [metaitem('frameNaquadahAlloy'), metaitem('plateNaquadahAlloy') * 6, metaitem('quantumstar'), metaitem('emitter.zpm') * 2, metaitem('circuit.wetware_assembly') * 2, metaitem('wireFineUraniumRhodiumDinaquadide') * 64, metaitem('wireFineUraniumRhodiumDinaquadide') * 64, metaitem('cableGtSingleVanadiumGallium') * 4], [fluid('soldering_alloy') * 1152])
 // UV Field Generator * 1
 mods.gregtech.assembly_line.removeByInput(100000, [metaitem('frameTritanium'), metaitem('plateTritanium') * 6, metaitem('gravistar'), metaitem('emitter.uv') * 2, metaitem('circuit.wetware_computer') * 2, metaitem('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, metaitem('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, metaitem('cableGtSingleYttriumBariumCuprate') * 4], [fluid('soldering_alloy') * 1728, fluid('naquadria') * 576])
-
 
 //REPLACEMENTS
 
@@ -58,7 +52,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 250)
                 .outputs(metaitem('field.generator.lv'))
                 .duration(100)
-                .EUt(30)
+                .EUt(VA[LV])
                 .buildAndRegister();
     }
     if(45 > val) {
@@ -70,7 +64,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 500)
                 .outputs(metaitem('field.generator.mv'))
                 .duration(100)
-                .EUt(120)
+                .EUt(VA[MV])
                 .buildAndRegister();
     }
     if(25 > val) {
@@ -82,7 +76,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 1000)
                 .outputs(metaitem('field.generator.hv'))
                 .duration(100)
-                .EUt(480)
+                .EUt(VA[HV])
                 .buildAndRegister();
     }
     if(5 > val) {
@@ -94,7 +88,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 1500)
                 .outputs(metaitem('field.generator.ev'))
                 .duration(100)
-                .EUt(1920)
+                .EUt(VA[EV])
                 .buildAndRegister();
     }
     if(5 > val) {
@@ -106,7 +100,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 2000)
                 .outputs(metaitem('field.generator.iv'))
                 .duration(100)
-                .EUt(7680)
+                .EUt(VA[IV])
                 .buildAndRegister();
     }
     if(5 > val) {
@@ -122,7 +116,7 @@ cryoLiquids.each { key, val ->
                 .fluidInputs(fluid(key) * 4000)
                 .outputs(metaitem('field.generator.luv'))
                 .duration(600)
-                .EUt(7680)
+                .EUt(VA[IV])
                 .buildAndRegister();
     }
     if(5 > val) {

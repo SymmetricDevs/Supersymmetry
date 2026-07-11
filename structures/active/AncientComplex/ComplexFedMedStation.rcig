@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ComplexFedMedStation",
+  "items": [
+    {
+      "weight": 1.9013646841049194,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gp_inhaler:inhaler",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 4.333380699157715,
+      "min": 18,
+      "max": 53,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 230,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 7,
+      "max": 15,
+      "item": {
+        "id": "industrialrenewal:medkit",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 1,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

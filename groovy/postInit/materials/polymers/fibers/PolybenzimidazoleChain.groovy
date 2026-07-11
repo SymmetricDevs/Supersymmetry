@@ -1,0 +1,110 @@
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+
+// Diphenyl Isophthalate
+
+BR.recipeBuilder()
+.fluidInputs(fluid('phenol') * 1000)
+.inputs(ore('dustSodiumHydroxide') * 3)
+.fluidOutputs(fluid('sodium_phenoxide_solution') * 1000)
+.duration(160)
+.EUt(VA[LV])
+.buildAndRegister()
+
+CSTR.recipeBuilder()
+.fluidInputs(fluid('isophthaloyl_chloride_solution') * 50)
+.fluidInputs(fluid('sodium_phenoxide_solution') * 100)
+.fluidOutputs(fluid('diphenyl_isophthalate_solution') * 50)
+.fluidOutputs(fluid('salt_water') * 100)
+.duration(10)
+.EUt(VA[LV])
+.buildAndRegister()
+
+// 3,3'-Dichlorobenzidine
+
+FIXED_BR.recipeBuilder()
+.fluidInputs(fluid('two_chloronitrobenzene') * 288)
+.fluidInputs(fluid('hot_hp_hydrogen') * 10000)
+.notConsumable(ore('dustPalladiumOnCarbon'))
+.outputs(metaitem('dustTwoTwoDichlorohydrazobenzene'))
+.fluidOutputs(fluid('water') * 4000)
+.duration(300)
+.EUt(VA[MV])
+.buildAndRegister()
+
+BR.recipeBuilder()
+.inputs(ore('dustTwoTwoDichlorohydrazobenzene'))
+.fluidInputs(fluid('toluene') * 1000)
+.notConsumable(fluid('sulfuric_acid') * 50)
+.fluidOutputs(fluid('dichlorobenzidine_solution') * 1000)
+.duration(200)
+.EUt(VA[MV])
+.buildAndRegister()
+
+// 3,3-Diaminobenzidine
+
+FLUIDIZED_BR.recipeBuilder()
+.fluidInputs(fluid('dichlorobenzidine_solution') * 100)
+.fluidInputs(fluid('hot_compressed_ammonia') * 200)
+.notConsumable(ore('dustCopper'))
+.fluidOutputs(fluid('diaminobenzidine_solution') * 100)
+.fluidOutputs(fluid('hydrogen_chloride') * 200)
+.duration(20)    
+.EUt(60)
+.buildAndRegister()
+
+// PBI
+
+POLYMERIZATION_TANK.recipeBuilder()
+.notConsumable(fluid('nitrogen') * 8000)
+.fluidInputs(fluid('diaminobenzidine_solution') * 1000)
+.fluidInputs(fluid('diphenyl_isophthalate_solution') * 1000)
+.outputs(metaitem('dustPbiFoam') * 2)
+.fluidOutputs(fluid('pbi_waste') * 4000)
+.fluidOutputs(fluid('water') * 2000)
+.duration(200)
+.EUt(240)
+.buildAndRegister()
+
+ROASTER.recipeBuilder()
+.inputs(ore('dustPbiFoam'))
+.outputs(metaitem('dustPbiPrepolymer'))
+.duration(100)
+.EUt(240)
+.buildAndRegister()
+
+MIXER.recipeBuilder()
+.inputs(ore('dustLithiumChloride') * 2)
+.fluidInputs(fluid('dimethylacetamide') * 1000)
+.inputs(ore('dustPbiPrepolymer'))
+.fluidOutputs(fluid('pbi_solution') * 1000)
+.duration(100)
+.EUt(VA[MV])
+.buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+.fluidInputs(fluid('hot_hp_nitrogen') * 160)
+.fluidInputs(fluid('pbi_solution') * 1000)
+.notConsumable(metaitem('spinneret'))
+.outputs(metaitem('fiberPolybenzimidazole') * 8)
+.fluidOutputs(fluid('spent_pbi_solution') * 1000)
+.duration(100)
+.EUt(VA[HV])
+.buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+.fluidInputs(fluid('spent_pbi_solution') * 1000)
+.outputs(metaitem('dustLithiumChloride') * 2)
+.fluidOutputs(fluid('dimethylacetamide') * 1000)
+.duration(20)
+.EUt(VA[LV])
+.buildAndRegister()
+
+DT.recipeBuilder()
+.fluidInputs(fluid('pbi_waste') * 4000)
+.fluidOutputs(fluid('toluene') * 1000)
+.fluidOutputs(fluid('phenol') * 2000)
+.fluidOutputs(fluid('one_two_dichloroethane') * 1000)
+.duration(300)
+.EUt(240)
+.buildAndRegister()

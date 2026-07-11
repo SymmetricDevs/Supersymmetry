@@ -1,9 +1,6 @@
-import globals.Globals
-
-ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
-BR = recipemap('batch_reactor')
-ION_EXCHANGE = recipemap('ion_exchange_column')
-CRYSTALLIZER = recipemap('crystallizer')
+import static prePostInit.Recipemaps.*
+import globals.Carbons
+import static gregtech.api.GTValues.*
 
 ELECTROSTATIC_SEPARATOR.recipeBuilder()
     .notConsumable(metaitem('item_filter'))
@@ -11,7 +8,7 @@ ELECTROSTATIC_SEPARATOR.recipeBuilder()
     .chancedOutput(metaitem('dustRheniumRichFlue'), 5000, 0)
     .fluidOutputs(fluid('sulfur_dioxide') * 2000)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -20,7 +17,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustAsh'))
     .fluidOutputs(fluid('scrubbed_perrhenate_solution') * 50)
     .duration(20)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 ION_EXCHANGE.recipeBuilder()
@@ -29,7 +26,7 @@ ION_EXCHANGE.recipeBuilder()
     .outputs(metaitem('beads.loaded_rhenium_anion_exchange'))
     .fluidOutputs(fluid('wastewater') * 1000)
     .duration(200)
-    .EUt(Globals.voltAmps[4])
+    .EUt(VA[EV])
     .buildAndRegister()
     
 BR.recipeBuilder()
@@ -38,7 +35,7 @@ BR.recipeBuilder()
     .outputs(metaitem('beads.weak_basic_anion_exchange'))
     .fluidOutputs(fluid('ammonium_perrhenate_solution') * 1000)
     .duration(200)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
@@ -46,7 +43,7 @@ CRYSTALLIZER.recipeBuilder()
     .outputs(metaitem('dustAmmoniumPerrhenate') * 10)
     .fluidOutputs(fluid('wastewater') * 1000)
     .duration(200)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 REACTION_FURNACE.recipeBuilder()
@@ -56,6 +53,6 @@ REACTION_FURNACE.recipeBuilder()
     .fluidOutputs(fluid('dense_steam') * 4000)
     .fluidOutputs(fluid('ammonia') * 1000)
     .duration(200)
-    .EUt(Globals.voltAmps[4])
+    .EUt(VA[EV])
     .buildAndRegister()
 

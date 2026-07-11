@@ -1,7 +1,7 @@
 {
   "preRequisites:11": [
     509,
-    394
+    752427679
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -23,20 +23,6 @@
           "Count:3": 1,
           "Damage:2": 17003,
           "id:8": "gregtech:machine"
-        },
-        "1:10": {
-          "Count:3": 11,
-          "id:8": "susy:electrode_assembly"
-        },
-        "2:10": {
-          "Count:3": 30,
-          "Damage:2": 4,
-          "id:8": "gregtech:metal_casing"
-        },
-        "3:10": {
-          "Count:3": 10,
-          "Damage:2": 1,
-          "id:8": "gregtech:boiler_firebox_casing"
         }
       },
       "taskID:8": "bq_standard:retrieval"

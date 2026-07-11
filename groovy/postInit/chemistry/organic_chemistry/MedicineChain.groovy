@@ -1,11 +1,5 @@
-import globals.Globals
-
-AUTOCLAVE = recipemap('autoclave')
-TBR = recipemap('trickle_bed_reactor')
-DT = recipemap('distillation_tower')
-BR = recipemap('batch_reactor')
-FORMING_PRESS = recipemap('forming_press')
-LCR = recipemap('large_chemical_reactor')
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
 
 // Paracetamol
 
@@ -15,7 +9,7 @@ AUTOCLAVE.recipeBuilder()
     .outputs(metaitem('dustFourNitrophenol') * 15)
     .fluidOutputs(fluid('diluted_salt_water') * 2000)
     .duration(100)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister()
 
 TBR.recipeBuilder()
@@ -25,7 +19,7 @@ TBR.recipeBuilder()
     .notConsumable(metaitem('dustActivatedRaneyNickel'))
     .fluidOutputs(fluid('four_aminophenol_solution') * 3000)
     .duration(100)
-    .EUt(Globals.voltAmps[2])
+    .EUt(VA[MV])
     .buildAndRegister()
 
 LCR.recipeBuilder()
@@ -36,7 +30,7 @@ LCR.recipeBuilder()
     .fluidInputs(fluid('hydrogen') * 5000)
     .outputs(metaitem('dustFourAminophenol') * 15)
     .duration(100)
-    .EUt(Globals.voltAmps[3])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 DT.recipeBuilder()
@@ -45,7 +39,7 @@ DT.recipeBuilder()
     .fluidOutputs(fluid('water') * 2000)
     .fluidOutputs(fluid('isopropyl_alcohol') * 1000)
     .duration(100)
-    .EUt(Globals.voltAmps[1])
+    .EUt(VA[LV])
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -54,7 +48,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustParacetamol') * 20)
     .fluidOutputs(fluid('acetic_acid') * 2000)
     .duration(100)
-    .EUt(Globals.voltAmps[4])
+    .EUt(VA[EV])
     .buildAndRegister()
 
 // Paracetamol Caplet * 1
@@ -66,5 +60,5 @@ FORMING_PRESS.recipeBuilder()
     .inputs(metaitem('gregtechfoodoption:component.caplet_cap') * 8)
     .outputs(metaitem('gregtechfoodoption:food.paracetamol_caplet') * 8)
     .duration(40)
-    .EUt(Globals.voltAmps[5])
+    .EUt(VA[IV])
     .buildAndRegister() 

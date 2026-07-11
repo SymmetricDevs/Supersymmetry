@@ -439,14 +439,14 @@ class FirstDegreeMaterialsB {
         MixedOxideFuel.setFormula("(U,Pu)O2", true)
 
         MixedOxideFuel.setProperty(SCPropertyKey.FISSION_FUEL,
-                FissionFuelProperty.builder(MixedOxideFuel.getRegistryName(), 1600, 60000, 1.5)
+                FissionFuelProperty.builder(MixedOxideFuel.getRegistryName(), 1600, 13200000, 1.5)
                         .fastNeutronCaptureCrossSection(0.5)
                         .fastNeutronFissionCrossSection(0.25)
                         .slowNeutronCaptureCrossSection(2.2)
                         .slowNeutronFissionCrossSection(2.2)
                         .requiredNeutrons(1)
                         .releasedNeutrons(2.60)
-                        .releasedHeatEnergy(0.02)
+                        .releasedHeatEnergy(0.052)
                         .decayRate(0.1)
                         .build())
 
@@ -635,6 +635,256 @@ class FirstDegreeMaterialsB {
                 .build()
 
         BismuthIIINitrateSolution.setFormula("(Bi(NO3)3)2(H2O)3", true)
+
+        LeadIVOxide = new Material.Builder(8758, SuSyUtility.susyId('lead_iv_oxide'))
+                .dust()
+                .components(Lead, Oxygen * 2)
+                .color(0x1d0b25)
+                .build()
+                .setFormula("PbO2", true)
+
+        SilverNitrate = new Material.Builder(8761, SuSyUtility.susyId('silver_nitrate'))
+                .dust()
+                .components(Silver, Nitrogen, Oxygen * 3)
+                .color(0xF5F3D0)
+                .build()
+
+        ZincDithioniteSolution = new Material.Builder(8762, SuSyUtility.susyId('zinc_dithionite_solution'))
+                .liquid()
+                .components(Zinc, Sulfur * 2, Oxygen * 4, Water)
+                .color(0xd6c7b0)
+                .build()
+
+        SodiumDithionite = new Material.Builder(8763, SuSyUtility.susyId('sodium_dithionite'))
+                .dust()
+                .components(Sodium * 2, Sulfur * 2, Oxygen * 4)
+                .color(0xcfc0a1)
+                .build()
+
+        ZincHydroxide = new Material.Builder(8764, SuSyUtility.susyId('zinc_hydroxide'))
+                .dust()
+                .components(Zinc, Hydrogen * 2, Oxygen * 2)
+                .color(0x939cbf)
+                .build()
+
+        ZincHydroxide.setFormula("Zn(OH)2", true)
+      
+        BariumFluoride = new Material.Builder(8765, SuSyUtility.susyId('barium_fluoride'))
+                .dust()
+                .components(Barium, Fluorine * 2)
+                .colorAverage()
+                .build()
+
+        ManganeseSteel = new Material.Builder(8766, SuSyUtility.susyId('manganese_steel'))
+                .ingot().liquid(new FluidBuilder().temperature(1600))
+                .iconSet(SHINY)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .components(Iron * 83, Manganese * 13, Carbon * 4)
+                .color(0xc2e6a3)
+                .blastTemp(1600, GasTier.LOW, GTValues.VA[GTValues.MV], 200)
+                .build()
+
+        GreenCarbon = new Material.Builder(8767, SuSyUtility.susyId('green_carbon'))
+                .dust()
+                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION, GENERATE_PLATE)
+                .components(Carbon)
+                .color(0x312b29)
+                .build()
+
+        BakedCarbon = new Material.Builder(8768, SuSyUtility.susyId('baked_carbon'))
+                .dust()
+                .flags(FORCE_GENERATE_BLOCK, NO_UNIFICATION, GENERATE_PLATE)
+                .components(Carbon)
+                .color(0x353535)
+                .build()
+
+        MercuryIISulfateSolution = new Material.Builder(8769, SuSyUtility.susyId('mercury_ii_sulfate_solution'))
+                .liquid()
+                .components(Mercury, Sulfur, Oxygen * 4, Water)
+                .colorAverage()
+                .build()
+
+        MercuryIISulfateSolution.setFormula("(HgSO4)(H2O)", true)
+
+        CopperIIAcetateMonohydrate = new Material.Builder(8770, SuSyUtility.susyId("copper_ii_acetate_monohydrate"))
+                .dust()
+                .components(Copper * 2, Carbon * 8, Hydrogen * 12, Oxygen * 8, Water * 2)
+                .color(0x488ae0)
+                .build()
+
+        CopperIIAcetateMonohydrate.setFormula("Cu(C2H3O2)2*H2O", true)
+
+        RhodiumIIIChlorideTrihydrate = new Material.Builder(8771, SuSyUtility.susyId("rhodium_iii_chloride_trihydrate"))
+                .dust()
+                .components(Rhodium, Chlorine * 3, Water * 3)
+                .color(0x210010)
+                .build()
+
+        RhodiumIIIChlorideTrihydrate.setFormula("RhCl3*(H2O)3", true)
+
+        LithiumIodideSolution = new Material.Builder(8772, SuSyUtility.susyId("lithium_iodide_solution"))
+                .liquid()
+                .components(Lithium, Iodine, Water * 2)
+                .colorAverage()
+                .build()
+
+        LithiumIodideSolution.setFormula("(LiI)(H2O)2", true)
+
+        HexachloroiridicIIIAcidSolution = new Material.Builder(8773, SuSyUtility.susyId('hexachloroiridic_iii_acid_solution'))
+                .liquid()
+                .components(Hydrogen * 3, Iridium, Chlorine * 6, Water * 12)
+                .color(0x241500)
+                .build()
+
+        HexachloroiridicIIIAcidSolution.setFormula("(H3IrCl6)(H2O)12", true)
+
+        IridiumIIIChlorideTrihydrate = new Material.Builder(8774, SuSyUtility.susyId("iridium_iii_chloride_trihydrate"))
+                .dust()
+                .components(Iridium, Chlorine * 3, Water * 3)
+                .color(0x12101a)
+                .build()
+
+        IridiumIIIChlorideTrihydrate.setFormula("IrCl3*(H2O)3", true)
+
+        TetrachloropalladicIIAcidSolution = new Material.Builder(8775, SuSyUtility.susyId('tetrachloropalladic_ii_acid_solution'))
+                .liquid()
+                .components(Hydrogen * 2, Palladium, Chlorine * 4, Water * 8)
+                .color(0x361a16)
+                .build()
+
+        TetrachloropalladicIIAcidSolution.setFormula("(H2PdCl4)(H2O)2", true)
+
+        GreenVitriol = new Material.Builder(8776, SuSyUtility.susyId('green_vitriol'))
+                .dust()
+                .components(Iron, Sulfur, Oxygen * 4, Water * 7)
+                .color(0x69e0ab)
+                .build()
+
+        NitrosylsulfuricAcid = new Material.Builder(8777, SuSyUtility.susyId('nitrosylsulfuric_acid'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Nitrogen * 2, Hydrogen * 2, Sulfur * 2, Oxygen * 10, Water * 1)
+                .color(0xe8a020)
+                .build()
+
+        NitrosylsulfuricAcid.setFormula("(NOHSO4)2(H2O)", true)
+
+        AcetaldehydeSolution = new Material.Builder(8778, SuSyUtility.susyId('acetaldehyde_solution'))
+                .liquid()
+                .components(Acetaldehyde, Water)
+                .colorAverage()
+                .build()
+
+        GammaAlumina = new Material.Builder(8779, SuSyUtility.susyId('gamma_alumina'))
+                .dust()
+                .components(Aluminium * 2, Oxygen * 3)
+                .color(0xe8e4d0)
+                .iconSet(SAND)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        FineGammaAlumina = new Material.Builder(8780, SuSyUtility.susyId('fine_gamma_alumina'))
+                .dust()
+                .components(Aluminium * 2, Oxygen * 3)
+                .color(0xf0ede0)
+                .iconSet(FINE)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        AB2MetalAlloy = new Material.Builder(8781, SuSyUtility.susyId('AB_2_metal_alloy'))
+                .ingot().liquid(new FluidBuilder().temperature(1500))
+                .components(HighPurityZirconium * 8, Titanium * 2, Vanadium * 6, Manganese * 3, Palladium, Nickel * 8, Iron * 2)
+                .color(0xa66570)
+                .iconSet(METALLIC)
+                .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .build()
+                
+        AB2MetalAlloy.setFormula("(Zr0.8Ti0.2)(V0.6Mn0.3Pd0.1Ni0.8Fe0.2)", true)
+
+        AB5MetalAlloy = new Material.Builder(8782, SuSyUtility.susyId('AB_5_metal_alloy'))
+                .ingot().liquid(new FluidBuilder().temperature(1500))
+                .components(Lanthanum * 8, HighPurityZirconium * 2, Nickel * 45, Aluminium * 5)
+                .color(0xac6570)
+                .iconSet(METALLIC)
+                .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .build()
+
+        AB5MetalAlloy.setFormula("(La0.8Zr0.2)(Ni4.5Al0.5)", true)
+
+        AnnealedAB2MetalAlloy = new Material.Builder(8783, SuSyUtility.susyId('annealed_AB_2_metal_alloy'))
+                .ingot().liquid(new FluidBuilder().temperature(1500))
+                .components(HighPurityZirconium * 8, Titanium * 2, Vanadium * 6, Manganese * 3, Palladium, Nickel * 8, Iron * 2)
+                .color(0xa66570)
+                .iconSet(SHINY)
+                .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .build()
+        
+        AnnealedAB2MetalAlloy.setFormula("(Zr0.8Ti0.2)(V0.6Mn0.3Pd0.1Ni0.8Fe0.2)", true)
+
+        AnnealedAB5MetalAlloy = new Material.Builder(8784, SuSyUtility.susyId('annealed_AB_5_metal_alloy'))
+                .ingot().liquid(new FluidBuilder().temperature(1500))
+                .components(Lanthanum * 8, HighPurityZirconium * 2, Nickel * 45, Aluminium * 5)
+                .color(0xac6570)
+                .iconSet(SHINY)
+                .blastTemp(1500, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .build()
+                
+        AnnealedAB5MetalAlloy.setFormula("(La0.8Zr0.2)(Ni4.5Al0.5)", true)
+
+        CadmiumOxide = new Material.Builder(8785, SuSyUtility.susyId('cadmium_oxide'))
+                .dust()
+                .components(Cadmium * 1, Oxygen * 1)
+                .color(0xe8e4d0)
+                .iconSet(METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+      
+        DimethylOneThreeDioxane = new Material.Builder(8786, SuSyUtility.susyId('dimethyl_one_three_dioxane'))
+                .liquid()
+                .components(Carbon * 6, Hydrogen * 12, Oxygen * 2)
+                .colorAverage()
+                .build()
+
+        Methylbutynol = new Material.Builder(8787, SuSyUtility.susyId('methylbutynol'))
+                .liquid()
+                .components(Carbon * 5, Hydrogen * 8, Oxygen)
+                .colorAverage()
+                .build()
+
+        Methylbutenol = new Material.Builder(8788, SuSyUtility.susyId('methylbutenol'))
+                .liquid()
+                .components(Carbon * 5, Hydrogen * 10, Oxygen)
+                .colorAverage()
+                .build()
+              
+        ExpandedPolytetrafluoroethylene = new Material.Builder(8789, SuSyUtility.susyId('expanded_polytetrafluoroethylene'))
+                .polymer(1)
+                .color(0x634F4F)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, NO_UNIFICATION)
+                .components(Carbon * 2, Fluorine * 4)
+                .macerateInto(Polytetrafluoroethylene)
+                .build();
+      
+        CopperTungstenAlloy = new Material.Builder(8790, SuSyUtility.susyId('copper_tungsten_alloy'))
+                .dust()
+                .flags(GENERATE_ROD, NO_UNIFICATION)
+                .components(Copper, Tungsten * 3)
+                .color(0xA8591C)
+                .build()
+
+        LanthanumZirconiumOxide = new Material.Builder(8791, SuSyUtility.susyId('lanthanum_zirconium_oxide'))
+                .dust().ingot()
+                .flags(NO_UNIFICATION)
+                .components(Lanthanum * 2, Zirconium * 2, Oxygen * 7)
+                .color(0xB94DA0)
+                .iconSet(DULL)
+                .build()
+        
+        /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
+                .dust()
+                .components(Vanadium * 2, Oxygen * 3)
+                .colorAverage()
+                .build()*/
+
 
     }
 }

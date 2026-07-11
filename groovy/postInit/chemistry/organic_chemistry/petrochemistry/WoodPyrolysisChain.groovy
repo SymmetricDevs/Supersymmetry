@@ -1,13 +1,9 @@
-import globals.Globals
-
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
-
-def PYROLYSE_OVEN = recipemap('pyrolyse_oven');
-def DISTILLATION_TOWER = recipemap('distillation_tower');
-def CENTRIFUGE = recipemap('centrifuge');
+import static prePostInit.Recipemaps.*
+import static gregtech.api.GTValues.*
+import gregtech.api.recipes.ModHandler
+import gregtech.api.unification.material.Materials
+import gregtech.api.unification.ore.OrePrefix
+import gregtech.api.unification.stack.UnificationEntry
 
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore('logWood') * 16)
@@ -56,21 +52,63 @@ CENTRIFUGE.recipeBuilder()
         .fluidOutputs(fluid('creosote') * 250)
         .fluidOutputs(fluid('wood_gas') * 5000)
         .duration(20)
-        .EUt(30)
+        .EUt(VA[LV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+SIEVE_DT.recipeBuilder()
+        .notConsumable(fluid('ethyl_acetate') * 100)
         .fluidInputs(fluid('wood_vinegar') * 1000)
         .fluidOutputs(fluid('acetic_acid') * 100)
         .fluidOutputs(fluid('water') * 700)
         .fluidOutputs(fluid('methanol') * 100)
         .fluidOutputs(fluid('acetone') * 100)
         .duration(10)
-        .EUt(24)
+        .EUt(VA[LV])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
-        .chancedOutput(metaitem('dustAsphalt'), 5000, 0)
+DISTILLERY.recipeBuilder()
+        .circuitMeta(1)
+        .notConsumable(fluid('ethyl_acetate') * 100)
+        .fluidInputs(fluid('wood_vinegar') * 1000)
+        .fluidOutputs(fluid('acetic_acid') * 100)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .circuitMeta(2)
+        .notConsumable(fluid('ethyl_acetate') * 100)
+        .fluidInputs(fluid('wood_vinegar') * 1000)
+        .fluidOutputs(fluid('water') * 700)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .circuitMeta(3)
+        .fluidInputs(fluid('wood_vinegar') * 1000)
+        .fluidOutputs(fluid('methanol') * 100)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .circuitMeta(4)
+        .fluidInputs(fluid('wood_vinegar') * 1000)
+        .fluidOutputs(fluid('acetone') * 100)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+DISTILLERY.recipeBuilder()
+        .circuitMeta(5)
+        .fluidInputs(fluid('wood_vinegar') * 1000)
+        .fluidOutputs(fluid('diluted_acetic_acid') * 200)
+        .duration(100)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+DT.recipeBuilder()
         .fluidInputs(fluid('creosote') * 1000)
         .fluidOutputs(fluid('creosol') * 400)
         .fluidOutputs(fluid('gtfo_guaiacol') * 250)

@@ -1,13 +1,10 @@
-import classes.*;
+import static prePostInit.Recipemaps.*
+import classes.*
 import globals.Globals
+import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-def ASSEMBLER = recipemap('assembler')
-def VACUUM = recipemap('vacuum_chamber')
-def CIRCUIT_ASSEMBLER = recipemap('circuit_assembler')
-
 mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('plate.integrated_logic_circuit'), metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
-
 
 // NAND Chip * 8
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
@@ -53,7 +50,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.nand_chip') * 16)
                 .duration(10)
-                .EUt(16)
+                .EUt(VA[LV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -64,7 +61,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.nand_chip') * 24)
                 .duration(10)
-                .EUt(16)
+                .EUt(VA[LV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -77,7 +74,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.microprocessor') * 6)
                 .duration(200)
-                .EUt(120)
+                .EUt(VA[MV])
                 .buildAndRegister()
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -90,7 +87,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.microprocessor') * 12)
                 .duration(200)
-                .EUt(60)
+                .EUt(VA[MV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -101,7 +98,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.microprocessor') * 18)
                 .duration(50)
-                .EUt(600)
+                .EUt(VA[EV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -114,7 +111,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.processor') * 2)
                 .duration(200)
-                .EUt(120)
+                .EUt(VA[MV])
                 .buildAndRegister()
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -127,21 +124,21 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * (val * 2))
                 .outputs(metaitem('circuit.assembly') * 1)
                 .duration(300)
-                .EUt(120)
+                .EUt(VA[MV])
                 .buildAndRegister()
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
                 .inputs(metaitem('frameAluminium'))
                 .inputs(metaitem('circuit.assembly') * 2)
                 .inputs(metaitem('component.smd.diode') * 4)
-                .inputs(metaitem('plate.random_access_memory') * 4)
+                .inputs(metaitem('plate.nand_memory_chip') * 4)
                 .inputs(metaitem('plate.central_processing_unit') * 4)
                 .inputs(ore('cableGtSingleElectrum') * 4)
                 .fluidInputs(fluid(key) * (val * 2))
                 .outputs(metaitem('circuit.workstation'))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(400)
-                .EUt(120)
+                .EUt(VA[MV])
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -155,7 +152,7 @@ Globals.solders.each { key, val ->
                 .outputs(metaitem('circuit.mainframe'))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(500)
-                .EUt(120)
+                .EUt(VA[HV])
                 .buildAndRegister();
 
 }

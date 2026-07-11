@@ -10,7 +10,8 @@
         "id:8": "susy:resource_block"
       },
       "name:8": "susy.quest.db.1064746016.title",
-      "questlogic:8": "OR"
+      "questlogic:8": "OR",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 1064746016,
@@ -30,17 +31,6 @@
         "0:10": {
           "Count:3": 1,
           "Damage:2": 6,
-          "id:8": "susy:resource_block"
-        }
-      },
-      "taskID:8": "bq_standard:retrieval"
-    },
-    "2:10": {
-      "index:3": 2,
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 9,
           "id:8": "susy:resource_block"
         }
       },

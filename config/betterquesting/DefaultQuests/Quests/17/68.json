@@ -6,8 +6,8 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.68.desc",
       "icon:10": {
-        "Damage:2": 3,
-        "id:8": "susy:susy_stone_smooth"
+        "Damage:2": 10204,
+        "id:8": "gregtech:meta_item_2"
       },
       "name:8": "susy.quest.db.68.title",
       "questlogic:8": "OR"

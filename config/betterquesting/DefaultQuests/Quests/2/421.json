@@ -1,12 +1,10 @@
 {
   "preRequisites:11": [
-    418,
     419
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.421.desc",
-      "frame:8": "GATE",
       "icon:10": {
         "id:8": "gregtech:crowbar",
         "tag:10": {
@@ -24,7 +22,6 @@
           "HideFlags:3": 2
         }
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.421.title"
     }
   },

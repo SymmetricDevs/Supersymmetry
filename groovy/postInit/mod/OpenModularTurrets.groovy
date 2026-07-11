@@ -1,6 +1,6 @@
+import static prePostInit.Recipemaps.*
 import gregtech.api.recipes.ingredients.nbtmatch.*
-
-
+import static gregtech.api.GTValues.*
 
 def soldering_alloys = [
         liquid('tin') * 144,
@@ -55,7 +55,7 @@ for (item in name_removals) {
 }
 
 for (solder in soldering_alloys) {
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateSteel')*4,
                     metaitem('hull.lv'),
@@ -65,23 +65,10 @@ for (solder in soldering_alloys) {
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:turret_base:1'))
             .duration(200)
-            .EUt(30)
+            .EUt(VA[LV])
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    ore('plateAluminium')*4,
-                    metaitem('hull.mv'),
-                    ore('circuitMv'),
-                    item('openmodularturrets:intermediate_regular:0')*2
-            ])
-            .fluidInputs(solder)
-            .outputs(item('openmodularturrets:turret_base:2'))
-            .duration(200)
-            .EUt(120)
-            .buildAndRegister();
-
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateStainlessSteel')*4,
                     metaitem('hull.hv'),
@@ -89,12 +76,25 @@ for (solder in soldering_alloys) {
                     item('openmodularturrets:intermediate_regular:0')*2
             ])
             .fluidInputs(solder)
-            .outputs(item('openmodularturrets:turret_base:3'))
+            .outputs(item('openmodularturrets:turret_base:2'))
             .duration(200)
-            .EUt(480)
+            .EUt(VA[MV])
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
+            .inputs([
+                    ore('plateTitanium')*4,
+                    metaitem('hull.ev'),
+                    ore('circuitEv'),
+                    item('openmodularturrets:intermediate_regular:0')*2
+            ])
+            .fluidInputs(solder)
+            .outputs(item('openmodularturrets:turret_base:3'))
+            .duration(200)
+            .EUt(VA[HV])
+            .buildAndRegister();
+
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateTritanium')*4,
                     metaitem('hull.uv'),
@@ -107,7 +107,7 @@ for (solder in soldering_alloys) {
             .EUt(500000)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     item('openmodularturrets:intermediate_tiered:6'),
                     item('openmodularturrets:intermediate_tiered:11'),
@@ -122,52 +122,52 @@ for (solder in soldering_alloys) {
             .EUt(20)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     item('openmodularturrets:intermediate_tiered:6'),
                     item('openmodularturrets:intermediate_tiered:11'),
                     item('openmodularturrets:intermediate_regular:0'),
-                    ore('circuitLv'),
-                    metaitem('electric.motor.lv') * 2,
-                    metaitem('electric.pump.lv') * 2
+                    ore('circuitMv'),
+                    metaitem('electric.motor.mv') * 2,
+                    metaitem('electric.pump.mv') * 2
             ])
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:incendiary_turret'))
             .duration(200)
-            .EUt(20)
+            .EUt(80)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     item('openmodularturrets:intermediate_tiered:7'),
                     item('openmodularturrets:intermediate_tiered:12'),
-                    item('openmodularturrets:intermediate_regular:0'),
-                    ore('plateAluminium')*4,
-                    ore('circuitMv'),
-                    metaitem('electric.motor.mv') * 2,
-            ])
-            .fluidInputs(solder)
-            .outputs(item('openmodularturrets:grenade_turret'))
-            .duration(200)
-            .EUt(60)
-            .buildAndRegister();
-
-    recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    item('openmodularturrets:intermediate_tiered:8'),
-                    item('openmodularturrets:intermediate_tiered:13'),
                     item('openmodularturrets:intermediate_regular:0'),
                     ore('plateStainlessSteel')*4,
                     ore('circuitHv'),
                     metaitem('electric.motor.hv') * 2,
             ])
             .fluidInputs(solder)
-            .outputs(item('openmodularturrets:rocket_turret'))
+            .outputs(item('openmodularturrets:grenade_turret'))
             .duration(200)
-            .EUt(300)
+            .EUt(320)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
+            .inputs([
+                    item('openmodularturrets:intermediate_tiered:8'),
+                    item('openmodularturrets:intermediate_tiered:13'),
+                    item('openmodularturrets:intermediate_regular:0'),
+                    ore('plateTitanium')*4,
+                    ore('circuitEv'),
+                    metaitem('electric.motor.ev') * 2,
+            ])
+            .fluidInputs(solder)
+            .outputs(item('openmodularturrets:rocket_turret'))
+            .duration(200)
+            .EUt(1280)
+            .buildAndRegister();
+
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateSteel'),
                     ore('dustGunpowder'),
@@ -179,19 +179,19 @@ for (solder in soldering_alloys) {
             .EUt(16)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
-                    ore('roundAluminium')*4,
+                    ore('roundStainlessSteel')*4,
                     ore('plateSteel'),
                     ore('dustGunpowder')
             ])
             .fluidInputs(solder)
             .outputs(item('openmodularturrets:ammo_meta:3'))
             .duration(10)
-            .EUt(60)
+            .EUt(VA[HV])
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('wireFineRedAlloy'),
                     metaitem('conveyor.module.lv'),
@@ -204,7 +204,7 @@ for (solder in soldering_alloys) {
             .EUt(20)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateSteel')*10,
                     ore('wireFineRedAlloy'),
@@ -217,20 +217,7 @@ for (solder in soldering_alloys) {
             .EUt(20)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
-            .inputs([
-                    ore('plateAluminium')*10,
-                    ore('wireFineRedAlloy'),
-                    ore('springSteel'),
-                    ore('gearAluminium')
-            ])
-            .fluidInputs(solder)
-            .outputs(item('openmodularturrets:intermediate_tiered:7'))
-            .duration(200)
-            .EUt(60)
-            .buildAndRegister();
-
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateStainlessSteel')*10,
                     ore('wireFineRedAlloy'),
@@ -238,12 +225,25 @@ for (solder in soldering_alloys) {
                     ore('gearStainlessSteel')
             ])
             .fluidInputs(solder)
+            .outputs(item('openmodularturrets:intermediate_tiered:7'))
+            .duration(200)
+            .EUt(60)
+            .buildAndRegister();
+
+    WEAPONS_FACTORY.recipeBuilder()
+            .inputs([
+                    ore('plateTitanium')*10,
+                    ore('wireFineRedAlloy'),
+                    ore('springSteel'),
+                    ore('gearTitanium')
+            ])
+            .fluidInputs(solder)
             .outputs(item('openmodularturrets:intermediate_tiered:8'))
             .duration(200)
             .EUt(300)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateTritanium')*10,
                     ore('wireFineRedAlloy'),
@@ -256,7 +256,7 @@ for (solder in soldering_alloys) {
             .EUt(500000)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateSteel')*6,
                     item('techguns:itemshared:39')
@@ -268,9 +268,9 @@ for (solder in soldering_alloys) {
             .EUt(20)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
-                    ore('plateAluminium')*6,
+                    ore('plateStainlessSteel')*6,
                     item('techguns:itemshared:39')
             ])
             .circuitMeta(1)
@@ -280,9 +280,9 @@ for (solder in soldering_alloys) {
             .EUt(60)
             .buildAndRegister();
 
-    recipemap('weapons_factory').recipeBuilder()
+    WEAPONS_FACTORY.recipeBuilder()
             .inputs([
-                    ore('plateStainlessSteel')*6,
+                    ore('plateTitanium')*6,
                     item('techguns:itemshared:39')
             ])
             .circuitMeta(1)
@@ -293,12 +293,20 @@ for (solder in soldering_alloys) {
             .buildAndRegister();
 }
 
-recipemap('mixer').recipeBuilder()
+MIXER.recipeBuilder()
         .inputs(ore('dustClay'))
-        .fluidInputs(liquid('gasoline')*1000)
-        .outputs(item('openmodularturrets:ammo_meta:0')*32)
+        .fluidInputs(liquid('gasoline') * 1000)
+        .outputs(item('openmodularturrets:ammo_meta:0') * 8)
         .duration(20)
-        .EUt(30)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustClay'))
+        .fluidInputs(liquid('napalm') * 1000)
+        .outputs(item('openmodularturrets:ammo_meta:0') * 32)
+        .duration(20)
+        .EUt(VA[MV])
         .buildAndRegister();
 
 crafting.replaceShaped("openmodularturrets:addon_meta_5_vanilla", item('openmodularturrets:addon_meta', 5), [
