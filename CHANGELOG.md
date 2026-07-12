@@ -1,3 +1,20 @@
+# UPDATE 0.1.16.11
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.109 → v0.1.111
+## Changes
+### New Features
+- [Susy-Core] SUSY now has cargo drones! Transport items long distances (slowly) with a Drone Basket and a Cargo Drone Pad! (#658 by @lanicerine)
+- The attrition scrubber is now available! Bulk wash your ores. (by @The-ExZombie & @jethro-3000)
+- Decorative sintering blocks with permanent bloom have been added! (#1924 by @JorgeMIng)
+### Changed Features
+- Neodymium alloy now requires a bit of praseodymium for realism (whose chance has been corrected) (#1909 by @jethro-3000)
+- The H2SO4 quest now directly shows the need for small piles of green vitriol. (#1915 by @jethro-3000)
+- The book and quill recipe has been SUSY-fied (and eggs/feathers can be automated through drone pads) (#1922 by @LauraDoesProgramming)
+- Greenhouse recipes with fertilizer are (#1923 by @jethro-3000)
+### Fixes
+Thanks to @unitazer, @h3tR, @planetme, @JorgeMing, @jethro-3000, and @Fiery36 for helping maintain the pack.
+And congrats to @JorgeMIng, @jethro-3000, and @LauraDoesProgramming for their first contributions! :)
 # UPDATE 0.1.16.10
 ## Mod Changes
 ### Mod Updates
