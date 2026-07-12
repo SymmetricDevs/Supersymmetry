@@ -1,0 +1,72 @@
+{
+  "preRequisites:11": [
+    371,
+    398
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "§6Cargo Drones§r are an alternative way to move items over medium-long distances. While slow and only able to carry a single stack, they require very little infrastructure.\n\nFirst, set up a §3Cargo Drone Pad§r (built like the basic one, but with aluminium casings, and no energy hatches). Then, set up a §2Drone Deposit Basket§r at the destination, and shift-right-click it with a §bLocation Card§r. The basket\u0027s location will be stored into the card.\n\nPut the card into a §3Cargo Drone Pad\u0027s §rinput bus. The pad will link to the basket (as long as it still exists at those coordinates), and the card wil be put into the output bus.\nFinally, load some items and a §6Cargo Drone§r into the input bus. If there is enough space in the target basket, the drone will lift off into the sky, fly in a straight line towards its target, land on the basket, output its cargo, and return to the drone pad it started from. If there is not enough space in the target basket when a drone arrives, §4§lthe items will be lost!§r\n\nOnly the drone pad must be chunkloaded for the drone to fly, the other chunks do not.\n\nThere are several versions of both §2Deposit Baskets§r and§6 Cargo Drones§r. The basic basket has 4 slots, allowing safe operations with up to 4 drone pads linked to it. The advanced version, unlocked in EV, has 16.\nCargo drones come in §3Basic§r, §6Advanced§r, and §5Elite§r versions, available respectively in MV, HV, and EV. The basic and advanced versions are similar, differing only in the speeds and ranges. The elite version, however, runs off §1Hydrogen§r, allowing for significantly higher range and speed (though it comes at a significant price, and still carries only one stack).",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 18,
+        "id:8": "susy:meta_item",
+        "tag:10": {
+          "Charge:4": 51200
+        }
+      },
+      "name:8": "Cargo Drones"
+    }
+  },
+  "questID:3": 1117848175,
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "OR",
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 18112,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 18,
+          "id:8": "susy:meta_item",
+          "tag:10": {
+            "Charge:4": 51200
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 19,
+          "id:8": "susy:meta_item",
+          "tag:10": {
+            "Charge:4": 204800
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 21,
+          "id:8": "susy:meta_item"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 20,
+          "id:8": "susy:meta_item"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 18210,
+          "id:8": "gregtech:machine"
+        },
+        "6:10": {
+          "Count:3": 1,
+          "Damage:2": 18211,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}
