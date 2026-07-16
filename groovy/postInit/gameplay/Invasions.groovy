@@ -929,16 +929,16 @@ new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
 
 
 /**
- federation flight platoon
+ federation reinforced flight platoon
  45 people
  LMG, miniguns, flamethrowers, scar
  full power armor
  active combat stims
  direct close air support
- Standard federation combat unit, usually reserved for breaking open reinforced positions
+ Standard federation air combat unit, typically reserved for rapid in-and-out operations
  **/
 
-new MobHordeEvent((player) -> null, 50, 50, "fed_flight_platoon")
+new MobHordeEvent((player) -> null, 50, 50, "fed_air_cavalry")
         .setTimer(144000, 216000)
         .minHate("Feds", 750)
 
@@ -983,7 +983,7 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_flight_platoon")
                     return entity;
                 }
         )
-//sergant
+//Captain
         .addPattern(
                 //circle
                 t -> {
@@ -1048,12 +1048,11 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_flight_platoon")
                     double angle = t * 2 * Math.PI;
                     return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
                 },
-                //WIP, gonna make this a heli later
-                Arrays.asList("setblock ~ ~10 ~ stone"), //summons helicopters above where the drop pod landed so they don't start out on the ground, wip
+                Arrays.asList("summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{faction:\"Feds\",hate:30}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:150}],Health:150.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b}]}"),
                 null,
                 null,
         )
-        .setExactDistribution(44,1,5); //federation soldiers, platoon sergeant, air support
+        .setExactDistribution(44,1,5); //federation soldiers, troop Captain, helicopters
 
 /*
 // Commands for pods
