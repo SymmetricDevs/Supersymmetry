@@ -983,7 +983,7 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_air_cavalry")
                     return entity;
                 }
         )
-//Captain
+//sergeant
         .addPattern(
                 //circle
                 t -> {
@@ -1052,7 +1052,7 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_air_cavalry")
                 null,
                 null,
         )
-        .setExactDistribution(44,1,5); //federation soldiers, troop Captain, helicopters
+        .setExactDistribution(44,1,5); //federation soldiers, platoon sergeant, helicopters
 
 /*
 // Commands for pods
