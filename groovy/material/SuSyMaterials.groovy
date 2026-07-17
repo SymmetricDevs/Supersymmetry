@@ -207,6 +207,7 @@ class SuSyMaterials {
     public static Material ConcentratedBlackLiquor
     public static Material GreenLiquor
     public static Material RawCellulose
+    public static Material Bagasse
     public static Material Wastewater
     public static Material AcidicCelluloseSolution
     public static Material HeatedWastewater
@@ -2690,7 +2691,11 @@ class SuSyMaterials {
     public static Material HotPressurizedHeavyWater
     public static Material TritiatedHeavyWater
     public static Material TritiatedSteam
-    public static Material ChilledWater    
+    public static Material ChilledWater
+    public static Material Syrup
+    public static Material LightMolasses
+    public static Material HeavyMolasses
+    public static Material Blackstrap
 
     public static void changeFormulas() {
         log.infoMC("Changing Formulas!")

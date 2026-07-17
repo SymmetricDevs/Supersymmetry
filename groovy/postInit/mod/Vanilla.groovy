@@ -567,10 +567,11 @@ mods.gregtech.autoclave.recipeBuilder()
 // Blaze Powder * 1
 mods.gregtech.centrifuge.removeByInput(5, [item('minecraft:magma_cream')], null)
 
+// Sugar chain step 2/5: extract sugary water and fibrous residue
 mods.gregtech.centrifuge.recipeBuilder()
-        .inputs(metaitem('sugar_cane_dust') * 1)
+    .inputs(metaitem('sugar_cane_pulp') * 1)
         .fluidInputs(fluid('water') * 250)
-        .outputs(metaitem('dustWood') * 1)
+        .outputs(metaitem('bagasse') * 1)
         .fluidOutputs(fluid('sugary_water') * 250)
         .duration(100)
         .EUt(VA[ULV])
@@ -614,23 +615,50 @@ mods.gregtech.chemical_bath.recipeBuilder()
         .EUt(4)
         .buildAndRegister()
 
-//Crystallizer
-
-CRYSTALLIZER.recipeBuilder()
+    // Sugar chain step 4/5: concentrate clarified sugary water into syrup
+    DISTILLERY.recipeBuilder()
         .fluidInputs(fluid('clarified_sugary_water') * 1000)
-        .outputs(item('minecraft:sugar') * 6)
-        .duration(200)
+        .fluidOutputs(fluid('syrup') * 250)
+        .duration(400)
         .EUt(VA[ULV])
         .buildAndRegister()
 
+//Crystallizer
+    // Sugar chain step 5/5: staged sugar extraction with heavier byproducts
+
 CRYSTALLIZER.recipeBuilder()
         .fluidInputs(fluid('sugary_water') * 1000)
-        .outputs(item('minecraft:sugar') * 3)
+        .outputs(item('minecraft:sugar') * 2)
         .duration(300)
         .EUt(VA[ULV])
         .buildAndRegister()
 
+CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('syrup') * 250)
+        .outputs(item('minecraft:sugar') * 2)
+        .fluidOutputs(fluid('light_molasses') * 125)
+        .duration(250)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('light_molasses') * 125)
+        .outputs(item('minecraft:sugar') * 3)
+        .fluidOutputs(fluid('heavy_molasses') * 60)
+        .duration(250)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+        .fluidInputs(fluid('heavy_molasses') * 60)
+        .outputs(item('minecraft:sugar') * 3)
+        .fluidOutputs(fluid('blackstrap') * 30)
+        .duration(250)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
 //Extractor
+
 mods.gregtech.extractor.recipeBuilder()
     .inputs(item('quark:glass_shards:0'))
     .fluidOutputs(fluid('glass') * 36)
@@ -643,10 +671,11 @@ mods.gregtech.extractor.recipeBuilder()
 // Sugar * 1
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:reeds')], null)
 
+// Sugar chain step 1/5: shred reeds into sugar cane pulp
 mods.gregtech.macerator.recipeBuilder()
         .inputs(item('minecraft:reeds'))
-        .outputs(metaitem('sugar_cane_dust'))
-        .duration(400)
+    .outputs(metaitem('sugar_cane_pulp'))
+        .duration(300)
         .EUt(2)
         .buildAndRegister()
 
@@ -669,6 +698,7 @@ mods.gregtech.mixer.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister()
 
+// Sugar chain step 3/5: clarify sugary water before concentration
 mods.gregtech.mixer.recipeBuilder()
         .inputs(ore('dustQuicklime'))
         .fluidInputs(fluid('sugary_water') * 10000)

@@ -23,7 +23,7 @@ class UnknownCompositionMaterials {
     static void register() {
 
         log.infoMC('Registering Unknown Composition Materials!')
-
+        
         EarthGreenhouseGas = new Material.Builder(4000, SuSyUtility.susyId('greenhouse_gases'))
                 .gas()
                 .color(0x95cade)
@@ -166,8 +166,13 @@ class UnknownCompositionMaterials {
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xc47e70)
                 .build()
+        
+        Syrup = new Material.Builder(4028, SuSyUtility.susyId('syrup'))
+                .liquid()
+                .color(0x6f4e37)
+                .build()
 
-        //FREE IDs: 4028-4029
+        //FREE ID(s): 4029
 
         CrudeCumene = new Material.Builder(4030, SuSyUtility.susyId('crude_cumene'))
                 .liquid()
@@ -272,7 +277,7 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0xc3c4b3)
                 .build()
-
+        
         RawCellulose = new Material.Builder(4050, SuSyUtility.susyId('raw_cellulose'))
                 .dust()
                 .color(0x302b1a)
@@ -3431,6 +3436,27 @@ class UnknownCompositionMaterials {
                 .dust()
                 .iconSet(METALLIC)
                 .color(0xFFE1D8)
+                .build()
+
+
+        LightMolasses = new Material.Builder(4745, SuSyUtility.susyId('light_molasses'))
+                .liquid()
+                .color(0xD2A679)
+                .build()
+        
+        HeavyMolasses = new Material.Builder(4746, SuSyUtility.susyId('heavy_molasses'))
+                .liquid()
+                .color(0x8B5A2B)
+                .build()
+
+        Blackstrap = new Material.Builder(4747, SuSyUtility.susyId('blackstrap'))
+                .liquid()
+                .color(0x331807)
+                .build()
+
+        Bagasse = new Material.Builder(4748, SuSyUtility.susyId('bagasse'))
+                .dust()
+                .color(0xedf0d8)
                 .build()
 
     }

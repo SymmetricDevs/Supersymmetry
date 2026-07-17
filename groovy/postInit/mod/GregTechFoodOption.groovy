@@ -224,6 +224,23 @@ FERMENTER.recipeBuilder()
     .EUt(2)
     .buildAndRegister()
 
+CANNER.recipeBuilder()
+    .inputs(item('minecraft:glass_bottle'))
+    .fluidInputs(fluid('blackstrap') * 250)
+    .outputs(item('minecraft:potion').withNbt([
+        'Potion': 'minecraft:water',
+        'display': ['Name': 'Blackstrap Syrup'],
+        'CustomPotionEffects': [
+            ['Id': (byte) 10, 'Amplifier': (byte) 0, 'Duration': 1800],
+            ['Id': (byte) 23, 'Amplifier': (byte) 1, 'Duration': 1200],
+            ['Id': (byte) 9, 'Amplifier': (byte) 1, 'Duration': 200],
+            ['Id': (byte) 3, 'Amplifier': (byte) 1, 'Duration': 600]
+        ]
+    ]))
+    .duration(80)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 ELECTROLYZER.recipeBuilder()
     .notConsumable(metaitem('stickNickel'))
     .notConsumable(metaitem('graphite_electrode'))

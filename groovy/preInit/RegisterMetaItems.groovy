@@ -38,7 +38,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(152, "sand.dust")
         addItem(153, "native_copper")
         addItem(154, "washed_rotten_flesh")
-        addItem(155, "sugar_cane_dust")
+        addItem(155, "sugar_cane_pulp")
 
         // FREE ID: 156
 
