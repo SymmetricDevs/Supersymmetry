@@ -25,6 +25,11 @@
           "Count:3": 1,
           "Damage:2": 14742,
           "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 14744,
+          "id:8": "gregtech:machine"
         }
       },
       "taskID:8": "bq_standard:retrieval"
