@@ -739,6 +739,13 @@ crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
     [null, null, null]
 ])
 
+FORGE_HAMMER.recipeBuilder()
+	.inputs(ore('stoneSmooth'))
+    .outputs(item('susy:home_block'))
+    .duration(40)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
 crafting.addShapeless('susy:home_block_1', item('susy:home_block', 4), [item('susy:home_block', 0)])
 crafting.addShapeless('susy:home_block_2', item('susy:home_block', 8), [item('susy:home_block', 4)])
 crafting.addShapeless('susy:home_block_3', item('susy:home_block', 12), [item('susy:home_block', 8)])
@@ -1991,3 +1998,25 @@ crafting.removeByOutput(item('gregtech:metal_casing', 11))
 mods.gregtech.assembler.removeByInput(16, [metaitem('platePalladium') * 6, metaitem('frameIridium'), metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
 mods.gregtech.macerator.removeByInput(32, [item('gregtech:metal_casing', 11)], null)
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:metal_casing', 11)], [fluid('oxygen') * 510])
+
+//Gregtech Item Assembler Recipes
+ASSEMBLER.recipeBuilder()
+    .inputs(item('minecraft:paper') * 3)
+    .inputs(ore('screwIron'))
+    .inputs(ore('boltIron'))
+    .inputs(ore('springSmallIron'))
+    .inputs(metaitem('plateWood'))
+    .outputs(metaitem('clipboard'))
+    .duration(50)
+    .EUt(7)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('field.generator.hv'))
+    .inputs(metaitem('robot.arm.ev') * 2)
+    .inputs(ore('screwStainlessSteel') * 2)
+    .inputs(ore('stickPolytetrafluoroethylene') * 2)
+    .outputs(metaitem('tool.multiblock_builder'))
+    .duration(50)
+    .EUt(VA[EV])
+    .buildAndRegister()

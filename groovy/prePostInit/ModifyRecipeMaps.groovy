@@ -463,3 +463,6 @@ RecipeMaps.DISTILLERY_RECIPES
 
 RecipeMaps.ASSEMBLER_RECIPES
     .modifyMaxFluidInputs(2)
+
+RecipeMaps.CUTTER_RECIPES
+    .modifyMaxInputs(2)
