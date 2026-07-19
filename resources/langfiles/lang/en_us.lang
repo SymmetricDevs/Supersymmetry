@@ -3586,3 +3586,5 @@ recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste
 recipe.lubricant.midgrade=Provides a 1.2x boost in power generation recipes requiring lubricant.
 recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requiring lubricant.
 recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.
+recipe.sulfuric.acid=You can do this reaction in 1/40th of the time with a Bubble Column Reactor.
+recipe.pyrite=You can obtain Green Vitriol by batch reacting small piles of Pyrite.

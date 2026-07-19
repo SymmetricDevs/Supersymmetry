@@ -1,0 +1,31 @@
+{
+  "preRequisites:11": [
+    1458693750
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "Finally, you have secured a working sample.\n\nThe controls of this thing seem relatively simple, and with that, you finally have a way to safely listen in on your enemies.\n§2This should allow you to gauge just how willing they are to throw themselves at you.§r\n\nThankfully, according to their radio, they seem too preoccupied with their war against the §4\u0027Former Federation Military\u0027§r (who you suspect has a similar device to this one) to care about you right now. Poking them too hard might change that.",
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 10,
+        "id:8": "susy:meta_item"
+      },
+      "name:8": "Strange Radio",
+      "visibility:8": "COMPLETED"
+    }
+  },
+  "questID:3": 1651487202,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 10,
+          "id:8": "susy:meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}
