@@ -122,3 +122,24 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
         [null, ore('ringIron'), null],
         [null, null, ore('ringIron')]
 ])
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(7)
+    .inputs(ore('stickIron') * 7)
+    .outputs(item('quark:iron_ladder') * 16)
+    .duration(80)
+    .EUt(4)
+    .buildAndRegister();
+
+def allTrapdoor = ['spruce', 'birch', 'jungle', 'acacia', 'dark_oak']
+
+allTrapdoor.eachWithIndex { trapdoor, i ->
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(3)
+    .inputs(item('minecraft:planks', i + 1) * 3)
+    .outputs(item('quark:' + trapdoor + '_trapdoor') * 2)
+    .duration(100)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+}
