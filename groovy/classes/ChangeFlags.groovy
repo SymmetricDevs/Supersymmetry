@@ -78,6 +78,7 @@ class ChangeFlags {
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Magnesium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Potassium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
         Polonium.setProperty(PropertyKey.DUST, new DustProperty());

@@ -115,7 +115,7 @@ DISTILLERY.recipeBuilder()
 
 SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('potassium') * 144)
-        .outputs(metaitem('dustPotassium'))
+        .outputs(metaitem('ingotPotassium'))
         .EUt(VA[LV])
         .duration(30)
         .buildAndRegister()
