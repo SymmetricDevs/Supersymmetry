@@ -1,6 +1,6 @@
 package classes
 
-import gregicality.multiblocks.api.unification.properties.GCYMPropertyKey;
+import gregicality.multiblocks.api.unification.properties.GCYMPropertyKey
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.store.FluidStorageKey
@@ -13,7 +13,7 @@ import gregtech.api.unification.material.properties.OreProperty
 import gregtech.api.unification.material.properties.PropertyKey
 import supersymmetry.api.fluids.SusyFluidStorageKeys
 import supersymmetry.api.recipes.SuSyRecipeMaps
-import supersymmetry.api.unification.material.properties.DummyABSProperty;
+import supersymmetry.api.unification.material.properties.DummyABSProperty
 import supersymmetry.api.unification.material.properties.FiberProperty
 import supersymmetry.api.unification.material.properties.MillBallProperty
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey
@@ -25,132 +25,118 @@ import static material.SuSyMaterials.*
 import supercritical.api.unification.material.properties.FissionFuelProperty
 import supercritical.api.unification.material.properties.ModeratorProperty
 import supercritical.api.unification.material.properties.SCPropertyKey
+import supersymmetry.integration.groovyscript.SuSyExpansions
+import postInit.materials.polymers.fibers.PolybenzimidazoleChain
 
 //eventManager.listen(EventPriority.LOWEST)
 class ChangeFlags {
-    private static void setupSlurries(Material mat) {
-        def property = new FluidProperty()
-        property.enqueueRegistration(SusyFluidStorageKeys.SLURRY, new FluidBuilder().temperature(293))
-        property.enqueueRegistration(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder().temperature(293))
-
-        mat.setProperty(PropertyKey.FLUID, property)
-    }
-    
-    private static void setupFluidType(Material mat, FluidStorageKey key, int temp) {
-        if (mat.getProperty(PropertyKey.FLUID) == null) {
-            def property = new FluidProperty();
-            property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
-            mat.setProperty(PropertyKey.FLUID, property)
-        } else {
-            def property = mat.getProperty(PropertyKey.FLUID)
-            if (property.getQueuedBuilder(key) != null) {
-                property.getQueuedBuilder(key).temperature(temp)
-            } else {
-                property.enqueueRegistration(key, new FluidBuilder().temperature(temp))
-            }
-        }
-    }
-    private static void setupFluidType(Material mat, FluidStorageKey key) {
-        if (mat.getProperty(PropertyKey.FLUID) == null) {
-            def property = new FluidProperty();
-            property.enqueueRegistration(key, new FluidBuilder())
-            mat.setProperty(PropertyKey.FLUID, property)
-        } else {
-            def property = mat.getProperty(PropertyKey.FLUID)
-            property.enqueueRegistration(key, new FluidBuilder())
-        }
-    }
 
     public static void init() {
     //MaterialEvent event ->
 
         log.infoMC("Modifying flags...")
 
-        RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
-        RecipeMaps.PYROLYSE_RECIPES.setMaxFluidInputs(2);
-        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxFluidInputs(3);
-        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxInputs(12);
+        RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2)
+        RecipeMaps.PYROLYSE_RECIPES.setMaxFluidInputs(2)
+        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxFluidInputs(3)
+        SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxInputs(12)
 
         // Properties
 
-        Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Tellurium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Magnesium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Germanium.addIngot()
+        Tellurium.addIngot()
+        Cadmium.addIngot()
+        Magnesium.addIngot()
+        Asbestos.addIngot()
 
-        BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
-        Polonium.setProperty(PropertyKey.DUST, new DustProperty());
+        BisphenolA.addDust()
+        Polonium.addDust()
 
-        Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
-        Rubber.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(593, 6, true, false, false, false));
+        Silver.addFluidPipes(1234, 50, false, false, true, false, true)
+        Rubber.addFluidPipes(593, 6, true, false, false, false, false)
 
-        
-        setupFluidType(AntimonyTrifluoride, FluidStorageKeys.LIQUID, 565)
-        setupFluidType(LithiumChloride, FluidStorageKeys.LIQUID, 890)
-        setupFluidType(SiliconDioxide, FluidStorageKeys.LIQUID, 1986)
-        setupFluidType(Caesium, FluidStorageKeys.LIQUID, 302)
-        setupFluidType(Cadmium, FluidStorageKeys.LIQUID, 600)
-        setupFluidType(BisphenolA, FluidStorageKeys.LIQUID, 428)
-        setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
-        setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
-        setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
-        setupFluidType(OsmiumTetroxide, FluidStorageKeys.GAS, 404)
+        AntimonyTrifluoride.setupFluidTypes(565, FluidStorageKeys.LIQUID)
+        LithiumChloride.setupFluidTypes(890, FluidStorageKeys.LIQUID)
+        SiliconDioxide.setupFluidTypes(1986, FluidStorageKeys.LIQUID)
+        Caesium.setupFluidTypes(302, FluidStorageKeys.LIQUID)
+        Cadmium.setupFluidTypes(600, FluidStorageKeys.LIQUID)
+        BisphenolA.setupFluidTypes(428, FluidStorageKeys.LIQUID)
+        Iodine.setupFluidTypes(460, FluidStorageKeys.GAS)
+        Chlorine.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.PLASMA, new FluidBuilder())
+        Selenium.setupFluidTypes(494, FluidStorageKeys.LIQUID)
+        OsmiumTetroxide.setupFluidTypes(404, FluidStorageKeys.GAS)
         OsmiumTetroxide.addFlags("NO_UNIFICATION")
-        //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
+        //Iron3Chloride.setupFluidTypes(590, FluidStorageKeys.GAS) 
 
-        setupFluidType(Sodium, FluidStorageKeys.LIQUID, 371)
-        setupFluidType(SodiumHydroxide, FluidStorageKeys.LIQUID, 591)
-        setupFluidType(Polydimethylsiloxane, FluidStorageKeys.LIQUID, 293)
-        setupFluidType(Glass, FluidStorageKeys.LIQUID, 1800)
-        setupFluidType(PolyvinylButyral, FluidStorageKeys.LIQUID, 440)
-        setupFluidType(Nitrochlorobenzene, FluidStorageKeys.LIQUID, 326)
-        setupFluidType(Iron3Chloride, FluidStorageKeys.LIQUID, 585)
-        setupFluidType(Dichlorobenzidine, FluidStorageKeys.LIQUID, 438)
-        setupFluidType(Diaminobenzidine, FluidStorageKeys.LIQUID, 450)
-        setupFluidType(PhthalicAcid, FluidStorageKeys.LIQUID, 480)
-        setupFluidType(DiphenylIsophtalate, FluidStorageKeys.LIQUID, 410)
-        setupFluidType(Dichlorobenzene, FluidStorageKeys.LIQUID, 256)
-        setupFluidType(SiliconeRubber, FluidStorageKeys.LIQUID, 400)
-        setupFluidType(StyreneButadieneRubber, FluidStorageKeys.LIQUID, 450)
-        setupFluidType(HighPurityGermanium, FluidStorageKeys.LIQUID, 1211)
-        setupFluidType(HighPurityArsenic, FluidStorageKeys.LIQUID, 1090)
-        setupFluidType(HighPuritySelenium, FluidStorageKeys.LIQUID, 494)
-        setupFluidType(BlackSteel, FluidStorageKeys.LIQUID, 1728)
-        setupFluidType(Polytetrafluoroethylene, FluidStorageKeys.LIQUID, 293)
+        Sodium.setupFluidTypes(371, FluidStorageKeys.LIQUID)
+        SodiumHydroxide.setupFluidTypes(591, FluidStorageKeys.LIQUID)
+        Polydimethylsiloxane.setupFluidTypes(293, FluidStorageKeys.LIQUID)
+        Glass.setupFluidTypes(1800, FluidStorageKeys.LIQUID)
+        PolyvinylButyral.setupFluidTypes(440, FluidStorageKeys.LIQUID)
+        Nitrochlorobenzene.setupFluidTypes(326, FluidStorageKeys.LIQUID)
+        Iron3Chloride.setupFluidTypes(585, FluidStorageKeys.LIQUID)
+        Dichlorobenzidine.setupFluidTypes(438, FluidStorageKeys.LIQUID)
+        Diaminobenzidine.setupFluidTypes(450, FluidStorageKeys.LIQUID)
+        PhthalicAcid.setupFluidTypes(480, FluidStorageKeys.LIQUID)
+        DiphenylIsophtalate.setupFluidTypes(410, FluidStorageKeys.LIQUID)
+        Dichlorobenzene.setupFluidTypes(256, FluidStorageKeys.LIQUID)
+        SiliconeRubber.setupFluidTypes(400, FluidStorageKeys.LIQUID)
+        StyreneButadieneRubber.setupFluidTypes(450, FluidStorageKeys.LIQUID)
+        HighPurityGermanium.setupFluidTypes(1211, FluidStorageKeys.LIQUID)
+        HighPurityArsenic.setupFluidTypes(1090, FluidStorageKeys.LIQUID)
+        HighPuritySelenium.setupFluidTypes(494, FluidStorageKeys.LIQUID)
+        BlackSteel.setupFluidTypes(1728, FluidStorageKeys.LIQUID)
+        Polytetrafluoroethylene.setupFluidTypes(293, FluidStorageKeys.LIQUID)
 
-        setupFluidType(CarbonDioxide, SusyFluidStorageKeys.SUPERCRITICAL, 304)
-        setupFluidType(Propane, SusyFluidStorageKeys.SUPERCRITICAL, 370)
+        CarbonDioxide.setupFluidTypes(304, SusyFluidStorageKeys.SUPERCRITICAL)
+        Propane.setupFluidTypes(370, SusyFluidStorageKeys.SUPERCRITICAL)
 
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
         Asbestos.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
-        //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+        //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()))
 
-        Tantalum.setProperty(PropertyKey.BLAST, new BlastProperty(3293, GasTier.MID, 480, 240, -1, -1));
-        Molybdenum.setProperty(PropertyKey.BLAST, new BlastProperty(2890, GasTier.MID, 480, 240, -1, -1));
-        Platinum.setProperty(PropertyKey.BLAST, new BlastProperty(2045, GasTier.LOW, 480, 240, -1, -1));
-        Thorium.setProperty(PropertyKey.BLAST, new BlastProperty(2028, GasTier.LOW, 480, 240, -1, -1));
-        Cobalt.setProperty(PropertyKey.BLAST, new BlastProperty(1750, GasTier.LOW, 120, 200, -1, -1));
-        Beryllium.setProperty(PropertyKey.BLAST, new BlastProperty(1560, GasTier.LOW, 120, 200, -1, -1));
-        Nickel.setProperty(PropertyKey.BLAST, new BlastProperty(1728, GasTier.LOW, 120, 120, -1, -1));
-        Hafnium.setProperty(PropertyKey.BLAST, new BlastProperty(2227, GasTier.LOW, 120, 120, -1, -1));
+        Tantalum.addBlastProperty(3293, "MID", 480, 240, -1, -1)
+        Molybdenum.addBlastProperty(2890, "MID", 480, 240, -1, -1)
+        Platinum.addBlastProperty(2045, "LOW", 480, 240, -1, -1)
+        Thorium.addBlastProperty(2028, "LOW", 480, 240, -1, -1)
+        Cobalt.addBlastProperty(1750, "LOW", 120, 200, -1, -1)
+        Beryllium.addBlastProperty(1560, "LOW", 120, 200, -1, -1)
+        Nickel.addBlastProperty(1728, "LOW", 120, 120, -1, -1)
+        Hafnium.addBlastProperty(2227, "LOW", 120, 120, -1, -1)
 
         // Supercons, max amps multiplied by 4.
-        ManganesePhosphide.getProperty(PropertyKey.WIRE).setAmperage(8);
-        MagnesiumDiboride.getProperty(PropertyKey.WIRE).setAmperage(16);
-        MercuryBariumCalciumCuprate.getProperty(PropertyKey.WIRE).setAmperage(16);
-        UraniumTriplatinum.getProperty(PropertyKey.WIRE).setAmperage(24);
-        SamariumIronArsenicOxide.getProperty(PropertyKey.WIRE).setAmperage(24);
-        IndiumTinBariumTitaniumCuprate.getProperty(PropertyKey.WIRE).setAmperage(32);
-        UraniumRhodiumDinaquadide.getProperty(PropertyKey.WIRE).setAmperage(32);
-        EnrichedNaquadahTriniumEuropiumDuranide.getProperty(PropertyKey.WIRE).setAmperage(64);
-        RutheniumTriniumAmericiumNeutronate.getProperty(PropertyKey.WIRE).setAmperage(96);
+        ManganesePhosphide.getProperty(PropertyKey.WIRE).setAmperage(8)
+        MagnesiumDiboride.getProperty(PropertyKey.WIRE).setAmperage(16)
+        MercuryBariumCalciumCuprate.getProperty(PropertyKey.WIRE).setAmperage(16)
+        UraniumTriplatinum.getProperty(PropertyKey.WIRE).setAmperage(24)
+        SamariumIronArsenicOxide.getProperty(PropertyKey.WIRE).setAmperage(24)
+        IndiumTinBariumTitaniumCuprate.getProperty(PropertyKey.WIRE).setAmperage(32)
+        UraniumRhodiumDinaquadide.getProperty(PropertyKey.WIRE).setAmperage(32)
+        EnrichedNaquadahTriniumEuropiumDuranide.getProperty(PropertyKey.WIRE).setAmperage(64)
+        RutheniumTriniumAmericiumNeutronate.getProperty(PropertyKey.WIRE).setAmperage(96)
 
         // Allow PE & PTFE to carry acidic/cyro fluids. Used in plastic cans
-        Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true);
-        Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCanContain(FluidAttributes.ACID, true);
-        Polytetrafluoroethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true);
+        Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true)
+        Polyethylene.getProperty(PropertyKey.FLUID_PIPE).setCanContain(FluidAttributes.ACID, true)
+        Polyethylene.setBaseProof(true)
+        Polytetrafluoroethylene.getProperty(PropertyKey.FLUID_PIPE).setCryoProof(true)
+        Polytetrafluoroethylene.setBaseProof(true)
+
+        // Base-proof
+        Chrome.setBaseProof(true)
+        Copper.setBaseProof(true)
+        Gold.setBaseProof(true)
+        Iridium.setBaseProof(true)
+        Titanium.setBaseProof(true)
+        Neutronium.setBaseProof(true)
+        Duranium.setBaseProof(true)
+        NiobiumTitanium.setBaseProof(true)
+        StainlessSteel.setBaseProof(true)
+        Steel.setBaseProof(true)
+        TungstenCarbide.setBaseProof(true)
+        Tungsten.setBaseProof(true)
+        Polybenzimidazole.setBaseProof(true)
 
         // Dummy properties for continuous casting
         Steel.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
@@ -158,41 +144,41 @@ class ChangeFlags {
 
         // Flags
 
-        Asbestos.addFlags("generate_foil");
-        Magnesium.addFlags("generate_rod", "generate_plate");
-        Tellurium.addFlags("generate_plate");
-        Steel.addFlags("generate_spring", "generate_spring_small", "continuously_cast");
-        Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
-        Lead.addFlags("generate_round");
-        Nickel.addFlags("generate_rod", "generate_foil", "generate_fine_wire");
-        Aluminium.addFlags("generate_round", "generate_rotor", "continuously_cast");
-        Tungsten.addFlags("generate_fine_wire", "hip_pressed");
-        Molybdenum.addFlags("generate_fine_wire");
-        Tantalum.addFlags("generate_rod", "generate_fine_wire", "generate_catalyst_bed", "generate_plate");
-        Titanium.addFlags("generate_fine_wire");
-        ChromiumTrioxide.addFlags("generate_catalyst_bed");
-        Iron3Chloride.addFlags("generate_catalyst_bed");
-        Alumina.addFlags("generate_catalyst_bed");
-        Silver.addFlags("generate_catalyst_bed");
-        Nickel.addFlags("generate_catalyst_bed");
-        Magnesia.addFlags("generate_catalyst_bed");
-        CupricOxide.addFlags("generate_catalyst_bed");
-        Brass.addFlags("generate_ring");
-        Indium.addFlags("generate_plate");
-        BisphenolA.addFlags("no_unification");
-        Phosphorus.addFlags("no_smelting");
-        Tetrahedrite.addFlags("no_smelting");
-        Gold.addFlags("generate_gear");
-        IronMagnetic.addFlags("generate_ring");
+        Asbestos.addFlags("generate_foil")
+        Magnesium.addFlags("generate_rod", "generate_plate")
+        Tellurium.addFlags("generate_plate")
+        Steel.addFlags("generate_spring", "generate_spring_small", "continuously_cast")
+        Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small")
+        Lead.addFlags("generate_round")
+        Nickel.addFlags("generate_rod", "generate_foil", "generate_fine_wire")
+        Aluminium.addFlags("generate_round", "generate_rotor", "continuously_cast")
+        Tungsten.addFlags("generate_fine_wire", "hip_pressed")
+        Molybdenum.addFlags("generate_fine_wire")
+        Tantalum.addFlags("generate_rod", "generate_fine_wire", "generate_catalyst_bed", "generate_plate")
+        Titanium.addFlags("generate_fine_wire")
+        ChromiumTrioxide.addFlags("generate_catalyst_bed")
+        Iron3Chloride.addFlags("generate_catalyst_bed")
+        Alumina.addFlags("generate_catalyst_bed")
+        Silver.addFlags("generate_catalyst_bed")
+        Nickel.addFlags("generate_catalyst_bed")
+        Magnesia.addFlags("generate_catalyst_bed")
+        CupricOxide.addFlags("generate_catalyst_bed")
+        Brass.addFlags("generate_ring")
+        Indium.addFlags("generate_plate")
+        BisphenolA.addFlags("no_unification")
+        Phosphorus.addFlags("no_smelting")
+        Tetrahedrite.addFlags("no_smelting")
+        Gold.addFlags("generate_gear")
+        IronMagnetic.addFlags("generate_ring")
         SteelMagnetic.addFlags("generate_plate")
-        StainlessSteel.addFlags("generate_round");
-        Hafnium.addFlags("generate_long_rod", "generate_rod");
-        VanadiumSteel.addFlags("generate_round");
-        Mica.addFlags("generate_plate", "no_unification");
-        Rubber.addFlags("generate_plate");
-        TungstenCarbide.addFlags("hip_pressed");
-        Polycaprolactam.addFlags("generate_foil");
-        Palladium.addFlags("generate_bolt_screw");
+        StainlessSteel.addFlags("generate_round")
+        Hafnium.addFlags("generate_long_rod", "generate_rod")
+        VanadiumSteel.addFlags("generate_round")
+        Mica.addFlags("generate_plate", "no_unification")
+        Rubber.addFlags("generate_plate")
+        TungstenCarbide.addFlags("hip_pressed")
+        Polycaprolactam.addFlags("generate_foil")
+        Palladium.addFlags("generate_bolt_screw")
         Copper.addFlags("continuously_cast")
         Graphite.addFlags("generate_plate")
         Magnalium.addFlags("generate_ring", "generate_rotor")
@@ -211,654 +197,405 @@ class ChangeFlags {
         RutheniumTriniumAmericiumNeutronate.addFlags("no_smashing", "no_smelting")
         */
 
-        ManganesePhosphide.addFlags("generate_fine_wire");
-        UraniumTriplatinum.addFlags("generate_fine_wire");
-        RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
+        ManganesePhosphide.addFlags("generate_fine_wire")
+        UraniumTriplatinum.addFlags("generate_fine_wire")
+        RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire")
 
         // Colors
 
-        Phosphorus.setMaterialRGB(0xfffed6);
-        Terbium.setMaterialRGB(0x4b9c70);
-        Dysprosium.setMaterialRGB(0xbfc25f);
-        Holmium.setMaterialRGB(0xe3b16b);
-        Erbium.setMaterialRGB(0xc07ede);
-        Thulium.setMaterialRGB(0xe86666);
-        Mica.setMaterialRGB(0xe8e7ba);
+        Phosphorus.setMaterialRGB(0xfffed6)
+        Terbium.setMaterialRGB(0x4b9c70)
+        Dysprosium.setMaterialRGB(0xbfc25f)
+        Holmium.setMaterialRGB(0xe3b16b)
+        Erbium.setMaterialRGB(0xc07ede)
+        Thulium.setMaterialRGB(0xe86666)
+        Mica.setMaterialRGB(0xe8e7ba)
 
         // Formulae
 
-        DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true);
-        DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true);
-        AquaRegia.setFormula("(HNO3)(HCl)3", true);
-        Tantalite.setFormula("(Fe,Mn)Ta2O6", true);
-        Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true);
-        Tetrahedrite.setFormula("Cu12Sb4S13", true);
-        IndiumGalliumPhosphide.setFormula("InGaP2", true);
-        NetherAir.setFormula("(N78O21Ar9)24(CO2)2(H2S)(SO2)", true);
-        Diatomite.setFormula("(SiO2)8(Fe2O3)(Al2O3)", true);
-        Pollucite.setFormula("(Cs,Na)2Al2Si4O12(H2O)2", true);
-        Pitchblende.setFormula("(?)UO2", true);
-        Bastnasite.setFormula("(REE)CO3F", true);
-        Monazite.setFormula("(REE,Th)PO4", true);
-        Gypsum.setFormula("(CaSO4)*(H2O)2", true);
-        Polyethylene.setFormula("[C2H4]n", true);
-        PolyvinylChloride.setFormula("[C2H3Cl]n", true);
-        Rubber.setFormula("[C5H8]n", true);
-        Polycaprolactam.setFormula("[C6H11NO]n", true);
-        Polytetrafluoroethylene.setFormula("[C2F4]n", true);
-        SiliconeRubber.setFormula("[SiC2H6O]n", true);
-        StyreneButadieneRubber.setFormula("[C40H44]n", true);
-        PolyphenyleneSulfide.setFormula("[C6H4S]n", true);
-        Polybenzimidazole.setFormula("[C20H12N4]n", true);
-        PolyvinylAcetate.setFormula("[C4H6O2]n", true);
-        PolyvinylButyral.setFormula("[C8H14O2]n", true);
-        TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true);
-        StainlessSteel.setFormula("Fe28Cr8Ni4Si2Mn", true);
-        Magnalium.setFormula("MgAl19", true);
+        DilutedHydrochloricAcid.setFormula("(H2O)2(HCl)", true)
+        DilutedSulfuricAcid.setFormula("(H2SO4)(H2O)", true)
+        AquaRegia.setFormula("(HNO3)(HCl)3", true)
+        Tantalite.setFormula("(Fe,Mn)Ta2O6", true)
+        Lepidolite.setFormula("(K,Rb)AlLi2Si4O10(OH,F)2", true)
+        Tetrahedrite.setFormula("Cu12Sb4S13", true)
+        IndiumGalliumPhosphide.setFormula("InGaP2", true)
+        NetherAir.setFormula("(N78O21Ar9)24(CO2)2(H2S)(SO2)", true)
+        Diatomite.setFormula("(SiO2)8(Fe2O3)(Al2O3)", true)
+        Pollucite.setFormula("(Cs,Na)2Al2Si4O12(H2O)2", true)
+        Pitchblende.setFormula("(?)UO2", true)
+        Bastnasite.setFormula("(REE)CO3F", true)
+        Monazite.setFormula("(REE,Th)PO4", true)
+        Gypsum.setFormula("(CaSO4)*(H2O)2", true)
+        Polyethylene.setFormula("[C2H4]n", true)
+        PolyvinylChloride.setFormula("[C2H3Cl]n", true)
+        Rubber.setFormula("[C5H8]n", true)
+        Polycaprolactam.setFormula("[C6H11NO]n", true)
+        Polytetrafluoroethylene.setFormula("[C2F4]n", true)
+        SiliconeRubber.setFormula("[SiC2H6O]n", true)
+        StyreneButadieneRubber.setFormula("[C40H44]n", true)
+        PolyphenyleneSulfide.setFormula("[C6H4S]n", true)
+        Polybenzimidazole.setFormula("[C20H12N4]n", true)
+        PolyvinylAcetate.setFormula("[C4H6O2]n", true)
+        PolyvinylButyral.setFormula("[C8H14O2]n", true)
+        TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true)
+        StainlessSteel.setFormula("Fe28Cr8Ni4Si2Mn", true)
+        Magnalium.setFormula("MgAl19", true)
 
         // Ore Processing
         
         Pitchblende.addFlags("disable_decomposition")
-        Borax.setProperty(PropertyKey.ORE, new OreProperty());
-        Scheelite.addFlags("generate_sifted", "generate_flotated");
-        setupSlurries(Scheelite)
-        Pyrochlore.addFlags("generate_sifted", "generate_flotated", "generate_concentrate");
-        setupSlurries(Pyrochlore)
-        Molybdenite.addFlags("generate_flotated");
-        setupSlurries(Molybdenite)
-        Tantalite.addFlags("generate_sifted", "generate_flotated", "generate_concentrate");
-        setupSlurries(Tantalite)
-        setupSlurries(Galena)
-        setupSlurries(Stibnite)
-        setupSlurries(Cinnabar)
-        Ilmenite.addFlags("generate_flotated", "generate_concentrate");
-        setupSlurries(Ilmenite)
-        setupSlurries(Barite)
-        setupSlurries(Spodumene)
-        Cassiterite.addFlags("generate_concentrate");
-        setupSlurries(Cassiterite)
-        setupSlurries(Malachite)
-        Rutile.addFlags("generate_concentrate");
-        setupSlurries(Sphalerite)
-        setupSlurries(Pollucite)
-        Pentlandite.addFlags("generate_sifted", "generate_flotated");
-        setupSlurries(Pentlandite)
-        Bastnasite.addFlags("generate_sifted", "generate_flotated");
-        setupSlurries(Bastnasite)
-        Monazite.addFlags("generate_concentrate");
-
-        setupFluidType(PolyvinylAcetate, FluidStorageKeys.LIQUID, 385)
-
-        OreProperty oreProp = Petalite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
-
-        oreProp = Aluminium.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
-
-        oreProp = Beryllium.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
-
-        oreProp = Cobalt.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
-
-        oreProp = Copper.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
-
-        oreProp = Gold.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
-
-        oreProp = Iron.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
-
-        oreProp = Lead.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
-
-        oreProp = Lithium.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
-
-        oreProp = Molybdenum.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
-
-        oreProp = Neodymium.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
-
-        oreProp = Nickel.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
-
-        oreProp = Palladium.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
-
-        oreProp = Platinum.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
-
-        oreProp = Plutonium239.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
-
-        oreProp = Silver.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
-
-        oreProp = Sulfur.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
-
-        oreProp = Thorium.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
-
-        oreProp = Tin.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Borax.addOre()
+        Scheelite.addFlags("generate_sifted", "generate_flotated")
+        Scheelite.setupSlurries()
+        Pyrochlore.addFlags("generate_sifted", "generate_flotated", "generate_concentrate")
+        Pyrochlore.setupSlurries()
+        Molybdenite.addFlags("generate_flotated")
+        Molybdenite.setupSlurries()
+        Tantalite.addFlags("generate_sifted", "generate_flotated", "generate_concentrate")
+        Tantalite.setupSlurries()
+        Galena.setupSlurries()
+        Stibnite.setupSlurries()
+        Cinnabar.setupSlurries()
+        Ilmenite.addFlags("generate_flotated", "generate_concentrate")
+        Ilmenite.setupSlurries()
+        Barite.setupSlurries()
+        Spodumene.setupSlurries()
+        Cassiterite.addFlags("generate_concentrate")
+        Cassiterite.setupSlurries()
+        Malachite.setupSlurries()
+        Rutile.addFlags("generate_concentrate")
+        Sphalerite.setupSlurries()
+        Pollucite.setupSlurries()
+        Pentlandite.addFlags("generate_sifted", "generate_flotated")
+        Pentlandite.setupSlurries()
+        Bastnasite.addFlags("generate_sifted", "generate_flotated")
+        Bastnasite.setupSlurries()
+        Monazite.addFlags("generate_concentrate")
 
-        oreProp = Naquadah.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
+        PolyvinylAcetate.setupFluidTypes(385, FluidStorageKeys.LIQUID)
 
-        oreProp = CertusQuartz.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
 
-        oreProp = Almandine.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Petalite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Asbestos.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Aluminium.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = BandedIron.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Beryllium.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = BlueTopaz.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Cobalt.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = BrownLimonite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Copper.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = YellowLimonite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Gold.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Calcite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Iron.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Cassiterite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Lead.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = CassiteriteSand.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Lithium.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Chalcopyrite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Molybdenum.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Chromite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Neodymium.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Cinnabar.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Nickel.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Coal.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Palladium.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Cobaltite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Platinum.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Cooperite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Plutonium239.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Diamond.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Silver.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Electrum.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Sulfur.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Emerald.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Thorium.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Galena.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Tin.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Garnierite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Naquadah.getProperty(PropertyKey.ORE).getOreByProducts().clear()
 
-        oreProp = GreenSapphire.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        CertusQuartz.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Grossular.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Almandine.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Ilmenite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Asbestos.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Bauxite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        BandedIron.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Lapis.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        BlueTopaz.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Magnesite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        BrownLimonite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Magnetite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        YellowLimonite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Molybdenite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Calcite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Powellite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Cassiterite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Scheelite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        CassiteriteSand.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Pyrite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Chalcopyrite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Pyrolusite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Chromite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Pyrope.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Cinnabar.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = RockSalt.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Coal.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Ruby.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Cobaltite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Salt.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Cooperite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Saltpeter.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Diamond.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Sapphire.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Electrum.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Sodalite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Emerald.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Tantalite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Galena.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Spessartine.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Garnierite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Sphalerite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        GreenSapphire.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Stibnite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Grossular.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Tetrahedrite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Ilmenite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Topaz.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Bauxite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Tungstate.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Lapis.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Uraninite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Magnesite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Wulfenite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Magnetite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = NetherQuartz.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Molybdenite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Graphite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Powellite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Bornite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Scheelite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Chalcocite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Pyrite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Realgar.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Pyrolusite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Bastnasite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Pyrope.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Pentlandite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        RockSalt.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Spodumene.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Ruby.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Lepidolite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Salt.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = GlauconiteSand.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Saltpeter.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Malachite.getProperty(PropertyKey.ORE);
-        oreProp.setOreMultiplier(2)
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Sapphire.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Alunite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Sodalite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Talc.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Tantalite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Kyanite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Spessartine.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Pyrochlore.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Sphalerite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Borax.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Stibnite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Olivine.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Tetrahedrite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Opal.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Topaz.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Amethyst.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Tungstate.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Apatite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Uraninite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = TricalciumPhosphate.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Wulfenite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = GarnetRed.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        NetherQuartz.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = GarnetYellow.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Graphite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = VanadiumMagnetite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Bornite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Pollucite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Chalcocite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Pitchblende.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Realgar.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Bentonite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(Clay, Clay, Clay, Clay);
+        Bastnasite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = FullersEarth.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(Clay, Clay, Clay, Clay);
+        Pentlandite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Monazite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Spodumene.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Trona.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Lepidolite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Gypsum.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        GlauconiteSand.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Zeolite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Malachite.getProperty(PropertyKey.ORE).setOreMultiplier(2)
+        Malachite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Redstone.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Alunite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Electrotine.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Talc.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Diatomite.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Kyanite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = GraniticMineralSand.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Pyrochlore.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = GarnetSand.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Borax.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = BasalticMineralSand.getProperty(PropertyKey.ORE);
-        oreProp.getOreByProducts().clear();
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Olivine.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Thortveitite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        Opal.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Titanomagnetite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Amethyst.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = VanadiferousTitanomagnetite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Apatite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Perovskite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        TricalciumPhosphate.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Arsenopyrite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        GarnetRed.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Smithsonite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
-        oreProp.setDirectSmeltResult(Zinc);
+        GarnetYellow.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Enargite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        VanadiumMagnetite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Proustite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Pollucite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Celestine.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Pitchblende.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Strontianite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Bentonite.setOreByProducts(Clay, Clay, Clay, Clay)
 
-        oreProp = Acanthite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        FullersEarth.setOreByProducts(Clay, Clay, Clay, Clay)
 
-        oreProp = Stephanite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Monazite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Pyrargyrite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Trona.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Barite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Gypsum.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Witherite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Zeolite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Wolframite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Redstone.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Sperrylite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings);
+        Electrotine.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Cerussite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        Diatomite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Anglesite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        GraniticMineralSand.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Bismuthinite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        GarnetSand.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Amblygonite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        BasalticMineralSand.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Vanadinite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Thortveitite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Carnotite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
+        Titanomagnetite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Bertrandite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings);
+        VanadiferousTitanomagnetite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Cerussite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(Lead);
+        Perovskite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Anglesite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(Lead);
+        Arsenopyrite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
 
-        oreProp = Pyrolusite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Smithsonite.getProperty(PropertyKey.ORE).setDirectSmeltResult(Zinc)
+        Smithsonite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Platinum.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Enargite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Molybdenum.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Proustite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Molybdenite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Celestine.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Beryllium.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Strontianite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Cobaltite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Acanthite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Cobalt.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Stephanite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Thorium.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Pyrargyrite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Nickel.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Barite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Pentlandite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Witherite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
 
-        oreProp = Garnierite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Wolframite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Ilmenite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Sperrylite.setOreByProducts(UltramaficTailings, UltramaficTailings, UltramaficTailings, UltramaficTailings)
 
-        oreProp = Powellite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Cerussite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Uraninite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Anglesite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
 
-        oreProp = Magnesite.getProperty(PropertyKey.ORE);
-        oreProp.setDirectSmeltResult(null);
+        Bismuthinite.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings)
+
+        Amblygonite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
+
+        Vanadinite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
+
+        Carnotite.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings)
+
+        Bertrandite.setOreByProducts(PegmatiteTailings, PegmatiteTailings, PegmatiteTailings, PegmatiteTailings)
+
+        Cerussite.getProperty(PropertyKey.ORE).setDirectSmeltResult(Lead)
+
+        Anglesite.getProperty(PropertyKey.ORE).setDirectSmeltResult(Lead)
+
+        Pyrolusite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Platinum.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Molybdenum.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Molybdenite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Beryllium.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Cobaltite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Cobalt.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Thorium.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Nickel.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Pentlandite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Garnierite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Ilmenite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Powellite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Uraninite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
+
+        Magnesite.getProperty(PropertyKey.ORE).setDirectSmeltResult(null)
 
         // Flammables
 
-        Naphtha.addFlags("flammable");
-        NaturalGas.addFlags("flammable");
-        Methane.addFlags("flammable");
-        Ethane.addFlags("flammable");
-        Propane.addFlags("flammable");
-        Butane.addFlags("flammable");
-        Butadiene.addFlags("flammable");
-        Toluene.addFlags("flammable");
-        WoodGas.addFlags("flammable");
-        CoalGas.addFlags("flammable");
-        Ethylene.addFlags("flammable");
-        RefineryGas.addFlags("flammable");
-        Ammonia.addFlags("flammable");
-        Propene.addFlags("flammable");
-        Butene.addFlags("flammable");
-        Phenol.addFlags("flammable");
-        Benzene.addFlags("flammable");
-        Hydrogen.addFlags("flammable");
-        Methanol.addFlags("flammable");
-        Ethanol.addFlags("flammable");
+        Naphtha.addFlags("flammable")
+        NaturalGas.addFlags("flammable")
+        Methane.addFlags("flammable")
+        Ethane.addFlags("flammable")
+        Propane.addFlags("flammable")
+        Butane.addFlags("flammable")
+        Butadiene.addFlags("flammable")
+        Toluene.addFlags("flammable")
+        WoodGas.addFlags("flammable")
+        CoalGas.addFlags("flammable")
+        Ethylene.addFlags("flammable")
+        RefineryGas.addFlags("flammable")
+        Ammonia.addFlags("flammable")
+        Propene.addFlags("flammable")
+        Butene.addFlags("flammable")
+        Phenol.addFlags("flammable")
+        Benzene.addFlags("flammable")
+        Hydrogen.addFlags("flammable")
+        Methanol.addFlags("flammable")
+        Ethanol.addFlags("flammable")
         log.infoMC("Finished modifying flags")
 
         // Nuclear
@@ -879,11 +616,11 @@ class ChangeFlags {
         Beryllium.setProperty(SCPropertyKey.MODERATOR, ModeratorProperty.builder()
                 .maxTemperature(1500)
                 .absorptionFactor(0.015625)
-                .moderationFactor(5).build());
+                .moderationFactor(5).build())
         Beryllium.addFlags("force_generate_block")
 
         // Mill balls
-        Steel.setProperty(SuSyPropertyKey.MILL_BALL, new MillBallProperty(7680));
-        StainlessSteel.setProperty(SuSyPropertyKey.MILL_BALL, new MillBallProperty(17280));
+        Steel.addMillBall(7680)
+        StainlessSteel.addMillBall(17280)
     }
 }
