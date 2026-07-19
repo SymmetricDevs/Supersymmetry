@@ -1242,19 +1242,11 @@ crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
     [null, ore('ingotSteel'), null]
 ])
 
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(ore('ingotAluminium') * 2)
-	.inputs(ore('ingotSteel') * 4)
-    .outputs(item('opencomputers:wrench'))
-    .duration(40)
-    .EUt(7)
-    .buildAndRegister();
-
 //disk platter
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(ore('lensGlass') * 4)
-	.inputs(ore('dustSmallCobalt'))
-    .outputs(item('opencomputers:material', 12))
-    .duration(400)
-    .EUt(VA[MV])
-    .buildAndRegister();
+	mods.gregtech.assembler.recipeBuilder()
+			.inputs(ore('lensGlass') * 4)
+			.inputs(ore('dustSmallCobalt'))
+            .outputs(item('opencomputers:material', 12))
+            .duration(400)
+            .EUt(VA[MV])
+            .buildAndRegister();

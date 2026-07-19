@@ -548,32 +548,11 @@ RecyclingHelper.addShaped("alternator_coil", item('susy:alternator_coil'), [
     [ore('circuitLv'),              metaitem('cableGtSingleTin'),  ore('circuitLv')]
 ])
 
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('electric.motor.lv') * 3)
-    .inputs(ore('circuitLv') * 2)
-	.inputs(ore('plateSteel'))
-    .inputs(ore('cableGtSingleTin'))
-    .outputs(item('susy:alternator_coil', 0))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 RecyclingHelper.addShaped("steel_turbine_rotor", item('susy:turbine_rotor'), [
     [ore('plateSteel'),             ore('screwSteel'),     ore('plateSteel')],
     [ore('craftingToolHardHammer'), ore('stickLongSteel'), ore('craftingToolScrewdriver')],
     [ore('plateSteel'),             ore('rotorSteel'),     ore('plateSteel')]
 ])
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(17)
-    .inputs(ore('plateSteel') * 4)
-    .inputs(ore('screwSteel'))
-	.inputs(ore('stickLongSteel'))
-    .inputs(ore('rotorSteel'))
-    .outputs(item('susy:turbine_rotor', 0))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
 
 RecyclingHelper.addShaped("steel_turbine_controller", metaitem('susy:basic_steam_turbine'), [
     [ore('plateSteel'),            metaitem('cableGtSingleTin'),       ore('plateSteel')],
@@ -1466,37 +1445,6 @@ RecyclingHelper.addShaped("gregtech:locomotive_controller", metaitem('susy:stock
 		[metaitem('emitter.lv'), ore('circuitLv'), metaitem('sensor.lv')]
 ])
 
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('hull.lv'))
-    .inputs(metaitem('conveyor.module.lv'))
-    .inputs(metaitem('electric.pump.lv'))
-	.inputs(ore('pipeSmallFluidSteel') * 4)
-    .outputs(item('gregtech:machine', 18001))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('hull.lv'))
-    .inputs(ore('circuitLv'))
-    .inputs(metaitem('electric.pump.lv'))
-	.inputs(ore('pipeSmallItemNickel') * 4)
-    .outputs(item('gregtech:machine', 18002))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('hull.lv'))
-    .inputs(ore('circuitLv') * 2)
-	.inputs(ore('pipeSmallItemNickel') * 2)
-    .inputs(metaitem('emitter.lv'))
-    .inputs(metaitem('sensor.lv'))
-    .outputs(item('gregtech:machine', 18004))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 // Curtain Coater
 
 RecyclingHelper.addShaped("gregtech:curtain_coater", metaitem('susy:curtain_coater'), [
@@ -1746,91 +1694,3 @@ crafting.addShaped(metaitem('susy:electric_discharge_machine'),
         [[ore('circuitEv'),metaitem('plate.power_integrated_circuit'),ore('circuitEv')],
          [metaitem('cableGtOctalSilver'), metaitem('hull.ev'), metaitem('cableGtOctalSilver')],
          [metaitem('electric.motor.hv'),metaitem('rotorTitanium'),metaitem('electric.pump.hv')]])
-
-//Multiblock Tank Assembler Recipes
-ASSEMBLER.recipeBuilder()
-    .inputs(item('gregtech:planks:1') * 4)
-	.inputs(ore('plateLead'))
-    .outputs(item('gregtech:steam_casing', 5))
-    .duration(25)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(1)
-    .inputs(item('gregtech:steam_casing', 5))
-    .inputs(ore('ringLead'))
-    .inputs(ore('rotorLead'))
-    .outputs(item('gregtech:machine', 1596))
-    .duration(100)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(item('gregtech:steam_casing', 5))
-    .inputs(ore('ringLead') * 2)
-    .outputs(item('gregtech:machine', 1597))
-    .duration(100)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(1)
-    .inputs(item('gregtech:metal_casing', 4))
-    .inputs(ore('ringSteel'))
-    .inputs(ore('rotorSteel'))
-    .outputs(item('gregtech:machine', 1598))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(item('gregtech:metal_casing', 4))
-    .inputs(ore('ringSteel') * 2)
-    .outputs(item('gregtech:machine', 1599))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-//Crafting Station Assembler Recipe
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('chestWood') * 2)
-    .inputs(item('minecraft:crafting_table'))
-    .inputs(ore('slabWood') * 2)
-    .inputs(ore('plankWood') * 4)
-    .outputs(item('gregtech:machine', 1647))
-    .duration(100)
-    .EUt(16)
-    .buildAndRegister();
-
-//Coagulation Tank Assembler Recipes
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('plankTreatedWood') * 4)
-    .inputs(metaitem('pipeLargeFluidTreatedWood'))
-    .inputs(ore('rotorSteel'))
-    .inputs(ore('screwSteel'))
-    .outputs(item('gregtech:machine', 14501))
-    .EUt(VA[LV])
-    .duration(200)
-    .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('plankTreatedWood') * 4)
-    .inputs(ore('frameGtTreatedWood'))
-    .inputs(ore('boltSteel') * 2)
-    .outputs(item('susy:coagulation_tank_wall', 0))
-    .EUt(VA[LV])
-    .duration(50)
-    .buildAndRegister()
-
-//Wooden Barrel Assembler Recipe
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('plankWood') * 4)
-    .inputs(ore('stickLongBronze') * 2)
-    .fluidInputs(fluid('glue') * 100)
-    .outputs(metaitem('drum.wood'))
-    .duration(200)
-    .EUt(VA[ULV])
-    .buildAndRegister()

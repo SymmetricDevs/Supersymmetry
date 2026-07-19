@@ -206,19 +206,6 @@ crafting.addShaped("rubylith_lpic", metaitem('stencil.lpic'), [
     [null, null, null]
 ]);
 
-def allStencil = ['ram', 'ic', 'pcb', 'ulpic', 'lpic', 'cpu']
-
-allStencil.eachWithIndex { stencil, i ->
-
-    CUTTER.recipeBuilder()
-        .circuitMeta(i + 1)
-        .inputs(metaitem('rubylith'))
-        .outputs(metaitem('stencil.' + stencil))
-        .duration(40)
-        .EUt(VA[MV])
-        .buildAndRegister();
-}
-
 UV_LIGHT_BOX.recipeBuilder()
     .inputs(metaitem('stencil.lpic'))
     .inputs(metaitem('mask.blank'))

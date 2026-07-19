@@ -13,21 +13,8 @@ def setChargeFromBatteryFn = { output, inputs, info ->
     }
 }
 
-//Liquid Fuelled Jetpack
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('electric.pump.lv'))
-    .inputs(metaitem('large_fluid_cell.steel') * 2)
-    .inputs(ore('rotorLead') * 2)
-    .inputs(ore('pipeSmallFluidPotin'))
-    .inputs(ore('circuitLv'))
-    .outputs(metaitem('liquid_fuel_jetpack'))
-    .duration(150)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 // LV Batteries
 Batteries[LV].each { battery ->
-
     // Item Magnet
     crafting.shapedBuilder()
         .name("gregtech:lv_magnet_${battery.name}")
@@ -39,17 +26,6 @@ Batteries[LV].each { battery ->
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-    
-    ASSEMBLER.recipeBuilder()
-        .inputs(battery.fetchMetaitem())
-        .inputs(ore('stickSteelMagnetic') * 4)
-        .inputs(ore('cableGtSingleTin') * 2)
-        .inputs(ore('plateSteel'))
-        .outputs(battery.imprintCapacity(metaitem('item_magnet.lv')))
-        .EUt(VA[LV])
-        .duration(150)
-        .buildAndRegister()
-
     // Prospector's Scanner
     crafting.shapedBuilder()
         .name("gregtech:prospector_${battery.name}")
@@ -61,7 +37,6 @@ Batteries[LV].each { battery ->
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-
     // NightVision Goggles
     crafting.shapedBuilder()
         .name("gregtech:nightvision_${battery.name}")
@@ -73,17 +48,6 @@ Batteries[LV].each { battery ->
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-    
-    ASSEMBLER.recipeBuilder()
-        .inputs(ore('circuitUlv') * 2)
-        .inputs(ore('ringRubber') * 2)
-        .inputs(ore('lensGlass') * 2)
-        .inputs(battery.fetchMetaitem())
-        .outputs(battery.imprintCapacity(metaitem('nightvision_goggles')))
-        .duration(150)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
     // Power Unit (manual craft)
     crafting.shapedBuilder()
         .name("gregtech:lv_power_unit_${battery.name}")
@@ -95,7 +59,6 @@ Batteries[LV].each { battery ->
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-    
     // Power Unit
     ASSEMBLER.recipeBuilder()
         .inputs(ore('gearSmallSteel') * 2)
@@ -104,48 +67,30 @@ Batteries[LV].each { battery ->
         .inputs(metaitem('electric.motor.lv'))
         .inputs(battery.fetchMetaitem())
         .outputs(battery.imprintCapacity(metaitem('power_unit.lv')))
-        .duration(150)
         .EUt(VA[LV])
+        .duration(150)
         .buildAndRegister()
 }
 
 // MV Batteries
 Batteries[MV].each { battery ->
-
     // Tricorder Scanner
     crafting.shapedBuilder()
         .name("gregtech:tricorder_${battery.name}")
         .output(battery.imprintCapacity(metaitem('tricorder_scanner')))
         .shape([
-            [metaitem('emitter.mv'), ore('plateAluminium'), metaitem('sensor.mv')],
+            [metaitem('emitter.mv'), metaitem('plateAluminium'), metaitem('sensor.mv')],
             [ore('circuitHv'), metaitem('cover.screen'), ore('circuitHv')],
-            [ore('plateAluminium'), battery.fetchMetaitem().mark('battery'), ore('plateAluminium')]
+            [metaitem('plateAluminium'), battery.fetchMetaitem().mark('battery'), metaitem('plateAluminium')]
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-    
-    // Electric Jetpack
-    crafting.shapedBuilder()
-        .name("gregtech:electric_jetpack_${battery.name}")
-        .output(battery.imprintCapacity(metaitem('gregtech:electric_jetpack')))
-        .shape([
-            [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
-            [metaitem('power_thruster'), battery.fetchMetaitem().mark('battery'), metaitem('power_thruster')],
-            [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
-        ])
-        .recipeFunction(setChargeFromBatteryFn)
-        .register()
-
-    ASSEMBLER.recipeBuilder()
-        .inputs(battery.fetchMetaitem())
-        .inputs(ore('wireGtDoubleAnnealedCopper') * 2)
-        .inputs(metaitem('power_thruster') * 2)
-        .inputs(ore('circuitMv'))
-        .outputs(battery.imprintCapacity(metaitem('electric_jetpack')))
-        .duration(150)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
+    // Electric Jetpack (power capacity does not depend on battery)
+    crafting.addShaped("gregtech:electric_jetpack_${battery.name}", metaitem('gregtech:electric_jetpack'), [
+        [ore('toolWireCutter'), ore('circuitMv'), ore('toolScrewdriver')],
+        [metaitem('power_thruster'), battery.fetchMetaitem(), metaitem('power_thruster')],
+        [ore('wireGtDoubleAnnealedCopper'), null, ore('wireGtDoubleAnnealedCopper')]
+    ])
     // Power Unit (manual craft)
     crafting.shapedBuilder()
         .name("gregtech:mv_power_unit_${battery.name}")
@@ -157,7 +102,6 @@ Batteries[MV].each { battery ->
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-    
     // Power Unit
     ASSEMBLER.recipeBuilder()
         .inputs(ore('gearSmallAluminium') * 2)
@@ -173,30 +117,12 @@ Batteries[MV].each { battery ->
 
 // HV Batteries
 Batteries[HV].each { battery ->
-
-    // Electric Jetpack
-    crafting.shapedBuilder()
-        .name("gregtech:electric_jetpack_advanced_${battery.name}")
-        .output(battery.imprintCapacity(metaitem('gregtech:advanced_electric_jetpack')))
-        .shape([
-            [ore('toolWireCutter'), metaitem('electric_jetpack'), ore('toolScrewdriver')],
-            [metaitem('power_thruster_advanced'), battery.fetchMetaitem().mark('battery'), metaitem('power_thruster_advanced')],
-            [ore('wireGtQuadrupleGold'), ore('circuitHv'), ore('wireGtQuadrupleGold')]
-        ])
-        .recipeFunction(setChargeFromBatteryFn)
-        .register()
-    
-    ASSEMBLER.recipeBuilder()
-        .inputs(battery.fetchMetaitem())
-        .inputs(metaitem('electric_jetpack'))
-        .inputs(ore('wireGtQuadrupleGold') * 2)
-        .inputs(metaitem('power_thruster_advanced') * 2)
-        .inputs(ore('circuitHv'))
-        .outputs(battery.imprintCapacity(metaitem('advanced_electric_jetpack')))
-        .duration(150)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
+    // Electric Jetpack (power capacity does not depend on battery)
+    crafting.addShaped("gregtech:electric_jetpack_advanced_${battery.name}", metaitem('gregtech:advanced_electric_jetpack'), [
+        [ore('toolWireCutter'), metaitem('electric_jetpack'), ore('toolScrewdriver')],
+        [metaitem('power_thruster_advanced'), battery.fetchMetaitem(), metaitem('power_thruster_advanced')],
+        [ore('wireGtQuadrupleGold'), ore('circuitHv'), ore('wireGtQuadrupleGold')]
+    ])
     // Item Magnet
     crafting.shapedBuilder()
         .name("gregtech:hv_magnet_${battery.name}")
@@ -204,21 +130,10 @@ Batteries[HV].each { battery ->
         .shape([
             [ore('stickAlnicoMagnetic'), ore('toolWrench'), ore('stickAlnicoMagnetic')],
             [ore('stickAlnicoMagnetic'), battery.fetchMetaitem().mark('battery'), ore('stickAlnicoMagnetic')],
-            [ore('cableGtSingleGold'), ore('plateStainlessSteel'), ore('cableGtSingleGold')]
+            [ore('wireGtSingleGold'), ore('plateStainlessSteel'), ore('wireGtSingleGold')]
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-
-    ASSEMBLER.recipeBuilder()
-        .inputs(battery.fetchMetaitem())
-        .inputs(ore('stickAlnicoMagnetic') * 4)
-        .inputs(ore('cableGtSingleGold') * 2)
-        .inputs(ore('plateStainlessSteel'))
-        .outputs(battery.imprintCapacity(metaitem('item_magnet.hv')))
-        .EUt(VA[HV])
-        .duration(150)
-        .buildAndRegister()
-
     // Prospector's Scanner
     crafting.shapedBuilder()
         .name("gregtech:prospector_${battery.name}")
@@ -230,7 +145,6 @@ Batteries[HV].each { battery ->
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-
     // Power Unit (manual craft)
     crafting.shapedBuilder()
         .name("gregtech:hv_power_unit_${battery.name}")
@@ -242,7 +156,6 @@ Batteries[HV].each { battery ->
         ])
         .recipeFunction(setChargeFromBatteryFn)
         .register()
-
     // Power Unit
     ASSEMBLER.recipeBuilder()
         .inputs(ore('gearSmallStainlessSteel') * 2)

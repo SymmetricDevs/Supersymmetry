@@ -1,4 +1,4 @@
- import static gregtech.api.GTValues.*
+import static gregtech.api.GTValues.*
 
 def name_removals = [
 	"industrialrenewal:prospecting_pan",
@@ -635,52 +635,6 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(item('industrialrenewal:transformer_hv'))
 	.duration(800)
 	.EUt(VA[LV])
-	.buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(ore('plateAluminium') * 3)
-	.inputs(ore('stickLongAluminium') * 3)
-    .inputs(item('industrialrenewal:energy_level'))
-	.outputs(item('industrialrenewal:small_wind_turbine_pillar') * 6)
-    .duration(80)
-	.EUt(VA[LV])
-	.buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(ore('plateAluminium') * 5)
-	.inputs(ore('boltAluminium'))
-    .inputs(metaitem('electric.motor.mv'))
-	.outputs(item('industrialrenewal:small_wind_turbine'))
-    .duration(80)
-	.EUt(VA[LV])
-	.buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(ore('screwSteel'))
-	.inputs(ore('stickSteel'))
-	.inputs(ore('plateSteel'))
-    .inputs(item('minecraft:stone_button'))
-	.inputs(metaitem('battery.lead_acid'))
-	.outputs(item('industrialrenewal:screwdrive'))
-    .duration(40)
-	.EUt(7)
-	.buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-    .circuitMeta(3)
-    .inputs(ore('plateSteel') * 4)
-	.inputs(ore('stickLongSteel') * 2)
-	.outputs(item('industrialrenewal:barrel_item'))
-    .duration(200)
-	.EUt(16)
-	.buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(ore('dyeRed'))
-	.inputs(ore('stickSteel') * 3)
-	.outputs(item('industrialrenewal:cart_linkable'))
-    .duration(40)
-	.EUt(7)
 	.buildAndRegister()
 /*
 

@@ -125,19 +125,3 @@ ASSEMBLER.recipeBuilder()
 	.duration(80)
 	.EUt(VA[ULV])
 	.buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-	.inputs(ore('plateIron') * 3)
-	.inputs(item('bdsandm:wood_crate'))
-    .outputs(item('bdsandm:crate_key'))
-    .duration(40)
-    .EUt(7)
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-	.inputs(ore('plateIron') * 3)
-	.inputs(item('bdsandm:wood_barrel'))
-    .outputs(item('bdsandm:crate_key'))
-    .duration(40)
-    .EUt(7)
-    .buildAndRegister();
