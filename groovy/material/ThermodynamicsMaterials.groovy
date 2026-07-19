@@ -6,7 +6,6 @@ import static globals.Globals.determineTemperatureLiquid
 
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
-import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.fluids.store.FluidStorageKeys
 import gregtech.api.unification.material.properties.*
@@ -482,7 +481,7 @@ class ThermodynamicsMaterials {
                 .build()
 
         ColdAmmoniacalArgonHydrogenMixture = new Material.Builder(22844, SuSyUtility.susyId('cold_ammoniacal_argon_hydrogen_mixture'))
-                .gas(new FluidBuilder().temperature(220))
+                .gas(new FluidBuilder().temperature(220).basic())
                 .components(Argon, Hydrogen, Ammonia)
                 .colorAverage()
                 .build()

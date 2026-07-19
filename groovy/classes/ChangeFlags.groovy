@@ -138,12 +138,22 @@ class ChangeFlags {
         Tungsten.setBaseProof(true)
         Polybenzimidazole.setBaseProof(true)
 
+        // :Acidic:
+        TitaniumTetrachloride.setAcidic(FluidStorageKeys.LIQUID)
+        Iron3Chloride.setAcidic(FluidStorageKeys.LIQUID)
+        SulfurDioxide.setAcidic(FluidStorageKeys.GAS)
+        SulfurTrioxide.setAcidic(FluidStorageKeys.GAS)
+
+        // :Basic:
+        Ammonia.setBasic(FluidStorageKeys.GAS)
+        Dimethylamine.setBasic(FluidStorageKeys.GAS)
+        Dimethylhydrazine.setBasic(FluidStorageKeys.LIQUID)
+
         // Dummy properties for continuous casting
         Steel.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
         Aluminium.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
 
         // Flags
-
         Asbestos.addFlags("generate_foil")
         Magnesium.addFlags("generate_rod", "generate_plate")
         Tellurium.addFlags("generate_plate")

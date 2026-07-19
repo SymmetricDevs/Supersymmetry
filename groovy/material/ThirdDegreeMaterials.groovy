@@ -4,7 +4,6 @@ import static material.SuSyMaterials.*
 
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
-import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.unification.material.properties.*
 
@@ -21,13 +20,13 @@ class ThirdDegreeMaterials {
         log.infoMC('Registering Third Degree Materials!')
 
         DiethylEtherSolution = new Material.Builder(24000, SuSyUtility.susyId('diethyl_ether_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(material('diethyl_ether'), SulfuricAcid * 1, Water * 1)
                 .colorAverage()
                 .build()
 
         LithiumSolution = new Material.Builder(24001, SuSyUtility.susyId('lithium_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Lithium * 2, material('diethyl_ether'))
                 .colorAverage()
                 .build()
@@ -39,7 +38,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         AcidicFurfuralSolution = new Material.Builder(24003, SuSyUtility.susyId('acidic_furfural_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(Furfural * 1, SulfuricAcid * 1, Water * 3)
                 .colorAverage()
                 .build()
@@ -59,19 +58,19 @@ class ThirdDegreeMaterials {
                 .build()
 
         HydrazineSolution = new Material.Builder(24007, SuSyUtility.susyId('hydrazine_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Hydrazine * 1, Ammonia * 2, Water * 4)
                 .colorAverage()
                 .build()
 
         LithiumHexafluorophosphateElectrolyte = new Material.Builder(24008, SuSyUtility.susyId("lithium_hexafluorophosphate_electrolyte"))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(LithiumHexafluorophosphate * 1, EthyleneCarbonate * 1)
                 .colorAverage()
                 .build()
 
         TNTSlurry = new Material.Builder(24009, SuSyUtility.susyId('tnt_slurry'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(TNT * 1, DilutedSulfuricAcid * 1)
                 .colorAverage()
                 .build()
@@ -79,7 +78,7 @@ class ThirdDegreeMaterials {
         // FREE ID: 24010
 
         SodiumEthoxideSolution = new Material.Builder(24011, SuSyUtility.susyId('sodium_ethoxide_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(SodiumEthoxide, Ethanol)
                 .color(0xcc5050)
                 .build()
@@ -123,7 +122,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         TwoButanolSolution = new Material.Builder(24018, SuSyUtility.susyId('two_butanol_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(SulfuricAcid * 1, TwoButanol * 1)
                 .colorAverage()
                 .build()
@@ -135,13 +134,13 @@ class ThirdDegreeMaterials {
                 .build()
 
         DiglycolicAcidSolution = new Material.Builder(24020, SuSyUtility.susyId('diglycolic_acid_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(DiglycolicAcid * 1, AmmoniaSolution * 1, Ethanol * 1)
                 .colorAverage()
                 .build()
 
         DiTwoEthylhexylPhosphoricAcidSolution = new Material.Builder(24021, SuSyUtility.susyId('di_two_ethylhexyl_phosphoric_acid_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(DiTwoEthylhexylPhosphoricAcid * 1, Hexane * 1)
                 .colorAverage()
                 .build()
@@ -177,7 +176,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         DilutedTwoEthylhexylNitrate = new Material.Builder(24027, SuSyUtility.susyId('diluted_two_ethylhexyl_nitrate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(TwoEthylhexylNitrate * 1, Water * 1, SulfuricAcid * 1)
                 .colorAverage()
                 .build()
@@ -195,13 +194,13 @@ class ThirdDegreeMaterials {
                 .build()
 
         DilutedDiisopropylamine = new Material.Builder(24030, SuSyUtility.susyId('diluted_diisopropylamine'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Diisopropylamine * 1, Water * 2)
                 .colorAverage()
                 .build()
 
         PerfluorooctanoicAcidMixture = new Material.Builder(24031, SuSyUtility.susyId('perfluorooctanoic_acid_mixture'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(PerfluorooctanoicAcid * 1, HydrofluoricAcid * 1)
                 .colorAverage()
                 .build()
@@ -243,7 +242,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         AcidicTributylPhosphate = new Material.Builder(24038, SuSyUtility.susyId('acidic_tributyl_phosphate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(TributylPhosphate * 1, HydrogenChloride * 3)
                 .colorAverage()
                 .build()
@@ -255,7 +254,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         TriethylamineSolution = new Material.Builder(24040, SuSyUtility.susyId('triethylamine_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Triethylamine * 1, Dichloromethane * 4)
                 .colorAverage()
                 .build()
@@ -267,7 +266,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         TNPSlurry = new Material.Builder(24042, SuSyUtility.susyId('tnp_slurry'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(PicricAcid * 1, DilutedSulfuricAcid * 1)
                 .colorAverage()
                 .build()
@@ -285,19 +284,19 @@ class ThirdDegreeMaterials {
                 .build()
 
         DichloroethaneIsophthalicAcidSolution = new Material.Builder(24045, SuSyUtility.susyId('dichloroethane_isophthalic_acid_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(OneTwoDichloroethane * 1, IsophthalicAcid * 1)
                 .colorAverage()
                 .build()
 
         TetrahydrofuranSolution = new Material.Builder(24046, SuSyUtility.susyId('tetrahydrofuran_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(Tetrahydrofuran * 1, SulfuricAcid * 1, Water * 1)
                 .colorAverage()
                 .build()
 
         AcidicTriethylPhosphate = new Material.Builder(24047, SuSyUtility.susyId('acidic_triethyl_phosphate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(TriethylPhosphate * 1, HydrogenChloride * 3)
                 .color(0x4639ee)
                 .build()
@@ -315,7 +314,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         AcidicNitrobenzeneMixture = new Material.Builder(24050, SuSyUtility.susyId('acidic_nitrobenzene_mixture'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(Nitrobenzene * 1, SulfuricAcid * 1, Water * 1)
                 .colorAverage()
                 .build()
@@ -337,7 +336,7 @@ class ThirdDegreeMaterials {
         DicarbonylbistriphenylphosphinenickelZero.setFormula('Ni(CO)2(PPh)2', true)
 
         SodiumPhenoxideSolution = new Material.Builder(24053, SuSyUtility.susyId('sodium_phenoxide_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(SodiumPhenoxide * 1, Water * 1)
                 .colorAverage()
                 .build()
@@ -449,7 +448,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         SodiumCyclopentadienideSolution = new Material.Builder(24071, SuSyUtility.susyId('sodium_cyclopentadienide_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Sodium * 1, Carbon * 5, Hydrogen * 5, Tetrahydrofuran * 1)
                 .colorAverage()
                 .build()
@@ -493,13 +492,13 @@ class ThirdDegreeMaterials {
                 .build()
 
         OlefinPolymerizationInitiator = new Material.Builder(24078, SuSyUtility.susyId('olefin_polymerization_initiator'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(NButanol * 1, BoronTrifluoride * 3)
                 .colorAverage()
                 .build()
 
         TrimelliticAcidSlurry = new Material.Builder(24079, SuSyUtility.susyId('trimellitic_acid_slurry'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(TrimelliticAcid * 1, AceticAcid * 1, Water * 1)
                 .colorAverage()
                 .build()
@@ -511,13 +510,13 @@ class ThirdDegreeMaterials {
                 .build()
 
         AcidicTricresylPhosphate = new Material.Builder(24081, SuSyUtility.susyId('acidic_tricresyl_phosphate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(TricresylPhosphate * 1, HydrogenChloride * 3)
                 .colorAverage()
                 .build()
 
         ChloroaceticAcidSolution = new Material.Builder(24082, SuSyUtility.susyId('chloroacetic_acid_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(ChloroaceticAcid * 1, SulfuricAcid * 2)
                 .colorAverage()
                 .build()
@@ -547,13 +546,13 @@ class ThirdDegreeMaterials {
                 .build()
 
         SodiumCelluloseXanthateSolution = new Material.Builder(24088, SuSyUtility.susyId('sodium_cellulose_xanthate_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(SodiumCelluloseXanthate * 1, SodiumHydroxide * 1, Water * 1)
                 .colorAverage()
                 .build()
 
         CrotonaldehydeMixture = new Material.Builder(24089, SuSyUtility.susyId('crotonaldehyde_mixture'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(SodiumHydroxide * 1, Crotonaldehyde * 1)
                 .colorAverage()
                 .build()
@@ -567,13 +566,13 @@ class ThirdDegreeMaterials {
         GaseousMethacrylicAcidMixture.setFormula("(C4H6O)(C4H6O2)3(H2O)4", true)
 
         MethacrylicAcidSolution = new Material.Builder(24091, SuSyUtility.susyId('methacrylic_acid_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(MethacrylicAcid * 1, Water * 1)
                 .colorAverage()
                 .build()
 
         AcidicChlorodifluoromethane = new Material.Builder(24092, SuSyUtility.susyId('acidic_chlorodifluoromethane'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .gas(new FluidBuilder().acidic())
                 .components(Chlorodifluoromethane * 1, HydrogenChloride * 2)
                 .color(0xbd97c7)
                 .build()
@@ -591,7 +590,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         DilutedButyllithium = new Material.Builder(24095, SuSyUtility.susyId('diluted_butyllithium'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Butyllithium * 1, DiethylEther * 1)
                 .colorAverage()
                 .build()
@@ -603,13 +602,13 @@ class ThirdDegreeMaterials {
                 .build()
 
         OxalicAcidSolution = new Material.Builder(24097, SuSyUtility.susyId('oxalic_acid_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(OxalicAcid * 1, Water * 1)
                 .colorAverage()
                 .build()
 
         GalliumSulfateSolution = new Material.Builder(24098, SuSyUtility.susyId('gallium_sulfate_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(Gallium * 2, Sulfur * 3, Oxygen * 12, OxalicAcid * 6, Water * 3)
                 .colorAverage()
                 .build()
@@ -617,7 +616,7 @@ class ThirdDegreeMaterials {
         GalliumSulfateSolution.setFormula("(Ga2(SO4)3)(H2C2O4)6(H2O)3", true)
 
         FormicAcidWaterAzeotrope = new Material.Builder(24099, SuSyUtility.susyId('formic_acid_water_azeotrope'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(FormicAcid * 6, Water * 4)
                 .color(0xbf3983)
                 .build()
@@ -639,7 +638,7 @@ class ThirdDegreeMaterials {
         // FREE ID: 24102
 
         IsopropylamineSolution = new Material.Builder(24103, SuSyUtility.susyId('isopropylamine_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Isopropylamine, Water)
                 .colorAverage()
                 .build()
@@ -687,7 +686,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         SodiumBisphenolateSolution = new Material.Builder(24111, SuSyUtility.susyId('sodium_bisphenolate_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(SodiumBisphenolate, Water * 2)
                 .colorAverage()
                 .build()
@@ -777,7 +776,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         EthylenediamineSolution = new Material.Builder(24126, SuSyUtility.susyId('ethylenediamine_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(Ethylenediamine, Water)
                 .color(0x2c6147)
                 .build()
@@ -813,7 +812,7 @@ class ThirdDegreeMaterials {
                 .build()
 
         FourNitroNMethylPhthalimideSolution = new Material.Builder(24132, SuSyUtility.susyId('four_nitro_n_methyl_phthalimide_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(FourNitroNMethylPhthalimide, SulfuricAcid, Water)
                 .colorAverage()
                 .build()
@@ -873,13 +872,13 @@ class ThirdDegreeMaterials {
                 .build()
 
         CrudeMethylVinylEther = new Material.Builder(24142, SuSyUtility.susyId('crude_methyl_vinyl_ether'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(MethylVinylEther, Methanol, PotassiumHydroxide)
                 .colorAverage()
                 .build()
                 
         TetrasodiumEthylenediaminetetraacetateSolution = new Material.Builder(24143, SuSyUtility.susyId('tetrasodium_ethylenediaminetetraacetate_solution'))
-                .liquid()
+                .liquid(new FluidBuilder().basic())
                 .components(TetrasodiumEthylenediaminetetraacetate, Water)
                 .colorAverage()
                 .build()
