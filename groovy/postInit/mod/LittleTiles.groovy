@@ -1,3 +1,5 @@
+
+
 crafting.replaceShaped('littletiles:hammer', item('littletiles:hammer'), [
     [ore('plateIron'), ore('plateIron'), ore('plateIron')],
     [ore('dyeBlue'), ore('stickIron'), null],
@@ -111,3 +113,11 @@ crafting.replaceShaped('alet:photoimporter', item('littletiles:premade').withNbt
         [metaitem('plateIron'), metaitem('sensor.lv'), metaitem('plateIron')],
         [metaitem('plateIron'), item('littletiles:recipeadvanced'), metaitem('plateIron')]
 ])
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('stickIron') * 5)
+    .inputs(ore('dyeBlue') * 3)
+    .outputs(item('littletiles:saw'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister()
