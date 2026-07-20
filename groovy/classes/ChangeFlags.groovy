@@ -194,6 +194,10 @@ class ChangeFlags {
         Polycaprolactam.addFlags("generate_foil");
         Palladium.addFlags("generate_bolt_screw");
         Copper.addFlags("continuously_cast")
+        Graphite.addFlags("generate_plate")
+        Magnalium.addFlags("generate_ring", "generate_rotor")
+        ReinforcedEpoxyResin.addFlags("generate_rotor")
+        Beryllium.addFlags("generate_rod")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -250,7 +254,8 @@ class ChangeFlags {
         PolyvinylButyral.setFormula("[C8H14O2]n", true);
         TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true);
         StainlessSteel.setFormula("Fe28Cr8Ni4Si2Mn", true);
-        
+        Magnalium.setFormula("MgAl19", true);
+
         // Ore Processing
         
         Pitchblende.addFlags("disable_decomposition")

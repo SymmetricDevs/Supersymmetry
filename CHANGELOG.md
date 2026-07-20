@@ -1,3 +1,64 @@
+# UPDATE 0.1.16.11
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.109 → v0.1.111
+## Changes
+### New Features
+- [Susy-Core] SUSY now has cargo drones! Transport items long distances (slowly) with a Drone Basket and a Cargo Drone Pad! (#658 by @lanicerine)
+- The attrition scrubber is now available! Bulk wash your ores. (by @The-ExZombie & @jethro-3000)
+- Decorative sintering blocks with permanent bloom have been added! (#1924 by @JorgeMIng)
+### Changed Features
+- Neodymium alloy now requires a bit of praseodymium for realism (whose chance has been corrected) (#1909 by @jethro-3000)
+- The H2SO4 quest now directly shows the need for small piles of green vitriol. (#1915 by @jethro-3000)
+- The book and quill recipe has been SUSY-fied (and eggs/feathers can be automated through drone pads) (#1922 by @LauraDoesProgramming)
+- Greenhouse recipes with fertilizer are (#1923 by @jethro-3000)
+### Fixes
+Thanks to @unitazer, @h3tR, @planetme, @JorgeMing, @jethro-3000, and @Fiery36 for helping maintain the pack.
+And congrats to @JorgeMIng, @jethro-3000, and @LauraDoesProgramming for their first contributions! :)
+# UPDATE 0.1.16.10
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.107 → v0.1.109
+## Changes
+### Changed Features
+- MnP superconductors no longer require assemblies.  (#1857 by @The-ExZombie)
+- Updated Chinese translations are available. (#1894 by @Zixk-0)
+- The cryogenics questbook chapter has been yeeted and scattered. (#1900 by @The-ExZombie)
+- Mica is now 40x cheaper to produce from the quarry. (#1898 by @unitazer)
+- Graphite plates have been migrated. (#1901 by @Fiery36)
+And thanks to @whoisyp9 for continuing to standardize questbook entries!
+### TODO: Uncategorized Changes (Please Categorize)
+- [Susy-Core] Evaporite Deposit Block (#653 by @The-ExZombie)
+# UPDATE 0.1.16.9
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.105 → v0.1.107
+- Had Enough Items 4.31.1 → 4.31.2
+## Changes
+### New Features
+- The power substation is now available! Use 64A EV input/dynamo hatches. (#1863 by @lanicerine)
+- EV-tier turbine blades are now made just as if you were Siemens. This involves a new Electric Discharge Machine multiblock! (#1872 by @lanicerine)
+- Fluid bars now appear on lead/brass drums and BDS&M barrels too! (#1887 by @unitazer)
+### Changed Features
+- Old arboretum recipes were removed, and greenhouse recipes have been nerfed to match the farmer. (#1884 by @WideMann)
+- [Susy-Core] The drill head model now looks like a drill head. (#651 by @lanicerine)
+### Fixes
+- That one groovy error. (#1878 by @TheFriedEgg618)
+- The rotary kiln quest is now fixed. (#1891 by @Fiery36)
+- [Susy-Core] HATE properly persists on player death. (#644 by @oliwier509)
+Thanks to our new contributor @lanicerine, who is single-handedly saving the pack rn. And also to @h3tR, @whoisyp, @Crindigo, @oliwier509, and @The-ExZombie for helping to keep the pack stable.
+# UPDATE 0.1.16.8
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.103 → v0.1.105
+## Changes
+### Changed Features
+- The SAM missile tracking range has increased. (#1859 by @oliwier509)
+- The Techguns charging station now has a recipe. (#1865 by @frogicillin)
+- More Russian lang! (#1869 by @kanayaya)
+### Fixes
+- The NiMH IV battery texture is now correct. (#1860 by @The-ExZombie)
+Also, thanks to our new contributor frogicillin (also I have no idea who you are on Discord)! And for @oliwier509, @The-ExZombie and @Fiery36 for helping maintain the pack.
 # UPDATE 0.1.16.7.1
 ## Changes
 ### Fixes

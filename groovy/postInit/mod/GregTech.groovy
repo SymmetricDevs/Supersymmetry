@@ -363,7 +363,7 @@ RecyclingHelper.replaceShaped('gregtech:bronze_primitive_blast_furnace', metaite
 
 RecyclingHelper.addShaped('gregtech:reverberatory_furnace', metaitem('susy:reverberatory_furnace'), [
     [ore('craftingToolHardHammer'), ore('plateWroughtIron'), ore('screwWroughtIron')],
-    [ore('blockGlass'), item('gregtech:metal_casing:1'), ore('stickWroughtIron')],
+    [null, item('gregtech:metal_casing:1'), ore('stickWroughtIron')],
     [ore('craftingToolScrewdriver'), ore('plateWroughtIron'), ore('screwWroughtIron')]
 ])
 
@@ -395,6 +395,50 @@ crafting.addShaped("pig_iron_tiny_pile_manual", metaitem('dustTinyPigIron'), [
     [ore('craftingToolHardHammer'), null],
     [null, metaitem('nuggetPigIron')]
 ]);
+
+// Ink Bottle * 1
+crafting.addShapeless(metaitem("ink_bottle"), [
+        item("minecraft:glass_bottle"), item("minecraft:dye", 0)
+])
+
+mods.gregtech.canner.recipeBuilder()
+        .inputs(item("minecraft:glass_bottle"))
+        .fluidInputs(fluid("ink") * 50)
+        .outputs(metaitem("ink_bottle"))
+        .duration(30)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+// Ink * 50L
+
+mods.gregtech.canner.recipeBuilder()
+        .inputs(metaitem("ink_bottle"))
+        .outputs(item("minecraft:glass_bottle"))
+        .fluidOutputs(fluid("ink") * 50)
+        .duration(30)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+// Ink * 150L
+
+mods.gregtech.extractor.recipeBuilder()
+    .inputs(item("minecraft:dye", 0))
+    .fluidOutputs(fluid("ink") * 150)
+    .duration(40)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+// Chemical Black Dye * 288L
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(metaitem("dustSalt") * 2)
+    .fluidInputs(fluid("ink") * 150)
+    .fluidInputs(fluid("sulfuric_acid") * 250)
+    .fluidOutputs(fluid("dye_black") * 288)
+    .duration(160)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 
 //Steam Piston
 
@@ -1298,13 +1342,69 @@ MIXER.recipeBuilder()
     .buildAndRegister();
 
 CENTRIFUGE.recipeBuilder()
-    .inputs(ore('dustMagnalium') * 3)
+    .inputs(ore('dustMagnalium') * 20)
     .outputs(metaitem('dustMagnesium'))
-    .outputs(metaitem('dustAluminium') * 2)
-    .duration(72)
+    .outputs(metaitem('dustAluminium') * 19)
+    .duration(480)
     .EUt(VA[LV])
     .buildAndRegister();
 
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotMagnesium'), metaitem('dustAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustMagnesium'), metaitem('ingotAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotMagnesium'), metaitem('ingotAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustMagnesium'), metaitem('dustAluminium') * 2], null)
+
+MIXER.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .outputs(metaitem('dustMagnalium') * 20)
+        .duration(800)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('ingotMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('ingotAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+
+ALLOY_SMELTER.recipeBuilder()
+        .inputs(ore('ingotMagnesium'))
+        .inputs(ore('ingotAluminium') * 19)
+        .outputs(metaitem('ingotMagnalium') * 20)
+        .duration(1000)
+        .EUt(VA[LV])
+        .buildAndRegister();
+mods.gregtech.blender.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+mods.gregtech.advanced_arc_furnace.removeByInput(16, [metaitem('dustMagnesium'), metaitem('dustAluminium') * 2, metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('refractory_gunning_mixture') * 50])
+ADVANCED_ARC_FURNACE.recipeBuilder()
+        .inputs(ore('dustMagnesium'))
+        .inputs(ore('dustAluminium') * 19)
+        .fluidInputs(fluid('refractory_gunning_mixture') * 50)
+        .fluidOutputs(fluid('magnalium') * 2880)
+        .circuitMeta(3)
+        .duration(187)
+        .EUt(VA[LV])
+        .buildAndRegister();
 // Fix distillation tower being too difficult (4 EV circuits? Seriously?)
 
 RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillation_tower'), [
@@ -1319,7 +1419,7 @@ RecyclingHelper.replaceShaped('gregtech:distillation_tower', metaitem('distillat
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:cobblestone')], null)
 
 MACERATOR.recipeBuilder()
-    .inputs(ore('cobblestone'))
+    .inputs(ore('defaultCobblestone'))
     .outputs(metaitem('dustStone'))
     .duration(98)
     .EUt(VA[ULV])
@@ -1342,6 +1442,16 @@ CUTTER.recipeBuilder()
     .inputs(ore('cobblestone'))
     .outputs(item('minecraft:stone_slab', 3) * 2)
     .duration(25)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+// Stone Dust -> Stone Plate
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustStone')], null)
+
+COMPRESSOR.recipeBuilder()
+    .inputs(metaitem('dustStone'))
+    .outputs(metaitem('plateStone'))
+    .duration(50)
     .EUt(VA[ULV])
     .buildAndRegister();
 
@@ -1439,17 +1549,6 @@ CENTRIFUGE.recipeBuilder()
     .outputs(metaitem('dustAsh'))
     .outputs(metaitem('dustCarbon'))
     .duration(100)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-// Light Concrete * 1
-mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
-
-SOLIDIFIER.recipeBuilder()
-    .notConsumable(metaitem('shape.mold.block'))
-    .fluidInputs(fluid('concrete') * 144)
-    .outputs(item('gregtech:stone_smooth', 4))
-    .duration(20)
     .EUt(VA[ULV])
     .buildAndRegister();
 
@@ -1961,3 +2060,34 @@ MIXER.recipeBuilder()
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
+
+//Power Substation
+//Source (controller and casing): I made it the fuck up
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.iv'))
+        .inputs(ore('circuitIv') * 8)
+        .inputs(metaitem('wireGtHexUraniumTriplatinum') * 16)
+        .inputs(metaitem('plate.power_integrated_circuit') * 32)
+        .inputs(ore('plateReinforcedEpoxyResin') * 16)
+        .outputs(metaitem('power_substation'))
+        .duration(450)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('frameGtInconel718'))
+        .inputs(ore('plateReinforcedEpoxyResin') * 6)
+        .fluidInputs(fluid('dye_light_blue') * 288)
+        .outputs(item('gregtech:metal_casing', 11) * 2)
+        .circuitMeta(6)
+        .duration(50)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+//Removing old recipes
+mods.gregtech.macerator.removeByInput(32, [metaitem('power_substation')], null)
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('power_substation')], [fluid('oxygen') * 510])
+crafting.removeByOutput(item('gregtech:metal_casing', 11))
+mods.gregtech.assembler.removeByInput(16, [metaitem('platePalladium') * 6, metaitem('frameIridium'), metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
+mods.gregtech.macerator.removeByInput(32, [item('gregtech:metal_casing', 11)], null)
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:metal_casing', 11)], [fluid('oxygen') * 510])

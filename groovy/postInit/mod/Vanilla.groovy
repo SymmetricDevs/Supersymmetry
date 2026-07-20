@@ -201,12 +201,6 @@ crafting.replaceShaped('minecraft:piston', item('minecraft:piston'),  [
     [ore('cobblestone'), ore('wireFineTin'), ore('cobblestone')]
 ])
 
-crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
-    [null, ore('stickWood'), ore('craftingToolHardHammer')],
-    [ore('ringIron'), ore('cobblestone'), ore('screwIron')],
-    [null, ore('dustRedstone'), ore('craftingToolScrewdriver')]
-])
-
 RecyclingHelper.replaceShaped('minecraft:tripwire_hook', item('minecraft:tripwire_hook'), [
     [null, ore('ringIron'), null],
     [ore('springSmallIron'), ore('stickWood'), null],
@@ -228,6 +222,23 @@ ASSEMBLER.recipeBuilder()
     .duration(100)
     .EUt(4)
     .buildAndRegister()
+
+crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
+        [null, ore('stickWood'), ore('craftingToolHardHammer')],
+        [ore('ringIron'), ore('cobblestone'), ore('screwIron')],
+        [null, ore('dustRedstone'), ore('craftingToolScrewdriver')]
+])
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickWood'))
+        .inputs(ore('ringIron'))
+        .inputs(ore('cobblestone'))
+        .inputs(ore('screwIron'))
+        .inputs(ore('dustRedstone'))
+        .outputs(item('minecraft:lever'))
+        .duration(100)
+        .EUt(4)
+        .buildAndRegister()
 
 RecyclingHelper.removeRecyclingRecipes(item('minecraft:trapped_chest'))
 RecyclingHelper.handleRecycling(item('minecraft:trapped_chest'), [item('minecraft:chest'), ore('ringIron'), ore('springSmallIron'), ore('stickWood'), ore('dustRedstone'), ore('cobblestone')])
@@ -372,6 +383,10 @@ crafting.replaceShaped('minecraft:compass', item('minecraft:compass'), [
 ])
 */
 
+crafting.addShapeless(item("minecraft:writable_book"), [
+        item("minecraft:book"), item("minecraft:feather"), metaitem("ink_bottle"), metaitem("ink_bottle"), metaitem("ink_bottle")
+])
+
 //GT Machines recipes
 //Assembler
 
@@ -386,6 +401,17 @@ mods.gregtech.assembler.recipeBuilder()
     .inputs(item('minecraft:redstone_torch') * 2)
     .outputs(item('minecraft:repeater'))
     .duration(20)
+    .EUt(16)
+    .buildAndRegister()
+
+// Redstone Repeater * 4
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(4)
+    .inputs(ore('plateMica'))
+    .inputs(ore('wireFineRedAlloy') * 4)
+    .inputs(item('minecraft:redstone_torch') * 4)
+    .outputs(item('minecraft:repeater') * 4)
+    .duration(60)
     .EUt(16)
     .buildAndRegister()
 
@@ -488,6 +514,36 @@ mods.gregtech.assembler.recipeBuilder()
     .buildAndRegister()
 // Activator Rail * 12
 //mods.gregtech.assembler.removeByInput(30, [metaitem('stickIron') * 12, item('minecraft:stick') * 2, item('minecraft:redstone_torch'), circuit(4)], null)
+
+// Book and Quill * 1
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item("minecraft:book"))
+    .inputs(item("minecraft:feather"))
+    .inputs(metaitem("ink_bottle") * 3)
+    .outputs(item("minecraft:writable_book"))
+    .duration(10)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item("minecraft:book"))
+    .inputs(item("minecraft:feather"))
+    .inputs(item("minecraft:glass_bottle") * 3)
+    .fluidInputs(fluid("ink") * 150)
+    .outputs(item("minecraft:writable_book"))
+    .duration(20)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(item("minecraft:book"))
+    .inputs(item("minecraft:feather"))
+    .inputs(item("minecraft:glass_bottle") * 3)
+    .fluidInputs(fluid("dye_black") * 150)
+    .outputs(item("minecraft:writable_book"))
+    .duration(20)
+    .EUt(VA[ULV])
+    .buildAndRegister()
 
 //Autoclave
 
@@ -618,6 +674,14 @@ mods.gregtech.mixer.recipeBuilder()
         .fluidInputs(fluid('sugary_water') * 10000)
         .fluidOutputs(fluid('clarified_sugary_water') * 10000)
         .duration(400)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+mods.gregtech.mixer.recipeBuilder()
+        .inputs(ore('dustSmallQuicklime'))
+        .fluidInputs(fluid('sugary_water') * 2500)
+        .fluidOutputs(fluid('clarified_sugary_water') * 2500)
+        .duration(100)
         .EUt(VA[ULV])
         .buildAndRegister()
 

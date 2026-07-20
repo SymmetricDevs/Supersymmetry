@@ -564,7 +564,7 @@ class SecondDegreeMaterials {
 
         AlluvialPalladiumMotherLiquor = new Material.Builder(13089, SuSyUtility.susyId('alluvial_palladium_mother_liquor'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
-                .components(AmmoniumChloride * 2, ZincChloride, HydrogenChloride * 4, Water * 16)
+                .components(ZincChloride, HydrogenChloride * 6, Water * 16)
                 .colorAverage()
                 .build()
 
@@ -1125,12 +1125,6 @@ class SecondDegreeMaterials {
                 .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
                 .colorAverage()
                 .build()
-
-        IsopreneSolution = new Material.Builder(13186, SuSyUtility.susyId('isoprene_solution'))
-                .liquid()
-                .components(Water, Isoprene, Formaldehyde)
-                .colorAverage()
-                .build()
         
         MetalHydrideMixAnode = new Material.Builder(13187, SuSyUtility.susyId('metal_hydride_mix_anode'))
                 .dust()
@@ -1139,5 +1133,57 @@ class SecondDegreeMaterials {
                 .iconSet(METALLIC)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
+      
+        VanadiumIIISulfateSolution = new Material.Builder(13188, SuSyUtility.susyId('vanadium_iii_sulfate_solution'))
+                .liquid()
+                .components(Vanadium * 2, Sulfur * 3, Oxygen * 12, Water)
+                .color(0x114d21)
+                .build()
+
+        VanadiumIIISulfateSolution.setFormula("(V2(SO4)3)(H2O)", true)
+        
+        DilutedVanadiumIIISulfateSolution = new Material.Builder(13189, SuSyUtility.susyId('diluted_vanadium_iii_sulfate_solution'))
+                .liquid()
+                .components(Vanadium * 2, Sulfur * 3, Oxygen * 12, Water * 2)
+                .color(0x356642)
+                .build()
+
+        DilutedVanadiumIIISulfateSolution.setFormula("(V2(SO4)3)(H2O)2", true)
+
+        VanadylSulfateSolution = new Material.Builder(13190, SuSyUtility.susyId('vanadyl_sulfate_solution'))
+                .liquid()
+                .components(Vanadium, Sulfur, Oxygen * 5, Water)
+                .color(0x150da8)
+                .build()
+
+        VanadylSulfateSolution.setFormula("(VOSO4)(H2O)", true)
+      
+        RawInvestmentCastingMixture = new Material.Builder(13191, SuSyUtility.susyId('raw_investment_casting_mixture'))
+                .dust()
+                .color(0x58A0A0)
+                .components(SiliconDioxide * 3, Zircon * 2, SiliconCarbide * 2)
+                .iconSet(SHINY)
+                .build();
+
+        SilicaCoatedInvestmentCastingMixture = new Material.Builder(13192, SuSyUtility.susyId('silica_coated_investment_casting_mixture'))
+                .dust()
+                .color(0x58A0A0)
+                .components(SiliconDioxide * 3, Zircon * 2, SiliconCarbide * 2)
+                .iconSet(LAPIS)
+                .build();
+
+        DriedSilicaCoatedInvestmentCastingMixture = new Material.Builder(13193, SuSyUtility.susyId('dried_silica_coated_investment_casting_mixture'))
+                .dust()
+                .color(0x64B7B7)
+                .components(SiliconDioxide * 3, Zircon * 2, SiliconCarbide * 2)
+                .iconSet(LAPIS)
+                .build();
+
+        SGlass = new Material.Builder(13194, SuSyUtility.susyId('s_glass'))
+                .dust().liquid(new FluidBuilder().temperature(1800))
+                .color(0xC49FAD)
+                .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
+                .iconSet(BRIGHT)
+                .build();
     }
 }

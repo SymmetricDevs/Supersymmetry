@@ -21,6 +21,12 @@ crafting.addShaped("susy:drone_pad_block_alt", item('susy:susy_multiblock_casing
     [ore('stonePolished'), ore('stonePolished'), ore('stonePolished')]
 ])
 
+crafting.addShaped("susy:cargo_drone_pad_controller", metaitem('susy:cargo_drone_pad'), [
+        [ore('plateMagnalium'), metaitem('wireless'), ore('plateMagnalium')],
+        [ore('circuitMv'), metaitem('hull.mv'), ore('circuitMv')],
+        [ore('plateMagnalium'), ore('circuitMv'), ore('plateMagnalium')]
+])
+
 mods.gregtech.assembler.recipeBuilder()
     .inputs(metaitem('electric.motor.lv') * 4)
     .inputs(ore('rotorSteel') * 4)
@@ -88,7 +94,134 @@ DRONE_PAD.recipeBuilder()
     .outputs(metaitem('drone.lv').withNbt(["Charge": 0L]))
     .chancedOutput(item('minecraft:leather') * 8, 8000, 400)
     .chancedOutput(item('minecraft:wool') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:feather') * 8, 8000, 400)
+    .chancedOutput(item('minecraft:egg') * 8, 8000, 400)
     .EUt(4)
     .duration(800)
     .dimension(Globals.dimensions["Overworld"])
     .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateFiberReinforcedNylon') * 4)
+        .inputs(metaitem('ringMagnalium'))
+        .outputs(metaitem('rotorFiberReinforcedNylon'))
+        .EUt(VA[MV])
+        .duration(120)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickMagnalium') * 6)
+        .inputs(ore('platePlastic') * 4)
+        .inputs(metaitem('electric.motor.mv') * 4)
+        .inputs(metaitem('rotorMagnalium') * 4)
+        .inputs(metaitem('wireless') * 1)
+        .inputs(ore('batteryMv') * 4)
+        .inputs(ore('circuitMv') * 2)
+        .outputs(metaitem('susy:cargo_drone.basic').withNbt(["Charge": 0L]))
+        .EUt(VA[MV])
+        .duration(360)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickMagnalium') * 6)
+        .inputs(ore('platePlastic') * 4)
+        .inputs(metaitem('electric.motor.mv') * 4)
+        .inputs(metaitem('rotorMagnalium') * 4)
+        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('battery.ni_fe') * 2)
+        .inputs(ore('circuitMv') * 2)
+        .outputs(metaitem('susy:cargo_drone.basic').withNbt(["Charge": 0L]))
+        .EUt(VA[MV])
+        .duration(300)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickMagnalium') * 6)
+        .inputs(ore('platePlastic') * 4)
+        .inputs(metaitem('electric.motor.mv') * 4)
+        .inputs(metaitem('rotorMagnalium') * 4)
+        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('battery.ni_cd.mv') * 1)
+        .inputs(ore('circuitMv') * 2)
+        .outputs(metaitem('susy:cargo_drone.basic').withNbt(["Charge": 0L]))
+        .EUt(VA[MV])
+        .duration(200)
+        .buildAndRegister()
+
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickTitanium') * 6)
+        .inputs(ore('platePolytetrafluoroethylene') * 4)
+        .inputs(metaitem('electric.motor.hv') * 4)
+        .inputs(metaitem('rotorFiberReinforcedNylon') * 4)
+        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('battery.ni_fe.hv') * 4)
+        .inputs(ore('circuitHv') * 2)
+        .outputs(metaitem('susy:cargo_drone.advanced').withNbt(["Charge": 0L]))
+        .EUt(VA[HV])
+        .duration(360)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickTitanium') * 6)
+        .inputs(ore('platePolytetrafluoroethylene') * 4)
+        .inputs(metaitem('electric.motor.hv') * 4)
+        .inputs(metaitem('rotorFiberReinforcedNylon') * 4)
+        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('battery.ni_cd.hv') * 3)
+        .inputs(ore('circuitHv') * 2)
+        .outputs(metaitem('susy:cargo_drone.advanced').withNbt(["Charge": 0L]))
+        .EUt(VA[HV])
+        .duration(300)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickTitanium') * 6)
+        .inputs(ore('platePolytetrafluoroethylene') * 4)
+        .inputs(metaitem('electric.motor.hv') * 4)
+        .inputs(metaitem('rotorFiberReinforcedNylon') * 4)
+        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('battery.ni_mh.hv') * 1)
+        .inputs(ore('circuitHv') * 2)
+        .outputs(metaitem('susy:cargo_drone.advanced').withNbt(["Charge": 0L]))
+        .EUt(VA[HV])
+        .duration(150)
+        .buildAndRegister()
+
+
+crafting.addShaped("susy:drone_basket", metaitem('susy:drone_deposit_basket'), [
+        [ore('platePlastic'), metaitem('wireless'), ore('platePlastic')],
+        [ore('stickLongMagnalium'), metaitem('screwMagnalium'), ore('stickLongMagnalium')],
+        [ore('platePlastic'), ore('stickLongMagnalium'), ore('platePlastic')]
+])
+
+crafting.addShaped("susy:advanced_drone_basket", metaitem('susy:advanced_drone_deposit_basket'), [
+        [ore('plateEpoxy'), metaitem('emitter.ev'), ore('plateEpoxy')],
+        [ore('stickLongTitanium'), ore('circuitEv'), ore('stickLongTitanium')],
+        [ore('plateEpoxy'), ore('stickLongTitanium'), ore('plateEpoxy')]
+])
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('wireFineAnnealedCopper') * 8)
+        .inputs(ore('platePlastic') * 3)
+        .inputs(ore('circuitMv') * 2)
+        .inputs(ore('circuitLv') * 4)
+        .outputs(metaitem('susy:location_card'))
+        .EUt(VA[MV])
+        .duration(120)
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('stickBeryllium') * 8)
+        .inputs(ore('plateReinforcedEpoxyResin') * 6)
+        .inputs(metaitem('electric.motor.ev') * 8)
+        .inputs(metaitem('rotorReinforcedEpoxyResin') * 8)
+        .inputs(metaitem('wireless') * 2)
+        .inputs(metaitem('proton_exchange_membrane_fuel_cell') * 1)
+        .inputs(metaitem('large_fluid_cell.titanium') * 1)
+        .inputs(ore('circuitEv') * 2)
+        .outputs(metaitem('susy:cargo_drone.elite'))
+        .EUt(VA[EV])
+        .duration(300)
+        .buildAndRegister()
+

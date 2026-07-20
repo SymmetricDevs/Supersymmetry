@@ -102,7 +102,7 @@ class FirstDegreeMaterialsA {
         HighPurityRhenium = generatePurifiedElement(Rhenium, 8049, false, false)
         HighPurityOsmium = generatePurifiedElement(Osmium, 8050, false, false)
         HighPurityIridium = generatePurifiedElement(Iridium, 8051, false, false)
-        HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, false)
+        HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, false).addIngot()
         HighPurityGold = generatePurifiedElement(Gold, 8053, false, true).addFlags(GENERATE_FOIL, GENERATE_PLATE)
         HighPurityThallium = generatePurifiedElement(Thallium, 8054, false, false)
         HighPurityLead = generatePurifiedElement(Lead, 8055, false, false)
@@ -1861,11 +1861,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        PotassiumSulfide = new Material.Builder(8366, SuSyUtility.susyId('potassium_sulfide'))
-                .dust()
-                .components(Potassium * 2, Sulfur)
-                .color(0xcbcfae)
-                .build()
+        //FREE ID: 8366
 
         WashedMagnesiumChlorideAmmoniate = new Material.Builder(8367, SuSyUtility.susyId('washed_magnesium_chloride_ammoniate'))
                 .dust()
@@ -2085,9 +2081,10 @@ class FirstDegreeMaterialsA {
                 .ingot()
                 .color(0x2b2a2a).iconSet(METALLIC)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, HIP_PRESSED)
-                .components(Neodymium * 2, Iron * 14, Boron)
+                .components(Neodymium * 3, Praseodymium, Iron * 28, Boron * 2)
                 .blastTemp(1297, GasTier.MID)
                 .build()
+
 
         TreatedNeodymiumAlloy = new Material.Builder(8401, SuSyUtility.susyId('treated_neodymium_alloy'))
                 .ingot()
@@ -2098,6 +2095,7 @@ class FirstDegreeMaterialsA {
                 .arcSmeltInto(NeodymiumAlloy)
                 .macerateInto(NeodymiumAlloy)
                 .build()
+
 
         NeodymiumAlloyMagnetic = new Material.Builder(8402, SuSyUtility.susyId('neodymium_alloy_magnetic'))
                 .ingot()
@@ -3229,11 +3227,7 @@ class FirstDegreeMaterialsA {
 
         CobaltIIAcetateTetrahydrate.setFormula("Co(C2H3O2)2*(H2O)4", true)
 
-        PotassiumPyrosulfate = new Material.Builder(8578, SuSyUtility.susyId("potassium_pyrosulfate"))
-                .dust()
-                .components(Potassium * 2, Sulfur * 2, Oxygen * 7)
-                .colorAverage()
-                .build()
+        //FREE ID: 8578
 
         IronIIINitrateSolution = new Material.Builder(8579, SuSyUtility.susyId("iron_iii_nitrate_solution"))
                 .liquid()

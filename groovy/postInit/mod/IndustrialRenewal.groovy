@@ -77,11 +77,7 @@ crafting.replaceShaped("industrialrenewal:catwalk_pillar_steel", item('industria
 	[ore('stickLongSteel'), ore('plateSteel'), ore('stickLongSteel')]
 ])
 
-crafting.replaceShaped("industrialrenewal:catwalk_column_steel", item('industrialrenewal:catwalk_column_steel'), [
-	[item('industrialrenewal:catwalk_steel_pillar'), null, null],
-	[null, null, null],
-	[null, null, null]
-])
+crafting.replaceShapeless("industrialrenewal:catwalk_column_steel", item('industrialrenewal:catwalk_column_steel'), [item('industrialrenewal:catwalk_steel_pillar')])
 
 crafting.replaceShaped("industrialrenewal:brace_steel", item('industrialrenewal:brace_steel') * 32, [
 	[ore('plateSteel'), ore('stickSteel'), null],
@@ -503,11 +499,7 @@ crafting.addShaped("industrialrenewal:chunkloader", item('industrialrenewal:chun
 		[ore('stickIron'), ore('plateIron'), ore('stickIron')]
 ])
 
-crafting.addShaped("industrialrenewal:column_to_pillar", item('industrialrenewal:catwalk_steel_pillar'), [
-	[item('industrialrenewal:catwalk_column_steel'), null, null],
-	[null, null, null],
-	[null, null, null]
-])
+crafting.addShapeless("industrialrenewal:column_to_pillar", item('industrialrenewal:catwalk_steel_pillar'), [item('industrialrenewal:catwalk_column_steel')])
 
 crafting.addShaped("industrialrenewal:alarm_custom", item('industrialrenewal:alarm'), [
 	[null, ore('stickSteel'), null],

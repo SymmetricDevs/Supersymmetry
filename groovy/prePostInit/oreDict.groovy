@@ -93,7 +93,7 @@ ore('nutrientPotassium').add(metaitem('dustAsh'))
 ore('nutrientPotassium').add(metaitem('dustCharcoal'))
 ore('nutrientPotassium').add(metaitem('dustRockSalt'))
 ore('nutrientPotassium').add(metaitem('dustPotassiumCarbonate'))
-ore('nutrientPotassium').add(metaitem('dustPotash'))
+ore('nutrientPotassium').add(metaitem('dustPotassiumSulfate'))
 
 // Phosphorous Nutrients
 ore('nutrientPhosphorous').add(metaitem('dustChlorapatite'))
@@ -249,6 +249,20 @@ for (type in StoneVariantBlock.StoneType.values()) {
     OreDictionary.registerOre('stone', variant)
 }
 
+ore('defaultCobblestone').add(ore('cobblestone'))
+
+for (i in 0..11) {
+    ore('defaultCobblestone').remove(item('susy:susy_stone_cobble', i))
+}
+
+// Stone Dust
+for (i in 27200..27207) {
+    ore('dustStone').add(item('gregtech:meta_dust', i))
+}
+
+ore('dustStone').add(metaitem('dustQuartzite'))
+ore('dustStone').add(metaitem('dustSoapstone'))
+
 // Misc Fixes
 ore('stickWood').add(item('minecraft:stick'))
 ore('blockCoalCoke').add(metaitem('blockCoke'))
@@ -259,19 +273,7 @@ ore('stone').remove(item('susy:susy_stone_smooth:9'))
 ore('cobblestone').remove(item('susy:susy_stone_cobble:9'))
 
 //Dust oredicting
-elements = [
-        'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Sodium', 'Magnesium', 'Aluminium', 'Silicon',
-        'Phosphorus', 'Sulfur', 'Potassium', 'Calcium', 'Scandium', 'Titanium', 'Vanadium', 'Chrome',
-        'Manganese', 'Iron', 'Cobalt', 'Nickel', 'Copper', 'Zinc', 'Gallium', 'Germanium', 'Arsenic',
-        'Selenium', 'Rubidium', 'Strontium', 'Yttrium', 'Ruthenium', 'Zirconium', 'Niobium', 'Molybdenum', 'Technetium',
-        'Rhenium', 'Rhodium', 'Palladium', 'Silver', 'Cadmium', 'Indium', 'Tin', 'Antimony', 'Tellurium',
-        'Iodine', 'Caesium', 'Barium', 'Lanthanum', 'Hafnium', 'Tantalum', 'Tungsten', 'Osmium',
-        'Iridium', 'Platinum', 'Gold', 'Thallium', 'Lead', 'Bismuth', 'Cerium', 'Praseodymium',
-        'Neodymium', 'Samarium', 'Europium', 'Gadolinium', 'Terbium', 'Dysprosium', 'Holmium', 'Erbium',
-        'Thulium', 'Ytterbium', 'Lutetium', 'Thorium'
-]
-
-elements.each { element ->
+elementList.each { element ->
     String anyPurityDust = "dustAnyPurity${element}"
     String highPurityDust = "dustHighPurity${element}"
     String normalDust = "dust${element}"
