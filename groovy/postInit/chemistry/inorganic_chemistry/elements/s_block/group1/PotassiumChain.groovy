@@ -114,6 +114,7 @@ DISTILLERY.recipeBuilder()
         .buildAndRegister()
 
 SOLIDIFIER.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.ingot'))
         .fluidInputs(fluid('potassium') * 144)
         .outputs(metaitem('ingotPotassium'))
         .EUt(VA[LV])
