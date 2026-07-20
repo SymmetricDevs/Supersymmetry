@@ -186,19 +186,19 @@ for (entry in buttonItemMap) {
 crafting.replaceShaped('minecraft:dispenser', item('minecraft:dispenser'), [
     [ore('cobblestone'), ore('gearIron'), ore('cobblestone')],
     [ore('string'), ore('springSteel'), metaitem('electric.motor.lv')],
-    [ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
+    [ore('cobblestone'), ore('wireFineTin'), ore('cobblestone')]
 ])
 
 crafting.replaceShaped('minecraft:noteblock', item('minecraft:noteblock'), [
     [ore('plankWood'), ore('leather'), ore('plankWood')],
-    [ore('wireFineRedAlloy'), ore('stickIronMagnetic'), ore('wireFineRedAlloy')],
+    [ore('wireFineTin'), ore('stickIronMagnetic'), ore('wireFineTin')],
     [ore('plankWood'), ore('leather'), ore('plankWood')]
 ])
 
 crafting.replaceShaped('minecraft:piston', item('minecraft:piston'),  [
     [ore('plankWood'), ore('plankWood'), ore('plankWood')],
     [ore('cobblestone'), metaitem('electric.piston.lv'), ore('cobblestone')],
-    [ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
+    [ore('cobblestone'), ore('wireFineTin'), ore('cobblestone')]
 ])
 
 crafting.replaceShaped('minecraft:lever', item('minecraft:lever'), [
@@ -247,60 +247,60 @@ crafting.replaceShaped('minecraft:redstone_lamp', item('minecraft:redstone_lamp'
 crafting.replaceShaped('minecraft:dropper', item('minecraft:dropper'), [
     [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
     [ore('cobblestone'), metaitem('electric.piston.lv'), null],
-    [ore('cobblestone'), ore('wireFineRedAlloy'), ore('cobblestone')]
+    [ore('cobblestone'), ore('wireFineTin'), ore('cobblestone')]
 ])
 
 crafting.replaceShaped('minecraft:repeater', item('minecraft:repeater'), [
-    [item('minecraft:redstone_torch'), ore('wireFineRedAlloy'), item('minecraft:redstone_torch')],
+    [item('minecraft:redstone_torch'), ore('wireFineTin'), item('minecraft:redstone_torch')],
     [ore('plateStone'), ore('plateStone'), ore('plateStone')]
 ])
 
 crafting.replaceShaped('minecraft:comparator', item('minecraft:comparator'), [
     [null, item('minecraft:redstone_torch'), null],
-    [item('minecraft:redstone_torch'), ore('wireFineRedAlloy'), item('minecraft:redstone_torch')],
+    [item('minecraft:redstone_torch'), ore('wireFineTin'), item('minecraft:redstone_torch')],
     [ore('plateStone'), ore('plateNetherQuartz'), ore('plateStone')]
 ])
 
 crafting.replaceShaped('appliedenergistics2:misc/vanilla_comparator', item('minecraft:comparator'), [
     [null, item('minecraft:redstone_torch'), null],
-    [item('minecraft:redstone_torch'), ore('wireFineRedAlloy'), item('minecraft:redstone_torch')],
+    [item('minecraft:redstone_torch'), ore('wireFineTin'), item('minecraft:redstone_torch')],
     [ore('plateStone'), ore('plateCertusQuartz'), ore('plateStone')]
 ])
 
 crafting.replaceShaped('gregtech:comparator_quartzite', item('minecraft:comparator'), [
     [null, item('minecraft:redstone_torch'), null],
-    [item('minecraft:redstone_torch'), ore('wireFineRedAlloy'), item('minecraft:redstone_torch')],
+    [item('minecraft:redstone_torch'), ore('wireFineTin'), item('minecraft:redstone_torch')],
     [ore('plateStone'), ore('plateQuartzite'), ore('plateStone')]
 ])
 
 crafting.replaceShaped('minecraft:daylight_detector', item('minecraft:daylight_detector'), [
     [ore('plateNetherQuartz'), ore('plateNetherQuartz'), ore('plateNetherQuartz')],
-    [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')],
+    [ore('wireFineTin'), ore('wireFineTin'), ore('wireFineTin')],
     [ore('plankWood'), ore('plankWood'), ore('plankWood')]
 ])
 
 crafting.replaceShaped('appliedenergistics2:misc/vanilla_daylight_detector', item('minecraft:daylight_detector'), [
     [ore('plateCertusQuartz'), ore('plateCertusQuartz'), ore('plateCertusQuartz')],
-    [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')],
+    [ore('wireFineTin'), ore('wireFineTin'), ore('wireFineTin')],
     [ore('plankWood'), ore('plankWood'), ore('plankWood')]
 ])
 
 crafting.replaceShaped('gregtech:daylight_detector_quartzite', item('minecraft:daylight_detector'), [
     [ore('plateQuartzite'), ore('plateQuartzite'), ore('plateQuartzite')],
-    [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')],
+    [ore('wireFineTin'), ore('wireFineTin'), ore('wireFineTin')],
     [ore('plankWood'), ore('plankWood'), ore('plankWood')]
 ])
 
 crafting.replaceShaped('minecraft:observer', item('minecraft:observer'), [
     [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')],
-    [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('plateNetherQuartz')],
+    [ore('wireFineTin'), ore('wireFineTin'), ore('plateNetherQuartz')],
     [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')]
 ])
 
 crafting.replaceShaped('minecraft:golden_rail', item('minecraft:golden_rail') * 6, [
     [ore('stickBrass'), ore('stickSteelMagnetic'), ore('stickBrass')],
     [ore('stickBrass'), ore('stickWood'), ore('stickBrass')],
-    [ore('stickBrass'), ore('wireFineRedAlloy'), ore('stickBrass')]
+    [ore('stickBrass'), ore('wireFineTin'), ore('stickBrass')]
 ])
 
 crafting.replaceShaped('minecraft:detector_rail', item('minecraft:detector_rail') * 6, [
@@ -381,7 +381,7 @@ mods.gregtech.assembler.removeByInput(4, [item('minecraft:string') * 3 * 3, item
 // Redstone Repeater * 1
 mods.gregtech.assembler.removeByInput(10, [item('minecraft:redstone_torch') * 2, item('minecraft:redstone')], [fluid('concrete') * 144])
 mods.gregtech.assembler.recipeBuilder()
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineTin'))
     .inputs(ore('plateStone'))
     .inputs(item('minecraft:redstone_torch') * 2)
     .outputs(item('minecraft:repeater'))
@@ -409,7 +409,7 @@ mods.gregtech.assembler.recipeBuilder()
     .circuitMeta(2)
     .inputs(ore('stickBrass') * 12)
     .inputs(ore('stickWood'))
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineTin'))
     .outputs(item('minecraft:golden_rail') * 12)
     .duration(100)
     .EUt(VA[LV])
@@ -428,7 +428,7 @@ mods.gregtech.assembler.recipeBuilder()
     .circuitMeta(10)
     .inputs(ore('cobblestone') * 4)
     .inputs(ore('plankWood') * 3)
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineTin'))
     .inputs(metaitem('electric.piston.lv'))
     .outputs(item('minecraft:piston'))
     .duration(20)
@@ -442,7 +442,7 @@ mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('cobblestone'))
     .inputs(ore('springSteel'))
     .inputs(ore('string'))
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineTin'))
     .inputs(metaitem('electric.motor.lv'))
     .outputs(item('minecraft:dispenser'))
     .duration(20)
@@ -454,7 +454,7 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('circuit.integrated').withNb
 mods.gregtech.assembler.recipeBuilder()
     .circuitMeta(12)
     .inputs(ore('cobblestone'))
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineTin'))
     .inputs(metaitem('electric.piston.lv'))
     .outputs(item('minecraft:dropper'))
     .duration(20)
@@ -835,7 +835,7 @@ mods.gregtech.mixer.recipeBuilder()
 
 crafting.addShaped("tnt_block", item('minecraft:tnt'), [
         [null, ore('dustTnt'), null],
-        [ore('dustSiliconDioxide'), ore('wireFineRedAlloy'), ore('dustSiliconDioxide')],
+        [ore('dustSiliconDioxide'), ore('wireFineTin'), ore('dustSiliconDioxide')],
         [null, ore('dustTnt'), null]
 ]);
 

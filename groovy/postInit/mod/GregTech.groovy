@@ -1626,7 +1626,7 @@ GroovyUtils.removeRecipesContainingFluid(mods.gregtech.assembly_line, fluid('pol
 ASSEMBLER.recipeBuilder()
     .inputs(ore('plankWood') * 4)
     .inputs(ore('stickIronMagnetic') * 1)
-    .inputs(ore('wireFineRedAlloy') * 2)
+    .inputs(ore('wireFineCopper') * 2)
     .inputs(item('minecraft:leather') * 2)
     .circuitMeta(9)
     .outputs(item('minecraft:noteblock'))

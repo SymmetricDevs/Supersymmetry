@@ -193,7 +193,7 @@ for (solder in soldering_alloys) {
 
     WEAPONS_FACTORY.recipeBuilder()
             .inputs([
-                    ore('wireFineRedAlloy'),
+                    ore('wireFineTin'),
                     metaitem('conveyor.module.lv'),
                     ore('plateLead'),
                     ore('plateIron')
@@ -207,7 +207,7 @@ for (solder in soldering_alloys) {
     WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateSteel')*10,
-                    ore('wireFineRedAlloy'),
+                    ore('wireFineTin'),
                     ore('springSteel'),
                     ore('gearSteel')
             ])
@@ -220,7 +220,7 @@ for (solder in soldering_alloys) {
     WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateStainlessSteel')*10,
-                    ore('wireFineRedAlloy'),
+                    ore('wireFineTin'),
                     ore('springSteel'),
                     ore('gearStainlessSteel')
             ])
@@ -233,7 +233,7 @@ for (solder in soldering_alloys) {
     WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateTitanium')*10,
-                    ore('wireFineRedAlloy'),
+                    ore('wireFineTin'),
                     ore('springSteel'),
                     ore('gearTitanium')
             ])
@@ -246,7 +246,7 @@ for (solder in soldering_alloys) {
     WEAPONS_FACTORY.recipeBuilder()
             .inputs([
                     ore('plateTritanium')*10,
-                    ore('wireFineRedAlloy'),
+                    ore('wireFineTin'),
                     ore('springSteel'),
                     ore('gearTritanium')
             ])

@@ -124,19 +124,19 @@ for (var i = 0; i < 8; i++) {
 //Explosives tier 1
 crafting.addShaped("icbm_exp_1_0_dynamite", item('icbmclassic:explosives:0'), [
     [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')],
-    [metaitem('dynamite'), ore('wireFineRedAlloy'), metaitem('dynamite')],
+    [metaitem('dynamite'), ore('wireFineTin'), metaitem('dynamite')],
     [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')]
 ]);
 
 crafting.addShaped("icbm_exp_1_0_tnt", item('icbmclassic:explosives:0'), [
     [null, ore('dustTnt'), null],
-    [ore('dustTnt'), ore('wireFineRedAlloy'), ore('dustTnt')],
+    [ore('dustTnt'), ore('wireFineTin'), ore('dustTnt')],
     [null, ore('dustTnt'), null]
 ]);
 
 crafting.addShaped("icbm_exp_1_0_tnp", item('icbmclassic:explosives:0'), [
     [null, ore('dustPicricAcid'), null],
-    [ore('dustPicricAcid'), ore('wireFineRedAlloy'), ore('dustPicricAcid')],
+    [ore('dustPicricAcid'), ore('wireFineTin'), ore('dustPicricAcid')],
     [null, ore('dustPicricAcid'), null]
 ]);
 
@@ -470,7 +470,7 @@ Globals.solders.each { key, val ->
                     ore('plateTitanium') * 2,
                     s_oxy,
                     s_fuel,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(1)
                 .fluidInputs(fluid(key) * val)
@@ -484,7 +484,7 @@ Globals.solders.each { key, val ->
                     ore('plateStainlessSteel') * 2,
                     s_oxy,
                     s_fuel,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(2)
                 .fluidInputs(fluid(key) * val)
@@ -498,7 +498,7 @@ Globals.solders.each { key, val ->
                     ore('plateStainlessSteel') * 2,
                     s_oxy * 2,
                     s_fuel * 2,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(3)
                 .fluidInputs(fluid(key) * val)
@@ -512,7 +512,7 @@ Globals.solders.each { key, val ->
                     ore('plateStainlessSteel') * 2,
                     s_oxy,
                     s_fuel,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(4)
                 .fluidInputs(fluid(key) * val)
