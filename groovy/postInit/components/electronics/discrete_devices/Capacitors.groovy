@@ -72,6 +72,54 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+// aluminium electrolytic cap, HV tier
+ELECTROLYZER.recipeBuilder()
+    .inputs(ore('foilAluminium') * 8)
+    .notConsumable(fluid('diluted_salt_water') * 100)
+    .outputs(metaitem('component.capacitor.electrolytic.etched_foil') * 8)
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+ELECTROLYZER.recipeBuilder()
+    .inputs(metaitem('component.capacitor.electrolytic.etched_foil') * 8)
+    .notConsumable(fluid('ammonium_phosphate_solution'))
+    .outputs(metaitem('component.capacitor.electrolytic.anode_foil') * 8)
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('ethylene_glycol') * 955)
+    .fluidInputs(fluid('phosphoric_acid') * 10)
+    .fluidInputs(fluid('water') * 35)
+    .fluidOutputs(fluid('electrolytic_capacitor_electrolyte') * 1000)
+    .duration(40)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('component.capacitor.electrolytic.anode_foil'))
+    .inputs(metaitem('foilAluminium'))
+    .inputs(ore('paper') * 2)
+    .inputs(metaitem('wireFineAnnealedCopper') * 2)
+    .fluidInputs(fluid('electrolytic_capacitor_electrolyte') * 80)
+    .outputs(metaitem('component.capacitor.electrolytic.core'))
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('component.capacitor.electrolytic.core'))
+    .inputs(ore('ringRubber') * 4)
+    .inputs(ore('foilAluminium') * 2) 
+    .fluidInputs(fluid('soldering_alloy') * 72)
+    .outputs(metaitem('component.capacitor.electrolytic'))
+    .duration(20)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+
 // Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
 // "Supercapacitors: Concepts and advances"
 // (IOP, 2025), sections 4.13, 5.6, 5.7.

@@ -2917,6 +2917,7 @@ class SuSyMaterials {
     public static Material ThickFilmResistorInk
     public static Material ZieglerNattaCatalyst
     public static Material FluoromethaneMixture
+    public static Material ElectrolyticCapacitorElectrolyte
 
     // Thermodynamics Materials
 

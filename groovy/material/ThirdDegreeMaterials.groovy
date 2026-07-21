@@ -1453,5 +1453,11 @@ class ThirdDegreeMaterials {
                 .components(Fluoromethane, HydrogenChloride)
                 .colorAverage()
                 .build()
+
+        ElectrolyticCapacitorElectrolyte = new Material.Builder(24251, SuSyUtility.susyId("electrolytic_capacitor_electrolyte"))
+                .liquid()
+                .components(EthyleneGlycol * 955, PhosphoricAcid * 10, Water * 35)
+                .colorAverage()
+                .build()
         }
 }
