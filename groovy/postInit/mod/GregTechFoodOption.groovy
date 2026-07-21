@@ -183,6 +183,17 @@ CENTRIFUGE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Brined Parmigiano-Reggiano Roll * 1
+mods.gregtech.fluid_solidifier.removeByInput(16, [metaitem('gregtechfoodoption:component.cheese_form')], [fluid('gtfo_parmigiano_reggiano_starter') * 1000])
+
+SOLIDIFIER.recipeBuilder()
+    .fluidInputs(fluid('gtfo_parmigiano_reggiano_starter') * 1000)
+    .notConsumable(metaitem('gregtechfoodoption:component.cheese_form'))
+    .outputs(metaitem('gregtechfoodoption:component.brined_parmigiano_roll'))
+    .duration(150)
+    .EUt(16)
+    .buildAndRegister()
+
 FERMENTER.recipeBuilder()
     .inputs(metaitem('gregtechfoodoption:component.brined_parmigiano_roll') * 64)
     .fluidInputs(fluid('air') * 10000)
