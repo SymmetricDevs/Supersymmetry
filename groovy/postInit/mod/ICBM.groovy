@@ -146,6 +146,30 @@ crafting.addShaped("icbm_exp_1_0_tnp", item('icbmclassic:explosives:0'), [
         [ore('roundLead'), ore('roundLead'), ore('roundLead')]
 ]);*/
 
+WEAPONS_FACTORY.recipeBuilder()
+	.inputs(metaitem('dynamite') * 8)
+    .inputs(ore('wireFineTin'))
+    .outputs(item('icbmclassic:explosives'))
+    .duration(200)
+	.EUt(VA[LV])
+	.buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+	.inputs(ore('dustTnt') * 4)
+    .inputs(ore('wireFineTin'))
+    .outputs(item('icbmclassic:explosives'))
+    .duration(200)
+	.EUt(VA[LV])
+	.buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+	.inputs(ore('dustPicricAcid') * 4)
+    .inputs(ore('wireFineTin'))
+    .outputs(item('icbmclassic:explosives'))
+    .duration(200)
+	.EUt(VA[LV])
+	.buildAndRegister();
+
 def flammable_liquids = [
     liquid('naphtha') * 1000,
     liquid('gasoline') * 500,
