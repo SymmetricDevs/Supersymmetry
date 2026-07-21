@@ -4,6 +4,7 @@ import techguns.entities.npcs.Bandit
 import techguns.entities.npcs.Outcast
 import net.minecraft.nbt.NBTTagCompound
 import net.minecraft.util.math.BlockPos
+import supersymmetry.common.metatileentities.single.electric.MetaTileEntityFederationDropBeacon
 
 System.out.println("grs Siege loaded")
 
@@ -35,6 +36,7 @@ def spawnBanditRaid(player) {
         root.setInteger("hate", 0)
         bandit.getEntityData().setTag("susy", root)
         bandit.addRandomArmor(1);
+        bandit.setCustomNameTag("Bandit reinforcements");
 
         // ===== Random weapon =====
         String[] weapons = [
@@ -92,6 +94,7 @@ def spawnFedRaid(player) {
         root.setInteger("hate", 0)
         outcast.getEntityData().setTag("susy", root)
         outcast.addRandomArmor(1);
+        outcast.setCustomNameTag("Former Federation reinforcements");
 
         // ===== Random weapon =====
         String[] weapons = [
@@ -134,4 +137,12 @@ def spawnFedRaid(player) {
         return
     }
 
+}
+
+//fed siege problem causers
+
+MetaTileEntityFederationDropBeacon.fedStrikeCommandsProvider = {
+    return [
+            "setblock ~ ~ ~ stone"
+    ]
 }
