@@ -1,1 +1,6 @@
+hash-format = "sha256"
 
+[[files]]
+file = "mods/had-enough-items.pw.toml"
+hash = "d8b3509f5f37d126f296db936248cff5aa0b99c0afdddd6fa28a2460880759ca"
+metafile = true

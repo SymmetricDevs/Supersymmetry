@@ -113,6 +113,12 @@ BOILER.recipeBuilder()
         .EUt(-32)
         .buildAndRegister()
 
+BOILER.recipeBuilder() // 800t placeholder for biomass based duration //
+        .inputs(ore('bagasse'))
+        .duration(800) 
+        .EUt(-32)
+        .buildAndRegister()
+
 // Liquid recipes. I divide by 4 to reduce the amounts.
 SEMI_FLUID_GENERATOR.recipeBuilder()
         .fluidInputs(fluid('creosote') * 250)

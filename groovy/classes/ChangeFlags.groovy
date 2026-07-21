@@ -73,6 +73,9 @@ class ChangeFlags {
 
         // Properties
 
+        Stone.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 131, 1));
+        Granite.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 191, 1));
+
         Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Tellurium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
