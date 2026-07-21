@@ -20,6 +20,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4, "rock.sedimentary")
         addItem(5, "rock.hydrothermal")
         addItem(6, "rock.alluvial")
+        // ID 7 saved for deposit_block 6
+        addItem(8, "rock.evaporite")
 
         addItem(100, "cement.clinker")
         addItem(101, "hot.cement.clinker")
