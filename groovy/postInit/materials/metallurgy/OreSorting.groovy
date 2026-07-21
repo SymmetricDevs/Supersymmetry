@@ -396,7 +396,7 @@ def evaporite_tier_2 = [
     //T1
     'susy:resource_block:3' : 2000, //HalideEvaporiteDeposit
     'susy:resource_block:4' : 2000, //SulfateEvaporiteDeposit
-    'susy:resource_block:5' : 2000  //CarbonateEvaporiteDeposit
+    'susy:resource_block:5' : 2000,  //CarbonateEvaporiteDeposit
     //T2
     'susy:resource_block:2' : 1000  //NonMarineEvaporiteDeposit
 ]
@@ -405,7 +405,7 @@ def evaporite_tier_3 = [
     //T1
     'susy:resource_block:3' : 2500, //HalideEvaporiteDeposit
     'susy:resource_block:4' : 2500, //SulfateEvaporiteDeposit
-    'susy:resource_block:5' : 2500  //CarbonateEvaporiteDeposit
+    'susy:resource_block:5' : 2500,  //CarbonateEvaporiteDeposit
     //T2
     'susy:resource_block:2' : 1500, //NonMarineEvaporiteDeposit
     //T3
@@ -416,7 +416,7 @@ def evaporite_tier_4 = [
     //T1
     'susy:resource_block:3' : 3000, //HalideEvaporiteDeposit
     'susy:resource_block:4' : 3000, //SulfateEvaporiteDeposit
-    'susy:resource_block:5' : 3000  //CarbonateEvaporiteDeposit
+    'susy:resource_block:5' : 3000,  //CarbonateEvaporiteDeposit
     //T2
     'susy:resource_block:2' : 2000, //NonMarineEvaporiteDeposit
     //T3
