@@ -719,5 +719,11 @@ class OreMaterials {
                 .color(0xcad7e8)
                 .components(Magnesium, Sulfur, Oxygen * 4, Water * 7)
                 .build()
+
+        EvaporiteDeposit = new Material.Builder(7095, SuSyUtility.susyId('evaporite_deposit'))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xfff4f2)
+                .build()
     }
 }

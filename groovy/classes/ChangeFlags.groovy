@@ -196,6 +196,8 @@ class ChangeFlags {
         Copper.addFlags("continuously_cast")
         Graphite.addFlags("generate_plate")
         Magnalium.addFlags("generate_ring", "generate_rotor")
+        ReinforcedEpoxyResin.addFlags("generate_rotor")
+        Beryllium.addFlags("generate_rod")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
