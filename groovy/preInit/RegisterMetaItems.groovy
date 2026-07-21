@@ -395,8 +395,9 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2869, "component.capacitor.electrolytic.core")
         addItem(2870, "component.capacitor.electrolytic")
         addItem(2781, "component.resistor.metal_film.core.deposited")
-        addItem(2782, "component.resistor.metal_film.core")
-        addItem(2783, "component.resistor.metal_film")
+        addItem(2782, "component.resistor.metal_film.core.uncut")
+        addItem(2783, "component.resistor.metal_film.core")
+        addItem(2784, "component.resistor.metal_film")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")

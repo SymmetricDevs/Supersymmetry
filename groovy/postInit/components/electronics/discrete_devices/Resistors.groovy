@@ -134,14 +134,21 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 // NiCr film resistors
-Deposition.generateSputteringRecipe("boltAlumina", "component.resistor.metal_film.core.deposited", ['chromium':120, 'nickel':480], 8)
+Deposition.generateSputteringRecipe("boltAlumina", "component.resistor.metal_film.core.deposited", ['chromium':120, 'nickel':480])
 
 LASER_ENGRAVER.recipeBuilder()
     .inputs(metaitem("component.resistor.metal_film.core.deposited"))
-    .outputs(metaitem("component.resistor.metal_film.core"))
+    .outputs(metaitem("component.resistor.metal_film.core.uncut"))
     .duration(100)
     .EUt(VA[HV])
-    .buildAndRegister(wireFine)
+    .buildAndRegister()
+
+CUTTER.recipeBuilder()
+    .inputs(metaitem("component.resistor.metal_film.core.uncut"))
+    .outputs(metaitem("component.resistor.metal_film.core") * 8)
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem("component.resistor.metal_film.core"))
