@@ -21,6 +21,7 @@
   "questID:3": 92,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -42,7 +43,7 @@
       "taskID:8": "bq_standard:retrieval"
     },
     "2:10": {
-      "index:3": 1,
+      "index:3": 2,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -53,7 +54,7 @@
       "taskID:8": "bq_standard:retrieval"
     },
     "3:10": {
-      "index:3": 1,
+      "index:3": 3,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
