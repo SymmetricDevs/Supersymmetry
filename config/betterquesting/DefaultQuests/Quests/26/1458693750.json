@@ -5,13 +5,13 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "So much for a peaceful first contact. It looks like the locals are rather trigger happy.\n\nThe body is remarkably ordinary, of course you didn\u0027t have the time for a proper autopsy, the factory waits for no one after all.\nA thought did briefly cross your mind however, §csomeone might come looking for this guy§r.\nHe could have been a lone actor, but you have no way to prove that right now. If only there was a way to somehow §2intercept their communications...§r\n\nPerhaps you can find out more by tracking down where he came from.",
+      "desc:8": "susy.quest.db.1458693750.desc",
+      "frame:8": "JAGGED",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 60,
         "id:8": "techguns:itemshared"
       },
-      "name:8": "Bandits",
+      "name:8": "susy.quest.db.1458693750.title",
       "visibility:8": "COMPLETED"
     }
   },
@@ -95,14 +95,6 @@
         "FallDistance:5": 0.0,
         "FallFlying:1": 0,
         "Fire:2": -1,
-        "ForgeCaps:10": {
-          "gaspunk:breathing_cap:10": {
-            "breath:5": 40.0
-          },
-          "geneticsreborn:maxhealth:10": {
-            "BonusHealth:5": 0.0
-          }
-        },
         "HandDropChances:9": {
           "0:5": 0.085,
           "1:5": 0.085

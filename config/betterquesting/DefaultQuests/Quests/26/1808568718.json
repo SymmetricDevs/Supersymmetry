@@ -4,26 +4,17 @@
   ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "This planet is §4not safe§r.\n\nSince it looks like you\u0027re going to be staying here for a while, it\u0027s only a matter of time before someone notices your presence.\nUnlike the shambling corpses you\u0027ve noticed stalking you through the night, §can intelligent adversary§r may prove a bit more challenging. If the faint glow of distant campfires is anything to go by, you may not be as alone as you think.\n\nPerhaps it\u0027s best to stay under the radar for now, who knows how they might retaliate if provoked. Prepare carefully.",
+      "desc:8": "susy.quest.db.1808568718.desc",
       "icon:10": {
-        "Count:3": 1,
         "Damage:2": 23,
-        "ForgeCaps:10": {
-          "Parent:10": {
-            "explosive:10": {
-              "customizations:9": {}
-            }
-          }
-        },
         "id:8": "icbmclassic:explosive_missile"
       },
-      "name:8": "HATE"
+      "name:8": "susy.quest.db.1808568718.title"
     }
   },
   "questID:3": 1808568718,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }
