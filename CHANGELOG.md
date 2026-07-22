@@ -1,3 +1,37 @@
+# UPDATE 0.1.16.12
+## Mod Changes
+### Mod Updates
+A lot! Some highlights:
+- SussyPatches 1.9.2 → 1.10.2
+- GregTech Food Option 1.12.2-1.12.8 → 1.12.2-1.12.10
+- Inventory Bogo Sorter 1.6.2 → 1.6.4
+- SusyCore v0.1.111 → v0.1.112
+- Had Enough Items 4.31.2 → 4.32.0
+- Better Questing Unofficial 4.3.1 → 4.3.2
+### Mod Additions
+- LemonSkin (AppleSkin Fork) → 4.0.0
+- Obscure Tooltips → forge-1.12.2-3.10.1
+### Mod Removals
+- AppleSkin
+- Coloured Tooltips
+- Sledgehammer
+## Changes
+### New Features
+- [Susy-Core] The steam log washer is now available for your early-game ore proc! (#665 by @jethro-3000)
+- [Susy-Core] Fluids are now basic! Most pipes are fine, if you're not using wood. (#678 by @MCTian-mi)
+- Items in HEI have been put into groups! Gracefully skip over pages of dusts like never before.
+### Changed Features
+- MV cargo drones are now a little cheaper! (#1934 by @lanicerine)
+- Evaporite deposits are now available! (#1926 by @jethro-3000)
+- Red alloy? So unrealistic. It is now used 99% less! (#1941 by @WideMann) (#1951 by @Rick8484)
+- Quests for HATE/cargo drones to help explain these mechanics now exist! (#1950 by @The-ExZombie)
+- Surface rocks look a little better... (#1953 by @MCTian-mi)
+### Fixes
+- The ore sorter HEI page is no longer weird.
+- Limestone small dust is again craftable. (#1927 by @Fiery36)
+- [Susy-Core] A rare server crash related to IR may be resolved. (#656 by @unitazer)
+- [Susy-Core] Cooling towers should let you put in a circuit now. (#667 by @PhaseRush)
+And thanks to @Fiery36, @Crindigo, @jethro-3000, @unitazer, and @MCTian-mi for helping to remove bugs.
 # UPDATE 0.1.16.11
 ## Mod Changes
 ### Mod Updates
