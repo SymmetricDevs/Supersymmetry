@@ -1,9 +1,9 @@
 {
   "preRequisites:11": [
     1520504426,
-    1997511526,
-    410,
-    243
+    538,
+    552,
+    745182757
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -12,8 +12,7 @@
         "Damage:2": 17011,
         "id:8": "gregtech:machine"
       },
-      "name:8": "susy.quest.db.2110846801.title",
-      "questlogic:8": "OR"
+      "name:8": "susy.quest.db.2110846801.title"
     }
   },
   "questID:3": 2110846801,

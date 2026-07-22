@@ -1810,3 +1810,14 @@ RecyclingHelper.replaceShaped("gregtech:diode.ulv", metaitem('gregtech:diode.ulv
         [ore('cableGtQuadrupleLead'), ore('componentDiode'), ore('cableGtQuadrupleLead')],
         [ore('componentDiode'), metaitem('gregtech:hull.ulv'), ore('componentDiode')],
         [ore('plateWroughtIron'), ore('componentDiode'), ore('plateWroughtIron')]])
+//Log Washer
+
+crafting.addShaped(metaitem('susy:log_washer'),
+        [[item('gregtech:boiler_casing', 0), metaitem('susy:pump.steam'), item('gregtech:boiler_casing', 0)],
+         [ore('gearBronze'), metaitem('steam.motor'), ore('gearBronze')],
+         [item('gregtech:metal_casing', 0), item('gregtech:boiler_casing', 0), item('gregtech:metal_casing', 0)]])
+
+crafting.addShaped(item('susy:paddle_shaft') * 2,
+        [[null, null, null],
+         [ore('rotorIron'), ore('logWood'), ore('rotorIron')],
+         [null, null, null]])
