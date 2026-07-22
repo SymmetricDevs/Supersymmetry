@@ -19,6 +19,16 @@
   "questID:3": 46,
   "tasks:9": {
     "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 8776,
+          "id:8": "gregtech:meta_dust_small"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    },
+    "1:10": {
       "ignoreNBT:1": 1,
       "index:3": 2,
       "requiredFluids:9": {
@@ -28,16 +38,6 @@
         }
       },
       "taskID:8": "bq_standard:fluid"
-    },
-    "1:10": {
-      "requiredItems:9": {
-        "0:10": {
-          "Count:3": 1,
-          "Damage:2": 8776,
-          "id:8": "gregtech:meta_dust_small"         
-        }
-      },
-      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }
