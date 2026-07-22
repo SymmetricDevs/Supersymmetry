@@ -1723,7 +1723,7 @@ crafting.addShaped(item('susy:susy_multiblock_casing', 13),
 
 //Log Washer
 
-crafting.addShaped(item('susy:log_washer'),
+crafting.addShaped(metaitem('susy:log_washer'),
         [[item('gregtech:boiler_casing', 0), metaitem('susy:pump.steam'), item('gregtech:boiler_casing', 0)],
          [ore('gearBronze'), metaitem('steam.motor'), ore('gearBronze')],
          [item('gregtech:metal_casing', 0), item('gregtech:boiler_casing', 0), item('gregtech:metal_casing', 0)]])
