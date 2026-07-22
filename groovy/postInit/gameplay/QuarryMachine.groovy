@@ -118,3 +118,29 @@ QUARRY.recipeBuilder()
     .duration(100)
     .EUt(VA[MV])
     .buildAndRegister();
+
+// Luna Rocks
+
+QUARRY.recipeBuilder()
+    .notConsumable(item('susy:susy_stone_smooth', 11))
+    .outputs(item('susy:susy_stone_smooth', 11))
+    .dimension(Globals.dimensions["Luna"])
+    .duration(5)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+QUARRY.recipeBuilder()
+    .notConsumable(item('gregtech:stone_smooth', 3))
+    .outputs(item('gregtech:stone_smooth', 3))
+    .dimension(Globals.dimensions["Luna"])
+    .duration(5)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+QUARRY.recipeBuilder()
+    .notConsumable(item('susy:resource_block_1', 3))
+    .outputs(item('susy:resource_block_1', 3))
+    .dimension(Globals.dimensions["Luna"])
+    .duration(5)
+    .EUt(VA[LV])
+    .buildAndRegister()
