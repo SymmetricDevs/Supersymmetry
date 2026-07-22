@@ -1,6 +1,6 @@
 name = "Ocean API"
 filename = "Ocean-API-v1.0.0-mc1.12.2.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
