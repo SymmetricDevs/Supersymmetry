@@ -1005,12 +1005,12 @@ ore('dustStone').each { stack ->
     def meta = stack.metadata
 
     PACKAGER.recipeBuilder()
-            .circuitMeta(1)
-            .inputs(item('gregtech:meta_dust', meta))
-            .outputs(item('gregtech:meta_dust_tiny', meta) * 9)
-            .duration(10)
-            .EUt(12)
-            .buildAndRegister()
+        .circuitMeta(1)
+        .inputs(item('gregtech:meta_dust', meta))
+        .outputs(item('gregtech:meta_dust_tiny', meta) * 9)
+        .duration(10)
+        .EUt(12)
+        .buildAndRegister()
 
     PACKAGER.recipeBuilder()
         .circuitMeta(2)
