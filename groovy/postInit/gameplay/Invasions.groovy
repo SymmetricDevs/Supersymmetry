@@ -1065,7 +1065,7 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_air_cavalry")
                     double angle = t * 2 * Math.PI;
                     return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
                 },
-                Arrays.asList("summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{faction:\"Feds\",hate:-30}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:150}],Health:150.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b}]}"),
+                Arrays.asList("summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{faction:\"Feds\",hate:-30,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:150}],Health:150.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b}]}"),
                 null,
                 null,
         )
