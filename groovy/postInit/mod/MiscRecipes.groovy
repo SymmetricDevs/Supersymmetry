@@ -90,7 +90,7 @@ crafting.replaceShaped('naturescompass:natures_compass', item('naturescompass:na
 ])
 
 crafting.addShaped('quark:redstone_randomizer', item('quark:redstone_randomizer'), [
-        [null, metaitem('wireFineRedAlloy'), null],
+        [null, null, null],
         [null, ore('circuitLv'), null],
         [null, item('minecraft:comparator'), null]
 ])
@@ -114,9 +114,9 @@ crafting.replaceShaped('travelersbackpack:travelers_backpack_standard', item('tr
 ])
 
 crafting.replaceShaped('jecalculation:item_calculator', item('jecalculation:item_calculator'), [
-        [metaitem('wireFineRedAlloy'), metaitem('plateGlass'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineTin'), metaitem('plateGlass'), metaitem('wireFineTin')],
         [item('opencomputers:material', 14), ore('circuitLv'), item('opencomputers:material', 16)],
-        [metaitem('wireFineRedAlloy'), ore('plateSteel'), metaitem('wireFineRedAlloy')]
+        [metaitem('wireFineTin'), ore('plateSteel'), metaitem('wireFineTin')]
 ])
 
 crafting.addShapeless("gregtech:mud_block_to_ball", item('biomesoplenty:mudball') * 4, [

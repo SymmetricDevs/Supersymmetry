@@ -381,7 +381,7 @@ for (i = 1; i <= 8; i++) {
 
 //Electrostatic separator
 
-def tieredElectrodes = [ore('wireFineRedAlloy'), ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
+def tieredElectrodes = [ore('wireFineTin'), ore('wireFineSteel'), metaitem('graphite_electrode'), ore('wireFinePlatinum'), ore('wireFineTitanium'),
                         ore('wireFineTungsten'), ore('wireFineOsmiridium'), ore('wireFineNiobiumTitanium'),
                         ore('wireFineNaquadah'), ore('wireFineNaquadahAlloy')];
 
