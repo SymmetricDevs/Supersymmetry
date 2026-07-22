@@ -97,13 +97,13 @@ class Deposition {
             return Math.max(1, (10000 - ((int) (consumptionRate * duration))))
         }
 
-        def generateRecipe(String input, String product, int duration, int parallels=1) { // For standalone sputtering (no co-sputtering or sequential sputtering)
+        def generateRecipe(String input, String product, int duration) { // For standalone sputtering (no co-sputtering or sequential sputtering)
             def reuseChance = Math.max(1, (10000 - ((int) (consumptionRate * duration))))
 
             SPUTTERER.recipeBuilder()
-                .inputs(metaitem(input) * parallels)
+                .inputs(metaitem(input))
                 .inputs(metaitem('target.' + this.targetMaterial))
-                .outputs(metaitem(product) * parallels)
+                .outputs(metaitem(product))
                 .chancedOutput(metaitem('target.' + this.targetMaterial), reuseChance, 0)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(duration)
@@ -140,13 +140,13 @@ class Deposition {
     }
 
     // feed keys as material paired with duration, for co-sputtering and sequential sputtering
-    static void generateSputteringRecipe(String input, String product, Map targetDurationMap, int parallels=1) {
+    static void generateSputteringRecipe(String input, String product, Map targetDurationMap) {
         int totalDuration = 0
         int power = 0
 
         def sputteringRecipe = SPUTTERER.recipeBuilder()
-            .inputs(metaitem(input) * paralells)
-            .outputs(metaitem(product) * parallels)
+            .inputs(metaitem(input))
+            .outputs(metaitem(product))
             .cleanroom(CleanroomType.CLEANROOM)
         
         for (pair in targetDurationMap) {
