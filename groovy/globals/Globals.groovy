@@ -12,7 +12,7 @@ import static gregtech.api.fluids.FluidConstants.*
 class Globals {
     public static voltageTiers = GTValues.VN.collect { it.toLowerCase() }
 
-    public static dimensions = ["Overworld": 0, "Beneath": 10, "Nether": -1]
+    public static dimensions = ["Overworld": 0, "Beneath": 10, "Nether": -1, "Luna": 800]
 
     public static solders = [
         'tin': 144,
