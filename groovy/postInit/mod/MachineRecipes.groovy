@@ -1720,3 +1720,15 @@ crafting.addShaped(item('susy:susy_multiblock_casing', 13),
         [[ore('plateAluminium'),ore('craftingToolHardHammer'),ore('plateAluminium')],
          [ore('gearAluminium'), ore('frameGtAluminium'), ore('gearAluminium')],
          [ore('plateAluminium'),ore('craftingToolWrench'),ore('plateAluminium')]])
+
+//Log Washer
+
+crafting.addShaped(metaitem('susy:log_washer'),
+        [[item('gregtech:boiler_casing', 0), metaitem('susy:pump.steam'), item('gregtech:boiler_casing', 0)],
+         [ore('gearBronze'), metaitem('steam.motor'), ore('gearBronze')],
+         [item('gregtech:metal_casing', 0), item('gregtech:boiler_casing', 0), item('gregtech:metal_casing', 0)]])
+
+crafting.addShaped(item('susy:paddle_shaft') * 2,
+        [[null, null, null],
+         [ore('rotorIron'), ore('logWood'), ore('rotorIron')],
+         [null, null, null]])

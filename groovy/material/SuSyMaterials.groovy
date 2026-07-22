@@ -130,6 +130,7 @@ class SuSyMaterials {
     public static Material SedimentaryDeposit
     public static Material HydrothermalDeposit
     public static Material AlluvialDeposit
+    public static Material EvaporiteDeposit
     public static Material MagmaticHydrothermalDeposit
     public static Material NonMarineEvaporiteDeposit
     public static Material HalideEvaporiteDeposit
