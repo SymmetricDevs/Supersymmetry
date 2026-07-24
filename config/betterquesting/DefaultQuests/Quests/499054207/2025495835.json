@@ -1,0 +1,18 @@
+{
+  "preRequisites:11": [
+    1931722845
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.2025495835.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 18050,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.2025495835.title"
+    }
+  },
+  "questID:3": 2025495835,
+  "tasks:9": {}
+}

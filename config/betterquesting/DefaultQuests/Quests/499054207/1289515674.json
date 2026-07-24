@@ -1,0 +1,14 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1289515674.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "minecraft:nether_star"
+      },
+      "name:8": "susy.quest.db.1289515674.title"
+    }
+  },
+  "questID:3": 1289515674,
+  "tasks:9": {}
+}
