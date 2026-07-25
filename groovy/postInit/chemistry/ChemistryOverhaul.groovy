@@ -2572,7 +2572,7 @@ REACTION_FURNACE.recipeBuilder()
 
 BR.recipeBuilder()
     .fluidInputs(fluid('ammonia') * 1000)
-    .inputs(ore('dustAnyPuritySodium'))
+    .fluidInputs(fluid('sodium') * 144)
     .fluidOutputs(fluid('hydrogen') * 1000)
     .outputs(metaitem('dustSodiumAmide') * 4)
     .EUt(VA[MV])
