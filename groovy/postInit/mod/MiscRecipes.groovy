@@ -43,18 +43,18 @@ for (name in name_removals) {
 }
 
 mods.jei.ingredient.yeet(
-        item('travelersbackpack:backpack_tank'),
-        item('travelersbackpack:sleeping_bag_bottom'),
-        item('travelersbackpack:hose_nozzle'),
-        item('travelersbackpack:hose'),
-        fluid('potion'),
-        item('biomesoplenty:biome_block'),
-        item('scalinghealth:crystalore'),
-        item('tardis:cinnabar_ore'),
-        item('rftools:dimensional_shard_ore'),
-        item('rftools:dimensional_shard_ore', 1),
-        item('rftools:dimensional_shard_ore', 2),
-        item('weeping-angels:kontron_ore'),
+    item('travelersbackpack:backpack_tank'),
+    item('travelersbackpack:sleeping_bag_bottom'),
+    item('travelersbackpack:hose_nozzle'),
+    item('travelersbackpack:hose'),
+    fluid('potion'),
+    item('biomesoplenty:biome_block'),
+    item('scalinghealth:crystalore'),
+    item('tardis:cinnabar_ore'),
+    item('rftools:dimensional_shard_ore'),
+    item('rftools:dimensional_shard_ore', 1),
+    item('rftools:dimensional_shard_ore', 2),
+    item('weeping-angels:kontron_ore'),
 )
 
 for (i in 0..7) {
@@ -62,6 +62,10 @@ for (i in 0..7) {
         item('biomesoplenty:gem_ore', i),
         item('srparasites:infestedore', i)
     )
+}
+
+for (i in 1..76) {
+    mods.jei.ingredient.yeet(item('travelersbackpack:travelers_backpack', i))
 }
 
 //Easter egg BOP gem blocks
