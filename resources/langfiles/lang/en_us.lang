@@ -983,6 +983,8 @@ susy.material.actinide_separation_mixture=Actinide Separation Mixture
 susy.material.reextracted_reprocessed_uranium_extract=Reextracted Reprocessed Uranium Extract
 susy.material.plutonium_reduction_solution=Plutonium Reduction Solution
 
+susy.material.ink=Ink
+
 # Thermodynamics
 
 susy.material.hot_hp_hydrogen=Hot High-Pressure Hydrogen
@@ -1177,6 +1179,7 @@ item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
 item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
 item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
+item.susy.material.evaporite_deposit.ore=Evaporite Deposit
 item.susy.material.non_marine_evaporite_deposit.ore=Non Marine Evaporite Deposit
 item.susy.material.halide_evaporite_deposit.ore=Halide Evaporite Deposit
 item.susy.material.carbonate_evaporite_deposit.ore=Carbonate Evaporite Deposit 
@@ -1195,6 +1198,7 @@ susy.material.sedimentary_deposit=Sedimentary Deposit
 susy.material.hydrothermal_deposit=Hydrothermal Deposit
 susy.material.alluvial_deposit=Alluvial Deposit
 susy.material.magmatic_hydrothermal_deposit=Magmatic Hydrothermal Deposit
+susy.material.evaporite_deposit=Evaporite Deposit
 susy.material.non_marine_evaporite_deposit=Non Marine Evaporite Deposit
 susy.material.halide_evaporite_deposit=Halide Evaporite Deposit
 susy.material.carbonate_evaporite_deposit=Carbonate Evaporite Deposit
@@ -2868,6 +2872,8 @@ susy.material.expanded_polytetrafluoroethylene=Expanded Polytetrafluoroethylene 
 susy.material.vanadium_iii_sulfate_solution=Vanadium III Sulfate Solution
 susy.material.diluted_vanadium_iii_sulfate_solution=Diluted Vanadium III Sulfate Solution
 susy.material.vanadyl_sulfate_solution=Vanadyl Sulfate Solution
+susy.material.s_glass=S-Glass
+susy.material.fiber_reinforced_nylon=Fiber-Reinforced Nylon
 
 # Isotopes
 
@@ -2943,6 +2949,7 @@ metaitem.rock.magmatic_hydrothermal.name=Magmatic Hydrothermal Rock
 metaitem.rock.sedimentary.name=Sedimentary Rock
 metaitem.rock.hydrothermal.name=Hydrothermal Rock
 metaitem.rock.alluvial.name=Alluvial Rock
+metaitem.rock.evaporite.name=Evaporite Rock
 metaitem.cement.clinker.name=Cement Clinker
 metaitem.hot.cement.clinker.name=Hot Cement Clinker
 metaitem.cement.dust.name=Cement Dust
@@ -3317,9 +3324,9 @@ metaitem.sponge.ruthenium.name=Ruthenium Sponge
 metaitem.sponge.iridium.name=Iridium Sponge
 metaitem.sponge.rhodium.name=Rhodium Sponge
 
-metaitem.drone.lv.name=Basic Drone
+metaitem.drone.lv.name=Basic Hunting Drone
 
-metaitem.glass_fibers.name=Glass Fibers
+metaitem.glass_fibers.name=Kevlar-Reinforced E-Glass Fibers
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 
@@ -3383,6 +3390,8 @@ metaitem.circuit_board.fr4.tooltip=An Advanced Circuit Board/nDouble-sided FR-4 
 metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
 metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel Cell (PEMFC)
+
+metaitem.ink_bottle.name=Ink Bottle
 
 ## Dimension Display Items
 metaitem.display.overworld.name=Overworld
@@ -3462,6 +3471,7 @@ metaitem.milled_low_pressure_steam_turbine_blade.name=Milled Low-Pressure Steam 
 metaitem.low_pressure_steam_turbine_blade.name=Low-Pressure Steam Turbine Blade
 metaitem.sputtering_magnetron.name=Sputtering Magnetron
 metaitem.graphite_paper.name=Graphite Paper
+metaitem.s_glass_fibers.name=S-Glass Fibers
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
@@ -3580,3 +3590,5 @@ recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste
 recipe.lubricant.midgrade=Provides a 1.2x boost in power generation recipes requiring lubricant.
 recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requiring lubricant.
 recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.
+recipe.sulfuric.acid=You can do this reaction in 1/40th of the time with a Bubble Column Reactor.
+recipe.pyrite=You can obtain Green Vitriol by batch reacting small piles of Pyrite.

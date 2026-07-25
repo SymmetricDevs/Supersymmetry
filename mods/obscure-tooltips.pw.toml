@@ -1,0 +1,13 @@
+name = "Obscure Tooltips"
+filename = "obscure_tooltips-forge-1.12.2-3.10.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "ecc9c1b473f5ca8674361dda92f437a780da2619"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8288563
+project-id = 715660

@@ -5,9 +5,7 @@ import static globals.Globals.*
 
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
-import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.FluidBuilder
-import gregtech.api.fluids.store.FluidStorageKeys
 import gregtech.api.fluids.store.FluidStorage
 import gregtech.api.unification.material.properties.*
 import gregtech.api.GTValues
@@ -222,7 +220,7 @@ class FirstDegreeMaterialsB {
                 .build()
 
         SaltyPhosphoricAcid = new Material.Builder(8705, SuSyUtility.susyId('salty_phosphoric_acid'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(PhosphoricAcid, Salt * 3, Water * 3)
                 .color(0xbfbe7c)
                 .build()
@@ -258,6 +256,8 @@ class FirstDegreeMaterialsB {
                 .blastTemp(2200, GasTier.MID, GTValues.VA[GTValues.EV])
                 .fluidPipeProperties(1500, 1500, true, true, true, false)
                 .build()
+                
+        Zircaloy4.setBaseProof(true)
 
         ReactorSteel = new Material.Builder(8711, SuSyUtility.susyId('reactor_steel'))
                 .ingot().liquid(new FluidBuilder().temperature(1800))
@@ -485,7 +485,7 @@ class FirstDegreeMaterialsB {
         DilutedBenzenediolCatalysisMixture.setFormula('(H3PO4)10(HClO4)(H2O)5', true)
 
         CleavedCumeneMixture = new Material.Builder(8738, SuSyUtility.susyId('cleaved_cumene_mixture'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(SulfuricAcid, Phenol * 5, Acetone * 5)
                 .colorAverage()
                 .build()
@@ -761,7 +761,7 @@ class FirstDegreeMaterialsB {
                 .build()
 
         NitrosylsulfuricAcid = new Material.Builder(8777, SuSyUtility.susyId('nitrosylsulfuric_acid'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(Nitrogen * 2, Hydrogen * 2, Sulfur * 2, Oxygen * 10, Water * 1)
                 .color(0xe8a020)
                 .build()

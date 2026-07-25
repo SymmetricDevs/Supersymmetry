@@ -4,7 +4,6 @@ import static material.SuSyMaterials.*
 
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
-import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.unification.material.properties.*
 
@@ -718,6 +717,12 @@ class OreMaterials {
                 .flags(NO_UNIFICATION)
                 .color(0xcad7e8)
                 .components(Magnesium, Sulfur, Oxygen * 4, Water * 7)
+                .build()
+
+        EvaporiteDeposit = new Material.Builder(7095, SuSyUtility.susyId('evaporite_deposit'))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xfff4f2)
                 .build()
     }
 }
