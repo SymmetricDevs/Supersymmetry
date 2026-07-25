@@ -272,7 +272,7 @@ crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
 
 crafting.replaceShaped("techguns:simplemachine_10_charging_station", item('techguns:simplemachine', 10), [
     [ore('circuitIv'), metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), ore('circuitIv')],
-    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 126), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
+    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 29), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
     [metaitem('plateTungstenSteel'), metaitem('battery_buffer.iv.4'), metaitem('plateTungstenSteel')]
 ])
 
@@ -432,7 +432,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .inputs(metaitem('electric.motor.lv'))
     .inputs(ore('circuitLv'))
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineCopper'))
     .inputs(ore('plateSteel') * 4)
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('techguns:basicmachine', 3))

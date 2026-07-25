@@ -131,7 +131,7 @@ def fuels = [
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.ev'))
     .inputs(ore('circuitEv') * 16)
-    .inputs(ore('wireFineRedAlloy') * 16)
+    .inputs(ore('wireFineGold') * 16)
     .inputs(metaitem('sensor.ev') * 16)
     .inputs(ore('roundVanadiumSteel') * 64)
     .fluidInputs(fluid('soldering_alloy') * 1296)
@@ -144,7 +144,7 @@ ASSEMBLER.recipeBuilder()
 RecyclingHelper.handleRecycling(metaitem('supercritical:fission_reactor'), [
     metaitem('hull.ev'),
     ore('circuitEv') * 16,
-    ore('wireFineRedAlloy') * 16,
+    ore('wireFineGold') * 16,
     metaitem('sensor.ev') * 16,
     ore('roundVanadiumSteel') * 64,
     ore('ingotSolderingAlloy') * 9

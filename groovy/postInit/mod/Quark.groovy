@@ -94,7 +94,7 @@ crafting.addShapeless('quark:bark_4', item('quark:bark', 4), [item('minecraft:lo
 crafting.addShapeless('quark:bark_5', item('quark:bark', 5), [item('minecraft:log2', 1)])
 
 crafting.replaceShaped('quark:rain_detector', item('quark:rain_detector'), [
-        [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')],
+        [ore('wireFineCopper'), ore('wireFineCopper'), ore('wireFineCopper')],
         [ore('plateNetherQuartz'), ore('plateNetherQuartz'), ore('plateNetherQuartz')],
         [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')]
 ])

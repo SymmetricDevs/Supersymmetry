@@ -20,6 +20,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4, "rock.sedimentary")
         addItem(5, "rock.hydrothermal")
         addItem(6, "rock.alluvial")
+        // ID 7 saved for deposit_block 6
+        addItem(8, "rock.evaporite")
 
         addItem(100, "cement.clinker")
         addItem(101, "hot.cement.clinker")
@@ -475,6 +477,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10100, "turbojet.small")
         addItem(10101, "wing_panel.fiber_reinforced_epoxy")
         addItem(10102, "wing.small")
+        addItem(10103, "ink_bottle")
+        addItem(10104, "s_glass_fibers")
 
         // Dimension Display items 10200-10250
         addItem(10200, 'display.overworld')

@@ -1,0 +1,67 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "normal": [
+      {
+        "model": "gregtech:surface_rock_a"
+      },
+      {
+        "model": "gregtech:surface_rock_a",
+        "y": 90
+      },
+      {
+        "model": "gregtech:surface_rock_a",
+        "y": 180
+      },
+      {
+        "model": "gregtech:surface_rock_a",
+        "y": 270
+      },
+      {
+        "model": "gregtech:surface_rock_b"
+      },
+      {
+        "model": "gregtech:surface_rock_b",
+        "y": 90
+      },
+      {
+        "model": "gregtech:surface_rock_b",
+        "y": 180
+      },
+      {
+        "model": "gregtech:surface_rock_b",
+        "y": 270
+      },
+      {
+        "model": "gregtech:surface_rock_c"
+      },
+      {
+        "model": "gregtech:surface_rock_c",
+        "y": 90
+      },
+      {
+        "model": "gregtech:surface_rock_c",
+        "y": 180
+      },
+      {
+        "model": "gregtech:surface_rock_c",
+        "y": 270
+      },
+      {
+        "model": "gregtech:surface_rock_d"
+      },
+      {
+        "model": "gregtech:surface_rock_d",
+        "y": 90
+      },
+      {
+        "model": "gregtech:surface_rock_d",
+        "y": 180
+      },
+      {
+        "model": "gregtech:surface_rock_d",
+        "y": 270
+      }
+    ]
+  }
+}

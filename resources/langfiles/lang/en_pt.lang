@@ -1792,6 +1792,7 @@ metaitem.rock.magmatic_hydrothermal.name=Magmatic Hydrothermal Rock
 metaitem.rock.sedimentary.name=Sedimentary Rock
 metaitem.rock.hydrothermal.name=Hydrothermal Rock
 metaitem.rock.alluvial.name=Alluvial Rock
+metaitem.rock.evaporite.name=Evaporite Rock
 metaitem.cement.clinker.name=Cement Clinker
 metaitem.hot.cement.clinker.name=Hot Cement Clinker
 metaitem.cement.dust.name=Cement Dust
