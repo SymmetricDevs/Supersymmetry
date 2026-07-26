@@ -1427,7 +1427,7 @@ ALLOY_SMELTER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister();
 mods.gregtech.blender.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
-mods.gregtech.advanced_arc_furnace.removeByInput(16, [metaitem('dustMagnesium'), metaitem('dustAluminium') * 2, metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('refractory_gunning_mixture') * 50])
+
 ADVANCED_ARC_FURNACE.recipeBuilder()
         .inputs(ore('dustMagnesium'))
         .inputs(ore('dustAluminium') * 19)
