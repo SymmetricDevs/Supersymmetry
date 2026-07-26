@@ -21,7 +21,6 @@ INDUCTION_FURNACE.recipeBuilder()
     .duration(10)
     .buildAndRegister()
 
-
 // Phosphorized copper for copper electroplating anodes
 
 TUBE_FURNACE.recipeBuilder()
