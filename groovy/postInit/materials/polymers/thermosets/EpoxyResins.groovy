@@ -252,6 +252,7 @@ VACUUM_CHAMBER.recipeBuilder()
         .buildAndRegister()
 
 // Fiber reinforced epoxy
+
     // E glass
     MIXER.recipeBuilder()
         .inputs(ore('dustSiliconDioxide') * 3)
@@ -283,24 +284,24 @@ VACUUM_CHAMBER.recipeBuilder()
     CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('glass_fibers'))
         .fluidInputs(fluid('flame_retardant_epoxy') * 144)
-        .outputs(metaitem('board.epoxy.prepreg'))
+        .outputs(metaitem('board.fr4.prepreg'))
         .EUt(VA[MV])
         .duration(10)
         .buildAndRegister()
             
     CHEMICAL_BATH.recipeBuilder()
-            .inputs(metaitem('glass_fibers')) //FIXME: replace with S-glass fibers
-            .inputs(ore('fiberKevlar'))
-            .fluidInputs(fluid('epoxy') * 144)
+        .inputs(metaitem('glass_fibers')) //FIXME: replace with S-glass fibers
+        .inputs(ore('fiberKevlar'))
+        .fluidInputs(fluid('epoxy') * 144)
         .outputs(metaitem('plateReinforcedEpoxyResin'))
         .EUt(VA[MV])
         .duration(160)
         .buildAndRegister()
 
-CHEMICAL_BATH.recipeBuilder()
+    CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('glass_fibers'))
         .fluidInputs(fluid('epoxy') * 144)
-        .outputs(metaitem('board.hv.prepreg'))
+        .outputs(metaitem('board.g10.prepreg'))
         .circuitMeta(1)//FIXME: remove circuit once S-glass is used for the fiber epoxy plate
         .EUt(VA[MV])
         .duration(75)

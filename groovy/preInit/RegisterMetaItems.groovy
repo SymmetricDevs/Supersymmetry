@@ -562,30 +562,31 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5307, "etched.silicon_nitride")
 
         //Epoxy Circuit Board + Components 5800-5900
-        addItem(5800, "board.epoxy.prepreg")
-        addItem(5801, "board.epoxy.copper_clad");
-        addItem(5802, "board.epoxy.patterned");
-        addItem(5803, "board.epoxy.etched");
-        addItem(5804, "board.epoxy.drilled");
-        addItem(5805, "board.epoxy.electroless");
-        addItem(5806, "board.epoxy.electrolytic");
-        addItem(5807, "board.epoxy.wet_masked");
-        addItem(5808, "board.epoxy.mask_affixed");
+        addItem(5800, "board.fr4.prepreg")
+        addItem(5801, "board.fr4.copper_clad");
+        addItem(5802, "board.fr4.patterned");
+        addItem(5803, "board.fr4.etched");
+        addItem(5804, "board.fr4.drilled");
+        addItem(5805, "board.fr4.electroless");
+        addItem(5806, "board.fr4.electrolytic");
+        addItem(5807, "board.fr4.wet_masked");
+        addItem(5808, "board.fr4.mask_affixed");
         addItem(5809, "circuit_board.fr4")
-        addItem(5810, "board.epoxy.resist")
+        addItem(5810, "board.fr4.resist")
+        addItem(5811, "board.fr4.developed")
 
-        addItem(5811, "board.hv.prepreg")
-        addItem(5812, "board.hv.copper_clad");
-        addItem(5813, "board.hv.resist")
-        addItem(5814, "board.hv.patterned");
-        addItem(5815, "board.hv.etched");
-        addItem(5816, "board.hv.drilled");
-        addItem(5817, "board.hv.electroless");
-        addItem(5818, "board.hv.electrolytic");
-        addItem(5819, "board.hv.wet_masked");
-        addItem(5820, "board.hv.mask_affixed");
-        addItem(5821, "circuit_board.g10")
-
+        addItem(5812, "board.g10.prepreg")
+        addItem(5813, "board.g10.copper_clad");
+        addItem(5814, "board.g10.resist")
+        addItem(5815, "board.g10.patterned");
+        addItem(5816, "board.g10.etched");
+        addItem(5817, "board.g10.drilled");
+        addItem(5818, "board.g10.electroless");
+        addItem(5819, "board.g10.electrolytic");
+        addItem(5820, "board.g10.wet_masked");
+        addItem(5821, "board.g10.mask_affixed");
+        addItem(5822, "circuit_board.g10")
+        addItem(5823, "board.g10.developed")
 
         //Good Circuit Components 5900-6000
         addItem(5900, "op_amp")
