@@ -1454,9 +1454,19 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        ElectrolyticCapacitorElectrolyte = new Material.Builder(24251, SuSyUtility.susyId("electrolytic_capacitor_electrolyte"))
+        NitratolacticAcidSolution = new Material.Builder(24251, SuSyUtility.susyId('nitratolactic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xe8e1bc)
+                .build()
+
+        NitricOxalicAcidSolution = new Material.Builder(24252, SuSyUtility.susyId('nitric_oxalic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xaeb382)
+                .build()
+
+        ElectrolyticCapacitorElectrolyte = new Material.Builder(24253, SuSyUtility.susyId("electrolytic_capacitor_electrolyte"))
                 .liquid()
-                .components(EthyleneGlycol * 500, PhosphoricAcid * 5, Water * 700, AceticAcid * 50, AmmoniumAcetateSolution * 45)
+                .components(EthyleneGlycol * 100, PhosphoricAcid, Water * 140, AceticAcid * 10, AmmoniumAcetateSolution * 9)
                 .colorAverage()
                 .build()
         }

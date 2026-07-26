@@ -3491,6 +3491,16 @@ class UnknownCompositionMaterials {
                 .color(0x3749ad)
                 .build()
 
+        WhiteEpoxyPCBCoating = new Material.Builder(4762, SuSyUtility.susyId('white_epoxy_pcb_coating'))
+                .liquid()
+                .color(0xF2F0B8)
+                .build()
+
+        CrudeSodiumOxalateSolution = new Material.Builder(4763, SuSyUtility.susyId('crude_sodium_oxalate_solution'))
+                .liquid()
+                .color(0xEFE977)
+                .build()
+
         PineResin = new Material.Builder(4743, SuSyUtility.susyId('pine_resin'))
                 .liquid()
                 .color(0x572e09)
