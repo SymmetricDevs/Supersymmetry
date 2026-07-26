@@ -16,7 +16,7 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 
 oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
 oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.film'))
 
-// Silver mica capacitors
+// Silver mica capacitors (LV)
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('foilSilver') * 2)
@@ -40,7 +40,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// Plastic film capacitors
+// Plastic film capacitors (MV)
 
 oreDict.add('capacitorFilm', metaitem('mylar'))
 oreDict.add('capacitorFilm', metaitem('foilPolypropylene'))
@@ -72,7 +72,8 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-// aluminium electrolytic cap, HV tier
+// Aluminium electrolytic capacitors (HV)
+
 ELECTROLYZER.recipeBuilder()
     .inputs(ore('foilAluminium') * 8)
     .notConsumable(fluid('diluted_salt_water') * 100)
@@ -120,7 +121,6 @@ ASSEMBLER.recipeBuilder()
     .duration(20)
     .EUt(VA[MV])
     .buildAndRegister()
-
 
 // Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
 // "Supercapacitors: Concepts and advances"
