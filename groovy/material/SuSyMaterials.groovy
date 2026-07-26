@@ -1104,6 +1104,7 @@ class SuSyMaterials {
     public static Material CopperIIChloride
     public static Material SiliconCarbide
     public static Material TungstenTrioxide
+    public static Material RheniumHeptoxide
     public static Material Alumina
     public static Material BoronCarbide
     public static Material SilverChloride
@@ -1645,6 +1646,13 @@ class SuSyMaterials {
     public static Material DiammoniumHydrogenPhosphate
     public static Material Boehmite
     public static Material ReverseOsmosisWater
+    public static Material ThoriatedTungstenMixture
+    public static Material UnsinteredThoriatedTungsten
+    public static Material ThoriatedTungsten
+    public static Material YttriumNitrate
+    public static Material YttriumNitrateSolution
+    public static Material NeodymiumYttriumAluminiumGarnet
+    public static Material AmmoniumHydroxide
     public static Material ChromiumIIINitrateSolution
     public static Material ChromiumIIICarbonate
     public static Material ManganeseIICarbonate
