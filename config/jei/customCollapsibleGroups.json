@@ -1,0 +1,2244 @@
+[
+  {
+    "id": "custom:4942c665",
+    "displayName": "BQu Loot Chests",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "bq_standard:loot_chest"
+    ]
+  },
+  {
+    "id": "custom:f8e1078e",
+    "displayName": "Zyth",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zyth:*"
+    ]
+  },
+  {
+    "id": "custom:aff0509f",
+    "displayName": "Ztyl",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:ztyl:*"
+    ]
+  },
+  {
+    "id": "custom:bf251f09",
+    "displayName": "Zorg",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zorg:*"
+    ]
+  },
+  {
+    "id": "custom:a14fe9b0",
+    "displayName": "Zone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zone:*"
+    ]
+  },
+  {
+    "id": "custom:7a687599",
+    "displayName": "Zome",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zome:*"
+    ]
+  },
+  {
+    "id": "custom:47645116",
+    "displayName": "Zoea",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zoea:*"
+    ]
+  },
+  {
+    "id": "custom:06440e46",
+    "displayName": "Zkul",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zkul:*"
+    ]
+  },
+  {
+    "id": "custom:b2fdefcf",
+    "displayName": "Zeta",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zeta:*"
+    ]
+  },
+  {
+    "id": "custom:377df3f3",
+    "displayName": "Zest",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zest:*"
+    ]
+  },
+  {
+    "id": "custom:bc981d4b",
+    "displayName": "Zech",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zech:*"
+    ]
+  },
+  {
+    "id": "custom:2b785e1f",
+    "displayName": "Zane",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zane:*"
+    ]
+  },
+  {
+    "id": "custom:573584b9",
+    "displayName": "Vena",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:vena:*"
+    ]
+  },
+  {
+    "id": "custom:779f012d",
+    "displayName": "Vect",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:vect:*"
+    ]
+  },
+  {
+    "id": "custom:0f54ddb6",
+    "displayName": "Tank",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:tank:*"
+    ]
+  },
+  {
+    "id": "custom:56a8b0d5",
+    "displayName": "Roen",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:roen:*"
+    ]
+  },
+  {
+    "id": "custom:0f45920a",
+    "displayName": "Reed",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:reed:*"
+    ]
+  },
+  {
+    "id": "custom:ad458fc9",
+    "displayName": "Reds",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:reds:*"
+    ]
+  },
+  {
+    "id": "custom:7687b7a8",
+    "displayName": "Mint",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:mint:*"
+    ]
+  },
+  {
+    "id": "custom:33ed28ee",
+    "displayName": "Lave",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:lave:*"
+    ]
+  },
+  {
+    "id": "custom:7a20b028",
+    "displayName": "Lair",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:lair:*"
+    ]
+  },
+  {
+    "id": "custom:1505ab1b",
+    "displayName": "Kryp",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:kryp:*"
+    ]
+  },
+  {
+    "id": "custom:7aa07bb1",
+    "displayName": "Korp",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:korp:*"
+    ]
+  },
+  {
+    "id": "custom:79776ea0",
+    "displayName": "Jelt",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:jelt:*"
+    ]
+  },
+  {
+    "id": "custom:d5d73bf2",
+    "displayName": "Iszm",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:iszm:*"
+    ]
+  },
+  {
+    "id": "custom:8372f0a1",
+    "displayName": "Glaxx",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:glaxx:*"
+    ]
+  },
+  {
+    "id": "custom:27270df3",
+    "displayName": "Fort",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:fort:*"
+    ]
+  },
+  {
+    "id": "custom:85458696",
+    "displayName": "Cray",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:cray:*"
+    ]
+  },
+  {
+    "id": "custom:0647329a",
+    "displayName": "Bitt",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:bitt:*"
+    ]
+  },
+  {
+    "id": "custom:d59485de",
+    "displayName": "Azur",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:azur:*"
+    ]
+  },
+  {
+    "id": "custom:1f518f42",
+    "displayName": "XNet Connectors",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xnet:advanced_connector:*",
+      "xnet:connector:*"
+    ]
+  },
+  {
+    "id": "custom:8a027c44",
+    "displayName": "XNet Cables",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xnet:netcable:*"
+    ]
+  },
+  {
+    "id": "custom:49cc8f6e",
+    "displayName": "Stacked Dimension Bedrock",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "dimstack:bedrock:*"
+    ]
+  },
+  {
+    "id": "custom:e49ce0a4",
+    "displayName": "Asbestos Fiber",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "susy:fake_wool:*"
+    ]
+  },
+  {
+    "id": "custom:95aa29ce",
+    "displayName": "Elevators",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "elevatorid:elevator_black",
+      "elevatorid:elevator_red",
+      "elevatorid:elevator_green",
+      "elevatorid:elevator_brown",
+      "elevatorid:elevator_blue",
+      "elevatorid:elevator_purple",
+      "elevatorid:elevator_cyan",
+      "elevatorid:elevator_silver",
+      "elevatorid:elevator_gray",
+      "elevatorid:elevator_pink",
+      "elevatorid:elevator_lime",
+      "elevatorid:elevator_yellow",
+      "elevatorid:elevator_light_blue",
+      "elevatorid:elevator_magenta",
+      "elevatorid:elevator_orange",
+      "elevatorid:elevator_white"
+    ]
+  },
+  {
+    "id": "custom:3a15fcf5",
+    "displayName": "Wool",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:wool:*"
+    ]
+  },
+  {
+    "id": "custom:fe9b0083",
+    "displayName": "Terracotta",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:stained_hardened_clay:*",
+      "minecraft:hardened_clay"
+    ]
+  },
+  {
+    "id": "custom:c68c7198",
+    "displayName": "Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:stained_glass:*",
+      "minecraft:glass"
+    ]
+  },
+  {
+    "id": "custom:5b64a274",
+    "displayName": "Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:concrete:*"
+    ]
+  },
+  {
+    "id": "custom:0a1011e2",
+    "displayName": "Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:stained_glass_pane:*",
+      "minecraft:glass_pane"
+    ]
+  },
+  {
+    "id": "custom:5ee0fa69",
+    "displayName": "Concrete Powder",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:concrete_powder:*"
+    ]
+  },
+  {
+    "id": "custom:fe6ab50f",
+    "displayName": "Carpet",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:carpet:*"
+    ]
+  },
+  {
+    "id": "custom:8e20a87e",
+    "displayName": "Shulker Boxes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:white_shulker_box",
+      "minecraft:black_shulker_box",
+      "minecraft:red_shulker_box",
+      "minecraft:green_shulker_box",
+      "minecraft:brown_shulker_box",
+      "minecraft:blue_shulker_box",
+      "minecraft:silver_shulker_box",
+      "minecraft:gray_shulker_box",
+      "minecraft:pink_shulker_box",
+      "minecraft:lime_shulker_box",
+      "minecraft:yellow_shulker_box",
+      "minecraft:light_blue_shulker_box",
+      "minecraft:magenta_shulker_box",
+      "minecraft:orange_shulker_box",
+      "minecraft:cyan_shulker_box",
+      "minecraft:purple_shulker_box"
+    ]
+  },
+  {
+    "id": "custom:0bdac656",
+    "displayName": "Glazed Terracotta",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:red_glazed_terracotta",
+      "minecraft:black_glazed_terracotta",
+      "minecraft:green_glazed_terracotta",
+      "minecraft:brown_glazed_terracotta",
+      "minecraft:blue_glazed_terracotta",
+      "minecraft:purple_glazed_terracotta",
+      "minecraft:cyan_glazed_terracotta",
+      "minecraft:silver_glazed_terracotta",
+      "minecraft:gray_glazed_terracotta",
+      "minecraft:pink_glazed_terracotta",
+      "minecraft:lime_glazed_terracotta",
+      "minecraft:yellow_glazed_terracotta",
+      "minecraft:light_blue_glazed_terracotta",
+      "minecraft:magenta_glazed_terracotta",
+      "minecraft:orange_glazed_terracotta",
+      "minecraft:white_glazed_terracotta"
+    ]
+  },
+  {
+    "id": "custom:020fc386",
+    "displayName": "Beds",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:bed:*"
+    ]
+  },
+  {
+    "id": "custom:72c9120f",
+    "displayName": "Banners",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:banner:*"
+    ]
+  },
+  {
+    "id": "custom:966225b2",
+    "displayName": "Dyes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:dye:*"
+    ]
+  },
+  {
+    "id": "custom:41a45dc6",
+    "displayName": "Music Discs",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "minecraft:record_13",
+      "minecraft:record_cat",
+      "minecraft:record_wait",
+      "minecraft:record_11",
+      "minecraft:record_ward",
+      "minecraft:record_strad",
+      "minecraft:record_stal",
+      "minecraft:record_mellohi",
+      "minecraft:record_mall",
+      "minecraft:record_far",
+      "minecraft:record_chirp",
+      "minecraft:record_blocks"
+    ]
+  },
+  {
+    "id": "custom:41f4d665",
+    "displayName": "Paint Balls",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "appliedenergistics2:paint_ball:*"
+    ]
+  },
+  {
+    "id": "custom:5dfccde1",
+    "displayName": "ME Cables",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "appliedenergistics2:part:66",
+      "appliedenergistics2:part:65",
+      "appliedenergistics2:part:64",
+      "appliedenergistics2:part:62",
+      "appliedenergistics2:part:61",
+      "appliedenergistics2:part:60",
+      "appliedenergistics2:part:56",
+      "appliedenergistics2:part:55",
+      "appliedenergistics2:part:54",
+      "appliedenergistics2:part:53",
+      "appliedenergistics2:part:52",
+      "appliedenergistics2:part:51",
+      "appliedenergistics2:part:76",
+      "appliedenergistics2:part:75",
+      "appliedenergistics2:part:74",
+      "appliedenergistics2:part:73",
+      "appliedenergistics2:part:72",
+      "appliedenergistics2:part:71",
+      "appliedenergistics2:part:70",
+      "appliedenergistics2:part:69",
+      "appliedenergistics2:part:68",
+      "appliedenergistics2:part:67",
+      "appliedenergistics2:part:42",
+      "appliedenergistics2:part:43",
+      "appliedenergistics2:part:44",
+      "appliedenergistics2:part:45",
+      "appliedenergistics2:part:46",
+      "appliedenergistics2:part:47",
+      "appliedenergistics2:part:48",
+      "appliedenergistics2:part:49",
+      "appliedenergistics2:part:50",
+      "appliedenergistics2:part:14",
+      "appliedenergistics2:part:15",
+      "appliedenergistics2:part:16",
+      "appliedenergistics2:part:21",
+      "appliedenergistics2:part:22",
+      "appliedenergistics2:part:23",
+      "appliedenergistics2:part:24",
+      "appliedenergistics2:part:25",
+      "appliedenergistics2:part:26",
+      "appliedenergistics2:part:27",
+      "appliedenergistics2:part:28",
+      "appliedenergistics2:part:29",
+      "appliedenergistics2:part:30",
+      "appliedenergistics2:part:31",
+      "appliedenergistics2:part:33",
+      "appliedenergistics2:part:34",
+      "appliedenergistics2:part:35",
+      "appliedenergistics2:part:36",
+      "appliedenergistics2:part:40",
+      "appliedenergistics2:part:41",
+      "appliedenergistics2:part:13",
+      "appliedenergistics2:part:12",
+      "appliedenergistics2:part:11",
+      "appliedenergistics2:part:10",
+      "appliedenergistics2:part:9",
+      "appliedenergistics2:part:8",
+      "appliedenergistics2:part:7",
+      "appliedenergistics2:part:6",
+      "appliedenergistics2:part:5",
+      "appliedenergistics2:part:4",
+      "appliedenergistics2:part:3",
+      "appliedenergistics2:part:2",
+      "appliedenergistics2:part:1",
+      "appliedenergistics2:part:0",
+      "appliedenergistics2:part:20",
+      "appliedenergistics2:part:32",
+      "appliedenergistics2:part:63",
+      "appliedenergistics2:part:516",
+      "appliedenergistics2:part:515",
+      "appliedenergistics2:part:514",
+      "appliedenergistics2:part:513",
+      "appliedenergistics2:part:512",
+      "appliedenergistics2:part:511",
+      "appliedenergistics2:part:510",
+      "appliedenergistics2:part:509",
+      "appliedenergistics2:part:508",
+      "appliedenergistics2:part:507",
+      "appliedenergistics2:part:506",
+      "appliedenergistics2:part:505",
+      "appliedenergistics2:part:504",
+      "appliedenergistics2:part:503",
+      "appliedenergistics2:part:502",
+      "appliedenergistics2:part:501",
+      "appliedenergistics2:part:500"
+    ]
+  },
+  {
+    "id": "custom:9d27307f",
+    "displayName": "Architecture Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "architecturecraft:shape:*"
+    ]
+  },
+  {
+    "id": "custom:ee83c862",
+    "displayName": "Floppy Discs",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "computercraft:disk_expanded:*"
+    ]
+  },
+  {
+    "id": "custom:1ac3d882",
+    "displayName": "Blocks of Aluminium",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockaluminum:*"
+    ]
+  },
+  {
+    "id": "custom:e822612a",
+    "displayName": "Chiseled Andesite",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:andesite1:*",
+      "chisel:andesite:*",
+      "chisel:andesite2:*"
+    ]
+  },
+  {
+    "id": "custom:1010b744",
+    "displayName": "Antiblocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:antiblock:*"
+    ]
+  },
+  {
+    "id": "custom:f7b05dd6",
+    "displayName": "Basalt",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:basalt:*",
+      "chisel:basalt2:*",
+      "chisel:basalt1:*"
+    ]
+  },
+  {
+    "id": "custom:149cb12b",
+    "displayName": "Oak Bookshelves",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:bookshelf_oak:*"
+    ]
+  },
+  {
+    "id": "custom:1e6c5467",
+    "displayName": "Spruce Bookshelves",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:bookshelf_spruce:*"
+    ]
+  },
+  {
+    "id": "custom:e02e1515",
+    "displayName": "Birch Bookshelves",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:bookshelf_birch:*"
+    ]
+  },
+  {
+    "id": "custom:669bc220",
+    "displayName": "Jungle Bookshelves",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:bookshelf_jungle:*"
+    ]
+  },
+  {
+    "id": "custom:d00df019",
+    "displayName": "Acacia Booksheves",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:bookshelf_acacia:*"
+    ]
+  },
+  {
+    "id": "custom:4f3db3bd",
+    "displayName": "Chiseled Bricks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:bricks:*",
+      "chisel:bricks1:*",
+      "chisel:bricks2:*"
+    ]
+  },
+  {
+    "id": "custom:4971dccd",
+    "displayName": "Blocks of Bronze",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockbronze:*"
+    ]
+  },
+  {
+    "id": "custom:09b0f0b3",
+    "displayName": "Brownstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:brownstone:*"
+    ]
+  },
+  {
+    "id": "custom:e74d0a77",
+    "displayName": "Blocks of Certus Quartz",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:certus:*",
+      "chisel:certus1:*",
+      "chisel:certus2:*"
+    ]
+  },
+  {
+    "id": "custom:f0dfb740",
+    "displayName": "Chiseled Carpet",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:carpet_black:*",
+      "chisel:carpet_red:*",
+      "chisel:carpet_green:*",
+      "chisel:carpet_brown:*",
+      "chisel:carpet_blue:*",
+      "chisel:carpet_purple:*",
+      "chisel:carpet_cyan:*",
+      "chisel:carpet_lightgray:*",
+      "chisel:carpet_white:*",
+      "chisel:carpet_orange:*",
+      "chisel:carpet_lightblue:*",
+      "chisel:carpet_yellow:*",
+      "chisel:carpet_pink:*",
+      "chisel:carpet_gray:*",
+      "chisel:carpet_magenta:*",
+      "chisel:carpet_lime:*"
+    ]
+  },
+  {
+    "id": "custom:79d2f54b",
+    "displayName": "Blocks of Charcoal",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:block_charcoal:*",
+      "chisel:block_charcoal1:*",
+      "chisel:block_charcoal2:*"
+    ]
+  },
+  {
+    "id": "custom:252d7c21",
+    "displayName": "Clouds",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:cloud:*"
+    ]
+  },
+  {
+    "id": "custom:9bc42d2f",
+    "displayName": "Blocks of Cobalt",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockcobalt:*"
+    ]
+  },
+  {
+    "id": "custom:f2a08566",
+    "displayName": "Chiseled Cobblestone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:cobblestone:*",
+      "chisel:cobblestone1:*",
+      "chisel:cobblestone2:*"
+    ]
+  },
+  {
+    "id": "custom:6c939f5b",
+    "displayName": "Blocks of Charcoal",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:block_coal:*",
+      "chisel:block_coal1:*",
+      "chisel:block_coal2:*"
+    ]
+  },
+  {
+    "id": "custom:21d000ff",
+    "displayName": "Blocks of Coal Coke",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:block_coal_coke:*",
+      "chisel:block_coal_coke1:*",
+      "chisel:block_coal_coke2:*"
+    ]
+  },
+  {
+    "id": "custom:488631b3",
+    "displayName": "Moss Stone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:cobblestonemossy:*",
+      "chisel:cobblestonemossy1:*",
+      "chisel:cobblestonemossy2:*"
+    ]
+  },
+  {
+    "id": "custom:7aa78948",
+    "displayName": "Chiseled Black Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_black:*",
+      "chisel:concrete_black1:*",
+      "chisel:concrete_black2:*"
+    ]
+  },
+  {
+    "id": "custom:32b0def6",
+    "displayName": "Chiseled Red Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_red:*",
+      "chisel:concrete_red1:*",
+      "chisel:concrete_red2:*"
+    ]
+  },
+  {
+    "id": "custom:aa3f05ff",
+    "displayName": "Chiseled Green Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_green:*",
+      "chisel:concrete_green1:*",
+      "chisel:concrete_green2:*"
+    ]
+  },
+  {
+    "id": "custom:460bcb44",
+    "displayName": "Chiseled Brown Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_brown1:*",
+      "chisel:concrete_brown:*",
+      "chisel:concrete_brown2:*"
+    ]
+  },
+  {
+    "id": "custom:8f9fa48f",
+    "displayName": "Chiseled Blue Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_blue:*",
+      "chisel:concrete_blue1:*",
+      "chisel:concrete_blue2:*"
+    ]
+  },
+  {
+    "id": "custom:205856b4",
+    "displayName": "Chiseled Purple Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_purple1:*",
+      "chisel:concrete_purple:*",
+      "chisel:concrete_purple2:*"
+    ]
+  },
+  {
+    "id": "custom:f5839966",
+    "displayName": "Chiseled Cyan Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_cyan:*",
+      "chisel:concrete_cyan2:*",
+      "chisel:concrete_cyan1:*"
+    ]
+  },
+  {
+    "id": "custom:0ef22776",
+    "displayName": "Chiseled Light Gray Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_lightgray1:*",
+      "chisel:concrete_lightgray:*",
+      "chisel:concrete_lightgray2:*"
+    ]
+  },
+  {
+    "id": "custom:06c16217",
+    "displayName": "Chiseled Gray Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_gray:*",
+      "chisel:concrete_gray2:*",
+      "chisel:concrete_gray1:*"
+    ]
+  },
+  {
+    "id": "custom:01f4e62f",
+    "displayName": "Chiseled Pink Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_pink:*",
+      "chisel:concrete_pink1:*",
+      "chisel:concrete_pink2:*"
+    ]
+  },
+  {
+    "id": "custom:7cd9e4c2",
+    "displayName": "Chiseled Lime Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_lime:*",
+      "chisel:concrete_lime1:*",
+      "chisel:concrete_lime2:*"
+    ]
+  },
+  {
+    "id": "custom:4084dc1d",
+    "displayName": "Chiseled Yellow Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_yellow1:*",
+      "chisel:concrete_yellow:*",
+      "chisel:concrete_yellow2:*"
+    ]
+  },
+  {
+    "id": "custom:dc069439",
+    "displayName": "Chiseled Light Blue Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_lightblue:*",
+      "chisel:concrete_lightblue1:*",
+      "chisel:concrete_lightblue2:*"
+    ]
+  },
+  {
+    "id": "custom:cf50721c",
+    "displayName": "Chiseled Magenta Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_magenta:*",
+      "chisel:concrete_magenta1:*",
+      "chisel:concrete_magenta2:*"
+    ]
+  },
+  {
+    "id": "custom:b9e6ea65",
+    "displayName": "Chiseled Orange Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_orange:*",
+      "chisel:concrete_orange1:*",
+      "chisel:concrete_orange2:*"
+    ]
+  },
+  {
+    "id": "custom:c24e9776",
+    "displayName": "Chiseled White Concrete",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:concrete_white:*",
+      "chisel:concrete_white1:*",
+      "chisel:concrete_white2:*"
+    ]
+  },
+  {
+    "id": "custom:3fec89e1",
+    "displayName": "Blocks of Copper",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockcopper:*"
+    ]
+  },
+  {
+    "id": "custom:3e21c1e6",
+    "displayName": "Blocks of Diamond",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:diamond:*"
+    ]
+  },
+  {
+    "id": "custom:7b6430c0",
+    "displayName": "Chiseled Diorite",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:diorite2:*",
+      "chisel:diorite1:*",
+      "chisel:diorite:*"
+    ]
+  },
+  {
+    "id": "custom:04d9ef99",
+    "displayName": "Chiseled Dirt",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:dirt:*"
+    ]
+  },
+  {
+    "id": "custom:c87a33fe",
+    "displayName": "Blocks of Electrum",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockelectrum:*"
+    ]
+  },
+  {
+    "id": "custom:1f2e6de2",
+    "displayName": "Blocks of Emerald",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:emerald:*"
+    ]
+  },
+  {
+    "id": "custom:b504863a",
+    "displayName": "Chiseled Purpur",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:purpur:*",
+      "chisel:purpur1:*",
+      "chisel:purpur2:*"
+    ]
+  },
+  {
+    "id": "custom:f0c67fb0",
+    "displayName": "Chiseled Endstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:endstone:*",
+      "chisel:endstone1:*",
+      "chisel:endstone2:*"
+    ]
+  },
+  {
+    "id": "custom:ea7c95fe",
+    "displayName": "Factory Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:factory:*",
+      "chisel:factory1:*",
+      "chisel:technical1:*",
+      "chisel:technicalnew:*",
+      "chisel:technical:*"
+    ]
+  },
+  {
+    "id": "custom:77ad03e6",
+    "displayName": "Chiseled Stone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:stonebrick2:*",
+      "chisel:stonebrick:*",
+      "chisel:stonebrick1:*"
+    ]
+  },
+  {
+    "id": "custom:1abd9074",
+    "displayName": "Blocks of Silver",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blocksilver:*"
+    ]
+  },
+  {
+    "id": "custom:c8fc8651",
+    "displayName": "Red Sandstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:sandstonered-scribbles:*",
+      "chisel:sandstonered1:*",
+      "chisel:sandstonered:*",
+      "chisel:sandstonered2:*"
+    ]
+  },
+  {
+    "id": "custom:85e812aa",
+    "displayName": "Sandstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:sandstone-scribbles:*",
+      "chisel:sandstoneyellow2:*",
+      "chisel:sandstoneyellow1:*",
+      "chisel:sandstoneyellow:*"
+    ]
+  },
+  {
+    "id": "custom:290b3c97",
+    "displayName": "Block of Steel",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blocksteel:*"
+    ]
+  },
+  {
+    "id": "custom:5f483c54",
+    "displayName": "Blocks of Redstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:redstone1:*",
+      "chisel:redstone:*"
+    ]
+  },
+  {
+    "id": "custom:c2842e87",
+    "displayName": "Blocks of Quartz",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:quartz1:*",
+      "chisel:quartz:*"
+    ]
+  },
+  {
+    "id": "custom:673c24b8",
+    "displayName": "Chiseled Prismarine",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:prismarine2:*",
+      "chisel:prismarine1:*",
+      "chisel:prismarine:*"
+    ]
+  },
+  {
+    "id": "custom:4c05fa01",
+    "displayName": "Blocks of Platinum",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockplatinum:*"
+    ]
+  },
+  {
+    "id": "custom:7d38bb0f",
+    "displayName": "Futura Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:futura:*"
+    ]
+  },
+  {
+    "id": "custom:758a540c",
+    "displayName": "Waterstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:waterstone1:*",
+      "chisel:waterstone:*",
+      "chisel:waterstone2:*"
+    ]
+  },
+  {
+    "id": "custom:d5962b62",
+    "displayName": "Chiseled Wool",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:wool_brown:*",
+      "chisel:wool_black:*",
+      "chisel:wool_red:*",
+      "chisel:wool_green:*",
+      "chisel:wool_blue:*",
+      "chisel:wool_purple:*",
+      "chisel:wool_cyan:*",
+      "chisel:wool_lightgray:*",
+      "chisel:wool_orange:*",
+      "chisel:wool_magenta:*",
+      "chisel:wool_lightblue:*",
+      "chisel:wool_yellow:*",
+      "chisel:wool_lime:*",
+      "chisel:wool_pink:*",
+      "chisel:wool_gray:*",
+      "chisel:wool_white:*"
+    ]
+  },
+  {
+    "id": "custom:ac882d97",
+    "displayName": "Voidstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:voidstonerunic:*",
+      "chisel:energizedvoidstone:*",
+      "chisel:voidstone:*"
+    ]
+  },
+  {
+    "id": "custom:bda4f864",
+    "displayName": "Valentine\u0027s Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:valentines:*"
+    ]
+  },
+  {
+    "id": "custom:16bd3af4",
+    "displayName": "Blocks of Uranium",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockuranium:*"
+    ]
+  },
+  {
+    "id": "custom:2ac72633",
+    "displayName": "Temple Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:temple:*"
+    ]
+  },
+  {
+    "id": "custom:034e5397",
+    "displayName": "Mossy Temple Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:templemossy:*"
+    ]
+  },
+  {
+    "id": "custom:700c8071",
+    "displayName": "Blocks of Tin",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blocktin:*"
+    ]
+  },
+  {
+    "id": "custom:a4e0273c",
+    "displayName": "Tyrian",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:tyrian:*"
+    ]
+  },
+  {
+    "id": "custom:1a5be502",
+    "displayName": "Chiseled Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glass:*",
+      "chisel:glass1:*"
+    ]
+  },
+  {
+    "id": "custom:2d4f524b",
+    "displayName": "Chiseled Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspane1:*",
+      "chisel:glasspane:*"
+    ]
+  },
+  {
+    "id": "custom:691bc7f2",
+    "displayName": "Chiseled Black Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedblack:*"
+    ]
+  },
+  {
+    "id": "custom:f2cafd1e",
+    "displayName": "Chiseled Black Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedblack:*"
+    ]
+  },
+  {
+    "id": "custom:563966de",
+    "displayName": "Chiseled Red Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedred:*"
+    ]
+  },
+  {
+    "id": "custom:e60007cf",
+    "displayName": "Chiseled Red Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedred:*"
+    ]
+  },
+  {
+    "id": "custom:e5b96b41",
+    "displayName": "Chiseled Green Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedgreen:*"
+    ]
+  },
+  {
+    "id": "custom:d1c5d7cb",
+    "displayName": "Chiseled Green Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedgreen:*"
+    ]
+  },
+  {
+    "id": "custom:37b1bd2d",
+    "displayName": "Chiseled Brown Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedbrown:*"
+    ]
+  },
+  {
+    "id": "custom:6c25a92f",
+    "displayName": "Chiseled Brown Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedbrown:*"
+    ]
+  },
+  {
+    "id": "custom:79884341",
+    "displayName": "Chiseled Blue Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedblue:*"
+    ]
+  },
+  {
+    "id": "custom:8436f7a7",
+    "displayName": "Chiseled Blue Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedblue:*"
+    ]
+  },
+  {
+    "id": "custom:5a768ea1",
+    "displayName": "Chiseled Purple Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedpurple:*"
+    ]
+  },
+  {
+    "id": "custom:51b471a1",
+    "displayName": "Chiseled Purple Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedpurple:*"
+    ]
+  },
+  {
+    "id": "custom:c020c5e5",
+    "displayName": "Chiseled Cyan Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedcyan:*"
+    ]
+  },
+  {
+    "id": "custom:eb17cb52",
+    "displayName": "Chiseled Cyan Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedcyan:*"
+    ]
+  },
+  {
+    "id": "custom:ad28cbf6",
+    "displayName": "Chiseled Light Gray Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedlightgray:*"
+    ]
+  },
+  {
+    "id": "custom:7d84ac94",
+    "displayName": "Chiseled Light Gray Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedlightgray:*"
+    ]
+  },
+  {
+    "id": "custom:bde83829",
+    "displayName": "Dark Oak Bookshelves",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:bookshelf_darkoak:*"
+    ]
+  },
+  {
+    "id": "custom:73e9f5aa",
+    "displayName": "Chiseled Gray Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedgray:*"
+    ]
+  },
+  {
+    "id": "custom:941c5bb1",
+    "displayName": "Chiseled Gray Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedgray:*"
+    ]
+  },
+  {
+    "id": "custom:f4a9c707",
+    "displayName": "Chiseled Pink Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedpink:*"
+    ]
+  },
+  {
+    "id": "custom:a9ce9ccd",
+    "displayName": "Chiseled Pink Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedpink:*"
+    ]
+  },
+  {
+    "id": "custom:04c1e906",
+    "displayName": "Chiseled Lime Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedlime:*"
+    ]
+  },
+  {
+    "id": "custom:e097a426",
+    "displayName": "Chiseled Lime Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedlime:*"
+    ]
+  },
+  {
+    "id": "custom:81365209",
+    "displayName": "Chiseled Yellow Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedyellow:*"
+    ]
+  },
+  {
+    "id": "custom:5d19d569",
+    "displayName": "Chiseled Yellow Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedyellow:*"
+    ]
+  },
+  {
+    "id": "custom:a73eb291",
+    "displayName": "Chiseled Light Blue Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedlightblue:*"
+    ]
+  },
+  {
+    "id": "custom:3d36aaf9",
+    "displayName": "Chiseled Light Blue Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedlightblue:*"
+    ]
+  },
+  {
+    "id": "custom:c7d01766",
+    "displayName": "Chiseled Magenta Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedmagenta:*"
+    ]
+  },
+  {
+    "id": "custom:421e5783",
+    "displayName": "Chiseled Magenta Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedmagenta:*"
+    ]
+  },
+  {
+    "id": "custom:36479ff5",
+    "displayName": "Chiseled Orange Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedorange:*"
+    ]
+  },
+  {
+    "id": "custom:c24670c2",
+    "displayName": "Chiseled Orange Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedorange:*"
+    ]
+  },
+  {
+    "id": "custom:16686488",
+    "displayName": "Chiseled White Stained Glass",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glassdyedwhite:*"
+    ]
+  },
+  {
+    "id": "custom:7192d94e",
+    "displayName": "Chiseled White Stained Glass Panes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glasspanedyedwhite:*"
+    ]
+  },
+  {
+    "id": "custom:bf5b44b0",
+    "displayName": "Chiseled Glowstone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:glowstone:*",
+      "chisel:glowstone1:*",
+      "chisel:glowstone2:*"
+    ]
+  },
+  {
+    "id": "custom:7ad08364",
+    "displayName": "Blocks of Gold",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockgold:*",
+      "chisel:gold:*"
+    ]
+  },
+  {
+    "id": "custom:53e2d29a",
+    "displayName": "Chiseled Granite",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:granite:*",
+      "chisel:granite1:*",
+      "chisel:granite2:*"
+    ]
+  },
+  {
+    "id": "custom:1e4b9bac",
+    "displayName": "Chiseled Terracotta",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:hardenedclay1:*",
+      "chisel:hardenedclay:*",
+      "chisel:hardenedclay2:*"
+    ]
+  },
+  {
+    "id": "custom:2db884e5",
+    "displayName": "Chiseled Ice",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:ice2:*",
+      "chisel:ice:*",
+      "chisel:ice1:*",
+      "chisel:icepillar:*"
+    ]
+  },
+  {
+    "id": "custom:932c6c30",
+    "displayName": "Blocks of Invar",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockinvar:*"
+    ]
+  },
+  {
+    "id": "custom:67cbec93",
+    "displayName": "Blocks of Iron",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blockiron:*",
+      "chisel:iron:*"
+    ]
+  },
+  {
+    "id": "custom:a97356c1",
+    "displayName": "Chiseled Iron Bars",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:ironpane:*"
+    ]
+  },
+  {
+    "id": "custom:1af08d74",
+    "displayName": "Laboratory Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:laboratory:*"
+    ]
+  },
+  {
+    "id": "custom:5f0db8b3",
+    "displayName": "Blocks of Lapiz Lazuli",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:lapis:*"
+    ]
+  },
+  {
+    "id": "custom:3bf49c0a",
+    "displayName": "Lavastone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:lavastone:*",
+      "chisel:lavastone1:*",
+      "chisel:lavastone2:*"
+    ]
+  },
+  {
+    "id": "custom:f58e34f0",
+    "displayName": "Blocks of Lead",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blocklead:*"
+    ]
+  },
+  {
+    "id": "custom:f37a3a20",
+    "displayName": "Limestone",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:limestone:*",
+      "chisel:limestone1:*",
+      "chisel:limestone2:*"
+    ]
+  },
+  {
+    "id": "custom:dfe4e99d",
+    "displayName": "Marble",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:marble:*",
+      "chisel:marblepillar:*",
+      "chisel:marble1:*",
+      "chisel:marble2:*"
+    ]
+  },
+  {
+    "id": "custom:197ec707",
+    "displayName": "Chiseled Nether Bricks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:netherbrick:*"
+    ]
+  },
+  {
+    "id": "custom:a50fd84b",
+    "displayName": "Chiseled Netherack",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:netherrack:*"
+    ]
+  },
+  {
+    "id": "custom:414aec60",
+    "displayName": "Blocks of Nickel",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:blocknickel:*"
+    ]
+  },
+  {
+    "id": "custom:294fce8b",
+    "displayName": "Chiseled Obsidian",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:obsidian:*"
+    ]
+  },
+  {
+    "id": "custom:37abe6cf",
+    "displayName": "Paper Walls",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:paper:*"
+    ]
+  },
+  {
+    "id": "custom:14332227",
+    "displayName": "Chiseled Oak Planks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:planks-oak:*"
+    ]
+  },
+  {
+    "id": "custom:e09b5b6a",
+    "displayName": "Chiseled Spruce Planks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:planks-spruce:*"
+    ]
+  },
+  {
+    "id": "custom:13d323a9",
+    "displayName": "Chiseled Birch Planks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:planks-birch:*"
+    ]
+  },
+  {
+    "id": "custom:b2df82b0",
+    "displayName": "Chiseled Jungle Planks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:planks-jungle:*"
+    ]
+  },
+  {
+    "id": "custom:4278e719",
+    "displayName": "Chiseled Acacia Planks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:planks-acacia:*"
+    ]
+  },
+  {
+    "id": "custom:705d5336",
+    "displayName": "Chiseled Dark Oak Planks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "chisel:planks-dark-oak:*"
+    ]
+  },
+  {
+    "id": "custom:f77a340d",
+    "displayName": "Hazard Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "industrialrenewal:safety_hazard",
+      "industrialrenewal:radiation_hazard",
+      "industrialrenewal:fire_hazard",
+      "industrialrenewal:caution_hazard",
+      "industrialrenewal:aisle_hazard",
+      "industrialrenewal:block_hazard",
+      "industrialrenewal:defective_hazard"
+    ]
+  },
+  {
+    "id": "custom:ac9316e4",
+    "displayName": "Vault Wall Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:1"
+    ]
+  },
+  {
+    "id": "custom:a9d3db9c",
+    "displayName": "Vault Item Boxes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:2"
+    ]
+  },
+  {
+    "id": "custom:cf45ccb0",
+    "displayName": "Vault Redstone Passes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:3"
+    ]
+  },
+  {
+    "id": "custom:88f61360",
+    "displayName": "Vault Liquid Passes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:4"
+    ]
+  },
+  {
+    "id": "custom:ce5cd0f2",
+    "displayName": "Vault EU Power Passes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:5"
+    ]
+  },
+  {
+    "id": "custom:eefa2ae8",
+    "displayName": "Vault RF Power Passes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:6"
+    ]
+  },
+  {
+    "id": "custom:14bc5fb5",
+    "displayName": "Vault Power Passes",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:7"
+    ]
+  },
+  {
+    "id": "custom:cf4a356c",
+    "displayName": "Vault Windows",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:vault:13"
+    ]
+  },
+  {
+    "id": "custom:2a9f6be9",
+    "displayName": "EnderLink Chests",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:ender_chest:*"
+    ]
+  },
+  {
+    "id": "custom:b9f91359",
+    "displayName": "EnderLink Bags",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "multistorage:ender_bag:*"
+    ]
+  },
+  {
+    "id": "custom:5d6b1454",
+    "displayName": "Hardened Blocks",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "ompd:hardened:*"
+    ]
+  },
+  {
+    "id": "custom:83239164",
+    "displayName": "Modular Defense Fences",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "ompd:fence:*"
+    ]
+  },
+  {
+    "id": "custom:c3c7fd0a",
+    "displayName": "Hardened Walls",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "ompd:wall:*"
+    ]
+  },
+  {
+    "id": "custom:85dafba0",
+    "displayName": "OC Floppy Discs",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:dig\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:builder\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:oppm\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:openloader\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:plan9k\"}",
+      "opencomputers:storage:1",
+      "opencomputers:storage:{\"oc:lootFactory\":\"openglasses:wavefront objects\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"openglasses:openGlasses Demo\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:network\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:maze\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:data\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:openos\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:irc\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"susy:speaker example\"}",
+      "opencomputers:storage:{\"oc:lootFactory\":\"opencomputers:generator\"}"
+    ]
+  },
+  {
+    "id": "custom:2d4ab503",
+    "displayName": "ProjectRed Lamps",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:lamp:*"
+    ]
+  },
+  {
+    "id": "custom:d6ae2431",
+    "displayName": "Illumar",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-core:resource_item:500",
+      "projectred-core:resource_item:501",
+      "projectred-core:resource_item:502",
+      "projectred-core:resource_item:503",
+      "projectred-core:resource_item:504",
+      "projectred-core:resource_item:505",
+      "projectred-core:resource_item:506",
+      "projectred-core:resource_item:507",
+      "projectred-core:resource_item:508",
+      "projectred-core:resource_item:509",
+      "projectred-core:resource_item:510",
+      "projectred-core:resource_item:511",
+      "projectred-core:resource_item:512",
+      "projectred-core:resource_item:513",
+      "projectred-core:resource_item:514",
+      "projectred-core:resource_item:515"
+    ]
+  },
+  {
+    "id": "custom:bb4d2f1f",
+    "displayName": "Loot Tables",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "reccomplex:inventory_generation_component_tag",
+      "reccomplex:inventory_generation_single_tag",
+      "reccomplex:inventory_generation_tag"
+    ]
+  },
+  {
+    "id": "custom:438bee69",
+    "displayName": "Sync",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:sync:*"
+    ]
+  },
+  {
+    "id": "custom:41214258",
+    "displayName": "Sols",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:sols:*"
+    ]
+  },
+  {
+    "id": "custom:85586dc1",
+    "displayName": "Myst",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:myst:*"
+    ]
+  },
+  {
+    "id": "custom:f44e7b5a",
+    "displayName": "Zion",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:zion:*"
+    ]
+  },
+  {
+    "id": "custom:d95bbff9",
+    "displayName": "Agon",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "xtones:agon:*"
+    ]
+  },
+  {
+    "id": "custom:55eff7e2",
+    "displayName": "Framed Cables",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-transmission:framed_wire:*"
+    ]
+  },
+  {
+    "id": "custom:601c0723",
+    "displayName": "ProjectRed Wire",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-transmission:wire:*"
+    ]
+  },
+  {
+    "id": "custom:26c5e0f0",
+    "displayName": "Illumar Buttons",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:light_button:*"
+    ]
+  },
+  {
+    "id": "custom:fdd34b6e",
+    "displayName": "Illumar Feedback Buttons",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:feedback_light_button:*"
+    ]
+  },
+  {
+    "id": "custom:d52a8be6",
+    "displayName": "Lanterns",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:lantern:*"
+    ]
+  },
+  {
+    "id": "custom:f8c9b743",
+    "displayName": "Inverted Lanterns",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:inverted_lantern:*"
+    ]
+  },
+  {
+    "id": "custom:ac258306",
+    "displayName": "Fixtures",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:fixture_light:*"
+    ]
+  },
+  {
+    "id": "custom:dc3b6665",
+    "displayName": "Inverted Fixtures",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:inverted_fixture_light:*"
+    ]
+  },
+  {
+    "id": "custom:8802e32e",
+    "displayName": "Fallout Lights",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:fallout_lamp:*"
+    ]
+  },
+  {
+    "id": "custom:a4b39621",
+    "displayName": "Inverted Fallout Lights",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:inverted_fallout_lamp:*"
+    ]
+  },
+  {
+    "id": "custom:187eb64b",
+    "displayName": "Cage Lamps",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:cage_lamp:*"
+    ]
+  },
+  {
+    "id": "custom:a1d86b42",
+    "displayName": "Inverted Cage Lamps",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-illumination:inverted_cage_lamp:*"
+    ]
+  },
+  {
+    "id": "custom:ca3d4c00",
+    "displayName": "Portal Guns",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "portalgun:item_portalgun:*"
+    ]
+  },
+  {
+    "id": "custom:4b82af9e",
+    "displayName": "Buckets",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "forge:bucketfilled:*"
+    ]
+  },
+  {
+    "id": "custom:5765e520",
+    "displayName": "ProjectRed Gates",
+    "backgroundColor": 861230421,
+    "borderColor": -863467384,
+    "itemUids": [
+      "projectred-integration:gate:*"
+    ]
+  }
+]
