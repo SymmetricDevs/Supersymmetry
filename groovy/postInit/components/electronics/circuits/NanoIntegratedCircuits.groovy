@@ -362,4 +362,33 @@ generatePackaging('bcd_lpic', 'wafer.bcd_lpic.beol_four.step_eight')
 generatePackaging('bcd_pic', 'wafer.bcd_pic.beol_five.step_eight')
 generatePackaging('bcd_hpic', 'wafer.bcd_hpic.beol_six.step_eight')
 
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.bcd_lpic.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
+    .outputs(metaitem('plate.low_power_integrated_circuit'))
+    .duration(50)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.bcd_pic.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
+    .outputs(metaitem('plate.power_integrated_circuit'))
+    .duration(50)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.bcd_hpic.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
+    .outputs(metaitem('plate.high_power_integrated_circuit'))
+    .duration(50)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+// IV power circuit
+
 // Cheaper clock generator

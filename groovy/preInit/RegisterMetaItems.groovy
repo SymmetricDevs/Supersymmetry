@@ -285,9 +285,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2759, "plate.power_integrated_circuit")
         addItem(2760, "plate.high_power_integrated_circuit")
         addItem(2761, "component.quartz_oscillator")
-        addItem(2762, "component.bjt_lpic")
-        addItem(2763, "component.bjt_pic")
-        addItem(2764, "component.bjt_ulpic")
+        // FREE ID: 2762 - 2764
         addItem(2765, "component.clock_generator")
         addItem(2766, "component.crystal_oscillator")
         addItem(2767, "component.diode.schottky")

@@ -82,25 +82,27 @@ ASSEMBLER.recipeBuilder()
 // (in Epoxy Chain)
 
 // Titanium Cylinder Drum
+
 FORMING_PRESS.recipeBuilder()
-        .notConsumable(metaitem('shape.mold.cylinder'))
-        .inputs(ore('ingotTitanium') * 8)
-        .outputs(metaitem('titanium_cylinder') * 1)
-        .EUt(VA[MV])
-        .duration(320)
-        .buildAndRegister();
+    .notConsumable(metaitem('shape.mold.cylinder'))
+    .inputs(ore('ingotTitanium') * 8)
+    .outputs(metaitem('titanium_cylinder') * 1)
+    .EUt(VA[MV])
+    .duration(320)
+    .buildAndRegister();
 
 // ED Copper Foil
+
 ELECTROLYTIC_CELL.recipeBuilder()
-        .notConsumable(metaitem('titanium_cylinder'))
-        .notConsumable(metaitem('graphite_electrode'))
-        .fluidInputs(fluid('copper_sulfate_solution') * 1000)
-        .outputs(metaitem('foilHighPurityCopper') * 4)
-        .fluidOutputs(fluid('sulfuric_acid') * 1000)
-        .fluidOutputs(fluid('oxygen') * 1000)
-        .EUt(VA[MV])
-        .duration(20)
-        .buildAndRegister();
+    .notConsumable(metaitem('titanium_cylinder'))
+    .notConsumable(metaitem('graphite_electrode'))
+    .fluidInputs(fluid('copper_sulfate_solution') * 1000)
+    .outputs(metaitem('foilHighPurityCopper') * 4)
+    .fluidOutputs(fluid('sulfuric_acid') * 1000)
+    .fluidOutputs(fluid('oxygen') * 1000)
+    .EUt(VA[MV])
+    .duration(20)
+    .buildAndRegister();
 
 // HV Board
 
