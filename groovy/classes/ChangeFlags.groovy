@@ -126,6 +126,7 @@ class ChangeFlags {
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
         Asbestos.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
+
         //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
 
         Tantalum.setProperty(PropertyKey.BLAST, new BlastProperty(3293, GasTier.MID, 480, 240, -1, -1));
@@ -197,6 +198,7 @@ class ChangeFlags {
         Copper.addFlags("continuously_cast");
         AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
         Graphite.addFlags("generate_plate");
+        Germanium.addFlags("generate_plate");
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
         MagnesiumDiboride.addFlags("no_smashing", "no_smelting")

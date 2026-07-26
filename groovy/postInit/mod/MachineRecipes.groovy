@@ -1824,6 +1824,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateAluminium') *  6)
+        .circuitMeta(7)
         .outputs(metaitem('honeycomb.aluminium'))
         .EUt(VA[HV])
         .duration(20)

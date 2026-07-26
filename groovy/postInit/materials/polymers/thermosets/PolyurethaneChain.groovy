@@ -178,3 +178,17 @@ DRYER.recipeBuilder()
     .EUt(VA[HV])
     .duration(100)
     .buildAndRegister()
+
+EXTRACTOR.recipeBuilder()
+        .inputs(metaitem('platePolyurethane'))
+        .fluidOutputs(fluid('polyurethane') * 144)
+        .EUt(VA[LV])
+        .duration(14)
+        .buildAndRegister()
+
+EXTRACTOR.recipeBuilder()
+        .inputs(item('gregtech:meta_block_compressed_945', 4))//polyurethane block
+        .fluidOutputs(fluid('polyurethane') * 1296)
+        .EUt(VA[LV])
+        .duration(126)
+        .buildAndRegister()

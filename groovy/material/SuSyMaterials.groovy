@@ -818,9 +818,6 @@ class SuSyMaterials {
     public static Material BauxiteLeach
     public static Material InvestmentCastingCeramicSlurry
     public static Material InvestmentCastingMixture
-    //public static Material VanadiumElectrolyteSlurry
-    //public static Material CrystallizedVanadiumElectrolyte
-    //public static Material VanadiumBatteryElectrolyte
     public static Material GrapheneOxideDispersion
     public static Material GrapheneOxide
     public static Material GrapheneOxideTungstateSolution
@@ -830,6 +827,7 @@ class SuSyMaterials {
     public static Material NanoparticleModifiedNafionDispersion
     public static Material NanoparticleModifiedNafion
     public static Material ExpandableGraphite
+    public static Material CalciumAluminateConcrete
 
 
     // Petrochem Materials
@@ -1699,9 +1697,9 @@ class SuSyMaterials {
     public static Material CadmiumOxide
     public static Material CopperTungstenAlloy
     public static Material LanthanumZirconiumOxide
+    public static Material PalladiumChloride
 
     //public static Material VanadiumTrioxide
-    public static Material ExpandedPolytetrafluoroethylene
 
 
     // HP Materials
@@ -1952,6 +1950,7 @@ class SuSyMaterials {
     public static Material VanadiumIIISulfateSolution
     public static Material DilutedVanadiumIIISulfateSolution
     public static Material VanadylSulfateSolution
+    public static Material ManganeseCobaltNickelOxide
 
     // Organic Chemistry Materials
 
@@ -2472,13 +2471,25 @@ class SuSyMaterials {
     public static Material Diazonaphthoquinone
     public static Material RawNitrileRubber
     public static Material NitrileRubber
+    public static Material DichlorobuteneMixture
+    public static Material ThreeFourDichloroOneButene
+    public static Material Neoprene
+    public static Material PolyacrylicAcid
+    public static Material WetSodiumPolyacrylate
+    public static Material SodiumPolyacrylate
     public static Material Norbornene
     public static Material PetroleumResin
     public static Material HydrogenatedPetroleumResin
-
     public static Material TrimethylGallium
     public static Material TrimethylIndium
     public static Material DiallyldimethylammoniumChloride
+    public static Material ExpandedPolytetrafluoroethylene
+    public static Material Benzonitrile
+    public static Material BisBenzonitrilePalladiumIiChloride
+    public static Material CrudeChloroprene
+    public static Material DriedChloroprene
+    public static Material Chloroprene
+    public static Material DiisopropylDixanthogenDisulfide
 
     // Third Degree Materials
 
@@ -2626,6 +2637,9 @@ class SuSyMaterials {
     public static Material OneNaphtholTwoDiazoniumChlorideSolution
     public static Material BenzenediazoniumChlorideSolution
     public static Material BenzenediazoniumFluorideSolution
+    //public static Material ChloropreneSolution
+    public static Material NeopreneSolution
+    public static Material NeopreneCoatedNylon
     public static Material IsopropylAlcoholSolution
     public static Material KetoneAlcoholOil
     public static Material AcetyleneSolution
@@ -2636,6 +2650,9 @@ class SuSyMaterials {
     public static Material DiallyldimethylammoniumChlorideSolution
     public static Material PolydiallyldimethylammoniumChlorideSolution
     public static Material NafionDispersion
+    public static Material SodiumPolyacrylateSolution
+    public static Material ChloropreneEmulsion
+    public static Material NeopreneLatex
 
     // Thermodynamics Materials
 

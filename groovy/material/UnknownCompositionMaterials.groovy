@@ -3097,6 +3097,7 @@ class UnknownCompositionMaterials {
         AmmoxidationCatalyst = new Material.Builder(4681, SuSyUtility.susyId('ammoxidation_catalyst'))
                 .dust()
                 .color(0x18877a)
+                .flags(GENERATE_CATALYST_BED)
                 .build()
 
         PropyleneAmmoxidationMixture = new Material.Builder(4682, SuSyUtility.susyId('propylene_ammoxidation_mixture'))
@@ -3428,6 +3429,12 @@ class UnknownCompositionMaterials {
                 .dust()
                 .iconSet(METALLIC)
                 .color(0xFFE1D8)
+                .build()
+
+        CalciumAluminateConcrete = new Material.Builder(4745, SuSyUtility.susyId('calcium_aluminate_concrete'))
+                .dust().liquid(new FluidBuilder().temperature(300))
+                .iconSet(ROUGH)
+                .color(0xADC3FF)
                 .build()
 
     }

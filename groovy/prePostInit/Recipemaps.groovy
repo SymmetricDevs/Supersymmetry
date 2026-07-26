@@ -44,6 +44,7 @@ class Recipemaps {
     static final def ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
     static final def ELECTROSTATIC_SEPARATOR = recipemap('electrostatic_separator')
     static final def ERF = recipemap('electric_blast_furnace')
+    static final def EVAPORATION_DEPOSITION = recipemap('evaporation_deposition')
     static final def EVAPORATION_POOL = recipemap('evaporation_pool')
     static final def EXTRACTOR = recipemap('extractor')
     static final def EXTRUDER = recipemap('extruder')
@@ -127,5 +128,4 @@ class Recipemaps {
     static final def VULCANIZER = recipemap('vulcanizing_press')
     static final def WEAPONS_FACTORY = recipemap('weapons_factory')
     static final def ZONE_REFINER = recipemap('zone_refiner')
-    static final def EVAPORATION_DEPOSITION = recipemap('evaporation_deposition')
 }

@@ -12,6 +12,9 @@ import gregtech.api.fluids.store.FluidStorage
 import gregtech.api.unification.material.properties.*
 import gregtech.api.GTValues
 import supersymmetry.api.util.SuSyUtility
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey
+import supersymmetry.api.unification.material.properties.FiberProperty
+
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*
 import static gregtech.api.unification.material.info.MaterialFlags.*

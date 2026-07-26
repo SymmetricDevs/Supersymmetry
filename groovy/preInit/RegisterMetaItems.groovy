@@ -306,6 +306,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4209, "preform.lubricated_ptfe")
         addItem(4210, "foil.extruded_ptfe")
         addItem(4211, "foil.stretched_ptfe")
+        addItem(4212, "fiber.extruded_ptfe")
+        addItem(4213, "fiber.stretched_ptfe")
 
         //Dusts & Pulps 4500-4999
 
@@ -579,13 +581,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10410, "lamp.mercury.hp")
         addItem(10411, "lamp.mercury.lp")
 
-        // Spectral Filters 10441 - 10445
-
-        addItem(10441, "electron_gun")
-        addItem(10442, "spectral_filter.near_ir_bandpass")
-        addItem(10443, "spectral_filter.mid_ir_bandpass")
-        addItem(10444, "spectral_filter.visible_bandpass")
-        addItem(10445, "spectral_filter.near_uv_bandpass")
         // Rocketry Components 10421-10440
 
         addItem(10421, "fuel_injector")
@@ -593,6 +588,45 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10423, "slapper_detonator")
         addItem(10424, "frangible_nut")
         addItem(10425, "honeycomb.aluminium")
+        addItem(10426, "spacecraft_sensor.gyroscope")
+        addItem(10427, "spacecraft_sensor.sun_star")
+        addItem(10428, "spacecraft_sensor.ion_flow")
+        addItem(10429, "spacecraft_sensor.infrared")
+        addItem(10430, "photomultiplier_tube")
+        addItem(10431, "bialkali_photocathode")
+        addItem(10432, "photomultiplier_components")
+        addItem(10433, "beo_coated_stainless_steel_plate")
+
+        // Spacesuit Components 10441-10480
+
+        addItem(10441, "sheet.aluminized_mylar")
+        addItem(10442, "sheet.neoprene_coated_nylon")
+        addItem(10443, "sheet.ortho_fabric")
+        addItem(10444, "sheet.urethane_coated_nylon")
+        addItem(10445, "space_suit.pressure.helmet")
+        addItem(10446, "space_suit.pressure.chest")
+        addItem(10447, "space_suit.pressure.gloves")
+        addItem(10448, "space_suit.pressure.leggings")
+        addItem(10449, "space_suit.pressure.boots")
+        addItem(10450, "space_suit.cooling.chest")
+        addItem(10451, "space_suit.cooling.leggings")
+        addItem(10452, "space_suit.cooling.boots")
+        addItem(10453, "space_suit.thermal.helmet")
+        addItem(10454, "space_suit.thermal.chest")
+        addItem(10455, "space_suit.thermal.gloves")
+        addItem(10456, "space_suit.thermal.leggings")
+        addItem(10457, "space_suit.thermal.boots")
+        addItem(10458, "space_suit.plss")
+        addItem(10459, "space_suit.mag")
+
+        // Spectral Filters 10481 - 10485
+
+        addItem(10481, "electron_gun")
+        addItem(10482, "spectral_filter.near_ir_bandpass")
+        addItem(10483, "spectral_filter.mid_ir_bandpass")
+        addItem(10484, "spectral_filter.visible_bandpass")
+        addItem(10485, "spectral_filter.near_uv_bandpass")
+
     }
 
     log.infoMC("Finished adding metaitems")

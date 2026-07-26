@@ -980,5 +980,25 @@ class ThirdDegreeMaterials {
                 .components(PetroleumResin * 1, Benzene * 1)
                 .colorAverage()
                 .build()
+
+        SodiumPolyacrylateSolution = new Material.Builder(24157, SuSyUtility.susyId('sodium_polyacrylate_solution'))
+                .liquid()
+                .components(SodiumPolyacrylate * 1, Water * 1)
+                .colorAverage()
+                .build()
+
+        ChloropreneEmulsion = new Material.Builder(24158, SuSyUtility.susyId('chloroprene_emulsion'))
+                .liquid()
+                .components(Chloroprene * 1, Water * 1)
+                .colorAverage()
+                .build()
+
+        NeopreneLatex = new Material.Builder(24159, SuSyUtility.susyId('neoprene_latex'))
+                .liquid(new FluidBuilder().temperature(293)).dust()
+                .components(Neoprene * 1, Water * 1)
+                .colorAverage()
+                .iconSet(DULL)
+                .build()
+
     }
 }
