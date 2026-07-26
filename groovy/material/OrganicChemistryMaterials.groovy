@@ -4389,5 +4389,11 @@ class OrganicChemistryMaterials {
                 .components(Carbon, Hydrogen * 3, Fluorine)
                 .color(0x9bd4d4)
                 .build()
+
+        CalciumOxalate = new Material.Builder(15742, SuSyUtility.susyId('calcium_oxalate'))
+                .dust()
+                .components(Calcium, Carbon * 2, Oxygen * 4)
+                .color(0xE8E4E0)
+                .build()
     }
 }

@@ -1453,5 +1453,15 @@ class ThirdDegreeMaterials {
                 .components(Fluoromethane, HydrogenChloride)
                 .colorAverage()
                 .build()
+
+        NitratolacticAcidSolution = new Material.Builder(24251, SuSyUtility.susyId('nitratolactic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xe8e1bc)
+                .build()
+
+        NitricOxalicAcidSolution = new Material.Builder(24252, SuSyUtility.susyId('nitric_oxalic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .color(0xaeb382)
+                .build()
         }
 }

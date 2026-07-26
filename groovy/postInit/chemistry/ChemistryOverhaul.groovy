@@ -2400,18 +2400,7 @@ DT.recipeBuilder() // SCHULZ-FLORY, p = 0.82, ROUNDED TO NEAREST 5
     .EUt(VA[HV])
     .buildAndRegister()
 
-//OXALIC ACID
-LCR.recipeBuilder()
-    .fluidInputs(fluid('ethylene_glycol') * 1000)
-    .fluidInputs(fluid('oxygen') * 4000)
-    .notConsumable(fluid('nitric_acid') * 800)
-    .notConsumable(ore('dustVanadiumPentoxide') * 7)
-    .notConsumable(ore('dustIronIiiChloride') * 4)
-    .outputs(metaitem('dustOxalicAcid') * 8)
-    .fluidOutputs(fluid('water') * 2000)
-    .duration(120)
-    .EUt(VA[HV])
-    .buildAndRegister()
+
 
 //ANILINE
 CSTR.recipeBuilder()
