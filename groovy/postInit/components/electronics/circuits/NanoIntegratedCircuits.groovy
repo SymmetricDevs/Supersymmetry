@@ -391,4 +391,25 @@ ASSEMBLER.recipeBuilder()
 
 // IV power circuit
 
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('circuit_board.fr4'))
+    .inputs(metaitem('plate.high_power_integrated_circuit'))
+    .inputs(metaitem('component.thin_film_resistor'))
+    .inputs(metaitem('component.clock_generator'))
+    .inputs(ore('componentInductor') * 4)
+    .inputs(ore('componentSMDCapacitor') * 4)
+    //.inputs(metaitem(component.capacitor.aluminium_electrolytic))
+    .inputs(ore('componentDiodeSignal'))
+    .inputs(metaitem('component.diode.zener'))
+    .inputs(metaitem('component.diode.schottky') * 2)
+    .inputs(metaitem('component.fuse.hv'))
+    .inputs(metaitem('component.heat_sink') * 2)
+    .fluidInputs(fluid('soldering_alloy') * 576)
+    .outputs(metaitem('circuit.power.iv'))
+    .duration(200)
+    .EUt(VA[LV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+
 // Cheaper clock generator

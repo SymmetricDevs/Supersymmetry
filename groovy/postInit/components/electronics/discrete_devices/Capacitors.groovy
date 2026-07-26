@@ -13,9 +13,6 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), meta
 // SMD Capacitor * 24
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilTantalum')], [fluid('plastic') * 72])
 
-oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
-oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.film'))
-
 // Silver mica capacitors
 
 ASSEMBLER.recipeBuilder()
