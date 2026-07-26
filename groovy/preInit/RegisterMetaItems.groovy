@@ -388,6 +388,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2865, "component.thyristor.assembly")
         addItem(2866, "component.thyristor")
 
+        addItem(2867, "circuit.power.iv")
+
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
         addItem(2955, "die.diode.planar")

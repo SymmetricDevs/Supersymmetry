@@ -408,7 +408,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('lead_free_solder_paste') * 576)
     .outputs(metaitem('circuit.power.iv'))
     .duration(200)
-    .EUt(VA[LV])
+    .EUt(VA[HV])
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 

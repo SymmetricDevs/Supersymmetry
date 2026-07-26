@@ -30,6 +30,7 @@ mods.gregtech.compressor.removeByInput(2, [metaitem('dustAlumina')], null)
 // Advanced SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(3840, [metaitem('foilVanadiumGallium'), metaitem('wireFineHssg') * 8], [fluid('polybenzimidazole') * 144])
 
+/*
 //SMD Diodes
 
 //n-doped silicon
@@ -941,3 +942,4 @@ CUTTER.recipeBuilder()
         .duration(400)
         .EUt(64)
         .buildAndRegister()
+*/
