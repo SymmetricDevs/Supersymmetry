@@ -222,6 +222,8 @@ def generateCMOSFabrication(String componentName) {
 
 generateCMOSFabrication('cmos_cpu') // Includes on die SRAM
 generateCMOSFabrication('cmos_gpu')
+generateCMOSFabrication('cmos_chipset')
+generateCMOSFabrication('cmos_phy')
 
 //Bipolar-CMOS-DMOS (BCD) process for power management ICs, ~180nm process.
 
