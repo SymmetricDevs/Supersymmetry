@@ -1,6 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import globals.semiconductors.Packaging
+import globals.semiconductors.Etching
 import globals.Sintering
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
@@ -73,20 +74,24 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 // Aluminium electrolytic capacitors (HV)
-
+// anodization process from https://doi.org/10.1007/s12039-015-1006-8
 ELECTROLYZER.recipeBuilder()
     .inputs(ore('foilAluminium') * 8)
-    .notConsumable(fluid('diluted_salt_water') * 100)
-    .outputs(metaitem('component.capacitor.electrolytic.etched_foil') * 8)
-    .duration(100)
+    .notConsumable(ore('coilPlatinum'))
+    .notConsumable(fluid('oxalic_acid_solution') * 1000)
+    .outputs(metaitem('component.capacitor.electrolytic.first_anodization') * 8)
+    .duration(200)
     .EUt(VA[HV])
     .buildAndRegister()
 
+Etching.generateWetEtchingRecipe("component.capacitor.electrolytic.first_anodization", "component.capacitor.electrolytic.etched_foil", "alumina", 0.0083, false)
+
 ELECTROLYZER.recipeBuilder()
     .inputs(metaitem('component.capacitor.electrolytic.etched_foil') * 8)
-    .notConsumable(fluid('ammonium_phosphate_solution'))
+    .notConsumable(ore('coilPlatinum'))
+    .notConsumable(fluid('diluted_phosphoric_acid') * 1000)
     .outputs(metaitem('component.capacitor.electrolytic.anode_foil') * 8)
-    .duration(100)
+    .duration(60)
     .EUt(VA[HV])
     .buildAndRegister()
 
@@ -115,7 +120,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('component.capacitor.electrolytic.core'))
     .inputs(ore('ringRubber') * 4)
-    .inputs(ore('foilAluminium') * 2) 
+    .inputs(ore('foilPlastic') * 2) 
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(metaitem('component.capacitor.electrolytic'))
     .duration(20)
