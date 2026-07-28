@@ -126,3 +126,12 @@ BR.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
+// Strontium hydroxide
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustStrontiumHydroxide') * 5)
+    .outputs(metaitem('dustStrontiumOxide') * 2)
+    .fluidOutputs(fluid('dense_steam') * 1000)
+    .EUt(VA[MV])
+    .duration(20)
+    .buildAndRegister()

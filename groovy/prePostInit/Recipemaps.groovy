@@ -80,6 +80,7 @@ class Recipemaps {
     static final def LATHE = recipemap('lathe')
     static final def LCR = recipemap('large_chemical_reactor')
     static final def LOW_PRESSURE_CRYO_DT = recipemap('low_pressure_cryogenic_distillation')
+    static final def LUNAR_BWE = recipemap('lunar_bwe')
     static final def MACERATOR = recipemap('macerator')
     static final def METALLURGICAL_CONVERTER = recipemap('metallurgical_converter')
     static final def MILLING = recipemap('milling')
