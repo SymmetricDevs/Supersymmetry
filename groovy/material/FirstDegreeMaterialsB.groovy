@@ -533,7 +533,7 @@ class FirstDegreeMaterialsB {
                 .components(Hydrogen * 2, Oxygen)
                 .color(0x53a4c9)
                 .build()
-
+      
         ChromiumIIINitrateSolution = new Material.Builder(8745, SuSyUtility.susyId('chromium_iii_nitrate_solution'))
                 .liquid()
                 .components(Chrome * 2, Nitrogen * 6, Oxygen * 18, Water * 3)
@@ -933,5 +933,46 @@ class FirstDegreeMaterialsB {
                 .iconSet(SHINY)
                 .build()
 
+      
+        ThoriatedTungsten = new Material.Builder(8801, SuSyUtility.susyId('thoriated_tungsten'))
+                .dust().ingot()
+                .flags(GENERATE_ROD, NO_UNIFICATION)
+                .components(Tungsten * 98, Thorium * 2)
+                .color(0x1F0808)
+                .blastTemp(3000, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .build()
+        
+        ThoriatedTungsten.setFormula('W98(ThO2)2', true)
+
+        ThoriatedTungstenMixture = new Material.Builder(8802, SuSyUtility.susyId('thoriated_tungsten_mixture'))
+                .dust()
+                .color(0x121212)
+                .build()
+
+        NeodymiumYttriumAluminiumGarnet = new Material.Builder(8803, SuSyUtility.susyId('neodymium_yttrium_aluminium_garnet'))
+                .dust()
+                .flags(GENERATE_ROD, NO_UNIFICATION)
+                .components(Yttrium * 3, Aluminium * 5, Oxygen * 12, Neodymium * 1)
+                .color(0xcb88ba)
+                .liquid(new FluidBuilder().temperature(2200))
+                .build()
+        
+        NeodymiumYttriumAluminiumGarnet.setFormula('Y2.97Nd0.03Al5O12', true) // the decimal points are weird here
+
+        YttriumNitrate = new Material.Builder(8804, SuSyUtility.susyId('yttrium_nitrate'))
+                .dust()
+                .components(Yttrium, Nitrogen * 3, Oxygen * 9)
+                .color(0xF4F8D4)
+                .build()
+
+        YttriumNitrate.setFormula('Y(NO3)3', true)
+
+        RheniumHeptoxide = new Material.Builder(8773, SuSyUtility.susyId('rhenium_heptoxide'))
+                .dust()
+                .components(Rhenium * 2, Oxygen * 7)
+                .color(0x50504a)
+                .build()
+
+        RheniumHeptoxide.setFormula('Re2O7', true)
     }
 }
