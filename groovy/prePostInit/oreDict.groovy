@@ -16,6 +16,12 @@ ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
+// Circuit component oredict
+oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
+oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.film'))
+oreDict.add('componentSMDCapacitor', metaitem('component.pme_cap'))
+oreDict.add('componentSMDCapacitor', metaitem('component.bme_cap'))
+
 // Circuit oredict
 ore('circuitZpm').add(metaitem('circuit.gooware_processor'))
 

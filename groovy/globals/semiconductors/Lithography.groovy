@@ -61,6 +61,7 @@ class Lithography {
                 .EUt(VA[this.voltageTier])
 
             if (nonConsumable != null) {exposureRecipe.notConsumable(metaitem(nonConsumable))}
+            if (this.name.contains("methacrylate")) {exposureRecipe.fluidInputs(fluid('ultrapure_water') * 5)}
             exposureRecipe.buildAndRegister();
         }
 

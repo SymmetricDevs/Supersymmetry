@@ -222,6 +222,8 @@ def generateCMOSFabrication(String componentName) {
 
 generateCMOSFabrication('cmos_cpu') // Includes on die SRAM
 generateCMOSFabrication('cmos_gpu')
+generateCMOSFabrication('cmos_chipset')
+generateCMOSFabrication('cmos_phy')
 
 //Bipolar-CMOS-DMOS (BCD) process for power management ICs, ~180nm process.
 
@@ -361,5 +363,56 @@ generateBEOLProcess('bcd_hpic', 'novolac_resist', 'wafer.bcd_base.beol_four.step
 generatePackaging('bcd_lpic', 'wafer.bcd_lpic.beol_four.step_eight')
 generatePackaging('bcd_pic', 'wafer.bcd_pic.beol_five.step_eight')
 generatePackaging('bcd_hpic', 'wafer.bcd_hpic.beol_six.step_eight')
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.bcd_lpic.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
+    .outputs(metaitem('plate.low_power_integrated_circuit'))
+    .duration(50)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.bcd_pic.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
+    .outputs(metaitem('plate.power_integrated_circuit'))
+    .duration(50)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.bcd_hpic.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
+    .outputs(metaitem('plate.high_power_integrated_circuit'))
+    .duration(50)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+// IV power circuit
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('circuit_board.fr4'))
+    .inputs(metaitem('plate.high_power_integrated_circuit'))
+    .inputs(metaitem('component.thin_film_resistor'))
+    .inputs(metaitem('component.crystal_oscillator'))
+    .inputs(ore('componentSMDInductor') * 5)
+    .inputs(ore('componentSMDCapacitor') * 4)
+    //.inputs(metaitem(component.capacitor.aluminium_electrolytic))
+    .inputs(metaitem('component.capacitor.film') * 2)
+    .inputs(ore('componentDiodeSignal'))
+    .inputs(metaitem('component.diode.zener'))
+    .inputs(metaitem('component.diode.schottky') * 2)
+    .inputs(metaitem('component.fuse.hv'))
+    .inputs(metaitem('component.heat_sink') * 2)
+    .fluidInputs(fluid('lead_free_solder_paste') * 576)
+    .outputs(metaitem('circuit.power.iv'))
+    .duration(200)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
 
 // Cheaper clock generator

@@ -285,9 +285,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2759, "plate.power_integrated_circuit")
         addItem(2760, "plate.high_power_integrated_circuit")
         addItem(2761, "component.quartz_oscillator")
-        addItem(2762, "component.bjt_lpic")
-        addItem(2763, "component.bjt_pic")
-        addItem(2764, "component.bjt_ulpic")
+        // FREE ID: 2762 - 2764
         addItem(2765, "component.clock_generator")
         addItem(2766, "component.crystal_oscillator")
         addItem(2767, "component.diode.schottky")
@@ -389,7 +387,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2864, "component.capacitor.edlc")
         addItem(2865, "component.thyristor.assembly")
         addItem(2866, "component.thyristor")
-
+      
         addItem(2867, "component.capacitor.electrolytic.first_anodization")
         addItem(2868, "component.capacitor.electrolytic.etched_foil")
         addItem(2869, "component.capacitor.electrolytic.anode_foil")
@@ -399,6 +397,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2773, "component.resistor.metal_film.core.uncut")
         addItem(2774, "component.resistor.metal_film.core")
         addItem(2775, "component.resistor.metal_film")
+        addItem(2876, "circuit.power.iv")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
