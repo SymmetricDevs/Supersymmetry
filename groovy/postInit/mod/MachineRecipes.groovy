@@ -1743,7 +1743,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('dustRdx') * 4)
         .outputs(metaitem('frangible_nut'))
         .EUt(VA[EV])
-        .duration(10)
+        .duration(100)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1751,7 +1751,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('stickLongAluminiumAlloy7075') * 4)
         .outputs(item('susy:rocket_fairing'))
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1760,7 +1760,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('frangible_nut') * 4)
         .outputs(item('susy:rocket_fairing_connector'))
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1769,7 +1769,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('frangible_nut') * 4)
         .outputs(item('susy:rocket_interstage'))
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 // Instrument Recipes
@@ -1782,7 +1782,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('frameStainlessSteel'))
         .outputs(item('susy:spacecraft_instrument')) // Sensor
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1794,7 +1794,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('circuitEv') * 4)
         .outputs(item('susy:spacecraft_instrument', 1)) // Collector
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1805,7 +1805,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('frameStainlessSteel'))
         .outputs(item('susy:spacecraft_instrument', 4)) // Battery
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1819,7 +1819,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateStyreneIsopreneRubber') * 2)
         .outputs(item('susy:spacecraft_instrument', 5)) // Arm
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1827,7 +1827,7 @@ ASSEMBLER.recipeBuilder()
         .circuitMeta(7)
         .outputs(metaitem('honeycomb.aluminium'))
         .EUt(VA[HV])
-        .duration(5)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1839,7 +1839,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('cableGtDoubleAluminium') * 4)
         .outputs(item('susy:spacecraft_instrument', 6)) // Lander
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 // Other Spacecraft Recipes
@@ -1850,7 +1850,7 @@ BR.recipeBuilder()
         .outputs(metaitem('dustLithiumHydroperoxide'))
         .fluidOutputs(fluid('water') * 1000)
         .EUt(VA[HV])
-        .duration(5)
+        .duration(20)
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
@@ -1858,7 +1858,7 @@ ROASTER.recipeBuilder()
         .outputs(metaitem('dustLithiumPeroxide'))
         .fluidOutputs(fluid('hydrogen_peroxide') * 1000)
         .EUt(VA[HV])
-        .duration(5)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1871,7 +1871,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('hull.ev'))
         .outputs(item('susy:spacecraft_life_support')) // Oxygen Regenerator
         .EUt(VA[EV])
-        .duration(20)
+        .duration(200)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1880,7 +1880,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('springSmallStainlessSteel') * 8)
         .outputs(metaitem('susy:padding_cloth'))
         .EUt(VA[EV])
-        .duration(5)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1889,7 +1889,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateReinforcedEpoxyResin') * 8)
         .outputs(item('susy:spacecraft_room_padding'))
         .EUt(VA[EV])
-        .duration(5)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1906,16 +1906,25 @@ ASSEMBLER.recipeBuilder()
 RecyclingHelper.addShaped('susy.machine.building_cleanroom', metaitem('susy:building_cleanroom'), [
         [metaitem('item_filter'), metaitem('item_filter'), metaitem('item_filter')],
         [metaitem('rotorTitanium'), metaitem('hull.ev'), metaitem('rotorTitanium')],
-        [metaitem('electric.motor.ev'), ore('circuitEV'), metaitem('electric.motor.ev')]
+        [metaitem('electric.motor.ev'), ore('circuitEv'), metaitem('electric.motor.ev')]
 ])
 
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('hull.ev'))
+        .inputs(ore('circuitEv') * 4)
+        .inputs(metaitem('sensor.ev') * 4)
+        .inputs(metaitem('cableGtSingleAluminium') * 4)
+        .outputs(item('susy:component_scanner'))
+        .duration(400)
+        .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
         .inputs(ore('foilNitrileRubber') * 8)
         .inputs(item('gregtech:metal_casing', 4))
         .outputs(item('susy:rocket_multiblock_casing', 3)) // Aerospace Gasket
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1923,7 +1932,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('gregtech:metal_casing', 4))
         .outputs(item('susy:rocket_multiblock_casing', 2)) // Vinyl Composite Flooring
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1932,7 +1941,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing')) // Vinyl Ceiling Tile
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1942,7 +1951,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing', 1)) // Ceiling Grid Filter Unit
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
@@ -1950,8 +1959,11 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('dustPolystyrene') * 9)
         .outputs(item('susy:metallurgy_2', 4)) // Polystyrene Wall
         .EUt(VA[HV])
-        .duration(1)
+        .duration(20)
         .buildAndRegister()
+
+// Greenhouse
+
 RecyclingHelper.addShaped("gregtech:greenhouse", metaitem('susy:greenhouse'), [
         [metaitem('sensor.lv'), metaitem('gregtechfoodoption:cover.sprinkler'), metaitem('sensor.lv')],
         [metaitem('robot.arm.lv'), metaitem('hull.lv'), metaitem('robot.arm.lv')],
