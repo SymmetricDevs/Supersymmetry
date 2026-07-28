@@ -134,13 +134,6 @@ VACUUM_CHAMBER.recipeBuilder()
 
 // Flame retardant DGEBA
     // Catalyst preparation
-    BR.recipeBuilder()
-        .inputs(ore('dustAluminiumHydroxide') * 7)
-        .fluidInputs(fluid('hydrochloric_acid') * 3000)
-        .fluidOutputs(fluid('aluminium_chloride_solution') * 3000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
 
     BR.recipeBuilder()
         .inputs(ore('dustNickelChloride') * 9)
