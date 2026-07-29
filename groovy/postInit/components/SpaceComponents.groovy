@@ -236,7 +236,49 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('spacecraft_sensor.sun_star'))
         .inputs(metaitem('spacecraft_sensor.infrared'))
         .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
-        .inputs(ore('circuitIv'))
+        .inputs(metaitem('circuit.nano_computer'))
+        .inputs(metaitem('cableGtDoubleSilver') * 6)
+        .outputs(item('susy:guidance_system'))
+        .duration(800)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.ev'))
+        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
+        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
+        .inputs(metaitem('spacecraft_sensor.sun_star'))
+        .inputs(metaitem('spacecraft_sensor.infrared'))
+        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
+        .inputs(metaitem('circuit.quantum_assembly'))
+        .inputs(metaitem('cableGtDoubleSilver') * 6)
+        .outputs(item('susy:guidance_system'))
+        .duration(800)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.ev'))
+        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
+        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
+        .inputs(metaitem('spacecraft_sensor.sun_star'))
+        .inputs(metaitem('spacecraft_sensor.infrared'))
+        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
+        .inputs(metaitem('circuit.crystal_processor'))
+        .inputs(metaitem('cableGtDoubleSilver') * 6)
+        .outputs(item('susy:guidance_system'))
+        .duration(800)
+        .EUt(VA[EV])
+        .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('hull.ev'))
+        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
+        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
+        .inputs(metaitem('spacecraft_sensor.sun_star'))
+        .inputs(metaitem('spacecraft_sensor.infrared'))
+        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
+        .inputs(metaitem('circuit.suprachronal.iv'))
         .inputs(metaitem('cableGtDoubleSilver') * 6)
         .outputs(item('susy:guidance_system'))
         .duration(800)
