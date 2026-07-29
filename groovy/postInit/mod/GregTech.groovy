@@ -755,6 +755,13 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block'))
+    .outputs(metaitem('crushedBauxite') * 4)
+    .duration(400)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
 //Mud
 
 CENTRIFUGE.recipeBuilder()
@@ -920,6 +927,62 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 2))
+    .outputs(metaitem('dustNonMarineEvaporite') * 4)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 4))
+    .outputs(metaitem('dustSulfateEvaporite') * 4)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 5))
+    .outputs(metaitem('dustCarbonateEvaporite') * 4)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 3))
+    .outputs(metaitem('dustHalideEvaporite') * 4)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 12))
+    .outputs(metaitem('dustPhosphorite') * 8)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 13))
+    .outputs(metaitem('dustPotashConcentrate') * 8)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 14))
+    .outputs(metaitem('dustSulfur') * 8)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 15))
+    .outputs(metaitem('dustCoal') * 8)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();    
+
 FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block', 15))
     .outputs(item('minecraft:coal') * 8)
@@ -934,6 +997,14 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block_1'))
+    .outputs(metaitem('dustCopper') * 8)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+
 FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block_1', 1))
     .outputs(metaitem('gemAnthracite') * 8)
@@ -942,6 +1013,13 @@ FORGE_HAMMER.recipeBuilder()
     .buildAndRegister();
 
 MACERATOR.recipeBuilder()
+    .inputs(item('susy:resource_block_1', 1))
+    .outputs(metaitem('dustAnthracite') * 8)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
     .inputs(item('susy:resource_block_1', 1))
     .outputs(metaitem('dustAnthracite') * 8)
     .duration(240)
@@ -962,7 +1040,21 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block_1', 2))
+    .outputs(metaitem('dustLignite') * 8)
+    .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
 MACERATOR.recipeBuilder()
+    .inputs(metaitem('native_copper'))
+    .outputs(metaitem('dustCopper'))
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
     .inputs(metaitem('native_copper'))
     .outputs(metaitem('dustCopper'))
     .duration(30)

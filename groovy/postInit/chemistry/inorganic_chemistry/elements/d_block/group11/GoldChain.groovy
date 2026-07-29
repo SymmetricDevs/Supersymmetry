@@ -59,6 +59,13 @@ MACERATOR.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block:11'))
+    .outputs(metaitem('dustGoldConcentrate') * 8)
+    .duration(40)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
 MIXER.recipeBuilder()
     .inputs(ore('dustGoldConcentrate') * 20)
     .fluidInputs(fluid('distilled_water') * 6000)
