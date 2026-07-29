@@ -62,7 +62,7 @@ MACERATOR.recipeBuilder()
 ROLL_CRUSHER.recipeBuilder()
     .inputs(item('susy:resource_block:11'))
     .outputs(metaitem('dustGoldConcentrate') * 8)
-    .duration(40)
+    .duration(10)
     .EUt(VA[MV])
     .buildAndRegister()
 

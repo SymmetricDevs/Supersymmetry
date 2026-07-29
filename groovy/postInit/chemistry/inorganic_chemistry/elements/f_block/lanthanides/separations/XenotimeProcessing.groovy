@@ -34,7 +34,7 @@ Y: 60.8
 /*ROLL_CRUSHER.recipeBuilder()
     .inputs(item('susy:resource_block', 9))
     .outputs(metaitem('dustXenotime') * 4)
-    .duration(240)
+    .duration(30)
     .EUt(VA[ULV])
     .buildAndRegister()*/
 

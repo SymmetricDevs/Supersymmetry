@@ -11,7 +11,7 @@ MACERATOR.recipeBuilder()
 ROLL_CRUSHER.recipeBuilder()
     .inputs(item('susy:resource_block:1'))
     .outputs(metaitem('dustCaliche') * 4)
-    .duration(80)
+    .duration(10)
     .EUt(VA[ULV])
     .buildAndRegister()
 

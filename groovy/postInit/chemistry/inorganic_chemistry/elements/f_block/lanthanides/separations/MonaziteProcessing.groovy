@@ -38,7 +38,7 @@ MACERATOR.recipeBuilder()
 ROLL_CRUSHER.recipeBuilder()
     .inputs(item('susy:resource_block', 6))
     .outputs(metaitem('dustMonazite') * 4)
-    .duration(240)
+    .duration(30)
     .EUt(VA[ULV])
     .buildAndRegister()
 
