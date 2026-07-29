@@ -967,7 +967,7 @@ class FirstDegreeMaterialsB {
 
         YttriumNitrate.setFormula('Y(NO3)3', true)
 
-        RheniumHeptoxide = new Material.Builder(8773, SuSyUtility.susyId('rhenium_heptoxide'))
+        RheniumHeptoxide = new Material.Builder(8805, SuSyUtility.susyId('rhenium_heptoxide'))
                 .dust()
                 .components(Rhenium * 2, Oxygen * 7)
                 .color(0x50504a)
