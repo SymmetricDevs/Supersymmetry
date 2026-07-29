@@ -755,13 +755,6 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
-ROLL_CRUSHER.recipeBuilder()
-    .inputs(item('susy:resource_block'))
-    .outputs(metaitem('crushedBauxite') * 4)
-    .duration(400)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
 //Mud
 
 CENTRIFUGE.recipeBuilder()
