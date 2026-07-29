@@ -14,7 +14,6 @@ MIXER.recipeBuilder()
 HOT_ISOSTATIC_PRESS.recipeBuilder()
     .notConsumable(metaitem('shape.mold.rod'))
     .inputs(ore('dustSmallThoriatedTungstenMixture') * 2)
-    .fluidOutputs(fluid('hydrogen') * 754) // 0.7539 mol
     .outputs(metaitem('stickThoriatedTungsten'))
     .EUt(VA[EV])
     .duration(80)
