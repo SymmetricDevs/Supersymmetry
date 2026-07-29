@@ -974,5 +974,27 @@ class FirstDegreeMaterialsB {
                 .build()
 
         RheniumHeptoxide.setFormula('Re2O7', true)
+
+        StrontiumFerriteMagnetic = new Material.Builder(8806, SuSyUtility.susyId('strontium_ferrite_magnetic'))
+                .ingot()
+                .iconSet(MAGNETIC)
+                .flags(GENERATE_PLATE, IS_MAGNETIC)
+                .colorAverage()
+                .components(StrontiumFerrite)
+                .ingotSmeltInto(StrontiumFerrite)
+                .arcSmeltInto(StrontiumFerrite)
+                .macerateInto(StrontiumFerrite)
+                .build()
+
+        BariumFerriteMagnetic = new Material.Builder(8807, SuSyUtility.susyId('barium_ferrite_magnetic'))
+                .ingot()
+                .iconSet(MAGNETIC)
+                .flags(GENERATE_PLATE, IS_MAGNETIC)
+                .colorAverage()
+                .components(BariumFerrite)
+                .ingotSmeltInto(BariumFerrite)
+                .arcSmeltInto(BariumFerrite)
+                .macerateInto(BariumFerrite)
+                .build()
     }
 }
