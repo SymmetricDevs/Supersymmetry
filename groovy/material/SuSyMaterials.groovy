@@ -1288,7 +1288,9 @@ class SuSyMaterials {
     public static Material NitrogenTrifluoride
     public static Material CobaltFerrite
     public static Material StrontiumFerrite
+    public static Material StrontiumFerriteMagnetic
     public static Material BariumFerrite
+    public static Material BariumFerriteMagnetic
     public static Material ManganeseZincFerrite
     public static Material StrontiumCarbonate
     public static Material BariumCarbonate
