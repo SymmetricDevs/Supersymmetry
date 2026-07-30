@@ -3748,16 +3748,16 @@ metaitem.raw_carbon_plate=Raw Carbon Plate
 metaitem.carbon_plate=Carbon Plate
 metaitem.graphite_plate.name=Graphite Electrode Plate
 
-metaitem.component.capacitor.electrolytic.first_anodization=Preanodized Aluminium Foil
-metaitem.component.capacitor.electrolytic.etched_foil=Etched Aluminium Foil
-metaitem.component.capacitor.electrolytic.anode_foil=Nanoporous Aluminium Anode Foil
-metaitem.component.capacitor.electrolytic.core=Aluminium Electrolytic Capacitor Core 
-metaitem.component.capacitor.electrolytic=Aluminium Electrolytic Capacitor
+metaitem.component.capacitor.electrolytic.first_anodization.name=Preanodized Aluminium Foil
+metaitem.component.capacitor.electrolytic.etched_foil.name=Etched Aluminium Foil
+metaitem.component.capacitor.electrolytic.anode_foil.name=Nanoporous Aluminium Anode Foil
+metaitem.component.capacitor.electrolytic.core.name=Aluminium Electrolytic Capacitor Core 
+metaitem.component.capacitor.electrolytic.name=Aluminium Electrolytic Capacitor
 
-metaitem.component.resistor.metal_film.core.deposited=Nickel-Chromium Coated Alumina Bolt
-metaitem.component.resistor.metal_film.core.uncut=Etched Metal Film Resistor Core Rod
-metaitem.component.resistor.metal_film.core=Metal Film Resistor Core 
-metaitem.component.resistor.metal_film=Metal Film Resistor
+metaitem.component.resistor.metal_film.core.deposited.name=Nickel-Chromium Coated Alumina Bolt
+metaitem.component.resistor.metal_film.core.uncut.name=Etched Metal Film Resistor Core Rod
+metaitem.component.resistor.metal_film.core.name=Metal Film Resistor Core 
+metaitem.component.resistor.metal_film.name=Metal Film Resistor
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
