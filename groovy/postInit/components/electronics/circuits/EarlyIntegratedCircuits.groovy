@@ -52,7 +52,7 @@ mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plas
 FORMING_PRESS.recipeBuilder()
     .notConsumable(metaitem('shape.mold.leadframe'))
     .inputs(ore('plateAnnealedCopper'))
-    .outputs(metaitem('component.lead_frame') * 24)
+    .outputs(metaitem('component.leadframe') * 24)
     .duration(120)
     .EUt(VA[MV])
     .buildAndRegister()

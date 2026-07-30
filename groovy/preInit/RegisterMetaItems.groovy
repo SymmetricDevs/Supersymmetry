@@ -70,6 +70,10 @@ def registerNMOSMetaitems(String name, int stepCount = 25, List photoresist = [7
 }
 
 def registerCMOSMetaitems(String name) {
+    // Step 2 is the STI split layer: the family forks off the shared cmos_base trunk at exposure,
+    // so only step_two.exposed is per-family (step_two.coated belongs to cmos_base)
+    toadd_list.add("wafer." + name + ".step_two.exposed")
+
     // FEOL/MEOL shares the main step namespace and carries the component die + mask
     registerWaferSteps(name, 74, [start: 3, mask: true, die: true,
         photoresist: [11, 14, 23, 28, 32, 39, 51, 59, 67],
@@ -294,7 +298,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2770, "component.floppy_drive")
         addItem(2771, "component.floppy_head")
         addItem(2772, "component.heat_sink")
-        addItem(2773, "component.lead_frame")
+        addItem(2773, "component.leadframe")
         addItem(2774, "component.nmos_bus_controller")
         addItem(2775, "component.nmos_cpu")
         addItem(2776, "component.nmos_dram")
@@ -740,8 +744,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8044, "wafer.cmos_base.step_one")
         addItem(8045, "wafer.cmos_base.step_two")
         addItem(8046, "wafer.cmos_base.step_two.coated")
-        addItem(8047, "wafer.cmos_cpu.step_two.exposed")
-        addItem(8048, "wafer.cmos_gpu.step_two.exposed")
+        // FREE ID: 8047 - 8048 (per-family step_two.exposed now comes from registerCMOSMetaitems)
 
         registerNMOSMetaitems("nmos_cpu")
         registerNMOSMetaitems("nmos_sram")
@@ -765,6 +768,10 @@ eventManager.listen { PostMaterialEvent event ->
         registerWaferSteps("monosilicon_photovoltaic", 8, [start: 1, photoresist: [4]])
         toadd_list.add("mask.monosilicon_photovoltaic")
         toadd_list.add("cell.monosilicon_photovoltaic")
+
+        // EV logic die families; ride the same 45nm CMOS flow as cmos_cpu/cmos_gpu
+        registerCMOSMetaitems("cmos_chipset") // PCIe root complex / memory controller
+        registerCMOSMetaitems("cmos_phy")     // Ethernet/USB serdes I/O
 
         addItem(8049, "wafer.diode.alloy.step_two")
         addItem(8050, "wafer.zener_diode.alloy.step_two")
