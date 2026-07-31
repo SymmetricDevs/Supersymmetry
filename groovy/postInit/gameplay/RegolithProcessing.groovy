@@ -145,8 +145,8 @@ PHASE_SEPARATOR.recipeBuilder()
 
 
 // 95% anorthite, 5% albite
-// $stoik CaAl2Si2O8 + 2HCl + 2H2O -> CaCl2 + Al2Si2O7(H2O)3
-// $stoik 2NaAlSi3O8 + 2HCl + 2H2O -> 2NaCl + Al2Si6O15(H2O)3 (gel)
+// $stoik CaAl2Si2O8 + 2HCl + 4H2O -> CaCl2 + Al2Si2O7(H2O)3 + 2H2O
+// $stoik 2NaAlSi3O8 + 2HCl + 4H2O -> 2NaCl + Al2Si6O15(H2O)3 (gel) + 2H2O
 BR.recipeBuilder()
     .inputs(metaitem("dustAnorthosite") * 13)
     .fluidInputs(fluid("diluted_hydrochloric_acid") * 3900)
@@ -154,11 +154,13 @@ BR.recipeBuilder()
     .EUt(VA[LV])
     .duration(200)
 
-// Same but with the silicate stuff
+// Same but with the silicate stuff, although this also includes 0.25mol olivine (and pyroxenes but that's too much for t1)
+// Mg2SiO4 + 4HCl + 8H2O -> 2MgCl2 + SiO2 + 10H2O
+
 BR.recipeBuilder()
     .fluidInputs(fluid("lunar_silicate_slurry") * 1950)
-    .fluidInputs(fluid("diluted_hydrochloric_acid") * 1950)
-    .fluidOutputs(fluid("leached_anorthosite") * 3900)
+    .fluidInputs(fluid("diluted_hydrochloric_acid") * 5900)
+    .fluidOutputs(fluid("leached_lunar_basalt") * 6400)
     .EUt(VA[LV])
     .duration(200)
 
@@ -169,12 +171,27 @@ ROASTER.recipeBuilder()
     .EUt(VA[LV])
     .duration(200)
 
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid("leached_lunar_basalt") * 6400)
+    .outputs(metaitem("dustLeachedLunarBasalt") * 13)
+    .fluidOutputs(fluid("dense_steam") * 6400)
+    .EUt(VA[LV])
+    .duration(200)
+
 // .95 CaCl2 + .05 NaCl coming out
 BR.recipeBuilder()
     .inputs(metaitem("dustLeachedAnorthosite") * 13)
     .fluidInputs(fluid("water") * 1000)
     .inputs(metaitem("dustAnorthositeAluminosilicate") * 13)
     .fluidOutputs(fluid("alkali_anorthositic_chlorides") * 1000)
+    .EUt(VA[LV])
+    .duration(200)
+
+BR.recipeBuilder()
+    .inputs(metaitem("dustLeachedLunarBasalt") * 13)
+    .fluidInputs(fluid("water") * 1000)
+    .inputs(metaitem("dustAnorthositeAluminosilicate") * 13)
+    .fluidOutputs(fluid("alkali_basaltic_chlorides") * 1000)
     .EUt(VA[LV])
     .duration(200)
 
@@ -188,19 +205,21 @@ BR.recipeBuilder()
 BR.recipeBuilder()
     .inputs(metaitem("dustAnorthositeAluminosilicate") * 20)
     .fluidInputs(fluid("sodium_hydroxide_solution") * 3000)
-    .outputs(metaitem("dustSiliconDioxide") * 9) // TODO: there's actually pyroxenes and olivines in here if they didn't just get obliterated by NaOH
-    .fluidOutputs(fluid("sodium_aluminate_solution") * 6500)
+    .outputs(metaitem("dustSiliconDioxide") * 9)
+    .fluidOutputs(fluid("lunar_sodium_aluminate_solution") * 6500)
     .EUt(VA[LV])
     .duration(400)
 
 // (19 CaCl2 + NaCl)(20H2O) + 38NaOH(H2O) -> 19Ca(OH)2 + 39NaCl + 58H2O
+// The salt is 20000 salt water, 38000 diluted salt water
 // Fortunately we can scale down the recipe 5x
 BR.recipeBuilder()
     .circuitMeta(1)
     .fluidInputs(fluid("alkali_anorthositic_chlorides") * 4000)
     .fluidInputs(fluid("sodium_hydroxide_solution") * 7600)
     .outputs(metaitem("dustCalciumHydroxide") * 19)
-    .fluidOutputs(fluid("lunar_salt_water") * 11600)
+    .fluidOutputs(fluid("salt_water") * 4000)
+    .fluidOutputs(fluid("diluted_salt_water") * 7600)
     .EUt(VA[LV])
     .duration(80)
 
@@ -212,31 +231,22 @@ BR.recipeBuilder()
     .fluidInputs(fluid("sodium_hydroxide_solution") * 7600)
     .outputs(metaitem("dustCalciumHydroxide") * 18)
     .outputs(metaitem("dustStrontiumHydroxide") * 1)
-    .fluidOutputs(fluid("lunar_salt_water") * 11600)
+    .fluidOutputs(fluid("salt_water") * 4000)
+    .fluidOutputs(fluid("diluted_salt_water") * 7600)
     .EUt(VA[LV])
     .duration(800)
 
-
-// Lunar salt water reprocessing
-DISTILLATION.recipeBuilder()
-    .fluidInputs(fluid("lunar_salt_water") * 29000)
-    .fluidOutputs(fluid("water") * 29000)
-    .outputs(metaitem("dustSalt") * 39)
-    .EUt(VA[MV])
-    .duration(400)
-
-// 39NaCl58H2O + 7H2O -> 13H + 13Cl + 13NaOH + 26NaCl(H2O)2
-// (same NaOH to NaCl(H2O)2 ratio as the original recipe)
-ELECTROLYTIC_CELL.recipeBuilder()
-    .notConsumable(metaitem('stickNickel'))
-    .notConsumable(metaitem('graphite_electrode'))
-    .notConsumable(ore('plateAsbestos'))
-    .fluidInputs(fluid('lunar_salt_water') * 5800)
-    .fluidInputs(fluid('water') * 700)
-    .fluidOutputs(fluid('chlorine') * 1300)
-    .fluidOutputs(fluid('hydrogen') * 1300)
-    .fluidOutputs(fluid('diluted_salt_water') * 2600)
-    .fluidOutputs(fluid('sodium_hydroxide_solution') * 1300)
+// MgCl2 + 2NaOH -> Mg(OH)2 + 2NaCl
+// (19 CaCl2 + 5MgCl2 + NaCl)(20H2O) + 48NaOH(H2O) -> 5Mg(OH)2 + 19Ca(OH)2 + 49NaCl + 68H2O
+// The salt is 30000 salt water, 38000 diluted salt water
+// Fortunately we can scale down the recipe 5x
+BR.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid("alkali_basaltic_chlorides") * 4000)
+    .fluidInputs(fluid("sodium_hydroxide_solution") * 9600)
+    .outputs(metaitem("dustCalciumHydroxide") * 19)
+    .outputs(metaitem("dustMagnesiumHydroxide") * 5)
+    .fluidOutputs(fluid("salt_water") * 6000)
+    .fluidOutputs(fluid("diluted_salt_water") * 7600)
     .EUt(VA[LV])
-    .duration(720)
-    .buildAndRegister()
+    .duration(160)
