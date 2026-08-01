@@ -77,7 +77,7 @@ for (i in 0..15) {
 	CHEMICAL_BATH.recipeBuilder()
 		.inputs(ore('plankWood') * 8)
 		.fluidInputs(fluid('dye_' + dye_colors[i]) * 72)
-		.outputs(item('quark:stained_planks', i))
+		.outputs(item('quark:stained_planks', i) * 8)
 		.duration(20)
 		.EUt(VA[ULV])
 		.buildAndRegister();
