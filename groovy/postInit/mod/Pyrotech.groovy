@@ -1241,8 +1241,8 @@ def extra_smelting_recipes = [
         [[ore('gemMalachite') * 8], [metaitem('ingotCopper') * 16], 2,  150],
         [[metaitem('native_copper') * 8, ore('dustTinyLimestone')], [metaitem('ingotCopper') * 8, item('pyrotech:slag')], 1,  100],
         [[ore('oreNativeCopperDeposit'), ore('dustTinyLimestone')], [metaitem('ingotCopper') * 8, item('pyrotech:slag')], 1,  150],
-        [[metaitem('native_copper') * 6, ore('ingotTin') * 2], [metaitem('ingotBronze') * 8, item('pyrotech:slag')], 1,  350],
-        [[metaitem('native_copper') * 6, ore('dustTin') * 2], [metaitem('ingotBronze') * 8, item('pyrotech:slag')], 1,  300],
+        [[metaitem('native_copper') * 14, ore('ingotTin') * 1], [metaitem('ingotBronze') * 15, item('pyrotech:slag')], 1,  350],
+        [[metaitem('native_copper') * 14, ore('dustTin') * 1], [metaitem('ingotBronze') * 15, item('pyrotech:slag')], 1,  300],
         [[ore('ingotPigIron') * 8], [item('minecraft:iron_ingot') * 8, item('pyrotech:slag')], 1,  300]
 ]
 
@@ -1290,13 +1290,9 @@ def alloy_add = {String outputAlloy, int outputAmount, int recipeDuration, Array
 // Smelter alloying recipes
 alloying_recipes = [
         // Bronze
-        ["Bronze", 4, 200, ["Copper", 3, "Tin", 1]],
+        ["Bronze", 15, 200, ["Copper", 14, "Tin", 1]],
         // Brass
-        ["Brass", 4, 200, ["Copper", 3, "Zinc", 1]],
-        // SnFe
-        ["TinAlloy", 2, 100, ["Iron", 1, "Tin", 1]],
-        // Potin
-        ["Potin", 9, 450, ["Bronze", 8, "Lead", 1]],
+        ["Brass", 7, 200, ["Copper", 5, "Zinc", 2]],
         // Kovar
         ["Kovar", 2, 100, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
 ]

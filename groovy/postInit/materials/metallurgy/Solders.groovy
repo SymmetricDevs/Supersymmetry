@@ -1,6 +1,15 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
+// Lead-Tin Soldering Alloy
+INDUCTION_FURNACE.recipeBuilder() // TO DO: replace
+    .inputs(metaitem('ingotLead'))
+    .inputs(metaitem('ingotTin') * 3)
+    .fluidOutputs(fluid('soldering_alloy') * 576)
+    .EUt(VA[LV])
+    .duration(60)
+    .buildAndRegister()
+
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('dustBismuth') * 6)
     .inputs(ore('dustTin') * 4)
