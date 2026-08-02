@@ -115,6 +115,7 @@ class Recipemaps {
     static final def SIFTER = recipemap('sifter')
     static final def SINGLE_COLUMN_CRYO_DT = recipemap('single_column_cryogenic_distillation')
     static final def SINTERING_OVEN = recipemap('sintering_oven')
+    static final def SOLAR_FURNACE = recipemap('solar_furnace')
     static final def SOLIDIFIER = recipemap('fluid_solidifier')
     static final def SPENT_FUEL_POOL = recipemap('spent_fuel_pool')
     static final def SPINNING = recipemap('spinning')
