@@ -996,5 +996,14 @@ class FirstDegreeMaterialsB {
                 .arcSmeltInto(BariumFerrite)
                 .macerateInto(BariumFerrite)
                 .build()
+
+        StrontiumHydroxide = new Material.Builder(8808, SuSyUtility.susyId('strontium_hydroxide'))
+                .dust()
+                .components(Strontium * 1, Oxygen * 2, Hydrogen * 2)
+                .color(0xC4B966)
+                .build()
+
+        StrontiumHydroxide.setFormula('Sr(OH)2', true)
+
     }
 }

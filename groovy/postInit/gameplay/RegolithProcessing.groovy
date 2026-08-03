@@ -48,7 +48,7 @@ MACERATOR.recipeBuilder()
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
     .inputs(metaitem("dustAnorthositicRegolith") * 4)
     .outputs(metaitem("dustAnorthosite") * 4)
-    .chancedOutput(metaitem("dustLunarMagnetic") * 1, 3000, 0)
+    .chancedOutput(metaitem("dustLunarMagnetic") * 1, 300, 0)
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
@@ -97,10 +97,10 @@ FROTH_FLOTATION.recipeBuilder()
     .buildAndRegister()
 
 CSTR.recipeBuilder()
-    .fluidInputs(fluid("lunar_ilmenite_slurry") * 100)
+    .fluidInputs(fluid("lunar_ferrosilicate_slurry") * 100)
     .notConsumable(fluid("sodium_silicate_solution") * 1000)
     .notConsumable(fluid("oleic_acid") * 100)
-    .notConsumable(fluid("sodium_ethyl_xanthate") * 100)
+    .notConsumable(metaitem("dustSodiumEthylXanthate") * 1)
     .fluidOutputs(fluid("lunar_troilite_slurry") * 100)
     .fluidOutputs(fluid("lunar_silicate_slurry") * 900)
     .EUt(VA[LV])
@@ -108,10 +108,10 @@ CSTR.recipeBuilder()
     .buildAndRegister()
 
 FROTH_FLOTATION.recipeBuilder()
-    .fluidInputs(fluid("lunar_ilmenite_slurry") * 100)
+    .fluidInputs(fluid("lunar_ferrosilicate_slurry") * 100)
     .notConsumable(fluid("sodium_silicate_solution") * 1000)
     .notConsumable(fluid("oleic_acid") * 100)
-    .notConsumable(fluid("sodium_ethyl_xanthate") * 100)
+    .notConsumable(metaitem("dustSodiumEthylXanthate") * 1)
     .fluidOutputs(fluid("lunar_troilite_slurry") * 100)
     .fluidOutputs(fluid("lunar_silicate_slurry") * 900)
     .EUt(VA[LV])
@@ -119,13 +119,16 @@ FROTH_FLOTATION.recipeBuilder()
     .buildAndRegister()
 
 // FeTiO3(H2O) + 2H -> Fe + TiO2 + 2H2O
-ERF.recipeBuilder()
+SOLAR_FURNACE.recipeBuilder()
     .fluidInputs(fluid("lunar_ilmenite_slurry") * 1000)
-    .fluidInputs(fluid("hydrogen") * 1000)
-    .fluidOutputs(fluid("water") * 2000)
+    .fluidInputs(fluid("hydrogen") * 2000)
+    .fluidOutputs(fluid("dense_steam") * 2000)
     .outputs(metaitem("dustIron"))
-    .outputs(metaitem("dustTitaniumDioxide") * 3)
-    .temperature(1800)
+    .outputs(metaitem("dustRutile") * 3)
+    .duration(9999999)
+    .EUt(2147483647)//placeholder for the actual solar furnace
+    //.temperature(1800)
+    .buildAndRegister()
 
 CLARIFIER.recipeBuilder()
     .fluidInputs(fluid('lunar_troilite_slurry') * 1000)
@@ -150,9 +153,11 @@ PHASE_SEPARATOR.recipeBuilder()
 BR.recipeBuilder()
     .inputs(metaitem("dustAnorthosite") * 13)
     .fluidInputs(fluid("diluted_hydrochloric_acid") * 3900)
-    .fluidOutputs(fluid("leached_anorthosite") * 3900)
+    .fluidOutputs(fluid("anorthosite_leach") * 3900)
     .EUt(VA[LV])
     .duration(200)
+    .buildAndRegister()
+
 
 // Same but with the silicate stuff, although this also includes 0.25mol olivine (and pyroxenes but that's too much for t1)
 // Mg2SiO4 + 4HCl + 8H2O -> 2MgCl2 + SiO2 + 10H2O
@@ -160,40 +165,49 @@ BR.recipeBuilder()
 BR.recipeBuilder()
     .fluidInputs(fluid("lunar_silicate_slurry") * 1950)
     .fluidInputs(fluid("diluted_hydrochloric_acid") * 5900)
-    .fluidOutputs(fluid("leached_lunar_basalt") * 6400)
+    .fluidOutputs(fluid("lunar_basalt_leach") * 6400)
     .EUt(VA[LV])
     .duration(200)
+    .buildAndRegister()
+
 
 ROASTER.recipeBuilder()
-    .fluidInputs(fluid("leached_anorthosite") * 3900)
+    .fluidInputs(fluid("anorthosite_leach") * 3900)
     .outputs(metaitem("dustLeachedAnorthosite") * 13)
     .fluidOutputs(fluid("dense_steam") * 3900)
     .EUt(VA[LV])
     .duration(200)
+    .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .fluidInputs(fluid("leached_lunar_basalt") * 6400)
+    .fluidInputs(fluid("lunar_basalt_leach") * 6400)
     .outputs(metaitem("dustLeachedLunarBasalt") * 13)
     .fluidOutputs(fluid("dense_steam") * 6400)
     .EUt(VA[LV])
     .duration(200)
+        .buildAndRegister()
+
 
 // .95 CaCl2 + .05 NaCl coming out
 BR.recipeBuilder()
     .inputs(metaitem("dustLeachedAnorthosite") * 13)
     .fluidInputs(fluid("water") * 1000)
-    .inputs(metaitem("dustAnorthositeAluminosilicate") * 13)
+    .outputs(metaitem("dustAnorthositeAluminosilicate") * 13)
     .fluidOutputs(fluid("alkali_anorthositic_chlorides") * 1000)
     .EUt(VA[LV])
     .duration(200)
+        .buildAndRegister()
+
 
 BR.recipeBuilder()
     .inputs(metaitem("dustLeachedLunarBasalt") * 13)
     .fluidInputs(fluid("water") * 1000)
-    .inputs(metaitem("dustAnorthositeAluminosilicate") * 13)
+    .outputs(metaitem("dustAnorthositeAluminosilicate") * 13)
     .fluidOutputs(fluid("alkali_basaltic_chlorides") * 1000)
     .EUt(VA[LV])
     .duration(200)
+        .buildAndRegister()
+
 
 // 0.95 Al2Si2O7 + 0.025 Al2Si6O15 + NaOH
 // If I multiply by 40...
@@ -209,6 +223,8 @@ BR.recipeBuilder()
     .fluidOutputs(fluid("lunar_sodium_aluminate_solution") * 6500)
     .EUt(VA[LV])
     .duration(400)
+        .buildAndRegister()
+
 
 // (19 CaCl2 + NaCl)(20H2O) + 38NaOH(H2O) -> 19Ca(OH)2 + 39NaCl + 58H2O
 // The salt is 20000 salt water, 38000 diluted salt water
@@ -222,6 +238,8 @@ BR.recipeBuilder()
     .fluidOutputs(fluid("diluted_salt_water") * 7600)
     .EUt(VA[LV])
     .duration(80)
+        .buildAndRegister()
+
 
 // But what if you're really careful?
 // https://www.sciencedirect.com/science/article/abs/pii/S0003267001823849
@@ -235,6 +253,8 @@ BR.recipeBuilder()
     .fluidOutputs(fluid("diluted_salt_water") * 7600)
     .EUt(VA[LV])
     .duration(800)
+        .buildAndRegister()
+
 
 // MgCl2 + 2NaOH -> Mg(OH)2 + 2NaCl
 // (19 CaCl2 + 5MgCl2 + NaCl)(20H2O) + 48NaOH(H2O) -> 5Mg(OH)2 + 19Ca(OH)2 + 49NaCl + 68H2O
@@ -250,3 +270,4 @@ BR.recipeBuilder()
     .fluidOutputs(fluid("diluted_salt_water") * 7600)
     .EUt(VA[LV])
     .duration(160)
+        .buildAndRegister()

@@ -828,6 +828,24 @@ class SuSyMaterials {
     public static Material NanoparticleModifiedNafion
     public static Material ExpandableGraphite
     public static Material CalciumAluminateConcrete
+    public static Material AnorthositicRegolith
+    public static Material BasalticRegolith
+    public static Material KREEPRegolith
+    public static Material LunarMagnetic
+    public static Material LunarIlmeniteSlurry
+    public static Material LunarFerrosilicateSlurry
+    public static Material LunarTroiliteSlurry
+    public static Material LunarSilicateSlurry
+    public static Material Troilite
+    public static Material LeachedAnorthosite
+    public static Material LeachedLunarBasalt
+    public static Material AnorthositeLeach
+    public static Material LunarBasaltLeach
+    public static Material AnorthositeAluminosilicate
+    public static Material AlkaliAnorthositicChlorides
+    public static Material AlkaliBasalticChlorides
+    public static Material LunarSodiumAluminateSolution
+    public static Material LunarBasalt
 
 
     // Petrochem Materials
@@ -1708,9 +1726,7 @@ class SuSyMaterials {
     public static Material CopperTungstenAlloy
     public static Material LanthanumZirconiumOxide
     public static Material PalladiumChloride
-
-    //public static Material VanadiumTrioxide
-
+    public static Material StrontiumHydroxide
 
     // HP Materials
 
