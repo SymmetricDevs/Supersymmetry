@@ -485,6 +485,17 @@ crafting.addShaped('susy:kimberlite_bricks', item('susy:susy_stone_bricks', 8) *
         [ore('stoneKimberlite'), ore('stoneKimberlite')]
 ])
 
+crafting.addShaped('susy:anorthosite_bricks', item('susy:susy_stone_bricks', 11) * 4, [
+        [ore('stoneAnorthosite'), ore('stoneAnorthosite')],
+        [ore('stoneAnorthosite'), ore('stoneAnorthosite')]
+])
+
+crafting.addShaped('susy:leucobasalt_bricks', item('susy:susy_stone_bricks', 12) * 4, [
+        [ore('stoneLeucobasalt'), ore('stoneLeucobasalt')],
+        [ore('stoneLeucobasalt'), ore('stoneLeucobasalt')]
+])
+
+
 //Dotted Panels
 def panels = [4, 5, 6, 7]
 
