@@ -12,7 +12,6 @@ static def removeItemsOfAlloy(String itemCategory) {
     mods.jei.ingredient.removeAndHide(metaitem('plate' + itemCategory));
     mods.jei.ingredient.removeAndHide(metaitem('stick' + itemCategory));
     mods.jei.ingredient.removeAndHide(metaitem('nugget' + itemCategory));
-    mods.jei.ingredient.removeAndHide(metaitem('frameGT' + itemCategory));
 }
 
 static def removeItemsOfAlloyNoRod(String itemCategory) {
@@ -23,7 +22,6 @@ static def removeItemsOfAlloyNoRod(String itemCategory) {
     mods.jei.ingredient.removeAndHide(metaitem('dustTiny' + itemCategory));
     mods.jei.ingredient.removeAndHide(metaitem('plate' + itemCategory));
     mods.jei.ingredient.removeAndHide(metaitem('nugget' + itemCategory));
-    mods.jei.ingredient.removeAndHide(metaitem('frameGT' + itemCategory));
 }
 
 removeItemsOfAlloy('HastelloyC276');
