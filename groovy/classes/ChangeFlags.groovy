@@ -43,35 +43,12 @@ class ChangeFlags {
 
         // Properties
 
-        Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Tellurium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Magnesium.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Asbestos.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Potassium.setProperty(PropertyKey.INGOT, new IngotProperty());
-
-        BisphenolA.setProperty(PropertyKey.DUST, new DustProperty());
-        Polonium.setProperty(PropertyKey.DUST, new DustProperty());
-
-        Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
-        Rubber.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(593, 6, true, false, false, false));
-
-        
-        setupFluidType(AntimonyTrifluoride, FluidStorageKeys.LIQUID, 565)
-        setupFluidType(LithiumChloride, FluidStorageKeys.LIQUID, 890)
-        setupFluidType(SiliconDioxide, FluidStorageKeys.LIQUID, 1986)
-        setupFluidType(Caesium, FluidStorageKeys.LIQUID, 302)
-        setupFluidType(Cadmium, FluidStorageKeys.LIQUID, 600)
-        setupFluidType(BisphenolA, FluidStorageKeys.LIQUID, 428)
-        setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
-        setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
-        setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
-        setupFluidType(OsmiumTetroxide, FluidStorageKeys.GAS, 404)
         Germanium.addIngot()
         Tellurium.addIngot()
         Cadmium.addIngot()
         Magnesium.addIngot()
         Asbestos.addIngot()
+        Potassium.addIngot()
 
         BisphenolA.addDust()
         Polonium.addDust()
