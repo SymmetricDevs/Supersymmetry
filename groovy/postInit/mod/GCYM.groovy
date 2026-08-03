@@ -1,3 +1,5 @@
+import gregtech.integration.jei.multiblock.MultiblockInfoCategory
+
 for (i in 2000..2028) {
     mods.jei.ingredient.yeet(item('gregtech:machine', i))
 }
@@ -78,4 +80,8 @@ mods.jei.ingredient.yeet(ore('frameGtHastelloyC276'))
 mods.jei.ingredient.yeet(ore('frameGtHastelloyX'))
 mods.jei.ingredient.yeet(ore('frameGtHslaSteel'))
 mods.jei.ingredient.yeet(ore('frameGtIncoloyMa956'))
+
+MultiblockInfoCategory.REGISTER.removeAll { controller ->
+    controller.metaTileEntityId.namespace == 'gcym'
+}
 
