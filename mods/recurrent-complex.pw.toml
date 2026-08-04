@@ -1,13 +1,13 @@
 name = "Recurrent Complex"
-filename = "RecurrentComplex-1.4.8.6.jar"
+filename = "RecurrentComplex-1.4.8.7.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "31059d070bee48368050cf774ea3e8f9caea0356"
+hash = "9b7eee3f3a71cb20a27490860812cd3ababc4258"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 5615733
+file-id = 8562927
 project-id = 223150

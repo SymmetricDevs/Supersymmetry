@@ -19,6 +19,13 @@ mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium
         .EUt(VA[LV])
         .buildAndRegister()
 
+    ROLL_CRUSHER.recipeBuilder()
+        .inputs(item('susy:resource_block', 10))
+        .outputs(metaitem('dustAlluvialPgmSand') * 9)
+        .duration(16)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
     SIFTER.recipeBuilder()
         .inputs(ore('dustAlluvialPgmSand'))
         .outputs(metaitem('nuggetAlluvialPgm') * 4)

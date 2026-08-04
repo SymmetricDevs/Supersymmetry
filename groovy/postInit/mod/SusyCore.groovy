@@ -51,6 +51,7 @@ RecyclingHelper.handleRecycling(item('susy:separator_rotor') * 5,
         [metaitem('electric.motor.hv') * 2, ore('gearStainlessSteel') * 4, ore('rotorStainlessSteel') * 16, ore('plateStainlessSteel') * 16]
 )
 
+
 ASSEMBLER.recipeBuilder()
     .circuitMeta(20)
     .inputs(ore('plateStainlessSteel') * 9)

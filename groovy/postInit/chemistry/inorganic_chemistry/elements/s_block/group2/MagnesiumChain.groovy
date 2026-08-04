@@ -85,7 +85,7 @@ REACTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 LCR.recipeBuilder()
-        .inputs(ore('dustMagnesite') * 5)
+        .inputs(ore('dustMagnesite') * 1)
         .fluidInputs(fluid('hydrochloric_acid') * 2000)
         .fluidOutputs(fluid('magnesium_chloride_solution') * 2000)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
