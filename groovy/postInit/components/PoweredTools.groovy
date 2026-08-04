@@ -3,6 +3,7 @@ import globals.Batteries
 import static gregtech.api.GTValues.*
 import gregtech.api.capability.GregtechCapabilities
 import gregtech.api.capability.IElectricItem
+import net.minecraft.nbt.NBTTagCompound
 
 log.infoMC("Running PoweredTools.groovy...")
 
@@ -283,30 +284,33 @@ ItemStack withMaxChargeFromBattery(ItemStack tool, ItemStack battery) {
         .buildAndRegister()
 }
 
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('gearSmallTitanium') * 2)
-    .inputs(ore('screwTitanium'))
-    .inputs(ore('plateTitanium') * 2)
-    .inputs(metaitem('electric.motor.ev'))
-    .inputs(ore('batteryEv'))
-    .outputs(metaitem('power_unit.ev'))
-    .EUt(VA[EV])
-    .duration(150)
-    .buildAndRegister()
+[metaitem('battery.ni_cd.ev'), metaitem('battery.ni_mh.ev')].each { battery ->
+    ASSEMBLER.recipeBuilder()
+        .inputs(ore('gearSmallTitanium') * 2)
+        .inputs(ore('screwTitanium'))
+        .inputs(ore('plateTitanium') * 2)
+        .inputs(metaitem('electric.motor.ev'))
+        .inputs(battery)
+        .outputs(withMaxChargeFromBattery(metaitem('power_unit.ev'), battery))
+        .duration(150)
+        .EUt(VA[EV])
+        .buildAndRegister()
+}
 
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('gearSmallTungstenSteel') * 2)
-    .inputs(ore('screwTungstenSteel'))
-    .inputs(ore('plateTungstenSteel') * 2)
-    .inputs(metaitem('electric.motor.iv'))
-    .inputs(ore('batteryIv'))
-    .outputs(metaitem('power_unit.iv'))
-    .EUt(VA[IV])
-    .duration(150)
-    .buildAndRegister()
+[metaitem('battery.ni_mh.iv'), metaitem('battery.ni_mh.iv')].each { battery ->
+    ASSEMBLER.recipeBuilder()
+        .inputs(ore('gearSmallTungstenSteel') * 2)
+        .inputs(ore('screwTungstenSteel'))
+        .inputs(ore('plateTungstenSteel') * 2)
+        .inputs(metaitem('electric.motor.iv'))
+        .inputs(metaitem('battery.ni_mh.iv'))
+        .outputs(withMaxChargeFromBattery(metaitem('power_unit.iv'), battery))
+        .duration(150)
+        .EUt(VA[IV])
+        .buildAndRegister()
+}
 
 // Jetpacks from non-reworked batteries
-
 crafting.addShaped('gregtech:electric_jetpack_advanced1', metaitem('advanced_electric_jetpack'), [
     [ore('toolWireCutter'), metaitem('electric_jetpack'), ore('toolScrewdriver')],
     [metaitem('power_thruster_advanced'), metaitem('battery.re.hv.lithium'), metaitem('power_thruster_advanced')],
@@ -333,3 +337,198 @@ crafting.replaceShaped('gregtech:magnet_hv_battery.re.hv.cadmium', metaitem('ite
     [ore('wireGtSingleGold'), ore('plateStainlessSteel'), ore('wireGtSingleGold')]
 ])
 
+//Assembler Recipes for Electric Tools
+ItemStack createPowerUnit(String tier, long maxCharge) {
+    def unit = metaitem('power_unit.' + tier).copy()
+
+    if (unit.getTagCompound() == null)
+    unit.setTagCompound(new NBTTagCompound())
+
+    unit.getTagCompound().setLong("MaxCharge", maxCharge)
+    unit.getTagCompound().setLong("Charge", 0L)
+
+    return unit
+}
+
+ItemStack createElectricTool(String toolType, String voltage, String material, ItemStack unit) {
+
+    def itemName = [
+        chainsaw: 'gregtech:chainsaw_lv',
+        buzzSaw: 'gregtech:buzzSaw',
+        screwdriver: 'gregtech:screwdriver_lv',
+        butchery_knife: 'gregtechfoodoption:butchery_knife.hv'
+    ].get(toolType, "gregtech:${toolType}_${voltage}")
+
+    def tool = item(itemName)
+
+    if (tool == null) {
+        log.infoMC("Missing " + toolType + " tier: " + voltage)
+        return null
+    }
+
+    tool = tool.copy()
+
+    def nbt = tool.getTagCompound() ?: new NBTTagCompound()
+
+    nbt.setLong("MaxCharge", unit.getTagCompound().getLong("MaxCharge"))
+    nbt.setLong("Charge", 0L)
+
+    def toolTag = nbt.getCompoundTag("GT.Tool")
+    toolTag.setString("Material", "gregtech:" + material)
+    nbt.setTag("GT.Tool", toolTag)
+
+    tool.setTagCompound(nbt)
+
+    return tool
+}
+
+String getMaterial(String tooltip) {
+    return tooltip.replaceAll(/([a-z])([A-Z])/, '$1_$2').toLowerCase()
+}
+
+def allToolTip = ['Aluminium', 'Iron', 'Titanium', 'Neutronium', 'Duranium', 'Bronze', 'Diamond', 'Invar', 'SterlingSilver', 'RoseGold', 'StainlessSteel', 'Steel', 'Ultimet', 'WroughtIron', 'TungstenCarbide', 'DamascusSteel', 'TungstenSteel', 'CobaltBrass', 'VanadiumSteel', 'NaquadahAlloy', 'RedSteel', 'BlueSteel', 'Hsse']
+def screwdriverBlacklist = ['Duranium', 'Diamond', 'DamascusSteel', 'RedSteel', 'BlueSteel']
+
+def electricToolUnits = [
+    lv: [[80000L, 112000L], LV],
+    mv: [[320000L, 448000L, 640000L], MV],
+    hv: [[1280000L, 1792000L, 2560000L], HV],
+    ev: [[5120000L, 7168000L], EV],
+    iv: [[20480000L], IV]
+]
+
+def wrenchVoltages = ['lv', 'hv', 'iv']
+
+for (tooltip in allToolTip) {
+
+    ASSEMBLER.recipeBuilder()
+        .circuitMeta(20)
+        .inputs(ore('plate' + tooltip) * 4)
+        .inputs(ore('ringSteel'))
+        .inputs(ore('screwSteel') * 2)
+        .outputs(metaitem('toolHeadWrench' + tooltip))
+        .duration(50) .EUt(VA[LV])
+        .buildAndRegister();
+    
+    ASSEMBLER.recipeBuilder()
+        .circuitMeta(21)
+        .inputs(ore('plate' + tooltip) * 4)
+        .inputs(ore('plateSteel') * 4)
+        .outputs(metaitem('toolHeadDrill' + tooltip))
+        .duration(50)
+        .EUt(VA[LV])
+        .buildAndRegister();
+    
+    ASSEMBLER.recipeBuilder()
+        .circuitMeta(22)
+        .inputs(ore('plate' + tooltip) * 2)
+        .inputs(ore('plateSteel') * 4)
+        .inputs(ore('ringSteel') * 2)
+        .outputs(metaitem('toolHeadChainsaw' + tooltip))
+        .duration(50) .EUt(VA[LV])
+        .buildAndRegister();
+
+    electricToolUnits.each { voltage, data ->
+        def tier = data[1]
+
+        data[0].each { charge ->
+            def unit = createPowerUnit(voltage, charge)
+            def material = tooltip.replaceAll(/([a-z])([A-Z])/, '$1_$2').toLowerCase()
+            def drill = createElectricTool('drill', voltage, material, unit)
+
+            ASSEMBLER.recipeBuilder()
+                .inputs(metaitem('toolHeadDrill' + tooltip))
+                .inputs(unit)
+                .outputs(drill)
+                .duration(50)
+                .EUt(VA[tier])
+                .buildAndRegister()
+
+            if (voltage == 'lv') {
+                def chainsaw = createElectricTool('chainsaw', 'lv', material, unit)
+                def buzzSaw = createElectricTool('buzzSaw', 'lv', material, unit)
+
+                ASSEMBLER.recipeBuilder()
+                    .inputs(metaitem('toolHeadChainsaw' + tooltip))
+                    .inputs(unit)
+                    .outputs(chainsaw)
+                    .duration(50)
+                    .EUt(VA[LV])
+                    .buildAndRegister()
+
+                ASSEMBLER.recipeBuilder()
+                    .inputs(metaitem('toolHeadBuzzSaw' + tooltip))
+                    .inputs(unit)
+                    .outputs(buzzSaw)
+                    .duration(50)
+                    .EUt(VA[LV])
+                    .buildAndRegister()
+            }
+
+            if (voltage in wrenchVoltages) {
+                def wrench = createElectricTool('wrench', voltage, material, unit)
+                def wire_cutter = createElectricTool('wire_cutter', voltage, material, unit)
+
+                ASSEMBLER.recipeBuilder()
+                    .inputs(metaitem('toolHeadWrench' + tooltip))
+                    .inputs(unit)
+                    .outputs(wrench)
+                    .duration(50)
+                    .EUt(VA[tier])
+                    .buildAndRegister()
+
+                ASSEMBLER.recipeBuilder()
+                    .inputs(ore('plate' + tooltip) * 3)
+                    .inputs(ore('stick' + tooltip) * 2)
+                    .inputs(unit)
+                    .outputs(wire_cutter)
+                    .duration(50)
+                    .EUt(VA[tier])
+                    .buildAndRegister()
+            }
+        }
+    }
+
+    def material = tooltip.replaceAll(/([a-z])([A-Z])/, '$1_$2').toLowerCase()
+
+    electricToolUnits.hv[0].each { charge ->
+        def unit = createPowerUnit('hv', charge)
+        def butchery_knife = createElectricTool('butchery_knife', 'hv', material, unit)
+
+        ASSEMBLER.recipeBuilder()
+            .inputs(metaitem('electric.motor.hv'))
+            .inputs(ore('plate' + tooltip) * 2)
+            .inputs(metaitem('cableGtDoubleGold'))
+            .inputs(unit)
+            .outputs(butchery_knife)
+            .duration(50)
+            .EUt(VA[HV])
+            .buildAndRegister()
+    }
+
+    if (!(tooltip in screwdriverBlacklist)) {
+
+        electricToolUnits.lv[0].each { charge ->
+            def unit = createPowerUnit('lv', charge)
+            def screwdriver = createElectricTool('screwdriver', 'lv', material, unit)
+
+            ASSEMBLER.recipeBuilder()
+                .inputs(metaitem('toolHeadScrewdriver' + tooltip))
+                .inputs(unit)
+                .outputs(screwdriver)
+                .duration(50)
+                .EUt(VA[LV])
+                .buildAndRegister()
+        }
+    }
+    
+    if (!(tooltip in screwdriverBlacklist)) {
+
+        ASSEMBLER.recipeBuilder()
+            .inputs(ore('stickLong' + tooltip))
+            .outputs(metaitem('toolHeadScrewdriver' + tooltip))
+            .duration(50)
+            .EUt(VA[LV])
+            .buildAndRegister();
+    }
+}
