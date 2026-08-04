@@ -182,7 +182,7 @@ LCR.recipeBuilder()
 
 REACTION_FURNACE.recipeBuilder()
     .inputs(ore('dustAmmoniumDiuranate') * 19)
-    .fluidInputs(fluid('hydrogen') * 2000)
+    .fluidInputs(fluid('hydrogen') * 4000)
     .outputs(metaitem('dustUraniumDioxide') * 6)
     .fluidOutputs(fluid('ammonia') * 2000)
     .fluidOutputs(fluid('dense_steam') * 3000)
