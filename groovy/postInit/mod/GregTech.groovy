@@ -667,7 +667,6 @@ CENTRIFUGE.recipeBuilder()
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-    .fluidInputs(fluid('tin_alloy') * 144)
     .inputs(ore('wireGtDoubleCupronickel') * 8)
     .inputs(metaitem('mineral_wool') * 8)
     .inputs(ore('foilBronze') * 8)
