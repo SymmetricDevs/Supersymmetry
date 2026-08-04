@@ -45,6 +45,15 @@ MACERATOR.recipeBuilder()
 
 // Tier 1
 
+ELECTROSTATIC_SEPARATOR.recipeBuilder()
+    .inputs(metaitem("dustBasalticRegolith") * 4)
+    .outputs(metaitem("dustAnorthosite") * 1)
+    .outputs(metaitem("dustLunarBasalt") * 3)
+    .chancedOutput(metaitem("dustLunarMagnetic") * 1, 5000, 0)
+    .EUt(VA[MV])
+    .duration(100)
+    .buildAndRegister()
+
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
     .inputs(metaitem("dustAnorthositicRegolith") * 4)
     .outputs(metaitem("dustAnorthosite") * 4)
@@ -70,6 +79,24 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(metaitem("dustAnorthosite"))
+    .outputs(metaitem("dustDegassedAnorthosite"))
+    .fluidOutputs(fluid("regolith_gases") * 100)
+    .EUt(VA[MV])
+    .duration(100)
+    .buildAndRegister()
+
+
+ROASTER.recipeBuilder()
+    .inputs(metaitem("dustLunarBasalt"))
+    .outputs(metaitem("dustDegassedLunarBasalt"))
+    .fluidOutputs(fluid("regolith_gases") * 100)
+    .EUt(VA[MV])
+    .duration(100)
+    .buildAndRegister()
+
 
 // Ilmenite flotation
 CSTR.recipeBuilder()
@@ -214,13 +241,13 @@ BR.recipeBuilder()
 // $stoik (38 Al2Si2O7 + Al2Si6O15) + 78NaOH(H2O) -> 39(NaAlO2)2(H2O)3 + 82SiO2
 // Remove 4 SiO2 and it's OK
 // 520 dust + 78NaOH(H2O) -> 39(NaAlO2)2(H2O)3 + 78SiO2
-// 40 dust + 6NaOH(H2O) -> 13(NaAlO2)2(H2O)3 + 6SiO2
+// 40 dust + 6NaOH(H2O) -> 3(NaAlO2)2(H2O)3 + 6SiO2
 // + one extra division in half
 BR.recipeBuilder()
     .inputs(metaitem("dustAnorthositeAluminosilicate") * 20)
     .fluidInputs(fluid("sodium_hydroxide_solution") * 3000)
     .outputs(metaitem("dustSiliconDioxide") * 9)
-    .fluidOutputs(fluid("lunar_sodium_aluminate_solution") * 6500)
+    .fluidOutputs(fluid("sodium_aluminate_solution") * 4500)
     .EUt(VA[LV])
     .duration(400)
         .buildAndRegister()
