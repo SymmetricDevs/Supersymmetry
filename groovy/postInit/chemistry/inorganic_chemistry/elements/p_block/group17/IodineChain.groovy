@@ -8,6 +8,13 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister()
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block:1'))
+    .outputs(metaitem('dustCaliche') * 4)
+    .duration(10)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 MIXER.recipeBuilder()
     .inputs(metaitem('dustCaliche') * 4)
     .fluidInputs(fluid('distilled_water') * 500)
