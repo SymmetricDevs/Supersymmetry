@@ -134,7 +134,7 @@ ore('dustSilicaSand').add(
 ore('carbonSource').add(
         metaitem('dustCharcoal'),
         metaitem('dustGreenCoke'),
-        metaitem('dustCoke')
+        metaitem('dustCoke'),
         metaitem('dustCarbon')
 )
 
