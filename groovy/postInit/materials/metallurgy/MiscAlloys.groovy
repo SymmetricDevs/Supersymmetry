@@ -1,66 +1,85 @@
- import static prePostInit.Recipemaps.*
+import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 // Red Alloy
 RESISTANCE_FURNACE.recipeBuilder()
-         .inputs(metaitem('ingotCopper') * 1)
-         .inputs(item('minecraft:redstone') * 5)
-         .notConsumable(metaitem('susy:clay_graphite_crucible'))
-         .fluidOutputs(fluid('red_alloy') * 144)
-         .EUt(VA[LV])
-         .duration(168)
-         .buildAndRegister()
+    .fluidInputs(fluid('copper') * 144)
+    .inputs(item('minecraft:redstone') * 5)
+    .notConsumable(metaitem('susy:clay_graphite_crucible'))
+    .fluidOutputs(fluid('red_alloy') * 144)
+    .temperature(1473)
+    .EUt(VA[LV])
+    .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
-        .inputs(metaitem('ingotCopper') * 1)
-        .inputs(item('minecraft:redstone') * 5)
-        .fluidOutputs(fluid('red_alloy') * 144)
-        .EUt(VA[LV])
-        .duration(42)
-        .buildAndRegister()
+    .fluidInputs(fluid('copper') * 144)
+    .inputs(item('minecraft:redstone') * 5)
+    .fluidOutputs(fluid('red_alloy') * 144)
+    .EUt(VA[LV])
+    .buildAndRegister()
 
 // Invar
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('iron') * 720) // TO DO: replace
-        .inputs(metaitem('ingotNickel') * 3)
-        .fluidOutputs(fluid('invar') * 1152)
-        .EUt(VA[LV])
-        .duration(60)
-        .buildAndRegister()
+    .fluidInputs(fluid('iron') * 720) // TO DO: replace
+    .inputs(metaitem('ingotNickel') * 3)
+    .fluidOutputs(fluid('invar') * 1152)
+    .EUt(VA[LV])
+    .buildAndRegister()
 
 // Nichrome
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('nickel') * 1008)
-        .inputs(metaitem('ingotChrome') * 2)
-        .fluidOutputs(fluid('nichrome') * 1296)
-        .EUt(VA[LV])
-        .duration(60)
-        .buildAndRegister()
+    .fluidInputs(fluid('nickel') * 1008)
+    .inputs(metaitem('ingotChrome') * 2)
+    .fluidOutputs(fluid('nichrome') * 1296)
+    .EUt(VA[LV])
+    .buildAndRegister()
 
 // Kanthal
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('iron') * 4032) // TO DO: replace
-        .inputs(metaitem('dustFerrochromium') * 3)
-        .inputs(metaitem('ingotAluminium') * 5)
-        .fluidOutputs(fluid('kanthal') * 5184)
-        .EUt(VA[MV])
-        .duration(60)
-        .buildAndRegister()
+    .fluidInputs(fluid('iron') * 4032) // TO DO: replace
+    .inputs(metaitem('dustFerrochromium') * 3)
+    .inputs(metaitem('ingotAluminium') * 5)
+    .fluidOutputs(fluid('kanthal') * 5184)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
- // Kovar
-ALLOY_SMELTER.recipeBuilder()
-        .inputs(ore('ingotInvar') * 3)
-        .inputs(ore('ingotCobaltMatte') * 1)
-        .outputs(metaitem('ingotKovar') * 2)
-        .duration(400)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
+// Kovar
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('iron') * 288)
-        .inputs(metaitem('ingotNickel'))
-        .inputs(metaitem('ingotCobalt'))
-        .fluidOutputs(fluid('kovar') * 576)
-        .EUt(VA[LV])
-        .duration(60)
-        .buildAndRegister()
+    .fluidInputs(fluid('iron') * 1440) // TO DO: replace
+    .inputs(metaitem('ingotNickel') * 5)
+    .inputs(metaitem('ingotCobalt') * 3)
+    .fluidOutputs(fluid('kovar') * 576)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Electrum
+RESISTANCE_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('silver') * 144)
+    .inputs(item('minecraft:gold_ingot'))
+    .notConsumable(metaitem('susy:clay_graphite_crucible'))
+    .fluidOutputs(fluid('electrum') * 288)
+    .temperature(1235)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Monel
+INDUCTION_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustNickel') * 23)
+    .inputs(metaitem('dustManganese') * 2)
+    .inputs(metaitem('dustCopper') * 10)
+    .inputs(metaitem('dustAluminium') * 4)
+    .inputs(metaitem('dustTitanium'))
+    .fluidOutputs(fluid('monel_500') * 5760)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Zircaloy
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustHighPurityZirconium') * 18)
+    .inputs(metaitem('dustTin') * 3)
+    .inputs(metaitem('dustIron') * 2)
+    .inputs(metaitem('dustChrome'))
+    .fluidOutputs(fluid('zircaloy_4') * 3456)
+    .EUt(VA[IV])
+    .duration(400)
+    .buildAndRegister()

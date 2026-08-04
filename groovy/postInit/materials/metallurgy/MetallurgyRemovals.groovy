@@ -92,6 +92,42 @@ mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustWroughtIron') * 2, 
 mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotWroughtIron') * 2, metaitem('ingotNickel')], null)
 // Invar Ingot * 3
 mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustWroughtIron') * 2, metaitem('dustNickel')], null)
+// Battery Alloy Ingot * 5
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotLead') * 4, metaitem('dustAntimony')], null)
+// Battery Alloy Ingot * 5
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustLead') * 4, metaitem('ingotAntimony')], null)
+// Battery Alloy Ingot * 5
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotLead') * 4, metaitem('ingotAntimony')], null)
+// Battery Alloy Ingot * 5
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustLead') * 4, metaitem('dustAntimony')], null)
+// Electrum Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [item('minecraft:gold_ingot'), metaitem('dustSilver')], null)
+// Electrum Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustGold'), metaitem('ingotSilver')], null)
+// Electrum Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [item('minecraft:gold_ingot'), metaitem('ingotSilver')], null)
+// Electrum Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustGold'), metaitem('dustSilver')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [item('minecraft:iron_ingot'), metaitem('dustTin')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustIron'), metaitem('ingotTin')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [item('minecraft:iron_ingot'), metaitem('ingotTin')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustIron'), metaitem('dustTin')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotWroughtIron'), metaitem('dustTin')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustWroughtIron'), metaitem('ingotTin')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotWroughtIron'), metaitem('ingotTin')], null)
+// Tin Alloy Ingot * 2
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustWroughtIron'), metaitem('dustTin')], null)
+// Blue Alloy Ingot * 1
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotSilver'), metaitem('dustElectrotine') * 4], null)
+// Blue Alloy Ingot * 1
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustSilver'), metaitem('dustElectrotine') * 4], null)
 // Potin Dust * 9
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustCopper') * 6, metaitem('dustTin') * 2, metaitem('dustLead'), metaitem('circuit.integrated').withNbt(['Configuration': 3])], null)
 // Potin Dust * 9

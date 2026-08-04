@@ -1,47 +1,34 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-// 97.6% Al 1.1% Mg 0.64% Si 0.36% Cu 0.30% Cr
+// 6061 Aluminium Alloy
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('aluminium') * 10144)
-        .inputs(ore('dustTinyMagnesium') * 8)
-        .inputs(ore('dustTinySilicon') * 4)
-        .inputs(ore('dustTinyCopper') * 1)
-        .inputs(ore('dustTinyChrome') * 1)
-        .fluidOutputs(fluid('aluminium_alloy_6061') * 10368)
-        .EUt(VA[LV])
-        .duration(9600)
-        .buildAndRegister()
+    .fluidInputs(fluid('aluminium') * 10144)
+    .inputs(ore('dustTinyMagnesium') * 8)
+    .inputs(ore('dustTinySilicon') * 4)
+    .inputs(ore('dustTinyCopper') * 1)
+    .inputs(ore('dustTinyChrome') * 1)
+    .fluidOutputs(fluid('aluminium_alloy_6061') * 10368)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
-// 90.6% Al 5.5% Zn 2.4% Mg 1.3% Cu 0.26% Cr
+// 7075 Aluminium Alloy
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('aluminium') * 10848)
-        .inputs(ore('dustTinyZinc') * 17)
-        .inputs(ore('dustTinyMagnesium') * 20)
-        .inputs(ore('dustTinyCopper') * 4)
-        .inputs(ore('dustTinyChrome') * 1)
-        .fluidOutputs(fluid('aluminium_alloy_7075') * 11520)
-        .EUt(VA[MV])
-        .duration(9600)
-        .buildAndRegister()
+    .fluidInputs(fluid('aluminium') * 10848)
+    .inputs(ore('dustTinyZinc') * 17)
+    .inputs(ore('dustTinyMagnesium') * 20)
+    .inputs(ore('dustTinyCopper') * 4)
+    .inputs(ore('dustTinyChrome') * 1)
+    .fluidOutputs(fluid('aluminium_alloy_7075') * 11520)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
 // Magnalium
-RESISTANCE_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('aluminium') * 2736)
-        .inputs(ore('ingotMagnesium'))
-        .notConsumable(metaitem('susy:clay_graphite_crucible'))
-        .temperature(923)
-        .fluidOutputs(fluid('magnalium') * 2880)
-        .duration(1000)
-        .EUt(VA[LV])
-        .buildAndRegister();
-
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('aluminium') * 2736)
-        .inputs(ore('ingotMagnesium'))
-        .fluidOutputs(fluid('magnalium') * 2880)
-        .duration(187)
-        .EUt(VA[LV])
-        .buildAndRegister();
+    .fluidInputs(fluid('aluminium') * 2736)
+    .inputs(ore('ingotMagnesium'))
+    .fluidOutputs(fluid('magnalium') * 2880)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
 
