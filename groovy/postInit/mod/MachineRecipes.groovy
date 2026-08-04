@@ -1828,15 +1828,15 @@ ASSEMBLER.recipeBuilder()
     .circuitMeta(12)
     .inputs(ore('plateStainlessSteel') * 4)
     .inputs(ore('frameGtStainlessSteel'))
-    .outputs(item('susy:susy_multiblock_casing', 14))
+    .outputs(item('susy:susy_multiblock_casing', 15))
     .duration(240)
     .EUt(VA[HV])
     .buildAndRegister()
 
-RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 1), [ore('plateStainlessSteel') * 4, ore('frameGtStainlessSteel')])
+RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 15), [ore('plateStainlessSteel') * 4, ore('frameGtStainlessSteel')])
 
-crafting.addShaped("susy:industrial_sifter"), [
+crafting.addShaped(metaitem("susy:industrial_sifter"), [
     [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
     [ore('cableGtSingleGold'), metaitem('hull.Hv'), ore('cableGtSingleGold')],
     [metaitem('frameStainlessSteel'), metaitem('electric.motor.hv'), metaitem('frameStainlessSteel')]
-]
+])
