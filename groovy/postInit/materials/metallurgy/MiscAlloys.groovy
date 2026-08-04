@@ -37,10 +37,10 @@ INDUCTION_FURNACE.recipeBuilder()
 
 // Kanthal
 INDUCTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('iron') * 4032) // TO DO: replace
-    .inputs(metaitem('dustFerrochromium') * 3)
-    .inputs(metaitem('ingotAluminium') * 5)
-    .fluidOutputs(fluid('kanthal') * 5184)
+    .fluidInputs(fluid('iron') * 3312) // TO DO: replace
+    .inputs(metaitem('dustFerrochromium') * 12)
+    .inputs(metaitem('ingotAluminium') * 4)
+    .fluidOutputs(fluid('kanthal') * 5616)
     .EUt(VA[MV])
     .buildAndRegister()
 

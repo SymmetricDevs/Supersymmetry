@@ -251,6 +251,12 @@ class ChangeFlags {
         TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true)
         StainlessSteel.setFormula("Fe28Cr8Ni4Si2Mn", true)
         Magnalium.setFormula("MgAl19", true)
+        Bronze.setFormula("Cu14Sn", true)
+        Brass.setFormula("Cu5Zn2", true)
+        Cupronickel.setFormula("Cu8Ni", true)
+        Invar.setFormula("Fe5Ni3", true)
+        Nichrome.setFormula("Ni7Cr2", true)
+        Kanthal.setFormula("Fe27Cr8Al4", true)
 
         // Ore Processing
         
