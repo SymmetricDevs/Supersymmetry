@@ -135,6 +135,7 @@ ore('carbonSource').add(
         metaitem('dustCharcoal'),
         metaitem('dustGreenCoke'),
         metaitem('dustCoke')
+        metaitem('dustCarbon')
 )
 
 RESISTANCE_FURNACE.recipeBuilder()
