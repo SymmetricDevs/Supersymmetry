@@ -134,6 +134,8 @@ mods.gregtech.mixer.removeByInput(7, [metaitem('dustCopper') * 6, metaitem('dust
 mods.gregtech.blender.removeByInput(7, [metaitem('dustCopper') * 6, metaitem('dustTin') * 2, metaitem('dustLead'), metaitem('circuit.integrated').withNbt(['Configuration': 3])], null)
 // Magnalium Dust * 3
 mods.gregtech.blender.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Soldering Alloy Dust * 10
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustTin') * 6, metaitem('dustLead') * 3, metaitem('dustAntimony'), metaitem('circuit.integrated').withNbt(['Configuration': 3])], null)
 
 crafting.remove("gregtech:dust_brass")
 crafting.remove("gregtech:dust_bronze")
