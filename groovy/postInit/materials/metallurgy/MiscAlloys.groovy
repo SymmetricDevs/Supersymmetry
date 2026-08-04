@@ -4,7 +4,7 @@ import static gregtech.api.GTValues.*
 // Red Alloy
 RESISTANCE_FURNACE.recipeBuilder()
     .fluidInputs(fluid('copper') * 144)
-    .inputs(item('minecraft:redstone') * 5)
+    .inputs(item('minecraft:redstone') * 4)
     .notConsumable(metaitem('susy:clay_graphite_crucible'))
     .fluidOutputs(fluid('red_alloy') * 144)
     .temperature(1473)
@@ -13,8 +13,9 @@ RESISTANCE_FURNACE.recipeBuilder()
 
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('copper') * 144)
-    .inputs(item('minecraft:redstone') * 5)
+    .inputs(item('minecraft:redstone') * 4)
     .fluidOutputs(fluid('red_alloy') * 144)
+    .duration(74)
     .EUt(VA[LV])
     .buildAndRegister()
 
@@ -48,7 +49,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('iron') * 1440) // TO DO: replace
     .inputs(metaitem('ingotNickel') * 5)
     .inputs(metaitem('ingotCobalt') * 3)
-    .fluidOutputs(fluid('kovar') * 576)
+    .fluidOutputs(fluid('kovar') * 2592)
     .EUt(VA[LV])
     .buildAndRegister()
 
@@ -64,13 +65,22 @@ RESISTANCE_FURNACE.recipeBuilder()
 
 // Monel
 INDUCTION_FURNACE.recipeBuilder()
-    .inputs(metaitem('dustNickel') * 23)
+    .fluidInputs(fluid('nickel') * 3312)
     .inputs(metaitem('dustManganese') * 2)
     .inputs(metaitem('dustCopper') * 10)
     .inputs(metaitem('dustAluminium') * 4)
     .inputs(metaitem('dustTitanium'))
     .fluidOutputs(fluid('monel_500') * 5760)
     .EUt(VA[MV])
+    .buildAndRegister()
+
+// Silver-Indium-Cadmium Alloy
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('silver') * 2448)
+    .inputs(metaitem('dustIndium') * 3)
+    .inputs(metaitem('dustCadmium'))
+    .fluidOutputs(fluid('silver_indium_cadmium') * 3024)
+    .EUt(VA[EV])
     .buildAndRegister()
 
 // Zircaloy
