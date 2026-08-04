@@ -1956,3 +1956,22 @@ crafting.addShaped(item('susy:paddle_shaft') * 2,
         [[null, null, null],
          [ore('rotorIron'), ore('logWood'), ore('rotorIron')],
          [null, null, null]])
+
+//Industrial Sifter
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(12)
+    .inputs(ore('plateStainlessSteel') * 4)
+    .inputs(ore('frameGtStainlessSteel'))
+    .outputs(item('susy:susy_multiblock_casing', 15))
+    .duration(240)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 15), [ore('plateStainlessSteel') * 4, ore('frameGtStainlessSteel')])
+
+crafting.addShaped(metaitem("susy:industrial_sifter"), [
+    [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
+    [ore('cableGtSingleGold'), metaitem('hull.Hv'), ore('cableGtSingleGold')],
+    [metaitem('frameStainlessSteel'), metaitem('electric.motor.hv'), metaitem('frameStainlessSteel')]
+])
