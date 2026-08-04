@@ -921,18 +921,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-FORMING_PRESS.recipeBuilder()
-    .inputs(ore('plateBronze'))
-    .inputs(ore('plateSteel'))
-    .inputs(ore('plateBrass'))
-    .inputs(ore('boltBronze'))
-    .inputs(ore('boltSteel'))
-    .inputs(ore('boltBrass'))
-    .outputs(item('techguns:itemshared', 45))
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 LATHE.recipeBuilder()
     .inputs(ore('stickIron'))
     .outputs(item('techguns:itemshared', 38))
@@ -1339,40 +1327,8 @@ WEAPONS_FACTORY.recipeBuilder()
         .EUt(60)
         .buildAndRegister();
 
-WEAPONS_FACTORY.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(item('techguns:itemshared', 45) * 5)
-        .outputs(item('techguns:steam_helmet'))
-        .duration(100)
-        .EUt(15)
-        .buildAndRegister();
-
-WEAPONS_FACTORY.recipeBuilder()
-        .circuitMeta(2)
-        .inputs(item('techguns:itemshared', 45) * 8)
-        .outputs(item('techguns:steam_chestplate'))
-        .duration(100)
-        .EUt(15)
-        .buildAndRegister();
-
-WEAPONS_FACTORY.recipeBuilder()
-        .circuitMeta(3)
-        .inputs(item('techguns:itemshared', 45) * 7)
-        .outputs(item('techguns:steam_leggings'))
-        .duration(100)
-        .EUt(15)
-        .buildAndRegister();
-
-WEAPONS_FACTORY.recipeBuilder()
-        .circuitMeta(4)
-        .inputs(item('techguns:itemshared', 45) * 4)
-        .outputs(item('techguns:steam_boots'))
-        .duration(100)
-        .EUt(15)
-        .buildAndRegister();
 
 //Miner Armor
-
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('plateIron') * 2)
