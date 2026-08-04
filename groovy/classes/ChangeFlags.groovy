@@ -85,6 +85,8 @@ class ChangeFlags {
         Silver.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(1234, 50, false, false, true, false));
         Rubber.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(593, 6, true, false, false, false));
 
+        Stone.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 131, 1));
+        Granite.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 191, 1));
         
         setupFluidType(AntimonyTrifluoride, FluidStorageKeys.LIQUID, 565)
         setupFluidType(LithiumChloride, FluidStorageKeys.LIQUID, 890)
