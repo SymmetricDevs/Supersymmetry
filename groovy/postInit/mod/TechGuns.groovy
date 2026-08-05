@@ -272,7 +272,7 @@ crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
 
 crafting.replaceShaped("techguns:simplemachine_10_charging_station", item('techguns:simplemachine', 10), [
     [ore('circuitIv'), metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), ore('circuitIv')],
-    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 126), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
+    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 29), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
     [metaitem('plateTungstenSteel'), metaitem('battery_buffer.iv.4'), metaitem('plateTungstenSteel')]
 ])
 
@@ -432,7 +432,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .inputs(metaitem('electric.motor.lv'))
     .inputs(ore('circuitLv'))
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineCopper'))
     .inputs(ore('plateSteel') * 4)
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('techguns:basicmachine', 3))
@@ -921,18 +921,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-FORMING_PRESS.recipeBuilder()
-    .inputs(ore('plateBronze'))
-    .inputs(ore('plateSteel'))
-    .inputs(ore('plateBrass'))
-    .inputs(ore('boltBronze'))
-    .inputs(ore('boltSteel'))
-    .inputs(ore('boltBrass'))
-    .outputs(item('techguns:itemshared', 45))
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 LATHE.recipeBuilder()
     .inputs(ore('stickIron'))
     .outputs(item('techguns:itemshared', 38))
@@ -987,6 +975,21 @@ CANNER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
+LATHE.recipeBuilder()
+    .inputs(ore('stone'))
+    .outputs(item('techguns:itemshared', 37))
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+CUTTER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('plankWood'))
+    .outputs(item('techguns:itemshared', 42))
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 crafting.replaceShaped("techguns:riot_shield", item('techguns:riot_shield'), [
     [metaitem('stickLongSteel'), metaitem('platePolycarbonate'), metaitem('stickLongSteel')],
     [metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
@@ -1005,7 +1008,7 @@ crafting.replaceShaped("techguns:advanced_shield", item('techguns:advanced_shiel
     [metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateUltraHighMolecularWeightPolyethylene')]
 ]);
 
-crafting.addShaped("stone_barrel", item('techguns:itemshared:37'), [
+crafting.replaceShaped("stone_barrel", item('techguns:itemshared:37'), [
     [null, ore('craftingToolFile'), null],
     [ore('craftingToolScrewdriver'), ore('stone'), ore('craftingToolHardHammer')]
 ]);
@@ -1207,6 +1210,15 @@ crafting.addShaped("bound_leather", metaitem('bound_leather')*8, [
     [item('techguns:itemshared:77'), item('techguns:itemshared:77'), item('techguns:itemshared:77')]
 ]);
 
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('plateIron'))
+    .inputs(ore('screwIron') * 2)
+    .inputs(item('minecraft:iron_door'))
+    .outputs(item('techguns:item_bunkerdoor'))
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister();
+
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(1)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
@@ -1315,38 +1327,45 @@ WEAPONS_FACTORY.recipeBuilder()
         .EUt(60)
         .buildAndRegister();
 
+
+//Miner Armor
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
-        .inputs(item('techguns:itemshared', 45) * 5)
-        .outputs(item('techguns:steam_helmet'))
-        .duration(100)
+        .inputs(ore('plateIron') * 2)
+        .inputs(ore('dyeYellow'))
+        .inputs(item('techguns:itemshared', 60) * 2)
+        .outputs(item('techguns:t1_miner_helmet'))
+        .duration(50)
         .EUt(15)
-        .buildAndRegister();
+        .buildAndRegister()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(2)
-        .inputs(item('techguns:itemshared', 45) * 8)
-        .outputs(item('techguns:steam_chestplate'))
-        .duration(100)
+        .inputs(ore('plateIron') * 2)
+        .inputs(item('techguns:itemshared', 60) * 6)
+        .outputs(item('techguns:t1_miner_chestplate'))
+        .duration(50)
         .EUt(15)
-        .buildAndRegister();
+        .buildAndRegister()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(3)
-        .inputs(item('techguns:itemshared', 45) * 7)
-        .outputs(item('techguns:steam_leggings'))
-        .duration(100)
+        .inputs(ore('plateIron') * 2)
+        .inputs(item('techguns:itemshared', 60) * 5)
+        .outputs(item('techguns:t1_miner_leggings'))
+        .duration(50)
         .EUt(15)
-        .buildAndRegister();
+        .buildAndRegister()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(4)
-        .inputs(item('techguns:itemshared', 45) * 4)
-        .outputs(item('techguns:steam_boots'))
-        .duration(100)
+        .inputs(ore('plateIron') * 2)
+        .inputs(item('techguns:itemshared', 60) * 2)
+        .outputs(item('techguns:t1_miner_boots'))
+        .duration(50)
         .EUt(15)
-        .buildAndRegister();
-    
+        .buildAndRegister()
+
 //Armor upgrades
 
 WEAPONS_FACTORY.recipeBuilder()

@@ -1,11 +1,11 @@
 {
   "preRequisites:11": [
-    504
+    504,
+    81
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1481636455.desc",
-      "frame:8": "GATE",
       "icon:10": {
         "id:8": "susy:eccentric_roll"
       },
@@ -24,6 +24,11 @@
         "1:10": {
           "Count:3": 1,
           "Damage:2": 14742,
+          "id:8": "gregtech:machine"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 14744,
           "id:8": "gregtech:machine"
         }
       },

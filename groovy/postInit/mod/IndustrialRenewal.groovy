@@ -1,4 +1,4 @@
-import static gregtech.api.GTValues.*
+ import static gregtech.api.GTValues.*
 
 def name_removals = [
 	"industrialrenewal:prospecting_pan",
@@ -170,9 +170,9 @@ crafting.replaceShaped("industrialrenewal:safety_hazard", item('industrialrenewa
 ])
 
 crafting.replaceShaped("industrialrenewal:fuse_box", item('industrialrenewal:fuse_box'), [
-	[ore('plateSteel'), ore('wireFineRedAlloy'), ore('plateSteel')],
+	[ore('plateSteel'), ore('wireFineTin'), ore('plateSteel')],
 	[ore('plateSteel'), ore('chest'), item('minecraft:lever')],
-	[ore('plateSteel'), ore('wireFineRedAlloy'), ore('plateSteel')]
+	[ore('plateSteel'), ore('wireFineTin'), ore('plateSteel')]
 ])
 
 crafting.replaceShaped("industrialrenewal:flame_detector", item('industrialrenewal:flame_detector'), [
@@ -243,7 +243,7 @@ crafting.replaceShaped("industrialrenewal:wall_concrete", item('industrialrenewa
 
 crafting.replaceShaped("industrialrenewal:cartridge_plus", item('industrialrenewal:cartridge_plus') * 6, [
 	[null, ore('stickIron'), null],
-	[ore('wireFineRedAlloy'), ore('plateIron'), ore('wireFineRedAlloy')],
+	[ore('wireFineTin'), ore('plateIron'), ore('wireFineTin')],
 	[null, ore('stickIron'), null]
 ])
 
@@ -303,13 +303,13 @@ crafting.replaceShaped("industrialrenewal:frame", item('industrialrenewal:frame'
 
 crafting.replaceShaped("industrialrenewal:conduit_connector", item('industrialrenewal:conduit_connector'), [
 	[null, ore('stickSteel'), null],
-	[null, ore('wireFineRedAlloy'), null],
-	[ore('stickSteel'), ore('wireFineRedAlloy'), ore('stickSteel')]
+	[null, ore('wireFineTin'), null],
+	[ore('stickSteel'), ore('wireFineTin'), ore('stickSteel')]
 ])
 
 crafting.replaceShaped("industrialrenewal:conduit_extension", item('industrialrenewal:conduit_extension') * 6, [
 	[null, ore('stickSteel'), null],
-	[null, ore('wireFineRedAlloy'), null],
+	[null, ore('wireFineTin'), null],
 	[null, ore('stickSteel'), null]
 ])
 
@@ -370,7 +370,7 @@ crafting.replaceShaped("industrialrenewal:rail_gate", item('industrialrenewal:ra
 crafting.replaceShaped("industrialrenewal:rail_loader", item('industrialrenewal:rail_loader'), [
 	[null, ore('plateSteel'), null],
 	[null, item('industrialrenewal:booster_rail'), null],
-	[null, ore('wireFineRedAlloy'), null]
+	[null, ore('wireFineTin'), null]
 ])
 
 crafting.replaceShaped("industrialrenewal:plow_iron", item('industrialrenewal:plow_iron'), [
@@ -381,13 +381,13 @@ crafting.replaceShaped("industrialrenewal:plow_iron", item('industrialrenewal:pl
 
 crafting.replaceShaped("industrialrenewal:energy_level", item('industrialrenewal:energy_level'), [
 	[null, ore('plateSteel'), null],
-	[item('minecraft:comparator'), ore('stickIron'), ore('wireFineRedAlloy')],
+	[item('minecraft:comparator'), ore('stickIron'), ore('wireFineTin')],
 	[null, ore('plateSteel'), null]
 ])
 
 crafting.replaceShaped("industrialrenewal:fluid_gauge", item('industrialrenewal:fluid_gauge'), [
 	[null, ore('plateSteel'), null],
-	[ore('wireFineRedAlloy'), ore('stickIron'), item('minecraft:comparator')],
+	[ore('wireFineTin'), ore('stickIron'), item('minecraft:comparator')],
 	[null, ore('plateSteel'), null]
 ])
 
@@ -483,7 +483,7 @@ crafting.replaceShaped("industrialrenewal:fluorescent", item('industrialrenewal:
 
 crafting.replaceShaped("industrialrenewal:traffic_light", item('industrialrenewal:traffic_light') * 2, [
 	[ore('plateSteel'), ore('gtLight'), ore('dyeRed')],
-	[ore('wireFineRedAlloy'), ore('gtLight'), ore('dyeYellow')],
+	[ore('wireFineTin'), ore('gtLight'), ore('dyeYellow')],
 	[ore('plateSteel'), ore('gtLight'), ore('dyeGreen')]
 ])
 
@@ -524,7 +524,7 @@ mods.gregtech.assembler.recipeBuilder()
 
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('sensor.lv'))
-	.inputs(ore('wireFineRedAlloy')*4)
+	.inputs(ore('wireFineTin')*4)
 	.inputs(ore('stickSteel') * 2)
 	.fluidInputs(fluid('soldering_alloy') * 72)
 	.outputs(item('industrialrenewal:entity_detector'))
@@ -635,6 +635,52 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(item('industrialrenewal:transformer_hv'))
 	.duration(800)
 	.EUt(VA[LV])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('plateAluminium') * 3)
+	.inputs(ore('stickLongAluminium') * 3)
+    .inputs(item('industrialrenewal:energy_level'))
+	.outputs(item('industrialrenewal:small_wind_turbine_pillar') * 6)
+    .duration(80)
+	.EUt(VA[LV])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('plateAluminium') * 5)
+	.inputs(ore('boltAluminium'))
+    .inputs(metaitem('electric.motor.mv'))
+	.outputs(item('industrialrenewal:small_wind_turbine'))
+    .duration(80)
+	.EUt(VA[LV])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('screwSteel'))
+	.inputs(ore('stickSteel'))
+	.inputs(ore('plateSteel'))
+    .inputs(item('minecraft:stone_button'))
+	.inputs(metaitem('battery.lead_acid'))
+	.outputs(item('industrialrenewal:screwdrive'))
+    .duration(40)
+	.EUt(7)
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(3)
+    .inputs(ore('plateSteel') * 4)
+	.inputs(ore('stickLongSteel') * 2)
+	.outputs(item('industrialrenewal:barrel_item'))
+    .duration(200)
+	.EUt(16)
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('dyeRed'))
+	.inputs(ore('stickSteel') * 3)
+	.outputs(item('industrialrenewal:cart_linkable'))
+    .duration(40)
+	.EUt(7)
 	.buildAndRegister()
 /*
 
@@ -886,9 +932,9 @@ crafting.addShaped("irw_pump", item('industrialrenewal:electric_pump'), [
 ]);
 
 crafting.addShaped("irw_fusebox", item('industrialrenewal:fuse_box'), [
-		[ore('stickSteel'), ore('wireFineRedAlloy'), ore('stickSteel')],
+		[ore('stickSteel'), ore('wireFineTin'), ore('stickSteel')],
 		[ore('stickSteel'), ore('chest'), ore('stickSteel')],
-		[ore('stickSteel'), ore('wireFineRedAlloy'), ore('stickSteel')]
+		[ore('stickSteel'), ore('wireFineTin'), ore('stickSteel')]
 ]);
 
 crafting.addShaped("irw_catwalk_gate", item('industrialrenewal:catwalk_gate')*2, [
@@ -917,7 +963,7 @@ crafting.addShaped("irw_pillar_brace", item('industrialrenewal:brace')*24, [
 
 crafting.addShaped("irw_rain_sensor", item('industrialrenewal:sensor_rain'), [
 		[null, ore('plateSteel'), null],
-		[ore('plateSteel'), ore('wireFineRedAlloy'), ore('plateSteel')],
+		[ore('plateSteel'), ore('wireFineTin'), ore('plateSteel')],
 		[ore('minislabStone'), ore('minislabStone'), ore('minislabStone')]
 ]);
 
@@ -929,7 +975,7 @@ crafting.addShaped("irw_signal_indicator", item('industrialrenewal:signal_indica
 
 crafting.addShaped("irw_traffic_light", item('industrialrenewal:traffic_light'), [
 		[ore('plateSteel'), ore('circuitUlv'), ore('dyeRed')],
-		[ore('wireFineRedAlloy'), ore('circuitUlv'), ore('dyeYellow')],
+		[ore('wireFineTin'), ore('circuitUlv'), ore('dyeYellow')],
 		[ore('plateSteel'), ore('circuitUlv'), ore('dyeGreen')]
 ]);
 
@@ -971,7 +1017,7 @@ mods.gregtech.canner.recipeBuilder().EUt(VA[LV]).duration(20)
 for (solder in soldering_alloys) {
 	mods.gregtech.assembler.recipeBuilder().EUt(VA[LV]).duration(20)
 			.inputs(metaitem('sensor.lv'))
-			.inputs(ore('wireFineRedAlloy')*4)
+			.inputs(ore('wireFineTin')*4)
 			.inputs(ore('stickSteel'))
 			.fluidInputs(solder)
 			.outputs(item('industrialrenewal:entity_detector'))

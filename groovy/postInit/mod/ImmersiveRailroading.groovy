@@ -50,7 +50,7 @@ crafting.replaceShaped("immersiverailroading:item_switch_key", item('immersivera
 crafting.replaceShaped("immersiverailroading:item_track_exchanger", item('immersiverailroading:item_track_exchanger'), [
 		[ore('paneGlass'), ore('paneGlass'), ore('paneGlass')],
 		[item('immersiverailroading:item_large_wrench'), ore('plateSteel'), item('immersiverailroading:item_rail')],
-		[ore('paneGlass'), ore('wireFineRedAlloy'), ore('paneGlass')]
+		[ore('paneGlass'), ore('wireFineTin'), ore('paneGlass')]
 ]);
 
 crafting.replaceShaped("immersiverailroading:item_hook", item('immersiverailroading:item_hook'), [
@@ -88,7 +88,7 @@ crafting.addShaped("ir_coupler", item('immersiverailroading:item_augment').withN
 crafting.addShaped("ir_detector", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 7]), [
 		[null, metaitem('sensor.lv'), null],
 		[metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-		[null, metaitem('wireFineRedAlloy'), null]
+		[null, metaitem('wireFineTin'), null]
 ]);
 
 crafting.addShaped("ir_speed_retarder", item('immersiverailroading:item_augment').withNbt(["gauge": 1.435D, "augment": 0]), [
@@ -151,6 +151,23 @@ mods.gregtech.assembler.recipeBuilder()
 		.duration(200)
 		.EUt(VA[MV])
 		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('stickSteel') * 2)
+    .inputs(ore('ringSteel'))
+    .outputs(item('immersiverailroading:item_switch_key'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(18)
+    .inputs(ore('plateSteel') * 6)
+    .outputs(item('immersiverailroading:item_large_wrench'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister()
 		
 Globals.solders.each { key, val ->
 

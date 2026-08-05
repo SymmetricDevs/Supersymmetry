@@ -119,7 +119,7 @@ susy.material.DilutedSodiumCarbonateSolution=Rozcieńczony Roztwór Węglanu Sod
 susy.material.iron_ii_sulfide=Siarczek Żelaza(II)
 susy.material.potassium_bisulfate=Wodorosiarczan Potasu
 susy.material.potassium_sulfate=Siarczan Potasu
-susy.material.wet_antimony_trifluoride=Mokry Trifluoerk Antymonu
+susy.material.wet_antimony_trifluoride=Mokry Trifluorek Antymonu
 susy.material.black_ash=Czarny Popiół
 susy.material.sodium_bicarbonate=Wodorowęglan sodu
 susy.material.calcium_sulfide=Siarczek Wapnia
@@ -190,7 +190,7 @@ susy.material.iron_iii_sulfate=Siarczan Żelaza(III)
 
 susy.material.aluminium_hydroxide=Wodorotlenek Glinu
 susy.material.aluminium_trifluoride=Fluorek Glinu
-susy.material.sodium_fluoride=Fluoerk Sodu
+susy.material.sodium_fluoride=Fluorek Sodu
 
 susy.material.gallium_phosphate=Fosforan Galu
 susy.material.lithium_niobate=Niobian Litu
@@ -276,7 +276,7 @@ susy.material.high_purity_thorium=Tor Wysokiej Czystości
 
 susy.material.amorphous_boron=Bor Bezpostaciowy
 susy.material.magnesium_oxide=Tlenek Magnezu
-susy.material.boron_trioxide=Tritlenek Magneu
+susy.material.boron_trioxide=Tritlenek Diboru
 susy.material.boric_acid=Kwas Borowy
 susy.material.sodium_tetraborate=Tetraboran Sodu
 susy.material.boron_carbide=Węglik Boru
@@ -300,7 +300,7 @@ susy.material.cobaltite_leach_solution=Odsączony Roztwór Kobaltytu
 susy.material.arsenopyrite_leach_solution=Odsączony Roztwór Arsenopirytu
 
 susy.material.arsenic_iii_sulfide=Siarczek Arsenu(III)
-susy.material.arsenic_v_sulfide=Siarczek Arsenu (V)
+susy.material.arsenic_v_sulfide=Siarczek Arsenu(V)
 susy.material.silver_chloride=Chlorek Srebra
 susy.material.copper_sulfate=Siarczan Miedzi
 susy.material.antimony_iii_sulfide=Siarczek Antymonu(III)
@@ -623,10 +623,10 @@ susy.material.sodium_perchlorate_solution=Roztwór Nadchloranu Sodu
 susy.material.sodium_chlorate_solution=Roztwór Chloranu Sodu
 susy.material.diluted_aniline=Rozcieńczona Anilina
 
-susy.material.sodium_thiosulfate_solution=Sodium Thiosulfate Solution
-susy.material.sodium_sulfite_solution=Sodium Sulfite Solution
-susy.material.sulfidic_silver_cyanide_solution=Sulfidic Silver Cyanide Solution
-susy.material.silver_cyanide_solution=Silver Cyanide Solution
+susy.material.sodium_thiosulfate_solution=Roztwór Tiosiarczanu Sodu
+susy.material.sodium_sulfite_solution=Roztwór Siarczanu Sodu
+susy.material.sulfidic_silver_cyanide_solution=Roztwór Sulfidic Silver Cyanide
+susy.material.silver_cyanide_solution=Roztwór Cyjanku Srebra
 susy.material.sulfidic_pyrargyrite_cyanide_leach_solution=Sulfidic Pyrargyrite Cyanide Leach Solution
 susy.material.pyrargyrite_cyanide_leach_solution=Pyrargyrite Cyanide Leach Solution
 susy.material.sulfidic_stephanite_cyanide_leach_solution=Sulfidic Stephanite Cyanide Leach Solution
@@ -635,29 +635,29 @@ susy.material.pyrargyrite_thiosulfate_leach_solution=Pyrargyrite Thiosulfate Lea
 susy.material.thiosulfate_thioantimonite_solution=Thiosulfate Thioantimonite Solution
 susy.material.proustite_thiosulfate_leach_solution=Proustite Thiosulfate Leach Solution
 susy.material.thiosulfate_thioarsenite_solution=Thiosulfate Thioarsenite Solution
-susy.material.diluted_iron_iii_chloride_solution=Diluted Iron III Chloride Solution
+susy.material.diluted_iron_iii_chloride_solution=Rozcieńczony Roztwór Chlorku Żelaza(III)
 susy.material.acidic_arsenate_v_solution=Acidic Arsenate Solution
 susy.material.proustite_alkaline_leach_solution=Proustite Alkaline Leach Solution
 susy.material.crude_arsenic_trichloride=Crude Arsenic Trichloride
 susy.material.enargite_sulfide_leach_solution=Enargite Sulfide Leach Solution
 susy.material.arsenic_trichloride=Arsenic Trichloride
 susy.material.acidic_copper_solution=Acidic Copper Solution
-susy.material.arsine=Arsine
+susy.material.arsine=Arsenowodór
 susy.material.sodium_bromide_solution=Sodium Bromide Solution
-susy.material.sperrylite_waste=Sperrylite Waste
-susy.material.gallium_trichloride=Gallium Trichloride
-susy.material.manganese_ii_oxide=Manganese II Oxide
-susy.material.crude_manganese_ii_sulfate_solution=Crude Manganese II Sulfate Solution
-susy.material.manganese_ii_sulfate_solution=Manganese II Sulfate Solution
-susy.material.iron_iii_hydroxide=Iron III Hydroxide
+susy.material.sperrylite_waste=Odpady po Sperrylicie
+susy.material.gallium_trichloride=Chlorek Galu(III)
+susy.material.manganese_ii_oxide=Tlenek Manganu(II)
+susy.material.crude_manganese_ii_sulfate_solution=Surowy Roztwór Siarczan Manganu(II)
+susy.material.manganese_ii_sulfate_solution=Roztwór Siarczanu Manganu(II)
+susy.material.iron_iii_hydroxide=Wodorotlenek Żelaza(III)
 susy.material.rhodochrosite=Rhodochrosite
 
-susy.material.diluted_phosphoric_acid=Diluted Phosphoric Acid
+susy.material.diluted_phosphoric_acid=Rozcieńczony Kwas Fosforowy
 susy.material.high_purity_phosphorus_vapor_mixture=High Purity Phosphorus Vapor Mixture
 
-susy.material.unscrubbed_wood_gas=Unscrubbed Wood Gas
+susy.material.unscrubbed_wood_gas=Nieoczysczony Gaz Drzewny
 susy.material.light_oil=Coal Tar Oil
-susy.material.impure_creosote=Impure Creosote
+susy.material.impure_creosote=Nieczysty Kreozot
 susy.material.naphthalene_oil=Naphthalene Oil
 susy.material.anthracene_oil=Anthracene Oil
 susy.material.alkaline_naphthalene_oil=Alkaline Naphthalene Oil
@@ -675,29 +675,31 @@ susy.material.quinoline=Quinoline
 susy.material.soda_ash=Soda Oczyszczona (Węglan Sodu)
 
 susy.material.concentrated_brine=Concentrated Brine
-susy.material.brine_evaporite=Brine Evaporite
-susy.material.boron_free_brine=Boron-Free Brine
-susy.material.lithium_free_brine=Lithium-Free Brine
-susy.material.chlorinated_brine=Chlorinated Brine
-susy.material.impure_bromine=Impure Bromine
-susy.material.concentrated_salt_water=Concentrated Salt Water
-susy.material.hypersaline_water=Hypersaline Water
-susy.material.lithium_cobalt_oxide=Lithium Cobalt Oxide
-susy.material.lithium_hexafluorophosphate=Lithium Hexafluorophosphate
-susy.material.nickel_chloride=Nickel Chloride
-susy.material.nickel_hydroxide=Nickel Hydroxide
-susy.material.dimethyl_carbonate=Dimethyl Carbonate
-susy.material.calcium_orthosilicate=Calcium Orthosilicate
-susy.material.magnesium_hydroxide=Magnesium Hydroxide
-susy.material.magnesium_chloride_solution=Magnesium Chloride Solution
-susy.material.wood_ash=Wood Ash
-susy.material.potassium_carbonate_solution=Potassium Carbonate Solution
-susy.material.magnesium_sulfate=Magnesium Sulfate
-susy.material.very_concentrated_brine=Very Concentrated Brine
-susy.material.langbeinite_leach=Langbeinite Leach
-susy.material.polyhalite_leach=Polyhalite Leach
+susy.material.brine_evaporite=Ewaporat Solanki
+susy.material.boron_free_brine=Solanka Bezborowa
+susy.material.lithium_free_brine=Solanka Bezlitowa
+susy.material.chlorinated_brine=Skoncentrowana Solanka
+susy.material.impure_bromine=Nieczysty Brom
+susy.material.concentrated_salt_water=Skoncentrowana Słona Woda
+susy.material.hypersaline_water=Woda Hipersłona
+susy.material.lithium_cobalt_oxide=Tlenek Kobaltu(III) Litu
+susy.material.sodium_cathode_alloy=Stop Katody Akumulatora Sodowo-Jonowego
+susy.material.lithium_hexafluorophosphate=Heksafluorofosforan Litu
+susy.material.nickel_chloride=Chlorek Niklu
+susy.material.nickel_hydroxide=Wodorotlenek Niklu
+susy.material.dimethyl_carbonate=Węglan Dimetylu
+susy.material.nickel_oxide_hydroxide=Oksywodorotlenek Niklu
+susy.material.calcium_orthosilicate=Ortokrzemian Wapnia
+susy.material.magnesium_hydroxide=Wodorotlenek Magnezu
+susy.material.magnesium_chloride_solution=Roztwór Chlorku Magnezu
+susy.material.wood_ash=Popiół Drzewny
+susy.material.potassium_carbonate_solution=Roztwór Węglanu Potasu
+susy.material.magnesium_sulfate=Siarczan Magnezu
+susy.material.very_concentrated_brine=Bardzo Skoncentrowana Solanka
+susy.material.langbeinite_leach=Wypłukany Langbajnit
+susy.material.polyhalite_leach=Wypłukany Polihalit
 susy.material.concentrated_polyhalite_leach=Concentrated Polyhalite Leach
-susy.material.kainite_leach=Kainite Leach
+susy.material.kainite_leach=Wypłukany Kainit
 susy.material.lts_catalyst=LTS Catalyst
 susy.material.hts_catalyst=HTS Catalyst
 susy.material.spent_bismuth_catalyst=Spent Bismuth Catalyst
@@ -925,27 +927,27 @@ susy.material.cold_hp_nitrogen=Cold High-Pressure Nitrogen
 susy.material.hot_hp_propene=Hot High-Pressure Propene
 susy.material.hp_propene=High-Pressure Propene
 
-susy.material.hot_hp_benzene=Hot High-Pressure Benzene
-susy.material.hp_benzene=High-Pressure Benzene
+susy.material.hot_hp_benzene=Gorący Sprężony Benzen
+susy.material.hp_benzene=Sprężony Benzen
 
-susy.material.hot_hp_carbon_monoxide=Hot High-Pressure Carbon Monoxide
-susy.material.hp_carbon_monoxide=High-Pressure Carbon Monoxide
+susy.material.hot_hp_carbon_monoxide=Gorący Sprężony Tlenek Węgla
+susy.material.hp_carbon_monoxide=Sprężony Tlenek Węgla
 
-susy.material.liquid_hydrogen=Liquid Hydrogen
-susy.material.liquid_helium=Liquid Helium
-susy.material.liquid_neon=Liquid Neon
-susy.material.liquid_argon=Liquid Argon
-susy.material.liquid_krypton=Liquid Krypton
-susy.material.liquid_xenon=Liquid Xenon
-susy.material.liquid_nitrogen=Liquid Nitrogen
-susy.material.liquid_refinery_gas=Liquid Refinery Gas
-susy.material.liquid_natural_gas=Liquid Natural Gas (LNG)
-susy.material.liquid_methane=Liquid Methane
-susy.material.liquid_decarburized_air=Liquid Decarburized Air
+susy.material.liquid_hydrogen=Ciekły Wodór
+susy.material.liquid_helium=Ciekły Hel
+susy.material.liquid_neon=Ciekły Neon
+susy.material.liquid_argon=Ciekły Argon
+susy.material.liquid_krypton=Ciekły Krypton
+susy.material.liquid_xenon=Ciekły Ksenon
+susy.material.liquid_nitrogen=Ciekły Azot
+susy.material.liquid_refinery_gas=Ciekły Gaz Rafineryjny
+susy.material.liquid_natural_gas=Ciekły Gaz Ziemny (LNG)
+susy.material.liquid_methane=Ciekły Metan
+susy.material.liquid_decarburized_air=Ciekły Decarburized Air
 
-susy.material.hot_hp_air=Hot High-Pressure Air
-susy.material.hp_air=High-Pressure Air
-susy.material.cold_hp_air=Cold High-Pressure Air
+susy.material.hot_hp_air=Gorące Sprężone Powietrze
+susy.material.hp_air=Sprężone Powietrze
+susy.material.cold_hp_air=Zimne Sprężone Powietrze
 
 susy.material.hot_hp_nether_air=Hot High-Pressure Nether Air
 susy.material.hp_nether_air=High-Pressure Nether Air
@@ -959,28 +961,28 @@ susy.material.hot_hp_refinery_gas=Hot High-Pressure Refinery Gas
 susy.material.hp_refinery_gas=High-Pressure Refinery Gas
 susy.material.cold_hp_refinery_gas=Cold High-Pressure Refinery Gas
 
-susy.material.hot_hp_natural_gas=Hot High-Pressure Natural Gas
-susy.material.hp_natural_gas=High-Pressure Natural Gas
-susy.material.cold_hp_natural_gas=Cold High-Pressure Natural Gas
+susy.material.hot_hp_natural_gas=Gorący Sprężony Gaz Ziemny
+susy.material.hp_natural_gas=Sprężony Gaz Ziemny
+susy.material.cold_hp_natural_gas=Zimny Sprężony Gaz Ziemny
 
 susy.material.hot_hp_methane=Hot High-Pressure Methane
 susy.material.hp_methane=High-Pressure Methane
 susy.material.cold_hp_methane=Cold High-Pressure Methane
 
-susy.material.hot_compressed_ammonia=Hot Compressed Ammonia
-susy.material.compressed_ammonia=Compressed Ammonia
-susy.material.cold_compressed_ammonia=Cold Compressed Ammonia
-susy.material.cold_ammonia=Cold Ammonia
+susy.material.hot_compressed_ammonia=Gorący Sprężony Amoniak
+susy.material.compressed_ammonia=Sprężony Amoniak
+susy.material.cold_compressed_ammonia=Zimny Sprężony Amoniak
+susy.material.cold_ammonia=Zimny Amoniak
 
-susy.material.hot_compressed_propane=Hot Compressed Propane
-susy.material.compressed_propane=Compressed Propane
-susy.material.cold_compressed_propane=Cold Compressed Propane
-susy.material.cold_propane=Cold Propane
+susy.material.hot_compressed_propane=Gorący Sprężony Propan
+susy.material.compressed_propane=Sprężony Propan
+susy.material.cold_compressed_propane=Zimny Sprężony Propan
+susy.material.cold_propane=Zimny Propan
 
-susy.material.hot_compressed_carbon_dioxide=Hot Compressed Carbon Dioxide
-susy.material.compressed_carbon_dioxide=Compressed Carbon Dioxide
-susy.material.cold_compressed_carbon_dioxide=Cold Compressed Carbon Dioxide
-susy.material.cold_carbon_dioxide=Cold Carbon Dioxide
+susy.material.hot_compressed_carbon_dioxide=Gorący Sprężony Dwutlenek Węgla
+susy.material.compressed_carbon_dioxide=Stężony Dwutlenek Węgla
+susy.material.cold_compressed_carbon_dioxide=Zimny Stężony Dwutlenek Węgla
+susy.material.cold_carbon_dioxide=Zimny Dwutlenek Węgla
 
 susy.material.hot_compressed_trichlorofluoromethane=Hot Compressed Trichlorofluoromethane
 susy.material.compressed_trichlorofluoromethane=Compressed Trichlorofluoromethane
@@ -1002,15 +1004,15 @@ susy.material.compressed_chlorodifluoromethane=Compressed Chlorodifluoromethane
 susy.material.cold_compressed_chlorodifluoromethane=Cold Compressed Chlorodifluoromethane
 susy.material.cold_chlorodifluoromethane=Cold Chlorodifluoromethane
 
-susy.material.warm_water=Warm Water
+susy.material.warm_water=Ciepła Woda
 susy.material.warm_ethylene_glycol=Warm Ethylene Glycol
-susy.material.warm_salt_water=Warm Salt Water
+susy.material.warm_salt_water=Ciepła Słona Woda
 susy.material.warm_lubricant=Warm Lubricant
 susy.material.warm_polychlorinated_biphenyl=Warm Polychlorinated Biphenyl
 susy.material.warm_sodium_potassium=Warm Sodium Potassium
 
-susy.material.hot_air=Hot Air
-susy.material.hot_nitrogen=Hot Nitrogen
+susy.material.hot_air=Gorące Powietrze
+susy.material.hot_nitrogen=Gorący Azot
 
 susy.material.ethylene_glycol=Ethylene Glycol
 susy.material.carbon_disulfide=Carbon Disulfide
@@ -1064,8 +1066,8 @@ susy.material.lorandite=Lorandite
 susy.material.hutchinsonite=Hutchinsonite
 susy.material.crookesite=Crookesite
 susy.material.dilithium=Dilithium
-susy.material.lignite=Lignite
-susy.material.lignite_coke=Lignite Coke
+susy.material.lignite=Węgiel Brunatny
+susy.material.lignite_coke=Koks z Węgla Brunatnego
 susy.material.anthracite=Anthracite
 susy.material.phosphorite=Phosphorite
 susy.material.sperrylite=Sperrylite
@@ -1078,6 +1080,7 @@ item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
 item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
 item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
+item.susy.material.evaporite_deposit.ore=Evaporite Deposite
 
 susy.material.orthomagmatic_deposit=Orthomagmatic Deposit
 susy.material.metamorphic_deposit=Metamorphic Deposit
@@ -1085,6 +1088,7 @@ susy.material.sedimentary_deposit=Sedimentary Deposit
 susy.material.hydrothermal_deposit=Hydrothermal Deposit
 susy.material.alluvial_deposit=Alluvial Deposit
 susy.material.magmatic_hydrothermal_deposit=Magmatic Hydrothermal Deposit
+susy.material.evaporite_deposit=Evaporite Deposit
 
 susy.material.corundum=Corundum
 susy.material.tourmaline=Tourmaline
@@ -1860,23 +1864,23 @@ susy.material.spent_pbi_solution=Spent PBI Solution
 
 # GregTech RecipeMaps
 
-recipemap.fluid_decompressor.name=Fluid (De)Compression
-recipemap.fluid_compressor.name=Fluid Compression
-recipemap.weapons_factory.name=Weapons Factory
-recipemap.heat_exchanger.name=Heat Exchanger
+recipemap.fluid_decompressor.name=Rozprężanie Płynów
+recipemap.fluid_compressor.name=Sprężanie Płynów
+recipemap.weapons_factory.name=Fabryka Broni
+recipemap.heat_exchanger.name=Wymiana Ciepła
 recipemap.radiator.name=Radiator
-recipemap.large_weapons_factory.name=Large Weapons Factory
-recipemap.ore_sorter.name=Ore Sorting
+recipemap.large_weapons_factory.name=Duża Fabryka Broni
+recipemap.ore_sorter.name=Sortowanie Rud
 recipemap.natural_draft_cooling_tower.name=Natural Draft Cooling Tower
-recipemap.gas_turbine_new.name=Gas Turbine
+recipemap.gas_turbine_new.name=Turbina Gazowa
 recipemap.quencher.name=Quencher
-recipemap.steam_turbine_new.name=Steam Turbine
-recipemap.railroad_engineering_station.name=Railroad Engineering Station
-recipemap.dryer.name=Drying
-recipemap.sintering_oven.name=Sintering
-recipemap.electrolytic_cell.name=Advanced Electrolysis
-recipemap.vat_fermentation.name=Fermentation Vat
-recipemap.vacuum_distillation.name=Vacuum Distillation
+recipemap.steam_turbine_new.name=Turbina Parowa
+recipemap.railroad_engineering_station.name=Stacja Inżynierii Kolejowej
+recipemap.dryer.name=Suszenie
+recipemap.sintering_oven.name=Spiekanie
+recipemap.electrolytic_cell.name=Zaawansowana Elektroliza
+recipemap.vat_fermentation.name=Fermentacja
+recipemap.vacuum_distillation.name=Destylacja Próżniowa
 recipemap.catalytic_reformer_recipes.name=Catalytic Reforming
 recipemap.coking_tower.name=Coking Tower
 recipemap.ion_exchange_column.name=Ion Exchange
@@ -1893,15 +1897,15 @@ recipemap.high_pressure_cryogenic_distillation.name=High Pressure Cryogenic Dist
 
 gas.gaspunk.chlorine=Chlorine
 gas.gaspunk.radon=Radon
-gas.gaspunk.hydrogen_cyanide=Hydrogen Cyanide
+gas.gaspunk.hydrogen_cyanide=Cyjanowodór
 gas.gaspunk.vx=VX Nerve Agent
 gas.gaspunk.diborane=Diborane
 gas.gaspunk.phosphine=Phosphine
-gas.gaspunk.fluorine=Fluorine
+gas.gaspunk.fluorine=Fluor
 gas.gaspunk.hydrogen_sulfide=Hydrogen Sulfide
 gas.gaspunk.chloroform=Chloroform
-gas.gaspunk.ammonia=Ammonia
-gas.gaspunk.carbon_monoxide=Carbon Monoxide
+gas.gaspunk.ammonia=Amoniak
+gas.gaspunk.carbon_monoxide=Tlenek Węgla
 gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 gas.gaspunk.novichok=Novichok A-230 Nerve Agent
@@ -1909,17 +1913,18 @@ gas.gaspunk.novichok=Novichok A-230 Nerve Agent
 # Metaitems
 
 metaitem.rock.orthomagmatic.name=Orthomagmatic Rock
-metaitem.rock.metamorphic.name=Metamorphic Rock
-metaitem.rock.magmatic_hydrothermal.name=Magmatic Hydrothermal Rock
-metaitem.rock.sedimentary.name=Sedimentary Rock
-metaitem.rock.hydrothermal.name=Hydrothermal Rock
-metaitem.rock.alluvial.name=Alluvial Rock
+metaitem.rock.metamorphic.name=Skały Metamorficzne
+metaitem.rock.magmatic_hydrothermal.name=Skały Magmowo-Hydrotermalne
+metaitem.rock.sedimentary.name=Skały Osadowe
+metaitem.rock.hydrothermal.name=Skały Hydrotermalne
+metaitem.rock.alluvial.name=Skały Aluwialne
+metaitem.rock.evaporite.name=Evaporite Rock
 metaitem.cement.clinker.name=Cement Clinker
 metaitem.hot.cement.clinker.name=Hot Cement Clinker
-metaitem.cement.dust.name=Cement Dust
+metaitem.cement.dust.name=Proszek Cementowy
 metaitem.chunk.magnetite.name=Magnetite Chunk
-metaitem.hot_iron_rod.name=Hot Iron Rod
-metaitem.voltaic_pile.name=Voltaic Pile
+metaitem.hot_iron_rod.name=Gorący Pręt Żelazny
+metaitem.voltaic_pile.name=Ogniwo Volty
 metaitem.electrolyte_paper.name=Electrolyte Paper
 metaitem.sand.dust.name=Fine Pile of Sand
 metaitem.straw.name=Straw
@@ -1935,15 +1940,15 @@ metaitem.pattern.processor.name=Pattern CPU
 metaitem.pattern.memory.name=Pattern RAM
 metaitem.storage.segment.name=Storage Segment
 
-metaitem.gun.barrel.steel.name=Steel Barrel
+metaitem.gun.barrel.steel.name=Stalowa Lufa
 
-metaitem.cathode.lead.name=Lead Cathode
-metaitem.anode.lead.name=Lead Anode
-metaitem.battery.lead_acid.name=Lead Acid Battery
+metaitem.cathode.lead.name=Ołowiana Katoda
+metaitem.anode.lead.name=Ołowiana Anoda
+metaitem.battery.lead_acid.name=Akumulator Kwasowo-Ołowiowy
 
-metaitem.steam.piston.name=Steam Piston
-metaitem.steam.motor.name=Steam Motor
-metaitem.steam.pump.name=Steam Pump
+metaitem.steam.piston.name=Tłok Parowy
+metaitem.steam.motor.name=Silnik Parowy
+metaitem.steam.pump.name=Pompa Parowa
 
 metaitem.bound_leather.name=Bound Leather
 
@@ -2026,10 +2031,10 @@ metaitem.circuit.suprachronal.opv.tooltip=§fOpV-tier Circuit/n
 metaitem.circuit.suprachronal.max.name=Supra-Chronal Maximum Circuit
 metaitem.circuit.suprachronal.max.tooltip=§fMAX-tier Circuit/n
 
-metaitem.sugar_cane_dust.name=Sugar Cane Dust
-metaitem.washed_rotten_flesh.name=Washed Rotten Flesh
+metaitem.sugar_cane_dust.name=Proszek Trzciny Cukrowej
+metaitem.washed_rotten_flesh.name=Umyte Zgniłe Mięso
 
-metaitem.bitumen.name=Bitumen
+metaitem.bitumen.name=Bitum
 metaitem.paraffin_wax.name=Paraffin Wax
 metaitem.spent_cracking_catalyst.name=Spent Cracking Catalyst
 metaitem.cracking_catalyst.name=Cracking Catalyst
@@ -2114,7 +2119,7 @@ metaitem.shape.mold.rod.name=Mold (Rod)
 metaitem.shape.mold.long_rod.name=Mold (Long Rod)
 metaitem.shape.mold.ring.name=Mold (Ring)
 
-metaitem.assemblymanganesephosphide.name=Manganese Phosphide Assembly
+metaitem.tubemanganesephosphide.name=Manganese Phosphide Assembly
 metaitem.basemanganesephosphide.name=Base Manganese Phosphide Superconductor
 metaitem.cannedmagnesiumdiboride.name=Canned Magnesium Diboride
 metaitem.tubemagnesiumdiboride.name=Magnesium Diboride Tube
@@ -2236,7 +2241,7 @@ metaitem.stencil.lpic.name=LPIC Stencil
 tile.hellsand.name=Mineral-Rich Sand
 tile.magma.name=Magma-Infused Netherrack
 
-item.fireworks.name=Elytra Rocket
+item.fireworks.name=Fajerwerk
 tile.appliedenergistics2.grindstone.name=Primitive Grindstone
 
 # Laser Engraver Renaming
@@ -2261,6 +2266,10 @@ item.chisel.chisel_diamond.name=Steel Chisel
 tooltip.computronics.waila.tape.notapeinserted=No Tape Inserted
 tooltip.computronics.waila.tape.tapeinserted=Tape Inserted
 item.chesttransporter_copper.name=Bronze Chest Transporter
+gregtech.universal.tooltip.terrain_resist=§eNie eksploduje od wody, lawy, ognia i deszczu.
+gregtech.machine.electric_blast_furnace.name=Elektryczny Piec Oporowy
+
+recipemap.electric_blast_furnace.name=Piec Oporowy
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
