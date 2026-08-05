@@ -211,7 +211,7 @@ key_visualores.button.undergroundfluid:0:NONE
 key_WorldEdit Reference:38:NONE
 key_Clear Measurement:46:ALT
 key_bogosort.key.move_all_same:-100:ALT
-key_bogosort.key.move_all:-100:NONE
+key_bogosort.key.move_all:0:NONE
 key_bogosort.key.move_single:-100:CONTROL
 key_bogosort.key.move_single_empty:-99:CONTROL
 key_bogosort.key.throw_all_same:16:ALT

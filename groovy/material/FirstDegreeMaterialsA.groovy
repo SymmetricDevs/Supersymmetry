@@ -2361,7 +2361,7 @@ class FirstDegreeMaterialsA {
         CalciumMetaphosphate.setFormula("Ca(PO3)2", true)
 
         SulfurTrioxideReactionMixture = new Material.Builder(8440, SuSyUtility.susyId('sulfur_trioxide_reaction_mixture'))
-                .gas()
+                .gas(new FluidBuilder().acidic())
                 .components(SulfurDioxide, Oxygen)
                 .colorAverage()
                 .build()

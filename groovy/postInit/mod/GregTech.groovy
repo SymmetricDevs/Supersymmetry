@@ -41,8 +41,6 @@ mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustTitaniumT
 mods.gregtech.fluid_heater.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
 // Beryllium Oxide Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('beryllium_oxide') * 144])
-// Beryllium Oxide Plate * 1
-mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
 // Laminated Glass * 1
 mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casing') * 2, metaitem('platePolyvinylButyral')], null)
 // Gelatin Mixture * 4000
@@ -782,6 +780,13 @@ crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
     [null, null, null]
 ])
 
+FORGE_HAMMER.recipeBuilder()
+	.inputs(ore('stoneSmooth'))
+    .outputs(item('susy:home_block'))
+    .duration(40)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
 crafting.addShapeless('susy:home_block_1', item('susy:home_block', 4), [item('susy:home_block', 0)])
 crafting.addShapeless('susy:home_block_2', item('susy:home_block', 8), [item('susy:home_block', 4)])
 crafting.addShapeless('susy:home_block_3', item('susy:home_block', 12), [item('susy:home_block', 8)])
@@ -919,6 +924,62 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 2))
+    .outputs(metaitem('dustNonMarineEvaporite') * 4)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 4))
+    .outputs(metaitem('dustSulfateEvaporite') * 4)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 5))
+    .outputs(metaitem('dustCarbonateEvaporite') * 4)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 3))
+    .outputs(metaitem('dustHalideEvaporite') * 4)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 12))
+    .outputs(metaitem('dustPhosphorite') * 8)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 13))
+    .outputs(metaitem('dustPotashConcentrate') * 8)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 14))
+    .outputs(metaitem('dustSulfur') * 8)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 15))
+    .outputs(metaitem('dustCoal') * 8)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();    
+
 FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block', 15))
     .outputs(item('minecraft:coal') * 8)
@@ -930,6 +991,13 @@ MACERATOR.recipeBuilder()
     .inputs(item('susy:resource_block_1'))
     .outputs(metaitem('dustCopper') * 8)
     .duration(240)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block_1'))
+    .outputs(metaitem('dustCopper') * 8)
+    .duration(30)
     .EUt(VA[ULV])
     .buildAndRegister();
 
@@ -947,6 +1015,13 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block_1', 1))
+    .outputs(metaitem('dustAnthracite') * 8)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
 FORGE_HAMMER.recipeBuilder()
     .inputs(item('susy:resource_block_1', 2))
     .outputs(metaitem('gemLignite') * 8)
@@ -961,7 +1036,21 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister();
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block_1', 2))
+    .outputs(metaitem('dustLignite') * 8)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
 MACERATOR.recipeBuilder()
+    .inputs(metaitem('native_copper'))
+    .outputs(metaitem('dustCopper'))
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ROLL_CRUSHER.recipeBuilder()
     .inputs(metaitem('native_copper'))
     .outputs(metaitem('dustCopper'))
     .duration(30)
@@ -2072,3 +2161,25 @@ crafting.removeByOutput(item('gregtech:metal_casing', 11))
 mods.gregtech.assembler.removeByInput(16, [metaitem('platePalladium') * 6, metaitem('frameIridium'), metaitem('circuit.integrated').withNbt(['Configuration': 6])], null)
 mods.gregtech.macerator.removeByInput(32, [item('gregtech:metal_casing', 11)], null)
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:metal_casing', 11)], [fluid('oxygen') * 510])
+
+//Gregtech Item Assembler Recipes
+ASSEMBLER.recipeBuilder()
+    .inputs(item('minecraft:paper') * 3)
+    .inputs(ore('screwIron'))
+    .inputs(ore('boltIron'))
+    .inputs(ore('springSmallIron'))
+    .inputs(metaitem('plateWood'))
+    .outputs(metaitem('clipboard'))
+    .duration(50)
+    .EUt(7)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('field.generator.hv'))
+    .inputs(metaitem('robot.arm.ev') * 2)
+    .inputs(ore('screwStainlessSteel') * 2)
+    .inputs(ore('stickPolytetrafluoroethylene') * 2)
+    .outputs(metaitem('tool.multiblock_builder'))
+    .duration(50)
+    .EUt(VA[EV])
+    .buildAndRegister()

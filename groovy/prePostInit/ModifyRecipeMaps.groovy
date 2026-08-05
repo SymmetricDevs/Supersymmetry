@@ -381,6 +381,12 @@ mods.gregtech.bender.removeByInput(24, [metaitem('ingotPolyphenyleneSulfide'), m
 // Ethenone * 100
 mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('acetone') * 100])
 
+//Remove SuperCon Centrifuge
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustSamariumIronArsenicOxide')*4],null)
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustUraniumTriplatinum')*4],null)
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustUraniumRhodiumDinaquadide')*4],null)
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustEnrichedNaquadahTriniumEuropiumDuranide')*10],null)
+
 RecipeMaps.SIFTER_RECIPES
     .modifyMaxFluidInputs(1)
     .modifyMaxFluidOutputs(1)
@@ -459,3 +465,6 @@ RecipeMaps.DISTILLERY_RECIPES
 
 RecipeMaps.ASSEMBLER_RECIPES
     .modifyMaxFluidInputs(2)
+
+RecipeMaps.CUTTER_RECIPES
+    .modifyMaxInputs(2)

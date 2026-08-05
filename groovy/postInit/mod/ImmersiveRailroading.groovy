@@ -151,6 +151,23 @@ mods.gregtech.assembler.recipeBuilder()
 		.duration(200)
 		.EUt(VA[MV])
 		.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('stickSteel') * 2)
+    .inputs(ore('ringSteel'))
+    .outputs(item('immersiverailroading:item_switch_key'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(18)
+    .inputs(ore('plateSteel') * 6)
+    .outputs(item('immersiverailroading:item_large_wrench'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister()
 		
 Globals.solders.each { key, val ->
 

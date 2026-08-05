@@ -42,12 +42,15 @@ class ChangeFlags {
         SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxInputs(12)
 
         // Properties
+        Stone.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 131, 1));
+        Granite.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 191, 1));
 
         Germanium.addIngot()
         Tellurium.addIngot()
         Cadmium.addIngot()
         Magnesium.addIngot()
         Asbestos.addIngot()
+        Potassium.addIngot()
 
         BisphenolA.addDust()
         Polonium.addDust()
