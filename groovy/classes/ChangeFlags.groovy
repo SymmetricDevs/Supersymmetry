@@ -194,6 +194,12 @@ class ChangeFlags {
         Magnalium.addFlags("generate_ring", "generate_rotor")
         ReinforcedEpoxyResin.addFlags("generate_rotor")
         Beryllium.addFlags("generate_rod")
+        Bronze.addFlags("disable_decomposition")
+        Brass.addFlags("disable_decomposition")
+        Cupronickel.addFlags("disable_decomposition")
+        Invar.addFlags("disable_decomposition")
+        Nichrome.addFlags("disable_decomposition")
+        Kanthal.addFlags("disable_decomposition")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
