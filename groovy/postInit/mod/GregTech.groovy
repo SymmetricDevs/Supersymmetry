@@ -41,8 +41,6 @@ mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustTitaniumT
 mods.gregtech.fluid_heater.removeByInput(120, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('water') * 1000])
 // Beryllium Oxide Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('beryllium_oxide') * 144])
-// Beryllium Oxide Plate * 1
-mods.gregtech.compressor.removeByInput(2, [metaitem('dustBerylliumOxide')], null)
 // Laminated Glass * 1
 mods.gregtech.forming_press.removeByInput(480, [item('gregtech:transparent_casing') * 2, metaitem('platePolyvinylButyral')], null)
 // Gelatin Mixture * 4000
