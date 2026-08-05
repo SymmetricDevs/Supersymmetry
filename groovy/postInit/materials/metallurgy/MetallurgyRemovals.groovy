@@ -136,7 +136,15 @@ mods.gregtech.blender.removeByInput(7, [metaitem('dustCopper') * 6, metaitem('du
 mods.gregtech.blender.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
 // Soldering Alloy Dust * 10
 mods.gregtech.mixer.removeByInput(7, [metaitem('dustTin') * 6, metaitem('dustLead') * 3, metaitem('dustAntimony'), metaitem('circuit.integrated').withNbt(['Configuration': 3])], null)
-
+mods.gregtech.mixer.removeByInput(7, [metaitem('dustAluminium') * 2, metaitem('dustMagnesium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotMagnesium'), metaitem('dustAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustMagnesium'), metaitem('ingotAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotMagnesium'), metaitem('ingotAluminium') * 2], null)
+mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustMagnesium'), metaitem('dustAluminium') * 2], null)
+// Nichrome Dust * 5
+mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel') * 4, metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], null)
+// Kanthal Dust * 3
+mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron'), metaitem('dustAluminium'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
 crafting.remove("gregtech:dust_brass")
 crafting.remove("gregtech:dust_bronze")
 crafting.remove("gregtech:potin_dust")
