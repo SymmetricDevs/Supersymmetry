@@ -97,6 +97,33 @@ ROASTER.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
+// Lunar Magnetic Dust Processing
+// Change the output amounts if accurate info found
+ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
+    .inputs(metaitem("dustLunarMagnetic"))
+    .outputs(metaitem("dustNativeLunarIron"))
+    .chancedOutput(metaitem("dustHematite") * 1, 5000, 0)
+    .chancedOutput(metaitem("dustIlmenite") * 1, 5000, 0)
+    .EUt(VA[HV])
+    .duration(100)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(metaitem("dustNativeLunarIron"))
+    .fluidInputs(fluid("carbon_monoxide") * 4000)
+    .outputs(metaitem("dustIron"))
+    .fluidOutputs(fluid("nickel_carbonyl") * 1000)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder() // CHANGE TO SOLAR FURNACE
+    .circuitMeta(1)
+    .fluidInputs(fluid("nickel_carbonyl") * 1000)
+    .outputs(metaitem("dustNickel"))
+    .fluidOutputs(fluid("carbon_monoxide") * 4000)
+    .EUt(15)
+    .duration(150)
+    .buildAndRegister()
 
 // Ilmenite flotation
 CSTR.recipeBuilder()
