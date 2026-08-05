@@ -159,12 +159,12 @@ mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustMagnesium'), metait
 // Nichrome Dust * 5
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel') * 4, metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], null)
 // Nichrome Dust * 5
-mods.gregtech.blender.removeByInput(7, [metaitem('dustNickel') * 4, metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], null)
+mods.gregtech.blender.removeByInput(120, [metaitem('dustNickel') * 4, metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], null)
 
 // Kanthal Dust * 3
 mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron'), metaitem('dustAluminium'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
 // Kanthal Dust * 3
-mods.gregtech.blender.removeByInput(7, [metaitem('dustIron'), metaitem('dustAluminium'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+mods.gregtech.blender.removeByInput(120, [metaitem('dustIron'), metaitem('dustAluminium'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
 
 crafting.remove("gregtech:dust_brass")
 crafting.remove("gregtech:dust_bronze")
