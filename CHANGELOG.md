@@ -1,3 +1,13 @@
+# UPDATE 0.1.16.13.2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.115 → v0.1.115.1 
+## Changes
+### Fixes
+- Doubled kanthal springs
+- HP machines now use iron rather than tin alloy
+- The SiC crucible is again craftable
+- [Susy-Core] Clarifiers and other machines not working
 # UPDATE 0.1.16.13.1
 ## Mod Changes
 ### Mod Updates
