@@ -1598,6 +1598,24 @@ RecyclingHelper.handleRecycling(metaitem('susy:gas_turbine'), [
 
 // Crushers and grinders
 
+RecyclingHelper.replaceShaped("gregtech:steam_grinder", metaitem('steam_grinder'), [
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')],
+        [item('gregtech:metal_casing'), metaitem('steam_macerator_bronze'), item('gregtech:metal_casing')],
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:steam_oven", metaitem('steam_oven'), [
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')],
+        [item('gregtech:boiler_firebox_casing'), metaitem('steam_furnace_bronze'), item('gregtech:boiler_firebox_casing')],
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')]
+])
+
+RecyclingHelper.replaceShaped("gregtechfoodoption:steam_baking_oven", metaitem('gregtechfoodoption:steam_baking_oven'), [
+        [ore('craftingToolScrewdriver'), metaitem('screwSteel'), metaitem('gearIron')],
+        [item('gregtechfoodoption:gtfo_casing', 1), metaitem('gregtechfoodoption:baking_oven'), metaitem('pipeSmallFluidBronze')],
+        [ore('craftingToolFile'), metaitem('screwSteel'), metaitem('gearIron')]
+])
+
 ASSEMBLER.recipeBuilder()
     .circuitMeta(11)
     .inputs(metaitem('hull.mv'))

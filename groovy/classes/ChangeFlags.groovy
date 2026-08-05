@@ -197,6 +197,12 @@ class ChangeFlags {
         Magnalium.addFlags("generate_ring", "generate_rotor")
         ReinforcedEpoxyResin.addFlags("generate_rotor")
         Beryllium.addFlags("generate_rod")
+        Bronze.addFlags("disable_decomposition")
+        Brass.addFlags("disable_decomposition")
+        Cupronickel.addFlags("disable_decomposition")
+        Invar.addFlags("disable_decomposition")
+        Nichrome.addFlags("disable_decomposition")
+        Kanthal.addFlags("disable_decomposition")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -254,6 +260,12 @@ class ChangeFlags {
         TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true)
         StainlessSteel.setFormula("Fe28Cr8Ni4Si2Mn", true)
         Magnalium.setFormula("MgAl19", true)
+        Bronze.setFormula("Cu14Sn", true)
+        Brass.setFormula("Cu5Zn2", true)
+        Cupronickel.setFormula("Cu8Ni", true)
+        Invar.setFormula("Fe5Ni3", true)
+        Nichrome.setFormula("Ni7Cr2", true)
+        Kanthal.setFormula("Fe27Cr8Al4", true)
 
         // Ore Processing
         
