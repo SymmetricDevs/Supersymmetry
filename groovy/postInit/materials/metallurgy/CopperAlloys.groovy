@@ -2,6 +2,14 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 // Bronze
+ALLOY_SMELTER.recipeBuilder()
+    .inputs(metaitem('ingotCopper') * 14)
+    .inputs(metaitem('ingotTin'))
+    .outputs(metaitem('ingotBronze') * 15)
+    .duration(800)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 RESISTANCE_FURNACE.recipeBuilder()
     .fluidInputs(fluid('copper') * 2016)
     .inputs(metaitem('ingotTin'))
@@ -19,6 +27,14 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // Brass
+ALLOY_SMELTER.recipeBuilder()
+    .inputs(metaitem('ingotCopper') * 5)
+    .inputs(metaitem('ingotZinc') * 2)
+    .outputs(metaitem('ingotBrass') * 7)
+    .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 RESISTANCE_FURNACE.recipeBuilder()
     .fluidInputs(fluid('copper') * 720)
     .inputs(metaitem('ingotZinc') * 2)
