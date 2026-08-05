@@ -32,7 +32,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('nickel') * 1008)
     .inputs(metaitem('ingotChrome') * 2)
     .fluidOutputs(fluid('nichrome') * 1296)
-    .EUt(VA[LV])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 // Kanthal

@@ -54,9 +54,10 @@ class ChangeFlags {
 
         BisphenolA.addDust()
         Polonium.addDust()
-
+        
         Silver.addFluidPipes(1234, 50, false, false, true, false, true)
         Rubber.addFluidPipes(593, 6, true, false, false, false, false)
+        Iron.addFluidPipes(1811, 40, true, false, false, false, false)
 
         AntimonyTrifluoride.setupFluidTypes(565, FluidStorageKeys.LIQUID)
         LithiumChloride.setupFluidTypes(890, FluidStorageKeys.LIQUID)

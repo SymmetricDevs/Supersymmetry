@@ -397,40 +397,81 @@ for (i = 1; i <= 8; i++) {
 
 RecyclingHelper.addShaped("gregtech:vulcanizing_press.steel", metaitem('susy:vulcanizing_press.steel'), [
     [metaitem('plateSteel'), metaitem('plateSteel'), metaitem('plateSteel')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('susy:vulcanizing_press.bronze'), metaitem('pipeSmallFluidTinAlloy')],
+    [metaitem('pipeSmallFluidIron'), metaitem('susy:vulcanizing_press.bronze'), metaitem('pipeSmallFluidIron')],
     [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:mixer.steel", metaitem('susy:mixer.steel'), [
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy')],
+    [metaitem('pipeSmallFluidIron'), metaitem('plateSteel'), metaitem('pipeSmallFluidIron')],
     [metaitem('plateWroughtIron'), metaitem('susy:mixer.bronze'), metaitem('plateWroughtIron')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy')]
+    [metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:vacuum_chamber.steel", metaitem('susy:vacuum_chamber.steel'), [
-    [metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('susy:vacuum_chamber.bronze'), metaitem('pipeSmallFluidTinAlloy')],
-    [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateWroughtIron')]
+    [metaitem('plateSteel'), metaitem('pipeSmallFluidIron'), metaitem('plateSteel')],
+    [metaitem('pipeSmallFluidIron'), metaitem('susy:vacuum_chamber.bronze'), metaitem('pipeSmallFluidIron')],
+    [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidIron'), metaitem('plateWroughtIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:roaster.steel", metaitem('susy:roaster.steel'), [
     [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
     [metaitem('plateSteel'), metaitem('susy:roaster.bronze'), metaitem('plateSteel')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy')]
+    [metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:batch_reactor.steel", metaitem('susy:batch_reactor.steel'), [
-        [metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel')],
-        [metaitem('pipeSmallFluidTinAlloy'), metaitem('susy:batch_reactor.bronze'), metaitem('pipeSmallFluidTinAlloy')],
-        [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateWroughtIron')]
+        [metaitem('plateSteel'), metaitem('pipeSmallFluidIron'), metaitem('plateSteel')],
+        [metaitem('pipeSmallFluidIron'), metaitem('susy:batch_reactor.bronze'), metaitem('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidIron'), metaitem('plateWroughtIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:distiller.steel", metaitem('susy:distiller.steel'), [
-        [metaitem('plateSteel'), ore('pipeSmallFluidTinAlloy'), metaitem('plateSteel')],
-        [ore('pipeSmallFluidTinAlloy'), metaitem('susy:distiller.bronze'), ore('pipeSmallFluidTinAlloy')],
-        [metaitem('plateWroughtIron'), ore('pipeSmallFluidTinAlloy'), metaitem('plateWroughtIron')]
+        [metaitem('plateSteel'), ore('pipeSmallFluidIron'), metaitem('plateSteel')],
+        [ore('pipeSmallFluidIron'), metaitem('susy:distiller.bronze'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), ore('pipeSmallFluidIron'), metaitem('plateWroughtIron')]
 ])
 
+RecyclingHelper.replaceShaped("gregtech:steam_compressor_steel", metaitem('gregtech:steam_compressor_steel'), [
+    [ore('pipeSmallFluidIron'), metaitem('plateSteel'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_compressor_bronze'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:rock_breaker_steel", metaitem('steam_rock_breaker_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), metaitem('steam_rock_breaker_bronze'),  ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
+])
+
+RecyclingHelper.replaceShaped("gregtech:steam_furnace_steel", metaitem('gregtech:steam_furnace_steel'), [
+    	[ore('pipeSmallFluidIron'), metaitem('plateSteel'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_furnace_bronze'),  metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:macerator_steel", metaitem('gregtech:steam_macerator_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), metaitem('gregtech:steam_macerator_bronze'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
+])
+
+RecyclingHelper.replaceShaped("gregtech:alloy_smelter_steel", metaitem('gregtech:steam_alloy_smelter_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_alloy_smelter_bronze'), metaitem('plateWroughtIron')],
+        [metaitem('plateWroughtIron'), ore('pipeSmallFluidIron'), metaitem('plateWroughtIron')],
+])
+
+RecyclingHelper.replaceShaped("gregtech:extractor_steel", metaitem('gregtech:steam_extractor_steel'), [
+    	[ore('pipeSmallFluidIron'), metaitem('plateSteel'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_extractor_bronze'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:forge_hammer_steel", metaitem('gregtech:steam_hammer_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), metaitem('gregtech:steam_hammer_bronze'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
+])
 //Add the rest of the vacuum chambers
 
 for (def i = 1; i < 8; i++) {
@@ -1612,7 +1653,7 @@ RecyclingHelper.replaceShaped("gregtech:steam_oven", metaitem('steam_oven'), [
 
 RecyclingHelper.replaceShaped("gregtechfoodoption:steam_baking_oven", metaitem('gregtechfoodoption:steam_baking_oven'), [
         [ore('craftingToolScrewdriver'), metaitem('screwSteel'), metaitem('gearIron')],
-        [item('gregtechfoodoption:gtfo_casing', 1), metaitem('gregtechfoodoption:baking_oven'), metaitem('pipeSmallFluidBronze')],
+        [item('gregtechfoodoption:gtfo_casing', 1), metaitem('gregtechfoodoption:baking_oven'), metaitem('pipeSmallFluidIron')],
         [ore('craftingToolFile'), metaitem('screwSteel'), metaitem('gearIron')]
 ])
 
