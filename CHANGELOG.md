@@ -1,3 +1,11 @@
+# UPDATE 0.1.16.13.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.114 → v0.1.115
+- SussyPatches v1.11.0 → v0.1.11.1
+## Changes
+### Fixes
+- [Susy-Core] Mixins not applying
 # UPDATE 0.1.16.13
 ## Mod Changes
 ### Mod Updates
