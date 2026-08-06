@@ -4,12 +4,7 @@ import com.cleanroommc.groovyscript.api.GroovyLog
 import gregtech.api.metatileentity.multiblock.CleanroomType
 import static gregtech.api.GTValues.*
 
-/*
-def solders = [
-        fluid('soldering_alloy') * 72,
-        fluid('tin') * 144
-]
-*/
+
 
 def name_removals = [
         'appliedenergistics2:misc/grindstone_woodengear',
@@ -146,6 +141,7 @@ storageComponents.each { component ->
                 .inputs(ore('wireFineSilver') * 4)
                 .inputs(metaitem('plate.random_access_memory') * component.ramCount)
                 .inputs(metaitem('storage.segment'))
+                .fluidInputs(fluid('soldering_alloy') * 72, fluid('tin') * 144)
                 .circuitMeta(storageType.circuitMeta)
                 .outputs(storageType.output)
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -170,6 +166,7 @@ spatialStorageComponents.each { component ->
             .inputs(ore('wireFineSilver') * 4)
             .inputs(metaitem('plate.random_access_memory') * component.ramCount)
             .inputs(metaitem('storage.segment'))
+            .fluidInputs(fluid('soldering_alloy') * 144, fluid('tin') * 288)
             .circuitMeta(3)
             .outputs(component.output)
             .cleanroom(CleanroomType.CLEANROOM)
