@@ -525,6 +525,7 @@ for (tooltip in allToolTip) {
     if (!(tooltip in screwdriverBlacklist)) {
 
         ASSEMBLER.recipeBuilder()
+            .circuitMeta(32)
             .inputs(ore('stickLong' + tooltip))
             .outputs(metaitem('toolHeadScrewdriver' + tooltip))
             .duration(50)
