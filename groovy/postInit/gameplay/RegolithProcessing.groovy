@@ -80,23 +80,22 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
     .duration(100)
     .buildAndRegister()
 
-ROASTER.recipeBuilder()
+RESISTANCE_FURNACE.recipeBuilder()
     .inputs(metaitem("dustAnorthosite"))
     .outputs(metaitem("dustDegassedAnorthosite"))
-    .fluidOutputs(fluid("regolith_gases") * 100)
+    .fluidOutputs(fluid("regolith_gases") * 1)
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
 
 
-ROASTER.recipeBuilder()
+RESISTANCE_FURNACE.recipeBuilder()
     .inputs(metaitem("dustLunarBasalt"))
     .outputs(metaitem("dustDegassedLunarBasalt"))
-    .fluidOutputs(fluid("regolith_gases") * 100)
+    .fluidOutputs(fluid("regolith_gases") * 1)
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
-
 
 // Ilmenite flotation
 CSTR.recipeBuilder()
@@ -111,8 +110,32 @@ CSTR.recipeBuilder()
     .duration(300)
     .buildAndRegister()
 
+CSTR.recipeBuilder()
+    .inputs(metaitem("dustDegassedLunarBasalt") * 1)
+    .fluidInputs(fluid("water") * 1000)
+    .notConsumable(fluid("sodium_silicate_solution") * 100)
+    .notConsumable(fluid("oleic_acid") * 100)
+    .notConsumable(fluid("methyl_isobutyl_carbinol") * 100)
+    .fluidOutputs(fluid("lunar_ilmenite_slurry") * 100)
+    .fluidOutputs(fluid("lunar_ferrosilicate_slurry") * 900)
+    .EUt(VA[LV])
+    .duration(300)
+    .buildAndRegister()
+
 FROTH_FLOTATION.recipeBuilder()
     .inputs(metaitem("dustLunarBasalt") * 1)
+    .fluidInputs(fluid("water") * 1000)
+    .notConsumable(fluid("sodium_silicate_solution") * 100)
+    .notConsumable(fluid("oleic_acid") * 100)
+    .notConsumable(fluid("methyl_isobutyl_carbinol") * 100)
+    .fluidOutputs(fluid("lunar_ilmenite_slurry") * 100)
+    .fluidOutputs(fluid("lunar_ferrosilicate_slurry") * 900)
+    .EUt(VA[LV])
+    .duration(30)
+    .buildAndRegister()
+
+FROTH_FLOTATION.recipeBuilder()
+    .inputs(metaitem("dustDegassedLunarBasalt") * 1)
     .fluidInputs(fluid("water") * 1000)
     .notConsumable(fluid("sodium_silicate_solution") * 100)
     .notConsumable(fluid("oleic_acid") * 100)
@@ -297,4 +320,81 @@ BR.recipeBuilder()
     .fluidOutputs(fluid("diluted_salt_water") * 7600)
     .EUt(VA[LV])
     .duration(160)
-        .buildAndRegister()
+    .buildAndRegister()
+
+
+
+// Tier 2
+// Regolith gas:
+// 25% CO
+// 5/32 C2H4
+// 1/32 CO2
+// 1/32 CH3OH
+// 1/32 CH4
+// 1/32 NH3
+// 15/32 H/He
+
+MACERATOR.recipeBuilder()
+    .inputs(item('susy:deposit_block', 6))
+    .outputs(metaitem("dustIcyRegolith") * 8)
+    .EUt(VA[MV])
+    .duration(50)
+    .buildAndRegister()
+
+RESISTANCE_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustIcyRegolith") * 1)
+    .fluidOutputs(fluid("regolith_gases") * 100)
+    .fluidOutputs(fluid("water") * 400)
+    .outputs(metaitem("dustDegassedLunarBasalt"))
+    .EUt(VA[LV])
+    .duration(100)
+    .buildAndRegister()
+
+SIFTER.recipeBuilder()
+    .inputs(ore('dustMolecularSieveX'))
+    .fluidInputs(fluid('regolith_gases') * 640)
+    .fluidOutputs(fluid('decarburized_regolith_gases') * 620)
+    .outputs(metaitem('dustCarbonatedMolecularSieveX'))
+    .duration(4)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+FLUID_COMPRESSOR.recipeBuilder()
+    .fluidInputs(fluid('decarburized_regolith_gases') * 1000)
+    .fluidOutputs(fluid('hp_decarburized_regolith_gases') * 1000)
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+CONDENSER.recipeBuilder()
+    .fluidInputs(fluid('hp_decarburized_regolith_gases') * 620)
+    .fluidOutputs(fluid('methanol') * 20)
+    .fluidOutputs(fluid('hp_regolith_gases') * 600)  // 323 K
+    .duration(100)
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('hp_regolith_gases') * 600)
+    .fluidInputs(fluid('water') * 20)
+    .fluidOutputs(fluid('ammonia_solution') * 20)
+    .fluidOutputs(fluid('hp_regolith_light_gases') * 580)
+    .duration(100)
+    .EUt(VA[MV])
+
+HIGH_PRESSURE_CRYO_DT.recipeBuilder()
+    .fluidInputs(fluid('hp_regolith_light_gases') * 580)
+    .fluidOutputs(fluid('ethylene') * 100)
+    .fluidOutputs(fluid('carbon_monoxide') * 160)
+    .fluidOutputs(fluid('hydrogen_helium_mixture') * 300) // 82 K
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('hydrogen_helium_mixture') * 300)
+    .fluidInputs(fluid('oxygen') * 140)
+    .fluidOutputs(fluid('ice') * 280)
+    .fluidInputs(fluid('helium') * 20)
+    .duration(50)
+    .EUt(VA[LV])
+    .buildAndRegister()
