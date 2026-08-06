@@ -128,3 +128,53 @@ for (name in name_removals) {
     crafting.remove(name)
 }
 
+// Storage components
+def storageComponents = [
+        [circuit: 'circuitIv',  tier: IV,  ramCount: 1,  itemOutput: item('appliedenergistics2:material', 35), fluidOutput: item('appliedenergistics2:material', 54)],
+        [circuit: 'circuitLuv', tier: LuV, ramCount: 4,  itemOutput: item('appliedenergistics2:material', 36), fluidOutput: item('appliedenergistics2:material', 55)],
+        [circuit: 'circuitZpm', tier: ZPM, ramCount: 16, itemOutput: item('appliedenergistics2:material', 37), fluidOutput: item('appliedenergistics2:material', 56)],
+        [circuit: 'circuitUv',  tier: UV,  ramCount: 64, itemOutput: item('appliedenergistics2:material', 38), fluidOutput: item('appliedenergistics2:material', 57)]
+]
+
+storageComponents.each { component ->
+    [
+            [circuitMeta: 1, output: component.itemOutput],
+            [circuitMeta: 2, output: component.fluidOutput]
+    ].each { storageType ->
+        CIRCUIT_ASSEMBLER.recipeBuilder()
+                .inputs(ore(component.circuit))
+                .inputs(ore('wireFineSilver') * 4)
+                .inputs(metaitem('plate.random_access_memory') * component.ramCount)
+                .inputs(metaitem('storage.segment'))
+                .circuitMeta(storageType.circuitMeta)
+                .outputs(storageType.output)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(200)
+                .EUt(VA[component.tier])
+                .buildAndRegister()
+    }
+}
+
+
+
+//Spatial stuff. i dont understand it, but it seems to be a thing that exists in AE2. I guess its like a 3D storage cell or something.
+def spatialStorageComponents = [
+        [circuit: 'circuitUv',  tier: UV,  ramCount: 1,  output: item('appliedenergistics2:material', 32)],
+        [circuit: 'circuitUhv', tier: UHV, ramCount: 4,  output: item('appliedenergistics2:material', 33)],
+        [circuit: 'circuitUev', tier: UEV, ramCount: 16, output: item('appliedenergistics2:material', 34)]
+]
+
+spatialStorageComponents.each { component ->
+    CIRCUIT_ASSEMBLER.recipeBuilder()
+            .inputs(ore(component.circuit))
+            .inputs(ore('wireFineSilver') * 4)
+            .inputs(metaitem('plate.random_access_memory') * component.ramCount)
+            .inputs(metaitem('storage.segment'))
+            .circuitMeta(3)
+            .outputs(component.output)
+            .cleanroom(CleanroomType.CLEANROOM)
+            .duration(200)
+            .EUt(VA[component.tier])
+            .buildAndRegister()
+}
+
