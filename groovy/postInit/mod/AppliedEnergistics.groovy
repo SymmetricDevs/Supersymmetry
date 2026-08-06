@@ -136,18 +136,20 @@ storageComponents.each { component ->
             [circuitMeta: 1, output: component.itemOutput],
             [circuitMeta: 2, output: component.fluidOutput]
     ].each { storageType ->
-        CIRCUIT_ASSEMBLER.recipeBuilder()
-                .inputs(ore(component.circuit))
-                .inputs(ore('wireFineSilver') * 4)
-                .inputs(metaitem('plate.random_access_memory') * component.ramCount)
-                .inputs(metaitem('storage.segment'))
-                .fluidInputs(fluid('soldering_alloy') * 72, fluid('tin') * 144)
-                .circuitMeta(storageType.circuitMeta)
-                .outputs(storageType.output)
-                .cleanroom(CleanroomType.CLEANROOM)
-                .duration(200)
-                .EUt(VA[component.tier])
-                .buildAndRegister()
+        Globals.solders.each { solder, amount ->
+            CIRCUIT_ASSEMBLER.recipeBuilder()
+                    .inputs(ore(component.circuit))
+                    .inputs(ore('wireFineSilver') * 4)
+                    .inputs(metaitem('plate.random_access_memory') * component.ramCount)
+                    .inputs(metaitem('storage.segment'))
+                    .fluidInputs(fluid(solder) * amount)
+                    .circuitMeta(storageType.circuitMeta)
+                    .outputs(storageType.output)
+                    .cleanroom(CleanroomType.CLEANROOM)
+                    .duration(200)
+                    .EUt(VA[component.tier])
+                    .buildAndRegister()
+        }
     }
 }
 
@@ -161,17 +163,19 @@ def spatialStorageComponents = [
 ]
 
 spatialStorageComponents.each { component ->
-    CIRCUIT_ASSEMBLER.recipeBuilder()
-            .inputs(ore(component.circuit))
-            .inputs(ore('wireFineSilver') * 4)
-            .inputs(metaitem('plate.random_access_memory') * component.ramCount)
-            .inputs(metaitem('storage.segment'))
-            .fluidInputs(fluid('soldering_alloy') * 144, fluid('tin') * 288)
-            .circuitMeta(3)
-            .outputs(component.output)
-            .cleanroom(CleanroomType.CLEANROOM)
-            .duration(200)
-            .EUt(VA[component.tier])
-            .buildAndRegister()
+    Globals.solders.each { solder, amount ->
+        CIRCUIT_ASSEMBLER.recipeBuilder()
+                .inputs(ore(component.circuit))
+                .inputs(ore('wireFineSilver') * 4)
+                .inputs(metaitem('plate.random_access_memory') * component.ramCount)
+                .inputs(metaitem('storage.segment'))
+                .fluidInputs(fluid(solder) * (amount * 2))
+                .circuitMeta(3)
+                .outputs(component.output)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(200)
+                .EUt(VA[component.tier])
+                .buildAndRegister()
+    }
 }
 
