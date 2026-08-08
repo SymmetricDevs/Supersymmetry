@@ -2,29 +2,29 @@ import static prePostInit.Recipemaps.*
 import globals.Globals
 // this removes all recipes Solo.
 def name_removal = [
-"retro_sophisticated_backpacks:inception_upgrade",
-"retro_sophisticated_backpacks.stack_upgrade_starter_tier",
-"retro_sophisticated_backpacks:stack_upgrade_tier_2",
-"retro_sophisticated_backpacks:stack_upgrade_tier_3",
-"retro_sophisticated_backpacks:stack_upgrade_tier_4",
-"retro_sophisticated_backpacks.exponential_stack_upgrade",
-"retro_sophisticated_backpacks:backpack_iron",
-"retro_sophisticated_backpacks:backpack_gold",
-"retro_sophisticated_backpacks:backpack_diamond",
-"retro_sophisticated_backpacks:backpack_obsidian",
-"retro_sophisticated_backpacks:upgrade_base",
-"retro_sophisticated_backpacks:stack_upgrade_tier_1",
-"retro_sophisticated_backpacks:crafting_upgrade",
-"retro_sophisticated_backpacks:pickup_upgrade",
-"retro_sophisticated_backpacks:advanced_pickup_upgrade",
-"retro_sophisticated_backpacks:filter_upgrade",
-"retro_sophisticated_backpacks:advanced_filter_upgrade",
-"retro_sophisticated_backpacks:restock_upgrade",
-"retro_sophisticated_backpacks:advanced_restock_upgrade",
-"retro_sophisticated_backpacks:deposit_upgrade",
-"retro_sophisticated_backpacks:advanced_deposit_upgrade",
-"retro_sophisticated_backpacks:feeding_upgrade",
-"retro_sophisticated_backpacks:advanced_feeding_upgrade",
+    "retro_sophisticated_backpacks:inception_upgrade",
+    "retro_sophisticated_backpacks.stack_upgrade_starter_tier",
+    "retro_sophisticated_backpacks:stack_upgrade_tier_2",
+    "retro_sophisticated_backpacks:stack_upgrade_tier_3",
+    "retro_sophisticated_backpacks:stack_upgrade_tier_4",
+    "retro_sophisticated_backpacks.exponential_stack_upgrade",
+    "retro_sophisticated_backpacks:backpack_iron",
+    "retro_sophisticated_backpacks:backpack_gold",
+    "retro_sophisticated_backpacks:backpack_diamond",
+    "retro_sophisticated_backpacks:backpack_obsidian",
+    "retro_sophisticated_backpacks:upgrade_base",
+    "retro_sophisticated_backpacks:stack_upgrade_tier_1",
+    "retro_sophisticated_backpacks:crafting_upgrade",
+    "retro_sophisticated_backpacks:pickup_upgrade",
+    "retro_sophisticated_backpacks:advanced_pickup_upgrade",
+    "retro_sophisticated_backpacks:filter_upgrade",
+    "retro_sophisticated_backpacks:advanced_filter_upgrade",
+    "retro_sophisticated_backpacks:restock_upgrade",
+    "retro_sophisticated_backpacks:advanced_restock_upgrade",
+    "retro_sophisticated_backpacks:deposit_upgrade",
+    "retro_sophisticated_backpacks:advanced_deposit_upgrade",
+    "retro_sophisticated_backpacks:feeding_upgrade",
+    "retro_sophisticated_backpacks:advanced_feeding_upgrade",
 ]
 for (name in name_removal) {
     crafting.remove(name)
@@ -44,8 +44,8 @@ crafting.addShaped(
     item('retro_sophisticated_backpacks:backpack_iron'),
     [
         [ore('frameGtSteel'), ore('screwSteel'), ore('frameGtSteel')],
-        [ore('leather'), ore('chest'), ore('leather')],
-        [ore('leather'),ore('leather'), ore('leather')]
+        [item('techguns:itemshared', 77), ore('chest'), item('techguns:itemshared', 77)],
+        [item('techguns:itemshared', 77),item('techguns:itemshared', 77), item('techguns:itemshared', 77)]
     ]
 )
 crafting.addShaped(
