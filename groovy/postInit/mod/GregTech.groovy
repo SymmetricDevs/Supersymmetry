@@ -2126,6 +2126,6 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 //Old Coils
-for (i in 3..7) {
+for (i in 5..7) {
     mods.jei.ingredient.yeet(item('gregtech:wire_coil', i))
 }
