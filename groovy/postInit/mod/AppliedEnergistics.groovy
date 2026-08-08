@@ -122,7 +122,6 @@ def name_removals = [
 for (name in name_removals) {
     crafting.remove(name)
 }
-
 // Storage components
 def storageComponents = [
         [circuit: 'circuitIv',  tier: IV,  ramCount: 1,  itemOutput: item('appliedenergistics2:material', 35), fluidOutput: item('appliedenergistics2:material', 54)],
@@ -179,3 +178,16 @@ spatialStorageComponents.each { component ->
     }
 }
 
+
+
+// Actual housing
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('plateTitanium') * 4)
+        .inputs(metaitem('fused_quartz') * 2)
+        .inputs(item('appliedenergistics2:part', 16))
+        .fluidInputs(fluid('plastic') * 144)
+        .circuitMeta(1)
+        .outputs(item('appliedenergistics2:material', 39))
+        .duration(200)
+        .EUt(VA[IV])
+        .buildAndRegister()
