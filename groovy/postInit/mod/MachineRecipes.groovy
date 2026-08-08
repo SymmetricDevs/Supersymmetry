@@ -16,8 +16,6 @@ mods.jei.ingredient.yeet(
     metaitem('gas_turbine.lv'),
     metaitem('gas_turbine.mv'),
     metaitem('gas_turbine.hv'),
-    metaitem('gcym:steam_engine'),
-    item('gcym:large_multiblock_casing:12'),
     metaitem('large_turbine.steam'),
     metaitem('large_turbine.gas'),
     metaitem('large_turbine.plasma'),

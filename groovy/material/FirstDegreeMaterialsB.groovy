@@ -878,7 +878,14 @@ class FirstDegreeMaterialsB {
                 .color(0xB94DA0)
                 .iconSet(DULL)
                 .build()
-        
+
+        MolybdenumDisilicide = new Material.Builder(8792, SuSyUtility.susyId('molybdenum_disilicide'))
+                .dust().liquid(new FluidBuilder().temperature(2300))
+                .flags(GENERATE_ROD, DISABLE_DECOMPOSITION)
+                .components(Molybdenum, Silicon * 2)
+                .color(0x967BB6)
+                .build()
+
         /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
                 .dust()
                 .components(Vanadium * 2, Oxygen * 3)
