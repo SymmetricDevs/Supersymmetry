@@ -102,6 +102,7 @@ def name_removals = [
         'appliedenergistics2:network/blocks/energy_dense_energy_cell',
         'appliedenergistics2:network/cables/covered_fluix',
         'appliedenergistics2:network/cables/smart_fluix',
+        'appliedenergistics2:network/parts/panels_semi_dark_monitor',
         'appliedenergistics2:network/wireless_part',
         'appliedenergistics2:network/parts/toggle_bus',
         'appliedenergistics2:network/cables/glass_fluix',
@@ -190,4 +191,25 @@ ASSEMBLER.recipeBuilder()
         .outputs(item('appliedenergistics2:material', 39))
         .duration(200)
         .EUt(VA[IV])
+        .buildAndRegister()
+// Quartz glass: flame hydrolysis of SiCl4 followed by consolidation in a block mold
+REACTION_FURNACE.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.block'))
+        .fluidInputs(fluid('purified_silicon_tetrachloride') * 4000)
+        .fluidInputs(fluid('hydrogen') * 8000)
+        .fluidInputs(fluid('oxygen') * 4000)
+        .outputs(item('appliedenergistics2:quartz_glass'))
+        .fluidOutputs(fluid('hydrogen_chloride') * 16000)
+        .duration(1600)
+        .EUt(VA[MV])
+        .buildAndRegister()
+// Illuminated Panel
+ASSEMBLER.recipeBuilder()
+        .inputs(item('gregtech:machine', 1667))
+        .inputs(ore('cableGtSingleGold') * 2)
+        .inputs(item('appliedenergistics2:quartz_glass'))
+        .outputs(item('appliedenergistics2:part', 180))
+        .circuitMeta(1)
+        .duration(200)
+        .EUt(VA[EV])
         .buildAndRegister()
