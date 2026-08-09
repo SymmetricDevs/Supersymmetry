@@ -1,0 +1,13 @@
+name = "Retro Sophisticated Backpacks"
+filename = "Retro-Sophisticated-Backpacks-1.1.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4022bc5297f16d4277efd9a1ac6c208dfb6435d2"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8311887
+project-id = 1197465
