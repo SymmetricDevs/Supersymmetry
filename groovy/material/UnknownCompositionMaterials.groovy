@@ -3481,13 +3481,7 @@ class UnknownCompositionMaterials {
                 .color(0x5F5F68)
                 .build()
 
-        Troilite = new Material.Builder(4754, SuSyUtility.susyId('troilite'))
-                .dust()
-                .iconSet(METALLIC)
-                .color(0x595021)
-                .build()
-
-        Troilite.setFormula('FeS', true)
+        // FREE ID: 4754
 
         AnorthositeLeach = new Material.Builder(4755, SuSyUtility.susyId('anorthosite_leach'))
                 .liquid()

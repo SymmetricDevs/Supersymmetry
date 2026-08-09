@@ -137,7 +137,7 @@ ROASTER.recipeBuilder() // CHANGE TO SOLAR FURNACE
 // Ilmenite flotation
 builders = [CSTR, FROTH_FLOTATION]
 durations = [300, 30]
-for (builder, dur) in builders.zip(durations) {
+for builder, dur in builders.zip(durations) {
     builder.recipeBuilder()
         .inputs(metaitem("dustKreepAnorthosite") * 1)
         .fluidInputs(fluid("water") * 1000)
@@ -187,12 +187,24 @@ for (builder, dur) in builders.zip(durations) {
         .buildAndRegister()
 
     builder.recipeBuilder()
-        .fluidInputs(fluid("lunar_ferrosilicate_slurry") * 100)
+        .fluidInputs(fluid("lunar_ferrosilicate_slurry") * 1000)
         .notConsumable(fluid("sodium_silicate_solution") * 1000)
         .notConsumable(fluid("oleic_acid") * 100)
         .notConsumable(metaitem("dustSodiumEthylXanthate") * 1)
         .fluidOutputs(fluid("lunar_troilite_slurry") * 100)
         .fluidOutputs(fluid("lunar_silicate_slurry") * 900)
+        .EUt(VA[LV])
+        .duration(dur)
+        .buildAndRegister()
+
+    // another optional recipe, specifically if someone just wants to process the plagioclase separately (or not at all)
+    builder.recipeBuilder()
+        .fluidInputs(fluid('lunar_silicate_slurry') * 3000)
+        .notConsumable(fluid("sodium_silicate_solution") * 1000)
+        .notConsumable(ore('dustOctylHydroxamicAcid') * 1)
+        .notConsumable(fluid('methyl_isobutyl_carbinol') * 100)
+        .fluidOutputs(fluid('lunar_plagioclase_slurry') * 1000)
+        .fluidOutputs(fluid('lunar_mafic_slurry') * 2000)
         .EUt(VA[LV])
         .duration(dur)
         .buildAndRegister()
@@ -212,7 +224,7 @@ SOLAR_FURNACE.recipeBuilder()
 
 CLARIFIER.recipeBuilder()
     .fluidInputs(fluid('lunar_troilite_slurry') * 1000)
-    .outputs(metaitem('dustTroilite') * 2)
+    .outputs(metaitem('dustIronIiSulfide') * 2)
     .fluidOutputs(fluid('wastewater') * 1000)
     .EUt(VA[LV])
     .duration(20)
@@ -220,12 +232,21 @@ CLARIFIER.recipeBuilder()
 
 PHASE_SEPARATOR.recipeBuilder()
     .fluidInputs(fluid('lunar_troilite_slurry') * 1000)
-    .outputs(metaitem('dustTroilite') * 2)
+    .outputs(metaitem('dustIronIiSulfide') * 2)
     .fluidOutputs(fluid('wastewater') * 1000)
     .EUt(VA[ULV])
     .duration(300)
     .buildAndRegister()
 
+CLARIFIER.recipeBuilder()
+    .fluidInputs(fluid('lunar_plagioclase_slurry') * 1000)
+    .outputs(metaitem('dustAnorthosite') * 13)
+    .fluidOutputs(fluid('wastewater') * 800)
+    .EUt(VA[LV])
+    .duration(40)
+    .buildAndRegister()
+
+// Various leaches
 
 // 95% anorthite, 5% albite
 // $stoik CaAl2Si2O8 + 2HCl + 4H2O -> CaCl2 + Al2Si2O7(H2O)3 + 2H2O
@@ -250,12 +271,23 @@ BR.recipeBuilder()
 // Same but with the silicate stuff, although this also includes 0.25mol olivine (and pyroxenes but that's too much for t1)
 // Mg2SiO4 + 4HCl + 8H2O -> 2MgCl2 + SiO2 + 10H2O
 
+// CaFeSi2O6 passes through unreacted and is filtered off as dustLunarPyroxene.
 BR.recipeBuilder()
-    .fluidInputs(fluid("lunar_silicate_slurry") * 1950)
-    .fluidInputs(fluid("diluted_hydrochloric_acid") * 5900)
-    .fluidOutputs(fluid("lunar_basalt_leach") * 6400)
-    .EUt(VA[LV])
-    .duration(200)
+    .fluidInputs(fluid('lunar_mafic_slurry') * 2000)
+    .fluidInputs(fluid('diluted_hydrochloric_acid') * 7800)
+    .fluidOutputs(fluid('lunar_basalt_leach') * 7800)
+    .outputs(metaitem('dustLunarPyroxene') * 10)
+    .EUt(VA[MV])
+    .duration(300)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('lunar_silicate_slurry') * 3000)
+    .fluidInputs(fluid('diluted_hydrochloric_acid') * 11700)
+    .fluidOutputs(fluid('lunar_basalt_leach') * 11700)
+    .outputs(metaitem('dustLunarPyroxene') * 10)  // off to PyroxeneProcessing.groovy
+    .EUt(VA[MV])
+    .duration(400)
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -283,7 +315,7 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .fluidInputs(fluid("lunar_basalt_leach") * 5850)
+    .fluidInputs(fluid("lunar_kreep_anorthosite_leach") * 5850)
     .outputs(metaitem("dustLeachedKreepAnorthosite") * 13)
     .fluidOutputs(fluid("dense_steam") * 5850)
     .EUt(VA[LV])
@@ -486,13 +518,18 @@ BR.recipeBuilder()
     .fluidInputs(fluid('lunar_phosphate_concentrate_slurry') * 9000)
     .fluidInputs(fluid('sulfuric_acid') * 6200)
     .fluidOutputs(fluid('impure_phosphoric_acid') * 4000)
-    .fluidOutputs(fluid('hydrogen_chloride') * 100)
+    .fluidOutputs(fluid('halogen_mix') * 400)
     .EUt(VA[MV])
     .duration(300)
     .buildAndRegister()
 
-// TODO: how the fuck do I get fluorine out of this? does it involve really weird ratios of SiO2 or something
-// this is for planetme to solve pls
+DISTILLATION.recipeBuilder()
+    .fluidInputs(fluid('halogen_mix') * 1000)
+    .fluidOutputs(fluid('hydrogen_fluoride') * 750)
+    .fluidOutputs(fluid('hydrogen_chloride') * 250)
+    .EUt(VA[MV])
+    .duration(40)
+    .buildAndRegister()
 
 MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('impure_phosphoric_acid') * 4000)
@@ -513,3 +550,5 @@ MIXER_SETTLER.recipeBuilder()
     .EUt(VA[HV])
     .requiredCells(2)
     .buildAndRegister()
+
+// Pyroxene processing

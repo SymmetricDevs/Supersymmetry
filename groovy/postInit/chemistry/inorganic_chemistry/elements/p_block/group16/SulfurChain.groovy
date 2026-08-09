@@ -42,7 +42,7 @@ ROASTER.recipeBuilder()
 
 ROASTER.recipeBuilder()
     .circuitMeta(2)
-    .inputs(ore('dustTroilite'))
+    .inputs(ore('dustTroilite') * 2)
     .outputs(metaitem('dustIronIiSulfide') * 2)
     .outputs(metaitem('dustSulfur'))
     .duration(80)
