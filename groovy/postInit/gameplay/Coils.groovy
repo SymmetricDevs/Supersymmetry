@@ -64,3 +64,6 @@ ASSEMBLER.recipeBuilder()
         .duration(400)
         .EUt(VA[IV])
         .buildAndRegister();
+
+crafting.addShapeless('susy:heating_coil.rtm_convert', item('susy:heating_coil'), [item('gregtech:wire_coil', 3)])
+crafting.addShapeless('susy:heating_coil.hssg_convert', item('susy:heating_coil', 1), [item('gregtech:wire_coil', 4)])

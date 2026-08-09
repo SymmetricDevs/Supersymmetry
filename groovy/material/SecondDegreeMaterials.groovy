@@ -874,7 +874,7 @@ class SecondDegreeMaterials {
                 .components(Platinum * 9, Rhodium)
                 .color(0xffe1c8)
                 .flags(GENERATE_FINE_WIRE)
-                .blastTemp(2113, GasTier.MID)
+                .blastTemp(1400, GasTier.MID)
                 .build()
 
         CopperIIChlorideSolution = new Material.Builder(13142, SuSyUtility.susyId('copper_ii_chloride_solution'))
