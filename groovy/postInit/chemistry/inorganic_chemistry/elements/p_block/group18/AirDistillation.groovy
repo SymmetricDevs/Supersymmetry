@@ -69,7 +69,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
     VACUUM_CHAMBER.recipeBuilder()
         .circuitMeta(2)
         .inputs(ore('dustCarbonatedMolecularSieveX') * 36)
-        .notConsumable(metaitem('springKanthal'))
+        .notConsumable(metaitem('springNichrome'))
         .outputs(metaitem('dustMolecularSieveX') * 36)
         .fluidOutputs(fluid('carbon_dioxide') * 1280)
         .duration(10)
@@ -96,7 +96,7 @@ HIGH PRESSURE OUTPUT GAS: 6L OF REGULAR GAS
 
     VACUUM_CHAMBER.recipeBuilder()
         .inputs(ore('dustNetherMolecularSieveX'))
-        .notConsumable(metaitem('springKanthal'))
+        .notConsumable(metaitem('springNichrome'))
         .outputs(metaitem('dustMolecularSieveX'))
         .fluidOutputs(fluid('heavy_nether_gases') * 2000)
         .duration(4)

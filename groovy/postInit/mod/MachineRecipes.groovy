@@ -115,8 +115,8 @@ def hulls = [metaitem('hull.ulv'), metaitem('hull.lv'), metaitem('hull.mv'), met
              metaitem('hull.uev'), metaitem('hull.uiv'), metaitem('hull.uxv'),
              metaitem('hull.opv')];
 
-def tieredWires = [ore('wireGtQuadrupleLead'), ore('wireGtQuadrupleCopper'), ore('wireGtQuadrupleCupronickel'), ore('wireGtQuadrupleKanthal'),
-                   ore('wireGtQuadrupleNichrome'), ore('wireGtQuadrupleRtmAlloy'), ore('wireGtQuadrupleHssg'),
+def tieredWires = [ore('wireGtQuadrupleLead'), ore('wireGtQuadrupleCopper'), ore('wireGtQuadrupleCupronickel'), ore('wireGtQuadrupleNichrome'),
+                   ore('wireGtQuadrupleKanthal'), ore('wireGtQuadrupleRtmAlloy'), ore('wireGtQuadrupleHssg'),
                    ore('wireGtQuadrupleNaquadah'), ore('wireGtQuadrupleNaquadahAlloy')];
 
 def tieredPlates = [ore('plateWroughtIron'), ore('plateSteel'), ore('plateAluminium'), ore('plateStainlessSteel'),
@@ -147,8 +147,8 @@ def tieredHexCables = [ore('cableGtHexLead'), ore('cableGtHexTin'), ore('cableGt
                         ore('cableGtHexAluminium'), ore('cableGtHexPlatinum'), ore('cableGtHexNiobiumTitanium'),
                         ore('cableGtHexVanadiumGallium'), ore('cableGtHexYttriumBariumCuprate')]
 
-def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springKanthal'),
-                     metaitem('springNichrome'), metaitem('springRtmAlloy'), metaitem('springHssg'),
+def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springNichrome'),
+                     metaitem('springKanthal'), metaitem('springRtmAlloy'), metaitem('springHssg'),
                      metaitem('springNaquadah'), metaitem('springNaquadahAlloy')]
 
 def rotors = [
@@ -1400,7 +1400,7 @@ RecyclingHelper.addShaped('gregtech:large_fluid_pump', metaitem('susy:large_flui
 
 RecyclingHelper.addShaped("gregtech:sieve_distillation_tower", metaitem('susy:sieve_distillation_tower'), [
     [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
-    [metaitem('springKanthal'), metaitem('hull.Hv'), metaitem('springKanthal')],
+    [metaitem('springNichrome'), metaitem('hull.Hv'), metaitem('springNichrome')],
     [metaitem('frameStainlessSteel'), metaitem('electric.pump.hv'), metaitem('frameStainlessSteel')]
 ])
 
@@ -1569,9 +1569,9 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
     
 RecyclingHelper.addShaped("gregtech:injection_molder", metaitem('susy:injection_molder'), [
-        [metaitem('springKanthal'), ore('circuitHv'), metaitem('cableGtSingleGold')],
+        [metaitem('springNichrome'), ore('circuitHv'), metaitem('cableGtSingleGold')],
         [ore('pipeLargeFluidStainlessSteel'), metaitem('hull.hv'), metaitem('electric.motor.hv')],
-        [metaitem('springKanthal'), ore('circuitHv'), metaitem('cableGtSingleGold')],
+        [metaitem('springNichrome'), ore('circuitHv'), metaitem('cableGtSingleGold')],
 ])
 
 for (def i = 1; i < 8; i++) {

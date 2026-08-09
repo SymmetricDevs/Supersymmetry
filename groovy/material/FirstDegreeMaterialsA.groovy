@@ -3552,7 +3552,7 @@ class FirstDegreeMaterialsA {
                 .components(Iron * 12, Nickel * 8, Chrome * 12, Manganese, Copper * 2, Niobium, Tantalum, Molybdenum * 2)
                 .colorAverage()
                 .flags(GENERATE_ROD, GENERATE_PLATE, SUPERALLOY, INDUCTION_MELT)
-                .blastTemp(1700, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .blastTemp(2100, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
 
         Incoloy825 = new Material.Builder(8628, SuSyUtility.susyId("incoloy_825"))
@@ -3561,7 +3561,7 @@ class FirstDegreeMaterialsA {
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROTOR, SUPERALLOY, INDUCTION_MELT)
                 .components(Iron * 9, Nickel * 16, Chrome * 7, Manganese, Copper * 2, Aluminium, Titanium, Molybdenum * 2)
                 .colorAverage()
-                .blastTemp(1700, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .blastTemp(2100, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
 
         Incoloy908 = new Material.Builder(8629, SuSyUtility.susyId("incoloy_908"))
@@ -3570,7 +3570,7 @@ class FirstDegreeMaterialsA {
                 .flags(GENERATE_PLATE, GENERATE_ROD, SUPERALLOY, INDUCTION_MELT)
                 .components(Iron * 20, Nickel * 30, Cobalt, Chrome * 3, Aluminium, Titanium * 2, Tungsten, Niobium * 2)
                 .colorAverage()
-                .blastTemp(1700, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .blastTemp(2100, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
 
         ReneN5 = new Material.Builder(8630, SuSyUtility.susyId("rene_n_5"))
@@ -3579,7 +3579,7 @@ class FirstDegreeMaterialsA {
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROTOR, SUPERALLOY, INDUCTION_MELT)
                 .components(Nickel * 22, Cobalt * 4, Chrome * 3, Aluminium * 3, Tungsten * 2, Hafnium, Rhenium * 2, Tantalum * 3)
                 .colorAverage()
-                .blastTemp(1700, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .blastTemp(2100, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
 
         Monel500 = new Material.Builder(8631, SuSyUtility.susyId("monel_500"))
@@ -3609,7 +3609,7 @@ class FirstDegreeMaterialsA {
                 .flags(GENERATE_PLATE, GENERATE_ROD, SUPERALLOY, INDUCTION_MELT)
                 .components(Nickel, Cobalt * 24, Chrome * 10, Manganese, Tungsten * 3, Molybdenum)
                 .colorAverage()
-                .blastTemp(1700, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .blastTemp(2100, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
 
         HSLA980X = new Material.Builder(8634, SuSyUtility.susyId("hsla_980_x"))
@@ -3644,7 +3644,7 @@ class FirstDegreeMaterialsA {
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_PLATE, GENERATE_RING, GENERATE_ROTOR, SUPERALLOY, INDUCTION_MELT)
                 .components(Nickel * 19, Chrome * 6, Manganese * 1, Iron * 1, Aluminium * 2, Titanium * 1, Cobalt * 8)
                 .colorAverage()
-                .blastTemp(1700, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .blastTemp(2100, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
 
         // 8638: Co3O4

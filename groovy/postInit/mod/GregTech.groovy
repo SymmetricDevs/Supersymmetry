@@ -2080,3 +2080,20 @@ ASSEMBLER.recipeBuilder()
 for (i in 5..7) {
     mods.jei.ingredient.yeet(item('gregtech:wire_coil', i))
 }
+
+//Fix Distillery
+
+RecyclingHelper.removeByOutput(metaitem('distillery.hv'))
+RecyclingHelper.removeByOutput(metaitem('distillery.ev'))
+
+RecyclingHelper.replaceShaped"(gregtech.machine.distillery.hv", metaitem('distillery.hv'), [
+        [item('gregtech:transparent_casing'), ore('springNichrome'), item('gregtech:transparent_casing')],
+        [ore("circuitHv"), metaitem('gregtech:hull.hv'), ore("circuitHv")],
+        [metaitem('cableGtSingleGold'), metaitem('electric.pump.hv'), metaitem('cableGtSingleGold')]
+]
+
+RecyclingHelper.replaceShaped"(gregtech.machine.distillery.ev", metaitem('distillery.ev'), [
+        [item('gregtech:transparent_casing'), ore('springKanthal'), item('gregtech:transparent_casing')],
+        [ore("circuitEv"), metaitem('gregtech:hull.ev'), ore("circuitEv")],
+        [metaitem('cableGtSingleAluminium'), metaitem('electric.pump.ev'), metaitem('cableGtSingleAluminium')]
+]

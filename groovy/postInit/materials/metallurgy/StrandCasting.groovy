@@ -129,27 +129,27 @@ RecyclingHelper.handleRecycling(metaitem('susy:metallurgical_converter'), [
 
 // Turning zone
 RecyclingHelper.addShaped("susy:turning_zone", metaitem('susy:turning_zone'), [
-    [ore('gearUltimet'), metaitem('cableGtOctalNichrome'), ore('gearUltimet')],
+    [ore('gearUltimet'), metaitem('cableGtOctalKanthal'), ore('gearUltimet')],
     [metaitem('electric.motor.ev'), item('gregtech:metal_casing', 4), metaitem('electric.motor.ev')],
     [metaitem('electric.motor.ev'), ore('circuitMv'), metaitem('electric.motor.ev')]
 ])
 
 // Rolling mill and cluster mill
 RecyclingHelper.addShaped("susy:rolling_mill", metaitem('susy:rolling_mill'), [
-    [ore('gearUltimet'), metaitem('cableGtOctalNichrome'), ore('gearUltimet')],
+    [ore('gearUltimet'), metaitem('cableGtOctalKanthal'), ore('gearUltimet')],
     [metaitem('electric.pump.ev'), item('gregtech:boiler_casing', 1), metaitem('electric.pump.ev')],
-    [metaitem('electric.motor.ev'), metaitem('cableGtOctalNichrome'), metaitem('electric.motor.ev')]
+    [metaitem('electric.motor.ev'), metaitem('cableGtOctalKanthal'), metaitem('electric.motor.ev')]
 ])
 
 RecyclingHelper.addShaped("susy:cluster_mill", metaitem('susy:cluster_mill'), [
-    [ore('gearUltimet'), metaitem('cableGtHexNichrome'), ore('gearUltimet')],
+    [ore('gearUltimet'), metaitem('cableGtOctalKanthal'), ore('gearUltimet')],
     [metaitem('electric.pump.ev'), item('gregtech:boiler_casing', 1), metaitem('electric.pump.ev')],
-    [metaitem('electric.motor.ev'), metaitem('cableGtHexNichrome'), metaitem('electric.motor.ev')]
+    [metaitem('electric.motor.ev'), metaitem('cableGtOctalKanthal'), metaitem('electric.motor.ev')]
 ])
 
 // Flying shear
 RecyclingHelper.addShaped("susy:flying_shear", metaitem('susy:flying_shear'), [
-    [ore('gearUltimet'), metaitem('cableGtOctalNichrome'), ore('gearUltimet')],
+    [ore('gearUltimet'), metaitem('cableGtOctalKanthal'), ore('gearUltimet')],
     [metaitem('sensor.ev'), item('gregtech:metal_casing', 4), metaitem('electric.piston.ev')],
     [metaitem('electric.motor.ev'), ore('circuitEv'), metaitem('electric.piston.ev')]
 ])

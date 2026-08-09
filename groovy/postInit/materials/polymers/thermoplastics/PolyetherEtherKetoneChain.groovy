@@ -12,7 +12,7 @@ BR.recipeBuilder()
     .buildAndRegister();
 
 CRYSTALLIZER.recipeBuilder()
-    .notConsumable(metaitem('springNichrome'))
+    .notConsumable(metaitem('springKanthal'))
     .fluidInputs(fluid('benzenediazonium_fluoride_solution') * 4000)
     .outputs(metaitem('dustBenzenediazoniumFluoride') * 14)
     .fluidOutputs(fluid('sodium_fluoride_solution') * 1000)
