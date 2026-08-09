@@ -2630,6 +2630,9 @@ class SuSyMaterials {
     public static Material DiallyldimethylammoniumChlorideSolution
     public static Material PolydiallyldimethylammoniumChlorideSolution
     public static Material NafionDispersion
+    public static Material AluminosilicateMix
+    public static Material MoSiSlurry
+    public static Material MoSiPrecursor
 
     // Thermodynamics Materials
 

@@ -646,55 +646,6 @@ SOLIDIFIER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-//Coils
-
-CENTRIFUGE.recipeBuilder()
-    .fluidInputs(fluid('lava') * 1000)
-    .notConsumable(metaitem('stickSteel'))
-    .outputs(metaitem('mineral_wool') * 16)
-    .duration(500)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-CENTRIFUGE.recipeBuilder()
-    .fluidInputs(fluid('chilled_lava') * 1000)
-    .notConsumable(ore('stickSteel'))
-    .outputs(metaitem('mineral_wool') * 16)
-    .duration(400)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .inputs(ore('wireGtDoubleCupronickel') * 8)
-    .inputs(metaitem('mineral_wool') * 8)
-    .inputs(ore('foilBronze') * 8)
-    .outputs(item('gregtech:wire_coil'))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-/*ASSEMBLER.recipeBuilder()
-    .fluidInputs(fluid('copper') * 144)
-    .inputs(ore('wireGtDoubleKanthal') * 8)
-    .inputs(metaitem('mineral_wool') * 8)
-    .inputs(ore('foilAluminium') * 8)
-    .outputs(item('gregtech:wire_coil', 1))
-    .duration(300)
-    .EUt(VA[MV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .fluidInputs(fluid('aluminium') * 144)
-    .inputs(ore('wireGtDoubleNichrome') * 8)
-    .inputs(metaitem('mineral_wool') * 8)
-    .inputs(ore('foilStainlessSteel') * 8)
-    .outputs(item('gregtech:wire_coil', 2))
-    .duration(400)
-    .EUt(VA[HV])
-    .buildAndRegister();
-
- */
-
 //Cleanroom Filter Casings
 
 ASSEMBLER.recipeBuilder()
