@@ -2,17 +2,12 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 // Scandium recovery from lunar pyroxene.
-// Picks up from PyroxeneProcessing.groovy after the titanyl sulfate hydrolysis, which
-// delivers scandium_bearing_waste_acid at ~1.5 M H2SO4.
-//
-// This is the "scandium from titania waste acid" flowsheet, which is the best-documented
-// Sc route in industry: P204 extraction at low acidity, HCl scrub, HF scrub, alkaline
-// strip, controlled redissolution, oxalate precipitation, calcination.
 
 // TODO: UNREGISTERED MATERIALS
 //   dustCrudeScandiumHydroxide         Sc(OH)3 + impurities, 7 dust = 1 mol
 //   dustScandiumOxalate                Sc2(C2O4)3(H2O)6, 38 dust = 1 mol
 //   dustScandiumOxide                  Sc2O3, 5 dust = 1 mol
+//   dustChromiumIiiSulfate
 //   scandium_depleted_sulfate_raffinate
 //   scandium_p204_extract
 //   scrubbed_scandium_p204_extract
@@ -21,18 +16,8 @@ import static gregtech.api.GTValues.*
 //   fluoride_scrub_raffinate
 //   scandium_chloride_solution
 
-// The solvent-extraction steps below are partitions rather than reactions, so they carry no
-// $stoik receipt - same as the P204/P507 stages in the bastnasite and monazite chains.
-
-
-// ---------------------------------------------------------------------------------------
-// P204 solvent extraction
-// ---------------------------------------------------------------------------------------
-
 // 30% P204 in kerosene against a ~1.5 M H2SO4 feed. Extraction order is
-// Sc3+ > Fe3+ > Lu3+ > Yb3+ > Er3+ > Y3+ > Ho3+, so Fe(III) is the main co-extractant with
-// Zr/Hf close behind. The raffinate keeps the bulk Fe and is also where Cr and V report,
-// since neither is well extracted by P204.
+// Sc3+ > Fe3+ > a bunch of lanthanides that aren't in here, probably
 MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('scandium_bearing_waste_acid') * 60000)
     .fluidInputs(fluid('p_two_zero_four_extraction_mixture') * 6000)
@@ -43,23 +28,40 @@ MIXER_SETTLER.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
-// Iron scrub, 5 M HCl.
+// TODO: decide on adding vanadium here
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('scandium_depleted_sulfate_raffinate') * 15000)
+    .outputs(metaitem('dustIronIiiSulfate') * 4)
+    .chancedOutput(metaitem('dustChromiumIiiSulfate') * 17, 1000, 0) // a little extra sulfate for the fans
+    .fluidOutputs(fluid('sulfuric_acid') * 5250)
+    .EUt(VA[HV])
+    .duration(500)
+    .buildAndRegister()
+
+// Iron scrub, "5 M HCl"
 MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('scandium_p204_extract') * 6000)
-    .fluidInputs(fluid('hydrochloric_acid') * 30000)
+    .fluidInputs(fluid('hydrochloric_acid') * 10000)
     .fluidOutputs(fluid('scrubbed_scandium_p204_extract') * 6000)
-    .fluidOutputs(fluid('iron_chloride_scrub_raffinate') * 30000)
+    .fluidOutputs(fluid('iron_chloride_scrub_raffinate') * 10000)
     .requiredCells(2)
     .EUt(VA[HV])
     .duration(120)
     .buildAndRegister()
 
-// Fluoride scrub, 0.1 M HF. This is the step that decides product purity: Zr behaves almost
-// identically to Sc and will otherwise follow it all the way to the oxide, which is why
-// industrial Sc2O3 typically carries 3-10% Zr. HF converts Ti/Zr/Hf to anionic fluoride
-// complexes that will not stay in the organic phase.
-// Fluorine is the scarcest reagent in the lunar tree - the only source is fluorapatite in
-// the KREEP branch - so the raffinate is recycled at the bottom of this file.
+// FeCl3 + 3NaOH -> 3NaCl + Fe(OH)3  
+BR.recipeBuilder()
+    .fluidInputs(fluid('iron_chloride_scrub_raffinate') * 1000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+    .outputs(metaitem('dustIronIiiHydroxide') * 7)
+    .fluidInputs(fluid('salt_water') * 1000)
+    .EUt(VA[LV])
+    .duration(120)
+    .buildAndRegister()
+
+// According to https://patents.google.com/patent/CN103060580A/en,
+// you can get out Zr by converting it into a complex with HF, which is one of the very few ways
+// it is separable from Sc.
 MIXER_SETTLER.recipeBuilder()
     .fluidInputs(fluid('scrubbed_scandium_p204_extract') * 6000)
     .fluidInputs(fluid('hydrofluoric_acid') * 1000)
@@ -81,10 +83,6 @@ BR.recipeBuilder()
     .duration(150)
     .buildAndRegister()
 
-
-// ---------------------------------------------------------------------------------------
-// Oxalate finish
-// ---------------------------------------------------------------------------------------
 
 // Controlled redissolution, held near 3 M so residual Ti, Zr, Fe and Si hydrolyse and stay
 // in the solid residue while Sc goes into solution.
@@ -123,31 +121,12 @@ ROASTER.recipeBuilder()
     .duration(400)
     .buildAndRegister()
 
-
-// ---------------------------------------------------------------------------------------
-// Fluoride raffinate: Zr/Hf recovery and fluorine recycle
-// ---------------------------------------------------------------------------------------
-
-// Steam pyrohydrolysis, ~500 C, giving anhydrous HF rather than the aqueous acid. This is
-// the same operation used industrially to detoxify spent aluminium potlining.
-//
-// Zr and Hf are deliberately not separated here. dustFusedZirconia is the existing
-// Hf-bearing zirconia intermediate, so this drops straight into the sulfatization in
-// ZirconiumChain.groovy, upstream of the MIBK/thiocyanate Hf split that already exists.
-//
-// Fluorine balance: the scrub above spends 1000 L (1 mol) HF per cycle, so 40 cycles give
-// 40000 L of raffinate carrying 40 mol F as 6 mol H2ZrF6 (36 F) plus 4 mol free HF. This
-// returns all 40 mol, so the loop closes exactly and only handling losses need making up.
-// $stoik 6H2ZrF6 + 12H2O -> 6ZrO2 + 36HF
-// The remaining 4000 L of hydrogen_fluoride output is the free HF carried in unreacted.
+// $stoik 6H2ZrF6 + 12H2O + 4HF -> 6ZrO2 + 36HF + 4HF
 ROASTER.recipeBuilder()
-    .fluidInputs(fluid('fluoride_scrub_raffinate') * 40000)
-    .fluidInputs(fluid('steam') * 12000)
-    .outputs(metaitem('dustFusedZirconia') * 18)
-    .fluidOutputs(fluid('hydrogen_fluoride') * 40000)
+    .fluidInputs(fluid('fluoride_scrub_raffinate') * 20000)
+    .fluidInputs(fluid('steam') * 6000)
+    .outputs(metaitem('dustFusedZirconia') * 9)
+    .fluidOutputs(fluid('hydrogen_fluoride') * 20000)
     .EUt(VA[HV])
     .duration(400)
     .buildAndRegister()
-
-// The anhydrous HF rejoins the scrub feed through the existing absorption recipe in
-// ChemistryOverhaul.groovy: hydrogen_fluoride + water -> hydrofluoric_acid, 1:1:1.

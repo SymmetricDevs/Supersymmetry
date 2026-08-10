@@ -767,6 +767,14 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustTinySodiumHydroxide'))
+        .fluidInputs(fluid('spent_p_two_zero_four_extraction_mixture') * 1000) // being nice to the player
+        .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 1000)
+        .duration(10)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
     // EHEHPA (P507)
 
     CSTR.recipeBuilder()
