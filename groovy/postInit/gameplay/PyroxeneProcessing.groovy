@@ -56,7 +56,7 @@ BR.recipeBuilder()
     .duration(300)
     .buildAndRegister()
 
-// Sulfuric acid leach, 8 M, ~80 C. Needs extra acidity in order to prevent Ti coprecipitation as below.
+// Sulfuric acid leach, "8 M", ~80 C. Needs extra acidity in order to prevent Ti coprecipitation as below.
 // $stoik 4Fe(OH)3 + 4Ca(OH)2 + 10H2SO4(H2O) -> 2Fe2(SO4)3 + 4CaSO4 + 30H2O
 // scandian_ferric_sulfate_leachate additionally carries 10 mol free H2SO4(H2O).
 BR.recipeBuilder()
