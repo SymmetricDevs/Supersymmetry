@@ -65,5 +65,9 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[IV])
         .buildAndRegister();
 
+crafting.addShapeless('susy:heating_coil.kanthal_convert', item('gregtech:wire_coil', 2), [item('gregtech:wire_coil', 1)])
+crafting.addShapeless('susy:heating_coil.nichrome_convert', item('gregtech:wire_coil', 1), [item('gregtech:wire_coil', 2)])
 crafting.addShapeless('susy:heating_coil.rtm_convert', item('susy:heating_coil'), [item('gregtech:wire_coil', 3)])
 crafting.addShapeless('susy:heating_coil.hssg_convert', item('susy:heating_coil', 1), [item('gregtech:wire_coil', 4)])
+crafting.addShapeless('susy:spring.kanthal_convert', item('gregtech:meta_spring', 294), [item('gregtech:meta_spring', 288)])
+crafting.addShapeless('susy:spring.nichrome_convert', item('gregtech:meta_spring', 288), [item('gregtech:meta_spring', 294)])
