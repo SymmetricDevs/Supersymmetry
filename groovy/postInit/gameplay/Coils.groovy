@@ -65,6 +65,9 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[IV])
         .buildAndRegister();
 
+mods.jei.ingredient.yeet(item('gregtech:wire_coil', 3))
+mods.jei.ingredient.yeet(item('gregtech:wire_coil', 4))
+
 crafting.addShapeless('susy:heating_coil.kanthal_convert', item('gregtech:wire_coil', 2), [item('gregtech:wire_coil', 1)])
 crafting.addShapeless('susy:heating_coil.nichrome_convert', item('gregtech:wire_coil', 1), [item('gregtech:wire_coil', 2)])
 crafting.addShapeless('susy:heating_coil.rtm_convert', item('susy:heating_coil'), [item('gregtech:wire_coil', 3)])
