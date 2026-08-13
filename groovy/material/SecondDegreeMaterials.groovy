@@ -1197,6 +1197,40 @@ class SecondDegreeMaterials {
         
         YttriumNitrateSolution.setFormula('(Y(NO3)3)2(H2O)3', true)
 
+        RegolithGases = new Material.Builder(13196, SuSyUtility.susyId('regolith_gases'))
+                .gas()
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, CarbonDioxide * 1, Methanol * 1, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x4F594F)
+                .build()
 
+        DecarburizedRegolithGases = new Material.Builder(13197, SuSyUtility.susyId('decarburized_regolith_gases'))
+                .gas()
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methanol * 1, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x516651)
+                .build()
+
+        HighPressureDecarburizedRegolithGases = new Material.Builder(13198, SuSyUtility.susyId('high_pressure_decarburized_regolith_gases'))
+                .gas(new FluidBuilder().temperature(323))
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methanol * 1, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x516651)
+                .build()
+
+        HighPressureRegolithGases = new Material.Builder(13199, SuSyUtility.susyId('high_pressure_regolith_gases'))
+                .gas(new FluidBuilder().temperature(323))
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x486651)
+                .build()
+
+        HighPressureRegolithLightGases = new Material.Builder(13200, SuSyUtility.susyId('high_pressure_regolith_light_gases'))
+                .gas(new FluidBuilder().temperature(323))
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methane * 1, Helium * 1)
+                .color(0x79AA88)
+                .build()
+
+        HalogenMix = new Material.Builder(13201, SuSyUtility.susyId('halogen_mix'))
+                .gas()
+                .components(HydrogenFluoride * 3, HydrogenChloride * 1)
+                .color(0x85B200)
+                .build()
     }
 }

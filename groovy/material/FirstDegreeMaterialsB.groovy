@@ -1005,5 +1005,43 @@ class FirstDegreeMaterialsB {
 
         StrontiumHydroxide.setFormula('Sr(OH)2', true)
 
+        HydrogenHeliumMixture = new Material.Builder(8809, SuSyUtility.susyId('hydrogen_helium_mixture'))
+                .gas(new FluidBuilder().temperature(82))
+                .components(Hydrogen * 14, Helium * 1)
+                .colorAverage()
+                .build()
+
+        ScandiumOxalate = new Material.Builder(8810, SuSyUtility.susyId('scandium_oxalate'))
+                .dust()
+                .components(Scandium * 2, Carbon * 6, Hydrogen * 12, Oxygen * 18)
+                .color(0xB5B261)
+                .iconSet(ROUGH)
+                .build()
+
+        ScandiumOxalate.setFormula('Sc2(C2O4)3(H2O)6', true)
+
+        ScandiumOxide = new Material.Builder(8811, SuSyUtility.susyId('scandium_oxide'))
+                .dust()
+                .components(Scandium * 2, Oxygen * 3)
+                .color(0xDBBE00)
+                .iconSet(METALLIC)
+                .build()
+
+        ChromiumIIISulfate = new Material.Builder(8812, SuSyUtility.susyId('chromium_iii_sulfate'))
+                .dust()
+                .components(Chrome * 2, Oxygen * 12, Sulfur * 3)
+                .color(0x4C005B)
+                .iconSet(SHINY)
+                .build()
+
+        ChromiumIIISulfate.setFormula('Cr2(SO4)3', true)
+
+        ScandiumIIIFluoride = new Material.Builder(8813, SuSyUtility.susyId('scandium_iii_fluoride'))
+                .dust()
+                .components(Scandium * 1, Fluorine * 3)
+                .color(0xD2FF63)
+                .iconSet(METALLIC)
+                .build()
+
     }
 }
