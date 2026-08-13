@@ -845,6 +845,36 @@ class SuSyMaterials {
     public static Material AlkaliBasalticChlorides
     public static Material LunarSodiumAluminateSolution
     public static Material LunarBasalt
+    public static Material DemagnetizedAnorthosite
+    public static Material DemagnetizedLunarBasalt
+    public static Material DemagnetizedKreepAnorthosite
+    public static Material LunarPhosphateConcentrateSlurry
+    public static Material LunarKreepFerrosilicateSlurry
+    public static Material LunarPlagioclaseSlurry
+    public static Material LunarMaficSlurry
+    public static Material KreepAnorthosite
+    public static Material LunarPyroxene
+    public static Material LunarKreepSilicateSlurry
+    public static Material LunarKreepAnorthositeLeach
+    public static Material LeachedKreepAnorthosite
+    public static Material AlkaliKreepAnorthositicChlorides
+    public static Material IcyRegolith
+    public static Material ImpurePhosphoricAcid
+    public static Material PhosphoricAcidExtract
+    public static Material WasteGypsum
+    public static Material SodianFerriteClinker
+    public static Material HydrolyzedPyroxeneResidue
+    public static Material ScandianFerricSulfateLeachate
+    public static Material ScandiumBearingWasteAcid
+    public static Material CrudeScandiumHydroxide
+    public static Material ScandiumDepletedSulfateRaffinate
+    public static Material ScandiumP204Extract
+    public static Material ScrubbedScandiumP204Extract
+    public static Material PurifiedScandiumP204Extract
+    public static Material IronChlorideScrubRaffinate
+    public static Material FluorideScrubRaffinate
+    public static Material ImpureScandiumChlorideSolution
+    public static Material NativeLunarIron
 
 
     // Petrochem Materials
@@ -1726,6 +1756,11 @@ class SuSyMaterials {
     public static Material LanthanumZirconiumOxide
     public static Material PalladiumChloride
     public static Material StrontiumHydroxide
+    public static Material HydrogenHeliumMixture
+    public static Material ScandiumOxalate
+    public static Material ScandiumOxide
+    public static Material ChromiumIIISulfate
+    public static Material ScandiumIIIFluoride
 
     // HP Materials
 
@@ -1968,7 +2003,6 @@ class SuSyMaterials {
     public static Material RawInvestmentCastingMixture
     public static Material SilicaCoatedInvestmentCastingMixture
     public static Material DriedSilicaCoatedInvestmentCastingMixture
-
     public static Material HalophosphatePhosphor
     public static Material HalophosphatePhosphorSolution
     public static Material YttriumAluminiumGarnetCerium
@@ -1976,6 +2010,12 @@ class SuSyMaterials {
     public static Material DilutedVanadiumIIISulfateSolution
     public static Material VanadylSulfateSolution
     public static Material ManganeseCobaltNickelOxide
+    public static Material RegolithGases
+    public static Material DecarburizedRegolithGases
+    public static Material HighPressureDecarburizedRegolithGases
+    public static Material HighPressureRegolithGases
+    public static Material HighPressureRegolithLightGases
+    public static Material HalogenMix
 
     // Organic Chemistry Materials
 

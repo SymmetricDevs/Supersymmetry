@@ -491,8 +491,8 @@ crafting.addShaped('susy:anorthosite_bricks', item('susy:susy_stone_bricks', 11)
 ])
 
 crafting.addShaped('susy:leucobasalt_bricks', item('susy:susy_stone_bricks', 12) * 4, [
-        [ore('stoneLeucobasalt'), ore('stoneLeucobasalt')],
-        [ore('stoneLeucobasalt'), ore('stoneLeucobasalt')]
+        [ore('stoneKreepBasalt'), ore('stoneKreepBasalt')],
+        [ore('stoneKreepBasalt'), ore('stoneKreepBasalt')]
 ])
 
 
