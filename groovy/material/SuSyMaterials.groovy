@@ -1693,6 +1693,7 @@ class SuSyMaterials {
     public static Material CopperTungstenAlloy
     public static Material LanthanumZirconiumOxide
     public static Material MolybdenumDisilicide
+    public static Material Inconel601
 
     //public static Material VanadiumTrioxide
     public static Material ExpandedPolytetrafluoroethylene

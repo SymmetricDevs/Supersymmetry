@@ -881,6 +881,14 @@ class FirstDegreeMaterialsB {
 
         MolybdenumDisilicide = supersymmetry.common.materials.SusyMaterials.MolybdenumDisilicide
 
+        Inconel601 = new Material.Builder(8793, SuSyUtility.susyId('inconel_601'))
+                .ingot().liquid(new FluidBuilder().temperature(1800))
+                .colorAverage()
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_DOUBLE_PLATE, GENERATE_FRAME, SUPERALLOY, INDUCTION_MELT)
+                .components(Nickel * 59, Iron * 17, Chrome * 26, Aluminium * 2, Manganese * 2, Silicon * 1, Carbon * 1)
+                .blastTemp(2100, GasTier.MID, GTValues.VA[GTValues.EV])
+                .build()
+
         /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
                 .dust()
                 .components(Vanadium * 2, Oxygen * 3)

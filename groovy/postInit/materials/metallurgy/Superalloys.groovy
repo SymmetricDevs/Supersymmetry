@@ -51,6 +51,22 @@ ASSEMBLER.recipeBuilder()
     .EUt(16)
     .buildAndRegister()
 
+// Heat Vent
+RecyclingHelper.replaceShaped('gcym:heat_vent', item('gcym:unique_casing', 3) * 2, [
+        [ore('stickInconel601'), ore('craftingToolHardHammer'), ore('stickInconel601')],
+        [ore('rotorReneN5'), ore('frameGtInconel601'), ore('rotorReneN5')],
+        [ore('stickInconel601'), ore('craftingToolWrench'), ore('stickInconel601')]])
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(6)
+        .inputs(ore('frameGtInconel601'))
+        .inputs(ore('stickInconel601') * 4)
+        .inputs(ore('rotorReneN5') * 2)
+        .outputs(item('gcym:unique_casing', 3) * 2)
+        .duration(50)
+        .EUt(16)
+        .buildAndRegister()
+
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('iron') * 1728)
     .fluidInputs(fluid('nickel') * 1152)
@@ -148,6 +164,18 @@ INDUCTION_FURNACE.recipeBuilder()
     .fluidOutputs(fluid('inconel_718') * 12672)
     .EUt(VA[EV])
     .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+        .fluidInputs(fluid('nickel') * 8496)
+        .inputs(metaitem('dustIron') * 17)
+        .inputs(metaitem('dustChrome') * 26)
+        .inputs(metaitem('dustAluminium') * 2)
+        .inputs(metaitem('dustManganese') * 2)
+        .inputs(metaitem('dustCarbon'))
+        .inputs(metaitem('dustSilicon'))
+        .fluidOutputs(fluid('inconel_601') * 15264)
+        .EUt(VA[EV])
+        .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('cobalt') * 720)

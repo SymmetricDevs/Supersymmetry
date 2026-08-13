@@ -2216,6 +2216,7 @@ susy.material.food_grade_stainless_steel=Food-Grade Stainless Steel
 susy.material.platinum_rhodium=Platinum-Rhodium
 susy.material.zircaloy_4=Zircaloy 4
 susy.material.inconel_625=Inconel 625
+susy.material.inconel_601=Inconel 601
 susy.material.moist_argon=Moist Argon
 susy.material.argon_hydrogen_mixture=Argon Hydrogen Mixture
 susy.material.ammoniacal_argon_hydrogen_mixture=Ammoniacal Argon Hydrogen Mixture
