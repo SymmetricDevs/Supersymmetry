@@ -113,6 +113,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
     .outputs(metaitem("dustNativeLunarIron"))
     .chancedOutput(metaitem("dustHematite") * 1, 5000, 0)
     .chancedOutput(metaitem("dustIlmenite") * 1, 5000, 0)
+    .chancedOutput(metaitem("dustChromite") * 1, 2500, 0)
     .EUt(VA[HV])
     .duration(100)
     .buildAndRegister()
@@ -426,7 +427,26 @@ BR.recipeBuilder()
     .duration(160)
     .buildAndRegister()
 
-
+// But what if you're really careful, again?
+// Since Mn is the one remaining cation that can be oxidized, we can use:
+// https://en.wikipedia.org/wiki/Winkler_titration
+// $stoik 2MnCl2 + 4NaOH + O2 -> 2MnO2 + 4NaCl + 2H2O
+// Mn rides in as the tephroite component of the olivine and so is not carried in the idealised
+// (19 CaCl2 + 5 MgCl2 + NaCl) formula. 4000 L of liquor is ~0.05 mol Mn; the O2 is sparged in
+// excess, and the trace NaOH it consumes is absorbed in the existing charge.
+BR.recipeBuilder()
+    .circuitMeta(2)
+    .fluidInputs(fluid("alkali_basaltic_chlorides") * 4000)
+    .fluidInputs(fluid("sodium_hydroxide_solution") * 9600)
+    .fluidInputs(fluid("oxygen") * 50)
+    .outputs(metaitem("dustCalciumHydroxide") * 19)
+    .outputs(metaitem("dustMagnesiumHydroxide") * 5)
+    .fluidOutputs(fluid("lunar_manganese_slurry") * 1000)
+    .fluidOutputs(fluid("salt_water") * 6000)
+    .fluidOutputs(fluid("diluted_salt_water") * 6600)   // 1000 L leaves with the slurry (RIP small amount of sodium)
+    .EUt(VA[LV])
+    .duration(1600)                                     // 10x circuit 1, as with the Sr step
+    .buildAndRegister()
 
 // Tier 2
 // Regolith gas:

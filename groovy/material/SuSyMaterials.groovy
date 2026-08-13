@@ -836,7 +836,6 @@ class SuSyMaterials {
     public static Material LunarFerrosilicateSlurry
     public static Material LunarTroiliteSlurry
     public static Material LunarSilicateSlurry
-    public static Material Troilite
     public static Material LeachedAnorthosite
     public static Material LeachedLunarBasalt
     public static Material AnorthositeLeach
