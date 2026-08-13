@@ -44,9 +44,9 @@ config/beneath/blockdeco.json
 
 config/betterquesting/DefaultQuests/QuestSettings.json
 
-#config/biomesoplenty/biomes/defaults/
+config/biomesoplenty/biomes/defaults/
 
-#config/biomesoplenty/biome_ids.json
+config/biomesoplenty/biome_ids.json
 
 config/BiomeTweaker/output/
 
