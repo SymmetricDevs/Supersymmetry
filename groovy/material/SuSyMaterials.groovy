@@ -875,7 +875,8 @@ class SuSyMaterials {
     public static Material FluorideScrubRaffinate
     public static Material ImpureScandiumChlorideSolution
     public static Material NativeLunarIron
-
+    public static Material LunarManganeseIIOxide
+    public static Material LunarManganeseSlurry
 
     // Petrochem Materials
 

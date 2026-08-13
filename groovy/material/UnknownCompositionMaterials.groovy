@@ -3707,6 +3707,15 @@ class UnknownCompositionMaterials {
                 .iconSet(METALLIC)
                 .build()
 
-
+        LunarManganeseIIOxide = new Material.Builder(4796, SuSyUtility.susyId('lunar_manganese_ii_oxide'))
+                .dust()
+                .color(0x472400)
+                .iconSet(ROUGH)
+                .build()
+        
+        LunarManganeseSlurry = new Material.Builder(4797, SuSyUtility.susyId('lunar_manganese_slurry'))
+                .liquid()
+                .color(0x42472B)
+                .build()
     }
 }
