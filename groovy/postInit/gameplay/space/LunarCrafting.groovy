@@ -113,5 +113,29 @@ SOLAR_FURNACE.recipeBuilder()
     .EUt(12000)
     .buildAndRegister()
 
+crafting.addShaped("susy:ev_conveyor_moon", metaitem('conveyor.module.ev') * 1, [
+    [metaitem('lunar_r_glass_fibers'), metaitem('lunar_r_glass_fibers'), metaitem('lunar_r_glass_fibers')],
+    [metaitem('electric.motor.ev'), metaitem('cableGtSingleAluminium'), metaitem('electric.motor.ev')],
+    [metaitem('lunar_r_glass_fibers'), metaitem('lunar_r_glass_fibers'), metaitem('lunar_r_glass_fibers')]
+])
+
+crafting.addShaped("susy:item_filter_moon", metaitem('item_filter') * 1, [
+    [metaitem('foilAluminium'), metaitem('lunar_r_glass_fibers'), metaitem('foilAluminium')],
+    [metaitem('foilAluminium'), metaitem('lunar_r_glass_fibers'), metaitem('foilAluminium')],
+    [metaitem('foilAluminium'), metaitem('lunar_r_glass_fibers'), metaitem('foilAluminium')]
+])
+
+crafting.addShaped("susy:fluid_filter_moon", metaitem('fluid_filter') * 1, [
+    [metaitem('foilAluminium'), metaitem('foilAluminium'), metaitem('foilAluminium')],
+    [metaitem('lunar_r_glass_fibers'), metaitem('lunar_r_glass_fibers'), metaitem('lunar_r_glass_fibers')],
+    [metaitem('foilAluminium'), metaitem('foilAluminium'), metaitem('foilAluminium')]
+])
+
+
+crafting.addShaped("susy:restrictive_filter_moon", metaitem('susy:restrictive_filter') * 1, [
+    [null, metaitem('foilAluminium'), null],
+    [metaitem('foilAluminium'), metaitem('item_filter'), metaitem('foilAluminium')],
+    [null, metaitem('foilAluminium'), null]
+])
 
 
