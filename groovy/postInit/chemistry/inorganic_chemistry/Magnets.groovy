@@ -169,7 +169,7 @@ for (material in materials) {
         .inputs(ore(material + 'StrontiumFerrite'))
         .outputs(metaitem(material + 'StrontiumFerriteMagnetic'))
         .duration(80)
-        .EUt(VA[HV])
+        .EUt(16)
         .buildAndRegister();
 }
 

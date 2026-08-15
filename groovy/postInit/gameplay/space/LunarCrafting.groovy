@@ -111,6 +111,7 @@ SOLAR_FURNACE.recipeBuilder()
     .outputs(metaitem("ingotTitanium"))
     .duration(200)
     .EUt(12000)
+    .requireVacuum()
     .buildAndRegister()
 
 crafting.addShaped("susy:ev_conveyor_moon", metaitem('conveyor.module.ev') * 1, [
@@ -137,5 +138,36 @@ crafting.addShaped("susy:restrictive_filter_moon", metaitem('susy:restrictive_fi
     [metaitem('foilAluminium'), metaitem('item_filter'), metaitem('foilAluminium')],
     [null, metaitem('foilAluminium'), null]
 ])
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore("dustAluminium") * 4) //FIXME (maybe): use molten salt electrolysis instead?
+    .inputs(ore("dustSiliconDioxide") * 9)
+    .outputs(metaitem("dustSilicon") * 3)
+    .outputs(metaitem("dustAlumina") * 10)
+    .duration(80)
+    .EUt(1000)
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore("dustAluminium") * 8) //according to wikipedia this is done somewhere
+    .inputs(ore("dustChromite") * 21)
+    .outputs(metaitem("dustFerrochromium") * 9)
+    .outputs(metaitem("dustAlumina") * 20)
+    .duration(140)
+    .EUt(6000)
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore("dustIron") * 24)
+    .inputs(ore("dustFerrochromium") * 12)
+    .inputs(ore("dustNickel") * 4)
+    .inputs(ore("dustManganese"))
+    .inputs(ore("dustSilicon") * 2)
+    .fluidOutputs(fluid("stainless_steel") * 6192)
+    .duration(1600)
+    .EUt(16000)
+    .info('recipe.moon')
+    .requireVacuum()
+    .buildAndRegister()
 
 
