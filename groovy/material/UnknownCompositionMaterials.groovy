@@ -3723,7 +3723,7 @@ class UnknownCompositionMaterials {
                 .color(0x5DA073)
                 .build()
 
-        LunarWeaklyMagnetic = new Material.Builder(4798, SuSyUtility.susyId('lunar_weakly_magnetic'))
+        LunarWeaklyMagnetic = new Material.Builder(4799, SuSyUtility.susyId('lunar_weakly_magnetic'))
                 .dust()
                 .iconSet(DULL)
                 .color(0x382828)
