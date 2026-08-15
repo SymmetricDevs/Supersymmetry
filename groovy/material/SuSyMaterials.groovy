@@ -880,7 +880,6 @@ class SuSyMaterials {
     public static Material StrongAnorthositeLeach
     public static Material LunarWeaklyMagnetic
 
-
     // Petrochem Materials
 
     public static Material DilutedOil
