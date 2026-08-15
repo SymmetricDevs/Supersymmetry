@@ -877,6 +877,8 @@ class SuSyMaterials {
     public static Material NativeLunarIron
     public static Material LunarManganeseIIOxide
     public static Material LunarManganeseSlurry
+    public static Material StrongAnorthositeLeach
+
 
     // Petrochem Materials
 
@@ -1762,6 +1764,7 @@ class SuSyMaterials {
     public static Material ScandiumOxide
     public static Material ChromiumIIISulfate
     public static Material ScandiumIIIFluoride
+    public static Material LunarRutile
 
     // HP Materials
 
@@ -2017,6 +2020,9 @@ class SuSyMaterials {
     public static Material HighPressureRegolithGases
     public static Material HighPressureRegolithLightGases
     public static Material HalogenMix
+    public static Material SupersaturatedCalciumChlorideSolution
+    public static Material AluminiumChlorideHexahydrate
+    public static Material LunarRGlass
 
     // Organic Chemistry Materials
 

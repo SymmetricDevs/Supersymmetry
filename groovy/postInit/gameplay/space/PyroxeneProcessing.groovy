@@ -77,9 +77,11 @@ BR.recipeBuilder()
 BR.recipeBuilder()
     .fluidInputs(fluid('scandian_ferric_sulfate_leachate') * 40000)
     .fluidInputs(fluid('water') * 20000)
-    .notConsumable(ore('dustRutile') * 1)
-    .outputs(metaitem('dustTitaniumDioxide') * 3)
+    .notConsumable(ore('dustLunarRutile') * 1)
+    .outputs(metaitem('dustLunarRutile') * 3)
     .fluidOutputs(fluid('scandium_bearing_waste_acid') * 60000)
     .EUt(VA[MV])
     .duration(1200)
     .buildAndRegister()
+
+//see ScandiumChain.groovy

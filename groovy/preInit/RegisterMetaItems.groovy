@@ -629,6 +629,12 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10484, "spectral_filter.visible_bandpass")
         addItem(10485, "spectral_filter.near_uv_bandpass")
 
+        // Lunar Metaitems 10486 - 10600
+
+        addItem(10486, "lunar_r_glass_fibers")
+        addItem(10487, "platinum_bushing")
+        addItem(10488, "platinum_rhodium_bushing")
+        addItem(10489, "stainless_steel_bushing")
     }
 
     log.infoMC("Finished adding metaitems")

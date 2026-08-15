@@ -3717,5 +3717,10 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x42472B)
                 .build()
+
+        StrongAnorthositeLeach = new Material.Builder(4798, SuSyUtility.susyId('strong_anorthosite_leach'))
+                .liquid()
+                .color(0x5DA073)
+                .build()
     }
 }

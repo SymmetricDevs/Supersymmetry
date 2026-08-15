@@ -1043,5 +1043,12 @@ class FirstDegreeMaterialsB {
                 .iconSet(METALLIC)
                 .build()
 
+        LunarRutile = new Material.Builder(8814, SuSyUtility.susyId('lunar_rutile'))
+            .dust()
+            .components(Titanium * 1, Oxygen * 2)
+            .color(0xFF667C)
+            .iconSet(METALLIC)
+            .build()
+
     }
 }

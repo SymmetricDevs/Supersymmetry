@@ -1232,5 +1232,33 @@ class SecondDegreeMaterials {
                 .components(HydrogenFluoride * 3, HydrogenChloride * 1)
                 .color(0x85B200)
                 .build()
+
+        SupersaturatedCalciumChlorideSolution = new Material.Builder(13202, SuSyUtility.susyId('supersaturated_calcium_chloride_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(CalciumChloride * 1, HydrochloricAcid * 1)
+                .color(0xBCFFE6)
+                .build()
+
+        SupersaturatedCalciumChlorideSolution.setFormula('(CaCl2)(H2O)(HCl)', true)
+
+        AluminiumChlorideHexahydrate = new Material.Builder(13203, SuSyUtility.susyId('aluminium_chloride_hexahydrate'))
+                .dust()
+                .colorAverage()
+                .components(AluminiumChloride * 1, Water * 6)
+                .iconSet(METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+
+        AluminiumChlorideHexahydrate.setFormula("AlCl₃•6H₂O", false)
+
+        LunarRGlass = new Material.Builder(13204, SuSyUtility.susyId('lunar_r_glass'))
+            .dust().liquid(new FluidBuilder().temperature(2300))
+            .components(SiliconDioxide * 4, Alumina * 1, Quicklime * 1)
+            .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
+            .color(0xFFE3CC)
+            .iconSet(SHINY)
+            .build()
+
+
     }
 }
