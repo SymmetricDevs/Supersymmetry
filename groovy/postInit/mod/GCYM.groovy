@@ -1,3 +1,5 @@
+// side: client
+
 import gregtech.integration.jei.multiblock.MultiblockInfoCategory
 
 for (i in 2000..2028) {

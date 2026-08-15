@@ -43,11 +43,6 @@ for (name in name_removals) {
 }
 
 mods.jei.ingredient.yeet(
-    item('travelersbackpack:backpack_tank'),
-    item('travelersbackpack:sleeping_bag_bottom'),
-    item('travelersbackpack:hose_nozzle'),
-    item('travelersbackpack:hose'),
-    fluid('potion'),
     item('biomesoplenty:biome_block'),
     item('scalinghealth:crystalore'),
     item('tardis:cinnabar_ore'),
@@ -62,10 +57,6 @@ for (i in 0..7) {
         item('biomesoplenty:gem_ore', i),
         item('srparasites:infestedore', i)
     )
-}
-
-for (i in 1..76) {
-    mods.jei.ingredient.yeet(item('travelersbackpack:travelers_backpack', i))
 }
 
 //Easter egg BOP gem blocks
@@ -214,12 +205,6 @@ crafting.replaceShaped('toolbelt:belt', item('toolbelt:belt'), [
         [item('minecraft:string'), metaitem('bound_leather'), item('minecraft:string')],
         [metaitem('bound_leather'), null, metaitem('bound_leather')],
         [item('toolbelt:pouch'), metaitem('ringSteel'), item('toolbelt:pouch')]
-])
-
-crafting.replaceShaped('travelersbackpack:travelers_backpack_standard', item('travelersbackpack:travelers_backpack'), [
-        [item('techguns:itemshared', 77), metaitem('workbench'), item('techguns:itemshared', 77)],
-        [metaitem('large_fluid_cell.steel').or(item('gregtech:machine', 1612)), item('minecraft:chest'), metaitem('large_fluid_cell.steel').or(item('gregtech:machine', 1612))],
-        [item('techguns:itemshared', 77), ore('wool'), item('techguns:itemshared', 77)]
 ])
 
 crafting.replaceShaped('jecalculation:item_calculator', item('jecalculation:item_calculator'), [

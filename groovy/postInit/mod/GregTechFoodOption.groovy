@@ -665,3 +665,15 @@ allWoodenForm.eachWithIndex { woodenForm, i ->
         .EUt(VA[LV])
         .buildAndRegister();
 }
+
+// added seeds
+crafting.addShaped(
+    'minecraft:beetroot_seeds',
+    item('minecraft:beetroot_seeds'),
+    [
+        [(null), (null), (null)],
+        [(null), (null), (null)],
+        [metaitem('gregtechfoodoption:seed.unknown'), metaitem('gregtechfoodoption:seed.unknown'), (null)]
+    ]
+    
+)
