@@ -878,6 +878,7 @@ class SuSyMaterials {
     public static Material LunarManganeseIIOxide
     public static Material LunarManganeseSlurry
     public static Material StrongAnorthositeLeach
+    public static Material LunarWeaklyMagnetic
 
 
     // Petrochem Materials
@@ -1766,6 +1767,8 @@ class SuSyMaterials {
     public static Material ScandiumIIIFluoride
     public static Material LunarRutile
 
+    public static Material PureGaseousTitaniumTetrachloride
+    
     // HP Materials
 
     public static Material HighPurityLithium

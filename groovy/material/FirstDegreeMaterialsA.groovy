@@ -1975,7 +1975,7 @@ class FirstDegreeMaterialsA {
 
         StrontiumFerrite = new Material.Builder(8383, SuSyUtility.susyId('strontium_ferrite'))
                 .ingot()
-                .flags(GENERATE_ROD, GENERATE_RING)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE)
                 .components(Strontium, Iron * 12, Oxygen * 19)
                 .colorAverage()
                 .build()

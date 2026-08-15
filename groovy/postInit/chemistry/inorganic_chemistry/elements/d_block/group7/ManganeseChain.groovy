@@ -327,7 +327,7 @@ BR.recipeBuilder()
 
 CLARIFIER.recipeBuilder()
     .fluidInputs(fluid('lunar_manganese_slurry') * 20000)
-    .outputs(metaitem('dustCrudeManganeseIiOxide') * 3)
+    .outputs(metaitem('dustLunarManganeseIiOxide') * 3)
     .fluidOutputs(fluid('wastewater') * 20000)
     .EUt(VA[LV])
     .duration(400)

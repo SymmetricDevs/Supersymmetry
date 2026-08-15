@@ -3722,5 +3722,11 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x5DA073)
                 .build()
+
+        LunarWeaklyMagnetic = new Material.Builder(4798, SuSyUtility.susyId('lunar_weakly_magnetic'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x382828)
+                .build()
     }
 }

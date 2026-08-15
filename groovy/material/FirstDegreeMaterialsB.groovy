@@ -978,7 +978,7 @@ class FirstDegreeMaterialsB {
         StrontiumFerriteMagnetic = new Material.Builder(8806, SuSyUtility.susyId('strontium_ferrite_magnetic'))
                 .ingot()
                 .iconSet(MAGNETIC)
-                .flags(GENERATE_PLATE, IS_MAGNETIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, NO_UNIFICATION, IS_MAGNETIC)
                 .colorAverage()
                 .components(StrontiumFerrite)
                 .ingotSmeltInto(StrontiumFerrite)
@@ -1049,6 +1049,12 @@ class FirstDegreeMaterialsB {
             .color(0xFF667C)
             .iconSet(METALLIC)
             .build()
+
+        PureGaseousTitaniumTetrachloride = new Material.Builder(8814, SuSyUtility.susyId('pure_gaseous_titanium_tetrachloride'))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(1180))
+                .components(TitaniumTetrachloride)
+                .color(0x8f5064)
+                .build()
 
     }
 }

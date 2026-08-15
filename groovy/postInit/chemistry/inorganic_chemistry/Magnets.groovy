@@ -164,6 +164,13 @@ for (material in materials) {
         .duration(80)
         .EUt(VA[IV])
         .buildAndRegister();
+
+    POLARIZER.recipeBuilder() 
+        .inputs(ore(material + 'StrontiumFerrite'))
+        .outputs(metaitem(material + 'StrontiumFerriteMagnetic'))
+        .duration(80)
+        .EUt(VA[HV])
+        .buildAndRegister();
 }
 
 // Samarium-cobalt magnets (LuV)

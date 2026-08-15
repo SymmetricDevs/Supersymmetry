@@ -443,3 +443,14 @@ EVAPORATION_DEPOSITION.recipeBuilder()
         .duration(100)
         .EUt(VA[EV])
         .buildAndRegister();
+
+EVAPORATION_DEPOSITION.recipeBuilder()
+        .inputs(ore('stickLongTitanium'))
+        .inputs(ore('plateTitanium') * 4)
+        .inputs(ore('dustAluminium'))
+        .circuitMeta(1)
+        .outputs(item('susy:heliostat'))
+        .duration(200)
+        .EUt(VA[HV])
+        .buildAndRegister()
+

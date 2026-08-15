@@ -529,6 +529,14 @@ RecyclingHelper.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metai
     [ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
 ])
 
+RecyclingHelper.addShaped("gregtech:gregtech.machine.electrolyzer.ev.alternate", metaitem('gregtech:electrolyzer.ev'), [
+    [metaitem('wireGtSingleAluminium'), item('gregtech:transparent_casing'), metaitem('wireGtSingleAluminium')],
+    [metaitem('wireGtSingleAluminium'), metaitem('gregtech:hull.ev'), metaitem('wireGtSingleAluminium')],
+    [ore('circuitEv'), metaitem('cableGtSingleAluminium'), ore('circuitEv')]
+])
+
+RecyclingHelper.handleRecycling(metaitem('gregtech:electrolyzer.ev'), [metaitem('hull.ev'), metaitem('cableGtSingleAluminium'), ore('circuitEv') * 2, metaitem('gregtech:hull.ev')])
+
 // Steam machine recipes (due to furnace removal)
 
 RecyclingHelper.replaceShaped("gregtech:steam_furnace_bronze", item('gregtech:machine', 15), [
