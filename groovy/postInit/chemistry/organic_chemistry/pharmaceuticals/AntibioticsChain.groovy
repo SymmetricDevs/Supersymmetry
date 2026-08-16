@@ -78,7 +78,7 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     CRYSTALLIZER.recipeBuilder()
-        .notConsumable(ore('springNichrome'))
+        .notConsumable(ore('springEarly'))
         .fluidInputs(fluid('guanidinium_nitrate_solution') * 2000)
         .outputs(metaitem('dustGuanidiniumNitrate') * 14)
         .fluidOutputs(fluid('wastewater') * 2000)

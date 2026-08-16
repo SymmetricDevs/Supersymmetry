@@ -816,7 +816,7 @@ CONDENSER.recipeBuilder()
 // PWR pressurizer & steam generator
 
 FLUID_COMPRESSOR.recipeBuilder()
-        .notConsumable(ore('springKanthal'))
+        .notConsumable(ore('springEarly'))
         .fluidInputs(liquid('deionized_water') * 1536)
         .fluidOutputs(liquid('pressurized_water') * 1536)
         .duration(1)

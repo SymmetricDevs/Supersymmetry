@@ -993,7 +993,7 @@ BCR.recipeBuilder()
 // Chloronitrobenzenes
 
 CSTR.recipeBuilder()
-    .notConsumable(ore('springKanthal'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('chlorobenzene') * 50)
     .fluidInputs(fluid('nitration_mixture') * 100)
     .fluidOutputs(fluid('acidic_chloronitrobenzene_mixture') * 100)
@@ -2819,7 +2819,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 FLUIDIZED_BR.recipeBuilder()
-    .notConsumable(ore('springKanthal'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('benzene') * 1000)
     .fluidInputs(fluid('oxygen') * 50)
     .chancedOutput(metaitem('dustBiphenyl'), 500, 0)
@@ -3532,7 +3532,7 @@ MIXER.recipeBuilder()
 // p-Nitrotoluene
 
 CSTR.recipeBuilder()
-    .notConsumable(ore('springKanthal'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('toluene') * 50)
     .fluidInputs(fluid('nitration_mixture') * 100)
     .fluidOutputs(fluid('acidic_nitrotoluene_mixture') * 150)

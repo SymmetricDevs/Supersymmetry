@@ -1569,9 +1569,9 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
     
 RecyclingHelper.addShaped("gregtech:injection_molder", metaitem('susy:injection_molder'), [
-        [metaitem('springNichrome'), ore('circuitHv'), metaitem('cableGtSingleGold')],
+        [metaitem('springKanthal'), ore('circuitHv'), metaitem('cableGtSingleGold')],
         [ore('pipeLargeFluidStainlessSteel'), metaitem('hull.hv'), metaitem('electric.motor.hv')],
-        [metaitem('springNichrome'), ore('circuitHv'), metaitem('cableGtSingleGold')],
+        [metaitem('springKanthal'), ore('circuitHv'), metaitem('cableGtSingleGold')],
 ])
 
 for (def i = 1; i < 8; i++) {

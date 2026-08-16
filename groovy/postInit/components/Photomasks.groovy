@@ -89,7 +89,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('benzenediazonium_chloride_solution') * 4000)
     .outputs(metaitem('dustBenzenediazoniumChloride') * 14)
     .fluidOutputs(fluid('salt_water') * 1000)
