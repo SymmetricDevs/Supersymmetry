@@ -119,8 +119,8 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('stickLongSteel') * 4)
-        .inputs(metaitem('plateStainlessSteel') * 2)
+        .inputs(metaitem('stickLongSteel') * 24)
+        .inputs(metaitem('plateStainlessSteel') * 6)
         .outputs(item('susy:rocket_assembler_casing', 3))
         .circuitMeta(1)
         .duration(15)
@@ -128,16 +128,16 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('stickLongVanadiumSteel') * 8)
-        .inputs(metaitem('plateStainlessSteel') * 2)
-        .inputs(metaitem('stickStainlessSteel') * 4)
+        .inputs(metaitem('stickLongSteel') * 30)
+        .inputs(metaitem('plateSteel') * 20)
+        .inputs(metaitem('plateStainlessSteel') * 8)
         .outputs(item('susy:rocket_assembler_casing', 2))
         .circuitMeta(1)
         .duration(40)
         .EUt(VA[HV])
         .buildAndRegister();
 
-VACUUM_CHAMBER.recipeBuilder() //FIXME: replace with evaporation deposition
+EVAPORATION_DEPOSITION.recipeBuilder()
         .inputs(metaitem('fused_quartz'))
         .inputs(metaitem('dustSmallCaesium'))
         .inputs(metaitem('dustSmallRubidium'))
@@ -236,7 +236,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('spacecraft_sensor.sun_star'))
         .inputs(metaitem('spacecraft_sensor.infrared'))
         .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
-        .inputs(metaitem('circuit.nano_computer'))
+        .inputs(metaitem('circuit.nano_computer')) //specifically excludes mainframes because they're too heavy
         .inputs(metaitem('cableGtDoubleSilver') * 6)
         .outputs(item('susy:guidance_system'))
         .duration(800)
