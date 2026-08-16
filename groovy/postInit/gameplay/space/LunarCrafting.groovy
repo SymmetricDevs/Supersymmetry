@@ -289,4 +289,13 @@ ASSEMBLER.recipeBuilder()
     .info('recipe.moon')
     .buildAndRegister()
 
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore("dustSiliconDioxide") * 3)
+    .outputs(metaitem("fused_quartz"))
+    .duration(200)
+    .EUt(16000)
+    .circuitMeta(3)
+    .info('recipe.moon')
+    .buildAndRegister()
+
 
