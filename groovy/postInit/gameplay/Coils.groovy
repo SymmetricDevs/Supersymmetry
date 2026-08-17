@@ -32,7 +32,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('wireGtDoubleNichrome') * 8)
         .inputs(metaitem('mineral_wool') * 8)
         .inputs(ore('foilAluminium') * 8)
-        .outputs(item('gregtech:wire_coil', 2))
+        .outputs(item('gregtech:wire_coil', 1)) // swapped
         .duration(300)
         .EUt(VA[MV])
         .buildAndRegister();
@@ -41,7 +41,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('wireGtDoubleKanthal') * 8)
         .inputs(metaitem('ingotSyntheticMulliteRefractory') * 8)
         .inputs(ore('foilStainlessSteel') * 8)
-        .outputs(item('gregtech:wire_coil', 1))
+        .outputs(item('gregtech:wire_coil', 2)) // swapped
         .duration(400)
         .EUt(VA[HV])
         .buildAndRegister();
@@ -69,10 +69,8 @@ ASSEMBLER.recipeBuilder()
 mods.jei.ingredient.yeet(item('gregtech:wire_coil', 3))
 mods.jei.ingredient.yeet(item('gregtech:wire_coil', 4))
 
-crafting.addShapeless('susy:heating_coil.kanthal_convert', item('gregtech:wire_coil', 2), [item('gregtech:wire_coil', 1)])
-crafting.addShapeless('susy:heating_coil.nichrome_convert', item('gregtech:wire_coil', 1), [item('gregtech:wire_coil', 2)])
-crafting.addShapeless('susy:heating_coil.rtm_convert', item('susy:heating_coil'), [item('gregtech:wire_coil', 3)])
-crafting.addShapeless('susy:heating_coil.hssg_convert', item('susy:heating_coil', 1), [item('gregtech:wire_coil', 4)])
+crafting.addShapeless('susy:heating_coil.rtm_convert', item('susy:heating_coil', 2), [item('gregtech:wire_coil', 3)])
+crafting.addShapeless('susy:heating_coil.hssg_convert', item('susy:heating_coil', 2), [item('gregtech:wire_coil', 4)])
 crafting.addShapeless('susy:spring.kanthal_convert', item('gregtech:meta_spring', 294), [item('gregtech:meta_spring', 288)])
 crafting.addShapeless('susy:spring.nichrome_convert', item('gregtech:meta_spring', 288), [item('gregtech:meta_spring', 294)])
 
