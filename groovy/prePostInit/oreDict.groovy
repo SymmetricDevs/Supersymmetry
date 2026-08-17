@@ -174,7 +174,7 @@ for (i in 0..2) {
 }
 
 // Kanthal/Nichrome springs
-ore('springEarly').add(ore('springNichrome'), ore('springKanthal'))
+ore('springEarly').add(metaitem('springNichrome'), metaitem('springKanthal'))
 
 // OreDict Removal + Hide from JEI
 
