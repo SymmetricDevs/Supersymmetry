@@ -518,7 +518,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('platePolyvinylChloride') * 2)
+    .inputs(metaitem('platePolyvinylChloride') * 2) //FIXME: make this realistic once circuit update is here
     .inputs(metaitem('circuit_board.plastic'))
     .inputs(ore('circuitEv'))
     .inputs(metaitem('plate.nand_memory_chip') * 24)
