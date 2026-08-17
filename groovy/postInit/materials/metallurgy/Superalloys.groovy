@@ -287,6 +287,17 @@ INDUCTION_FURNACE.recipeBuilder()
         .duration(80)
         .EUt(VA[HV])
         .buildAndRegister()
+
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('iron') * 3456)
+    .inputs(metaitem('dustChrome') * 8)
+    .inputs(metaitem('dustNickel') * 5)
+    .inputs(metaitem('dustMolybdenum') * 2)
+    .inputs(metaitem('dustManganese'))
+    .fluidOutputs(fluid('food_grade_stainless_steel') * 5760)
+    .EUt(VA[EV])
+    .buildAndRegister()
 /*
     Blocks from GT superalloys need to be removed (block, frame, sheeted frame) and liquids
     Recipes for GCYM casings need to be changed to use SuSy superalloys, currently they still have recipes with old ones

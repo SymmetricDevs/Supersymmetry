@@ -523,6 +523,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10000, "tunnelbore.axle")
         addItem(10001, "tunnelbore.engine")
         addItem(10002, "tunnelbore.drillhead")
+        addItem(10003, "minecart_wheels.chromoly")
 
         // Misc Crafting Components 10100-10200
         addItem(10100, "turbojet.small")

@@ -151,7 +151,13 @@ mods.gregtech.assembler.recipeBuilder()
 		.duration(200)
 		.EUt(VA[MV])
 		.buildAndRegister()
-		
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('stickLongFoodGradeStainlessSteel'))
+        .inputs(metaitem('ringFoodGradeStainlessSteel') * 4)
+        .outputs(metaitem('minecart_wheels.chromoly'))
+        .duration(60).EUt(20).buildAndRegister();
+
 Globals.solders.each { key, val ->
 
 	TagCompound tag = new TagCompound();
@@ -269,4 +275,43 @@ Globals.solders.each { key, val ->
 		.duration(400)
 		.buildAndRegister();
 
+	TagCompound tag6 = new TagCompound();
+
+	tag6.setString("defID", "rolling_stock/transporter_erector/soyuz_transporter.json");
+	tag6.setFloat("gauge", (float) Gauges.STANDARD);
+
+	cam72cam.mod.item.ItemStack is6 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is6.setTagCompound(tag6);
+
+	SuSyRecipeMaps.LARGE_RES_RECIPES.recipeBuilder()
+		.circuitMeta(6)
+		.inputs(ore('gearSmallTitanium') * 12)
+		.inputs(ore('plateTitanium') * 64)
+		.inputs(ore('stickLongTitanium') * 16)
+		.inputs(metaitem('minecart_wheels.chromoly') * 16)
+    	.inputs(item('susy:metallurgy') * 8)
+		.inputs(ore('circuitEv') * 4)
+		.fluidInputs(fluid(key) * (val * 20))
+		.outputs(is6.internal)
+		.EUt(VA[HV])
+		.duration(800)
+		.buildAndRegister();
+	
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(6)
+		.inputs(item('gregtech:boiler_casing', 2) * 2)
+		.inputs(ore('gearSmallTitanium') * 12)
+		.inputs(metaitem('minecart_wheels.chromoly') * 4)
+		.inputs(metaitem('electric.motor.hv') * 4)
+		.inputs(metaitem('electric.piston.hv') * 4)
+		.inputs(item('gregtech:boiler_firebox_casing', 2) * 2)
+		.inputs(item('gregtech:transparent_casing', 2) * 8)
+		.inputs(ore('plateTitanium') * 32)
+		.inputs(ore('stickLongTitanium') * 8)
+		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/tender/big_boy_tender.json', 'gauge': (float) Gauges.STANDARD]))
+		.EUt(VA[HV])
+		.duration(800)
+		.buildAndRegister();
+
+		
 }

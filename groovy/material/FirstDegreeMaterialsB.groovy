@@ -872,14 +872,7 @@ class FirstDegreeMaterialsB {
                 .iconSet(DULL)
                 .build()
 
-        GRCop84 = new Material.Builder(8792, SuSyUtility.susyId('grcop_84'))
-                .dust()
-                .ingot().liquid(new FluidBuilder().temperature(1337))
-                .flags(GENERATE_PLATE)
-                .components(Copper * 19, Chrome * 2, Niobium)
-                .iconSet(SHINY)
-                .colorAverage()
-                .build()
+        // Molybdenum disilicide for no reason
 
         MARM246 = new Material.Builder(8793, SuSyUtility.susyId('mar_m_246'))
                 .ingot().liquid(new FluidBuilder().temperature(1558))
@@ -1063,6 +1056,15 @@ class FirstDegreeMaterialsB {
             .color(0x68352E)
             .components(Titanium * 200, Carbon * 1)
             .build()
+
+        GRCop84 = new Material.Builder(8817, SuSyUtility.susyId('grcop_84'))
+                .dust()
+                .ingot().liquid(new FluidBuilder().temperature(1337))
+                .flags(GENERATE_PLATE)
+                .components(Copper * 19, Chrome * 2, Niobium)
+                .iconSet(SHINY)
+                .colorAverage()
+                .build()
 
     }
 }
