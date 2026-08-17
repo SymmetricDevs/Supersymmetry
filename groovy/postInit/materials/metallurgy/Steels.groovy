@@ -26,11 +26,7 @@ SOLIDIFIER.recipeBuilder()
     // Stainless Steel Dust * 9
     mods.gregtech.mixer.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
     mods.gregtech.blender.removeByInput(120, [metaitem('dustIron') * 4, metaitem('dustInvar') * 3, metaitem('dustManganese'), metaitem('dustChrome'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-    // Liquid Stainless Steel * 1296
-    mods.gregtech.advanced_arc_furnace.removeByInput(480, [metaitem('dustIron') * 6, metaitem('dustChrome'), metaitem('dustManganese'), metaitem('dustNickel'), metaitem('circuit.integrated').withNbt(['Configuration': 14])], [fluid('nitrogen') * 9000 * 9000, fluid('refractory_gunning_mixture') * 500])
-    // Liquid Stainless Steel * 1296
-    mods.gregtech.advanced_arc_furnace.removeByInput(480, [metaitem('dustIron') * 6, metaitem('dustChrome'), metaitem('dustManganese'), metaitem('dustNickel'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('refractory_gunning_mixture') * 800])
-
+  
     def iron_sources = [
         'dustIron'               : 24,
         'dustMagnetite'          : 8,
@@ -98,39 +94,56 @@ SOLIDIFIER.recipeBuilder()
     }
 
 // Manganese steel
-
-MIXER.recipeBuilder()
-    .circuitMeta(1)
-    .inputs(ore('dustSteel') * 14)
-    .inputs(ore('dustManganese') * 2)
-    .outputs(metaitem('dustManganeseSteel') * 16)
-    .duration(100)
-    .EUt(VA[LV] * 2)
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustIron') * 83)
+    .inputs(metaitem('dustManganese') * 13)
+    .inputs(metaitem('dustCarbon') * 4)
+    .fluidOutputs(fluid('manganese_steel') * 14400)
+    .EUt(VA[LV])
+    .duration(400)
     .buildAndRegister()
 
 // Tungsten steel
-
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .circuitMeta(1)
-    .fluidInputs(fluid('molten.steel') * 8640) //equal to 60 Steel dust 
+    .fluidInputs(fluid('steel') * 8640) //equal to 60 Steel dust
     .inputs(ore('dustTungsten') * 8)
     .inputs(ore('dustChrome') * 3)
     .inputs(ore('dustVanadium') * 1)
     .inputs(ore('dustMolybdenum') * 2)  
-    .fluidOutputs(fluid('molten.tungsten_steel') * 10656) // 74 ingot 
+    .fluidOutputs(fluid('tungsten_steel') * 10656) // 74 ingot
     .EUt(VA[IV])
     .duration(22000) 
     .buildAndRegister()
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .circuitMeta(2)
-    .fluidInputs(fluid('molten.steel') * 8640) //equal to 60 Steel dust
+    .fluidInputs(fluid('steel') * 8640) //equal to 60 Steel dust
     .fluidInputs(fluid('argon') * 6000)
     .inputs(ore('dustTungsten') * 8)
     .inputs(ore('dustChrome') * 3)
     .inputs(ore('dustVanadium') * 1)
     .inputs(ore('dustMolybdenum') * 2)  
-    .fluidOutputs(fluid('molten.tungsten_steel') * 10656) // 74 ingot 
+    .fluidOutputs(fluid('tungsten_steel') * 10656) // 74 ingot
     .EUt(VA[IV])
     .duration(17000) 
+    .buildAndRegister()
+
+// Reactor steel
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustIron') * 113)
+    .inputs(metaitem('dustManganese') * 10)
+    .inputs(metaitem('dustMolybdenum') * 2)
+    .inputs(metaitem('dustNickel') * 3)
+    .fluidOutputs(fluid('reactor_steel') * 18432)
+    .EUt(VA[IV])
+    .duration(400)
+    .buildAndRegister()
+
+// HSLA 980X
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('iron') * 5616)
+    .inputs(metaitem('dustManganese'))
+    .fluidOutputs(fluid('hsla_980_x') * 5760)
+    .EUt(VA[EV])
     .buildAndRegister()

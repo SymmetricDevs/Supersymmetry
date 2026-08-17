@@ -35,6 +35,13 @@ MACERATOR.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister()
 
+ROLL_CRUSHER.recipeBuilder()
+    .inputs(item('susy:resource_block', 6))
+    .outputs(metaitem('dustMonazite') * 4)
+    .duration(30)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 // Monazite beneficiation
 
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
@@ -182,7 +189,7 @@ MIXER_SETTLER.recipeBuilder()
 
     BR.recipeBuilder()
         .inputs(ore('dustMonaOxPrNdConcentrate'))
-        .fluidInputs(fluid('hydrochloric_acid') * 459)
+        .fluidInputs(fluid('hydrochloric_acid') * 918)
         .chancedOutput(metaitem('dustPraseodymiumIvOxide') * 3, 410, 0)
         .fluidOutputs(fluid('neodymium_chloride_solution') * 918)
         .duration(2000)

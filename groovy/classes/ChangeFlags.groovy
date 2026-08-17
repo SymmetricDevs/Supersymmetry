@@ -42,18 +42,22 @@ class ChangeFlags {
         SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxInputs(12)
 
         // Properties
+        Stone.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 131, 1));
+        Granite.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 191, 1));
 
         Germanium.addIngot()
         Tellurium.addIngot()
         Cadmium.addIngot()
         Magnesium.addIngot()
         Asbestos.addIngot()
+        Potassium.addIngot()
 
         BisphenolA.addDust()
         Polonium.addDust()
-
+        
         Silver.addFluidPipes(1234, 50, false, false, true, false, true)
         Rubber.addFluidPipes(593, 6, true, false, false, false, false)
+        Iron.addFluidPipes(1811, 40, true, false, false, false, false)
 
         AntimonyTrifluoride.setupFluidTypes(565, FluidStorageKeys.LIQUID)
         LithiumChloride.setupFluidTypes(890, FluidStorageKeys.LIQUID)
@@ -194,6 +198,12 @@ class ChangeFlags {
         Magnalium.addFlags("generate_ring", "generate_rotor")
         ReinforcedEpoxyResin.addFlags("generate_rotor")
         Beryllium.addFlags("generate_rod")
+        Bronze.addFlags("disable_decomposition")
+        Brass.addFlags("disable_decomposition")
+        Cupronickel.addFlags("disable_decomposition")
+        Invar.addFlags("disable_decomposition")
+        Nichrome.addFlags("disable_decomposition")
+        Kanthal.addFlags("disable_decomposition")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -251,6 +261,12 @@ class ChangeFlags {
         TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true)
         StainlessSteel.setFormula("Fe28Cr8Ni4Si2Mn", true)
         Magnalium.setFormula("MgAl19", true)
+        Bronze.setFormula("Cu14Sn", true)
+        Brass.setFormula("Cu5Zn2", true)
+        Cupronickel.setFormula("Cu8Ni", true)
+        Invar.setFormula("Fe5Ni3", true)
+        Nichrome.setFormula("Ni7Cr2", true)
+        Kanthal.setFormula("Fe27Cr8Al4", true)
 
         // Ore Processing
         

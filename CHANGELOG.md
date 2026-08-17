@@ -1,3 +1,48 @@
+# UPDATE 0.1.16.13.2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.115 → v0.1.115.1 
+## Changes
+### Fixes
+- Doubled kanthal springs
+- HP machines now use iron rather than tin alloy
+- The SiC crucible is again craftable
+- [Susy-Core] Clarifiers and other machines not working
+# UPDATE 0.1.16.13.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.114 → v0.1.115
+- SussyPatches v1.11.0 → v0.1.11.1
+## Changes
+### Fixes
+- [Susy-Core] Mixins not applying
+# UPDATE 0.1.16.13
+## Mod Changes
+### Mod Updates
+- JEI Utilities Utilities-1.12.2-0.2.13 → Utilities-1.12.2-0.2.15
+- SussyPatches 1.10.2 → 1.11.0
+- SusyCore v0.1.112 → v0.1.114
+- Recurrent Complex 1.4.8.6 → 1.4.8.7
+- Supercritical 0.2.5 → 0.2.6
+- Obscure Tooltips forge-1.12.2-3.10.1 → forge-1.12.2-3.10.2
+### Mod Additions
+- Ocean API → API-v1.0.1-mc1.12.2
+## Changes
+### New Features
+- REALISTIC METALLURGY TIME! (thanks to @Fiery36)
+- Bronze is now a correct 15:1 copper-to-tin blend, and brass a 5:2 ratio.
+- Use the induction furnace to rapidly melt metals! "remove extractor" is smiling from their ban.
+- Also you have to cool it down like a boiler or else it explodes :)
+- Alloy furnaces are also no longer very useful for melting metals (like, why would steam be able to do that lol)
+- Have fun! :D
+- Use the industrial sifter to quickly set off gem alerts! (#1970 by @jethro-3000)
+### Changed Features
+- The Federation has officially decreed to ban steam armor. (#1968 by @Rick8484)
+- Forge Microblocks now works on more blocks! (#1960 by @nxuv)
+### Fixes
+- Deposits can now be processed in the ERC. (#1966 by @jethro-3000)
+- Carbon black can now be used for electrodes. (#1977 by @jethro-3000)
+And thanks to @JorgeMIng, @Crindigo, @Fiery36, and @The-ExZombie for their support.
 # UPDATE 0.1.16.12
 ## Mod Changes
 ### Mod Updates

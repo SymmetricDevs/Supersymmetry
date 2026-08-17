@@ -397,40 +397,81 @@ for (i = 1; i <= 8; i++) {
 
 RecyclingHelper.addShaped("gregtech:vulcanizing_press.steel", metaitem('susy:vulcanizing_press.steel'), [
     [metaitem('plateSteel'), metaitem('plateSteel'), metaitem('plateSteel')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('susy:vulcanizing_press.bronze'), metaitem('pipeSmallFluidTinAlloy')],
+    [metaitem('pipeSmallFluidIron'), metaitem('susy:vulcanizing_press.bronze'), metaitem('pipeSmallFluidIron')],
     [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:mixer.steel", metaitem('susy:mixer.steel'), [
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy')],
+    [metaitem('pipeSmallFluidIron'), metaitem('plateSteel'), metaitem('pipeSmallFluidIron')],
     [metaitem('plateWroughtIron'), metaitem('susy:mixer.bronze'), metaitem('plateWroughtIron')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy')]
+    [metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:vacuum_chamber.steel", metaitem('susy:vacuum_chamber.steel'), [
-    [metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('susy:vacuum_chamber.bronze'), metaitem('pipeSmallFluidTinAlloy')],
-    [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateWroughtIron')]
+    [metaitem('plateSteel'), metaitem('pipeSmallFluidIron'), metaitem('plateSteel')],
+    [metaitem('pipeSmallFluidIron'), metaitem('susy:vacuum_chamber.bronze'), metaitem('pipeSmallFluidIron')],
+    [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidIron'), metaitem('plateWroughtIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:roaster.steel", metaitem('susy:roaster.steel'), [
     [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
     [metaitem('plateSteel'), metaitem('susy:roaster.bronze'), metaitem('plateSteel')],
-    [metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy'), metaitem('pipeSmallFluidTinAlloy')]
+    [metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron'), metaitem('pipeSmallFluidIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:batch_reactor.steel", metaitem('susy:batch_reactor.steel'), [
-        [metaitem('plateSteel'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateSteel')],
-        [metaitem('pipeSmallFluidTinAlloy'), metaitem('susy:batch_reactor.bronze'), metaitem('pipeSmallFluidTinAlloy')],
-        [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidTinAlloy'), metaitem('plateWroughtIron')]
+        [metaitem('plateSteel'), metaitem('pipeSmallFluidIron'), metaitem('plateSteel')],
+        [metaitem('pipeSmallFluidIron'), metaitem('susy:batch_reactor.bronze'), metaitem('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('pipeSmallFluidIron'), metaitem('plateWroughtIron')]
 ])
 
 RecyclingHelper.addShaped("gregtech:distiller.steel", metaitem('susy:distiller.steel'), [
-        [metaitem('plateSteel'), ore('pipeSmallFluidTinAlloy'), metaitem('plateSteel')],
-        [ore('pipeSmallFluidTinAlloy'), metaitem('susy:distiller.bronze'), ore('pipeSmallFluidTinAlloy')],
-        [metaitem('plateWroughtIron'), ore('pipeSmallFluidTinAlloy'), metaitem('plateWroughtIron')]
+        [metaitem('plateSteel'), ore('pipeSmallFluidIron'), metaitem('plateSteel')],
+        [ore('pipeSmallFluidIron'), metaitem('susy:distiller.bronze'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), ore('pipeSmallFluidIron'), metaitem('plateWroughtIron')]
 ])
 
+RecyclingHelper.replaceShaped("gregtech:steam_compressor_steel", metaitem('gregtech:steam_compressor_steel'), [
+    [ore('pipeSmallFluidIron'), metaitem('plateSteel'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_compressor_bronze'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:rock_breaker_steel", metaitem('steam_rock_breaker_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), metaitem('steam_rock_breaker_bronze'),  ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
+])
+
+RecyclingHelper.replaceShaped("gregtech:steam_furnace_steel", metaitem('gregtech:steam_furnace_steel'), [
+    	[ore('pipeSmallFluidIron'), metaitem('plateSteel'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_furnace_bronze'),  metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:macerator_steel", metaitem('gregtech:steam_macerator_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), metaitem('gregtech:steam_macerator_bronze'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
+])
+
+RecyclingHelper.replaceShaped("gregtech:alloy_smelter_steel", metaitem('gregtech:steam_alloy_smelter_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_alloy_smelter_bronze'), metaitem('plateWroughtIron')],
+        [metaitem('plateWroughtIron'), ore('pipeSmallFluidIron'), metaitem('plateWroughtIron')],
+])
+
+RecyclingHelper.replaceShaped("gregtech:extractor_steel", metaitem('gregtech:steam_extractor_steel'), [
+    	[ore('pipeSmallFluidIron'), metaitem('plateSteel'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('gregtech:steam_extractor_bronze'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:forge_hammer_steel", metaitem('gregtech:steam_hammer_steel'), [
+        [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
+        [ore('pipeSmallFluidIron'), metaitem('gregtech:steam_hammer_bronze'), ore('pipeSmallFluidIron')],
+        [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
+])
 //Add the rest of the vacuum chambers
 
 for (def i = 1; i < 8; i++) {
@@ -552,11 +593,32 @@ RecyclingHelper.addShaped("alternator_coil", item('susy:alternator_coil'), [
     [ore('circuitLv'),              metaitem('cableGtSingleTin'),  ore('circuitLv')]
 ])
 
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('electric.motor.lv') * 3)
+    .inputs(ore('circuitLv') * 2)
+	.inputs(ore('plateSteel'))
+    .inputs(ore('cableGtSingleTin'))
+    .outputs(item('susy:alternator_coil', 0))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
 RecyclingHelper.addShaped("steel_turbine_rotor", item('susy:turbine_rotor'), [
     [ore('plateSteel'),             ore('screwSteel'),     ore('plateSteel')],
     [ore('craftingToolHardHammer'), ore('stickLongSteel'), ore('craftingToolScrewdriver')],
     [ore('plateSteel'),             ore('rotorSteel'),     ore('plateSteel')]
 ])
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(17)
+    .inputs(ore('plateSteel') * 4)
+    .inputs(ore('screwSteel'))
+	.inputs(ore('stickLongSteel'))
+    .inputs(ore('rotorSteel'))
+    .outputs(item('susy:turbine_rotor', 0))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister();
 
 RecyclingHelper.addShaped("steel_turbine_controller", metaitem('susy:basic_steam_turbine'), [
     [ore('plateSteel'),            metaitem('cableGtSingleTin'),       ore('plateSteel')],
@@ -1449,6 +1511,37 @@ RecyclingHelper.addShaped("gregtech:locomotive_controller", metaitem('susy:stock
 		[metaitem('emitter.lv'), ore('circuitLv'), metaitem('sensor.lv')]
 ])
 
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.lv'))
+    .inputs(metaitem('conveyor.module.lv'))
+    .inputs(metaitem('electric.pump.lv'))
+	.inputs(ore('pipeSmallFluidSteel') * 4)
+    .outputs(item('gregtech:machine', 18001))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.lv'))
+    .inputs(ore('circuitLv'))
+    .inputs(metaitem('electric.pump.lv'))
+	.inputs(ore('pipeSmallItemNickel') * 4)
+    .outputs(item('gregtech:machine', 18002))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.lv'))
+    .inputs(ore('circuitLv') * 2)
+	.inputs(ore('pipeSmallItemNickel') * 2)
+    .inputs(metaitem('emitter.lv'))
+    .inputs(metaitem('sensor.lv'))
+    .outputs(item('gregtech:machine', 18004))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
 // Curtain Coater
 
 RecyclingHelper.addShaped("gregtech:curtain_coater", metaitem('susy:curtain_coater'), [
@@ -1545,6 +1638,24 @@ RecyclingHelper.handleRecycling(metaitem('susy:gas_turbine'), [
 ])
 
 // Crushers and grinders
+
+RecyclingHelper.replaceShaped("gregtech:steam_grinder", metaitem('steam_grinder'), [
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')],
+        [item('gregtech:metal_casing'), metaitem('steam_macerator_bronze'), item('gregtech:metal_casing')],
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')]
+])
+
+RecyclingHelper.replaceShaped("gregtech:steam_oven", metaitem('steam_oven'), [
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')],
+        [item('gregtech:boiler_firebox_casing'), metaitem('steam_furnace_bronze'), item('gregtech:boiler_firebox_casing')],
+        [item('gregtech:metal_casing'), metaitem('gearIron'), item('gregtech:metal_casing')]
+])
+
+RecyclingHelper.replaceShaped("gregtechfoodoption:steam_baking_oven", metaitem('gregtechfoodoption:steam_baking_oven'), [
+        [ore('craftingToolScrewdriver'), metaitem('screwSteel'), metaitem('gearIron')],
+        [item('gregtechfoodoption:gtfo_casing', 1), metaitem('gregtechfoodoption:baking_oven'), metaitem('pipeSmallFluidIron')],
+        [ore('craftingToolFile'), metaitem('screwSteel'), metaitem('gearIron')]
+])
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(11)
@@ -1699,6 +1810,80 @@ crafting.addShaped(metaitem('susy:electric_discharge_machine'),
          [metaitem('cableGtOctalSilver'), metaitem('hull.ev'), metaitem('cableGtOctalSilver')],
          [metaitem('electric.motor.hv'),metaitem('rotorTitanium'),metaitem('electric.pump.hv')]])
 
+//Multiblock Tank Assembler Recipes
+ASSEMBLER.recipeBuilder()
+    .inputs(item('gregtech:planks:1') * 4)
+	.inputs(ore('plateLead'))
+    .outputs(item('gregtech:steam_casing', 5))
+    .duration(25)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(item('gregtech:steam_casing', 5))
+    .inputs(ore('ringLead'))
+    .inputs(ore('rotorLead'))
+    .outputs(item('gregtech:machine', 1596))
+    .duration(100)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(item('gregtech:steam_casing', 5))
+    .inputs(ore('ringLead') * 2)
+    .outputs(item('gregtech:machine', 1597))
+    .duration(100)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(item('gregtech:metal_casing', 4))
+    .inputs(ore('ringSteel'))
+    .inputs(ore('rotorSteel'))
+    .outputs(item('gregtech:machine', 1598))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(item('gregtech:metal_casing', 4))
+    .inputs(ore('ringSteel') * 2)
+    .outputs(item('gregtech:machine', 1599))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+//Crafting Station Assembler Recipe
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('chestWood') * 2)
+    .inputs(item('minecraft:crafting_table'))
+    .inputs(ore('slabWood') * 2)
+    .inputs(ore('plankWood') * 4)
+    .outputs(item('gregtech:machine', 1647))
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister();
+
+//Coagulation Tank Assembler Recipes
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('plankTreatedWood') * 4)
+    .inputs(metaitem('pipeLargeFluidTreatedWood'))
+    .inputs(ore('rotorSteel'))
+    .inputs(ore('screwSteel'))
+    .outputs(item('gregtech:machine', 14501))
+    .EUt(VA[LV])
+    .duration(200)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('plankTreatedWood') * 4)
+    .inputs(ore('frameGtTreatedWood'))
+    .inputs(ore('boltSteel') * 2)
+    .outputs(item('susy:coagulation_tank_wall', 0))
 //Attrition Scrubber
 
 ASSEMBLER.recipeBuilder()
@@ -1724,6 +1909,15 @@ ASSEMBLER.recipeBuilder()
     .duration(50)
     .buildAndRegister()
 
+//Wooden Barrel Assembler Recipe
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('plankWood') * 4)
+    .inputs(ore('stickLongBronze') * 2)
+    .fluidInputs(fluid('glue') * 100)
+    .outputs(metaitem('drum.wood'))
+    .duration(200)
+    .EUt(VA[ULV])
+    .buildAndRegister()
 crafting.addShaped(item('susy:susy_multiblock_casing', 13),
         [[ore('plateAluminium'),ore('craftingToolHardHammer'),ore('plateAluminium')],
          [ore('gearAluminium'), ore('frameGtAluminium'), ore('gearAluminium')],
@@ -1821,3 +2015,22 @@ crafting.addShaped(item('susy:paddle_shaft') * 2,
         [[null, null, null],
          [ore('rotorIron'), ore('logWood'), ore('rotorIron')],
          [null, null, null]])
+
+//Industrial Sifter
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(12)
+    .inputs(ore('plateStainlessSteel') * 4)
+    .inputs(ore('frameGtStainlessSteel'))
+    .outputs(item('susy:susy_multiblock_casing', 15))
+    .duration(240)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+RecyclingHelper.handleRecycling(item('susy:susy_multiblock_casing', 15), [ore('plateStainlessSteel') * 4, ore('frameGtStainlessSteel')])
+
+crafting.addShaped(metaitem("susy:industrial_sifter"), [
+    [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
+    [ore('cableGtSingleGold'), metaitem('hull.Hv'), ore('cableGtSingleGold')],
+    [metaitem('frameStainlessSteel'), metaitem('electric.motor.hv'), metaitem('frameStainlessSteel')]
+])

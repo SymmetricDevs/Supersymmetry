@@ -63,6 +63,14 @@ QUARRY.recipeBuilder()
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
+        .notConsumable(ore('dustKyanite'))
+        .outputs(metaitem('dustKyanite'))
+        .dimension(Globals.dimensions["Beneath"])
+        .duration(60)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+QUARRY.recipeBuilder()
     .circuitMeta(1)
     .chancedOutput(item('minecraft:stone'), 1667, 500)
     .chancedOutput(item('minecraft:stone', 1), 1667, 500)

@@ -96,16 +96,6 @@
       }
     },
     {
-      "weight": 0.0403180830180645,
-      "min": 1,
-      "max": 1,
-      "item": {
-        "id": "gregtech:machine",
-        "damage": 1575,
-        "count": 1
-      }
-    },
-    {
       "weight": 0.20703016221523285,
       "min": 1,
       "max": 2,

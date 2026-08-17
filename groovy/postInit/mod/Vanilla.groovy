@@ -869,6 +869,111 @@ MIXER.recipeBuilder()
             .EUt(16)
             .buildAndRegister()
 
+//Iron Armor
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(1)
+	.inputs(ore('plateIron') * 3)
+    .inputs(ore('screwIron') * 2)
+    .inputs(item('minecraft:leather'))
+    .outputs(item('minecraft:iron_helmet'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(2)
+	.inputs(ore('plateIron') * 5)
+    .inputs(ore('screwIron') * 2)
+    .inputs(item('minecraft:leather'))
+    .outputs(item('minecraft:iron_chestplate'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(3)
+	.inputs(ore('plateIron') * 5)
+    .inputs(ore('screwIron') * 2)
+    .inputs(item('minecraft:leather'))
+    .outputs(item('minecraft:iron_leggings'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(4)
+	.inputs(ore('plateIron') * 4)
+    .outputs(item('minecraft:iron_boots'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+//Chainmail Armor
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(1)
+	.inputs(ore('ringIron') * 5)
+    .outputs(item('minecraft:chainmail_helmet'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(2)
+	.inputs(ore('ringIron') * 8)
+    .outputs(item('minecraft:chainmail_chestplate'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(3)
+	.inputs(ore('ringIron') * 7)
+    .outputs(item('minecraft:chainmail_leggings'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(4)
+	.inputs(ore('ringIron') * 4)
+    .outputs(item('minecraft:chainmail_boots'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+//Horse Armor
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(5)
+    .inputs(item('minecraft:iron_helmet'))
+    .inputs(item('minecraft:iron_chestplate'))
+	.inputs(item('minecraft:iron_leggings') * 2)
+    .inputs(ore('plateIron') * 2)
+    .inputs(ore('screwIron'))
+    .outputs(item('minecraft:iron_horse_armor'))
+    .duration(60)
+    .EUt(15)
+    .buildAndRegister();
+
+//Misc Vanilla
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('stickLongWood') * 3)
+    .inputs(item('minecraft:string'))
+	.inputs(ore('ringIron'))
+    .outputs(item('minecraft:fishing_rod'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('plateIron') * 2)
+    .inputs(ore('screwIron'))
+	.inputs(ore('ringIron'))
+    .inputs(item('minecraft:stick') * 2)
+    .outputs(item('minecraft:shears'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister();
+
 // Gold Dust * 8
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:golden_apple')], null)
 // Gold Ingot * 8
