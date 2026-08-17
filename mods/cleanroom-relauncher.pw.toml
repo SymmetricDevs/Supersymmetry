@@ -1,0 +1,17 @@
+name = "Cleanroom Relauncher"
+filename = "!cleanroom-relauncher-1.0.5.jar"
+side = "client"
+
+[option]
+optional = true
+default = false
+
+[download]
+hash-format = "sha1"
+hash = "9e97d52f15c49563a6f1422837c166521ceef837"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8647291
+project-id = 1214490
