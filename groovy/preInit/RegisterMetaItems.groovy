@@ -635,6 +635,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10487, "platinum_bushing")
         addItem(10488, "platinum_rhodium_bushing")
         addItem(10489, "stainless_steel_bushing")
+        addItem(10490, "hardened_titanium_grinding_head")
     }
 
     log.infoMC("Finished adding metaitems")

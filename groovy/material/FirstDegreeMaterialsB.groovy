@@ -1056,5 +1056,13 @@ class FirstDegreeMaterialsB {
                 .color(0x8f5064)
                 .build()
 
+        HardenedTitanium = new Material.Builder(8816, SuSyUtility.susyId('hardened_titanium'))
+            .ingot()
+            .iconSet(METALLIC)
+            .flags(GENERATE_PLATE, NO_UNIFICATION)
+            .color(0x68352E)
+            .components(Titanium * 200, Carbon * 1)
+            .build()
+
     }
 }

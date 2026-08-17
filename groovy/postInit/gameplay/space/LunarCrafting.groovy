@@ -102,7 +102,6 @@ crafting.addShaped("susy:ev_hull_moon", metaitem('hull.ev') * 1, [
 SOLAR_FURNACE.recipeBuilder()
     .inputs(ore("dustAluminium"))
     .outputs(metaitem("ingotAluminium"))
-    .requireVacuum()
     .duration(80)
     .EUt(8000)
     .buildAndRegister()
@@ -110,10 +109,8 @@ SOLAR_FURNACE.recipeBuilder()
 SOLAR_FURNACE.recipeBuilder()
     .inputs(ore("dustTitanium"))
     .outputs(metaitem("ingotTitanium"))
-    .requireVacuum()
     .duration(200)
     .EUt(12000)
-    .requireVacuum()
     .buildAndRegister()
 
 SOLAR_FURNACE.recipeBuilder()
@@ -296,6 +293,50 @@ SOLAR_FURNACE.recipeBuilder()
     .EUt(16000)
     .circuitMeta(3)
     .info('recipe.moon')
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore("plateTitanium"))
+    .fluidInputs(fluid('carbon_monoxide') * 1000)
+    .outputs(metaitem("plateHardenedTitanium"))
+    .fluidOutputs(fluid("carbon_monoxide") * 950)
+    .duration(200)
+    .EUt(4000)
+    .buildAndRegister()
+
+crafting.addShaped("susy:hardened_titanium_grinding_head", metaitem('hardened_titanium_grinding_head') * 1, [
+    [metaitem('plateHardenedTitanium'), metaitem('plateNickel'), metaitem('plateHardenedTitanium')],
+    [metaitem('plateNickel'), metaitem('ringTitanium'), metaitem('plateNickel')],
+    [metaitem('plateHardenedTitanium'), metaitem('plateNickel'), metaitem('plateHardenedTitanium')]
+])
+
+crafting.addShaped("susy:hardened_titanium_casing", item('susy:susy_multiblock_casing', 14) * 6, [
+    [metaitem('plateHardenedTitanium'), ore('toolHammer'), metaitem('plateHardenedTitanium')],
+    [metaitem('plateHardenedTitanium'), metaitem('frameTitanium'), metaitem('plateHardenedTitanium')],
+    [metaitem('plateHardenedTitanium'), ore('toolWrench'), metaitem('plateHardenedTitanium')]
+])
+
+crafting.addShaped("susy:bwe_conveyor_belt", item('susy:bwe_conveyor_belt') * 12, [
+    [metaitem('plateHardenedTitanium'), ore('plateHardenedTitanium'), metaitem('plateHardenedTitanium')],
+    [metaitem('electric.motor.ev'), metaitem('frameSteel'), metaitem('electric.motor.ev')],
+    [metaitem('plateHardenedTitanium'), ore('plateHardenedTitanium'), metaitem('plateHardenedTitanium')]
+])
+
+crafting.addShaped("susy:vehicle_track", item('susy:vehicle_track') * 16, [
+    [metaitem('plateSteel'), ore('plateSteel'), metaitem('plateSteel')],
+    [metaitem('electric.motor.ev'), metaitem('frameSteel'), metaitem('electric.motor.ev')],
+    [metaitem('plateSteel'), ore('plateSteel'), metaitem('plateSteel')]
+])
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem("hull.ev"))
+    .inputs(metaitem("electric.motor.ev") * 16)
+    .inputs(metaitem("cableGtOctalAluminium") * 4)
+    .inputs(ore("circuitEv") * 4)
+    .outputs(metaitem('susy:lunar_bucket_wheel_excavator'))
+    .EUt(VA[HV])
+    .duration(320)
+    .circuitMeta(4)
     .buildAndRegister()
 
 

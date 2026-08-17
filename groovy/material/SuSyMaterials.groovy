@@ -1765,6 +1765,7 @@ class SuSyMaterials {
     public static Material ChromiumIIISulfate
     public static Material ScandiumIIIFluoride
     public static Material LunarRutile
+    public static Material HardenedTitanium
 
     public static Material PureGaseousTitaniumTetrachloride
     
