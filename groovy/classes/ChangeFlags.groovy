@@ -100,14 +100,14 @@ class ChangeFlags {
         Asbestos.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()))
 
-        Tantalum.addBlastProperty(3293, "MID", 480, 240, -1, -1)
-        Molybdenum.addBlastProperty(2890, "MID", 480, 240, -1, -1)
-        Platinum.addBlastProperty(2045, "LOW", 480, 240, -1, -1)
-        Thorium.addBlastProperty(2028, "LOW", 480, 240, -1, -1)
-        Cobalt.addBlastProperty(1750, "LOW", 120, 200, -1, -1)
-        Beryllium.addBlastProperty(1560, "LOW", 120, 200, -1, -1)
-        Nickel.addBlastProperty(1728, "LOW", 120, 120, -1, -1)
-        Hafnium.addBlastProperty(2227, "LOW", 120, 120, -1, -1)
+        Tantalum.addBlastProperty(1700, "MID", 480, 240, -1, -1)
+        Molybdenum.addBlastProperty(1700, "MID", 480, 240, -1, -1)
+        Platinum.addBlastProperty(1400, "LOW", 480, 240, -1, -1)
+        Thorium.addBlastProperty(1400, "LOW", 480, 240, -1, -1)
+        Cobalt.addBlastProperty(800, "LOW", 120, 200, -1, -1)
+        Beryllium.addBlastProperty(800, "LOW", 120, 200, -1, -1)
+        Nickel.addBlastProperty(800, "LOW", 120, 120, -1, -1)
+        Hafnium.addBlastProperty(1400, "LOW", 120, 120, -1, -1)
 
         // Supercons, max amps multiplied by 4.
         ManganesePhosphide.getProperty(PropertyKey.WIRE).setAmperage(8)

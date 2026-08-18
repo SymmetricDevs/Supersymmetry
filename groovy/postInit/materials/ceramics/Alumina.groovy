@@ -9,7 +9,7 @@ ERF.recipeBuilder()
         .inputs(ore('dustKyanite'))
         .outputs(metaitem('dustMullitizedKyanite'))
         .EUt(VA[MV])
-        .blastFurnaceTemp(1200)
+        .blastFurnaceTemp(800)
         .duration(100)
         .buildAndRegister()
 

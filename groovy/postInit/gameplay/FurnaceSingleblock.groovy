@@ -5,8 +5,8 @@ import static gregtech.api.GTValues.*
 
 def heatingElements = [
         [material: metaitem('springCupronickel'), duration: 100],
-        [material: metaitem('springKanthal'), duration: 75],
-        [material: metaitem('springNichrome'), duration: 60]
+        [material: metaitem('springNichrome'), duration: 75],
+        [material: metaitem('springKanthal'), duration: 60]
 ]
 
 def mapRange = { idIn, idOut, range ->

@@ -18,7 +18,7 @@ for (combustible in Carbons.combustibles()) {
         .inputs(ore('dustTinyCalcite'))
         .chancedOutput(metaitem('dustManganese'), 7500, 0)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
-        .blastFurnaceTemp(1200)
+        .blastFurnaceTemp(800)
         .duration(120)
         .EUt(VA[MV])
         .buildAndRegister()
