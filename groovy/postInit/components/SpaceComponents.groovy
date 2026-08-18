@@ -548,9 +548,9 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 ItemStack stack = metaitem('data_card.master_blueprint') * 1
 stack.setTagCompound(SusyRocketComponents.ROCKET_SOYUZ_BLUEPRINT_DEFAULT.writeToNBT())
 
-ASSEMBLER.recipeBuilder()
-        .circuitMeta(1)
+SCANNER.recipeBuilder()
         .inputs(metaitem('susy:data_card'))
+        .circuitMeta(1)
         .outputs(stack)
         .EUt(VA[EV])
         .duration(10000)
