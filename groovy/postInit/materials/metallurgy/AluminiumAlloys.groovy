@@ -13,7 +13,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-// 7075 Aluminium Alloy
+// Magnalium
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 10848)
     .inputs(ore('dustTinyZinc') * 17)
@@ -37,9 +37,11 @@ INDUCTION_FURNACE.recipeBuilder()
 // Magnalium
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 2736)
-    .inputs(ore('ingotMagnesium'))
+    .inputs(metaitem('ingotMagnesium'))
     .fluidOutputs(fluid('magnalium') * 2880)
     .duration(400)
+    .EUt(VA[LV])
+    .buildAndRegister()
     .EUt(VA[LV])
     .buildAndRegister();
 
