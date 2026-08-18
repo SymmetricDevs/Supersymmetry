@@ -2097,3 +2097,29 @@ RecyclingHelper.replaceShaped"(gregtech.machine.distillery.ev", metaitem('distil
         [ore("circuitEv"), metaitem('gregtech:hull.ev'), ore("circuitEv")],
         [metaitem('cableGtSingleAluminium'), metaitem('electric.pump.ev'), metaitem('cableGtSingleAluminium')]
 ]
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('dye_orange') * 18)
+    .inputs(item('gregtech:stone_smooth',4))
+    .outputs(item('susy:bmrf_blocks', 0) * 32)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .fluidInputs(fluid('dye_orange') * 18)
+    .inputs(item('gregtech:stone_smooth',4))
+    .outputs(item('susy:s3bmrf_blocks', 0) * 32)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(3)
+    .fluidInputs(fluid('dye_orange') * 18)
+    .inputs(item('gregtech:stone_smooth',4))
+    .outputs(item('susy:s5bmrf_blocks', 0) * 32)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
