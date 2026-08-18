@@ -1,5 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import net.minecraft.item.ItemStack;
+import supersymmetry.common.rocketry.SusyRocketComponents;
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(2)
@@ -542,3 +544,14 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .duration(30)
     .EUt(VA[EV])
     .buildAndRegister()
+
+ItemStack stack = metaitem('data_card.master_blueprint') * 1
+stack.setTagCompound(SusyRocketComponents.ROCKET_SOYUZ_BLUEPRINT_DEFAULT.writeToNBT())
+
+ASSEMBLER.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(metaitem('susy:data_card'))
+        .outputs(stack)
+        .EUt(VA[EV])
+        .duration(10000)
+        .buildAndRegister()
