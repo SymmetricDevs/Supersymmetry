@@ -402,7 +402,7 @@ def wrenchVoltages = ['lv', 'hv', 'iv']
 for (tooltip in allToolTip) {
 
     ASSEMBLER.recipeBuilder()
-        .circuitMeta(20)
+        .circuitMeta(32)
         .inputs(ore('plate' + tooltip) * 4)
         .inputs(ore('ringSteel'))
         .inputs(ore('screwSteel') * 2)
@@ -411,7 +411,7 @@ for (tooltip in allToolTip) {
         .buildAndRegister();
     
     ASSEMBLER.recipeBuilder()
-        .circuitMeta(21)
+        .circuitMeta(29)
         .inputs(ore('plate' + tooltip) * 4)
         .inputs(ore('plateSteel') * 4)
         .outputs(metaitem('toolHeadDrill' + tooltip))
