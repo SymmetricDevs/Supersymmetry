@@ -25,14 +25,11 @@ QuenchingFluid Brine = new QuenchingFluid('brine', 'warm_brine', 1000, 150.0, fa
 def ingotMap = [
     'Europium':6000,
     'Iridium':4500,
-    'Molybdenum':2890,
     'Niobium':2750,
     'Osmium':4500,
     'Rhodium':2237,
     'Ruthenium':2607,
     'Samarium':5400,
-    'Tantalum':3293,
-    'Thorium':2028,
     'Titanium':2141,
     'Tungsten':3600,
     'Vanadium':2183,
@@ -65,14 +62,7 @@ def ingotMap = [
     'RhodiumPlatedPalladium':4500,
     'Hssg':4200,
     'Hsse':5000,
-    'Hsss':5000,
-    'Monel500':3000,
-    'Hsla980X':2600,
-    'FoodGradeStainlessSteel':2600,
-    'PlatinumRhodium':2113,
-    'Zircaloy4':2200,
-    'ReactorSteel':1800,
-    'Alnico':1800
+    'Hsss':5000
 ]
 
 def electrodeMap = [
