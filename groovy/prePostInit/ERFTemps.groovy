@@ -30,9 +30,19 @@ new ArrayList<>(RecipeMaps.BLAST_RECIPES.getRecipeList()).each { Recipe recipe -
 
     if (oldTemp == newTemp && recipe.getEUt() == newEUt) return
 
-    def builder = new BlastRecipeBuilder(recipe, RecipeMaps.BLAST_RECIPES)
-    builder.blastFurnaceTemp(newTemp)
-    builder.EUt(newEUt)
+    def builder = RecipeMaps.BLAST_RECIPES.recipeBuilder()
+        .inputIngredients(recipe.getInputs())
+        .outputs(recipe.getOutputs())
+        .fluidInputs(recipe.getFluidInputs())
+        .fluidOutputs(recipe.getFluidOutputs())
+        .chancedOutputs(recipe.getChancedOutputs().getChancedEntries())
+        .chancedOutputLogic(recipe.getChancedOutputs().getChancedOutputLogic())
+        .chancedFluidOutputs(recipe.getChancedFluidOutputs().getChancedEntries())
+        .chancedFluidOutputLogic(recipe.getChancedFluidOutputs().getChancedOutputLogic())
+        .EUt(newEUt)
+        .blastFurnaceTemp(newTemp)
+        .duration(recipe.getDuration())
+
     RecipeMaps.BLAST_RECIPES.removeRecipe(recipe)
     builder.buildAndRegister()
 }
