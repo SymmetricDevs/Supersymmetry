@@ -1179,16 +1179,12 @@ class SecondDegreeMaterials {
                 .iconSet(LAPIS)
                 .build();
 
-<<<<<<< HEAD
-        ManganeseCobaltNickelOxide = new Material.Builder(13194, SuSyUtility.susyId('manganese_cobalt_nickel_oxide'))
-                .dust()
-                .color(0x64B7B7)
-                .components(ManganeseDioxide * 10, ManganeseIIOxide * 5, CobaltOxide * 12, NickelIIOxide * 3)
-                .iconSet(DULL)
-                .flags(GENERATE_PLATE, NO_UNIFICATION)
+        SGlass = new Material.Builder(13194, SuSyUtility.susyId('s_glass'))
+                .dust().liquid(new FluidBuilder().temperature(1800))
+                .color(0xC49FAD)
+                .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
+                .iconSet(BRIGHT)
                 .build();
-
-        ManganeseCobaltNickelOxide.setFormula("Mn15Co12Ni3O40", true)
       
         YttriumNitrateSolution = new Material.Builder(13195, SuSyUtility.susyId('yttrium_nitrate_solution'))
                 .liquid()
@@ -1260,14 +1256,14 @@ class SecondDegreeMaterials {
             .iconSet(SHINY)
             .build()
 
-
-=======
-        SGlass = new Material.Builder(13194, SuSyUtility.susyId('s_glass'))
-                .dust().liquid(new FluidBuilder().temperature(1800))
-                .color(0xC49FAD)
-                .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
-                .iconSet(BRIGHT)
+        ManganeseCobaltNickelOxide = new Material.Builder(13195, SuSyUtility.susyId('manganese_cobalt_nickel_oxide'))
+                .dust()
+                .color(0x64B7B7)
+                .components(ManganeseDioxide * 10, ManganeseIIOxide * 5, CobaltOxide * 12, NickelIIOxide * 3)
+                .iconSet(DULL)
+                .flags(GENERATE_PLATE, NO_UNIFICATION)
                 .build();
->>>>>>> master-ceu
+
+        ManganeseCobaltNickelOxide.setFormula("Mn15Co12Ni3O40", true)
     }
 }
