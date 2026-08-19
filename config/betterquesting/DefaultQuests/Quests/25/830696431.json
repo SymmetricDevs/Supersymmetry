@@ -1,12 +1,13 @@
 {
   "preRequisites:11": [
-    563
+    99
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.830696431.desc",
       "icon:10": {
-        "id:8": "susy:fluid_samples_storage"
+        "Damage:2": 18525,
+        "id:8": "gregtech:machine"
       },
       "name:8": "susy.quest.db.830696431.title"
     }
@@ -17,7 +18,8 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "id:8": "susy:fluid_samples_storage"
+          "Damage:2": 18525,
+          "id:8": "gregtech:machine"
         }
       },
       "taskID:8": "bq_standard:retrieval"
