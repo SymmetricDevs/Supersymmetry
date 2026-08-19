@@ -2032,3 +2032,9 @@ crafting.addShaped(metaitem("susy:industrial_sifter"), [
     [ore('cableGtSingleGold'), metaitem('hull.Hv'), ore('cableGtSingleGold')],
     [metaitem('frameStainlessSteel'), metaitem('electric.motor.hv'), metaitem('frameStainlessSteel')]
 ])
+
+RecyclingHelper.addShaped("susy:fluid_samples_storage", metaitem('susy:fluid_samples_storage'), [
+    [metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel')],
+    [metaitem('large_fluid_cell.steel'), item('gregtech:boiler_casing', 1), metaitem('large_fluid_cell.steel')],
+    [metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel')]
+])
