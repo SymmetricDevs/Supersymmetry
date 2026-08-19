@@ -159,6 +159,7 @@ ore('oreSedimentaryDeposit').add(item('susy:deposit_block:2'))
 ore('oreHydrothermalDeposit').add(item('susy:deposit_block:3'))
 ore('oreAlluvialDeposit').add(item('susy:deposit_block:4'))
 ore('oreMagmaticHydrothermalDeposit').add(item('susy:deposit_block:5'))
+ore('oreEvaporiteDeposit').add(item('susy:deposit_block:7'))
 
 // Bauxite the special little snowflake
 ore('oreBauxite').add(item('susy:resource_block:0'))
