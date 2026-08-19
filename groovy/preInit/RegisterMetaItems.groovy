@@ -131,6 +131,10 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(500, "sintered_alumina.insulator")
 
+        addItem(550, "mo_si_rod.wet")
+        addItem(551, "mo_si_rod.unsintered")
+        addItem(552, "graphite_boat")
+
         addItem(1000, "chunk.magnetite")
         addItem(1001, "hot_iron_rod")
         addItem(1002, "voltaic_pile").setMaxStackSize(1)
@@ -509,7 +513,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10314, "carbon_crucible")
         addItem(10315, "crucible.graphite")
         addItem(10316, "clay_graphite_paste")
-        addItem(10317, "clay_graphite_crucible")
         addItem(10318, "raw_clay_graphite_crucible")
 
         // Alumina Refractories 10330-10340

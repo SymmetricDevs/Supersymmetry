@@ -601,7 +601,7 @@ for (quartz in quartz_dusts) {
                 .inputs(ore(quartz) * 60)
                 .circuitMeta(1)
                 .outputs(item('appliedenergistics2:quartz_glass') * 60)
-                .blastFurnaceTemp(2500)
+                .blastFurnaceTemp(1400)
                 .duration(1200)
                 .EUt(60)
                 .buildAndRegister();
@@ -610,7 +610,7 @@ for (quartz in quartz_dusts) {
                 .inputs(ore(quartz) * 60)
                 .inputs(ore('dustGlowstone') * 1)
                 .outputs(item('appliedenergistics2:quartz_vibrant_glass') * 60)
-                .blastFurnaceTemp(2500)
+                .blastFurnaceTemp(1400)
                 .duration(1200)
                 .EUt(60)
                 .buildAndRegister();

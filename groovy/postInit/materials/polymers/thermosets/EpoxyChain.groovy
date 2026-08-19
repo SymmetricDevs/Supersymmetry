@@ -126,7 +126,7 @@ for (curingAgent in curingAgents) {
 
 VACUUM_CHAMBER.recipeBuilder()
     .inputs(ore('dustWetEpoxy') * 8)
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .outputs(metaitem('dustEpoxy') * 8)
     .duration(100)
     .EUt(VA[LV])
@@ -134,13 +134,6 @@ VACUUM_CHAMBER.recipeBuilder()
 
 // Flame retardant DGEBA
     // Catalyst preparation
-    BR.recipeBuilder()
-        .inputs(ore('dustAluminiumHydroxide') * 7)
-        .fluidInputs(fluid('hydrochloric_acid') * 3000)
-        .fluidOutputs(fluid('aluminium_chloride_solution') * 3000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
 
     BR.recipeBuilder()
         .inputs(ore('dustNickelChloride') * 9)
@@ -279,7 +272,7 @@ BR.recipeBuilder()
 
 VACUUM_CHAMBER.recipeBuilder()
     .inputs(ore('dustWetEpoxyCresolNovolacs'))
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .outputs(metaitem('dustEpoxyCresolNovolacs'))
     .duration(25)
     .EUt(VA[LV])
@@ -337,7 +330,7 @@ VACUUM_CHAMBER.recipeBuilder()
 
     VACUUM_CHAMBER.recipeBuilder()
         .inputs(ore('dustWetFlameRetardantEpoxy') * 8)
-        .notConsumable(ore('springNichrome'))
+        .notConsumable(ore('springEarly'))
         .outputs(metaitem('dustFlameRetardantEpoxy') * 8)
         .duration(30)
         .EUt(VA[HV])

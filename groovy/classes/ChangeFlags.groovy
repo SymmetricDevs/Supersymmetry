@@ -42,6 +42,8 @@ class ChangeFlags {
         SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.setMaxInputs(12)
 
         // Properties
+        Stone.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 131, 1));
+        Granite.setProperty(PropertyKey.TOOL, new ToolProperty(4.0F, 1.0F, 191, 1));
 
         Germanium.addIngot()
         Tellurium.addIngot()
@@ -52,9 +54,10 @@ class ChangeFlags {
 
         BisphenolA.addDust()
         Polonium.addDust()
-
+        
         Silver.addFluidPipes(1234, 50, false, false, true, false, true)
         Rubber.addFluidPipes(593, 6, true, false, false, false, false)
+        Iron.addFluidPipes(1811, 40, true, false, false, false, false)
 
         AntimonyTrifluoride.setupFluidTypes(565, FluidStorageKeys.LIQUID)
         LithiumChloride.setupFluidTypes(890, FluidStorageKeys.LIQUID)
@@ -97,14 +100,14 @@ class ChangeFlags {
         Asbestos.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()))
 
-        Tantalum.addBlastProperty(3293, "MID", 480, 240, -1, -1)
-        Molybdenum.addBlastProperty(2890, "MID", 480, 240, -1, -1)
-        Platinum.addBlastProperty(2045, "LOW", 480, 240, -1, -1)
-        Thorium.addBlastProperty(2028, "LOW", 480, 240, -1, -1)
-        Cobalt.addBlastProperty(1750, "LOW", 120, 200, -1, -1)
-        Beryllium.addBlastProperty(1560, "LOW", 120, 200, -1, -1)
-        Nickel.addBlastProperty(1728, "LOW", 120, 120, -1, -1)
-        Hafnium.addBlastProperty(2227, "LOW", 120, 120, -1, -1)
+        Tantalum.addBlastProperty(1700, "MID", 480, 240, -1, -1)
+        Molybdenum.addBlastProperty(1700, "MID", 480, 240, -1, -1)
+        Platinum.addBlastProperty(1400, "LOW", 480, 240, -1, -1)
+        Thorium.addBlastProperty(1400, "LOW", 480, 240, -1, -1)
+        Cobalt.addBlastProperty(800, "LOW", 120, 200, -1, -1)
+        Beryllium.addBlastProperty(800, "LOW", 120, 200, -1, -1)
+        Nickel.addBlastProperty(800, "LOW", 120, 120, -1, -1)
+        Hafnium.addBlastProperty(1400, "LOW", 120, 120, -1, -1)
 
         // Supercons, max amps multiplied by 4.
         ManganesePhosphide.getProperty(PropertyKey.WIRE).setAmperage(8)
@@ -195,6 +198,12 @@ class ChangeFlags {
         Magnalium.addFlags("generate_ring", "generate_rotor")
         ReinforcedEpoxyResin.addFlags("generate_rotor")
         Beryllium.addFlags("generate_rod")
+        Bronze.addFlags("disable_decomposition")
+        Brass.addFlags("disable_decomposition")
+        Cupronickel.addFlags("disable_decomposition")
+        Invar.addFlags("disable_decomposition")
+        Nichrome.addFlags("disable_decomposition")
+        Kanthal.addFlags("disable_decomposition")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -252,6 +261,12 @@ class ChangeFlags {
         TungstenSteel.setFormula("Fe60W8Cr3Mo2V", true)
         StainlessSteel.setFormula("Fe28Cr8Ni4Si2Mn", true)
         Magnalium.setFormula("MgAl19", true)
+        Bronze.setFormula("Cu14Sn", true)
+        Brass.setFormula("Cu5Zn2", true)
+        Cupronickel.setFormula("Cu8Ni", true)
+        Invar.setFormula("Fe5Ni3", true)
+        Nichrome.setFormula("Ni7Cr2", true)
+        Kanthal.setFormula("Fe27Cr8Al4", true)
 
         // Ore Processing
         

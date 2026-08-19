@@ -388,6 +388,9 @@ susy.material.phosphorus=White Phosphorus
 susy.material.hydroxyapatite=Hydroxyapatite
 susy.material.calcium_metasilicate=Calcium Metasilicate
 susy.material.pyrazine=Pyrazine
+susy.material.molybdenum_disilicide=Molybdenum Disilicide
+susy.material.aluminosilicate_mix=Aluminosilicate Mix
+susy.material.mo_si_precursor=Mo-Si Precursor
 
 # Fluids
 
@@ -982,6 +985,7 @@ susy.material.plutonium_iii_nitrate_solution=Plutonium III Nitrate Solution
 susy.material.actinide_separation_mixture=Actinide Separation Mixture
 susy.material.reextracted_reprocessed_uranium_extract=Reextracted Reprocessed Uranium Extract
 susy.material.plutonium_reduction_solution=Plutonium Reduction Solution
+susy.material.mo_si_slurry=Mo-Si Slurry
 
 susy.material.ink=Ink
 
@@ -2212,6 +2216,7 @@ susy.material.food_grade_stainless_steel=Food-Grade Stainless Steel
 susy.material.platinum_rhodium=Platinum-Rhodium
 susy.material.zircaloy_4=Zircaloy 4
 susy.material.inconel_625=Inconel 625
+susy.material.inconel_601=Inconel 601
 susy.material.moist_argon=Moist Argon
 susy.material.argon_hydrogen_mixture=Argon Hydrogen Mixture
 susy.material.ammoniacal_argon_hydrogen_mixture=Ammoniacal Argon Hydrogen Mixture
@@ -3124,7 +3129,6 @@ metaitem.raw_carbon_crucible.name=Green Carbon Crucible
 metaitem.carbon_crucible.name=Baked Carbon Crucible
 metaitem.clay_graphite_paste.name=Clay-Graphite Paste
 metaitem.raw_clay_graphite_crucible.name=Green Clay-Graphite Crucible
-metaitem.clay_graphite_crucible.name=Clay-Graphite Crucible
 
 metaitem.hot_cac_clinker.name=Hot Calcium Aluminate Cement Clinker
 metaitem.cac_clinker.name=Calcium Aluminate Cement Clinker
@@ -3336,6 +3340,11 @@ metaitem.engine.piston.name=Piston
 metaitem.engine.crankshaft.name=Crankshaft
 metaitem.sintered_alumina.insulator.name=Sintered Alumina Insulator
 metaitem.titanium_cylinder.name=Titanium Cylinder
+
+metaitem.mo_si_rod.wet.name=Wet Mo-Si Rod
+metaitem.mo_si_rod.unsintered.name=Unsintered Mo-Si Rod
+metaitem.graphite_boat.name=Graphite Boat
+
 
 metaitem.rubylith.name=Rubylith
 metaitem.rubylith_film.name=Rubylith Film
@@ -3592,3 +3601,8 @@ recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requi
 recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.
 recipe.sulfuric.acid=You can do this reaction in 1/40th of the time with a Bubble Column Reactor.
 recipe.pyrite=You can obtain Green Vitriol by batch reacting small piles of Pyrite.
+tile.retro_sophisticated_backpacks.backpack_leather.name=Primitive Backpack
+tile.retro_sophisticated_backpacks.backpack_iron.name=Basic Backpack
+tile.retro_sophisticated_backpacks.backpack_gold.name=Advanced Backpack
+tile.retro_sophisticated_backpacks.backpack_diamond.name=Elite Backpack
+tile.retro_sophisticated_backpacks.backpack_obsidian.name=Sophisticated Backpack 
