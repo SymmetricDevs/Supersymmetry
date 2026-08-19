@@ -10,6 +10,7 @@
 ### New Features
 - Experiencing base lag? Try out the direct fluid pipes! They transfer fluids just like item pipes. (sc#694 by @MCTian-mi)
 - Store your various fluid slop in the new Fluid Sample Storage, with 32 8kL slots! (sc#693 by @Sadsaltan)
+- Sophisticated backpacks now replaces travelers' backpacks! With sufficient Gregification, of course. (#1984 by @Solothesolo)
 ### Changed Features
 - Nichrome has been swapped for Kanthal! (#1987 by @jethro-3000)
 - Two new coil tiers help make coil progression more realistic: MoSi2 (2100K) and W (3000K)!
