@@ -63,6 +63,14 @@ RESISTANCE_FURNACE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('silver') * 144)
+    .inputs(item('minecraft:gold_ingot'))
+    .fluidOutputs(fluid('electrum') * 288)
+    .temperature(1235)
+    .EUt(VA[LV])
+    .buildAndRegister()    
+
 // Monel
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('nickel') * 3312)
