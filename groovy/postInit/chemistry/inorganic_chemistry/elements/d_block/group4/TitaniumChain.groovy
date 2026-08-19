@@ -232,7 +232,7 @@ for (inertGas in Globals.inertGases) {
                 .outputs(metaitem('sponge.titanium.crude') * 4)
                 .fluidOutputs(fluid('magnesium_chloride') * 3024)
                 .outputs(metaitem('dustMagnesium'))
-                .blastFurnaceTemp(2150)
+                .blastFurnaceTemp(1400)
                 .duration(400 * inertGas.duration)
                 .EUt(VA[HV] * 2)
                 .buildAndRegister()

@@ -4,7 +4,6 @@ import static material.SuSyMaterials.*
 
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
-import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.unification.material.properties.*
 
@@ -748,13 +747,13 @@ class PetrochemistryMaterials {
                 .build()
 
         AcidicAlkylateMixture = new Material.Builder(20126, SuSyUtility.susyId('acidic_alkylate_mixture'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xc27234)
                 .flags()
                 .build()
 
         AlkylateMixture = new Material.Builder(20127, SuSyUtility.susyId('alkylate_mixture'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0x994a23)
                 .flags()
                 .build()
@@ -766,7 +765,7 @@ class PetrochemistryMaterials {
                 .build()
 
         CrudeIsobutane = new Material.Builder(20129, SuSyUtility.susyId('crude_isobutane'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .gas(new FluidBuilder().acidic())
                 .color(0x736154)
                 .flags()
                 .build()

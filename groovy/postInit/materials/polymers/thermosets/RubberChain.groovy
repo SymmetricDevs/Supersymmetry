@@ -343,7 +343,6 @@ DT.recipeBuilder()
     .buildAndRegister()
 
 BR.recipeBuilder()
-    .circuitMeta(2)
     .inputs(ore('dustSalt') * 2)
     .fluidInputs(fluid('sulfuric_acid') * 100)
     .fluidInputs(fluid('nitrile_rubber_latex') * 2000)

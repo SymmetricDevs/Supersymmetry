@@ -19,7 +19,7 @@ key_key.smoothCamera:0:NONE
 key_key.fullscreen:87:NONE
 key_key.spectatorOutlines:0:NONE
 key_key.swapHands:33:NONE
-key_key.saveToolbarActivator:0:NONE
+key_key.saveToolbarActivator:46:NONE
 key_key.loadToolbarActivator:45:NONE
 key_key.advancements:38:NONE
 key_key.hotbar.1:2:NONE
@@ -34,25 +34,26 @@ key_key.hotbar.9:10:NONE
 key_ir_keys.increase_throttle:72:NONE
 key_ir_keys.zero_throttle:76:NONE
 key_ir_keys.decrease_throttle:80:NONE
+key_ir_keys.increase_reverser:73:NONE
+key_ir_keys.zero_reverser:77:NONE
+key_ir_keys.decrease_reverser:81:NONE
 key_ir_keys.increase_brake:71:NONE
 key_ir_keys.zero_brake:75:NONE
 key_ir_keys.decrease_brake:79:NONE
+key_ir_keys.increase_independent_brake:71:NONE
+key_ir_keys.zero_independent_brake:75:NONE
+key_ir_keys.decrease_independent_brake:79:NONE
 key_ir_keys.horn:156:NONE
 key_ir_keys.dead_mans_switch:55:NONE
 key_ir_keys.start_stop_engine:78:NONE
 key_ir_keys.bell:74:NONE
 key_ir_keys.config:181:NONE
+key_flare.key.start_sampling:0:NONE
+key_flare.key.stop_sampling:0:NONE
+key_flare.key.start_client_sampling:0:NONE
+key_flare.key.stop_client_sampling:0:NONE
+key_flare.key.open_tick_tracking_menu:0:NONE
 key_keybind.baublesinventory:48:NONE
-key_key.toggle_shaders:0:NONE
-key_quark.keybind.dropoff:0:NONE
-key_quark.keybind.changeHotbar:44:NONE
-key_quark.keybind.chestSort:0:NONE
-key_quark.keybind.chestDropoff:0:NONE
-key_quark.keybind.chestMerge:0:NONE
-key_quark.keybind.chestRestock:0:NONE
-key_quark.keybind.chestExtract:0:NONE
-key_quark.keybind.toggleAutojump:48:NONE
-key_quark.keybind.lockBuilding:37:NONE
 key_quark.emote.no:0:NONE
 key_quark.emote.yes:0:NONE
 key_quark.emote.wave:0:NONE
@@ -71,26 +72,40 @@ key_quark.emote.dab:0:NONE
 key_quark.emote.jet:0:NONE
 key_quark.emote.exorcist:0:NONE
 key_quark.emote.zombie:0:NONE
+key_quark.keybind.dropoff:0:NONE
+key_quark.keybind.changeHotbar:44:NONE
+key_quark.keybind.chestSort:0:NONE
+key_quark.keybind.chestDropoff:0:NONE
+key_quark.keybind.chestMerge:0:NONE
+key_quark.keybind.chestRestock:0:NONE
+key_quark.keybind.chestExtract:0:NONE
+key_quark.keybind.lockBuilding:37:NONE
+key_quark.keybind.toggleAutojump:48:NONE
 key_key.betterquesting.quests:41:NONE
+key_key.betterquesting.back:14:NONE
+key_cos.key.opencosarmorinventory:0:NONE
+key_Open sound muffler screen:0:NONE
 key_key.findme.search:21:NONE
+key_key.ftbutilities.nbt:49:ALT
+key_key.ftbutilities.trash:211:NONE
 key_Dragons Breath:35:NONE
 key_Teleport:34:NONE
+key_gregtech.key.armor_mode_switch:50:NONE
+key_gregtech.key.armor_hover:35:NONE
+key_gregtech.key.armor_charging:49:NONE
+key_gregtech.key.tool_aoe_change:47:NONE
 key_ingameinfoxml.key.toggle:0:NONE
+key_key.moreoverlays.lightoverlay.desc:65:NONE
+key_key.moreoverlays.chunkbounds.desc:67:NONE
 key_Difficulty Meter - Show:49:NONE
 key_Difficulty Meter - Show Always:49:SHIFT
-key_key.toastcontrol.clear:36:NONE
-key_key.open_wct.desc:0:NONE
-key_key.cycle_magnet_mode.desc:0:NONE
-key_key.open_wft.desc:0:NONE
-key_key.open_wit.desc:0:NONE
-key_key.open_wpt.desc:0:NONE
 key_key.openglasses.interact:46:NONE
 key_key.openglasses.stable_interact:46:ALT
 key_key.openglasses.nightvision:49:NONE
 key_key.openglasses.thermalvision:48:NONE
 key_key.openglasses.config:46:SHIFT
+key_key.openglasses.opensecurity:24:NONE
 key_key.xtones.scroll:42:NONE
-key_key.pickup.item:0:NONE
 key_key.rotateup:200:NONE
 key_key.rotatedown:208:NONE
 key_key.rotateright:205:NONE
@@ -98,8 +113,15 @@ key_key.rotateleft:203:NONE
 key_key.little.flip:34:NONE
 key_key.little.mark:50:NONE
 key_key.little.config.item:46:NONE
+key_key.little.config:46:CONTROL
 key_key.little.undo:44:CONTROL
 key_key.little.redo:21:CONTROL
+key_key.toggle_focus.desc:15:NONE
+key_key.open_wireless_terminal.desc:20:SHIFT
+key_key.open_wireless_crafting_terminal.desc:18:SHIFT
+key_key.open_wireless_pattern_terminal.desc:19:SHIFT
+key_key.open_wireless_fluid_terminal.desc:33:SHIFT
+key_key.aquaacrobatics.toggle_crawling:46:NONE
 key_key.jei.toggleOverlay:24:CONTROL
 key_key.jei.focusSearch:33:CONTROL
 key_key.jei.toggleCheatMode:0:NONE
@@ -109,15 +131,16 @@ key_key.jei.showUses:22:NONE
 key_key.jei.recipeBack:14:NONE
 key_key.jei.previousPage:201:NONE
 key_key.jei.nextPage:209:NONE
+key_key.hei.previousCategory:201:SHIFT
+key_key.hei.nextCategory:209:SHIFT
 key_key.jei.bookmark:30:NONE
-key_key.jei.toggleBookmarkOverlay:0:NONE
-key_key.toggleLiquids:38:NONE
-key_key.toggleVisible:0:NONE
-key_key.immersiveengineering.magnetEquip:31:NONE
-key_key.immersiveengineering.chemthrowerSwitch:0:NONE
-key_key.toggle_focus.desc:15:NONE
+key_key.hei.bookmarkToTop:30:SHIFT
+key_key.hei.recipeBookmark:30:CONTROL
+key_key.hei.toggleBookmarkOverlay:0:NONE
+key_key.hei.crafting:46:SHIFT
 key_bbw.key.mode:50:NONE
-key_bbw.key.fluidmode:33:NONE
+key_bbw.key.fluidmode:33:ALT
+key_bqutweaker.key.pageback:14:NONE
 key_key.settings_menu:34:NONE
 key_key.range:19:NONE
 key_key.undo:22:NONE
@@ -142,25 +165,27 @@ key_key.craftingtweaks.decompressAll:0:NONE
 key_key.craftingtweaks.refill_last:15:NONE
 key_key.craftingtweaks.refill_last_stack:15:NONE
 key_cyberware.keybinds.menu:19:NONE
-key_key.clipboardPaste:210:NONE
-key_ALT Menu:56:NONE
-key_Mode Switch:50:NONE
-key_Fly key:33:NONE
-key_tardis.keybinds.demat_remat_anim:36:NONE
+key_key.ae2fc.open_wireless_fluid_pattern_terminal.desc:0:NONE
+key_keybind.groovyscript.reload:0:NONE
+key_keybind.groovyscript.quick_reload:0:NONE
+key_keybind.groovyscript.copy:0:NONE
+key_key.toggleLiquids:38:NONE
+key_key.toggleVisible:0:NONE
+key_key.nutrition:49:NONE
+key_tardis.keybinds.demat_remat_anim:0:NONE
 key_handles.keybinds.snap:35:NONE
-key_invtweaks.key.sort:19:NONE
+key_key.itemzoom.toggle:44:SHIFT
+key_key.itemzoom.hold:0:NONE
+key_key.itemzoom.zoom.in:0:NONE
+key_key.itemzoom.zoom.out:0:NONE
 key_jecalculation.key.gui_craft:0:NONE
 key_jecalculation.key.gui_math:0:NONE
-key_key.segment1.up:71:NONE
-key_key.segment1.down:79:NONE
-key_key.segment2.up:72:NONE
-key_key.segment2.down:80:NONE
-key_key.segment3.up:73:NONE
-key_key.segment3.down:81:NONE
-key_key.turret.right:77:NONE
-key_key.turret.left:75:NONE
-key_key.unload:22:NONE
-key_overloaded.key.noclip:47:NONE
+key_Open Key Wizard:65:NONE
+key_key.neenergistics.ingredient.switch:42:NONE
+key_key.neenergistics.stack.count.change:29:NONE
+key_key.neenergistics.crafting.helper.noPreview:56:NONE
+key_key.neenergistics.crafting.helper.noPreview:56:NONE
+key_key.clipboardPaste:210:NONE
 key_key.porterNextDestination:27:NONE
 key_key.porterPrevDestination:26:NONE
 key_key.debugDumpNBTItem:0:NONE
@@ -169,16 +194,31 @@ key_techguns.key.toggleNightvision:49:NONE
 key_techguns.key.toggleSafemode:48:NONE
 key_techguns.key.toggleStepassist:47:NONE
 key_techguns.key.forceReload:19:NONE
-key_techguns.key.toggleJetpack:36:NONE
+key_techguns.key.toggleJetpack:0:NONE
+key_key.toolbelt.open:19:NONE
+key_key.toolbelt.cycle.left:0:NONE
+key_key.toolbelt.cycle.right:0:NONE
+key_key.toolbelt.slot:47:NONE
+key_key.travelersbackpack.inventory:48:NONE
+key_key.travelersbackpack.toggle_tank:49:NONE
+key_key.travelersbackpack.cycle_tool:44:NONE
+key_keybind.universaltweaks.clear_toasts:11:CONTROL
+key_visualores.key.action:211:NONE
+key_visualores.button.oreveins:0:NONE
+key_visualores.button.chunk_viewing:0:NONE
+key_visualores.button.chunk_claiming:0:NONE
+key_visualores.button.undergroundfluid:0:NONE
 key_WorldEdit Reference:38:NONE
 key_Clear Measurement:46:ALT
-key_Toggle Jetpack:45:NONE
-key_Open Rocket GUI:46:NONE
-key_Toggle RCS:19:NONE
-key_Rotate Vehicle Right:32:NONE
-key_Rotate Vehicle Left:30:NONE
-key_Move Vehicle Up:44:NONE
-key_Move Vehicle Down:45:NONE
+key_bogosort.key.move_all_same:-100:ALT
+key_bogosort.key.move_all:0:NONE
+key_bogosort.key.move_single:-100:CONTROL
+key_bogosort.key.move_single_empty:-99:CONTROL
+key_bogosort.key.throw_all_same:16:ALT
+key_bogosort.key.throw_all:-100:ALT
+key_bogosort.key.sort_config:37:NONE
+key_bogosort.key.sort:-98:NONE
+key_bogosort.key.lock_slot:23:NONE
 key_key.journeymap.zoom_in:13:NONE
 key_key.journeymap.zoom_out:12:NONE
 key_key.journeymap.minimap_type:26:NONE
@@ -195,27 +235,6 @@ key_key.journeymap.fullscreen.north:200:NONE
 key_key.journeymap.fullscreen.south:208:NONE
 key_key.journeymap.fullscreen.east:205:NONE
 key_key.journeymap.fullscreen.west:203:NONE
+key_key.control:29:NONE
 key_Profile GUI:210:NONE
-key_regeneration.keybinds.regenerate:19:NONE
-key_regeneration.keybinds.regenerate_forced:21:NONE
-key_enderio.keybind.inventory:23:NONE
-key_enderio.keybind.dsu:0:NONE
-key_enderio.keybind.glidertoggle:34:NONE
-key_enderio.keybind.soundlocator:0:NONE
-key_enderio.keybind.nightvision:25:NONE
-key_enderio.keybind.gogglesofrevealing:0:NONE
-key_enderio.keybind.stepassist:0:NONE
-key_enderio.keybind.speed:0:NONE
-key_enderio.keybind.jump:0:NONE
-key_enderio.keybind.top:0:NONE
-key_enderio.keybind.tnt:0:NONE
-key_enderio.keybind.yetawrenchmode:21:NONE
-key_enderio.keybind.magnet:0:NONE
-key_enderio.keybind.fovreset:0:NONE
-key_enderio.keybind.fovunreset:0:NONE
-key_enderio.keybind.fovstore:0:NONE
-key_enderio.keybind.fovrecall:0:NONE
-key_enderio.keybind.fovplus:0:NONE
-key_enderio.keybind.fovminus:0:NONE
-key_enderio.keybind.fovplusfast:0:NONE
-key_enderio.keybind.fovminusfast:0:NONE
+key_key.craftpresence.config_keycode.name:0:NONE

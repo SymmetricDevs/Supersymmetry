@@ -25,6 +25,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4, "rock.sedimentary")
         addItem(5, "rock.hydrothermal")
         addItem(6, "rock.alluvial")
+        // ID 7 saved for deposit_block 6
+        addItem(8, "rock.evaporite")
 
         addItem(100, "cement.clinker")
         addItem(101, "hot.cement.clinker")
@@ -133,6 +135,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(403, "engine.spark_plug.palladium")
 
         addItem(500, "sintered_alumina.insulator")
+
+        addItem(550, "mo_si_rod.wet")
+        addItem(551, "mo_si_rod.unsintered")
+        addItem(552, "graphite_boat")
 
         addItem(1000, "chunk.magnetite")
         addItem(1001, "hot_iron_rod")
@@ -384,7 +390,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6004, "led_light")
 
         //Superconductors 6100-6200
-        addItem(6100, "assemblymanganesephosphide")
+        addItem(6100, "tubemanganesephosphide")
         addItem(6101, "basemanganesephosphide")
         addItem(6102, "cannedmagnesiumdiboride")
         addItem(6103, "tubemagnesiumdiboride")
@@ -405,6 +411,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6118, "baseenrichednaquadahtriniumeuropiumduranide")
         addItem(6119, "assemblyrutheniumtriniumamericiumneutronate")
         addItem(6120, "baserutheniumtriniumamericiumneutronate")
+        addItem(6121, "cannedmanganesephosphide")
 
         //Metal sponges 6200-6300
         addItem(6200, "sponge.titanium")
@@ -529,6 +536,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10100, "turbojet.small")
         addItem(10101, "wing_panel.fiber_reinforced_epoxy")
         addItem(10102, "wing.small")
+        addItem(10103, "ink_bottle")
+        addItem(10104, "s_glass_fibers")
 
         // Dimension Display items 10200-10250
         addItem(10200, 'display.overworld')
@@ -559,11 +568,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10314, "carbon_crucible")
         addItem(10315, "crucible.graphite")
         addItem(10316, "clay_graphite_paste")
-        addItem(10317, "clay_graphite_crucible")
         addItem(10318, "raw_clay_graphite_crucible")
-        addItem(10319, "raw_carbon_plate")
-        addItem(10320, "carbon_plate")
-        addItem(10321, "graphite_plate")
 
         // Alumina Refractories 10330-10340
         addItem(10330, "cac_clinker")
@@ -583,6 +588,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10409, "lamp.mercury.hp.unfilled")
         addItem(10410, "lamp.mercury.hp")
         addItem(10411, "lamp.mercury.lp")
+
+        addItem(10412, "fused_quartz_tube")
 
         // Rocketry Components 10421-10440
 

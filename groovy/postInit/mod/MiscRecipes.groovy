@@ -43,18 +43,13 @@ for (name in name_removals) {
 }
 
 mods.jei.ingredient.yeet(
-        item('travelersbackpack:backpack_tank'),
-        item('travelersbackpack:sleeping_bag_bottom'),
-        item('travelersbackpack:hose_nozzle'),
-        item('travelersbackpack:hose'),
-        fluid('potion'),
-        item('biomesoplenty:biome_block'),
-        item('scalinghealth:crystalore'),
-        item('tardis:cinnabar_ore'),
-        item('rftools:dimensional_shard_ore'),
-        item('rftools:dimensional_shard_ore', 1),
-        item('rftools:dimensional_shard_ore', 2),
-        item('weeping-angels:kontron_ore'),
+    item('biomesoplenty:biome_block'),
+    item('scalinghealth:crystalore'),
+    item('tardis:cinnabar_ore'),
+    item('rftools:dimensional_shard_ore'),
+    item('rftools:dimensional_shard_ore', 1),
+    item('rftools:dimensional_shard_ore', 2),
+    item('weeping-angels:kontron_ore'),
 )
 
 for (i in 0..7) {
@@ -77,6 +72,111 @@ mods.chisel.carving.addGroup("sapphire_blocks")
 mods.chisel.carving.addVariation("sapphire_blocks", item('gregtech:meta_block_compressed_19', 10))
 mods.chisel.carving.addVariation("sapphire_blocks", item('biomesoplenty:gem_block', 6))
 
+mods.chisel.carving.addGroup("BMRF1&2_blocks")
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 0))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 1))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 2))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 3))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 4))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 5))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 6))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 7))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 8))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 9))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 10))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 11))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 12))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 13))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 14))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:bmrf_blocks', 15))
+
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 0))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 1))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 2))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 3))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 4))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 5))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 6))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 7))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 8))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 9))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 10))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 11))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 12))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 13))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 14))
+mods.chisel.carving.addVariation("BMRF1&2_blocks", item('susy:s2bmrf_blocks', 15))
+
+mods.chisel.carving.addGroup("BMRF3&4_blocks")
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 0))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 1))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 2))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 3))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 4))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 5))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 6))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 7))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 8))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 9))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 10))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 11))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 12))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 13))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 14))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s3bmrf_blocks', 15))
+
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 0))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 1))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 2))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 3))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 4))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 5))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 6))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 7))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 8))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 9))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 10))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 11))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 12))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 13))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 14))
+mods.chisel.carving.addVariation("BMRF3&4_blocks", item('susy:s4bmrf_blocks', 15))
+
+mods.chisel.carving.addGroup("BMRF5&6_blocks")
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 0))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 1))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 2))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 3))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 4))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 5))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 6))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 7))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 8))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 9))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 10))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 11))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 12))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 13))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 14))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s5bmrf_blocks', 15))
+
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 0))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 1))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 2))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 3))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 4))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 5))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 6))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 7))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 8))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 9))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 10))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 11))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 12))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 13))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 14))
+mods.chisel.carving.addVariation("BMRF5&6_blocks", item('susy:s6bmrf_blocks', 15))
+
 crafting.replaceShaped('cd4017be_lib:dimstack/dim_pipe', item('dimstack:dim_pipe') * 2, [
         [ore('frameGtSteel'), ore('gemQuartzite'), ore('frameGtSteel')],
         [ore('frameGtSteel'), metaitem('crate.wood'), ore('frameGtSteel')],
@@ -90,7 +190,7 @@ crafting.replaceShaped('naturescompass:natures_compass', item('naturescompass:na
 ])
 
 crafting.addShaped('quark:redstone_randomizer', item('quark:redstone_randomizer'), [
-        [null, metaitem('wireFineRedAlloy'), null],
+        [null, null, null],
         [null, ore('circuitLv'), null],
         [null, item('minecraft:comparator'), null]
 ])
@@ -107,16 +207,10 @@ crafting.replaceShaped('toolbelt:belt', item('toolbelt:belt'), [
         [item('toolbelt:pouch'), metaitem('ringSteel'), item('toolbelt:pouch')]
 ])
 
-crafting.replaceShaped('travelersbackpack:travelers_backpack_standard', item('travelersbackpack:travelers_backpack'), [
-        [item('techguns:itemshared', 77), metaitem('workbench'), item('techguns:itemshared', 77)],
-        [metaitem('large_fluid_cell.steel').or(item('gregtech:machine', 1612)), item('minecraft:chest'), metaitem('large_fluid_cell.steel').or(item('gregtech:machine', 1612))],
-        [item('techguns:itemshared', 77), ore('wool'), item('techguns:itemshared', 77)]
-])
-
 crafting.replaceShaped('jecalculation:item_calculator', item('jecalculation:item_calculator'), [
-        [metaitem('wireFineRedAlloy'), metaitem('plateGlass'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineTin'), metaitem('plateGlass'), metaitem('wireFineTin')],
         [item('opencomputers:material', 14), ore('circuitLv'), item('opencomputers:material', 16)],
-        [metaitem('wireFineRedAlloy'), ore('plateSteel'), metaitem('wireFineRedAlloy')]
+        [metaitem('wireFineTin'), ore('plateSteel'), metaitem('wireFineTin')]
 ])
 
 crafting.addShapeless("gregtech:mud_block_to_ball", item('biomesoplenty:mudball') * 4, [

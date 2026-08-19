@@ -9,7 +9,7 @@ ERF.recipeBuilder()
         .inputs(ore('dustKyanite'))
         .outputs(metaitem('dustMullitizedKyanite'))
         .EUt(VA[MV])
-        .blastFurnaceTemp(1200)
+        .blastFurnaceTemp(800)
         .duration(100)
         .buildAndRegister()
 
@@ -49,6 +49,7 @@ Sintering.RotaryKiln.fuels.each { fuel ->
     Sintering.RotaryKiln.comburents.each { comburent ->
         ROTARY_KILN.recipeBuilder()
                 .inputs(ore('dustAlumina'))
+                .circuitMeta(1)
                 .outputs(metaitem('dustTabularAlumina'))
                 .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
                 .fluidInputs(fluid(comburent.name) * comburent.amountRequired)

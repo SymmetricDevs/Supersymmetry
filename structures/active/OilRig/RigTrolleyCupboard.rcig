@@ -3,9 +3,9 @@
   "inventoryGeneratorID": "RigTrolleyCupboard",
   "items": [
     {
-      "weight": 1.0950840711593628,
+      "weight": 0.20703016221523285,
       "min": 1,
-      "max": 7,
+      "max": 2,
       "item": {
         "id": "gregtech:meta_item_1",
         "damage": 158,
@@ -13,9 +13,9 @@
       }
     },
     {
-      "weight": 2.7249209880828857,
-      "min": 8,
-      "max": 18,
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 3,
       "item": {
         "id": "gregtech:meta_item_1",
         "damage": 128,
@@ -23,9 +23,9 @@
       }
     },
     {
-      "weight": 1.39763605594635,
-      "min": 2,
-      "max": 8,
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
       "item": {
         "id": "gregtech:meta_item_1",
         "damage": 143,
@@ -33,9 +33,9 @@
       }
     },
     {
-      "weight": 0.5354365706443787,
-      "min": 2,
-      "max": 4,
+      "weight": 0.20703016221523285,
+      "min": 1,
+      "max": 2,
       "item": {
         "id": "gregtech:meta_item_1",
         "damage": 188,
@@ -43,9 +43,9 @@
       }
     },
     {
-      "weight": 1.1894346475601196,
-      "min": 4,
-      "max": 9,
+      "weight": 0.20703016221523285 ,
+      "min": 1,
+      "max": 2,
       "item": {
         "id": "gregtech:meta_item_1",
         "damage": 173,

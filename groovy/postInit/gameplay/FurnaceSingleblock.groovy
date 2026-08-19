@@ -5,8 +5,8 @@ import static gregtech.api.GTValues.*
 
 def heatingElements = [
         [material: metaitem('springCupronickel'), duration: 100],
-        [material: metaitem('springKanthal'), duration: 75],
-        [material: metaitem('springNichrome'), duration: 60]
+        [material: metaitem('springNichrome'), duration: 75],
+        [material: metaitem('springKanthal'), duration: 60]
 ]
 
 def mapRange = { idIn, idOut, range ->
@@ -67,39 +67,15 @@ def nonMetals = [
         [input: metaitem('gregtechfoodoption:component.coconut'), output: metaitem('copra')],
         [input: metaitem('raw_electrode'), output: metaitem('carbon_electrode')],
         [input: metaitem('raw_carbon_crucible'), output: metaitem('carbon_crucible')],
-        [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('clay_graphite_crucible')],
+        [input: metaitem('raw_clay_graphite_crucible'), output: metaitem('susy:clay_graphite_crucible')],
         [input: ore('blockGreenCarbon'), output: ore('blockBakedCarbon').first()],
         [input: metaitem('dustExpandableGraphite'), output: metaitem('expanded_graphite_worms') * 4],
-        [input: metaitem('raw_carbon_plate'), output: metaitem('carbon_plate')]
+        [input: metaitem('plateGreenCarbon'), output: metaitem('plateBakedCarbon')]
 ]
 
 nonMetals += mapRange('susy:susy_stone_cobble', 'susy:susy_stone_smooth', 0..11)
 nonMetals += mapRange('gregtech:stone_cobble', 'gregtech:stone_smooth', 0..5)
 nonMetals += mapRange('gregtech:stone_smooth', 'gregtech:stone_polished', 1..5)
-
-def metals = [
-        [input: metaitem('dustTin'), output: fluid('tin')],
-        [input: metaitem('dustLead'), output: fluid('lead')],
-        [input: metaitem('dustZinc'), output: fluid('zinc')],
-        [input: metaitem('dustAntimony'), output: fluid('antimony')],
-        [input: metaitem('dustBismuth'), output: fluid('bismuth')],
-        [input: metaitem('dustBatteryAlloy'), output: fluid('battery_alloy')],
-        [input: metaitem('dustSolderingAlloy'), output: fluid('soldering_alloy')],
-        [input: metaitem('dustCopper'), output: fluid('copper')],
-        [input: metaitem('dustBronze'), output: fluid('bronze')],
-        [input: metaitem('dustBrass'), output: fluid('brass')],
-        [input: metaitem('dustCupronickel'), output: fluid('cupronickel')],
-        [input: metaitem('dustPotin'), output: fluid('potin')],
-        [input: metaitem('dustGold'), output: fluid('gold')],
-        [input: metaitem('dustSilver'), output: fluid('silver')],
-        [input: metaitem('dustAluminium'), output: fluid('aluminium')],
-        [input: metaitem('dustAluminiumAlloy6061'), output: fluid('aluminium_alloy_6061')],
-        [input: metaitem('dustAluminiumAlloy7075'), output: fluid('aluminium_alloy_7075')],
-        [input: metaitem('dustCadmium'), output: fluid('cadmium')],
-        [input: metaitem('dustIndium'), output: fluid('indium')],
-        [input: metaitem('dustRedAlloy'), output: fluid('red_alloy')],
-        [input: ore('dustGrcop84'), output: fluid('grcop_84')]
-]
 
 heatingElements.each { heatingElement ->
     nonMetals.each {nonMetal ->
@@ -107,17 +83,6 @@ heatingElements.each { heatingElement ->
                 .notConsumable(heatingElement.material)
                 .inputs(nonMetal.input)
                 .outputs(nonMetal.output)
-                .duration(heatingElement.duration)
-                .EUt(4)
-                .buildAndRegister()
-    }
-
-    metals.each {metal ->
-        RESISTANCE_FURNACE.recipeBuilder()
-                .notConsumable(metaitem('clay_graphite_crucible'))
-                .notConsumable(heatingElement.material)
-                .inputs(metal.input)
-                .fluidOutputs(metal.output * 144)
                 .duration(heatingElement.duration)
                 .EUt(4)
                 .buildAndRegister()
@@ -136,7 +101,8 @@ ore('dustSilicaSand').add(
 ore('carbonSource').add(
         metaitem('dustCharcoal'),
         metaitem('dustGreenCoke'),
-        metaitem('dustCoke')
+        metaitem('dustCoke'),
+        metaitem('dustCarbon')
 )
 
 RESISTANCE_FURNACE.recipeBuilder()
@@ -154,7 +120,8 @@ RESISTANCE_FURNACE.recipeBuilder()
 ore('insulatingCarbon').add(
         metaitem('dustCoke'),
         metaitem('dustHeatedGreenCoke'),
-        metaitem('dustAnthracite')
+        metaitem('dustAnthracite'),
+        metaitem('dustCarbon')
 )
 
 RESISTANCE_FURNACE.recipeBuilder()
@@ -178,13 +145,15 @@ RESISTANCE_FURNACE.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
+// Graphite Plate * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustGraphite')], null)
+
 RESISTANCE_FURNACE.recipeBuilder()
-        .circuitMeta(2)
-        .inputs(metaitem('carbon_plate'))
+        .inputs(metaitem('plateBakedCarbon'))
         .inputs(ore('insulatingCarbon') * 4)
         .notConsumable(ore('insulatingCarbon') * 16)
         .notConsumable(metaitem('graphite_electrode'))
-        .outputs(metaitem('graphite_electrode'))
+        .outputs(metaitem('plateGraphite'))
         .duration(120)
         .EUt(VA[LV])
         .buildAndRegister()

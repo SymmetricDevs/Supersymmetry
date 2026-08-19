@@ -42,7 +42,7 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister();
 
 CSTR.recipeBuilder()
-        .circuitMeta(2)
+        .circuitMeta(1)
         .fluidInputs(fluid('formaldehyde') * 75)
         .fluidInputs(fluid('phenol') * 25)
         .notConsumable(fluid('sodium_hydroxide_solution') * 50)

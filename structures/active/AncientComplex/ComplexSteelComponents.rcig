@@ -4,8 +4,8 @@
   "items": [
     {
       "weight": 0.9243392944335938,
-      "min": 8,
-      "max": 28,
+      "min": 4,
+      "max": 11,
       "item": {
         "id": "gregtech:meta_stick",
         "damage": 2,
@@ -15,7 +15,7 @@
     {
       "weight": 1.0068187713623047,
       "min": 6,
-      "max": 15,
+      "max": 9,
       "item": {
         "id": "gregtech:meta_ring",
         "damage": 2,
@@ -184,8 +184,8 @@
     },
     {
       "weight": 0.7087690830230713,
-      "min": 2,
-      "max": 6,
+      "min": 1,
+      "max": 2,
       "item": {
         "id": "gregtech:machine",
         "damage": 1613,
@@ -194,8 +194,8 @@
     },
     {
       "weight": 0.7087690830230713,
-      "min": 2,
-      "max": 5,
+      "min": 1,
+      "max": 2,
       "item": {
         "id": "gregtech:machine",
         "damage": 1628,
@@ -214,8 +214,8 @@
     },
     {
       "weight": 1.0068187713623047,
-      "min": 1,
-      "max": 14,
+      "min": 2,
+      "max": 4,
       "item": {
         "id": "gregtech:meta_ingot",
         "damage": 2,

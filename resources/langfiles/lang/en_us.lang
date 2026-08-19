@@ -387,6 +387,9 @@ susy.material.phosphorus=White Phosphorus
 susy.material.hydroxyapatite=Hydroxyapatite
 susy.material.calcium_metasilicate=Calcium Metasilicate
 susy.material.pyrazine=Pyrazine
+susy.material.molybdenum_disilicide=Molybdenum Disilicide
+susy.material.aluminosilicate_mix=Aluminosilicate Mix
+susy.material.mo_si_precursor=Mo-Si Precursor
 
 susy.material.thoriated_tungsten=Thoriated Tungsten
 susy.material.thoriated_tungsten_mixture=Thorium-Tungsten Mixture
@@ -985,6 +988,9 @@ susy.material.plutonium_iii_nitrate_solution=Plutonium III Nitrate Solution
 susy.material.actinide_separation_mixture=Actinide Separation Mixture
 susy.material.reextracted_reprocessed_uranium_extract=Reextracted Reprocessed Uranium Extract
 susy.material.plutonium_reduction_solution=Plutonium Reduction Solution
+susy.material.mo_si_slurry=Mo-Si Slurry
+
+susy.material.ink=Ink
 
 # Thermodynamics
 
@@ -1180,6 +1186,7 @@ item.susy.material.sedimentary_deposit.ore=Sedimentary Deposit
 item.susy.material.hydrothermal_deposit.ore=Hydrothermal Deposit
 item.susy.material.alluvial_deposit.ore=Alluvial Deposit
 item.susy.material.magmatic_hydrothermal_deposit.ore=Magmatic Hydrothermal Deposit
+item.susy.material.evaporite_deposit.ore=Evaporite Deposit
 item.susy.material.non_marine_evaporite_deposit.ore=Non Marine Evaporite Deposit
 item.susy.material.halide_evaporite_deposit.ore=Halide Evaporite Deposit
 item.susy.material.carbonate_evaporite_deposit.ore=Carbonate Evaporite Deposit 
@@ -1198,6 +1205,7 @@ susy.material.sedimentary_deposit=Sedimentary Deposit
 susy.material.hydrothermal_deposit=Hydrothermal Deposit
 susy.material.alluvial_deposit=Alluvial Deposit
 susy.material.magmatic_hydrothermal_deposit=Magmatic Hydrothermal Deposit
+susy.material.evaporite_deposit=Evaporite Deposit
 susy.material.non_marine_evaporite_deposit=Non Marine Evaporite Deposit
 susy.material.halide_evaporite_deposit=Halide Evaporite Deposit
 susy.material.carbonate_evaporite_deposit=Carbonate Evaporite Deposit
@@ -2213,6 +2221,7 @@ susy.material.food_grade_stainless_steel=ER6 Steel
 susy.material.platinum_rhodium=Platinum-Rhodium
 susy.material.zircaloy_4=Zircaloy 4
 susy.material.inconel_625=Inconel 625
+susy.material.inconel_601=Inconel 601
 susy.material.moist_argon=Moist Argon
 susy.material.argon_hydrogen_mixture=Argon Hydrogen Mixture
 susy.material.ammoniacal_argon_hydrogen_mixture=Ammoniacal Argon Hydrogen Mixture
@@ -2901,6 +2910,8 @@ susy.material.vanadium_iii_sulfate_solution=Vanadium III Sulfate Solution
 susy.material.diluted_vanadium_iii_sulfate_solution=Diluted Vanadium III Sulfate Solution
 susy.material.vanadyl_sulfate_solution=Vanadyl Sulfate Solution
 susy.material.manganese_cobalt_nickel_oxide=Manganese Cobalt Nickel Oxide
+susy.material.s_glass=S-Glass
+susy.material.fiber_reinforced_nylon=Fiber-Reinforced Nylon
 
 # Isotopes
 
@@ -2977,6 +2988,7 @@ metaitem.rock.magmatic_hydrothermal.name=Magmatic Hydrothermal Rock
 metaitem.rock.sedimentary.name=Sedimentary Rock
 metaitem.rock.hydrothermal.name=Hydrothermal Rock
 metaitem.rock.alluvial.name=Alluvial Rock
+metaitem.rock.evaporite.name=Evaporite Rock
 metaitem.cement.clinker.name=Cement Clinker
 metaitem.hot.cement.clinker.name=Hot Cement Clinker
 metaitem.cement.dust.name=Cement Dust
@@ -3157,7 +3169,6 @@ metaitem.raw_carbon_crucible.name=Green Carbon Crucible
 metaitem.carbon_crucible.name=Baked Carbon Crucible
 metaitem.clay_graphite_paste.name=Clay-Graphite Paste
 metaitem.raw_clay_graphite_crucible.name=Green Clay-Graphite Crucible
-metaitem.clay_graphite_crucible.name=Clay-Graphite Crucible
 
 metaitem.hot_cac_clinker.name=Hot Calcium Aluminate Cement Clinker
 metaitem.cac_clinker.name=Calcium Aluminate Cement Clinker
@@ -3238,7 +3249,7 @@ metaitem.shape.mold.rod.name=Mold (Rod)
 metaitem.shape.mold.long_rod.name=Mold (Long Rod)
 metaitem.shape.mold.ring.name=Mold (Ring)
 
-metaitem.assemblymanganesephosphide.name=Manganese Phosphide Assembly
+metaitem.tubemanganesephosphide.name=Manganese Phosphide Tube
 metaitem.basemanganesephosphide.name=Base Manganese Phosphide Superconductor
 metaitem.cannedmagnesiumdiboride.name=Canned Magnesium Diboride
 metaitem.tubemagnesiumdiboride.name=Magnesium Diboride Tube
@@ -3259,6 +3270,7 @@ metaitem.assemblyenrichednaquadahtriniumeuropiumduranide.name=Enriched Naquadah 
 metaitem.baseenrichednaquadahtriniumeuropiumduranide.name=Base Enriched Naquadah Trinium Europium Duranide Superconductor
 metaitem.assemblyrutheniumtriniumamericiumneutronate.name=Ruthenium Trinium Americium Neutronate Assembly
 metaitem.baserutheniumtriniumamericiumneutronate.name=Base Ruthenium Trinium Americium Neutronate Superconductor
+metaitem.cannedmanganesephosphide.name=Canned Manganese Phosphide
 
 metaitem.alternator.stator.name=Alternator Stator
 metaitem.alternator.rotor.name=Alternator Rotor
@@ -3358,9 +3370,9 @@ metaitem.sponge.ruthenium.name=Ruthenium Sponge
 metaitem.sponge.iridium.name=Iridium Sponge
 metaitem.sponge.rhodium.name=Rhodium Sponge
 
-metaitem.drone.lv.name=Basic Drone
+metaitem.drone.lv.name=Basic Hunting Drone
 
-metaitem.glass_fibers.name=Glass Fibers
+metaitem.glass_fibers.name=Kevlar-Reinforced E-Glass Fibers
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 
@@ -3370,6 +3382,11 @@ metaitem.engine.piston.name=Piston
 metaitem.engine.crankshaft.name=Crankshaft
 metaitem.sintered_alumina.insulator.name=Sintered Alumina Insulator
 metaitem.titanium_cylinder.name=Titanium Cylinder
+
+metaitem.mo_si_rod.wet.name=Wet Mo-Si Rod
+metaitem.mo_si_rod.unsintered.name=Unsintered Mo-Si Rod
+metaitem.graphite_boat.name=Graphite Boat
+
 
 metaitem.rubylith.name=Rubylith
 metaitem.rubylith_film.name=Rubylith Film
@@ -3425,8 +3442,8 @@ metaitem.circuit_board.fr4.tooltip=An Advanced Circuit Board/nDouble-sided FR-4 
 metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
 metaitem.proton_exchange_membrane_fuel_cell.name=Proton Exchange Membrane Fuel Cell (PEMFC)
+metaitem.ink_bottle.name=Ink Bottle
 
-// Rocketry
 
 metaitem.fuel_injector.name=Fuel Injector
 metaitem.augmented_spark_igniter.name=Augmented Spark Igniter
@@ -3461,6 +3478,7 @@ metaitem.fused_quartz_bulb.name=Fused Quartz Bulb
 metaitem.lamp.mercury.hp.unfilled.name=Unfilled Mercury Vapor Lamp
 metaitem.lamp.mercury.hp.name=High Pressure Mercury Vapor Lamp
 metaitem.lamp.mercury.lp.name=Ultraviolet Mercury Vapor Lamp
+metaitem.fused_quartz_tube.name=Fused Quartz Tube
 metaitem.carbon.mesh.phenolic.moist.name=Moist Phenolic Carbon Mesh
 metaitem.carbon.mesh.phenolic.treated.name=Treated Phenolic Carbon Mesh
 metaitem.carbon.tile.phenolic.treated.name=Treated Phenolic Carbon Tile
@@ -3549,6 +3567,7 @@ metaitem.photomultiplier_tube.name=Photomultiplier Tube
 metaitem.bialkali_photocathode.name=Bialkali Photocathode
 metaitem.photomultiplier_components.name=Photomultiplier Tube Components
 metaitem.beo_coated_stainless_steel_plate.name=Beryllium Oxide-Coated Stainless Steel Plate
+metaitem.s_glass_fibers.name=S-Glass Fibers
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
@@ -3641,7 +3660,7 @@ supersymmetry.subtitle.2=Vitals: stable. Pod fuel: 46%%.
 recipe.latex_extraction=The easiest way to make rubber./nRemember to place the rubber log on the side with the white square (and leave the vent unblocked)!
 recipe.vulcanization.=Sulfur may be obtained by processing pyrite or pure sulfur deposits./nYou can speed this up with optional catalysts./nVulcanization makes cross links between polymer chains, improving the strength of rubber.
 recipe.vulcanization.dustMagnesia=The catalyst requires magnesite ore in steam age, which is only found in the beneath and nether.
-recipe.vulcanization.dustZincite=The catalyst requires smithsonite ore, which is only found in the nether.
+recipe.vulcanization.dustZincite=Zincite can be produced in an LV Roaster from either sphalerite or smithsonite. Smithsonite is only obtainable in the Nether.
 recipe.compounded_polyisoprene=This is an HV-age post-oil-processing product that makes rubber more efficiently./nDo not try to make this in steam age!
 recipe.hydrogen_fluoride.production=The best way to begin producing HF (and hydrofluoric acid) in LV by treating fluorite with sulfuric acid. This produces an insoluble byproduct, calcium sulfate, which can be used to regenerate sulfuric acid.
 recipe.chloralkali.upfront=§2Chloralkali process
@@ -3668,3 +3687,10 @@ recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste
 recipe.lubricant.midgrade=Provides a 1.2x boost in power generation recipes requiring lubricant.
 recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requiring lubricant.
 recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.
+recipe.sulfuric.acid=You can do this reaction in 1/40th of the time with a Bubble Column Reactor.
+recipe.pyrite=You can obtain Green Vitriol by batch reacting small piles of Pyrite.
+tile.retro_sophisticated_backpacks.backpack_leather.name=Primitive Backpack
+tile.retro_sophisticated_backpacks.backpack_iron.name=Basic Backpack
+tile.retro_sophisticated_backpacks.backpack_gold.name=Advanced Backpack
+tile.retro_sophisticated_backpacks.backpack_diamond.name=Elite Backpack
+tile.retro_sophisticated_backpacks.backpack_obsidian.name=Sophisticated Backpack 

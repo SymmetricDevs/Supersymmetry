@@ -130,6 +130,7 @@ class SuSyMaterials {
     public static Material SedimentaryDeposit
     public static Material HydrothermalDeposit
     public static Material AlluvialDeposit
+    public static Material EvaporiteDeposit
     public static Material MagmaticHydrothermalDeposit
     public static Material NonMarineEvaporiteDeposit
     public static Material HalideEvaporiteDeposit
@@ -879,6 +880,8 @@ class SuSyMaterials {
     public static Material LunarManganeseSlurry
     public static Material StrongAnorthositeLeach
     public static Material LunarWeaklyMagnetic
+    public static Material Ink
+
 
     // Petrochem Materials
 
@@ -1321,7 +1324,6 @@ class SuSyMaterials {
     public static Material AmmoniumTungstateSolution
     public static Material CopperMonosulfide
     public static Material PotassiumSaltMixture
-    public static Material PotassiumSulfide
     public static Material SaturatedAmmoniacalMethanol
     public static Material MagnesiumChlorideAmmoniate
     public static Material PurifiedMagnesiumChloride
@@ -1511,7 +1513,6 @@ class SuSyMaterials {
     public static Material ImpureStrontiumSulfide
     public static Material DilutedAceticAcid
     public static Material CobaltIIAcetateTetrahydrate
-    public static Material PotassiumPyrosulfate
     public static Material IronIIINitrateSolution
     public static Material ManganeseIIChloride
     public static Material ChloroplatinicAcidSolution
@@ -1766,6 +1767,8 @@ class SuSyMaterials {
     public static Material ScandiumIIIFluoride
     public static Material LunarRutile
     public static Material HardenedTitanium
+    public static Material MolybdenumDisilicide
+    public static Material Inconel601
 
     public static Material PureGaseousTitaniumTetrachloride
     
@@ -2026,6 +2029,7 @@ class SuSyMaterials {
     public static Material SupersaturatedCalciumChlorideSolution
     public static Material AluminiumChlorideHexahydrate
     public static Material LunarRGlass
+    public static Material SGlass
 
     // Organic Chemistry Materials
 
@@ -2565,6 +2569,7 @@ class SuSyMaterials {
     public static Material DriedChloroprene
     public static Material Chloroprene
     public static Material DiisopropylDixanthogenDisulfide
+    public static Material FiberReinforcedNylon
 
     // Third Degree Materials
 
@@ -2728,6 +2733,9 @@ class SuSyMaterials {
     public static Material SodiumPolyacrylateSolution
     public static Material ChloropreneEmulsion
     public static Material NeopreneLatex
+    public static Material AluminosilicateMix
+    public static Material MoSiSlurry
+    public static Material MoSiPrecursor
 
     // Thermodynamics Materials
 

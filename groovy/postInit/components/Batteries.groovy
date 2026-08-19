@@ -442,7 +442,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-ARC_FURNACE.recipeBuilder()
+ROASTER.recipeBuilder()
     .fluidInputs(fluid('oxygen') * 1000)
     .inputs(ore('dustCadmium'))
     .outputs(metaitem('dustCadmiumOxide'))
@@ -507,15 +507,6 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 // Nickel Metal Hydride Battery
-
-// Liquid AB-2 Metal Alloy * 4320
-mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustHighPurityZirconium') * 8, metaitem('dustTitanium') * 2, metaitem('dustVanadium') * 6, metaitem('dustManganese') * 3, metaitem('dustPalladium'), metaitem('dustNickel') * 8, metaitem('dustIron') * 2, metaitem('circuit.integrated').withNbt(['Configuration': 17])], [fluid('refractory_gunning_mixture') * 1700, fluid('argon') * 1500])
-mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustHighPurityZirconium') * 8, metaitem('dustTitanium') * 2, metaitem('dustVanadium') * 6, metaitem('dustManganese') * 3, metaitem('dustPalladium'), metaitem('dustNickel') * 8, metaitem('dustIron') * 2, metaitem('circuit.integrated').withNbt(['Configuration': 7])], [fluid('refractory_gunning_mixture') * 2600])
-
-// Liquid Annealed AB-5 Metal Alloy * 8640
-mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustLanthanum') * 8, metaitem('dustHighPurityZirconium') * 2, metaitem('dustNickel') * 45, metaitem('dustAluminium') * 5, metaitem('circuit.integrated').withNbt(['Configuration': 14])], [fluid('refractory_gunning_mixture') * 3650, fluid('argon') * 3000])
-mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustLanthanum') * 8, metaitem('dustHighPurityZirconium') * 2, metaitem('dustNickel') * 45, metaitem('dustAluminium') * 5, metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('refractory_gunning_mixture') * 5550])
-
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(ore('dustHighPurityZirconium') * 8)
@@ -629,65 +620,6 @@ ASSEMBLER.recipeBuilder()
 RecyclingHelper.removeRecyclingRecipes(metaitem('battery.hull.hv'))
 RecyclingHelper.handleRecycling(metaitem('battery.hull.hv'), [ore('plateStainlessSteel') * 8, metaitem('cableGtSingleGold') * 4, ore('dustPolycaprolactam'), ore('dustPolyvinylChloride'), ore('dustPolypropylene') * 9])
 
-/* Old recipes */
-
-ROASTER.recipeBuilder()
-    .inputs(ore('dustLithiumCarbonate') * 6)
-    .fluidInputs(fluid('hydrogen_fluoride') * 2000)
-    .fluidOutputs(fluid('dense_steam') * 1000)
-    .fluidOutputs(fluid('carbon_dioxide') * 1000)
-    .outputs(metaitem('dustLithiumFluoride') * 4)
-    .duration(140)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-BR.recipeBuilder()
-    .inputs(ore('dustLithiumFluoride') * 2)
-    .inputs(ore('dustPhosphorusPentachloride') * 6)
-    .fluidInputs(fluid('hydrogen_fluoride') * 5000)
-    .fluidOutputs(fluid('hydrogen_chloride') * 5000)
-    .outputs(metaitem('dustLithiumHexafluorophosphate') * 8)
-    .duration(140)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-MIXER_RECIPES.recipeBuilder()
-    .inputs(ore('dustLithiumHexafluorophosphate') * 8)
-    .fluidInputs(fluid('ethylene_carbonate') * 1000)
-    .fluidOutputs(fluid('lithium_hexafluorophosphate_electrolyte') * 1000)
-    .duration(400)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-ROASTER.recipeBuilder()
-    .inputs(ore('dustLithiumCarbonate') * 6)
-    .inputs(ore('dustHighPurityCobaltOxide') * 4)
-    .fluidOutputs(fluid('carbon_monoxide') * 1000)
-    .outputs(metaitem('dustLithiumCobaltOxide') * 8)
-    .duration(140)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(metaitem('battery.hull.hv'))
-    .inputs(ore('dustGraphite') * 4)
-    .inputs(ore('dustLithiumCobaltOxide') * 4)
-    .fluidInputs(fluid('lithium_hexafluorophosphate_electrolyte') * 500)
-    .outputs(metaitem('battery.re.hv.lithium'))
-    .duration(400)
-    .EUt(16)
-    .buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(metaitem('battery.hull.hv'))
-    .inputs(ore('dustCadmium') * 4)
-    .inputs(ore('dustNickelHydroxide') * 10)
-    .fluidInputs(fluid('potassium_hydroxide_solution') * 500)
-    .outputs(metaitem('battery.re.hv.cadmium'))
-    .duration(400)
-    .EUt(16)
-    .buildAndRegister()
-
 //Vanadium flow battery (for PSS)
 
 //Electrode
@@ -757,7 +689,7 @@ ROASTER.recipeBuilder()
 CSTR.recipeBuilder()
     .fluidInputs(fluid('allyl_chloride') * 100)
     .fluidInputs(fluid('dimethylamine') * 50)
-    .notConsumable(metaitem('springKanthal'))
+    .notConsumable(ore('springEarly'))
     .fluidOutputs(fluid('diallyldimethylammonium_chloride') * 50)
     .fluidOutputs(fluid('hydrogen_chloride') * 50)
     .duration(5)

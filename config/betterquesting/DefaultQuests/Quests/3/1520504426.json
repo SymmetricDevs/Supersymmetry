@@ -11,8 +11,7 @@
       "icon:10": {
         "id:8": "appliedenergistics2:dummy_fluid_item",
         "tag:10": {
-          "Amount:3": 1000,
-          "FluidName:8": "ethylene_glycol"
+          "FluidName:8": "ethylene_glycol_mix"
         }
       },
       "name:8": "susy.quest.db.1520504426.title",
@@ -25,7 +24,7 @@
       "requiredFluids:9": {
         "0:10": {
           "Amount:3": 1000,
-          "FluidName:8": "ethylene_glycol"
+          "FluidName:8": "ethylene_glycol_mix"
         }
       },
       "taskID:8": "bq_standard:fluid"

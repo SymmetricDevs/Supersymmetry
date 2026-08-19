@@ -102,3 +102,15 @@ HOT_ISOSTATIC_PRESS.recipeBuilder()
     .duration(600)
     .EUt(VA[HV])
     .buildAndRegister()
+
+// Silicon Carbide
+
+FORMING_PRESS.recipeBuilder() //Simplified temporary recipe
+    .inputs(ore('dustSiliconCarbide') * 4)
+    .inputs(ore('dustGraphite') * 2)
+    .inputs(ore('dustFireclay'))
+    .notConsumable(metaitem('shape.mold.crucible'))
+    .outputs(item('susy:crucible'))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()

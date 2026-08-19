@@ -1,13 +1,13 @@
 name = "Flare (Spark for 1.12.2)"
-filename = "flare-0.7.0.jar"
+filename = "flare-0.8.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "73c99e9a1c530880f4dd6d2646a5e8cd08eaf6c0"
+hash = "13d7a4bc80805f7a92fd8d41c90e7dfd53df2ddb"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6598523
+file-id = 7857037
 project-id = 692142
