@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import globals.Globals
+import gregtech.api.recipes.ingredients.nbtmatch.*
 // this removes all recipes Solo.
 def name_removal = [
     "retro_sophisticated_backpacks:inception_upgrade",
@@ -107,7 +108,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(ore('screwAluminium')*2)
     .inputs(item('retro_sophisticated_backpacks:upgrade_base'))
-    .inputs(metaitem('item_magnet.lv'))
+    .inputNBT(metaitem('item_magnet.lv').item, 1, metaitem('item_magnet.lv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .outputs(item('retro_sophisticated_backpacks:pickup_upgrade'))
     .duration(30)
     .EUt(128)
