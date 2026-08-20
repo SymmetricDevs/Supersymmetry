@@ -1692,6 +1692,8 @@ class SuSyMaterials {
     public static Material CadmiumOxide
     public static Material CopperTungstenAlloy
     public static Material LanthanumZirconiumOxide
+    public static Material MolybdenumDisilicide
+    public static Material Inconel601
 
     //public static Material VanadiumTrioxide
     public static Material ExpandedPolytetrafluoroethylene
@@ -2629,6 +2631,9 @@ class SuSyMaterials {
     public static Material DiallyldimethylammoniumChlorideSolution
     public static Material PolydiallyldimethylammoniumChlorideSolution
     public static Material NafionDispersion
+    public static Material AluminosilicateMix
+    public static Material MoSiSlurry
+    public static Material MoSiPrecursor
 
     // Thermodynamics Materials
 

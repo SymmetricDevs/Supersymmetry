@@ -195,9 +195,9 @@ mods.gregtech.polarizer.removeByInput(4096, [metaitem('ingotSamarium')], null)
 mods.gregtech.polarizer.removeByInput(16, [metaitem('screwIron')], null)
 
 crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.ev', metaitem('electromagnetic_separator.ev'), [
-    [metaitem('conveyor.module.ev'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')],
+    [metaitem('conveyor.module.ev'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleKanthal')],
     [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('stickAlnicoMagnetic')],
-    [ore('circuitEv'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')]
+    [ore('circuitEv'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleKanthal')]
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.iv', metaitem('electromagnetic_separator.iv'), [
@@ -207,9 +207,9 @@ crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.iv',
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.ev', metaitem('polarizer.ev'), [
-    [metaitem('wireGtQuadrupleNichrome'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleNichrome')],
+    [metaitem('wireGtQuadrupleKanthal'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleKanthal')],
     [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],
-    [metaitem('wireGtQuadrupleNichrome'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleNichrome')]
+    [metaitem('wireGtQuadrupleKanthal'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleKanthal')]
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.iv', metaitem('polarizer.iv'), [

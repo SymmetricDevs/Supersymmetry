@@ -32,7 +32,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('nickel') * 1008)
     .inputs(metaitem('ingotChrome') * 2)
     .fluidOutputs(fluid('nichrome') * 1296)
-    .EUt(VA[HV])
+    .EUt(VA[MV])
     .buildAndRegister()
 
 // Kanthal
@@ -41,7 +41,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .inputs(metaitem('dustFerrochromium') * 12)
     .inputs(metaitem('ingotAluminium') * 4)
     .fluidOutputs(fluid('kanthal') * 5616)
-    .EUt(VA[MV])
+    .EUt(VA[HV])
     .buildAndRegister()
 
 // Kovar

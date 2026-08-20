@@ -134,7 +134,7 @@ EXTRUDER.recipeBuilder()
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .notConsumable(metaitem('springNichrome') * 2)
+    .notConsumable(ore('springEarly') * 2)
     .inputs(metaitem('foil.extruded_ptfe'))
     .outputs(metaitem('foil.stretched_ptfe'))
     .duration(100)
