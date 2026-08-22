@@ -95,6 +95,15 @@ for (fluid in QuenchingFluid.quenching_fluids) {
         .buildAndRegister();
 
     CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('ingotHotNichrome'))
+        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+        .outputs(metaitem('ingotNichrome'))
+        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+        .duration((int) fluid.getDuration() * 4)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('ingotHotAlnico'))
         .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
         .outputs(metaitem('ingotAlnico'))
