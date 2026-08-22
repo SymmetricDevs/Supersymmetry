@@ -329,6 +329,22 @@ Globals.solders.each { key, val ->
 		.EUt(VA[HV])
 		.duration(800)
 		.buildAndRegister();
-
-		
+	
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(7)
+		.inputs(item('gregtech:multiblock_casing') * 2)
+		.inputs(item('susy:engine_casing') * 12)
+		.inputs(item('susy:engine_casing_2') * 12)
+		.inputs(ore('plateTitanium') * 32)
+		.inputs(ore('stickLongTitanium') * 8)
+		.inputs(item('susy:alternator_coil') * 12)
+		.inputs(ore('cableGtQuadrupleAluminium') * 16)
+		.inputs(metaitem('drum.titanium'))
+		.inputs(metaitem('pipeHugeFluidTitanium') * 12)
+		.inputs(metaitem('minecart_wheels.chromoly') * 4)
+		.inputs(ore('circuitEv') * 8)
+		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/locomotives/emd_sw1500.json', 'gauge': (float) Gauges.STANDARD]))
+		.EUt(VA[HV])
+		.duration(800)
+		.buildAndRegister();
 }
