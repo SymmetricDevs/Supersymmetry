@@ -1050,7 +1050,7 @@ class FirstDegreeMaterialsB {
             .build()
 
         PureGaseousTitaniumTetrachloride = new Material.Builder(8815, SuSyUtility.susyId('pure_gaseous_titanium_tetrachloride'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(1180))
+                .gas(new FluidBuilder().acidic().temperature(1180))
                 .components(TitaniumTetrachloride)
                 .color(0x8f5064)
                 .build()

@@ -1231,7 +1231,7 @@ class SecondDegreeMaterials {
                 .build()
 
         SupersaturatedCalciumChlorideSolution = new Material.Builder(13202, SuSyUtility.susyId('supersaturated_calcium_chloride_solution'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .components(CalciumChloride * 1, HydrochloricAcid * 1)
                 .color(0xBCFFE6)
                 .build()

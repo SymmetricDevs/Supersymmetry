@@ -3615,17 +3615,17 @@ class UnknownCompositionMaterials {
                 .build()
 
         ImpurePhosphoricAcid = new Material.Builder(4778, SuSyUtility.susyId('impure_phosphoric_acid'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xA5A527)
                 .build()
 
         ImpurePhosphoricAcid = new Material.Builder(4779, SuSyUtility.susyId('impure_phosphoric_acid'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xA5A527)
                 .build()
 
         PhosphoricAcidExtract = new Material.Builder(4780, SuSyUtility.susyId('phosphoric_acid_extract'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xFFFF00)
                 .build()
 
@@ -3647,17 +3647,17 @@ class UnknownCompositionMaterials {
                 .build()
 
         ScandianFerricSulfateLeachate = new Material.Builder(4784, SuSyUtility.susyId('scandian_ferric_sulfate_leachate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xC1715B)
                 .build()
 
         ScandianFerricSulfateLeachate = new Material.Builder(4785, SuSyUtility.susyId('scandian_ferric_sulfate_leachate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xC1715B)
                 .build()
 
         ScandiumBearingWasteAcid = new Material.Builder(4786, SuSyUtility.susyId('scandium_bearing_waste_acid'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xBFB559)
                 .build()
 
@@ -3670,7 +3670,7 @@ class UnknownCompositionMaterials {
         CrudeScandiumHydroxide.setFormula('Sc(OH)3', true)
 
         ScandiumDepletedSulfateRaffinate = new Material.Builder(4788, SuSyUtility.susyId('scandium_depleted_sulfate_raffinate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0x7973BA)
                 .build()
 
@@ -3695,7 +3695,7 @@ class UnknownCompositionMaterials {
                 .build()
 
         FluorideScrubRaffinate = new Material.Builder(4793, SuSyUtility.susyId('fluoride_scrub_raffinate'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0x7EFF5E)
                 .build()
 
