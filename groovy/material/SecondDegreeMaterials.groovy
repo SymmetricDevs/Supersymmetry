@@ -1256,7 +1256,7 @@ class SecondDegreeMaterials {
             .iconSet(SHINY)
             .build()
 
-        ManganeseCobaltNickelOxide = new Material.Builder(13195, SuSyUtility.susyId('manganese_cobalt_nickel_oxide'))
+        ManganeseCobaltNickelOxide = new Material.Builder(13205, SuSyUtility.susyId('manganese_cobalt_nickel_oxide'))
                 .dust()
                 .color(0x64B7B7)
                 .components(ManganeseDioxide * 10, ManganeseIIOxide * 5, CobaltOxide * 12, NickelIIOxide * 3)
