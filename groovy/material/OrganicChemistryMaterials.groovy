@@ -3491,7 +3491,7 @@ class OrganicChemistryMaterials {
 
         DiisopropylDixanthogenDisulfide.setFormula('((CH3)2CHOCS2)2', true)
 
-        FiberReinforcedNylon = new Material.Builder(15530, SuSyUtility.susyId('fiber_reinforced_nylon'))
+        FiberReinforcedNylon = new Material.Builder(15542, SuSyUtility.susyId('fiber_reinforced_nylon'))
                 .polymer(2)
                 .color(0x4C3E44)
                 .flags(GENERATE_PLATE, GENERATE_ROTOR, NO_UNIFICATION)
