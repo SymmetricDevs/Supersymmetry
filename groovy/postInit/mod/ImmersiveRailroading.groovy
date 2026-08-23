@@ -347,4 +347,18 @@ Globals.solders.each { key, val ->
 		.EUt(VA[HV])
 		.duration(800)
 		.buildAndRegister();
+
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(8)
+		.inputs(ore('ringFoodGradeStainlessSteel') * 12)
+		.inputs(metaitem('minecart_wheels.chromoly') * 4)
+		.inputs(ore('plateFoodGradeStainlessSteel') * 32)
+		.inputs(ore('stickLongFoodGradeStainlessSteel') * 8)
+		.fluidInputs(fluid('dye_orange') * 576)
+		.fluidInputs(fluid('dye_black') * 1296)
+		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/freight/attx_flatcar_1.json', 'gauge': (float) Gauges.STANDARD]))
+		.EUt(VA[HV])
+		.duration(300)
+		.buildAndRegister();
+
 }
