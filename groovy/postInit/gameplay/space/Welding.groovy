@@ -24,7 +24,7 @@ ELECTROLYTIC_CELL.recipeBuilder() // electropolishing
     .inputs(ore('stickThoriatedTungsten'))
     .fluidInputs(fluid('diluted_sodium_hydroxide_solution') * 1000)
     .fluidOutputs(fluid('wastewater') * 1000) // contains trace WO3 et al, and I'm not bothering with figuring this out
-    .outputs(item('susy:meta_item', 12))
+    .outputs(metaitem('susy:tungsten_electrode'))
     .EUt(VA[MV])
     .duration(60)
     .buildAndRegister()
