@@ -339,4 +339,100 @@ ASSEMBLER.recipeBuilder()
     .circuitMeta(4)
     .buildAndRegister()
 
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('cableGtSingleAluminium'))
+        .inputs(ore('pipeNormalFluidTitanium'))
+        .inputs(ore('screwStainlessSteel'))
+        .inputs(ore('rotorStainlessSteel'))   
+        .inputs(metaitem("lunar_r_glass_fibers") * 2)
+        .inputs(metaitem('electric.motor.ev'))
+        .outputs(metaitem('electric.pump.ev'))
+        .duration(100)
+        .EUt(VA[MV])
+        .info('recipe.moon')
+        .buildAndRegister();
 
+crafting.addShaped('gregtech:machine_68_moon', item('gregtech:machine', 68), [
+        [metaitem('electric.piston.ev'), metaitem('electric.motor.ev'), metaitem('hardened_titanium_grinding_head')],
+        [ore('cableGtSingleAluminium'), ore('cableGtSingleAluminium'), metaitem('hull.ev')],
+        [ore('circuitEv'), ore('circuitEv'), ore('cableGtSingleAluminium')]])        
+
+crafting.addShaped('gregtech:machine_293_moon', item('gregtech:machine', 293), [
+        [metaitem('conveyor.module.ev'), ore('cableGtSingleAluminium'), ore('wireGtQuadrupleKanthal')],
+        [ore('cableGtSingleAluminium'), metaitem('hull.ev'), ore('stickStrontiumFerriteMagnetic')],
+        [ore('circuitEv'), ore('cableGtSingleAluminium'), ore('wireGtQuadrupleKanthal')]]) 
+
+crafting.addShaped('gregtech:machine_443_moon', item('gregtech:machine', 443), [
+        [ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')],
+        [metaitem('electric.motor.ev'), metaitem('hull.ev'), metaitem('hardened_titanium_grinding_head')],
+        [ore('circuitEv'), ore('cableGtSingleAluminium'), metaitem('electric.piston.ev')]])  
+
+crafting.addShaped('gregtech:machine_548_moon', item('gregtech:machine', 548), [
+        [ore('wireGtQuadrupleKanthal'), ore('stickStrontiumFerriteMagnetic'), ore('wireGtQuadrupleKanthal')],
+        [ore('cableGtSingleAluminium'), metaitem('hull.ev'), ore('cableGtSingleAluminium')],
+        [ore('wireGtQuadrupleKanthal'), ore('stickStrontiumFerriteMagnetic'), ore('wireGtQuadrupleKanthal')]]) 
+
+crafting.addShaped('gregtech:machine_668_moon', item('gregtech:machine', 668), [
+        [metaitem('electric.piston.ev'), metaitem('electric.motor.ev'), metaitem('hardened_titanium_grinding_head')],
+        [ore('cableGtSingleAluminium'), metaitem('hull.ev'), ore('cableGtSingleAluminium')],
+        [item('gregtech:transparent_casing'), item('gregtech:transparent_casing'), item('gregtech:transparent_casing')]]) 
+
+crafting.addShaped('gregtech:machine_1593_moon', item('gregtech:machine', 1593), [
+        [metaitem('electric.motor.ev'), metaitem('hardened_titanium_grinding_head'), metaitem('electric.motor.ev')],
+        [ore('circuitEv'), metaitem('hull.ev'), ore('circuitEv')],
+        [ore('cableGtSingleAluminium'), metaitem('crate.aluminium'), ore('cableGtSingleAluminium')]]) 
+
+crafting.addShaped('gregtech:machine_14557_moon', item('gregtech:machine', 14557), [
+        [ore('pipeLargeFluidTitanium'), ore('rotorStainlessSteel'), ore('pipeLargeFluidTitanium')],
+        [ore('cableGtSingleAluminium'), metaitem('electric.motor.ev'), ore('cableGtSingleAluminium')],
+        [ore('circuitEv'), metaitem('hull.ev'), ore('circuitEv')]]) 
+
+crafting.addShaped('gregtech:machine_14596_moon', item('gregtech:machine', 14596), [
+        [ore('plateTitanium'), item('gregtech:transparent_casing'), ore('plateTitanium')],
+        [ore('pipeLargeFluidTitanium'), metaitem('hull.ev'), ore('pipeLargeFluidTitanium')],
+        [ore('circuitEv'), metaitem('electric.pump.ev'), ore('circuitEv')]])         
+
+crafting.addShaped('gregtech:machine_14609_moon', item('gregtech:machine', 14609), [
+        [ore('pipeLargeFluidTitanium'), ore('pipeLargeFluidTitanium'), ore('pipeLargeFluidTitanium')],
+        [ore('cableGtSingleAluminium'), metaitem('electric.pump.ev'), ore('cableGtSingleAluminium')],
+        [ore('circuitEv'), metaitem('hull.ev'), ore('circuitEv')]])   
+
+crafting.addShaped('gregtech:machine_14669_moon', item('gregtech:machine', 14669), [
+        [ore('circuitEv'), item('gregtech:transparent_casing'), ore('circuitEv')],
+        [ore('stickStrontiumFerriteMagnetic'), metaitem('hull.ev'), ore('stickStrontiumFerriteMagnetic')],
+        [ore('cableGtSingleAluminium'), ore('springKanthal'), ore('cableGtSingleAluminium')]])  
+
+crafting.addShaped('gregtech:machine_14684_moon', item('gregtech:machine', 14684), [
+        [ore('cableGtSingleAluminium'), metaitem('electric.pump.ev'), ore('cableGtSingleAluminium')],
+        [ore('pipeLargeFluidTitanium'), metaitem('hull.ev'), ore('pipeLargeFluidTitanium')],
+        [ore('circuitEv'), ore('cableGtSingleAluminium'), ore('circuitEv')]]) 
+
+crafting.addShaped('gregtech:machine_398_moon', item('gregtech:machine', 398), [
+        [metaitem('electric.pump.ev'), item('gregtech:transparent_casing'), metaitem('electric.pump.ev')],
+        [ore('cableGtSingleAluminium'), metaitem('hull.ev'), ore('cableGtSingleAluminium')],
+        [ore('circuitEv'), metaitem('crate.aluminium'), ore('circuitEv')]])
+
+crafting.addShaped('gregtech:machine_503_moon', item('gregtech:machine', 503), [
+        [metaitem('crate.aluminium'), ore('circuitEv'), metaitem('crate.aluminium')],
+        [metaitem('robot.arm.ev'), metaitem('hull.ev'), metaitem('conveyor.module.ev')],
+        [ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')]])     
+
+crafting.addShaped('gregtech:machine_1397_moon', item('gregtech:machine', 1379), [
+        [ore('wireGtQuadrupleAluminium'), metaitem('crate.aluminium'), ore('wireGtQuadrupleAluminium')],
+        [ore('wireGtQuadrupleAluminium'), metaitem('hull.ev'), ore('wireGtQuadrupleAluminium')],
+        [ore('cableGtSingleAluminium'), ore('circuitEv'), ore('cableGtSingleAluminium')]])  
+
+crafting.addShaped('gregtech:machine_1319_moon', item('gregtech:machine', 1319), [
+        [null, null, null],
+        [ore('wireGtQuadrupleAluminium'), metaitem('crate.aluminium'), ore('wireGtQuadrupleAluminium')],
+        [ore('wireGtQuadrupleAluminium'), metaitem('hull.ev'), ore('wireGtQuadrupleAluminium')]])
+
+crafting.addShaped('gregtech:machine_1333_moon', item('gregtech:machine', 1333), [
+        [null, null, null],
+        [ore('wireGtOctalAluminium'), metaitem('crate.aluminium'), ore('wireGtOctalAluminium')],
+        [ore('wireGtOctalAluminium'), metaitem('hull.ev'), ore('wireGtOctalAluminium')]])
+
+crafting.addShaped('gregtech:machine_1347_moon', item('gregtech:machine', 1347), [
+        [null, null, null],
+        [ore('wireGtHexAluminium'), metaitem('crate.aluminium'), ore('wireGtHexAluminium')],
+        [ore('wireGtHexAluminium'), metaitem('hull.ev'), ore('wireGtHexAluminium')]])  
