@@ -325,7 +325,7 @@ Globals.solders.each { key, val ->
 		.inputs(item('gregtech:transparent_casing', 2) * 8)
 		.inputs(ore('plateTitanium') * 32)
 		.inputs(ore('stickLongTitanium') * 8)
-		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/tender/big_boy_tender.json', 'gauge': (float) Gauges.STANDARD]))
+		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/locomotives/big_boy.json', 'gauge': (float) Gauges.STANDARD]))
 		.EUt(VA[HV])
 		.duration(800)
 		.buildAndRegister();

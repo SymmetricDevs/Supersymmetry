@@ -385,6 +385,7 @@ ASSEMBLER.recipeBuilder()
         .duration(120)
         .EUt(VA[HV])
         .buildAndRegister();
+
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateMolybdenum') * 2)
         .inputs(metaitem('foilTantalum') * 2)
@@ -545,7 +546,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister()
 
-ItemStack stack = metaitem('data_card.master_blueprint') * 1
+ItemStack stack = metaitem('susy:data_card.master_blueprint') * 1
 stack.setTagCompound(SusyRocketComponents.ROCKET_SOYUZ_BLUEPRINT_DEFAULT.writeToNBT())
 
 SCANNER.recipeBuilder()
