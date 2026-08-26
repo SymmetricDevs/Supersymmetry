@@ -2123,3 +2123,591 @@ ASSEMBLER.recipeBuilder()
     .duration(10)
     .EUt(VA[LV])
     .buildAndRegister()
+
+
+crafting.addShaped(item('susy:wire_coil_active',0) * 16,
+        [[metaitem('wireFineCopper'),ore('stone'),metaitem('wireFineCopper')],
+         [ore('stone'), ore('gtLight'), ore('stone')],
+         [metaitem('wireFineCopper'),ore('stone'),metaitem('wireFineCopper')]])
+
+
+
+
+crafting.addShapeless(item('gregtech:machine',18526) * 16, [
+    item('gregtech:machine',1657)
+])
+
+
+crafting.addShapeless(item('gregtech:machine',18527) * 1, [
+    item('susy:multiblock_tank',0)
+])
+
+
+
+
+
+crafting.addShapeless(item('susy:wire_coil_active',0), [
+    item('susy:wire_coil_active_inverted',0)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',0), [
+    item('susy:wire_coil_active',0)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',1), [
+    item('susy:wire_coil_active_inverted',1)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',1), [
+    item('susy:wire_coil_active',1)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',2), [
+    item('susy:wire_coil_active_inverted',2)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',2), [
+    item('susy:wire_coil_active',2)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',3), [
+    item('susy:wire_coil_active_inverted',3)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',3), [
+    item('susy:wire_coil_active',3)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',4), [
+    item('susy:wire_coil_active_inverted',4)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',4), [
+    item('susy:wire_coil_active',4)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',5), [
+    item('susy:wire_coil_active_inverted',5)
+])
+
+crafting.addShapeless(item('susy:wire_coil_active_inverted',5), [
+    item('susy:wire_coil_active',5)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',6), [
+    item('susy:wire_coil_active_inverted',6)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',6), [
+    item('susy:wire_coil_active',6)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',7), [
+    item('susy:wire_coil_active_inverted',7)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',7), [
+    item('susy:wire_coil_active',7)
+])
+
+
+
+crafting.addShapeless(item('susy:heating_coil_active',0), [
+    item('susy:heating_coil_active_inverted',0)
+])
+crafting.addShapeless(item('susy:heating_coil_active_inverted',0), [
+    item('susy:heating_coil_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:heating_coil_active',1), [
+    item('susy:heating_coil_active_inverted',1)
+])
+crafting.addShapeless(item('susy:heating_coil_active_inverted',1), [
+    item('susy:heating_coil_active',1)
+])
+
+
+
+
+crafting.addShapeless(item('susy:cooling_coil_active',0), [
+    item('susy:cooling_coil_active_inverted',0)
+])
+crafting.addShapeless(item('susy:cooling_coil_active_inverted',0), [
+    item('susy:cooling_coil_active',0)
+])
+
+
+crafting.addShapeless(item('susy:cooling_coil_active',1), [
+    item('susy:cooling_coil_active_inverted',1)
+])
+crafting.addShapeless(item('susy:cooling_coil_active_inverted',1), [
+    item('susy:cooling_coil_active',1)
+])
+
+
+crafting.addShapeless(item('susy:cooling_coil_active',2), [
+    item('susy:cooling_coil_active_inverted',2)
+])
+crafting.addShapeless(item('susy:cooling_coil_active_inverted',2), [
+    item('susy:cooling_coil_active',2)
+])
+
+
+
+
+crafting.addShapeless(item('susy:firebox_active',0), [
+    item('susy:firebox_active_inverted',0)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',0), [
+    item('susy:firebox_active',0)
+])
+
+
+crafting.addShapeless(item('susy:firebox_active',1), [
+    item('susy:firebox_active_inverted',1)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',1), [
+    item('susy:firebox_active',1)
+])
+
+
+crafting.addShapeless(item('susy:firebox_active',2), [
+    item('susy:firebox_active_inverted',2)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',2), [
+    item('scrafting.addShaped(item('susy:wire_coil_active',0) * 16,
+        [[metaitem('wireFineCopper'),ore('stone'),metaitem('wireFineCopper')],
+         [ore('stone'), ore('gtLight'), ore('stone')],
+         [metaitem('wireFineCopper'),ore('stone'),metaitem('wireFineCopper')]])
+
+
+
+
+crafting.addShapeless(item('gregtech:machine',18526) * 16, [
+    item('gregtech:machine',1657)
+])
+
+
+crafting.addShapeless(item('gregtech:machine',18527) * 1, [
+    item('susy:multiblock_tank',0)
+])
+
+
+
+
+
+
+
+
+
+
+crafting.addShapeless(item('susy:wire_coil_active',0), [
+    item('susy:wire_coil_active_inverted',0)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',0), [
+    item('susy:wire_coil_active',0)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',1), [
+    item('susy:wire_coil_active_inverted',1)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',1), [
+    item('susy:wire_coil_active',1)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',2), [
+    item('susy:wire_coil_active_inverted',2)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',2), [
+    item('susy:wire_coil_active',2)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',3), [
+    item('susy:wire_coil_active_inverted',3)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',3), [
+    item('susy:wire_coil_active',3)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',4), [
+    item('susy:wire_coil_active_inverted',4)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',4), [
+    item('susy:wire_coil_active',4)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',5), [
+    item('susy:wire_coil_active_inverted',5)
+])
+
+crafting.addShapeless(item('susy:wire_coil_active_inverted',5), [
+    item('susy:wire_coil_active',5)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',6), [
+    item('susy:wire_coil_active_inverted',6)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',6), [
+    item('susy:wire_coil_active',6)
+])
+
+
+crafting.addShapeless(item('susy:wire_coil_active',7), [
+    item('susy:wire_coil_active_inverted',7)
+])
+crafting.addShapeless(item('susy:wire_coil_active_inverted',7), [
+    item('susy:wire_coil_active',7)
+])
+
+
+
+crafting.addShapeless(item('susy:heating_coil_active',0), [
+    item('susy:heating_coil_active_inverted',0)
+])
+crafting.addShapeless(item('susy:heating_coil_active_inverted',0), [
+    item('susy:heating_coil_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:heating_coil_active',1), [
+    item('susy:heating_coil_active_inverted',1)
+])
+crafting.addShapeless(item('susy:heating_coil_active_inverted',1), [
+    item('susy:heating_coil_active',1)
+])
+
+
+
+
+crafting.addShapeless(item('susy:cooling_coil_active',0), [
+    item('susy:cooling_coil_active_inverted',0)
+])
+crafting.addShapeless(item('susy:cooling_coil_active_inverted',0), [
+    item('susy:cooling_coil_active',0)
+])
+
+
+crafting.addShapeless(item('susy:cooling_coil_active',1), [
+    item('susy:cooling_coil_active_inverted',1)
+])
+crafting.addShapeless(item('susy:cooling_coil_active_inverted',1), [
+    item('susy:cooling_coil_active',1)
+])
+
+
+crafting.addShapeless(item('susy:cooling_coil_active',2), [
+    item('susy:cooling_coil_active_inverted',2)
+])
+crafting.addShapeless(item('susy:cooling_coil_active_inverted',2), [
+    item('susy:cooling_coil_active',2)
+])
+
+
+
+
+crafting.addShapeless(item('susy:firebox_active',0), [
+    item('susy:firebox_active_inverted',0)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',0), [
+    item('susy:firebox_active',0)
+])
+
+
+crafting.addShapeless(item('susy:firebox_active',1), [
+    item('susy:firebox_active_inverted',1)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',1), [
+    item('susy:firebox_active',1)
+])
+
+
+crafting.addShapeless(item('susy:firebox_active',2), [
+    item('susy:firebox_active_inverted',2)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',2), [
+    item('susy:firebox_active',2)
+])
+
+
+crafting.addShapeless(item('susy:firebox_active',3), [
+    item('susy:firebox_active_inverted',3)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',3), [
+    item('susy:firebox_active',3)
+])
+
+
+
+
+crafting.addShapeless(item('susy:engine_intake_active',0), [
+    item('susy:engine_intake_active_inverted',0)
+])
+crafting.addShapeless(item('susy:engine_intake_active_inverted',0), [
+    item('susy:engine_intake_active',0)
+])
+
+
+crafting.addShapeless(item('susy:engine_intake_active',1), [
+    item('susy:engine_intake_active_inverted',1)
+])
+crafting.addShapeless(item('susy:engine_intake_active_inverted',1), [
+    item('susy:engine_intake_active',1)
+])
+
+
+
+
+crafting.addShapeless(item('susy:assembly_line_active',0), [
+    item('susy:assembly_line_active_inverted',0)
+])
+crafting.addShapeless(item('susy:assembly_line_active_inverted',0), [
+    item('susy:assembly_line_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:fusion_casing_active',0), [
+    item('susy:fusion_casing_active_inverted',0)
+])
+crafting.addShapeless(item('susy:fusion_casing_active_inverted',0), [
+    item('susy:fusion_casing_active',0)
+])
+
+
+crafting.addShapeless(item('susy:fusion_casing_active',1), [
+    item('susy:fusion_casing_active_inverted',1)
+])
+crafting.addShapeless(item('susy:fusion_casing_active_inverted',1), [
+    item('susy:fusion_casing_active',1)
+])
+
+
+crafting.addShapeless(item('susy:fusion_casing_active',2), [
+    item('susy:fusion_casing_active_inverted',2)
+])
+crafting.addShapeless(item('susy:fusion_casing_active_inverted',2), [
+    item('susy:fusion_casing_active',2)
+])
+
+
+
+
+crafting.addShapeless(item('susy:heat_vent_active',3), [
+    item('susy:heat_vent_active_inverted',3)
+])
+crafting.addShapeless(item('susy:heat_vent_active_inverted',3), [
+    item('susy:heat_vent_active',3)
+])
+
+
+
+crafting.addShapeless(item('susy:sintering_brick_active',0), [
+    item('susy:sintering_brick_active_inverted',0)
+])
+crafting.addShapeless(item('susy:sintering_brick_active_inverted',0), [
+    item('susy:sintering_brick_active',0)
+])
+
+crafting.addShapeless(item('susy:sintering_brick_active',1), [
+    item('susy:sintering_brick_active_inverted',1)
+])
+crafting.addShapeless(item('susy:sintering_brick_active_inverted',1), [
+    item('susy:sintering_brick_active',1)
+])
+
+
+
+
+crafting.addShapeless(item('susy:evaporation_bed_active',0), [
+    item('susy:evaporation_bed_active_inverted',0)
+])
+crafting.addShapeless(item('susy:evaporation_bed_active_inverted',0), [
+    item('susy:evaporation_bed_active',0)
+])
+
+
+
+crafting.addShapeless(item('susy:electrode_assembly_active',0), [
+    item('susy:electrode_assembly_active_inverted',0)
+])
+crafting.addShapeless(item('susy:electrode_assembly_active_inverted',0), [
+    item('susy:electrode_assembly_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:serpentine_active',0), [
+    item('susy:serpentine_active_inverted',0)
+])
+crafting.addShapeless(item('susy:serpentine_active_inverted',0), [
+    item('susy:serpentine_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:basic_intake_casing_active',0), [
+    item('susy:basic_intake_casing_active_inverted',0)
+])
+crafting.addShapeless(item('susy:basic_intake_casing_active_inverted',0), [
+    item('susy:basic_intake_casing_active',0)
+])
+
+
+
+crafting.addShapeless(item('susy:eccentric_roll_active',0), [
+    item('susy:eccentric_roll_active_inverted',0)
+])
+crafting.addShapeless(item('susy:eccentric_roll_active_inverted',0), [
+    item('susy:eccentric_roll_active',0)
+])usy:firebox_active',2)
+])
+
+
+crafting.addShapeless(item('susy:firebox_active',3), [
+    item('susy:firebox_active_inverted',3)
+])
+crafting.addShapeless(item('susy:firebox_active_inverted',3), [
+    item('susy:firebox_active',3)
+])
+
+
+
+
+crafting.addShapeless(item('susy:engine_intake_active',0), [
+    item('susy:engine_intake_active_inverted',0)
+])
+crafting.addShapeless(item('susy:engine_intake_active_inverted',0), [
+    item('susy:engine_intake_active',0)
+])
+
+
+crafting.addShapeless(item('susy:engine_intake_active',1), [
+    item('susy:engine_intake_active_inverted',1)
+])
+crafting.addShapeless(item('susy:engine_intake_active_inverted',1), [
+    item('susy:engine_intake_active',1)
+])
+
+
+
+
+crafting.addShapeless(item('susy:assembly_line_active',0), [
+    item('susy:assembly_line_active_inverted',0)
+])
+crafting.addShapeless(item('susy:assembly_line_active_inverted',0), [
+    item('susy:assembly_line_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:fusion_casing_active',0), [
+    item('susy:fusion_casing_active_inverted',0)
+])
+crafting.addShapeless(item('susy:fusion_casing_active_inverted',0), [
+    item('susy:fusion_casing_active',0)
+])
+
+
+crafting.addShapeless(item('susy:fusion_casing_active',1), [
+    item('susy:fusion_casing_active_inverted',1)
+])
+crafting.addShapeless(item('susy:fusion_casing_active_inverted',1), [
+    item('susy:fusion_casing_active',1)
+])
+
+
+crafting.addShapeless(item('susy:fusion_casing_active',2), [
+    item('susy:fusion_casing_active_inverted',2)
+])
+crafting.addShapeless(item('susy:fusion_casing_active_inverted',2), [
+    item('susy:fusion_casing_active',2)
+])
+
+
+
+
+crafting.addShapeless(item('susy:heat_vent_active',3), [
+    item('susy:heat_vent_active_inverted',3)
+])
+crafting.addShapeless(item('susy:heat_vent_active_inverted',3), [
+    item('susy:heat_vent_active',3)
+])
+
+
+
+crafting.addShapeless(item('susy:sintering_brick_active',0), [
+    item('susy:sintering_brick_active_inverted',0)
+])
+crafting.addShapeless(item('susy:sintering_brick_active_inverted',0), [
+    item('susy:sintering_brick_active',0)
+])
+
+crafting.addShapeless(item('susy:sintering_brick_active',1), [
+    item('susy:sintering_brick_active_inverted',1)
+])
+crafting.addShapeless(item('susy:sintering_brick_active_inverted',1), [
+    item('susy:sintering_brick_active',1)
+])
+
+
+
+
+crafting.addShapeless(item('susy:evaporation_bed_active',0), [
+    item('susy:evaporation_bed_active_inverted',0)
+])
+crafting.addShapeless(item('susy:evaporation_bed_active_inverted',0), [
+    item('susy:evaporation_bed_active',0)
+])
+
+
+
+crafting.addShapeless(item('susy:electrode_assembly_active',0), [
+    item('susy:electrode_assembly_active_inverted',0)
+])
+crafting.addShapeless(item('susy:electrode_assembly_active_inverted',0), [
+    item('susy:electrode_assembly_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:serpentine_active',0), [
+    item('susy:serpentine_active_inverted',0)
+])
+crafting.addShapeless(item('susy:serpentine_active_inverted',0), [
+    item('susy:serpentine_active',0)
+])
+
+
+
+
+crafting.addShapeless(item('susy:basic_intake_casing_active',0), [
+    item('susy:basic_intake_casing_active_inverted',0)
+])
+crafting.addShapeless(item('susy:basic_intake_casing_active_inverted',0), [
+    item('susy:basic_intake_casing_active',0)
+])
+
+
+
+crafting.addShapeless(item('susy:eccentric_roll_active',0), [
+    item('susy:eccentric_roll_active_inverted',0)
+])
+crafting.addShapeless(item('susy:eccentric_roll_active_inverted',0), [
+    item('susy:eccentric_roll_active',0)
+])
