@@ -868,6 +868,7 @@ class SuSyMaterials {
     public static Material SilverNanoparticleSuspension
     public static Material PalladiumNanoparticleSuspension
     public static Material BasicCMPSlurry
+    public static Material OxidativeCMPSlurry
 
     // Petrochem Materials
 
