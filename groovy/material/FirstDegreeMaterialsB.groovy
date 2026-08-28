@@ -275,6 +275,7 @@ class FirstDegreeMaterialsB {
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_DOUBLE_PLATE, GENERATE_FRAME, GENERATE_SPRING, SUPERALLOY, INDUCTION_MELT)
                 .components(Nickel * 41, Iron * 19, Chrome * 20, Niobium * 3, Molybdenum * 2, Titanium, Aluminium * 2)
                 .blastTemp(2100, GasTier.MID, GTValues.VA[GTValues.EV])
+                .fluidPipeProperties(1600, 4000, true, true, true, false)
                 .build()
 
         SilverIndiumCadmium = new Material.Builder(8713, SuSyUtility.susyId('silver_indium_cadmium'))

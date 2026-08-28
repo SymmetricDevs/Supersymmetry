@@ -556,3 +556,57 @@ SCANNER.recipeBuilder()
         .EUt(VA[EV])
         .duration(10000)
         .buildAndRegister()
+
+ItemStack stack = metaitem('susy:data_card.master_blueprint') * 1
+stack.setTagCompound(SusyRocketComponents.ROCKET_LUNAR_BLUEPRINT_DEFAULT.writeToNBT())
+
+SCANNER.recipeBuilder()
+        .inputs(metaitem('susy:data_card'))
+        .circuitMeta(1)
+        .outputs(stack)
+        .EUt(VA[EV])
+        .duration(10000)
+        .buildAndRegister()
+
+
+mods.susy.rocketCosts.add('soyuz', 'soyuz_plumbing')
+        .input(ore('pipeLargeStainlessSteel'), 20) // hydrogen embrittlement moment
+        .input(ore('screwStainlessSteel'), 20)
+        .duration(400)
+        .register()
+
+mods.susy.rocketCosts.add('soyuz', 'soyuz_wiring')
+        .input(ore('circuitEv'), 32)
+        .input(ore('cableGtQuadrupleAluminium'), 40)
+        .duration(400)
+        .register()
+
+// 12, modeled after the Fregat
+mods.susy.rocketCosts.add('soyuz', 'soyuz_verniers')
+        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'dinitrogen_tetroxide', 'Amount': 8000]]) * 12)
+        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'dimethylhydrazine', 'Amount': 8000]]) * 12)
+        .input(item('susy:rocket_engine_gas_generator') * 4) // One for each stage (being nice here) 
+        .input(item('susy:rocket_turbopump') * 12)
+        .input(item('susy:rocket_nozzle') * 48)
+        .duration(400)
+        .register()
+
+mods.susy.rocketCosts.add('lunar', 'lunar_plumbing')
+        .input(ore('pipeLargeStainlessSteel'), 10)
+        .input(ore('screwStainlessSteel'), 10)
+        .duration(200)
+        .register()
+
+mods.susy.rocketCosts.add('lunar', 'lunar_wiring')
+        .input(ore('cableGtQuadrupleAluminium'), 20)
+        .duration(200)
+        .register()
+
+mods.susy.rocketCosts.add('lunar', 'lunar_verniers')
+        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'dinitrogen_tetroxide', 'Amount': 8000]]) * 3)
+        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'dimethylhydrazine', 'Amount': 8000]]) * 3)
+        .input(item('susy:rocket_engine_gas_generator')) // One for each stage (being nice here) 
+        .input(item('susy:rocket_turbopump') * 3)
+        .input(item('susy:rocket_nozzle') * 12)
+        .duration(200)
+        .register()
