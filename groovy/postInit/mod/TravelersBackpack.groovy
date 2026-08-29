@@ -1,7 +1,4 @@
 // Deprecated
-import net.minecraftforge.event.entity.player.ItemTooltipEvent
-import gregtech.client.utils.TooltipHelper
-
 mods.jei.ingredient.yeet(
     item('travelersbackpack:backpack_tank'),
     item('travelersbackpack:sleeping_bag_bottom'),
@@ -19,9 +16,3 @@ crafting.replaceShaped('travelersbackpack:travelers_backpack_standard', item('tr
         [metaitem('large_fluid_cell.steel').or(item('gregtech:machine', 1612)), item('minecraft:chest'), metaitem('large_fluid_cell.steel').or(item('gregtech:machine', 1612))],
         [item('techguns:itemshared', 77), ore('wool'), item('techguns:itemshared', 77)]
 ])
-
-event_manager.listen { ItemTooltipEvent event ->
-    if (event.getItemStack() in item('travelersbackpack:travelers_backpack')) {
-        event.getToolTip() <<  "${TooltipHelper.BLINKING_RED}Deprecated! Could be remove in the next release!".toString()
-    }
-}

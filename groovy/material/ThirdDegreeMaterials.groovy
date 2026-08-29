@@ -979,5 +979,20 @@ class ThirdDegreeMaterials {
                 .components(PetroleumResin * 1, Benzene * 1)
                 .colorAverage()
                 .build()
+
+        AluminosilicateMix = new Material.Builder(24157, SuSyUtility.susyId('aluminosilicate_mix'))
+                .dust()
+                .color(0x836953)
+                .build()
+
+        MoSiSlurry = new Material.Builder(24158, SuSyUtility.susyId('mo_si_slurry'))
+                .liquid()
+                .color(0x673A3F)
+                .build()
+
+        MoSiPrecursor = new Material.Builder(24159, SuSyUtility.susyId('mo_si_precursor'))
+                .dust()
+                .color(0x673A3F)
+                .build()
     }
 }

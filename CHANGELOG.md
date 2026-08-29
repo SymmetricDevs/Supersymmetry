@@ -1,3 +1,27 @@
+# UPDATE 0.1.16.14.1
+fixed a fix to the ERF coils - bruberu
+# UPDATE 0.1.16.14
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.115 → v0.1.116
+- MixinBooter 10.7 → 11.14
+### Mod Additions
+- Retro Sophisticated Backpacks → Sophisticated-Backpacks-1.1.4
+- Cleanroom Relauncher → relauncher-1.0.5
+## Changes
+### New Features
+- Experiencing base lag? Try out the direct fluid pipes! They transfer fluids just like item pipes. (sc#694 by @MCTian-mi)
+- Store your various fluid slop in the new Fluid Sample Storage, with 32 8kL slots! (sc#693 by @Sadsaltan)
+- Sophisticated backpacks now replaces travelers' backpacks! With sufficient Gregification, of course. (#1984 by @Solothesolo)
+### Changed Features
+- Nichrome has been swapped for Kanthal! (#1987 by @jethro-3000)
+- Two new coil tiers help make coil progression more realistic: MoSi2 (2100K) and W (3000K)!
+- BREAKING: coil temperatures have dropped, so certain overclocks will no longer occur.
+- Cleanroom relauncher is now an optional mod to automatically run Cleanroom, for about a 20% loading time reduction! (#1991 by @MCTian-mi)
+- Kyanite is now available via quarry (#1988 by @jethro-3000)
+### Fixes
+- Beetroot seeds are now easier to obtain! (#1986 by @Solothesolo)
+And a few various fixes from @jethro-3000, who is going absolutely nuts. Thanks!
 # UPDATE 0.1.16.13.2
 ## Mod Changes
 ### Mod Updates

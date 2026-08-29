@@ -16,8 +16,6 @@ mods.jei.ingredient.yeet(
     metaitem('gas_turbine.lv'),
     metaitem('gas_turbine.mv'),
     metaitem('gas_turbine.hv'),
-    metaitem('gcym:steam_engine'),
-    item('gcym:large_multiblock_casing:12'),
     metaitem('large_turbine.steam'),
     metaitem('large_turbine.gas'),
     metaitem('large_turbine.plasma'),
@@ -117,8 +115,8 @@ def hulls = [metaitem('hull.ulv'), metaitem('hull.lv'), metaitem('hull.mv'), met
              metaitem('hull.uev'), metaitem('hull.uiv'), metaitem('hull.uxv'),
              metaitem('hull.opv')];
 
-def tieredWires = [ore('wireGtQuadrupleLead'), ore('wireGtQuadrupleCopper'), ore('wireGtQuadrupleCupronickel'), ore('wireGtQuadrupleKanthal'),
-                   ore('wireGtQuadrupleNichrome'), ore('wireGtQuadrupleRtmAlloy'), ore('wireGtQuadrupleHssg'),
+def tieredWires = [ore('wireGtQuadrupleLead'), ore('wireGtQuadrupleCopper'), ore('wireGtQuadrupleCupronickel'), ore('wireGtQuadrupleNichrome'),
+                   ore('wireGtQuadrupleKanthal'), ore('wireGtQuadrupleRtmAlloy'), ore('wireGtQuadrupleHssg'),
                    ore('wireGtQuadrupleNaquadah'), ore('wireGtQuadrupleNaquadahAlloy')];
 
 def tieredPlates = [ore('plateWroughtIron'), ore('plateSteel'), ore('plateAluminium'), ore('plateStainlessSteel'),
@@ -149,8 +147,8 @@ def tieredHexCables = [ore('cableGtHexLead'), ore('cableGtHexTin'), ore('cableGt
                         ore('cableGtHexAluminium'), ore('cableGtHexPlatinum'), ore('cableGtHexNiobiumTitanium'),
                         ore('cableGtHexVanadiumGallium'), ore('cableGtHexYttriumBariumCuprate')]
 
-def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springKanthal'),
-                     metaitem('springNichrome'), metaitem('springRtmAlloy'), metaitem('springHssg'),
+def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springNichrome'),
+                     metaitem('springKanthal'), metaitem('springRtmAlloy'), metaitem('springHssg'),
                      metaitem('springNaquadah'), metaitem('springNaquadahAlloy')]
 
 def rotors = [
@@ -1402,7 +1400,7 @@ RecyclingHelper.addShaped('gregtech:large_fluid_pump', metaitem('susy:large_flui
 
 RecyclingHelper.addShaped("gregtech:sieve_distillation_tower", metaitem('susy:sieve_distillation_tower'), [
     [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
-    [metaitem('springKanthal'), metaitem('hull.Hv'), metaitem('springKanthal')],
+    [metaitem('springNichrome'), metaitem('hull.Hv'), metaitem('springNichrome')],
     [metaitem('frameStainlessSteel'), metaitem('electric.pump.hv'), metaitem('frameStainlessSteel')]
 ])
 
@@ -2033,4 +2031,10 @@ crafting.addShaped(metaitem("susy:industrial_sifter"), [
     [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
     [ore('cableGtSingleGold'), metaitem('hull.Hv'), ore('cableGtSingleGold')],
     [metaitem('frameStainlessSteel'), metaitem('electric.motor.hv'), metaitem('frameStainlessSteel')]
+])
+
+RecyclingHelper.addShaped("susy:fluid_samples_storage", metaitem('susy:fluid_samples_storage'), [
+    [metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel')],
+    [metaitem('large_fluid_cell.steel'), item('gregtech:boiler_casing', 1), metaitem('large_fluid_cell.steel')],
+    [metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel')]
 ])

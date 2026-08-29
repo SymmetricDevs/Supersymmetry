@@ -173,6 +173,9 @@ for (i in 0..2) {
     mods.jei.ingredient.yeet(item('gregtech:ore_bauxite_0', i))
 }
 
+// Kanthal/Nichrome springs
+ore('springEarly').add(metaitem('springNichrome'), metaitem('springKanthal'))
+
 // OreDict Removal + Hide from JEI
 
 oreDictRemovals = [

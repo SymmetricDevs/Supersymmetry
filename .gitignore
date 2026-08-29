@@ -42,9 +42,9 @@ config/acronym/saved/
 
 config/betterquesting/DefaultQuests/QuestSettings.json
 
-#config/biomesoplenty/biomes/defaults/
+config/biomesoplenty/biomes/defaults/
 
-#config/biomesoplenty/biome_ids.json
+config/biomesoplenty/biome_ids.json
 
 config/BiomeTweaker/output/
 
