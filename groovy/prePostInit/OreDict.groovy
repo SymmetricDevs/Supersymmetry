@@ -1,6 +1,5 @@
-package prePostInit;
+package prePostInit
 
-import static globals.Globals.*
 
 import supersymmetry.common.blocks.SuSyBlocks
 import supersymmetry.common.blocks.SusyStoneVariantBlock
