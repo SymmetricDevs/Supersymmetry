@@ -204,6 +204,7 @@ class ChangeFlags {
         Invar.addFlags("disable_decomposition")
         Nichrome.addFlags("disable_decomposition")
         Kanthal.addFlags("disable_decomposition")
+        Electrum.addFlags("induction_melt")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")

@@ -3621,3 +3621,13 @@ ROASTER.recipeBuilder()
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Ammonium Fluoride
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustAmmoniumFluoride') * 6)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('ammonium_fluoride_solution') * 1000)
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()

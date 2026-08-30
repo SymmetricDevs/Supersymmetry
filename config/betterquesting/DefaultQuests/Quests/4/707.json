@@ -7,7 +7,7 @@
       "desc:8": "susy.quest.db.707.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Damage:2": 1,
+        "Damage:2": 2,
         "id:8": "gregtech:wire_coil"
       },
       "name:8": "susy.quest.db.707.title"
