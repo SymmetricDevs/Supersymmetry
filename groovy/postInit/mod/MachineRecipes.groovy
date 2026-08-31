@@ -488,14 +488,6 @@ RecyclingHelper.addShaped("gregtech:brick_sintering_block", item('susy:sintering
     [null, null, null]
 ])
 
-mods.chisel.carving.addGroup("sintering_bricks")
-mods.chisel.carving.addVariation("sintering_bricks", item('susy:sintering_brick', 0))
-mods.chisel.carving.addVariation("sintering_bricks", item('susy:sintering_brick', 2))
-
-mods.chisel.carving.addGroup("sintering_bricks_magneto")
-mods.chisel.carving.addVariation("sintering_bricks_magneto", item('susy:sintering_brick', 1))
-mods.chisel.carving.addVariation("sintering_bricks_magneto", item('susy:sintering_brick', 3))
-
 RecyclingHelper.replaceShaped("gregtech:sintering_oven", metaitem('susy:sintering_oven'), [
     [motors[1], rotors[1], metaitem('wireGtQuadrupleCupronickel')],
     [circuits[1], item('gregtech:metal_casing', 1), circuits[1]],
