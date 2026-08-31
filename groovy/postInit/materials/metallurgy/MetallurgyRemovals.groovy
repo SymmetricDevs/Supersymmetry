@@ -169,3 +169,31 @@ mods.gregtech.blender.removeByInput(120, [metaitem('dustIron'), metaitem('dustAl
 crafting.remove("gregtech:dust_brass")
 crafting.remove("gregtech:dust_bronze")
 crafting.remove("gregtech:potin_dust")
+
+def superalloy = [
+    'incoloy_20',
+    'incoloy_825',
+    'incoloy_908',
+    'rene_n_5',
+    'stellite_j',
+    'stellite_6',
+    'nimonic_105',
+    'inconel_718',
+    'inconel_601',
+]
+
+superalloy.each {name ->
+    mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid(name) * 1296])
+    mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid(name) * 144])
+    mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.nugget')], [fluid(name) * 144])
+    mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.ingot')], [fluid(name) * 144])
+}
+
+// Incoloy 825 Rotor * 1
+mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')], [fluid('incoloy_825') * 576])
+// Rene N5 Rotor * 1
+mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')], [fluid('rene_n_5') * 576])
+// Nimonic 105 Rotor * 1
+mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')], [fluid('nimonic_105') * 576])
+
+

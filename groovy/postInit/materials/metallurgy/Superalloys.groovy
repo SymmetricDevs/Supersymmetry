@@ -178,6 +178,7 @@ INDUCTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('cobalt') * 720)
     .inputs(metaitem('dustChrome') * 2)
     .inputs(metaitem('dustNickel'))

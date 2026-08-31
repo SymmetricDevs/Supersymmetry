@@ -142,6 +142,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
 
 // HSLA 980X
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('iron') * 5616)
     .inputs(metaitem('dustManganese'))
     .fluidOutputs(fluid('hsla_980_x') * 5760)
