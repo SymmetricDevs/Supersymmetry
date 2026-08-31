@@ -183,7 +183,6 @@ def superalloy = [
 ]
 
 superalloy.each {name ->
-    println name
     mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid(name) * 1296])
     mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid(name) * 144])
     mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.nugget')], [fluid(name) * 144])
