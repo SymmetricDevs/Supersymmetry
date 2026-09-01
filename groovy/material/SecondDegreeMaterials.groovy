@@ -1283,5 +1283,11 @@ class SecondDegreeMaterials {
                 .components(HydrogenChloride, Water)
                 .color(0x0fd47b)
                 .build()
+
+        UltrapureHydrogenPeroxideSolution = new Material.Builder(13200, SuSyUtility.susyId('ultrapure_hydrogen_peroxide_solution'))
+                .liquid()
+                .components(HydrogenPeroxide * 1, Water * 1)
+                .color(0x89cff0)
+                .build()
     }
 }

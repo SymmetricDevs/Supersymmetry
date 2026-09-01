@@ -61,7 +61,7 @@ MIXER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-/* Ultrapure H2O2 (titanium and tungsten etchant)
+// Ultrapure H2O2 (titanium and tungsten etchant)
 
 BCR.recipeBuilder()
     .fluidInputs(fluid('hydrogen_peroxide_solution') * 1000)
@@ -71,4 +71,3 @@ BCR.recipeBuilder()
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()
-*/
