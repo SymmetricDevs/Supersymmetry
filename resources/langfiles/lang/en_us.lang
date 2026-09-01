@@ -3528,6 +3528,7 @@ gregtech.advancement.medium_voltage.31_mv_energy_hatch.name=Upgrade Your ERF
 recipemap.electric_blast_furnace.name=Resistance Furnace
 gregtechfoodoption.machine.greenhouse.name=Arboretum
 recipemap.greenhouse.name=Arboretum
+fluid.gregtech.material.ice.liquid_generic=Ice Slurry
 
 
 # Material Renaming

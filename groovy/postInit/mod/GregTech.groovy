@@ -1428,6 +1428,7 @@ mods.gregtech.cutter.removeByInput(7, [item('minecraft:stone')], [fluid('water')
 CUTTER.recipeBuilder()
     .inputs(ore('stone'))
     .outputs(item('minecraft:stone_slab') * 2)
+    .circuitMeta(1)
     .duration(25)
     .EUt(VA[ULV])
     .buildAndRegister();

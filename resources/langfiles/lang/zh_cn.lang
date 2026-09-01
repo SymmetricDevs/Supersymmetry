@@ -3530,6 +3530,7 @@ gregtech.advancement.medium_voltage.31_mv_energy_hatch.name=升级你的电阻�
 recipemap.electric_blast_furnace.name=电阻炉
 gregtechfoodoption.machine.greenhouse.name=高级温室
 recipemap.greenhouse.name=高级温室
+fluid.gregtech.material.ice.liquid_generic=冰水混合物
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=小撮超高分子量聚乙烯（UHMWPE）末

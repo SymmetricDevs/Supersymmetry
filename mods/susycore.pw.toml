@@ -1,13 +1,13 @@
 name = "SusyCore"
-filename = "Susy-Core-0.1.116.jar"
+filename = "Susy-Core-0.1.117.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "1b530a4b5a32fc4d4c47559cb558644a9796390e"
+hash = "76216596fdfe6bf394e527916847707ae9d3cdce"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8678037
+file-id = 8779818
 project-id = 846224
