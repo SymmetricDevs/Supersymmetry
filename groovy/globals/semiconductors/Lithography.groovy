@@ -61,7 +61,7 @@ class Lithography {
                 .EUt(VA[this.voltageTier])
 
             if (nonConsumable != null) {exposureRecipe.notConsumable(metaitem(nonConsumable))}
-            if (this.name.contains("methacrylate")) {exposureRecipe.fluidInputs(fluid('ultrapure_water') * 5)}
+            if (this.resistName.contains("methacrylate")) {exposureRecipe.fluidInputs(fluid('ultrapure_water') * 5)}
             exposureRecipe.buildAndRegister();
         }
 
@@ -106,6 +106,7 @@ class Lithography {
     ]
 
     static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean mandrel = false) {
+        def overrideInput = null
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 if (photoresist.ibarc) {
@@ -136,7 +137,7 @@ class Lithography {
                 // i.e. SiO2, Si3N4, bare Si, surfaces after CMP. HMDS is not used on metals, over organic BARCs, negative tone resists, SiOCH.
                 photoresist.generateCoatingRecipe(input, hmds, null, overrideInput)
                 photoresist.generateExposureRecipe(input, nonConsumable)
-                photoresist.generateDevelopmentRecipe(input, product, null, (photoresist.ibarc ? input + ".developed" : null))
+                photoresist.generateDevelopmentRecipe(input, product, (photoresist.ibarc ? input + ".developed" : null))
             }
         }
     }
@@ -160,6 +161,7 @@ class Lithography {
     }
 
     static void generateCoatingRecipe(String input, String photoresistNeeded, boolean hmds, boolean mandrel = false) {
+        def overrideInput = null
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 if (photoresist.ibarc) {
@@ -174,8 +176,6 @@ class Lithography {
                         .buildAndRegister()
 
                     Deposition.generateChemicalVaporDepositionRecipe(input + ".hardmasked", input + ".ibarc", 0.25, "silicon_oxynitride")
-                    Etching.generateReactiveIonEtchingRecipe(input + ".developed", input + ".etched", "silicon_oxynitride", 100)
-                    Etching.generateReactiveIonEtchingRecipe(input + ".etched", product, "spin_on_carbon", 200)
 
                     if (mandrel) {
                         Deposition.generateChemicalVaporDepositionRecipe(input + ".ibarc", input + ".mandrel", 0.25, "silicon")
