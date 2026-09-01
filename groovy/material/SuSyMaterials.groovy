@@ -2010,6 +2010,7 @@ class SuSyMaterials {
     public static Material VanadylSulfateSolution
     public static Material SupportedChromiumIIIOxide
     public static Material UltrapureHydrochloricAcid
+    public static Material UltrapureHydrogenPeroxideSolution
 
     // Organic Chemistry Materials
 
