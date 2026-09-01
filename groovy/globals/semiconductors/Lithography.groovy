@@ -66,25 +66,14 @@ class Lithography {
         }
 
         def generateDevelopmentRecipe(String input, String product, String overrideProduct = null) {
-            if (!liftoff) {
-                RESIST_PROCESSOR.recipeBuilder()
-                    .inputs(metaitem(input + ".exposed"))
-                    .fluidInputs(fluid(this.developerName) * 100)
-                    .outputs(metaitem(product))
-                    .cleanroom(CleanroomType.CLEANROOM)
-                    .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier])
-                    .buildAndRegister()
-            } else {
-                RESIST_PROCESSOR.recipeBuilder()
-                    .inputs(metaitem(input + ".deposited"))
-                    .fluidInputs(fluid(this.developerName) * 100)
-                    .outputs(metaitem(overrideProduct ?: product))
-                    .cleanroom(CleanroomType.CLEANROOM)
-                    .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier])
-                    .buildAndRegister()
-            }
+            RESIST_PROCESSOR.recipeBuilder()
+            .inputs(metaitem(input + (liftoff ? ".deposited" : ".exposed")))
+            .fluidInputs(fluid(this.developerName) * 100)
+            .outputs(metaitem(overrideProduct ?: product))
+            .cleanroom(CleanroomType.CLEANROOM)
+            .duration(this.timeUsed)
+            .EUt(VA[this.voltageTier])
+            .buildAndRegister()
         }
     }
 
