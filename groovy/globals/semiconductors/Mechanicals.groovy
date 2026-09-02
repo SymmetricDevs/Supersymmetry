@@ -12,8 +12,9 @@ class Mechanicals {
     static void generateBackgrindingRecipe(String input, String product, int duration, int voltageTier) {
         POLISHING_MACHINE.recipeBuilder()
             .inputs(metaitem(input))
-            .fluidOutputs(fluid('basic_cmp_slurry') * 100)
+            .fluidInputs(fluid('basic_cmp_slurry') * 100)
             .outputs(metaitem(product))
+            .fluidOutputs(fluid('wastewater') * 100)
             .cleanroom(CleanroomType.CLEANROOM)
             .duration(duration)
             .EUt(VA[voltageTier])
