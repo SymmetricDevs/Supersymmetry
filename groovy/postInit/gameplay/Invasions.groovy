@@ -1456,21 +1456,20 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
         //flare
         .addPattern(
                 t -> {
-                    double radius = 5;
-                    double angle = t * 2 * Math.PI;
-                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                    return new MobHordeEvent.Vec2(-5, 0);
                 },
                 Arrays.asList("setblock ~ ~ ~ susy:raid_flare_block 1 replace {targetUUID:\"%player_uuid%\"}"), //add player data tag
                 null,
                 null,
         )
+        //drop beacon
         .addPattern(
                 t -> {
-                    return new MobHordeEvent.Vec2(8, 0);
+                    return new MobHordeEvent.Vec2(5, 0);
                 },
                 Arrays.asList(
                         "blocklist",
-                        "gregtech:machine,18650"
+                        "gregtech:machine,18650,{\"targetUUID\":\"%player_uuid%\"}"
                 ),
                 null,
                 null,
