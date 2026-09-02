@@ -78,7 +78,7 @@ def registerCMOSMetaitems(String name) {
     registerWaferSteps(name, 74, [start: 3, mask: true, die: true,
         photoresist: [11, 14, 23, 28, 32, 39, 51, 59, 67],
         ashed:       [6, 13, 16, 27, 31, 35, 41, 53, 61, 70],
-        trilayer:    [23, 59]])
+        trilayer:    [23, 59, 67]])
 
     // 9-layer damascene copper BEOL; layers 1-6 use trilayer (ibarc) resist
     for (int i = 1; i <= 9; i++) {
