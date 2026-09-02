@@ -18,8 +18,9 @@ class Lithography {
         Map additionalFluids
         boolean liftoff
         boolean ibarc
+        String fluidName
 
-        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, Map additionalFluids = [:], boolean liftoff = false, boolean ibarc = false) {
+        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, Map additionalFluids = [:], boolean liftoff = false, boolean ibarc = false, String fluidName = null) {
             this.resistName = resistName
             this.solventName = solventName
             this.developerName = developerName
@@ -29,6 +30,7 @@ class Lithography {
             this.liftoff = liftoff
             this.additionalFluids = additionalFluids
             this.ibarc = ibarc
+            this.fluidName = fluidName ?: resistName
         }
 
         def generateCoatingRecipe(String input, boolean hmds, Integer circuit = null, String overrideInput = null) {
@@ -37,7 +39,7 @@ class Lithography {
             
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(overrideInput ?: input))
-                .fluidInputs(fluid(this.resistName) * 50)
+                .fluidInputs(fluid(this.fluidName) * 50)
                 .fluidInputs(fluid(this.solventName) * solvent_amount)
                 .outputs(metaitem(input + ".coated"))
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -82,9 +84,9 @@ class Lithography {
         new Resist("novolac_liftoff_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300, [:], true),
         new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "uv_light_box", 200),
         new Resist("polyhydroxystyrene_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, ["krf_barc" : 25]),
-        new Resist("polyhydroxystyrene_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, [:], false, true),
+        new Resist("polyhydroxystyrene_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, [:], false, true, "polyhydroxystyrene_resist"),
         new Resist("methacrylate_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10, "arf_barc" : 25]),
-        new Resist("methacrylate_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10], false, true)
+        new Resist("methacrylate_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10], false, true, "methacrylate_resist")
         // Trilayers should be used for highly reflective substrates, i.e. metal as organic BARCs will no longer be sufficient to minimize internal reflection of patterning light,
         // which cause poor resolution. It is also useful for very high aspect ratio patterning where the addition of a SOC hardmask allows good etching selectivity.
         // The hardmask also is useful for patterning on substrates with severe topography and critical dimension uniformity.
