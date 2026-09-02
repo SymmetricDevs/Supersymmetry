@@ -229,7 +229,7 @@ generateCMOSFabrication('cmos_phy')
 
 // N+ buried layer (NBL) plus epitaxial P- layer for isolation of high voltage devices
 Doping.generateIonImplantationRecipes('wafer.silicon.p_doped', 'wafer.bcd_base.step_one', 400, 'purified_antimony_trioxide')
-Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_one', 'wafer.bcd_base.step_two', 1.0, 'p-type_silicon')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.bcd_base.step_one', 'wafer.bcd_base.step_two', 1.0, 'p_doped_silicon')
 
 // FEOL
 
