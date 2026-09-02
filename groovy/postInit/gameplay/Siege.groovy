@@ -141,8 +141,12 @@ def spawnFedRaid(player) {
 
 //fed siege problem causers
 
-MetaTileEntityFederationDropBeacon.fedStrikeCommandsProvider = {
+MetaTileEntityFederationDropBeacon.fedPayloadProvider = {
     return [
-            "setblock ~ ~ ~ stone"
+            ["gregtech:machine", "18600"],
+            ["gregtech:machine", "18610"],
+            ["gregtech:machine", "18620"],
+            ["gregtech:machine", "18630"],
+            ["gregtech:machine", "18640"],
     ]
 }
