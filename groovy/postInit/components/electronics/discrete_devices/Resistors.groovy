@@ -26,19 +26,6 @@ mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wi
 // Resistor * 4
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
 
-// Oredicting
-
-oreDict.add('componentResistorMedium', metaitem('component.resistor.carbon_composite'))
-oreDict.add('componentResistorMedium', metaitem('component.resistor.carbon_film'))
-
-oreDict.add('componentResistorSmall', metaitem('component.smd.resistor'))
-oreDict.add('componentResistorSmall', metaitem('component.advanced_smd.resistor'))
-
-// Carbon composite
-
-oreDict.add('resistorCarbon', metaitem('dustCarbon'))
-oreDict.add('resistorCarbon', metaitem('dustHighPurityCarbon'))
-oreDict.add('resistorCarbon', metaitem('dustGraphite'))
 
 MIXER.recipeBuilder()
     .inputs(ore('resistorCarbon'))

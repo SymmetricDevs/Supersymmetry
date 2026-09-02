@@ -37,10 +37,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// Plastic film capacitors
 
-oreDict.add('capacitorFilm', metaitem('mylar'))
-oreDict.add('capacitorFilm', metaitem('foilPolypropylene'))
 
 EVAPORATION.recipeBuilder()
     .inputs(ore('nuggetAluminium'))
@@ -69,11 +66,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-// Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
-// "Supercapacitors: Concepts and advances"
-// (IOP, 2025), sections 4.13, 5.6, 5.7.
 
-oreDict.add('componentSupercapacitor', metaitem('component.capacitor.edlc'))
 
 // --- Electrode chain (book section 4.13) ---
 

@@ -106,7 +106,6 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-oreDict.add('circuitLv', metaitem('circuit.power.lv'))
 
 // MV Power Circuit
 
@@ -124,7 +123,6 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-oreDict.add('circuitMv', metaitem('circuit.power.mv'))
 
 // HV Power Circuit
 
@@ -145,4 +143,3 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-oreDict.add('circuitHv', metaitem('circuit.power.hv'))

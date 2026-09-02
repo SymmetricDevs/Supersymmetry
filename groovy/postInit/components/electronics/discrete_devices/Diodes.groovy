@@ -23,10 +23,7 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineAnnealedCopper') * 
 // Diode * 2
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineCopper') * 4, metaitem('dustSmallGalliumArsenide')], [fluid('plastic') * 144])
 
-// Standard signal diodes
 
-oreDict.add('componentDiodeSignal', metaitem('component.diode.alloy_junction'))
-oreDict.add('componentDiodeSignal', metaitem('component.diode.planar'))
 
 // Alloy junction signal diodes
 
