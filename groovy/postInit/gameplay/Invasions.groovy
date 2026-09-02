@@ -1154,7 +1154,7 @@ def tri2z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(330))
 
 new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
         .setTimer(144000, 216000)
-        .minHate("Feds", 750)
+        .minHate("Feds", 1500)
 
 // ── FORMATION 0 - normal soldiers ──────────────────────────────────────
         .addPattern(
@@ -1464,12 +1464,14 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                 null,
                 null,
         )
-        //drop beacon
         .addPattern(
                 t -> {
-                    return new MobHordeEvent.Vec2(0, 0);
+                    return new MobHordeEvent.Vec2(8, 0);
                 },
-                Arrays.asList("setblock ~ ~ ~ stone"),
+                Arrays.asList(
+                        "blocklist",
+                        "gregtech:machine,18650"
+                ),
                 null,
                 null,
         )
