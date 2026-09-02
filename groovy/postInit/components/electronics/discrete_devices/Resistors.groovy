@@ -133,6 +133,31 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
+// NiCr film resistors
+Deposition.generateSputteringRecipe("boltAlumina", "component.resistor.metal_film.core.deposited", ['chromium':120, 'nickel':480])
+
+LASER_ENGRAVER.recipeBuilder()
+    .inputs(metaitem("component.resistor.metal_film.core.deposited"))
+    .outputs(metaitem("component.resistor.metal_film.core.uncut"))
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+CUTTER.recipeBuilder()
+    .inputs(metaitem("component.resistor.metal_film.core.uncut"))
+    .outputs(metaitem("component.resistor.metal_film.core") * 8)
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem("component.resistor.metal_film.core"))
+    .inputs(metaitem("wireFineCopper") * 2)
+    .fluidInputs(fluid('tin') * 16)
+    .fluidInputs(fluid('epoxy') * 16)
+    .outputs(metaitem('component.resistor.metal_film'))
+
+Deposition.generateSputteringRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer", ['chromium' : 120, 'nickel' : 480]) // NiCr vacuum deposition; 80/20 composition
 // thick/thin-film resistors
 
 Sintering.nonPlasmaFuels().each { fuel ->

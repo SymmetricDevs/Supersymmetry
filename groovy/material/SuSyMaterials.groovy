@@ -2927,6 +2927,7 @@ class SuSyMaterials {
     public static Material FluoromethaneMixture
     public static Material NitratolacticAcidSolution
     public static Material NitricOxalicAcidSolution
+    public static Material ElectrolyticCapacitorElectrolyte
 
     // Thermodynamics Materials
 

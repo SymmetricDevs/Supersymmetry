@@ -1463,5 +1463,11 @@ class ThirdDegreeMaterials {
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xaeb382)
                 .build()
+
+        ElectrolyticCapacitorElectrolyte = new Material.Builder(24253, SuSyUtility.susyId("electrolytic_capacitor_electrolyte"))
+                .liquid()
+                .components(EthyleneGlycol * 100, PhosphoricAcid, Water * 140, AceticAcid * 10, AmmoniumAcetateSolution * 9)
+                .colorAverage()
+                .build()
         }
 }
