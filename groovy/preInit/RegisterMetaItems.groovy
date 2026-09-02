@@ -316,7 +316,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2784, "component.op_amp")
         addItem(2785, "component.protector_circuit")
         addItem(2786, "component.resistor.carbon_film")
-        addItem(2787, "component.zener_diode")
+        addItem(2787, "component.diode.zener")
         addItem(2788, "component.relay")
         addItem(2789, "component.capacitor.film.core")
         addItem(2790, "component.capacitor.film.metallized_film")

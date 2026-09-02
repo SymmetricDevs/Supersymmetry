@@ -85,7 +85,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glass') * 72)
     .fluidInputs(fluid('high_temperature_solder') * 72)
     .fluidInputs(fluid('nitrogen') * 50)
-    .outputs(metaitem('component.zener_diode'))
+    .outputs(metaitem('component.diode.zener'))
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister();

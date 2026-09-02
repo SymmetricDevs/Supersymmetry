@@ -104,7 +104,7 @@ Doping.generateDriveInRecipe('wafer.thyristor.step_six', 'wafer.thyristor.step_s
 Lithography.generatePhotolithographyRecipes('wafer.thyristor.step_seven', 'wafer.thyristor.step_eight', 'novolac_liftoff_resist', 'mask_set.thyristor', false)
 Deposition.generateSputteringRecipe('wafer.thyristor.step_eight', 'wafer.thyristor.step_nine', 400, 'aluminium') // Aluminium metallization & liftoff
 Lithography.generateResistStrippingRecipes('wafer.thyristor.step_nine', 'wafer.thyristor.step_ten', 1, false, true)
-Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.thyristor.step_ten', 'wafer.thyristor.step_eleven', 400, HV) // CMP for electrode contact
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.thyristor.step_ten', 'wafer.thyristor.step_eleven', 'silicon_dioxide', 400, HV) // CMP for electrode contact
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.thyristor.step_eleven', 'wafer.thyristor', 400, true) // Passivation
 
 FORMING_PRESS.recipeBuilder()
