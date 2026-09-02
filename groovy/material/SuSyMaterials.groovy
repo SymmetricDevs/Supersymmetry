@@ -1740,6 +1740,8 @@ class SuSyMaterials {
     public static Material HolmiumOxide
     public static Material PalladiumNanoparticle
     public static Material PalladiumNitrateSolution
+    public static Material Ozone
+    public static Material Propylene
 
     // HP Materials
 

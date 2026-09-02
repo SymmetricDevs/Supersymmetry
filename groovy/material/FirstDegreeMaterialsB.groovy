@@ -989,5 +989,11 @@ class FirstDegreeMaterialsB {
                 .components(Palladium, Nitrogen, Oxygen * 3, Water)
                 .color(0x7c2111)
                 .build()
+
+        Ozone = new Material.Builder(8811, SuSyUtility.susyId('ozone'))
+                .liquid()
+                .components(Oxygen * 3)
+                .color(0xadd8e6)
+                .build()
     }
 }

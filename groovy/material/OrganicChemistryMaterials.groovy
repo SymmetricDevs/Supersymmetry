@@ -4395,5 +4395,11 @@ class OrganicChemistryMaterials {
                 .components(Calcium, Carbon * 2, Oxygen * 4)
                 .color(0xE8E4E0)
                 .build()
+
+        Propylene = new Material.Builder(15743, SuSyUtility.susyId('propylene'))
+                .liquid()
+                .components(Carbon * 3, Hydrogen * 6)
+                .colorAverage()
+                .build()
     }
 }
