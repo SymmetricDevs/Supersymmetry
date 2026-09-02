@@ -86,7 +86,7 @@ def generatePackaging(String componentName, String starter) {
 
     Lithography.generateResistStrippingRecipes('wafer.' + componentName + '.pkg.step_ten', 'wafer.' + componentName + '.pkg.step_eleven', 1, true)
     Deposition.generateSinteringRecipe('wafer.' + componentName + '.pkg.step_eleven', 'wafer.' + componentName + '.pkg.step_twelve', 400, MV) // Reflow solder to form bumps
-    Packaging.generateBackgrindingRecipe('wafer.' + componentName + '.pkg.step_twelve', 'wafer.' + componentName + '.pkg.step_thirteen', 400, MV) // Backgrinding to reduce wafer thickness for flip chip bonding
+    Mechanicals.generateBackgrindingRecipe('wafer.' + componentName + '.pkg.step_twelve', 'wafer.' + componentName + '.pkg.step_thirteen', 400, MV) // Backgrinding to reduce wafer thickness for flip chip bonding
     Packaging.generateDicingRecipe('wafer.' + componentName + '.pkg.step_thirteen', 'die.' + componentName, 64, 400, HV) // Dicing wafer into individual dies
     Packaging.generateWireBondingRecipe('die.' + componentName, 'die.' + componentName + '.bonded', 'gold', 50, HV)
 }
