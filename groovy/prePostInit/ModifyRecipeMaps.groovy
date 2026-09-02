@@ -11,6 +11,7 @@ import gregtech.api.unification.material.properties.PropertyKey
 import gregtech.api.unification.ore.OrePrefix
 import gregtechfoodoption.recipe.GTFORecipeMaps
 import supersymmetry.api.fluids.SusyFluidStorageKeys
+import supersymmetry.api.recipes.SuSyRecipeMaps
 import supersymmetry.api.gui.SusyGuiTextures
 
 import static gregtech.api.recipes.GTRecipeHandler.*
@@ -471,3 +472,6 @@ RecipeMaps.DISTILLERY_RECIPES
 
 RecipeMaps.COMPRESSOR_RECIPES
     .modifyMaxInputs(2)
+
+SuSyRecipeMaps.WIRE_BONDING
+    .setMaxInputs(3)
