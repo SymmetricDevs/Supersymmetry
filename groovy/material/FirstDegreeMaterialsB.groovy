@@ -995,5 +995,11 @@ class FirstDegreeMaterialsB {
                 .components(Oxygen * 3)
                 .color(0xadd8e6)
                 .build()
+        
+        SulfurHexafluoride = new Material.Builder(8812, SuSyUtility.susyId('sulfur_hexafluoride'))
+                .liquid()
+                .components(Sulfur, Fluorine * 6)
+                .colorAverage()
+                .build()
     }
 }

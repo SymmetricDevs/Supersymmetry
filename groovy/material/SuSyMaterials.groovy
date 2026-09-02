@@ -1741,7 +1741,7 @@ class SuSyMaterials {
     public static Material PalladiumNanoparticle
     public static Material PalladiumNitrateSolution
     public static Material Ozone
-    public static Material Propylene
+    public static Material SulfurHexafluoride
 
     // HP Materials
 
@@ -2681,6 +2681,7 @@ class SuSyMaterials {
     public static Material TriethylBorate
     public static Material Fluoromethane
     public static Material CalciumOxalate
+    public static Material Propylene
 
     // Third Degree Materials
 
