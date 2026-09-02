@@ -475,3 +475,6 @@ RecipeMaps.COMPRESSOR_RECIPES
 
 SuSyRecipeMaps.WIRE_BONDING
     .setMaxInputs(3)
+
+SuSyRecipeMaps.SCREEN_PRINTING
+    .setMaxInputs(3)
