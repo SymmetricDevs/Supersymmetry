@@ -1,3 +1,27 @@
+# UPDATE 0.1.16.15
+## Mod Changes
+### Mod Updates
+- Supercritical 0.2.6 → 0.2.7
+- SusyCore 0.1.116 → 0.1.118
+- MixinBooter 11.14 → 11.15
+- Fugue 0.23.7 → 0.24.3
+- Cleanroom Relauncher 1.0.5 → 1.1.3
+- Forgelin-Continuous 2.4.0.0 → 2.4.10.0
+- SussyPatches 1.11.1 → 1.11.6
+## Changes
+### New Features
+- New decorative versions of multiblock components have been added! Add some more bloom to your base (as well as red mud waste piles). (#1998 by @JorgeMIng)
+- Concrete is now (slowly) craftable in the steam age! (not that you weren't already stealing it from structures) (#1999 by @quest-wizard)
+- Ore generation has been sped up! (#1996 by @MCTian-mi)
+### Changed Features
+- **BREAKING CHANGE**: Fission reactors no longer change reactivity with a rotated design. **You may want to turn off your reactor before updating.** (Supercritical#20 by @crindigo)
+- Masonry bricks are now craftable in a cutter (so stone slabs have a circuit now) (#1996 by @MCTian-mi)
+- ProjectRed has been gregified! Most recipes have changed, and PR intermediates like cathodes/anodes are no longer used. (#2000 by @quest-wizard)
+- A fluid sample storage quest is available for people who forgor that existed :skulle: (#1993 by @Sadsaltan)
+### Fixes
+- The coil quests have been flipped, and nichrome can be cooled in a chemical bath (#1994 by @jethro-3000)
+- The backpack pickup upgrade now works with all magnets. (#1995 by @Solothesolo)
+- The HIP is no longer optional for superalloys. (#2002 by @Fiery36)
 # UPDATE 0.1.16.14.1
 fixed a fix to the ERF coils - bruberu
 # UPDATE 0.1.16.14
