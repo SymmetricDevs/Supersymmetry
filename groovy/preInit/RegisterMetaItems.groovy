@@ -113,6 +113,10 @@ def registerBCDMetaitems() {
     // Tiers diverge at M4 and finish at their top metal layer (HV=4, EV=5, IV=6)
     def tiers = ['bcd_lpic': 4, 'bcd_pic': 5, 'bcd_hpic': 6]
     tiers.each { tier, topLayer ->
+        // Tier-level mask + die: generateBEOLProcess/generatePackaging reference the bare tier name
+        toadd_list.add("mask_set." + tier)
+        toadd_list.add("die." + tier)
+        toadd_list.add("die." + tier + ".bonded")
         // M4 is the split layer: only step_one.exposed (from the split) plus steps 2-8
         registerWaferSteps(tier + ".beol_four", 8, [start: 2])
         toadd_list.add("wafer." + tier + ".beol_four.step_one.exposed")
@@ -120,8 +124,8 @@ def registerBCDMetaitems() {
         for (int i = 5; i <= topLayer; i++) {
             registerWaferSteps(tier + ".beol_" + wordsFromNumber(i), 8, [start: 1, photoresist: [1]])
         }
-        // Sealing/packaging carries this tier's die + mask
-        registerWaferSteps(tier + ".pkg", 13, [start: 1, mask: true, die: true, photoresist: [2, 7], ashed: [10]])
+        // Sealing/packaging
+        registerWaferSteps(tier + ".pkg", 13, [start: 1, photoresist: [2, 7], ashed: [10]])
     }
 }
 
