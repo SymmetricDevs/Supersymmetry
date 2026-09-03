@@ -1769,6 +1769,9 @@ class SuSyMaterials {
     public static Material HardenedTitanium
     public static Material MolybdenumDisilicide
     public static Material Inconel601
+    public static Material UraniumMolybdenumAlloy
+    public static Material Haynes230
+    public static Material RheniumPentachloride
 
     public static Material PureGaseousTitaniumTetrachloride
     
@@ -2570,6 +2573,7 @@ class SuSyMaterials {
     public static Material Chloroprene
     public static Material DiisopropylDixanthogenDisulfide
     public static Material FiberReinforcedNylon
+    public static Material IridiumAcetylacetonate
 
     // Third Degree Materials
 

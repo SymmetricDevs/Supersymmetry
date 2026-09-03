@@ -272,7 +272,7 @@ class FirstDegreeMaterialsB {
         Inconel718 = new Material.Builder(8712, SuSyUtility.susyId('inconel_718'))
                 .ingot().liquid(new FluidBuilder().temperature(1800))
                 .colorAverage()
-                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_DOUBLE_PLATE, GENERATE_FRAME, GENERATE_SPRING, SUPERALLOY, INDUCTION_MELT)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_DOUBLE_PLATE, GENERATE_FRAME, GENERATE_SPRING, GENERATE_BOLT_SCREW, SUPERALLOY, INDUCTION_MELT)
                 .components(Nickel * 41, Iron * 19, Chrome * 20, Niobium * 3, Molybdenum * 2, Titanium, Aluminium * 2)
                 .blastTemp(2100, GasTier.MID, GTValues.VA[GTValues.EV])
                 .fluidPipeProperties(1600, 4000, true, true, true, false)
@@ -1083,6 +1083,34 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .blastTemp(3800, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
+
+            .ingot().liquid(new FluidBuilder().temperature(1395))
+            .flags(DISABLE_DECOMPOSITION, INDUCTION_MELT)
+            .iconSet(SHINY)
+            .components(WeaponsGradeUranium * 16, Molybdenum * 3)
+            .color(0x7AFF7A)
+            .build()
+
+        UraniumMolybdenumAlloy.setFormula('U39Mo7', true)
+
+        Haynes230 = new Material.Builder(8820, SuSyUtility.susyId('haynes_230'))
+            .ingot().liquid(new FluidBuilder().temperature(1648))
+            .flags(GENERATE_PLATE, SUPERALLOY, DISABLE_DECOMPOSITION, INDUCTION_MELT)
+            .components(Nickel * 108, Chrome * 48, Cobalt  * 11, Tungsten * 10, Iron * 7, Molybdenum * 4, Silicon * 3, Manganese * 2, Aluminium * 2, Copper * 1)
+            .iconSet(METALLIC)
+            .fluidPipeProperties(1500, 5000, true, true, true, false)
+            .color(0xFFEE00)
+            .build()
+
+        Haynes230.setBaseProof(true)
+
+        RheniumPentachloride = new Material.Builder(8821, SuSyUtility.susyId('rhenium_pentachloride'))
+            .dust()
+            .components(Rhenium * 1, Chlorine * 5)
+            .color(0x467064)
+            .iconSet(ROUGH)
+            .build()
+
 
     }
 }

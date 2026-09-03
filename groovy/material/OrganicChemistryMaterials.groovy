@@ -3497,5 +3497,14 @@ class OrganicChemistryMaterials {
                 .flags(GENERATE_PLATE, GENERATE_ROTOR, NO_UNIFICATION)
                 .build()
 
+        IridiumAcetylacetonate = new Material.Builder(15543, SuSyUtility.susyId('iridium_acetylacetonate'))
+            .dust()
+            .components(Iridium * 1, Carbon * 15, Hydrogen * 21, Oxygen * 6)
+            .iconSet(LAPIS)
+            .color(0xFFEBA3)
+            .build()
+
+        IridiumAcetylacetonate.setFormula('Ir(acac)3', true)
+
     }
 }

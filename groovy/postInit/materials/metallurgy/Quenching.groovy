@@ -72,7 +72,8 @@ def ingotMap = [
     'PlatinumRhodium':2113,
     'Zircaloy4':2200,
     'ReactorSteel':1800,
-    'Alnico':1800
+    'Alnico':1800,
+    'UraniumMolybdenumAlloy':1405
 ]
 
 def electrodeMap = [
@@ -84,7 +85,9 @@ def electrodeMap = [
     'Incoloy20':3000,
     'Nimonic105':3000,
     'Inconel718':3000,
-    'Inconel601':3000
+    'Inconel601':3000,
+    'Haynes230':3000,
+    'MarM246':3000
 ]
 
 //MV Tweaks (from CEu #1724)

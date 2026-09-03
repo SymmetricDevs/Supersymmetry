@@ -606,6 +606,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10431, "bialkali_photocathode")
         addItem(10432, "photomultiplier_components")
         addItem(10433, "beo_coated_stainless_steel_plate")
+        addItem(10434, "molybdenum_combustion_chamber_mandrel")
+        addItem(10435, "iridium_combustion_chamber_mandrel")
+        addItem(10436, "rhenium_combustion_chamber_mandrel")
+        addItem(10437, "rhenium_combustion_chamber")
 
         // Spacesuit Components 10441-10480
 

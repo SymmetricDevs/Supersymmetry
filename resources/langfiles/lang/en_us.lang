@@ -509,7 +509,6 @@ metaitem.space_suit.pressure.boots.name=Pressure Garment Boots
 metaitem.space_suit.cooling.boots.name=Liquid Cooling Garment Socks
 metaitem.space_suit.cooling.chest.name=Liquid Cooling Garment Shirt
 metaitem.space_suit.cooling.leggings.name=Liquid Cooling Garment Pants
-metaitem.space_suit.cooling.boots.name=Cooling Suit Boots
 metaitem.space_suit.thermal.boots.name=Integrated Thermal Micrometeoroid Garment (ITMG) Boots
 metaitem.space_suit.thermal.chest.name=Integrated Thermal Micrometeoroid Garment (ITMG) Chestplate
 metaitem.space_suit.thermal.gloves.name=Integrated Thermal Micrometeoroid Garment (ITMG) Gloves
@@ -527,6 +526,10 @@ metaitem.spectral_filter.visible_bandpass.name=Visible Bandpass Spectral Filter
 metaitem.spectral_filter.near_ir_bandpass.name=Near Infrared Bandpass Spectral Filter
 metaitem.spectral_filter.mid_ir_bandpass.name=Mid Infrared Bandpass Spectral Filter
 metaitem.spectral_filter.near_uv_bandpass.name=Near Ultraviolet Bandpass Spectral Filter
+metaitem.molybdenum_combustion_chamber_mandrel.name=Molybdenum Combustion Chamber Mandrel
+metaitem.iridium_combustion_chamber_mandrel.name=Iridium-Coated Combustion Chamber Mandrel
+metaitem.rhenium_combustion_chamber_mandrel.name=Rhenium-Coated Combustion Chamber Mandrel
+metaitem.rhenium_combustion_chamber.name=Rhenium Orbital Thruster Combustion Chamber
 
 
 
@@ -3071,6 +3074,10 @@ susy.material.diluted_vanadium_iii_sulfate_solution=Diluted Vanadium III Sulfate
 susy.material.vanadyl_sulfate_solution=Vanadyl Sulfate Solution
 susy.material.s_glass=S-Glass
 susy.material.fiber_reinforced_nylon=Fiber-Reinforced Nylon
+susy.material.rhenium_pentachloride=Rhenium Pentachloride
+susy.material.iridium_acetylacetonate=Iridium Acetylacetonate
+susy.material.haynes_230=Haynes 230
+susy.material.uranium_molybdenum_alloy=Uranium-Molybdenum Alloy
 
 # Isotopes
 
