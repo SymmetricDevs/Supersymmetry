@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    205944534
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.352771313.desc",
+      "icon:10": {
+        "id:8": "susy:rocket_interstage"
+      },
+      "name:8": "susy.quest.db.352771313.title"
+    }
+  },
+  "questID:3": 352771313,
+  "tasks:9": {}
+}

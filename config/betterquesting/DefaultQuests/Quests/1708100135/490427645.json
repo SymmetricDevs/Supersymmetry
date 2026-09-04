@@ -1,0 +1,48 @@
+{
+  "preRequisites:11": [
+    1478395428,
+    2121772749,
+    1803213799,
+    1192162820,
+    349809747,
+    352771313,
+    1674462236
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.490427645.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 18061,
+        "id:8": "gregtech:machine"
+      },
+      "name:8": "susy.quest.db.490427645.title"
+    }
+  },
+  "questID:3": 490427645,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 18061,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 13,
+          "id:8": "susy:meta_item",
+          "tag:10": {
+            "AFSimprovement:4": 0,
+            "buildstat:1": 0,
+            "instruments:10": {},
+            "maxCargoVolume:6": 0.0,
+            "maxVolume:6": 0.0,
+            "name:8": "soyuz"
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

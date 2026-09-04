@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    205944534
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1803213799.desc",
+      "icon:10": {
+        "id:8": "susy:rocket_fairing"
+      },
+      "name:8": "susy.quest.db.1803213799.title"
+    }
+  },
+  "questID:3": 1803213799,
+  "tasks:9": {}
+}

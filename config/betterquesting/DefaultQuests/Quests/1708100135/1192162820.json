@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    205944534
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1192162820.desc",
+      "icon:10": {
+        "Damage:2": 2,
+        "id:8": "susy:rocket_combustion_chamber"
+      },
+      "name:8": "susy.quest.db.1192162820.title"
+    }
+  },
+  "questID:3": 1192162820,
+  "tasks:9": {}
+}

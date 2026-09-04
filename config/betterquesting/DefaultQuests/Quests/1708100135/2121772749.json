@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    205944534
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.2121772749.desc",
+      "icon:10": {
+        "id:8": "susy:guidance_system"
+      },
+      "name:8": "susy.quest.db.2121772749.title"
+    }
+  },
+  "questID:3": 2121772749,
+  "tasks:9": {}
+}
