@@ -236,6 +236,15 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[EV])
         .buildAndRegister()
 
+crafting.shapelessBuilder()
+    .name("susy:space_suit_fill")
+    .output(metaitem('susy:astronaut_chestplate').withNbt(['oxygen': 1200.0D]))
+    .input(metaitem('susy:astronaut_chestplate').mark('tank')) 
+    .input(metaitem('dustCalciumHydroxide'))
+    .recipeFunction { output, inputs, info -> 
+        output.getTagCompound().setDouble("damage", inputs['tank'].getTagCompound().getDouble("damage"))
+    }.register()
+
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('space_suit.pressure.leggings'))
         .inputs(metaitem('space_suit.cooling.leggings'))
