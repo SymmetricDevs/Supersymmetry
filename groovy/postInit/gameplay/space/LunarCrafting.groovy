@@ -78,14 +78,15 @@ ASSEMBLER.recipeBuilder()
     .info('recipe.moon')
     .buildAndRegister()
 
-crafting.addShapeless('susy:crafting_table_moon_anorthosite', item('minecraft:crafting_table'), [
-    item('susy:susy_stone_cobble', 11)
+crafting.addShaped("susy:crafting_table_moon_anorthosite", item('minecraft:crafting_table') * 1, [
+    [item('susy:susy_stone_cobble', 11), item('susy:susy_stone_cobble', 11)],
+    [item('susy:susy_stone_cobble', 11), item('susy:susy_stone_cobble', 11)],
 ])
 
-crafting.addShapeless('susy:crafting_table_moon_basalt', item('minecraft:crafting_table'), [
-    item('susy:susy_stone_cobble', 12)
+crafting.addShaped("susy:crafting_table_moon_basalt", item('minecraft:crafting_table') * 1, [
+    [item('susy:susy_stone_cobble', 12), item('susy:susy_stone_cobble', 12)],
+    [item('susy:susy_stone_cobble', 12), item('susy:susy_stone_cobble', 12)],
 ])
-
 
 crafting.addShaped("susy:ev_casing_moon", item('gregtech:machine_casing', 4) * 1, [
     [ore('plateAluminium'), metaitem('lunar_r_glass_fibers'), ore('plateAluminium')],
