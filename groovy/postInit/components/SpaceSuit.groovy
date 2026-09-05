@@ -238,7 +238,7 @@ ASSEMBLER.recipeBuilder()
 
 crafting.shapelessBuilder()
     .name("susy:space_suit_fill")
-    .output(metaitem('susy:astronaut_chestplate').withNbt(['oxygen': 1200.0D]))
+    .output(metaitem('susy:astronaut_chestplate').withNbt(['oxygen': 3600.0D]))
     .input(metaitem('susy:astronaut_chestplate').mark('tank')) 
     .input(metaitem('dustCalciumHydroxide'))
     .recipeFunction { output, inputs, info -> 
