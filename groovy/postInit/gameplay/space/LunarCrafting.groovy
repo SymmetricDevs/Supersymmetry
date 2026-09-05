@@ -79,11 +79,11 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 crafting.addShapeless('susy:crafting_table_moon_anorthosite', item('minecraft:crafting_table'), [
-    item('susy:susy_stone_bricks', 11)
+    item('susy:susy_stone_cobble', 11)
 ])
 
 crafting.addShapeless('susy:crafting_table_moon_basalt', item('minecraft:crafting_table'), [
-    item('susy:susy_stone_bricks', 12)
+    item('susy:susy_stone_cobble', 12)
 ])
 
 
