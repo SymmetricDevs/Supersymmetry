@@ -1084,6 +1084,7 @@ class FirstDegreeMaterialsB {
                 .blastTemp(3800, GasTier.HIGH, GTValues.VA[GTValues.EV])
                 .build()
 
+        UraniumMolybdenumAlloy = new Material.Builder(8819, SuSyUtility.susyId('uranium_molybdenum_alloy'))
             .ingot().liquid(new FluidBuilder().temperature(1395))
             .flags(DISABLE_DECOMPOSITION, INDUCTION_MELT)
             .iconSet(SHINY)
