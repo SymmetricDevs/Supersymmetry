@@ -312,7 +312,9 @@ def fluid_removals = [
     fluid('uranium_hexafluoride'),
     item('forge:bucketfilled').withNbt(['FluidName': 'uranium_hexafluoride', 'Amount': 1000]),
     fluid('enriched_uranium_hexafluoride'),
-    item('forge:bucketfilled').withNbt(['FluidName': 'enriched_uranium_hexafluoride', 'Amount': 1000])
+    item('forge:bucketfilled').withNbt(['FluidName': 'enriched_uranium_hexafluoride', 'Amount': 1000]),
+    fluid('rocket_fuel'),
+    item('forge:bucketfilled').withNbt(['FluidName': 'rocket_fuel', 'Amount': 1000])
 ]
 
 for (fluid in fluid_removals) {
@@ -2131,3 +2133,16 @@ ASSEMBLER.recipeBuilder()
     .duration(10)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Remove GT Rocket Fuel
+
+mods.gregtech.mixer.streamRecipes().removeIf { recipe ->
+    recipe.getFluidOutputs().any { output ->
+        output.getFluid().getName() == 'rocket_fuel'
+    }
+}
+
+mods.gregtech.mixer.removeByInput(16, [fluid('dimethylhydrazine') * 1000], [fluid('oxygen') * 1000])
+mods.gregtech.mixer.removeByInput(16, [fluid('dimethylhydrazine') * 1000], [fluid('dinitrogen_tetroxide') * 1000])
+mods.gregtech.blender.removeByInput(16, [fluid('dimethylhydrazine') * 1000], [fluid('oxygen') * 1000])
+mods.gregtech.blender.removeByInput(16, [fluid('dimethylhydrazine') * 1000], [fluid('dinitrogen_tetroxide') * 1000])
