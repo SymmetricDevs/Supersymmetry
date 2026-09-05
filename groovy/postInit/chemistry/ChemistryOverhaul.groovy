@@ -904,10 +904,10 @@ VACUUM_FREEZER.recipeBuilder()
 BCR.recipeBuilder()
     .fluidInputs(fluid('dinitrogen_tetroxide') * 1000)
     .fluidInputs(fluid('nitric_oxide') * 100)
-    .fluidOutputs(fluid('mon_3' * 1000))
+    .fluidOutputs(fluid('mon_3') * 1000)
     .duration(100)
     .EUt(VA[HV])
-    .buildAndRegister
+    .buildAndRegister()
 
 // 1,1-dimethylhydrazine
 

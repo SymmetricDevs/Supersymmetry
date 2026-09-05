@@ -2136,12 +2136,6 @@ ASSEMBLER.recipeBuilder()
 
 // Remove GT Rocket Fuel
 
-mods.gregtech.mixer.streamRecipes().removeIf { recipe ->
-    recipe.getFluidOutputs().any { output ->
-        output.getFluid().getName() == 'rocket_fuel'
-    }
-}
-
 mods.gregtech.mixer.removeByInput(16, [fluid('dimethylhydrazine') * 1000], [fluid('oxygen') * 1000])
 mods.gregtech.mixer.removeByInput(16, [fluid('dimethylhydrazine') * 1000], [fluid('dinitrogen_tetroxide') * 1000])
 mods.gregtech.blender.removeByInput(16, [fluid('dimethylhydrazine') * 1000], [fluid('oxygen') * 1000])
