@@ -1772,7 +1772,7 @@ class SuSyMaterials {
     public static Material UraniumMolybdenumAlloy
     public static Material Haynes230
     public static Material RheniumPentachloride
-
+    public static Material MON3
     public static Material PureGaseousTitaniumTetrachloride
     
     // HP Materials

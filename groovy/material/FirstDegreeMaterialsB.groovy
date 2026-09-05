@@ -1112,6 +1112,12 @@ class FirstDegreeMaterialsB {
             .iconSet(ROUGH)
             .build()
 
+        MON3 = new Material.Builder(8822, SuSyUtility.susyId('mon_3'))
+                .liquid()
+                .components(DinitrogenTetroxide * 10, NitricOxide)
+                .color(0x5f9ea0)
+                .build()
 
+        MON3.setFormula('(N2O3)(N2O4)10', true)
     }
 }
