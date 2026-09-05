@@ -3506,5 +3506,11 @@ class OrganicChemistryMaterials {
 
         IridiumAcetylacetonate.setFormula('Ir(acac)3', true)
 
+        Aerozine50 = new Material.Builder(15544, SuSyUtility.susyId('aerozine_50'))
+            .liquid(new FluidBuilder().basic())
+            .components(Dimethylhydrazine * 1, Hydrazine * 1)
+            .color(0x005FA8)
+            .build()
+
     }
 }

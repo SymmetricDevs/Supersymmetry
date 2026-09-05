@@ -530,6 +530,7 @@ metaitem.molybdenum_combustion_chamber_mandrel.name=Molybdenum Combustion Chambe
 metaitem.iridium_combustion_chamber_mandrel.name=Iridium-Coated Combustion Chamber Mandrel
 metaitem.rhenium_combustion_chamber_mandrel.name=Rhenium-Coated Combustion Chamber Mandrel
 metaitem.rhenium_combustion_chamber.name=Rhenium Orbital Thruster Combustion Chamber
+metaitem.lunar_module_engine.name=Lunar Module Engine
 
 
 
@@ -3078,6 +3079,7 @@ susy.material.rhenium_pentachloride=Rhenium Pentachloride
 susy.material.iridium_acetylacetonate=Iridium Acetylacetonate
 susy.material.haynes_230=Haynes 230
 susy.material.uranium_molybdenum_alloy=Uranium-Molybdenum Alloy
+susy.material.aerozine_50=Aerozine 50
 
 # Isotopes
 

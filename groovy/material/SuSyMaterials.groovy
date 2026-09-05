@@ -2574,6 +2574,7 @@ class SuSyMaterials {
     public static Material DiisopropylDixanthogenDisulfide
     public static Material FiberReinforcedNylon
     public static Material IridiumAcetylacetonate
+    public static Material Aerozine50
 
     // Third Degree Materials
 

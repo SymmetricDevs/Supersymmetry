@@ -610,6 +610,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10435, "iridium_combustion_chamber_mandrel")
         addItem(10436, "rhenium_combustion_chamber_mandrel")
         addItem(10437, "rhenium_combustion_chamber")
+        addItem(10438, "lunar_module_engine")
 
         // Spacesuit Components 10441-10480
 

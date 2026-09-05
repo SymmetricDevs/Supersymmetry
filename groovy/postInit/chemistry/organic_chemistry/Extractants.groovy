@@ -46,6 +46,7 @@ import static gregtech.api.GTValues.*
     BR.recipeBuilder()
         .inputs(ore('dustCalciumCyanamide') * 4)
         .fluidInputs(fluid('water') * 3000)
+        .circuitMeta(1)
         .outputs(metaitem('dustCalcite') * 5)
         .fluidOutputs(fluid('ammonia') * 2000)
         .duration(200)
