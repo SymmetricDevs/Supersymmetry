@@ -1,4 +1,8 @@
 {
+  "preRequisites:11": [
+    743,
+    550
+  ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.2011054701.desc",
