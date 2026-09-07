@@ -566,16 +566,16 @@ SCANNER.recipeBuilder()
 
 
 mods.susy.rocketCosts.add('soyuz', 'soyuz_plumbing')
-        .input(ore('pipeLargeStainlessSteel'), 20) // hydrogen embrittlement moment
+        .input(ore('pipeLargeFluidStainlessSteel'), 20) // hydrogen embrittlement moment
         .input(ore('screwStainlessSteel'), 20)
-        .duration(400)
+        .duration(20) //this is in seconds for some reason
         .register()
 
 mods.susy.rocketCosts.add('soyuz', 'soyuz_wiring')
         .input(ore('circuitMv'), 32)
         .input(ore('circuitEv'), 8)
         .input(ore('cableGtQuadrupleAluminium'), 40)
-        .duration(400)
+        .duration(20)
         .register()
 
 // 12, modeled after the Fregat
@@ -585,27 +585,26 @@ mods.susy.rocketCosts.add('soyuz', 'soyuz_verniers')
         .input(item('susy:rocket_engine_gas_generator') * 4) // One for each stage (being nice here) 
         .input(item('susy:rocket_turbopump') * 12)
         .input(item('susy:rocket_nozzle') * 48)
-        .duration(400)
+        .duration(20)
         .register()
 
 mods.susy.rocketCosts.add('lunar', 'lunar_plumbing')
         .input(ore('pipeLargeStainlessSteel'), 10)
         .input(ore('screwStainlessSteel'), 10)
-        .duration(200)
+        .duration(10)
         .register()
 
 mods.susy.rocketCosts.add('lunar', 'lunar_wiring')
         .input(ore('cableGtQuadrupleAluminium'), 20)
-        .duration(200)
+        .duration(10)
         .register()
 
 mods.susy.rocketCosts.add('lunar', 'lunar_verniers')
-        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'mon_3', 'Amount': 8000]]) * 3)
-        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'dimethylhydrazine', 'Amount': 8000]]) * 3)
-        .input(item('susy:rocket_engine_gas_generator')) // One for each stage (being nice here) 
-        .input(item('susy:rocket_turbopump') * 3)
-        .input(item('susy:rocket_nozzle') * 12)
-        .duration(200)
+        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'hydrogen', 'Amount': 8000]]) * 2)
+        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'oxygen', 'Amount': 8000]]) * 2)
+        .input(metaitem('electric.pump.ev') * 4)
+        .input(metaitem('plateTitanium') * 12)
+        .duration(10)
         .register()
 
 BR.recipeBuilder()

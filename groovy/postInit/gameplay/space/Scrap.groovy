@@ -5,21 +5,19 @@ import supersymmetry.api.space.Planetoid
 // Earth
 SALVAGING.recipeBuilder()
     .inputs(Planetoid.PLANETOIDS.inverse().get(0).getDisplayItem())
-    .outputs(metaitem('scrap.commercial') * 2)
-    .outputs(metaitem('scrap.parts'))
-    .chancedOutput(metaitem('scrap.supply'), 8000, 0)
-    .chancedOutput(metaitem('scrap.commercial'), 3000, 0)
-    .chancedOutput(metaitem('scrap.supply'), 2000, 0)
-    .chancedOutput(metaitem('scrap.military'), 1000, 0)
-    .chancedOutput(metaitem('scrap.parts'), 500, 0)
-    .chancedOutput(metaitem('scrap.commercial') * 3, 200, 0)
-    .chancedOutput(metaitem('scrap.military'), 100, 0)
-    .duration(5000)
+    .outputs(metaitem('susy:orbital.scrap.earth') * 16)
+    .duration(6000)
     .buildAndRegister()
 
 // Moon
 SALVAGING.recipeBuilder()
     .inputs(Planetoid.PLANETOIDS.inverse().get(800).getDisplayItem())
+    .outputs(metaitem('susy:orbital.scrap.earth') * 16)
+    .duration(3000)
+    .buildAndRegister()
+
+SCRAP_RECYCLER.recipeBuilder()
+    .inputs(metaitem('susy:orbital.scrap.earth'))
     .outputs(metaitem('scrap.supply') * 2)
     .outputs(metaitem('scrap.commercial'))
     .outputs(metaitem('scrap.parts'))
@@ -29,8 +27,10 @@ SALVAGING.recipeBuilder()
     .chancedOutput(metaitem('scrap.commercial'), 1000, 0)
     .chancedOutput(metaitem('scrap.parts') * 2, 500, 0)
     .chancedOutput(metaitem('scrap.military'), 200, 0)
-    .duration(6000)
+    .duration(300)
+    .EUt(VA[HV])
     .buildAndRegister()
+
 
 // Have fun!
 def robotArms = [metaitem('robot.arm.mv'), metaitem('robot.arm.hv'),
@@ -256,6 +256,7 @@ scrapRecipes(builder -> builder
 
 for (def i = 0; i < 6; i++) {
     SCRAP_RECYCLER.recipeBuilder()
+        .inputs(metaitem('scrap.military.unknown'))
         .chancedOutput(metaitem('scrap.unusable'), 2000, decreases[i])
         .chancedOutputLogic(ChancedOutputLogic.OR)
         .inputs(robotArms[i])
@@ -270,6 +271,7 @@ for (def i = 0; i < 6; i++) {
         .buildAndRegister()
 }
 SCRAP_RECYCLER.recipeBuilder()
+    .inputs(metaitem('scrap.military.unknown'))
     .chancedOutput(metaitem('scrap.unusable'), 5000, -25)
     .chancedOutputLogic(ChancedOutputLogic.OR)
     .notConsumable(metaitem('sensor.hv'))
