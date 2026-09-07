@@ -566,7 +566,7 @@ SCANNER.recipeBuilder()
 
 
 mods.susy.rocketCosts.add('soyuz', 'soyuz_plumbing')
-        .input(ore('pipeLargeStainlessSteel'), 20) // hydrogen embrittlement moment
+        .input(ore('pipeLargeFluidStainlessSteel'), 20) // hydrogen embrittlement moment
         .input(ore('screwStainlessSteel'), 20)
         .duration(400)
         .register()
@@ -589,7 +589,7 @@ mods.susy.rocketCosts.add('soyuz', 'soyuz_verniers')
         .register()
 
 mods.susy.rocketCosts.add('lunar', 'lunar_plumbing')
-        .input(ore('pipeLargeStainlessSteel'), 10)
+        .input(ore('pipeLargeFluidStainlessSteel'), 10)
         .input(ore('screwStainlessSteel'), 10)
         .duration(200)
         .register()
