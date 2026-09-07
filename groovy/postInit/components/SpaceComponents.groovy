@@ -589,7 +589,7 @@ mods.susy.rocketCosts.add('soyuz', 'soyuz_verniers')
         .register()
 
 mods.susy.rocketCosts.add('lunar', 'lunar_plumbing')
-        .input(ore('pipeLargeStainlessSteel'), 10)
+        .input(ore('pipeLargeFluidStainlessSteel'), 10)
         .input(ore('screwStainlessSteel'), 10)
         .duration(10)
         .register()
