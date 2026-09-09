@@ -5,6 +5,11 @@ import techguns.entities.npcs.Outcast
 import net.minecraft.nbt.NBTTagCompound
 import net.minecraft.util.math.BlockPos
 import supersymmetry.common.metatileentities.single.electric.MetaTileEntityFederationDropBeacon
+import supersymmetry.common.metatileentities.single.electric.MetaTileEntityFederationReinforcementBeacon
+import net.minecraft.inventory.EntityEquipmentSlot
+import net.minecraft.item.Item
+import net.minecraft.item.ItemStack
+import net.minecraft.util.ResourceLocation
 
 System.out.println("grs Siege loaded")
 
@@ -149,4 +154,33 @@ MetaTileEntityFederationDropBeacon.fedPayloadProvider = {
             ["gregtech:machine", "18630"],
             ["gregtech:machine", "18640"],
     ]
+}
+
+MetaTileEntityFederationReinforcementBeacon.fedPayloadProvider = { world ->
+    Outcast outcast = new Outcast(world)
+
+    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy")
+    root.setString("faction", "Feds")
+    root.setInteger("hate", 0)
+    outcast.getEntityData().setTag("susy", root)
+    outcast.setCustomNameTag("Former Federation reinforcements")
+
+    return outcast
+}
+
+MetaTileEntityFederationReinforcementBeacon.fedPostSpawnModifier = { mob ->
+    String[] weapons = [
+            "techguns:lmg",
+            "techguns:flamethrower",
+            "techguns:minigun"
+    ]
+
+    String chosen = weapons[(int) (Math.random() * weapons.length)]
+    Item weaponItem = Item.REGISTRY.getObject(new ResourceLocation(chosen))
+
+    if (weaponItem != null) {
+        ItemStack weaponStack = new ItemStack(weaponItem, 1)
+        mob.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, weaponStack)
+        mob.setDropChance(EntityEquipmentSlot.MAINHAND, 0.085F)
+    }
 }
