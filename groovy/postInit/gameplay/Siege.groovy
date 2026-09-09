@@ -10,8 +10,11 @@ import net.minecraft.inventory.EntityEquipmentSlot
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.util.ResourceLocation
+import net.minecraft.potion.PotionEffect;
+import supersymmetry.common.potion.PotionDropPodSickness;
 
 System.out.println("grs Siege loaded")
+int DROP_POD_SICKNESS_DURATION = 450
 
 // /setblock ~ ~ ~ susy:raid_flare_block 0 replace {targetUUID:"31c4910d-9b69-4725-8969-9ed53ac8a7dc"}
 // deverloper uuid, use for RunClient
@@ -164,7 +167,7 @@ MetaTileEntityFederationReinforcementBeacon.fedPayloadProvider = { world ->
     root.setInteger("hate", 0)
     outcast.getEntityData().setTag("susy", root)
     outcast.setCustomNameTag("Former Federation reinforcements")
-
+    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
     return outcast
 }
 
