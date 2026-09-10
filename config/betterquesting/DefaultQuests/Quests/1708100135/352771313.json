@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.352771313.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "susy:rocket_interstage"
       },
       "name:8": "susy.quest.db.352771313.title"
@@ -14,7 +15,23 @@
   "questID:3": 352771313,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "susy:rocket_interstage"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 8760,
+          "id:8": "gregtech:meta_plate"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

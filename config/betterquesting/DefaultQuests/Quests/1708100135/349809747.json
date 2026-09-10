@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.349809747.desc",
       "icon:10": {
+        "Count:3": 1,
         "id:8": "susy:rocket_tank_shell"
       },
       "name:8": "susy.quest.db.349809747.title"
@@ -14,7 +15,23 @@
   "questID:3": 349809747,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "susy:rocket_tank_shell"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 27151,
+          "id:8": "gregtech:meta_plate"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

@@ -6,6 +6,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1192162820.desc",
       "icon:10": {
+        "Count:3": 1,
         "Damage:2": 2,
         "id:8": "susy:rocket_combustion_chamber"
       },
@@ -15,7 +16,45 @@
   "questID:3": 1192162820,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "susy:rocket_combustion_chamber"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "susy:rocket_nozzle"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "susy:rocket_engine_gas_generator"
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 4,
+          "id:8": "susy:rocket_engine_gas_generator"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "id:8": "susy:rocket_turbopump"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 4,
+          "id:8": "susy:rocket_turbopump"
+        },
+        "6:10": {
+          "Count:3": 1,
+          "Damage:2": 8,
+          "id:8": "susy:rocket_turbopump"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
     }
   }
 }

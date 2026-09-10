@@ -11,7 +11,9 @@
       "desc:8": "susy.quest.db.940456096.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "id:8": "minecraft:nether_star"
+        "Count:3": 1,
+        "Damage:2": 4,
+        "id:8": "openmodularturrets:ammo_meta"
       },
       "name:8": "susy.quest.db.940456096.title"
     }
@@ -19,6 +21,7 @@
   "questID:3": 940456096,
   "tasks:9": {
     "0:10": {
+      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     }
   }
