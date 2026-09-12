@@ -86,6 +86,11 @@ PolychlorinatedBiphenylCoolant.setDurationRadiator(40);
 PolychlorinatedBiphenylCoolant.setAmountToUse(1000);
 PolychlorinatedBiphenylCoolant.setTimeFactor(2);
 
+def FC75Coolant = new Coolant("fc_75", "warm_fc_75");
+PolychlorinatedBiphenylCoolant.setDurationRadiator(30);
+PolychlorinatedBiphenylCoolant.setAmountToUse(1000);
+PolychlorinatedBiphenylCoolant.setTimeFactor(1);
+
 def Coolants = [
         WaterCoolant,
         ChilledWaterCoolant,
@@ -94,7 +99,8 @@ def Coolants = [
         LubricantCoolant,
         SodiumPotassiumCoolant,
         EthyleneGlycolCoolant,
-        PolychlorinatedBiphenylCoolant
+        PolychlorinatedBiphenylCoolant,
+        FC75Coolant
 ];
 
 def CryoHydrogen = new CryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen');
