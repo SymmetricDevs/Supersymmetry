@@ -29,17 +29,17 @@ crafting.addShaped(item('gregtech:machine',18528),
 // ---------------------------------------------------------------------------
 
 // 1) Create your own groups and add blocks to them (recipe membership).
-def myFacadeGroup = createExtendedChiselGroup('susy.facades')
-addItemToGroup('susy.facades', item('chisel:marble'))
-addItemToGroup('susy.facades', item('chisel:marble', 1))
-addItemToGroup('susy.facades', item('minecraft:stone'))
-addItemToGroup('susy.facades', item('minecraft:brick_block'))
+// def myFacadeGroup = createExtendedChiselGroup('susy.facades')
+// addItemToGroup('susy.facades', item('chisel:marble'))
+// addItemToGroup('susy.facades', item('chisel:marble', 1))
+// addItemToGroup('susy.facades', item('minecraft:stone'))
+// addItemToGroup('susy.facades', item('minecraft:brick_block'))
 
 // 2) Place them in the browser, completely independently of the group above.
-addLocationsToItem(item('chisel:marble'), 'susy/facades/Stone-like')
-addLocationsToItem(item('chisel:marble', 1), 'susy/facades/Stone-like', 'decor/bricks')
-addLocationsToItem(item('minecraft:stone'), 'susy/facades/Stone-like')
-addLocationsToItem(item('minecraft:brick_block'), 'susy/facades/Masonry')
+// addLocationsToItem(item('chisel:marble'), 'susy/facades/Stone-like')
+// addLocationsToItem(item('chisel:marble', 1), 'susy/facades/Stone-like', 'decor/bricks')
+// addLocationsToItem(item('minecraft:stone'), 'susy/facades/Stone-like')
+// addLocationsToItem(item('minecraft:brick_block'), 'susy/facades/Masonry')
 
 
 
@@ -177,6 +177,230 @@ for (int i = 0; i < ids.size(); i++) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+// SUSY BLOCKS
+
+createExtendedChiselGroup('susy_structural_blocks')
+for (int i = 0; i<16; i++) {
+    addItemToGroup("susy_structural_blocks", item('susy:structural_block', i))
+    addLocationsToItem(item('susy:structural_block', i),"SUSY/Structural Blocks")
+    addItemToGroup("susy_structural_blocks", item('susy:structural_block', i))
+}
+for (int i = 0; i<10; i++) {
+    addItemToGroup("susy_structural_blocks", item('susy:structural_block_1', i))
+    addLocationsToItem(item('susy:structural_block_1', i),"SUSY/Structural Blocks")
+}
+
+
+createExtendedChiselGroup('susy_structural_blocks')
+addItemToGroup("home_blocks", item('susy:home_block', 0))
+addLocationsToItem(item('susy:home_block', 0),"SUSY/Home Blocks")
+addItemToGroup("home_blocks", item('susy:home_block', 4))
+addLocationsToItem(item('susy:home_block', 4),"SUSY/Home Blocks")
+addItemToGroup("home_blocks", item('susy:home_block', 8))
+addLocationsToItem(item('susy:home_block', 8),"SUSY/Home Blocks")
+addItemToGroup("home_blocks", item('susy:home_block', 12))
+addLocationsToItem(item('susy:home_block', 12),"SUSY/Home Blocks")
+
+
+
+createExtendedChiselGroup('ruby_blocks')
+addItemToGroup("ruby_blocks", item('gregtech:meta_block_compressed_19', 7))
+addLocationsToItem(item('gregtech:meta_block_compressed_19', 7),"SUSY/Gems/Ruby")
+
+addItemToGroup("ruby_blocks", item('biomesoplenty:gem_block', 1))
+addLocationsToItem(item('biomesoplenty:gem_block', 1),"SUSY/Gems/Ruby")
+
+
+createExtendedChiselGroup('malachite_blocks')
+addItemToGroup("malachite_blocks", item('gregtech:meta_block_compressed_24', 1))
+addLocationsToItem(item('gregtech:meta_block_compressed_24', 1),"SUSY/Gems/Malachite")
+
+addItemToGroup("malachite_blocks", item('biomesoplenty:gem_block', 5))
+addLocationsToItem(item('biomesoplenty:gem_block', 5),"SUSY/Gems/Malachite")
+
+createExtendedChiselGroup('sapphire_blocks')
+addItemToGroup("sapphire_blocks", item('gregtech:meta_block_compressed_19', 10))
+addLocationsToItem(item('gregtech:meta_block_compressed_19', 10),"SUSY/Gems/Sapphire")
+
+addItemToGroup("sapphire_blocks", item('biomesoplenty:gem_block', 6))
+addLocationsToItem(item('biomesoplenty:gem_block', 6),"SUSY/Gems/Sapphire")
+
+
+
+// MARKINGS
+
+createExtendedChiselGroup("markings_basic")
+createExtendedChiselGroup("markings_symbolic")
+createExtendedChiselGroup("markings_symbolic_yellow")
+createExtendedChiselGroup("markings_electric")
+createExtendedChiselGroup("markings_black")
+createExtendedChiselGroup("markings_blue")
+createExtendedChiselGroup("markings_green")
+createExtendedChiselGroup("markings_orange")
+createExtendedChiselGroup("markings_red")
+createExtendedChiselGroup("markings_yellow")
+
+def basic = [
+    'ags_modernmarkings:floor_marking_white_singleline',
+    'ags_modernmarkings:floor_marking_white_lane',
+    'ags_modernmarkings:floor_marking_white_lane_cross',
+    'ags_modernmarkings:floor_marking_white_square',
+    'ags_modernmarkings:floor_marking_whiteblack_hazardline',
+    'ags_modernmarkings:floor_marking_white_corner',
+    'ags_modernmarkings:floor_marking_red_hazardline',
+    'ags_modernmarkings:floor_marking_white_arrow',
+    'ags_modernmarkings:wall_marking_arrowleft',
+    'ags_modernmarkings:wall_marking_arrowright'
+]
+
+def black = [
+    'ags_modernmarkings:floor_marking_black_corner',
+    'ags_modernmarkings:floor_marking_black_singleline'
+]
+
+def blue = [
+    'ags_modernmarkings:floor_marking_blue_corner',
+    'ags_modernmarkings:floor_marking_blue_singleline'
+]
+
+def green = [
+    'ags_modernmarkings:floor_marking_green_corner',
+    'ags_modernmarkings:floor_marking_green_singleline'
+]
+
+def orange = [
+    'ags_modernmarkings:floor_marking_orange_corner',
+    'ags_modernmarkings:floor_marking_orange_singleline'
+]
+
+def red = [
+    'ags_modernmarkings:floor_marking_red_corner',
+    'ags_modernmarkings:floor_marking_red_singleline',
+    'ags_modernmarkings:floor_marking_danger_red',
+    'ags_modernmarkings:floor_marking_redx'
+]
+
+def yellow = [
+    'ags_modernmarkings:floor_marking_yellow_corner',
+    'ags_modernmarkings:floor_marking_yellow_hazardline',
+    'ags_modernmarkings:floor_marking_yellow_lane',
+    'ags_modernmarkings:floor_marking_yellow_sideline',
+    'ags_modernmarkings:floor_marking_yellow_singleline',
+    'ags_modernmarkings:floor_marking_yellow_square',
+    'ags_modernmarkings:floor_marking_yellow_stripes',
+    'ags_modernmarkings:floor_marking_danger_yellow',
+    'ags_modernmarkings:wall_marking_warning_danger',
+    'ags_modernmarkings:wall_marking_hazardline_left',
+    'ags_modernmarkings:wall_marking_hazardline_right',
+    'ags_modernmarkings:floor_marking_yellow_arrow'
+]
+
+for (anItem in basic) {
+    
+    addItemToGroup("markings_basic", item(anItem))
+    addLocationsToItem(item(anItem),"chisel/AGS_MODERN_MARKINGS/Basic")
+}
+
+for (anItem in black) {
+    
+    addItemToGroup("markings_black", item(anItem))
+    addLocationsToItem(item(anItem),"chisel/AGS_MODERN_MARKINGS/Black")
+}
+
+for (anItem in blue) {
+    
+    addItemToGroup("markings_blue", item(anItem))
+    addLocationsToItem(item(anItem),"chisel/AGS_MODERN_MARKINGS/Blue")
+}
+
+for (anItem in green) {
+    
+    addItemToGroup("markings_green", item(anItem))
+    addLocationsToItem(item(anItem),"chisel/AGS_MODERN_MARKINGS/Green")
+}
+
+for (anItem in orange) {
+    
+    addItemToGroup("markings_orange", item(anItem))
+    addLocationsToItem(item(anItem),"chisel/AGS_MODERN_MARKINGS/Orange")
+}
+
+for (anItem in red) {
+    
+    addItemToGroup("markings_red", item(anItem))
+    addLocationsToItem(item(anItem),"chisel/AGS_MODERN_MARKINGS/Red")
+}
+
+for (anItem in yellow) {
+    
+    addItemToGroup("markings_yellow", item(anItem))
+    addLocationsToItem(item(anItem),"chisel/AGS_MODERN_MARKINGS/Yellow")
+}
+
+
+
+
+createExtendedChiselGroup("fire_bricks")
+addItemToGroup("fire_bricks", item('gregtech:metal_casing', 1))
+addItemToGroup("fire_bricks", item('pyrotech:refractory_brick_block'))
+
+addLocationsToItem(item('gregtech:metal_casing', 1),"chisel/PyroTech")
+addLocationsToItem(item('pyrotech:refractory_brick_block'),"chisel/PyroTech")
+
+
+
+addItemToGroup("gt_metal_sheet", item('susy:custom_sheets', 0))
+addItemToGroup("gt_metal_sheet", item('susy:custom_sheets', 1))
+
+addLocationsToItem(item('susy:custom_sheets', 0),"chisel/gt_metal_sheet")
+addLocationsToItem(item('susy:custom_sheets', 1),"chisel/gt_metal_sheet")
+
+
+
+
+
+activityBlocks = []
+def addActivityGroup(name, number) {
+    for (int i = 0; i < number; i++) {
+        activityBlocks << [item(name, i),  item(name + '_inverted', i)]
+    }
+}
+addActivityGroup('susy:wire_coil_active', 8)
+addActivityGroup('susy:heating_coil_active', 2)
+addActivityGroup('susy:cooling_coil_active', 3)
+addActivityGroup('susy:firebox_active', 4)
+addActivityGroup('susy:engine_intake_active', 2)
+addActivityGroup('susy:assembly_line_active', 1)
+addActivityGroup('susy:fusion_casing_active', 3)
+// weird edge case for no reason
+activityBlocks << [item('susy:heat_vent_active', 3), item('susy:heat_vent_active_inverted', 3)]
+addActivityGroup('susy:sintering_brick_active', 2)
+addActivityGroup('susy:evaporation_bed_active', 1)
+addActivityGroup('susy:electrode_assembly_active', 1)
+addActivityGroup('susy:serpentine_active', 1)
+addActivityGroup('susy:basic_intake_casing_active', 1)
+addActivityGroup('susy:eccentric_roll_active', 1)
+createExtendedChiselGroup("active_blocks")
+
+
+activityBlocks.each { active, inverted -> 
+    addItemToGroup("active_blocks", active)
+    addItemToGroup("active_blocks", inverted)
+
+    addLocationsToItem(active,"SUSY/ActiveBlocks/Normal")
+    addLocationsToItem(inverted,"SUSY/ActiveBlocks/Inverted")
+    
+}
 
 
 
