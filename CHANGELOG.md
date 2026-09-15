@@ -1,3 +1,21 @@
+# UPDATE 0.1.16.16-rc1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.118 → v0.1.120
+## Changes
+### New Features
+- Getting confused by the rapid amount of new blocks we're adding? Try the Extended Chisel Maker in MV! (#2009 by @JorgeMIng)
+- Also, we added 160 new BMRF blocks.
+### Changed Features
+- **BREAKING CHANGE**: The Downs and Castner process now use the electrolytic cell and electrolyzer, respectively, and the Castner process has been made more realistic. (#2010 by @Obih)
+- The AFC and HIP can use distinct buses now. (by @jethro3000)
+- The VDT, IAF, and PT no longer have perfect overclocks. (#703 by @jethro3000)
+### Fixes
+- More carbon sources can be used for Ebonite (#2004 by @mamiopro)
+- Added water to sugar crystallization output (#2005 by @mamiopro)
+- Coils. Coils? Coils! (#2008 by @jethro-3000)
+Thanks to our new contributor @mamiopro!
+By the way, conditional on the trailer being made on time, the space update will come out October 1st. 
 # UPDATE 0.1.16.15
 ## Mod Changes
 ### Mod Updates
