@@ -134,3 +134,9 @@ crafting.replaceShaped('gregtech:machine_8568', item('gregtech:machine', 8568), 
         [ore('circuitHv'), item('gregtech:transparent_casing'), ore('circuitHv')],
         [item('gregtech:transparent_casing'), metaitem('hull.hv'), item('gregtech:transparent_casing')],
         [ore('wireGtQuadrupleNichrome'), metaitem('electric.motor.hv'), ore('wireGtQuadrupleNichrome')]])
+
+//Remove Recycling
+
+RecyclingHelper.removeRecyclingRecipes(item('gregtech:wire_coil'))
+RecyclingHelper.removeRecyclingRecipes(item('gregtech:wire_coil', 1))
+RecyclingHelper.removeRecyclingRecipes(item('gregtech:wire_coil', 2))
