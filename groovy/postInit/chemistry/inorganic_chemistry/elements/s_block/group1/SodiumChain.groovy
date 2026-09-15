@@ -31,26 +31,28 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 //CASTNER PROCESS
-ELECTROLYTIC_CELL.recipeBuilder()
+ELECTROLYZER.recipeBuilder()
         .fluidInputs(fluid('sodium_hydroxide') * 432)
         .notConsumable(metaitem('stickNickel'))
         .notConsumable(metaitem('stickIron'))
         .outputs(metaitem('dustSodium'))
         .fluidOutputs(fluid('oxygen') * 1000)
         .fluidOutputs(fluid('hydrogen') * 1000)
-        .duration(200)
+        .duration(300)
         .EUt(VA[LV] * 2)
         .buildAndRegister()
 
 //DOWNS CELL PROCESSES
-ELECTROLYZER.recipeBuilder()
+ELECTROLYTIC_CELL.recipeBuilder()
         .notConsumable(metaitem('graphite_electrode'))
         .notConsumable(metaitem('stickIron'))
-        .fluidInputs(fluid('salt') * 288)
+        .notConsumable(metaitem('foilSteel'))
+        .notConsumable(fluid('calcium_chloride') * 432)
+        .inputs(ore('dustSalt') * 2)
         .fluidOutputs(fluid('chlorine') * 1000)
         .outputs(metaitem('dustSodium'))
         .EUt(VA[LV])
-        .duration(300)
+        .duration(200)
         .buildAndRegister()
 
 //COMPOUNDS
