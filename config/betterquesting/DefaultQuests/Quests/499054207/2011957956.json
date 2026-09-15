@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    1549982210
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.2011957956.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "id:8": "susy:rocket_tank_shell"
+      },
+      "name:8": "susy.quest.db.2011957956.title"
+    }
+  },
+  "questID:3": 2011957956,
+  "tasks:9": {}
+}
