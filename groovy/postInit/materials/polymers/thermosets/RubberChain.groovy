@@ -103,10 +103,6 @@ def shapes = [
     new Shape('pipeTinyFluid', 'pipe.tiny', 2)
 ]
 
-//Combine dustCoal and carbonSource for Ebonite
-ore('dustAnyPurityCarbon').add(ore('dustCoal'))
-ore('dustAnyPurityCarbon').add(ore('carbonSource'))
-
 // Rubber vulcanization
 for (rubber in rubbers) {
     for (sulfur in sulfurs) { 
@@ -145,6 +141,14 @@ for (rubber in rubbers) {
     }
 }
 
+ore('eboniteCarbonSource').add(
+        metaitem('dustCharcoal'),
+        metaitem('dustGreenCoke'),
+        metaitem('dustCoke'),
+        metaitem('dustCarbon'),
+        metaitem('dustCoal')
+)
+
 // Ebonite
 for (rubber in rubbers) {
     coal_amount = Math.max(1, rubber.amount_required.intdiv(4))
@@ -160,7 +164,7 @@ for (rubber in rubbers) {
                     fluidInputs(fluid(sulfur.name) * (rubber.amount_required * sulfur.amount_required * 1000)) :
                     inputs(ore(sulfur.name) * (rubber.amount_required * sulfur.amount_required))
             }
-            .inputs(ore('dustAnyPurityCarbon') * coal_amount)
+            .inputs(ore('eboniteCarbonSource') * coal_amount)
             .outputs(metaitem('dustCompoundedEbonite') * (rubber.yield * 2))
             .duration(40 * rubber.yield)
             .EUt(VA[LV])
