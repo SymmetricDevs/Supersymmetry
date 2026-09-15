@@ -13,13 +13,13 @@ ROASTER.recipeBuilder()
 
 //CASTNER PROCESS
 ELECTROLYZER.recipeBuilder()
-        .fluidInputs(fluid('sodium_hydroxide') * 432)
+        .fluidInputs(fluid('sodium_hydroxide') * 864)
         .notConsumable(metaitem('stickNickel'))
         .notConsumable(metaitem('stickIron'))
-        .outputs(metaitem('dustSodium'))
+        .outputs(metaitem('dustSodium') * 2)
         .fluidOutputs(fluid('oxygen') * 1000)
-        .fluidOutputs(fluid('hydrogen') * 1000)
-        .duration(300)
+        .fluidOutputs(fluid('dense_steam') * 1000)
+        .duration(600)
         .EUt(VA[LV] * 2)
         .buildAndRegister()
 
