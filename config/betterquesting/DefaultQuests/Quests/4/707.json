@@ -19,7 +19,7 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 16,
-          "Damage:2": 1,
+          "Damage:2": 2,
           "id:8": "gregtech:wire_coil"
         }
       },
