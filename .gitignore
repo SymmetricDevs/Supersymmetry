@@ -40,13 +40,11 @@ hei_bookmarks.ini
 
 config/acronym/saved/
 
-config/beneath/blockdeco.json
-
 config/betterquesting/DefaultQuests/QuestSettings.json
 
-#config/biomesoplenty/biomes/defaults/
+config/biomesoplenty/biomes/defaults/
 
-#config/biomesoplenty/biome_ids.json
+config/biomesoplenty/biome_ids.json
 
 config/BiomeTweaker/output/
 
@@ -109,3 +107,4 @@ vintagefix/transformerCache/jarDiscoverer.cache
 /journeymap
 hotbar.nbt
 config/susy/susy_canary
+groovy/sideOnlyGenerated.json

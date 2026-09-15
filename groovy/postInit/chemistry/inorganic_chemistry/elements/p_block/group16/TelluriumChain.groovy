@@ -5,7 +5,7 @@ ERF.recipeBuilder()
     .inputs(ore('dustTelluriumResidue')) // 0.25 Na2TeO4, 2 Ag/Au
     .outputs(metaitem('dustRawElectrum') * 2)
     .chancedOutput(metaitem('dustTelluriumSlag'), 2500, 0)
-    .blastFurnaceTemp(1400)
+    .blastFurnaceTemp(800)
     .duration(120)
     .EUt(240)
     .buildAndRegister()

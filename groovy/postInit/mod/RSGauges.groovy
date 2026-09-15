@@ -12,36 +12,36 @@ for (name in name_removals) {
 crafting.replaceShaped('rsgauges:industrial/bistableswitch1', item('rsgauges:bistableswitch1'), [
         [null, item('minecraft:redstone_torch'), null],
         [metaitem('plateSteel'), metaitem('ringSteel'), null],
-        [null, metaitem('wireFineRedAlloy'), null]
+        [null, metaitem('wireFineCopper'), null]
 ])
 
 crafting.replaceShaped('rsgauges:industrial/bistableswitch2', item('rsgauges:bistableswitch2'), [
         [null, item('minecraft:redstone_torch'), null],
         [metaitem('plateSteel'), metaitem('ringSteel'), item('minecraft:lever')],
-        [null, metaitem('wireFineRedAlloy'), null]
+        [null, metaitem('wireFineCopper'), null]
 ])
 
 crafting.replaceShaped('rsgauges:industrial/bistableswitch8', item('rsgauges:bistableswitch8'), [
         [null, item('minecraft:redstone_torch'), null],
         [metaitem('plateSteel'), item('minecraft:lever'), null],
-        [null, metaitem('wireFineRedAlloy'), null]
+        [null, metaitem('wireFineCopper'), null]
 ])
 
 crafting.replaceShaped('rsgauges:industrial/bistableswitch7', item('rsgauges:bistableswitch7'), [
         [null, item('minecraft:redstone_torch'), null],
         [metaitem('plateSteel'), metaitem('ringSteel'), item('minecraft:lever')],
-        [null, metaitem('wireFineRedAlloy'), null]
+        [null, metaitem('wireFineCopper'), null]
 ])
 
 crafting.replaceShaped('rsgauges:industrial/bistableswitch3', item('rsgauges:bistableswitch3'), [
         [null, item('minecraft:redstone_torch'), null],
         [item('minecraft:stone_button'), metaitem('plateSteel'), item('minecraft:stone_button')],
-        [null, metaitem('wireFineRedAlloy'), null]
+        [null, metaitem('wireFineCopper'), null]
 ])
 
 crafting.replaceShaped('rsgauges:industrial/bistableswitch5', item('rsgauges:bistableswitch5'), [
         [null, item('minecraft:heavy_weighted_pressure_plate'), null],
-        [null, metaitem('wireFineRedAlloy'), null],
+        [null, metaitem('wireFineCopper'), null],
         [null, metaitem('plateSteel'), null]
 ])
 
@@ -77,13 +77,13 @@ crafting.replaceShaped('rsgauges:industrial/pulseswitch5', item('rsgauges:pulses
 
 crafting.replaceShaped('rsgauges:industrial/pulseswitch3', item('rsgauges:pulseswitch3'), [
         [metaitem('plateSteel'), null, null],
-        [metaitem('springSmallSteel'), metaitem('wireFineRedAlloy'), null],
+        [metaitem('springSmallSteel'), metaitem('wireFineCopper'), null],
         [metaitem('stickSteel'), item('minecraft:stick'), null]
 ])
 
 crafting.replaceShaped('rsgauges:misc/dimmerswitch1', item('rsgauges:dimmerswitch1'), [
         [null, metaitem('plateSteel'), null],
-        [metaitem('wireFineRedAlloy'), metaitem('stickSteel'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineCopper'), metaitem('stickSteel'), metaitem('wireFineCopper')],
         [null, metaitem('plateSteel'), item('minecraft:stick')]
 ])
 
@@ -100,7 +100,7 @@ crafting.replaceShaped('rsgauges:industrial/contactmat2', item('rsgauges:contact
 ])
 
 crafting.replaceShaped('rsgauges:industrial/contactmat3', item('rsgauges:contactmat3'), [
-        [null, metaitem('wireFineRedAlloy'), null],
+        [null, metaitem('wireFineCopper'), null],
         [null, metaitem('foilSteel'), null],
         [null, item('minecraft:heavy_weighted_pressure_plate'), null]
 ])
@@ -119,18 +119,18 @@ crafting.replaceShaped('rsgauges:industrial/trapdorswitch2', item('rsgauges:trap
 
 crafting.replaceShaped('rsgauges:industrial/trapdorswitch3', item('rsgauges:trapdoorswitch3'), [
         [null, null, null],
-        [metaitem('wireFineRedAlloy'), metaitem('stickSteel'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineCopper'), metaitem('stickSteel'), metaitem('wireFineCopper')],
         [null, metaitem('sensor.lv'), null]
 ])
 
 crafting.replaceShaped('rsgauges:industrial/automaticswitchdetector1', item('rsgauges:automaticswitch1'), [
         [null, metaitem('plateSteel'), null],
-        [metaitem('wireFineRedAlloy'), metaitem('plateSteel'), metaitem('sensor.lv')],
+        [metaitem('wireFineCopper'), metaitem('plateSteel'), metaitem('sensor.lv')],
         [null, metaitem('plateSteel'), null]
 ])
 
 crafting.replaceShaped('rsgauges:glass/detectorswitch_glass1', item('rsgauges:detectorswitch_glass1'), [
         [null, metaitem('plateGlass'), null],
-        [metaitem('wireFineRedAlloy'), metaitem('plateGlass'), metaitem('sensor.lv')],
+        [metaitem('wireFineCopper'), metaitem('plateGlass'), metaitem('sensor.lv')],
         [null, metaitem('plateGlass'), null]
 ])

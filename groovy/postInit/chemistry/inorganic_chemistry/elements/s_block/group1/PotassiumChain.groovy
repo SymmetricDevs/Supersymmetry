@@ -1,6 +1,10 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
+mods.jei.ingredient.yeet(
+        metaitem('dustPotash'),
+)
+
 MIXER.recipeBuilder()
         .inputs(ore('dustPotashConcentrate') * 8)
         .fluidInputs(fluid('brine') * 2000)
@@ -93,34 +97,6 @@ CRYSTALLIZER.recipeBuilder()
         .duration(160)
         .buildAndRegister()
 
-ROASTER.recipeBuilder()
-        .inputs(ore('dustPotassiumSulfate') * 7)
-        .outputs(metaitem('dustPotash') * 3)
-        .fluidOutputs(fluid('sulfur_trioxide') * 1000)
-        .circuitMeta(1)
-        .EUt(VA[LV])
-        .duration(160)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .inputs(ore('dustPotassiumSulfate') * 7)
-        .inputs(ore('dustAnyPurityCarbon') * 4)
-        .outputs(metaitem('dustPotassiumSulfide') * 3)
-        .fluidOutputs(fluid('carbon_monoxide') * 4000)
-        .circuitMeta(2)
-        .EUt(VA[LV])
-        .duration(160)
-        .buildAndRegister()
-
-ROASTER.recipeBuilder()
-        .inputs(ore('dustPotassiumSulfide') * 3)
-        .fluidInputs(fluid('oxygen') * 3000)
-        .outputs(metaitem('dustPotash') * 3)
-        .fluidOutputs(fluid('sulfur_dioxide') * 1000)
-        .EUt(VA[LV])
-        .duration(160)
-        .buildAndRegister()
-
 REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustAnyPuritySodium'))
         .fluidInputs(fluid('rock_salt') * 288)
@@ -135,6 +111,14 @@ DISTILLERY.recipeBuilder()
         .fluidOutputs(fluid('potassium') * 144)
         .EUt(VA[LV])
         .duration(160)
+        .buildAndRegister()
+
+SOLIDIFIER.recipeBuilder()
+        .notConsumable(metaitem('shape.mold.ingot'))
+        .fluidInputs(fluid('potassium') * 144)
+        .outputs(metaitem('ingotPotassium'))
+        .EUt(VA[LV])
+        .duration(30)
         .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()

@@ -130,6 +130,7 @@ class SuSyMaterials {
     public static Material SedimentaryDeposit
     public static Material HydrothermalDeposit
     public static Material AlluvialDeposit
+    public static Material EvaporiteDeposit
     public static Material MagmaticHydrothermalDeposit
     public static Material NonMarineEvaporiteDeposit
     public static Material HalideEvaporiteDeposit
@@ -816,6 +817,22 @@ class SuSyMaterials {
     public static Material DilutedNitricAcidMotherLiquor
     public static Material AdipicNitricAcidMotherLiquor
     public static Material BauxiteLeach
+    public static Material InvestmentCastingCeramicSlurry
+    public static Material InvestmentCastingMixture
+    //public static Material VanadiumElectrolyteSlurry
+    //public static Material CrystallizedVanadiumElectrolyte
+    //public static Material VanadiumBatteryElectrolyte
+    public static Material GrapheneOxideDispersion
+    public static Material GrapheneOxide
+    public static Material GrapheneOxideTungstateSolution
+    public static Material AcidifiedGrapheneOxideTungstateSolution
+    public static Material AcidifiedGrapheneOxideTungstate
+    public static Material TungstenModifiedGrapheneOxideNanosheet
+    public static Material NanoparticleModifiedNafionDispersion
+    public static Material NanoparticleModifiedNafion
+    public static Material ExpandableGraphite
+    public static Material Ink
+
 
     // Petrochem Materials
 
@@ -1257,7 +1274,6 @@ class SuSyMaterials {
     public static Material AmmoniumTungstateSolution
     public static Material CopperMonosulfide
     public static Material PotassiumSaltMixture
-    public static Material PotassiumSulfide
     public static Material SaturatedAmmoniacalMethanol
     public static Material MagnesiumChlorideAmmoniate
     public static Material PurifiedMagnesiumChloride
@@ -1445,7 +1461,6 @@ class SuSyMaterials {
     public static Material ImpureStrontiumSulfide
     public static Material DilutedAceticAcid
     public static Material CobaltIIAcetateTetrahydrate
-    public static Material PotassiumPyrosulfate
     public static Material IronIIINitrateSolution
     public static Material ManganeseIIChloride
     public static Material ChloroplatinicAcidSolution
@@ -1667,9 +1682,22 @@ class SuSyMaterials {
     public static Material AcetaldehydeSolution
     public static Material GammaAlumina
     public static Material FineGammaAlumina
+    public static Material DimethylOneThreeDioxane
+    public static Material Methylbutynol
+    public static Material Methylbutenol
+    public static Material DimethylDioxaneSolution
+    public static Material IsopreneSolution
     public static Material AnnealedAB2MetalAlloy
     public static Material AnnealedAB5MetalAlloy
     public static Material CadmiumOxide
+    public static Material CopperTungstenAlloy
+    public static Material LanthanumZirconiumOxide
+    public static Material MolybdenumDisilicide
+    public static Material Inconel601
+
+    //public static Material VanadiumTrioxide
+    public static Material ExpandedPolytetrafluoroethylene
+
 
     // HP Materials
 
@@ -1909,6 +1937,16 @@ class SuSyMaterials {
     public static Material LeadChamberReactionMixture
     public static Material MetalHydrideMixAnode
     public static Material SupportedVanadiumPentoxide
+    public static Material RawInvestmentCastingMixture
+    public static Material SilicaCoatedInvestmentCastingMixture
+    public static Material DriedSilicaCoatedInvestmentCastingMixture
+    public static Material HalophosphatePhosphor
+    public static Material HalophosphatePhosphorSolution
+    public static Material YttriumAluminiumGarnetCerium
+    public static Material VanadiumIIISulfateSolution
+    public static Material DilutedVanadiumIIISulfateSolution
+    public static Material VanadylSulfateSolution
+    public static Material SGlass
 
     // Organic Chemistry Materials
 
@@ -2429,6 +2467,13 @@ class SuSyMaterials {
     public static Material Diazonaphthoquinone
     public static Material RawNitrileRubber
     public static Material NitrileRubber
+    public static Material Norbornene
+    public static Material PetroleumResin
+    public static Material HydrogenatedPetroleumResin
+    public static Material TrimethylGallium
+    public static Material TrimethylIndium
+    public static Material DiallyldimethylammoniumChloride
+    public static Material FiberReinforcedNylon
 
     // Third Degree Materials
 
@@ -2579,7 +2624,16 @@ class SuSyMaterials {
     public static Material IsopropylAlcoholSolution
     public static Material KetoneAlcoholOil
     public static Material AcetyleneSolution
-    public static Material PolyCaprolactamSolution
+    public static Material PolycaprolactamSolution
+    public static Material PetroleumResinSolution
+    public static Material TrimethylGalliumSolution
+    public static Material TrimethylIndiumSolution
+    public static Material DiallyldimethylammoniumChlorideSolution
+    public static Material PolydiallyldimethylammoniumChlorideSolution
+    public static Material NafionDispersion
+    public static Material AluminosilicateMix
+    public static Material MoSiSlurry
+    public static Material MoSiPrecursor
 
     // Thermodynamics Materials
 
@@ -2642,15 +2696,7 @@ class SuSyMaterials {
     public static Material HotPressurizedHeavyWater
     public static Material TritiatedHeavyWater
     public static Material TritiatedSteam
-    public static Material ChilledWater
-    public static Material HalophosphatePhosphor
-    public static Material HalophosphatePhosphorSolution
-    public static Material TrimethylGalliumSolution
-    public static Material TrimethylIndiumSolution
-    public static Material TrimethylGallium
-    public static Material TrimethylIndium
-    public static Material YttriumAluminiumGarnetCerium
-
+    public static Material ChilledWater    
 
     public static void changeFormulas() {
         log.infoMC("Changing Formulas!")

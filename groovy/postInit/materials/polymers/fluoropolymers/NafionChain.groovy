@@ -19,7 +19,7 @@ CSTR.recipeBuilder()
     .buildAndRegister();
 
 LCR.recipeBuilder()
-    .inputs(ore('dustSodaAsh') * 5)
+    .inputs(ore('dustSodaAsh') * 6)
     .fluidInputs(fluid('dimethylformamide') * 2000)
     .fluidInputs(fluid('hexafluoropropylene_oxide') * 2000)
     .fluidInputs(fluid('fluorosulfonyl_difluoroacetyl_fluoride') * 1000)
@@ -33,6 +33,7 @@ DT.recipeBuilder()
     .fluidInputs(fluid('perfluorovinyl_sulfonyl_ether_solution') * 3000)
     .fluidOutputs(fluid('perfluorovinyl_sulfonyl_ether') * 1000)
     .fluidOutputs(fluid('dimethylformamide') * 2000)
+    .outputs(metaitem('dustSodiumFluoride') * 4)
     .duration(100)
     .EUt(VA[HV])
     .buildAndRegister();

@@ -126,7 +126,7 @@ for (curingAgent in curingAgents) {
 
 VACUUM_CHAMBER.recipeBuilder()
     .inputs(ore('dustWetEpoxy') * 8)
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .outputs(metaitem('dustEpoxy') * 8)
     .duration(100)
     .EUt(VA[LV])
@@ -134,13 +134,6 @@ VACUUM_CHAMBER.recipeBuilder()
 
 // Flame retardant DGEBA
     // Catalyst preparation
-    BR.recipeBuilder()
-        .inputs(ore('dustAluminiumHydroxide') * 7)
-        .fluidInputs(fluid('hydrochloric_acid') * 3000)
-        .fluidOutputs(fluid('aluminium_chloride_solution') * 3000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
 
     BR.recipeBuilder()
         .inputs(ore('dustNickelChloride') * 9)
@@ -279,7 +272,7 @@ BR.recipeBuilder()
 
 VACUUM_CHAMBER.recipeBuilder()
     .inputs(ore('dustWetEpoxyCresolNovolacs'))
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .outputs(metaitem('dustEpoxyCresolNovolacs'))
     .duration(25)
     .EUt(VA[LV])
@@ -337,7 +330,7 @@ VACUUM_CHAMBER.recipeBuilder()
 
     VACUUM_CHAMBER.recipeBuilder()
         .inputs(ore('dustWetFlameRetardantEpoxy') * 8)
-        .notConsumable(ore('springNichrome'))
+        .notConsumable(ore('springEarly'))
         .outputs(metaitem('dustFlameRetardantEpoxy') * 8)
         .duration(30)
         .EUt(VA[HV])
@@ -388,6 +381,37 @@ VACUUM_CHAMBER.recipeBuilder()
         .EUt(VA[MV])
         .duration(160)
         .buildAndRegister()
+
+crafting.removeByOutput(metaitem('rotorReinforcedEpoxyResin'))
+crafting.removeByOutput(metaitem('boltReinforcedEpoxyResin'))
+crafting.removeByOutput(metaitem('screwReinforcedEpoxyResin'))
+crafting.removeByOutput(metaitem('stickReinforcedEpoxyResin'))
+mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')], [fluid('reinforced_epoxy_resin') * 576])
+mods.gregtech.extruder.removeByInput(64, [metaitem('ingotReinforcedEpoxyResin') * 4, metaitem('shape.extruder.rotor')], null)
+mods.gregtech.extruder.removeByInput(64, [metaitem('dustReinforcedEpoxyResin') * 4, metaitem('shape.extruder.rotor')], null)
+mods.gregtech.lathe.removeByInput(16, [metaitem('ingotReinforcedEpoxyResin')], null)
+mods.gregtech.extruder.removeByInput(42, [metaitem('ingotReinforcedEpoxyResin'), metaitem('shape.extruder.rod')], null)
+mods.gregtech.cutter.removeByInput(4, [metaitem('stickReinforcedEpoxyResin')], [fluid('water') * 4])
+mods.gregtech.cutter.removeByInput(4, [metaitem('stickReinforcedEpoxyResin')], [fluid('distilled_water') * 3])
+mods.gregtech.cutter.removeByInput(4, [metaitem('stickReinforcedEpoxyResin')], [fluid('lubricant')])
+mods.gregtech.cutter.removeByInput(24, [metaitem('screwReinforcedEpoxyResin')], [fluid('water') * 4])
+mods.gregtech.cutter.removeByInput(24, [metaitem('screwReinforcedEpoxyResin')], [fluid('distilled_water') * 3])
+mods.gregtech.cutter.removeByInput(24, [metaitem('screwReinforcedEpoxyResin')], [fluid('lubricant')])
+mods.gregtech.extruder.removeByInput(120, [metaitem('ingotReinforcedEpoxyResin'), metaitem('shape.extruder.bolt')], null)
+mods.gregtech.extruder.removeByInput(120, [metaitem('dustReinforcedEpoxyResin'), metaitem('shape.extruder.bolt')], null)
+mods.gregtech.lathe.removeByInput(4, [metaitem('boltReinforcedEpoxyResin')], null)
+mods.gregtech.extruder.removeByInput(42, [metaitem('ingotReinforcedEpoxyResin'), metaitem('shape.extruder.ring')], null)
+mods.gregtech.extruder.removeByInput(42, [metaitem('dustReinforcedEpoxyResin'), metaitem('shape.extruder.ring')], null)
+
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('plateReinforcedEpoxyResin') * 4)
+        .inputs(metaitem('ringTitanium'))
+        .outputs(metaitem('rotorReinforcedEpoxyResin'))
+        .EUt(VA[MV])
+        .duration(160)
+        .buildAndRegister()
+
+
 
 // SU-8 photoresist
     // Bisphenol A Novolac Epoxy

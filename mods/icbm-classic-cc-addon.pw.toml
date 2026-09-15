@@ -1,0 +1,13 @@
+name = "ICBM Classic: Computer Craft Addon"
+filename = "ICBM-classic-cc-addon-1.12.2-1.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3a9760e23f9d26abb52fd0f0ba0f95ec3b99a80a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5374750
+project-id = 856258

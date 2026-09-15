@@ -28,7 +28,7 @@ import static gregtech.api.GTValues.*
         .fluidInputs(fluid('nitrogen') * 2000)
         .outputs(metaitem('dustCalciumCyanamide') * 4)
         .outputs(metaitem('dustCarbon'))
-        .blastFurnaceTemp(1200)
+        .blastFurnaceTemp(800)
         .EUt(VA[LV])
         .duration(200)
         .buildAndRegister()

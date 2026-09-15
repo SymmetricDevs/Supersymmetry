@@ -144,8 +144,7 @@ jobs:
             echo "Warning: groovy_server.log not found"
           fi
       
-      - name: Upload logs on failure
-        if: failure()
+      - name: Upload logs
         uses: actions/upload-artifact@v4
         with:
           name: server-logs

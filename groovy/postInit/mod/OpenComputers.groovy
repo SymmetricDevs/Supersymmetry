@@ -812,7 +812,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 	
 mods.gregtech.circuit_assembler.recipeBuilder()
 		.inputs(item('opencomputers:component'))
-		.inputs(ore('wireFineRedAlloy') * 4)
+		.inputs(ore('wireFineTin') * 4)
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([1])
@@ -823,7 +823,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 
 mods.gregtech.circuit_assembler.recipeBuilder()
 		.inputs(item('opencomputers:component', 1))
-		.inputs(ore('wireFineRedAlloy') * 16)
+		.inputs(ore('wireFineTin') * 16)
 		.inputs(metaitem('circuit_board.plastic'))
 		.fluidInputs(solder)
 		.circuitMeta([2])
@@ -1135,7 +1135,7 @@ mods.gregtech.assembler.recipeBuilder()
 
 mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('plateSteel') * 4)
-		.inputs(ore('wireFineRedAlloy') * 4)
+		.inputs(ore('wireFineTin') * 4)
 		.inputs(metaitem('sensor.lv'))
 		.inputs(metaitem('emitter.lv'))
 		.fluidInputs(solder)
@@ -1147,7 +1147,7 @@ mods.gregtech.assembler.recipeBuilder()
 
 mods.gregtech.assembler.recipeBuilder()
 		.inputs(ore('plateAluminium') * 4)
-		.inputs(ore('wireFineRedAlloy') * 4)
+		.inputs(ore('wireFineTin') * 4)
 		.inputs(metaitem('sensor.mv'))
 		.inputs(metaitem('emitter.mv'))
 		.fluidInputs(solder)
@@ -1242,11 +1242,19 @@ crafting.addShaped('opencomputers:scrench', item('opencomputers:wrench'), [
     [null, ore('ingotSteel'), null]
 ])
 
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('ingotAluminium') * 2)
+	.inputs(ore('ingotSteel') * 4)
+    .outputs(item('opencomputers:wrench'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister();
+
 //disk platter
-	mods.gregtech.assembler.recipeBuilder()
-			.inputs(ore('lensGlass') * 4)
-			.inputs(ore('dustSmallCobalt'))
-            .outputs(item('opencomputers:material', 12))
-            .duration(400)
-            .EUt(VA[MV])
-            .buildAndRegister();
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('lensGlass') * 4)
+	.inputs(ore('dustSmallCobalt'))
+    .outputs(item('opencomputers:material', 12))
+    .duration(400)
+    .EUt(VA[MV])
+    .buildAndRegister();

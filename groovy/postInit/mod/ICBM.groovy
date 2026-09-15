@@ -124,19 +124,19 @@ for (var i = 0; i < 8; i++) {
 //Explosives tier 1
 crafting.addShaped("icbm_exp_1_0_dynamite", item('icbmclassic:explosives:0'), [
     [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')],
-    [metaitem('dynamite'), ore('wireFineRedAlloy'), metaitem('dynamite')],
+    [metaitem('dynamite'), ore('wireFineTin'), metaitem('dynamite')],
     [metaitem('dynamite'), metaitem('dynamite'), metaitem('dynamite')]
 ]);
 
 crafting.addShaped("icbm_exp_1_0_tnt", item('icbmclassic:explosives:0'), [
     [null, ore('dustTnt'), null],
-    [ore('dustTnt'), ore('wireFineRedAlloy'), ore('dustTnt')],
+    [ore('dustTnt'), ore('wireFineTin'), ore('dustTnt')],
     [null, ore('dustTnt'), null]
 ]);
 
 crafting.addShaped("icbm_exp_1_0_tnp", item('icbmclassic:explosives:0'), [
     [null, ore('dustPicricAcid'), null],
-    [ore('dustPicricAcid'), ore('wireFineRedAlloy'), ore('dustPicricAcid')],
+    [ore('dustPicricAcid'), ore('wireFineTin'), ore('dustPicricAcid')],
     [null, ore('dustPicricAcid'), null]
 ]);
 
@@ -145,6 +145,30 @@ crafting.addShaped("icbm_exp_1_0_tnp", item('icbmclassic:explosives:0'), [
         [ore('roundLead'), item('icbmclassic:explosives:0'), ore('roundLead')],
         [ore('roundLead'), ore('roundLead'), ore('roundLead')]
 ]);*/
+
+WEAPONS_FACTORY.recipeBuilder()
+	.inputs(metaitem('dynamite') * 8)
+    .inputs(ore('wireFineTin'))
+    .outputs(item('icbmclassic:explosives'))
+    .duration(200)
+	.EUt(VA[LV])
+	.buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+	.inputs(ore('dustTnt') * 4)
+    .inputs(ore('wireFineTin'))
+    .outputs(item('icbmclassic:explosives'))
+    .duration(200)
+	.EUt(VA[LV])
+	.buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+	.inputs(ore('dustPicricAcid') * 4)
+    .inputs(ore('wireFineTin'))
+    .outputs(item('icbmclassic:explosives'))
+    .duration(200)
+	.EUt(VA[LV])
+	.buildAndRegister();
 
 def flammable_liquids = [
     liquid('naphtha') * 1000,
@@ -470,7 +494,7 @@ Globals.solders.each { key, val ->
                     ore('plateTitanium') * 2,
                     s_oxy,
                     s_fuel,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(1)
                 .fluidInputs(fluid(key) * val)
@@ -484,7 +508,7 @@ Globals.solders.each { key, val ->
                     ore('plateStainlessSteel') * 2,
                     s_oxy,
                     s_fuel,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(2)
                 .fluidInputs(fluid(key) * val)
@@ -498,7 +522,7 @@ Globals.solders.each { key, val ->
                     ore('plateStainlessSteel') * 2,
                     s_oxy * 2,
                     s_fuel * 2,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(3)
                 .fluidInputs(fluid(key) * val)
@@ -512,7 +536,7 @@ Globals.solders.each { key, val ->
                     ore('plateStainlessSteel') * 2,
                     s_oxy,
                     s_fuel,
-                    ore('wireFineRedAlloy')
+                    ore('wireFineTin')
                 ])
                 .circuitMeta(4)
                 .fluidInputs(fluid(key) * val)
@@ -661,3 +685,43 @@ Globals.solders.each { key, val ->
         .EUt(VA[LV])
         .buildAndRegister();
 }
+//surface to air missile
+Globals.solders.each { key, val ->
+    for (s_fuel in solidfuels) {
+        for (l_oxy in liquidoxys) {
+
+            LARGE_WEAPONS_FACTORY.recipeBuilder()
+                    .inputs([
+                            ore('stickStainlessSteel') * 2,
+                            ore('ringStainlessSteel'),
+                            ore('plateStainlessSteel'),
+                            ore('foilStainlessSteel') * 8,
+                            s_fuel * 8,
+                            item('icbmclassic:explosives:0'),
+                            ore('circuitMv') * 2,
+                            metaitem('sensor.mv')
+                    ])
+                    .fluidInputs(fluid(key) * (val / 2))
+                    .fluidInputs(l_oxy * 1000)
+                    .outputs(item('icbmclassic:surface_to_air_missile'))
+                    .duration(100)
+                    .EUt(VA[MV])
+                    .buildAndRegister();
+        }
+    }
+}
+
+//radar
+WEAPONS_FACTORY.recipeBuilder()
+    .inputs([
+        ore('wireFineCopper') * 64,
+        ore('circuitHv') * 2,
+        metaitem('sensor.hv'),
+        metaitem('emitter.hv'),
+        metaitem('electric.motor.hv'),
+        metaitem('hull.hv')
+    ])
+    .outputs(item('icbmclassic:radarstation:0'))
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister();

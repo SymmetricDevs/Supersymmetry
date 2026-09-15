@@ -1,3 +1,212 @@
+# UPDATE 0.1.16.15
+## Mod Changes
+### Mod Updates
+- Supercritical 0.2.6 → 0.2.7
+- SusyCore 0.1.116 → 0.1.118
+- MixinBooter 11.14 → 11.15
+- Fugue 0.23.7 → 0.24.3
+- Cleanroom Relauncher 1.0.5 → 1.1.3
+- Forgelin-Continuous 2.4.0.0 → 2.4.10.0
+- SussyPatches 1.11.1 → 1.11.6
+## Changes
+### New Features
+- New decorative versions of multiblock components have been added! Add some more bloom to your base (as well as red mud waste piles). (#1998 by @JorgeMIng)
+- Concrete is now (slowly) craftable in the steam age! (not that you weren't already stealing it from structures) (#1999 by @quest-wizard)
+- Ore generation has been sped up! (#1996 by @MCTian-mi)
+### Changed Features
+- **BREAKING CHANGE**: Fission reactors no longer change reactivity with a rotated design. **You may want to turn off your reactor before updating.** (Supercritical#20 by @crindigo)
+- Masonry bricks are now craftable in a cutter (so stone slabs have a circuit now) (#1996 by @MCTian-mi)
+- ProjectRed has been gregified! Most recipes have changed, and PR intermediates like cathodes/anodes are no longer used. (#2000 by @quest-wizard)
+- A fluid sample storage quest is available for people who forgor that existed :skulle: (#1993 by @Sadsaltan)
+### Fixes
+- The coil quests have been flipped, and nichrome can be cooled in a chemical bath (#1994 by @jethro-3000)
+- The backpack pickup upgrade now works with all magnets. (#1995 by @Solothesolo)
+- The HIP is no longer optional for superalloys. (#2002 by @Fiery36)
+# UPDATE 0.1.16.14.1
+fixed a fix to the ERF coils - bruberu
+# UPDATE 0.1.16.14
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.115 → v0.1.116
+- MixinBooter 10.7 → 11.14
+### Mod Additions
+- Retro Sophisticated Backpacks → Sophisticated-Backpacks-1.1.4
+- Cleanroom Relauncher → relauncher-1.0.5
+## Changes
+### New Features
+- Experiencing base lag? Try out the direct fluid pipes! They transfer fluids just like item pipes. (sc#694 by @MCTian-mi)
+- Store your various fluid slop in the new Fluid Sample Storage, with 32 8kL slots! (sc#693 by @Sadsaltan)
+- Sophisticated backpacks now replaces travelers' backpacks! With sufficient Gregification, of course. (#1984 by @Solothesolo)
+### Changed Features
+- Nichrome has been swapped for Kanthal! (#1987 by @jethro-3000)
+- Two new coil tiers help make coil progression more realistic: MoSi2 (2100K) and W (3000K)!
+- BREAKING: coil temperatures have dropped, so certain overclocks will no longer occur.
+- Cleanroom relauncher is now an optional mod to automatically run Cleanroom, for about a 20% loading time reduction! (#1991 by @MCTian-mi)
+- Kyanite is now available via quarry (#1988 by @jethro-3000)
+### Fixes
+- Beetroot seeds are now easier to obtain! (#1986 by @Solothesolo)
+And a few various fixes from @jethro-3000, who is going absolutely nuts. Thanks!
+# UPDATE 0.1.16.13.2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.115 → v0.1.115.1 
+## Changes
+### Fixes
+- Doubled kanthal springs
+- HP machines now use iron rather than tin alloy
+- The SiC crucible is again craftable
+- [Susy-Core] Clarifiers and other machines not working
+# UPDATE 0.1.16.13.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.114 → v0.1.115
+- SussyPatches v1.11.0 → v0.1.11.1
+## Changes
+### Fixes
+- [Susy-Core] Mixins not applying
+# UPDATE 0.1.16.13
+## Mod Changes
+### Mod Updates
+- JEI Utilities Utilities-1.12.2-0.2.13 → Utilities-1.12.2-0.2.15
+- SussyPatches 1.10.2 → 1.11.0
+- SusyCore v0.1.112 → v0.1.114
+- Recurrent Complex 1.4.8.6 → 1.4.8.7
+- Supercritical 0.2.5 → 0.2.6
+- Obscure Tooltips forge-1.12.2-3.10.1 → forge-1.12.2-3.10.2
+### Mod Additions
+- Ocean API → API-v1.0.1-mc1.12.2
+## Changes
+### New Features
+- REALISTIC METALLURGY TIME! (thanks to @Fiery36)
+- Bronze is now a correct 15:1 copper-to-tin blend, and brass a 5:2 ratio.
+- Use the induction furnace to rapidly melt metals! "remove extractor" is smiling from their ban.
+- Also you have to cool it down like a boiler or else it explodes :)
+- Alloy furnaces are also no longer very useful for melting metals (like, why would steam be able to do that lol)
+- Have fun! :D
+- Use the industrial sifter to quickly set off gem alerts! (#1970 by @jethro-3000)
+### Changed Features
+- The Federation has officially decreed to ban steam armor. (#1968 by @Rick8484)
+- Forge Microblocks now works on more blocks! (#1960 by @nxuv)
+### Fixes
+- Deposits can now be processed in the ERC. (#1966 by @jethro-3000)
+- Carbon black can now be used for electrodes. (#1977 by @jethro-3000)
+And thanks to @JorgeMIng, @Crindigo, @Fiery36, and @The-ExZombie for their support.
+# UPDATE 0.1.16.12
+## Mod Changes
+### Mod Updates
+A lot! Some highlights:
+- SussyPatches 1.9.2 → 1.10.2
+- GregTech Food Option 1.12.2-1.12.8 → 1.12.2-1.12.10
+- Inventory Bogo Sorter 1.6.2 → 1.6.4
+- SusyCore v0.1.111 → v0.1.112
+- Had Enough Items 4.31.2 → 4.32.0
+- Better Questing Unofficial 4.3.1 → 4.3.2
+### Mod Additions
+- LemonSkin (AppleSkin Fork) → 4.0.0
+- Obscure Tooltips → forge-1.12.2-3.10.1
+### Mod Removals
+- AppleSkin
+- Coloured Tooltips
+- Sledgehammer
+## Changes
+### New Features
+- [Susy-Core] The steam log washer is now available for your early-game ore proc! (#665 by @jethro-3000)
+- [Susy-Core] Fluids are now basic! Most pipes are fine, if you're not using wood. (#678 by @MCTian-mi)
+- Items in HEI have been put into groups! Gracefully skip over pages of dusts like never before.
+### Changed Features
+- MV cargo drones are now a little cheaper! (#1934 by @lanicerine)
+- Evaporite deposits are now available! (#1926 by @jethro-3000)
+- Red alloy? So unrealistic. It is now used 99% less! (#1941 by @WideMann) (#1951 by @Rick8484)
+- Quests for HATE/cargo drones to help explain these mechanics now exist! (#1950 by @The-ExZombie)
+- Surface rocks look a little better... (#1953 by @MCTian-mi)
+### Fixes
+- The ore sorter HEI page is no longer weird.
+- Limestone small dust is again craftable. (#1927 by @Fiery36)
+- [Susy-Core] A rare server crash related to IR may be resolved. (#656 by @unitazer)
+- [Susy-Core] Cooling towers should let you put in a circuit now. (#667 by @PhaseRush)
+And thanks to @Fiery36, @Crindigo, @jethro-3000, @unitazer, and @MCTian-mi for helping to remove bugs.
+# UPDATE 0.1.16.11
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.109 → v0.1.111
+## Changes
+### New Features
+- [Susy-Core] SUSY now has cargo drones! Transport items long distances (slowly) with a Drone Basket and a Cargo Drone Pad! (#658 by @lanicerine)
+- The attrition scrubber is now available! Bulk wash your ores. (by @The-ExZombie & @jethro-3000)
+- Decorative sintering blocks with permanent bloom have been added! (#1924 by @JorgeMIng)
+### Changed Features
+- Neodymium alloy now requires a bit of praseodymium for realism (whose chance has been corrected) (#1909 by @jethro-3000)
+- The H2SO4 quest now directly shows the need for small piles of green vitriol. (#1915 by @jethro-3000)
+- The book and quill recipe has been SUSY-fied (and eggs/feathers can be automated through drone pads) (#1922 by @LauraDoesProgramming)
+- Greenhouse recipes with fertilizer are (#1923 by @jethro-3000)
+### Fixes
+Thanks to @unitazer, @h3tR, @planetme, @JorgeMing, @jethro-3000, and @Fiery36 for helping maintain the pack.
+And congrats to @JorgeMIng, @jethro-3000, and @LauraDoesProgramming for their first contributions! :)
+# UPDATE 0.1.16.10
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.107 → v0.1.109
+## Changes
+### Changed Features
+- MnP superconductors no longer require assemblies.  (#1857 by @The-ExZombie)
+- Updated Chinese translations are available. (#1894 by @Zixk-0)
+- The cryogenics questbook chapter has been yeeted and scattered. (#1900 by @The-ExZombie)
+- Mica is now 40x cheaper to produce from the quarry. (#1898 by @unitazer)
+- Graphite plates have been migrated. (#1901 by @Fiery36)
+And thanks to @whoisyp9 for continuing to standardize questbook entries!
+### TODO: Uncategorized Changes (Please Categorize)
+- [Susy-Core] Evaporite Deposit Block (#653 by @The-ExZombie)
+# UPDATE 0.1.16.9
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.105 → v0.1.107
+- Had Enough Items 4.31.1 → 4.31.2
+## Changes
+### New Features
+- The power substation is now available! Use 64A EV input/dynamo hatches. (#1863 by @lanicerine)
+- EV-tier turbine blades are now made just as if you were Siemens. This involves a new Electric Discharge Machine multiblock! (#1872 by @lanicerine)
+- Fluid bars now appear on lead/brass drums and BDS&M barrels too! (#1887 by @unitazer)
+### Changed Features
+- Old arboretum recipes were removed, and greenhouse recipes have been nerfed to match the farmer. (#1884 by @WideMann)
+- [Susy-Core] The drill head model now looks like a drill head. (#651 by @lanicerine)
+### Fixes
+- That one groovy error. (#1878 by @TheFriedEgg618)
+- The rotary kiln quest is now fixed. (#1891 by @Fiery36)
+- [Susy-Core] HATE properly persists on player death. (#644 by @oliwier509)
+Thanks to our new contributor @lanicerine, who is single-handedly saving the pack rn. And also to @h3tR, @whoisyp, @Crindigo, @oliwier509, and @The-ExZombie for helping to keep the pack stable.
+# UPDATE 0.1.16.8
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.103 → v0.1.105
+## Changes
+### Changed Features
+- The SAM missile tracking range has increased. (#1859 by @oliwier509)
+- The Techguns charging station now has a recipe. (#1865 by @frogicillin)
+- More Russian lang! (#1869 by @kanayaya)
+### Fixes
+- The NiMH IV battery texture is now correct. (#1860 by @The-ExZombie)
+Also, thanks to our new contributor frogicillin (also I have no idea who you are on Discord)! And for @oliwier509, @The-ExZombie and @Fiery36 for helping maintain the pack.
+# UPDATE 0.1.16.7.1
+## Changes
+### Fixes
+- Actually remember to add the thing
+- Oh by the way greenhouses are good now
+# UPDATE 0.1.16.7
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.100 → v0.1.103
+### Mod Additions
+- Keyboard Wizard → 1.12.2-1.7.3
+## Changes
+### New Features
+- HATE. Let me tell you how we've added a new faction system to SUSY! Raids are now significantly more tied to your progression than before.
+- You now have two new ways to manufacture isoprene! (#1840 by @WideMann)
+### Changed Features
+- Pentlandite drilling is now available at MV. (#1856 by @TheFriedEgg618)
+- Drop pods can now be targeted by ICBM radars.
+### Fixes
+- The battery dupe has been fixed. (#1853 by @The-ExZombie)
+- The contact process uses a fixed bed reactor rather than a fluidized bed reactor (oops)
 # UPDATE 0.1.16.6
 ## Mod Changes
 ### Mod Updates

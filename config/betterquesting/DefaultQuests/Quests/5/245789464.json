@@ -10,7 +10,6 @@
         "id:8": "gregtech:meta_dust_sifted"
       },
       "name:8": "susy.quest.db.245789464.title",
-      "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
   },

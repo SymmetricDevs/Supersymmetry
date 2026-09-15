@@ -7,7 +7,7 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.57.desc",
       "icon:10": {
-        "Damage:2": 5,
+        "Damage:2": 18304,
         "id:8": "gregtech:machine"
       },
       "name:8": "susy.quest.db.57.title",

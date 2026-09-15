@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gregtech:items/metaitems/turbines/ceramic_coated_wax_turbine_blade_mold"
+  }
+}
