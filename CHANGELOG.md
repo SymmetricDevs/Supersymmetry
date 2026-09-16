@@ -1,3 +1,10 @@
+# UPDATE 0.1.16.16
+## Mod Changes
+### Mod Updates
+- SusyCore v0.1.120 → v0.1.121
+## Changes
+### Fixes
+- Fixed BMRF block textures.
 # UPDATE 0.1.16.16-rc1
 ## Mod Changes
 ### Mod Updates
