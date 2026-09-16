@@ -87,9 +87,11 @@ for (pdopant in PDopants.pdopants) {
         .duration(300)
         .EUt(60)
         .buildAndRegister()
+}
 
-    for (ndopant in NDopants.ndopants) {
-            int batchSize = ndopant.efficiency * pdopant.efficiency
+Etchants.generateEtchingRecipes('wafer.vdmos.step_four', 'wafer.vdmos.step_five', 'CF4', HV, 1, false)
+
+for (ndopant in NDopants.ndopants) {
 
         ION_IMPLANTER.recipeBuilder()
             .inputs(metaitem('wafer.vdmos.step_five') * 16 * ndopant.efficiency)
@@ -100,14 +102,18 @@ for (pdopant in PDopants.pdopants) {
             .duration(300)
             .EUt(60)
             .buildAndRegister()
-    }
 }
 
-Etchants.generateEtchingRecipes('wafer.vdmos.step_four', 'wafer.vdmos.step_five', 'CF4', HV, 1, false)
+Etchants.generateEtchingRecipes('wafer.vdmos.step_six', 'wafer.vdmos.step_seven', 'buffered_HF', HV, 1, false)
 
-Etchants.generateEtchingRecipes('wafer.vdmos.step_six', 'wafer.vdmos.step_seve', 'buffered_HF', HV, 1, false)
-
-//Etchants.generateEtchingRecipes('wafer.vdmos.step_seven', 'wafer.vdmos.step_eight', , HV, 1, false) is actualy ion beam
+CHEMICAL_BATH.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_seven'))
+    .fluidInputs(fluid('plasma.chlorine') * 10)
+    .outputs(metaitem('wafer.vdmos.step_eight'))
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(60)
+    .EUt(VA[HV])
+    .buildAndRegister()
 
 ROASTER.recipeBuilder()
     .inputs(metaitem('wafer.vdmos.step_eight'))
@@ -126,16 +132,6 @@ CVD.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(100)
     .EUt(240)
-    .buildAndRegister()
-
-ION_IMPLANTER.recipeBuilder()
-    .inputs(metaitem('wafer.vdmos.step_ten') * 16 * pdopant.efficiency)
-    .circuitMeta(1)
-    .inputs(metaitem(pdopant.metaItemName))
-    .outputs(metaitem('wafer.vdmos.step_eleven') * 16 * pdopant.efficiency)
-    .cleanroom(CleanroomType.CLEANROOM)
-    .duration(300)
-    .EUt(60)
     .buildAndRegister()
 
 Etchants.generateEtchingRecipes('wafer.vdmos.step_eleven', 'wafer.vdmos.step_twelve', 'CF4', HV, 1, false)
