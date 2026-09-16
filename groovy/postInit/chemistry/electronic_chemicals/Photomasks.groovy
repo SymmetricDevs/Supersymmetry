@@ -153,6 +153,20 @@ crafting.addShaped("smd_resistor_pads", metaitem('stencil.resistor_pads'), [
     [null, null, null]
 ]);
 
+crafting.addShaped("vdmos", metaitem('stencil.vdmos'), [
+    [metaitem('rubylith'), null, null],
+    [null, ore('craftingToolKnife'), null],
+    [null, null, null]
+]);
+
+UV_LIGHT_BOX.recipeBuilder()
+    .inputs(metaitem('stencil.vdmos'))
+    .inputs(metaitem('mask.blank'))
+    .outputs(metaitem('mask.vdmos'))
+    .duration(200)
+    .EUt(VA[ULV])
+    .buildAndRegister()
+
 // CrO3 photomasks
 
 REACTION_FURNACE.recipeBuilder()

@@ -65,7 +65,7 @@ ROASTER.recipeBuilder()
     .EUt(240)
     .buildAndRegister()
 
-Photolithography.generatePatterningRecipes('wafer.vdmos.step_two', 'wafer.vdmos.step_three', 'mask.??', HV, 4, 2, 5, false)
+Photolithography.generatePatterningRecipes('wafer.vdmos.step_two', 'wafer.vdmos.step_three', 'mask.vdmos', HV, 4, 2, 5, false)
 
 for (pdopant in PDopants.pdopants) {
     ION_IMPLANTER.recipeBuilder()
@@ -77,22 +77,11 @@ for (pdopant in PDopants.pdopants) {
         .duration(300)
         .EUt(60)
         .buildAndRegister()
-
-    ION_IMPLANTER.recipeBuilder()
-        .inputs(metaitem('wafer.vdmos.step_ten') * 16 * pdopant.efficiency)
-        .circuitMeta(1)
-        .inputs(metaitem(pdopant.metaItemName))
-        .outputs(metaitem('wafer.vdmos.step_eleven') * 16 * pdopant.efficiency)
-        .cleanroom(CleanroomType.CLEANROOM)
-        .duration(300)
-        .EUt(60)
-        .buildAndRegister()
 }
 
 Etchants.generateEtchingRecipes('wafer.vdmos.step_four', 'wafer.vdmos.step_five', 'CF4', HV, 1, false)
 
 for (ndopant in NDopants.ndopants) {
-
         ION_IMPLANTER.recipeBuilder()
             .inputs(metaitem('wafer.vdmos.step_five') * 16 * ndopant.efficiency)
             .circuitMeta(1)
@@ -134,12 +123,24 @@ CVD.recipeBuilder()
     .EUt(240)
     .buildAndRegister()
 
+for (pdopant in PDopants.pdopants) {
+    ION_IMPLANTER.recipeBuilder()
+        .inputs(metaitem('wafer.vdmos.step_ten') * 16 * pdopant.efficiency)
+        .circuitMeta(1)
+        .inputs(metaitem(pdopant.metaItemName))
+        .outputs(metaitem('wafer.vdmos.step_eleven') * 16 * pdopant.efficiency)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(300)
+        .EUt(60)
+        .buildAndRegister()
+}
+
 Etchants.generateEtchingRecipes('wafer.vdmos.step_eleven', 'wafer.vdmos.step_twelve', 'CF4', HV, 1, false)
 
 ROASTER.recipeBuilder()
     .inputs(metaitem('wafer.vdmos.step_twelve'))
     .fluidInputs(fluid('oxygen') * 1000)
-    .outputs(metaitem('wafer.vdmos.final'))
+    .outputs(metaitem('wafer.vdmos.step_thirdteen'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(400)
     .EUt(240)

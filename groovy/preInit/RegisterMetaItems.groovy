@@ -286,7 +286,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2500, "gun.barrel.steel")
 
         // circuit overhaul metaitems: 2750 - 3000
-        // FREE ID: 2750 - 2755
+        // FREE ID: 2750 - 2754
+        addItem(2755, "component.transistor.vdmos")
         addItem(2756, "component.transistor.alloy_junction")
         addItem(2757, "plate.ultra_low_power_integrated_circuit")
         addItem(2758, "plate.low_power_integrated_circuit")
@@ -406,7 +407,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2958, "die.zener_diode.alloy")
         addItem(2959, "die.alloy_junction_transistor.step_one")
         addItem(2960, "die.alloy_junction_transistor.step_two")
-        addItem(2961, "die.alloy_junction_transistor.step_three")
+        addItem(2961, "die.vdmos")
 
 
 
@@ -531,6 +532,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5008, "stencil.resistor")
         addItem(5009, "stencil.capacitor")
         addItem(5010, "stencil.resistor_pads")
+        addItem(5011, "stencil.vdmos")
 
         addItem(5020, "mask.blank")
         addItem(5021, "mask.ic")
@@ -546,6 +548,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5031, "mask_set.diode.power")
         addItem(5032, "mask_set.diode.schottky")
         addItem(5033, "mask.resistor")
+        addItem(5034, "mask.vdmos")
 
         addItem(5100, "patterned.ic")
         addItem(5101, "patterned.cpu")
@@ -816,6 +819,19 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8087, "wafer.diode.drift.step_one.exposed")
         addItem(8088, "wafer.diode.schottky.step_five.coated")
         addItem(8089, "wafer.diode.schottky.step_five.exposed")
+        addItem(8090, "wafer.vdmos.step_one")
+        addItem(8091, "wafer.vdmos.step_two")
+        addItem(8092, "wafer.vdmos.step_tree")
+        addItem(8093, "wafer.vdmos.step_four")
+        addItem(8094, "wafer.vdmos.step_five")
+        addItem(8095, "wafer.vdmos.step_six")
+        addItem(8096, "wafer.vdmos.step_seven")
+        addItem(8097, "wafer.vdmos.step_eight")
+        addItem(8098, "wafer.vdmos.step_nine")
+        addItem(8099, "wafer.vdmos.step_ten")
+        addItem(8100, "wafer.vdmos.step_eleven")
+        addItem(8101, "wafer.vdmos.step_twelve")
+        addItem(8102, "wafer.vdmos.step_thirdteen")
 
         log.infoMC("adding " + toadd_list.size() + " wafer metaitems")
         def start = 8250
