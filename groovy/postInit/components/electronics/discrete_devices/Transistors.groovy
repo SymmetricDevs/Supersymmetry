@@ -21,6 +21,7 @@ RESISTANCE_FURNACE.recipeBuilder()
 // Backside (collector) metallization for ohmic contact
 Deposition.generateEvaporationRecipe('die.alloy_junction_transistor.step_two', 'die.alloy_junction_transistor.step_three', 100, 'gold_antimony', false)
 
+
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('die.alloy_junction_transistor.step_three'))
     .inputs(ore('wireFineDumet') * 3)
@@ -44,7 +45,16 @@ ASSEMBLER.recipeBuilder()
 
 // trenched VDMOS
 
-Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.n_doped', 'wafer.vdmos.step_one', 2.0, "phosphine.silane")
+CVD.recipeBuilder()
+    .inputs(metaitem('wafer.silicon.n_doped'))
+    .fluidInputs(fluid('phosphine') * 250)
+    .fluidInputs(fluid('silane') * 250)
+    .outputs(metaitem('wafer.vdmos.step_one'))
+    .fluidOutputs(fluid('hydrogen') * 1000)
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(100)
+    .EUt(240)
+    .buildAndRegister()
 
 ROASTER.recipeBuilder()
     .inputs(metaitem('wafer.vdmos.step_one'))
@@ -57,25 +67,43 @@ ROASTER.recipeBuilder()
 
 Photolithography.generatePatterningRecipes('wafer.vdmos.step_two', 'wafer.vdmos.step_three', 'mask.??', HV, 4, 2, 5, false)
 
-ION_IMPLANTER.recipeBuilder()
-    .inputs(metaitem('wafer.vdmos.step_three') * 16 * pdopant.efficiency)
-    .circuitMeta(1)
-    .inputs(metaitem(pdopant.metaItemName))
-    .outputs(metaitem('wafer.vdmos.step_four') * 16 * pdopant.efficiency)
-    .duration(300)
-    .EUt(60)
-    .buildAndRegister()
+for (pdopant in PDopants.pdopants) {
+    ION_IMPLANTER.recipeBuilder()
+        .inputs(metaitem('wafer.vdmos.step_three') * 16 * pdopant.efficiency)
+        .circuitMeta(1)
+        .inputs(metaitem(pdopant.metaItemName))
+        .outputs(metaitem('wafer.vdmos.step_four') * 16 * pdopant.efficiency)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(300)
+        .EUt(60)
+        .buildAndRegister()
+
+    ION_IMPLANTER.recipeBuilder()
+        .inputs(metaitem('wafer.vdmos.step_ten') * 16 * pdopant.efficiency)
+        .circuitMeta(1)
+        .inputs(metaitem(pdopant.metaItemName))
+        .outputs(metaitem('wafer.vdmos.step_eleven') * 16 * pdopant.efficiency)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(300)
+        .EUt(60)
+        .buildAndRegister()
+
+    for (ndopant in NDopants.ndopants) {
+            int batchSize = ndopant.efficiency * pdopant.efficiency
+
+        ION_IMPLANTER.recipeBuilder()
+            .inputs(metaitem('wafer.vdmos.step_five') * 16 * ndopant.efficiency)
+            .circuitMeta(1)
+            .inputs(metaitem(ndopant.metaItemName))
+            .outputs(metaitem('wafer.vdmos.step_six') * 16 * ndopant.efficiency)
+            .cleanroom(CleanroomType.CLEANROOM)
+            .duration(300)
+            .EUt(60)
+            .buildAndRegister()
+    }
+}
 
 Etchants.generateEtchingRecipes('wafer.vdmos.step_four', 'wafer.vdmos.step_five', 'CF4', HV, 1, false)
-
-ION_IMPLANTER.recipeBuilder()
-    .inputs(metaitem('wafer.vdmos.step_five') * 16 * ndopant.efficiency)
-    .circuitMeta(1)
-    .inputs(metaitem(ndopant.metaItemName))
-    .outputs(metaitem('wafer.vdmos.step_six') * 16 * ndopant.efficiency)
-    .duration(300)
-    .EUt(60)
-    .buildAndRegister()
 
 Etchants.generateEtchingRecipes('wafer.vdmos.step_six', 'wafer.vdmos.step_seve', 'buffered_HF', HV, 1, false)
 
@@ -105,6 +133,7 @@ ION_IMPLANTER.recipeBuilder()
     .circuitMeta(1)
     .inputs(metaitem(pdopant.metaItemName))
     .outputs(metaitem('wafer.vdmos.step_eleven') * 16 * pdopant.efficiency)
+    .cleanroom(CleanroomType.CLEANROOM)
     .duration(300)
     .EUt(60)
     .buildAndRegister()
@@ -124,6 +153,7 @@ CUTTER.recipeBuilder()
     .inputs(metaitem('wafer.vdmos.final')) 
     .fluidInputs(fluid('ultrapurewater') * 1000)
     .outputs(metaitem('die.vdmos') * 32)
+    .cleanroom(CleanroomType.CLEANROOM)
     .duration(400)
     .EUt(240)
     .buildAndRegister()
@@ -134,6 +164,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('boltKovar'))
     .fluidInputs(fluid('high_temperature_solder') * 18)
     .outputs(metaitem('component.transistor.vdmos'))
+    .cleanroom(CleanroomType.CLEANROOM)
     .duration(100)
     .EUt(VA[MV])
     .buildAndRegister();
