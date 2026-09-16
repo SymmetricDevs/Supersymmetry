@@ -64,10 +64,8 @@ def addLocationBMRF(folder,i_bmrf){
     location_i = (i_bmrf-1)%16
     location_j = (i_bmrf-1).intdiv(16)+1
     if (location_j==1){
-        log.info(i_bmrf+' '+location_j+' '+location_i)
         addLocationsToItem(item('susy:bmrf_blocks', location_i), folder) 
     }else{
-        log.info(i_bmrf+' '+location_j+' '+location_i)
         addLocationsToItem(item('susy:s'+location_j+'bmrf_blocks', location_i), folder)
     }
 }
