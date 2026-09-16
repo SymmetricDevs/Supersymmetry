@@ -42,8 +42,100 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-// Power Si-MOSFET (VDMOS for power, LDMOS for RF/high-speed)
+// trenched VDMOS
 
-// Power SiC-MOSFET
+Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.n_doped', 'wafer.vdmos.step_one', 2.0, "phosphine.silane")
+
+ROASTER.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_one'))
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('wafer.vdmos.step_two'))
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(400)
+    .EUt(240)
+    .buildAndRegister()
+
+Photolithography.generatePatterningRecipes('wafer.vdmos.step_two', 'wafer.vdmos.step_three', 'mask.??', HV, 4, 2, 5, false)
+
+ION_IMPLANTER.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_three') * 16 * pdopant.efficiency)
+    .circuitMeta(1)
+    .inputs(metaitem(pdopant.metaItemName))
+    .outputs(metaitem('wafer.vdmos.step_four') * 16 * pdopant.efficiency)
+    .duration(300)
+    .EUt(60)
+    .buildAndRegister()
+
+Etchants.generateEtchingRecipes('wafer.vdmos.step_four', 'wafer.vdmos.step_five', 'CF4', HV, 1, false)
+
+ION_IMPLANTER.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_five') * 16 * ndopant.efficiency)
+    .circuitMeta(1)
+    .inputs(metaitem(ndopant.metaItemName))
+    .outputs(metaitem('wafer.vdmos.step_six') * 16 * ndopant.efficiency)
+    .duration(300)
+    .EUt(60)
+    .buildAndRegister()
+
+Etchants.generateEtchingRecipes('wafer.vdmos.step_six', 'wafer.vdmos.step_seve', 'buffered_HF', HV, 1, false)
+
+//Etchants.generateEtchingRecipes('wafer.vdmos.step_seven', 'wafer.vdmos.step_eight', , HV, 1, false) is actualy ion beam
+
+ROASTER.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_eight'))
+    .fluidInputs(fluid('water') * 1000)
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('wafer.vdmos.step_nine'))
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(400)
+    .EUt(240)
+    .buildAndRegister()
+
+CVD.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_nine'))
+    .fluidInputs(fluid('polysilicon') * 250)
+    .outputs(metaitem('wafer.vdmos.step_ten'))
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(100)
+    .EUt(240)
+    .buildAndRegister()
+
+ION_IMPLANTER.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_ten') * 16 * pdopant.efficiency)
+    .circuitMeta(1)
+    .inputs(metaitem(pdopant.metaItemName))
+    .outputs(metaitem('wafer.vdmos.step_eleven') * 16 * pdopant.efficiency)
+    .duration(300)
+    .EUt(60)
+    .buildAndRegister()
+
+Etchants.generateEtchingRecipes('wafer.vdmos.step_eleven', 'wafer.vdmos.step_twelve', 'CF4', HV, 1, false)
+
+ROASTER.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.step_twelve'))
+    .fluidInputs(fluid('oxygen') * 1000)
+    .outputs(metaitem('wafer.vdmos.final'))
+    .cleanroom(CleanroomType.CLEANROOM)
+    .duration(400)
+    .EUt(240)
+    .buildAndRegister()
+
+CUTTER.recipeBuilder()
+    .inputs(metaitem('wafer.vdmos.final')) 
+    .fluidInputs(fluid('ultrapurewater') * 1000)
+    .outputs(metaitem('die.vdmos') * 32)
+    .duration(400)
+    .EUt(240)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.vdmos'))
+    .inputs(ore('wireFineDumet') * 3)
+    .inputs(ore('boltKovar'))
+    .fluidInputs(fluid('high_temperature_solder') * 18)
+    .outputs(metaitem('component.transistor.vdmos'))
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister();
 
 // IGBT (power electronics)
