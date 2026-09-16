@@ -107,9 +107,9 @@ jobs:
 
         run: |
           if ${{ inputs.full-release }}; then
-            $TAG=<@&881244321062481950>
+            $TAG="<@&881244321062481950>"
           else
-            $TAG=<@&1539499852495323136>\n# Candidate release
+            $TAG="<@&1539499852495323136>\n# Candidate release"
           fi
           echo "tag=${TAG}" >> $GITHUB_OUTPUT
       - name: Publish to Discord
