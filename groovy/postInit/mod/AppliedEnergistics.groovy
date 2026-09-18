@@ -69,7 +69,7 @@ def name_removals = [
         'appliedenergistics2:network/parts/planes_annihilation',
         'appliedenergistics2:network/parts/planes_annihilation_alt',
         'appliedenergistics2:network/parts/planes_annihilation_alt2',
-        'appliedenergistics2:network/parts/planes_annihilatition_identity',
+        'appliedenergistics2:network/parts/planes_annihilation_identity',
         'appliedenergistics2:network/parts/import_bus_fluid',
         'appliedenergistics2:network/parts/import_bus',
         'nae2:block/crafting/storage_256k',
@@ -236,6 +236,17 @@ REACTION_FURNACE.recipeBuilder()
         .duration(1600)
         .EUt(VA[MV])
         .buildAndRegister()
+
+['dustCertusQuartz', 'dustNetherQuartz', 'dustQuartzite'].each { quartz ->
+    mods.gregtech.electric_blast_furnace.recipeBuilder()
+            .inputs(ore(quartz) * 60)
+            .inputs(ore('dustGlowstone'))
+            .outputs(item('appliedenergistics2:quartz_vibrant_glass') * 60)
+            .blastFurnaceTemp(1400)
+            .duration(1200)
+            .EUt(60)
+            .buildAndRegister()
+}
 // Illuminated Panel
 ASSEMBLER.recipeBuilder()
         .inputs(item('gregtech:machine', 1667))
@@ -249,7 +260,7 @@ ASSEMBLER.recipeBuilder()
 
 // Finished item and fluid cells use the gated components above.
 def storageCells = [
-        [tier: IV,  circuit: 'circuitEv',  component: 35, fluidComponent: 54, item: 'storage_cell_1k',  fluid: 'fluid_storage_cell_1k'],
+        [tier: IV,  circuit: 'circuitIv',  craftingTier: EV, craftingCircuit: 'circuitEv', component: 35, fluidComponent: 54, item: 'storage_cell_1k',  fluid: 'fluid_storage_cell_1k'],
         [tier: LuV, circuit: 'circuitLuv', component: 36, fluidComponent: 55, item: 'storage_cell_4k',  fluid: 'fluid_storage_cell_4k'],
         [tier: ZPM, circuit: 'circuitZpm', component: 37, fluidComponent: 56, item: 'storage_cell_16k', fluid: 'fluid_storage_cell_16k'],
         [tier: UV,  circuit: 'circuitUv',  component: 38, fluidComponent: 57, item: 'storage_cell_64k', fluid: 'fluid_storage_cell_64k']
@@ -298,8 +309,6 @@ spatialCells.each { cell ->
         [output: item('appliedenergistics2:part', 380), cores: 1],
         [output: item('appliedenergistics2:part', 360), cores: 1],
         [output: item('appliedenergistics2:part', 340), cores: 1],
-        [output: item('appliedenergistics2:part', 220), cores: 1],
-        [output: item('appliedenergistics2:part', 221), cores: 1],
         [output: item('appliedenergistics2:part', 240), cores: 1],
         [output: item('appliedenergistics2:part', 241), cores: 1],
         [output: item('appliedenergistics2:part', 260), cores: 1],
@@ -359,10 +368,10 @@ storageCells.each { cell ->
     ASSEMBLER.recipeBuilder()
             .inputs(item('appliedenergistics2:crafting_unit'))
             .inputs(item('appliedenergistics2:material', cell.component))
-            .inputs(ore(cell.circuit))
+            .inputs(ore(cell.craftingCircuit ?: cell.circuit))
             .outputs(item("appliedenergistics2:crafting_storage_${cell.item - 'storage_cell_'}"))
             .duration(200)
-            .EUt(VA[cell.tier])
+            .EUt(VA[cell.craftingTier ?: cell.tier])
             .buildAndRegister()
 }
 
