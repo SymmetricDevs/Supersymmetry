@@ -34,7 +34,7 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 def EDMDielectricFluids = [
-        [fluid: fluid('lubricating_oil'), duration: 6],
+        [fluid: fluid('lubricating_oil'), duration: 24],
         [fluid: fluid('polychlorinated_biphenyl'), duration: 3],
         [fluid: fluid('ester_base_oil'), duration: 2],
         [fluid: fluid('polyalphaolefin'), duration: 1]
@@ -77,7 +77,7 @@ EDMDielectricFluids.each { DielectricFluid ->
 
     EDM.recipeBuilder()
             .inputs(metaitem('milled_low_pressure_steam_turbine_blade'))
-            .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 500))
+            .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 125))
             .outputs(metaitem('low_pressure_steam_turbine_blade'))
             .duration(150 * DielectricFluid.duration)
             .EUt(VA[EV])
@@ -85,7 +85,7 @@ EDMDielectricFluids.each { DielectricFluid ->
 
     EDM.recipeBuilder()
             .inputs(metaitem('milled_high_pressure_steam_turbine_blade'))
-            .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 500))
+            .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 125))
             .outputs(metaitem('high_pressure_steam_turbine_blade'))
             .duration(150 * DielectricFluid.duration)
             .EUt(VA[EV])
