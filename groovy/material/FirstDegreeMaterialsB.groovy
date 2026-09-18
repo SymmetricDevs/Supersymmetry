@@ -1119,5 +1119,12 @@ class FirstDegreeMaterialsB {
                 .build()
 
         MON3.setFormula('(N2O3)(N2O4)10', true)
+
+        FineAluminium = new Material.Builder(8823, SuSyUtility.susyId('fine_aluminium'))
+                .dust()
+                .components(Aluminium * 1)
+                .colorAverage()
+                .iconSet(SHINY)
+                .build()
     }
 }

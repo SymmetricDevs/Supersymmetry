@@ -438,9 +438,18 @@ crafting.addShaped('gregtech:machine_1347_moon', item('gregtech:machine', 1347),
         [ore('wireGtHexAluminium'), metaitem('crate.aluminium'), ore('wireGtHexAluminium')],
         [ore('wireGtHexAluminium'), metaitem('hull.ev'), ore('wireGtHexAluminium')]])
 
+BR.recipeBuilder()
+    .fluidInputs(fluid('aluminium') * 144)
+    .notConsumable(fluid('nitrogen') * 10)
+    .notConsumable(metaitem('ringSteel'))
+    .outputs('dustFineAluminium' * 1)
+    .EUt(30)
+    .duration(40)
+    .buildAndRegister()
+
 MIXER.recipeBuilder()
     .inputs(metaitem('dustIce') * 3)
-    .inputs(metaitem('dustAluminium') * 2)
+    .inputs(metaitem('dustFineAluminium') * 2)
     .outputs(metaitem('dustAlice') * 5)
     .EUt(16)
     .duration(150)
