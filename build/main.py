@@ -79,6 +79,9 @@ def build(args):
     export_server_pack()
 
 def refresh():
+    # packwiz can only update an existing index, not create one from scratch
+    if not os.path.exists('index.toml'):
+        open('index.toml', 'w').close()
     subprocess.run([packwizName, 'refresh'], check=True)
 
 def export_client_pack():
