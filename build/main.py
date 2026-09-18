@@ -137,7 +137,7 @@ def export_server_pack():
 def export_modlist():
     print("Modlist Exporting")
     result = subprocess.run([packwizName, 'list'], capture_output=True, encoding='utf-8').stdout.strip().split('\n')
-    with open(basePath + "/buildOut/modlist.html", "w") as file:
+    with open(basePath + "/buildOut/modlist.html", "w", encoding="utf-8") as file:
         data = "<html><body><h1>Modlist</h1><ul>"
         for mod in result:
             data += "<li>" + mod + "</li>"
