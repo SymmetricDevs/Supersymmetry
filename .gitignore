@@ -176,7 +176,8 @@ groovy/sideOnlyGenerated.json
 .clawdea/REPO_STATE.md
 
 
-# Bullshit
+# UV python stuff
 .python-version
 pyproject.toml
 .venv/
+uv.lock
