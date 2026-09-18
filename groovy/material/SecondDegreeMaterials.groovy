@@ -8,6 +8,7 @@ import gregtech.api.fluids.FluidBuilder
 import gregtech.api.fluids.store.FluidStorageKeys
 import gregtech.api.unification.material.properties.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
 import supersymmetry.api.util.SuSyUtility
 
@@ -1265,5 +1266,16 @@ class SecondDegreeMaterials {
                 .build();
 
         ManganeseCobaltNickelOxide.setFormula("Mn15Co12Ni3O40", true)
+
+        ALICE = new Material.Builder(13206, SuSyUtility.susyId('alice'))
+                .dust()
+                .components(Aluminium * 2, Water * 3)
+                .colorAverage()
+                .iconSet(DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+        
+        ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+
     }
 }

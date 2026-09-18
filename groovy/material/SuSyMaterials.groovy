@@ -2033,6 +2033,7 @@ class SuSyMaterials {
     public static Material AluminiumChlorideHexahydrate
     public static Material LunarRGlass
     public static Material SGlass
+    public static Material ALICE
 
     // Organic Chemistry Materials
 
