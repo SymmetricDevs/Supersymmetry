@@ -54,7 +54,7 @@ EDMDielectricFluids.each { DielectricFluid ->
             .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 1000))//the parentheses around the duration * 1000 are necessary
             .outputs(metaitem('turbine_blade_shape_die'))
             .circuitMeta(1)
-            .duration(250 * DielectricFluid.duration)
+            .duration(60 * DielectricFluid.duration)
             .EUt(VA[EV])
             .buildAndRegister()
 
@@ -63,7 +63,7 @@ EDMDielectricFluids.each { DielectricFluid ->
             .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 1000))
             .outputs(metaitem('turbine_blade_core_die'))
             .circuitMeta(2)
-            .duration(250 * DielectricFluid.duration)
+            .duration(60 * DielectricFluid.duration)
             .EUt(VA[EV])
             .buildAndRegister()
 
@@ -71,7 +71,7 @@ EDMDielectricFluids.each { DielectricFluid ->
             .inputs(metaitem('milled_gas_turbine_blade'))
             .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 500))
             .outputs(metaitem('surface_finished_gas_turbine_blade'))
-            .duration(150 * DielectricFluid.duration)
+            .duration(35 * DielectricFluid.duration)
             .EUt(VA[EV])
             .buildAndRegister()
 
@@ -79,7 +79,7 @@ EDMDielectricFluids.each { DielectricFluid ->
             .inputs(metaitem('milled_low_pressure_steam_turbine_blade'))
             .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 125))
             .outputs(metaitem('low_pressure_steam_turbine_blade'))
-            .duration(150 * DielectricFluid.duration)
+            .duration(35 * DielectricFluid.duration)
             .EUt(VA[EV])
             .buildAndRegister()
 
@@ -87,7 +87,7 @@ EDMDielectricFluids.each { DielectricFluid ->
             .inputs(metaitem('milled_high_pressure_steam_turbine_blade'))
             .fluidInputs(DielectricFluid.fluid * (DielectricFluid.duration * 125))
             .outputs(metaitem('high_pressure_steam_turbine_blade'))
-            .duration(150 * DielectricFluid.duration)
+            .duration(35 * DielectricFluid.duration)
             .EUt(VA[EV])
             .buildAndRegister()
 }
