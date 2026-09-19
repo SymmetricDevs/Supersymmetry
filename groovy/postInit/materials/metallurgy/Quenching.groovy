@@ -157,16 +157,17 @@ for (entry in electrodeMap) {
             .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
             .EUt(VA[MV])
             .buildAndRegister();
-        
-        QUENCHER.recipeBuilder()
-            .notConsumable(metaitem('shape.mold.rod'))
-            .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
-            .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
-            .outputs(metaitem('electrode' + entry.key))
-            .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
-            .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
-            .EUt(VA[MV])
-            .buildAndRegister();
+        if (entry.key != 'Haynes230') {
+            QUENCHER.recipeBuilder()
+                .notConsumable(metaitem('shape.mold.rod'))
+                .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
+                .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
+                .outputs(metaitem('electrode' + entry.key))
+                .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
+                .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
+                .EUt(VA[MV])
+                .buildAndRegister();
+        }
     }
 }
 
