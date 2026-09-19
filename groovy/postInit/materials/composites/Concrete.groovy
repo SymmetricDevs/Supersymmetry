@@ -44,6 +44,10 @@ mods.gregtech.autoclave.recipeBuilder()
 // Light Concrete * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('concrete') * 144])
 
+crafting.addShapeless("primitive_concrete", item('gregtech:stone_smooth', 4) * 4, [
+  ore('craftingToolRollingPin'), metaitem('shape.mold.block').reuse(), fluid('concrete') * 1000
+])
+
 SOLIDIFIER.recipeBuilder()
         .notConsumable(metaitem('shape.mold.block'))
         .fluidInputs(fluid('concrete') * 144)

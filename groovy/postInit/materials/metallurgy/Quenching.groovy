@@ -25,14 +25,11 @@ QuenchingFluid Brine = new QuenchingFluid('brine', 'warm_brine', 1000, 150.0, fa
 def ingotMap = [
     'Europium':6000,
     'Iridium':4500,
-    'Molybdenum':2890,
     'Niobium':2750,
     'Osmium':4500,
     'Rhodium':2237,
     'Ruthenium':2607,
     'Samarium':5400,
-    'Tantalum':3293,
-    'Thorium':2028,
     'Titanium':2141,
     'Tungsten':3600,
     'Vanadium':2183,
@@ -102,6 +99,15 @@ for (fluid in QuenchingFluid.quenching_fluids) {
         .inputs(ore('ingotHotKanthal'))
         .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
         .outputs(metaitem('ingotKanthal'))
+        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+        .duration((int) fluid.getDuration() * 4)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('ingotHotNichrome'))
+        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+        .outputs(metaitem('ingotNichrome'))
         .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
         .duration((int) fluid.getDuration() * 4)
         .EUt(VA[MV])
