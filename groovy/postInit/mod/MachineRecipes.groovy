@@ -1864,9 +1864,9 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(1)
-        .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
+        .inputs(ore('plateAluminiumAlloy2219') * 6)
         .inputs(ore('stickLongAluminiumAlloy2219') * 12)
-        .outputs(item('susy:rocket_tank_shell')) // Al-2219 tank shell
+        .outputs(item('susy:rocket_tank_shell') * 6) // Al-2219 tank shell
         .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
