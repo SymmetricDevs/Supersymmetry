@@ -24,9 +24,6 @@ jobs:
         shell: bash
         run: |
           echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
-      - name: Install requests
-        run: |
-          pip install requests
       - run: python build/main.py
       - uses: actions/setup-node@v4
         with:

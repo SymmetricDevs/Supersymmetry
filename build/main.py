@@ -7,6 +7,7 @@ import os
 import sys
 import shutil
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 from typing import Optional
 import cfThirdPartyList
 import zipfile
@@ -78,6 +79,9 @@ def build(args):
     export_server_pack()
 
 def refresh():
+    # packwiz can only update an existing index, not create one from scratch
+    if not os.path.exists('index.toml'):
+        open('index.toml', 'w').close()
     subprocess.run([packwizName, 'refresh'], check=True)
 
 def export_client_pack():
@@ -107,12 +111,12 @@ def export_server_pack():
         if not_downloaded:
             print("\nthe following mods failed to download automatically: ")
             missing_mods_list=""
-            for mod,(project_id,file_id) in not_downloaded.items():
+            with ThreadPoolExecutor() as pool:
+                metas = list(pool.map(lambda item: cfThirdPartyList.cf_file_meta(*item[1]), not_downloaded.items()))
+            for (mod, _), meta in zip(not_downloaded.items(), metas):
                 print(f" - {mod}")
-                
-                out = cfThirdPartyList.cf_file_meta(project_id,file_id)
-                if out:
-                    name, url = out
+                if meta:
+                    name, url = meta
                     missing_mods_list+=f"{name} : {url}\n"
             print("please download these manually and put them into ./mods folder before running the server itself\n")
 
