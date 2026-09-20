@@ -37,7 +37,7 @@ VACUUM_DT.recipeBuilder()
 
 ELECTROLYZER.recipeBuilder()
         .notConsumable(metaitem('graphite_electrode'))
-        .notConsumable(metaiWtem('stickSteel'))
+        .notConsumable(metaitem('stickSteel'))
         .fluidInputs(fluid('calcium_chloride') * 432)
         .fluidOutputs(fluid('chlorine') * 2000)
         .outputs(metaitem('dustCalcium'))
