@@ -23,6 +23,14 @@ INDUCTION_FURNACE.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('aluminium') * 7472)
+    .inputs(ore('dustTinyMagnesium') * 30)
+    .inputs(ore('dustTinyManganese') * 3)
+    .fluidOutputs(fluid('aluminium_alloy_mg_6') * 8000)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
 // Magnalium
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 2736)
