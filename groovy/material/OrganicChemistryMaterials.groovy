@@ -4401,5 +4401,23 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 3, Hydrogen * 6)
                 .colorAverage()
                 .build()
+
+        SodiumMethylcyclopentadienide = new Material.Builder(15744, SuSyUtility.susyId('sodium_methylcyclopentadienide'))
+            .liquid()
+            .components(Sodium * 1, Carbon * 6, Hydrogen * 7)
+            .color(0xD6FF8C)
+            .build()
+
+        SodiumMethylcyclopentadienide.setFormula('Na(MeCp)', true)
+
+
+        BismethylcyclopentadienylBeryllium = new Material.Builder(15745, SuSyUtility.susyId('bismethylcyclopentadienyl_beryllium'))
+            .dust().gas(new FluidBuilder().temperature(506))
+            .components(Beryllium * 1, Carbon * 12, Hydrogen * 14)
+            .color(0xB9FF9E)
+            .build()
+
+        BismethylcyclopentadienylBeryllium.setFormula('Be(MeCp)2', true)
+
     }
 }

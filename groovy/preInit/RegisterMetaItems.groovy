@@ -773,6 +773,11 @@ eventManager.listen { PostMaterialEvent event ->
         toadd_list.add("mask.monosilicon_photovoltaic")
         toadd_list.add("cell.monosilicon_photovoltaic")
 
+        // Multijunction photovoltaic cells
+        registerWaferSteps("multijunction_photovoltaic", 25, [start: 1, photoresist: [21]])
+        toadd_list.add("mask.multijunction_photovoltaic")
+        toadd_list.add("cell.multijunction_photovoltaic")
+
         // EV logic die families; ride the same 45nm CMOS flow as cmos_cpu/cmos_gpu
         registerCMOSMetaitems("cmos_chipset") // PCIe root complex / memory controller
         registerCMOSMetaitems("cmos_phy")     // Ethernet/USB serdes I/O
