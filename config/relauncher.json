@@ -1,12 +1,12 @@
 {
-  "selectedVersion": "0.6.10-alpha",
-  "latestVersion": "0.6.10-alpha",
+  "selectedVersion": "0.6.12-alpha",
+  "latestVersion": "0.6.12-alpha",
   "targetJavaVersion": 25,
   "targetVendor": "Azul Zulu",
   "args": "-XX:+UseCompactObjectHeaders",
   "autoSetup": true,
   "enableRelauncher": true,
-  "fetchUpdates": false,
+  "fetchUpdates": true,
   "clearCleanroomFolder": false,
   "clearJavaProvisionFolder": false,
   "darkMode": true

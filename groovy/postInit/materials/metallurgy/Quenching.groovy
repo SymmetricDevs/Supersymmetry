@@ -25,14 +25,11 @@ QuenchingFluid Brine = new QuenchingFluid('brine', 'warm_brine', 1000, 150.0, fa
 def ingotMap = [
     'Europium':6000,
     'Iridium':4500,
-    'Molybdenum':2890,
     'Niobium':2750,
     'Osmium':4500,
     'Rhodium':2237,
     'Ruthenium':2607,
     'Samarium':5400,
-    'Tantalum':3293,
-    'Thorium':2028,
     'Titanium':2141,
     'Tungsten':3600,
     'Vanadium':2183,
@@ -108,6 +105,15 @@ for (fluid in QuenchingFluid.quenching_fluids) {
         .buildAndRegister();
 
     CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('ingotHotNichrome'))
+        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+        .outputs(metaitem('ingotNichrome'))
+        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+        .duration((int) fluid.getDuration() * 4)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('ingotHotAlnico'))
         .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
         .outputs(metaitem('ingotAlnico'))
@@ -151,16 +157,17 @@ for (entry in electrodeMap) {
             .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
             .EUt(VA[MV])
             .buildAndRegister();
-        
-        QUENCHER.recipeBuilder()
-            .notConsumable(metaitem('shape.mold.rod'))
-            .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
-            .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
-            .outputs(metaitem('electrode' + entry.key))
-            .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
-            .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
-            .EUt(VA[MV])
-            .buildAndRegister();
+        if (entry.key != 'Haynes230') {
+            QUENCHER.recipeBuilder()
+                .notConsumable(metaitem('shape.mold.rod'))
+                .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
+                .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
+                .outputs(metaitem('electrode' + entry.key))
+                .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
+                .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
+                .EUt(VA[MV])
+                .buildAndRegister();
+        }
     }
 }
 
