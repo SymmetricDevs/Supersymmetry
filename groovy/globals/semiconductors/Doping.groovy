@@ -35,7 +35,8 @@ class Doping {
         new IonSource("boron_trifluoride", "boron"),
         new IonSource("phosphine", "phosphorus"),
         new IonSource("arsine", "arsenic"),
-        new IonSource("purified_antimony_trioxide", "antimony")
+        new IonSource("purified_antimony_trioxide", "antimony"),
+        new IonSource("silane", "silicon"),
     ]
 
     static void generateIonImplantationRecipes(String input, String product, int duration, String sourceName) {
