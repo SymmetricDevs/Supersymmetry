@@ -35,6 +35,7 @@ ALLOY_SMELTER.recipeBuilder()
     .outputs(metaitem('ingotLeadFreeSolder') * 27)
     .duration(360)
     .EUt(VA[MV])
+    .buildAndRegister()
 
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('ingotTin') * 27)
@@ -42,6 +43,7 @@ ALLOY_SMELTER.recipeBuilder()
     .outputs(metaitem('ingotLeadFreeSolder') * 27)
     .duration(360)
     .EUt(VA[MV])
+    .buildAndRegister()
 
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('ingotTin') * 27)
@@ -49,6 +51,7 @@ ALLOY_SMELTER.recipeBuilder()
     .outputs(metaitem('ingotLeadFreeSolder') * 27)
     .duration(360)
     .EUt(VA[MV])
+    .buildAndRegister()
 
 // Cryogenic solder
 RESISTANCE_FURNACE.recipeBuilder()
@@ -78,10 +81,10 @@ MIXER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-crafting.addShapeless("susy:high_temperature_solder", metaitem('dustHighTemperatureSolder') * 44, [
-    ore('dustLead') * 43,
-    ore('dustTinySilver') * 6,
-    ore('dustTinyTin') * 4
+crafting.addShapeless("susy:high_temperature_solder", metaitem('dustHighTemperatureSolder') * 6, [
+    ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'),
+    ore('dustTinySilver'), ore('dustTinySilver'),
+    ore('dustTinyTin')
 ])
 
 INDUCTION_FURNACE.recipeBuilder()

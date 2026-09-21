@@ -889,8 +889,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8060, "wafer.diode.schottky.step_eight.coated")
         addItem(8061, "wafer.diode.schottky.step_eight.exposed")
         addItem(8062, "wafer.diode.schottky.step_eight.deposited")
-        addItem(8063, "wafer.diode.power.step_nine.exposed")
-        // FREE ID: 8064
+        // FREE ID: 8063/4
         addItem(8065, "wafer.silicon.n_doped.coated")
         addItem(8066, "wafer.silicon.n_doped.exposed")
         addItem(8067, "wafer.thyristor.step_one.coated")

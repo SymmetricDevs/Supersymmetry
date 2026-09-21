@@ -820,13 +820,6 @@ class UnknownCompositionMaterials {
                 .color(0x80849c)
                 .build()
 
-        AmorphousSilicaAlumina = new Material.Builder(4160, SuSyUtility.susyId('amorphous_silica_alumina'))
-                .dust()
-                .color(0x7ea3ed)
-                .flags(GENERATE_CATALYST_BED)
-                .iconSet(DULL)
-                .build()
-
         ImpureUranylSulfateSolution = new Material.Builder(4161, SuSyUtility.susyId('impure_uranyl_sulfate_solution'))
                 .liquid()
                 .color(0x9c8f30)
