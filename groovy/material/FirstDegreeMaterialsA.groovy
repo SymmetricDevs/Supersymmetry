@@ -109,6 +109,7 @@ class FirstDegreeMaterialsA {
         HighPurityOsmium = generatePurifiedElement(Osmium, 8050, false, false)
         HighPurityIridium = generatePurifiedElement(Iridium, 8051, false, false)
         HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, false)
+        HighPurityPlatinum.addFlags(GENERATE_INGOT)
         HighPurityGold = generatePurifiedElement(Gold, 8053, false, true)
         HighPurityGold.addFlags(GENERATE_FOIL, GENERATE_PLATE)
         HighPurityThallium = generatePurifiedElement(Thallium, 8054, false, false)
