@@ -903,3 +903,11 @@ FLUID_HEATER.recipeBuilder()
         .duration(20)
         .EUt(VA[LV])
         .buildAndRegister();
+
+// Induction hot coolant water
+
+RADIATOR.recipeBuilder()
+    .fluidInputs(liquid('hot_softened_water') * 100)
+    .fluidOutputs(liquid('water') * 100)
+    .duration(100)
+    .buildAndRegister();
