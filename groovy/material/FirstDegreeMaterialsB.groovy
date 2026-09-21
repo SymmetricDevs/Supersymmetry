@@ -871,38 +871,6 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .build()*/
         
-        FormingGas = new Material.Builder(8849, SuSyUtility.susyId('forming_gas'))
-                .gas()
-                .components(Hydrogen, Nitrogen * 19)
-                .colorAverage()
-                .build()
-
-        Germane = new Material.Builder(8850, SuSyUtility.susyId('germane'))
-                .gas()
-                .components(Germanium, Hydrogen * 4)
-                .colorAverage()
-                .build()
-
-        TungstenHexafluoride = new Material.Builder(8851, SuSyUtility.susyId('tungsten_hexafluoride'))
-                .gas(new FluidBuilder().acidic())
-                .components(Tungsten, Fluorine * 6)
-                .colorAverage()
-                .build()
-
-        UltrapureSteam = new Material.Builder(8792, SuSyUtility.susyId('ultrapure_steam'))
-                .gas()
-                .components(Hydrogen * 2, Oxygen)
-                .color(0xf0f0ff)
-                .build()
-
-        CopperIPhosphide = new Material.Builder(8852, SuSyUtility.susyId('copper_i_phosphide'))
-                .dust()
-                .components(Copper * 3, Phosphorus)
-                .color(0x7a7350)
-                .build()
-
-        // Molybdenum disilicide for no reason
-
         AluminiumAlloy2219 = new Material.Builder(8794, SuSyUtility.susyId('aluminium_alloy_2219'))
                 .ingot().liquid(new FluidBuilder().temperature(640))
                 .colorAverage()
@@ -1260,6 +1228,38 @@ class FirstDegreeMaterialsB {
                 .components(Sulfur, Fluorine * 6)
                 .colorAverage()
                 .build()
+
+        FormingGas = new Material.Builder(8849, SuSyUtility.susyId('forming_gas'))
+                .gas()
+                .components(Hydrogen, Nitrogen * 19)
+                .colorAverage()
+                .build()
+
+        Germane = new Material.Builder(8850, SuSyUtility.susyId('germane'))
+                .gas()
+                .components(Germanium, Hydrogen * 4)
+                .colorAverage()
+                .build()
+
+        TungstenHexafluoride = new Material.Builder(8851, SuSyUtility.susyId('tungsten_hexafluoride'))
+                .gas(new FluidBuilder().acidic())
+                .components(Tungsten, Fluorine * 6)
+                .colorAverage()
+                .build()
+
+        UltrapureSteam = new Material.Builder(8852, SuSyUtility.susyId('ultrapure_steam'))
+                .gas()
+                .components(Hydrogen * 2, Oxygen)
+                .color(0xf0f0ff)
+                .build()
+
+        CopperIPhosphide = new Material.Builder(8853, SuSyUtility.susyId('copper_i_phosphide'))
+                .dust()
+                .components(Copper * 3, Phosphorus)
+                .color(0x7a7350)
+                .build()
+
+        // Molybdenum disilicide for no reason
 
     }
 }
