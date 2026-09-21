@@ -41,7 +41,7 @@ INDUCTION_FURNACE.recipeBuilder()
 
 
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('molten.aluminium') * 26576)
+        .fluidInputs(fluid('aluminium') * 26576)
         .inputs(ore('dustTinyCopper') * 45)
         .inputs(ore('dustTinyManganese') * 18)
         .inputs(ore('dustTinyVanadium') * 1)
@@ -53,7 +53,7 @@ INDUCTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
-        .fluidInputs(fluid('molten.aluminium') * 32192)
+        .fluidInputs(fluid('aluminium') * 32192)
         .inputs(ore('dustTinyCopper') * 36)
         .inputs(ore('dustTinyLithium') * 90)
         .inputs(ore('dustTinyManganese') * 18)
