@@ -1785,6 +1785,7 @@ class SuSyMaterials {
     public static Material HighPurityMagnesium
     public static Material HighPurityAluminium
     public static Material HighPuritySilicon
+    public static Material HighPuritySilica
     public static Material HighPurityPhosphorus
     public static Material HighPuritySulfur
     public static Material HighPurityPotassium
