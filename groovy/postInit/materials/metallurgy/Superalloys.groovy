@@ -6,6 +6,33 @@ import static gregtech.api.GTValues.*
 mods.gregtech.mixer.removeByInput(480, [metaitem('dustCobalt') * 5, metaitem('dustChrome') * 2, metaitem('dustNickel'),
                                         metaitem('dustMolybdenum'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
 
+// GRCop-84
+
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('dustGrcop84')], [fluid('oxygen') * 63])
+mods.gregtech.extractor.removeByInput(30, [metaitem('dustGrcop84')], null)
+
+MIXER.recipeBuilder()
+        .inputs(metaitem('dustCopper') * 19)
+        .inputs(metaitem('dustChrome') * 2)
+        .inputs(metaitem('dustNiobium'))
+        .outputs(metaitem('dustGrcop84') * 22)
+        .duration(5)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+// MAR-M246
+
+mods.gregtech.assembler.removeByInput(400, [metaitem('turbineBladeMarM246') * 8, metaitem('stickLongMagnalium')], null)
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('turbineBladeMarM246') * 8)
+    .inputs(metaitem('stickLongIncoloy908'))
+    .outputs(metaitem('turbine_rotor').withNbt(['GT.PartStats': ['Material': 'susy:mar_m_246']]))
+    .duration(1000)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+
 // Secure Maceration Casing
 RecyclingHelper.replaceShaped('gcym:casing_large_macerator', item('gcym:large_multiblock_casing') * 2, [
     [ore('plateStelliteJ'), ore('craftingToolHardHammer'), ore('plateStelliteJ')],
@@ -178,12 +205,66 @@ INDUCTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
+        .inputs(metaitem('dustNimonic105') * 1)
+        .fluidOutputs(fluid('molten.nimonic_105') * 144)
+        .duration(80)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+        .inputs(metaitem('dustIncoloy825') * 1)
+        .fluidOutputs(fluid('molten.incoloy_825') * 144)
+        .duration(80)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('iron') * 3456)
+    .inputs(metaitem('dustChrome') * 8)
+    .inputs(metaitem('dustNickel') * 5)
+    .inputs(metaitem('dustMolybdenum') * 2)
+    .inputs(metaitem('dustManganese'))
+    .fluidOutputs(fluid('food_grade_stainless_steel') * 5760)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
     .circuitMeta(2)
     .fluidInputs(fluid('cobalt') * 720)
     .inputs(metaitem('dustChrome') * 2)
     .inputs(metaitem('dustNickel'))
     .inputs(metaitem('dustMolybdenum'))
     .fluidOutputs(fluid('ultimet') * 1296)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('nickel') * 15552)
+    .fluidInputs(fluid('lanthanum') * 6)
+    .inputs(metaitem('dustChrome') * 48)
+    .inputs(metaitem('dustCobalt') * 11)
+    .inputs(metaitem('dustTungsten') * 10)
+    .inputs(metaitem('dustIron') * 7)
+    .inputs(metaitem('dustMolybdenum') * 4)
+    .inputs(metaitem('dustSilicon') * 3)
+    .inputs(metaitem('dustManganese') * 2)
+    .inputs(metaitem('dustAluminium') * 2)
+    .inputs(metaitem('dustCopper') * 1)
+    .fluidOutputs(fluid('haynes_230') * 28224)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('nickel') * 4176)
+    .inputs(metaitem('dustChrome') * 5)
+    .inputs(metaitem('dustCobalt') * 5)
+    .inputs(metaitem('dustTungsten') * 5)
+    .inputs(metaitem('dustAluminium') * 3)
+    .inputs(metaitem('dustMolybdenum') * 1)
+    .inputs(metaitem('dustTitanium') * 1)
+    .inputs(metaitem('dustTantalum') * 1)
+    .fluidOutputs(fluid('mar_m_246') * 7200)
     .EUt(VA[EV])
     .buildAndRegister()
 /*

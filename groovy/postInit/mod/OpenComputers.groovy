@@ -1232,6 +1232,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 mods.gregtech.forming_press.recipeBuilder()
 		.inputs(ore('foilPolycaprolactam') * 4)
 		.outputs(item('opencomputers:material', 28))
+		.circuitMeta(1)
 		.duration(160)
 		.EUt(VA[MV])
 		.buildAndRegister();

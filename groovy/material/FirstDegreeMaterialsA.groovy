@@ -10,6 +10,9 @@ import gregtech.api.fluids.store.FluidStorage
 import gregtech.api.unification.material.properties.*
 import gregtech.api.GTValues
 import supersymmetry.api.util.SuSyUtility
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey
+import supersymmetry.api.unification.material.properties.FiberProperty
+
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
@@ -1968,7 +1971,7 @@ class FirstDegreeMaterialsA {
 
         StrontiumFerrite = new Material.Builder(8383, SuSyUtility.susyId('strontium_ferrite'))
                 .ingot()
-                .flags(GENERATE_ROD, GENERATE_RING)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE)
                 .components(Strontium, Iron * 12, Oxygen * 19)
                 .colorAverage()
                 .build()
@@ -3567,10 +3570,11 @@ class FirstDegreeMaterialsA {
         Incoloy908 = new Material.Builder(8629, SuSyUtility.susyId("incoloy_908"))
                 .ingot().liquid(new FluidBuilder().temperature(1685))
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROD, SUPERALLOY, INDUCTION_MELT)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, SUPERALLOY, INDUCTION_MELT)
                 .components(Iron * 20, Nickel * 30, Cobalt, Chrome * 3, Aluminium, Titanium * 2, Tungsten, Niobium * 2)
                 .colorAverage()
                 .blastTemp(2100, GasTier.HIGH, GTValues.VA[GTValues.EV])
+                .fluidPipeProperties(760, 2000, true, true, true, false)
                 .build()
 
         ReneN5 = new Material.Builder(8630, SuSyUtility.susyId("rene_n_5"))
@@ -3585,7 +3589,7 @@ class FirstDegreeMaterialsA {
         Monel500 = new Material.Builder(8631, SuSyUtility.susyId("monel_500"))
                 .ingot().liquid(new FluidBuilder().temperature(1625))
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, INDUCTION_MELT)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_ROTOR, INDUCTION_MELT)
                 .components(Nickel * 23, Manganese * 2, Copper * 10, Aluminium * 4, Titanium)
                 .colorAverage()
                 .blastTemp(1700, GasTier.HIGH, GTValues.VA[GTValues.EV])

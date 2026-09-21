@@ -312,7 +312,9 @@ def fluid_removals = [
     fluid('uranium_hexafluoride'),
     item('forge:bucketfilled').withNbt(['FluidName': 'uranium_hexafluoride', 'Amount': 1000]),
     fluid('enriched_uranium_hexafluoride'),
-    item('forge:bucketfilled').withNbt(['FluidName': 'enriched_uranium_hexafluoride', 'Amount': 1000])
+    item('forge:bucketfilled').withNbt(['FluidName': 'enriched_uranium_hexafluoride', 'Amount': 1000]),
+    fluid('rocket_fuel'),
+    item('forge:bucketfilled').withNbt(['FluidName': 'rocket_fuel', 'Amount': 1000])
 ]
 
 for (fluid in fluid_removals) {
@@ -570,6 +572,14 @@ RecyclingHelper.replaceShaped("gregtech:gregtech.machine.electrolyzer.mv", metai
     [metaitem('wireGtSingleGold'), metaitem('gregtech:hull.mv'), metaitem('wireGtSingleGold')],
     [ore('circuitMv'), metaitem('cableGtSingleCopper'), ore('circuitMv')]
 ])
+
+RecyclingHelper.addShaped("gregtech:gregtech.machine.electrolyzer.ev.alternate", metaitem('gregtech:electrolyzer.ev'), [
+    [metaitem('wireGtSingleAluminium'), item('gregtech:transparent_casing'), metaitem('wireGtSingleAluminium')],
+    [metaitem('wireGtSingleAluminium'), metaitem('gregtech:hull.ev'), metaitem('wireGtSingleAluminium')],
+    [ore('circuitEv'), metaitem('cableGtSingleAluminium'), ore('circuitEv')]
+])
+
+RecyclingHelper.handleRecycling(metaitem('gregtech:electrolyzer.ev'), [metaitem('hull.ev'), metaitem('cableGtSingleAluminium'), ore('circuitEv') * 2, metaitem('gregtech:hull.ev')])
 
 // Steam machine recipes (due to furnace removal)
 
@@ -2098,3 +2108,10 @@ RecyclingHelper.replaceShaped"(gregtech.machine.distillery.ev", metaitem('distil
         [ore("circuitEv"), metaitem('gregtech:hull.ev'), ore("circuitEv")],
         [metaitem('cableGtSingleAluminium'), metaitem('electric.pump.ev'), metaitem('cableGtSingleAluminium')]
 ]
+
+// Remove GT Rocket Fuel
+
+mods.gregtech.mixer.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('oxygen') * 1000])
+mods.gregtech.mixer.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('dinitrogen_tetroxide') * 1000])
+mods.gregtech.blender.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('oxygen') * 1000])
+mods.gregtech.blender.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('dinitrogen_tetroxide') * 1000])
