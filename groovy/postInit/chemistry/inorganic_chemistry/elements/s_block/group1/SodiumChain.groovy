@@ -12,49 +12,31 @@ ROASTER.recipeBuilder()
     .duration(120)
     .buildAndRegister()
 
-// Impure halite purification
-
-BR.recipeBuilder()
-    .inputs(ore('dustImpureSalt') * 2)
-    .fluidInputs(fluid('distilled_water') * 1000)
-    .fluidOutputs(fluid('halite_leach') * 1000)
-    .EUt(VA[LV])
-    .duration(20)
-    .buildAndRegister()
-
-BR.recipeBuilder()
-    .inputs(ore('dustSodaAsh'))
-    .fluidInputs(fluid('halite_leach') * 8000)
-    .chancedOutput(metaitem('dustBarite') * 5, 1667, 0)
-    .outputs(metaitem('dustClay'))
-    .fluidOutputs(fluid('salt_water') * 8000)
-    .EUt(VA[LV])
-    .duration(160)
-    .buildAndRegister()
-
 // Castner process
 
-ELECTROLYTIC_CELL.recipeBuilder()
-    .fluidInputs(fluid('sodium_hydroxide') * 432)
+ELECTROLYZER.recipeBuilder()
+    .fluidInputs(fluid('sodium_hydroxide') * 864)
     .notConsumable(metaitem('stickNickel'))
     .notConsumable(metaitem('stickIron'))
-    .outputs(metaitem('dustSodium'))
+    .outputs(metaitem('dustSodium') * 2)
     .fluidOutputs(fluid('oxygen') * 1000)
-    .fluidOutputs(fluid('hydrogen') * 1000)
-    .duration(200)
+    .fluidOutputs(fluid('dense_steam') * 1000)
+    .duration(600)
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
 // Downs cell process
 
-ELECTROLYZER.recipeBuilder()
+ELECTROLYTIC_CELL.recipeBuilder()
     .notConsumable(metaitem('graphite_electrode'))
     .notConsumable(metaitem('stickIron'))
-    .fluidInputs(fluid('salt') * 288)
+    .notConsumable(metaitem('foilSteel'))
+    .notConsumable(fluid('calcium_chloride') * 432)
+    .inputs(ore('dustSalt') * 2)
     .fluidOutputs(fluid('chlorine') * 1000)
     .outputs(metaitem('dustSodium'))
     .EUt(VA[LV])
-    .duration(300)
+    .duration(200)
     .buildAndRegister()
 
 // Compounds

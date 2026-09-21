@@ -5,7 +5,6 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.302928877.desc",
-      "frame:8": "GATE",
       "icon:10": {
         "Damage:2": 350,
         "id:8": "gregtech:meta_item_1"

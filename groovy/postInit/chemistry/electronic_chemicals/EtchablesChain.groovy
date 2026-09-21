@@ -256,7 +256,7 @@ FORMING_PRESS.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-Photolithography.generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', LV, 1, 1, 0, false)
+Photolithography.generatePatterningRecipes('laminated.board.phenolic', 'patterned.board.phenolic', 'mask.pcb', LV, 1, 1, 1, false)
 Etchants.generateEtchingRecipes('patterned.board.phenolic', 'circuit_board.good', 'copper', LV, 1, false)
 
 //PLASTIC CIRCUIT BOARD (TIER 3)
@@ -293,7 +293,7 @@ FORMING_PRESS.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister()
 
-Photolithography.generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', MV, 1, 1, 0, false)
+Photolithography.generatePatterningRecipes('board.plastic', 'patterned.board.plastic', 'mask.pcb', MV, 1, 1, 1, false)
 Etchants.generateEtchingRecipes('patterned.board.plastic', 'circuit_board.plastic', 'copper', MV, 1, false)
 
 //NAND AND NOR

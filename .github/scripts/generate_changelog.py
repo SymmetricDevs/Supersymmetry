@@ -24,7 +24,9 @@ def get_current_version():
 # GitHub API configuration
 # NOTE: These will need to be set as GitHub secrets and passed to the script
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
-GITHUB_REPO = "SymmetricDevs/Supersymmetry"  # Format: owner/repo
+# Format: owner/repo. GitHub Actions sets GITHUB_REPOSITORY automatically, so
+# this works on forks too (e.g. when testing on a personal fork).
+GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY", "SymmetricDevs/Supersymmetry")
 GITHUB_ORG = os.environ.get("GITHUB_ORGANIZATION", "SymmetricDevs")  # Default organization
 VERSION = os.environ.get("VERSION", get_current_version())
 GITHUB_API_BASE = "https://api.github.com"
@@ -441,6 +443,101 @@ def generate_pr_changelog(prs):
     
     return markdown
 
+# --- Breaking Changes section (collected from PR bodies) ---
+
+def extract_section(body, heading):
+    """Extract the content of a '## <heading>' section from a markdown body,
+    up to (but not including) the next '## ' heading or the end of the body."""
+    section_lines = []
+    in_section = False
+    heading_re = re.compile(r'^##\s+(.+?)\s*$')
+    for line in body.splitlines():
+        m = heading_re.match(line)
+        if m:
+            if in_section:
+                break
+            if m.group(1).strip().lower() == heading.lower():
+                in_section = True
+            continue
+        if in_section:
+            section_lines.append(line)
+    return '\n'.join(section_lines).strip()
+
+
+def extract_breaking_changes(body):
+    """Extract the '## Breaking Changes' section from a PR body.
+
+    Returns the cleaned markdown content, or None when the section is
+    missing or empty (e.g. only the template's HTML comment guidance left).
+    """
+    if not body:
+        return None
+    section = extract_section(body, "Breaking Changes")
+    if not section:
+        return None
+    # Drop the template's HTML comment guidance and stray trailing spaces
+    section = re.sub(r'<!--.*?-->', '', section, flags=re.DOTALL)
+    section = re.sub(r'[ \t]+$', '', section, flags=re.MULTILINE)
+    section = section.strip()
+    return section or None
+
+
+def enrich_prs_with_body(prs):
+    """PR summaries from the commits/{sha}/pulls endpoint carry no 'body',
+    so fetch the full PR for each one to read its Breaking Changes section."""
+    if not prs:
+        return prs
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    for pr in prs:
+        number = pr.get("number")
+        repo = pr.get("repository") or GITHUB_REPO
+        pr_url = f"{GITHUB_API_BASE}/repos/{repo}/pulls/{number}"
+        try:
+            response = requests.get(pr_url, headers=headers)
+            response.raise_for_status()
+            pr["body"] = response.json().get("body")
+        except requests.exceptions.RequestException as e:
+            logging.warning(f"Failed to fetch body for PR #{number} ({repo}): {e}")
+    return prs
+
+
+def generate_breaking_changes_section(prs):
+    """Collect the '## Breaking Changes' sections of all merged PRs into a
+    dedicated changelog section. Returns an empty string when no PR declares
+    breaking changes (internal PRs are skipped, matching the main changelog)."""
+    entries = []
+    for pr in prs:
+        labels = [label["name"].lower() for label in pr.get("labels", [])]
+        if "internal" in labels:
+            continue
+        changes = extract_breaking_changes(pr.get("body"))
+        if not changes:
+            continue
+        title = pr.get("title", "No title")
+        number = pr.get("number", "")
+        author = pr.get("user", {}).get("login", "Unknown")
+        repo = pr.get("repository", "").split("/")[-1]
+        attribution = f"{title} (#{number} by @{author})"
+        if repo != GITHUB_REPO.split("/")[-1]:
+            attribution = f"[{repo}] {attribution}"
+        entries.append((attribution, changes))
+
+    if not entries:
+        return ""
+
+    markdown = "## Breaking Changes\n\n"
+    markdown += "> **Heads up:** this update may break existing setups, worlds, or saves. Read before updating!\n\n"
+    for attribution, changes in entries:
+        # Render the PR as a top-level bullet, with its breaking-change
+        # content indented beneath it as a nested markdown list.
+        indented = "\n".join("   " + line for line in changes.splitlines())
+        markdown += f"-  {attribution}\n\n{indented}\n\n"
+    return markdown
+
+
 # Generate the complete changelog
 def generate_full_changelog():
     tag = get_latest_tag()
@@ -454,7 +551,7 @@ def generate_full_changelog():
     mod_changes, susy_old_version, susy_new_version = generate_mod_changelog()
     
     # Get merged PRs since the last tag from main repo
-    main_prs = get_merged_prs_between_refs("SymmetricDevs/Supersymmetry", tag)
+    main_prs = get_merged_prs_between_refs(GITHUB_REPO, tag)
     
     # Get merged PRs from SusyCore between relevant versions
     susy_prs = []
@@ -464,12 +561,18 @@ def generate_full_changelog():
     # Combine PRs from both repositories
     all_prs = main_prs + susy_prs
     
+    # Fetch full PR bodies so we can read the Breaking Changes section
+    all_prs = enrich_prs_with_body(all_prs)
+
     # Generate PR changelog section
     pr_changes = generate_pr_changelog(all_prs)
+
+    # Collect breaking changes declared in PR bodies
+    breaking_changes = generate_breaking_changes_section(all_prs)
     
     # Combine all sections
     header = f"# UPDATE {current_version}\n\n"
-    full_changelog = header + mod_changes + pr_changes
+    full_changelog = header + mod_changes + pr_changes + breaking_changes
     
     return full_changelog
 

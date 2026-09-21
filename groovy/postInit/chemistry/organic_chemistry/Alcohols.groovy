@@ -108,15 +108,6 @@ DT.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister()
 
-    FIXED_BR.recipeBuilder()
-        .fluidInputs(fluid('gtfo_acetaldehyde') * 100)
-        .fluidInputs(fluid('hydrogen') * 100)
-        .notConsumable(ore('catalystBedSupportedPlatinum'))
-        .fluidOutputs(fluid('ethanol') * 100)
-        .duration(5)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
 // C3 alcohols
 
     // n-Propanol

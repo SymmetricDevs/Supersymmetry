@@ -177,26 +177,6 @@
       "min": 1,
       "max": 64,
       "item": {
-        "id": "gregtech:meta_dust_impure",
-        "damage": 7025,
-        "count": 1
-      }
-    },
-    {
-      "weight": 1.0,
-      "min": 1,
-      "max": 64,
-      "item": {
-        "id": "gregtech:ore_livingstonite_0",
-        "damage": 0,
-        "count": 1
-      }
-    },
-    {
-      "weight": 1.0,
-      "min": 1,
-      "max": 64,
-      "item": {
         "id": "gregtech:meta_crushed",
         "damage": 322,
         "count": 1

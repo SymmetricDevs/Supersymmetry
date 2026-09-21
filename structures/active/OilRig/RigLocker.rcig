@@ -123,7 +123,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 3,
+      "max": 1,
       "item": {
         "id": "opensecurity:rfid_card",
         "damage": 0,
@@ -133,7 +133,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 3,
+      "max": 1,
       "item": {
         "id": "opensecurity:mag_card",
         "damage": 0,

@@ -704,7 +704,7 @@ BLENDER.recipeBuilder()
 // RP-1
 
 FIXED_BR.recipeBuilder()
-    .fluidInputs(fluid('supreme_kerosene') * 1000)
+    .fluidInputs(fluid('kerosene') * 1000)
     .fluidInputs(fluid('hydrogen') * 1000)
     .notConsumable(metaitem('catalystBedHydrotreatingCatalyst'))
     .fluidOutputs(fluid('rp_one') * 1000)

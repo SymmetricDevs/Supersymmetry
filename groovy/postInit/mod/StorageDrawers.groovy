@@ -120,3 +120,11 @@ drawerVariants.each { drawer ->
         [planks, planks, planks],
         [ore('chestWood'), planks, ore('chestWood')]])
 }
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('plateBrass'))
+	.inputs(ore('stickBrass') * 2)
+    .outputs(item('storagedrawers:drawer_key'))
+    .duration(40)
+    .EUt(7)
+    .buildAndRegister();

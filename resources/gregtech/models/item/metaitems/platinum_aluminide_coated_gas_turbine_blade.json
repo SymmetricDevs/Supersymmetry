@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gregtech:items/metaitems/turbines/platinum_aluminide_coated_gas_turbine_blade"
+  }
+}

@@ -11,13 +11,15 @@
     &emsp;&ensp;English
     <br />
     &emsp;&ensp;<a href="/README_PT.md">Português</a>
+    <br />
+    &emsp;&ensp;<a href="/README_PL.md">Polski</a>
   </details>
 </blockquote>
 
 # Supersymmetry
 Supersymmetry is a complex tech-centered modpack based around GregTech that integrates chemical and physical processes from reality into its progression. This means having many different crafting chains that imitate manufacturing processes used in real life.
 
-Much of it is in-development, with PvE elements such as environmental factors and raids of enemy factions being planned. We intend to have our own [space-faring mod](https://github.com/SymmetricDevs/GregicalityStarbound) as well.
+Much of it is in-development, with PvE elements such as environmental factors and raids of enemy factions being planned. We have our own implementation of space travel in the works as well.
 
 Progression defies the well-established GT power tiers, as the pack aims to break up the rigid progression. Innovation does not let itself be dictated by higher force, it happens through research and discoveries. 
 ## Implemented Content

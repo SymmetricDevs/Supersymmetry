@@ -6,6 +6,11 @@ import gregtech.api.GregTechAPI
 import gregtech.api.items.metaitem.ElectricStats
 import gregtech.api.items.metaitem.StandardMetaItem
 import gregtech.api.unification.material.event.PostMaterialEvent
+import gregtech.api.util.RandomPotionEffect
+import gregtechfoodoption.item.GTFOFoodStats
+import net.minecraft.init.MobEffects
+import net.minecraft.item.ItemStack
+
 
 def wordsFromNumber(int num) {
     def ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
@@ -142,6 +147,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4, "rock.sedimentary")
         addItem(5, "rock.hydrothermal")
         addItem(6, "rock.alluvial")
+        // ID 7 saved for deposit_block 6
+        addItem(8, "rock.evaporite")
 
         addItem(100, "cement.clinker")
         addItem(101, "hot.cement.clinker")
@@ -260,6 +267,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(500, "sintered_alumina.insulator")
         addItem(501, "ceramic_casing")
 
+        addItem(550, "mo_si_rod.wet")
+        addItem(551, "mo_si_rod.unsintered")
+        addItem(552, "graphite_boat")
+
         addItem(1000, "chunk.magnetite")
         addItem(1001, "hot_iron_rod")
         addItem(1002, "voltaic_pile").setMaxStackSize(1)
@@ -270,7 +281,52 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(1100, "steam.piston")
         addItem(1101, "steam.motor")
 
-        addItem(2000, "spaceship.me.scrap")
+        // 1500-1599: various scrap items
+        addItem(1500, "scrap.military")
+        addItem(1501, "scrap.supply")
+        addItem(1502, "scrap.commercial")
+        addItem(1503, "scrap.parts")
+
+        addItem(1504, "scrap.commercial.lootbox")
+        addItem(1505, "scrap.commercial.food")
+        addItem(1506, "scrap.commercial.data")
+
+        addItem(1507, "scrap.supply.wiring")
+        addItem(1508, "scrap.supply.component")
+        addItem(1509, "scrap.supply.circuitry")
+        addItem(1510, "scrap.supply.chemical")
+        addItem(1511, "scrap.supply.alloy")
+        addItem(1512, "scrap.supply.biological")
+
+        addItem(1513, "scrap.military.unknown")
+        addItem(1514, "scrap.military.armor")
+        addItem(1515, "scrap.military.weaponry")
+
+        addItem(1516, "scrap.parts.life_support")
+        addItem(1517, "scrap.parts.engine")
+        addItem(1518, "scrap.parts.cladding")
+        addItem(1519, "scrap.parts.energy")
+
+        addItem(1520, "scrap.unusable")
+
+        // 1600-1699: food items
+        // Hunger, saturation (multiplies hunger), (drinkable), (always edible), (return stack, potion effects)
+        // Nutrients: dairy, fruit, grain, protein, vegetable
+        // Potion effects: duration, amplifier (subtract 1), 100 - actual % chance
+        addItem(1600, "food.protein_paste").addComponents(new GTFOFoodStats(
+            2, 1, false, true
+        ).nutrients(0, 0, 0, 2, 0))
+        addItem(1601, "food.cellulose_reformate").addComponents(new GTFOFoodStats(
+            3, 0.4, false, true
+        ).nutrients(0.1, 0.1, 0.4, 0.1, 1))
+        addItem(1602, "food.glue_pizza").addComponents(new GTFOFoodStats(
+            4, 0, false, false, ItemStack.EMPTY, 
+            new RandomPotionEffect(MobEffects.POISON, 2000, 1, 20)
+        ).nutrients(1, 0, 1, 0, 1))
+        addItem(1603, "food.organic_ocean_powder").addComponents(new GTFOFoodStats(
+            5, 1.2, false, false, ItemStack.EMPTY, 
+            new RandomPotionEffect(MobEffects.SPEED, 4000, 2, 20)
+        ).nutrients(0, 1, 0.5, 1, 1))
 
         addItem(2001, "wafer.pattern.processor")
         addItem(2002, "wafer.pattern.memory")
@@ -515,6 +571,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(4209, "preform.lubricated_ptfe")
         addItem(4210, "foil.extruded_ptfe")
         addItem(4211, "foil.stretched_ptfe")
+        addItem(4212, "fiber.extruded_ptfe")
+        addItem(4213, "fiber.stretched_ptfe")
 
         //Dusts & Pulps 4500-4999
 
@@ -614,7 +672,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6004, "led_light")
 
         //Superconductors 6100-6200
-        addItem(6100, "assemblymanganesephosphide")
+        addItem(6100, "tubemanganesephosphide")
         addItem(6101, "basemanganesephosphide")
         addItem(6102, "cannedmagnesiumdiboride")
         addItem(6103, "tubemagnesiumdiboride")
@@ -635,6 +693,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6118, "baseenrichednaquadahtriniumeuropiumduranide")
         addItem(6119, "assemblyrutheniumtriniumamericiumneutronate")
         addItem(6120, "baserutheniumtriniumamericiumneutronate")
+        addItem(6121, "cannedmanganesephosphide")
 
         //Metal sponges 6200-6300
         addItem(6200, "sponge.titanium")
@@ -658,9 +717,47 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(6303, "anode_slime.copper")
         addItem(6304, "anode_slime.decopperized")
 
-        // Metallurgy 6400-6500
+        // Metallurgy 6400-6499
         addItem(6400, "work_roll.unfinished")
         addItem(6401, "nozzle.boron_nitride")
+
+        //Turbines 6500-6800
+        addItem(6500, "turbine_blade_core_die")
+        addItem(6501, "turbine_blade_shape_die")
+        addItem(6502, "investment_casting_binder")
+        addItem(6503, "turbine_blade_casting_core")
+        addItem(6504, "fired_turbine_blade_casting_core")
+        addItem(6505, "investment_casting_wax")
+        addItem(6506, "wax_turbine_blade_mold")
+        addItem(6507, "ceramic_coated_wax_turbine_blade_mold")
+        addItem(6508, "stuccoed_ceramic_turbine_blade_mold")
+        addItem(6509, "dried_ceramic_turbine_blade_mold")
+        addItem(6510, "dewaxed_ceramic_turbine_blade_mold")
+        addItem(6511, "turbine_blade_mold")
+        addItem(6512, "bridgman_furnace")
+
+        addItem(6513, "cast_gas_turbine_blade")
+        addItem(6514, "demolded_gas_turbine_blade")
+        addItem(6515, "decored_gas_turbine_blade")
+        addItem(6516, "milled_gas_turbine_blade")
+        addItem(6517, "surface_finished_gas_turbine_blade")
+        addItem(6518, "platinum_coated_gas_turbine_blade")
+        addItem(6519, "platinum_aluminide_coated_gas_turbine_blade")
+        addItem(6520, "gas_turbine_blade")
+        
+        addItem(6521, "cast_high_pressure_steam_turbine_blade")
+        addItem(6522, "demolded_high_pressure_steam_turbine_blade")
+        addItem(6523, "decored_high_pressure_steam_turbine_blade")
+        addItem(6524, "milled_high_pressure_steam_turbine_blade")
+        addItem(6525, "high_pressure_steam_turbine_blade")
+        addItem(6526, "cast_low_pressure_steam_turbine_blade")
+        addItem(6527, "demolded_low_pressure_steam_turbine_blade")
+        addItem(6528, "decored_low_pressure_steam_turbine_blade")
+        addItem(6529, "milled_low_pressure_steam_turbine_blade")
+        addItem(6530, "low_pressure_steam_turbine_blade")
+
+        addItem(6531, "sputtering_magnetron")
+
 
         //Seed crystals 7000-7500
 
@@ -670,7 +767,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7003, "seed_crystal.beryllium_oxide")
         addItem(7004, "seed_crystal.emerald")
         addItem(7005, "seed_crystal.lithium_niobate")
-        addItem(7006, "seed_crystal.germanium")
+        addItem(7006, "seed_crystal.neodymium_yttrium_aluminium_garnet")
+        addItem(7007, "seed_crystal.germanium")
 
         //Boules 7500-8000
 
@@ -684,7 +782,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7507, "boule.ruby")
         addItem(7508, "boule.silicon_germanium")
         addItem(7509, "boule.lithium_niobate")
-        addItem(7510, "boule.germanium.n_doped")
+        addItem(7510, "boule.neodymium_yttrium_aluminium_garnet")
         // overhaul boules
         addItem(7511, "boule.silicon.cz")
         addItem(7512, "boule.silicon.cz.n_doped")
@@ -852,11 +950,14 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10000, "tunnelbore.axle")
         addItem(10001, "tunnelbore.engine")
         addItem(10002, "tunnelbore.drillhead")
+        addItem(10003, "minecart_wheels.chromoly")
 
         // Misc Crafting Components 10100-10200
         addItem(10100, "turbojet.small")
         addItem(10101, "wing_panel.fiber_reinforced_epoxy")
         addItem(10102, "wing.small")
+        addItem(10103, "ink_bottle")
+        addItem(10104, "s_glass_fibers")
 
         // Dimension Display items 10200-10250
         addItem(10200, 'display.overworld')
@@ -887,11 +988,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10314, "carbon_crucible")
         addItem(10315, "crucible.graphite")
         addItem(10316, "clay_graphite_paste")
-        addItem(10317, "clay_graphite_crucible")
         addItem(10318, "raw_clay_graphite_crucible")
-        addItem(10319, "raw_carbon_plate")
-        addItem(10320, "carbon_plate")
-        addItem(10321, "graphite_plate")
 
         // Alumina Refractories 10330-10340
         addItem(10330, "cac_clinker")
@@ -911,6 +1008,67 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10409, "lamp.mercury.hp.unfilled")
         addItem(10410, "lamp.mercury.hp")
         addItem(10411, "lamp.mercury.lp")
+
+        addItem(10412, "fused_quartz_tube")
+
+        // Rocketry Components 10421-10440
+
+        addItem(10421, "fuel_injector")
+        addItem(10422, "augmented_spark_igniter")
+        addItem(10423, "slapper_detonator")
+        addItem(10424, "frangible_nut")
+        addItem(10425, "honeycomb.aluminium")
+        addItem(10426, "spacecraft_sensor.gyroscope")
+        addItem(10427, "spacecraft_sensor.sun_star")
+        addItem(10428, "spacecraft_sensor.ion_flow")
+        addItem(10429, "spacecraft_sensor.infrared")
+        addItem(10430, "photomultiplier_tube")
+        addItem(10431, "bialkali_photocathode")
+        addItem(10432, "photomultiplier_components")
+        addItem(10433, "beo_coated_stainless_steel_plate")
+        addItem(10434, "molybdenum_combustion_chamber_mandrel")
+        addItem(10435, "iridium_combustion_chamber_mandrel")
+        addItem(10436, "rhenium_combustion_chamber_mandrel")
+        addItem(10437, "rhenium_combustion_chamber")
+        addItem(10438, "lunar_module_engine")
+
+        // Spacesuit Components 10441-10480
+
+        addItem(10441, "sheet.aluminized_mylar")
+        addItem(10442, "sheet.neoprene_coated_nylon")
+        addItem(10443, "sheet.ortho_fabric")
+        addItem(10444, "sheet.urethane_coated_nylon")
+        addItem(10445, "space_suit.pressure.helmet")
+        addItem(10446, "space_suit.pressure.chest")
+        addItem(10447, "space_suit.pressure.gloves")
+        addItem(10448, "space_suit.pressure.leggings")
+        addItem(10449, "space_suit.pressure.boots")
+        addItem(10450, "space_suit.cooling.chest")
+        addItem(10451, "space_suit.cooling.leggings")
+        addItem(10452, "space_suit.cooling.boots")
+        addItem(10453, "space_suit.thermal.helmet")
+        addItem(10454, "space_suit.thermal.chest")
+        addItem(10455, "space_suit.thermal.gloves")
+        addItem(10456, "space_suit.thermal.leggings")
+        addItem(10457, "space_suit.thermal.boots")
+        addItem(10458, "space_suit.plss")
+        addItem(10459, "space_suit.mag")
+
+        // Spectral Filters 10481 - 10485
+
+        addItem(10481, "electron_gun")
+        addItem(10482, "spectral_filter.near_ir_bandpass")
+        addItem(10483, "spectral_filter.mid_ir_bandpass")
+        addItem(10484, "spectral_filter.visible_bandpass")
+        addItem(10485, "spectral_filter.near_uv_bandpass")
+
+        // Lunar Metaitems 10486 - 10600
+
+        addItem(10486, "lunar_r_glass_fibers")
+        addItem(10487, "platinum_bushing")
+        addItem(10488, "platinum_rhodium_bushing")
+        addItem(10489, "stainless_steel_bushing")
+        addItem(10490, "hardened_titanium_grinding_head")
     }
 
     log.infoMC("Finished adding metaitems")

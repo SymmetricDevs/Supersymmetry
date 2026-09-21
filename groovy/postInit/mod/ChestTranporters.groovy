@@ -18,9 +18,9 @@ crafting.replaceShaped('chesttransporter:wooden_transporter', item('chesttranspo
 ]);
 
 crafting.replaceShaped('chesttransporter:iron_transporter', item('chesttransporter:chesttransporter_iron'), [
-  [ore('plateWroughtIron'), null, ore('plateWroughtIron')],
-  [ore('screwWroughtIron'), ore('gearSmallIron') , ore('screwWroughtIron')],
-  [ore('craftingToolScrewdriver'), ore('stickWroughtIron'), ore('craftingToolHardHammer')]
+  [ore('plateIron'), null, ore('plateIron')],
+  [ore('screwIron'), ore('gearSmallIron') , ore('screwIron')],
+  [ore('craftingToolScrewdriver'), ore('stickIron'), ore('craftingToolHardHammer')]
 ]);
 
 crafting.replaceShaped('chesttransporter:silver_transporter', item('chesttransporter:chesttransporter_silver'), [
@@ -36,17 +36,47 @@ crafting.replaceShaped('chesttransporter:copper_transporter', item('chesttranspo
 ]);
 
 ASSEMBLER.recipeBuilder()
-        .inputs(item('minecraft:stick') * 4)
-        .fluidInputs(fluid('glue') * 20)
-        .outputs(item('chesttransporter:chesttransporter'))
-        .duration(400)
-        .EUt(16)
-        .buildAndRegister()
+    .inputs(item('minecraft:stick') * 4)
+    .fluidInputs(fluid('glue') * 20)
+    .outputs(item('chesttransporter:chesttransporter'))
+    .duration(50)
+    .EUt(16)
+    .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-        .inputs(item('minecraft:stick') * 4)
-        .fluidInputs(fluid('resin') * 100)
-        .outputs(item('chesttransporter:chesttransporter'))
-        .duration(800)
-        .EUt(16)
-        .buildAndRegister()
+    .inputs(item('minecraft:stick') * 4)
+    .fluidInputs(fluid('resin') * 100)
+    .outputs(item('chesttransporter:chesttransporter'))
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('stickBronze'))
+    .inputs(ore('plateBronze') * 2)
+    .inputs(ore('screwBronze') * 2)
+    .inputs(ore('gearSmallBronze'))
+    .outputs(item('chesttransporter:chesttransporter_copper'))
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('stickIron'))
+    .inputs(ore('plateIron') * 2)
+    .inputs(ore('screwIron') * 2)
+    .inputs(ore('gearSmallIron'))
+    .outputs(item('chesttransporter:chesttransporter_iron'))
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('stickSilver'))
+    .inputs(ore('screwSteel') * 2)
+    .inputs(ore('gearSmallSteel'))
+    .inputs(metaitem('robot.arm.lv') * 2)
+    .outputs(item('chesttransporter:chesttransporter_silver'))
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister()

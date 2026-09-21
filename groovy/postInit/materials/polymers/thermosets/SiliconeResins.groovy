@@ -56,7 +56,7 @@ MIXER.recipeBuilder()
 
 BR.recipeBuilder()
     .notConsumable(ore('dustPotassiumHydroxide'))
-    .notConsumable(ore('springKanthal'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('polydimethylsiloxane') * 1000)
     .fluidOutputs(fluid('octamethylcyclotetrasiloxane') * 250)
     .duration(200)
