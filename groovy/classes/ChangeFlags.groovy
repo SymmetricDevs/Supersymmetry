@@ -187,7 +187,7 @@ class ChangeFlags {
         Gold.addFlags("generate_gear");
         IronMagnetic.addFlags("generate_ring");
         SteelMagnetic.addFlags("generate_plate")
-        StainlessSteel.addFlags("generate_round");
+        StainlessSteel.addFlags("generate_round", "generate_fine_wire");
         Hafnium.addFlags("generate_long_rod", "generate_rod");
         VanadiumSteel.addFlags("generate_round");
         Mica.addFlags("generate_plate", "no_unification");
@@ -199,16 +199,18 @@ class ChangeFlags {
         AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
         Graphite.addFlags("generate_plate");
         Germanium.addFlags("generate_plate");
-        Magnalium.addFlags("generate_ring", "generate_rotor")
-        ReinforcedEpoxyResin.addFlags("generate_rotor")
-        Beryllium.addFlags("generate_rod")
-        Bronze.addFlags("disable_decomposition")
-        Brass.addFlags("disable_decomposition")
-        Cupronickel.addFlags("disable_decomposition")
-        Invar.addFlags("disable_decomposition")
-        Nichrome.addFlags("disable_decomposition")
-        Kanthal.addFlags("disable_decomposition")
-        Electrum.addFlags("induction_melt")
+        Magnalium.addFlags("generate_ring", "generate_rotor");
+        ReinforcedEpoxyResin.addFlags("generate_rotor");
+        Beryllium.addFlags("generate_rod");
+        Bronze.addFlags("disable_decomposition");
+        Brass.addFlags("disable_decomposition");
+        Cupronickel.addFlags("disable_decomposition");
+        Invar.addFlags("disable_decomposition", "generate_fine_wire");
+        Nichrome.addFlags("disable_decomposition");
+        Kanthal.addFlags("disable_decomposition");
+        Electrum.addFlags("induction_melt");
+        Kovar.addFlags("generate_bolt_screw");
+        NickelZincFerrite.addFlags("generate_bolt_screw");
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")

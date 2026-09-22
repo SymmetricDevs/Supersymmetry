@@ -25,9 +25,9 @@ ore('componentSMDInductor').add(metaitem('component.smd.inductor'))
 ore('componentTransistor').add(metaitem('component.transistor.alloy_junction'))
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_composite'))
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_film'))
-
 ore('componentResistorSmall').add(metaitem('component.smd.resistor'))
 ore('componentResistorSmall').add(metaitem('component.advanced_smd.resistor'))
+ore('componentOpAmp').add(metaitem('component.op_amp'))
 
 // Carbon composite
 

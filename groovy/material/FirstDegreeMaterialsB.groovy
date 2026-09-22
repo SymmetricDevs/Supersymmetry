@@ -931,6 +931,7 @@ class FirstDegreeMaterialsB {
 
         NeodymiumYttriumAluminiumGarnet = new Material.Builder(8803, SuSyUtility.susyId('neodymium_yttrium_aluminium_garnet'))
                 .dust()
+                .gem().iconSet(RUBY)
                 .flags(GENERATE_ROD, NO_UNIFICATION)
                 .components(Yttrium * 3, Aluminium * 5, Oxygen * 12, Neodymium * 1)
                 .color(0xcb88ba)
