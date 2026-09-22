@@ -215,7 +215,7 @@ key_bogosort.key.move_all:0:NONE
 key_bogosort.key.move_single:-100:CONTROL
 key_bogosort.key.move_single_empty:-99:CONTROL
 key_bogosort.key.throw_all_same:16:ALT
-key_bogosort.key.throw_all:16:NONE
+key_bogosort.key.throw_all:-100:ALT
 key_bogosort.key.sort_config:37:NONE
 key_bogosort.key.sort:-98:NONE
 key_bogosort.key.lock_slot:23:NONE

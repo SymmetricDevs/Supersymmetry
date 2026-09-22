@@ -33,6 +33,15 @@ CLARIFIER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+SOLAR_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('wastewater') * 100)
+    .fluidOutputs(fluid('dense_steam') * 100)
+    .duration(200)
+    .EUt(4000)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+
 // Deionized water
 ION_EXCHANGE.recipeBuilder()
     .notConsumable(metaitem('beads.strong_acidic_cation_exchange'))

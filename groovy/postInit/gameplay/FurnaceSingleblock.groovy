@@ -5,8 +5,8 @@ import static gregtech.api.GTValues.*
 
 def heatingElements = [
         [material: metaitem('springCupronickel'), duration: 100],
-        [material: metaitem('springKanthal'), duration: 75],
-        [material: metaitem('springNichrome'), duration: 60]
+        [material: metaitem('springNichrome'), duration: 75],
+        [material: metaitem('springKanthal'), duration: 60]
 ]
 
 def mapRange = { idIn, idOut, range ->
@@ -49,11 +49,11 @@ def nonMetals = [
         [input: item('pyrotech:bucket_clay_unfired'), output: item('pyrotech:bucket_clay')],
         [input: item('minecraft:dye', 15), output: metaitem('gregtechfoodoption:bone_ash_dust')],
         [input: metaitem('dustLimestone'), output: metaitem('dustQuicklime')],
-        [input: item('projectred-core:resource_item', 250), output: item('projectred-core:resource_item', 300)],
-        [input: item('projectred-core:resource_item', 251), output: item('projectred-core:resource_item', 103)],
-        [input: item('projectred-core:resource_item', 252), output: item('projectred-core:resource_item', 104)],
-        [input: item('projectred-core:resource_item', 310), output: item('projectred-core:resource_item', 320)],
-        [input: item('projectred-core:resource_item', 311), output: item('projectred-core:resource_item', 341)],
+        // [input: item('projectred-core:resource_item', 250), output: item('projectred-core:resource_item', 300)],
+        // [input: item('projectred-core:resource_item', 251), output: item('projectred-core:resource_item', 103)],
+        // [input: item('projectred-core:resource_item', 252), output: item('projectred-core:resource_item', 104)],
+        // [input: item('projectred-core:resource_item', 310), output: item('projectred-core:resource_item', 320)],
+        // [input: item('projectred-core:resource_item', 311), output: item('projectred-core:resource_item', 341)],
         [input: metaitem('ingotIronMagnetic'), output: item('minecraft:iron_ingot')],
         [input: metaitem('stickIronMagnetic'), output: metaitem('stickIron')],
         [input: metaitem('ingotSteelMagnetic'), output: metaitem('ingotSteel')],

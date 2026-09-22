@@ -899,6 +899,16 @@ VACUUM_FREEZER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+// MON-3
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('dinitrogen_tetroxide') * 1000)
+    .fluidInputs(fluid('nitric_oxide') * 100)
+    .fluidOutputs(fluid('mon_3') * 1000)
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
 // 1,1-dimethylhydrazine
 
 CSTR.recipeBuilder()
@@ -993,7 +1003,7 @@ BCR.recipeBuilder()
 // Chloronitrobenzenes
 
 CSTR.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('chlorobenzene') * 50)
     .fluidInputs(fluid('nitration_mixture') * 100)
     .fluidOutputs(fluid('acidic_chloronitrobenzene_mixture') * 100)
@@ -2819,7 +2829,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 FLUIDIZED_BR.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('benzene') * 1000)
     .fluidInputs(fluid('oxygen') * 50)
     .chancedOutput(metaitem('dustBiphenyl'), 500, 0)
@@ -3532,7 +3542,7 @@ MIXER.recipeBuilder()
 // p-Nitrotoluene
 
 CSTR.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('toluene') * 50)
     .fluidInputs(fluid('nitration_mixture') * 100)
     .fluidOutputs(fluid('acidic_nitrotoluene_mixture') * 150)
@@ -3619,5 +3629,15 @@ ROASTER.recipeBuilder()
     .fluidInputs(fluid('chlorine') * 2000)
     .outputs(metaitem('dustTriphenylphosphineDichloride'))
     .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Ammonium Fluoride
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustAmmoniumFluoride') * 6)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('ammonium_fluoride_solution') * 1000)
+    .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()

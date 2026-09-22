@@ -8,6 +8,7 @@ import gregtech.api.fluids.FluidBuilder
 import gregtech.api.fluids.store.FluidStorageKeys
 import gregtech.api.unification.material.properties.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier
+import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
 import supersymmetry.api.util.SuSyUtility
 
@@ -874,7 +875,7 @@ class SecondDegreeMaterials {
                 .components(Platinum * 9, Rhodium)
                 .color(0xffe1c8)
                 .flags(GENERATE_FINE_WIRE)
-                .blastTemp(2113, GasTier.MID)
+                .blastTemp(1400, GasTier.MID)
                 .build()
 
         CopperIIChlorideSolution = new Material.Builder(13142, SuSyUtility.susyId('copper_ii_chloride_solution'))
@@ -1185,5 +1186,96 @@ class SecondDegreeMaterials {
                 .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
                 .iconSet(BRIGHT)
                 .build();
+      
+        YttriumNitrateSolution = new Material.Builder(13195, SuSyUtility.susyId('yttrium_nitrate_solution'))
+                .liquid()
+                .components(YttriumNitrate * 2, Water * 3)
+                .color(0xF4F8D4)
+                .build()
+        
+        YttriumNitrateSolution.setFormula('(Y(NO3)3)2(H2O)3', true)
+
+        RegolithGases = new Material.Builder(13196, SuSyUtility.susyId('regolith_gases'))
+                .gas()
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, CarbonDioxide * 1, Methanol * 1, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x4F594F)
+                .build()
+
+        DecarburizedRegolithGases = new Material.Builder(13197, SuSyUtility.susyId('decarburized_regolith_gases'))
+                .gas()
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methanol * 1, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x516651)
+                .build()
+
+        HighPressureDecarburizedRegolithGases = new Material.Builder(13198, SuSyUtility.susyId('high_pressure_decarburized_regolith_gases'))
+                .gas(new FluidBuilder().temperature(323))
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methanol * 1, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x516651)
+                .build()
+
+        HighPressureRegolithGases = new Material.Builder(13199, SuSyUtility.susyId('high_pressure_regolith_gases'))
+                .gas(new FluidBuilder().temperature(323))
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methane * 1, Ammonia * 1, Helium * 1)
+                .color(0x486651)
+                .build()
+
+        HighPressureRegolithLightGases = new Material.Builder(13200, SuSyUtility.susyId('high_pressure_regolith_light_gases'))
+                .gas(new FluidBuilder().temperature(323))
+                .components(Hydrogen * 14, CarbonMonoxide * 8, Ethylene * 5, Methane * 1, Helium * 1)
+                .color(0x79AA88)
+                .build()
+
+        HalogenMix = new Material.Builder(13201, SuSyUtility.susyId('halogen_mix'))
+                .gas()
+                .components(HydrogenFluoride * 3, HydrogenChloride * 1)
+                .color(0x85B200)
+                .build()
+
+        SupersaturatedCalciumChlorideSolution = new Material.Builder(13202, SuSyUtility.susyId('supersaturated_calcium_chloride_solution'))
+                .liquid(new FluidBuilder().acidic())
+                .components(CalciumChloride * 1, HydrochloricAcid * 1)
+                .color(0xBCFFE6)
+                .build()
+
+        SupersaturatedCalciumChlorideSolution.setFormula('(CaCl2)(H2O)(HCl)', true)
+
+        AluminiumChlorideHexahydrate = new Material.Builder(13203, SuSyUtility.susyId('aluminium_chloride_hexahydrate'))
+                .dust()
+                .colorAverage()
+                .components(AluminiumChloride * 1, Water * 6)
+                .iconSet(METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+
+        AluminiumChlorideHexahydrate.setFormula("AlCl₃•6H₂O", false)
+
+        LunarRGlass = new Material.Builder(13204, SuSyUtility.susyId('lunar_r_glass'))
+            .dust().liquid(new FluidBuilder().temperature(2300))
+            .components(SiliconDioxide * 4, Alumina * 1, Quicklime * 1)
+            .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
+            .color(0xFFE3CC)
+            .iconSet(SHINY)
+            .build()
+
+        ManganeseCobaltNickelOxide = new Material.Builder(13205, SuSyUtility.susyId('manganese_cobalt_nickel_oxide'))
+                .dust()
+                .color(0x64B7B7)
+                .components(ManganeseDioxide * 10, ManganeseIIOxide * 5, CobaltOxide * 12, NickelIIOxide * 3)
+                .iconSet(DULL)
+                .flags(GENERATE_PLATE, NO_UNIFICATION)
+                .build();
+
+        ManganeseCobaltNickelOxide.setFormula("Mn15Co12Ni3O40", true)
+
+        ALICE = new Material.Builder(13206, SuSyUtility.susyId('alice'))
+                .dust()
+                .components(Aluminium * 2, Water * 3)
+                .colorAverage()
+                .iconSet(DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+        
+        //ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+
     }
 }

@@ -25,14 +25,11 @@ QuenchingFluid Brine = new QuenchingFluid('brine', 'warm_brine', 1000, 150.0, fa
 def ingotMap = [
     'Europium':6000,
     'Iridium':4500,
-    'Molybdenum':2890,
     'Niobium':2750,
     'Osmium':4500,
     'Rhodium':2237,
     'Ruthenium':2607,
     'Samarium':5400,
-    'Tantalum':3293,
-    'Thorium':2028,
     'Titanium':2141,
     'Tungsten':3600,
     'Vanadium':2183,
@@ -41,8 +38,8 @@ def ingotMap = [
     'NaquadahEnriched':7000,
     'Naquadria':9000,
     'Trinium':7200,
-    'Kanthal':1800,
-    'Nichrome':2700,
+    'Kanthal':2700,
+    'Nichrome':1800,
     'NiobiumNitride':2846,
     'NiobiumTitanium':4500,
     'BlackBronze':2000,
@@ -52,7 +49,6 @@ def ingotMap = [
     'YttriumBariumCuprate':4500,
     'Osmiridium':4500,
     'TungstenCarbide':3068,
-    'MagnesiumDiboride':2500,
     'MercuryBariumCalciumCuprate':3300,
     'UraniumTriplatinum':4400,
     'SamariumIronArsenicOxide':5200,
@@ -67,25 +63,14 @@ def ingotMap = [
     'Hssg':4200,
     'Hsse':5000,
     'Hsss':5000,
-    'Stellite100':3790,
-    'WatertightSteel':3850,
-    'MaragingSteel300':4000,
-    'HastelloyC276':4625,
-    'HastelloyX':4200,
-    'Trinaquadalloy':8747,
-    'Zeron100':3693,
-    'TitaniumCarbide':3430,
-    'TantalumCarbide':4120,
-    'MolybdenumDisilicide':2300,
-    'TitaniumTungstenCarbide':3800,
-    'IncoloyMa956':3625,
     'Monel500':3000,
     'Hsla980X':2600,
     'FoodGradeStainlessSteel':2600,
     'PlatinumRhodium':2113,
     'Zircaloy4':2200,
     'ReactorSteel':1800,
-    'Alnico':1800
+    'Alnico':1800,
+    'UraniumMolybdenumAlloy':1405
 ]
 
 def electrodeMap = [
@@ -96,7 +81,10 @@ def electrodeMap = [
     'Incoloy908':3000,
     'Incoloy20':3000,
     'Nimonic105':3000,
-    'Inconel718':3000
+    'Inconel718':3000,
+    'Inconel601':3000,
+    'Haynes230':3000,
+    'MarM246':3000
 ]
 
 //MV Tweaks (from CEu #1724)
@@ -111,6 +99,15 @@ for (fluid in QuenchingFluid.quenching_fluids) {
         .inputs(ore('ingotHotKanthal'))
         .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
         .outputs(metaitem('ingotKanthal'))
+        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
+        .duration((int) fluid.getDuration() * 4)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+    CHEMICAL_BATH.recipeBuilder()
+        .inputs(ore('ingotHotNichrome'))
+        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
+        .outputs(metaitem('ingotNichrome'))
         .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
         .duration((int) fluid.getDuration() * 4)
         .EUt(VA[MV])
@@ -160,16 +157,17 @@ for (entry in electrodeMap) {
             .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
             .EUt(VA[MV])
             .buildAndRegister();
-        
-        QUENCHER.recipeBuilder()
-            .notConsumable(metaitem('shape.mold.rod'))
-            .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
-            .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
-            .outputs(metaitem('electrode' + entry.key))
-            .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
-            .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
-            .EUt(VA[MV])
-            .buildAndRegister();
+        if (entry.key != 'Haynes230') {
+            QUENCHER.recipeBuilder()
+                .notConsumable(metaitem('shape.mold.rod'))
+                .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
+                .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
+                .outputs(metaitem('electrode' + entry.key))
+                .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
+                .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
+                .EUt(VA[MV])
+                .buildAndRegister();
+        }
     }
 }
 
@@ -202,18 +200,6 @@ def fluidMap = [
     'molten.hssg':'Hssg',
     'molten.hsse':'Hsse',
     'molten.hsss':'Hsss',
-    'molten.stellite_100':'Stellite100',
-    'molten.watertight_steel':'WatertightSteel',
-    'molten.maraging_steel_300':'MaragingSteel300',
-    'molten.hastelloy_c_276':'HastelloyC276',
-    'molten.hastelloy_x':'HastelloyX',
-    'molten.trinaquadalloy':'Trinaquadalloy',
-    'molten.zeron_100':'Zeron100',
-    'molten.titanium_carbide':'TitaniumCarbide',
-    'molten.tantalum_carbide':'TantalumCarbide',
-    'molten.molybdenum_disilicide':'MolybdenumDisilicide',
-    'molten.titanium_tungsten_carbide':'TitaniumTungstenCarbide',
-    'molten.incoloy_ma_956':'IncoloyMa956',
     'molten.monel_500':'Monel500',
     'molten.hsla_980_x':'Hsla980X',
     'molten.food_grade_stainless_steel':'FoodGradeStainlessSteel',

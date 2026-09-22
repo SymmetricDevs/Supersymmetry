@@ -35,7 +35,7 @@ ERF.recipeBuilder()
         .fluidOutputs(fluid('magnesium') * 288)
         .EUt(VA[LV])
         .duration(200)
-        .blastFurnaceTemp(1370)
+        .blastFurnaceTemp(800)
         .buildAndRegister()
 
 for (combustible in Carbons.combustibles()) {
@@ -47,7 +47,7 @@ for (combustible in Carbons.combustibles()) {
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .EUt(VA[MV])
         .duration(20 * combustible.duration)
-        .blastFurnaceTemp(2500)
+        .blastFurnaceTemp(1400)
         .buildAndRegister()
 }
 
