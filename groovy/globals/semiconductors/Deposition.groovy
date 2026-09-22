@@ -141,7 +141,7 @@ class Deposition {
 
     record TargetName(String name, String ore_name) {}
     public static final targetNames = [
-        new TargetName("aluminium", "Aluminium"), // corresponds to ~300 hours irl
+        new TargetName("aluminium", "Aluminium"),
         new TargetName("copper", "Copper"),
         new TargetName("titanium", "Titanium"),
         new TargetName("nickel", "Nickel"),
