@@ -174,3 +174,10 @@ lib/groovy-ant-5.0.0-alpha-1-sources.jar
 Supersymmetry.iml
 groovy/sideOnlyGenerated.json
 .clawdea/REPO_STATE.md
+
+# Python / uv tooling
+.venv/
+.uv-cache/
+.python-version
+pyproject.toml
+uv.lock
