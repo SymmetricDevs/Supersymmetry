@@ -201,7 +201,7 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('battery.re.hv.lithium') * 2)
+        .inputs(metaitem('battery.ni_mh.ev') * 2)
         .inputs(metaitem('large_fluid_cell.titanium') * 4)
         .inputs(metaitem('electric.pump.ev') * 4)
         .inputs(ore('pipeTinyFluidEthyleneVinylAcetate') * 20)

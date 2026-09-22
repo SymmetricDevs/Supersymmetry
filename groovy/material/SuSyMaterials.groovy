@@ -2035,6 +2035,8 @@ class SuSyMaterials {
     public static Material LunarRGlass
     public static Material SGlass
     public static Material ALICE
+    public static Material SilicaSulfurMix
+    public static Material LunarConcrete
 
     // Organic Chemistry Materials
 

@@ -497,7 +497,7 @@ metaitem.spacecraft_sensor.sun_star.name=Spacecraft Sun and Star Location Finder
 metaitem.spacecraft_sensor.infrared.name=Spacecraft Infrared Horizon Finder
 metaitem.photomultiplier_tube.name=Photomultiplier Tube
 metaitem.bialkali_photocathode.name=Bialkali Photocathode
-metaitem.photomultiplier_components.name=PHotomultiplier Components
+metaitem.photomultiplier_components.name=Photomultiplier Components
 metaitem.beo_coated_stainless_steel_plate.name=Beryllium Oxide-Coated Stainless Steel Plate
 metaitem.sheet.aluminized_mylar.name=Aluminized Mylar Sheet
 metaitem.sheet.neoprene_coated_nylon.name=Neoprene-Coated Nylon Sheet
@@ -3083,6 +3083,8 @@ susy.material.haynes_230=Haynes 230
 susy.material.uranium_molybdenum_alloy=Uranium-Molybdenum Alloy
 susy.material.aerozine_50=Aerozine 50
 susy.material.mon_3=MON-3
+susy.material.silica_sulfur_mix=Silica-Sulfur Mix
+susy.material.lunar_concrete=Lunar Concrete
 
 # Isotopes
 
@@ -3537,7 +3539,7 @@ metaitem.sponge.rhodium.name=Rhodium Sponge
 
 metaitem.drone.lv.name=Basic Hunting Drone
 
-metaitem.glass_fibers.name=Kevlar-Reinforced E-Glass Fibers
+metaitem.glass_fibers.name=E-Glass Fibers
 metaitem.stem.cotton.name=Cotton Stem
 metaitem.spinneret.name=Spinneret
 
@@ -3810,6 +3812,7 @@ recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requi
 recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.
 recipe.sulfuric.acid=You can do this reaction in 1/40th of the time with a Bubble Column Reactor.
 recipe.pyrite=You can obtain Green Vitriol by batch reacting small piles of Pyrite.
+recipe.moon=This recipe is intended for use on the Moon.
 tile.retro_sophisticated_backpacks.backpack_leather.name=Primitive Backpack
 tile.retro_sophisticated_backpacks.backpack_iron.name=Basic Backpack
 tile.retro_sophisticated_backpacks.backpack_gold.name=Advanced Backpack

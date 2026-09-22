@@ -206,7 +206,7 @@ RESISTANCE_FURNACE.recipeBuilder()
 // Change the output amounts if accurate info found
 ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
     .inputs(metaitem("dustLunarMagnetic"))
-    .chancedOutput(metaitem("dustNativeLunarIron"), 100, 0)
+    .chancedOutput(metaitem("dustNativeLunarIron"), 1000, 0)
     .outputs(metaitem("dustLunarWeaklyMagnetic"))
     .EUt(16)
     .duration(100)

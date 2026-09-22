@@ -1247,7 +1247,7 @@ class SecondDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
 
-        AluminiumChlorideHexahydrate.setFormula("AlCl₃•6H₂O", false)
+        AluminiumChlorideHexahydrate.setFormula("AlCl3*6H2O", false)
 
         LunarRGlass = new Material.Builder(13204, SuSyUtility.susyId('lunar_r_glass'))
             .dust().liquid(new FluidBuilder().temperature(2300))
@@ -1276,6 +1276,21 @@ class SecondDegreeMaterials {
                 .build()
         
         //ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+
+        SilicaSulfurMix = new Material.Builder(13207, SuSyUtility.susyId('silica_sulfur_mix'))
+            .dust().liquid(new FluidBuilder().temperature(388))
+            .components(SiliconDioxide * 7, Sulfur * 16)
+            .color(0xC1C462)
+            .iconSet(DULL)
+            .flags(DISABLE_DECOMPOSITION)
+            .build()
+
+        LunarConcrete = new Material.Builder(13208, SuSyUtility.susyId('lunar_concrete'))
+            .dust().liquid(new FluidBuilder().temperature(388))
+            .color(0x68684C)
+            .iconSet(ROUGH)
+            .flags(DISABLE_DECOMPOSITION)
+            .build()
 
     }
 }
