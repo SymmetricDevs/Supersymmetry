@@ -9,6 +9,8 @@ import gregtech.api.fluids.store.FluidStorageKeys
 import gregtech.api.unification.material.properties.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey
+import supersymmetry.api.unification.material.properties.SolidRocketFuelProperty
+
 
 import supersymmetry.api.util.SuSyUtility
 
@@ -1407,7 +1409,7 @@ class SecondDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
         
-        //ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+        ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
 
     }
 }
