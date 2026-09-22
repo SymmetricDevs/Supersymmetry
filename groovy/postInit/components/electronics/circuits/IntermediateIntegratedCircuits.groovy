@@ -364,6 +364,9 @@ generatePackaging('bcd_lpic', 'wafer.bcd_lpic.beol_four.step_eight')
 generatePackaging('bcd_pic', 'wafer.bcd_pic.beol_five.step_eight')
 generatePackaging('bcd_hpic', 'wafer.bcd_hpic.beol_six.step_eight')
 
+// Sputtering Target Recipes
+Deposition.generateSputteringTargetRecipes()
+
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('die.bcd_lpic.bonded'))
     .fluidInputs(fluid('epoxy_molding_compound') * 288)

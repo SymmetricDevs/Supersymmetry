@@ -164,6 +164,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(112, "shape.mold.pin")
         addItem(113, "shape.mold.leadframe")
         addItem(114, "shape.mold.bolt")
+        addItem(115, "shape.mold.target")
 
         addItem(150, "mudbrick_mix")
         addItem(151, "slaked_lime")
