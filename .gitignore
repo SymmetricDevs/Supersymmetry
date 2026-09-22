@@ -175,9 +175,9 @@ Supersymmetry.iml
 groovy/sideOnlyGenerated.json
 .clawdea/REPO_STATE.md
 
-
 # UV python stuff
 .python-version
 pyproject.toml
 .venv/
+.uv-cache/
 uv.lock
