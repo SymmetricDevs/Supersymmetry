@@ -546,9 +546,9 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
     BR.recipeBuilder()
         .inputs(ore('dustDodecylbenzene'))
-        .fluidInputs(fluid('oleum') * 11000)
+        .fluidInputs(fluid('oleum') * 3000)
         .outputs(metaitem('dustDodecylbenzenesulfonicAcid'))
-        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .fluidOutputs(fluid('sulfuric_acid') * 2000)
         .duration(200)
         .EUt(VA[MV])
         .buildAndRegister()
@@ -627,16 +627,6 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .EUt(VA[MV])
         .buildAndRegister()
 
-    // Polyethylene glycol
-
-    POLYMERIZATION_TANK.recipeBuilder()
-        .fluidInputs(fluid('ethylene_oxide') * 1000)
-        .fluidInputs(fluid('boron_trifluoride') * 10)
-        .fluidOutputs(fluid('polyethylene_glycol') * 1000)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
 // Antiwear
 
     // Tri-(m/p)-cresylphosphate
@@ -646,7 +636,15 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .fluidOutputs(fluid('meta_para_cresol_mixture') * 700) // needs to be slightly higher than SATP
         .fluidOutputs(fluid('ortho_cresol') * 300)
         .duration(200)
-        .EUt(240)
+        .EUt(VHA[HV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('meta_para_cresol_mixture') * 700)
+        .fluidOutputs(fluid('para_cresol') * 300)
+        .fluidOutputs(fluid('meta_cresol') * 400)
+        .duration(200)
+        .EUt(VHA[HV])
         .buildAndRegister()
 
     CSTR.recipeBuilder()
@@ -778,9 +776,9 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
     BR.recipeBuilder()
         .inputs(ore('dustDidodecylbenzene'))
-        .fluidInputs(fluid('oleum') * 11000)
+        .fluidInputs(fluid('oleum') * 3000)
         .outputs(metaitem('dustDidodecylbenzenesulfonicAcid'))
-        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .fluidOutputs(fluid('sulfuric_acid') * 2000)
         .duration(100)
         .EUt(VA[MV])
         .buildAndRegister()

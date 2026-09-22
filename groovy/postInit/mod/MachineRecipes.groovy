@@ -1340,7 +1340,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(2)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameAluminium') * 3)
     .inputs(ore('circuitHv') * 4)
     .inputs(metaitem('electric.pump.hv') * 4)
@@ -1354,7 +1354,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(3)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameAluminium') * 3)
     .inputs(ore('circuitHv') * 2)
     .inputs(metaitem('electric.pump.hv') * 4)
@@ -1369,7 +1369,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(4)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameAluminium') * 12)
     .inputs(ore('circuitHv') * 6)
     .inputs(metaitem('electric.pump.hv') * 8)
@@ -1383,7 +1383,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(3)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameStainlessSteel'))
     .inputs(ore('platePolytetrafluoroethylene') * 4)
     .inputs(ore('circuitHv') * 2)
@@ -1402,7 +1402,7 @@ RecyclingHelper.addShaped('gregtech:large_fluid_pump', metaitem('susy:large_flui
 
 RecyclingHelper.addShaped("gregtech:sieve_distillation_tower", metaitem('susy:sieve_distillation_tower'), [
     [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
-    [metaitem('springNichrome'), metaitem('hull.Hv'), metaitem('springNichrome')],
+    [metaitem('springNichrome'), metaitem('hull.hv'), metaitem('springNichrome')],
     [metaitem('frameStainlessSteel'), metaitem('electric.pump.hv'), metaitem('frameStainlessSteel')]
 ])
 
@@ -1546,7 +1546,7 @@ ASSEMBLER.recipeBuilder()
 
 RecyclingHelper.addShaped("gregtech:curtain_coater", metaitem('susy:curtain_coater'), [
     [metaitem('electric.pump.hv'), metaitem('frameStainlessSteel'), metaitem('electric.pump.hv')],
-    [ore('circuitHv'), metaitem('hull.Hv'), ore('circuitHv')],
+    [ore('circuitHv'), metaitem('hull.hv'), ore('circuitHv')],
     [metaitem('pipeLargeFluidStainlessSteel'), ore('circuitHv'), metaitem('pipeLargeFluidStainlessSteel')]
 ])
 
@@ -1554,7 +1554,7 @@ RecyclingHelper.addShaped("gregtech:curtain_coater", metaitem('susy:curtain_coat
 
 RecyclingHelper.addShaped("gregtech:milling", metaitem('susy:milling'), [
     [ore('circuitHv'), metaitem('conveyor.module.hv'), ore('circuitHv')],
-    [metaitem('robot.arm.hv'), metaitem('hull.Hv'), metaitem('robot.arm.hv')],
+    [metaitem('robot.arm.hv'), metaitem('hull.hv'), metaitem('robot.arm.hv')],
     [ore('circuitHv'), metaitem('conveyor.module.hv'), ore('circuitHv')]
 ])
 

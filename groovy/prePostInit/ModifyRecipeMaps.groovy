@@ -11,6 +11,7 @@ import gregtech.api.unification.material.properties.PropertyKey
 import gregtech.api.unification.ore.OrePrefix
 import gregtechfoodoption.recipe.GTFORecipeMaps
 import supersymmetry.api.fluids.SusyFluidStorageKeys
+import supersymmetry.api.recipes.SuSyRecipeMaps
 import supersymmetry.api.gui.SusyGuiTextures
 
 import static gregtech.api.recipes.GTRecipeHandler.*
@@ -398,7 +399,7 @@ RecipeMaps.CENTRIFUGE_RECIPES
     .setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY)
 
 RecipeMaps.MIXER_RECIPES
-    .modifyMaxFluidInputs(3)
+    .modifyMaxFluidInputs(4)
     .modifyMaxFluidOutputs(2)
 
 RecipeMaps.ARC_FURNACE_RECIPES
@@ -442,6 +443,7 @@ RecipeMaps.AUTOCLAVE_RECIPES
     .modifyMaxFluidOutputs(2)
 
 RecipeMaps.CHEMICAL_BATH_RECIPES
+    .modifyMaxInputs(2)
     .modifyMaxOutputs(3)
     .modifyMaxFluidInputs(3)
     .modifyMaxFluidOutputs(3)
@@ -460,11 +462,24 @@ RecipeMaps.LARGE_CHEMICAL_RECIPES
     .modifyMaxInputs(4)
     .modifyMaxFluidInputs(6)
 
+RecipeMaps.ASSEMBLER_RECIPES
+    .modifyMaxFluidInputs(3)
+
+RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES
+    .modifyMaxInputs(16)
+    .modifyMaxFluidInputs(4)
+    
 RecipeMaps.DISTILLERY_RECIPES
     .modifyMaxFluidInputs(2)
 
-RecipeMaps.ASSEMBLER_RECIPES
-    .modifyMaxFluidInputs(2)
+RecipeMaps.COMPRESSOR_RECIPES
+    .modifyMaxInputs(2)
+
+SuSyRecipeMaps.WIRE_BONDING
+    .setMaxInputs(3)
+
+SuSyRecipeMaps.SCREEN_PRINTER
+    .setMaxInputs(3)
 
 RecipeMaps.CUTTER_RECIPES
     .modifyMaxInputs(2)

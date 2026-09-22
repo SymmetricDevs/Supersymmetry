@@ -57,8 +57,10 @@ class FirstDegreeMaterialsA {
         HighPurityCarbon = generatePurifiedElement(Carbon, 8003, false, false)
         HighPuritySodium = generatePurifiedElement(Sodium, 8004, false, false)
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
-        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true).addFlags(GENERATE_FOIL)
-        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false)
+        HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true)
+        HighPurityAluminium.addFlags(GENERATE_FOIL)
+        HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, true)
+        HighPuritySilicon.addFlags(GENERATE_ROD, FORCE_GENERATE_BLOCK)
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)
         HighPurityPotassium = generatePurifiedElement(Potassium, 8010, false, false)
@@ -71,10 +73,12 @@ class FirstDegreeMaterialsA {
         HighPurityIron = generatePurifiedElement(Iron, 8017, false, false)
         HighPurityNickel = generatePurifiedElement(Cobalt, 8018, false, false)
         HighPurityCobalt = generatePurifiedElement(Nickel, 8019, false, false)
-        HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false).addFlags(GENERATE_FOIL)
+        HighPurityCopper = generatePurifiedElement(Copper, 8020, false, false)
+        HighPurityCopper.addFlags(GENERATE_FOIL)
         HighPurityZinc = generatePurifiedElement(Zinc, 8021, false, false)
         HighPurityGallium = generatePurifiedElement(Gallium, 8022, true, false)
         HighPurityGermanium = generatePurifiedElement(Germanium, 8023, true, true)
+        HighPurityGermanium.addFlags(FORCE_GENERATE_BLOCK)
         HighPurityArsenic = generatePurifiedElement(Arsenic, 8024, true, false)
         HighPuritySelenium = generatePurifiedElement(Selenium, 8025, true, false)
         HighPurityRubidium = generatePurifiedElement(Rubidium, 8026, false, false)
@@ -89,7 +93,8 @@ class FirstDegreeMaterialsA {
         HighPurityPalladium = generatePurifiedElement(Palladium, 8035, false, false)
         HighPuritySilver = generatePurifiedElement(Silver, 8036, false, false)
         HighPurityCadmium = generatePurifiedElement(Cadmium, 8037, false, false)
-        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, false).addFlags(GENERATE_PLATE)
+        HighPurityIndium = generatePurifiedElement(Indium, 8038, false, true)
+        HighPurityIndium.addFlags(GENERATE_PLATE)
         HighPurityTin = generatePurifiedElement(Tin, 8039, false, false)
         HighPurityAntimony = generatePurifiedElement(Antimony, 8040, false, false)
         HighPurityTellurium = generatePurifiedElement(Tellurium, 8041, false, true)
@@ -99,12 +104,13 @@ class FirstDegreeMaterialsA {
         HighPurityLanthanum = generatePurifiedElement(Lanthanum, 8045, false, false)
         HighPurityHafnium = generatePurifiedElement(Hafnium, 8046, false, false)
         HighPurityTantalum = generatePurifiedElement(Tantalum, 8047, false, false)
-        HighPurityTungsten = generatePurifiedElement(Tungsten, 8048, false, false)
+        HighPurityTungsten = generatePurifiedElement(Tungsten, 8048, false, true)
         HighPurityRhenium = generatePurifiedElement(Rhenium, 8049, false, false)
         HighPurityOsmium = generatePurifiedElement(Osmium, 8050, false, false)
         HighPurityIridium = generatePurifiedElement(Iridium, 8051, false, false)
-        HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, false).addIngot()
-        HighPurityGold = generatePurifiedElement(Gold, 8053, false, true).addFlags(GENERATE_FOIL, GENERATE_PLATE)
+        HighPurityPlatinum = generatePurifiedElement(Platinum, 8052, false, true)
+        HighPurityGold = generatePurifiedElement(Gold, 8053, false, true)
+        HighPurityGold.addFlags(GENERATE_FOIL, GENERATE_PLATE)
         HighPurityThallium = generatePurifiedElement(Thallium, 8054, false, false)
         HighPurityLead = generatePurifiedElement(Lead, 8055, false, false)
         HighPurityBismuth = generatePurifiedElement(Bismuth, 8056, false, false)
@@ -257,7 +263,7 @@ class FirstDegreeMaterialsA {
 
         AluminiumHydroxide.setFormula("Al(OH)3", true)
 
-        AluminiumTrifluoride = new Material.Builder(8119, SuSyUtility.susyId('aluminium_trifluoride'))
+        AluminiumFluoride = new Material.Builder(8119, SuSyUtility.susyId('aluminium_fluoride'))
                 .dust()
                 .components(Aluminium, Fluorine * 3)
                 .color(0x3d98bf)
@@ -427,7 +433,7 @@ class FirstDegreeMaterialsA {
 
         Alumina = new Material.Builder(8147, SuSyUtility.susyId('alumina'))
                 .dust().liquid(new FluidBuilder().temperature(2345))
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW)
                 .components(Aluminium * 2, Oxygen * 3)
                 .color(0xd0cff7)
                 .build()
@@ -827,24 +833,20 @@ class FirstDegreeMaterialsA {
                 .build()
 
         PurifiedAntimonyTrioxide = new Material.Builder(8209, SuSyUtility.susyId('purified_antimony_trioxide'))
-                .dust()
+                .dust().gas(new FluidBuilder().temperature(1698))
                 .components(Antimony * 2, Oxygen * 3)
                 .color(0x92d1d4)
                 .build()
 
         DicobaltOctacarbonyl = new Material.Builder(8210, SuSyUtility.susyId('dicobalt_octacarbonyl'))
                 .dust()
-                .components(Cobalt * 2, Cobalt * 8, Oxygen * 8)
+                .components(Cobalt * 2, Carbon * 8, Oxygen * 8)
                 .colorAverage()
                 .build()
 
         DicobaltOctacarbonyl.setFormula("Co2(CO)8", true)
 
-        ImpregnatedAluminaCatalyst = new Material.Builder(8211, SuSyUtility.susyId('impregnated_alumina_catalyst'))
-                .dust()
-                .components(SiliconDioxide, Alumina)
-                .colorAverage()
-                .build()
+        // FREE ID: 8211
 
         BismuthCopper = new Material.Builder(8212, SuSyUtility.susyId('bismuth_copper'))
                 .dust()
@@ -853,11 +855,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        Bromobenzene = new Material.Builder(8213, SuSyUtility.susyId('bromobenzene'))
-                .liquid()
-                .components(Carbon * 6, Hydrogen * 5, Bromine)
-                .colorAverage()
-                .build()
+        // FREE ID: 8213
 
         ManganeseIISulfate = new Material.Builder(8214, SuSyUtility.susyId('manganese_ii_sulfate'))
                 .dust()
@@ -865,13 +863,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        Triethylaluminium = new Material.Builder(8215, SuSyUtility.susyId('triethylaluminium'))
-                .liquid()
-                .components(Carbon * 12, Hydrogen * 30, Aluminium * 2)
-                .colorAverage()
-                .build()
-
-        Triethylaluminium.setFormula("Al2(C2H5)6", true)
+        // FREE ID: 8215
 
         HydrogenPeroxide = new Material.Builder(8216, SuSyUtility.susyId('hydrogen_peroxide'))
                 .liquid()
@@ -879,17 +871,7 @@ class FirstDegreeMaterialsA {
                 .colorAverage()
                 .build()
 
-        CarbonTetrabromide = new Material.Builder(8217, SuSyUtility.susyId('carbon_tetrabromide'))
-                .dust()
-                .components(Carbon, Bromine * 4)
-                .colorAverage()
-                .build()
-
-        Bromomethane = new Material.Builder(8218, SuSyUtility.susyId('bromomethane'))
-                .gas()
-                .components(Carbon, Hydrogen * 3, Bromine)
-                .colorAverage()
-                .build()
+        // FREE ID: 8217-8218
 
         VeryDilutedSulfuricAcid = new Material.Builder(8219, SuSyUtility.susyId('very_diluted_sulfuric_acid'))
                 .liquid(new FluidBuilder().acidic())
@@ -1029,7 +1011,6 @@ class FirstDegreeMaterialsA {
 
         AluminiumChloride = new Material.Builder(8242, SuSyUtility.susyId('aluminium_chloride'))
                 .dust().gas(new FluidBuilder().temperature(453))
-                .flags(GENERATE_CATALYST_BED)
                 .components(Aluminium, Chlorine * 3)
                 .colorAverage()
                 .build()
@@ -1731,9 +1712,9 @@ class FirstDegreeMaterialsA {
                 .build()
 
         LeadFreeSolder = new Material.Builder(8346, SuSyUtility.susyId('lead_free_solder'))
-                .ingot().liquid(new FluidBuilder().temperature(411))
-                .components(Bismuth * 6, Tin * 4)
-                .flags(RESISTANCE_MELT, INDUCTION_MELT)
+                .ingot().liquid(new FluidBuilder().temperature(490))
+                .components(Tin * 115, Silver * 2, Copper * 1)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, RESISTANCE_MELT, INDUCTION_MELT)
                 .colorAverage()
                 .build()
 
@@ -1950,11 +1931,7 @@ class FirstDegreeMaterialsA {
                 .components(Nickel, Oxygen)
                 .build()
 
-        CarbonTetrafluoride = new Material.Builder(8380, SuSyUtility.susyId('carbon_tetrafluoride'))
-                .gas().plasma()
-                .components(Carbon, Fluorine * 4)
-                .colorAverage()
-                .build()
+        // FREE ID: 8380
 
         NitrogenTrifluoride = new Material.Builder(8381, SuSyUtility.susyId('nitrogen_trifluoride'))
                 .gas().plasma()
@@ -2050,6 +2027,7 @@ class FirstDegreeMaterialsA {
         ManganeseDioxide = new Material.Builder(8395, SuSyUtility.susyId('manganese_dioxide'))
                 .dust()
                 .iconSet('SHINY')
+                .flags(GENERATE_CATALYST_BED)
                 .components(Manganese, Oxygen * 2)
                 .color(0x38251e)
                 .build()
@@ -2141,13 +2119,13 @@ class FirstDegreeMaterialsA {
 
         TreatedSamariumAlloy.getProperty(PropertyKey.INGOT).setMagneticMaterial(SamariumAlloyMagnetic)
 
-        CobaltNitrateSolution = new Material.Builder(8406, SuSyUtility.susyId('cobalt_nitrate_solution'))
+        CobaltIINitrateSolution = new Material.Builder(8406, SuSyUtility.susyId('cobalt_ii_nitrate_solution'))
                 .liquid()
                 .components(Cobalt, Nitrogen * 2, Oxygen * 6, Water)
-                .colorAverage()
+                .color(0x6e0909)
                 .build()
 
-        CobaltNitrateSolution.setFormula("(Co(NO3)2)(H2O)", true)
+        CobaltIINitrateSolution.setFormula("(Co(NO3)2)(H2O)", true)
 
         Dichlorosilane = new Material.Builder(8407, SuSyUtility.susyId('dichlorosilane'))
                 .gas()
@@ -2269,7 +2247,7 @@ class FirstDegreeMaterialsA {
 
         Oleum = new Material.Builder(8425, SuSyUtility.susyId('oleum'))
                 .liquid(new FluidBuilder().acidic())
-                .components(SulfuricAcid * 10, SulfurTrioxide)
+                .components(SulfuricAcid * 2, SulfurTrioxide)
                 .color(0xe8c3a5)
                 .build()
 
@@ -2556,7 +2534,7 @@ class FirstDegreeMaterialsA {
         IronIIHydroxide.setFormula("Fe(OH)2", true)
 
         SodiumAmide = new Material.Builder(8469, SuSyUtility.susyId('sodium_amide'))
-                .dust()
+                .dust().liquid(new FluidBuilder().temperature(483))
                 .components(Sodium, Nitrogen, Hydrogen * 2)
                 .colorAverage()
                 .build()
@@ -3499,7 +3477,7 @@ class FirstDegreeMaterialsA {
         Kovar = new Material.Builder(8619, SuSyUtility.susyId('kovar'))
                 .ingot().liquid(new FluidBuilder().temperature(1723))
                 .iconSet(SHINY)
-                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, DISABLE_DECOMPOSITION, INDUCTION_MELT)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_PLATE, GENERATE_FOIL, DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE, INDUCTION_MELT)
                 .components(Iron * 2, Nickel * 1, Cobalt * 1)
                 .colorAverage()
                 .blastTemp(800, GasTier.LOW, GTValues.VA[GTValues.MV], 90)

@@ -979,7 +979,7 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('circuit_board.plastic'))
+        .inputs(metaitem('circuit_board.g10'))
         .inputs(ore('circuitHv'))
         .inputs(ore('wireFineElectrum') * 4)
         .fluidInputs(solder)

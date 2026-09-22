@@ -2,8 +2,6 @@ import static prePostInit.Recipemaps.*
 import globals.Globals
 import static gregtech.api.GTValues.*
 
-
-
 ROASTER.recipeBuilder()
     .inputs(item('minecraft:string') * 4)
     .inputs(metaitem('wireGtSingleCopper') * 2)

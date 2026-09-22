@@ -840,24 +840,6 @@ class FirstDegreeMaterialsB {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
       
-        DimethylOneThreeDioxane = new Material.Builder(8786, SuSyUtility.susyId('dimethyl_one_three_dioxane'))
-                .liquid()
-                .components(Carbon * 6, Hydrogen * 12, Oxygen * 2)
-                .colorAverage()
-                .build()
-
-        Methylbutynol = new Material.Builder(8787, SuSyUtility.susyId('methylbutynol'))
-                .liquid()
-                .components(Carbon * 5, Hydrogen * 8, Oxygen)
-                .colorAverage()
-                .build()
-
-        Methylbutenol = new Material.Builder(8788, SuSyUtility.susyId('methylbutenol'))
-                .liquid()
-                .components(Carbon * 5, Hydrogen * 10, Oxygen)
-                .colorAverage()
-                .build()
-
         CopperTungstenAlloy = new Material.Builder(8790, SuSyUtility.susyId('copper_tungsten_alloy'))
                 .dust()
                 .flags(GENERATE_ROD, NO_UNIFICATION)
@@ -888,9 +870,7 @@ class FirstDegreeMaterialsB {
                 .components(Vanadium * 2, Oxygen * 3)
                 .colorAverage()
                 .build()*/
-
-        // Molybdenum disilicide for no reason
-
+        
         AluminiumAlloy2219 = new Material.Builder(8794, SuSyUtility.susyId('aluminium_alloy_2219'))
                 .ingot().liquid(new FluidBuilder().temperature(640))
                 .colorAverage()
@@ -1126,5 +1106,160 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .iconSet(SHINY)
                 .build()
+
+        // FREE IDs: 8824-8829
+
+        CarbonCompound = new Material.Builder(8830, SuSyUtility.susyId('carbon_compound'))
+                .dust()
+                .components(Carbon, Clay)
+                .colorAverage()
+                .build()
+
+        IodinePentafluoride = new Material.Builder(8831, SuSyUtility.susyId('iodine_pentafluoride'))
+                .liquid()
+                .components(Iodine, Fluorine * 5)
+                .color(0xe5c98a)
+                .build()
+
+        IodinePentafluoride.setFormula('IF5', true)
+
+        BerylliumCopper = new Material.Builder(8832, SuSyUtility.susyId('beryllium_copper'))
+                .ingot().liquid(new FluidBuilder().temperature(1139))
+                .iconSet(SHINY)
+                .flags(GENERATE_PLATE, GENERATE_PINS)
+                .components(Beryllium, Copper * 5)
+                .color(0xcca66a)
+                .build()
+
+        SodiumPolysulfide = new Material.Builder(8833, SuSyUtility.susyId('sodium_polysulfide'))
+                .dust()
+                .components(Sodium * 2, Sulfur * 4)
+                .color(0x630c04)
+                .build()
+
+        SodiumAzide = new Material.Builder(8834, SuSyUtility.susyId('sodium_azide'))
+                .dust()
+                .components(Sodium, Nitrogen * 3)
+                .colorAverage()
+                .build()
+
+        PhosphorizedCopper = new Material.Builder(8835, SuSyUtility.susyId('phosphorized_copper'))
+                .ingot().liquid(new FluidBuilder().temperature(1085))
+                .components(Copper)
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
+                .color(0xed9436)
+                .build()
+
+        SulfamicAcid = new Material.Builder(8836, SuSyUtility.susyId('sulfamic_acid'))
+                .dust()
+                .components(Sulfur, Oxygen * 3, Hydrogen * 3, Nitrogen)
+                .colorAverage()
+                .build()
+
+        GammaIronIIIOxide = new Material.Builder(8837, SuSyUtility.susyId('gamma_iron_three_oxide'))
+                .dust()
+                .components(Iron * 2, Oxygen * 3)
+                .color(0x474040)
+                .build()
+
+        Dumet = new Material.Builder(8838, SuSyUtility.susyId('dumet'))
+                .flags(GENERATE_FINE_WIRE, DISABLE_DECOMPOSITION)
+                .components(Copper, Invar)
+                .color(0xe0d3ad)
+                .build()
+
+        Permendur = new Material.Builder(8839, SuSyUtility.susyId('permendur'))
+                .ingot().liquid(new FluidBuilder().temperature(1700))
+                .flags(GENERATE_BOLT_SCREW)
+                .build()
+
+        IodineMonochloride = new Material.Builder(8840, SuSyUtility.susyId('iodine_monochloride'))
+                .liquid(new FluidBuilder().temperature(300))
+                .components(Iodine, Chlorine)
+                .color(0x8a3122)
+                .build()
+      
+        SilverNanoparticle = new Material.Builder(8841, SuSyUtility.susyId('silver_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Silver)
+                .color(0x120c07)
+                .build()
+
+        NickelNanoparticle = new Material.Builder(8842, SuSyUtility.susyId('nickel_nanoparticle'))
+                .dust()
+                .iconSet(SHINY)
+                .components(Nickel)
+                .color(0x262321)
+                .build()
+
+        HolmiumOxide = new Material.Builder(8843, SuSyUtility.susyId('holmium_oxide'))
+                .dust()
+                .components(Holmium * 2, Oxygen * 3)
+                .color(0xf4dfa6)
+                .build()
+
+        DysprosiumOxide = new Material.Builder(8844, SuSyUtility.susyId('dysprosium_oxide'))
+                .dust()
+                .components(Dysprosium * 2, Oxygen * 3)
+                .color(0xdaffaf)
+                .build()
+
+        PalladiumNanoparticle = new Material.Builder(8845, SuSyUtility.susyId('palladium_nanoparticle'))
+                .dust()
+                .components(Palladium)
+                .color(0xd9cdcd)
+                .build()
+
+        PalladiumNitrateSolution = new Material.Builder(8846, SuSyUtility.susyId('palladium_nitrate_solution'))
+                .liquid()
+                .components(Palladium, Nitrogen, Oxygen * 3, Water)
+                .color(0x7c2111)
+                .build()
+
+        Ozone = new Material.Builder(8847, SuSyUtility.susyId('ozone'))
+                .liquid()
+                .components(Oxygen * 3)
+                .color(0xadd8e6)
+                .build()
+        
+        SulfurHexafluoride = new Material.Builder(8848, SuSyUtility.susyId('sulfur_hexafluoride'))
+                .liquid()
+                .components(Sulfur, Fluorine * 6)
+                .colorAverage()
+                .build()
+
+        FormingGas = new Material.Builder(8849, SuSyUtility.susyId('forming_gas'))
+                .gas()
+                .components(Hydrogen, Nitrogen * 19)
+                .colorAverage()
+                .build()
+
+        Germane = new Material.Builder(8850, SuSyUtility.susyId('germane'))
+                .gas()
+                .components(Germanium, Hydrogen * 4)
+                .colorAverage()
+                .build()
+
+        TungstenHexafluoride = new Material.Builder(8851, SuSyUtility.susyId('tungsten_hexafluoride'))
+                .gas(new FluidBuilder().acidic())
+                .components(Tungsten, Fluorine * 6)
+                .colorAverage()
+                .build()
+
+        UltrapureSteam = new Material.Builder(8852, SuSyUtility.susyId('ultrapure_steam'))
+                .gas()
+                .components(Hydrogen * 2, Oxygen)
+                .color(0xf0f0ff)
+                .build()
+
+        CopperIPhosphide = new Material.Builder(8853, SuSyUtility.susyId('copper_i_phosphide'))
+                .dust()
+                .components(Copper * 3, Phosphorus)
+                .color(0x7a7350)
+                .build()
+
+        // Molybdenum disilicide for no reason
+
     }
 }

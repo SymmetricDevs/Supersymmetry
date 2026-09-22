@@ -74,6 +74,7 @@ class ChangeFlags {
         //Iron3Chloride.setupFluidTypes(590, FluidStorageKeys.GAS) 
 
         Sodium.setupFluidTypes(371, FluidStorageKeys.LIQUID)
+        Sulfur.setupFluidTypes(388, FluidStorageKeys.LIQUID)
         SodiumHydroxide.setupFluidTypes(591, FluidStorageKeys.LIQUID)
         Polydimethylsiloxane.setupFluidTypes(293, FluidStorageKeys.LIQUID)
         Glass.setupFluidTypes(1800, FluidStorageKeys.LIQUID)
@@ -178,7 +179,7 @@ class ChangeFlags {
         Nickel.addFlags("generate_catalyst_bed");
         Magnesia.addFlags("generate_catalyst_bed");
         CupricOxide.addFlags("generate_catalyst_bed");
-        Brass.addFlags("generate_ring");
+        Brass.addFlags("generate_ring", "generate_pins");
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");
