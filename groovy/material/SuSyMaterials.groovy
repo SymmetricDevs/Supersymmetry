@@ -1774,6 +1774,7 @@ class SuSyMaterials {
     public static Material RheniumPentachloride
     public static Material MON3
     public static Material PureGaseousTitaniumTetrachloride
+    public static Material FineAluminium
     
     // HP Materials
 

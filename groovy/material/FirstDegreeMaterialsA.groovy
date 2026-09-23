@@ -59,7 +59,7 @@ class FirstDegreeMaterialsA {
         HighPurityMagnesium = generatePurifiedElement(Magnesium, 8005, false, false)
         HighPurityAluminium = generatePurifiedElement(Aluminium, 8006, true, true).addFlags(GENERATE_FOIL)
         HighPuritySilicon = generatePurifiedElement(Silicon, 8007, true, false)
-        HighPuritySilica = new Material.Builder(8506, SuSyUtility.susyId('high_purity_silica')).dust().liquid(new FluidBuilder().temperature(2500)).components(SiliconDioxide).iconSet(GLASS).color(0xf4f7ff).build()
+        HighPuritySilica = new Material.Builder(8513, SuSyUtility.susyId('high_purity_silica')).dust().liquid(new FluidBuilder().temperature(2500)).components(SiliconDioxide).iconSet(GLASS).color(0xf4f7ff).build()
         HighPurityPhosphorus = generatePurifiedElement(Phosphorus, 8008, true, true)
         HighPuritySulfur = generatePurifiedElement(Sulfur, 8009, false, false)
         HighPurityPotassium = generatePurifiedElement(Potassium, 8010, false, false)
