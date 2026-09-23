@@ -649,6 +649,13 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10488, "platinum_rhodium_bushing")
         addItem(10489, "stainless_steel_bushing")
         addItem(10490, "hardened_titanium_grinding_head")
+
+        // AE2 optical interconnect chain
+        addItem(10491, "optical_fiber_preform.initial")
+        addItem(10492, "optical_fiber_preform")
+        addItem(10493, "fiber.optical")
+        addItem(10494, "fiber.optical.coated")
+        addItem(10495, "cable.optical")
     }
 
     log.infoMC("Finished adding metaitems")
