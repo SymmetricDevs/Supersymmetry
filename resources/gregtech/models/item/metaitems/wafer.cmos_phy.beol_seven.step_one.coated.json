@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "gregtech:items/metaitems/wafer/cmos_phy/beol_seven/step_one/coated"
+    }
+}
