@@ -79,6 +79,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .buildAndRegister()
 
 // Flame retardant DGEBA
+
     // Catalyst preparation
 
     BR.recipeBuilder()
@@ -136,6 +137,27 @@ VACUUM_CHAMBER.recipeBuilder()
         .fluidOutputs(fluid('wastewater') * 7000)
         .duration(100)
         .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Curing
+    
+    POLYMERIZATION_TANK.recipeBuilder()
+        .inputs(ore('dustTetrabromobisphenolA') * 4)
+        .fluidInputs(fluid('epichlorohydrin') * 4800)
+        .inputs(ore('dustEpoxyCuringMixture'))
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
+        .outputs(metaitem('dustWetFlameRetardantEpoxy') * 8)
+        .fluidOutputs(fluid('diluted_salt_water') * 8000)
+        .duration(100)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+    VACUUM_CHAMBER.recipeBuilder()
+        .inputs(ore('dustWetFlameRetardantEpoxy') * 8)
+        .notConsumable(ore('springEarly'))
+        .outputs(metaitem('dustFlameRetardantEpoxy') * 8)
+        .duration(30)
+        .EUt(VA[HV])
         .buildAndRegister()
 
 // Epoxy Cresol Novolacs (ECN)
@@ -225,25 +247,6 @@ VACUUM_CHAMBER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-    POLYMERIZATION_TANK.recipeBuilder()
-        .inputs(ore('dustTetrabromobisphenolA') * 4)
-        .fluidInputs(fluid('epichlorohydrin') * 4800)
-        .inputs(ore('dustEpoxyCuringMixture'))
-        .fluidInputs(fluid('sodium_hydroxide_solution') * 4000)
-        .outputs(metaitem('dustWetFlameRetardantEpoxy') * 8)
-        .fluidOutputs(fluid('diluted_salt_water') * 8000)
-        .duration(100)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-    VACUUM_CHAMBER.recipeBuilder()
-        .inputs(ore('dustWetFlameRetardantEpoxy') * 8)
-        .notConsumable(ore('springEarly'))
-        .outputs(metaitem('dustFlameRetardantEpoxy') * 8)
-        .duration(30)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
 // Fiber reinforced epoxy
 
     // E glass
@@ -274,7 +277,9 @@ VACUUM_CHAMBER.recipeBuilder()
         .buildAndRegister()
 
     // Curing
+
     CHEMICAL_BATH.recipeBuilder()
+        .circuitMeta(1)
         .inputs(metaitem('glass_fibers'))
         .fluidInputs(fluid('flame_retardant_epoxy') * 144)
         .outputs(metaitem('board.fr4.prepreg'))
@@ -349,3 +354,49 @@ LCR.recipeBuilder()
     .duration(5)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Phosphorus-based flame retardants
+
+    // 2-phenylphenol
+
+    // Aldol condensation of cyclohexanone
+
+    ION_EXCHANGE.recipeBuilder()
+        .notConsumable(metaitem('beads.strong_acidic_cation_exchange'))
+        .fluidInputs(fluid('cyclohexanone') * 2000)
+        .fluidInputs(fluid('distilled_water') * 2000)
+        .fluidOutputs(fluid('two_cyclohexenylcyclohexanone_solution') * 3000)
+        .duration(100)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('two_cyclohexenylcyclohexanone_solution') * 3000)
+        .fluidOutputs(fluid('two_cyclohexenylcyclohexanone') * 1000)
+        .fluidOutputs(fluid('water') * 2000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // Dehydrogenation to 2-phenylphenol
+
+    FIXED_BR.recipeBuilder()
+        .notConsumable(ore('catalystBedSupportedPlatinum'))
+        .fluidInputs(fluid('two_cyclohexenylcyclohexanone') * 1000)
+        .fluidOutputs(fluid('hydrogen') * 8000)
+        .outputs(metaitem('dustTwoPhenylphenol'))
+        .duration(100)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    // DOPO synthesis
+    
+    LCR.recipeBuilder()
+        .inputs(ore('dustTwoPhenylphenol'))
+        .fluidInputs(fluid('phosphorus_trichloride') * 1000)
+        .fluidInputs(fluid('distilled_water') * 4000)
+        .outputs(metaitem('dustDihydrooxaphosphaphenanthreneOxide') * 24)
+        .fluidOutputs(fluid('hydrochloric_acid') * 3000)
+        .duration(100)
+        .EUt(VA[MV])
+        .buildAndRegister()
