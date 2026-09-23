@@ -3414,109 +3414,7 @@ class UnknownCompositionMaterials {
                 .liquid(new FluidBuilder().temperature(450).basic())
                 .color(0x5e2613)
                 .build()
-
-        ChlorosilaneMixture = new Material.Builder(4800, SuSyUtility.susyId('chlorosilane_mixture'))
-                .liquid()
-                .color(0x8be288)
-                .build()
-
-        GaseousChlorosilaneMixture = new Material.Builder(4801, SuSyUtility.susyId('gaseous_chlorosilane_mixture'))
-                .gas()
-                .color(0x68cc90)
-                .build()
-
-        SiliconCVDOffgas = new Material.Builder(4802, SuSyUtility.susyId('silicon_cvd_offgas'))
-                .gas()
-                .color(0xdcf2d2)
-                .build()
-
-        WasteGas = new Material.Builder(4803, SuSyUtility.susyId('waste_gas'))
-                .gas()
-                .color(0x363d39)
-                .build()
-
-        CorrosiveGas = new Material.Builder(4804, SuSyUtility.susyId('corrosive_gas'))
-                .gas(new FluidBuilder().acidic())
-                .color(0x3f4d45)
-                .build()
-
-        MagneticLiningSlurry = new Material.Builder(4805, SuSyUtility.susyId('magnetic_lining_slurry'))
-                .liquid()
-                .color(0x1a1a1a)
-                .build()
-
-        FluorinatedSulfolaneMixture = new Material.Builder(4806, SuSyUtility.susyId('fluorinated_sulfolane_mixture'))
-                .liquid()
-                .color(0xdeeb52)
-                .build()
-
-        EpoxyMoldingCompound = new Material.Builder(4807, SuSyUtility.susyId('epoxy_molding_compound'))
-                .liquid()
-                .color(0x70553a)
-                .build()
-
-        OligomericPolyesterMixture = new Material.Builder(4808, SuSyUtility.susyId('oligomeric_polyester_mixture'))
-                .liquid()
-                .color(0xe8ffee)
-                .build()
-
-        PolyesterMelt = new Material.Builder(4809, SuSyUtility.susyId('polyester_melt'))
-                .liquid()
-                .color(0xb8dbc1)
-                .build()
-
-        PolyesterResin = new Material.Builder(4810, SuSyUtility.susyId('polyester_resin'))
-                .liquid()
-                .color(0xa5f2b9)
-                .build()
-
-        CopperSuperfillElectrolyte = new Material.Builder(4740, SuSyUtility.susyId('copper_superfill_electrolyte'))
-                .liquid()
-                .color(0xcf9e80)
-                .build()
-
-        StandardCleanOne = new Material.Builder(4811, SuSyUtility.susyId('standard_clean_one'))
-                .liquid()
-                .color(0x2180a3)
-                .build()
-
-        StandardCleanTwo = new Material.Builder(4812, SuSyUtility.susyId('standard_clean_two'))
-                .liquid()
-                .color(0x3749ad)
-                .build()
-
-        WhiteEpoxyPCBCoating = new Material.Builder(4819, SuSyUtility.susyId('white_epoxy_pcb_coating'))
-                .liquid()
-                .color(0xF2F0B8)
-                .build()
-
-        CrudeSodiumOxalateSolution = new Material.Builder(4820, SuSyUtility.susyId('crude_sodium_oxalate_solution'))
-                .liquid()
-                .color(0xEFE977)
-                .build()
-
-        PineResin = new Material.Builder(4813, SuSyUtility.susyId('pine_resin'))
-                .liquid()
-                .color(0x572e09)
-                .build()
-
-        Rosin = new Material.Builder(4814, SuSyUtility.susyId('rosin'))
-                .dust()
-                .iconSet(DULL)
-                .color(0x5e1d05)
-                .build()
-
-        MildlyActivatedSolderFluxMixture = new Material.Builder(4815, SuSyUtility.susyId('mildly_activated_solder_flux_mixture'))
-                .liquid()
-                .color(0x2d5c0d)
-                .build()
-
-        LeadFreeSolderPaste = new Material.Builder(4816, SuSyUtility.susyId('lead_free_solder_paste'))
-                .liquid()
-                .color(0x4d4946)
-                .build()
-                
-        ExpandableGraphite = new Material.Builder(4729, SuSyUtility.susyId('expandable_graphite'))
+                ExpandableGraphite = new Material.Builder(4729, SuSyUtility.susyId('expandable_graphite'))
                 .dust()
                 .iconSet("SHINY")
                 .color(0x5B5B5B)
@@ -3577,6 +3475,11 @@ class UnknownCompositionMaterials {
                 .color(0xAD0079)
                 .build()
 
+        CopperSuperfillElectrolyte = new Material.Builder(4740, SuSyUtility.susyId('copper_superfill_electrolyte'))
+                .liquid()
+                .color(0xcf9e80)
+                .build()
+
         NanoparticleModifiedNafion = new Material.Builder(4741, SuSyUtility.susyId('nanoparticle_modified_nafion'))
                 .polymer().ingot()
                 .flags(GENERATE_PLATE, GENERATE_FOIL)
@@ -3593,12 +3496,7 @@ class UnknownCompositionMaterials {
 
         NanoparticleModifiedNafionDispersion.setFormula('([(C2F4)(C7HF13O5S)]n)((CH3)2CHOH)', true)
 
-        AluminiumChlorofluoride = new Material.Builder(4817, SuSyUtility.susyId('aluminium_chlorofluoride'))
-                .dust()
-                .color(0x7599c7)
-                .iconSet(DULL)
-                .flags(GENERATE_CATALYST_BED)
-                .build()
+
         InvestmentCastingCeramicSlurry = new Material.Builder(4743, SuSyUtility.susyId('investment_casting_ceramic_slurry'))
                 .liquid()
                 .color(0x6E4C40)
@@ -3843,10 +3741,6 @@ class UnknownCompositionMaterials {
                 .color(0x92BC4F)
                 .build()
 
-        OxidativeCMPSlurry = new Material.Builder(4818, SuSyUtility.susyId('oxidative_cmp_slurry'))
-                .liquid()
-                .color(0x6a9191)
-                .build()
         CrudeScandiumHydroxide.setFormula('Sc(OH)3', true)
 
         ScandiumDepletedSulfateRaffinate = new Material.Builder(4788, SuSyUtility.susyId('scandium_depleted_sulfate_raffinate'))
@@ -3910,6 +3804,114 @@ class UnknownCompositionMaterials {
                 .dust()
                 .iconSet(DULL)
                 .color(0x382828)
+                .build()
+
+        ChlorosilaneMixture = new Material.Builder(4800, SuSyUtility.susyId('chlorosilane_mixture'))
+                .liquid()
+                .color(0x8be288)
+                .build()
+
+        GaseousChlorosilaneMixture = new Material.Builder(4801, SuSyUtility.susyId('gaseous_chlorosilane_mixture'))
+                .gas()
+                .color(0x68cc90)
+                .build()
+
+        SiliconCVDOffgas = new Material.Builder(4802, SuSyUtility.susyId('silicon_cvd_offgas'))
+                .gas()
+                .color(0xdcf2d2)
+                .build()
+
+        WasteGas = new Material.Builder(4803, SuSyUtility.susyId('waste_gas'))
+                .gas()
+                .color(0x363d39)
+                .build()
+
+        CorrosiveGas = new Material.Builder(4804, SuSyUtility.susyId('corrosive_gas'))
+                .gas(new FluidBuilder().acidic())
+                .color(0x3f4d45)
+                .build()
+
+        MagneticLiningSlurry = new Material.Builder(4805, SuSyUtility.susyId('magnetic_lining_slurry'))
+                .liquid()
+                .color(0x1a1a1a)
+                .build()
+
+        FluorinatedSulfolaneMixture = new Material.Builder(4806, SuSyUtility.susyId('fluorinated_sulfolane_mixture'))
+                .liquid()
+                .color(0xdeeb52)
+                .build()
+
+        EpoxyMoldingCompound = new Material.Builder(4807, SuSyUtility.susyId('epoxy_molding_compound'))
+                .liquid()
+                .color(0x70553a)
+                .build()
+
+        OligomericPolyesterMixture = new Material.Builder(4808, SuSyUtility.susyId('oligomeric_polyester_mixture'))
+                .liquid()
+                .color(0xe8ffee)
+                .build()
+
+        PolyesterMelt = new Material.Builder(4809, SuSyUtility.susyId('polyester_melt'))
+                .liquid()
+                .color(0xb8dbc1)
+                .build()
+
+        PolyesterResin = new Material.Builder(4810, SuSyUtility.susyId('polyester_resin'))
+                .liquid()
+                .color(0xa5f2b9)
+                .build()
+
+        StandardCleanOne = new Material.Builder(4811, SuSyUtility.susyId('standard_clean_one'))
+                .liquid()
+                .color(0x2180a3)
+                .build()
+
+        StandardCleanTwo = new Material.Builder(4812, SuSyUtility.susyId('standard_clean_two'))
+                .liquid()
+                .color(0x3749ad)
+                .build()
+
+        WhiteEpoxyPCBCoating = new Material.Builder(4819, SuSyUtility.susyId('white_epoxy_pcb_coating'))
+                .liquid()
+                .color(0xF2F0B8)
+                .build()
+
+        CrudeSodiumOxalateSolution = new Material.Builder(4820, SuSyUtility.susyId('crude_sodium_oxalate_solution'))
+                .liquid()
+                .color(0xEFE977)
+                .build()
+
+        PineResin = new Material.Builder(4813, SuSyUtility.susyId('pine_resin'))
+                .liquid()
+                .color(0x572e09)
+                .build()
+
+        Rosin = new Material.Builder(4814, SuSyUtility.susyId('rosin'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x5e1d05)
+                .build()
+
+        MildlyActivatedSolderFluxMixture = new Material.Builder(4815, SuSyUtility.susyId('mildly_activated_solder_flux_mixture'))
+                .liquid()
+                .color(0x2d5c0d)
+                .build()
+
+        LeadFreeSolderPaste = new Material.Builder(4816, SuSyUtility.susyId('lead_free_solder_paste'))
+                .liquid()
+                .color(0x4d4946)
+                .build()
+        
+        AluminiumChlorofluoride = new Material.Builder(4817, SuSyUtility.susyId('aluminium_chlorofluoride'))
+                .dust()
+                .color(0x7599c7)
+                .iconSet(DULL)
+                .flags(GENERATE_CATALYST_BED)
+                .build()
+
+        OxidativeCMPSlurry = new Material.Builder(4818, SuSyUtility.susyId('oxidative_cmp_slurry'))
+                .liquid()
+                .color(0x6a9191)
                 .build()
     }
 }

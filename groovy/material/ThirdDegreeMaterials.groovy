@@ -1046,7 +1046,7 @@ class ThirdDegreeMaterials {
                 .iconSet(DULL)
                 .build()
 
-                GallicAcidSolution = genSolution(24166, 'gallic_acid_solution', GallicAcid, Water, true)
+        GallicAcidSolution = genSolution(24166, 'gallic_acid_solution', GallicAcid, Water, true)
 
         StyreneAnthracenylMaleimideSolution = new Material.Builder(24167, SuSyUtility.susyId('styrene_anthracenyl_maleimide_solution'))
                 .liquid()
@@ -1112,13 +1112,7 @@ class ThirdDegreeMaterials {
 
         HexamethyldisilazaneSolution = genSolution(24177, "hexamethyldisilazane_solution", Hexamethyldisilazane, Hexane, false)
 
-        PolyhydroxystyreneResist = new Material.Builder(24178, SuSyUtility.susyId('polyhydroxystyrene_resist'))
-                .liquid()
-                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, Triethanolamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
-                .colorAverage()
-                .build()
-
-        PolyhydroxystyreneResist.setFormula('(?)(C6H10O3)3(C4H10O2)', true)
+        PropyleneGlycolMethylEtherAcetateSolution = genSolution(24178, 'propylene_glycol_methyl_ether_acetate_solution', PropyleneGlycolMethylEtherAcetate, Water, false)
 
         StyreneMaleicAnhydrideSolution = new Material.Builder(24179, SuSyUtility.susyId('styrene_maleic_anhydride_solution'))
                 .liquid()
@@ -1499,11 +1493,18 @@ class ThirdDegreeMaterials {
         PolyhydroxystyreneSolution = genSolution(24254, 'polyhydroxystyrene_solution', Polyhydroxystyrene, Dimethylformamide, false)
         DiTertButylDicarbonateSolution = genSolution(24255, 'di_tert_butyl_dicarbonate_solution', DiTertButylDicarbonate, PotassiumChlorideSolution, false)
         ParaEthylbenzenesulfonicAcidSolution = genSolution(24256, 'para_ethylbenzenesulfonic_acid_solution', ParaEthylbenzenesulfonicAcid, Water, true)
-        PropyleneGlycolMethylEtherAcetateSolution = genSolution(24257, 'propylene_glycol_methyl_ether_acetate_solution', PropyleneGlycolMethylEtherAcetate, Water, false)
         EthylLactateSolution = genSolution(24258, 'ethyl_lactate_solution', EthylLactate, Water, false)
         BisAzideCrosslinkerSolution = genSolution(24259, 'bis_azide_crosslinker_solution', BisAzideCrosslinker, Water, false)
         ParaAzidobenzaldehydeSolution = genSolution(24260, 'para_azidobenzaldehyde_solution', ParaAzidobenzaldehyde, SaltWater, false)
         NaphthalenedisulfonicAcidSolution = genSolution(24261, 'naphthalenedisulfonic_acid_solution', Naphthalene, Oleum, true)
         SodiumNaphtholSulfonateSolution = genSolution(24262, "sodium_naphthol_sulfonate_solution", SodiumOneNaphtholFiveSulfonate, Water, false)
+
+        PolyhydroxystyreneResist = new Material.Builder(24263, SuSyUtility.susyId('polyhydroxystyrene_resist'))
+                .liquid()
+                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, Triethanolamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
+                .colorAverage()
+                .build()
+
+        PolyhydroxystyreneResist.setFormula('(?)(C6H10O3)3(C4H10O2)', true)
     }
 }
