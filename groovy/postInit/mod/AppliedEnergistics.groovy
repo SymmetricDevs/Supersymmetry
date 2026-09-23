@@ -242,14 +242,14 @@ crafting.replaceShapeless('appliedenergistics2:network/parts/storage_bus_fluid',
 crafting.replaceShapeless('appliedenergistics2:materials/cardredstone', item('appliedenergistics2:material:26'), [item('appliedenergistics2:material:25')])
 crafting.replaceShapeless('appliedenergistics2:materials/cardcrafting', item('appliedenergistics2:material:53'), [item('appliedenergistics2:material:26')])
 crafting.replaceShapeless('appliedenergistics2:materials/cardcapacity', item('appliedenergistics2:material:27'), [item('appliedenergistics2:material:53')])
-//crafting.addShapeless('appliedenergistics2:recycle_card', item('appliedenergistics2:material:25'), [item('appliedenergistics2:material:27')])
+crafting.addShapeless('susy:recycle_card', item('appliedenergistics2:material:25'), [item('appliedenergistics2:material:27')])
 
 crafting.replaceShapeless('appliedenergistics2:materials/cardspeed', item('appliedenergistics2:material:30'), [item('appliedenergistics2:material:28')])
 crafting.replaceShapeless('appliedenergistics2:materials/cardpatternexpansion', item('appliedenergistics2:material:58'), [item('appliedenergistics2:material:30')])
 crafting.replaceShapeless('appliedenergistics2:materials/cardinverter', item('appliedenergistics2:material:31'), [item('appliedenergistics2:material:58')])
 crafting.replaceShapeless('appliedenergistics2:materials/cardfuzzy', item('appliedenergistics2:material:29'), [item('appliedenergistics2:material:31')])
 //crafting.replaceShapeless('wct:magnet_card', item('wct:magnet_card'), [item('appliedenergistics2:material:29')])
-//crafting.addShapeless('appliedenergistics2:recycle_advcard', item('appliedenergistics2:material:28'), [item('wct:magnet_card')])
+crafting.addShapeless('susy:recycle_advcard', item('appliedenergistics2:material:28'), [item('appliedenergistics2:material:29')])
 
 crafting.replaceShapeless('appliedenergistics2:network/cells/view_cell_storage', item('appliedenergistics2:view_cell'), [item('appliedenergistics2:material', 39), metaitem('cover.screen')])
 

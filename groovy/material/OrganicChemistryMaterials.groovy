@@ -744,7 +744,7 @@ class OrganicChemistryMaterials {
                 .build()
 
         Polyurethane = new Material.Builder(15124, SuSyUtility.susyId('polyurethane'))
-                .dust()
+                .dust().liquid(new FluidBuilder().temperature(400))
                 .components(Carbon * 17, Hydrogen * 16, Nitrogen * 2, Oxygen * 4)
                 .color(0xd1d1d1)
                 .flags(NO_UNIFICATION, GENERATE_PLATE, FORCE_GENERATE_BLOCK)
@@ -818,6 +818,7 @@ class OrganicChemistryMaterials {
 
         KaptonK = new Material.Builder(15135, SuSyUtility.susyId('kapton_k'))
                 .polymer(1)
+                .flags(GENERATE_FOIL)
                 .components(Carbon * 22, Hydrogen * 10, Nitrogen * 2, Oxygen * 5)
                 .color(0xfabe19)
                 .build()
@@ -3353,12 +3354,23 @@ class OrganicChemistryMaterials {
                 .flags(FLAMMABLE)
                 .color(0xd4c97a)
                 .build()
-      
+
         DiallyldimethylammoniumChloride = new Material.Builder(15526, SuSyUtility.susyId('diallyldimethylammonium_chloride'))
                 .liquid()
                 .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine)
                 .color(0x30FF7F)
                 .build()
+
+        ExpandedPolytetrafluoroethylene = new Material.Builder(8789, SuSyUtility.susyId('expanded_polytetrafluoroethylene'))
+                .polymer(1)
+                .color(0x634F4F)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, NO_UNIFICATION)
+                .components(Carbon * 2, Fluorine * 4)
+                .macerateInto(Polytetrafluoroethylene)
+                .build();
+
+        ExpandedPolytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
+        ExpandedPolytetrafluoroethylene.setFormula("[C2F4]n", true)
 
         Norbornene = new Material.Builder(15527, SuSyUtility.susyId('norbornene'))
                 .dust()
@@ -3381,13 +3393,124 @@ class OrganicChemistryMaterials {
                 .color(0xA8B277)
                 .build()
 
-        HydrogenatedPetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true) //should there be more hydrogen here?
+        HydrogenatedPetroleumResin.setFormula("[(C10H12)9(C7H10)]n", true)
 
-        FiberReinforcedNylon = new Material.Builder(15530, SuSyUtility.susyId('fiber_reinforced_nylon'))
+        DichlorobuteneMixture = new Material.Builder(15530, SuSyUtility.susyId('dichlorobutene_mixture'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 12, Chlorine * 4)
+                .color(0x609B7D)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        DichlorobuteneMixture.setFormula('(C4H6Cl2)(C4H6Cl2)', true)
+
+        ThreeFourDichloroOneButene = new Material.Builder(15531, SuSyUtility.susyId('three_four_dichloro_one_butene'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 6, Chlorine * 2)
+                .color(0x469968)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        Benzonitrile = new Material.Builder(15532, SuSyUtility.susyId('benzonitrile'))
+                .fluid()
+                .components(Carbon * 7, Hydrogen * 5, Nitrogen * 1)
+                .color(0x9081DB)
+                .build()
+
+        Benzonitrile.setFormula('C6H5CN', true)
+
+        BisBenzonitrilePalladiumIiChloride = new Material.Builder(15533, SuSyUtility.susyId('bis_benzonitrile_palladium_ii_chloride'))
+                .dust()
+                .components(Benzonitrile * 2, Palladium * 1, Chlorine * 2)
+                .iconSet(ROUGH)
+                .color(0x9081DB)
+                .build()
+
+        BisBenzonitrilePalladiumIiChloride.setFormula("(C6H5CN)2PdCl2", true)
+
+        CrudeChloroprene = new Material.Builder(15534, SuSyUtility.susyId('crude_chloroprene'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1)
+                .color(0x237702)
+                .build()
+
+        DriedChloroprene = new Material.Builder(15535, SuSyUtility.susyId('dried_chloroprene'))
+                .liquid(new FluidBuilder().temperature(263))
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1)
+                .color(0x2FA003)
+                .build()
+
+        Chloroprene = new Material.Builder(15536, SuSyUtility.susyId('chloroprene'))
+                .liquid()
+                .components(Carbon * 4, Hydrogen * 5, Chlorine * 1)
+                .color(0x3FD304)
+                .build()
+
+        Neoprene = new Material.Builder(15537, SuSyUtility.susyId('neoprene'))
+                .polymer()
+                .components(Carbon * 4, Hydrogen * 5, Chlorine)
+                .flags(GENERATE_FOIL, GENERATE_RING, GENERATE_PLATE)
+                .iconSet(METALLIC)
+                .color(0x469968)
+                .build()
+
+        Neoprene.setFormula('[C4H5Cl]n', true)
+
+        PolyacrylicAcid = new Material.Builder(15538, SuSyUtility.susyId('polyacrylic_acid'))
+                .fluid()
+                .components(Carbon * 3, Hydrogen * 4, Oxygen * 2)
+                .color(0x5DD890)
+                .build()
+
+        PolyacrylicAcid.setFormula('[C3H4O2]n', true)
+
+        WetSodiumPolyacrylate = new Material.Builder(15539, SuSyUtility.susyId('wet_sodium_polyacrylate'))
+                .dust()
+                .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
+                .iconSet(DULL)
+                .color(0xB98AA0)
+                .build()
+
+        WetSodiumPolyacrylate.setFormula('[C3H3NaO2]n.H2O', true)
+
+        SodiumPolyacrylate = new Material.Builder(15540, SuSyUtility.susyId('sodium_polyacrylate'))
+                .dust()
+                .components(Sodium * 1, Carbon * 3, Hydrogen * 3, Oxygen * 2)
+                .iconSet(SHINY)
+                .color(0xB98AA0)
+                .build()
+
+        SodiumPolyacrylate.setFormula('[C3H3NaO2]n', true)
+
+        DiisopropylDixanthogenDisulfide = new Material.Builder(15541, SuSyUtility.susyId('diisopropyl_dixanthogen_disulfide'))
+                .dust()
+                .components(Sulfur * 4, Carbon * 8, Hydrogen * 14, Oxygen * 2)
+                .iconSet(SHINY)
+                .color(0xBCA93E)
+                .build()
+
+        DiisopropylDixanthogenDisulfide.setFormula('((CH3)2CHOCS2)2', true)
+
+        FiberReinforcedNylon = new Material.Builder(15542, SuSyUtility.susyId('fiber_reinforced_nylon'))
                 .polymer(2)
                 .color(0x4C3E44)
                 .flags(GENERATE_PLATE, GENERATE_ROTOR, NO_UNIFICATION)
                 .build()
+
+        IridiumAcetylacetonate = new Material.Builder(15543, SuSyUtility.susyId('iridium_acetylacetonate'))
+            .dust()
+            .components(Iridium * 1, Carbon * 15, Hydrogen * 21, Oxygen * 6)
+            .iconSet(LAPIS)
+            .color(0xFFEBA3)
+            .build()
+
+        IridiumAcetylacetonate.setFormula('Ir(acac)3', true)
+
+        Aerozine50 = new Material.Builder(15544, SuSyUtility.susyId('aerozine_50'))
+            .liquid(new FluidBuilder().basic())
+            .components(Dimethylhydrazine * 1, Hydrazine * 1)
+            .color(0x005FA8)
+            .build()
 
     }
 }

@@ -20,6 +20,7 @@ import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
+import static supersymmetry.common.materials.SusyMaterials.*
 import static material.SuSyMaterials.*
 
 import supercritical.api.unification.material.properties.FissionFuelProperty
@@ -28,7 +29,7 @@ import supercritical.api.unification.material.properties.SCPropertyKey
 import supersymmetry.integration.groovyscript.SuSyExpansions
 import postInit.materials.polymers.fibers.PolybenzimidazoleChain
 
-//eventManager.listen(EventPriority.LOWEST)
+//eventManager.listen(EventPriority.LOWEST)SS
 class ChangeFlags {
 
     public static void init() {
@@ -98,7 +99,6 @@ class ChangeFlags {
         Polybenzimidazole.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
         Polytetrafluoroethylene.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, false))
         Asbestos.setProperty(SuSyPropertyKey.FIBER, new FiberProperty(false, true, true))
-        //Polydimethylsiloxane.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()))
 
         Tantalum.addBlastProperty(1700, "MID", 480, 240, -1, -1)
         Molybdenum.addBlastProperty(1700, "MID", 480, 240, -1, -1)
@@ -158,43 +158,46 @@ class ChangeFlags {
         Aluminium.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
 
         // Flags
-        Asbestos.addFlags("generate_foil")
-        Magnesium.addFlags("generate_rod", "generate_plate")
-        Tellurium.addFlags("generate_plate")
-        Steel.addFlags("generate_spring", "generate_spring_small", "continuously_cast")
-        Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small")
-        Lead.addFlags("generate_round")
-        Nickel.addFlags("generate_rod", "generate_foil", "generate_fine_wire")
-        Aluminium.addFlags("generate_round", "generate_rotor", "continuously_cast")
-        Tungsten.addFlags("generate_fine_wire", "hip_pressed")
-        Molybdenum.addFlags("generate_fine_wire")
-        Tantalum.addFlags("generate_rod", "generate_fine_wire", "generate_catalyst_bed", "generate_plate")
-        Titanium.addFlags("generate_fine_wire")
-        ChromiumTrioxide.addFlags("generate_catalyst_bed")
-        Iron3Chloride.addFlags("generate_catalyst_bed")
-        Alumina.addFlags("generate_catalyst_bed")
-        Silver.addFlags("generate_catalyst_bed")
-        Nickel.addFlags("generate_catalyst_bed")
-        Magnesia.addFlags("generate_catalyst_bed")
-        CupricOxide.addFlags("generate_catalyst_bed")
-        Brass.addFlags("generate_ring")
-        Indium.addFlags("generate_plate")
-        BisphenolA.addFlags("no_unification")
-        Phosphorus.addFlags("no_smelting")
-        Tetrahedrite.addFlags("no_smelting")
-        Gold.addFlags("generate_gear")
-        IronMagnetic.addFlags("generate_ring")
+
+        Asbestos.addFlags("generate_foil");
+        Magnesium.addFlags("generate_rod", "generate_plate");
+        Tellurium.addFlags("generate_plate");
+        Steel.addFlags("generate_spring", "generate_spring_small", "continuously_cast");
+        Titanium.addFlags("generate_foil", "generate_spring", "generate_spring_small");
+        Lead.addFlags("generate_round");
+        Nickel.addFlags("generate_rod", "generate_foil", "generate_fine_wire");
+        Aluminium.addFlags("generate_round", "generate_rotor", "continuously_cast");
+        Tungsten.addFlags("generate_fine_wire", "hip_pressed");
+        Molybdenum.addFlags("generate_fine_wire", "generate_ring");
+        Tantalum.addFlags("generate_rod", "generate_fine_wire", "generate_catalyst_bed", "generate_plate");
+        Titanium.addFlags("generate_fine_wire");
+        ChromiumTrioxide.addFlags("generate_catalyst_bed");
+        Iron3Chloride.addFlags("generate_catalyst_bed");
+        Alumina.addFlags("generate_catalyst_bed");
+        Silver.addFlags("generate_catalyst_bed");
+        Nickel.addFlags("generate_catalyst_bed");
+        Magnesia.addFlags("generate_catalyst_bed");
+        CupricOxide.addFlags("generate_catalyst_bed");
+        Brass.addFlags("generate_ring");
+        Indium.addFlags("generate_plate");
+        BisphenolA.addFlags("no_unification");
+        Phosphorus.addFlags("no_smelting");
+        Tetrahedrite.addFlags("no_smelting");
+        Gold.addFlags("generate_gear");
+        IronMagnetic.addFlags("generate_ring");
         SteelMagnetic.addFlags("generate_plate")
-        StainlessSteel.addFlags("generate_round")
-        Hafnium.addFlags("generate_long_rod", "generate_rod")
-        VanadiumSteel.addFlags("generate_round")
-        Mica.addFlags("generate_plate", "no_unification")
-        Rubber.addFlags("generate_plate")
-        TungstenCarbide.addFlags("hip_pressed")
-        Polycaprolactam.addFlags("generate_foil")
-        Palladium.addFlags("generate_bolt_screw")
-        Copper.addFlags("continuously_cast")
-        Graphite.addFlags("generate_plate")
+        StainlessSteel.addFlags("generate_round");
+        Hafnium.addFlags("generate_long_rod", "generate_rod");
+        VanadiumSteel.addFlags("generate_round");
+        Mica.addFlags("generate_plate", "no_unification");
+        Rubber.addFlags("generate_plate");
+        TungstenCarbide.addFlags("hip_pressed");
+        Polycaprolactam.addFlags("generate_foil");
+        Palladium.addFlags("generate_bolt_screw");
+        Copper.addFlags("continuously_cast");
+        AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
+        Graphite.addFlags("generate_plate");
+        Germanium.addFlags("generate_plate");
         Magnalium.addFlags("generate_ring", "generate_rotor")
         ReinforcedEpoxyResin.addFlags("generate_rotor")
         Beryllium.addFlags("generate_rod")

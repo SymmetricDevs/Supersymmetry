@@ -62,7 +62,15 @@ def ingotMap = [
     'RhodiumPlatedPalladium':4500,
     'Hssg':4200,
     'Hsse':5000,
-    'Hsss':5000
+    'Hsss':5000,
+    'Monel500':3000,
+    'Hsla980X':2600,
+    'FoodGradeStainlessSteel':2600,
+    'PlatinumRhodium':2113,
+    'Zircaloy4':2200,
+    'ReactorSteel':1800,
+    'Alnico':1800,
+    'UraniumMolybdenumAlloy':1405
 ]
 
 def electrodeMap = [
@@ -74,7 +82,9 @@ def electrodeMap = [
     'Incoloy20':3000,
     'Nimonic105':3000,
     'Inconel718':3000,
-    'Inconel601':3000
+    'Inconel601':3000,
+    'Haynes230':3000,
+    'MarM246':3000
 ]
 
 //MV Tweaks (from CEu #1724)
@@ -147,16 +157,17 @@ for (entry in electrodeMap) {
             .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
             .EUt(VA[MV])
             .buildAndRegister();
-        
-        QUENCHER.recipeBuilder()
-            .notConsumable(metaitem('shape.mold.rod'))
-            .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
-            .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
-            .outputs(metaitem('electrode' + entry.key))
-            .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
-            .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
-            .EUt(VA[MV])
-            .buildAndRegister();
+        if (entry.key != 'Haynes230') {
+            QUENCHER.recipeBuilder()
+                .notConsumable(metaitem('shape.mold.rod'))
+                .fluidInputs(liquid(quenching_fluid.getColdFluid()) * quenching_fluid.amount)
+                .fluidInputs(fluid('molten.' + GTUtility.toLowerCaseUnderscore(entry.key)) * 144)
+                .outputs(metaitem('electrode' + entry.key))
+                .fluidOutputs(liquid(quenching_fluid.getHotFluid()) * quenching_fluid.amount)
+                .duration((int) (quenching_fluid.getDuration() * (float) (entry.value / 2000)))
+                .EUt(VA[MV])
+                .buildAndRegister();
+        }
     }
 }
 

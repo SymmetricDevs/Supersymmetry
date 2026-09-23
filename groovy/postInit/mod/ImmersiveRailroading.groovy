@@ -152,6 +152,12 @@ mods.gregtech.assembler.recipeBuilder()
 		.EUt(VA[MV])
 		.buildAndRegister()
 
+ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('stickLongFoodGradeStainlessSteel'))
+        .inputs(metaitem('ringFoodGradeStainlessSteel') * 4)
+        .outputs(metaitem('minecart_wheels.chromoly'))
+        .duration(60).EUt(20).buildAndRegister();
+
 mods.gregtech.assembler.recipeBuilder()
     .circuitMeta(2)
     .inputs(ore('stickSteel') * 2)
@@ -284,6 +290,75 @@ Globals.solders.each { key, val ->
 		.outputs(is5.internal)
 		.EUt(VA[LV])
 		.duration(400)
+		.buildAndRegister();
+
+	TagCompound tag6 = new TagCompound();
+
+	tag6.setString("defID", "rolling_stock/transporter_erector/soyuz_transporter.json");
+	tag6.setFloat("gauge", (float) Gauges.STANDARD);
+
+	cam72cam.mod.item.ItemStack is6 = new cam72cam.mod.item.ItemStack(IRItems.ITEM_ROLLING_STOCK, 1);
+	is6.setTagCompound(tag6);
+
+	SuSyRecipeMaps.LARGE_RES_RECIPES.recipeBuilder()
+		.circuitMeta(6)
+		.inputs(ore('gearSmallTitanium') * 12)
+		.inputs(ore('plateTitanium') * 64)
+		.inputs(ore('stickLongTitanium') * 16)
+		.inputs(metaitem('minecart_wheels.chromoly') * 16)
+    	.inputs(item('susy:metallurgy') * 8)
+		.inputs(ore('circuitEv') * 4)
+		.fluidInputs(fluid(key) * (val * 20))
+		.outputs(is6.internal)
+		.EUt(VA[HV])
+		.duration(800)
+		.buildAndRegister();
+	
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(6)
+		.inputs(item('gregtech:boiler_casing', 2) * 2)
+		.inputs(ore('gearSmallTitanium') * 12)
+		.inputs(metaitem('minecart_wheels.chromoly') * 4)
+		.inputs(metaitem('electric.motor.hv') * 4)
+		.inputs(metaitem('electric.piston.hv') * 4)
+		.inputs(item('gregtech:boiler_firebox_casing', 2) * 2)
+		.inputs(item('gregtech:transparent_casing', 2) * 8)
+		.inputs(ore('plateTitanium') * 32)
+		.inputs(ore('stickLongTitanium') * 8)
+		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/locomotives/big_boy.json', 'gauge': (float) Gauges.STANDARD]))
+		.EUt(VA[HV])
+		.duration(800)
+		.buildAndRegister();
+	
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(7)
+		.inputs(item('gregtech:multiblock_casing') * 2)
+		.inputs(item('susy:engine_casing') * 12)
+		.inputs(item('susy:engine_casing_2') * 12)
+		.inputs(ore('plateTitanium') * 32)
+		.inputs(ore('stickLongTitanium') * 8)
+		.inputs(item('susy:alternator_coil') * 12)
+		.inputs(ore('cableGtQuadrupleAluminium') * 16)
+		.inputs(metaitem('drum.titanium'))
+		.inputs(metaitem('pipeHugeFluidTitanium') * 12)
+		.inputs(metaitem('minecart_wheels.chromoly') * 4)
+		.inputs(ore('circuitEv') * 8)
+		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/locomotives/emd_sw1500.json', 'gauge': (float) Gauges.STANDARD]))
+		.EUt(VA[HV])
+		.duration(800)
+		.buildAndRegister();
+
+	SuSyRecipeMaps.RAILROAD_ENGINEERING_STATION_RECIPES.recipeBuilder()
+		.circuitMeta(8)
+		.inputs(ore('ringFoodGradeStainlessSteel') * 12)
+		.inputs(metaitem('minecart_wheels.chromoly') * 4)
+		.inputs(ore('plateFoodGradeStainlessSteel') * 32)
+		.inputs(ore('stickLongFoodGradeStainlessSteel') * 8)
+		.fluidInputs(fluid('dye_orange') * 576)
+		.fluidInputs(fluid('dye_black') * 1296)
+		.outputs(item('immersiverailroading:item_rolling_stock').withNbt(['defID': 'rolling_stock/freight/attx_flatcar_1.json', 'gauge': (float) Gauges.STANDARD]))
+		.EUt(VA[HV])
+		.duration(300)
 		.buildAndRegister();
 
 }

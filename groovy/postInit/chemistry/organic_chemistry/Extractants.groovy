@@ -46,6 +46,7 @@ import static gregtech.api.GTValues.*
     BR.recipeBuilder()
         .inputs(ore('dustCalciumCyanamide') * 4)
         .fluidInputs(fluid('water') * 3000)
+        .circuitMeta(1)
         .outputs(metaitem('dustCalcite') * 5)
         .fluidOutputs(fluid('ammonia') * 2000)
         .duration(200)
@@ -763,6 +764,14 @@ import static gregtech.api.GTValues.*
         .inputs(ore('dustSodiumHydroxide'))
         .fluidInputs(fluid('spent_p_two_zero_four_extraction_mixture') * 10000)
         .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 10000)
+        .duration(10)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    BLENDER.recipeBuilder()
+        .inputs(ore('dustTinySodiumHydroxide'))
+        .fluidInputs(fluid('spent_p_two_zero_four_extraction_mixture') * 1000) // being nice to the player
+        .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 1000)
         .duration(10)
         .EUt(VA[MV])
         .buildAndRegister()

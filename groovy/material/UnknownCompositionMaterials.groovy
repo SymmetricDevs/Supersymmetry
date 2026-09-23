@@ -3097,6 +3097,7 @@ class UnknownCompositionMaterials {
         AmmoxidationCatalyst = new Material.Builder(4681, SuSyUtility.susyId('ammoxidation_catalyst'))
                 .dust()
                 .color(0x18877a)
+                .flags(GENERATE_CATALYST_BED)
                 .build()
 
         PropyleneAmmoxidationMixture = new Material.Builder(4682, SuSyUtility.susyId('propylene_ammoxidation_mixture'))
@@ -3433,5 +3434,302 @@ class UnknownCompositionMaterials {
                 .color(0xFFE1D8)
                 .build()
 
+        CalciumAluminateConcrete = new Material.Builder(4745, SuSyUtility.susyId('calcium_aluminate_concrete'))
+                .dust().liquid(new FluidBuilder().temperature(300))
+                .iconSet(ROUGH)
+                .color(0xADC3FF)
+                .build()
+
+        AnorthositicRegolith = new Material.Builder(4746, SuSyUtility.susyId('anorthositic_regolith'))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0xA2A2A2)
+                .build()
+
+        BasalticRegolith = new Material.Builder(4747, SuSyUtility.susyId('basaltic_regolith'))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0x6D6D6D)
+                .build()
+
+        KREEPRegolith = new Material.Builder(4748, SuSyUtility.susyId('kreep_regolith'))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0x545245)
+                .build()
+
+        LunarMagnetic = new Material.Builder(4749, SuSyUtility.susyId('lunar_magnetic'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x282828)
+                .build()
+
+        LunarIlmeniteSlurry = new Material.Builder(4750, SuSyUtility.susyId('lunar_ilmenite_slurry'))
+                .liquid()
+                .color(0x443631)
+                .build()
+
+        LunarFerrosilicateSlurry = new Material.Builder(4751, SuSyUtility.susyId('lunar_ferrosilicate_slurry'))
+                .liquid()
+                .color(0x4D4D5B)
+                .build()
+
+        LunarTroiliteSlurry = new Material.Builder(4752, SuSyUtility.susyId('lunar_troilite_slurry'))
+                .liquid()
+                .color(0x595021)
+                .build()
+
+        LunarSilicateSlurry = new Material.Builder(4753, SuSyUtility.susyId('lunar_silicate_slurry'))
+                .liquid()
+                .color(0x5F5F68)
+                .build()
+
+        // FREE ID: 4754
+
+        AnorthositeLeach = new Material.Builder(4755, SuSyUtility.susyId('anorthosite_leach'))
+                .liquid()
+                .color(0x9A9EAF)
+                .build()
+
+        LunarBasaltLeach = new Material.Builder(4756, SuSyUtility.susyId('lunar_basalt_leach'))
+                .liquid()
+                .color(0xADA998)
+                .build()
+
+        LeachedAnorthosite = new Material.Builder(4757, SuSyUtility.susyId('leached_anorthosite'))
+                .dust()
+                .iconSet(METALLIC)
+                .color(0x9A9EAF)
+                .build()
+
+        LeachedLunarBasalt = new Material.Builder(4758, SuSyUtility.susyId('leached_lunar_basalt'))
+                .dust()
+                .iconSet(METALLIC)
+                .color(0xADA998)
+                .build()
+
+        AnorthositeAluminosilicate = new Material.Builder(4759, SuSyUtility.susyId('anorthosite_aluminosilicate'))
+                .dust()
+                .iconSet(METALLIC)
+                .color(0x88AAA8)
+                .build()
+
+        AlkaliAnorthositicChlorides = new Material.Builder(4760, SuSyUtility.susyId('alkali_anorthositic_chlorides'))
+                .liquid()
+                .color(0x81A86F)
+                .build()
+
+        AlkaliBasalticChlorides = new Material.Builder(4761, SuSyUtility.susyId('alkali_basaltic_chlorides'))
+                .liquid()
+                .color(0x627F55)
+                .build()
+
+        LunarSodiumAluminateSolution = new Material.Builder(4762, SuSyUtility.susyId('lunar_sodium_aluminate_solution'))
+                .liquid()
+                .color(0xAAE5FF)
+                .build()
+
+        LunarBasalt = new Material.Builder(4763, SuSyUtility.susyId('lunar_basalt'))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0x5E5E5E)
+                .build()
+
+        KreepAnorthosite = new Material.Builder(4764, SuSyUtility.susyId('kreep_anorthosite'))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0xAFAE77)
+                .build()
+
+        DemagnetizedAnorthosite = new Material.Builder(4765, SuSyUtility.susyId('demagnetized_anorthosite'))
+                .dust()
+                .iconSet(DULL)
+                .color(0xA2A2A2)
+                .build()
+
+        DemagnetizedLunarBasalt = new Material.Builder(4766, SuSyUtility.susyId('demagnetized_lunar_basalt'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x6D6D6D)
+                .build()
+
+        DemagnetizedKreepAnorthosite = new Material.Builder(4767, SuSyUtility.susyId('demagnetized_kreep_anorthosite'))
+                .dust()
+                .iconSet(DULL)
+                .color(0xAFAE77)
+                .build()
+
+        LunarPhosphateConcentrateSlurry = new Material.Builder(4768, SuSyUtility.susyId('lunar_phosphate_concentrate_slurry'))
+                .liquid()
+                .color(0xAD9F32)
+                .build()
+
+        LunarKreepFerrosilicateSlurry = new Material.Builder(4769, SuSyUtility.susyId('lunar_kreep_ferrosilicate_slurry'))
+                .liquid()
+                .color(0x586466)
+                .build()
+
+        LunarPlagioclaseSlurry = new Material.Builder(4770, SuSyUtility.susyId('lunar_plagioclase_slurry'))
+                .liquid()
+                .color(0x9A9B93)
+                .build()
+
+        LunarMaficSlurry = new Material.Builder(4771, SuSyUtility.susyId('lunar_mafic_slurry'))
+                .liquid()
+                .color(0x563738)
+                .build()
+
+        LunarPyroxene = new Material.Builder(4772, SuSyUtility.susyId('lunar_pyroxene'))
+                .dust()
+                .iconSet(METALLIC)
+                .color(0x576327)
+                .build()
+
+        LunarPyroxene.setFormula('CaFeSi2O6', true)
+
+        LunarKreepSilicateSlurry = new Material.Builder(4773, SuSyUtility.susyId('lunar_kreep_silicate_slurry'))
+                .liquid()
+                .color(0x2B6054)
+                .build()
+
+        LunarKreepAnorthositeLeach = new Material.Builder(4774, SuSyUtility.susyId('lunar_kreep_anorthosite_leach'))
+                .liquid()
+                .color(0xB7A5B6)
+                .build()
+
+        LeachedKreepAnorthosite = new Material.Builder(4775, SuSyUtility.susyId('leached_kreep_anorthosite'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x9FAD7E)
+                .build()
+
+        AlkaliKreepAnorthositicChlorides = new Material.Builder(4776, SuSyUtility.susyId('alkali_kreep_anorthositic_chlorides'))
+                .liquid()
+                .color(0x5AA538)
+                .build()
+
+        IcyRegolith = new Material.Builder(4777, SuSyUtility.susyId('icy_regolith'))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0xB5E2DF)
+                .build()
+
+        ImpurePhosphoricAcid = new Material.Builder(4778, SuSyUtility.susyId('impure_phosphoric_acid'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0xA5A527)
+                .build()
+
+        ImpurePhosphoricAcid = new Material.Builder(4779, SuSyUtility.susyId('impure_phosphoric_acid'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0xA5A527)
+                .build()
+
+        PhosphoricAcidExtract = new Material.Builder(4780, SuSyUtility.susyId('phosphoric_acid_extract'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0xFFFF00)
+                .build()
+
+        WasteGypsum = new Material.Builder(4781, SuSyUtility.susyId('waste_gypsum'))
+                .liquid()
+                .color(0xCECEA1)
+                .build()
+
+        SodianFerriteClinker = new Material.Builder(4782, SuSyUtility.susyId('sodian_ferrite_clinker'))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0x7A7C91)
+                .build()
+
+        HydrolyzedPyroxeneResidue = new Material.Builder(4783, SuSyUtility.susyId('hydrolyzed_pyroxene_residue'))
+                .dust()
+                .iconSet(METALLIC)
+                .color(0x8E6E4A)
+                .build()
+
+        ScandianFerricSulfateLeachate = new Material.Builder(4784, SuSyUtility.susyId('scandian_ferric_sulfate_leachate'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0xC1715B)
+                .build()
+
+        ScandianFerricSulfateLeachate = new Material.Builder(4785, SuSyUtility.susyId('scandian_ferric_sulfate_leachate'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0xC1715B)
+                .build()
+
+        ScandiumBearingWasteAcid = new Material.Builder(4786, SuSyUtility.susyId('scandium_bearing_waste_acid'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0xBFB559)
+                .build()
+
+        CrudeScandiumHydroxide = new Material.Builder(4787, SuSyUtility.susyId('crude_scandium_hydroxide'))
+                .dust()
+                .iconSet(METALLIC)
+                .color(0x92BC4F)
+                .build()
+
+        CrudeScandiumHydroxide.setFormula('Sc(OH)3', true)
+
+        ScandiumDepletedSulfateRaffinate = new Material.Builder(4788, SuSyUtility.susyId('scandium_depleted_sulfate_raffinate'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0x7973BA)
+                .build()
+
+        ScandiumP204Extract = new Material.Builder(4789, SuSyUtility.susyId('scandium_p_204_extract'))
+                .liquid()
+                .color(0xBC2B78)
+                .build()
+
+        ScrubbedScandiumP204Extract = new Material.Builder(4790, SuSyUtility.susyId('scrubbed_scandium_p_204_extract'))
+                .liquid()
+                .color(0xD17BA9)
+                .build()
+
+        PurifiedScandiumP204Extract = new Material.Builder(4791, SuSyUtility.susyId('purified_scandium_p_204_extract'))
+                .liquid()
+                .color(0xFF68BB)
+                .build()
+
+        IronChlorideScrubRaffinate = new Material.Builder(4792, SuSyUtility.susyId('iron_chloride_scrub_raffinate'))
+                .liquid()
+                .color(0x3C7A2D)
+                .build()
+
+        FluorideScrubRaffinate = new Material.Builder(4793, SuSyUtility.susyId('fluoride_scrub_raffinate'))
+                .liquid(new FluidBuilder().acidic())
+                .color(0x7EFF5E)
+                .build()
+
+        ImpureScandiumChlorideSolution = new Material.Builder(4794, SuSyUtility.susyId('impure_scandium_chloride_solution'))
+                .liquid()
+                .color(0xA1FF00)
+                .build()
+
+        NativeLunarIron = new Material.Builder(4795, SuSyUtility.susyId('native_lunar_iron'))
+                .dust()
+                .color(0x82A4B7)
+                .iconSet(METALLIC)
+                .build()
+
+        LunarManganeseIIOxide = new Material.Builder(4796, SuSyUtility.susyId('lunar_manganese_ii_oxide'))
+                .dust()
+                .color(0x472400)
+                .iconSet(ROUGH)
+                .build()
+        
+        LunarManganeseSlurry = new Material.Builder(4797, SuSyUtility.susyId('lunar_manganese_slurry'))
+                .liquid()
+                .color(0x42472B)
+                .build()
+
+        StrongAnorthositeLeach = new Material.Builder(4798, SuSyUtility.susyId('strong_anorthosite_leach'))
+                .liquid()
+                .color(0x5DA073)
+                .build()
+
+        LunarWeaklyMagnetic = new Material.Builder(4799, SuSyUtility.susyId('lunar_weakly_magnetic'))
+                .dust()
+                .iconSet(DULL)
+                .color(0x382828)
+                .build()
     }
 }
