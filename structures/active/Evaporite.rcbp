@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "biomes": "$MESA",
+      "weight": 0.4
+    },
+    {
+      "biomes": "$SANDY",
+      "weight": 0.4
+    },
+    {
+      "biomes": "$RIVER",
+      "weight": 0.3
+    }
+  ],
+  "metadata": {
+    "title": "Evaporite",
+    "description": [
+      ""
+    ]
+  }
+}

@@ -41,26 +41,6 @@
         "damage": 279,
         "count": 1
       }
-    },
-    {
-      "weight": 0.646636426448822,
-      "min": 26,
-      "max": 39,
-      "item": {
-        "id": "gregtech:ore_anthracite_0",
-        "damage": 0,
-        "count": 1
-      }
-    },
-    {
-      "weight": 0.5354365706443787,
-      "min": 20,
-      "max": 34,
-      "item": {
-        "id": "gregtech:meta_dust_impure",
-        "damage": 7034,
-        "count": 1
-      }
     }
   ],
   "dependencyExpression": ""

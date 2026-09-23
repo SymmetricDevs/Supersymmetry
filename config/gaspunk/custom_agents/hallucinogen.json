@@ -1,0 +1,6 @@
+{
+  "factory": "potion",
+  "duration": 1000,
+  "amplifier": 5,
+  "potion": "minecraft:nausea"
+}

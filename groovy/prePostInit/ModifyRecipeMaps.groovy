@@ -11,6 +11,7 @@ import gregtech.api.unification.material.properties.PropertyKey
 import gregtech.api.unification.ore.OrePrefix
 import gregtechfoodoption.recipe.GTFORecipeMaps
 import supersymmetry.api.fluids.SusyFluidStorageKeys
+import supersymmetry.api.recipes.SuSyRecipeMaps
 import supersymmetry.api.gui.SusyGuiTextures
 
 import static gregtech.api.recipes.GTRecipeHandler.*
@@ -342,10 +343,6 @@ mods.gregtech.mixer.removeByInput(8, [metaitem('dustSodiumBicarbonate')], [fluid
 mods.gregtech.assembler.removeByInput(2, [item('minecraft:brick') * 3], null)
 // Tungsten Steel * 2
 mods.gregtech.mixer.removeByInput(1920, [metaitem('dustTungsten'), metaitem('dustSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-// Molten Tungstensteel * 288
-mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), metaitem('dustTungsten'), metaitem('circuit.integrated').withNbt(['Configuration': 12])], [fluid('helium') * 200 * 200, fluid('refractory_gunning_mixture') * 50 * 50])
-// Molten Tungstensteel * 288
-mods.gregtech.advanced_arc_furnace.removeByInput(1920, [metaitem('dustSteel'), metaitem('dustTungsten'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('refractory_gunning_mixture') * 50 * 50])
 // Diesel * 6000
 mods.gregtech.blender.removeByInput(120, null, [fluid('light_fuel') * 5000 * 5000, fluid('heavy_fuel') * 1000 * 1000])
 // Tungstensteel Dust * 2
@@ -384,6 +381,12 @@ mods.gregtech.bender.removeByInput(24, [metaitem('platePolyphenyleneSulfide'), m
 mods.gregtech.bender.removeByInput(24, [metaitem('ingotPolyphenyleneSulfide'), metaitem('circuit.integrated').withNbt(['Configuration': 10])], null)
 // Ethenone * 100
 mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('acetone') * 100])
+
+//Remove SuperCon Centrifuge
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustSamariumIronArsenicOxide')*4],null)
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustUraniumTriplatinum')*4],null)
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustUraniumRhodiumDinaquadide')*4],null)
+mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustEnrichedNaquadahTriniumEuropiumDuranide')*10],null)
 
 RecipeMaps.SIFTER_RECIPES
     .modifyMaxFluidInputs(1)
@@ -463,11 +466,20 @@ RecipeMaps.ASSEMBLER_RECIPES
     .modifyMaxFluidInputs(3)
 
 RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES
-    .modifyMaxInputs(12)
-    .modifyMaxFluidInputs(3)
+    .modifyMaxInputs(16)
+    .modifyMaxFluidInputs(4)
     
 RecipeMaps.DISTILLERY_RECIPES
     .modifyMaxFluidInputs(2)
 
 RecipeMaps.COMPRESSOR_RECIPES
+    .modifyMaxInputs(2)
+
+SuSyRecipeMaps.WIRE_BONDING
+    .setMaxInputs(3)
+
+SuSyRecipeMaps.SCREEN_PRINTER
+    .setMaxInputs(3)
+
+RecipeMaps.CUTTER_RECIPES
     .modifyMaxInputs(2)

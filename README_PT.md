@@ -11,6 +11,8 @@
     &emsp;&ensp;Português
     <br />
     &emsp;&ensp;<a href="/README.md">English</a>
+    <br />
+    &emsp;&ensp;<a href="/README_PL.md">Polski</a>
   </details>
 </blockquote>
 

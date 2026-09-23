@@ -1,0 +1,137 @@
+{
+  "preRequisites:11": [
+    1808568718,
+    152
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1458693750.desc",
+      "frame:8": "JAGGED",
+      "icon:10": {
+        "Damage:2": 60,
+        "id:8": "techguns:itemshared"
+      },
+      "name:8": "susy.quest.db.1458693750.title",
+      "visibility:8": "COMPLETED"
+    }
+  },
+  "questID:3": 1458693750,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 1,
+      "target:8": "techguns:bandit",
+      "targetNBT:10": {
+        "AABB:9": {
+          "0:6": -0.30000001192092896,
+          "1:6": 0.0,
+          "2:6": -0.30000001192092896,
+          "3:6": 0.30000001192092896,
+          "4:6": 1.7999999523162842,
+          "5:6": 0.30000001192092896
+        },
+        "AbsorptionAmount:5": 0.0,
+        "Air:2": 300,
+        "ArmorDropChances:9": {
+          "0:5": 0.085,
+          "1:5": 0.085,
+          "2:5": 0.085,
+          "3:5": 0.085
+        },
+        "ArmorItems:9": {
+          "0:10": {},
+          "1:10": {},
+          "2:10": {},
+          "3:10": {}
+        },
+        "Attributes:9": {
+          "0:10": {
+            "Base:6": 0.0,
+            "Name:8": "techguns.radiationResistance"
+          },
+          "1:10": {
+            "Base:6": 100.0,
+            "Name:8": "cyberware.tolerance"
+          },
+          "2:10": {
+            "Base:6": 40.0,
+            "Name:8": "gaspunk.maxAirSupply"
+          },
+          "3:10": {
+            "Base:6": 20.0,
+            "Name:8": "generic.maxHealth"
+          },
+          "4:10": {
+            "Base:6": 0.0,
+            "Name:8": "generic.knockbackResistance"
+          },
+          "5:10": {
+            "Base:6": 0.3,
+            "Name:8": "generic.movementSpeed"
+          },
+          "6:10": {
+            "Base:6": 0.0,
+            "Name:8": "generic.armor"
+          },
+          "7:10": {
+            "Base:6": 0.0,
+            "Name:8": "generic.armorToughness"
+          },
+          "8:10": {
+            "Base:6": 1.0,
+            "Name:8": "forge.swimSpeed"
+          },
+          "9:10": {
+            "Base:6": 40.0,
+            "Name:8": "generic.followRange"
+          },
+          "10:10": {
+            "Base:6": 5.0,
+            "Name:8": "generic.attackDamage"
+          }
+        },
+        "CanPickUpLoot:1": 0,
+        "DeathTime:2": 0,
+        "Dimension:3": 0,
+        "FallDistance:5": 0.0,
+        "FallFlying:1": 0,
+        "Fire:2": -1,
+        "HandDropChances:9": {
+          "0:5": 0.085,
+          "1:5": 0.085
+        },
+        "HandItems:9": {
+          "0:10": {},
+          "1:10": {}
+        },
+        "Health:5": 20.0,
+        "HurtByTimestamp:3": 0,
+        "HurtTime:2": 0,
+        "Invulnerable:1": 0,
+        "Leashed:1": 0,
+        "LeftHanded:1": 0,
+        "Motion:9": {
+          "0:6": 0.0,
+          "1:6": 0.0,
+          "2:6": 0.0
+        },
+        "OnGround:1": 0,
+        "PersistenceRequired:1": 0,
+        "PortalCooldown:3": 0,
+        "Pos:9": {
+          "0:6": 0.0,
+          "1:6": 0.0,
+          "2:6": 0.0
+        },
+        "Rotation:9": {
+          "0:5": 4.568497,
+          "1:5": 0.0
+        },
+        "UUIDLeast:4": -6660080473727536146,
+        "UUIDMost:4": 3643547642546834334,
+        "UpdateBlocked:1": 0,
+        "id:8": "techguns:bandit"
+      },
+      "taskID:8": "bq_standard:hunt"
+    }
+  }
+}

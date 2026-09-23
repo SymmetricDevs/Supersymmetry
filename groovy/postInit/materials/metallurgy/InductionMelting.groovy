@@ -26,7 +26,7 @@ INDUCTION_FURNACE.recipeBuilder()
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(metaitem('dustAluminium'))
-    .fluidOutputs(fluid('molten.aluminium') * 144)
+    .fluidOutputs(fluid('aluminium') * 144)
     .EUt(VA[MV])
     .duration(10)
     .buildAndRegister()

@@ -18,8 +18,9 @@ class Lithography {
         Map additionalFluids
         boolean liftoff
         boolean ibarc
+        String fluidName
 
-        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, Map additionalFluids = [:], boolean liftoff = false, boolean ibarc = false) {
+        Resist(String resistName, String solventName, String developerName, int voltageTier, String exposureRecipeMap, int timeUsed, Map additionalFluids = [:], boolean liftoff = false, boolean ibarc = false, String fluidName = null) {
             this.resistName = resistName
             this.solventName = solventName
             this.developerName = developerName
@@ -29,6 +30,7 @@ class Lithography {
             this.liftoff = liftoff
             this.additionalFluids = additionalFluids
             this.ibarc = ibarc
+            this.fluidName = fluidName ?: resistName
         }
 
         def generateCoatingRecipe(String input, boolean hmds, Integer circuit = null, String overrideInput = null) {
@@ -37,7 +39,7 @@ class Lithography {
             
             def coatingRecipe = RESIST_PROCESSOR.recipeBuilder()
                 .inputs(metaitem(overrideInput ?: input))
-                .fluidInputs(fluid(this.resistName) * 50)
+                .fluidInputs(fluid(this.fluidName) * 50)
                 .fluidInputs(fluid(this.solventName) * solvent_amount)
                 .outputs(metaitem(input + ".coated"))
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -61,29 +63,19 @@ class Lithography {
                 .EUt(VA[this.voltageTier])
 
             if (nonConsumable != null) {exposureRecipe.notConsumable(metaitem(nonConsumable))}
+            if (this.resistName.contains("methacrylate")) {exposureRecipe.fluidInputs(fluid('ultrapure_water') * 5)}
             exposureRecipe.buildAndRegister();
         }
 
         def generateDevelopmentRecipe(String input, String product, String overrideProduct = null) {
-            if (!liftoff) {
-                RESIST_PROCESSOR.recipeBuilder()
-                    .inputs(metaitem(input + ".exposed"))
-                    .fluidInputs(fluid(this.developerName) * 100)
-                    .outputs(metaitem(product))
-                    .cleanroom(CleanroomType.CLEANROOM)
-                    .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier])
-                    .buildAndRegister()
-            } else {
-                RESIST_PROCESSOR.recipeBuilder()
-                    .inputs(metaitem(input + ".deposited"))
-                    .fluidInputs(fluid(this.developerName) * 100)
-                    .outputs(metaitem(overrideProduct ?: product))
-                    .cleanroom(CleanroomType.CLEANROOM)
-                    .duration(this.timeUsed)
-                    .EUt(VA[this.voltageTier])
-                    .buildAndRegister()
-            }
+            RESIST_PROCESSOR.recipeBuilder()
+            .inputs(metaitem(input + (liftoff ? ".deposited" : ".exposed")))
+            .fluidInputs(fluid(this.developerName) * 100)
+            .outputs(metaitem(overrideProduct ?: product))
+            .cleanroom(CleanroomType.CLEANROOM)
+            .duration(this.timeUsed)
+            .EUt(VA[this.voltageTier])
+            .buildAndRegister()
         }
     }
 
@@ -92,9 +84,9 @@ class Lithography {
         new Resist("novolac_liftoff_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", HV, "uv_light_box", 300, [:], true),
         new Resist("su_eight", "propylene_glycol_methyl_ether_acetate", "propylene_glycol_methyl_ether_acetate", EV, "uv_light_box", 200),
         new Resist("polyhydroxystyrene_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, ["krf_barc" : 25]),
-        new Resist("polyhydroxystyrene_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, [:], false, true),
+        new Resist("polyhydroxystyrene_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 200, [:], false, true, "polyhydroxystyrene_resist"),
         new Resist("methacrylate_resist", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10, "arf_barc" : 25]),
-        new Resist("methacrylate_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10], false, true)
+        new Resist("methacrylate_resist_trilayer", "ebr_solvent", "tetramethylammonium_hydroxide_solution", EV, "laser_engraver", 300, ["arf_topcoat" : 10], false, true, "methacrylate_resist")
         // Trilayers should be used for highly reflective substrates, i.e. metal as organic BARCs will no longer be sufficient to minimize internal reflection of patterning light,
         // which cause poor resolution. It is also useful for very high aspect ratio patterning where the addition of a SOC hardmask allows good etching selectivity.
         // The hardmask also is useful for patterning on substrates with severe topography and critical dimension uniformity.
@@ -105,6 +97,7 @@ class Lithography {
     ]
 
     static void generatePhotolithographyRecipes(String input, String product, String photoresistNeeded, String nonConsumable, boolean hmds, boolean mandrel = false) {
+        def overrideInput = null
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 if (photoresist.ibarc) {
@@ -135,7 +128,7 @@ class Lithography {
                 // i.e. SiO2, Si3N4, bare Si, surfaces after CMP. HMDS is not used on metals, over organic BARCs, negative tone resists, SiOCH.
                 photoresist.generateCoatingRecipe(input, hmds, null, overrideInput)
                 photoresist.generateExposureRecipe(input, nonConsumable)
-                photoresist.generateDevelopmentRecipe(input, product, null, (photoresist.ibarc ? input + ".developed" : null))
+                photoresist.generateDevelopmentRecipe(input, product, (photoresist.ibarc ? input + ".developed" : null))
             }
         }
     }
@@ -159,6 +152,7 @@ class Lithography {
     }
 
     static void generateCoatingRecipe(String input, String photoresistNeeded, boolean hmds, boolean mandrel = false) {
+        def overrideInput = null
         for (photoresist in photoresists) {
             if (photoresist.resistName == photoresistNeeded) {
                 if (photoresist.ibarc) {
@@ -173,8 +167,6 @@ class Lithography {
                         .buildAndRegister()
 
                     Deposition.generateChemicalVaporDepositionRecipe(input + ".hardmasked", input + ".ibarc", 0.25, "silicon_oxynitride")
-                    Etching.generateReactiveIonEtchingRecipe(input + ".developed", input + ".etched", "silicon_oxynitride", 100)
-                    Etching.generateReactiveIonEtchingRecipe(input + ".etched", product, "spin_on_carbon", 200)
 
                     if (mandrel) {
                         Deposition.generateChemicalVaporDepositionRecipe(input + ".ibarc", input + ".mandrel", 0.25, "silicon")

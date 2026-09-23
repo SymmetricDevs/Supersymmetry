@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "gregtech:items/metaitems/doped_barium_titanate_paste"
+    }
+}

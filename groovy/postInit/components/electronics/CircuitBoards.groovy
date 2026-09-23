@@ -82,25 +82,27 @@ ASSEMBLER.recipeBuilder()
 // (in Epoxy Chain)
 
 // Titanium Cylinder Drum
+
 FORMING_PRESS.recipeBuilder()
-        .notConsumable(metaitem('shape.mold.cylinder'))
-        .inputs(ore('ingotTitanium') * 8)
-        .outputs(metaitem('titanium_cylinder') * 1)
-        .EUt(VA[MV])
-        .duration(320)
-        .buildAndRegister();
+    .notConsumable(metaitem('shape.mold.cylinder'))
+    .inputs(ore('ingotTitanium') * 8)
+    .outputs(metaitem('titanium_cylinder') * 1)
+    .EUt(VA[MV])
+    .duration(320)
+    .buildAndRegister();
 
 // ED Copper Foil
+
 ELECTROLYTIC_CELL.recipeBuilder()
-        .notConsumable(metaitem('titanium_cylinder'))
-        .notConsumable(metaitem('graphite_electrode'))
-        .fluidInputs(fluid('copper_sulfate_solution') * 1000)
-        .outputs(metaitem('foilHighPurityCopper') * 4)
-        .fluidOutputs(fluid('sulfuric_acid') * 1000)
-        .fluidOutputs(fluid('oxygen') * 1000)
-        .EUt(VA[MV])
-        .duration(20)
-        .buildAndRegister();
+    .notConsumable(metaitem('titanium_cylinder'))
+    .notConsumable(metaitem('graphite_electrode'))
+    .fluidInputs(fluid('copper_sulfate_solution') * 1000)
+    .outputs(metaitem('foilHighPurityCopper') * 4)
+    .fluidOutputs(fluid('sulfuric_acid') * 1000)
+    .fluidOutputs(fluid('oxygen') * 1000)
+    .EUt(VA[MV])
+    .duration(20)
+    .buildAndRegister();
 
 // HV Board
 
@@ -109,7 +111,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
     FORMING_PRESS.recipeBuilder()
         .inputs(metaitem('board.g10.prepreg'))
         .inputs(ore('foilHighPurityCopper'))
-        .outputs(metaitem('board.hv.copper_clad'))
+        .outputs(metaitem('board.g10.copper_clad'))
         .EUt(VA[MV])
         .duration(50)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -312,8 +314,8 @@ ELECTROLYTIC_CELL.recipeBuilder()
     // Drilling
 
     MILLING.recipeBuilder()
-        .inputs(metaitem('board.epoxy.etched') * 4)
-        .outputs(metaitem('board.epoxy.drilled') * 4)
+        .inputs(metaitem('board.fr4.etched') * 4)
+        .outputs(metaitem('board.fr4.drilled') * 4)
         .EUt(VA[MV])
         .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -421,5 +423,145 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .fluidOutputs(fluid('wastewater') * 100)
         .EUt(VA[LV])
         .duration(80)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+// EV flip-chip PGA substrate
+
+    // Patterning
+
+    UV_LIGHT_BOX.recipeBuilder()
+        .inputs(metaitem('board.fr4.resist'))
+        .notConsumable(metaitem('mask.substrate_ev'))
+        .outputs(metaitem('substrate.fr4.patterned'))
+        .duration(100)
+        .EUt(VA[MV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    CHEMICAL_BATH.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.patterned'))
+        .fluidInputs(fluid('diluted_potassium_carbonate_solution') * 100)
+        .outputs(metaitem('substrate.fr4.developed'))
+        .fluidOutputs(fluid('wastewater') * 100)
+        .duration(100)
+        .EUt(VA[MV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    // Etching
+    Etching.generateWetEtchingRecipe("substrate.fr4.developed", "substrate.fr4.etched", "copper", 100, false)
+
+    // Drilling
+
+    LASER_ENGRAVING.recipeBuilder()
+        .inputs(metaitem('substrate.epoxy.etched'))
+        .outputs(metaitem('substrate.epoxy.drilled'))
+        .EUt(VA[MV])
+        .duration(300)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    // Electroless plating
+    // Source: 
+    //      https://www.nmfrc.org/pdf/p0295g.pdf
+    //      https://www.rsc.org/suppdata/d2/ee/d2ee01427k/d2ee01427k1.pdf
+    // (the upper one seems to have a typo: 2H2O instead of 2H2)
+    // Base reaction: HCHO + 3OH- + Cu+2 --EDTA-> HCOO- + 2H2O + Cu° 
+
+    LCR.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.drilled') * 4)
+        .inputs(ore('dustTinyPalladiumChlorideDihydrate'))
+        .fluidInputs(fluid('distilled_water') * 100)
+        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 50)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+        .fluidInputs(fluid('copper_sulfate_solution') * 1000)
+        .fluidInputs(fluid('formaldehyde') * 1000)
+        .outputs(metaitem('substrate.fr4.electroless') * 4)
+        .fluidOutputs(fluid('wastewater') * 6144)
+        .EUt(VA[MV])
+        .duration(300)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    LCR.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.drilled') * 4)
+        .inputs(ore('dustTinyPalladiumChlorideDihydrate'))
+        .inputs(ore('dustCopperIiChloride') * 3)
+        .fluidInputs(fluid('distilled_water') * 100)
+        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 50)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+        .fluidInputs(fluid('formaldehyde') * 1000)
+        .outputs(metaitem('substrate.fr4.electroless') * 4)
+        .fluidOutputs(fluid('wastewater') * 5144)
+        .EUt(VA[MV])
+        .duration(300)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+        
+    LCR.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.drilled') * 4)
+        .inputs(ore('dustTinyPalladiumChlorideDihydrate'))
+        .inputs(ore('dustCopperIiNitrate') * 9)
+        .fluidInputs(fluid('distilled_water') * 100)
+        .fluidInputs(fluid('tetrasodium_ethylenediaminetetraacetate_solution') * 50)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+        .fluidInputs(fluid('formaldehyde') * 1000)
+        .outputs(metaitem('substrate.fr4.electroless') * 4)
+        .fluidOutputs(fluid('wastewater') * 5144)
+        .EUt(VA[MV])
+        .duration(300)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    // Electrolytic plating
+    // Reference for the mixture: https://patents.google.com/patent/US4242181A/en
+
+    ELECTROLYTIC_CELL.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.electroless'))
+        .inputs(ore('foilPhosphorizedCopper'))
+        .notConsumable(fluid('diluted_sulfuric_acid') * 4000)
+        .notConsumable(fluid('copper_sulfate_solution') * 600)
+        .outputs(metaitem('substrate.fr4.electrolytic'))
+        .EUt(VA[MV])
+        .duration(400)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    // Masking
+
+    CURTAIN_COATER.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.electrolytic'))
+        .fluidInputs(fluid('green_epoxy_pcb_coating') * 50)
+        .outputs(metaitem('substrate.fr4.wet_masked'))
+        .EUt(VA[LV])
+        .duration(20)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    UV_LIGHT_BOX.recipeBuilder()
+        .notConsumable(metaitem('mask.pcb'))
+        .inputs(metaitem('substrate.fr4.wet_masked'))
+        .outputs(metaitem('substrate.fr4.mask_affixed'))
+        .EUt(VA[MV])
+        .duration(100)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    CURTAIN_COATER.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.mask_affixed'))
+        .fluidInputs(fluid('soda_ash_solution') * 100)
+        .outputs(metaitem('substrate.fr4.array'))
+        .fluidOutputs(fluid('wastewater') * 100)
+        .EUt(VA[LV])
+        .duration(80)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister();
+
+    CUTTING_MACHINE.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.array'))
+        .outputs(metaitem('substrate.fr4.cut') * 36)
+        .EUt(VA[MV])
+        .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)
         .buildAndRegister();

@@ -47,7 +47,7 @@ LCR.recipeBuilder()
 
 POLYMERIZATION_TANK.recipeBuilder()
     .inputs(ore('dustTinyOxalicAcid') * 2)
-    .inputs(ore('dustTwoNaphthol') * 1000)
+    .inputs(ore('dustTwoNaphthol'))
     .fluidInputs(fluid('formaldehyde') * 1500)
     .fluidInputs(fluid('phenol') * 1000)
     .fluidOutputs(fluid('naphthol_modified_phenolic_novolacs_oligomer') * 3500)

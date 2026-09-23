@@ -4,7 +4,6 @@ import gregtech.api.metatileentity.multiblock.CleanroomType
 import globals.semiconductors.Deposition
 import globals.semiconductors.Packaging
 
-oreDict.add('componentTransistor', metaitem('component.transistor.alloy_junction'))
 
 // Alloy-junction bipolar transistor (MV)
 

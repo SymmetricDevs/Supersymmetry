@@ -38,7 +38,7 @@ import static gregtech.api.unification.material.Materials.*;
     // Gas Centrifuge Heater
 
     ASSEMBLER.recipeBuilder()
-        .inputs(ore('springKanthal') * 4)
+        .inputs(ore('springNichrome') * 4)
         .inputs(ore('plateStainlessSteel') * 4)
         .inputs(ore('cableGtSingleAluminium') * 4)
         .inputs(ore('frameGtStainlessSteel'))
@@ -49,7 +49,7 @@ import static gregtech.api.unification.material.Materials.*;
         .buildAndRegister()
 
     RecyclingHelper.handleRecycling(item('supercritical:nuclear_casing', 1), [
-        ore('springKanthal') * 4,
+        ore('springNichrome') * 4,
         ore('plateStainlessSteel') * 4,
         ore('cableGtSingleAluminium') * 4,
         ore('frameGtStainlessSteel')
@@ -131,7 +131,7 @@ def fuels = [
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.ev'))
     .inputs(ore('circuitEv') * 16)
-    .inputs(ore('wireFineRedAlloy') * 16)
+    .inputs(ore('wireFineGold') * 16)
     .inputs(metaitem('sensor.ev') * 16)
     .inputs(ore('roundVanadiumSteel') * 64)
     .fluidInputs(fluid('soldering_alloy') * 1296)
@@ -144,7 +144,7 @@ ASSEMBLER.recipeBuilder()
 RecyclingHelper.handleRecycling(metaitem('supercritical:fission_reactor'), [
     metaitem('hull.ev'),
     ore('circuitEv') * 16,
-    ore('wireFineRedAlloy') * 16,
+    ore('wireFineGold') * 16,
     metaitem('sensor.ev') * 16,
     ore('roundVanadiumSteel') * 64,
     ore('ingotSolderingAlloy') * 9

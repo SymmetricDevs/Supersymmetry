@@ -3,13 +3,14 @@ package material
 import static material.SuSyMaterials.*
 import static globals.Globals.*
 
+import gregtech.api.fluids.FluidBuilder
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
 import gregtech.api.unification.material.properties.*
 import gregtech.api.unification.Elements
 import gregtech.api.GTValues
 import supersymmetry.api.util.SuSyUtility
-
+import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*
 import static gregtech.api.unification.material.info.MaterialIconSet.*
 import static gregtech.api.unification.material.info.MaterialFlags.*
 import static gregtech.api.unification.material.Materials.*
@@ -52,9 +53,9 @@ class IsotopeMaterials {
                 .build()
 
         WeaponsGradeUranium = new Material.Builder(31004, SuSyUtility.susyId("weapons_grade_uranium"))
-                .dust()
+                .dust().liquid(new FluidBuilder().temperature(1405))
                 .components(Uranium235 * 90, Uranium238 * 10)
-                .flags(DISABLE_DECOMPOSITION)
+                .flags(DISABLE_DECOMPOSITION, INDUCTION_MELT)
                 .color(0x0fe50e)
                 .build()
 

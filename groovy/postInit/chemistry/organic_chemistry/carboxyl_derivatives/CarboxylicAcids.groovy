@@ -151,7 +151,7 @@ SIEVE_DT.recipeBuilder()
 // Monsanto Process
 
 CRYSTALLIZER.recipeBuilder() // Source: Platinum Group Metals and Compounds Chapter in Ullmann's Encyclopedia of Industrial Chemistry https://doi.org/10.1002/14356007.a21_075
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('hexachlororhodic_acid_solution') * 8950)
     .fluidInputs(fluid('hydrochloric_acid') * 1500)
     .chancedOutput(metaitem('dustRhodiumIiiChlorideTrihydrate') * 7, 5000, 0)
@@ -208,7 +208,7 @@ BR.recipeBuilder() // Source: https://patents.justia.com/patent/20190337819
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('hexachloroiridic_iii_acid_solution') * 12000)
     .fluidInputs(fluid('hydrochloric_acid') * 1000)
     .outputs(metaitem('dustIridiumIiiChlorideTrihydrate') * 7)
@@ -336,7 +336,7 @@ CSTR.recipeBuilder()
         .notConsumable(fluid('nitric_acid') * 800)
         .notConsumable(ore('dustVanadiumPentoxide') * 7)
         .notConsumable(ore('dustIronIiiChloride') * 4)
-        .chancedOutputs(metaitem('dustOxalicAcid') * 8, 9000, 0)
+        .chancedOutput(metaitem('dustOxalicAcid') * 8, 9000, 0)
         .fluidOutputs(fluid('water') * 2000)
         .duration(120)
         .EUt(VA[HV])

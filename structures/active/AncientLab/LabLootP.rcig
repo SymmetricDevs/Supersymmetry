@@ -111,44 +111,6 @@
       }
     },
     {
-      "weight": 1.290178656578064,
-      "min": 1,
-      "max": 1,
-      "item": {
-        "id": "gregtech:meta_item_1",
-        "damage": 736,
-        "count": 1,
-        "tag": {
-          "nbtType": "compound",
-          "nbt": {
-            "Charge": {
-              "nbtType": "long",
-              "nbt": 420000
-            }
-          }
-        }
-      }
-    },
-    {
-      "weight": 1.290178656578064,
-      "min": 1,
-      "max": 1,
-      "item": {
-        "id": "gregtech:meta_item_1",
-        "damage": 735,
-        "count": 1,
-        "tag": {
-          "nbtType": "compound",
-          "nbt": {
-            "Charge": {
-              "nbtType": "long",
-              "nbt": 120000
-            }
-          }
-        }
-      }
-    },
-    {
       "weight": 1.1894346475601196,
       "min": 1,
       "max": 3,
@@ -160,8 +122,8 @@
     },
     {
       "weight": 0.5889394283294678,
-      "min": 3,
-      "max": 8,
+      "min": 1,
+      "max": 3,
       "item": {
         "id": "gregtech:meta_item_1",
         "damage": 627,

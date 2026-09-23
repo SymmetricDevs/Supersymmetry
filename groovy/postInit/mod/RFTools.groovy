@@ -113,32 +113,32 @@ crafting.replaceShaped('rftools:storage_module_2', item('rftools:storage_module'
 
 crafting.replaceShaped('rftools:redstone_transmitter_block', item('rftools:redstone_transmitter_block'), [
         [null, null, null],
-        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('emitter.lv')],
+        [metaitem('wireFineCopper'), ore('circuitLv'), metaitem('emitter.lv')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:redstone_receiver_block', item('rftools:redstone_receiver_block'), [
         [null, null, null],
-        [metaitem('sensor.lv'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
+        [metaitem('sensor.lv'), ore('circuitLv'), metaitem('wireFineCopper')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:sequencer_block', item('rftools:sequencer_block'), [
         [null, item('minecraft:redstone_torch'), null],
-        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineCopper'), ore('circuitLv'), metaitem('wireFineCopper')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:counter_block', item('rftools:counter_block'), [
         [null, item('minecraft:comparator'), null],
-        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineCopper'), ore('circuitLv'), metaitem('wireFineCopper')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:logic_block', item('rftools:logic_block'), [
-        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineCopper'), ore('circuitLv'), metaitem('wireFineCopper')],
         [item('minecraft:comparator'), metaitem('plateStone'), item('minecraft:comparator')],
-        [metaitem('wireFineRedAlloy'), item('minecraft:comparator'), metaitem('wireFineRedAlloy')]
+        [metaitem('wireFineCopper'), item('minecraft:comparator'), metaitem('wireFineCopper')]
 ])
 
 crafting.replaceShaped('rftools:invchecker_block', item('rftools:invchecker_block'), [
@@ -154,26 +154,26 @@ crafting.replaceShaped('rftools:sensor_block', item('rftools:sensor_block'), [
 ])
 
 crafting.replaceShaped('rftools:analog_block', item('rftools:analog_block'), [
-        [null, metaitem('wireFineRedAlloy'), null],
-        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
+        [null, metaitem('wireFineCopper'), null],
+        [metaitem('wireFineCopper'), ore('circuitLv'), metaitem('wireFineCopper')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:digit_block', item('rftools:digit_block'), [
         [null, ore('paneGlass'), null],
-        [metaitem('wireFineRedAlloy'), ore('circuitLv'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineCopper'), ore('circuitLv'), metaitem('wireFineCopper')],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:wire_block', item('rftools:wire_block'), [
         [null, null, null],
-        [null, metaitem('wireFineRedAlloy'), null],
+        [null, metaitem('wireFineCopper'), null],
         [null, metaitem('plateStone'), null]
 ])
 
 crafting.replaceShaped('rftools:timer_block', item('rftools:timer_block'), [
         [null, item('minecraft:comparator'), null],
-        [metaitem('wireFineRedAlloy'), item('minecraft:clock'), metaitem('wireFineRedAlloy')],
+        [metaitem('wireFineCopper'), item('minecraft:clock'), metaitem('wireFineCopper')],
         [null, metaitem('plateStone'), null]
 ])
 

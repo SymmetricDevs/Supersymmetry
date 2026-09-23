@@ -22,6 +22,7 @@ class Packaging {
     static void generateWireBondingRecipe(String input, String product, String wireMaterial, int duration, int voltageTier) {
         def builder = WIRE_BONDING.recipeBuilder()
             .inputs(metaitem(input))
+            .inputs(metaitem('component.leadframe'))
             .inputs(metaitem("wireFine" + wireMaterial.substring(0,1).toUpperCase() + wireMaterial.substring(1))) // ok i guess
         if (wireMaterial != "gold") {
             builder.fluidInputs(fluid('nitrogen') * 50)
