@@ -452,8 +452,17 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2864, "component.capacitor.edlc")
         addItem(2865, "component.thyristor.assembly")
         addItem(2866, "component.thyristor")
-
         addItem(2867, "circuit.power.iv")
+
+        addItem(2868, "component.capacitor.electrolytic.preanodized_foil")
+        addItem(2868, "component.capacitor.electrolytic.etched_foil")
+        addItem(2869, "component.capacitor.electrolytic.anode_foil")
+        addItem(2870, "component.capacitor.electrolytic.core")
+        addItem(2871, "component.capacitor.electrolytic")
+        addItem(2872, "component.resistor.metal_film.core.deposited")
+        addItem(2873, "component.resistor.metal_film.core.uncut")
+        addItem(2873, "component.resistor.metal_film.core")
+        addItem(2874, "component.resistor.metal_film")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")

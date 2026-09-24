@@ -32,9 +32,17 @@ class ThirdDegreeMaterials {
 
         log.infoMC('Registering Third Degree Materials!')
 
+        // Loan materials from organic materials, IDs kept to prevent transmutation.
+
         ZieglerNattaCatalyst = new Material.Builder(13025, SuSyUtility.susyId('ziegler_natta_catalyst'))
                 .dust()
                 .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
+                .colorAverage()
+                .build()
+
+        DimethylDioxaneSolution = new Material.Builder(13185, SuSyUtility.susyId('dimethyl_dioxane_solution'))
+                .liquid(new FluidBuilder().acidic())
+                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
                 .colorAverage()
                 .build()
 
@@ -65,12 +73,6 @@ class ThirdDegreeMaterials {
         AcidicFurfuralSolution = new Material.Builder(24003, SuSyUtility.susyId('acidic_furfural_solution'))
                 .liquid(new FluidBuilder().acidic())
                 .components(Furfural, SulfuricAcid, Water * 3)
-                .colorAverage()
-                .build()
-
-        DimethylDioxaneSolution = new Material.Builder(13185, SuSyUtility.susyId('dimethyl_dioxane_solution'))
-                .liquid(new FluidBuilder().acidic())
-                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
                 .colorAverage()
                 .build()
 
@@ -1046,6 +1048,14 @@ class ThirdDegreeMaterials {
                 .iconSet(DULL)
                 .build()
 
+        ElectrolyticCapacitorElectrolyte = new Material.Builder(24163, SuSyUtility.susyId("electrolytic_capacitor_electrolyte"))
+                .liquid()
+                .components(EthyleneGlycol * 100, PhosphoricAcid, Water * 140, AceticAcid * 10, AmmoniumAcetateSolution * 9)
+                .colorAverage()
+                .build()
+
+        // FREE IDs: 24164-24165
+
         GallicAcidSolution = genSolution(24166, 'gallic_acid_solution', GallicAcid, Water, true)
 
         StyreneAnthracenylMaleimideSolution = new Material.Builder(24167, SuSyUtility.susyId('styrene_anthracenyl_maleimide_solution'))
@@ -1481,8 +1491,7 @@ class ThirdDegreeMaterials {
         NitricOxalicAcidSolution = new Material.Builder(24252, SuSyUtility.susyId('nitric_oxalic_acid_solution'))
                 .liquid(new FluidBuilder().acidic())
                 .color(0xaeb382)
-                .build()     
-
+                .build()
 
         BoronExtractionMixture = new Material.Builder(24253, SuSyUtility.susyId('boron_extraction_mixture'))
                 .liquid()

@@ -2120,6 +2120,7 @@ class SuSyMaterials {
     public static Material LunarRGlass
     public static Material SGlass
     public static Material ALICE
+    public static Material PhosphoricChromicAcidSolution
 
     // Organic Chemistry Materials
 
@@ -3056,6 +3057,7 @@ class SuSyMaterials {
     public static Material FluoromethaneMixture
     public static Material NitratolacticAcidSolution
     public static Material NitricOxalicAcidSolution
+    public static Material ElectrolyticCapacitorElectrolyte
     public static Material SodiumPolyacrylateSolution
     public static Material ChloropreneEmulsion
     public static Material NeopreneLatex

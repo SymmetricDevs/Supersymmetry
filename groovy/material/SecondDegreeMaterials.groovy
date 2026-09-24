@@ -1140,7 +1140,11 @@ class SecondDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE ID: 13177
+        PhosphoricChromicAcidSolution = new Material.Builder(13177, SuSyUtility.susyId('phosphoric_chromic_acid_solution'))
+                .liquid(new FluidBuilder().acidic())
+                .components(ChromiumTrioxide, PhosphoricAcid * 4, Water * 35)
+                .colorAverage()
+                .build()
 
         YttriumAluminiumGarnetCerium = new Material.Builder(13178, SuSyUtility.susyId('yttrium_aluminium_garnet_cerium'))
                 .dust()

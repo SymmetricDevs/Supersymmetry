@@ -1,6 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import globals.semiconductors.Packaging
+import globals.semiconductors.Etching
 import globals.Sintering
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
@@ -13,7 +14,10 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), meta
 // SMD Capacitor * 24
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilTantalum')], [fluid('plastic') * 72])
 
-// Silver mica capacitors
+oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
+oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.film'))
+
+// Silver mica capacitors (LV)
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('foilSilver') * 2)
@@ -37,6 +41,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Plastic film capacitors (MV)
 
 
 EVAPORATION.recipeBuilder()
@@ -66,6 +71,78 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+// Aluminium electrolytic capacitors (HV)
+// anodization process from https://doi.org/10.1007/s12039-015-1006-8
+ELECTROLYZER.recipeBuilder()
+    .inputs(ore('foilAluminium') * 8)
+    .notConsumable(ore('coilPlatinum'))
+    .notConsumable(fluid('oxalic_acid_solution') * 1000)
+    .outputs(metaitem('component.capacitor.electrolytic.preanodized_foil') * 8)
+    .duration(200)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustChromiumTrioxide'))
+    .fluidInputs(fluid('phosphoric_acid') * 1250)
+    .fluidInputs(fluid('distilled_water') * 8750)
+    .fluidOutputs(fluid('phosphoric_chromic_acid_solution') * 10000)
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+CHEMICAL_BATH.recipeBuilder()
+    .inputs(metaitem('component.capacitor.electrolytic.preanodized_foil'))
+    .fluidInputs(fluid('phosphoric_chromic_acid_solution') * 10)
+    .outputs(metaitem('component.capacitor.electrolytic.preanodized_foil'))
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+ELECTROLYZER.recipeBuilder()
+    .inputs(metaitem('component.capacitor.electrolytic.etched_foil') * 8)
+    .notConsumable(ore('coilPlatinum'))
+    .notConsumable(fluid('diluted_phosphoric_acid') * 1000)
+    .outputs(metaitem('component.capacitor.electrolytic.anode_foil') * 8)
+    .duration(60)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .fluidInputs(fluid('ethylene_glycol') * 500)
+    .fluidInputs(fluid('phosphoric_acid') * 5)
+    .fluidInputs(fluid('water') * 700)
+    .fluidInputs(fluid('acetic_acid') * 50)
+    .fluidInputs(fluid('ammonium_acetate_solution') * 45)
+    .fluidOutputs(fluid('electrolytic_capacitor_electrolyte') * 1300)
+    .duration(40)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('component.capacitor.electrolytic.anode_foil'))
+    .inputs(metaitem('foilAluminium'))
+    .inputs(ore('paper') * 2)
+    .inputs(metaitem('wireFineAnnealedCopper') * 2)
+    .fluidInputs(fluid('electrolytic_capacitor_electrolyte') * 80)
+    .outputs(metaitem('component.capacitor.electrolytic.core'))
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('component.capacitor.electrolytic.core'))
+    .inputs(ore('ringRubber') * 4)
+    .inputs(ore('foilPlastic') * 2) 
+    .fluidInputs(fluid('soldering_alloy') * 72)
+    .outputs(metaitem('component.capacitor.electrolytic'))
+    .duration(20)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
+// "Supercapacitors: Concepts and advances"
+// (IOP, 2025), sections 4.13, 5.6, 5.7.
 
 
 // --- Electrode chain (book section 4.13) ---
