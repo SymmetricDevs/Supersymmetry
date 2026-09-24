@@ -3066,3 +3066,22 @@ MIXER.recipeBuilder()
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()
+
+// Sulfur Hexafluoride
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('sulfur') * 144)
+    .fluidInputs(fluid('fluorine') * 6000)
+    .fluidOutputs(fluid('crude_sulfur_hexafluoride') * 1000)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('crude_sulfur_hexafluoride') * 1000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+    .fluidOutputs(fluid('sulfur_hexafluoride') * 950)
+    .fluidoutputs(fluid('wastewater') * 3050)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
