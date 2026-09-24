@@ -3055,3 +3055,14 @@ MIXER.recipeBuilder()
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Forming Gas
+
+MIXER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('nitrogen') * 950)
+    .fluidInputs(fluid('hydrogen') * 50)
+    .fluidOutputs(fluid('forming_gas') * 1000)
+    .EUt(VA[MV])
+    .duration(100)
+    .buildAndRegister()
