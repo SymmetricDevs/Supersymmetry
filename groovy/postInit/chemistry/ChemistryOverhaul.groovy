@@ -3055,3 +3055,33 @@ MIXER.recipeBuilder()
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Forming Gas
+
+MIXER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('nitrogen') * 950)
+    .fluidInputs(fluid('hydrogen') * 50)
+    .fluidOutputs(fluid('forming_gas') * 1000)
+    .EUt(VA[MV])
+    .duration(100)
+    .buildAndRegister()
+
+// Sulfur Hexafluoride
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('sulfur') * 144)
+    .fluidInputs(fluid('fluorine') * 6000)
+    .fluidOutputs(fluid('crude_sulfur_hexafluoride') * 1000)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('crude_sulfur_hexafluoride') * 1000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+    .fluidOutputs(fluid('sulfur_hexafluoride') * 950)
+    .fluidoutputs(fluid('wastewater') * 3050)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()

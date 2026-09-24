@@ -1260,7 +1260,13 @@ class FirstDegreeMaterialsB {
                 .color(0x7a7350)
                 .build()
 
-        // Molybdenum disilicide for no reason
+        CrudeSulfurHexafluoride = new Material.Builder(8854, SuSyUtility.susyId('crude_sulfur_hexafluoride'))
+                .liquid()
+                .components(Sulfur, Fluorine * 6)
+                .color(0xccccff)
+                .build()
+
+
 
     }
 }

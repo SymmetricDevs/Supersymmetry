@@ -1814,6 +1814,7 @@ class SuSyMaterials {
     public static Material PalladiumNitrateSolution
     public static Material Ozone
     public static Material SulfurHexafluoride
+    public static Material CrudeSulfurHexafluoride
     public static Material CopperTungstenAlloy
     public static Material LanthanumZirconiumOxide
     public static Material PalladiumChloride

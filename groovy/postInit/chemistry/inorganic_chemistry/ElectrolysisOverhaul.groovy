@@ -241,3 +241,15 @@ ELECTROLYZER.recipeBuilder()
     .duration(300)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Ozone
+
+ELECTROLYZER.recipeBuilder()
+    .notConsumable(ore('dustLeadIvOxide'))
+    .notConsumable(ore('plateNafion'))
+    .fluidInputs(fluid('ultrapure_water') * 3000)
+    .fluidOutputs(fluid('ozone') * 1000)
+    .fluidOutputs(fluid('hydrogen') * 6000)
+    .duration(300)
+    .EUt(VA[EV])
+    .buildAndRegister()

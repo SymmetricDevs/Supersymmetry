@@ -32,6 +32,24 @@ class ThirdDegreeMaterials {
 
         log.infoMC('Registering Third Degree Materials!')
 
+        ZieglerNattaCatalyst = new Material.Builder(13025, SuSyUtility.susyId('ziegler_natta_catalyst'))
+                .dust()
+                .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
+                .colorAverage()
+                .build()
+
+        DimethylDioxaneSolution = new Material.Builder(13185, SuSyUtility.susyId('dimethyl_dioxane_solution'))
+                .liquid(new FluidBuilder().acidic())
+                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
+                .colorAverage()
+                .build()
+
+        IsopreneSolution = new Material.Builder(13186, SuSyUtility.susyId('isoprene_solution'))
+                .liquid()
+                .components(Water, Isoprene, Formaldehyde)
+                .colorAverage()
+                .build()
+
         DiethylEtherSolution = new Material.Builder(24000, SuSyUtility.susyId('diethyl_ether_solution'))
                 .liquid(new FluidBuilder().acidic())
                 .components(material('diethyl_ether'), SulfuricAcid, Water)
@@ -53,12 +71,6 @@ class ThirdDegreeMaterials {
         AcidicFurfuralSolution = new Material.Builder(24003, SuSyUtility.susyId('acidic_furfural_solution'))
                 .liquid(new FluidBuilder().acidic())
                 .components(Furfural, SulfuricAcid, Water * 3)
-                .colorAverage()
-                .build()
-
-        DimethylDioxaneSolution = new Material.Builder(13185, SuSyUtility.susyId('dimethyl_dioxane_solution'))
-                .liquid(new FluidBuilder().acidic())
-                .components(SulfuricAcid, DimethylOneThreeDioxane, Water)
                 .colorAverage()
                 .build()
 
@@ -947,11 +959,56 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE IDs: 24150-24155
-
-        ElectrolyticCapacitorElectrolyte = new Material.Builder(24156, SuSyUtility.susyId("electrolytic_capacitor_electrolyte"))
+        PolycaprolactamSolution = new Material.Builder(24150, SuSyUtility.susyId('polycaprolactam_solution'))
                 .liquid()
-                .components(EthyleneGlycol * 100, PhosphoricAcid, Water * 140, AceticAcid * 10, AmmoniumAcetateSolution * 9)
+                .components(Caprolactam * 1, Tetrahydrofuran * 1)
+                .color(0x66696e)
+                .colorAverage()
+                .build()
+
+      
+        NafionDispersion = new Material.Builder(24151, SuSyUtility.susyId('nafion_dispersion'))
+                .liquid()
+                .components(Nafion, IsopropylAlcohol)
+                .color(0xcfccb0)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+
+        TrimethylGalliumSolution = new Material.Builder(24152, SuSyUtility.susyId('trimethyl_gallium_solution'))
+                .liquid()
+                .components(TrimethylGallium, Toluene)
+                .color(0x424242)
+                .build()
+
+        TrimethylGalliumSolution.setFormula('Ga(CH3)33(C6H5CH3)', true)
+
+        TrimethylIndiumSolution = new Material.Builder(24153, SuSyUtility.susyId('trimethyl_indium_solution'))
+                .liquid()
+                .components(TrimethylIndium, Toluene)
+                .color(0x3b2f61)
+                .build()
+
+        TrimethylIndiumSolution.setFormula('In(CH3)3(C6H5CH3)', true)
+
+        DiallyldimethylammoniumChlorideSolution = new Material.Builder(24154, SuSyUtility.susyId('diallyldimethylammonium_chloride_solution'))
+                .liquid()
+                .components(DiallyldimethylammoniumChloride, Water)
+                .colorAverage()
+                .build()
+
+        DiallyldimethylammoniumChlorideSolution.setFormula('(C8H16NCl)(H2O)', true)
+        
+        PolydiallyldimethylammoniumChlorideSolution = new Material.Builder(24155, SuSyUtility.susyId('polydiallyldimethylammonium_chloride_solution'))
+                .liquid()
+                .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine, Water)
+                .color(0x77FFA9)
+                .build()
+
+        PolydiallyldimethylammoniumChlorideSolution.setFormula('([C8H16NCl]n)(H2O)', true)
+
+        PetroleumResinSolution = new Material.Builder(24156, SuSyUtility.susyId('petroleum_resin_solution'))
+                .liquid()
+                .components(PetroleumResin * 1, Benzene * 1)
                 .colorAverage()
                 .build()
 
@@ -989,7 +1046,13 @@ class ThirdDegreeMaterials {
                 .iconSet(DULL)
                 .build()
 
-        // FREE IDs: 24163-24165
+        ElectrolyticCapacitorElectrolyte = new Material.Builder(24163, SuSyUtility.susyId("electrolytic_capacitor_electrolyte"))
+                .liquid()
+                .components(EthyleneGlycol * 100, PhosphoricAcid, Water * 140, AceticAcid * 10, AmmoniumAcetateSolution * 9)
+                .colorAverage()
+                .build()
+
+        // FREE IDs: 24164-24165
 
         GallicAcidSolution = genSolution(24166, 'gallic_acid_solution', GallicAcid, Water, true)
 
@@ -1057,13 +1120,7 @@ class ThirdDegreeMaterials {
 
         HexamethyldisilazaneSolution = genSolution(24177, "hexamethyldisilazane_solution", Hexamethyldisilazane, Hexane, false)
 
-        PolyhydroxystyreneResist = new Material.Builder(24178, SuSyUtility.susyId('polyhydroxystyrene_resist'))
-                .liquid()
-                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, Triethanolamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
-                .colorAverage()
-                .build()
-
-        PolyhydroxystyreneResist.setFormula('(?)(C6H10O3)3(C4H10O2)', true)
+        PropyleneGlycolMethylEtherAcetateSolution = genSolution(24178, 'propylene_glycol_methyl_ether_acetate_solution', PropyleneGlycolMethylEtherAcetate, Water, false)
 
         StyreneMaleicAnhydrideSolution = new Material.Builder(24179, SuSyUtility.susyId('styrene_maleic_anhydride_solution'))
                 .liquid()
@@ -1074,13 +1131,6 @@ class ThirdDegreeMaterials {
         AcidicParaTertButylnitrobenzeneMixture = new Material.Builder(24180, SuSyUtility.susyId('acidic_para_tert_butylnitrobenzene_mixture'))
                 .liquid(new FluidBuilder().acidic())
                 .components(ParaTertButylnitrobenzeneMixture, SulfuricAcid, Water)
-                .colorAverage()
-                .build()
-
-        PolycaprolactamSolution = new Material.Builder(24150, SuSyUtility.susyId('polycaprolactam_solution'))
-                .liquid()
-                .components(Caprolactam * 1, Tetrahydrofuran * 1)
-                .color(0x66696e)
                 .colorAverage()
                 .build()
 
@@ -1359,52 +1409,7 @@ class ThirdDegreeMaterials {
 
         ArFBottomAntireflectiveCoating.setFormula('(?)(C6H12O3)', true)
 
-        IsopreneSolution = new Material.Builder(24232, SuSyUtility.susyId('isoprene_solution'))
-                .liquid()
-                .components(Water, Isoprene, Formaldehyde)
-                .colorAverage()
-                .build()
-
         DiethylammoniumChlorideSolution = genSolution(24233, 'diethylammonium_chloride_solution', DiethylammoniumChloride, Water, false)
-
-        NafionDispersion = new Material.Builder(24234, SuSyUtility.susyId('nafion_dispersion'))
-                .liquid()
-                .components(Nafion, IsopropylAlcohol)
-                .color(0xcfccb0)
-                .flags(DISABLE_DECOMPOSITION)
-                .build()
-
-        TrimethylGalliumSolution = new Material.Builder(24235, SuSyUtility.susyId('trimethyl_gallium_solution'))
-                .liquid()
-                .components(TrimethylGallium, Toluene)
-                .color(0x424242)
-                .build()
-
-        TrimethylGalliumSolution.setFormula('Ga(CH3)33(C6H5CH3)', true)
-
-        TrimethylIndiumSolution = new Material.Builder(24236, SuSyUtility.susyId('trimethyl_indium_solution'))
-                .liquid()
-                .components(TrimethylIndium, Toluene)
-                .color(0x3b2f61)
-                .build()
-
-        TrimethylIndiumSolution.setFormula('In(CH3)3(C6H5CH3)', true)
-
-        DiallyldimethylammoniumChlorideSolution = new Material.Builder(24237, SuSyUtility.susyId('diallyldimethylammonium_chloride_solution'))
-                .liquid()
-                .components(DiallyldimethylammoniumChloride, Water)
-                .colorAverage()
-                .build()
-
-        DiallyldimethylammoniumChlorideSolution.setFormula('(C8H16NCl)(H2O)', true)
-        
-        PolydiallyldimethylammoniumChlorideSolution = new Material.Builder(24238, SuSyUtility.susyId('polydiallyldimethylammonium_chloride_solution'))
-                .liquid()
-                .components(Carbon * 8, Hydrogen * 16, Nitrogen, Chlorine, Water)
-                .color(0x77FFA9)
-                .build()
-
-        PolydiallyldimethylammoniumChlorideSolution.setFormula('([C8H16NCl]n)(H2O)', true)
 
         PyridiniumTosylateSolution = genSolution(24239, 'pyridinium_tosylate_solution', PyridiniumTosylate, Water, false)
 
@@ -1470,12 +1475,6 @@ class ThirdDegreeMaterials {
                 .color(0x0d0a18)
                 .build()
 
-        ZieglerNattaCatalyst = new Material.Builder(13025, SuSyUtility.susyId('ziegler_natta_catalyst'))
-                .dust()
-                .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
-                .colorAverage()
-                .build()
-
         FluoromethaneMixture = new Material.Builder(24250, SuSyUtility.susyId('fluoromethane_mixture'))
                 .gas(new FluidBuilder().acidic())
                 .components(Fluoromethane, HydrogenChloride)
@@ -1491,9 +1490,7 @@ class ThirdDegreeMaterials {
                 .liquid(new FluidBuilder().acidic())
                 .color(0xaeb382)
                 .build()
-                .colorAverage()
-                .build()
-      
+
         BoronExtractionMixture = new Material.Builder(24253, SuSyUtility.susyId('boron_extraction_mixture'))
                 .liquid()
                 .components(TwoEthylOneThreeHexanediol, Kerosene)
@@ -1503,13 +1500,18 @@ class ThirdDegreeMaterials {
         PolyhydroxystyreneSolution = genSolution(24254, 'polyhydroxystyrene_solution', Polyhydroxystyrene, Dimethylformamide, false)
         DiTertButylDicarbonateSolution = genSolution(24255, 'di_tert_butyl_dicarbonate_solution', DiTertButylDicarbonate, PotassiumChlorideSolution, false)
         ParaEthylbenzenesulfonicAcidSolution = genSolution(24256, 'para_ethylbenzenesulfonic_acid_solution', ParaEthylbenzenesulfonicAcid, Water, true)
-        PropyleneGlycolMethylEtherAcetateSolution = genSolution(24257, 'propylene_glycol_methyl_ether_acetate_solution', PropyleneGlycolMethylEtherAcetate, Water, false)
         EthylLactateSolution = genSolution(24258, 'ethyl_lactate_solution', EthylLactate, Water, false)
         BisAzideCrosslinkerSolution = genSolution(24259, 'bis_azide_crosslinker_solution', BisAzideCrosslinker, Water, false)
         ParaAzidobenzaldehydeSolution = genSolution(24260, 'para_azidobenzaldehyde_solution', ParaAzidobenzaldehyde, SaltWater, false)
         NaphthalenedisulfonicAcidSolution = genSolution(24261, 'naphthalenedisulfonic_acid_solution', Naphthalene, Oleum, true)
         SodiumNaphtholSulfonateSolution = genSolution(24262, "sodium_naphthol_sulfonate_solution", SodiumOneNaphtholFiveSulfonate, Water, false)
 
+        PolyhydroxystyreneResist = new Material.Builder(24263, SuSyUtility.susyId('polyhydroxystyrene_resist'))
+                .liquid()
+                .components(ProtectedPolyhydroxystyrene, TriphenylsulfoniumTriflate, Triethanolamine, PropyleneGlycolMethylEtherAcetateSolution * 3, PropyleneGlycolMethylEtherAcetate)
+                .colorAverage()
+                .build()
 
+        PolyhydroxystyreneResist.setFormula('(?)(C6H10O3)3(C4H10O2)', true)
     }
 }
