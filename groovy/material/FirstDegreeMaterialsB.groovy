@@ -1260,7 +1260,7 @@ class FirstDegreeMaterialsB {
                 .color(0x7a7350)
                 .build()
 
-        CrudeSulfurHexafluoride = new Material.Builder(8848, SuSyUtility.susyId('crude_sulfur_hexafluoride'))
+        CrudeSulfurHexafluoride = new Material.Builder(8854, SuSyUtility.susyId('crude_sulfur_hexafluoride'))
                 .liquid()
                 .components(Sulfur, Fluorine * 6)
                 .color(0xccccff)
