@@ -2119,6 +2119,7 @@ class SuSyMaterials {
     public static Material LunarRGlass
     public static Material SGlass
     public static Material ALICE
+    public static Material PhosphoricChromicAcidSolution
 
     // Organic Chemistry Materials
 

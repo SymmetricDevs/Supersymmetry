@@ -454,6 +454,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2866, "component.thyristor")
         addItem(2867, "circuit.power.iv")
 
+        addItem(2868, "component.capacitor.electrolytic.preanodized_foil")
         addItem(2868, "component.capacitor.electrolytic.etched_foil")
         addItem(2869, "component.capacitor.electrolytic.anode_foil")
         addItem(2870, "component.capacitor.electrolytic.core")

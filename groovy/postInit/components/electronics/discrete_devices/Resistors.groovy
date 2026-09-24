@@ -140,7 +140,7 @@ CUTTER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem("component.resistor.metal_film.core"))
     .inputs(metaitem("wireFineCopper") * 2)
-    .fluidInputs(fluid('tin') * 16)
+    .fluidInputs(fluid('high_temperature_solder') * 16)
     .fluidInputs(fluid('epoxy') * 16)
     .outputs(metaitem('component.resistor.metal_film'))
 

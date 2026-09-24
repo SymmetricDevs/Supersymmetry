@@ -3392,6 +3392,7 @@ susy.material.haynes_230=Haynes 230
 susy.material.uranium_molybdenum_alloy=Uranium-Molybdenum Alloy
 susy.material.aerozine_50=Aerozine 50
 susy.material.mon_3=MON-3
+susy.material.phosphoric_chromic_acid_solution=Phosphoric-Chromic Acid Solution
 
 # Isotopes
 
@@ -4018,7 +4019,7 @@ metaitem.low_pressure_steam_turbine_blade.name=Low-Pressure Steam Turbine Blade
 metaitem.sputtering_magnetron.name=Sputtering Magnetron
 metaitem.graphite_paper.name=Graphite Paper
 metaitem.s_glass_fibers.name=S-Glass Fibers
-metaitem.component.capacitor.electrolytic.first_anodization.name=Preanodized Aluminium Foil
+metaitem.component.capacitor.electrolytic.preanodized_foil.name=Preanodized Aluminium Foil
 metaitem.component.capacitor.electrolytic.etched_foil.name=Etched Aluminium Foil
 metaitem.component.capacitor.electrolytic.anode_foil.name=Nanoporous Aluminium Anode Foil
 metaitem.component.capacitor.electrolytic.core.name=Aluminium Electrolytic Capacitor Core 
