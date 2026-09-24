@@ -179,11 +179,17 @@ MetaTileEntityFederationReinforcementBeacon.fedPostSpawnModifier = { mob ->
     ]
 
     String chosen = weapons[(int) (Math.random() * weapons.length)]
-    Item weaponItem = Item.REGISTRY.getObject(new ResourceLocation(chosen))
 
-    if (weaponItem != null) {
-        ItemStack weaponStack = new ItemStack(weaponItem, 1)
-        mob.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, weaponStack)
-        mob.setDropChance(EntityEquipmentSlot.MAINHAND, 0.085F)
-    }
+    NBTTagCompound nbt = new NBTTagCompound()
+    def hands = new NBTTagList()
+
+    def main = new NBTTagCompound()
+    main.setString("id", chosen)
+    main.setByte("Count", (byte)1)
+
+    hands.appendTag(main)
+    hands.appendTag(new NBTTagCompound())
+
+    nbt.setTag("HandItems", hands)
+    mob.readEntityFromNBT(nbt)
 }
