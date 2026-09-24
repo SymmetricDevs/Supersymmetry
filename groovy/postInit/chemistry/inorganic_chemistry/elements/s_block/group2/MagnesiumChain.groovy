@@ -33,7 +33,7 @@ ERF.recipeBuilder()
         .fluidOutputs(fluid('magnesium') * 288)
         .EUt(VA[LV])
         .duration(200)
-        .blastFurnaceTemp(1370)
+        .blastFurnaceTemp(800)
         .buildAndRegister()
 
 ERF.recipeBuilder()
@@ -44,7 +44,7 @@ ERF.recipeBuilder()
         .fluidOutputs(fluid('magnesium') * 288)
         .EUt(VA[LV])
         .duration(200)
-        .blastFurnaceTemp(1370)
+        .blastFurnaceTemp(800)
         .buildAndRegister()
 
 for (combustible in Carbons.combustibles()) {
@@ -56,7 +56,7 @@ for (combustible in Carbons.combustibles()) {
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
         .EUt(VA[MV])
         .duration(20 * combustible.duration)
-        .blastFurnaceTemp(2500)
+        .blastFurnaceTemp(1400)
         .buildAndRegister()
 }
 
@@ -94,7 +94,7 @@ REACTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 LCR.recipeBuilder()
-        .inputs(ore('dustMagnesite') * 5)
+        .inputs(ore('dustMagnesite') * 1)
         .fluidInputs(fluid('hydrochloric_acid') * 2000)
         .fluidOutputs(fluid('magnesium_chloride_solution') * 2000)
         .fluidOutputs(fluid('carbon_dioxide') * 1000)

@@ -151,7 +151,7 @@ SIEVE_DT.recipeBuilder()
 // Monsanto Process
 
 CRYSTALLIZER.recipeBuilder() // Source: Platinum Group Metals and Compounds Chapter in Ullmann's Encyclopedia of Industrial Chemistry https://doi.org/10.1002/14356007.a21_075
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('hexachlororhodic_acid_solution') * 8950)
     .fluidInputs(fluid('hydrochloric_acid') * 1500)
     .chancedOutput(metaitem('dustRhodiumIiiChlorideTrihydrate') * 7, 5000, 0)
@@ -208,7 +208,7 @@ BR.recipeBuilder() // Source: https://patents.justia.com/patent/20190337819
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('hexachloroiridic_iii_acid_solution') * 12000)
     .fluidInputs(fluid('hydrochloric_acid') * 1000)
     .outputs(metaitem('dustIridiumIiiChlorideTrihydrate') * 7)
@@ -324,4 +324,85 @@ CSTR.recipeBuilder()
         .fluidOutputs(fluid('caprylic_acid') * 75)
         .duration(80)
         .EUt(VA[LV])
+        .buildAndRegister()
+
+// Oxalic acid
+
+    // From ethylene glycol
+
+    LCR.recipeBuilder()
+        .fluidInputs(fluid('ethylene_glycol') * 1000)
+        .fluidInputs(fluid('oxygen') * 4000)
+        .notConsumable(fluid('nitric_acid') * 800)
+        .notConsumable(ore('dustVanadiumPentoxide') * 7)
+        .notConsumable(ore('dustIronIiiChloride') * 4)
+        .chancedOutput(metaitem('dustOxalicAcid') * 8, 9000, 0)
+        .fluidOutputs(fluid('water') * 2000)
+        .duration(120)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
+    // From biomass
+
+    AUTOCLAVE.recipeBuilder()
+        .inputs(ore('dustWood'))
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('crude_sodium_oxalate_solution') * 1000)
+        .duration(600) //intentionally terrible to promote use of the LCR recipe
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    CRYSTALLIZER.recipeBuilder()
+        .inputs(ore('dustCalciumHydroxide') * 5)
+        .fluidInputs(fluid('crude_sodium_oxalate_solution') * 1000)
+        .chancedOutput(metaitem('dustCalciumOxalate') * 7, 5000, 0)
+        .fluidOutputs(fluid('wastewater') * 1000)
+        .duration(200)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .inputs(ore('dustCalciumOxalate') * 7)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .outputs(metaitem('dustCalciumSulfate') * 6)
+        .fluidOutputs(fluid('oxalic_acid_solution') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('oxalic_acid_solution') * 1000)
+        .outputs(metaitem('dustOxalicAcid') * 8)
+        .duration(20)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
+    // From propylene
+
+    BCR.recipeBuilder()
+        .fluidInputs(fluid('propylene') * 50)
+        .fluidInputs(fluid('diluted_nitric_acid') * 300)
+        .fluidOutputs(fluid('nitratolactic_acid_solution') * 250)
+        .fluidOutputs(fluid('nitric_oxide') * 100)
+        .duration(10)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    BCR.recipeBuilder()
+        .fluidInputs(fluid('oxygen') * 250)
+        .fluidInputs(fluid('nitratolactic_acid_solution') * 250)
+        .fluidInputs(fluid('chromium_iii_nitrate_solution') * 1) // small amount of catalyst
+        .fluidOutputs(fluid('nitric_oxalic_acid_solution') * 150)
+        .fluidOutputs(fluid('carbon_dioxide') * 50)
+        .duration(10)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    CRYSTALLIZER.recipeBuilder()
+        .notConsumable(ore('springCupronickel'))
+        .fluidInputs(fluid('nitric_oxalic_acid_solution') * 3000)
+        .chancedOutput(metaitem('dustOxalicAcid') * 8, 9000, 0)
+        .fluidOutputs(fluid('acidic_wastewater') * 3000)
+        .duration(10)
+        .EUt(VA[MV])
         .buildAndRegister()

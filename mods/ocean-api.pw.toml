@@ -1,0 +1,13 @@
+name = "Ocean API"
+filename = "Ocean-API-v1.0.1-mc1.12.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "38045c8926bfd9189f1392ebb698280f8632b067"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8521103
+project-id = 1553824

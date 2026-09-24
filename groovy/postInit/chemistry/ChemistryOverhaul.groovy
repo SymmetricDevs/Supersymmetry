@@ -259,8 +259,8 @@ ROASTER.recipeBuilder()
 // Antimony Trioxide roaster
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('oxygen') * 3000)
-    .inputs(ore('dustAnyPurityAntimony'))
-    .outputs(metaitem('dustAntimonyTrioxide'))
+    .inputs(ore('dustAnyPurityAntimony') * 2)
+    .outputs(metaitem('dustAntimonyTrioxide') * 5)
     .duration(60)
     .EUt(VA[ULV])
     .buildAndRegister()
@@ -335,20 +335,10 @@ ROASTER.recipeBuilder()
     .buildAndRegister()
 
 ROASTER.recipeBuilder()
-    .circuitMeta(1)
     .inputs(ore('dustPotassiumBisulfate') * 14)
     .outputs(metaitem('dustPotassiumSulfate') * 7)
     .fluidOutputs(fluid('dense_steam') * 1000)
     .fluidOutputs(fluid('sulfur_trioxide') * 1000)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
-ROASTER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(ore('dustPotassiumBisulfate') * 14)
-    .outputs(metaitem('dustPotassiumPyrosulfate') * 11)
-    .fluidOutputs(fluid('dense_steam') * 1000)
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
@@ -592,7 +582,7 @@ CHEMICAL_BATH.recipeBuilder()
     .EUt(540)
     .buildAndRegister()
 
-// Leblanc process
+// Mannheim process
 
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid') * 1000)
@@ -602,6 +592,17 @@ ROASTER.recipeBuilder()
     .duration(60)
     .EUt(VA[LV])
     .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_acid') * 1000)
+    .inputs(ore('dustRockSalt') * 4)
+    .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+    .outputs(metaitem('dustPotassiumSulfate') * 7)
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Leblanc process
 
 ROASTER.recipeBuilder()
     .inputs(ore('dustSodiumSulfide') * 3)
@@ -825,6 +826,16 @@ VACUUM_FREEZER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
+// MON-3
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('dinitrogen_tetroxide') * 1000)
+    .fluidInputs(fluid('nitric_oxide') * 100)
+    .fluidOutputs(fluid('mon_3') * 1000)
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
 // 1,1-dimethylhydrazine
 
 CSTR.recipeBuilder()
@@ -919,7 +930,7 @@ BCR.recipeBuilder()
 // Chloronitrobenzenes
 
 CSTR.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('chlorobenzene') * 50)
     .fluidInputs(fluid('nitration_mixture') * 100)
     .fluidOutputs(fluid('acidic_chloronitrobenzene_mixture') * 100)
@@ -1362,14 +1373,6 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('diluted_potassium_chloride_solution') * 2000)
     .EUt(VA[LV])
     .duration(160)
-    .buildAndRegister()
-
-DT.recipeBuilder()
-    .fluidInputs(fluid('diluted_potassium_chloride_solution') * 2000)
-    .fluidOutputs(fluid('potassium_chloride_solution') * 1000)
-    .fluidOutputs(fluid('water') * 1000)
-    .EUt(16)
-    .duration(60)
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
@@ -2400,18 +2403,7 @@ DT.recipeBuilder() // SCHULZ-FLORY, p = 0.82, ROUNDED TO NEAREST 5
     .EUt(VA[HV])
     .buildAndRegister()
 
-//OXALIC ACID
-LCR.recipeBuilder()
-    .fluidInputs(fluid('ethylene_glycol') * 1000)
-    .fluidInputs(fluid('oxygen') * 4000)
-    .notConsumable(fluid('nitric_acid') * 800)
-    .notConsumable(ore('dustVanadiumPentoxide') * 7)
-    .notConsumable(ore('dustIronIiiChloride') * 4)
-    .outputs(metaitem('dustOxalicAcid') * 8)
-    .fluidOutputs(fluid('water') * 2000)
-    .duration(120)
-    .EUt(VA[HV])
-    .buildAndRegister()
+
 
 //ANILINE
 CSTR.recipeBuilder()
@@ -3052,4 +3044,44 @@ DISTILLERY.recipeBuilder()
     .fluidOutputs(fluid('water') * 2000)
     .duration(100)
     .EUt(VA[LV])
+    .buildAndRegister()
+
+// Ammonium Fluoride
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustAmmoniumFluoride') * 6)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('ammonium_fluoride_solution') * 1000)
+    .duration(60)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Forming Gas
+
+MIXER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('nitrogen') * 950)
+    .fluidInputs(fluid('hydrogen') * 50)
+    .fluidOutputs(fluid('forming_gas') * 1000)
+    .EUt(VA[MV])
+    .duration(100)
+    .buildAndRegister()
+
+// Sulfur Hexafluoride
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('sulfur') * 144)
+    .fluidInputs(fluid('fluorine') * 6000)
+    .fluidOutputs(fluid('crude_sulfur_hexafluoride') * 1000)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+BCR.recipeBuilder()
+    .fluidInputs(fluid('crude_sulfur_hexafluoride') * 1000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+    .fluidOutputs(fluid('sulfur_hexafluoride') * 950)
+    .fluidoutputs(fluid('wastewater') * 3050)
+    .duration(200)
+    .EUt(VA[MV])
     .buildAndRegister()

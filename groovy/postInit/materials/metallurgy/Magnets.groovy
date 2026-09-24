@@ -86,7 +86,7 @@ ERF.recipeBuilder()
     .inputs(ore('dustZincOxide') * 2)
     .inputs(ore('dustNickelIiOxide') * 2)
     .outputs(metaitem('ingotNickelZincFerrite') * 14)
-    .blastFurnaceTemp(1200)
+    .blastFurnaceTemp(800)
     .duration(300)
     .EUt(60)
     .buildAndRegister()
@@ -96,7 +96,7 @@ ERF.recipeBuilder()
     .inputs(ore('dustZincOxide') * 2)
     .inputs(ore('dustManganeseIiOxide') * 2)
     .outputs(metaitem('ingotManganeseZincFerrite') * 14)
-    .blastFurnaceTemp(1200)
+    .blastFurnaceTemp(800)
     .duration(300)
     .EUt(60)
     .buildAndRegister()
@@ -106,7 +106,7 @@ ERF.recipeBuilder()
     .inputs(ore('dustBariumCarbonate') * 5)
     .outputs(metaitem('ingotBariumFerrite') * 32)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
-    .blastFurnaceTemp(1200)
+    .blastFurnaceTemp(800)
     .duration(100)
     .EUt(60)
     .buildAndRegister()
@@ -116,9 +116,26 @@ ERF.recipeBuilder()
     .inputs(ore('dustStrontiumCarbonate') * 5)
     .outputs(metaitem('ingotStrontiumFerrite') * 32)
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
-    .blastFurnaceTemp(1200)
+    .blastFurnaceTemp(800)
     .duration(100)
     .EUt(60)
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore('dustIronIiiOxide') * 30)
+    .inputs(ore('dustStrontiumOxide') * 2)
+    .outputs(metaitem('ingotStrontiumFerrite') * 32)
+    .requireVacuum() // reminder to update your susycore (bc SrO would be hydrated and then carbonated IRL)
+    .duration(100)
+    .EUt(7500)
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore('dustHematite') * 6)
+    .inputs(ore('dustStrontiumOxide') * 2)
+    .outputs(metaitem('ingotStrontiumFerrite') * 32)
+    .duration(100)
+    .EUt(7500)
     .buildAndRegister()
 
 // Permendur
@@ -148,11 +165,12 @@ MIXER.recipeBuilder()
 // Neodymium magnets (IV)
 
 MIXER.recipeBuilder()
-    .inputs(ore('dustNeodymium') * 2)
-    .inputs(ore('dustIron') * 14)
-    .inputs(ore('dustBoron') * 1)
-    .outputs(metaitem('dustNeodymiumAlloy') * 17)
-    .duration(400)
+    .inputs(ore('dustNeodymium') * 3)
+    .inputs(ore('dustPraseodymium'))
+    .inputs(ore('dustIron') * 28)
+    .inputs(ore('dustBoron') * 2)
+    .outputs(metaitem('dustNeodymiumAlloy') * 34)
+    .duration(800)
     .EUt(VA[EV])
     .buildAndRegister();
 
@@ -217,6 +235,13 @@ for (material in materials) {
         .duration(80)
         .EUt(VA[IV])
         .buildAndRegister();
+
+    POLARIZER.recipeBuilder() 
+        .inputs(ore(material + 'StrontiumFerrite'))
+        .outputs(metaitem(material + 'StrontiumFerriteMagnetic'))
+        .duration(80)
+        .EUt(16)
+        .buildAndRegister();
 }
 
 // Samarium-cobalt magnets (LuV)
@@ -247,9 +272,9 @@ mods.gregtech.polarizer.removeByInput(4096, [metaitem('ingotSamarium')], null)
 mods.gregtech.polarizer.removeByInput(16, [metaitem('screwIron')], null)
 
 crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.ev', metaitem('electromagnetic_separator.ev'), [
-    [metaitem('conveyor.module.ev'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')],
+    [metaitem('conveyor.module.ev'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleKanthal')],
     [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('stickAlnicoMagnetic')],
-    [ore('circuitEv'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleNichrome')]
+    [ore('circuitEv'), metaitem('cableGtSingleAluminium'), metaitem('wireGtQuadrupleKanthal')]
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.iv', metaitem('electromagnetic_separator.iv'), [
@@ -259,9 +284,9 @@ crafting.replaceShaped('gregtech:gregtech.machine.electromagnetic_separator.iv',
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.ev', metaitem('polarizer.ev'), [
-    [metaitem('wireGtQuadrupleNichrome'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleNichrome')],
+    [metaitem('wireGtQuadrupleKanthal'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleKanthal')],
     [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],
-    [metaitem('wireGtQuadrupleNichrome'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleNichrome')]
+    [metaitem('wireGtQuadrupleKanthal'), metaitem('stickAlnicoMagnetic'), metaitem('wireGtQuadrupleKanthal')]
 ])
 
 crafting.replaceShaped('gregtech:gregtech.machine.polarizer.iv', metaitem('polarizer.iv'), [

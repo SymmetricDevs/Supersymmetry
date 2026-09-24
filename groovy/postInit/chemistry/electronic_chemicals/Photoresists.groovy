@@ -1,5 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 // HMDS resist adhesion promoter
 
@@ -1061,7 +1062,7 @@ DT.recipeBuilder()
             .fluidInputs(fluid('butanone') * 1000)
             .fluidInputs(fluid('isopropyl_thiol') * 50)
             .fluidInputs(fluid('alpha_methacryloxy_gamma_butyrolactone') * 1000)
-            .inputs(ore('dustTwoMethylTwoAdamantylMethacrylate'))
+            .fluidInputs(fluid('two_methyl_two_adamantyl_methacrylate') * 1000)
             .inputs(ore('dustOneAdamantylMethacrylate'))
             .fluidOutputs(fluid('methacrylate_terpolymer_solution') * 1000)
             .duration(400)

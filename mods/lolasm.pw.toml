@@ -1,13 +1,13 @@
-name = "CensoredASM"
-filename = "loliasm-5.31.jar"
+name = "Chibi"
+filename = "loliasm-5.33.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "77d556456ffe96271d02b3bb7e74d88f930297c5"
+hash = "71eea31ddedc783b02bee6490d4c1f3aae10cc9c"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7671063
+file-id = 8225778
 project-id = 460609

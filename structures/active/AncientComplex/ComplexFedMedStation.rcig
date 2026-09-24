@@ -23,8 +23,8 @@
     },
     {
       "weight": 4.333380699157715,
-      "min": 18,
-      "max": 53,
+      "min": 8,
+      "max": 18,
       "item": {
         "id": "gregtechfoodoption:gtfo_meta_item",
         "damage": 230,

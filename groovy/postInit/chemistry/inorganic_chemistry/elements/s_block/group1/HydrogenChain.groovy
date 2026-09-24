@@ -6,7 +6,7 @@ ERF.recipeBuilder()
     .outputs(metaitem('dustCeriumIiiOxide') * 10)
     .fluidOutputs(fluid('oxygen') * 2000)
     .EUt(VA[EV])
-    .blastFurnaceTemp(2273)
+    .blastFurnaceTemp(1400)
     .duration(20)
     .buildAndRegister()
 

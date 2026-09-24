@@ -4,8 +4,8 @@
   "items": [
     {
       "weight": 1.0,
-      "min": 10,
-      "max": 25,
+      "min": 6,
+      "max": 14,
       "item": {
         "id": "gregtech:stone_smooth",
         "damage": 4,
@@ -14,8 +14,8 @@
     },
     {
       "weight": 1.5121370553970337,
-      "min": 1,
-      "max": 12,
+      "min": 3,
+      "max": 5,
       "item": {
         "id": "gregtech:meta_ingot",
         "damage": 324,
@@ -24,8 +24,8 @@
     },
     {
       "weight": 1.1894346475601196,
-      "min": 6,
-      "max": 15,
+      "min": 4,
+      "max": 9,
       "item": {
         "id": "gregtech:meta_stick",
         "damage": 324,
@@ -34,8 +34,8 @@
     },
     {
       "weight": 1.1894346475601196,
-      "min": 3,
-      "max": 11,
+      "min": 2,
+      "max": 5,
       "item": {
         "id": "gregtech:meta_block_frame_20",
         "damage": 4,
@@ -45,7 +45,7 @@
     {
       "weight": 0.7755888104438782,
       "min": 4,
-      "max": 16,
+      "max": 7,
       "item": {
         "id": "gregtech:meta_bolt",
         "damage": 324,

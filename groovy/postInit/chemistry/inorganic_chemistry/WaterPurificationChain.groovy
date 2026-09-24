@@ -34,6 +34,15 @@ CLARIFIER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+SOLAR_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('wastewater') * 100)
+    .fluidOutputs(fluid('dense_steam') * 100)
+    .duration(200)
+    .EUt(4000)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+
 // Deionized water
 
 ION_EXCHANGE.recipeBuilder()
@@ -142,4 +151,14 @@ DISTILLERY.recipeBuilder()
     .fluidOutputs(fluid('ultrapure_water') * 90)
     .duration(10)
     .EUt(VA[LV])
+    .buildAndRegister()
+
+//Ultrapure steam
+
+FLUID_HEATER.recipeBuilder()
+    .circuitMeta(1)
+    .fluidInputs(fluid('ultrapure_water') * 6)
+    .fluidOutputs(fluid('ultrapure_steam') * 960)
+    .duration(80)
+    .EUt(VA[HV])
     .buildAndRegister()

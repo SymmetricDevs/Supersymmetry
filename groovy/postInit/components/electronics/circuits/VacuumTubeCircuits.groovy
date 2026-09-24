@@ -35,6 +35,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(ore('wireGtSingleCopper') * 2)
     .inputs(metaitem('component.relay'))
     .inputs(metaitem('circuit_board.basic'))
+    .outputs(metaitem('circuit.good_electronic'))
     .duration(50)
     .EUt(16)
     .buildAndRegister();

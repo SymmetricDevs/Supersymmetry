@@ -119,7 +119,7 @@ alcohols.forEach { alcohol ->
 
     // Vacuum Flash Distillation of Glycerol Solutions
     VACUUM_CHAMBER.recipeBuilder()
-        .fluidInputs(fluid('diluted_hydrochloric_acid') * 1000)
+        .fluidInputs(fluid('diluted_hydrochloric_acid') * 2000)
         .fluidInputs(alcohol.getGlycerolSolution(7000))
         .fluidOutputs(fluid('crude_glycerol') * 3000)
         .fluidOutputs(alcohol.get(5000))
@@ -130,7 +130,7 @@ alcohols.forEach { alcohol ->
     // Distillation of Crude Glycerol
     DT.recipeBuilder()
         .fluidInputs(fluid('crude_glycerol') * 3000)
-        .outputs(metaitem('dustSalt'))
+        .outputs(metaitem('dustSalt') * 2)
         .fluidOutputs(fluid('glycerol') * 2000)
         .fluidOutputs(fluid('water') * 1000)
         .duration(20)

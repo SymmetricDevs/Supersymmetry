@@ -1,6 +1,27 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
+// Lead-Tin Soldering Alloy
+RESISTANCE_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustTin') * 6)
+    .inputs(metaitem('dustLead') * 3)
+    .inputs(metaitem('dustAntimony'))
+    .notConsumable(metaitem('susy:clay_graphite_crucible'))
+    .fluidOutputs(fluid('soldering_alloy') * 1440)
+    .temperature(904)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustTin') * 6)
+    .inputs(metaitem('dustLead') * 3)
+    .inputs(metaitem('dustAntimony'))
+    .fluidOutputs(fluid('soldering_alloy') * 1440)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Lead-free (SAC) solder
 ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('dustTin') * 27)
     .inputs(ore('dustSilver'))
@@ -13,37 +34,44 @@ ALLOY_SMELTER.recipeBuilder()
     .inputs(ore('ingotSilver'))
     .outputs(metaitem('ingotLeadFreeSolder') * 27)
     .duration(360)
-    .EUt(VA[MV])
-
-ALLOY_SMELTER.recipeBuilder()
-    .inputs(ore('ingotTin') * 27)
-    .inputs(ore('dustSilver'))
-    .outputs(metaitem('ingotLeadFreeSolder') * 27)
-    .duration(360)
-    .EUt(VA[MV])
-
-ALLOY_SMELTER.recipeBuilder()
-    .inputs(ore('ingotTin') * 27)
-    .inputs(ore('ingotSilver'))
-    .outputs(metaitem('ingotLeadFreeSolder') * 27)
-    .duration(360)
-    .EUt(VA[MV])
-
-MIXER.recipeBuilder()
-    .inputs(ore('dustIndium') * 3)
-    .inputs(ore('dustTinySilver'))
-    .outputs(metaitem('dustCryogenicSolder') * 3)
-    .duration(120)
     .EUt(VA[MV])
     .buildAndRegister()
 
-crafting.addShapeless("susy:cryogenic_solder", metaitem('dustCryogenicSolder') * 3, [
-    ore('dustIndium'),
-    ore('dustIndium'),
-    ore('dustIndium'),
-    ore('dustTinySilver')
-])
+ALLOY_SMELTER.recipeBuilder()
+    .inputs(ore('ingotTin') * 27)
+    .inputs(ore('dustSilver'))
+    .outputs(metaitem('ingotLeadFreeSolder') * 27)
+    .duration(360)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
+ALLOY_SMELTER.recipeBuilder()
+    .inputs(ore('ingotTin') * 27)
+    .inputs(ore('ingotSilver'))
+    .outputs(metaitem('ingotLeadFreeSolder') * 27)
+    .duration(360)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Cryogenic solder
+RESISTANCE_FURNACE.recipeBuilder()
+    .inputs(ore('dustIndium') * 3)
+    .inputs(ore('dustTinySilver'))
+    .notConsumable(metaitem('susy:clay_graphite_crucible'))
+    .fluidOutputs(fluid('cryogenic_solder') * 432)
+    .temperature(1235)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .inputs(ore('dustIndium') * 3)
+    .inputs(ore('dustTinySilver'))
+    .fluidOutputs(fluid('cryogenic_solder') * 432)
+    .duration(60)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// High-temperature solder, SAC solder melt and solder paste
 MIXER.recipeBuilder()
     .inputs(ore('dustLead') * 43)
     .inputs(ore('dustTinySilver') * 6)
@@ -53,10 +81,10 @@ MIXER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister()
 
-crafting.addShapeless("susy:high_temperature_solder", metaitem('dustHighTemperatureSolder') * 44, [
-    ore('dustLead') * 43,
-    ore('dustTinySilver') * 6,
-    ore('dustTinyTin') * 4
+crafting.addShapeless("susy:high_temperature_solder", metaitem('dustHighTemperatureSolder') * 6, [
+    ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'),
+    ore('dustTinySilver'), ore('dustTinySilver'),
+    ore('dustTinyTin')
 ])
 
 INDUCTION_FURNACE.recipeBuilder()

@@ -6,7 +6,7 @@ import static gregtech.api.GTValues.*
 ASSEMBLER.recipeBuilder()
     .circuitMeta(11)
     .inputs(ore('plateStainlessSteel') * 4)
-    .inputs(ore('springNichrome'))
+    .inputs(ore('springEarly'))
     .inputs(ore('pipeTinyFluidPlastic'))
     .inputs(ore('circuitHv'))
     .inputs(metaitem('electric.pump.hv'))

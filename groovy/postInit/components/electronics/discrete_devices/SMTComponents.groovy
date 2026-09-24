@@ -8,15 +8,6 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wir
 // Inductor * 4
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
 
-// SMD Capacitor * 8
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
-// SMD Capacitor * 12
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilAluminium')], [fluid('plastic') * 72])
-// SMD Capacitor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilTantalum')], [fluid('plastic') * 72])
-// SMD Capacitor * 24
-mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilTantalum')], [fluid('plastic') * 72])
-
 // SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
 // SMD Transistor * 32
@@ -28,8 +19,6 @@ mods.gregtech.blender.removeByInput(120, [metaitem('dustNickel'), metaitem('dust
 
 // Nickel Zinc Ferrite Ingot * 1
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMixture')], [fluid('oxygen') * 2000])
-// Liquid Nickel Zinc Ferrite * 864
-mods.gregtech.advanced_arc_furnace.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(['Configuration': 6])], [fluid('oxygen') * 8000 * 8000, fluid('refractory_gunning_mixture') * 100])
 
 // Alumina Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('alumina') * 144])
@@ -39,6 +28,7 @@ mods.gregtech.compressor.removeByInput(2, [metaitem('dustAlumina')], null)
 // Advanced SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(3840, [metaitem('foilVanadiumGallium'), metaitem('wireFineHssg') * 8], [fluid('polybenzimidazole') * 144])
 
+/*
 //SMD Diodes
 
 //n-doped silicon
@@ -950,3 +940,4 @@ CUTTER.recipeBuilder()
         .duration(400)
         .EUt(64)
         .buildAndRegister()
+*/

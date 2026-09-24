@@ -1,0 +1,13 @@
+name = "LemonSkin (AppleSkin Fork)"
+filename = "lemonskin-4.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a3445db181f0837da44d0434f4bef31ac34bd098"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7763338
+project-id = 1337144
