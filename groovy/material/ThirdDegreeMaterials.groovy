@@ -32,6 +32,8 @@ class ThirdDegreeMaterials {
 
         log.infoMC('Registering Third Degree Materials!')
 
+        // Loan materials from organic materials, IDs kept to prevent transmutation.
+
         ZieglerNattaCatalyst = new Material.Builder(13025, SuSyUtility.susyId('ziegler_natta_catalyst'))
                 .dust()
                 .components(Triethylaluminium * 1, TitaniumTetrachloride * 1)
