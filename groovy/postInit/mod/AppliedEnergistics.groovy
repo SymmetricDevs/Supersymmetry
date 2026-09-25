@@ -262,7 +262,7 @@ storageCells.each { cell ->
         [output: item('appliedenergistics2:interface'), cores: 2],
         [output: item('appliedenergistics2:fluid_interface'), cores: 2],
         [output: item('appliedenergistics2:chest'), cores: 1]
-].each { device ->
+].eachWithIndex { device, index ->
     def recipe = ASSEMBLER.recipeBuilder()
             .inputs(ore('circuitEv'))
             .inputs(item('appliedenergistics2:quartz_glass'))
@@ -272,6 +272,7 @@ storageCells.each { cell ->
                 .inputs(item('appliedenergistics2:material', 44) * device.cores)
     }
     recipe
+        .circuitMeta(index + 1)
             .outputs(device.output)
             .duration(200)
             .EUt(VA[EV])
@@ -292,9 +293,9 @@ ASSEMBLER.recipeBuilder()
 // AE2 terminal part metas: 380 = terminal, 360 = crafting terminal, 340 = pattern terminal.
 // Terminals use laminated-glass faces, iridium foil shielding and optical links.
 [
-        [output: 380, cores: 1],
-        [output: 360, cores: 1],
-        [output: 340, cores: 2]
+        [output: 380, cores: 1, id: 1],
+        [output: 360, cores: 1, id: 2],
+        [output: 340, cores: 2, id: 3]
 ].each { terminal ->
     ASSEMBLER.recipeBuilder()
             .inputs(ore('plateGlass') * 2)
@@ -303,6 +304,7 @@ ASSEMBLER.recipeBuilder()
             .inputs(item('appliedenergistics2:material', 43) * terminal.cores)
             .inputs(item('appliedenergistics2:material', 44) * terminal.cores)
             .inputs(ore('circuitEv'))
+            .circuitMeta(terminal.id)
             .outputs(item('appliedenergistics2:part', terminal.output))
             .duration(300)
             .EUt(VA[EV])
@@ -320,7 +322,7 @@ ROASTER.recipeBuilder()
 
 SOLIDIFIER.recipeBuilder()
         .fluidInputs(fluid('high_purity_silica') * 864)
-        .notConsumable(metaitem('shape.mold.tube'))
+        .notConsumable(metaitem('shape.mold.ball'))
         .outputs(metaitem('optical_fiber_preform.initial'))
         .duration(200)
         .EUt(VA[EV])
@@ -463,10 +465,10 @@ storageCells.each { cell ->
         [output: 'ma_mod_cpu', cores: 1, count: 1],
         [output: 'ma_io_port', cores: 1, count: 1],
         [output: 'ma_controller', cores: 2, count: 1]
-].each { part ->
+].eachWithIndex { part, index ->
     def recipe = ASSEMBLER.recipeBuilder()
             .inputs(ore('circuitEv'))
-            .inputs(ore('plateTitanium') * 2)
+            .circuitMeta(index + 1)
             .inputs(ore('plateTungstenSteel') * 2)
             .inputs(metaitem('electric.pump.ev'))
             .inputs(ore('pipeNormalFluidTungstenSteel'))
@@ -477,63 +479,8 @@ storageCells.each { cell ->
                 .inputs(item('appliedenergistics2:material', 44) * part.cores)
     }
     recipe
-            .outputs(item("threng:${part.output}") * part.count)
+            .outputs(item("threng:big_assembler", index) * part.count)
             .duration(200)
             .EUt(VA[EV])
             .buildAndRegister()
 }
-
-// Optical fiber production: high-purity silica -> preform -> strand -> cable.
-ROASTER.recipeBuilder()
-        .inputs(metaitem('dustHighPuritySilicon'))
-        .fluidInputs(fluid('oxygen') * 2000)
-        .outputs(metaitem('dustHighPuritySilica') * 3)
-        .duration(200)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
-SOLIDIFIER.recipeBuilder()
-        .fluidInputs(fluid('high_purity_silica') * 864)
-        .notConsumable(metaitem('shape.mold.tube'))
-        .outputs(metaitem('optical_fiber_preform.initial'))
-        .duration(200)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-CVD.recipeBuilder()
-        .inputs(metaitem('optical_fiber_preform.initial'))
-        .fluidInputs(fluid('silicon_tetrachloride') * 1990)
-        .fluidInputs(fluid('germanium_tetrachloride') * 10)
-        .fluidInputs(fluid('oxygen') * 4000)
-        .outputs(metaitem('optical_fiber_preform'))
-        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
-        .cleanroom(CleanroomType.CLEANROOM)
-        .duration(800)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-EXTRUDER.recipeBuilder()
-        .inputs(metaitem('optical_fiber_preform'))
-        .notConsumable(metaitem('shape.extruder.wire'))
-        .outputs(metaitem('fiber.optical') * 16)
-        .duration(200)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-CHEMICAL_BATH.recipeBuilder()
-        .inputs(metaitem('fiber.optical') * 16)
-        .fluidInputs(fluid('pmma') * 144)
-        .outputs(metaitem('fiber.optical.coated') * 16)
-        .duration(200)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('fiber.optical.coated') * 16)
-        .inputs(ore('foilExpandedPolytetrafluoroethylene') * 4)
-        .inputs(ore('fiberKevlar') * 8)
-        .inputs(ore('foilPolyvinylChloride') * 4)
-        .outputs(metaitem('cable.optical') * 4)
-        .duration(200)
-        .EUt(VA[EV])
-        .buildAndRegister()
