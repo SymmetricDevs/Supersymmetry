@@ -227,11 +227,13 @@ metaitems/wafer/cmos_gpu/pkg/step_seven
 metaitems/wafer/cmos_cpu/beol_five/step_two
 metaitems/wafer/cmos_gpu/step_twenty_three/exposed
 metaitems/wafer/cmos_chipset/beol_six/step_one/hardmasked
+metaitems/component/capacitor/electrolytic/etched_foil
 metaitems/wafer/cmos_phy/beol_seven/step_four
 metaitems/wafer/nmos_bus_controller/step_fourteen
 metaitems/component/thin_film_resistor/wafer/coated
 metaitems/wafer/germanium/n_doped/raw
 metaitems/wafer/cmos_phy/step_forty_five
+metaitems/substrate/fr4/wet_masked
 metaitems/wafer/cmos_chipset/step_eleven/exposed
 metaitems/wafer/small/silicon/n_doped/polished
 metaitems/board/g10/wet_masked
@@ -351,6 +353,7 @@ metaitems/wafer/cmos_gpu/beol_two/step_one/developed
 metaitems/component/thin_film_resistor/dipped
 metaitems/wafer/cmos_chipset/beol_two/step_seven
 metaitems/wafer/cmos_phy/beol_two/step_four
+metaitems/substrate/fr4/drilled
 metaitems/wafer/nmos_mask_rom/step_twelve/coated
 metaitems/wafer/nmos_bus_controller/step_twenty_five
 metaitems/wafer/cmos_gpu/beol_five/step_six
@@ -429,6 +432,7 @@ metaitems/wafer/cmos_gpu/pkg/step_seven/coated
 metaitems/component/bme_cap/polished
 metaitems/wafer/bcd_base/step_fifty_eight/exposed
 metaitems/wafer/cmos_chipset/step_sixty_one/ashed
+metaitems/component/capacitor/electrolytic/anode_foil
 metaitems/wafer/cmos_gpu/step_thirty_one/ashed
 metaitems/wafer/cmos_gpu/beol_seven/step_three
 metaitems/wafer/cmos_cpu/step_eleven/coated
@@ -471,6 +475,7 @@ metaitems/wafer/cmos_cpu/step_forty_five
 metaitems/wafer/gallium_arsenide/n_doped
 metaitems/wafer/cmos_phy/beol_six/step_one/etched
 metaitems/wafer/bcd_base/step_twenty_nine/ashed
+metaitems/component/resistor/metal_film/core
 metaitems/component/thin_film_resistor/terminated
 metaitems/wafer/cmos_phy/step_seventy_three
 metaitems/wafer/nmos_cpu/step_nine
@@ -487,9 +492,11 @@ metaitems/wafer/cmos_phy/beol_four/step_four
 metaitems/wafer/cmos_gpu/beol_three/step_one/exposed
 metaitems/wafer/bcd_pic/beol_four/step_four
 metaitems/wafer/diode/alloy/step_one
+metaitems/substrate/fr4/electrolytic
 metaitems/wafer/nmos_sram/step_twenty_one/exposed
 metaitems/wafer/cmos_chipset/beol_seven/step_one/coated
 metaitems/wafer/cmos_chipset/beol_four/step_one/exposed
+metaitems/substrate/fr4/cut
 metaitems/wafer/cmos_gpu/step_eleven/coated
 metaitems/wafer/bcd_base/step_fifty_eight
 metaitems/wafer/cmos_gpu/beol_one/step_three/ashed
@@ -535,6 +542,7 @@ metaitems/wafer/cmos_chipset/step_forty_two
 metaitems/circuit/power/lv
 metaitems/wafer/bcd_hpic/beol_five/step_one
 metaitems/wafer/cmos_phy/step_sixty_four
+metaitems/substrate/fr4/patterned
 metaitems/wafer/cmos_gpu/beol_six/step_one/ibarc
 metaitems/wafer/cmos_phy/beol_two/step_two
 metaitems/wafer/cmos_phy/beol_five/step_one/exposed
@@ -563,6 +571,7 @@ metaitems/wafer/cmos_chipset/step_fourteen/exposed
 metaitems/wafer/bcd_base/step_five
 metaitems/edlc_electrode
 metaitems/wafer/bcd_hpic/pkg/step_twelve
+metaitems/substrate/fr4/mask_affixed
 metaitems/wafer/cmos_cpu/step_fifty_nine/etched
 metaitems/wafer/bcd_hpic/beol_six/step_two
 metaitems/doped_barium_titanate_paste
@@ -597,6 +606,7 @@ metaitems/wafer/cmos_gpu/step_thirty_two/exposed
 metaitems/wafer/cmos_gpu/beol_two/step_seven
 metaitems/wafer/cmos_chipset/pkg/step_two
 metaitems/wafer/cmos_phy/beol_seven/step_seven
+metaitems/component/capacitor/electrolytic/preanodized_foil
 metaitems/wafer/cmos_chipset/step_thirty_two/exposed
 metaitems/wafer/cmos_gpu/step_four
 metaitems/wafer/bcd_base/beol_one/step_three/ashed
@@ -693,6 +703,7 @@ metaitems/wafer/nmos_mask_rom/step_twenty_three
 metaitems/wafer/cmos_phy/beol_three/step_six
 metaitems/wafer/cmos_cpu/step_forty_nine
 metaitems/wafer/cmos_chipset/beol_three/step_one/exposed
+metaitems/substrate/fr4/developed
 metaitems/wafer/bcd_pic/beol_four/step_three
 metaitems/wafer/cmos_chipset/step_thirty_four
 metaitems/wafer/cmos_phy/step_sixty_seven/hardmasked
@@ -783,6 +794,7 @@ metaitems/wafer/cmos_phy/beol_two/step_one/ibarc
 metaitems/wafer/cmos_cpu/step_fourteen
 metaitems/wafer/bjt_lpic/step_thirteen
 metaitems/wafer/cmos_cpu/step_fifty_eight
+metaitems/component/capacitor/electrolytic/core
 metaitems/wafer/diode/planar/step_nine
 metaitems/component/pme_cap/plated
 metaitems/wafer/cmos_gpu/beol_three/step_five
@@ -925,6 +937,7 @@ metaitems/wafer/cmos_phy/beol_nine/step_seven
 metaitems/mask_set/cmos_chipset
 metaitems/wafer/cmos_cpu/pkg/step_ten
 metaitems/wafer/bjt_pic/step_nine/coated
+metaitems/mask/substrate_ev
 metaitems/wafer/cmos_cpu/beol_six/step_three/ashed
 metaitems/wafer/bcd_base/beol_one/step_one/coated
 metaitems/wafer/cmos_gpu/beol_one/step_two
@@ -937,6 +950,7 @@ metaitems/wafer/diode/alloy/step_two
 metaitems/wafer/cmos_phy/step_fifty_nine/exposed
 metaitems/wafer/cmos_phy/step_sixty_nine
 metaitems/wafer/monosilicon_photovoltaic/step_four/coated
+metaitems/substrate/fr4/array
 metaitems/wafer/cmos_cpu/beol_three/step_three/ashed
 metaitems/wafer/bcd_base/step_forty_three/coated
 metaitems/wafer/cmos_chipset/step_seventy/ashed
@@ -1106,6 +1120,7 @@ metaitems/wafer/bcd_hpic/pkg/step_one
 metaitems/wafer/cmos_cpu/step_sixty_six
 metaitems/boule/silicon/cz/p_doped
 metaitems/wafer/cmos_gpu/step_thirty_nine/exposed
+metaitems/component/capacitor/electrolytic
 metaitems/wafer/cmos_gpu/beol_four/step_one
 metaitems/wafer/cmos_gpu/step_fifty_three
 metaitems/wafer/cmos_chipset/beol_five/step_one/coated
@@ -1249,6 +1264,7 @@ metaitems/wafer/cmos_cpu/step_fifty_nine
 metaitems/wafer/cmos_chipset/step_thirty_nine/coated
 metaitems/wafer/cmos_phy/beol_five/step_six
 metaitems/wafer/bcd_hpic/beol_six/step_seven
+metaitems/component/resistor/metal_film/core/uncut
 metaitems/wafer/cmos_gpu/beol_six/step_one/hardmasked
 metaitems/wafer/nmos_sram/step_twenty_two
 metaitems/wafer/cmos_phy/beol_five/step_one/developed
@@ -1272,6 +1288,7 @@ metaitems/wafer/bcd_base/step_thirty_nine/exposed
 metaitems/wafer/bcd_pic/pkg/step_thirteen
 metaitems/wafer/cmos_cpu/step_twenty_six
 metaitems/wafer/cmos_phy/beol_six/step_one/hardmasked
+metaitems/substrate/fr4/electroless
 metaitems/wafer/cmos_phy/step_thirty_one
 metaitems/wafer/bcd_pic/pkg/step_eleven
 metaitems/wafer/cmos_chipset/step_sixteen
@@ -1545,6 +1562,7 @@ metaitems/wafer/cmos_cpu/step_seventy_three
 metaitems/wafer/cmos_chipset/step_sixty_seven/exposed
 metaitems/wafer/bjt_pic_base/step_thirteen
 metaitems/wafer/bcd_base/beol_one/step_seven
+metaitems/substrate/fr4/etched
 metaitems/component/resistor/carbon_composite/unfired
 metaitems/die/nmos_cpu/bonded
 metaitems/wafer/cmos_phy/beol_six/step_one/coated
@@ -1575,6 +1593,7 @@ metaitems/wafer/cmos_cpu/beol_eight/step_five
 metaitems/wafer/diode/schottky/step_six
 metaitems/wafer/bcd_base/step_eighty
 metaitems/wafer/cmos_cpu/step_thirty_two/exposed
+metaitems/component/resistor/metal_film
 metaitems/wafer/bcd_lpic/pkg/step_seven
 metaitems/wafer/cmos_gpu/step_fourteen/coated
 metaitems/component/resistor/carbon_film/core
@@ -1697,6 +1716,7 @@ metaitems/wafer/cmos_cpu/beol_two/step_three
 metaitems/wafer/cmos_phy/beol_five/step_three/ashed
 metaitems/wafer/cmos_cpu/beol_six/step_one/developed
 metaitems/wafer/bcd_base/step_eleven/coated
+metaitems/component/resistor/metal_film/core/deposited
 metaitems/wafer/cmos_gpu/step_nine
 metaitems/wafer/cmos_gpu/beol_five/step_two
 metaitems/wafer/cmos_cpu/beol_two/step_three/ashed

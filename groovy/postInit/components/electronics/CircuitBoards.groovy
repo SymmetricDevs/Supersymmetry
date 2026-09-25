@@ -454,9 +454,9 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
     // Drilling
 
-    LASER_ENGRAVING.recipeBuilder()
-        .inputs(metaitem('substrate.epoxy.etched'))
-        .outputs(metaitem('substrate.epoxy.drilled'))
+    LASER_ENGRAVER.recipeBuilder()
+        .inputs(metaitem('substrate.fr4.etched'))
+        .outputs(metaitem('substrate.fr4.drilled'))
         .EUt(VA[MV])
         .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)

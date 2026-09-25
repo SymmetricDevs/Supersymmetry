@@ -144,9 +144,9 @@ class Etching {
             new Etchant(["boron_trichloride" : 60, "argon" : 30, "chlorine" : 10], ["corrosive_gas" : 100], EV, 1.67, true, true)
         ],
         alumina: [
-            new Etchant("boron_trichloride", "corrosive_gas", EV, 100, 0.0167, true, true),
+            new Etchant("boron_trichloride", "corrosive_gas", EV, 100, 1.67, true, true),
             // from https://doi.org/10.1007/s12039-015-1006-8
-            new Etchant(["phosphoric_acid" : 35, "chromic_acid" : 45], ["acidic_wastewater" : 80], HV, 100, 0.83, false, false)
+            new Etchant(["phosphoric_acid" : 35, "chromic_acid" : 45], ["acidic_wastewater" : 80], HV, 0.83, false, false)
         ],
         zirconia_alumina_coetch: [
             new Etchant(["boron_trichloride" : 60, "chlorine" : 20, "argon" : 20], ["corrosive_gas" : 100], EV, 0.4, true, true)

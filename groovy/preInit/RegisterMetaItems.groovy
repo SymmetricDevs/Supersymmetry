@@ -455,14 +455,14 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2867, "circuit.power.iv")
 
         addItem(2868, "component.capacitor.electrolytic.preanodized_foil")
-        addItem(2868, "component.capacitor.electrolytic.etched_foil")
-        addItem(2869, "component.capacitor.electrolytic.anode_foil")
-        addItem(2870, "component.capacitor.electrolytic.core")
-        addItem(2871, "component.capacitor.electrolytic")
-        addItem(2872, "component.resistor.metal_film.core.deposited")
-        addItem(2873, "component.resistor.metal_film.core.uncut")
-        addItem(2873, "component.resistor.metal_film.core")
-        addItem(2874, "component.resistor.metal_film")
+        addItem(2869, "component.capacitor.electrolytic.etched_foil")
+        addItem(2870, "component.capacitor.electrolytic.anode_foil")
+        addItem(2871, "component.capacitor.electrolytic.core")
+        addItem(2872, "component.capacitor.electrolytic")
+        addItem(2873, "component.resistor.metal_film.core.deposited")
+        addItem(2874, "component.resistor.metal_film.core.uncut")
+        addItem(2875, "component.resistor.metal_film.core")
+        addItem(2876, "component.resistor.metal_film")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -615,6 +615,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5032, "mask_set.diode.schottky")
         addItem(5033, "mask.resistor")
 
+        addItem(5035, "mask.substrate_ev")
+
         addItem(5100, "patterned.ic")
         addItem(5101, "patterned.cpu")
         addItem(5102, "patterned.ram")
@@ -663,6 +665,18 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5821, "board.g10.mask_affixed");
         addItem(5822, "circuit_board.g10")
         addItem(5823, "board.g10.developed")
+
+        addItem(5850, "substrate.fr4.patterned")
+        addItem(5851, "substrate.fr4.developed")
+        addItem(5852, "substrate.fr4.etched")
+        addItem(5853, "substrate.fr4.drilled")
+        addItem(5854, "substrate.fr4.electroless")
+        addItem(5855, "substrate.fr4.electrolytic")
+        addItem(5856, "substrate.fr4.wet_masked")
+        addItem(5857, "substrate.fr4.mask_affixed")
+        addItem(5858, "substrate.fr4.array")
+        addItem(5859, "substrate.fr4.cut")
+
 
         //Good Circuit Components 5900-6000
         addItem(5900, "op_amp")
