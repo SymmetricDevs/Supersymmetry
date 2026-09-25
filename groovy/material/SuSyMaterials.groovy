@@ -1774,8 +1774,8 @@ class SuSyMaterials {
     public static Material RheniumPentachloride
     public static Material MON3
     public static Material PureGaseousTitaniumTetrachloride
-    public static Material FineAluminium
-    
+    public static Material FineAluminium    
+
     // HP Materials
 
     public static Material HighPurityLithium
@@ -2035,6 +2035,7 @@ class SuSyMaterials {
     public static Material AluminiumChlorideHexahydrate
     public static Material LunarRGlass
     public static Material SGlass
+    public static Material ALICE
 
     // Organic Chemistry Materials
 

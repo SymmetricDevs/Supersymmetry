@@ -488,14 +488,6 @@ RecyclingHelper.addShaped("gregtech:brick_sintering_block", item('susy:sintering
     [null, null, null]
 ])
 
-mods.chisel.carving.addGroup("sintering_bricks")
-mods.chisel.carving.addVariation("sintering_bricks", item('susy:sintering_brick', 0))
-mods.chisel.carving.addVariation("sintering_bricks", item('susy:sintering_brick', 2))
-
-mods.chisel.carving.addGroup("sintering_bricks_magneto")
-mods.chisel.carving.addVariation("sintering_bricks_magneto", item('susy:sintering_brick', 1))
-mods.chisel.carving.addVariation("sintering_bricks_magneto", item('susy:sintering_brick', 3))
-
 RecyclingHelper.replaceShaped("gregtech:sintering_oven", metaitem('susy:sintering_oven'), [
     [motors[1], rotors[1], metaitem('wireGtQuadrupleCupronickel')],
     [circuits[1], item('gregtech:metal_casing', 1), circuits[1]],
@@ -1872,9 +1864,9 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(1)
-        .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
+        .inputs(ore('plateAluminiumAlloy2219') * 6)
         .inputs(ore('stickLongAluminiumAlloy2219') * 12)
-        .outputs(item('susy:rocket_tank_shell')) // Al-2219 tank shell
+        .outputs(item('susy:rocket_tank_shell') * 6) // Al-2219 tank shell
         .EUt(VA[EV])
         .duration(20)
         .buildAndRegister()
@@ -2089,17 +2081,6 @@ RecyclingHelper.addShaped('susy.machine.building_cleanroom', metaitem('susy:buil
 ])
 
 ASSEMBLER.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(metaitem('hull.ev'))
-        .inputs(ore('circuitEv') * 4)
-        .inputs(metaitem('sensor.ev') * 4)
-        .inputs(metaitem('cableGtSingleAluminium') * 4)
-        .outputs(metaitem('susy:component_scanner'))
-        .EUt(VA[EV])
-        .duration(400)
-        .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
         .inputs(ore('foilNitrileRubber') * 8)
         .inputs(item('gregtech:metal_casing', 4))
         .outputs(item('susy:rocket_multiblock_casing', 3)) // Aerospace Gasket
@@ -2120,6 +2101,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateDoubleSteel') * 2)
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing')) // Vinyl Ceiling Tile
+        .circuitMeta(2)
         .EUt(VA[HV])
         .duration(20)
         .buildAndRegister()
@@ -2130,6 +2112,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('hepa_filter'))
         .inputs(ore('frameGtAluminium'))
         .outputs(item('susy:rocket_multiblock_casing', 1)) // Ceiling Grid Filter Unit
+        .circuitMeta(1)
         .EUt(VA[HV])
         .duration(20)
         .buildAndRegister()
