@@ -248,7 +248,7 @@ class Deposition {
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
+                .duration((int) (duration * thickness * 20 * (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }
@@ -302,7 +302,7 @@ class Deposition {
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
+                .duration((int) (duration * thickness * 20 * (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }
