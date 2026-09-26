@@ -399,7 +399,7 @@ RecipeMaps.CENTRIFUGE_RECIPES
     .setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY)
 
 RecipeMaps.MIXER_RECIPES
-    .modifyMaxFluidInputs(4)
+    .modifyMaxFluidInputs(5)
     .modifyMaxFluidOutputs(2)
 
 RecipeMaps.ARC_FURNACE_RECIPES
