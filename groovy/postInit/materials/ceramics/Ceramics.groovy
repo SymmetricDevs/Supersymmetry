@@ -103,14 +103,34 @@ HOT_ISOSTATIC_PRESS.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-// Silicon Carbide
 
-FORMING_PRESS.recipeBuilder() //Simplified temporary recipe
+// Induction crucible recipes (temporary recipes)
+
+// Silicon Carbide
+FORMING_PRESS.recipeBuilder()
     .inputs(ore('dustSiliconCarbide') * 4)
     .inputs(ore('dustGraphite') * 2)
     .inputs(ore('dustFireclay'))
     .notConsumable(metaitem('shape.mold.crucible'))
     .outputs(item('susy:crucible'))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Alumina
+FORMING_PRESS.recipeBuilder()
+    .inputs(ore('dustSyntheticMulliteRefractory') * 7)
+    .notConsumable(metaitem('shape.mold.crucible'))
+    .outputs(item('susy:crucible', 1))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// High-Performance Alumina
+FORMING_PRESS.recipeBuilder()
+    .inputs(ore('dustTabularAluminaRefractory') * 7)
+    .notConsumable(metaitem('shape.mold.crucible'))
+    .outputs(item('susy:crucible', 3))
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()
