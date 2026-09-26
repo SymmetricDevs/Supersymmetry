@@ -42,34 +42,6 @@ ASSEMBLER.recipeBuilder()
 
 // Early circuit stencils
 
-crafting.addShaped("rubylith_ram", metaitem('stencil.ram'), [
-    [ore('craftingToolKnife'), null, null],
-    [null, metaitem('rubylith'), null],
-    [null, null, null]
-]);
-
-UV_LIGHT_BOX.recipeBuilder()
-    .inputs(metaitem('stencil.ram'))
-    .inputs(metaitem('mask.blank'))
-    .outputs(metaitem('mask.ram'))
-    .duration(200)
-    .EUt(VA[ULV])
-    .buildAndRegister()
-
-crafting.addShaped("rubylith_ic", metaitem('stencil.ic'), [
-    [null, ore('craftingToolKnife'), null],
-    [null, metaitem('rubylith'), null],
-    [null, null, null]
-]);
-
-UV_LIGHT_BOX.recipeBuilder()
-    .inputs(metaitem('stencil.ic'))
-    .inputs(metaitem('mask.blank'))
-    .outputs(metaitem('mask.ic'))
-    .duration(200)
-    .EUt(VA[ULV])
-    .buildAndRegister()
-
 crafting.addShaped("rubylith_pcb", metaitem('stencil.pcb'), [
     [null, null, ore('craftingToolKnife')],
     [null, metaitem('rubylith'), null],
@@ -84,60 +56,15 @@ UV_LIGHT_BOX.recipeBuilder()
     .EUt(VA[ULV])
     .buildAndRegister()
 
-crafting.addShaped("rubylith_ulpic", metaitem('stencil.ulpic'), [
-    [null, null, null],
-    [ore('craftingToolKnife'), metaitem('rubylith'), null],
-    [null, null, null]
-]);
 
-UV_LIGHT_BOX.recipeBuilder()
-    .inputs(metaitem('stencil.ulpic'))
-    .inputs(metaitem('mask.blank'))
-    .outputs(metaitem('mask.ulpic'))
-    .duration(200)
-    .EUt(VA[ULV])
+CUTTER.recipeBuilder()
+    .circuitMeta(3)
+    .inputs(metaitem('rubylith'))
+    .outputs(metaitem('stencil.pcb'))
+    .duration(40)
+    .EUt(VA[MV])
     .buildAndRegister()
 
-crafting.addShaped("rubylith_lpic", metaitem('stencil.lpic'), [
-    [null, null, null],
-    [null, metaitem('rubylith'), ore('craftingToolKnife')],
-    [null, null, null]
-]);
-
-def allStencil = ['ram', 'ic', 'pcb', 'ulpic', 'lpic', 'cpu']
-
-allStencil.eachWithIndex { stencil, i ->
-
-    CUTTER.recipeBuilder()
-        .circuitMeta(i + 1)
-        .inputs(metaitem('rubylith'))
-        .outputs(metaitem('stencil.' + stencil))
-        .duration(40)
-        .EUt(VA[MV])
-        .buildAndRegister();
-}
-
-UV_LIGHT_BOX.recipeBuilder()
-    .inputs(metaitem('stencil.lpic'))
-    .inputs(metaitem('mask.blank'))
-    .outputs(metaitem('mask.lpic'))
-    .duration(200)
-    .EUt(VA[ULV])
-    .buildAndRegister()
-
-crafting.addShaped("rubylith_cpu", metaitem('stencil.cpu'), [
-    [null, null, null],
-    [null, metaitem('rubylith'), null],
-    [ore('craftingToolKnife'), null, null]
-]);
-
-UV_LIGHT_BOX.recipeBuilder()
-    .inputs(metaitem('stencil.cpu'))
-    .inputs(metaitem('mask.blank'))
-    .outputs(metaitem('mask.cpu'))
-    .duration(200)
-    .EUt(VA[ULV])
-    .buildAndRegister()
 
 crafting.addShaped("smd_resistor", metaitem('stencil.resistor'), [
     [metaitem('rubylith'), ore('craftingToolKnife'), null],
@@ -175,32 +102,5 @@ REACTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('hydrogen') * 2000)
     .outputs(metaitem('fused_quartz'))
     .duration(400)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('fused_quartz'))
-    .inputs(ore('dustTinyChromiumTrioxide'))
-    .circuitMeta(1)
-    .outputs(metaitem('mask.advanced'))
-    .duration(200)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('fused_quartz'))
-    .inputs(ore('dustTinyChromiumTrioxide'))
-    .circuitMeta(2)
-    .outputs(metaitem('mask.nand'))
-    .duration(200)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('fused_quartz'))
-    .inputs(ore('dustTinyChromiumTrioxide'))
-    .circuitMeta(3)
-    .outputs(metaitem('mask.nor'))
-    .duration(200)
     .EUt(VA[MV])
     .buildAndRegister()

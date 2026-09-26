@@ -208,9 +208,10 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(179, "dry_film_photoresist")
 
-        addItem(180, "patterned_thick_film_substrate_wafer")
-        addItem(181, "thick_film_resistor_wafer")
+        //addItem(180, "patterned_thick_film_substrate_wafer")
+        //addItem(181, "thick_film_resistor_wafer")
         addItem(182, "metallized_plastic_film")
+        /*
         addItem(183, "metallized_plastic_square")
         addItem(184, "raw_smd_capacitor")
         addItem(185, "raw_capacitor_roll")
@@ -226,10 +227,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(194, "chip.insulated_silicon_germanium")
         addItem(195, "chip.n_doped_silicon")
         addItem(196, "chip.silicon_dioxide")
-
+        */
         addItem(197, "fused_quartz")
 
-        addItem(200, "thick_film_substrate_wafer")
+        //addItem(200, "thick_film_substrate_wafer")
 
         addItem(201, "vti_rich_pig_iron")
         addItem(202, "vt_slag")
@@ -590,26 +591,26 @@ eventManager.listen { PostMaterialEvent event ->
         //Photomasks 5000-5099
         addItem(5000, "rubylith")
         addItem(5001, "rubylith_film")
-        addItem(5002, "stencil.ic")
-        addItem(5003, "stencil.cpu")
-        addItem(5004, "stencil.ram")
+        //addItem(5002, "stencil.ic")
+        //addItem(5003, "stencil.cpu")
+        //addItem(5004, "stencil.ram")
         addItem(5005, "stencil.pcb")
-        addItem(5006, "stencil.ulpic")
-        addItem(5007, "stencil.lpic")
+        //addItem(5006, "stencil.ulpic")
+        //addItem(5007, "stencil.lpic")
         addItem(5008, "stencil.resistor")
         addItem(5009, "stencil.capacitor")
         addItem(5010, "stencil.resistor_pads")
 
         addItem(5020, "mask.blank")
-        addItem(5021, "mask.ic")
-        addItem(5022, "mask.cpu")
-        addItem(5023, "mask.ram")
+        //addItem(5021, "mask.ic")
+        //addItem(5022, "mask.cpu")
+        //addItem(5023, "mask.ram")
         addItem(5024, "mask.pcb")
-        addItem(5025, "mask.ulpic")
-        addItem(5026, "mask.lpic")
-        addItem(5027, "mask.nand")
-        addItem(5028, "mask.nor")
-        addItem(5029, "mask.advanced")
+        //addItem(5025, "mask.ulpic")
+        //addItem(5026, "mask.lpic")
+        //addItem(5027, "mask.nand")
+        //addItem(5028, "mask.nor")
+        //addItem(5029, "mask.advanced")
         addItem(5030, "mask.diode.planar")
         addItem(5031, "mask_set.diode.power")
         addItem(5032, "mask_set.diode.schottky")
@@ -617,6 +618,7 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(5035, "mask.substrate_ev")
 
+        /*
         addItem(5100, "patterned.ic")
         addItem(5101, "patterned.cpu")
         addItem(5102, "patterned.ram")
@@ -627,9 +629,11 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5107, "patterned.silicon_nitride")
         addItem(5108, "patterned.nand")
         addItem(5109, "patterned.nor")
+        */
         addItem(5150, "patterned.board.phenolic")
-        addItem(5151, "patterned.board.plastic")
+        //addItem(5151, "patterned.board.plastic")
         addItem(5200, "laminated.board.phenolic")
+        /*
         addItem(5300, "etched.ic")
         addItem(5301, "etched.cpu")
         addItem(5302, "etched.ram")
@@ -638,6 +642,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5305, "etched.silicon_dioxide")
         addItem(5306, "etched.polysilicon")
         addItem(5307, "etched.silicon_nitride")
+        */
 
         //Epoxy Circuit Board + Components 5800-5900
         addItem(5800, "board.fr4.prepreg")
@@ -788,7 +793,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7000, "seed_crystal.silicon")
         addItem(7001, "seed_crystal.gallium_arsenide")
         addItem(7002, "seed_crystal.alumina")
-        addItem(7003, "seed_crystal.beryllium_oxide")
+        //addItem(7003, "seed_crystal.beryllium_oxide")
         addItem(7004, "seed_crystal.emerald")
         addItem(7005, "seed_crystal.lithium_niobate")
         addItem(7006, "seed_crystal.neodymium_yttrium_aluminium_garnet")
@@ -796,15 +801,15 @@ eventManager.listen { PostMaterialEvent event ->
 
         //Boules 7500-8000
 
-        addItem(7500, "unrefined_boule.silicon")
+        //addItem(7500, "unrefined_boule.silicon")
         addItem(7501, "boule.gallium_arsenide")
-        addItem(7502, "unrefined_boule.gallium_arsenide")
-        addItem(7503, "boule.alumina")
-        addItem(7504, "boule.beryllium_oxide")
+        //addItem(7502, "unrefined_boule.gallium_arsenide")
+        //addItem(7503, "boule.alumina")
+        //addItem(7504, "boule.beryllium_oxide")
         addItem(7505, "boule.emerald")
         addItem(7506, "boule.sapphire")
         addItem(7507, "boule.ruby")
-        addItem(7508, "boule.silicon_germanium")
+        //addItem(7508, "boule.silicon_germanium")
         addItem(7509, "boule.lithium_niobate")
         addItem(7510, "boule.neodymium_yttrium_aluminium_garnet")
         // overhaul boules
@@ -817,7 +822,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7517, "boule.gallium_arsenide.n_doped")
 
         //Wafers 8000-9000
-
+        /*
         addItem(8000, "wafer.doped.silicon")
         addItem(8001, "wafer.n_doped.silicon")
         addItem(8002, "wafer.silicon_dioxide")
@@ -834,8 +839,10 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8013, "wafer.gallium_arsenide")
         addItem(8014, "wafer.raw.silicon")
         addItem(8015, "wafer.treated.silicon")
+        */
 
         // new wafers in overhaul; not going to delete any already existing materials
+        // ^ you might not, but i will -j3k
         addItem(8016, "wafer.quartz.at_cut.tuned")
         addItem(8017, "wafer.quartz.at_cut")
         addItem(8018, "wafer.diode.alloy.step_one")
