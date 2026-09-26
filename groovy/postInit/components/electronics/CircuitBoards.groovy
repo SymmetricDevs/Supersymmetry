@@ -558,7 +558,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .cleanroom(CleanroomType.CLEANROOM)
         .buildAndRegister();
 
-    CUTTING_MACHINE.recipeBuilder()
+    CUTTER.recipeBuilder()
         .inputs(metaitem('substrate.fr4.array'))
         .outputs(metaitem('substrate.fr4.cut') * 36)
         .EUt(VA[MV])
