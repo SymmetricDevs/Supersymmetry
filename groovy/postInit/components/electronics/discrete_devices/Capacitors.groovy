@@ -108,7 +108,7 @@ ELECTROLYZER.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-MIXER.recipeBuilder()
+BLENDER.recipeBuilder()
     .fluidInputs(fluid('ethylene_glycol') * 500)
     .fluidInputs(fluid('phosphoric_acid') * 5)
     .fluidInputs(fluid('water') * 700)

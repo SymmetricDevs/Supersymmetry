@@ -4557,6 +4557,32 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 6, Hydrogen * 12, Oxygen * 3)
                 .color(0x567a6e)
                 .build()
+        
+        Dihydrooxaphosphaphenanthreneoxide = new Material.Builder(15759, SuSyUtility.susyId('dihydrooxaphosphaphenanthreneoxide'))
+                .dust()
+                .components(Carbon * 12, Hydrogen * 9, Oxygen * 2, Phosphorus)
+                .colorAverage()
+                .build()
+        
+        TwoPhenylphenol = new Material.Builder(15760, SuSyUtility.susyId('two_phenylphenol'))
+                .dust()
+                .components(Carbon * 12, Hydrogen * 10, Oxygen)
+                .color(0x6d0840)
+                .build()
+
+        TwoPhenylphenol.setFormula('C₆H₅-C₆H₄OH', false)
+
+        TwoCyclohexenylCyclohexanone = new Material.Builder(15761, SuSyUtility.susyId('two_cyclohexenylcyclohexanone'))
+                .liquid()
+                .components(Carbon * 12, Hydrogen * 18, Oxygen)
+                .color(0x937993)
+                .build()
+
+        TwoCyclohexenylcyclohexanoneSolution = new Material.Builder(15762, SuSyUtility.susyId('two_cyclohexenylcyclohexanone_solution'))
+                .liquid()
+                .components(TwoCyclohexenylCyclohexanone, Water * 2)
+                .color(0x776077)
+                .build()
 
     }
 }

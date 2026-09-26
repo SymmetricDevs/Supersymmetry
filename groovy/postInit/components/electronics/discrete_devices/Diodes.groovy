@@ -142,7 +142,7 @@ Deposition.generateSiliconDioxideGrowthRecipe('wafer.diode.power.step_seven', 'w
 
 // Metallization
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_eight', 'wafer.diode.power.step_nine', 'silicon_nitride', 400, false)
-Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_nine', 'wafer.diode.power.step_ten', 'novolacs_liftoff_resist', 'mask_set.diode.power', true)
+Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_nine', 'wafer.diode.power.step_ten', 'novolac_liftoff_resist', 'mask_set.diode.power', true)
 Deposition.generateSputteringRecipe('wafer.diode.power.step_nine.exposed', 'wafer.diode.power.step_nine.deposited', [ 'titanium' : 200, 'nickel' : 400, 'silver' : 200 ])
 Lithography.generateResistStrippingRecipes('wafer.diode.power.step_ten', 'wafer.diode.power.step_eleven', 1, false, true)
 Mechanicals.generateBackgrindingRecipe('wafer.diode.power.step_eleven', 'wafer.diode.power.step_twelve', 400, HV)
@@ -175,7 +175,7 @@ Etching.generateWetEtchingRecipe('wafer.diode.schottky.step_six', 'wafer.diode.s
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_seven', 'wafer.diode.schottky.step_eight', 1, false, true)
 
 // Anode metallization with titanium for Schottky barrier
-Lithography.generatePhotolithographyRecipes('wafer.diode.schottky.step_eight', 'wafer.diode.schottky.step_nine', 'novolacs_liftoff_resist', 'mask_set.diode.schottky', false)
+Lithography.generatePhotolithographyRecipes('wafer.diode.schottky.step_eight', 'wafer.diode.schottky.step_nine', 'novolac_liftoff_resist', 'mask_set.diode.schottky', false)
 Deposition.generateSputteringRecipe('wafer.diode.schottky.step_eight.exposed', 'wafer.diode.schottky.step_eight.deposited', ['titanium': 200, 'nickel' : 400, 'silver' : 200])
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_nine', 'wafer.diode.schottky.step_ten', 1, false, true)
 

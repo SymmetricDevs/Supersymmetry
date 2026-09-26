@@ -2808,6 +2808,10 @@ class SuSyMaterials {
     public static Material FiberReinforcedNylon
     public static Material IridiumAcetylacetonate
     public static Material Aerozine50
+    public static Material Dihydrooxaphosphaphenanthreneoxide
+    public static Material TwoPhenylphenol
+    public static Material TwoCyclohexenylCyclohexanone
+    public static Material TwoCyclohexenylcyclohexanoneSolution
 
     // Third Degree Materials
 
