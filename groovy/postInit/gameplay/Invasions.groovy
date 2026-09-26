@@ -1030,6 +1030,7 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_air_cavalry")
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
                     root.setInteger("hate", -50);
+                    root.setBoolean("leader", true); // Sets leader: 1b in NBT
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
                     outcast.setCustomNameTag("Former Federation Sergeant");
@@ -1091,7 +1092,7 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_air_cavalry")
         .setExactDistribution(44,1,5); //federation soldiers, platoon sergeant, helicopters
 
 /**
- federation reinforced flight platoon
+ federation air scouts
  20 attack helicopters, 1 leader helicopter
  helicopter munitions, helicopter rockets
  Air only combat unit, prized by the federation militaries for securing air corridors
@@ -1100,7 +1101,7 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_air_cavalry")
 String helicopterCommand1 = "summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{leader:1b,faction:\"Feds\",hate:-150,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:200}],Health:200.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b},{Id:" + PotionDropPodSickness.getId() + ",Amplifier:0b,Duration:" + DROP_POD_SICKNESS_DURATION + ",ShowParticles:0b}]}"
 new MobHordeEvent((player) -> null, 20, 20, "fed_air_scouts")
         .setTimer(144000, 216000)
-        .minHate("Feds", 750)
+        .minHate("Feds", 1500)
 
 //normal raider
         .addPattern(
@@ -1143,7 +1144,7 @@ new MobHordeEvent((player) -> null, 20, 20, "fed_air_scouts")
  The strongest the federation is willing to send at you as long as you remain planetbound
  **/
 
-double TRIANGLE_RADIUS = 40.0;
+double TRIANGLE_RADIUS = 80.0;
 def tri0x = TRIANGLE_RADIUS * Math.cos(Math.toRadians(90))
 def tri0z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(90))
 def tri1x = TRIANGLE_RADIUS * Math.cos(Math.toRadians(210))
@@ -1154,7 +1155,7 @@ def tri2z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(330))
 
 new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
         .setTimer(144000, 216000)
-        .minHate("Feds", 1500)
+        .minHate("Feds", 2500)
 
 // ── FORMATION 0 - normal soldiers ──────────────────────────────────────
         .addPattern(
@@ -1444,19 +1445,66 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                 null,
                 null
         )
+        //first sargent
+        .addPattern(
+                t -> new MobHordeEvent.Vec2(0, 0),
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -75);
+                    root.setBoolean("leader", true);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
+                    outcast.setCustomNameTag("Federation Platoon Sergeant");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 10000, 10));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t4_power_boots",
+                            "techguns:t4_power_leggings",
+                            "techguns:t4_power_chestplate",
+                            "techguns:t2_beret"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", "techguns:grenadelauncher");
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
         //constructoid
         .addPattern(
                 t -> {
                     return new MobHordeEvent.Vec2(0, 0);
                 },
-                Arrays.asList("setblock ~ ~ ~ stone"),
+                Arrays.asList("/#gen ConstructoidMK01"),
                 null,
                 null,
         )
         //flare
         .addPattern(
                 t -> {
-                    return new MobHordeEvent.Vec2(-5, 0);
+                    return new MobHordeEvent.Vec2(-3, 0);
                 },
                 Arrays.asList("setblock ~ ~ ~ susy:raid_flare_block 1 replace {targetUUID:\"%player_uuid%\"}"), //add player data tag
                 null,
@@ -1465,7 +1513,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
         //drop beacon
         .addPattern(
                 t -> {
-                    return new MobHordeEvent.Vec2(5, 0);
+                    return new MobHordeEvent.Vec2(3, 0);
                 },
                 Arrays.asList(
                         "blocklist",
@@ -1475,7 +1523,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                 null,
         )
 
-        .setExactDistribution(19, 1, 19, 1, 19, 1, 9, 1, 1, 1, 1); // formation0 soldiers, formation0 sergeant, formation1 soldiers, formation1 sergeant, formation2 soldiers, formation2 sergeant, normal helicopter, captain helicopter, constructoid, flare, drop beacon
+        .setExactDistribution(19, 1, 19, 1, 19, 1, 9, 1, 1, 1, 1, 1); // formation0 soldiers, formation0 sergeant, formation1 soldiers, formation1 sergeant, formation2 soldiers, formation2 sergeant, normal helicopter, captain helicopter, constructoid, flare, drop beacon
 /*
 // Commands for pods
 // example code only, templates, etc...
