@@ -470,6 +470,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('ringTitanium'))
         .outputs(metaitem('rotorReinforcedEpoxyResin'))
         .EUt(VA[MV])
+        .circuitMeta(2)
         .duration(160)
         .buildAndRegister()
 

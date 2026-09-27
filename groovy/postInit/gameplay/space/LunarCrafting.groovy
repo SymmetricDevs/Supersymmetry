@@ -39,6 +39,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtSingleAluminium"))
     .EUt(4)
     .duration(8)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -48,6 +49,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtDoubleAluminium"))
     .EUt(4)
     .duration(12)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -57,6 +59,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtQuadrupleAluminium"))
     .EUt(4)
     .duration(16)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -66,6 +69,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtOctalAluminium"))
     .EUt(4)
     .duration(20)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -75,6 +79,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtHexAluminium"))
     .EUt(4)
     .duration(24)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -103,6 +108,7 @@ crafting.addShaped("susy:ev_hull_moon", metaitem('hull.ev') * 1, [
 SOLAR_FURNACE.recipeBuilder()
     .inputs(ore("dustAluminium"))
     .outputs(metaitem("ingotAluminium"))
+    .circuitMeta(1)
     .duration(80)
     .EUt(8000)
     .buildAndRegister()
@@ -475,6 +481,7 @@ SOLAR_FURNACE.recipeBuilder()
     .inputs(metaitem("dustIron") * 5)
     .inputs(metaitem("dustNickel") * 3)
     .fluidOutputs(fluid("invar") * 1152)
+    .circuitMeta(4)
     .EUt(14000)
     .duration(200)
     .info('recipe.moon')
@@ -742,3 +749,112 @@ mods.gregtech.alloy_smelter.removeByInput(28, [metaitem('ingotHardenedTitanium')
 mods.gregtech.extruder.removeByInput(56, [metaitem('ingotHardenedTitanium') * 9, metaitem('shape.extruder.block')], null)
 // Hardened Titanium Nugget * 9
 mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('ingotHardenedTitanium'), metaitem('shape.mold.nugget')], null)
+
+crafting.addShaped('susy:muffler_moon', metaitem('muffler_hatch.lv'), [
+    [metaitem('hull.ev'), metaitem('electric.motor.ev')],
+    [metaitem('pipeNormalFluidAluminium'), metaitem('rotorAluminium')]])
+
+crafting.addShaped('susy:drawer_upgrade_base_moon', item('storagedrawers:upgrade_template') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [metaitem('stickAluminium'), ore('drawerBasic'), metaitem('stickAluminium')],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_upgrade_4x_moon', item('storagedrawers:upgrade_storage', 1) * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [metaitem('ingotAluminium'), item('storagedrawers:upgrade_template'), metaitem('ingotAluminium')],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_downgrade_moon', item('storagedrawers:upgrade_one_stack') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [item('susy:regolith'), item('storagedrawers:upgrade_template'), item('susy:regolith')],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_downgrade_moon_basalt', item('storagedrawers:upgrade_one_stack') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [item('susy:regolith', 1), item('storagedrawers:upgrade_template'), item('susy:regolith', 1)],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_downgrade_moon_kreep', item('storagedrawers:upgrade_one_stack') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [item('susy:regolith', 2), item('storagedrawers:upgrade_template'), item('susy:regolith', 2)],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+SOLIDIFIER.recipeBuilder()
+    .notConsumable(metaitem('shape.mold.block'))
+    .fluidInputs(liquid('lunar_r_glass') * 144)
+    .outputs(item('gregtech:transparent_casing'))
+    .EUt(7)
+    .duration(16)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+// 3SiO2 + 4Al -> 2Al2O3 + 3Si
+// apparently this is even done somewhere
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustSiliconDioxide") * 9)
+    .inputs(metaitem("dustAluminium") * 4)
+    .outputs(metaitem('dustAlumina') * 10)
+    .fluidOutputs(fluid("silicon") * 432)
+    .EUt(8000)
+    .duration(150)
+    .buildAndRegister()
+
+// Lunar solar cells
+// based off https://www.niac.usra.edu/files/library/meetings/annual/jun00/433Ignatiev.pdf (very trustworthy paper)
+// step 1: Al back contact on glass substrate
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('plateLunarRGlass'))
+    .inputs(metaitem("dustSmallAluminium"))
+    .outputs(metaitem('simple_solar_panel.step_one'))
+    .requireVacuum()
+    .EUt(4000)
+    .duration(45)
+    .buildAndRegister()
+
+// step 2: Al-doped Si base layer
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_one') * 4)
+    .inputs(metaitem("dustHighPuritySilicon"))
+    .inputs(metaitem("dustTinyAluminium"))
+    .outputs(metaitem('simple_solar_panel.step_two') * 4)
+    .requireVacuum()
+    .EUt(8000)
+    .duration(135)
+    .buildAndRegister()
+
+// step 3: S-doped Si emitter
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_two') * 16)
+    .inputs(metaitem("dustHighPuritySilicon"))
+    .inputs(metaitem("dustTinySulfur"))
+    .outputs(metaitem('simple_solar_panel.step_three') * 16)
+    .requireVacuum()
+    .EUt(8000)
+    .duration(400)
+    .buildAndRegister()
+
+// step 4: TiO2 antireflection coating
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_three') * 8)
+    .inputs(metaitem("dustTinyLunarRutile"))
+    .outputs(metaitem('simple_solar_panel.step_four') * 8)
+    .requireVacuum()
+    .EUt(10000)
+    .duration(240)
+    .buildAndRegister()
+
+// step 5: Al front contact, deposited via a Ti mask
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_four'))
+    .inputs(metaitem("dustSmallAluminium"))
+    .notConsumable(metaitem('mask.simple_solar_panel'))
+    .outputs(metaitem('simple_solar_panel.cell'))
+    .requireVacuum()
+    .EUt(4000)
+    .duration(60)
+    .buildAndRegister()
+
+crafting.addShaped('susy:simple_solar_mask', metaitem('mask.simple_solar_panel'), [
+    [ore('toolSaw'), null, null],
+    [null, metaitem('plateTitanium'), null],
+    [null, null, null]])

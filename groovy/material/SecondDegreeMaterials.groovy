@@ -18,6 +18,7 @@ import static gregtech.api.unification.material.Materials.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier
 import static gregtechfoodoption.GTFOMaterialHandler.*
 import static supersymmetry.api.unification.material.info.SuSyMaterialFlags.*
+import supersymmetry.api.unification.material.properties.SolidRocketFuelProperty
 
 class SecondDegreeMaterials {
     static void register() {
@@ -1247,7 +1248,7 @@ class SecondDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
 
-        AluminiumChlorideHexahydrate.setFormula("AlCl3*6H2O", false)
+        AluminiumChlorideHexahydrate.setFormula("AlCl3*(H2O)6", true)
 
         LunarRGlass = new Material.Builder(13204, SuSyUtility.susyId('lunar_r_glass'))
             .dust().liquid(new FluidBuilder().temperature(2300))
@@ -1275,7 +1276,7 @@ class SecondDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
         
-        //ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+        ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
 
         SilicaSulfurMix = new Material.Builder(13207, SuSyUtility.susyId('silica_sulfur_mix'))
             .dust().liquid(new FluidBuilder().temperature(388))
@@ -1290,6 +1291,12 @@ class SecondDegreeMaterials {
             .color(0x68684C)
             .iconSet(ROUGH)
             .flags(DISABLE_DECOMPOSITION)
+            .build()
+
+        DilutedMagnesiumChlorideSolution = new Material.Builder(13209, SuSyUtility.susyId('diluted_magnesium_chloride_solution'))
+            .liquid()
+            .components(MagnesiumChloride * 1, Water * 4)
+            .color(0x9EF6FF)
             .build()
 
     }

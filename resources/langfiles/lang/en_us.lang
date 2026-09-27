@@ -3085,6 +3085,7 @@ susy.material.aerozine_50=Aerozine 50
 susy.material.mon_3=MON-3
 susy.material.silica_sulfur_mix=Silica-Sulfur Mix
 susy.material.lunar_concrete=Lunar Concrete
+susy.material.diluted_magnesium_chloride_solution=Diluted Magnesium Chloride Solution
 
 # Isotopes
 
@@ -3690,6 +3691,12 @@ metaitem.low_pressure_steam_turbine_blade.name=Low-Pressure Steam Turbine Blade
 metaitem.sputtering_magnetron.name=Sputtering Magnetron
 metaitem.graphite_paper.name=Graphite Paper
 metaitem.s_glass_fibers.name=S-Glass Fibers
+metaitem.simple_solar_panel.step_one.name=Simple Photovoltaic Panel (Step 1)
+metaitem.simple_solar_panel.step_two.name=Simple Photovoltaic Panel (Step 2)
+metaitem.simple_solar_panel.step_three.name=Simple Photovoltaic Panel (Step 3)
+metaitem.simple_solar_panel.step_four.name=Simple Photovoltaic Panel (Step 4)
+metaitem.simple_solar_panel.cell.name=Simple Photovoltaic Cell
+metaitem.mask.simple_solar_panel.name=Simple Photovoltaic Cell Mask
 
 # Vanilla MC
 tile.hellsand.name=Mineral-Rich Sand
