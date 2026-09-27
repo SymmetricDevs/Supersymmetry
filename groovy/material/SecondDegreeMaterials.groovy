@@ -1277,5 +1277,20 @@ class SecondDegreeMaterials {
                 .build()
         
         ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+
+        WetSuppoertedCalciumAluminateNickel = new Material.Builder(13206, SuSyUtility.susyId('wet_suppoerted_calcium_aluminate_nickel'))
+                .dust()
+                .components(Alumina * 5, CalciumOxide * 1, NickelIINitrate * 9,Water * 1)
+                .colorAverage()
+                .iconSet(DULL)
+                .build()
+
+        SuppoertedCalciumAluminateNickel = new Material.Builder(13206, SuSyUtility.susyId('suppoerted_calcium_aluminate_nickel'))
+                .dust()
+                .components(Alumina * 5, CalciumOxide * 1, NickelIINitrate * 9)
+                .colorAverage()
+                .iconSet(DULL)
+                .build()
+
     }
 }
