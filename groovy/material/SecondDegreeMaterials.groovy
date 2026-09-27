@@ -1277,6 +1277,5 @@ class SecondDegreeMaterials {
                 .build()
         
         ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
-
     }
 }
