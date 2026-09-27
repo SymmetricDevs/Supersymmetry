@@ -2812,6 +2812,7 @@ class SuSyMaterials {
     public static Material TwoPhenylphenol
     public static Material TwoCyclohexenylCyclohexanone
     public static Material TwoCyclohexenylcyclohexanoneSolution
+    public static Material BenzalChloride
 
     // Third Degree Materials
 
