@@ -46,7 +46,13 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
+
 // Trench VDMOS
+// Sources: https://patents.google.com/patent/US4767722A/en
+//          https://patents.google.com/patent/US4516143A/en
+//          https://patents.google.com/patent/US4466172A/en
+//          https://patents.google.com/patent/US4733289A/en
+//          https://patents.google.com/patent/US4517226A/en
 
 Deposition.generateChemicalVaporDepositionRecipe('wafer.small.silicon.heavily_n_doped', 'wafer.vdmos.step_one', 2.0, 'n_doped_silicon')
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.vdmos.step_one', 'wafer.vdmos.step_two', 400, false)
@@ -121,12 +127,58 @@ RESISTANCE_FURNACE.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 Packaging.generateDicingRecipe('wafer.vdmos.step_twenty_four', 'die.vdmos', 4, 400, HV)
-Packaging.generateWireBondingRecipe('die.vdmos', 'component.transistor.vdmos.bonded', 'aluminium', 200, HV)
+Packaging.generateWireBondingRecipe('die.vdmos', 'component.transistor.vdmos.bonded', 'aluminium', 50, HV)
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('component.transistor.vdmos.bonded'))
-    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
     .outputs(metaitem('component.transistor.vdmos'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(VA[HV])
+    .buildAndRegister()
+
+
+// Signal MOSFET
+// Sources: https://patents.google.com/patent/US4319396A/en
+//          https://patents.google.com/patent/US4299024A/en
+
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.p_doped', 'wafer.signal_mosfet.step_one', 400, true)
+Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_one', 'wafer.signal_mosfet.step_two.patterned', 'novolac_resist', 'mask_set.signal_mosfet', true)
+Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_two.patterned', 'wafer.signal_mosfet.step_two.etched', 'silicon_dioxide', 400, false)
+Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_two.etched', 'wafer.signal_mosfet.step_two', 1, false, true)
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.signal_mosfet.step_two', 'wafer.signal_mosfet.step_three', 400, false)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_three', 'wafer.signal_mosfet.step_four', 2.0, 'n_doped_silicon')
+Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_four', 'wafer.signal_mosfet.step_five.patterned', 'novolac_resist', 'mask_set.signal_mosfet', true)
+Etching.generateReactiveIonEtchingRecipe('wafer.signal_mosfet.step_five.patterned', 'wafer.signal_mosfet.step_five.etched', 'silicon', 100)
+Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_five.etched', 'wafer.signal_mosfet.step_five', 1, true)
+Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_five', 'wafer.signal_mosfet.step_six.patterned', 'novolac_resist', 'mask_set.signal_mosfet', true)
+Doping.generateIonImplantationRecipes('wafer.signal_mosfet.step_six.patterned', 'wafer.signal_mosfet.step_six.implanted', 400, 'phosphine')
+Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_six.implanted', 'wafer.signal_mosfet.step_six', 1, true)
+Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_six', 'wafer.signal_mosfet.step_seven.patterned', 'novolac_resist', 'mask_set.signal_mosfet', true)
+Doping.generateIonImplantationRecipes('wafer.signal_mosfet.step_seven.patterned', 'wafer.signal_mosfet.step_seven.implanted', 400, 'boron_trifluoride')
+Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_seven.implanted', 'wafer.signal_mosfet.step_seven', 1, true)
+Doping.generateDriveInRecipe('wafer.signal_mosfet.step_seven', 'wafer.signal_mosfet.step_eight', 400)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_eight', 'wafer.signal_mosfet.step_nine', 1.0, 'phosphosilicate_glass')
+Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_nine', 'wafer.signal_mosfet.step_ten.patterned', 'novolac_resist', 'mask_set.signal_mosfet', true)
+Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_ten.patterned', 'wafer.signal_mosfet.step_ten.etched', 'silicon_dioxide', 100, false)
+Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_ten.etched', 'wafer.signal_mosfet.step_ten', 1, false, true)
+Deposition.generateEvaporationRecipe('wafer.signal_mosfet.step_ten', 'wafer.signal_mosfet.step_eleven', 400, 'aluminium', true)
+Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_eleven', 'wafer.signal_mosfet.step_twelve.patterned', 'novolac_resist', 'mask_set.signal_mosfet', false)
+Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_twelve.patterned', 'wafer.signal_mosfet.step_twelve.etched', 'aluminium', 100, false)
+Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_twelve.etched', 'wafer.signal_mosfet.step_twelve', 1, false, true)
+Deposition.generateSinteringRecipe('wafer.signal_mosfet.step_twelve', 'wafer.signal_mosfet.step_thirteen', 400, HV)
+Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_thirteen', 'wafer.signal_mosfet.step_fourteen', 2.0, 'silicon_nitride.silane')
+Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_fourteen', 'wafer.signal_mosfet.step_fifteen.patterned', 'novolac_resist', 'mask_set.signal_mosfet', true)
+Etching.generateReactiveIonEtchingRecipe('wafer.signal_mosfet.step_fifteen.patterned', 'wafer.signal_mosfet.step_fifteen.etched', 'silicon_nitride', 100)
+Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_fifteen.etched', 'wafer.signal_mosfet.step_fifteen', 1, true, true)
+Mechanicals.generateBackgrindingRecipe('wafer.signal_mosfet.step_fifteen', 'wafer.signal_mosfet.step_sixteen', 400, HV)
+Packaging.generateDicingRecipe('wafer.signal_mosfet.step_sixteen', 'die.signal_mosfet', 4, 400, HV)
+Packaging.generateWireBondingRecipe('die.signal_mosfet', 'die.signal_mosfet.bonded', 'aluminium', 50, HV)
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.signal_mosfet.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 288)
+    .outputs(metaitem('component.transistor.signal_mosfet'))
+    .duration(100)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
