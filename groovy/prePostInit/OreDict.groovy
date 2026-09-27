@@ -44,6 +44,7 @@ ore('capacitorFilm').add(metaitem('foilPolypropylene'))
 
 ore('componentDiodeSignal').add(metaitem('component.diode.alloy_junction'))
 ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
+ore('componentDiodeSignal').add(metaitem('component.smd.diode'))
 
 // Circuit oredict
 
