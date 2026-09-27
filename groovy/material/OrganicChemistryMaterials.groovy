@@ -4584,5 +4584,11 @@ class OrganicChemistryMaterials {
                 .color(0x776077)
                 .build()
 
+        BenzalChloride = new Material.Builder(15763, SuSyUtility.susyId('benzal_chloride'))
+                .liquid()
+                .components(Carbon * 7, Hydrogen * 6 Chlorine * 2)
+                .color(0xdb7b21)
+                .build()
+
     }
 }

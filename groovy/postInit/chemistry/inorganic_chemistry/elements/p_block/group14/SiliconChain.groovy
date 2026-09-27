@@ -70,8 +70,10 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('gaseous_chlorosilane_mixture') * 3100)
     .duration(100)
     .EUt(VA[LV])
+
     .buildAndRegister()
 
+/* Seems like a corner-cutting version of the real process
 FLUIDIZED_BR.recipeBuilder()
     .inputs(ore('dustSilicon'))
     .fluidInputs(fluid('hydrogen_chloride') * 3100)
@@ -79,6 +81,7 @@ FLUIDIZED_BR.recipeBuilder()
     .duration(20)
     .EUt(VA[LV])
     .buildAndRegister()
+*/
 
 CONDENSER.recipeBuilder()
     .fluidInputs(fluid('gaseous_chlorosilane_mixture') * 3100)
@@ -88,6 +91,7 @@ CONDENSER.recipeBuilder()
     .buildAndRegister()
 
 DISTILLERY.recipeBuilder()
+    .circuitMeta(3)
     .fluidInputs(fluid('chlorosilane_mixture') * 100)
     .fluidOutputs(fluid('chlorosilane') * 900)
     .duration(100)

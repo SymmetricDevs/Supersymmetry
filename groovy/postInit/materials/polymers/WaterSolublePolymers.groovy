@@ -4,6 +4,7 @@ import static gregtech.api.GTValues.*
 // Polyethylene glycol (PEG)
 
 POLYMERIZATION_TANK.recipeBuilder()
+    .circuitMeta(1)
     .fluidInputs(fluid('ethylene_oxide') * 1000)
     .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
     .fluidOutputs(fluid('polyethylene_glycol_solution') * 2000)
@@ -40,6 +41,7 @@ BR.recipeBuilder()
     .buildAndRegister()
 
 CSTR.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('ethyl_acetate') * 50)
     .notConsumable(fluid('sulfuric_acid') * 50)
     .fluidOutputs(fluid('ethanol') * 50)

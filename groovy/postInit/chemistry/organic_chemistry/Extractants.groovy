@@ -1043,6 +1043,7 @@ import static gregtech.api.GTValues.*
         .buildAndRegister()
 
     CSTR.recipeBuilder()
+        .circuitMeta(2)
         .notConsumable(fluid('sulfuric_acid') * 50)
         .fluidInputs(fluid('ethylbenzene') * 50)
         .fluidInputs(fluid('ethylene') * 50)

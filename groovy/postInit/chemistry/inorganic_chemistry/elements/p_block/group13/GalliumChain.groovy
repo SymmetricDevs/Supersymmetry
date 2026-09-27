@@ -37,12 +37,6 @@ ELECTROLYZER.recipeBuilder()
     .buildAndRegister()
 
 //CHLORIDE ROUTE (75%)
-DISTILLERY.recipeBuilder()
-    .fluidInputs(fluid('crude_gallium_trichloride') * 432)
-    .fluidOutputs(fluid('gallium_trichloride') * 750)
-    .duration(120)
-    .EUt(VA[LV])
-    .buildAndRegister()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('crude_gallium_trichloride') * 432)

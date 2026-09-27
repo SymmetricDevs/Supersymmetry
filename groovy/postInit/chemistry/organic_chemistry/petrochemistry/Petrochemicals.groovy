@@ -268,6 +268,7 @@ DT.recipeBuilder()
     // Toluene chlorination
 
     BR.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustTinyAzobisisobutyronitrile'))
         .fluidInputs(fluid('toluene') * 1000)
         .fluidInputs(fluid('chlorine') * 3000)
@@ -276,6 +277,28 @@ DT.recipeBuilder()
         .duration(200)
         .EUt(VA[MV])
         .buildAndRegister()
+
+    // Toluene chlorination for Benzaldehyde
+
+    BR.recipeBuilder()
+        .circuitMeta(2)
+        .fluidInputs(fluid('toluene') * 1000)
+        .fluidInputs(fluid('chlorine') * 2000)
+        .fluidOutputs(fluid('benzal_chloride') * 1000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 2000)
+        .duration(200)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('benzal_chloride') * 50)
+        .fluidInputs(fluid('water') * 50)
+        .fluidOutputs(fluid('benzaldehyde') * 50)
+        .fluidOutputs(fluid('hydrogen_chloride') * 100)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+    
 
     // Benzoyl chloride
 

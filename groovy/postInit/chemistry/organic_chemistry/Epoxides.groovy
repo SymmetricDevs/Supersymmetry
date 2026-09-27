@@ -49,6 +49,16 @@ DT.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Propylene Glycol
+
+CSTR.recipeBuilder()
+    .fluidInputs(fluid('propylene_oxide') * 50)
+    .fluidInputs(fluid('water') * 50)
+    .fluidOutputs(fluid('propylene_glycol') * 50)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 // Epichlorohydrin
 
 CSTR.recipeBuilder()

@@ -5,6 +5,17 @@ import globals.semiconductors.Deposition
 
 // Monocrystalline quartz
 
+    //recipe conflict solution
+    mods.gregtech.autoclave.removeByInput(24, [metaitem('dustSiliconDioxide')], [fluid('distilled_water') * 250])
+    mods.gregtech.autoclave.recipeBuilder()
+            .inputs(ore('dustSiliconDioxide'))
+            .fluidInputs(fluid('distilled_water') * 250)
+            .chancedOutput(metaitem('gemQuartzite'), 1000, 1000)
+            .circuitMeta(2)
+            .duration(1200)
+            .EUt(24)
+            .buildAndRegister()
+
 AUTOCLAVE.recipeBuilder()
     .circuitMeta(1)
     .inputs(ore('dustSiliconDioxide') * 4)

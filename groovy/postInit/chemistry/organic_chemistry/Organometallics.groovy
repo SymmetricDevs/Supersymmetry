@@ -34,6 +34,7 @@ BR.recipeBuilder()
         .fluidOutputs(fluid('lithium_diisopropylamide_solution') * 1000)
         .duration(160)
         .EUt(VA[MV])
+        .buildAndRegister()
 
     // Lithium dimethylamide (LDM), for organometallic complexes
 
@@ -44,3 +45,4 @@ BR.recipeBuilder()
         .fluidOutputs(fluid('lithium_dimethylamide_solution') * 1000)
         .duration(160)
         .EUt(VA[MV])
+        .buildAndRegister()

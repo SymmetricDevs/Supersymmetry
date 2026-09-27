@@ -380,7 +380,7 @@ CSTR.recipeBuilder()
     // From propylene
 
     BCR.recipeBuilder()
-        .fluidInputs(fluid('propylene') * 50)
+        .fluidInputs(fluid('propene') * 50)
         .fluidInputs(fluid('diluted_nitric_acid') * 300)
         .fluidOutputs(fluid('nitratolactic_acid_solution') * 250)
         .fluidOutputs(fluid('nitric_oxide') * 100)

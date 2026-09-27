@@ -237,6 +237,7 @@ DT.recipeBuilder()
     // EBR Solvent, 70/30 
 
     BLENDER.recipeBuilder()
+        .circuitMeta(1)
         .fluidInputs(fluid('propylene_glycol_methyl_ether') * 770)
         .fluidInputs(fluid('propylene_glycol_methyl_ether_acetate') * 230)
         .fluidOutputs(fluid('ebr_solvent') * 1000)
@@ -473,6 +474,7 @@ DT.recipeBuilder()
     // Polyhydroxystyrene
 
     CSTR.recipeBuilder()
+        .circuitMeta(2)
         .fluidInputs(fluid('ethylbenzene') * 50)
         .fluidInputs(fluid('sulfuric_acid') * 50)
         .fluidOutputs(fluid('para_ethylbenzenesulfonic_acid_solution') * 50)
@@ -1386,8 +1388,7 @@ BLENDER.recipeBuilder()
 
 BCR.recipeBuilder()
     .fluidInputs(fluid('toluene') * 50)
-    .fluidInputs(fluid('sulfur_trioxide') * 50)
-    .fluidInputs(fluid('water') * 50)
+    .fluidInputs(fluid('sulfuric_acid') * 50)
     .fluidOutputs(fluid('tosylic_acid_solution') * 50)
     .duration(10)
     .EUt(VA[LV])

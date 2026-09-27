@@ -6,6 +6,7 @@ import static gregtech.api.GTValues.*
 // Phenol-formaldehyde novolacs
 
 POLYMERIZATION_TANK.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustTinyOxalicAcid'))
     .fluidInputs(fluid('formaldehyde') * 750)
     .fluidInputs(fluid('phenol') * 1000)
@@ -46,6 +47,7 @@ LCR.recipeBuilder()
     .buildAndRegister()
 
 POLYMERIZATION_TANK.recipeBuilder()
+    .circuitMeta(2)
     .inputs(ore('dustTinyOxalicAcid') * 2)
     .inputs(ore('dustTwoNaphthol'))
     .fluidInputs(fluid('formaldehyde') * 1500)

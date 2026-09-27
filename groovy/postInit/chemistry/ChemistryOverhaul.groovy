@@ -2803,6 +2803,7 @@ BR.recipeBuilder()
 // Copper Chloride Solution
 
 MIXER.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustCopperIiChloride') * 3)
     .fluidInputs(fluid('water') * 2000)
     .fluidOutputs(fluid('copper_ii_chloride_solution') * 2000)
