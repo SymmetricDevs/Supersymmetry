@@ -228,8 +228,9 @@ INDUCTION_FURNACE.recipeBuilder()
     .fluidOutputs(fluid('food_grade_stainless_steel') * 5760)
     .EUt(VA[EV])
     .buildAndRegister()
-    
+
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('cobalt') * 720)
     .inputs(metaitem('dustChrome') * 2)
     .inputs(metaitem('dustNickel'))

@@ -13,38 +13,16 @@ import static gregtech.api.GTValues.*
 //   scandian_ferric_sulfate_leachate
 //   scandium_bearing_waste_acid
 
-// Modelled on the Na2CO3 roasting-water washing-H2SO4 leaching route for Sc-bearing
-// aegirine, which is also a pyroxene.
-// $stoik 4CaFeSi2O6 + 10Na2CO3 + O2 -> 8Na2SiO3 + 4NaFeO2 + 4CaO + 10CO2
-Sintering.RotaryKiln.fuels.each { fuel ->
-    Sintering.RotaryKiln.comburents.each { comburent ->
-        def builder = ROTARY_KILN.recipeBuilder()
-            .inputs(ore('dustLunarPyroxene') * 40)
-            .inputs(ore('dustSodaAsh') * 60)
-            .fluidInputs(fluid(fuel.name) * fuel.amountRequired)
-            .outputs(metaitem('dustSodiumSilicate') * 48)
-            .outputs(metaitem('dustSodianFerriteClinker') * 24)
-            .duration(fuel.duration + comburent.duration)
-            .EUt(VA[HV])
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore('dustLunarPyroxene') * 40)
+    .inputs(ore('dustSodaAsh') * 60)
+    .outputs(metaitem('dustSodiumSilicate') * 48)
+    .outputs(metaitem('dustSodianFerriteClinker') * 24)
+    .fluidOutputs(fluid('carbon_dioxide') * 10000)
+    .duration(480)
+    .EUt(12000)
+    .buildAndRegister()
 
-        // Gotta not list the same fluid twice
-        if (comburent.name == 'oxygen') {
-            builder.fluidInputs(fluid('oxygen') * (1000 + comburent.amountRequired))
-        } else {
-            builder.fluidInputs(fluid(comburent.name) * comburent.amountRequired)
-            builder.fluidInputs(fluid('oxygen') * 1000)
-        }
-
-        if (fuel.byproduct == 'carbon_dioxide') {
-            builder.fluidOutputs(fluid('carbon_dioxide') * (10000 + fuel.byproductAmount))
-        } else {
-            builder.fluidOutputs(fluid('carbon_dioxide') * 10000)
-            builder.fluidOutputs(fluid(fuel.byproduct) * fuel.byproductAmount)
-        }
-
-        builder.buildAndRegister()
-    }
-}
 
 // $stoik 4NaFeO2 + 4CaO + 12H2O -> 4Fe(OH)3 + 4Ca(OH)2 + 4NaOH
 BR.recipeBuilder()

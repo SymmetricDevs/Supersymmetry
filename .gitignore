@@ -40,8 +40,6 @@ hei_bookmarks.ini
 
 config/acronym/saved/
 
-config/beneath/blockdeco.json
-
 config/betterquesting/DefaultQuests/QuestSettings.json
 
 config/biomesoplenty/biomes/defaults/
@@ -175,9 +173,9 @@ Supersymmetry.iml
 groovy/sideOnlyGenerated.json
 .clawdea/REPO_STATE.md
 
-# Python / uv tooling
-.venv/
-.uv-cache/
+# UV python stuff
 .python-version
 pyproject.toml
+.venv/
+.uv-cache/
 uv.lock

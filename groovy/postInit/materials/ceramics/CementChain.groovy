@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import globals.CoolantGases
 import globals.Sintering
+import globals.Carbons
 
 Sintering.plasmaFuels().each { fuel ->
     SINTERING_OVEN.recipeBuilder()
@@ -57,6 +58,17 @@ Sintering.nonPlasmaFuels().each { fuel ->
             .buildAndRegister()
     }
 }
+
+// PRIMITIVE CONCRETE
+for (combustible in Carbons.combustibles()) {
+  PBF.recipeBuilder()
+    .inputs(ore('dustClay'))
+    .inputs(ore('dustLimestone'))
+    .inputs(ore(combustible.name) * (combustible.equivalent(2)))
+    .outputs(metaitem('hot.cement.clinker'))
+    .duration(400)
+    .buildAndRegister()
+  }
 
 def gases = [
     new CoolantGases('air', 'hot_air', 100, 40)

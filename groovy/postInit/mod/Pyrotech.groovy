@@ -1378,6 +1378,29 @@ ALLOY_SMELTER.recipeBuilder()
         .EUt(VA[LV])
         .buildAndRegister();
 
+// Brick series for deco
+COMPRESSOR.recipeBuilder()
+        .inputs(item('pyrotech:material', 16) * 4)
+        .outputs(item('pyrotech:masonry_brick_block'))
+        .duration(300)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+EXTRACTOR.recipeBuilder()
+        .inputs(item('pyrotech:masonry_brick_block'))
+        .outputs(item('pyrotech:material', 16) * 4)
+        .duration(300)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+
+CUTTER.recipeBuilder()
+    .inputs(ore('stone'))
+    .outputs(item('pyrotech:material', 16) * 4)
+    .circuitMeta(2)
+    .duration(50)
+    .EUt(VA[ULV])
+    .buildAndRegister();        
+
 // Recycling
 def recycleStoneItem = { IIngredient itemInput, int stoneAmount, int smallStoneAmount = 0 ->
     RecyclingHelper.handleRecycling(itemInput, [

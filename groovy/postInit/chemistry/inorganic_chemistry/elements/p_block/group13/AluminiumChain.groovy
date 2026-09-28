@@ -80,6 +80,30 @@ CRYSTALLIZER.recipeBuilder()
     .EUt(16)
     .buildAndRegister()
 
+// Moon Aluminium (tm)
+
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('lunar_sodium_aluminate_solution') * 3000)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidInputs(fluid('carbon_dioxide') * 1000)
+    .fluidOutputs(fluid('soda_ash_solution') * 1000)
+    .outputs(metaitem('dustAluminiumHydroxide') * 14)
+    .info('recipe.moon')
+    .duration(300)
+    .EUt(20)
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('lunar_sodium_aluminate_solution') * 1500)
+    .fluidInputs(fluid('water') * 1500)
+    .notConsumable(ore('dustAluminiumHydroxide'))
+    .fluidOutputs(fluid('sodium_hydroxide_solution') * 1000)
+    .outputs(metaitem('dustAluminiumHydroxide') * 7)
+    .info('recipe.moon')
+    .duration(300)
+    .EUt(16)
+    .buildAndRegister()
+
 // Alumina from Al(OH)3
 
 ERF.recipeBuilder()
