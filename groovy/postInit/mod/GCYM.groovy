@@ -1,0 +1,17 @@
+mods.jei.ingredient.yeet(item('gcym:unique_casing', 0))
+mods.jei.ingredient.yeet(item('gcym:unique_casing', 1))
+mods.jei.ingredient.yeet(item('gcym:unique_casing', 2))
+mods.jei.ingredient.yeet(item('gcym:unique_casing', 4))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 0))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 1))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 2))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 4))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 5))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 6))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 7))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 9))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 10))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 11))
+mods.jei.ingredient.yeet(item('gcym:large_multiblock_casing', 12))
+
+

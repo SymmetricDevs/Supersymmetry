@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    919995486,
+    438034027
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1853734142.desc",
+      "icon:10": {
+        "id:8": "minecraft:nether_star"
+      },
+      "name:8": "susy.quest.db.1853734142.title"
+    }
+  },
+  "questID:3": 1853734142,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

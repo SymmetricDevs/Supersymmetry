@@ -314,7 +314,7 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
     // Oleomide
 
     CSTR.recipeBuilder()
-        .notConsumable(ore('springKanthal'))
+        .notConsumable(ore('springEarly'))
         .fluidInputs(fluid('oleic_acid') * 50)
         .fluidInputs(fluid('ammonia') * 50)
         .fluidOutputs(fluid('oleylamide') * 50)
@@ -326,7 +326,7 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
     // Monoglycerides
 
     CSTR.recipeBuilder()
-        .notConsumable(ore('springKanthal'))
+        .notConsumable(ore('springEarly'))
         .fluidInputs(fluid('seed_oil') * 50)
         .fluidInputs(fluid('glycerol') * 100)
         .fluidOutputs(fluid('monoglycerides') * 150)

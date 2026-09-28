@@ -46,7 +46,7 @@ FIXED_BR.recipeBuilder()
     .buildAndRegister()
 
 BCR.recipeBuilder()
-    .fluidInputs(fluid('two_ethylanthrahydroquinone') * 100)
+    .fluidInputs(fluid('two_ethylanthrahydroquinone_solution') * 100)
     .fluidInputs(fluid('air') * 500)
     .fluidOutputs(fluid('oxidized_two_ethylanthraquinone_solution') * 100)
     .duration(100)
@@ -54,7 +54,7 @@ BCR.recipeBuilder()
     .buildAndRegister();
 
 BCR.recipeBuilder()
-    .fluidInputs(fluid('two_ethylanthrahydroquinone') * 100)
+    .fluidInputs(fluid('two_ethylanthrahydroquinone_solution') * 100)
     .fluidInputs(fluid('oxygen') * 100)
     .fluidOutputs(fluid('oxidized_two_ethylanthraquinone_solution') * 100)
     .duration(100)

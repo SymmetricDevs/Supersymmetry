@@ -51,8 +51,9 @@ RecyclingHelper.handleRecycling(item('susy:separator_rotor') * 5,
         [metaitem('electric.motor.hv') * 2, ore('gearStainlessSteel') * 4, ore('rotorStainlessSteel') * 16, ore('plateStainlessSteel') * 16]
 )
 
+
 ASSEMBLER.recipeBuilder()
-    .circuitMeta(9)
+    .circuitMeta(20)
     .inputs(ore('plateStainlessSteel') * 9)
     .outputs(item('susy:susy_multiblock_casing', 2))
     .duration(240)
@@ -485,21 +486,32 @@ crafting.addShaped('susy:kimberlite_bricks', item('susy:susy_stone_bricks', 8) *
         [ore('stoneKimberlite'), ore('stoneKimberlite')]
 ])
 
-crafting.addShaped('susy:industrial_concrete_bricks', item('susy:susy_stone_bricks', 9) * 4, [
-        [item('susy:susy_stone_smooth', 9), item('susy:susy_stone_smooth', 9)],
-        [item('susy:susy_stone_smooth', 9), item('susy:susy_stone_smooth', 9)]
+crafting.addShaped('susy:anorthosite_bricks', item('susy:susy_stone_bricks', 11) * 4, [
+        [ore('stoneAnorthosite'), ore('stoneAnorthosite')],
+        [ore('stoneAnorthosite'), ore('stoneAnorthosite')]
 ])
 
-crafting.addShapeless('marble_conversion', item('gregtech:stone_smooth', 2), [item('chisel:marble2', 7)])
+crafting.addShaped('susy:leucobasalt_bricks', item('susy:susy_stone_bricks', 12) * 4, [
+        [ore('stoneKreepBasalt'), ore('stoneKreepBasalt')],
+        [ore('stoneKreepBasalt'), ore('stoneKreepBasalt')]
+])
 
-//add variants to chisel group
-mods.chisel.carving.addGroup("susy_structural_blocks")
-for (int i = 0; i<16; i++) {
-    mods.chisel.carving.addVariation("susy_structural_blocks", item('susy:structural_block', i))
+
+//Dotted Panels
+def panels = [4, 5, 6, 7]
+
+panels.each { number ->
+    ASSEMBLER.recipeBuilder()
+            .circuitMeta(number)
+            .inputs(metaitem('plateWroughtIron') * 4)
+            .inputs(metaitem('screwWroughtIron') * 2)
+            .outputs(item('susy:random_concrete', number) * 8)
+            .duration(80)
+            .EUt(VA[LV])
+            .buildAndRegister()
 }
-for (int i = 0; i<10; i++) {
-    mods.chisel.carving.addVariation("susy_structural_blocks", item('susy:structural_block_1', i))
-}
+
+crafting.addShapeless('marble_conversion', item('gregtech:stone_smooth', 2), [item('chisel:marble2', 7)])
 
 //add custom sheets to chisel group
 mods.chisel.carving.addVariation("gt_metal_sheet", item('susy:custom_sheets', 0))

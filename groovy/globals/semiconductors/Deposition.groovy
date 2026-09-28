@@ -139,6 +139,47 @@ class Deposition {
         sputteringTarget.generateRecipe(input, product, duration)
     }
 
+    record TargetName(String name, String ore_name) {}
+    public static final targetNames = [
+        new TargetName("aluminium", "Aluminium"),
+        new TargetName("copper", "Copper"),
+        new TargetName("titanium", "Titanium"),
+        new TargetName("nickel", "Nickel"),
+        new TargetName("silver", "Silver"),
+        new TargetName("gold", "Gold"),
+        new TargetName("palladium", "Palladium"),
+        new TargetName("tungsten", "Tungsten"),
+        new TargetName("antimony", "Antimony"),
+        new TargetName("silicon", "Silicon"),
+        new TargetName("platinum", "Platinum"),
+        new TargetName("tantalum", "Tantalum"),
+        new TargetName("chromium", "Chrome"),
+        new TargetName("tantalum_nitride", "TantalumNitride"),
+        new TargetName("cobalt", "Cobalt")
+    ]
+    
+    record InertGasHIP(String name, int amount_required, int duration) {}
+    public static final inertGasesHIP = [
+        new InertGasHIP('nitrogen', 200, 2),
+        new InertGasHIP('argon', 100, 1)
+    ]
+
+    static void generateSputteringTargetRecipes() {
+        for (gasses in inertGasesHIP){
+            for (target in targetNames){
+                HOT_ISOSTATIC_PRESS.recipeBuilder()
+                    .notConsumable(metaitem('shape.mold.target'))
+                    .inputs(ore("dust" + target.ore_name))
+                    .fluidInputs(fluid(gasses.name) * gasses.amount_required)
+                    .outputs(metaitem("target." + target.name))
+                    .duration(100 * gasses.duration)
+                    .EUt(VA[HV])
+                    .buildAndRegister()           
+            }
+        }
+    }
+
+
     // feed keys as material paired with duration, for co-sputtering and sequential sputtering
     static void generateSputteringRecipe(String input, String product, Map targetDurationMap) {
         int totalDuration = 0
@@ -187,8 +228,8 @@ class Deposition {
         int molar_volume
         double moles
 
-        cvdRecipe(Map in, Map out, int vt, int duration, int mv, double moles) {
-            this.inputs = in
+        cvdRecipe(Map in_, Map out, int vt, int duration, int mv, double moles) {
+            this.inputs = in_
             this.offgases = out
             this.voltageTier = vt
             this.duration = duration
@@ -207,7 +248,7 @@ class Deposition {
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
+                .duration((int) (duration * thickness * 20 * (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }
@@ -227,7 +268,13 @@ class Deposition {
         "tungsten": new cvdRecipe(['tungsten_hexafluoride' : 5, 'hydrogen' : 50], ['corrosive_gas' : 50], EV, 100, 10, 0.005), //  LPCVD via WF6 reduction in H2 carrier gas
         "titanium_nitride": new cvdRecipe(['titanium_tetrachloride' : 3, 'ammonia' : 4, 'nitrogen' : 48], ['corrosive_gas' : 60], HV, 80, 12, 0.003), // CVD via TiCl4 and NH3 reaction, with N2 carrier
         "silicon_oxycarbide_hydride": new cvdRecipe(['diethoxymethylsilane' : 5, 'alpha_terpinene' : 5, 'helium' : 50], ['corrosive_gas' : 50], EV, 30, 23, 0.005), // PECVD via DEMS decomposition in He carrier gas.
-        "silicon_oxynitride": new cvdRecipe(['silane': 5, 'ammonia': 10 , 'nitrous_oxide': 5, 'nitrogen': 60], ['waste_gas' : 300], EV, 30, 36, 0.0025) // PECVD via silane, ammonia, and nitrous oxide reaction.
+        "silicon_oxynitride": new cvdRecipe(['silane': 5, 'ammonia': 10 , 'nitrous_oxide': 5, 'nitrogen': 60], ['waste_gas' : 300], EV, 30, 36, 0.0025), // PECVD via silane, ammonia, and nitrous oxide reaction.
+        "germanium": new cvdRecipe(['germane' : 10, 'hydrogen' : 100], ['hydrogen' : 140], EV, 20, 14, 0.01),
+        "indium_gallium_phosphide": new cvdRecipe(['trimethyl_indium' : 10, 'trimethyl_gallium' : 10, 'phosphine' : 20, 'hydrogen' : 100], ['hydrogen' : 100, 'methane' : 60], HV, 40, 13, 0.04),
+        "indium_gallium_phosphide.be_doped": new cvdRecipe(['trimethyl_indium' : 50, 'trimethyl_gallium' : 50, 'phosphine' : 100, 'hydrogen' : 500, 'bismethylcyclopentadienyl_beryllium' : 1], ['hydrogen' : 500, 'methane' : 300], HV, 40, 13, 0.2),
+        "indium_aluminium_phosphide": new cvdRecipe(['trimethyl_indium' : 10, 'trimethylaluminium' : 10, 'phosphine' : 20, 'hydrogen' : 100], ['hydrogen' : 100, 'methane' : 60], HV, 40, 13, 0.04),
+        "gallium_arsenide": new cvdRecipe(['trimethyl_gallium' : 10, 'arsine' : 10, 'hydrogen' : 100], ['hydrogen' : 100, 'methane' : 30], HV, 25, 13, 0.02),
+        "gallium_arsenide.be_doped": new cvdRecipe(['trimethyl_gallium' : 50, 'arsine' : 50, 'hydrogen' : 500, 'bismethylcyclopentadienyl_beryllium' : 1], ['hydrogen' : 500, 'methane' : 150], HV, 25, 13, 0.1),
     ]
 
     static void generateChemicalVaporDepositionRecipe(String input, String product, double thickness, String recipe) {
@@ -242,8 +289,8 @@ class Deposition {
     public static class aldRecipe extends cvdRecipe {
         Map purgeGas
 
-        aldRecipe(Map in, Map out, Map purgeGas, int vt, int dur, int mv, double moles) {
-            super(in, out, vt, dur, mv, moles)
+        aldRecipe(Map in_, Map out, Map purgeGas, int vt, int dur, int mv, double moles) {
+            super(in_, out, vt, dur, mv, moles)
             this.purgeGas = purgeGas
         }
 
@@ -261,7 +308,7 @@ class Deposition {
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
+                .duration((int) (duration * thickness * 20 * (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }

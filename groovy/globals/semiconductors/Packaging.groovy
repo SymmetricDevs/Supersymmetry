@@ -8,15 +8,25 @@ import gregtech.api.metatileentity.multiblock.CleanroomType
 
 class Packaging {
 
-    static void generateDicingRecipe(String input, String product, int outputMultiplier, int duration, int voltageTier) {
-        CUTTER.recipeBuilder()
-            .inputs(metaitem(input))
-            .fluidInputs(fluid('ultrapure_water') * 100)
-            .outputs(metaitem(product) * outputMultiplier)
-            .cleanroom(CleanroomType.CLEANROOM)
-            .duration(duration)
-            .EUt(VA[voltageTier])
-            .buildAndRegister();
+    static void generateDicingRecipe(String input, String product, int outputMultiplier, int duration, int voltageTier, boolean cleanroom = true) {
+        if (cleanroom != true){
+            CUTTER.recipeBuilder()
+                .inputs(metaitem(input))
+                .fluidInputs(fluid('ultrapure_water') * 100)
+                .outputs(metaitem(product) * outputMultiplier)
+                .duration(duration)
+                .EUt(VA[voltageTier])
+                .buildAndRegister();
+        } else {
+            CUTTER.recipeBuilder()
+                .inputs(metaitem(input))
+                .fluidInputs(fluid('ultrapure_water') * 100)
+                .outputs(metaitem(product) * outputMultiplier)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(duration)
+                .EUt(VA[voltageTier])
+                .buildAndRegister();  
+        }   
     }
 
     static void generateWireBondingRecipe(String input, String product, String wireMaterial, int duration, int voltageTier) {

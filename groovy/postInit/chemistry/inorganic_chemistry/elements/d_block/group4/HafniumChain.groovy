@@ -51,7 +51,7 @@ for (inertGas in Globals.inertGases) {
         .inputs(ore('dustAnyPurityMagnesium') * 2)
         .outputs(metaitem('sponge.hafnium.crude'))
         .fluidOutputs(fluid('magnesium_chloride') * 864)
-        .blastFurnaceTemp(2150)
+        .blastFurnaceTemp(1400)
         .duration(100 * inertGas.duration)
         .EUt(VA[EV])
         .buildAndRegister()

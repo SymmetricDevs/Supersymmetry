@@ -1,6 +1,0 @@
-{
-  "parent": "gregtech:item/metaitems/pipelike_4x4",
-  "textures": {
-    "all": "gregtech:items/metaitems/assemblymanganesephosphide"
-  }
-}

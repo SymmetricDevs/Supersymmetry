@@ -9,10 +9,19 @@
 <!--A short description of what this PR added/fixed/changed/removed.-->
 <!--For correct linking of issues please use any of the Closes/Fixes/Resolves keywords. Example: When a PR is fixing a bug use "Fixes: #number-of-bug"-->
 
+## Breaking Changes
+<!--List any changes in this PR that break existing setups, worlds, saves, or quest lines. Examples:
+- Renamed, removed, or repurposed items, blocks, materials, or machines
+- Changed or removed recipes that existing bases depend on
+- Changed ore/processing chains, byproducts, or outputs
+- Config changes, worldgen changes, or quest changes that invalidate existing progress
+
+Write each breaking change as a bullet point: what breaks, and (if possible) how players should migrate.
+This section is automatically collected into the release changelog, so keep entries concise and user-facing.
+If this PR has no breaking changes, delete this entire section.-->
+
+
 ## Additional Information
 <!--This section is for screenshots to demonstrate any GUI or rendering changes, or any other additional information that reviewers should be aware of.-->
-
-## Potential Compatibility Issues
-<!--This section is for defining possible compatibility issues. It must be used when there item/block/material/machine changes, or recipe changes.-->
 
 <!--**Please fill in as much useful information as possible. Also, please remove all unused sections, including this and the other explanations.**-->

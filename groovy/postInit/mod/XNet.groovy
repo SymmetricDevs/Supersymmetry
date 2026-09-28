@@ -55,26 +55,26 @@ crafting.addShaped("xnet_connector_advanced", item('xnet:advanced_connector:0') 
 
 crafting.addShaped("xnet_controller", item('xnet:controller'), [
         [item('xnet:netcable:0'), item('xnet:netcable:0'), item('xnet:netcable:0')],
-        [ore('wireFineRedAlloy'), metaitem('hull.lv'), ore('wireFineRedAlloy')],
+        [ore('wireFineTin'), metaitem('hull.lv'), ore('wireFineTin')],
         [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ]);
 
 crafting.addShaped("xnet_router", item('xnet:router'), [
         [item('xnet:netcable:0'), item('xnet:connector:0'), item('xnet:netcable:0')],
-        [ore('wireFineRedAlloy'), metaitem('hull.lv'), ore('wireFineRedAlloy')],
+        [ore('wireFineTin'), metaitem('hull.lv'), ore('wireFineTin')],
         [ore('plateSteel'), ore('circuitLv'), ore('plateSteel')]
 ]);
 
 crafting.addShaped("xnet_redstone_proxy", item('xnet:redstone_proxy'), [
-        [ore('wireFineRedAlloy'), ore('blockRedstone'), ore('wireFineRedAlloy')],
-        [ore('wireFineRedAlloy'), metaitem('hull.lv'), ore('wireFineRedAlloy')],
-        [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')]
+        [ore('wireFineTin'), ore('blockRedstone'), ore('wireFineTin')],
+        [ore('wireFineTin'), metaitem('hull.lv'), ore('wireFineTin')],
+        [ore('wireFineTin'), ore('wireFineTin'), ore('wireFineTin')]
 ]);
 
 crafting.addShaped("xnet_routing_connector", item('xnet:connector:4'), [
-        [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')],
+        [ore('wireFineTin'), ore('wireFineTin'), ore('wireFineTin')],
         [ore('plateGold'), item('xnet:connector:0'), ore('plateGold')],
-        [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')]
+        [ore('wireFineTin'), ore('wireFineTin'), ore('wireFineTin')]
 ]);
 
 crafting.addShaped("xnet_connector_upgrade", item('xnet:connector_upgrade') * 4, [

@@ -1,13 +1,13 @@
 name = "Fixeroo"
-filename = "Fixeroo-2.3.6.jar"
+filename = "Fixeroo-2.3.7.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "62e9ab48dae0b6f864f81a400bdef49964a1bf03"
+hash = "21ccf9a7c549f3992bb72ae35587834496b9144d"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7095475
+file-id = 8144778
 project-id = 633806

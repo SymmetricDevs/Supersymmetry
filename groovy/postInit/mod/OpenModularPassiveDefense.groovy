@@ -23,9 +23,9 @@ crafting.replaceShaped('ompd:hardened_3', item('ompd:hardened', 3) * 8, [
 ])
 
 crafting.replaceShaped('ompd:hardened_4', item('ompd:hardened', 4) * 8, [
-        [null, metaitem('plateGraphene'), null],
-        [metaitem('plateGraphene'), item('ompd:hardened', 3), metaitem('plateGraphene')],
-        [null, metaitem('plateGraphene'), null]
+        [null, metaitem('plateTungstenCarbide'), null],
+        [metaitem('plateTungstenCarbide'), item('ompd:hardened', 3), metaitem('plateTungstenCarbide')],
+        [null, metaitem('plateTungstenCarbide'), null]
 ])
 
 crafting.replaceShaped('ompd:fence_0', item('ompd:fence') * 16, [
@@ -52,7 +52,7 @@ crafting.replaceShaped('ompd:fence_3', item('ompd:fence', 3) * 16, [
         [item('minecraft:iron_bars'), metaitem('plateDiamond'), item('minecraft:iron_bars')]
 ])
 crafting.replaceShaped('ompd:fence_4', item('ompd:fence', 4) * 16, [
-        [item('minecraft:iron_bars'), metaitem('plateGraphene'), item('minecraft:iron_bars')],
-        [metaitem('plateGraphene'), item('minecraft:iron_bars'), metaitem('plateGraphene')],
-        [item('minecraft:iron_bars'), metaitem('plateGraphene'), item('minecraft:iron_bars')]
+        [item('minecraft:iron_bars'), metaitem('plateTungstenCarbide'), item('minecraft:iron_bars')],
+        [metaitem('plateTungstenCarbide'), item('minecraft:iron_bars'), metaitem('plateTungstenCarbide')],
+        [item('minecraft:iron_bars'), metaitem('plateTungstenCarbide'), item('minecraft:iron_bars')]
 ])

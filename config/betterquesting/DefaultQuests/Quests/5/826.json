@@ -10,7 +10,6 @@
         "id:8": "gregtech:meta_item_2"
       },
       "name:8": "susy.quest.db.826.title",
-      "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
   },

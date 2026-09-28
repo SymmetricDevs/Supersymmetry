@@ -1,7 +1,7 @@
 {
   "preRequisites:11": [
-    729,
-    411
+    411,
+    538
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -19,17 +19,22 @@
   "questID:3": 728,
   "tasks:9": {
     "0:10": {
-      "taskID:8": "bq_standard:checkbox"
-    },
-    "1:10": {
       "index:3": 1,
       "requiredFluids:9": {
         "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "hydroxylamine"
+        },
+        "1:10": {
           "Amount:3": 1000,
           "FluidName:8": "cyclohexanone"
         }
       },
       "taskID:8": "bq_standard:fluid"
+    },
+    "1:10": {
+      "index:3": 2,
+      "taskID:8": "bq_standard:checkbox"
     }
   }
 }
