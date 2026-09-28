@@ -4610,7 +4610,7 @@ class OrganicChemistryMaterials {
         PMMAEBeamResist = new Material.Builder(15766, SuSyUtility.susyId('pmma_ebeam_resist'))
                 .liquid()
                 .components(PolymethylMethacrylate, Chlorobenzene)
-                .colorAverage
-                .build
+                .color(0x32cd32)
+                .build()
     }
 }
