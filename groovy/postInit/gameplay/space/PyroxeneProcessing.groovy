@@ -30,8 +30,8 @@ BR.recipeBuilder()
     .fluidInputs(fluid('water') * 12000)
     .outputs(metaitem('dustHydrolyzedPyroxeneResidue') * 48)
     .fluidOutputs(fluid('sodium_hydroxide_solution') * 4000)
-    .EUt(VA[MV])
-    .duration(300)
+    .EUt(60)
+    .duration(200)
     .buildAndRegister()
 
 // Sulfuric acid leach, "8 M", ~80 C. Needs extra acidity in order to prevent Ti coprecipitation as below.
@@ -43,7 +43,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustCalciumSulfate') * 24)
     .fluidOutputs(fluid('scandian_ferric_sulfate_leachate') * 20000)
     .EUt(VA[MV])
-    .duration(200)
+    .duration(150)
     .buildAndRegister()
 
 // In summary, by increasing pH and heating to 110C, titanyl sulfate forms and then hydrolyzes much more quickly, so it
@@ -59,7 +59,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustLunarRutile') * 3)
     .fluidOutputs(fluid('scandium_bearing_waste_acid') * 60000)
     .EUt(VA[MV])
-    .duration(1200)
+    .duration(400)
     .buildAndRegister()
 
 //see ScandiumChain.groovy

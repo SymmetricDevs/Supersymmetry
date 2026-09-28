@@ -3731,5 +3731,12 @@ class UnknownCompositionMaterials {
                 .iconSet(DULL)
                 .color(0x382828)
                 .build()
+
+        RWGSCatalyst = new Material.Builder(4800, SuSyUtility.susyId('rwgs_catalyst'))
+                .dust()
+                .iconSet(DULL)
+                .flags(GENERATE_CATALYST_BED)
+                .color(0x384578)
+                .build()
     }
 }

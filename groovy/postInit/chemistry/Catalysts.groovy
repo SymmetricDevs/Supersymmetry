@@ -535,3 +535,33 @@ MIXER.recipeBuilder()
         .EUt(VA[LV])
         .duration(72)
         .buildAndRegister()
+
+// HDG R-70 RWGS catalyst
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustFineGammaAlumina') * 5)
+    .fluidInputs(fluid('nickel_nitrate_solution') * 1000)
+    .inputs(ore('dustTinyQuicklime') * 1)
+    .outputs(metaitem('dustWetSupportedCalciumAluminateNickel'))
+    .fluidOutputs(fluid('water') * 500)
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(ore('dustWetSupportedCalciumAluminateNickel'))
+    .outputs(metaitem('dustSupportedCalciumAluminateNickel'))
+    .fluidOutputs(fluid('dense_steam') * 500)
+    .duration(120)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(metaitem('dustSupportedCalciumAluminateNickel'))
+    .fluidInputs(fluid('oxygen') * 2000)
+    .outputs(metaitem('dustRwgsCatalyst'))
+    .fluidOutputs(fluid('nitric_oxide') * 2000)
+    .EUt(VA[LV])
+    .duration(90)
+    .buildAndRegister()
+

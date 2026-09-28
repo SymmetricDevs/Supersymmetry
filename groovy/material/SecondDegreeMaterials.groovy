@@ -1248,7 +1248,7 @@ class SecondDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
 
-        AluminiumChlorideHexahydrate.setFormula("AlCl₃•6H₂O", false)
+        AluminiumChlorideHexahydrate.setFormula("AlCl3*(H2O)6", true)
 
         LunarRGlass = new Material.Builder(13204, SuSyUtility.susyId('lunar_r_glass'))
             .dust().liquid(new FluidBuilder().temperature(2300))
@@ -1277,6 +1277,41 @@ class SecondDegreeMaterials {
                 .build()
         
         ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+
+        SilicaSulfurMix = new Material.Builder(13207, SuSyUtility.susyId('silica_sulfur_mix'))
+            .dust().liquid(new FluidBuilder().temperature(388))
+            .components(SiliconDioxide * 7, Sulfur * 16)
+            .color(0xC1C462)
+            .iconSet(DULL)
+            .flags(DISABLE_DECOMPOSITION)
+            .build()
+
+        LunarConcrete = new Material.Builder(13208, SuSyUtility.susyId('lunar_concrete'))
+            .dust().liquid(new FluidBuilder().temperature(388))
+            .color(0x68684C)
+            .iconSet(ROUGH)
+            .flags(DISABLE_DECOMPOSITION)
+            .build()
+
+        DilutedMagnesiumChlorideSolution = new Material.Builder(13209, SuSyUtility.susyId('diluted_magnesium_chloride_solution'))
+            .liquid()
+            .components(MagnesiumChloride * 1, Water * 4)
+            .color(0x9EF6FF)
+            .build()
+
+        WetSupportedCalciumAluminateNickel = new Material.Builder(13210, SuSyUtility.susyId('wet_supported_calcium_aluminate_nickel'))
+                .dust()
+                .components(Alumina * 5, Quicklime * 1, NickelIINitrate * 9, Water * 1)
+                .colorAverage()
+                .iconSet(DULL)
+                .build()
+
+        SupportedCalciumAluminateNickel = new Material.Builder(13211, SuSyUtility.susyId('supported_calcium_aluminate_nickel'))
+                .dust()
+                .components(Alumina * 5, Quicklime * 1, NickelIINitrate * 9)
+                .colorAverage()
+                .iconSet(DULL)
+                .build()
 
     }
 }

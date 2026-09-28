@@ -642,20 +642,26 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10484, "spectral_filter.visible_bandpass")
         addItem(10485, "spectral_filter.near_uv_bandpass")
 
-        // Lunar Metaitems 10486 - 10600
+        // Lunar Metaitems 10486 - 10520
 
         addItem(10486, "lunar_r_glass_fibers")
         addItem(10487, "platinum_bushing")
         addItem(10488, "platinum_rhodium_bushing")
         addItem(10489, "stainless_steel_bushing")
         addItem(10490, "hardened_titanium_grinding_head")
+        addItem(10491, "simple_solar_panel.step_one")
+        addItem(10492, "simple_solar_panel.step_two")
+        addItem(10493, "simple_solar_panel.step_three")
+        addItem(10494, "simple_solar_panel.step_four")
+        addItem(10495, "simple_solar_panel.cell")
+        addItem(10496, "mask.simple_solar_panel")
 
         // AE2 optical interconnect chain
-        addItem(10491, "optical_fiber_preform.initial")
-        addItem(10492, "optical_fiber_preform")
-        addItem(10493, "fiber.optical")
-        addItem(10494, "fiber.optical.coated")
-        addItem(10495, "cable.optical")
+        addItem(10521, "optical_fiber_preform.initial")
+        addItem(10522, "optical_fiber_preform")
+        addItem(10523, "fiber.optical")
+        addItem(10524, "fiber.optical.coated")
+        addItem(10525, "cable.optical")
     }
 
     log.infoMC("Finished adding metaitems")

@@ -1013,5 +1013,14 @@ class ThirdDegreeMaterials {
                 .colorAverage()
                 .iconSet(DULL)
                 .build()
+
+        ImpureOxalicAcidSolution = new Material.Builder(24163, SuSyUtility.susyId('impure_oxalic_acid_solution'))
+            .liquid()
+            .components(OxalicAcid * 1, SodiumSulfateSolution * 1)
+            .colorAverage()
+            .build()
+
+        ImpureOxalicAcidSolution.setFormula('(H2C2O4)(Na2SO4)(H2O)', true)
+
     }
 }
