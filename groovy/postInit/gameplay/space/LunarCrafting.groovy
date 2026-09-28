@@ -462,7 +462,7 @@ SOLAR_FURNACE.recipeBuilder() // vaguely modeled after HSLA steel, no particular
     .inputs(metaitem("dustIron") * 50) // the titanium amount is prob way too high
     .inputs(metaitem("dustTinyManganese") * 3)
     .inputs(metaitem("dustTinyTitanium") * 1)
-    .fluidOutputs(fluid("steel") * 3680)
+    .fluidOutputs(fluid("steel") * 7264)
     .EUt(16000)
     .duration(500)
     .info('recipe.moon')
