@@ -150,7 +150,6 @@ metaitems/die/cmos_cpu
 metaitems/edlc_electrode_coated
 metaitems/die/zener_diode/alloy
 metaitems/die/nmos_sram
-metaitems/component/solenoid
 metaitems/die/bcd_pic
 metaitems/mask_set/nmos_bus_controller
 metaitems/substrate/fr4/etched
