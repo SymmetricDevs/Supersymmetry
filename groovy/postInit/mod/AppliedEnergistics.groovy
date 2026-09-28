@@ -143,9 +143,10 @@ for (name in name_removals) {
 }
 
 // AE2's entire Inscriber registry is replaced by GregTech machines below.
-// Purging the registry is intentional: selective output removal leaves the
-// built-in AE2 recipes visible after a GroovyScript/JEI reload in this pack.
 mods.appliedenergistics2.Inscriber.removeAll()
+
+// LazyAE2's ME Circuit Etcher removal
+mods.threng.etcher.removeAll()
 
 [
         [press: 19, circuit: 'circuitMv', plate: 'plateStainlessSteel', screw: 'screwStainlessSteel', foil: 'foilTin', tier: MV],
