@@ -65,18 +65,18 @@ ItemMassRegistry.setMass(metaitem('susy:froth_flotation_tank'), 297810)
 ItemMassRegistry.setMass(item('susy:spacecraft_instrument', 10), 1500000)
 
 def tiers = [
-    [tierName: 'lv', massMult: 2],
+    [tierName: 'lv', massMult: 2.0],
     [tierName: 'mv', massMult: 1.4],
-    [tierName: 'hv', massMult: 3],
-    [tierName: 'ev', massMult: 1],
-    [tierName: 'iv', massMult: 5]
+    [tierName: 'hv', massMult: 3.0],
+    [tierName: 'ev', massMult: 1.0],
+    [tierName: 'iv', massMult: 5.0]
 ]
 
 // GT machines already have masses defined, susy ones don't
 tiers.each { tier ->
     ItemMassRegistry.setMass(metaitem('susy:roaster.' + tier.tierName), (int) Math.round(278711 * tier.massMult))
     ItemMassRegistry.setMass(metaitem('susy:vacuum_chamber.' + tier.tierName), (int) Math.round(594812 * tier.massMult))
-    ItemMassRegistry.setMass(metaitem('susy:continuous_stirred_tank_reactor.' + tier.tierName), (int) Math.round(25745 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:continuous_stirred_tank_reactor.' + tier.tierName), (int) Math.round(257485 * tier.massMult))
     ItemMassRegistry.setMass(metaitem('susy:fixed_bed_reactor.' + tier.tierName), (int) Math.round(248342 * tier.massMult))
     ItemMassRegistry.setMass(metaitem('susy:trickle_bed_reactor.' + tier.tierName), (int) Math.round(317284 * tier.massMult))
     ItemMassRegistry.setMass(metaitem('susy:crystallizer.' + tier.tierName), (int) Math.round(345674 * tier.massMult))
@@ -99,7 +99,7 @@ tiers.each { tier ->
     ItemMassRegistry.setMass(metaitem('susy:resistance_furnace.' + tier.tierName), (int) Math.round(348135 * tier.massMult))
     ItemMassRegistry.setMass(metaitem('susy:ald.' + tier.tierName), (int) Math.round(784821 * tier.massMult))
     if (tier.tierName == 'lv' || tier.tierName == 'mv' || tier.tierName == 'hv' || tier.tierName == 'ev') {
-        ItemMassRegistry.setMass(metaitem('susy:latex_collector.' + tier.tierName), (int) Math.round(398 71 * tier.massMult))
+        ItemMassRegistry.setMass(metaitem('susy:latex_collector.' + tier.tierName), (int) Math.round(398771 * tier.massMult))
         ItemMassRegistry.setMass(metaitem('susy:vulcanizing_press.' + tier.tierName), (int) Math.round(348649 * tier.massMult))
         ItemMassRegistry.setMass(metaitem('susy:incinerator.' + tier.tierName), (int) Math.round(257218 * tier.massMult))
         ItemMassRegistry.setMass(metaitem('susy:screen_printer.' + tier.tierName), (int) Math.round(484410 * tier.massMult))

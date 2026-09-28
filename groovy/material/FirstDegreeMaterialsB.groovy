@@ -1127,5 +1127,15 @@ class FirstDegreeMaterialsB {
                 .colorAverage()
                 .iconSet(SHINY)
                 .build()
+
+        // 8824: Monel 400 (registered in susycore)
+
+        HighPuritySilica = new Material.Builder(8825, SuSyUtility.susyId('high_purity_silica'))
+            .dust().liquid(new FluidBuilder().temperature(2500))
+            .components(SiliconDioxide)
+            .iconSet(GLASS)
+            .color(0xf4f7ff)
+            .build()
+
     }
 }
