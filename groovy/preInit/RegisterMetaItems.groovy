@@ -591,15 +591,26 @@ eventManager.listen { PostMaterialEvent event ->
         //Photomasks 5000-5099
         addItem(5000, "rubylith")
         addItem(5001, "rubylith_film")
-        //addItem(5002, "stencil.ic")
-        //addItem(5003, "stencil.cpu")
-        //addItem(5004, "stencil.ram")
+        addItem(5002, "stencil.capacitor")
+        addItem(5003, "stencil.resistor_pads")
+        addItem(5004, "stencil.signal_mosfet")
         addItem(5005, "stencil.pcb")
-        //addItem(5006, "stencil.ulpic")
-        //addItem(5007, "stencil.lpic")
-        addItem(5008, "stencil.resistor")
-        addItem(5009, "stencil.capacitor")
-        addItem(5010, "stencil.resistor_pads")
+        addItem(5006, "stencil.resistor")
+        addItem(5007, "stencil.nmos_cpu")
+        addItem(5008, "stencil.nmos_sram")
+        addItem(5009, "stencil.nmos_uart")
+        addItem(5010, "stencil.nmos_mask_rom")
+        addItem(5011, "stencil.nmos_bus_controller")
+        addItem(5012, "stencil.nmos_dram")
+        addItem(5013, "stencil.diode.power")
+        addItem(5014, "stencil.diode.schottky")
+        addItem(5015, "stencil.thyristor")
+        addItem(5016, "stencil.bjt_pic_base")
+        addItem(5017, "stencil.bjt_ulpic")
+        addItem(5018, "stencil.bjt_lpic")
+        addItem(5119, "stencil.bjt_pic")
+
+
 
         addItem(5020, "mask.blank")
         //addItem(5021, "mask.ic")
@@ -619,18 +630,37 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(5035, "mask.substrate_ev")
 
-        /*
-        addItem(5100, "patterned.ic")
-        addItem(5101, "patterned.cpu")
-        addItem(5102, "patterned.ram")
-        addItem(5103, "patterned.ulpic")
-        addItem(5104, "patterned.lpic")
-        addItem(5105, "patterned.silicon_dioxide")
-        addItem(5106, "patterned.polysilicon")
-        addItem(5107, "patterned.silicon_nitride")
-        addItem(5108, "patterned.nand")
-        addItem(5109, "patterned.nor")
-        */
+        addItem(5050, "mask.blank.chromium")
+        addItem(5051, "mask.blank.chromium_oxide")
+        addItem(5052, "mask.blank.chromium_oxide.wet")
+        addItem(5053, "mask.blank.chromium_oxide.coated")
+
+        def ebeam_mask_list = [
+            'mask_set.cmos_cpu',
+            'mask_set.cmos_gpu',
+            'mask_set.cmos_chipset',
+            'mask_set.cmos_phy',
+            'mask_set.vdmos',
+            'mask_set.bcd_base',
+            'mask_set.bcd_lpic',
+            'mask_set.bcd_pic',
+            'mask_set.bcd_hpic',
+            'mask.substrate_ev',
+            'mask.multijunction_photovoltaic'
+        ]
+
+        def stages = ['exposed', 'developed', 'etched']
+
+        int ebeam_id = 5054
+        for (prefix in ebeam_mask_list) {
+            for (stage in stages) {
+                addItem(ebeam_id, prefix + '.' + stage)
+                ebeam_id++
+            }
+        }
+
+
+
         addItem(5150, "patterned.board.phenolic")
         //addItem(5151, "patterned.board.plastic")
         addItem(5200, "laminated.board.phenolic")

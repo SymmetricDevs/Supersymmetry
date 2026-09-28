@@ -93,7 +93,113 @@ crafting.addShaped("smd_resistor_pads", metaitem('stencil.resistor_pads'), [
     [null, null, null]
 ]);
 
-// CrO3 photomasks
+crafting.addShaped("rubylith_signal_mosfet", metaitem('stencil.signal_mosfet'), [
+    [metaitem('rubylith'), null, null],
+    [null, ore('craftingToolKnife'), null],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_nmos_cpu", metaitem('stencil.nmos_cpu'), [
+    [metaitem('rubylith'), null, null],
+    [null, null, ore('craftingToolKnife')],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_nmos_sram", metaitem('stencil.nmos_sram'), [
+    [metaitem('rubylith'), null, null],
+    [null, null, null],
+    [ore('craftingToolKnife'), null, null]
+]);
+
+crafting.addShaped("rubylith_nmos_mask_rom", metaitem('stencil.nmos_mask_rom'), [
+    [metaitem('rubylith'), null, null],
+    [null, null, null],
+    [null, ore('craftingToolKnife'), null]
+]);
+
+crafting.addShaped("rubylith_nmos_bus_controller", metaitem('stencil.nmos_bus_controller'), [
+    [metaitem('rubylith'), null, null],
+    [null, null, null],
+    [null, null, ore('craftingToolKnife')]
+]);
+
+crafting.addShaped("rubylith_nmos_dram", metaitem('stencil.nmos_dram'), [
+    [ore('craftingToolKnife'), metaitem('rubylith'), null],
+    [null, null, null],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_power_diode", metaitem('stencil.diode.power'), [
+    [null, metaitem('rubylith'), ore('craftingToolKnife')],
+    [null, null, null],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_schottky_diode", metaitem('stencil.diode.shottky'), [
+    [null, metaitem('rubylith'), null],
+    [ore('craftingToolKnife'), null, null],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_thyristor", metaitem('stencil.thyristor'), [
+    [null, metaitem('rubylith'), null],
+    [null, ore('craftingToolKnife'), null],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_ptj_pic_base", metaitem('stencil.ptj_pic_base'), [
+    [null, metaitem('rubylith'), null],
+    [null, null, ore('craftingToolKnife')],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_ptj_ulpic_base", metaitem('stencil.ptj_btj_ulpic'), [
+    [null, metaitem('rubylith'), null],
+    [null, null, null],
+    [ore('craftingToolKnife'), null, null]
+]);
+
+crafting.addShaped("rubylith_ptj_lpic", metaitem('stencil.ptj_lpic'), [
+    [null, metaitem('rubylith'), null],
+    [null, null, null],
+    [null, ore('craftingToolKnife'), null]
+]);
+
+crafting.addShaped("rubylith_ptj_pic", metaitem('stencil.ptj_pic'), [
+    [null, metaitem('rubylith'), null],
+    [null, null, null],
+    [null, null, ore('craftingToolKnife')]
+]);
+
+[
+    ['signal_mosfet', 7],
+    ['nmos_cpu', 5],
+    ['nmos_sram', 5],
+    ['nmos_uart', 5],
+    ['nmos_mask_rom', 5],
+    ['nmos_bus_controller', 5],
+    ['nmos_dram', 4],
+    ['diode.power', 2],
+    ['diode.schottky', 3],
+    ['thyristor', 3],
+    ['bjt_pic_base', 4],
+    ['bjt_ulpic', 1],
+    ['bjt_lpic', 4],
+    ['bjt_pic', 3]
+].each { name, maskCount ->
+    UV_LIGHT_BOX.recipeBuilder()
+        .inputs(metaitem('stencil.' + name))
+        .inputs(metaitem('mask.blank') * maskCount)
+        .outputs(metaitem('mask_set.' + name))
+        .duration(200 * maskCount)
+        .EUt(VA[ULV])
+        .buildAndRegister()
+}
+
+
+
+
+// Cr2O3 photomasks
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
@@ -104,3 +210,147 @@ REACTION_FURNACE.recipeBuilder()
     .duration(400)
     .EUt(VA[MV])
     .buildAndRegister()
+
+
+    //Sources:  https://patents.google.com/patent/US6562549B2/en
+    //          https://patents.google.com/patent/US7220531B2/en
+    //          https://www.sciencedirect.com/science/article/abs/pii/S0040609096089419
+    //          https://www.microresist.de/?jet_download=1bc56435506f1a3777a26aedb80b8e53690954bd
+    //          https://nanolithography.gatech.edu/pmma.html
+Deposition.generateSputteringRecipe('fused_quartz', 'mask.blank.chromium', 400, 'chromium')
+
+SPUTTERER.recipeBuilder()
+    .inputs(metaitem('mask.blank.chromium'))
+    .inputs(metaitem('target.chromium'))
+    .fluidInputs(fluid('argon') * 100)
+    .fluidInputs(fluid('oxygen') * 25)
+    .outputs(metaitem('mask.blank.chromium_oxide'))
+    .chancedOutput(metaitem('target.chromium'), 9999, 0)
+    .duration(100)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(ore('dustPolymethylMethacrylate'))
+    .fluidInputs(fluid('chlorobenzene') * 1000)
+    .fluidOutputs(fluid('pmma_ebeam_resist') * 1000)
+    .duration(200)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+RESIST_PROCESSOR.recipeBuilder()
+    .inputs(metaitem('mask.blank.chromium_oxide'))
+    .fluidInputs(fluid('pmma_ebeam_resist') * 50)
+    .outputs(metaitem('mask.blank.chromium_oxide.wet'))
+    .duration(200)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+DRYER.recipeBuilder()
+    .inputs(metaitem('mask.blank.chromium_oxide.wet'))
+    .outputs(metaitem('mask.blank.chromium_oxide.coated'))
+    .duration(200)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
+
+[   //E-Beam Mask Sets
+    ['cmos_cpu', 21, 1],
+    ['cmos_gpu', 21, 2],
+    ['cmos_chipset', 21, 3],
+    ['cmos_phy', 21, 4],
+    ['vdmos', 6, 5],
+    ['bcd_base', 19, 6],
+    ['bcd_lpic', 3, 7],
+    ['bcd_pic', 4, 8],
+    ['bcd_hpic', 5, 9]
+].each { name, maskCount, circuit ->
+    ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
+        .circuitMeta(circuit)
+        .inputs(metaitem('mask.blank.chromium_oxide.coated') * maskCount)
+        .outputs(metaitem('mask_set.' + name + '.exposed'))
+        .duration(1000 * maskCount)
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+
+    RESIST_PROCESSOR.recipeBuilder()
+        .inputs(metaitem('mask_set.' + name + '.exposed'))
+        .fluidInputs(fluid('methyl_isobutyl_ketone') * (25 * maskCount))
+        .fluidInputs(fluid('isopropyl_alcohol') * (75 * maskCount))
+        .outputs(metaitem('mask_set.' + name + '.developed'))
+        .duration(200 * maskCount)
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+
+    REACTIVE_ION_ETCHER.recipeBuilder()
+        .inputs(metaitem('mask_set.' + name + '.developed'))
+        .fluidInputs(fluid('chlorine') * (75 * maskCount))
+        .fluidInputs(fluid('oxygen') * (25 * maskCount))
+        .outputs(metaitem('mask_set.' + name + '.etched'))
+        .fluidOutputs(fluid('corrosive_gas') * (100 * maskCount))
+        .duration(200 * maskCount)
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+
+    RESIST_PROCESSOR.recipeBuilder()
+        .inputs(metaitem('mask_set.' + name + '.etched'))
+        .fluidInputs(fluid('n_methyl_two_pyrrolidone') * (100 * maskCount))
+        .fluidInputs(fluid('isopropyl_alcohol') * (50 * maskCount))
+        .outputs(metaitem('mask_set.' + name))
+        .duration(400 * maskCount)
+        .EUt(VA[HV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+}
+
+[   //E-Beam Mask Singles
+    ['substrate_ev', 1, 10],
+    ['multijunction_photovoltaic', 1, 11]
+].each { name, maskCount, circuit ->
+    ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
+        .circuitMeta(circuit)
+        .inputs(metaitem('mask.blank.chromium_oxide.coated') * maskCount)
+        .outputs(metaitem('mask.' + name + '.exposed'))
+        .duration(1000 * maskCount)
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+
+    RESIST_PROCESSOR.recipeBuilder()
+        .inputs(metaitem('mask.' + name + '.exposed'))
+        .fluidInputs(fluid('methyl_isobutyl_ketone') * (25 * maskCount))
+        .fluidInputs(fluid('isopropyl_alcohol') * (75 * maskCount))
+        .outputs(metaitem('mask.' + name + '.developed'))
+        .duration(200 * maskCount)
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+
+    REACTIVE_ION_ETCHER.recipeBuilder()
+        .inputs(metaitem('mask.' + name + '.developed'))
+        .fluidInputs(fluid('chlorine') * (75 * maskCount))
+        .fluidInputs(fluid('oxygen') * (25 * maskCount))
+        .outputs(metaitem('mask.' + name + '.etched'))
+        .fluidOutputs(fluid('corrosive_gas') * (100 * maskCount))
+        .duration(200 * maskCount)
+        .EUt(VA[EV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+
+    RESIST_PROCESSOR.recipeBuilder()
+        .inputs(metaitem('mask.' + name + '.etched'))
+        .fluidInputs(fluid('n_methyl_two_pyrrolidone') * (100 * maskCount))
+        .fluidInputs(fluid('isopropyl_alcohol') * (50 * maskCount))
+        .outputs(metaitem('mask.' + name))
+        .duration(2000 * maskCount)
+        .EUt(VA[HV])
+        .cleanroom(CleanroomType.CLEANROOM)
+        .buildAndRegister()
+}

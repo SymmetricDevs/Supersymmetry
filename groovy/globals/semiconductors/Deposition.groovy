@@ -153,7 +153,7 @@ class Deposition {
         new TargetName("silicon", "Silicon"),
         new TargetName("platinum", "Platinum"),
         new TargetName("tantalum", "Tantalum"),
-        new TargetName("chromium", "Chromium"),
+        new TargetName("chromium", "Chrome"),
         new TargetName("tantalum_nitride", "TantalumNitride"),
         new TargetName("cobalt", "Cobalt")
     ]

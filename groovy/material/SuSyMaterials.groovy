@@ -2815,6 +2815,7 @@ class SuSyMaterials {
     public static Material TwoCyclohexenylCyclohexanone
     public static Material TwoCyclohexenylcyclohexanoneSolution
     public static Material BenzalChloride
+    public static Material PMMAEBeamResist
 
     // Third Degree Materials
 
