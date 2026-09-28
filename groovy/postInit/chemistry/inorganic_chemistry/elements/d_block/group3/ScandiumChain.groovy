@@ -24,18 +24,18 @@ MIXER_SETTLER.recipeBuilder()
     .fluidOutputs(fluid('scandium_depleted_sulfate_raffinate') * 60000)
     .fluidOutputs(fluid('scandium_p_204_extract') * 1000)
     .requiredCells(4)
-    .EUt(240)
+    .EUt(VA[EV])
     .duration(200)
     .buildAndRegister()
 
 // TODO: decide on adding vanadium here
 CRYSTALLIZER.recipeBuilder()
-    .fluidInputs(fluid('scandium_depleted_sulfate_raffinate') * 15000)
-    .outputs(metaitem('dustIronIiiSulfate') * 17)
-    .chancedOutput(metaitem('dustChromiumIiiSulfate') * 17, 1000, 0) // a little extra sulfate for the fans
-    .fluidOutputs(fluid('sulfuric_acid') * 7000)
-    .EUt(VA[MV])
-    .duration(350)
+    .fluidInputs(fluid('scandium_depleted_sulfate_raffinate') * 15000) // 9 & 11/12 SO4
+    .outputs(metaitem('dustIronIiiSulfate') * 17) // 3 SO4
+    .chancedOutput(metaitem('dustChromiumIiiSulfate') * 17, 1000, 0)
+    .fluidOutputs(fluid('sulfuric_acid') * 7000) // a little extra sulfate for the fans
+    .EUt(VA[HV])
+    .duration(500)
     .buildAndRegister()
 
 // Iron scrub, "5 M HCl"
@@ -45,7 +45,7 @@ MIXER_SETTLER.recipeBuilder()
     .fluidOutputs(fluid('scrubbed_scandium_p_204_extract') * 6000)
     .fluidOutputs(fluid('iron_chloride_scrub_raffinate') * 10000)
     .requiredCells(2)
-    .EUt(VA[MV])
+    .EUt(VA[HV])
     .duration(120)
     .buildAndRegister()
 
@@ -63,7 +63,7 @@ BR.recipeBuilder()
 // you can get out Zr by converting it into a complex with HF, which is one of the very few ways
 // it is separable from Sc.
 MIXER_SETTLER.recipeBuilder()
-    .fluidInputs(fluid('scrubbed_scandium_p_204_extract') * 6000)
+    .fluidInputs(fluid('scrubbed_scandium_p_204_extract') * 6000) // 0.5 SO4
     .fluidInputs(fluid('hydrofluoric_acid') * 1000)
     .fluidOutputs(fluid('purified_scandium_p_204_extract') * 6000)
     .fluidOutputs(fluid('fluoride_scrub_raffinate') * 1000)
@@ -74,11 +74,12 @@ MIXER_SETTLER.recipeBuilder()
 
 // Alkaline strip, 2 M NaOH. Converts the loaded organic straight to solid crude Sc(OH)3
 // (70-78% Sc2O3) and regenerates the extractant into the existing spent-P204 loop.
+// Well actually the playtesters don't like that
 BR.recipeBuilder()
-    .fluidInputs(fluid('purified_scandium_p_204_extract') * 12000)
+    .fluidInputs(fluid('purified_scandium_p_204_extract') * 12000) // 1 SO4
     .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
     .outputs(metaitem('dustCrudeScandiumHydroxide') * 7)
-    .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 12000) // this should be spent but I'm sure it'll be fine :steamhappy:
+    .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 12000)
     .fluidOutputs(fluid('diluted_sodium_sulfate_solution') * 2000)
     .EUt(VA[MV])
     .duration(100)
