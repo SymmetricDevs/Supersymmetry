@@ -3512,5 +3512,18 @@ class OrganicChemistryMaterials {
             .color(0x005FA8)
             .build()
 
+        sodiumFormate = new Material.Builder(15545, SuSyUtility.susyUd('sodium_formate'))
+                .dust()
+                .componet(Sodium * 1, Carbon * 1, Oxygen * 2, Hydrogen * 1)
+                .iconSet(SHINY)
+                .color(0xDCDCDC)
+                .build
+
+        sodiumOxalate = new Material.Builder(15545, SuSyUtility.susyUd('sodium_oxalate'))
+                .dust()
+                .componet(Sodium * 2, Carbon * 2, Oxygen * 4, Hydrogen * 2)
+                .iconSet(SHINY)
+                .color(0xDCDC21)
+                .build
     }
 }
