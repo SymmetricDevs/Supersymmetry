@@ -653,6 +653,5 @@ class ChangeFlags {
         Steel.addMillBall(7680)
         StainlessSteel.addMillBall(17280)
 
-        Aluminium.cableProperties(2048, 1, 0)
     }
 }

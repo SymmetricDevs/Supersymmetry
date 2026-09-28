@@ -881,6 +881,7 @@ class SuSyMaterials {
     public static Material StrongAnorthositeLeach
     public static Material LunarWeaklyMagnetic
     public static Material Ink
+    public static Material RWGSCatalyst
 
 
     // Petrochem Materials
@@ -2038,6 +2039,8 @@ class SuSyMaterials {
     public static Material SilicaSulfurMix
     public static Material LunarConcrete
     public static Material DilutedMagnesiumChlorideSolution
+    public static Material WetSupportedCalciumAluminateNickel
+    public static Material SupportedCalciumAluminateNickel
 
     // Organic Chemistry Materials
 
@@ -2580,6 +2583,8 @@ class SuSyMaterials {
     public static Material FiberReinforcedNylon
     public static Material IridiumAcetylacetonate
     public static Material Aerozine50
+    public static Material SodiumFormate
+    public static Material SodiumOxalate
 
     // Third Degree Materials
 
@@ -2746,6 +2751,7 @@ class SuSyMaterials {
     public static Material AluminosilicateMix
     public static Material MoSiSlurry
     public static Material MoSiPrecursor
+    public static Material ImpureOxalicAcidSolution
 
     // Thermodynamics Materials
 

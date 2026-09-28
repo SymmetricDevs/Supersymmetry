@@ -3086,6 +3086,12 @@ susy.material.mon_3=MON-3
 susy.material.silica_sulfur_mix=Silica-Sulfur Mix
 susy.material.lunar_concrete=Lunar Concrete
 susy.material.diluted_magnesium_chloride_solution=Diluted Magnesium Chloride Solution
+susy.material.sodium_formate=Sodium Formate
+susy.material.sodium_oxalate=Sodium Oxalate
+susy.material.wet_supported_calcium_aluminate_nickel=Wet Supported Calcium Aluminate Nickel
+susy.material.supported_calcium_aluminate_nickel=Supported Calcium Aluminate Nickel
+susy.material.rwgs_catalyst=RWGS Catalyst
+susy.material.impure_oxalic_acid_solution=Impure Oxalic Acid Solution
 
 # Isotopes
 

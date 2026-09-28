@@ -153,16 +153,7 @@ crafting.addShaped("susy:restrictive_filter_moon", metaitem('susy:restrictive_fi
 ])
 
 SOLAR_FURNACE.recipeBuilder()
-    .inputs(ore("dustAluminium") * 4) //FIXME (maybe): use molten salt electrolysis instead?
-    .inputs(ore("dustSiliconDioxide") * 9)
-    .outputs(metaitem("dustSilicon") * 3)
-    .outputs(metaitem("dustAlumina") * 10)
-    .duration(80)
-    .EUt(1000)
-    .buildAndRegister()
-
-SOLAR_FURNACE.recipeBuilder()
-    .inputs(ore("dustAluminium") * 8) //according to wikipedia this is done somewhere
+    .inputs(ore("dustAluminium") * 8) // according to wikipedia this is done somewhere
     .inputs(ore("dustChromite") * 21)
     .outputs(metaitem("dustFerrochromium") * 9)
     .outputs(metaitem("dustAlumina") * 20)
@@ -484,6 +475,27 @@ SOLAR_FURNACE.recipeBuilder()
     .circuitMeta(4)
     .EUt(14000)
     .duration(200)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustFerrochromium") * 12)
+    .inputs(metaitem("dustAluminium") * 4)
+    .inputs(metaitem("dustIron") * 23)
+    .fluidOutputs(fluid("kanthal") * 5616)
+    .circuitMeta(3)
+    .EUt(16000)
+    .duration(400)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustHematite") * 5)
+    .fluidInputs(fluid('hydrogen') * 6)
+    .outputs(metaitem('dustIron') * 2)
+    .fluidOutputs(fluid("dense_steam") * 3000)
+    .EUt(8000)
+    .duration(80)
     .info('recipe.moon')
     .buildAndRegister()
 
