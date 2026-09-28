@@ -1117,6 +1117,8 @@ class SuSyMaterials {
     public static Material CokingEffluents
     public static Material RPOne
     public static Material DehexanizedNaphtha
+    public static Material SodiumMethylcyclopentadienide
+    public static Material BismethylcyclopentadienylBeryllium
 
     // First Degree Materials A
 

@@ -4453,7 +4453,7 @@ class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
         
-                Polyhydroxystyrene = new Material.Builder(15744, SuSyUtility.susyId('polyhydroxystyrene'))
+        Polyhydroxystyrene = new Material.Builder(15744, SuSyUtility.susyId('polyhydroxystyrene'))
                 .dust()
                 .components(Styrene, Oxygen)
                 .color(0xacc2a3)
@@ -4589,6 +4589,22 @@ class OrganicChemistryMaterials {
                 .components(Carbon * 7, Hydrogen * 6, Chlorine * 2)
                 .color(0xdb7b21)
                 .build()
+        
+        SodiumMethylcyclopentadienide = new Material.Builder(15764, SuSyUtility.susyId('sodium_methylcyclopentadienide'))
+            .liquid()
+            .components(Sodium * 1, Carbon * 6, Hydrogen * 7)
+            .color(0xD6FF8C)
+            .build()
 
+        SodiumMethylcyclopentadienide.setFormula('Na(MeCp)', true)
+
+
+        BismethylcyclopentadienylBeryllium = new Material.Builder(15765, SuSyUtility.susyId('bismethylcyclopentadienyl_beryllium'))
+            .dust().gas(new FluidBuilder().temperature(506))
+            .components(Beryllium * 1, Carbon * 12, Hydrogen * 14)
+            .color(0xB9FF9E)
+            .build()
+
+        BismethylcyclopentadienylBeryllium.setFormula('Be(MeCp)2', true)
     }
 }
