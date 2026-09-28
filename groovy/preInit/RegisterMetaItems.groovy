@@ -608,7 +608,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5016, "stencil.bjt_pic_base")
         addItem(5017, "stencil.bjt_ulpic")
         addItem(5018, "stencil.bjt_lpic")
-        addItem(5119, "stencil.bjt_pic")
+        addItem(5019, "stencil.bjt_pic")
 
 
 

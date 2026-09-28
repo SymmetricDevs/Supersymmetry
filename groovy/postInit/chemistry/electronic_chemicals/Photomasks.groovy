@@ -135,7 +135,7 @@ crafting.addShaped("rubylith_power_diode", metaitem('stencil.diode.power'), [
     [null, null, null]
 ]);
 
-crafting.addShaped("rubylith_schottky_diode", metaitem('stencil.diode.shottky'), [
+crafting.addShaped("rubylith_schottky_diode", metaitem('stencil.diode.schottky'), [
     [null, metaitem('rubylith'), null],
     [ore('craftingToolKnife'), null, null],
     [null, null, null]
@@ -147,25 +147,25 @@ crafting.addShaped("rubylith_thyristor", metaitem('stencil.thyristor'), [
     [null, null, null]
 ]);
 
-crafting.addShaped("rubylith_ptj_pic_base", metaitem('stencil.ptj_pic_base'), [
+crafting.addShaped("rubylith_ptj_pic_base", metaitem('stencil.btj_pic_base'), [
     [null, metaitem('rubylith'), null],
     [null, null, ore('craftingToolKnife')],
     [null, null, null]
 ]);
 
-crafting.addShaped("rubylith_ptj_ulpic_base", metaitem('stencil.ptj_btj_ulpic'), [
+crafting.addShaped("rubylith_ptj_ulpic_base", metaitem('stencil.btj_btj_ulpic'), [
     [null, metaitem('rubylith'), null],
     [null, null, null],
     [ore('craftingToolKnife'), null, null]
 ]);
 
-crafting.addShaped("rubylith_ptj_lpic", metaitem('stencil.ptj_lpic'), [
+crafting.addShaped("rubylith_ptj_lpic", metaitem('stencil.btj_lpic'), [
     [null, metaitem('rubylith'), null],
     [null, null, null],
     [null, ore('craftingToolKnife'), null]
 ]);
 
-crafting.addShaped("rubylith_ptj_pic", metaitem('stencil.ptj_pic'), [
+crafting.addShaped("rubylith_ptj_pic", metaitem('stencil.btj_pic'), [
     [null, metaitem('rubylith'), null],
     [null, null, null],
     [null, null, ore('craftingToolKnife')]
