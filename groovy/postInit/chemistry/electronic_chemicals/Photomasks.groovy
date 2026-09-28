@@ -1,5 +1,7 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
+import globals.semiconductors.Deposition
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 // Early lithography masks
 
@@ -147,25 +149,25 @@ crafting.addShaped("rubylith_thyristor", metaitem('stencil.thyristor'), [
     [null, null, null]
 ]);
 
-crafting.addShaped("rubylith_ptj_pic_base", metaitem('stencil.btj_pic_base'), [
+crafting.addShaped("rubylith_bjt_pic_base", metaitem('stencil.bjt_pic_base'), [
     [null, metaitem('rubylith'), null],
     [null, null, ore('craftingToolKnife')],
     [null, null, null]
 ]);
 
-crafting.addShaped("rubylith_ptj_ulpic_base", metaitem('stencil.btj_btj_ulpic'), [
+crafting.addShaped("rubylith_bjt_ulpic", metaitem('stencil.bjt_ulpic'), [
     [null, metaitem('rubylith'), null],
     [null, null, null],
     [ore('craftingToolKnife'), null, null]
 ]);
 
-crafting.addShaped("rubylith_ptj_lpic", metaitem('stencil.btj_lpic'), [
+crafting.addShaped("rubylith_bjt_lpic", metaitem('stencil.bjt_lpic'), [
     [null, metaitem('rubylith'), null],
     [null, null, null],
     [null, ore('craftingToolKnife'), null]
 ]);
 
-crafting.addShaped("rubylith_ptj_pic", metaitem('stencil.btj_pic'), [
+crafting.addShaped("rubylith_bjt_pic", metaitem('stencil.bjt_pic'), [
     [null, metaitem('rubylith'), null],
     [null, null, null],
     [null, null, ore('craftingToolKnife')]
@@ -225,7 +227,6 @@ SPUTTERER.recipeBuilder()
     .fluidInputs(fluid('argon') * 100)
     .fluidInputs(fluid('oxygen') * 25)
     .outputs(metaitem('mask.blank.chromium_oxide'))
-    .chancedOutput(metaitem('target.chromium'), 9999, 0)
     .duration(100)
     .EUt(VA[HV])
     .cleanroom(CleanroomType.CLEANROOM)

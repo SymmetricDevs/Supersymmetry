@@ -483,3 +483,6 @@ SuSyRecipeMaps.SCREEN_PRINTER
 
 RecipeMaps.CUTTER_RECIPES
     .modifyMaxInputs(2)
+
+SusyRecipeMaps.ELECTRON_BEAM_LITHOGRAPHY
+    .setMaxInputs(2)
