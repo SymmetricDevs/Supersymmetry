@@ -3047,6 +3047,23 @@ DISTILLERY.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+BR.recipeBuilder()
+    .fluidInputs(fluid('sodium') * 144)
+    .fluidInputs(fluid('methylcyclopentadiene') * 1000)
+    .fluidOutputs(fluid('sodium_methylcyclopentadienide') * 1000)
+    .fluidOutputs(fluid('hydrogen') * 1000)
+    .EUt(VA[EV])
+    .duration(80)
+    .buildAndRegister()
+
+BR.recipeBuilder()
+    .inputs(metaitem('dustBerylliumChloride') * 3)
+    .fluidInputs(fluid('sodium_methylcyclopentadienide') * 2000)
+    .notConsumable(fluid('diethyl_ether') * 1000)
+    .outputs(metaitem('dustBismethylcyclopentadienylBeryllium') * 1)
+    .outputs(metaitem('dustSalt') * 4)
+    .EUt(VA[EV])
+    .duration(120)
 // Ammonium Fluoride
 
 MIXER.recipeBuilder()

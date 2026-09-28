@@ -38,7 +38,7 @@ RESISTANCE_FURNACE.recipeBuilder()
     .buildAndRegister();
 
 Deposition.generateEvaporationRecipe('wafer.diode.alloy.step_one', 'wafer.diode.alloy.step_two', 400, 'gold_antimony', false)
-Packaging.generateDicingRecipe('wafer.diode.alloy.step_two', 'die.diode.alloy', 4, 400, LV)
+Packaging.generateDicingRecipe('wafer.diode.alloy.step_two', 'die.diode.alloy', 4, 400, LV, false)
 
 ELECTROLYZER.recipeBuilder()
     .inputs(ore('wireFineInvar') * 32)
@@ -74,7 +74,7 @@ RESISTANCE_FURNACE.recipeBuilder()
     .buildAndRegister();
 
 Deposition.generateEvaporationRecipe('wafer.zener_diode.alloy.step_one', 'wafer.zener_diode.alloy.step_two', 400, 'gold_antimony', false)
-Packaging.generateDicingRecipe('wafer.zener_diode.alloy.step_two', 'die.zener_diode.alloy', 4, 400, LV)
+Packaging.generateDicingRecipe('wafer.zener_diode.alloy.step_two', 'die.zener_diode.alloy', 4, 400, LV, false)
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineDumet') * 2)

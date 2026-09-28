@@ -28,6 +28,9 @@ ore('componentResistorMedium').add(metaitem('component.resistor.carbon_film'))
 ore('componentResistorSmall').add(metaitem('component.smd.resistor'))
 ore('componentResistorSmall').add(metaitem('component.advanced_smd.resistor'))
 ore('componentOpAmp').add(metaitem('component.op_amp'))
+ore('componentTransistorSignal').add(metaitem('component.transistor.signal_mosfet'))
+ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_junction'))
+
 
 // Carbon composite
 
@@ -42,8 +45,7 @@ ore('capacitorFilm').add(metaitem('foilPolypropylene'))
 
 // Standard signal diodes
 
-ore('componentDiodeSignal').add(metaitem('component.diode.alloy_junction'))
-ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
+ore('componentDiodeSignal').add(metaitem('component.diode'))
 ore('componentDiodeSignal').add(metaitem('component.smd.diode'))
 
 // Circuit oredict
