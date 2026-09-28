@@ -173,3 +173,7 @@ Supersymmetry.iml
 groovy/sideOnlyGenerated.json
 .clawdea/REPO_STATE.md
 
+# Venv Stuff
+.python-version
+pyproject.toml
+uv.lock
