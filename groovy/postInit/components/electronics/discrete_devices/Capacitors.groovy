@@ -62,7 +62,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('component.capacitor.film.metallized_film.impregnated'))
+    .inputs(metaitem('component.capacitor.film.core'))
     .inputs(ore('wireFineAnnealedCopper') * 2)
     .fluidInputs(fluid('high_temperature_solder') * 72)
     .fluidInputs(fluid('epoxy_molding_compound') * 16)

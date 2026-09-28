@@ -11,7 +11,7 @@ import globals.semiconductors.Mechanicals
 
 // Alloy-junction bipolar transistor (MV)
 
-Packaging.generateDicingRecipe('wafer.germanium.n_doped', 'die.alloy_junction_transistor.step_one', 4, 400, LV)
+Packaging.generateDicingRecipe('wafer.germanium.n_doped', 'die.alloy_junction_transistor.step_one', 4, 400, LV, false)
 
 RESISTANCE_FURNACE.recipeBuilder()
     .notConsumable(ore('springCupronickel'))

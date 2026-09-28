@@ -378,7 +378,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2788, "component.relay")
         addItem(2789, "component.capacitor.film.core")
         addItem(2790, "component.capacitor.film.metallized_film")
-        addItem(2791, "component.capacitor.film.metallized_film.impregnated")
+        //addItem(2791, "component.capacitor.film.metallized_film.impregnated")     film core already impregnated
         addItem(2792, "component.capacitor.silver_mica")
         addItem(2793, "component.diode.alloy_junction")
         addItem(2794, "component.diode.planar")
