@@ -979,14 +979,6 @@ def render(s, item):
 # --------------------------------------------------------------------------------------------------
 def add_fixups(g):
     """Items with no producing recipe (registration/recipe name mismatches) get their intended state."""
-    g.aliases.update({
-        'wafer.silicon.small.n_doped': 'wafer.small.silicon.n_doped',
-        'wafer.silicon.small.heavily_n_doped': 'wafer.small.silicon.heavily_n_doped',
-        'wafer.thyristor.step_one.coated': 'wafer.silicon.n_doped.coated',
-        'wafer.thyristor.step_one.exposed': 'wafer.silicon.n_doped.exposed',
-    })
-    g.virtual['wafer.thyristor.step_seven.deposited'] = (
-        'wafer.thyristor.step_seven.exposed', 'metal', dict(materials=['aluminium']))
     g.virtual['wafer.advanced_random_access_memory'] = (
         'wafer.cmos_chipset.beol_nine.step_eight', 'noop', {})
 

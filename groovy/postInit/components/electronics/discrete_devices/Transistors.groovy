@@ -78,7 +78,7 @@ Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_eighteen', 'wafer.sig
 Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_nineteen', 'wafer.signal_mosfet.step_twenty', 1, false, true)
 
 // Metalization
-Deposition.generateSputteringRecipe('wafer.vdmos.step_twenty', 'wafer.vdmos.step_twenty_one', [ 'aluminium' : 396, 'silicon' : 4 ])
+Deposition.generateSputteringRecipe('wafer.signal_mosfet.step_twenty', 'wafer.signal_mosfet.step_twenty_one', [ 'aluminium' : 396, 'silicon' : 4 ])
 Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_twenty_one', 'wafer.signal_mosfet.step_twenty_two', 'novolac_resist', 'mask_set.signal_mosfet', false)
 Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_twenty_two', 'wafer.signal_mosfet.step_twenty_three', 'aluminium', 100, false)
 Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_twenty_three', 'wafer.signal_mosfet.step_twenty_four', 1, false, true)

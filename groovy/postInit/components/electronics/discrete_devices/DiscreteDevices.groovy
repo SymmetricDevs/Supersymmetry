@@ -102,10 +102,10 @@ Doping.generateDriveInRecipe('wafer.thyristor.step_six', 'wafer.thyristor.step_s
 
 // Contact pad
 Lithography.generatePhotolithographyRecipes('wafer.thyristor.step_seven', 'wafer.thyristor.step_eight', 'novolac_liftoff_resist', 'mask_set.thyristor', false)
-Deposition.generateSputteringRecipe('wafer.thyristor.step_eight', 'wafer.thyristor.step_nine', 400, 'aluminium') // Aluminium metallization & liftoff
-Lithography.generateResistStrippingRecipes('wafer.thyristor.step_nine', 'wafer.thyristor.step_ten', 1, false, true)
-Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.thyristor.step_ten', 'wafer.thyristor.step_eleven', 'basic_cmp_slurry', 400, HV) // CMP for electrode contact
-Deposition.generateSiliconDioxideGrowthRecipe('wafer.thyristor.step_eleven', 'wafer.thyristor', 400, true) // Passivation
+Deposition.generateSputteringRecipe('wafer.thyristor.step_seven.exposed', 'wafer.thyristor.step_seven.deposited', 400, 'aluminium') // Aluminium metallization & liftoff
+Lithography.generateResistStrippingRecipes('wafer.thyristor.step_eight', 'wafer.thyristor.step_nine', 1, false, true)
+Mechanicals.generateChemicalMechanicalPolishingRecipe('wafer.thyristor.step_nine', 'wafer.thyristor.step_ten', 'basic_cmp_slurry', 400, HV) // CMP for electrode contact
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.thyristor.step_ten', 'wafer.thyristor', 400, true) // Passivation
 
 FORMING_PRESS.recipeBuilder()
     .inputs(metaitem('wafer.thyristor'))
