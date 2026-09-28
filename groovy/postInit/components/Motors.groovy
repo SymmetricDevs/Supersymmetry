@@ -219,11 +219,28 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineEnameledGrapheneCoatedGold') * 64)
     .inputs(metaitem('plate.high_power_integrated_circuit'))
     .inputs(ore('circuitIv'))
-    .inputs(metaitem('circuit_board.extreme'))
+    .inputs(metaitem('circuit_board.fr4'))
     .outputs(metaitem('electric.motor.iv') * 3)
     .duration(80)
     .EUt(VA[EV])
     .buildAndRegister();
+
+// Moon Recipes
+
+ASSEMBLER.recipeBuilder()
+        .inputs(ore('cableGtDoubleAluminium') * 2)
+        .inputs(ore('stickLongTitanium'))
+        .inputs(ore('plateStrontiumFerriteMagnetic') * 3)
+        .inputs(ore('wireGtDoubleAluminium') * 4)
+        .inputs(metaitem('lunar_r_glass_fibers') * 4)
+        .inputs(metaitem('plate.high_power_integrated_circuit'))
+        .inputs(ore('circuitEv'))
+        .inputs(metaitem('circuit_board.fr4'))
+        .outputs(metaitem('electric.motor.ev') * 6)
+        .duration(160)
+        .EUt(VA[MV])
+        .info('recipe.moon')
+        .buildAndRegister();
 
 // TEMPORARY: TO BE MODIFIED LATER
 

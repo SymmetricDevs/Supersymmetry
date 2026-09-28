@@ -1,9 +1,4 @@
 {
-  "preRequisiteTypes:7": [
-    1,
-    0,
-    0
-  ],
   "preRequisites:11": [
     813,
     977680348,
@@ -18,8 +13,7 @@
         "id:8": "gregtech:machine"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.373.title",
-      "questlogic:8": "OR"
+      "name:8": "susy.quest.db.373.title"
     }
   },
   "questID:3": 373,

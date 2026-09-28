@@ -1,18 +1,13 @@
 {
-  "preRequisiteTypes:7": [
-    0,
-    1
-  ],
   "preRequisites:11": [
-    537,
-    1481636455
+    537
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.538.desc",
       "icon:10": {
-        "Damage:2": 13092,
-        "id:8": "gregtech:meta_catalyst_bed"
+        "Damage:2": 80,
+        "id:8": "gregtech:meta_dust"
       },
       "name:8": "susy.quest.db.538.title",
       "questlogic:8": "OR"

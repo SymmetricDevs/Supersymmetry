@@ -189,7 +189,7 @@ MIXER_SETTLER.recipeBuilder()
 
     BR.recipeBuilder()
         .inputs(ore('dustBastOxPrNdConcentrate'))
-        .fluidInputs(fluid('hydrochloric_acid') * 324)
+        .fluidInputs(fluid('hydrochloric_acid') * 648)
         .chancedOutput(metaitem('dustPraseodymiumIvOxide'), 1200, 0)
         .fluidOutputs(fluid('neodymium_chloride_solution') * 648)
         .duration(2000)

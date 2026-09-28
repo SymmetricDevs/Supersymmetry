@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gregtech:items/metaitems/board.epoxy.mask_affixed"
+    "layer0": "gregtech:items/metaitems/board.fr4.mask_affixed"
   }
 }

@@ -1,13 +1,13 @@
 name = "JEI Utilities"
-filename = "JEI-Utilities-1.12.2-0.2.13.jar"
+filename = "JEI-Utilities-1.12.2-0.2.15.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "453b3e717bc1c522b1d1d1d5385125b73ea239e1"
+hash = "26cd49e01e8171962306de3c5e371ff0f00e60fc"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6937116
+file-id = 8528497
 project-id = 616190

@@ -9,6 +9,7 @@
       "icon:10": {
         "id:8": "pyrotech:bucket_clay"
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.93.title"
     }
   },

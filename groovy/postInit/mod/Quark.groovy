@@ -77,7 +77,7 @@ for (i in 0..15) {
 	CHEMICAL_BATH.recipeBuilder()
 		.inputs(ore('plankWood') * 8)
 		.fluidInputs(fluid('dye_' + dye_colors[i]) * 72)
-		.outputs(item('quark:stained_planks', i))
+		.outputs(item('quark:stained_planks', i) * 8)
 		.duration(20)
 		.EUt(VA[ULV])
 		.buildAndRegister();
@@ -94,7 +94,7 @@ crafting.addShapeless('quark:bark_4', item('quark:bark', 4), [item('minecraft:lo
 crafting.addShapeless('quark:bark_5', item('quark:bark', 5), [item('minecraft:log2', 1)])
 
 crafting.replaceShaped('quark:rain_detector', item('quark:rain_detector'), [
-        [ore('wireFineRedAlloy'), ore('wireFineRedAlloy'), ore('wireFineRedAlloy')],
+        [ore('wireFineCopper'), ore('wireFineCopper'), ore('wireFineCopper')],
         [ore('plateNetherQuartz'), ore('plateNetherQuartz'), ore('plateNetherQuartz')],
         [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')]
 ])
@@ -122,3 +122,24 @@ crafting.replaceShaped('quark:chain', item('quark:chain') * 3, [
         [null, ore('ringIron'), null],
         [null, null, ore('ringIron')]
 ])
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(7)
+    .inputs(ore('stickIron') * 7)
+    .outputs(item('quark:iron_ladder') * 16)
+    .duration(80)
+    .EUt(4)
+    .buildAndRegister();
+
+def allTrapdoor = ['spruce', 'birch', 'jungle', 'acacia', 'dark_oak']
+
+allTrapdoor.eachWithIndex { trapdoor, i ->
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(3)
+    .inputs(item('minecraft:planks', i + 1) * 3)
+    .outputs(item('quark:' + trapdoor + '_trapdoor') * 2)
+    .duration(100)
+    .EUt(VA[ULV])
+    .buildAndRegister();
+}

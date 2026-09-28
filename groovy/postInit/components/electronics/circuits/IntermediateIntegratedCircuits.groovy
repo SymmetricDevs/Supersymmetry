@@ -364,6 +364,9 @@ generatePackaging('bcd_lpic', 'wafer.bcd_lpic.beol_four.step_eight')
 generatePackaging('bcd_pic', 'wafer.bcd_pic.beol_five.step_eight')
 generatePackaging('bcd_hpic', 'wafer.bcd_hpic.beol_six.step_eight')
 
+// Sputtering Target Recipes
+Deposition.generateSputteringTargetRecipes()
+
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('die.bcd_lpic.bonded'))
     .fluidInputs(fluid('epoxy_molding_compound') * 288)
@@ -397,7 +400,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(metaitem('circuit_board.fr4'))
     .inputs(metaitem('plate.high_power_integrated_circuit'))
     .inputs(metaitem('component.thin_film_resistor'))
-    .inputs(metaitem('component.crystal_oscillator'))
+    .inputs(metaitem('component.quartz_oscillator'))
     .inputs(ore('componentSMDInductor') * 5)
     .inputs(ore('componentSMDCapacitor') * 4)
     //.inputs(metaitem(component.capacitor.aluminium_electrolytic))

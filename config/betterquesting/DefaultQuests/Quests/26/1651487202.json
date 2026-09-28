@@ -1,0 +1,29 @@
+{
+  "preRequisites:11": [
+    1458693750
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1651487202.desc",
+      "icon:10": {
+        "Damage:2": 10,
+        "id:8": "susy:meta_item"
+      },
+      "name:8": "susy.quest.db.1651487202.title",
+      "visibility:8": "COMPLETED"
+    }
+  },
+  "questID:3": 1651487202,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 10,
+          "id:8": "susy:meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

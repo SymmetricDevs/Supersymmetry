@@ -139,6 +139,47 @@ class Deposition {
         sputteringTarget.generateRecipe(input, product, duration)
     }
 
+    record TargetName(String name, String ore_name) {}
+    public static final targetNames = [
+        new TargetName("aluminium", "Aluminium"),
+        new TargetName("copper", "Copper"),
+        new TargetName("titanium", "Titanium"),
+        new TargetName("nickel", "Nickel"),
+        new TargetName("silver", "Silver"),
+        new TargetName("gold", "Gold"),
+        new TargetName("palladium", "Palladium"),
+        new TargetName("tungsten", "Tungsten"),
+        new TargetName("antimony", "Antimony"),
+        new TargetName("silicon", "Silicon"),
+        new TargetName("platinum", "Platinum"),
+        new TargetName("tantalum", "Tantalum"),
+        new TargetName("chromium", "Chromium"),
+        new TargetName("tantalum_nitride", "TantalumNitride"),
+        new TargetName("cobalt", "Cobalt")
+    ]
+    
+    record InertGasHIP(String name, int amount_required, int duration) {}
+    public static final inertGasesHIP = [
+        new InertGasHIP('nitrogen', 200, 2),
+        new InertGasHIP('argon', 100, 1)
+    ]
+
+    static void generateSputteringTargetRecipes() {
+        for (gasses in inertGasesHIP){
+            for (target in targetNames){
+                HOT_ISOSTATIC_PRESS.recipeBuilder()
+                    .notConsumable(metaitem('shape.mold.target'))
+                    .inputs(ore("dust" + target.ore_name))
+                    .fluidInputs(fluid(gasses.name) * gasses.amount_required)
+                    .outputs(metaitem("target." + target.name))
+                    .duration(100 * gasses.duration)
+                    .EUt(VA[HV])
+                    .buildAndRegister()           
+            }
+        }
+    }
+
+
     // feed keys as material paired with duration, for co-sputtering and sequential sputtering
     static void generateSputteringRecipe(String input, String product, Map targetDurationMap) {
         int totalDuration = 0
@@ -207,7 +248,7 @@ class Deposition {
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
+                .duration((int) (duration * thickness * 20 * (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }
@@ -267,7 +308,7 @@ class Deposition {
             }
 
             tmp.outputs(metaitem(product))
-                .duration((int) (duration * thickness * 20 / (this.molar_volume * this.moles)))
+                .duration((int) (duration * thickness * 20 * (this.molar_volume * this.moles)))
                 .EUt(VA[this.voltageTier])
                 .buildAndRegister()
         }

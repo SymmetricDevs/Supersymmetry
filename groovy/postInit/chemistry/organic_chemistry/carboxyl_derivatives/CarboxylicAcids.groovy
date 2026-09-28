@@ -151,7 +151,7 @@ SIEVE_DT.recipeBuilder()
 // Monsanto Process
 
 CRYSTALLIZER.recipeBuilder() // Source: Platinum Group Metals and Compounds Chapter in Ullmann's Encyclopedia of Industrial Chemistry https://doi.org/10.1002/14356007.a21_075
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('hexachlororhodic_acid_solution') * 8950)
     .fluidInputs(fluid('hydrochloric_acid') * 1500)
     .chancedOutput(metaitem('dustRhodiumIiiChlorideTrihydrate') * 7, 5000, 0)
@@ -208,7 +208,7 @@ BR.recipeBuilder() // Source: https://patents.justia.com/patent/20190337819
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
-    .notConsumable(ore('springNichrome'))
+    .notConsumable(ore('springEarly'))
     .fluidInputs(fluid('hexachloroiridic_iii_acid_solution') * 12000)
     .fluidInputs(fluid('hydrochloric_acid') * 1000)
     .outputs(metaitem('dustIridiumIiiChlorideTrihydrate') * 7)
@@ -380,7 +380,7 @@ CSTR.recipeBuilder()
     // From propylene
 
     BCR.recipeBuilder()
-        .fluidInputs(fluid('propylene') * 50)
+        .fluidInputs(fluid('propene') * 50)
         .fluidInputs(fluid('diluted_nitric_acid') * 300)
         .fluidOutputs(fluid('nitratolactic_acid_solution') * 250)
         .fluidOutputs(fluid('nitric_oxide') * 100)
