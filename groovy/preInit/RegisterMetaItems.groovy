@@ -655,6 +655,13 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(10494, "simple_solar_panel.step_four")
         addItem(10495, "simple_solar_panel.cell")
         addItem(10496, "mask.simple_solar_panel")
+
+        // AE2 optical interconnect chain
+        addItem(10491, "optical_fiber_preform.initial")
+        addItem(10492, "optical_fiber_preform")
+        addItem(10493, "fiber.optical")
+        addItem(10494, "fiber.optical.coated")
+        addItem(10495, "cable.optical")
     }
 
     log.infoMC("Finished adding metaitems")
