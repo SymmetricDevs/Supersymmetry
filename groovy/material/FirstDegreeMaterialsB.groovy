@@ -1127,6 +1127,8 @@ class FirstDegreeMaterialsB {
                 .iconSet(SHINY)
                 .build()
 
-        Monel400 = supersymmetry.common.materials.SusyMaterials.Monel400
+        Material Monel400 = supersymmetry.common.materials.SusyMaterials.Monel400
+
+        Monel400.addFlags(GENERATE_ROTOR)
     }
 }
