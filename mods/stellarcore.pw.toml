@@ -1,13 +1,13 @@
 name = "StellarCore"
-filename = "StellarCore-1.6.0.jar"
+filename = "StellarCore-1.6.2.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "e5de9e6543fcf4aa7bf8d864a0c6d335becb3cb6"
+hash = "6574363224fc918d4c91af85177af2064f60ba8b"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8406201
+file-id = 8946515
 project-id = 1064321
