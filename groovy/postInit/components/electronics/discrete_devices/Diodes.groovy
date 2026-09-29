@@ -23,15 +23,13 @@ mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineAnnealedCopper') * 
 // Diode * 2
 mods.gregtech.assembler.removeByInput(30, [metaitem('wireFineCopper') * 4, metaitem('dustSmallGalliumArsenide')], [fluid('plastic') * 144])
 
-
-
-// Alloy junction signal diodes
+// Alloy junction signal diodes (MV)
 
 RESISTANCE_FURNACE.recipeBuilder()
     .circuitMeta(1)
     .notConsumable(ore('springCupronickel'))
     .inputs(ore('nuggetAluminium') * 4)
-    .inputs(metaitem('wafer.silicon.small.n_doped'))
+    .inputs(metaitem('wafer.small.silicon.n_doped'))
     .outputs(metaitem('wafer.diode.alloy.step_one'))
     .duration(400)
     .EUt(VA[MV])
@@ -61,13 +59,13 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-// Alloy junction zener diode
+// Alloy junction zener diode (MV)
 
 RESISTANCE_FURNACE.recipeBuilder()
     .circuitMeta(1)
     .notConsumable(ore('springCupronickel'))
     .inputs(ore('nuggetAluminium') * 4)
-    .inputs(metaitem('wafer.silicon.small.heavily_n_doped'))
+    .inputs(metaitem('wafer.small.silicon.heavily_n_doped'))
     .outputs(metaitem('wafer.zener_diode.alloy.step_one'))
     .duration(400)
     .EUt(VA[MV])
@@ -87,7 +85,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-// Planar diodes
+// Planar diodes (HV, SMD)
 
 // Generate SiO2 doping mask and etch holes into it for doped regions
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.n_doped', 'wafer.diode.planar.step_one', 400, true)
@@ -127,7 +125,7 @@ ASSEMBLER.recipeBuilder()
 // Planar power diodes (mesa diodes w/ drift layer)
 
 // Deposit drift layer and dope p-side
-Deposition.generateChemicalVaporDepositionRecipe('wafer.silicon.small.n_doped', 'wafer.diode.drift.step_one', 1, 'phosphosilicate_glass')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.small.silicon.n_doped', 'wafer.diode.drift.step_one', 1, 'phosphosilicate_glass')
 Doping.generateIonImplantationRecipes('wafer.diode.drift.step_one', 'wafer.diode.power.step_two', 1200, 'boron_trifluoride')
 
 // Mask mesa/contact and etch
@@ -161,7 +159,7 @@ ASSEMBLER.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister();
 
-// Schottky diodes
+// Schottky diodes (HV)
 
 // n- epi layer, p+ guard ring
 Lithography.generatePhotolithographyRecipes('wafer.diode.drift.step_one', 'wafer.diode.schottky.step_two', 'novolac_resist', 'mask_set.diode.schottky', true)
