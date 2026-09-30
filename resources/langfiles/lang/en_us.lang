@@ -3863,8 +3863,8 @@ metaitem.titanium_cylinder.name=Titanium Cylinder
 metaitem.mo_si_rod.wet.name=Wet Mo-Si Rod
 metaitem.mo_si_rod.unsintered.name=Unsintered Mo-Si Rod
 metaitem.graphite_boat.name=Graphite Boat
-metaitem.mo_si_rod.wet.name=Wet Mo-Si Spring
-metaitem.mo_si_rod.unsintered.name=Unsintered Mo-Si Spring
+metaitem.mo_si_spring.wet.name=Wet Mo-Si Spring
+metaitem.mo_si_spring.unsintered.name=Unsintered Mo-Si Spring
 
 metaitem.rubylith.name=Rubylith
 metaitem.rubylith_film.name=Rubylith Film
