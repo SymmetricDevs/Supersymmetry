@@ -284,8 +284,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(550, "mo_si_rod.wet")
         addItem(551, "mo_si_rod.unsintered")
         addItem(552, "graphite_boat")
-        addItem(550, "mo_si_spring.wet")
-        addItem(551, "mo_si_spring.unsintered")
+        addItem(553, "mo_si_spring.wet")
+        addItem(554, "mo_si_spring.unsintered")
 
         addItem(1000, "chunk.magnetite")
         addItem(1001, "hot_iron_rod")
