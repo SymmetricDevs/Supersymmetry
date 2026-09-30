@@ -116,7 +116,7 @@ def hulls = [metaitem('hull.ulv'), metaitem('hull.lv'), metaitem('hull.mv'), met
              metaitem('hull.opv')];
 
 def tieredWires = [ore('wireGtQuadrupleLead'), ore('wireGtQuadrupleCopper'), ore('wireGtQuadrupleCupronickel'), ore('wireGtQuadrupleNichrome'),
-                   ore('wireGtQuadrupleKanthal'), ore('wireGtQuadrupleRtmAlloy'), ore('wireGtQuadrupleHssg'),
+                   ore('wireGtQuadrupleKanthal'), ore('stickMolybdenumDisilicide'), ore('wireGtQuadrupleTungsten'),
                    ore('wireGtQuadrupleNaquadah'), ore('wireGtQuadrupleNaquadahAlloy')];
 
 def tieredPlates = [ore('plateWroughtIron'), ore('plateSteel'), ore('plateAluminium'), ore('plateStainlessSteel'),
@@ -148,7 +148,7 @@ def tieredHexCables = [ore('cableGtHexLead'), ore('cableGtHexTin'), ore('cableGt
                         ore('cableGtHexVanadiumGallium'), ore('cableGtHexYttriumBariumCuprate')]
 
 def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springNichrome'),
-                     metaitem('springKanthal'), metaitem('springRtmAlloy'), metaitem('springHssg'),
+                     metaitem('springKanthal'), metaitem('springMolybdenumDisilicide'), metaitem('springTungsten'),
                      metaitem('springNaquadah'), metaitem('springNaquadahAlloy')]
 
 def rotors = [
@@ -2413,3 +2413,62 @@ RecyclingHelper.addShaped("susy:fluid_samples_storage", metaitem('susy:fluid_sam
     [metaitem('large_fluid_cell.steel'), item('gregtech:boiler_casing', 1), metaitem('large_fluid_cell.steel')],
     [metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel')]
 ])
+
+// ALD Unit
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:ald." + Globals.voltageTiers[i], metaitem('susy:ald.' + Globals.voltageTiers[i]), [
+        [pumps[i], hulls[i], pumps[i]],
+        [tieredCables[i], tieredPlates[i], tieredCables[i]],
+        [circuits[i], tieredSprings[i], circuits[i]]
+    ])
+}
+
+// Plasma Asher
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:plasma_asher." + Globals.voltageTiers[i], metaitem('susy:plasma_asher.' + Globals.voltageTiers[i]), [
+        [circuits[i], pumps[i], tieredElectrodes[i]],
+        [tieredCables[i], hulls[i], tieredCables[i]],
+        [tieredElectrodes[i], tieredPlates[i], circuits[i]]
+    ])
+}
+
+// Reactive Ion Etcher
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:reactive_ion_etcher." + Globals.voltageTiers[i], metaitem('susy:reactive_ion_etcher.' + Globals.voltageTiers[i]), [
+        [tieredElectrodes[i], pumps[i], circuits[i]],
+        [tieredCables[i], hulls[i], tieredCables[i]],
+        [circuits[i], tieredPlates[i], tieredElectrodes[i]]
+    ])
+}
+
+// Wire Bonder
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:wire_bonder." + Globals.voltageTiers[i], metaitem('susy:wire_bonder.' + Globals.voltageTiers[i]), [
+        [motors[i], robotArms[i], motors[i]],
+        [tieredCables[i], hulls[i], tieredCables[i]],
+        [circuits[i], tieredElectrodes[i], circuits[i]]
+    ])
+}
+
+// Resist Processor
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:resist_processor." + Globals.voltageTiers[i], metaitem('susy:resist_processor.' + Globals.voltageTiers[i]), [
+        [robotArms[i], pumps[i], tieredCables[i]],
+        [circuits[i], hulls[i], circuits[i]],
+        [motors[i], tieredWires[i], motors[i]]
+    ])
+}
+
+// Screen Printer
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:screen_printer." + Globals.voltageTiers[i], metaitem('susy:screen_printer.' + Globals.voltageTiers[i]), [
+        [robotArms[i], metaitem('mesh.stainless_steel'), pumps[i]],
+        [circuits[i], hulls[i], circuits[i]],
+        [tieredCables[i], conveyors[i], tieredCables[i]]
+    ])
+}
