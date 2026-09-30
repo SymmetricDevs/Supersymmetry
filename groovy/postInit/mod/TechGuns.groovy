@@ -158,6 +158,11 @@ def name_removals = [
     "techguns:simplemachine_9_upgrade_bench",
     "techguns:simplemachine2_9_armor_bench",
     "techguns:itemshared_60_heavycloth",
+    "techguns:t1_scout_helmet",
+    "techguns:t1_scout_chestplate",
+    "techguns:t1_scout_leggings",
+    "techguns:t1_scout_boots",
+    "techguns:t2_combat_helmet",
     "techguns:t2_commando_helmet",
     "techguns:t2_commando_chestplate",
     "techguns:t2_commando_leggings",
@@ -166,6 +171,10 @@ def name_removals = [
     "techguns:t2_combat_chestplate",
     "techguns:t2_combat_leggings",
     "techguns:t2_combat_boots",
+    "techguns:t2_riot_helmet",
+    "techguns:t2_riot_chestplate",
+    "techguns:t2_riot_leggings",
+    "techguns:t2_riot_boots",
     "techguns:t3_exo_helmet",
     "techguns:t3_exo_chestplate",
     "techguns:t3_exo_leggings",
@@ -272,7 +281,7 @@ crafting.addShaped("techguns:netherdoor", item('techguns:item_door3x3', 3), [
 
 crafting.replaceShaped("techguns:simplemachine_10_charging_station", item('techguns:simplemachine', 10), [
     [ore('circuitIv'), metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), ore('circuitIv')],
-    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 126), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
+    [metaitem('wireGtQuadrupleSamariumIronArsenicOxide'), item('techguns:itemshared', 29), metaitem('wireGtQuadrupleSamariumIronArsenicOxide')],
     [metaitem('plateTungstenSteel'), metaitem('battery_buffer.iv.4'), metaitem('plateTungstenSteel')]
 ])
 
@@ -378,6 +387,32 @@ crafting.replaceShaped("techguns:t1_miner_boots", item('techguns:t1_miner_boots'
     [ore('plateIron'), ore('craftingToolHardHammer'), ore('plateIron')]
 ])
 
+//soldier armor
+
+crafting.replaceShaped("techguns:t1_combat_helmet", item('techguns:t1_combat_helmet'), [
+    [null, null, null],
+    [item('techguns:itemshared', 60), ore('plateSteel'), item('techguns:itemshared', 60)],
+    [ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
+])
+
+crafting.replaceShaped("techguns:t1_combat_chestplate", item('techguns:t1_combat_chestplate'), [
+    [ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')],
+    [item('techguns:itemshared', 60), ore('plateSteel'), item('techguns:itemshared', 60)],
+    [item('techguns:itemshared', 60), item('techguns:itemshared', 60), item('techguns:itemshared', 60)]
+])
+
+crafting.replaceShaped("techguns:t1_combat_leggings", item('techguns:t1_combat_leggings'), [
+    [ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')],
+    [item('techguns:itemshared', 60), ore('plateSteel'), item('techguns:itemshared', 60)],
+    [item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)]
+])
+
+crafting.replaceShaped("techguns:t1_combat_boots", item('techguns:t1_combat_boots'), [
+    [null, null, null],
+    [item('techguns:itemshared', 60), null, item('techguns:itemshared', 60)],
+    [ore('plateSteel'), ore('craftingToolHardHammer'), ore('plateSteel')]
+])
+
 crafting.replaceShaped("techguns:item_bunkerdoor", item('techguns:item_bunkerdoor'), [
     [null, ore('craftingToolHardHammer'), ore('screwIron')],
     [null, ore('plateIron'), item('minecraft:iron_door')],
@@ -432,7 +467,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.lv'))
     .inputs(metaitem('electric.motor.lv'))
     .inputs(ore('circuitLv'))
-    .inputs(ore('wireFineRedAlloy'))
+    .inputs(ore('wireFineCopper'))
     .inputs(ore('plateSteel') * 4)
     .fluidInputs(fluid('soldering_alloy') * 72)
     .outputs(item('techguns:basicmachine', 3))
@@ -921,18 +956,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-FORMING_PRESS.recipeBuilder()
-    .inputs(ore('plateBronze'))
-    .inputs(ore('plateSteel'))
-    .inputs(ore('plateBrass'))
-    .inputs(ore('boltBronze'))
-    .inputs(ore('boltSteel'))
-    .inputs(ore('boltBrass'))
-    .outputs(item('techguns:itemshared', 45))
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 LATHE.recipeBuilder()
     .inputs(ore('stickIron'))
     .outputs(item('techguns:itemshared', 38))
@@ -987,10 +1010,25 @@ CANNER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
+LATHE.recipeBuilder()
+    .inputs(ore('stone'))
+    .outputs(item('techguns:itemshared', 37))
+    .duration(80)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+CUTTER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('plankWood'))
+    .outputs(item('techguns:itemshared', 42))
+    .duration(20)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
 crafting.replaceShaped("techguns:riot_shield", item('techguns:riot_shield'), [
-    [metaitem('stickLongSteel'), metaitem('platePolycarbonate'), metaitem('stickLongSteel')],
+    [metaitem('stickLongSteel'), ore('wireFineBorosilicateGlass'), metaitem('stickLongSteel')],
     [metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-    [metaitem('stickLongSteel'), metaitem('platePolycarbonate'), metaitem('stickLongSteel')]
+    [metaitem('stickLongSteel'), ore('wireFineBorosilicateGlass'), metaitem('stickLongSteel')]
 ]);
 
 crafting.replaceShaped("techguns:ballistic_shield", item('techguns:ballistic_shield'), [
@@ -1000,12 +1038,12 @@ crafting.replaceShaped("techguns:ballistic_shield", item('techguns:ballistic_shi
 ]);
 
 crafting.replaceShaped("techguns:advanced_shield", item('techguns:advanced_shield'), [
-    [metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateAluminiumOxynitride'), metaitem('plateUltraHighMolecularWeightPolyethylene')],
+    [metaitem('platePolycarbonate'), metaitem('plateAluminiumOxynitride'), metaitem('platePolycarbonate')],
     [metaitem('plateKevlar'), item('techguns:ballistic_shield'), metaitem('plateUltraHighMolecularWeightPolyethylene')],
     [metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateUltraHighMolecularWeightPolyethylene'), metaitem('plateUltraHighMolecularWeightPolyethylene')]
 ]);
 
-crafting.addShaped("stone_barrel", item('techguns:itemshared:37'), [
+crafting.replaceShaped("stone_barrel", item('techguns:itemshared:37'), [
     [null, ore('craftingToolFile'), null],
     [ore('craftingToolScrewdriver'), ore('stone'), ore('craftingToolHardHammer')]
 ]);
@@ -1035,10 +1073,16 @@ crafting.addShaped("hardened_barrel", item('techguns:itemshared:39'), [
     [ore('craftingToolScrewdriver'), item('techguns:itemshared:38'), ore('craftingToolHardHammer')]
 ]);
 
-crafting.addShaped("heavy_cloth", item('techguns:itemshared:60')*6, [
+crafting.addShaped("heavy_cloth", item('techguns:itemshared:60')*64, [
     [ore('platePolycaprolactam'), ore('platePolycaprolactam'), ore('platePolycaprolactam')],
     [ore('wireFineSteel'), ore('wireFineSteel'), ore('wireFineSteel')],
     [ore('platePolycaprolactam'), ore('platePolycaprolactam'), ore('platePolycaprolactam')]
+]);
+
+crafting.addShaped("heavy_cloth_easy", item('techguns:itemshared:60')*6, [
+    [item('projectred-core:resource_item', 420), item('projectred-core:resource_item', 420), item('projectred-core:resource_item', 420)],
+    [ore('wireFineSteel'), ore('wireFineSteel'), ore('wireFineSteel')],
+    [item('projectred-core:resource_item', 420), item('projectred-core:resource_item', 420), item('projectred-core:resource_item', 420)]
 ]);
 
 crafting.addShaped("techguns_iron_receiver", item('techguns:itemshared:33'), [
@@ -1178,9 +1222,9 @@ crafting.shapelessBuilder()
 //--------------------GregTech machines only recipes--------------------
 
 FORMING_PRESS.recipeBuilder()
-    .inputs(ore('platePolycaprolactam') * 2)
-    .inputs(ore('wireFineSteel'))
-    .outputs(item('techguns:itemshared:60') * 2)
+    .inputs(ore('platePolycaprolactam') * 6)
+    .inputs(ore('wireFineSteel') * 3)
+    .outputs(item('techguns:itemshared:60') * 64)
     .duration(40)
     .EUt(16)
     .buildAndRegister();
@@ -1207,22 +1251,37 @@ crafting.addShaped("bound_leather", metaitem('bound_leather')*8, [
     [item('techguns:itemshared:77'), item('techguns:itemshared:77'), item('techguns:itemshared:77')]
 ]);
 
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('plateIron'))
+    .inputs(ore('screwIron') * 2)
+    .inputs(item('minecraft:iron_door'))
+    .outputs(item('techguns:item_bunkerdoor'))
+    .duration(100)
+    .EUt(16)
+    .buildAndRegister();
+
+// commando armor
+
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(1)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
     .inputs(ore('plateBoronNitride') * 2)
+    .inputs(item('susy:susy_armor', 2))
     .outputs(item('techguns:t2_commando_helmet'))
     .duration(100)
-    .EUt(960)
+    .EUt(240)
     .buildAndRegister();
+
+
 
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(2)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 8)
     .inputs(ore('plateBoronNitride') * 4)
+    .inputs(item('susy:susy_armor', 3).withNbt(['maxOxygen': 1200.0d, 'durability': 500, 'oxygen': 1200.0d]))
     .outputs(item('techguns:t2_commando_chestplate'))
     .duration(100)
-    .EUt(960)
+    .EUt(240)
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1231,7 +1290,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateBoronNitride') * 3)
     .outputs(item('techguns:t2_commando_leggings'))
     .duration(100)
-    .EUt(960)
+    .EUt(240)
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1240,14 +1299,59 @@ WEAPONS_FACTORY.recipeBuilder()
     .inputs(ore('plateBoronNitride') * 2)
     .outputs(item('techguns:t2_commando_boots'))
     .duration(100)
-    .EUt(960)
+    .EUt(240)
     .buildAndRegister();
+
+// combat armor
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(ore('plateVanadiumSteel') * 5)
+    .inputs(ore('screwAluminium') * 2)
+    .inputs(item('techguns:itemshared', 77) * 4)
+    .inputs(item('gregtech:transparent_casing') * 2)
+    .outputs(item('techguns:t2_combat_helmet'))
+    .duration(100)
+    .EUt(60)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(ore('plateVanadiumSteel') * 8)
+    .inputs(ore('screwAluminium') * 4)
+    .inputs(item('techguns:itemshared', 77) * 4)
+    .outputs(item('techguns:t2_combat_chestplate'))
+    .duration(100)
+    .EUt(60)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(3)
+    .inputs(ore('plateVanadiumSteel') * 7)
+    .inputs(ore('screwAluminium') * 3)
+    .inputs(item('techguns:itemshared', 77) * 4)
+    .outputs(item('techguns:t2_combat_leggings'))
+    .duration(100)
+    .EUt(60)
+    .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+    .circuitMeta(4)
+    .inputs(ore('plateVanadiumSteel') * 4)
+    .inputs(ore('screwAluminium') * 2)
+    .inputs(item('techguns:itemshared', 77) * 4)
+    .outputs(item('techguns:t2_combat_boots'))
+    .duration(100)
+    .EUt(60)
+    .buildAndRegister()
+
+// ranger veteran armor
 
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(1)
     .inputs(ore('plateKevlar') * 5)
     .inputs(ore('plateBoronNitride') * 2)
-    .outputs(item('techguns:t2_combat_helmet'))
+    .outputs(item('techguns:t2_riot_helmet'))
     .duration(100)
     .EUt(240)
     .buildAndRegister();
@@ -1256,7 +1360,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(2)
     .inputs(ore('plateKevlar') * 8)
     .inputs(ore('plateBoronNitride') * 4)
-    .outputs(item('techguns:t2_combat_chestplate'))
+    .outputs(item('techguns:t2_riot_chestplate'))
     .duration(100)
     .EUt(240)
     .buildAndRegister();
@@ -1265,7 +1369,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(3)
     .inputs(ore('plateKevlar') * 7)
     .inputs(ore('plateBoronNitride') * 3)
-    .outputs(item('techguns:t2_combat_leggings'))
+    .outputs(item('techguns:t2_riot_leggings'))
     .duration(100)
     .EUt(240)
     .buildAndRegister();
@@ -1274,10 +1378,12 @@ WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(4)
     .inputs(ore('plateKevlar') * 4)
     .inputs(ore('plateBoronNitride') * 2)
-    .outputs(item('techguns:t2_combat_boots'))
+    .outputs(item('techguns:t2_riot_boots'))
     .duration(100)
     .EUt(240)
     .buildAndRegister()
+
+// soldier armor
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
@@ -1285,7 +1391,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .inputs(item('techguns:itemshared', 60) * 2)
         .outputs(item('techguns:t1_combat_helmet'))
         .duration(100)
-        .EUt(60)
+        .EUt(15)
         .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1294,7 +1400,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .inputs(item('techguns:itemshared', 60) * 5)
         .outputs(item('techguns:t1_combat_chestplate'))
         .duration(100)
-        .EUt(60)
+        .EUt(15)
         .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1303,7 +1409,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .inputs(item('techguns:itemshared', 60) * 4)
         .outputs(item('techguns:t1_combat_leggings'))
         .duration(100)
-        .EUt(60)
+        .EUt(15)
         .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1312,41 +1418,285 @@ WEAPONS_FACTORY.recipeBuilder()
         .inputs(item('techguns:itemshared', 60) * 2)
         .outputs(item('techguns:t1_combat_boots'))
         .duration(100)
-        .EUt(60)
+        .EUt(15)
         .buildAndRegister();
+
+// bandit armor
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
-        .inputs(item('techguns:itemshared', 45) * 5)
-        .outputs(item('techguns:steam_helmet'))
+        .inputs(item('techguns:itemshared', 60) * 5)
+        .inputs(item('susy:susy_armor').withNbt(['damage': 0.0d]) * 1)
+        .outputs(item('techguns:t1_scout_helmet'))
         .duration(100)
         .EUt(15)
         .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(2)
-        .inputs(item('techguns:itemshared', 45) * 8)
-        .outputs(item('techguns:steam_chestplate'))
+        .inputs(item('techguns:itemshared', 60) * 8)
+        .outputs(item('techguns:t1_scout_chestplate'))
         .duration(100)
         .EUt(15)
         .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(3)
-        .inputs(item('techguns:itemshared', 45) * 7)
-        .outputs(item('techguns:steam_leggings'))
+        .inputs(item('techguns:itemshared', 60) * 7)
+        .outputs(item('techguns:t1_scout_leggings'))
         .duration(100)
         .EUt(15)
         .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(4)
-        .inputs(item('techguns:itemshared', 45) * 4)
-        .outputs(item('techguns:steam_boots'))
+        .inputs(item('techguns:itemshared', 60) * 4)
+        .outputs(item('techguns:t1_scout_boots'))
         .duration(100)
         .EUt(15)
         .buildAndRegister();
-    
+
+// advanced combat armor
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('plateDoubleTitanium') * 5)
+        .inputs(item('gregtech:meta_item_1', 130) * 2)
+        .inputs(item('gregtech:meta_item_1', 307) * 1)
+        .inputs(ore('wireFineBorosilicateGlass') * 5)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 2)
+        .outputs(item('techguns:t3_combat_helmet'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('plateDoubleTitanium') * 8)
+        .inputs(item('gregtech:meta_item_1', 130) * 4)
+        .inputs(ore('plateKevlar') * 8)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 2)
+        .outputs(item('techguns:t3_combat_chestplate'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(3)
+        .inputs(ore('plateDoubleTitanium') * 7)
+        .inputs(item('gregtech:meta_item_1', 130) * 3)
+        .inputs(ore('plateKevlar') * 7)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 2)
+        .outputs(item('techguns:t3_combat_leggings'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(ore('plateDoubleTitanium') * 4)
+        .inputs(item('gregtech:meta_item_1', 130) * 2)
+        .inputs(ore('plateKevlar') * 4)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 2)
+        .outputs(item('techguns:t3_combat_boots'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+// steam armor
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('pipeTinyFluidVanadiumSteel') * 2)
+        .inputs(item('gregtech:meta_item_1', 307) * 1)
+        .inputs(ore('wireFineBorosilicateGlass') * 10)
+        .inputs(item('gregtech:meta_item_1', 130) * 8)
+        .inputs(ore('plateSiliconCarbide') * 5)
+        .inputs(ore('plateTungstenSteel') * 5)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
+        .inputs(ore('plateReneN5') * 5)
+        .outputs(item('techguns:steam_helmet'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('pipeTinyFluidVanadiumSteel') * 4)
+        .inputs(item('gregtech:meta_item_1', 145) * 2)
+        .inputs(item('gregtech:meta_item_1', 130) * 8)
+        .inputs(ore('plateSiliconCarbide') * 8)
+        .inputs(ore('plateTungstenSteel') * 8)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 8)
+        .inputs(ore('plateReneN5') * 8)
+        .outputs(item('techguns:steam_chestplate'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(3)
+        .inputs(ore('pipeTinyFluidVanadiumSteel') * 3)
+        .inputs(item('gregtech:meta_item_1', 130) * 8)
+        .inputs(ore('plateSiliconCarbide') * 7)
+        .inputs(ore('plateTungstenSteel') * 7)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 7)
+        .inputs(ore('plateReneN5') * 7)
+        .outputs(item('techguns:steam_leggings'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(ore('pipeTinyFluidVanadiumSteel') * 2)
+        .inputs(item('gregtech:meta_item_1', 130) * 8)
+        .inputs(ore('plateSiliconCarbide') * 4)
+        .inputs(ore('plateTungstenSteel') * 4)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 4)
+        .inputs(ore('plateReneN5') * 4)
+        .outputs(item('techguns:steam_boots'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+//Miner Armor
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('plateIron') * 2)
+        .inputs(ore('dyeYellow'))
+        .inputs(item('techguns:itemshared', 60) * 2)
+        .outputs(item('techguns:t1_miner_helmet'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('plateIron') * 2)
+        .inputs(item('techguns:itemshared', 60) * 6)
+        .outputs(item('techguns:t1_miner_chestplate'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(3)
+        .inputs(ore('plateIron') * 2)
+        .inputs(item('techguns:itemshared', 60) * 5)
+        .outputs(item('techguns:t1_miner_leggings'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(ore('plateIron') * 2)
+        .inputs(item('techguns:itemshared', 60) * 2)
+        .outputs(item('techguns:t1_miner_boots'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+// hazmat suit
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('platePolyvinylChloride') * 5)
+        .inputs(ore('plateRubber') * 5)
+        .outputs(item('techguns:hazmat_helmet'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('platePolyvinylChloride') * 8)
+        .inputs(ore('plateRubber') * 8)
+        .outputs(item('techguns:hazmat_chestplate'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(3)
+        .inputs(ore('platePolyvinylChloride') * 7)
+        .inputs(ore('plateRubber') * 7)
+        .outputs(item('techguns:hazmat_leggings'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(ore('platePolyvinylChloride') * 4)
+        .inputs(ore('plateRubber') * 4)
+        .outputs(item('techguns:hazmat_boots'))
+        .duration(50)
+        .EUt(60)
+        .buildAndRegister()
+
+// exo suit
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('wireGtSingleUraniumTriplatinum') * 2)
+        .inputs(item('gregtech:meta_item_1', 307) * 1)
+        .inputs(ore('wireFineBorosilicateGlass') * 10)
+        .inputs(item('gregtech:meta_item_1', 130) * 16)
+        .inputs(ore('plateBoronNitride') * 5)
+        .inputs(ore('plateNiobiumTitanium') * 5)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
+        .inputs(ore('plateReneN5') * 5)
+        .outputs(item('techguns:t3_exo_helmet'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(2)
+        .inputs(ore('wireGtSingleUraniumTriplatinum') * 4)
+        .inputs(ore('circuitEv') * 2)
+        .inputs(item('gregtech:meta_item_1', 130) * 16)
+        .inputs(ore('plateBoronNitride') * 8)
+        .inputs(ore('plateNiobiumTitanium') * 8)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 8)
+        .inputs(ore('plateReneN5') * 8)
+        .outputs(item('techguns:t3_exo_chestplate'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(3)
+        .inputs(ore('wireGtSingleUraniumTriplatinum') * 3)
+        .inputs(item('gregtech:meta_item_1', 130) * 16)
+        .inputs(ore('plateBoronNitride') * 7)
+        .inputs(ore('plateNiobiumTitanium') * 7)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 7)
+        .inputs(ore('plateReneN5') * 7)
+        .outputs(item('techguns:t3_exo_leggings'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
+WEAPONS_FACTORY.recipeBuilder()
+        .circuitMeta(4)
+        .inputs(ore('wireGtSingleUraniumTriplatinum') * 2)
+        .inputs(item('gregtech:meta_item_1', 130) * 16)
+        .inputs(ore('plateBoronNitride') * 4)
+        .inputs(ore('plateNiobiumTitanium') * 4)
+        .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 4)
+        .inputs(ore('plateReneN5') * 4)
+        .outputs(item('techguns:t3_exo_boots'))
+        .duration(100)
+        .EUt(960)
+        .buildAndRegister();
+
 //Armor upgrades
 
 WEAPONS_FACTORY.recipeBuilder()
