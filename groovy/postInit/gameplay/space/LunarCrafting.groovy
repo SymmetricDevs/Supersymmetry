@@ -649,6 +649,28 @@ ASSEMBLER.recipeBuilder()
     .info('recipe.moon')
     .buildAndRegister()
 
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('crate.aluminium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('item_bus.import.ev'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('crate.aluminium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('item_bus.export.ev'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
 crafting.addShaped('susy:lv_energy_hatch_moon', metaitem('energy_hatch.input.lv'), [
     [null, metaitem('voltage_coil.lv'), null],
     [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],

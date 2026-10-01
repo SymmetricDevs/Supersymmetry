@@ -883,16 +883,10 @@ class FirstDegreeMaterialsB {
                 .blastTemp(2100, GasTier.MID, GTValues.VA[GTValues.EV])
                 .build()
 
-        /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
-                .dust()
-                .components(Vanadium * 2, Oxygen * 3)
-                .colorAverage()
-                .build()*/
-
         // Molybdenum disilicide for no reason
 
         AluminiumAlloy2219 = new Material.Builder(8794, SuSyUtility.susyId('aluminium_alloy_2219'))
-                .ingot().liquid(new FluidBuilder().temperature(640))
+                .ingot().liquid(new FluidBuilder().temperature(933))
                 .colorAverage()
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .components(Aluminium * 1661, Copper * 60, Manganese * 18, Vanadium * 1, Zirconium * 2, Titanium * 1)
@@ -900,7 +894,7 @@ class FirstDegreeMaterialsB {
                 .build()
 
         AluminiumAlloy2195 = new Material.Builder(8795, SuSyUtility.susyId('aluminium_alloy_2195'))
-                .ingot().liquid(new FluidBuilder().temperature(660))
+                .ingot().liquid(new FluidBuilder().temperature(933))
                 .colorAverage()
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Aluminium * 2012, Copper * 36, Lithium * 90, Magnesium * 18, Silver * 3, Zirconium * 1)
@@ -908,9 +902,9 @@ class FirstDegreeMaterialsB {
                 .build()
       
         ScandiumAlloy = new Material.Builder(8796, SuSyUtility.susyId('scandium_alloy'))
-                .ingot()
+                .ingot().liquid(new FluidBuilder().temperature(933))
                 .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_SPRING)
-                .components(Aluminium * 12, Scandium * 3, Erbium, Zirconium)
+                .components(Aluminium * 995, Scandium * 2, Zirconium * 2, Erbium)
                 .color(0xffbfbf)
                 .iconSet(SHINY)
                 .build()
