@@ -1168,7 +1168,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('component.transistor') * 16)
+		.inputs(ore('componentTransistor') * 16)
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([1])

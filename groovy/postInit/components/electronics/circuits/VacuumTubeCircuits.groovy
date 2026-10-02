@@ -26,7 +26,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
 crafting.replaceShaped("gregtech:electronic_circuit_mv", metaitem('circuit.good_electronic'), [
     [ore('componentCapacitorMedium'), metaitem('circuit.electronic'), ore('componentCapacitorMedium')],
-    [ore('circuitLv'), metaitem('circuit_board.basic'), metaitem('circuit.electronic')],
+    [metaitem('circuit.electronic'), metaitem('circuit_board.basic'), metaitem('circuit.electronic')],
     [ore('wireGtSingleCopper'), metaitem('component.relay'), ore('wireGtSingleCopper')]])
 
 CIRCUIT_ASSEMBLER.recipeBuilder()

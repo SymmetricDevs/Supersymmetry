@@ -33,6 +33,20 @@ ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_juncti
 ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
 ore('componentOpAmp').add(metaitem('component.op_amp'))
 
+ore('circuitLv').remove(metaitem('circuit.basic_integrated')) //being EVIL
+ore('circuitMv').remove(metaitem('circuit.good_integrated'))
+ore('circuitHv').remove(metaitem('circuit.advanced_integrated'))
+
+mods.jei.ingredient.yeet(metaitem('component.transistor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.transistor'))
+mods.jei.ingredient.yeet(metaitem('component.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.capacitor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.capacitor'))
+// Capacitor * 8
+mods.gregtech.assembler.removeByInput(120, [metaitem('foilPlastic'), metaitem('foilAluminium') * 2], [fluid('plastic') * 144])
+mods.jei.ingredient.yeet(metaitem('component.capacitor'))
+
 // Carbon composite
 ore('resistorCarbon').add(metaitem('dustCarbon'))
 ore('resistorCarbon').add(metaitem('dustHighPurityCarbon'))

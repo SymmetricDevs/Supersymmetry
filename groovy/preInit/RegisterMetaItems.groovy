@@ -727,17 +727,6 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5858, "substrate.fr4.array")
         addItem(5859, "substrate.fr4.cut")
 
-
-        //Good Circuit Components 5900-6000
-        addItem(5900, "op_amp")
-        addItem(5901, "heat_sink")
-        addItem(5902, "protector_chip")
-        addItem(5903, "zener_diode")
-        addItem(5904, "fuse.hv")
-        addItem(5905, "voltage_regulator.hv.unsealed")
-        addItem(5906, "voltage_regulator.mv")
-        addItem(5907, "voltage_regulator.hv")
-
         //Light Sources 6000-6100
         addItem(6000, "carbon_arc_lamp")
         addItem(6001, "incandescent_light")

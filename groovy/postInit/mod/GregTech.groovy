@@ -1643,13 +1643,13 @@ MACERATOR.recipeBuilder()
 crafting.addShaped('gregtech:energy_hatch.mv2', item('gregtech:machine', 1212), [
     [null, metaitem('voltage_coil.mv'), null],
     [ore('cableGtSingleCopper'), item('gregtech:machine', 987), ore('cableGtSingleCopper')],
-    [null, metaitem('voltage_regulator.mv'), null]
+    [null, metaitem('circuit.power.mv'), null]
 ])
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .inputs(ore('cableGtSingleCopper') * 2)
-    .inputs(metaitem('voltage_regulator.mv'))
+    .inputs(metaitem('circuit.power.mv'))
     .inputs(metaitem('voltage_coil.mv'))
     .outputs(metaitem('energy_hatch.input.mv'))
     .duration(200)
@@ -1659,13 +1659,13 @@ ASSEMBLER.recipeBuilder()
 crafting.addShaped('gregtech:dynamo_hatch.mv2', item('gregtech:machine', 1227), [
     [null, metaitem('voltage_coil.mv'), null],
     [ore('springCopper'), item('gregtech:machine', 987), ore('springCopper')],
-    [null, metaitem('voltage_regulator.mv'), null]
+    [null, metaitem('circuit.power.mv'), null]
 ])
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .inputs(ore('springCopper') * 2)
-    .inputs(metaitem('voltage_regulator.mv'))
+    .inputs(metaitem('circuit.power.mv'))
     .inputs(metaitem('voltage_coil.mv'))
     .outputs(metaitem('energy_hatch.output.mv'))
     .duration(200)
@@ -1673,15 +1673,15 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 crafting.addShaped('gregtech:transformer.mv2', item('gregtech:machine', 1272), [
-    [metaitem('voltage_regulator.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')],
+    [metaitem('circuit.power.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')],
     [ore('cableGtSingleGold'), item('gregtech:machine', 987), null],
-    [metaitem('voltage_regulator.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')]
+    [metaitem('circuit.power.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')]
 ])
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('transformer.mv'))
     .inputs(metaitem('energy_hatch.output.mv'))
-    .inputs(metaitem('voltage_regulator.mv'))
+    .inputs(metaitem('circuit.power.mv'))
     .inputs(metaitem('voltage_coil.mv'))
     .inputs(ore('cableGtQuadrupleCopper') * 2)
     .outputs(metaitem('susy:energy_hatch.output_4a.mv'))
@@ -1692,7 +1692,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('transformer.adjustable.mv'))
     .inputs(metaitem('susy:energy_hatch.output_4a.mv'))
-    .inputs(metaitem('voltage_regulator.mv') * 2)
+    .inputs(metaitem('circuit.power.mv') * 2)
     .inputs(metaitem('voltage_coil.mv'))
     .inputs(ore('cableGtOctalCopper') * 2)
     .outputs(metaitem('susy:energy_hatch.output_16a.mv'))

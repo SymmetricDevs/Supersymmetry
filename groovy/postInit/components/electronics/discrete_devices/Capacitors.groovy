@@ -283,6 +283,8 @@ COMPRESSOR.recipeBuilder()
 
 Packaging.generateDicingRecipe("component.bme_cap.wafer", "component.bme_cap.unfired", 64, 100, HV);
 
+Packaging.generateDicingRecipe("component.pme_cap.wafer", "component.pme_cap.unfired", 64, 100, HV);
+
 Sintering.blankets.each { blanket ->
     SINTERING_OVEN.recipeBuilder()
         .inputs(metaitem('component.bme_cap.unfired') * 64)

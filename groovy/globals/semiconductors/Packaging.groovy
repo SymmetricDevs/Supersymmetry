@@ -9,7 +9,7 @@ import gregtech.api.metatileentity.multiblock.CleanroomType
 class Packaging {
 
     static void generateDicingRecipe(String input, String product, int outputMultiplier, int duration, int voltageTier, boolean cleanroom = true) {
-        if (cleanroom != true){
+        if (cleanroom != true) {
             CUTTER.recipeBuilder()
                 .inputs(metaitem(input))
                 .fluidInputs(fluid('ultrapure_water') * 100)
