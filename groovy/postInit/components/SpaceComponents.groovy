@@ -612,13 +612,6 @@ mods.susy.rocketCosts.add('lunar', 'lunar_spacecraft')
     .duration(20)
     .register()
 
-mods.susy.rocketCosts.add('lunar', 'lunar_spacecraft')
-        .input(item('susy:spacecraft_instrument', 10) * 1)
-        .input(item('susy:rocket_fairing') * 12)
-        .input(item('susy:rocket_fairing_connector') * 8)
-        .duration(10)
-        .register()
-
 BR.recipeBuilder()
     .inputs(metaitem('dustIridiumIiiChlorideTrihydrate') * 7)
     .inputs(metaitem('dustSmallSodiumBicarbonate'))

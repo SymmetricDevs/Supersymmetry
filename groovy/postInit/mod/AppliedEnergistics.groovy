@@ -677,7 +677,7 @@ storageCells.each { cell ->
 ASSEMBLER.recipeBuilder()
     .inputs(ore('frameTungstenSteel') * 2)
     .inputs(ore('plateTungstenSteel') * 8)
-    .inputs(ore('plateReinforcedEpoxyResin') * 8)
+    .inputs(ore('plateScandiumAlloy') * 8)
     .inputs(ore('foilRhodium') * 8)
     .outputs(item("threng:big_assembler") * 8) // frame
     .duration(200)
@@ -686,7 +686,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .inputs(ore('frameTungstenSteel') * 1)
-    .inputs(ore('plateAluminium') * 32)
+    .inputs(ore('plateScandiumAlloy') * 32)
     .inputs(ore('plateReinforcedEpoxyResin') * 8)
     .inputs(ore('pipeNormalFluidTitanium') * 4)
     .inputs(ore('rotorReinforcedEpoxyResin') * 4)
