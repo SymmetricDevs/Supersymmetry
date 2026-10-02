@@ -32,11 +32,11 @@ ore('componentTransistorSignal').add(metaitem('component.transistor.signal_mosfe
 ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_junction'))
 ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
 ore('componentOpAmp').add(metaitem('component.op_amp'))
-
+/*
 ore('circuitLv').remove(metaitem('circuit.basic_integrated')) //being EVIL
 ore('circuitMv').remove(metaitem('circuit.good_integrated'))
 ore('circuitHv').remove(metaitem('circuit.advanced_integrated'))
-
+*/
 mods.jei.ingredient.yeet(metaitem('component.transistor'))
 mods.jei.ingredient.yeet(metaitem('component.smd.transistor'))
 mods.jei.ingredient.yeet(metaitem('component.resistor'))
