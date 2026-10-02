@@ -2411,6 +2411,7 @@ susy.material.incoloy_825=Incoloy 825
 susy.material.incoloy_908=Incoloy 908
 susy.material.rene_n_5=Rene N5
 susy.material.monel_500=Monel 500
+susy.material.monel_400=Monel 400
 susy.material.stellite_j=Stellite J
 susy.material.stellite_6=Stellite 6
 susy.material.hsla_980_x=HSLA 980X
@@ -3395,6 +3396,11 @@ susy.material.uranium_molybdenum_alloy=Uranium-Molybdenum Alloy
 susy.material.aerozine_50=Aerozine 50
 susy.material.mon_3=MON-3
 susy.material.phosphoric_chromic_acid_solution=Phosphoric-Chromic Acid Solution
+susy.material.two_cyclohexenylcyclohexanone=2-(1-Cyclohexenyl)cyclohexanone
+susy.material.two_cyclohexenylcyclohexanone_solution=2-(1-Cyclohexenyl)cyclohexanone Solution
+susy.material.benzal_chloride=Benzal Chloride
+susy.material.pmma_ebeam_resist=PMMA E-Beam Resist
+susy.material.electrolytic_capacitor_electrolyte=Electrolytic Capacitor Electrolyte
 
 # Isotopes
 
@@ -4229,6 +4235,7 @@ metaitem.zest.lemon.name=Lemon Zest
 metaitem.component.pme_cap.plated.name=Plated PME Capacitor
 metaitem.target.tantalum.name=Tantalum Sputtering Target
 susy.material.sulfur_hexafluoride=Sulfur Hexafluoride
+susy.material.crude_sulfur_hexafluoride=Crude Sulfur Hexafluoride
 metaitem.die.nmos_sram.name=NMOS SRAM Die
 metaitem.component.thick_film_resistor.plated.name=Plated Thick Film Resistor
 metaitem.die.bjt_pic.name=BJT PIC Die
