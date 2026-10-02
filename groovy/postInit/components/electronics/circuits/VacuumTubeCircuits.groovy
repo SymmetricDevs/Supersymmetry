@@ -16,7 +16,7 @@ crafting.replaceShaped("gregtech:electronic_circuit_lv", metaitem('circuit.elect
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(ore('circuitUlv') * 2)
-    .inputs(ore('componentResistor') * 2)
+    .inputs(ore('componentResistorMedium') * 2)
     .inputs(ore('wireFineCopper') * 2)
     .inputs(metaitem('circuit_board.basic'))
     .outputs(metaitem('circuit.electronic') * 2)

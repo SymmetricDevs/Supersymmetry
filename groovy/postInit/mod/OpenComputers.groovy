@@ -336,8 +336,8 @@ mods.gregtech.assembler.recipeBuilder()
 
 mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('hull.hv'))
-		.inputs(metaitem('plate.random_access_memory'))
-		.inputs(metaitem('plate.central_processing_unit'))
+		.inputs(metaitem('component.nmos_sram'))
+		.inputs(metaitem('component.nmos_cpu'))
 		.inputs(item('opencomputers:diskdrive') * 3)
 		.inputs(ore('circuitHv'))
 		.fluidInputs(solder)
@@ -581,7 +581,7 @@ mods.gregtech.assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.central_processing_unit'))
+		.inputs(metaitem('component.nmos_cpu'))
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([1])
@@ -591,7 +591,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.central_processing_unit') * 2)
+		.inputs(metaitem('component.nmos_cpu') * 2)
 		.inputs(metaitem('circuit_board.g10'))
 		.fluidInputs(solder)
 		.circuitMeta([2])
@@ -601,7 +601,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.central_processing_unit') * 4)
+		.inputs(metaitem('component.nmos_cpu') * 4)
 		.inputs(metaitem('circuit_board.advanced'))
 		.fluidInputs(solder)
 		.circuitMeta([3])
@@ -611,7 +611,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.integrated_logic_circuit'))
+		.inputs(metaitem('plate.ultra_low_power_integrated_circuit'))
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([1])
@@ -621,7 +621,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.integrated_logic_circuit') * 2)
+		.inputs(metaitem('plate.ultra_low_power_integrated_circuit') * 2)
 		.inputs(metaitem('circuit_board.g10'))
 		.fluidInputs(solder)
 		.circuitMeta([2])
@@ -631,7 +631,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.integrated_logic_circuit') * 4)
+		.inputs(metaitem('plate.ultra_low_power_integrated_circuit') * 4)
 		.inputs(metaitem('circuit_board.advanced'))
 		.fluidInputs(solder)
 		.circuitMeta([3])
@@ -641,7 +641,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.random_access_memory'))
+		.inputs(metaitem('component.nmos_sram'))
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([1])
@@ -651,7 +651,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.random_access_memory') * 2)
+		.inputs(metaitem('component.nmos_sram') * 2)
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([2])
@@ -661,7 +661,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.random_access_memory') * 4)
+		.inputs(metaitem('component.nmos_sram') * 4)
 		.inputs(metaitem('circuit_board.g10'))
 		.fluidInputs(solder)
 		.circuitMeta([3])
@@ -671,7 +671,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.random_access_memory') * 6)
+		.inputs(metaitem('component.nmos_sram') * 6)
 		.inputs(metaitem('circuit_board.g10'))
 		.fluidInputs(solder)
 		.circuitMeta([4])
@@ -681,7 +681,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.random_access_memory') * 8)
+		.inputs(metaitem('component.nmos_sram') * 8)
 		.inputs(metaitem('circuit_board.advanced'))
 		.fluidInputs(solder)
 		.circuitMeta([5])
@@ -691,7 +691,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.random_access_memory') * 12)
+		.inputs(metaitem('component.nmos_sram') * 12)
 		.inputs(metaitem('circuit_board.advanced'))
 		.fluidInputs(solder)
 		.circuitMeta([6])

@@ -91,12 +91,12 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
 // P doping sandwich
 Lithography.generatePhotolithographyRecipes('wafer.silicon.n_doped', 'wafer.thyristor.step_one', 'novolac_resist', 'mask_set.thyristor', true)
-Doping.generateIonImplantationRecipes('wafer.thyristor.step_one', 'wafer.thyristor.step_two', 400, 'boron')
+Doping.generateIonImplantationRecipes('wafer.thyristor.step_one', 'wafer.thyristor.step_two', 400, 'boron_trifluoride')
 Lithography.generateResistStrippingRecipes('wafer.thyristor.step_two', 'wafer.thyristor.step_three', 1, false, true)
 
 // Cathode N doping
 Lithography.generatePhotolithographyRecipes('wafer.thyristor.step_three', 'wafer.thyristor.step_four', 'novolac_resist', 'mask_set.thyristor', true)
-Doping.generateIonImplantationRecipes('wafer.thyristor.step_four', 'wafer.thyristor.step_five', 400, 'phosphorus')
+Doping.generateIonImplantationRecipes('wafer.thyristor.step_four', 'wafer.thyristor.step_five', 400, 'phosphine')
 Lithography.generateResistStrippingRecipes('wafer.thyristor.step_five', 'wafer.thyristor.step_six', 1, false, true)
 Doping.generateDriveInRecipe('wafer.thyristor.step_six', 'wafer.thyristor.step_seven', 100) // Drive-in Process
 
