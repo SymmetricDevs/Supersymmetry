@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import net.minecraft.item.ItemStack;
 import supersymmetry.common.rocketry.SusyRocketComponents;
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(2)
@@ -523,6 +524,23 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .outputs(metaitem('susy:rocket_configurer'))
     .duration(40)
     .EUt(VA[EV])
+    .buildAndRegister()
+
+// Data Stick new recipes
+mods.gregtech.circuit_assembler.removeByInput(1200, [metaitem('circuit_board.advanced'), ore('circuitHv') * 2, metaitem('plate.random_access_memory') * 4, metaitem('plate.nor_memory_chip') * 16, metaitem('plate.nand_memory_chip') * 32, metaitem('wireFinePlatinum') * 32], [fluid('soldering_alloy') * 144])
+mods.gregtech.circuit_assembler.removeByInput(1200, [metaitem('circuit_board.advanced'), ore('circuitHv') * 2, metaitem('plate.random_access_memory') * 4, metaitem('plate.nor_memory_chip') * 16, metaitem('plate.nand_memory_chip') * 32, metaitem('wireFinePlatinum') * 32], [fluid('tin') * 288])
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('circuit_board.advanced'))
+    .inputs(ore('circuitHv') * 2)
+    .inputs(metaitem('component.nmos_sram') * 2)
+    .inputs(metaitem('component.nmos_dram') * 2)
+    .inputs(metaitem('component.nmos_uart') * 16)
+    .inputs(metaitem('wireFinePlatinum') * 32)
+    .solderMultiplier(2)
+    .duration(400)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
 ItemStack stack = metaitem('susy:data_card.master_blueprint') * 1
