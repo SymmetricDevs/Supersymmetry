@@ -17,36 +17,32 @@ ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
 // Circuit component oredict
-ore('componentCapacitorMedium').add(metaitem('component.capacitor.silver_mica'))
-ore('componentCapacitorMedium').add(metaitem('component.capacitor.film'))
 ore('componentResistorMedium').add(metaitem('component.resistor.metal_film'))
-ore('componentSMDCapacitor').add(metaitem('component.pme_cap'))
-ore('componentSMDCapacitor').add(metaitem('component.bme_cap'))
-ore('componentSMDInductor').add(metaitem('component.smd.inductor'))
-ore('componentTransistor').add(metaitem('component.transistor.alloy_junction'))
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_composite'))
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_film'))
 ore('componentResistorSmall').add(metaitem('component.smd.resistor'))
 ore('componentResistorSmall').add(metaitem('component.advanced_smd.resistor'))
 ore('componentResistorSmall').add(metaitem('component.thick_film_resistor'))
-ore('componentOpAmp').add(metaitem('component.op_amp'))
+ore('componentCapacitorMedium').add(metaitem('component.capacitor.silver_mica'))
+ore('componentCapacitorMedium').add(metaitem('component.capacitor.film'))
+ore('componentCapacitorSmall').add(metaitem('component.pme_cap'))
+ore('componentCapacitorSmall').add(metaitem('component.bme_cap'))
+ore('componentTransistor').add(metaitem('component.transistor.alloy_junction'))
 ore('componentTransistorSignal').add(metaitem('component.transistor.signal_mosfet'))
 ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_junction'))
-
+ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
+ore('componentOpAmp').add(metaitem('component.op_amp'))
 
 // Carbon composite
-
 ore('resistorCarbon').add(metaitem('dustCarbon'))
 ore('resistorCarbon').add(metaitem('dustHighPurityCarbon'))
 ore('resistorCarbon').add(metaitem('dustGraphite'))
 
 // Plastic film capacitors
-
 ore('capacitorFilm').add(metaitem('mylar'))
 ore('capacitorFilm').add(metaitem('foilPolypropylene'))
 
 // Standard signal diodes
-
 ore('componentDiodeSignal').add(metaitem('component.diode'))
 ore('componentDiodeSignal').add(metaitem('component.smd.diode'))
 
