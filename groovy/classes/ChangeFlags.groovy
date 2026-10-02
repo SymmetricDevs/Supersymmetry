@@ -211,7 +211,7 @@ class ChangeFlags {
         Electrum.addFlags("induction_melt");
         Kovar.addFlags("generate_bolt_screw");
         NickelZincFerrite.addFlags("generate_bolt_screw");
-        Platinum.addFlags("generate_coil")
+        Platinum.addFlags("generate_spring")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
