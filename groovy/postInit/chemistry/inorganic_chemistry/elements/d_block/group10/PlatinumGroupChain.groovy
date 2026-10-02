@@ -485,6 +485,18 @@ for (metal in metals) {
             .EUt(VA[MV])
             .buildAndRegister()
 
+        // Ir -> H3IrCl6
+        // source: https://pdf.benchchem.com/1316/Synthesis_and_Characterization_of_Iridium_Trichloride_Hydrate_A_Technical_Guide.pdf
+        ELECTROLYZER.recipeBuilder()
+            .inputs(metaitem('dustIridium') * 1)
+            .notConsumable(metaitem('graphite_electrode') * 2)
+            .fluidInputs(fluid('diluted_hydrochloric_acid') * 12000)
+            .fluidOutputs(fluid('hexachloroiridic_iii_acid_solution') * 12000)
+            .fluidOutputs(fluid('hydrogen') * 3000)
+            .duration(200)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
     //RHODIUM
 
         // Crystallization

@@ -110,7 +110,7 @@ tiers.each { tier ->
     ItemMassRegistry.setMass(metaitem('fluid_hatch.export.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
     ItemMassRegistry.setMass(metaitem('fluid_hatch.import.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
     ItemMassRegistry.setMass(metaitem('muffler_hatch.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
-    ItemMassRegistry.setMass(metaitem('energy_hatch.import.' + tier.tierName), (int) Math.round(30000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('energy_hatch.input.' + tier.tierName), (int) Math.round(30000 * tier.massMult))
 
     if (tier.tierName == 'lv' || tier.tierName == 'mv' || tier.tierName == 'hv' || tier.tierName == 'ev') {
         ItemMassRegistry.setMass(metaitem('susy:latex_collector.' + tier.tierName), (int) Math.round(398771 * tier.massMult))
