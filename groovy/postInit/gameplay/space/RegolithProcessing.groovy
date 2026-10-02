@@ -43,6 +43,13 @@ MACERATOR.recipeBuilder()
     .duration(10)
     .buildAndRegister()
 
+LUNAR_BWE.recipeBuilder()
+    .notConsumable(item('susy:deposit_block', 6))
+    .outputs(item('susy:deposit_block', 6) * 4)
+    .EUt(256)
+    .duration(20)
+    .buildAndRegister()
+
 // Tier 0.5?
 
 BR.recipeBuilder()
