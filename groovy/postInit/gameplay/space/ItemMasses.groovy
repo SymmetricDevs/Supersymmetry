@@ -61,7 +61,7 @@ ItemMassRegistry.setMass(metaitem('susy:redstone_controller'), 4581)
 ItemMassRegistry.setMass(metaitem('susy:froth_flotation_tank'), 297810)
 ItemMassRegistry.setMass(metaitem('fluid_cell'), 890)
 ItemMassRegistry.setMass(metaitem('fluid_cell.universal'), 890)
-ItemMassRegistry.setMass(metaitem('susy:froth_flotation_tank'), 297810)
+ItemMassRegistry.setMass(metaitem('plate.high_power_integrated_circuit'), 560)
 ItemMassRegistry.setMass(item('susy:spacecraft_instrument', 10), 1500000)
 
 def tiers = [
