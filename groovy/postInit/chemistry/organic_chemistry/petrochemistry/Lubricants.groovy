@@ -120,8 +120,8 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .fluidInputs(fluid('methylphenyldichlorosilane') * 100)
         .fluidInputs(fluid('water') * 3000)
         .fluidOutputs(fluid('silicone_oil_mixture') * 3000)
-        .duration(20)
-        .EUt(VA[HV])
+        .duration(40)
+        .EUt(VA[MV])
         .buildAndRegister()
 
     PHASE_SEPARATOR.recipeBuilder()

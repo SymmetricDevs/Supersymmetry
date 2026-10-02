@@ -33,7 +33,7 @@ BR.recipeBuilder()
 
 // 2-methylimidazole (Debus–Radziszewski imidazole synthesis)
 
-LCR.recipeBuilder()
+BR.recipeBuilder()
     .fluidInputs(fluid('gtfo_glyoxal') * 1000)
     .fluidInputs(fluid('ammonia') * 2000)
     .fluidInputs(fluid('gtfo_acetaldehyde') * 1000)

@@ -19,6 +19,7 @@ ore('gtLight').add(metaitem('lamp.mercury.hp'))
 // Circuit component oredict
 ore('componentCapacitorMedium').add(metaitem('component.capacitor.silver_mica'))
 ore('componentCapacitorMedium').add(metaitem('component.capacitor.film'))
+ore('componentCapacitorMedium').add(metaitem('component.resistor.metal_film'))
 ore('componentSMDCapacitor').add(metaitem('component.pme_cap'))
 ore('componentSMDCapacitor').add(metaitem('component.bme_cap'))
 ore('componentSMDInductor').add(metaitem('component.smd.inductor'))

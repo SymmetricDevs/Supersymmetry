@@ -143,6 +143,9 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('high_temperature_solder') * 16)
     .fluidInputs(fluid('epoxy') * 16)
     .outputs(metaitem('component.resistor.metal_film'))
+    .duration(100)
+    .EUt(VA[HV])
+    .buildAndRegister()
 
 Deposition.generateSputteringRecipe("component.resistor.wafer.pads", "component.thin_film_resistor.wafer", ['chromium' : 120, 'nickel' : 480]) // NiCr vacuum deposition; 80/20 composition
 // thick/thin-film resistors

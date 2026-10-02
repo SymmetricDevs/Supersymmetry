@@ -173,6 +173,12 @@ crafting.addShaped("rubylith_bjt_pic", metaitem('stencil.bjt_pic'), [
     [null, null, ore('craftingToolKnife')]
 ]);
 
+crafting.addShaped("rubylith_nmos_uart", metaitem('stencil.nmos_uart'), [
+    [ore('craftingToolKnife'), null, metaitem('rubylith')],
+    [null, null, null],
+    [null, null, null]
+]);
+
 [
     ['signal_mosfet', 7],
     ['nmos_cpu', 5],

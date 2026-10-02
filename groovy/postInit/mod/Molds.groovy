@@ -116,3 +116,43 @@ FORMING_PRESS.recipeBuilder()
 	.duration(120)
 	.EUt(22)
 	.buildAndRegister()
+
+// Bolt mold
+
+crafting.addShaped("mold_bolt", metaitem('shape.mold.bolt'), [
+    [null, null, null],
+    [ore('craftingToolWireCutter'), metaitem('shape.empty'), null],
+    [null, null, null]
+])
+
+RecyclingHelper.handleRecycling(metaitem('shape.mold.bolt'), [
+	metaitem('shape.empty')
+])
+
+FORMING_PRESS.recipeBuilder()
+	.inputs(metaitem('shape.empty'))
+	.notConsumable(metaitem('shape.mold.bolt'))
+	.outputs(metaitem('shape.mold.bolt'))
+	.duration(120)
+	.EUt(22)
+	.buildAndRegister()
+
+// Target mold
+
+crafting.addShaped("mold_target", metaitem('shape.mold.target'), [
+    [null, null, ore('craftingToolWireCutter')],
+    [null, metaitem('shape.empty'), null],
+    [null, null, null]
+])
+
+RecyclingHelper.handleRecycling(metaitem('shape.mold.target'), [
+	metaitem('shape.empty')
+])
+
+FORMING_PRESS.recipeBuilder()
+	.inputs(metaitem('shape.empty'))
+	.notConsumable(metaitem('shape.mold.target'))
+	.outputs(metaitem('shape.mold.target'))
+	.duration(120)
+	.EUt(22)
+	.buildAndRegister()
