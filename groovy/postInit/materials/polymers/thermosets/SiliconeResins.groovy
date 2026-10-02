@@ -12,7 +12,7 @@ FLUIDIZED_BR.recipeBuilder()
     .EUt(VA[LV] * 2)
     .buildAndRegister()
 
-FLUIDIZED_BR.recipeBuilder()
+BR.recipeBuilder()
     .fluidInputs(fluid('chloromethane') * 2000)
     .notConsumable(ore('dustCopperIOxide'))
     .inputs(ore('dustSilicon'))

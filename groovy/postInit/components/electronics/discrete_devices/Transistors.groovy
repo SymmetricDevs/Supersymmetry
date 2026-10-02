@@ -50,7 +50,7 @@ ASSEMBLER.recipeBuilder()
 //          https://patents.google.com/patent/US4299024A/en
 
 // Passivation oxide formation
-Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.p_doped', 'wafer.signal_mosfet.step_one', 400, true)
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.p_doped', 'wafer.signal_mosfet.step_one', 400, true, 2)
 Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_one', 'wafer.signal_mosfet.step_two', 'novolac_resist', 'mask_set.signal_mosfet', true)
 Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_two', 'wafer.signal_mosfet.step_three', 'silicon_dioxide', 400, false)
 

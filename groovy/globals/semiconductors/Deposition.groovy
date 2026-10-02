@@ -9,8 +9,9 @@ class Deposition {
 
     // Thermal oxidation of silicon dioxide
 
-    static void generateSiliconDioxideGrowthRecipe(String input, String output, int duration, boolean wet) {
+    static void generateSiliconDioxideGrowthRecipe(String input, String output, int duration, boolean wet, int metacircuit = 1) {
         def growthRecipe = TUBE_FURNACE.recipeBuilder()
+            .circuitMeta(metacircuit)
             .inputs(metaitem(input))
             .fluidInputs(fluid('oxygen') * 100)
             .outputs(metaitem(output))
