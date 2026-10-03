@@ -289,7 +289,7 @@ DRYER.recipeBuilder()
     ['bcd_pic', 4, 8],
     ['bcd_hpic', 5, 9]
 ].each { name, maskCount, circuit ->
-    ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
+    LASER_ENGRAVER.recipeBuilder()
         .circuitMeta(circuit)
         .inputs(metaitem('mask.blank.chromium_oxide.coated') * maskCount)
         .outputs(metaitem('mask_set.' + name + '.exposed'))
@@ -334,7 +334,7 @@ DRYER.recipeBuilder()
     ['substrate_ev', 1, 10],
     ['multijunction_photovoltaic', 1, 11]
 ].each { name, maskCount, circuit ->
-    ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
+    LASER_ENGRAVER.recipeBuilder()
         .circuitMeta(circuit)
         .inputs(metaitem('mask.blank.chromium_oxide.coated') * maskCount)
         .outputs(metaitem('mask.' + name + '.exposed'))
