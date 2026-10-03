@@ -59,6 +59,7 @@ ore('capacitorFilm').add(metaitem('foilPolypropylene'))
 // Standard signal diodes
 ore('componentDiodeSignal').add(metaitem('component.diode'))
 ore('componentDiodeSignal').add(metaitem('component.smd.diode'))
+ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
 
 // Circuit oredict
 

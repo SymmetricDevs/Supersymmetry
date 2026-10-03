@@ -629,8 +629,8 @@ eventManager.listen { PostMaterialEvent event ->
 
         addItem(5020, "mask.blank")
         addItem(5021, "stencil.photodiode")
-        //addItem(5022, "mask.cpu")
-        //addItem(5023, "mask.ram")
+        addItem(5022, "stencil.diode.planar")
+        addItem(5023, "stencil.monosilicon_photovoltaic")
         addItem(5024, "mask.pcb")
         //addItem(5025, "mask.ulpic")
         //addItem(5026, "mask.lpic")

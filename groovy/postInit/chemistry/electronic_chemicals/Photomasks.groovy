@@ -185,6 +185,18 @@ crafting.addShaped("rubylith_photodiode", metaitem('stencil.photodiode'), [
     [null, null, null]
 ]);
 
+crafting.addShaped("rubylith_monosilicon_photovoltaic", metaitem('stencil.monosilicon_photovoltaic'), [
+    [null, null, metaitem('rubylith')],
+    [ore('craftingToolKnife'), null, null],
+    [null, null, null]
+]);
+
+crafting.addShaped("rubylith_diode_planar", metaitem('stencil.diode.planar'), [
+    [null, null, metaitem('rubylith')],
+    [null, ore('craftingToolKnife'), null],
+    [null, null, null]
+]);
+
 [
     ['signal_mosfet', 7],
     ['nmos_cpu', 5],
@@ -210,6 +222,7 @@ crafting.addShaped("rubylith_photodiode", metaitem('stencil.photodiode'), [
         .buildAndRegister()
 }
 
+// Single-use rubylith masks
 UV_LIGHT_BOX.recipeBuilder()
         .inputs(metaitem('stencil.photodiode'))
         .inputs(metaitem('mask.blank'))
@@ -218,7 +231,21 @@ UV_LIGHT_BOX.recipeBuilder()
         .EUt(VA[ULV])
         .buildAndRegister()
 
+UV_LIGHT_BOX.recipeBuilder()
+    .inputs(metaitem('stencil.diode.planar'))
+    .inputs(metaitem('mask.blank'))
+    .outputs(metaitem('mask.diode.planar'))
+    .duration(200)
+    .EUt(VA[ULV])
+    .buildAndRegister()
 
+UV_LIGHT_BOX.recipeBuilder()
+    .inputs(metaitem('stencil.monosilicon_photovoltaic'))
+    .inputs(metaitem('mask.blank'))
+    .outputs(metaitem('mask.monosilicon_photovoltaic'))
+    .duration(200)
+    .EUt(VA[ULV])
+    .buildAndRegister()
 
 // Cr2O3 photomasks
 
