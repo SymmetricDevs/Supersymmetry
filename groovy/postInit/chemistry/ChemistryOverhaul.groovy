@@ -3064,6 +3064,8 @@ BR.recipeBuilder()
     .outputs(metaitem('dustSalt') * 4)
     .EUt(VA[EV])
     .duration(120)
+    .buildAndRegister()
+
 // Ammonium Fluoride
 
 MIXER.recipeBuilder()
