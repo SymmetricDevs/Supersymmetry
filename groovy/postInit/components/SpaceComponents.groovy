@@ -502,8 +502,8 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('platePolyvinylChloride') * 2) //FIXME: make this realistic once circuit update is here
-    .inputs(metaitem('circuit_board.plastic'))
+    .inputs(metaitem('platePolyvinylChloride') * 2)
+    .inputs(metaitem('circuit_board.fr4'))
     .inputs(ore('circuitEv'))
     .inputs(metaitem('component.nmos_uart') * 24)
     .inputs(metaitem('component.nmos_sram') * 2)
@@ -515,8 +515,8 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('platePolyvinylChloride') * 2) //FIXME: make this realistic once circuit update is here
-    .inputs(metaitem('circuit_board.plastic'))
+    .inputs(metaitem('platePolyvinylChloride') * 2)
+    .inputs(metaitem('circuit_board.fr4'))
     .inputs(ore('circuitHv'))
     .inputs(metaitem('cover.screen'))
     .inputs(metaitem('component.nmos_sram') * 1)

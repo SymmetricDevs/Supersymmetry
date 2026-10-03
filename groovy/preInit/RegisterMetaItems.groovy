@@ -949,7 +949,7 @@ eventManager.listen { PostMaterialEvent event ->
         toadd_list.add("cell.multijunction_photovoltaic")
 
         // Photodiodes
-        registerWaferSteps("photodiode", 5, [start: 1, mask: true, die: true, photoresist: [1]])
+        registerWaferSteps("photodiode", 5, [start: 1, mask: false, die: true, photoresist: [1]])
         toadd_list.add("mask.photodiode")
 
         // EV logic die families; ride the same 45nm CMOS flow as cmos_cpu/cmos_gpu
