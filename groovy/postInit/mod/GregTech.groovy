@@ -2040,3 +2040,7 @@ mods.gregtech.mixer.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, 
 mods.gregtech.mixer.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('dinitrogen_tetroxide') * 1000])
 mods.gregtech.blender.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('oxygen') * 1000])
 mods.gregtech.blender.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('dinitrogen_tetroxide') * 1000])
+
+// Remove LuV casing metal
+
+mods.gregtech.mixer.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
