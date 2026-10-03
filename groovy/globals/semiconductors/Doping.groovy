@@ -94,7 +94,7 @@ class Doping {
             .buildAndRegister();
     }
 
-    static void generateSealedDiffusionRecipe(String input, String product, int duration, String voltage, String diffusant, String diffusant2 = null){
+    static void generateSealedDiffusionRecipe(String input, String product, int duration, int voltage, String diffusant, String diffusant2 = null){
         if (diffusant2 != null){
         TUBE_FURNACE.recipeBuilder() 
             .inputs(metaitem(input))

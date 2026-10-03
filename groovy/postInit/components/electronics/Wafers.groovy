@@ -204,7 +204,7 @@ def wafers = [
     new Wafer('boule.silicon.fz.n_doped', 'wafer.small.silicon.n_doped', 'seed_crystal.silicon', true),
     new Wafer('boule.silicon.fz.heavily_n_doped', 'wafer.small.silicon.heavily_n_doped', 'seed_crystal.silicon', true),
     new Wafer('boule.germanium.n_doped', 'wafer.germanium.n_doped', 'seed_crystal.germanium', true),
-    new Wafer('boule.gallium_arsenide.n_doped', 'wafer.gallium_arsenide.n_doped', 'seed_crystal.gallium_arsenide', true)
+    new Wafer('boule.gallium_arsenide.n_doped', 'wafer.gallium_arsenide.n_doped', 'seed_crystal.gallium_arsenide', true),
     new Wafer('boule.indium_phosphide', 'wafer.indium_phosphide', 'seed_crystal.indium_phosphide', false)
 ]
 
