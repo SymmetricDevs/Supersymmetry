@@ -478,6 +478,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2874, "component.resistor.metal_film.core.uncut")
         addItem(2875, "component.resistor.metal_film.core")
         addItem(2876, "component.resistor.metal_film")
+        addItem(2877, "component.photodiode")
 
         // circuit overhaul dies 2950 - 3000
         addItem(2954, "die.diode.alloy")
@@ -627,7 +628,7 @@ eventManager.listen { PostMaterialEvent event ->
 
 
         addItem(5020, "mask.blank")
-        //addItem(5021, "mask.ic")
+        addItem(5021, "stencil.photodiode")
         //addItem(5022, "mask.cpu")
         //addItem(5023, "mask.ram")
         addItem(5024, "mask.pcb")
@@ -943,6 +944,10 @@ eventManager.listen { PostMaterialEvent event ->
         toadd_list.add("mask.multijunction_photovoltaic")
         toadd_list.add("cell.multijunction_photovoltaic")
 
+        // Photodiodes
+        registerWaferSteps("photodiode", 5, [start: 1, mask: true, die: true, photoresist: [1]])
+        toadd_list.add("mask.photodiode")
+
         // EV logic die families; ride the same 45nm CMOS flow as cmos_cpu/cmos_gpu
         registerCMOSMetaitems("cmos_chipset") // PCIe root complex / memory controller
         registerCMOSMetaitems("cmos_phy")     // Ethernet/USB serdes I/O
@@ -954,7 +959,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8077, "wafer.nmos.step_one.coated")
         addItem(8084, "wafer.silicon.p_doped.coated")
         addItem(8085, "wafer.silicon.p_doped.exposed")
-        // FREE ID: 8049 - 8064, 8067 - 8075, 8078 - 8083, 8086 - 8141, 8145 - 8195 (diode/thyristor/nmos split/vdmos/signal_mosfet wafer steps now come from registerWaferSteps)
+        // FREE ID: 8049 - 8064, 8067 - 8075, 8080 - 8083, 8086 - 8141, 8145 - 8195 (diode/thyristor/nmos split/vdmos/signal_mosfet wafer steps now come from registerWaferSteps)
 
         // Trench VDMOS (die/package keep their fixed IDs; mask_set.vdmos is 5034)
         registerWaferSteps("vdmos", 35, [start: 1,

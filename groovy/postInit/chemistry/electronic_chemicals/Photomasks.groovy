@@ -179,6 +179,12 @@ crafting.addShaped("rubylith_nmos_uart", metaitem('stencil.nmos_uart'), [
     [null, null, null]
 ]);
 
+crafting.addShaped("rubylith_photodiode", metaitem('stencil.photodiode'), [
+    [null, ore('craftingToolKnife'), metaitem('rubylith')],
+    [null, null, null],
+    [null, null, null]
+]);
+
 [
     ['signal_mosfet', 7],
     ['nmos_cpu', 5],
@@ -193,7 +199,7 @@ crafting.addShaped("rubylith_nmos_uart", metaitem('stencil.nmos_uart'), [
     ['bjt_pic_base', 4],
     ['bjt_ulpic', 1],
     ['bjt_lpic', 4],
-    ['bjt_pic', 3]
+    ['bjt_pic', 3],
 ].each { name, maskCount ->
     UV_LIGHT_BOX.recipeBuilder()
         .inputs(metaitem('stencil.' + name))
@@ -204,6 +210,13 @@ crafting.addShaped("rubylith_nmos_uart", metaitem('stencil.nmos_uart'), [
         .buildAndRegister()
 }
 
+UV_LIGHT_BOX.recipeBuilder()
+        .inputs(metaitem('stencil.photodiode'))
+        .inputs(metaitem('mask.blank'))
+        .outputs(metaitem('mask.photodiode'))
+        .duration(200)
+        .EUt(VA[ULV])
+        .buildAndRegister()
 
 
 

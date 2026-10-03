@@ -94,5 +94,29 @@ class Doping {
             .buildAndRegister();
     }
 
+    static void generateSealedDiffusionRecipe(String input, String product, int duration, String voltage, String diffusant, String diffusant2 = null){
+        if (diffusant2 != null){
+        TUBE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
+            .inputs(metaitem(input))
+            .inputs(ore("dust" + diffusant))
+            .inputs(ore("dust" + diffusant2))
+            .outputs(metaitem(product))
+            .duration(duration)
+            .cleanroom(CleanroomType.CLEANROOM)
+            .EUt(VA[voltage])
+            .buildAndRegister();
+        } else {
+            TUBE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
+            .inputs(metaitem(input))
+            .inputs(ore("dust" + diffusant))
+            .outputs(metaitem(product))
+            .duration(duration)
+            .cleanroom(CleanroomType.CLEANROOM)
+            .EUt(VA[voltage])
+            .buildAndRegister();
+        }
+        
+    }
+
     
 }

@@ -194,7 +194,43 @@ ASSEMBLER.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister();
 
-// Photodiodes
+// Photodiodes          Source: https://patents.google.com/patent/US4477964A/en
+//Indium phosphide
+
+CRYSTALLIZER.recipeBuilder()
+    .inputs(ore('dustHighPurityIndium') * 4)
+    .fluidInputs(fluid('high_purity_phosphorus') * 576)
+    .outputs(ore('seed_crystal.indium_phosphide'))
+    .duration(1200)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .inputs(ore('dustHighPurityIndium'))
+    .fluidInputs(fluid('high_purity_phosphorus') * 144)
+    .notConsumable(fluid('boron_trioxide') * 720)
+    .inputs(metaitem('seed_crystal.indium_phosphide'))
+    .notConsumable(metaitem('crucible.boron.nitride'))
+    .outputs(metaitem('boule.indium_phosphide'))
+    .duration(300)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+Doping.generateSealedDiffusionRecipe('wafer.indium_phosphide', 'wafer.photodiode.step_one', 400, HV, "Cadmium", "Indium") // Diffuse Cd into the wafer w/ In additive to aid process
+Lithography.generatePhotolithographyRecipes('wafer.photodiode.step_one', 'wafer.photodiode.step_two', 'novolac_resist', 'mask.photodiode', true)
+Etching.generateWetEtchingRecipe('wafer.photodiode.step_two', 'wafer.photodiode.step_three', 'indium_phosphide', 200, false) // InP need bromomethane
+Lithography.generateResistStrippingRecipes('wafer.photodiode.step_three', 'wafer.photodiode.step_four', 1, false, true)
+Deposition.generateSputteringRecipe('wafer.photodiode.step_four', 'wafer.photodiode.step_five', 400, 'gold') // Pure gold contacts because i think its too early for the 1% beryllium in the patent
+Packaging.generateDicingRecipe('wafer.photodiode.step_five', 'die.photodiode', 16, 400, HV)
+Packaging.generateWireBondingRecipe('die.photodiode', 'die.photodiode.bonded', 'gold', 50, HV)
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.photodiode.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .outputs(metaitem('component.photodiode'))
+    .duration(50)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
 
 // Light-emitting diodes
 

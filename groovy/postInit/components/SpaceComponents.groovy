@@ -194,7 +194,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('fused_quartz') * 3)
         .inputs(metaitem('plateAluminium') * 4)
         .inputs(metaitem('cableGtSingleCopper') * 2)
-        //FIXME: add photodiode
+        .inputs(metaitem('component.photodiode') * 4)
         .outputs(metaitem('spacecraft_sensor.sun_star'))
         .duration(400)
         .EUt(VA[EV])

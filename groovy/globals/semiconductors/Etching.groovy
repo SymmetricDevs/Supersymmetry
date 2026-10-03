@@ -171,6 +171,9 @@ class Etching {
         ],
         spin_on_carbon: [
             new Etchant("oxygen", "waste_gas", EV, 100, 1.67, true, true)
+        ],
+        indium_phosphide : [
+            new Etchant("bromomethane", "corrosive_gas", HV, 100, 0.4, false, false)
         ]
     ]
 
