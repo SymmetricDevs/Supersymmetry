@@ -96,7 +96,7 @@ class Doping {
 
     static void generateSealedDiffusionRecipe(String input, String product, int duration, String voltage, String diffusant, String diffusant2 = null){
         if (diffusant2 != null){
-        TUBE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
+        TUBE_FURNACE.recipeBuilder() 
             .inputs(metaitem(input))
             .inputs(ore("dust" + diffusant))
             .inputs(ore("dust" + diffusant2))
@@ -106,7 +106,7 @@ class Doping {
             .EUt(VA[voltage])
             .buildAndRegister();
         } else {
-            TUBE_FURNACE.recipeBuilder() // POCl3 gaseous diffusion doping
+            TUBE_FURNACE.recipeBuilder() 
             .inputs(metaitem(input))
             .inputs(ore("dust" + diffusant))
             .outputs(metaitem(product))
