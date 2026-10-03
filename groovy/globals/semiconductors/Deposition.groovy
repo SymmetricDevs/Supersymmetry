@@ -151,7 +151,7 @@ class Deposition {
         new TargetName("palladium", "Palladium"),
         new TargetName("tungsten", "Tungsten"),
         new TargetName("antimony", "Antimony"),
-        new TargetName("silicon", "Silicon"),
+        new TargetName("silicon", "HighPuritySilicon"),
         new TargetName("platinum", "Platinum"),
         new TargetName("tantalum", "Tantalum"),
         new TargetName("chromium", "Chrome"),
@@ -174,6 +174,14 @@ class Deposition {
                     .fluidInputs(fluid(gasses.name) * gasses.amount_required)
                     .outputs(metaitem("target." + target.name))
                     .duration(100 * gasses.duration)
+                    .EUt(VA[HV])
+                    .buildAndRegister()
+
+                FORMING_PRESS.recipeBuilder()
+                    .notConsumable(metaitem('shape.mold.target'))
+                    .inputs(ore("dust" + target.ore_name) * 2)
+                    .outputs(metaitem("target." + target.name))
+                    .duration(200 * gasses.duration)
                     .EUt(VA[HV])
                     .buildAndRegister()           
             }
