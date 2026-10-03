@@ -833,6 +833,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7005, "seed_crystal.lithium_niobate")
         addItem(7006, "seed_crystal.neodymium_yttrium_aluminium_garnet")
         addItem(7007, "seed_crystal.germanium")
+        addItem(7008, "seed_crystal.indium_phosphide")
 
         //Boules 7500-8000
 
@@ -855,6 +856,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(7515, "boule.silicon.fz.heavily_n_doped")
         addItem(7516, "boule.germanium.n_doped")
         addItem(7517, "boule.gallium_arsenide.n_doped")
+        addItem(7518, "boule.indium_phosphide")
 
         //Wafers 8000-9000
         /*
@@ -881,7 +883,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8016, "wafer.quartz.at_cut.tuned")
         addItem(8017, "wafer.quartz.at_cut")
         addItem(8018, "wafer.diode.alloy.step_one")
-        // FREE ID: 8019 - 8020
+        addItem(8019, "wafer.indium_phosphide.polished")
+        addItem(8020, "wafer.indium_phosphide.raw")
         addItem(8021, "wafer.zener_diode.alloy.step_one")
 
         addItem(8022, "wafer.silicon")
@@ -911,7 +914,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8044, "wafer.cmos_base.step_one")
         addItem(8045, "wafer.cmos_base.step_two")
         addItem(8046, "wafer.cmos_base.step_two.coated")
-        // FREE ID: 8047 - 8048 (per-family step_two.exposed now comes from registerCMOSMetaitems)
+        addItem(8047, "wafer.indium_phosphide")
+        // FREE ID: 8048 (per-family step_two.exposed now comes from registerCMOSMetaitems)
 
         registerNMOSMetaitems("nmos_cpu")
         registerNMOSMetaitems("nmos_sram")
