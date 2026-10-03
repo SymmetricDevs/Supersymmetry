@@ -6297,3 +6297,5 @@ metaitem.wafer.photodiode.step_five.name=Photodiode Wafer (Step 5)
 metaitem.mask.photodiode.name=Photolithography Mask (Photodiode)
 metaitem.die.photodiode.name=Photodiode Die
 metaitem.die.photodiode.bonded.name=Bonded Photodiode Die
+metaitem.stencil.monosilicon_photovoltaic.name=Monosilicon Photovoltaic Stencil
+metaitem.stencil.diode.planar.name=Planar Diode Stencil
