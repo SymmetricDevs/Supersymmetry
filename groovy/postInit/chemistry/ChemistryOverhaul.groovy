@@ -3105,3 +3105,14 @@ BCR.recipeBuilder()
     .duration(200)
     .EUt(VA[MV])
     .buildAndRegister()
+
+// Tantalum Nitride
+
+TUBE_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('nitrogen') * 1000)
+    .inputs(ore('dustTantalum'))
+    .outputs(ore('dustTantalumNitride'))
+    .duration(300)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
