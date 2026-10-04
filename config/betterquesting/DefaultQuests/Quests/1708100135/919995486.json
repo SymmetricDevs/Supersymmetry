@@ -25,7 +25,10 @@
         "1:10": {
           "Count:3": 1,
           "Damage:2": 19,
-          "id:8": "susy:susy_armor"
+          "id:8": "susy:susy_armor",
+          "tag:10": {
+            "oxygen:6": 3600.0
+          }
         },
         "2:10": {
           "Count:3": 1,
