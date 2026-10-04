@@ -50,6 +50,34 @@ LUNAR_BWE.recipeBuilder()
     .duration(20)
     .buildAndRegister()
 
+MACERATOR.recipeBuilder()
+    .inputs(item('susy:resource_block_1', 3))
+    .outputs(metaitem('dustKreepAnorthosite'))
+    .EUt(2)
+    .duration(150)
+    .buildAndRegister()
+
+// KREEP Basalt Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_smooth', 12)], null)
+
+// KREEP Basalt Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_cobble', 12)], null)
+
+
+MACERATOR.recipeBuilder()
+    .inputs(item('susy:susy_stone_smooth', 12))
+    .outputs(metaitem('dustLunarBasalt'))
+    .EUt(2)
+    .duration(150)
+    .buildAndRegister()
+
+MACERATOR.recipeBuilder()
+    .inputs(item('susy:susy_stone_cobble', 12))
+    .outputs(metaitem('dustLunarBasalt'))
+    .EUt(2)
+    .duration(150)
+    .buildAndRegister()
+
 // Tier 0.5?
 
 BR.recipeBuilder()
