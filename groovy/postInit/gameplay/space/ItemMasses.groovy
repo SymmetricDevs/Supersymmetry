@@ -69,8 +69,9 @@ ItemMassRegistry.setMass(item('gregtech:metal_casing', 3), 50000) //alu
 ItemMassRegistry.setMass(item('gregtech:metal_casing', 4), 150000) //steel
 ItemMassRegistry.setMass(item('gregtech:metal_casing', 5), 155000) //stainless
 ItemMassRegistry.setMass(item('gregtech:metal_casing', 6), 70000) //titanium
-ItemMassRegistry.setMass(item('gregtech:metal_casing', 7), 20000) //tungstensteel
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 7), 200000) //tungstensteel
 ItemMassRegistry.setMass(item('gregtech:metal_casing', 9), 25000) //ptfe
+ItemMassRegistry.setMass(metaitem('gregtechfoodoption:food.emergency_rations'), 270)
 
 def tiers = [
     [tierName: 'lv', massMult: 2.0],

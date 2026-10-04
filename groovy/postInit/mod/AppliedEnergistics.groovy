@@ -675,7 +675,7 @@ storageCells.each { cell ->
 // Lazy AE2's Mass Assembly Chamber replaces Molecular Assemblers for AE2 autocrafting.
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('frameTungstenSteel') * 2)
+    .inputs(metaitem('frameTungstenSteel') * 2)
     .inputs(ore('plateTungstenSteel') * 8)
     .inputs(ore('plateScandiumAlloy') * 8)
     .inputs(ore('foilRhodium') * 8)
@@ -685,7 +685,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('frameTungstenSteel') * 1)
+    .inputs(metaitem('frameTungstenSteel') * 1)
     .inputs(ore('plateScandiumAlloy') * 32)
     .inputs(ore('plateReinforcedEpoxyResin') * 8)
     .inputs(ore('pipeNormalFluidTitanium') * 4)

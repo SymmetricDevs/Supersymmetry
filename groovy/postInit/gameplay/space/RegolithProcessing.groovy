@@ -485,6 +485,14 @@ BR.recipeBuilder()
     .duration(150)
     .buildAndRegister()
 
+SOLAR_FURNACE.recipeBuilder() // if you don't wanna bother with pyroxene
+    .fluidInputs(fluid('lunar_silicate_slurry') * 3000)
+    .fluidOutputs(fluid('dense_steam') * 3000)
+    .outputs(metaitem('dustSmallAnorthosite'))
+    .EUt(6000)
+    .duration(400)
+    .buildAndRegister()
+
 BR.recipeBuilder()
     .fluidInputs(fluid("lunar_kreep_silicate_slurry") * 1950)
     .fluidInputs(fluid("diluted_hydrochloric_acid") * 3900)
