@@ -166,25 +166,26 @@ class Deposition {
     ]
 
     static void generateSputteringTargetRecipes() {
-        for (gasses in inertGasesHIP){
-            for (target in targetNames){
+        for (target in targetNames) {
+            for (gasses in inertGasesHIP) {
                 HOT_ISOSTATIC_PRESS.recipeBuilder()
                     .notConsumable(metaitem('shape.mold.target'))
                     .inputs(ore("dust" + target.ore_name))
                     .fluidInputs(fluid(gasses.name) * gasses.amount_required)
                     .outputs(metaitem("target." + target.name))
-                    .duration(100 * gasses.duration)
-                    .EUt(VA[HV])
+                    .duration(20 * gasses.duration)
+                    .EUt(VA[MV])
                     .buildAndRegister()
-
-                FORMING_PRESS.recipeBuilder()
-                    .notConsumable(metaitem('shape.mold.target'))
-                    .inputs(ore("dust" + target.ore_name) * 2)
-                    .outputs(metaitem("target." + target.name))
-                    .duration(200 * gasses.duration)
-                    .EUt(VA[HV])
-                    .buildAndRegister()           
             }
+
+            FORMING_PRESS.recipeBuilder()
+                .notConsumable(metaitem('shape.mold.target'))
+                .inputs(ore("dust" + target.ore_name) * 2)
+                .notConsumable(metaitem('springKanthal'))
+                .outputs(metaitem("target." + target.name))
+                .duration(800)
+                .EUt(VA[HV])
+                .buildAndRegister()
         }
     }
 
