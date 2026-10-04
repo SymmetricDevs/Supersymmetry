@@ -63,6 +63,14 @@ ItemMassRegistry.setMass(metaitem('fluid_cell'), 890)
 ItemMassRegistry.setMass(metaitem('fluid_cell.universal'), 890)
 ItemMassRegistry.setMass(metaitem('plate.high_power_integrated_circuit'), 560)
 ItemMassRegistry.setMass(item('susy:spacecraft_instrument', 10), 1500000)
+ItemMassRegistry.setMass(item('gregtech:metal_casing'), 160000) //bronze
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 2), 150000) //invar
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 3), 50000) //alu
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 4), 150000) //steel
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 5), 155000) //stainless
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 6), 70000) //titanium
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 7), 20000) //tungstensteel
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 9), 25000) //ptfe
 
 def tiers = [
     [tierName: 'lv', massMult: 2.0],
