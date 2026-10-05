@@ -2049,3 +2049,5 @@ mods.gregtech.macerator.removeByInput(32, [item('gregtech:machine_casing', 6)], 
 // Rhodium Plated Palladium Ingot * 8
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:machine_casing', 6)], [fluid('oxygen') * 840])
 
+// IV 16A Energy Hatch * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('transformer.iv'), metaitem('energy_hatch.input_4a.iv'), metaitem('wireGtOctalTungsten') * 2, metaitem('plateTungstenSteel') * 4], null)
