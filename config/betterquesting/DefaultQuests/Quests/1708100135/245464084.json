@@ -6,11 +6,49 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.245464084.desc",
       "icon:10": {
-        "id:8": "minecraft:nether_star"
+        "Damage:2": 22,
+        "id:8": "susy:meta_item"
       },
       "name:8": "susy.quest.db.245464084.title"
     }
   },
   "questID:3": 245464084,
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 22,
+          "id:8": "susy:meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 2,
+          "Damage:2": 25,
+          "id:8": "susy:meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "2:10": {
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 23,
+          "id:8": "susy:meta_item",
+          "tag:10": {
+            "Charge:4": 15604
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
 }
