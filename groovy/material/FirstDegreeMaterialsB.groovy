@@ -865,17 +865,6 @@ class FirstDegreeMaterialsB {
                 .blastTemp(2100, GasTier.MID, GTValues.VA[GTValues.EV])
                 .build()
 
-<<<<<<< HEAD
-        // Molybdenum disilicide for no reason
-
-=======
-        /*VanadiumTrioxide = new Material.Builder(8789, SuSyUtility.susyId('vanadium_trioxide'))
-                .dust()
-                .components(Vanadium * 2, Oxygen * 3)
-                .colorAverage()
-                .build()*/
-        
->>>>>>> origin/circuits-overhaul
         AluminiumAlloy2219 = new Material.Builder(8794, SuSyUtility.susyId('aluminium_alloy_2219'))
                 .ingot().liquid(new FluidBuilder().temperature(933))
                 .colorAverage()

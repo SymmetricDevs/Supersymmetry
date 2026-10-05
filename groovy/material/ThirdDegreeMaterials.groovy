@@ -1524,6 +1524,5 @@ class ThirdDegreeMaterials {
                 .build()
 
         PolyhydroxystyreneResist.setFormula('(?)(C6H10O3)3(C4H10O2)', true)
->>>>>>> origin/circuits-overhaul
     }
 }

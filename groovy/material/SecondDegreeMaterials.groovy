@@ -1429,11 +1429,7 @@ class SecondDegreeMaterials {
             .flags(DISABLE_DECOMPOSITION)
             .build()
 
-        DilutedMagnesiumChlorideSolution = new Material.Builder(13219, SuSyUtility.susyId('diluted_magnesium_chloride_solution'))
-            .liquid()
-            .components(MagnesiumChloride * 1, Water * 4)
-            .color(0x9EF6FF)
-            .build()
+        // FREE ID: 13219
 
         WetSupportedCalciumAluminateNickel = new Material.Builder(13220, SuSyUtility.susyId('wet_supported_calcium_aluminate_nickel'))
                 .dust()

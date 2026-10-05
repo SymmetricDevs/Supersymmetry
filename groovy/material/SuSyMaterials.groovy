@@ -2126,7 +2126,6 @@ class SuSyMaterials {
     public static Material ALICE
     public static Material SilicaSulfurMix
     public static Material LunarConcrete
-    public static Material DilutedMagnesiumChlorideSolution
     public static Material WetSupportedCalciumAluminateNickel
     public static Material SupportedCalciumAluminateNickel
     public static Material PhosphoricChromicAcidSolution

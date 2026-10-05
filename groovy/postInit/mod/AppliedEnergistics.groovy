@@ -208,10 +208,8 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 [
-        'wafer.silicon',
-        'wafer.doped.silicon',
-        'wafer.silicon_germanium',
-        'wafer.gallium_arsenide'
+        'wafer.silicon.n_doped',
+        'wafer.silicon.p_doped'
 ].each { silicon ->
     CIRCUIT_ASSEMBLER.recipeBuilder()
             .inputs(metaitem(silicon))
@@ -228,12 +226,9 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 // Processor prints: each press is reusable tooling, while the HV circuit is
 // consumed as the active electronics substrate during printing.
 [
-        [press: 13, substrate: 'wafer.silicon', interconnect: 'foilCopper', output: 16],
-        [press: 13, substrate: 'wafer.silicon_germanium', interconnect: 'foilCopper', output: 16],
-        [press: 14, substrate: 'wafer.gallium_arsenide', interconnect: 'foilSilver', output: 17],
-        [press: 14, substrate: 'wafer.silicon_germanium', interconnect: 'foilSilver', output: 17],
-        [press: 15, substrate: 'wafer.doped.silicon', interconnect: 'foilTin', output: 18],
-        [press: 15, substrate: 'wafer.silicon', interconnect: 'foilTin', output: 18]
+        [press: 13, substrate: 'wafer.silicon.n_doped', interconnect: 'foilCopper', output: 16],
+        [press: 14, substrate: 'wafer.gallium_arsenide.n_doped', interconnect: 'foilSilver', output: 17],
+        [press: 15, substrate: 'wafer.germanium.n_doped', interconnect: 'foilAluminium', output: 18]
 ].each { printed ->
     FORMING_PRESS.recipeBuilder()
             .notConsumable(item('appliedenergistics2:material', printed.press))
@@ -295,7 +290,6 @@ storageComponents.each { component ->
             [circuitMeta: 1, output: component.itemOutput],
             [circuitMeta: 2, output: component.fluidOutput]
     ].each { storageType ->
-        Globals.solders.each { solder, amount ->
             CIRCUIT_ASSEMBLER.recipeBuilder()
                     .inputs(ore(component.circuit))
                     .inputs(ore('wireGtSingleUraniumTriplatinum') * 4)
@@ -308,7 +302,7 @@ storageComponents.each { component ->
                     .duration(200)
                     .EUt(VA[component.tier])
                     .buildAndRegister()
-        }
+
     }
 }
 
@@ -616,7 +610,7 @@ EXTRUDER.recipeBuilder()
 
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('fiber.optical') * 16)
-        .fluidInputs(fluid('pmma') * 144)
+        .fluidInputs(fluid('polymethyl_methacrylate') * 144)
         .outputs(metaitem('fiber.optical.coated') * 16)
         .duration(200)
         .EUt(VA[HV])
@@ -636,7 +630,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
         .inputs(ore('circuitIv') * 8)
         .inputs(ore('wireGtOctalUraniumTriplatinum') * 16) // EV superconducting links
-        .inputs(metaitem('plate.power_integrated_circuit') * 64)
+        .inputs(metaitem('plate.high_power_integrated_circuit') * 64)
         .inputs(metaitem('plateReinforcedEpoxyResin') * 12)
         .inputs(ore('plateTungstenSteel') * 12)
         .inputs(item('appliedenergistics2:material', 43) * 8)
@@ -691,7 +685,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('appliedenergistics2:material:35'))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('appliedenergistics2:crafting_storage_1k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -702,7 +696,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('appliedenergistics2:material:36'))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('appliedenergistics2:crafting_storage_4k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -713,7 +707,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('appliedenergistics2:material:37'))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('appliedenergistics2:crafting_storage_16k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -724,7 +718,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('appliedenergistics2:material:38'))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('appliedenergistics2:crafting_storage_64k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -735,7 +729,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('nae2:material', 1))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('nae2:storage_crafting_256k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -746,7 +740,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('nae2:material', 2))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('nae2:storage_crafting_1024k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -757,7 +751,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('nae2:material', 3))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('nae2:storage_crafting_4096k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -768,7 +762,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(item('nae2:material', 4))
         .inputs(ore('wireFineSilver') * 2)
         .inputs(item('appliedenergistics2:crafting_unit'))
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('nae2:storage_crafting_16384k'))
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(80)
@@ -779,7 +773,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
         .inputs(metaitem('circuit_board.g10'))
         .inputs(ore('circuitHv'))
         .inputs(ore('wireFineElectrum') * 4)
-        .fluidInputs(solder)
+        .fluidInputs(fluid('high_temperature_solder') * 144)
         .outputs(item('appliedenergistics2:material:25'))
         .duration(80)
         .EUt(VA[EV])
