@@ -12,7 +12,14 @@
   "questID:3": 1341099559,
   "tasks:9": {
     "0:10": {
-      "taskID:8": "bq_standard:checkbox"
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 15063,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }
