@@ -1276,7 +1276,7 @@ class SecondDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
         
-        ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 0.075, 180))
+        ALICE.setProperty(SuSyPropertyKey.SOLID_ROCKET_FUEL, new SolidRocketFuelProperty(0.108, 100, 180))
 
         SilicaSulfurMix = new Material.Builder(13207, SuSyUtility.susyId('silica_sulfur_mix'))
             .dust().liquid(new FluidBuilder().temperature(388))
