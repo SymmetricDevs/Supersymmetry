@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "gregtech:items/metaitems/wafer/nmos_bus_controller/step_four"
+    }
+}

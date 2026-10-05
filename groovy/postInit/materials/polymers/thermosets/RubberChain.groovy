@@ -132,7 +132,7 @@ for (rubber in rubbers) {
                         }
                     }
                     .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
-                    .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
+                    .outputs(metaitem(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
                     .info('recipe.vulcanization.' + catalyst.name)
                     .EUt(VA[ULV])
                     .buildAndRegister()

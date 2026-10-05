@@ -1,6 +1,6 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
-//import gregtech.api.recipes.chance.output.ChancedOutputLogic;
+import gregtech.api.recipes.chance.output.ChancedOutputLogic
 
 // From copper electrorefining
 // Composition of slime: 15% Se, 5% Te, 40% Ag/Au, 40% Cu
@@ -87,15 +87,13 @@ BR.recipeBuilder()
 
 // Further refining
 
-HIGH_TEMP_DT.recipeBuilder()
+VACUUM_DT.recipeBuilder()
     .inputs(ore('dustSelenium'))
-    .fluidOutputs(fluid('selenium') * 60)
-    .fluidOutputs(fluid('high_purity_selenium') * 72)
-    //.chancedOutput(metaitem('dustSelenium'), 4000, 0)
-    //.chancedOutput(metaitem('dustHighPuritySelenium'), 5000, 0)
-    //.chancedOutputLogic(ChancedOutputLogic.XOR)
+    .chancedOutput(metaitem('dustSelenium'), 4000, 0)
+    .chancedOutput(metaitem('dustHighPuritySelenium'), 10000, 0)
+    .chancedOutputLogic(ChancedOutputLogic.XOR)
     .duration(500)
-    .EUt(240)
+    .EUt(VHA[HV])
     .buildAndRegister()
 
 SOLIDIFIER.recipeBuilder()

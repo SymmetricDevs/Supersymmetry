@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import net.minecraft.item.ItemStack;
 import supersymmetry.common.rocketry.SusyRocketComponents;
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(2)
@@ -37,27 +38,9 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister();
 
-CSTR.recipeBuilder()
-        .circuitMeta(1)
-        .fluidInputs(fluid('formaldehyde') * 75)
-        .fluidInputs(fluid('phenol') * 25)
-        .notConsumable(fluid('sodium_hydroxide_solution') * 50)
-        .fluidOutputs(fluid('resol_resin_mixture') * 100)
-        .duration(4)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
-CSTR.recipeBuilder()
-        .fluidInputs(fluid('isopropyl_alcohol') * 75)
-        .fluidInputs(fluid('resol_resin_mixture') * 25)
-        .fluidOutputs(fluid('resol_resin_infiltrant') * 100)
-        .duration(2)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('carbon.mesh'))
-        .fluidInputs(fluid('resol_resin_infiltrant') * 4000)
+        .fluidInputs(fluid('resol_infiltrant') * 4000)
         .outputs(metaitem('carbon.mesh.phenolic.moist'))
         .duration(200)
         .EUt(VA[MV])
@@ -211,7 +194,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('fused_quartz') * 3)
         .inputs(metaitem('plateAluminium') * 4)
         .inputs(metaitem('cableGtSingleCopper') * 2)
-        //FIXME: add photodiode
+        .inputs(metaitem('component.photodiode') * 4)
         .outputs(metaitem('spacecraft_sensor.sun_star'))
         .duration(400)
         .EUt(VA[EV])
@@ -519,11 +502,11 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('platePolyvinylChloride') * 2) //FIXME: make this realistic once circuit update is here
-    .inputs(metaitem('circuit_board.plastic'))
+    .inputs(metaitem('platePolyvinylChloride') * 2)
+    .inputs(metaitem('circuit_board.fr4'))
     .inputs(ore('circuitEv'))
-    .inputs(metaitem('plate.nand_memory_chip') * 24)
-    .inputs(metaitem('plate.random_access_memory') * 2)
+    .inputs(metaitem('component.nmos_uart') * 24)
+    .inputs(metaitem('component.nmos_sram') * 2)
     .inputs(metaitem('wireFineSilver') * 32)
     .outputs(metaitem('susy:data_card'))
     .solderMultiplier(2)
@@ -532,15 +515,33 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('platePolyvinylChloride') * 2) //FIXME: make this realistic once circuit update is here
-    .inputs(metaitem('circuit_board.plastic'))
+    .inputs(metaitem('platePolyvinylChloride') * 2)
+    .inputs(metaitem('circuit_board.fr4'))
     .inputs(ore('circuitHv'))
     .inputs(metaitem('cover.screen'))
-    .inputs(metaitem('plate.random_access_memory') * 1)
+    .inputs(metaitem('component.nmos_sram') * 1)
     .inputs(metaitem('wireFineCopper') * 16)
     .outputs(metaitem('susy:rocket_configurer'))
     .duration(40)
     .EUt(VA[EV])
+    .buildAndRegister()
+
+// Data Stick new recipes
+mods.gregtech.circuit_assembler.removeByInput(1200, [metaitem('circuit_board.advanced'), metaitem("circuit.nano_processor") * 2, metaitem('plate.random_access_memory') * 4, metaitem('plate.nor_memory_chip') * 16, metaitem('plate.nand_memory_chip') * 32, metaitem('wireFinePlatinum') * 32], [fluid('soldering_alloy') * 144])
+mods.gregtech.circuit_assembler.removeByInput(1200, [metaitem('circuit_board.advanced'), metaitem("circuit.nano_processor") * 2, metaitem('plate.random_access_memory') * 4, metaitem('plate.nor_memory_chip') * 16, metaitem('plate.nand_memory_chip') * 32, metaitem('wireFinePlatinum') * 32], [fluid('tin') * 288])
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('circuit_board.g10'))
+    .inputs(ore('circuitHv') * 2)
+    .inputs(metaitem('component.nmos_sram') * 2)
+    .inputs(metaitem('component.nmos_dram') * 2)
+    .inputs(metaitem('component.nmos_uart') * 16)
+    .inputs(metaitem('wireFinePlatinum') * 32)
+    .solderMultiplier(2)
+    .outputs(metaitem('tool.datastick'))
+    .duration(400)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
 ItemStack stack = metaitem('susy:data_card.master_blueprint') * 1

@@ -428,10 +428,10 @@ ASSEMBLER.recipeBuilder()
 // AE2 storage component metas: 35-38 = 1k/4k/16k/64k item components; 54-57 = fluid equivalents.
 // Finished item and fluid cells use the gated components above.
 def storageCells = [
-        [tier: IV,  circuit: 'circuitIv',  component: 35, fluidComponent: 54, item: 'storage_cell_1k',  fluid: 'fluid_storage_cell_1k', supcon: 'UraniumTriplatinum'],
-        [tier: LuV, circuit: 'circuitLuv', component: 36, fluidComponent: 55, item: 'storage_cell_4k',  fluid: 'fluid_storage_cell_4k', supcon: 'SamariumIronArsenicOxide'],
-        [tier: ZPM, circuit: 'circuitZpm', component: 37, fluidComponent: 56, item: 'storage_cell_16k', fluid: 'fluid_storage_cell_16k', supcon: 'IndiumTinBariumTitaniumCuprate'],
-        [tier: UV,  circuit: 'circuitUv',  component: 38, fluidComponent: 57, item: 'storage_cell_64k', fluid: 'fluid_storage_cell_64k', supcon: 'UraniumRhodiumDinaquadide']
+        [tier: IV,  circuit: 'circuitIv',  sram: 1,  component: 35, fluidComponent: 54, item: 'storage_cell_1k',  fluid: 'fluid_storage_cell_1k', supcon: 'UraniumTriplatinum'],
+        [tier: LuV, circuit: 'circuitLuv', sram: 4,  component: 36, fluidComponent: 55, item: 'storage_cell_4k',  fluid: 'fluid_storage_cell_4k', supcon: 'SamariumIronArsenicOxide'],
+        [tier: ZPM, circuit: 'circuitZpm', sram: 16, component: 37, fluidComponent: 56, item: 'storage_cell_16k', fluid: 'fluid_storage_cell_16k', supcon: 'IndiumTinBariumTitaniumCuprate'],
+        [tier: UV,  circuit: 'circuitUv',  sram: 64, component: 38, fluidComponent: 57, item: 'storage_cell_64k', fluid: 'fluid_storage_cell_64k', supcon: 'UraniumRhodiumDinaquadide']
 ]
 
 storageCells.each { cell ->
@@ -443,15 +443,55 @@ storageCells.each { cell ->
                 .inputs(item('appliedenergistics2:material', type.component))
                 .inputs(item('appliedenergistics2:material', 39))
                 .inputs(item('appliedenergistics2:quartz_glass') * 2)
+                .inputs(metaitem('component.nmos_sram') * cell.sram)
                 .inputs(ore('wireGtSingle' + cell.supcon) * 8)
                 .inputs(ore('foilIridium') * 2)
                 .inputs(metaitem('battery.ni_mh.iv'))
                 .outputs(item("appliedenergistics2:${type.output}"))
                 .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
                 .EUt(VA[cell.tier])
                 .buildAndRegister()
     }
 }
+
+//Spatial cells
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitLuv'))
+        .inputs(ore('wireFineSilver') * 4)
+        .inputs(metaitem('component.nmos_sram') * 1)
+        .inputs(metaitem('storage.segment') * 1)
+        .circuitMeta(3)
+        .outputs(item('appliedenergistics2:material:32'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(200)
+        .EUt(VA[IV])
+        .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitZpm'))
+        .inputs(ore('wireFineSilver') * 4)
+        .inputs(metaitem('component.nmos_sram') * 4)
+        .inputs(metaitem('storage.segment') * 1)
+        .circuitMeta(3)
+        .outputs(item('appliedenergistics2:material:33'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(200)
+        .EUt(VA[LuV])
+        .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitUv'))
+        .inputs(ore('wireFineSilver') * 4)
+        .inputs(metaitem('component.nmos_sram') * 16)
+        .inputs(metaitem('storage.segment') * 1)
+        .circuitMeta(3)
+        .outputs(item('appliedenergistics2:material:34'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(200)
+        .EUt(VA[ZPM])
+        .buildAndRegister()
+
 
 // AE2 material metas: 43 = formation core, 44 = annihilation core, 39 = drive housing.
 // AE2 part metas: 240/241 = item/fluid import buses, 260/261 = export buses
@@ -648,6 +688,105 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
+        .inputs(item('appliedenergistics2:material:35'))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('appliedenergistics2:crafting_storage_1k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('appliedenergistics2:material:36'))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('appliedenergistics2:crafting_storage_4k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('appliedenergistics2:material:37'))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('appliedenergistics2:crafting_storage_16k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('appliedenergistics2:material:38'))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('appliedenergistics2:crafting_storage_64k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('nae2:material', 1))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('nae2:storage_crafting_256k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('nae2:material', 2))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('nae2:storage_crafting_1024k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('nae2:material', 3))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('nae2:storage_crafting_4096k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+        .inputs(item('nae2:material', 4))
+        .inputs(ore('wireFineSilver') * 2)
+        .inputs(item('appliedenergistics2:crafting_unit'))
+        .fluidInputs(solder)
+        .outputs(item('nae2:storage_crafting_16384k'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('circuit_board.g10'))
+        .inputs(ore('circuitHv'))
+        .inputs(ore('wireFineElectrum') * 4)
+        .fluidInputs(solder)
+        .outputs(item('appliedenergistics2:material:25'))
+        .duration(80)
+        .EUt(VA[EV])
+        .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('circuit_board.advanced'))
         .inputs(ore('circuitEv'))
         .inputs(metaitem('pattern.memory'))
         .inputs(metaitem('pattern.processor'))
