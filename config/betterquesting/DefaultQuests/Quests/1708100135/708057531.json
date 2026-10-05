@@ -6,7 +6,8 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.708057531.desc",
       "icon:10": {
-        "id:8": "minecraft:nether_star"
+        "Damage:2": 4796,
+        "id:8": "gregtech:meta_dust"
       },
       "name:8": "susy.quest.db.708057531.title"
     }
