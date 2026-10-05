@@ -13,5 +13,16 @@
     }
   },
   "questID:3": 528288454,
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 10497,
+          "id:8": "gregtech:meta_item_2"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
 }
