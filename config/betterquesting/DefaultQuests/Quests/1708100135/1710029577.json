@@ -1,9 +1,14 @@
 {
+  "preRequisites:11": [
+    1319541244
+  ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.1710029577.desc",
+      "frame:8": "GATE",
       "icon:10": {
-        "id:8": "minecraft:nether_star"
+        "Damage:2": 18524,
+        "id:8": "gregtech:machine"
       },
       "name:8": "susy.quest.db.1710029577.title"
     }
