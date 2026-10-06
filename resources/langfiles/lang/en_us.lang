@@ -4194,7 +4194,7 @@ tile.retro_sophisticated_backpacks.backpack_leather.name=Primitive Backpack
 tile.retro_sophisticated_backpacks.backpack_iron.name=Basic Backpack
 tile.retro_sophisticated_backpacks.backpack_gold.name=Advanced Backpack
 tile.retro_sophisticated_backpacks.backpack_diamond.name=Elite Backpack
-tile.retro_sophisticated_backpacks.backpack_obsidian.name=Sophisticated Backpack 
+tile.retro_sophisticated_backpacks.backpack_obsidian.name=Sophisticated Backpack
 
 susy.rocketry.components.name.soyuz_plumbing=Soyuz Plumbing
 susy.rocketry.components.name.soyuz_wiring=Soyuz Wiring
@@ -6334,3 +6334,11 @@ metaitem.die.photodiode.name=Photodiode Die
 metaitem.die.photodiode.bonded.name=Bonded Photodiode Die
 metaitem.stencil.monosilicon_photovoltaic.name=Monosilicon Photovoltaic Cell Stencil
 metaitem.stencil.diode.planar.name=Planar Diode Stencil
+
+susy.rocketry.components.name.soyuz_plumbing=Soyuz Plumbing
+susy.rocketry.components.name.soyuz_wiring=Soyuz Wiring
+susy.rocketry.components.name.soyuz_verniers=Soyuz Verniers
+susy.rocketry.components.name.lunar_plumbing=Lunar Plumbing
+susy.rocketry.components.name.lunar_wiring=Lunar Wiring
+susy.rocketry.components.name.lunar_verniers=Lunar Verniers
+susy.rocketry.components.name.lunar_spacecraft=Lunar Spacecraft

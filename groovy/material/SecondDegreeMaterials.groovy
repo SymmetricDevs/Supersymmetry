@@ -10,6 +10,7 @@ import gregtech.api.unification.material.properties.*
 import gregtech.api.unification.material.properties.BlastProperty.GasTier
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey
 import supersymmetry.api.unification.material.properties.SolidRocketFuelProperty
+
 import supersymmetry.api.util.SuSyUtility
 
 import static gregtech.api.unification.material.info.MaterialIconSet.*
