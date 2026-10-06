@@ -1,10 +1,4 @@
 {
-  "preRequisiteTypes:7": [
-    1
-  ],
-  "preRequisites:11": [
-    479
-  ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.700.desc",
