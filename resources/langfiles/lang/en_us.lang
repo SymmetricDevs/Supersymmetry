@@ -3467,6 +3467,7 @@ recipemap.low_pressure_cryogenic_distillation.name=Low Pressure Cryogenic Distil
 recipemap.high_pressure_cryogenic_distillation.name=High Pressure Cryogenic Distillation
 recipemap.advanced_steam_turbine=Advanced Steam Turbine
 recipemap.injection_molder.name=Injection Molding
+recipemap.scrap_recycler.name=Scrap Recycling
 
 # QMD Particles
 

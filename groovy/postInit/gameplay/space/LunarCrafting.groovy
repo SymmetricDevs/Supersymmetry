@@ -848,7 +848,7 @@ SOLAR_FURNACE.recipeBuilder()
 // step 2: Al-doped Si base layer
 SOLAR_FURNACE.recipeBuilder()
     .inputs(metaitem('simple_solar_panel.step_one') * 4)
-    .inputs(metaitem("dustHighPuritySilicon"))
+    .inputs(metaitem("dustSilicon")) // the vacuum will make it high purity trust
     .inputs(metaitem("dustTinyAluminium"))
     .outputs(metaitem('simple_solar_panel.step_two') * 4)
     .requireVacuum()
@@ -858,10 +858,10 @@ SOLAR_FURNACE.recipeBuilder()
 
 // step 3: S-doped Si emitter
 SOLAR_FURNACE.recipeBuilder()
-    .inputs(metaitem('simple_solar_panel.step_two') * 16)
-    .inputs(metaitem("dustHighPuritySilicon"))
+    .inputs(metaitem('simple_solar_panel.step_two') * 8)
+    .inputs(metaitem("dustSilicon"))
     .inputs(metaitem("dustTinySulfur"))
-    .outputs(metaitem('simple_solar_panel.step_three') * 16)
+    .outputs(metaitem('simple_solar_panel.step_three') * 8)
     .requireVacuum()
     .EUt(8000)
     .duration(400)
