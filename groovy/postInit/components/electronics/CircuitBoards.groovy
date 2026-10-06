@@ -12,7 +12,7 @@ mods.jei.ingredient.yeet(
     metaitem('board.epoxy'),
     metaitem('board.fiber_reinforced'),
     metaitem('circuit_board.plastic'),
-    metaitem('circuit_board.advanced'),
+    metaitem('circuit_board.g10'),
     metaitem('circuit_board.extreme')
 )
 
