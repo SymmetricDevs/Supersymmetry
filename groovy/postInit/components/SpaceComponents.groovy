@@ -296,6 +296,17 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('conveyor.module.ev') * 8)
+    .inputs(metaitem('cableGtQuadrupleAluminium') * 64)
+    .inputs(ore('pipeLargeItemUltimet') * 8)
+    .inputs(ore('circuitHv') * 8)
+    .outputs(metaitem('susy:landing_pad'))
+    .duration(160)
+    .EUt(VA[HV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
         .inputs(metaitem('hull.iv'))
         .inputs(metaitem('sensor.iv') * 8)
         .inputs(metaitem('emitter.iv') * 8)
