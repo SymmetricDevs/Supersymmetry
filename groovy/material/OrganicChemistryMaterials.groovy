@@ -4626,5 +4626,29 @@ class OrganicChemistryMaterials {
                 .components(PolymethylMethacrylate, Chlorobenzene)
                 .color(0x32cd32)
                 .build()
+
+        AbieticAcid = new Material.Builder(15767, SuSyUtility.susyId('abietic_acid'))
+            .dust()
+            .components(Carbon * 20, Hydrogen * 30, Oxygen * 2)
+            .color(0x874F3B)
+            .iconSet(WOOD)
+            .build()
+
+        DisproportionatedAbieticAcid = new Material.Builder(15768, SuSyUtility.susyId('disproportionated_abietic_acid'))
+            .dust()
+            .components(Carbon * 20, Hydrogen * 30, Oxygen * 2)
+            .color(0x843B22)
+            .iconSet(WOOD)
+            .build()
+
+        AbieticAcidEmulsifier = new Material.Builder(15769, SuSyUtility.susyId('abietic_acid_emulsifier'))
+            .liquid()
+            .components(Carbon * 20, Hydrogen * 29, Oxygen * 2, Sodium * 1, Water * 1)
+            .color(0x843B22)
+            .build()
+
+        AbieticAcidEmulsifier.setFormula('(C20H29O2Na)(H2O)', true)
+
+
     }
 }

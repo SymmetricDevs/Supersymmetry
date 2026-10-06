@@ -2472,3 +2472,46 @@ for (i = 1; i <= 8; i++) {
         [tieredCables[i], conveyors[i], tieredCables[i]]
     ])
 }
+
+// solar panels
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('cell.monosilicon_photovoltaic') * 8)
+    .inputs(metaitem('plateGlass') * 4)
+    .inputs(metaitem('plateAluminium') * 2)
+    .inputs(metaitem('stickLongAluminium') * 4)
+    .inputs(metaitem('electric.motor.lv') * 2)
+    .inputs(metaitem('circuit.power.lv') * 1)
+    .inputs(ore('circuitLv') * 1)
+    .outputs(metaitem('susy:solar_panel.lv'))
+    .duration(80)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('cell.multijunction_photovoltaic') * 8)
+    .inputs(metaitem('plateGlass') * 4)
+    .inputs(metaitem('plateAluminium') * 2)
+    .inputs(metaitem('stickLongAluminium') * 4)
+    .inputs(metaitem('electric.motor.lv') * 2)
+    .inputs(metaitem('circuit.power.lv') * 1)
+    .inputs(ore('circuitLv') * 1)
+    .outputs(metaitem('susy:solar_panel.mv'))
+    .duration(90)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.cell') * 24)
+    .inputs(metaitem('plateLunarRGlass') * 8)
+    .inputs(metaitem('plateAluminium') * 4)
+    .inputs(metaitem('stickLongAluminium') * 4)
+    .inputs(metaitem('electric.motor.lv') * 1)
+    .outputs(metaitem('susy:solar_panel.moon'))
+    .duration(120)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+crafting.removeByOutput(metaitem('cover.solar.panel'))
+crafting.removeByOutput(metaitem('cover.solar.panel.ulv'))
+crafting.removeByOutput(metaitem('cover.solar.panel.lv'))

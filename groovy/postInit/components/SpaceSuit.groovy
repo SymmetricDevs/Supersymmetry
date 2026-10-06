@@ -15,7 +15,7 @@ import postInit.utils.RecyclingHelper
 log.infoMC("Running SpaceSuit.groovy...")
 
 
-VACUUM_CHAMBER.recipeBuilder() //FIXME: REPLACE WITH EVAPORATION DEPOSITION
+EVAPORATION_DEPOSITION.recipeBuilder()
         .inputs(metaitem('mylar'))
         .inputs(ore('dustSmallHighPurityAluminium'))
         .outputs(metaitem('sheet.aluminized_mylar'))

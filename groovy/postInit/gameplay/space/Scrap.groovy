@@ -177,14 +177,18 @@ scrapRecipes(builder -> builder
     .chancedOutput(metaitem('field.generator.iv'), 200, 60)
     .chancedOutput(metaitem('zpm'), 1, 1))
 
-scrapRecipes(builder -> builder // FIXME: update this once circuit update is merged
+scrapRecipes(builder -> builder
     .inputs(metaitem('scrap.supply.circuitry'))
-    .chancedOutput(metaitem('component.smd.diode') * 32, 1500, 10)
-    .chancedOutput(metaitem('circuit.microprocessor') * 16, 1000, 20)
-    .chancedOutput(metaitem('plate.power_integrated_circuit'), 1500, 30)
-    //.chancedOutput(metaitem('die.cmos_cpu') * 8, 1500, 40)
-    .chancedOutput(metaitem('circuit.crystal_processor'), 1500, 50)
-    .chancedOutput(metaitem('circuit.crystal_computer'), 200, 60))
+    .chancedOutput(metaitem('component.resistor.carbon_film') * 32, 2500, 10)
+    .chancedOutput(metaitem('component.bme_cap') * 32, 2500, 10)
+    .chancedOutput(metaitem('component.transistor.vdmos') * 16, 2000, 10)
+    .chancedOutput(metaitem('component.diode.planar') * 16, 2000, 10)
+    .chancedOutput(metaitem('component.smd.inductor') * 16, 2000, 10)
+    .chancedOutput(metaitem('component.nmos_cpu') * 12, 1500, 30)
+    .chancedOutput(metaitem('plate.power_integrated_circuit') * 3, 900, 50)
+    .chancedOutput(metaitem('plate.high_power_integrated_circuit'), 350, 30)
+    .chancedOutput(metaitem('circuit.nano_processor') * 8, 350, 20)
+    .chancedOutput(metaitem('circuit.quantum_processor') * 1, 50, 40))
 
 scrapRecipes(builder -> builder
     .inputs(metaitem('scrap.supply.chemical'))
@@ -252,20 +256,20 @@ scrapRecipes(builder -> builder
     .chancedOutput(metaitem('foilMetallizedBopet') * 16, 1000, 30)
     .chancedOutput(item('susy:rocket_tank_shell') * 16, 4000, 40)
     .chancedOutput(item('susy:rocket_fairing_connector') * 4, 2000, 40)
-    .chancedOutput(item('susy:rocket_interstage') * 4, 2000, 40))
+    .chancedOutput(item('susy:rocket_interstage') * 4, 2000, 40)
+    .chancedOutput(metaitem('carbon.tile.phenolic.treated') * 8, 1000, 20)
+    .chancedOutput(metaitem('parachute.main') * 1, 250, 10))
 
 scrapRecipes(builder -> builder
     .inputs(metaitem('scrap.parts.energy'))
     .chancedOutput(metaitem('battery.ni_cd.hv') * 8, 4000, 40)
-    .chancedOutput(metaitem('battery.ni_cd.ev') * 6, 3000, 40)
     .chancedOutput(metaitem('battery.ni_mh.ev') * 4, 3000, 40)
     .chancedOutput(metaitem('battery.ni_mh.iv') * 2, 2000, 40)
     .chancedOutput(item('susy:spacecraft_instrument', 5), 2000, 40) // spacecraft battery
     .chancedOutput(item('susy:spacecraft_instrument', 3), 4000, 40) // spacecraft solar panel
     .chancedOutput(item('susy:spacecraft_instrument', 9), 1000, 20) // spacecraft fuel cell
     .chancedOutput(item('susy:spacecraft_instrument', 7), 30, 2) // spacecraft nuclear reactor
-    .chancedOutput(metaitem('cover.solar.panel.lv'), 100, 60) // FIXME: update this once circuit update is merged
-    .chancedOutput(metaitem('cover.solar.panel.mv'), 10, 60)
+    .chancedOutput(metaitem('cell.multijunction_photovoltaic'), 500, 80)
     .chancedOutput(metaitem('susy:rtg.lv'), 400, 60)
     .chancedOutput(metaitem('susy:rtg.mv'), 60, 6))
 
@@ -281,7 +285,7 @@ scrapRecipes(builder -> builder
     .chancedOutput(item('openmodularturrets:laser_turret'), 100, 30)
     .chancedOutput(item('icbmclassic:explosives', 15) * 1, 1, 0) // we do a little trolling...
     .chancedOutput(item('techguns:biogun') * 1, 100, 4)
-    .chancedOutput(item('techguns:itemshared', 29) * 1, 250, 10) //energy cell
+    .chancedOutput(item('techguns:itemshared', 29) * 1, 250, 10) // energy cell
     .chancedOutput(item('techguns:itemshared', 25) * 4, 500, 12) // bio tank
     .chancedOutput(item('techguns:laserpistol') * 1, 1, 1))
 
