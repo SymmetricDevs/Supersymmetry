@@ -873,7 +873,7 @@ class SuSyMaterials {
     public static Material BasicCMPSlurry
     public static Material OxidativeCMPSlurry
     public static Material HeavyMineralTailing
-    public static Material MagneticHeavyMineralTailing
+    public static Material WeaklyMagneticHeavyMineralTailing
     public static Material NonMagneticHeavyMineralTailing
     public static Material ZirconMonaziteConcentrate
     public static Material CalciumAluminateConcrete

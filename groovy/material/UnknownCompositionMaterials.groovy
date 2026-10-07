@@ -3925,13 +3925,13 @@ class UnknownCompositionMaterials {
                 .color(0x2b3138)
                 .build()
 
-        MagneticHeavyMineralTailing = new Material.Builder(4822, SuSyUtility.susyId('magnetic_heavy_mineral_tailing'))
+        WeaklyMagneticHeavyMineralTailing = new Material.Builder(4822, SuSyUtility.susyId('weakly_magnetic_heavy_mineral_tailing'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0x2b3156)
                 .build()
 
-        NonMagneticHeavyMineralTailing = new Material.Builder(4823, SuSyUtility.susyId('non_heavy_mineral_tailing'))
+        NonMagneticHeavyMineralTailing = new Material.Builder(4823, SuSyUtility.susyId('non_magnetic_heavy_mineral_tailing'))
                 .dust()
                 .iconSet(SHINY)
                 .color(0x2b3115)
