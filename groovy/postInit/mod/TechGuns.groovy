@@ -1260,8 +1260,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
-// commando armor
-
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(1)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
@@ -1423,8 +1421,12 @@ WEAPONS_FACTORY.recipeBuilder()
 
 // bandit armor
 
+// bandit armor
+
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
+        .inputs(item('techguns:itemshared', 45) * 5)
+        .outputs(item('techguns:steam_helmet'))
         .inputs(item('techguns:itemshared', 60) * 5)
         .inputs(item('susy:susy_armor').withNbt(['damage': 0.0d]) * 1)
         .outputs(item('techguns:t1_scout_helmet'))
@@ -1434,6 +1436,8 @@ WEAPONS_FACTORY.recipeBuilder()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(2)
+        .inputs(item('techguns:itemshared', 45) * 8)
+        .outputs(item('techguns:steam_chestplate'))
         .inputs(item('techguns:itemshared', 60) * 8)
         .outputs(item('techguns:t1_scout_chestplate'))
         .duration(100)
@@ -1442,6 +1446,8 @@ WEAPONS_FACTORY.recipeBuilder()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(3)
+        .inputs(item('techguns:itemshared', 45) * 7)
+        .outputs(item('techguns:steam_leggings'))
         .inputs(item('techguns:itemshared', 60) * 7)
         .outputs(item('techguns:t1_scout_leggings'))
         .duration(100)
@@ -1450,12 +1456,12 @@ WEAPONS_FACTORY.recipeBuilder()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(4)
+        .inputs(item('techguns:itemshared', 45) * 4)
         .inputs(item('techguns:itemshared', 60) * 4)
         .outputs(item('techguns:t1_scout_boots'))
         .duration(100)
         .EUt(15)
         .buildAndRegister();
-
 // advanced combat armor
 
 WEAPONS_FACTORY.recipeBuilder()
@@ -1698,6 +1704,15 @@ WEAPONS_FACTORY.recipeBuilder()
         .EUt(960)
         .buildAndRegister();
 
+=======
+        .inputs(ore('plateIron') * 2)
+        .inputs(item('techguns:itemshared', 60) * 2)
+        .outputs(item('techguns:t1_miner_boots'))
+        .duration(50)
+        .EUt(15)
+        .buildAndRegister()
+
+>>>>>>> origin/master-ceu
 //Armor upgrades
 
 WEAPONS_FACTORY.recipeBuilder()

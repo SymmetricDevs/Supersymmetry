@@ -63,6 +63,14 @@ QUARRY.recipeBuilder()
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
+        .notConsumable(ore('dustKyanite'))
+        .outputs(metaitem('dustKyanite'))
+        .dimension(Globals.dimensions["Beneath"])
+        .duration(60)
+        .EUt(VA[MV])
+        .buildAndRegister();
+
+QUARRY.recipeBuilder()
     .circuitMeta(1)
     .chancedOutput(item('minecraft:stone'), 1667, 500)
     .chancedOutput(item('minecraft:stone', 1), 1667, 500)
@@ -116,5 +124,48 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_cobble', 6), 3333, 500)
     .dimension(Globals.dimensions["Beneath"])
     .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+// Anorthosite
+QUARRY.recipeBuilder()
+    .notConsumable(item('susy:susy_stone_cobble', 11))
+    .outputs(item('susy:susy_stone_cobble', 11))
+    .biomes("susy:lunar_highlands")
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+QUARRY.recipeBuilder()
+    .notConsumable(item('susy:susy_stone_smooth', 11))
+    .outputs(item('susy:susy_stone_smooth', 11))
+    .biomes("susy:lunar_highlands")
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+// Leucobasalt
+QUARRY.recipeBuilder()
+    .notConsumable(item('susy:susy_stone_cobble', 12))
+    .outputs(item('susy:susy_stone_cobble', 12))
+    .biomes("susy:lunar_maria")
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+QUARRY.recipeBuilder()
+    .notConsumable(item('susy:susy_stone_smooth', 12))
+    .outputs(item('susy:susy_stone_smooth', 12))
+    .biomes("susy:lunar_maria")
+    .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+// KREEP
+QUARRY.recipeBuilder()
+    .notConsumable(item('susy:resource_block_1', 3))
+    .outputs(item('susy:resource_block_1', 3))
+    .biomes("susy:lunar_kreep_terrane")
+    .duration(200)
     .EUt(VA[MV])
     .buildAndRegister();

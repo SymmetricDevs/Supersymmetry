@@ -26,3 +26,14 @@ for (entityEntry in ForgeRegistries.ENTITIES.getValues()) {
     }
     registry.register(entityInstance, lootResource)
 }
+
+// convenient location for this
+
+import net.minecraftforge.event.entity.player.ItemTooltipEvent
+import gregtech.client.utils.TooltipHelper
+
+event_manager.listen { ItemTooltipEvent event ->
+    if (event.getItemStack() in item('travelersbackpack:travelers_backpack')) {
+        event.getToolTip() <<  "${TooltipHelper.BLINKING_RED}Deprecated! Could be remove in the next release!".toString()
+    }
+}

@@ -298,3 +298,12 @@ ELECTROLYTIC_CELL.recipeBuilder()
     .duration(480)
     .EUt(VA[MV])
     .buildAndRegister()
+
+// SILVER COMPOUNDS
+ROASTER.recipeBuilder()
+    .inputs(ore('dustSilver'))
+    .fluidInputs(fluid('chlorine') * 1000)
+    .outputs(metaitem('dustSilverChloride') * 2)
+    .duration(100)
+    .EUt(VA[LV])
+    .buildAndRegister()

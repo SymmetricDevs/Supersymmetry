@@ -86,6 +86,11 @@ PolychlorinatedBiphenylCoolant.setDurationRadiator(40);
 PolychlorinatedBiphenylCoolant.setAmountToUse(1000);
 PolychlorinatedBiphenylCoolant.setTimeFactor(2);
 
+def FC75Coolant = new Coolant("fc_75", "warm_fc_75");
+PolychlorinatedBiphenylCoolant.setDurationRadiator(30);
+PolychlorinatedBiphenylCoolant.setAmountToUse(1000);
+PolychlorinatedBiphenylCoolant.setTimeFactor(1);
+
 def Coolants = [
         WaterCoolant,
         ChilledWaterCoolant,
@@ -94,7 +99,8 @@ def Coolants = [
         LubricantCoolant,
         SodiumPotassiumCoolant,
         EthyleneGlycolCoolant,
-        PolychlorinatedBiphenylCoolant
+        PolychlorinatedBiphenylCoolant,
+        FC75Coolant
 ];
 
 def CryoHydrogen = new CryoGas('hydrogen', 'hot_hp_hydrogen', 'hp_hydrogen', 'cold_hp_hydrogen', 'liquid_hydrogen');
@@ -275,6 +281,13 @@ ChlorodifluoromethaneRefrigerant.setDurationRadiator(2);
 ChlorodifluoromethaneRefrigerant.setAmountToUse(1000);
 ChlorodifluoromethaneRefrigerant.setTimeFactor(2);
 
+def TetrafluoroethaneRefrigerant = new Refrigerant("tetrafluoroethane", 'hot_compressed_tetrafluoroethane', 'compressed_tetrafluoroethane', 'cold_tetrafluoroethane');
+TetrafluoroethaneRefrigerant.setPowerToCompress(180);
+TetrafluoroethaneRefrigerant.setDurationToCompress(4);
+TetrafluoroethaneRefrigerant.setDurationRadiator(2);
+TetrafluoroethaneRefrigerant.setAmountToUse(1000);
+TetrafluoroethaneRefrigerant.setTimeFactor(1);
+
 def Refrigerants = [
         AmmoniaRefrigerant,
         PropaneRefrigerant,
@@ -282,7 +295,8 @@ def Refrigerants = [
         TrichlorofluoromethaneRefrigerant,
         DichlorodifluoromethaneRefrigerant,
         ChlorotrifluoromethaneRefrigerant,
-        ChlorodifluoromethaneRefrigerant
+        ChlorodifluoromethaneRefrigerant,
+        TetrafluoroethaneRefrigerant
 ];
 
 def CarbonDioxideSupercritical = new SupercriticalFluid("compressed_carbon_dioxide", "supercritical_carbon_dioxide");
@@ -816,7 +830,7 @@ CONDENSER.recipeBuilder()
 // PWR pressurizer & steam generator
 
 FLUID_COMPRESSOR.recipeBuilder()
-        .notConsumable(ore('springNichrome'))
+        .notConsumable(ore('springEarly'))
         .fluidInputs(liquid('deionized_water') * 1536)
         .fluidOutputs(liquid('pressurized_water') * 1536)
         .duration(1)

@@ -31,61 +31,6 @@ import static gregtech.api.GTValues.*
         .EUt(VA[MV])
         .buildAndRegister()
 
-    // Guanidinium nitrate
-
-    BR.recipeBuilder()
-        .inputs(ore('dustCalciumCyanamide') * 4)
-        .fluidInputs(fluid('carbon_dioxide') * 1000)
-        .fluidInputs(fluid('water') * 2000)
-        .fluidOutputs(fluid('cyanamide_slurry') * 1000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    SIFTER.recipeBuilder()
-        .fluidInputs(fluid('cyanamide_slurry') * 1000)
-        .outputs(metaitem('dustCalcite') * 5)
-        .fluidOutputs(fluid('crude_cyanamide_solution') * 1000)
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister()
-
-    ION_EXCHANGE.recipeBuilder()
-        .notConsumable(metaitem('beads.strong_acidic_cation_exchange'))
-        .fluidInputs(fluid('crude_cyanamide_solution') * 1000)
-        .fluidInputs(fluid('diluted_sulfuric_acid') * 100)
-        .fluidOutputs(fluid('cyanamide_solution') * 1000)
-        .fluidOutputs(fluid('wastewater') * 100)
-        .EUt(VA[MV])
-        .duration(100)
-        .buildAndRegister()
-
-    CRYSTALLIZER.recipeBuilder()
-        .inputs(ore('dustTinySodiumHydroxide'))
-        .fluidInputs(fluid('cyanamide_solution') * 2000)
-        .outputs(metaitem('dustDicyanamide') * 10)
-        .fluidOutputs(fluid('wastewater') * 2000)
-        .EUt(VA[LV])
-        .duration(100)
-        .buildAndRegister()
-
-    AUTOCLAVE.recipeBuilder()
-        .inputs(ore('dustDicyanamide') * 10)
-        .fluidInputs(fluid('ammonium_nitrate_solution') * 2000)
-        .fluidOutputs(fluid('guanidinium_nitrate_solution') * 2000)
-        .EUt(VA[LV])
-        .duration(100)
-        .buildAndRegister()
-
-    CRYSTALLIZER.recipeBuilder()
-        .notConsumable(ore('springKanthal'))
-        .fluidInputs(fluid('guanidinium_nitrate_solution') * 2000)
-        .outputs(metaitem('dustGuanidiniumNitrate') * 14)
-        .fluidOutputs(fluid('wastewater') * 2000)
-        .EUt(VA[MV])
-        .duration(100)
-        .buildAndRegister()
-
     // Malondialdehyde/tetramethoxypropane
 
     CSTR.recipeBuilder()

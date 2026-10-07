@@ -4,7 +4,6 @@ import static material.SuSyMaterials.*
 
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
-import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.unification.material.properties.*
 
@@ -68,13 +67,13 @@ class PetrochemistryMaterials {
                 .build()
 
         SulfuricHeavyGasOil = new Material.Builder(20009, SuSyUtility.susyId('sulfuric_heavy_gas_oil'))
-                .liquid()
+                .liquid(new FluidBuilder().temperature(333))
                 .color(0x858135)
                 .flags(FLAMMABLE)
                 .build()
 
         TreatedSulfuricHeavyGasOil = new Material.Builder(20010, SuSyUtility.susyId('treated_sulfuric_heavy_gas_oil'))
-                .liquid()
+                .liquid(new FluidBuilder().temperature(333))
                 .color(0x9e9a4f)
                 .flags(FLAMMABLE)
                 .build()
@@ -163,7 +162,7 @@ class PetrochemistryMaterials {
                 .build()
 
         SlackWax = new Material.Builder(20025, SuSyUtility.susyId('slack_wax'))
-                .liquid()
+                .liquid(new FluidBuilder().temperature(353))
                 .color(0x7d7b59)
                 .flags(FLAMMABLE)
                 .build()
@@ -185,7 +184,7 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        BtexExtract = new Material.Builder(20029, SuSyUtility.susyId('btex_extract'))
+        FurfuralBtexExtract = new Material.Builder(20029, SuSyUtility.susyId('furfural_btex_extract'))
                 .liquid()
                 .color(0xa8a87d)
                 .flags(FLAMMABLE)
@@ -215,7 +214,11 @@ class PetrochemistryMaterials {
                 .flags(FLAMMABLE)
                 .build()
 
-        // FREE ID: 20034
+        SulfolaneBtexExtract = new Material.Builder(20034, SuSyUtility.susyId('sulfolane_btex_extract'))
+                .liquid()
+                .color(0xd6d67c)
+                .flags(FLAMMABLE)
+                .build()
 
         SteamcrackedLightGasOil = new Material.Builder(20035, SuSyUtility.susyId('steamcracked_light_gas_oil'))
                 .gas(new FluidBuilder().temperature(1223))
@@ -460,7 +463,7 @@ class PetrochemistryMaterials {
                 .build()
 
         CrudeLightGasOil = new Material.Builder(20078, SuSyUtility.susyId('crude_light_gas_oil'))
-                .liquid()
+                .liquid(new FluidBuilder().temperature(540))
                 .color(0x96912c)
                 .flags(FLAMMABLE)
                 .build()
@@ -496,7 +499,7 @@ class PetrochemistryMaterials {
                 .build()
 
         LightGasOil = new Material.Builder(20084, SuSyUtility.susyId('light_gas_oil'))
-                .liquid(new FluidBuilder().temperature(540))
+                .liquid()
                 .color(0xb0ac58)
                 .flags(FLAMMABLE)
                 .build()
@@ -748,13 +751,13 @@ class PetrochemistryMaterials {
                 .build()
 
         AcidicAlkylateMixture = new Material.Builder(20126, SuSyUtility.susyId('acidic_alkylate_mixture'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0xc27234)
                 .flags()
                 .build()
 
         AlkylateMixture = new Material.Builder(20127, SuSyUtility.susyId('alkylate_mixture'))
-                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .liquid(new FluidBuilder().acidic())
                 .color(0x994a23)
                 .flags()
                 .build()
@@ -766,7 +769,7 @@ class PetrochemistryMaterials {
                 .build()
 
         CrudeIsobutane = new Material.Builder(20129, SuSyUtility.susyId('crude_isobutane'))
-                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .gas(new FluidBuilder().acidic())
                 .color(0x736154)
                 .flags()
                 .build()

@@ -266,7 +266,7 @@ crafting.shapelessBuilder()
         output.getTagCompound().setDouble("damage", inputs['tank'].getTagCompound().getDouble("damage"))
     }.register()
 
-CVD.recipeBuilder()
+EVAPORATION.recipeBuilder()
     .inputs(metaitem('dustAluminium'))
     .inputNBT(item('susy:susy_armor', 4), NBTMatcher.ANY, NBTCondition.ANY)
     .outputs(item('susy:susy_armor', 9).withNbt(['damage': 0.0D]))
@@ -274,7 +274,7 @@ CVD.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-CVD.recipeBuilder()
+EVAPORATION.recipeBuilder()
     .inputs(metaitem('dustAluminium'))
     .inputNBT(item('susy:susy_armor', 5), NBTMatcher.ANY, NBTCondition.ANY)
     .outputs(item('susy:susy_armor', 10).withNbt(['damage': 0.0D, 'oxygen': 0.0D]))
@@ -434,8 +434,8 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('circuitIv') * 2)
     .inputs(metaitem('cover.screen'))
     .inputs(ore('wireFineGold') * 8)
-    .inputs(metaitem('circuit_board.plastic'))
     .inputs(item('susy:meta_item', 28).withNbt(['susy': ['faction': 'Feds']]))
+    .inputs(metaitem('circuit_board.fr4'))
     .outputs(metaitem('susy:code_breacher'))
     .fluidInputs(fluid('soldering_alloy') * 144)
     .duration(400)
@@ -500,6 +500,17 @@ crafting.addShaped('susy:kimberlite_bricks', item('susy:susy_stone_bricks', 8) *
         [ore('stoneKimberlite'), ore('stoneKimberlite')],
         [ore('stoneKimberlite'), ore('stoneKimberlite')]
 ])
+
+crafting.addShaped('susy:anorthosite_bricks', item('susy:susy_stone_bricks', 11) * 4, [
+        [ore('stoneAnorthosite'), ore('stoneAnorthosite')],
+        [ore('stoneAnorthosite'), ore('stoneAnorthosite')]
+])
+
+crafting.addShaped('susy:leucobasalt_bricks', item('susy:susy_stone_bricks', 12) * 4, [
+        [ore('stoneKreepBasalt'), ore('stoneKreepBasalt')],
+        [ore('stoneKreepBasalt'), ore('stoneKreepBasalt')]
+])
+
 
 //Dotted Panels
 def panels = [4, 5, 6, 7]

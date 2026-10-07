@@ -120,8 +120,8 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .fluidInputs(fluid('methylphenyldichlorosilane') * 100)
         .fluidInputs(fluid('water') * 3000)
         .fluidOutputs(fluid('silicone_oil_mixture') * 3000)
-        .duration(20)
-        .EUt(VA[HV])
+        .duration(40)
+        .EUt(VA[MV])
         .buildAndRegister()
 
     PHASE_SEPARATOR.recipeBuilder()
@@ -314,7 +314,7 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
     // Oleomide
 
     CSTR.recipeBuilder()
-        .notConsumable(ore('springKanthal'))
+        .notConsumable(ore('springEarly'))
         .fluidInputs(fluid('oleic_acid') * 50)
         .fluidInputs(fluid('ammonia') * 50)
         .fluidOutputs(fluid('oleylamide') * 50)
@@ -326,7 +326,7 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
     // Monoglycerides
 
     CSTR.recipeBuilder()
-        .notConsumable(ore('springKanthal'))
+        .notConsumable(ore('springEarly'))
         .fluidInputs(fluid('seed_oil') * 50)
         .fluidInputs(fluid('glycerol') * 100)
         .fluidOutputs(fluid('monoglycerides') * 150)
@@ -546,9 +546,9 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
     BR.recipeBuilder()
         .inputs(ore('dustDodecylbenzene'))
-        .fluidInputs(fluid('oleum') * 11000)
+        .fluidInputs(fluid('oleum') * 3000)
         .outputs(metaitem('dustDodecylbenzenesulfonicAcid'))
-        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .fluidOutputs(fluid('sulfuric_acid') * 2000)
         .duration(200)
         .EUt(VA[MV])
         .buildAndRegister()
@@ -627,16 +627,6 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .EUt(VA[MV])
         .buildAndRegister()
 
-    // Polyethylene glycol
-
-    POLYMERIZATION_TANK.recipeBuilder()
-        .fluidInputs(fluid('ethylene_oxide') * 1000)
-        .fluidInputs(fluid('boron_trifluoride') * 10)
-        .fluidOutputs(fluid('polyethylene_glycol') * 1000)
-        .duration(200)
-        .EUt(120)
-        .buildAndRegister()
-
 // Antiwear
 
     // Tri-(m/p)-cresylphosphate
@@ -646,7 +636,15 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
         .fluidOutputs(fluid('meta_para_cresol_mixture') * 700) // needs to be slightly higher than SATP
         .fluidOutputs(fluid('ortho_cresol') * 300)
         .duration(200)
-        .EUt(240)
+        .EUt(VHA[HV])
+        .buildAndRegister()
+
+    DT.recipeBuilder()
+        .fluidInputs(fluid('meta_para_cresol_mixture') * 700)
+        .fluidOutputs(fluid('para_cresol') * 300)
+        .fluidOutputs(fluid('meta_cresol') * 400)
+        .duration(200)
+        .EUt(VHA[HV])
         .buildAndRegister()
 
     CSTR.recipeBuilder()
@@ -778,9 +776,9 @@ import static gregtech.api.unification.ore.OrePrefix.dye;
 
     BR.recipeBuilder()
         .inputs(ore('dustDidodecylbenzene'))
-        .fluidInputs(fluid('oleum') * 11000)
+        .fluidInputs(fluid('oleum') * 3000)
         .outputs(metaitem('dustDidodecylbenzenesulfonicAcid'))
-        .fluidOutputs(fluid('sulfuric_acid') * 10000)
+        .fluidOutputs(fluid('sulfuric_acid') * 2000)
         .duration(100)
         .EUt(VA[MV])
         .buildAndRegister()

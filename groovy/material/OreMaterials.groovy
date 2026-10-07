@@ -4,7 +4,6 @@ import static material.SuSyMaterials.*
 
 import gregtech.api.unification.material.Material
 import gregtech.api.GregTechAPI
-import gregtech.api.fluids.attribute.FluidAttributes
 import gregtech.api.fluids.FluidBuilder
 import gregtech.api.unification.material.properties.*
 
@@ -719,5 +718,20 @@ class OreMaterials {
                 .color(0xcad7e8)
                 .components(Magnesium, Sulfur, Oxygen * 4, Water * 7)
                 .build()
+
+        EvaporiteDeposit = new Material.Builder(7095, SuSyUtility.susyId('evaporite_deposit'))
+                .ore()
+                .flags(NO_UNIFICATION)
+                .color(0xfff4f2)
+                .build()
+
+        Dolime = new Material.Builder(7096, SuSyUtility.susyId('dolime'))
+                .dust()
+                .flags(NO_UNIFICATION)
+                .color(0xb2ac9b)
+                .components(Calcium, Magnesium, Oxygen * 2) //mixture of CaO and MgO
+                .build()
+
+
     }
 }

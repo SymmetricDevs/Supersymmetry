@@ -36,6 +36,7 @@ ROASTER.recipeBuilder()
     .inputs(ore('dustPyrite'))
     .outputs(metaitem('dustIronIiSulfide') * 2)
     .outputs(metaitem('dustSulfur'))
+    .info('recipe.pyrite')
     .duration(80)
     .EUt(VA[ULV])
     .buildAndRegister()
@@ -75,7 +76,35 @@ REACTION_FURNACE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// Sodium bisulfite
+// Hydrogen sulfide
+
+BR.recipeBuilder()
+    .fluidInputs(fluid('sulfur') * 144)
+    .fluidInputs(fluid('hydrogen') * 2000)
+    .fluidOutputs(fluid('hydrogen_sulfide') * 1000)
+    .duration(40)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Sulfates and bisulfates
+
+DISTILLERY.recipeBuilder()
+    .fluidInputs(fluid('diluted_ammonium_sulfate_solution') * 1000)
+    .outputs(metaitem('dustAmmoniumSulfate') * 15)
+    .fluidOutputs(fluid('water') * 2000)
+    .duration(160)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustAmmoniumSulfate') * 15)
+    .fluidOutputs(fluid('ammonia') * 1000)
+    .outputs(metaitem('dustAmmoniumBisulfate') * 11)
+    .duration(160)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Sulfites and bisulfites
 
 BCR.recipeBuilder()
     .fluidInputs(fluid('sulfur_dioxide') * 50)
@@ -85,6 +114,17 @@ BCR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// Polysulfides
+
+BR.recipeBuilder()
+    .notConsumable(fluid('argon') * 1000)
+    .fluidInputs(fluid('sodium') * 288)
+    .fluidInputs(fluid('sulfur') * 576)
+    .outputs(metaitem('dustSodiumPolysulfide') * 6)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+    
 // Sodium dithionite
 
 BR.recipeBuilder()
@@ -119,8 +159,9 @@ MIXER.recipeBuilder()
     .fluidInputs(fluid('sulfur_trioxide') * 1000)
     .fluidInputs(fluid('water') * 1000)
     .fluidOutputs(fluid('sulfuric_acid') * 1000)
-    .EUt(VA[ULV])
+    .info('recipe.sulfuric.acid')
     .duration(1600)
+    .EUt(VA[ULV])
     .buildAndRegister()
 
 BCR.recipeBuilder()

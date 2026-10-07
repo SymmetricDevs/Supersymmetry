@@ -1,0 +1,70 @@
+{
+  "preRequisites:11": [
+    371,
+    398
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1117848175.desc",
+      "icon:10": {
+        "Damage:2": 18,
+        "id:8": "susy:meta_item",
+        "tag:10": {
+          "Charge:4": 51200
+        }
+      },
+      "name:8": "susy.quest.db.1117848175.title"
+    }
+  },
+  "questID:3": 1117848175,
+  "tasks:9": {
+    "0:10": {
+      "entryLogic:8": "OR",
+      "ignoreNBT:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "Damage:2": 18112,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 18,
+          "id:8": "susy:meta_item",
+          "tag:10": {
+            "Charge:4": 51200
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 19,
+          "id:8": "susy:meta_item",
+          "tag:10": {
+            "Charge:4": 204800
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "Damage:2": 21,
+          "id:8": "susy:meta_item"
+        },
+        "4:10": {
+          "Count:3": 1,
+          "Damage:2": 20,
+          "id:8": "susy:meta_item"
+        },
+        "5:10": {
+          "Count:3": 1,
+          "Damage:2": 18210,
+          "id:8": "gregtech:machine"
+        },
+        "6:10": {
+          "Count:3": 1,
+          "Damage:2": 18211,
+          "id:8": "gregtech:machine"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

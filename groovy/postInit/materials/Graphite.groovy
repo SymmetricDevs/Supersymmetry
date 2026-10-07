@@ -54,9 +54,18 @@ EXTRUDER.recipeBuilder()
 
 // Graphite Dust * 9
 mods.gregtech.macerator.removeByInput(2, [metaitem('blockGraphite')], null)
+// Graphite Dust * 1
+mods.gregtech.macerator.removeByInput(2, [metaitem('plateGraphite')], null)
 
 BALL_MILL.recipeBuilder()
     .inputs(metaitem('graphite_electrode'))
+    .outputs(metaitem('dustGraphite') * 1)
+    .EUt(VA[LV])
+    .duration(40)
+    .buildAndRegister()
+
+BALL_MILL.recipeBuilder()
+    .inputs(metaitem('plateGraphite'))
     .outputs(metaitem('dustGraphite') * 1)
     .EUt(VA[LV])
     .duration(40)

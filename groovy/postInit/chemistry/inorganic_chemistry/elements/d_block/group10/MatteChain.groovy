@@ -12,7 +12,7 @@ ERF.recipeBuilder()
     .inputs(ore('dustFlotatedPentlandite') * 6)
     .outputs(metaitem('dustGreenMatte') * 6)
     .duration(200)
-    .blastFurnaceTemp(1700)
+    .blastFurnaceTemp(800)
     .EUt(VA[MV])
     .buildAndRegister()
 
@@ -24,7 +24,7 @@ ERF.recipeBuilder()
     .chancedOutput(metaitem('dustGraniticMineralSand'), 1400, 0) // 0.07 * 6 Fe in, 0.42 Fe out as 0.14 Fe3O4
     .fluidOutputs(fluid('sulfur_dioxide') * 420) // Assumed Fe present as pyrrhotite (~FeS)
     .duration(200)
-    .blastFurnaceTemp(1650)
+    .blastFurnaceTemp(800)
     .EUt(VA[MV])
     .buildAndRegister()
 

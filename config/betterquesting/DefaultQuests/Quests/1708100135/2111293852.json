@@ -1,0 +1,13 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.2111293852.desc",
+      "icon:10": {
+        "id:8": "minecraft:nether_star"
+      },
+      "name:8": "susy.quest.db.2111293852.title"
+    }
+  },
+  "questID:3": 2111293852,
+  "tasks:9": {}
+}
