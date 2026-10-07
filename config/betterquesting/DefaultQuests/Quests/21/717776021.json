@@ -1,12 +1,12 @@
 {
   "preRequisites:11": [
-    620
+    243
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.717776021.desc",
       "icon:10": {
-        "Damage:2": 17050,
+        "Damage:2": 17049,
         "id:8": "gregtech:machine"
       },
       "name:8": "susy.quest.db.717776021.title"
@@ -18,7 +18,7 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 17050,
+          "Damage:2": 17049,
           "id:8": "gregtech:machine"
         }
       },
