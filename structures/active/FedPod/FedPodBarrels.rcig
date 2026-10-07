@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "FedPodBarrels",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "susy:susy_stone_cobble",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "susy:susy_stone_smooth",
+        "damage": 4,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

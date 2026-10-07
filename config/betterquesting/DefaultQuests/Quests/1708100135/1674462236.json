@@ -12,5 +12,15 @@
     }
   },
   "questID:3": 1674462236,
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "fc_75"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    }
+  }
 }

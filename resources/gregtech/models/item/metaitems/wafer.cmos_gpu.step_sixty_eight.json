@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "gregtech:items/metaitems/wafer/cmos_gpu/step_sixty_eight"
+    }
+}

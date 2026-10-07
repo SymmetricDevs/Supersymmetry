@@ -30,10 +30,10 @@ MIXER_SETTLER.recipeBuilder()
 
 // TODO: decide on adding vanadium here
 CRYSTALLIZER.recipeBuilder()
-    .fluidInputs(fluid('scandium_depleted_sulfate_raffinate') * 15000)
-    .outputs(metaitem('dustIronIiiSulfate') * 4)
-    .chancedOutput(metaitem('dustChromiumIiiSulfate') * 17, 1000, 0) // a little extra sulfate for the fans
-    .fluidOutputs(fluid('sulfuric_acid') * 5250)
+    .fluidInputs(fluid('scandium_depleted_sulfate_raffinate') * 15000) // 9 & 11/12 SO4
+    .outputs(metaitem('dustIronIiiSulfate') * 17) // 3 SO4
+    .chancedOutput(metaitem('dustChromiumIiiSulfate') * 17, 1000, 0)
+    .fluidOutputs(fluid('sulfuric_acid') * 7000) // a little extra sulfate for the fans
     .EUt(VA[HV])
     .duration(500)
     .buildAndRegister()
@@ -51,10 +51,10 @@ MIXER_SETTLER.recipeBuilder()
 
 // FeCl3 + 3NaOH -> 3NaCl + Fe(OH)3  
 BR.recipeBuilder()
-    .fluidInputs(fluid('iron_chloride_scrub_raffinate') * 1000)
-    .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
-    .chancedOutput(metaitem('dustIronIiiHydroxide') * 7, 3333, 0)
-    .fluidOutputs(fluid('salt_water') * 1000)
+    .fluidInputs(fluid('iron_chloride_scrub_raffinate') * 3000)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 3000)
+    .outputs(metaitem('dustIronIiiHydroxide') * 7)
+    .fluidOutputs(fluid('salt_water') * 3000)
     .EUt(VA[LV])
     .duration(120)
     .buildAndRegister()
@@ -63,24 +63,26 @@ BR.recipeBuilder()
 // you can get out Zr by converting it into a complex with HF, which is one of the very few ways
 // it is separable from Sc.
 MIXER_SETTLER.recipeBuilder()
-    .fluidInputs(fluid('scrubbed_scandium_p_204_extract') * 6000)
+    .fluidInputs(fluid('scrubbed_scandium_p_204_extract') * 6000) // 0.5 SO4
     .fluidInputs(fluid('hydrofluoric_acid') * 1000)
     .fluidOutputs(fluid('purified_scandium_p_204_extract') * 6000)
     .fluidOutputs(fluid('fluoride_scrub_raffinate') * 1000)
     .requiredCells(2)
-    .EUt(VA[HV])
+    .EUt(192)
     .duration(120)
     .buildAndRegister()
 
 // Alkaline strip, 2 M NaOH. Converts the loaded organic straight to solid crude Sc(OH)3
 // (70-78% Sc2O3) and regenerates the extractant into the existing spent-P204 loop.
+// Well actually the playtesters don't like that
 BR.recipeBuilder()
-    .fluidInputs(fluid('purified_scandium_p_204_extract') * 12000)
+    .fluidInputs(fluid('purified_scandium_p_204_extract') * 12000) // 1 SO4
     .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
     .outputs(metaitem('dustCrudeScandiumHydroxide') * 7)
-    .fluidOutputs(fluid('spent_p_two_zero_four_extraction_mixture') * 12000)
+    .fluidOutputs(fluid('p_two_zero_four_extraction_mixture') * 12000)
+    .fluidOutputs(fluid('diluted_sodium_sulfate_solution') * 2000)
     .EUt(VA[MV])
-    .duration(150)
+    .duration(100)
     .buildAndRegister()
 
 
@@ -93,7 +95,7 @@ BR.recipeBuilder()
     .fluidOutputs(fluid('impure_scandium_chloride_solution') * 6000)
     .chancedOutput(metaitem('dustZirconiumDioxide') * 1, 2500, 0)
     .EUt(VA[MV])
-    .duration(200)
+    .duration(140)
     .buildAndRegister()
 
 // Oxalic acid precipitation. The HCl is regenerated and recycles to the redissolution and
@@ -106,7 +108,7 @@ BR.recipeBuilder()
     .outputs(metaitem('dustScandiumOxalate') * 38)
     .fluidOutputs(fluid('hydrochloric_acid') * 6000)
     .EUt(VA[LV])
-    .duration(300)
+    .duration(200)
     .buildAndRegister()
 
 // Calcination, 700-800 C. Yields 99.5% Sc2O3.
@@ -117,18 +119,28 @@ ROASTER.recipeBuilder()
     .fluidOutputs(fluid('carbon_monoxide') * 3000)
     .fluidOutputs(fluid('carbon_dioxide') * 3000)
     .fluidOutputs(fluid('dense_steam') * 6000)
-    .EUt(VA[HV])
-    .duration(400)
+    .EUt(VA[LV])
+    .duration(200)
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(ore('dustScandiumOxalate') * 38)
+    .outputs(metaitem('dustScandiumOxide') * 5)
+    .fluidOutputs(fluid('carbon_monoxide') * 3000)
+    .fluidOutputs(fluid('carbon_dioxide') * 3000)
+    .fluidOutputs(fluid('dense_steam') * 6000)
+    .EUt(8000)
+    .duration(200)
     .buildAndRegister()
 
 // $stoik 6H2ZrF6 + 12H2O + 4HF -> 6ZrO2 + 36HF + 4HF
 ROASTER.recipeBuilder()
     .fluidInputs(fluid('fluoride_scrub_raffinate') * 20000)
     .fluidInputs(fluid('steam') * 6000)
-    .outputs(metaitem('dustFusedZirconia') * 9)
+    .outputs(metaitem('dustZirconiumDioxide') * 9)
     .fluidOutputs(fluid('hydrogen_fluoride') * 20000)
-    .EUt(VA[HV])
-    .duration(400)
+    .EUt(60)
+    .duration(180)
     .buildAndRegister()
 
 BR.recipeBuilder()
@@ -147,5 +159,15 @@ REACTION_FURNACE.recipeBuilder()
     .outputs(metaitem('dustScandium') * 2)
     .outputs(metaitem('dustFluorite') * 9)
     .duration(200)
-    .EUt(VA[EV])
+    .EUt(160)
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .notConsumable(metaitem('crucible.tantalum'))
+    .inputs(ore('dustScandiumIiiFluoride') * 8)
+    .inputs(ore('dustCalcium') * 3)
+    .outputs(metaitem('dustScandium') * 2)
+    .outputs(metaitem('dustFluorite') * 9)
+    .duration(200)
+    .EUt(12000)
     .buildAndRegister()
