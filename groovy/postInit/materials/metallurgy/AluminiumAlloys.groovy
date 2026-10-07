@@ -23,6 +23,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .inputs(metaitem('dustTinyChrome') * 1)
     .fluidOutputs(fluid('aluminium_alloy_7075') * 11520)
     .material("Alumina")
+    .udratio(1600)
     .EUt(VA[MV])
     .buildAndRegister()
 
