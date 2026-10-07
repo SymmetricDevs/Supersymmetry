@@ -3,7 +3,7 @@
 ### Mod Updates
 - Chibi 5.33 → 5.34
 - Fugue 0.24.3 → 0.24.4
-- SusyCore v0.1.121 → 0.2.0-alpha2
+- SusyCore v0.1.121 → 0.2.0
 - Had Enough Items 4.31.2 → 4.35.0
 - MixinBooter 11.15 → 11.17
 - StellarCore 1.6.0 → 1.6.3
@@ -11,11 +11,18 @@
 - UniversalTweaks 1.20.1 → 1.21.0
 - VintageFix 0.7.0 → 0.7.2
 ## Changes
-- We added the space bar
-- Also HV/EV circuits are completely changed now.
-- And late-game invasions now use better AI.
-- Induction furnaces now can accept more crucible types
-- You might want to know that AE2 now requires 512x more power
+### New Features
+- You can now use space to jump!
+- You can now launch customizable rockets! Build components in the Aerospace Cleanroom, test your rocket with the Flight Simulator, and construct the Transporter/Erector with a Large Railroad Engineering Station. (This is not an exhaustive list.)
+- The moon is now accessible for regolith extraction! There are plenty of other things to explore there too...
+- **Breaking**: MV-EV circuit lines have been brought up to standard.
+- Late-game invasions now use advanced mob AI that can avoid traps and go through your doors.
+- AE2 autocrafting components can be obtained from orbital scrap harvesting missions.
+### Changed Features
+- Induction furnaces now can accept more crucible types.
+- Mineral sand can now be processed in HV for zircon.
+- **Breaking**: AE2 now requires 512x more power, so maybe take your items out before updating!
+
 Thanks to our new contributors @Wheatley and @Henrytorybot!
 # UPDATE 0.1.16.16
 ## Mod Changes
