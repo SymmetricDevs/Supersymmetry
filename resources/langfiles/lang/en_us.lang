@@ -1192,6 +1192,10 @@ susy.material.chloroprene=Chloroprene
 susy.material.polyacrylic_acid=Polyacrylic Acid
 susy.material.sodium_polyacrylate_solution=Sodium Polyacrylate Solution
 susy.material.chloroprene_emulsion=Chloroprene Emulsion
+susy.material.heavy_mineral_tailing=Heavy Mineral Tailing
+susy.material.weakly_magnetic_heavy_mineral_tailing=Weakly Magnetic Heavy Mineral Tailing
+susy.material.non_magnetic_heavy_mineral_tailing=Non-Magnetic Heavy Mineral Tailing
+susy.material.zircon_monazite_concentrate=Zircon-Monazite Concentrate
 
 # Thermodynamics
 
