@@ -872,6 +872,7 @@ class SuSyMaterials {
     public static Material PalladiumNanoparticleSuspension
     public static Material BasicCMPSlurry
     public static Material OxidativeCMPSlurry
+    public static Material HeavyMineralTailing
     public static Material CalciumAluminateConcrete
     public static Material AnorthositicRegolith
     public static Material BasalticRegolith

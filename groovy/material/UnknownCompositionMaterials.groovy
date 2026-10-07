@@ -3919,10 +3919,10 @@ class UnknownCompositionMaterials {
                 .color(0x6a9191)
                 .build()
 
-        HeavyMineralTailing = new Material.Builder(4801, SuSyUtility.susyId('heavy_mineral_tailing'))
+        HeavyMineralTailing = new Material.Builder(4821, SuSyUtility.susyId('heavy_mineral_tailing'))
                 .dust()
-                .iconset(SHINY)
+                .iconSet(SHINY)
                 .color(0x2b3138)
-                .build
+                .build()
     }
 }
