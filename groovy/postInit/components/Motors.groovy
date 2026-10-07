@@ -22,6 +22,8 @@ mods.gregtech.assembly_line.removeByInput(24000, [metaitem('stickLongSamariumMag
 mods.gregtech.assembly_line.removeByInput(100000, [metaitem('stickLongSamariumMagnetic'), metaitem('stickLongTritanium') * 4, metaitem('ringTritanium') * 4, metaitem('roundTritanium') * 8, metaitem('wireFineAmericium') * 64, metaitem('wireFineAmericium') * 64, metaitem('cableGtSingleYttriumBariumCuprate') * 2], [fluid('soldering_alloy') * 576, fluid('lubricant') * 1000, fluid('naquadria') * 576])
 
 crafting.removeByOutput(metaitem('electric.motor.lv'))
+crafting.removeByOutput(metaitem('electric.motor.mv'))
+crafting.removeByOutput(metaitem('electric.motor.hv'))
 crafting.removeByOutput(metaitem('electric.motor.ev'))
 crafting.removeByOutput(metaitem('electric.motor.iv'))
 
