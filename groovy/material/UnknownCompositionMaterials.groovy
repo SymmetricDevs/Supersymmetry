@@ -3924,5 +3924,23 @@ class UnknownCompositionMaterials {
                 .iconSet(SHINY)
                 .color(0x2b3138)
                 .build()
+
+        MagneticHeavyMineralTailing = new Material.Builder(4822, SuSyUtility.susyId('magnetic_heavy_mineral_tailing'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0x2b3156)
+                .build()
+
+        NonMagneticHeavyMineralTailing = new Material.Builder(4823, SuSyUtility.susyId('non_heavy_mineral_tailing'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0x2b3115)
+                .build()
+
+        ZirconMonaziteConcentrate = new Material.Builder(4824, SuSyUtility.susyId('zircon_monazite_concentrate'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0xb21383)
+                .build()
     }
 }
