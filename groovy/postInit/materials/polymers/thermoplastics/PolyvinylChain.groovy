@@ -112,17 +112,6 @@ PHASE_SEPARATOR.recipeBuilder()
     .fluidOutputs(fluid('methanol') * 1000)
     .duration(50)
     .buildAndRegister()
-
-// Polyvinyl Alcohol (PVA)
-
-BR.recipeBuilder()
-    .fluidInputs(fluid('polyvinyl_acetate') * 144)
-    .fluidInputs(fluid('ethanol') * 1000)
-    .outputs(metaitem('dustPolyvinylAlcohol'))
-    .fluidOutputs(fluid('ethyl_acetate') * 1000)
-    .duration(400)
-    .EUt(30)
-    .buildAndRegister()
     
 // Polyvinyl Butyral (PVB)
 

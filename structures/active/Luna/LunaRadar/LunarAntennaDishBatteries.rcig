@@ -1,0 +1,75 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LunarAntennaDishBatteries",
+  "items": [
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 4019,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 4019,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 7168000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 4020,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.23224952816963196,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 4020,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 20480000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:battery_block",
+        "damage": 1,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

@@ -60,7 +60,7 @@ import static gregtech.api.unification.material.Materials.*;
     ASSEMBLER.recipeBuilder()
         .inputs(metaitem('hull.ev'))
         .inputs(ore('circuitEv') * 8)
-        .inputs(metaitem('plate.power_integrated_circuit') * 4)
+        .inputs(metaitem('plate.low_power_integrated_circuit') * 4)
         .inputs(ore('pipeSmallFluidAluminium') * 16)
         .inputs(metaitem('electric.pump.ev') * 4)
         .circuitMeta(22)

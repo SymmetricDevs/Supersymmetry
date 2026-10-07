@@ -1,0 +1,19 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.475.desc",
+      "frame:8": "DIAMOND_ON_SQUARE",
+      "icon:10": {
+        "id:8": "minecraft:nether_star"
+      },
+      "name:8": "susy.quest.db.475.title"
+    }
+  },
+  "questID:3": 475,
+  "tasks:9": {
+    "0:10": {
+      "index:3": 1,
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}

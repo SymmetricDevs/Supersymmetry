@@ -3,7 +3,8 @@ import re
 from typing import Dict, List, Optional, Tuple
 
 import json
-import requests
+import urllib.request
+import urllib.error
 
 # I felt like actually parsing toml would take too much time so i guess thats worth it???? didnt actually test how much parsing toml takes. 
 def get_mods_kvp(folder):
@@ -48,13 +49,16 @@ def extract_failed(log: str) -> Optional[List[str]]:
 def cf_file_meta(project_id: int, file_id: int) -> Optional[Tuple[str,str]]:
     url = f"https://api.cfwidget.com/{project_id}"
     headers = {"User-Agent": "curl/8.4.0"} #idk why but it would return 403 with the default one?
-    response = requests.get(url, headers=headers)
-
-    if response.status_code != 200:
-        print(f"request failed with status code {response.status_code} during the fetching of version data for project {project_id} at {url}")
-        return None
     try:
-        data = response.json()
+        request = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(request) as response:
+            data = json.load(response)
+    except urllib.error.HTTPError as e:
+        print(f"request failed with status code {e.code} during the fetching of version data for project {project_id} at {url}")
+        return None
+    except urllib.error.URLError as e:
+        print(f"request failed ({e.reason}) during the fetching of version data for project {project_id} at {url}")
+        return None
     except json.JSONDecodeError:
         print("Could not decode json response from cfwidget, no idea what happened")
         return None

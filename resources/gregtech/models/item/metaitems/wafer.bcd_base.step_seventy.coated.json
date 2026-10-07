@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "gregtech:items/metaitems/wafer/bcd_base/step_seventy/coated"
+    }
+}

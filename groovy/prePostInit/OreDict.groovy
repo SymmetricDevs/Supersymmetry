@@ -16,7 +16,57 @@ ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
+// Circuit component oredict
+ore('componentResistorMedium').add(metaitem('component.resistor.metal_film'))
+ore('componentResistorMedium').add(metaitem('component.resistor.carbon_composite'))
+ore('componentResistorMedium').add(metaitem('component.resistor.carbon_film'))
+ore('componentResistorSmall').add(metaitem('component.smd.resistor'))
+ore('componentResistorSmall').add(metaitem('component.advanced_smd.resistor'))
+ore('componentResistorSmall').add(metaitem('component.thick_film_resistor'))
+ore('componentCapacitorMedium').add(metaitem('component.capacitor.silver_mica'))
+ore('componentCapacitorMedium').add(metaitem('component.capacitor.film'))
+ore('componentCapacitorSmall').add(metaitem('component.pme_cap'))
+ore('componentCapacitorSmall').add(metaitem('component.bme_cap'))
+ore('componentTransistor').add(metaitem('component.transistor.alloy_junction'))
+ore('componentTransistorSignal').add(metaitem('component.transistor.signal_mosfet'))
+ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_junction'))
+ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
+ore('componentOpAmp').add(metaitem('component.op_amp'))
+/*
+ore('circuitLv').remove(metaitem('circuit.basic_integrated')) //being EVIL
+ore('circuitMv').remove(metaitem('circuit.good_integrated'))
+ore('circuitHv').remove(metaitem('circuit.advanced_integrated'))
+*/
+mods.jei.ingredient.yeet(metaitem('component.transistor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.transistor'))
+mods.jei.ingredient.yeet(metaitem('component.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.capacitor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.capacitor'))
+// Capacitor * 8
+mods.gregtech.assembler.removeByInput(120, [metaitem('foilPlastic'), metaitem('foilAluminium') * 2], [fluid('plastic') * 144])
+mods.jei.ingredient.yeet(metaitem('component.capacitor'))
+
+// Carbon composite
+ore('resistorCarbon').add(metaitem('dustCarbon'))
+ore('resistorCarbon').add(metaitem('dustHighPurityCarbon'))
+ore('resistorCarbon').add(metaitem('dustGraphite'))
+
+// Plastic film capacitors
+ore('capacitorFilm').add(metaitem('mylar'))
+ore('capacitorFilm').add(metaitem('foilPolypropylene'))
+
+// Standard signal diodes
+ore('componentDiodeSignal').add(metaitem('component.diode'))
+ore('componentDiodeSignal').add(metaitem('component.smd.diode'))
+ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
+
 // Circuit oredict
+
+ore('circuitLv').add(metaitem('circuit.power.lv'))
+ore('circuitMv').add(metaitem('circuit.power.mv'))
+ore('circuitHv').add(metaitem('circuit.power.hv'))
+
 ore('circuitZpm').add(metaitem('circuit.gooware_processor'))
 
 ore('circuitUv').add(metaitem('circuit.gooware_assembly'))
@@ -133,6 +183,10 @@ ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.orange'))
 ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.lemon'))
 ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.lime'))
 
+ore('zest').add(metaitem('zest.orange'))
+ore('zest').add(metaitem('zest.lemon'))
+ore('zest').add(metaitem('zest.lime'))
+
 // Add ore dict to non traditional ore blocks
 ore('oreCaliche').add(item('susy:resource_block:1'))
 
@@ -173,6 +227,13 @@ mods.gregtech.macerator.removeByInput(2, [item('susy:resource_block')], null)
 for (i in 0..2) {
     mods.jei.ingredient.yeet(item('gregtech:ore_bauxite_0', i))
 }
+
+// Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
+// "Supercapacitors: Concepts and advances"
+// (IOP, 2025), sections 4.13, 5.6, 5.7.
+
+ore('componentSupercapacitor').add(metaitem('component.capacitor.edlc'))
+
 
 // Kanthal/Nichrome springs
 ore('springEarly').add(metaitem('springNichrome'), metaitem('springKanthal'))

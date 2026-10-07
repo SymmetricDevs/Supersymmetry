@@ -99,6 +99,7 @@ import static gregtech.api.GTValues.*
         // Hydrolysis
 
         CSTR.recipeBuilder()
+            .circuitMeta(1)
             .fluidInputs(fluid('sulfuric_acid') * 50)
             .fluidInputs(fluid('ethyl_acetate') * 50)
             .fluidInputs(fluid('water') * 250)

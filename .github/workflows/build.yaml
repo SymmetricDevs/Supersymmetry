@@ -21,9 +21,6 @@ jobs:
       shell: bash
       run: |
         echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
-    - name: Install requests
-      run: |
-        pip install requests
     - uses: actions/setup-java@v4
       with:
         distribution: 'adopt' # See 'Supported distributions' for available options

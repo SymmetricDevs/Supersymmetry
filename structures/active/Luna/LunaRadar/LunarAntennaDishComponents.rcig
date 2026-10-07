@@ -1,0 +1,277 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LunarAntennaDishComponents",
+  "items": [
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 131,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 146,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 176,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 191,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 221,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 6,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 236,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.124999523162842,
+      "min": 29,
+      "max": 48,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 6006,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 7,
+      "max": 26,
+      "item": {
+        "id": "gregtech:transparent_casing",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.1442086547613144,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 4205,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 3,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 528,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 3,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 529,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 3,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 530,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 3,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 531,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 3,
+      "max": 12,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 532,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 635,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.2900550961494446,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 636,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.16315889358520508,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 637,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.1442086547613144,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_2",
+        "damage": 306,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.08515378087759018,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 132,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.08515378087759018,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 147,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.08515378087759018,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 177,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.08515378087759018,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 192,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.08515378087759018,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 222,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.08515378087759018,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 237,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "opencomputers:component",
+        "damage": 15,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.9243392944335938,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 16512,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 2,
+      "max": 3,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 16513,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

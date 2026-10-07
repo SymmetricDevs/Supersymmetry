@@ -1,0 +1,27 @@
+{
+  "preRequisites:11": [
+    708057531
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.553012735.desc",
+      "icon:10": {
+        "Damage:2": 4772,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "susy.quest.db.553012735.title"
+    }
+  },
+  "questID:3": 553012735,
+  "tasks:9": {
+    "0:10": {
+      "requiredFluids:9": {
+        "0:10": {
+          "Amount:3": 1000,
+          "FluidName:8": "scandium_bearing_waste_acid"
+        }
+      },
+      "taskID:8": "bq_standard:fluid"
+    }
+  }
+}

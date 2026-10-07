@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "gregtech:items/metaitems/substrate/fr4/drilled"
+    }
+}

@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LunarAntennaDishMedicines",
+  "items": [
+    {
+      "weight": 3.3419337272644043,
+      "min": 22,
+      "max": 54,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 230,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 6,
+      "max": 12,
+      "item": {
+        "id": "industrialrenewal:medkit",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gp_inhaler:inhaler",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gaspunk:gas_tube",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "gaspunk:contained_gas": {
+              "nbtType": "string",
+              "nbt": "gaspunk:healing_vapor"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 3.5707483291625977,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.366908550262451,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "scalinghealth:healingitem",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 6,
+      "max": 18,
+      "item": {
+        "id": "pathos:empty_syringe",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

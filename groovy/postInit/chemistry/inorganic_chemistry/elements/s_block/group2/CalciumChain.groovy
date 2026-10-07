@@ -9,6 +9,16 @@ ROASTER.recipeBuilder()
         .duration(160)
         .buildAndRegister()
 
+// 56CaSO4(H2O)2 + 40H2O -> 56CaSO4 + 152H2O
+// 7, 5, 7, 19
+ROASTER.recipeBuilder()
+        .fluidInputs(fluid('waste_gypsum') * 19000)
+        .outputs(metaitem('dustCalciumSulfate') * 42)
+        .fluidOutputs(fluid('dense_steam') * 19000)
+        .EUt(VA[MV])
+        .duration(1600)
+        .buildAndRegister()
+
 ROASTER.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('dustCalciumSulfate') * 6)
