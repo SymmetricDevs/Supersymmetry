@@ -95,7 +95,7 @@ SOLIDIFIER.recipeBuilder()
 
 // Manganese steel
 
-INDUCTION_FURNACE.recipeBuilder()
+ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(metaitem('dustIron') * 83)
     .inputs(metaitem('dustManganese') * 13)
     .inputs(metaitem('dustCarbon') * 4)
