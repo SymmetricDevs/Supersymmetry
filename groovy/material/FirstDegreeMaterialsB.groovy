@@ -1103,6 +1103,9 @@ class FirstDegreeMaterialsB {
                 .iconSet(SHINY)
                 .build()
 
+        Material Monel400 = supersymmetry.common.materials.SusyMaterials.Monel400
+
+        Monel400.addFlags(GENERATE_ROTOR)
         // 8824: Monel 400 (registered in susycore)
 
         HighPuritySilica = new Material.Builder(8825, SuSyUtility.susyId('high_purity_silica'))

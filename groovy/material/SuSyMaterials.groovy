@@ -1616,6 +1616,7 @@ class SuSyMaterials {
     public static Material Incoloy908
     public static Material ReneN5
     public static Material Monel500
+    public static Material Monel400
     public static Material StelliteJ
     public static Material Stellite6
     public static Material HSLA980X
