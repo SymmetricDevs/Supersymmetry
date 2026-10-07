@@ -5,8 +5,8 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.ql.21.desc",
       "icon:10": {
-        "Damage:2": 592,
-        "id:8": "gregtech:meta_item_1"
+        "Damage:2": 2869,
+        "id:8": "gregtech:meta_item_2"
       },
       "name:8": "susy.quest.ql.21.title"
     }
