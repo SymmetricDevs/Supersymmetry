@@ -71,7 +71,7 @@ ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
 // Sulfate Process
 
 BR.recipeBuilder()
-        .fluidInputs(fluid('oleum') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
         .inputs(ore('dustIlmenite'))
         .fluidOutputs(fluid('titanyl_sulfate_solution') * 1000)
         .outputs(metaitem('dustUltramaficTailings'))
@@ -94,15 +94,6 @@ SIFTER.recipeBuilder()
         .outputs(metaitem('dustRutile') * 3)
         .duration(200)
         .EUt(VA[ULV])
-        .buildAndRegister()
-
-BR.recipeBuilder()
-        .fluidInputs(fluid('acidic_wastewater') * 1000)
-        .inputs(ore('dustSodaAsh'))
-        .fluidOutputs(fluid('wastewater') * 1000)
-        .fluidOutputs(fluid('carbon_dioxide') * 1000)
-        .duration(200)
-        .EUt(VA[LV])
         .buildAndRegister()
 
 // Chloride Ilmenite Process

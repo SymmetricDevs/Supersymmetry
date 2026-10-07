@@ -178,9 +178,9 @@ crafting.replaceShaped('rftools:timer_block', item('rftools:timer_block'), [
 ])
 
 crafting.replaceShaped('rftools:relay', item('rftools:relay'), [
-        [null, metaitem('component.resistor'), null],
+        [null, ore('componentResistorMedium'), null],
         [metaitem('cableGtSingleCopper'), metaitem('hull.lv'), metaitem('cableGtSingleCopper')],
-        [null, metaitem('component.resistor'), null]
+        [null, ore('componentResistorMedium'), null]
 ])
 
 crafting.replaceShaped('rftools:rf_monitor', item('rftools:rf_monitor'), [
