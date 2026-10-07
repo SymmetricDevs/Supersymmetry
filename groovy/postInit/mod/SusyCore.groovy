@@ -428,12 +428,27 @@ dyes.each { dye, number ->
         .buildAndRegister()
 }
 
+
+
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('circuitIv') * 4)
+    .inputs(ore('circuitIv') * 2)
     .inputs(metaitem('cover.screen'))
     .inputs(ore('wireFineGold') * 8)
+    .inputs(item('susy:meta_item', 28).withNbt(['susy': ['faction': 'Feds']]))
     .inputs(metaitem('circuit_board.fr4'))
     .outputs(metaitem('susy:code_breacher'))
+    .fluidInputs(fluid('soldering_alloy') * 144)
+    .duration(400)
+    .EUt(VA[EV])
+    .buildAndRegister();
+
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('circuitLv') * 1)
+    .inputs(ore('circuitUlv') * 4)
+    .inputs(item('gregtech:meta_item_1', 401))
+    .inputs(ore('wireFineCopper') * 16)
+    .outputs(item('susy:meta_item', 27))
     .fluidInputs(fluid('soldering_alloy') * 144)
     .duration(400)
     .EUt(VA[EV])
