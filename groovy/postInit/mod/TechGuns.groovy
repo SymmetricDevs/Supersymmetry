@@ -1704,15 +1704,6 @@ WEAPONS_FACTORY.recipeBuilder()
         .EUt(960)
         .buildAndRegister();
 
-=======
-        .inputs(ore('plateIron') * 2)
-        .inputs(item('techguns:itemshared', 60) * 2)
-        .outputs(item('techguns:t1_miner_boots'))
-        .duration(50)
-        .EUt(15)
-        .buildAndRegister()
-
->>>>>>> origin/master-ceu
 //Armor upgrades
 
 WEAPONS_FACTORY.recipeBuilder()
