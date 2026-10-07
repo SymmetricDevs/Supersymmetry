@@ -15,6 +15,7 @@
   "questID:3": 1344588484,
   "tasks:9": {
     "0:10": {
+      "optional:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -27,7 +28,7 @@
           "id:8": "projectred-core:resource_item"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     },
     "1:10": {
       "index:3": 1,

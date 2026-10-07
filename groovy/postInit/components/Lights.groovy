@@ -2,8 +2,6 @@ import static prePostInit.Recipemaps.*
 import globals.Globals
 import static gregtech.api.GTValues.*
 
-
-
 ROASTER.recipeBuilder()
     .inputs(item('minecraft:string') * 4)
     .inputs(metaitem('wireGtSingleCopper') * 2)
@@ -83,7 +81,7 @@ VACUUM_CHAMBER.recipeBuilder()
     .inputs(metaitem('component.glass.tube') * 12)
     .inputs(ore('wireFineCupronickel') * 6)
     .inputs(ore('componentInductor'))
-    .inputs(ore('componentCapacitor'))
+    .inputs(ore('componentCapacitorMedium'))
     .fluidInputs(fluid('mercury') * 10)
     .fluidInputs(fluid('halophosphate_phosphor_solution') * 500)
     .outputs(metaitem('fluorescent_light') * 6)

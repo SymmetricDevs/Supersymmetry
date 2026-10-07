@@ -1,0 +1,27 @@
+{
+  "preRequisiteTypes:7": [
+    1,
+    1
+  ],
+  "preRequisites:11": [
+    592,
+    717776021
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.876584093.desc",
+      "frame:8": "DIAMOND_ON_SQUARE",
+      "icon:10": {
+        "Damage:2": 361,
+        "id:8": "gregtech:meta_item_1"
+      },
+      "name:8": "susy.quest.db.876584093.title"
+    }
+  },
+  "questID:3": 876584093,
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
+}
