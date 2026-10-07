@@ -180,6 +180,8 @@ def superalloy = [
     'nimonic_105',
     'inconel_718',
     'inconel_601',
+    'mar_m_246',
+    'haynes_230'
 ]
 
 superalloy.each {name ->
@@ -195,5 +197,9 @@ mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')],
 mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')], [fluid('rene_n_5') * 576])
 // Nimonic 105 Rotor * 1
 mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')], [fluid('nimonic_105') * 576])
+// Mar-M246 Rotor * 1
+mods.gregtech.fluid_solidifier.removeByInput(20, [metaitem('shape.mold.rotor')], [fluid('mar_m_246') * 576])
+
+
 
 

@@ -1,0 +1,14 @@
+{
+  "gasType": "GAS",
+  "particleType": "GAS",
+  "color": "80B8EFF5",
+  "agents": [
+	{
+      "agent": "gaspunk:hallucinogen",
+      "potency": 1
+    }
+  ],
+  "tooltipLines": [
+    "Copium"
+  ]
+}

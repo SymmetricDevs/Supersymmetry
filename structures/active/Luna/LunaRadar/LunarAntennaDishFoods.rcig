@@ -1,0 +1,217 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LunarAntennaDishFoods",
+  "items": [
+    {
+      "weight": 0.20703016221523285,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 38,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 39,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 40,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 41,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.32298368215560913,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 33,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 8,
+      "max": 18,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 15,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 4,
+      "max": 14,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 16,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 19,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 155,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 153,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 337,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 14,
+      "max": 38,
+      "item": {
+        "id": "minecraft:rotten_flesh",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 14,
+      "max": 38,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 117,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 14,
+      "max": 38,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 118,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 59,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 60,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 61,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 8,
+      "max": 42,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 325,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.25986868143081665,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 47,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.25986868143081665,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 48,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.25986868143081665,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 83,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

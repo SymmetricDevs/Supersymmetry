@@ -1,0 +1,139 @@
+import supersymmetry.api.items.ItemMassRegistry
+
+// the numbers here are all completely vibes-based
+ItemMassRegistry.setMass(metaitem('susy:solar_furnace'), 120000)
+ItemMassRegistry.setMass(item('susy:epoxy_solar_furnace_mirror'), 2400)
+ItemMassRegistry.setMass(item('susy:steel_solar_furnace_mirror'), 12800)
+ItemMassRegistry.setMass(item('susy:solar_furnace_redirecting_mirror'), 6000)
+ItemMassRegistry.setMass(item('susy:solar_furnace_crucible'), 45000)
+ItemMassRegistry.setMass(item('susy:heliostat'), 7200)
+ItemMassRegistry.setMass(metaitem('platinum_bushing'), 7020)
+ItemMassRegistry.setMass(metaitem('stainless_steel_bushing'), 1980)
+ItemMassRegistry.setMass(metaitem('platinum_rhodium_bushing'), 6800)
+ItemMassRegistry.setMass(metaitem('susy:simple_condenser'), 12490)
+ItemMassRegistry.setMass(metaitem('graphite_electrode'), 3417)
+ItemMassRegistry.setMass(metaitem('susy:air_disperser'), 2485)
+ItemMassRegistry.setMass(metaitem('susy:oxygen_sensor'), 348)
+ItemMassRegistry.setMass(metaitem('susy:astronaut_helmet'), 12461)
+ItemMassRegistry.setMass(metaitem('susy:astronaut_chestplate'), 41213)
+ItemMassRegistry.setMass(metaitem('susy:astronaut_leggings'), 24867)
+ItemMassRegistry.setMass(metaitem('susy:astronaut_boots'), 10782)
+ItemMassRegistry.setMass(metaitem('mask.simple_solar_panel'), 984)
+ItemMassRegistry.setMass(metaitem('circuit.electronic'), 2561)
+ItemMassRegistry.setMass(metaitem('circuit.good_electronic'), 8113)
+ItemMassRegistry.setMass(metaitem('circuit.basic_integrated'), 842)
+ItemMassRegistry.setMass(metaitem('circuit.good_integrated'), 2710)
+ItemMassRegistry.setMass(metaitem('circuit.advanced_integrated'), 6781)
+ItemMassRegistry.setMass(metaitem('circuit.microprocessor'), 20)
+ItemMassRegistry.setMass(metaitem('circuit.processor'), 134)
+ItemMassRegistry.setMass(metaitem('circuit.assembly'), 794)
+ItemMassRegistry.setMass(metaitem('circuit.workstation'), 2278)
+ItemMassRegistry.setMass(metaitem('circuit.mainframe'), 26741)
+ItemMassRegistry.setMass(metaitem('circuit.nano_processor'), 156)
+ItemMassRegistry.setMass(metaitem('circuit.nano_assembly'), 971)
+ItemMassRegistry.setMass(metaitem('circuit.nano_computer'), 2647)
+ItemMassRegistry.setMass(metaitem('circuit.nano_mainframe'), 31841)
+ItemMassRegistry.setMass(metaitem('circuit.power.lv'), 98)
+ItemMassRegistry.setMass(metaitem('circuit.power.mv'), 284)
+ItemMassRegistry.setMass(metaitem('circuit.power.hv'), 716)
+ItemMassRegistry.setMass(metaitem('circuit.power.ev'), 1382)
+ItemMassRegistry.setMass(metaitem('circuit.power.iv'), 2487)
+ItemMassRegistry.setMass(metaitem('susy:drum.pe'), 12701)
+ItemMassRegistry.setMass(metaitem('susy:drum.pp'), 15789)
+ItemMassRegistry.setMass(metaitem('susy:drum.ptfe'), 16642)
+ItemMassRegistry.setMass(metaitem('susy:drum.uhmwpe'), 19784)
+ItemMassRegistry.setMass(metaitem('susy:electrolytic_cell'), 94820)
+ItemMassRegistry.setMass(metaitem('susy:industrial_sifter'), 75840)
+ItemMassRegistry.setMass(metaitem('susy:pressure_swing_adsorber'), 67810)
+ItemMassRegistry.setMass(metaitem('susy:fluid_samples_storage'), 8471)
+ItemMassRegistry.setMass(metaitem('susy:restrictive_filter'), 942)
+ItemMassRegistry.setMass(metaitem('susy:airlock'), 26710)
+ItemMassRegistry.setMass(metaitem('susy:data_card.master_blueprint'), 1672)
+ItemMassRegistry.setMass(metaitem('susy:rocket_configurer'), 674)
+ItemMassRegistry.setMass(metaitem('susy:solar_panel.lv'), 5487)
+ItemMassRegistry.setMass(metaitem('susy:solar_panel.mv'), 6914)
+ItemMassRegistry.setMass(metaitem('susy:solar_panel.moon'), 21784)
+ItemMassRegistry.setMass(metaitem('susy:quarry'), 7348110)
+ItemMassRegistry.setMass(metaitem('susy:reaction_furnace'), 78971)
+ItemMassRegistry.setMass(metaitem('susy:dumper'), 15746)
+ItemMassRegistry.setMass(metaitem('susy:lunar_bucket_wheel_excavator'), 17874205)
+ItemMassRegistry.setMass(metaitem('susy:lunar_launch_complex'), 29874812)
+ItemMassRegistry.setMass(metaitem('susy:mixer_settler_v2'), 58743567)
+ItemMassRegistry.setMass(metaitem('susy:phase_separator'), 18540)
+ItemMassRegistry.setMass(metaitem('susy:high_pressure_cryogenic_distillation_plant'), 267840)
+ItemMassRegistry.setMass(metaitem('susy:clarifier'), 187415)
+ItemMassRegistry.setMass(metaitem('susy:redstone_controller'), 4581)
+ItemMassRegistry.setMass(metaitem('susy:froth_flotation_tank'), 297810)
+ItemMassRegistry.setMass(metaitem('fluid_cell'), 890)
+ItemMassRegistry.setMass(metaitem('fluid_cell.universal'), 890)
+ItemMassRegistry.setMass(metaitem('plate.ultra_low_power_integrated_circuit'), 140)
+ItemMassRegistry.setMass(metaitem('plate.low_power_integrated_circuit'), 270)
+ItemMassRegistry.setMass(metaitem('plate.power_integrated_circuit'), 420)
+ItemMassRegistry.setMass(metaitem('plate.high_power_integrated_circuit'), 560)
+ItemMassRegistry.setMass(item('susy:spacecraft_instrument', 10), 1500000)
+ItemMassRegistry.setMass(item('gregtech:metal_casing'), 160000) //bronze
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 2), 150000) //invar
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 3), 50000) //alu
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 4), 150000) //steel
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 5), 155000) //stainless
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 6), 70000) //titanium
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 7), 200000) //tungstensteel
+ItemMassRegistry.setMass(item('gregtech:metal_casing', 9), 25000) //ptfe
+ItemMassRegistry.setMass(metaitem('gregtechfoodoption:food.emergency_rations'), 270)
+
+def tiers = [
+    [tierName: 'lv', massMult: 2.0],
+    [tierName: 'mv', massMult: 1.4],
+    [tierName: 'hv', massMult: 3.0],
+    [tierName: 'ev', massMult: 1.0],
+    [tierName: 'iv', massMult: 5.0]
+]
+
+// GT machines already have masses defined, susy ones don't
+tiers.each { tier ->
+    ItemMassRegistry.setMass(metaitem('susy:roaster.' + tier.tierName), (int) Math.round(278711 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:vacuum_chamber.' + tier.tierName), (int) Math.round(594812 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:continuous_stirred_tank_reactor.' + tier.tierName), (int) Math.round(257485 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:fixed_bed_reactor.' + tier.tierName), (int) Math.round(248342 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:trickle_bed_reactor.' + tier.tierName), (int) Math.round(317284 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:crystallizer.' + tier.tierName), (int) Math.round(345674 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:bubble_column_reactor.' + tier.tierName), (int) Math.round(458612 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:dryer.' + tier.tierName), (int) Math.round(345071 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:uv_light_box.' + tier.tierName), (int) Math.round(478545 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:cvd.' + tier.tierName), (int) Math.round(578341 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:ion_implanter.' + tier.tierName), (int) Math.round(478746 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:batch_reactor.' + tier.tierName), (int) Math.round(364481 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:ion_exchange_column.' + tier.tierName), (int) Math.round(424864 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:zone_refiner.' + tier.tierName), (int) Math.round(398580 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:tube_furnace.' + tier.tierName), (int) Math.round(347821 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:sputter_deposition.' + tier.tierName), (int) Math.round(599010 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:fluid_compressor.' + tier.tierName), (int) Math.round(374519 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:fluid_decompressor.' + tier.tierName), (int) Math.round(374519 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:weapons_factory.' + tier.tierName), (int) Math.round(678541 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:electrostatic_separator.' + tier.tierName), (int) Math.round(268430 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:polishing_machine.' + tier.tierName), (int) Math.round(368597 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:textile_spinner.' + tier.tierName), (int) Math.round(294941 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:resistance_furnace.' + tier.tierName), (int) Math.round(348135 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('susy:ald.' + tier.tierName), (int) Math.round(784821 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('hull.' + tier.tierName), (int) Math.round(200000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('electric.motor.' + tier.tierName), (int) Math.round(7500 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('electric.pump.' + tier.tierName), (int) Math.round(18000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('fluid.regulator.' + tier.tierName), (int) Math.round(19000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('electric.piston.' + tier.tierName), (int) Math.round(12000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('robot.arm.' + tier.tierName), (int) Math.round(30000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('conveyor.module.' + tier.tierName), (int) Math.round(20000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('item_bus.import.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('item_bus.export.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('fluid_hatch.export.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('fluid_hatch.import.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('muffler_hatch.' + tier.tierName), (int) Math.round(25000 * tier.massMult))
+    ItemMassRegistry.setMass(metaitem('energy_hatch.input.' + tier.tierName), (int) Math.round(30000 * tier.massMult))
+
+    if (tier.tierName == 'lv' || tier.tierName == 'mv' || tier.tierName == 'hv' || tier.tierName == 'ev') {
+        ItemMassRegistry.setMass(metaitem('susy:latex_collector.' + tier.tierName), (int) Math.round(398771 * tier.massMult))
+        ItemMassRegistry.setMass(metaitem('susy:vulcanizing_press.' + tier.tierName), (int) Math.round(348649 * tier.massMult))
+        ItemMassRegistry.setMass(metaitem('susy:incinerator.' + tier.tierName), (int) Math.round(257218 * tier.massMult))
+        ItemMassRegistry.setMass(metaitem('susy:screen_printer.' + tier.tierName), (int) Math.round(484410 * tier.massMult))
+    }
+}
+

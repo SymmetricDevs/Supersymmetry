@@ -285,3 +285,13 @@ BR.recipeBuilder()
     .duration(80)
     .EUt(VA[LV])
     .buildAndRegister()
+
+// Cr2(SO4)3 + 6NaOH -> 2Cr(OH)3 + 6NaSO4
+BR.recipeBuilder()
+    .inputs(metaitem('dustChromiumIiiSulfate') * 17)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 6000)
+    .outputs(metaitem('dustChromiumIiiHydroxide') * 14)
+    .fluidOutputs(fluid('sodium_sulfate_solution') * 6000)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
