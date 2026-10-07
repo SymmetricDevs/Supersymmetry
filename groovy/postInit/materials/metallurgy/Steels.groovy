@@ -96,9 +96,10 @@ SOLIDIFIER.recipeBuilder()
 // Manganese steel
 
 INDUCTION_FURNACE.recipeBuilder()
-    .inputs(ore('dustManganese') * 8)
-    .inputs(ore('dustIron') * 16)
-    .fluidOutputs(fluid('manganese_steel') * 11520) // 80 ingot
+    .inputs(metaitem('dustIron') * 83)
+    .inputs(metaitem('dustManganese') * 13)
+    .inputs(metaitem('dustCarbon') * 4)
+    .fluidOutputs(fluid('manganese_steel') * 14400)
     .EUt(VA[LV])
     .duration(12000)
     .buildAndRegister()
