@@ -52,6 +52,7 @@ class ChangeFlags {
         Magnesium.addIngot()
         Asbestos.addIngot()
         Potassium.addIngot()
+        Scandium.addIngot()
 
         BisphenolA.addDust()
         Polonium.addDust()

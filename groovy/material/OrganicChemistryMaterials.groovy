@@ -3531,7 +3531,7 @@ class OrganicChemistryMaterials {
                 .color(0xDCDCDC)
                 .build()
 
-        SodiumFormate.setFormula('NaCOOH', true)
+        SodiumFormate.setFormula('HCOONa', true)
 
         SodiumOxalate = new Material.Builder(15546, SuSyUtility.susyId('sodium_oxalate'))
                 .dust()
