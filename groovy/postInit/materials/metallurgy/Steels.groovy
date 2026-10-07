@@ -99,7 +99,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('dustManganese') * 8)
     .inputs(ore('dustIron') * 16)
     .fluidOutputs(fluid('manganese_steel') * 11520) // 80 ingot
-    .EUt(VA[IV])
+    .EUt(VA[LV])
     .duration(12000)
     .buildAndRegister()
 
