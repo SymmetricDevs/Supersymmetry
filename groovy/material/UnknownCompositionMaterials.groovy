@@ -3918,5 +3918,29 @@ class UnknownCompositionMaterials {
                 .liquid()
                 .color(0x6a9191)
                 .build()
+
+        HeavyMineralTailing = new Material.Builder(4821, SuSyUtility.susyId('heavy_mineral_tailing'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0x2b3138)
+                .build()
+
+        WeaklyMagneticHeavyMineralTailing = new Material.Builder(4822, SuSyUtility.susyId('weakly_magnetic_heavy_mineral_tailing'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0x2b3156)
+                .build()
+
+        NonMagneticHeavyMineralTailing = new Material.Builder(4823, SuSyUtility.susyId('non_magnetic_heavy_mineral_tailing'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0x2b3115)
+                .build()
+
+        ZirconMonaziteConcentrate = new Material.Builder(4824, SuSyUtility.susyId('zircon_monazite_concentrate'))
+                .dust()
+                .iconSet(SHINY)
+                .color(0xb21383)
+                .build()
     }
 }

@@ -1700,6 +1700,58 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// HV Alternate Energy Handling
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.hv'))
+    .inputs(ore('cableGtSingleGold') * 2)
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .fluidInputs(fluid('sodium_potassium') * 1000)
+    .outputs(metaitem('energy_hatch.input.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.hv'))
+    .inputs(ore('springGold') * 2)
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .fluidInputs(fluid('sodium_potassium') * 1000)
+    .outputs(metaitem('energy_hatch.output.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('transformer.hv'))
+    .inputs(metaitem('energy_hatch.output.hv'))
+    .inputs(metaitem('circuit.power.hv'))
+    .inputs(metaitem('voltage_coil.hv'))
+    .inputs(ore('wireGtQuadrupleGold') * 2)
+    .outputs(metaitem('susy:energy_hatch.output_4a.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('transformer.adjustable.hv'))
+    .inputs(metaitem('susy:energy_hatch.output_4a.hv'))
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .inputs(ore('wireGtOctalGold') * 2)
+    .outputs(metaitem('susy:energy_hatch.output_16a.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+crafting.addShaped('gregtech:transformer.hv2', item('gregtech:machine', 1273), [
+    [metaitem('circuit.power.hv'), ore('cableGtSingleGold'), ore('cableGtSingleGold')],
+    [ore('cableGtSingleAluminium'), item('gregtech:machine', 988), null],
+    [metaitem('circuit.power.hv'), ore('cableGtSingleGold'), ore('cableGtSingleGold')]
+])
+
 // Jet Wingpack recipes
 // Wing panel
 ASSEMBLER.recipeBuilder()
