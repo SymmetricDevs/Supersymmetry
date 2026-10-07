@@ -3738,5 +3738,11 @@ class UnknownCompositionMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .color(0x384578)
                 .build()
+
+        HeavyMineralTailing = new Material.Builder(4801, SuSyUtility.susyId('heavy_mineral_tailing'))
+                .dust()
+                .iconset(SHINY)
+                .color(0x2b3138)
+                .build
     }
 }
