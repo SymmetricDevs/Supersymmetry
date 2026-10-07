@@ -1,13 +1,13 @@
 name = "Chibi"
-filename = "loliasm-5.33.jar"
+filename = "chibi-5.34.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "71eea31ddedc783b02bee6490d4c1f3aae10cc9c"
+hash = "2c02004c36cc1be3647ed22af23a84cfa9bf67bc"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8225778
+file-id = 8957115
 project-id = 460609
