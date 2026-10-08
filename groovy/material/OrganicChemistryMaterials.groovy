@@ -4621,12 +4621,6 @@ class OrganicChemistryMaterials {
 
         BismethylcyclopentadienylBeryllium.setFormula('Be(MeCp)2', true)
 
-        PMMAEBeamResist = new Material.Builder(15766, SuSyUtility.susyId('pmma_ebeam_resist'))
-                .liquid()
-                .components(PolymethylMethacrylate, Chlorobenzene)
-                .color(0x32cd32)
-                .build()
-
         AbieticAcid = new Material.Builder(15767, SuSyUtility.susyId('abietic_acid'))
             .dust()
             .components(Carbon * 20, Hydrogen * 30, Oxygen * 2)
