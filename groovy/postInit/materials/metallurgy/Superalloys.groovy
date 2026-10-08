@@ -332,9 +332,8 @@ INDUCTION_FURNACE.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister()
 
-
-ADVANCED_ARC_FURNACE.recipeBuilder()
-    .inputs(metaitem('dustIron') * 24)
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('iron') * 3456)
     .inputs(metaitem('dustChrome') * 8)
     .inputs(metaitem('dustNickel') * 5)
     .inputs(metaitem('dustMolybdenum') * 2)
