@@ -80,6 +80,8 @@ ItemMassRegistry.setMass(item('gregtech:metal_casing', 6), 70000) //titanium
 ItemMassRegistry.setMass(item('gregtech:metal_casing', 7), 200000) //tungstensteel
 ItemMassRegistry.setMass(item('gregtech:metal_casing', 9), 25000) //ptfe
 ItemMassRegistry.setMass(metaitem('gregtechfoodoption:food.emergency_rations'), 270)
+ItemMassRegistry.setMass(item('appliedenergistics2:storage_cell_1k'), 99999999)
+ItemMassRegistry.setMass(item('appliedenergistics2:fluid_storage_cell_1k'), 99999999)
 
 def tiers = [
     [tierName: 'lv', massMult: 2.0],
