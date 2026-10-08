@@ -6,12 +6,15 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.2111293852.desc",
       "icon:10": {
-        "Damage:2": 10205,
-        "id:8": "gregtech:meta_item_2"
+        "id:8": "minecraft:fireworks"
       },
       "name:8": "susy.quest.db.2111293852.title"
     }
   },
   "questID:3": 2111293852,
-  "tasks:9": {}
+  "tasks:9": {
+    "0:10": {
+      "taskID:8": "bq_standard:checkbox"
+    }
+  }
 }
