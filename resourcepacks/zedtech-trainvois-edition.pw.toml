@@ -1,0 +1,13 @@
+name = "ZedTech - trainvoi's edition"
+filename = "trainvoi's GT resourcepack.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "88181ea6b5dfc5718152c432f67c1f578fbe7c3b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7926179
+project-id = 1514030
