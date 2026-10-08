@@ -1027,9 +1027,9 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 crafting.replaceShaped("techguns:riot_shield", item('techguns:riot_shield'), [
-    [metaitem('stickLongSteel'), ore('wireFineBorosilicateGlass'), metaitem('stickLongSteel')],
+    [metaitem('stickLongSteel'), item('gregtech:meta_item_2', 215), metaitem('stickLongSteel')],
     [metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-    [metaitem('stickLongSteel'), ore('wireFineBorosilicateGlass'), metaitem('stickLongSteel')]
+    [metaitem('stickLongSteel'), item('gregtech:meta_item_2', 215), metaitem('stickLongSteel')]
 ]);
 
 crafting.replaceShaped("techguns:ballistic_shield", item('techguns:ballistic_shield'), [
@@ -1261,6 +1261,8 @@ ASSEMBLER.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
+//commando armor
+
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(5)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
@@ -1461,7 +1463,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .inputs(ore('plateDoubleTitanium') * 5)
         .inputs(item('gregtech:meta_item_1', 130) * 2)
         .inputs(item('gregtech:meta_item_1', 307) * 1)
-        .inputs(ore('wireFineBorosilicateGlass') * 5)
+        .inputs(item('gregtech:meta_item_2', 215) * 5)
         .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 2)
         .outputs(item('techguns:t3_combat_helmet'))
         .duration(100)
@@ -1508,7 +1510,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('pipeTinyFluidVanadiumSteel') * 2)
         .inputs(item('gregtech:meta_item_1', 307) * 1)
-        .inputs(ore('wireFineBorosilicateGlass') * 10)
+        .inputs(item('gregtech:meta_item_2', 215) * 10)
         .inputs(item('gregtech:meta_item_1', 130) * 8)
         .inputs(ore('plateSiliconCarbide') * 5)
         .inputs(ore('plateTungstenSteel') * 5)
@@ -1643,7 +1645,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('wireGtSingleUraniumTriplatinum') * 2)
         .inputs(item('gregtech:meta_item_1', 307) * 1)
-        .inputs(ore('wireFineBorosilicateGlass') * 10)
+        .inputs(item('gregtech:meta_item_2', 215) * 10)
         .inputs(item('gregtech:meta_item_1', 130) * 16)
         .inputs(ore('plateBoronNitride') * 5)
         .inputs(ore('plateNiobiumTitanium') * 5)
