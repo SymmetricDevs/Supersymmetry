@@ -876,7 +876,7 @@ class FirstDegreeMaterialsB {
         AluminiumAlloy2195 = new Material.Builder(8795, SuSyUtility.susyId('aluminium_alloy_2195'))
                 .ingot().liquid(new FluidBuilder().temperature(933))
                 .colorAverage()
-                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE, GENERATE_LONG_ROD, GENERATE_DOUBLE_PLATE)
                 .components(Aluminium * 2012, Copper * 36, Lithium * 90, Magnesium * 18, Silver * 3, Zirconium * 1)
                 .color(0xbfe0e0)
                 .build()
