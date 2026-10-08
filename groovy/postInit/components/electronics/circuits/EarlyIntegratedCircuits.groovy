@@ -10,6 +10,16 @@ import globals.semiconductors.Deposition
 import globals.semiconductors.Packaging
 import globals.semiconductors.Doping
 
+mods.jei.ingredient.yeet(
+    item('gregtech:meta_item_2', 2759),
+    item('gregtech:meta_item_2', 2760),
+    item('gregtech:meta_item_2', 2761),
+    item('gregtech:meta_item_2', 2762),
+    item('gregtech:meta_item_1', 577),
+    item('gregtech:meta_item_1', 578),
+    item('gregtech:meta_item_1', 579),
+    item('gregtech:meta_item_1', 580)
+)
 mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('plate.integrated_logic_circuit'), metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
 
 // NAND Chip * 8
