@@ -1,6 +1,6 @@
 name = "ZedTech - trainvoi's edition"
 filename = "trainvoi's GT resourcepack.zip"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
