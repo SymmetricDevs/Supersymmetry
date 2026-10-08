@@ -241,7 +241,7 @@ Sintering.nonPlasmaFuels().each { fuel ->
     // SiF4
 
     ROASTER.recipeBuilder()
-        .inputs(ore('dustSodiumHexafluorosilicate') * 9)
+        .inputs(ore('dustSodiumFluorosilicate') * 9)
         .outputs(metaitem('dustSodiumFluoride') * 4)
         .fluidOutputs(fluid('silicon_tetrafluoride') * 1000)
         .duration(200)

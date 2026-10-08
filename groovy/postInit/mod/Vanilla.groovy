@@ -1067,7 +1067,7 @@ def stairVariants = [
         [block: item('minecraft:planks'), stair: item('minecraft:oak_stairs'), dust: metaitem('dustSmallWood')],
         [block: item('minecraft:cobblestone'), stair: item('minecraft:stone_stairs'), dust: metaitem('dustSmallStone')],
         [block: item('minecraft:brick_block'), stair: item('minecraft:brick_stairs'), dust: metaitem('dustBrick')],
-        [block: item('minecraft:stonebrick'), stair: item('minecraft:stone_brick_stairs'), dust: metaitem('dustSmallStone')],
+        //[block: item('minecraft:stonebrick'), stair: item('minecraft:stone_brick_stairs'), dust: metaitem('dustSmallStone')],
         [block: item('minecraft:nether_brick'), stair: item('minecraft:nether_brick_stairs'), dust: metaitem('dustNetherrack')],
         [block: item('minecraft:sandstone'), stair: item('minecraft:sandstone_stairs')],
         [block: item('minecraft:planks', 1), stair: item('minecraft:spruce_stairs'), dust: metaitem('dustSmallWood')],

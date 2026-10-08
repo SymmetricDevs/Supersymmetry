@@ -316,7 +316,7 @@ for (type in StoneVariantBlock.StoneType.values()) {
 
 ore('defaultCobblestone').add(ore('cobblestone'))
 
-for (i in 0..11) {
+for (i in 0..12) {
     ore('defaultCobblestone').remove(item('susy:susy_stone_cobble', i))
 }
 

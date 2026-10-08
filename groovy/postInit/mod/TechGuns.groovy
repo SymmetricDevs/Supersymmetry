@@ -516,7 +516,7 @@ Globals.solders.each { key, val ->
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
-        .inputs(ore('plateGraphene') * 3)
+        .inputs(ore('plateTungstenSteel') * 3)
         .inputs(ore('wireGtSingleGraphene') * 2)
         .inputs(ore('gearSmallTungstenSteel'))
         .inputs(ore('springSmallTungsten'))
@@ -1017,9 +1017,10 @@ LATHE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-CUTTER.recipeBuilder()
-    .circuitMeta(2)
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(16)
     .inputs(ore('plankWood'))
+    .fluidInputs(fluid('glue') * 100)
     .outputs(item('techguns:itemshared', 42))
     .duration(20)
     .EUt(VA[LV])
@@ -1252,7 +1253,7 @@ crafting.addShaped("bound_leather", metaitem('bound_leather')*8, [
 ]);
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('plateIron'))
+    .inputs(ore('plateWroughtIron'))
     .inputs(ore('screwIron') * 2)
     .inputs(item('minecraft:iron_door'))
     .outputs(item('techguns:item_bunkerdoor'))
@@ -1261,7 +1262,7 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(1)
+    .circuitMeta(5)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
     .inputs(ore('plateBoronNitride') * 2)
     .inputs(item('susy:susy_armor', 2))
@@ -1273,7 +1274,7 @@ WEAPONS_FACTORY.recipeBuilder()
 
 
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(2)
+    .circuitMeta(6)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 8)
     .inputs(ore('plateBoronNitride') * 4)
     .inputs(item('susy:susy_armor', 3).withNbt(['maxOxygen': 1200.0d, 'durability': 500, 'oxygen': 1200.0d]))
@@ -1283,7 +1284,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(3)
+    .circuitMeta(7)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 7)
     .inputs(ore('plateBoronNitride') * 3)
     .outputs(item('techguns:t2_commando_leggings'))
@@ -1292,7 +1293,7 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(4)
+    .circuitMeta(8)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 4)
     .inputs(ore('plateBoronNitride') * 2)
     .outputs(item('techguns:t2_commando_boots'))

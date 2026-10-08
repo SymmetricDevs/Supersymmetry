@@ -2203,29 +2203,11 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(item('gregtech:steam_casing', 5))
-    .inputs(ore('ringLead') * 2)
-    .outputs(item('gregtech:machine', 1597))
-    .duration(100)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
     .circuitMeta(1)
     .inputs(item('gregtech:metal_casing', 4))
     .inputs(ore('ringSteel'))
     .inputs(ore('rotorSteel'))
     .outputs(item('gregtech:machine', 1598))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(item('gregtech:metal_casing', 4))
-    .inputs(ore('ringSteel') * 2)
-    .outputs(item('gregtech:machine', 1599))
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister();

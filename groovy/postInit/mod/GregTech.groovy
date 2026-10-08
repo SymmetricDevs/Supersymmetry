@@ -2001,6 +2001,7 @@ RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 
 
 // Moist Air * 1000
 mods.gregtech.mixer.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
+mods.gregtech.blender.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
 
 MIXER.recipeBuilder()
     .circuitMeta(1)
@@ -2103,3 +2104,5 @@ mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:machine_casing', 6)]
 // Old circuit recipe
 // Integrated Processor * 4
 mods.gregtech.circuit_assembler.removeByInput(2400, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineRedAlloy') * 4, metaitem('boltAnnealedCopper') * 4], [fluid('tin') * 144])
+// prevent conflict with slicer blades
+mods.gregtech.forming_press.removeByInput(256, [metaitem('plateIron') * 10, metaitem('screwIron') * 2], null)
