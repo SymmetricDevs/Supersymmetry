@@ -93,8 +93,7 @@ SOLIDIFIER.recipeBuilder()
             .buildAndRegister()
     }
 
-// Manganese steel
-
+// Manganese Steel
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(metaitem('dustIron') * 83)
     .inputs(metaitem('dustManganese') * 13)
@@ -104,7 +103,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
     .duration(12000)
     .buildAndRegister()
 
-// Tungsten steel
+// Tungsten Steel
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .circuitMeta(1)
     .fluidInputs(fluid('steel') * 8640) //equal to 60 Steel dust
@@ -130,7 +129,7 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
     .duration(17000) 
     .buildAndRegister()
 
-// Reactor steel
+// Reactor Steel
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(metaitem('dustIron') * 113)
     .inputs(metaitem('dustManganese') * 10)
@@ -139,6 +138,18 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
     .fluidOutputs(fluid('reactor_steel') * 18432)
     .EUt(VA[IV])
     .duration(400)
+    .buildAndRegister()
+
+// ER6 Steel
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustIron') * 24)
+    .inputs(metaitem('dustChrome') * 8)
+    .inputs(metaitem('dustNickel') * 5)
+    .inputs(metaitem('dustMolybdenum') * 2)
+    .inputs(metaitem('dustManganese'))
+    .duration(2400)
+    .fluidOutputs(fluid('food_grade_stainless_steel') * 5760)
+    .EUt(VA[EV])
     .buildAndRegister()
 
 // HSLA 980X
