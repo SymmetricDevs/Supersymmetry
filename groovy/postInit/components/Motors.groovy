@@ -100,7 +100,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('component.brush') * 2)
     .outputs(metaitem('electric.motor.mv'))
     .duration(80)
-    .EUt(VA[MV])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -120,7 +120,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('component.brush') * 2)
     .outputs(metaitem('electric.motor.hv'))
     .duration(80)
-    .EUt(VA[HV])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -169,7 +169,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('circuit_board.good'))
     .outputs(metaitem('electric.motor.mv') * 6)
     .duration(160)
-    .EUt(VA[MV])
+    .EUt(VA[LV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -182,7 +182,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('circuit_board.g10'))
     .outputs(metaitem('electric.motor.hv') * 6)
     .duration(160)
-    .EUt(VA[HV])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
@@ -195,7 +195,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('circuit_board.g10'))
     .outputs(metaitem('electric.motor.ev') * 6)
     .duration(160)
-    .EUt(VA[EV])
+    .EUt(VA[HV])
     .buildAndRegister();
 
 CVD.recipeBuilder()

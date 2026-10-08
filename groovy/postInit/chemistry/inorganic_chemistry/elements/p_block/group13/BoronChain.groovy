@@ -131,11 +131,13 @@ ROASTER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// 3MgO + 6(HCl)(H2O) + 3H2O -> 3(MgCl2)(H2O)4
 CHEMICAL_BATH.recipeBuilder()
     .inputs(ore('dustBoronMixture') * 8)
     .fluidInputs(fluid('hydrochloric_acid') * 6000)
+    .fluidInputs(fluid('water') * 3000) // purely to avoid creating a "semi-diluted magnesium chloride solution" material
     .outputs(metaitem('dustBoron') * 2)
-    .fluidOutputs(fluid('diluted_magnesium_chloride_solution') * 9000)
+    .fluidOutputs(fluid('diluted_magnesium_chloride_solution') * 12000)
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()
