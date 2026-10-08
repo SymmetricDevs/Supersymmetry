@@ -647,7 +647,7 @@ FORMING_PRESS.recipeBuilder()
 
 CUTTER.recipeBuilder()
         .circuitMeta(1)
-        .inputs(ore('plankWood'))
+        .inputs(ore('slabWood'))
         .outputs(metaitem('wooden_form.empty'))
         .duration(20)
         .EUt(VA[LV])

@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import net.minecraft.item.ItemStack;
 import supersymmetry.common.rocketry.SusyRocketComponents;
+import gregtech.api.metatileentity.multiblock.CleanroomType
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(2)
@@ -37,27 +38,9 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister();
 
-CSTR.recipeBuilder()
-        .circuitMeta(1)
-        .fluidInputs(fluid('formaldehyde') * 75)
-        .fluidInputs(fluid('phenol') * 25)
-        .notConsumable(fluid('sodium_hydroxide_solution') * 50)
-        .fluidOutputs(fluid('resol_resin_mixture') * 100)
-        .duration(4)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
-CSTR.recipeBuilder()
-        .fluidInputs(fluid('isopropyl_alcohol') * 75)
-        .fluidInputs(fluid('resol_resin_mixture') * 25)
-        .fluidOutputs(fluid('resol_resin_infiltrant') * 100)
-        .duration(2)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('carbon.mesh'))
-        .fluidInputs(fluid('resol_resin_infiltrant') * 4000)
+        .fluidInputs(fluid('resol_infiltrant') * 4000)
         .outputs(metaitem('carbon.mesh.phenolic.moist'))
         .duration(200)
         .EUt(VA[MV])
@@ -131,7 +114,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateSteel') * 20)
         .inputs(metaitem('plateStainlessSteel') * 8)
         .outputs(item('susy:rocket_assembler_casing', 2))
-        .circuitMeta(1)
+        .circuitMeta(4)
         .duration(40)
         .EUt(VA[HV])
         .buildAndRegister();
@@ -208,10 +191,10 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('photomultiplier_tube') * 2)
+        .inputs(metaitem('component.photodiode') * 4)
         .inputs(metaitem('fused_quartz') * 3)
         .inputs(metaitem('plateAluminium') * 4)
         .inputs(metaitem('cableGtSingleCopper') * 2)
-        //FIXME: add photodiode
         .outputs(metaitem('spacecraft_sensor.sun_star'))
         .duration(400)
         .EUt(VA[EV])
@@ -234,50 +217,8 @@ ASSEMBLER.recipeBuilder()
         .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
         .inputs(metaitem('spacecraft_sensor.sun_star'))
         .inputs(metaitem('spacecraft_sensor.infrared'))
-        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
-        .inputs(metaitem('circuit.nano_computer')) //specifically excludes mainframes because they're too heavy
-        .inputs(metaitem('cableGtDoubleSilver') * 6)
-        .outputs(item('susy:guidance_system'))
-        .duration(800)
-        .EUt(VA[EV])
-        .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('hull.ev'))
-        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
-        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
-        .inputs(metaitem('spacecraft_sensor.sun_star'))
-        .inputs(metaitem('spacecraft_sensor.infrared'))
-        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
-        .inputs(metaitem('circuit.quantum_assembly'))
-        .inputs(metaitem('cableGtDoubleSilver') * 6)
-        .outputs(item('susy:guidance_system'))
-        .duration(800)
-        .EUt(VA[EV])
-        .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('hull.ev'))
-        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
-        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
-        .inputs(metaitem('spacecraft_sensor.sun_star'))
-        .inputs(metaitem('spacecraft_sensor.infrared'))
-        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
-        .inputs(metaitem('circuit.crystal_processor'))
-        .inputs(metaitem('cableGtDoubleSilver') * 6)
-        .outputs(item('susy:guidance_system'))
-        .duration(800)
-        .EUt(VA[EV])
-        .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('hull.ev'))
-        .inputs(metaitem('spacecraft_sensor.gyroscope') * 6)
-        .inputs(metaitem('spacecraft_sensor.ion_flow') * 3)
-        .inputs(metaitem('spacecraft_sensor.sun_star'))
-        .inputs(metaitem('spacecraft_sensor.infrared'))
-        .inputs(metaitem('wireless') * 3)//FIXME (maybe): replace with actual antenna
-        .inputs(metaitem('circuit.suprachronal.iv'))
+        .inputs(metaitem('wireless') * 3)
+        .inputs(ore('circuitIv'))
         .inputs(metaitem('cableGtDoubleSilver') * 6)
         .outputs(item('susy:guidance_system'))
         .duration(800)
@@ -353,6 +294,17 @@ ASSEMBLER.recipeBuilder()
         .duration(640)
         .EUt(VA[EV])
         .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('conveyor.module.ev') * 8)
+    .inputs(metaitem('cableGtQuadrupleAluminium') * 64)
+    .inputs(ore('pipeLargeItemUltimet') * 8)
+    .inputs(ore('circuitHv') * 8)
+    .outputs(metaitem('susy:landing_pad'))
+    .duration(160)
+    .EUt(VA[HV])
+    .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('hull.iv'))
@@ -519,11 +471,11 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('platePolyvinylChloride') * 2) //FIXME: make this realistic once circuit update is here
-    .inputs(metaitem('circuit_board.plastic'))
+    .inputs(metaitem('platePolyvinylChloride') * 2)
+    .inputs(metaitem('circuit_board.fr4'))
     .inputs(ore('circuitEv'))
-    .inputs(metaitem('plate.nand_memory_chip') * 24)
-    .inputs(metaitem('plate.random_access_memory') * 2)
+    .inputs(metaitem('component.floppy_drive'))
+    .inputs(metaitem('component.nmos_sram') * 2)
     .inputs(metaitem('wireFineSilver') * 32)
     .outputs(metaitem('susy:data_card'))
     .solderMultiplier(2)
@@ -532,15 +484,33 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('platePolyvinylChloride') * 2) //FIXME: make this realistic once circuit update is here
-    .inputs(metaitem('circuit_board.plastic'))
+    .inputs(metaitem('platePolyvinylChloride') * 2)
+    .inputs(metaitem('circuit_board.fr4'))
     .inputs(ore('circuitHv'))
     .inputs(metaitem('cover.screen'))
-    .inputs(metaitem('plate.random_access_memory') * 1)
+    .inputs(metaitem('component.nmos_sram') * 1)
     .inputs(metaitem('wireFineCopper') * 16)
     .outputs(metaitem('susy:rocket_configurer'))
     .duration(40)
     .EUt(VA[EV])
+    .buildAndRegister()
+
+// Data Stick new recipes
+mods.gregtech.circuit_assembler.removeByInput(1200, [metaitem('circuit_board.advanced'), metaitem("circuit.nano_processor") * 2, metaitem('plate.random_access_memory') * 4, metaitem('plate.nor_memory_chip') * 16, metaitem('plate.nand_memory_chip') * 32, metaitem('wireFinePlatinum') * 32], [fluid('soldering_alloy') * 144])
+mods.gregtech.circuit_assembler.removeByInput(1200, [metaitem('circuit_board.advanced'), metaitem("circuit.nano_processor") * 2, metaitem('plate.random_access_memory') * 4, metaitem('plate.nor_memory_chip') * 16, metaitem('plate.nand_memory_chip') * 32, metaitem('wireFinePlatinum') * 32], [fluid('tin') * 288])
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('circuit_board.g10'))
+    .inputs(ore('circuitHv') * 2)
+    .inputs(metaitem('component.nmos_sram') * 2)
+    .inputs(metaitem('component.nmos_dram') * 2)
+    .inputs(metaitem('component.floppy_drive'))
+    .inputs(metaitem('wireFinePlatinum') * 32)
+    .solderMultiplier(2)
+    .outputs(metaitem('tool.datastick'))
+    .duration(400)
+    .EUt(VA[EV])
+    .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
 ItemStack stack = metaitem('susy:data_card.master_blueprint') * 1
@@ -597,13 +567,20 @@ mods.susy.rocketCosts.add('lunar', 'lunar_wiring')
         .duration(10)
         .register()
 
-mods.susy.rocketCosts.add('lunar', 'lunar_verniers')
-        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'hydrogen', 'Amount': 8000]]) * 2)
-        .input(metaitem('large_fluid_cell.steel').withNbt(['Fluid': ['FluidName': 'oxygen', 'Amount': 8000]]) * 2)
-        .input(metaitem('electric.pump.ev') * 4)
-        .input(metaitem('plateTitanium') * 12)
-        .duration(10)
-        .register()
+mods.susy.rocketCosts.add('lunar', 'lunar_structural')
+    .input(metaitem('plateTitanium') * 40)
+    .input(metaitem('screwTitanium') * 32)
+    .input(metaitem('plateAluminium') * 128)
+    .duration(40)
+    .register()
+
+mods.susy.rocketCosts.add('lunar', 'lunar_spacecraft')
+    .input(ore('circuitEv') * 12)
+    .input(item('susy:spacecraft_instrument', 10) * 1)
+    .input(metaitem('simple_solar_panel.cell') * 16)
+    .input(metaitem('plateAluminium') * 32)
+    .duration(20)
+    .register()
 
 BR.recipeBuilder()
     .inputs(metaitem('dustIridiumIiiChlorideTrihydrate') * 7)
@@ -763,6 +740,66 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('pipeSmallFluidStainlessSteel') * 16)
     .fluidInputs(fluid('aerozine_50') * 8000)
     .outputs(item('susy:spacecraft_instrument', 14)) // Fuel tank
+    .duration(400)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('plateDoubleTitanium') * 12)
+    .inputs(metaitem('stickLongTitanium') * 16)
+    .outputs(item('susy:rocket_tank_shell1', 1)) // titanium tank shell
+    .duration(64)
+    .EUt(96)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('plateDoubleStainlessSteel') * 8)
+    .inputs(metaitem('plateAluminium') * 8)
+    .outputs(item('susy:rocket_nozzle', 1)) // solid rocket nozzle
+    .duration(64)
+    .EUt(96)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('drum.steel'))
+    .inputs(metaitem('wireGtSingleKanthal') * 1)
+    .inputs(metaitem('cableGtSingleAluminium') * 8)
+    .inputs(metaitem('dustAlice') * 8)
+    .outputs(item('susy:solid_rocket_igniter'))
+    .duration(64)
+    .EUt(96)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('plateAluminium') * 16)
+    .inputs(metaitem('plateTitanium') * 16)
+    .inputs(metaitem('electric.piston.ev') * 4)
+    .outputs(metaitem('susy:airlock'))
+    .duration(64)
+    .EUt(192)
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('stickLongTitanium') * 8)
+    .inputs(metaitem('cell.multijunction_photovoltaic') * 8)
+    .inputs(metaitem('electric.motor.ev') * 3)
+    .outputs(item('susy:spacecraft_instrument', 3)) // Solar panel
+    .duration(400)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+crafting.addShaped('susy:heavy_duty_pad', item('susy:susy_multiblock_casing', 8) * 8, [
+    [metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel')],
+    [metaitem('springTungstenSteel'), metaitem('springTungstenSteel'), metaitem('springTungstenSteel')],
+    [metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel')]
+])
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('robot.arm.ev') * 4)
+    .inputs(metaitem('electric.motor.ev') * 4)
+    .inputs(metaitem('stickLongTungstenSteel') * 4)
+    .inputs(metaitem('plateTitanium') * 4)
+    .outputs(item('susy:robot_arm'))
     .duration(400)
     .EUt(VA[EV])
     .buildAndRegister()

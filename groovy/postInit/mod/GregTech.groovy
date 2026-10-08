@@ -1007,47 +1007,6 @@ FORGE_HAMMER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-SIFTER.recipeBuilder()
-    .inputs(ore('dustNonMarineEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustBorax'), 7000, 250)
-    .chancedOutput(metaitem('dustTrona'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustSulfateEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustGypsum'), 5000, 250)
-    .chancedOutput(metaitem('dustKieserite'), 5000, 250)
-    .chancedOutput(metaitem('dustLangbeinite'), 5000, 250)
-    .chancedOutput(metaitem('dustPolyhalite'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustCarbonateEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustDolomite'), 5000, 250)
-    .chancedOutput(metaitem('dustCalcite'), 5000, 250)
-    .chancedOutput(metaitem('dustMagnesite'), 5000, 250)
-    .chancedOutput(metaitem('dustTrona'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustHalideEvaporite'))
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustSalt'), 8000, 500)
-    .chancedOutput(metaitem('dustCarnallite'), 7000, 250)
-    .chancedOutput(metaitem('dustKainite'), 5000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 CENTRIFUGE.recipeBuilder()
     .inputs(ore('dustLimestone'))
     .outputs(metaitem('dustCalcite'))
@@ -1356,41 +1315,6 @@ RecyclingHelper.addShaped('gregtech:electrolytic_cell', metaitem('susy:electroly
     [ore('wireGtQuadrupleTin'), metaitem('hull.lv'), ore('wireGtQuadrupleTin')],
     [ore('circuitLv'), ore('cableGtSingleTin'), ore('circuitLv')]
 ])
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('water') * 10)
-    .fluidOutputs(fluid('latex') * 100)
-    .blockStates("latex_logs", MetaBlocks.RUBBER_LOG.getBlockState())
-    .info('recipe.latex_extraction')
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('distilled_water') * 10)
-    .fluidOutputs(fluid('resin') * 100)
-    .blockStates("extractable_logs_1", Blocks.LOG.getBlockState())
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('lubricant') * 10)
-    .fluidOutputs(fluid('resin') * 100)
-    .blockStates("extractable_logs_2", Blocks.LOG2.getBlockState())
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-LATEX_COLLECTOR.recipeBuilder()
-    .notConsumable(fluid('hot_hp_air') * 10)
-    .fluidOutputs(fluid('gtfo_rainbow_sap') * 100)
-    .blockStates("rainbowwood_logs", GTFOTrees.RAINBOWWOOD_TREE.logState, 
-        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Y),
-        GTFOTrees.RAINBOWWOOD_TREE.logState.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z))
-    .duration(20)
-    .EUt(VA[ULV])
-    .buildAndRegister();
 
 // Construction Foam * 8000
 mods.gregtech.mixer.removeByInput(16, [metaitem('dustRawRubber')], [fluid('concrete') * 576])
@@ -1719,13 +1643,13 @@ MACERATOR.recipeBuilder()
 crafting.addShaped('gregtech:energy_hatch.mv2', item('gregtech:machine', 1212), [
     [null, metaitem('voltage_coil.mv'), null],
     [ore('cableGtSingleCopper'), item('gregtech:machine', 987), ore('cableGtSingleCopper')],
-    [null, metaitem('voltage_regulator.mv'), null]
+    [null, metaitem('circuit.power.mv'), null]
 ])
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .inputs(ore('cableGtSingleCopper') * 2)
-    .inputs(metaitem('voltage_regulator.mv'))
+    .inputs(metaitem('circuit.power.mv'))
     .inputs(metaitem('voltage_coil.mv'))
     .outputs(metaitem('energy_hatch.input.mv'))
     .duration(200)
@@ -1735,13 +1659,13 @@ ASSEMBLER.recipeBuilder()
 crafting.addShaped('gregtech:dynamo_hatch.mv2', item('gregtech:machine', 1227), [
     [null, metaitem('voltage_coil.mv'), null],
     [ore('springCopper'), item('gregtech:machine', 987), ore('springCopper')],
-    [null, metaitem('voltage_regulator.mv'), null]
+    [null, metaitem('circuit.power.mv'), null]
 ])
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.mv'))
     .inputs(ore('springCopper') * 2)
-    .inputs(metaitem('voltage_regulator.mv'))
+    .inputs(metaitem('circuit.power.mv'))
     .inputs(metaitem('voltage_coil.mv'))
     .outputs(metaitem('energy_hatch.output.mv'))
     .duration(200)
@@ -1749,15 +1673,15 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 crafting.addShaped('gregtech:transformer.mv2', item('gregtech:machine', 1272), [
-    [metaitem('voltage_regulator.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')],
+    [metaitem('circuit.power.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')],
     [ore('cableGtSingleGold'), item('gregtech:machine', 987), null],
-    [metaitem('voltage_regulator.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')]
+    [metaitem('circuit.power.mv'), ore('cableGtSingleCopper'), ore('cableGtSingleCopper')]
 ])
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('transformer.mv'))
     .inputs(metaitem('energy_hatch.output.mv'))
-    .inputs(metaitem('voltage_regulator.mv'))
+    .inputs(metaitem('circuit.power.mv'))
     .inputs(metaitem('voltage_coil.mv'))
     .inputs(ore('cableGtQuadrupleCopper') * 2)
     .outputs(metaitem('susy:energy_hatch.output_4a.mv'))
@@ -1768,7 +1692,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('transformer.adjustable.mv'))
     .inputs(metaitem('susy:energy_hatch.output_4a.mv'))
-    .inputs(metaitem('voltage_regulator.mv') * 2)
+    .inputs(metaitem('circuit.power.mv') * 2)
     .inputs(metaitem('voltage_coil.mv'))
     .inputs(ore('cableGtOctalCopper') * 2)
     .outputs(metaitem('susy:energy_hatch.output_16a.mv'))
@@ -1776,12 +1700,65 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// HV Alternate Energy Handling
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.hv'))
+    .inputs(ore('cableGtSingleGold') * 2)
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .fluidInputs(fluid('sodium_potassium') * 1000)
+    .outputs(metaitem('energy_hatch.input.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.hv'))
+    .inputs(ore('springGold') * 2)
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .fluidInputs(fluid('sodium_potassium') * 1000)
+    .outputs(metaitem('energy_hatch.output.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('transformer.hv'))
+    .inputs(metaitem('energy_hatch.output.hv'))
+    .inputs(metaitem('circuit.power.hv'))
+    .inputs(metaitem('voltage_coil.hv'))
+    .inputs(ore('wireGtQuadrupleGold') * 2)
+    .outputs(metaitem('susy:energy_hatch.output_4a.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('transformer.adjustable.hv'))
+    .inputs(metaitem('susy:energy_hatch.output_4a.hv'))
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .inputs(ore('wireGtOctalGold') * 2)
+    .outputs(metaitem('susy:energy_hatch.output_16a.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+crafting.addShaped('gregtech:transformer.hv2', item('gregtech:machine', 1273), [
+    [metaitem('circuit.power.hv'), ore('cableGtSingleGold'), ore('cableGtSingleGold')],
+    [ore('cableGtSingleAluminium'), item('gregtech:machine', 988), null],
+    [metaitem('circuit.power.hv'), ore('cableGtSingleGold'), ore('cableGtSingleGold')]
+])
+
 // Jet Wingpack recipes
 // Wing panel
-AUTOCLAVE.recipeBuilder()
+ASSEMBLER.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
     .inputs(ore('foilPolyethyleneTerephthalate'))
-    .fluidInputs(fluid('reinforced_epoxy_resin') * 288)
+    .inputs(metaitem('carbon.fibers') * 16)
+    .fluidInputs(fluid('epoxy') * 288)
     .outputs(metaitem('wing_panel.fiber_reinforced_epoxy'))
     .duration(600)
     .EUt(VA[HV])
@@ -2024,6 +2001,7 @@ RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 
 
 // Moist Air * 1000
 mods.gregtech.mixer.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
+mods.gregtech.blender.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
 
 MIXER.recipeBuilder()
     .circuitMeta(1)
@@ -2115,3 +2093,16 @@ mods.gregtech.mixer.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, 
 mods.gregtech.mixer.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('dinitrogen_tetroxide') * 1000])
 mods.gregtech.blender.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('oxygen') * 1000])
 mods.gregtech.blender.removeByInput(16, null, [fluid('dimethylhydrazine') * 1000, fluid('dinitrogen_tetroxide') * 1000])
+
+// Remove LuV casing metal
+
+mods.gregtech.mixer.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+// Rhodium Plated Palladium Dust * 8
+mods.gregtech.macerator.removeByInput(32, [item('gregtech:machine_casing', 6)], null)
+// Rhodium Plated Palladium Ingot * 8
+mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:machine_casing', 6)], [fluid('oxygen') * 840])
+// Old circuit recipe
+// Integrated Processor * 4
+mods.gregtech.circuit_assembler.removeByInput(2400, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineRedAlloy') * 4, metaitem('boltAnnealedCopper') * 4], [fluid('tin') * 144])
+// prevent conflict with slicer blades
+mods.gregtech.forming_press.removeByInput(256, [metaitem('plateIron') * 10, metaitem('screwIron') * 2], null)

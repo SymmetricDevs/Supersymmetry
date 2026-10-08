@@ -39,6 +39,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtSingleAluminium"))
     .EUt(4)
     .duration(8)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -48,6 +49,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtDoubleAluminium"))
     .EUt(4)
     .duration(12)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -57,6 +59,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtQuadrupleAluminium"))
     .EUt(4)
     .duration(16)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -66,6 +69,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtOctalAluminium"))
     .EUt(4)
     .duration(20)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -75,6 +79,7 @@ ASSEMBLER.recipeBuilder()
     .outputs(metaitem("cableGtHexAluminium"))
     .EUt(4)
     .duration(24)
+    .circuitMeta(1)
     .info('recipe.moon')
     .buildAndRegister()
 
@@ -103,6 +108,7 @@ crafting.addShaped("susy:ev_hull_moon", metaitem('hull.ev') * 1, [
 SOLAR_FURNACE.recipeBuilder()
     .inputs(ore("dustAluminium"))
     .outputs(metaitem("ingotAluminium"))
+    .circuitMeta(1)
     .duration(80)
     .EUt(8000)
     .buildAndRegister()
@@ -147,16 +153,7 @@ crafting.addShaped("susy:restrictive_filter_moon", metaitem('susy:restrictive_fi
 ])
 
 SOLAR_FURNACE.recipeBuilder()
-    .inputs(ore("dustAluminium") * 4) //FIXME (maybe): use molten salt electrolysis instead?
-    .inputs(ore("dustSiliconDioxide") * 9)
-    .outputs(metaitem("dustSilicon") * 3)
-    .outputs(metaitem("dustAlumina") * 10)
-    .duration(80)
-    .EUt(1000)
-    .buildAndRegister()
-
-SOLAR_FURNACE.recipeBuilder()
-    .inputs(ore("dustAluminium") * 8) //according to wikipedia this is done somewhere
+    .inputs(ore("dustAluminium") * 8) // according to wikipedia this is done somewhere
     .inputs(ore("dustChromite") * 21)
     .outputs(metaitem("dustFerrochromium") * 9)
     .outputs(metaitem("dustAlumina") * 20)
@@ -329,6 +326,12 @@ crafting.addShaped("susy:vehicle_track", item('susy:vehicle_track') * 16, [
     [metaitem('plateSteel'), ore('plateSteel'), metaitem('plateSteel')]
 ])
 
+crafting.addShaped("susy:light_stainless_casing", item('susy:susy_multiblock_casing2') * 64, [
+    [metaitem('plateStainlessSteel'), metaitem('lunar_r_glass_fibers'), metaitem('plateStainlessSteel')],
+    [metaitem('plateStainlessSteel'), metaitem('frameStainlessSteel'), metaitem('plateStainlessSteel')],
+    [metaitem('plateStainlessSteel'), metaitem('lunar_r_glass_fibers'), metaitem('plateStainlessSteel')]
+])
+
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem("hull.ev"))
     .inputs(metaitem("electric.motor.ev") * 16)
@@ -454,3 +457,438 @@ MIXER.recipeBuilder()
     .EUt(16)
     .duration(150)
     .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder() // vaguely modeled after HSLA steel, no particular grade
+    .inputs(metaitem("dustIron") * 50) // the titanium amount is prob way too high
+    .inputs(metaitem("dustTinyManganese") * 3)
+    .inputs(metaitem("dustTinyTitanium") * 1)
+    .fluidOutputs(fluid("steel") * 7264)
+    .EUt(16000)
+    .duration(500)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustIron") * 5)
+    .inputs(metaitem("dustNickel") * 3)
+    .fluidOutputs(fluid("invar") * 1152)
+    .circuitMeta(4)
+    .EUt(14000)
+    .duration(200)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustFerrochromium") * 12)
+    .inputs(metaitem("dustAluminium") * 4)
+    .inputs(metaitem("dustIron") * 23)
+    .fluidOutputs(fluid("kanthal") * 5616)
+    .circuitMeta(3)
+    .EUt(16000)
+    .duration(400)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustHematite") * 5)
+    .fluidInputs(fluid('hydrogen') * 6)
+    .outputs(metaitem('dustIron') * 2)
+    .fluidOutputs(fluid("dense_steam") * 3000)
+    .EUt(8000)
+    .duration(80)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+crafting.addShaped('susy:quarry_moon', item('gregtech:machine', 15063), [
+    [metaitem('plateAluminium'), metaitem('electric.motor.ev'), metaitem('plateAluminium')],
+    [ore('circuitEv'), metaitem('hull.ev'), ore('circuitEv')],
+    [ore('wireGtSingleAluminium'), metaitem('hardened_titanium_grinding_head'), ore('wireGtSingleAluminium')]])
+
+crafting.addShaped('susy:dumper_moon', metaitem('susy:dumper'), [
+    [metaitem('plateAluminium'), metaitem('plateAluminium'), metaitem('plateAluminium')],
+    [metaitem('electric.pump.ev'), metaitem('hull.ev'), metaitem('pipeHugeFluidAluminium')],
+    [metaitem('plateAluminium'), metaitem('plateAluminium'), metaitem('plateAluminium')]])
+
+crafting.addShaped('susy:smoke_stack_moon', metaitem('susy:smoke_stack'), [
+    [null, metaitem('rotorAluminium'), null],
+    [metaitem('pipeSmallFluidAluminium'), metaitem('hull.ev'), metaitem('pipeSmallFluidAluminium')],
+    [null, metaitem('plateAluminium'), null]])
+
+crafting.addShaped('susy:flare_stack_moon', metaitem('susy:flare_stack'), [
+    [null, metaitem('rotorAluminium'), null],
+    [metaitem('stickAluminium'), metaitem('hull.ev'), metaitem('stickAluminium')],
+    [null, metaitem('plateAluminium'), null]])
+
+crafting.addShaped('susy:reaction_furnace_moon', metaitem('susy:reaction_furnace'), [
+    [metaitem('cableGtQuadrupleAluminium'), metaitem('springKanthal'), metaitem('cableGtQuadrupleAluminium')],
+    [ore('circuitEv'), metaitem('hull.ev'), ore('circuitEv')],
+    [metaitem('plateAluminium'), metaitem('plateAluminium'), metaitem('plateAluminium')]])
+
+crafting.addShaped('susy:clarifier_moon', metaitem('susy:clarifier'), [
+    [metaitem('cableGtSingleAluminium'), metaitem('rotorTitanium'), metaitem('cableGtSingleAluminium')],
+    [metaitem('electric.pump.ev'), metaitem('hull.ev'), metaitem('electric.pump.ev')],
+    [ore('circuitEv'), metaitem('electric.motor.ev'), ore('circuitEv')]])
+
+crafting.addShaped('susy:froth_flotation_tank_moon', metaitem('susy:froth_flotation_tank'), [
+    [metaitem('cableGtSingleAluminium'), metaitem('rotorStainlessSteel'), metaitem('cableGtSingleAluminium')],
+    [metaitem('electric.pump.ev'), metaitem('hull.ev'), metaitem('electric.pump.ev')],
+    [ore('circuitEv'), metaitem('electric.motor.ev'), ore('circuitEv')]])
+
+crafting.addShaped('susy:phase_separator_moon', metaitem('susy:phase_separator'), [
+    [null, null, null],
+    [ore('frameGtAluminium'), metaitem('drum.aluminium'), metaitem('pipeSmallFluidAluminium')],
+    [metaitem('pipeSmallFluidAluminium'), metaitem('hull.ev'), metaitem('pipeSmallFluidAluminium')]])
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(4)
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('frameAluminium') * 12)
+    .inputs(ore('circuitEv') * 6)
+    .inputs(metaitem('electric.pump.ev') * 8)
+    .inputs(ore('plateAluminium') * 4)
+    .inputs(metaitem('lunar_r_glass_fibers') * 64)
+    .outputs(metaitem('susy:high_pressure_cryogenic_distillation_plant'))
+    .EUt(VA[LV])
+    .duration(600)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+crafting.addShaped('susy:mixer_settler_v2_moon', metaitem('susy:mixer_settler_v2'), [
+    [metaitem('electric.motor.ev'), ore('circuitEv'), metaitem('electric.motor.ev')],
+    [metaitem('rotorTitanium'), metaitem('hull.ev'), metaitem('rotorTitanium')],
+    [metaitem('electric.pump.ev'), metaitem('cableGtSingleAluminium'), metaitem('electric.pump.ev')]])
+
+crafting.addShaped('susy:electrolytic_cell_moon', metaitem('susy:electrolytic_cell'), [
+    [metaitem('plateAluminium'), ore('circuitEv'), metaitem('plateAluminium')],
+    [metaitem('wireGtQuadrupleAluminium'), metaitem('hull.ev'), metaitem('wireGtQuadrupleAluminium')],
+    [ore('circuitEv'), metaitem('cableGtSingleAluminium'), ore('circuitEv')]])
+
+crafting.addShaped('susy:simple_condenser', metaitem('susy:simple_condenser'), [
+    [null, metaitem('hull.ev'), null],
+    [ore('frameGtAluminium'), metaitem('pipeSmallFluidAluminium'), ore('frameGtAluminium')],
+    [ore('frameGtAluminium'), metaitem('pipeSmallFluidAluminium'), ore('frameGtAluminium')]])
+
+crafting.addShaped('susy:drawer_1x_moon', item('storagedrawers:customdrawers') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [null, metaitem('crate.aluminium'), null],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_2x_moon', item('storagedrawers:customdrawers', 1) * 16, [
+    [metaitem('stickAluminium'), metaitem('crate.aluminium'), metaitem('stickAluminium')],
+    [metaitem('stickAluminium'), metaitem('plateAluminium'), metaitem('stickAluminium')],
+    [metaitem('stickAluminium'), metaitem('crate.aluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_4x_moon', item('storagedrawers:customdrawers', 2) * 32, [
+    [metaitem('crate.aluminium'), metaitem('stickAluminium'), metaitem('crate.aluminium')],
+    [metaitem('stickAluminium'), metaitem('plateAluminium'), metaitem('stickAluminium')],
+    [metaitem('crate.aluminium'), metaitem('stickAluminium'), metaitem('crate.aluminium')]])
+
+crafting.addShaped('susy:drawer_table_moon', item('storagedrawers:framingtable'), [
+    [null, null, null],
+    [metaitem('plateAluminium'), metaitem('plateAluminium'), metaitem('plateAluminium')],
+    [metaitem('stickAluminium'), null, metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:maintenance_hatch_moon', metaitem('maintenance_hatch'), [
+    [null, ore('toolWrench'), null],
+    [null, metaitem('hull.ev'), null],
+    [null, null, null]])
+
+crafting.addShaped('susy:auto_maintenance_hatch_moon', metaitem('maintenance_hatch_full_auto'), [
+    [ore('circuitEv'), metaitem('maintenance_hatch'), ore('circuitEv')],
+    [metaitem('robot.arm.ev'), metaitem('hull.ev'), metaitem('robot.arm.ev')],
+    [ore('circuitEv'), metaitem('maintenance_hatch'), ore('circuitEv')]])
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(8)
+    .inputs(metaitem('hull.ev'))
+    .outputs(metaitem('maintenance_hatch'))
+    .EUt(VA[ULV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('drum.aluminium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('fluid_hatch.import.ev'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('drum.aluminium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('fluid_hatch.export.ev'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('fluid_hatch.import.ev'))
+    .inputs(metaitem('pipeQuadrupleFluidTitanium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('fluid_hatch.import_4x'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('fluid_hatch.export.ev'))
+    .inputs(metaitem('pipeQuadrupleFluidTitanium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('fluid_hatch.export_4x'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(1)
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('crate.aluminium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('item_bus.import.ev'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('crate.aluminium'))
+    .inputs(metaitem('lunar_r_glass_fibers') * 16)
+    .outputs(metaitem('item_bus.export.ev'))
+    .EUt(VA[MV])
+    .duration(20)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+crafting.addShaped('susy:lv_energy_hatch_moon', metaitem('energy_hatch.input.lv'), [
+    [null, metaitem('voltage_coil.lv'), null],
+    [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],
+    [null, null, null]])
+
+crafting.addShaped('susy:mv_energy_hatch_moon', metaitem('energy_hatch.input.mv'), [
+    [null, metaitem('voltage_coil.mv'), null],
+    [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],
+    [null, metaitem('plate.ultra_low_power_integrated_circuit'), null]])
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.ev'))
+    .inputs(metaitem('robot.arm.ev') * 12)
+    .inputs(metaitem('electric.piston.ev') * 16)
+    .inputs(metaitem('cableGtQuadrupleAluminium') * 24)
+    .inputs(ore('circuitEv') * 16)
+    .outputs(metaitem('susy:lunar_launch_complex'))
+    .EUt(VA[LV])
+    .duration(600)
+    .buildAndRegister()
+
+crafting.addShaped('susy:air_disperser', metaitem('susy:air_disperser'), [
+    [metaitem('plateAluminium'), metaitem('plateAluminium'), metaitem('plateAluminium')],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [null, metaitem('pipeSmallFluidAluminium'), null]])
+
+crafting.addShaped('susy:oxygen_sensor', metaitem('susy:oxygen_sensor'), [
+    [metaitem('plateAluminium'), ore('circuitMv'), metaitem('plateAluminium')],
+    [metaitem('plateAluminium'), metaitem('dustCalcium'), metaitem('stickAluminium')], // very vaguely based on an electrogalvanic oxygen sensor (they use lead and a bunch of other stuff tho)
+    [metaitem('cableGtSingleAluminium'), metaitem('pipeTinyFluidAluminium'), metaitem('cableGtSingleAluminium')]])
+
+MIXER.recipeBuilder()
+    .inputs(metaitem('dustSiliconDioxide') * 21)
+    .inputs(metaitem('dustSulfur') * 16)
+    .outputs(metaitem('dustSilicaSulfurMix') * 37)
+    .EUt(7)
+    .duration(370)
+    .buildAndRegister()
+
+MIXER.recipeBuilder()
+    .inputs(metaitem('dustBasalticRegolith') * 1)
+    .fluidInputs(liquid('silica_sulfur_mix') * 144)
+    .fluidOutputs(liquid('lunar_concrete') * 288)
+    .EUt(7)
+    .duration(12)
+    .buildAndRegister()
+
+SOLIDIFIER.recipeBuilder()
+    .inputs(metaitem('lunar_r_glass_fibers') * 8)
+    .fluidInputs(liquid('lunar_concrete') * 144)
+    .outputs(item('susy:lunar_concrete') * 32)
+    .EUt(7)
+    .duration(64)
+    .buildAndRegister()
+
+mods.chisel.carving.addGroup("lunar_concrete")
+
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete'))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 1))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 2))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 3))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 4))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 5))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 6))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 7))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 8))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 9))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 10))
+mods.chisel.carving.addVariation("lunar_concrete", item('susy:lunar_concrete', 11))
+
+// Hardened Titanium Dust * 9
+mods.gregtech.macerator.removeByInput(2, [item('gregtech:meta_block_compressed_551')], null)
+// Small Pile of Steel Dust * 18
+mods.gregtech.macerator.removeByInput(8, [metaitem('toolHeadChainsawHardenedTitanium')], null)
+// Hardened Titanium Dust * 4
+mods.gregtech.macerator.removeByInput(2, [metaitem('toolHeadBuzzSawHardenedTitanium')], null)
+// Hardened Titanium Dust * 4
+mods.gregtech.macerator.removeByInput(8, [metaitem('toolHeadWrenchHardenedTitanium')], null)
+// Hardened Titanium Dust * 1
+mods.gregtech.macerator.removeByInput(2, [metaitem('plateHardenedTitanium')], null)
+// Hardened Titanium Dust * 1
+mods.gregtech.macerator.removeByInput(2, [metaitem('ingotHardenedTitanium')], null)
+// Steel Dust * 4
+mods.gregtech.macerator.removeByInput(8, [metaitem('toolHeadDrillHardenedTitanium')], null)
+// Hardened Titanium Plate * 9
+mods.gregtech.cutter.removeByInput(30, [item('gregtech:meta_block_compressed_551')], [fluid('water') * 35])
+// Hardened Titanium Plate * 9
+mods.gregtech.cutter.removeByInput(30, [item('gregtech:meta_block_compressed_551')], [fluid('distilled_water') * 26])
+// Hardened Titanium Plate * 9
+mods.gregtech.cutter.removeByInput(30, [item('gregtech:meta_block_compressed_551')], [fluid('lubricant') * 8])
+// Hardened Titanium Ingot * 1
+mods.gregtech.extruder.removeByInput(28, [metaitem('dustHardenedTitanium'), metaitem('shape.extruder.ingot')], null)
+// Hardened Titanium Ingot * 2
+mods.gregtech.extractor.removeByInput(120, [metaitem('toolHeadChainsawHardenedTitanium')], null)
+// Hardened Titanium Ingot * 4
+mods.gregtech.extractor.removeByInput(120, [metaitem('toolHeadWrenchHardenedTitanium')], null)
+// Hardened Titanium Ingot * 4
+mods.gregtech.extractor.removeByInput(120, [metaitem('toolHeadDrillHardenedTitanium')], null)
+// Hardened Titanium Ingot * 1
+mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('nuggetHardenedTitanium') * 9, metaitem('shape.mold.ingot')], null)
+// Hardened Titanium Ingot * 9
+mods.gregtech.alloy_smelter.removeByInput(7, [item('gregtech:meta_block_compressed_551'), metaitem('shape.mold.ingot')], null)
+// Hardened Titanium Ingot * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('nuggetHardenedTitanium') * 9], null)
+// Block of Hardened Titanium * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('ingotHardenedTitanium') * 9], null)
+// Block of Hardened Titanium * 1
+mods.gregtech.alloy_smelter.removeByInput(28, [metaitem('ingotHardenedTitanium') * 9, metaitem('shape.mold.block')], null)
+// Block of Hardened Titanium * 1
+mods.gregtech.extruder.removeByInput(56, [metaitem('ingotHardenedTitanium') * 9, metaitem('shape.extruder.block')], null)
+// Hardened Titanium Nugget * 9
+mods.gregtech.alloy_smelter.removeByInput(7, [metaitem('ingotHardenedTitanium'), metaitem('shape.mold.nugget')], null)
+
+crafting.addShaped('susy:muffler_moon', metaitem('muffler_hatch.lv'), [
+    [metaitem('hull.ev'), metaitem('electric.motor.ev')],
+    [metaitem('pipeNormalFluidAluminium'), metaitem('rotorAluminium')]])
+
+crafting.addShaped('susy:drawer_upgrade_base_moon', item('storagedrawers:upgrade_template') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [metaitem('stickAluminium'), ore('drawerBasic'), metaitem('stickAluminium')],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_upgrade_4x_moon', item('storagedrawers:upgrade_storage', 1) * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [metaitem('ingotAluminium'), item('storagedrawers:upgrade_template'), metaitem('ingotAluminium')],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_downgrade_moon', item('storagedrawers:upgrade_one_stack') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [item('susy:regolith'), item('storagedrawers:upgrade_template'), item('susy:regolith')],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_downgrade_moon_basalt', item('storagedrawers:upgrade_one_stack') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [item('susy:regolith', 1), item('storagedrawers:upgrade_template'), item('susy:regolith', 1)],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+crafting.addShaped('susy:drawer_downgrade_moon_kreep', item('storagedrawers:upgrade_one_stack') * 8, [
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')],
+    [item('susy:regolith', 2), item('storagedrawers:upgrade_template'), item('susy:regolith', 2)],
+    [metaitem('stickAluminium'), metaitem('stickAluminium'), metaitem('stickAluminium')]])
+
+SOLIDIFIER.recipeBuilder()
+    .notConsumable(metaitem('shape.mold.block'))
+    .fluidInputs(liquid('lunar_r_glass') * 144)
+    .outputs(item('gregtech:transparent_casing'))
+    .EUt(7)
+    .duration(16)
+    .info('recipe.moon')
+    .buildAndRegister()
+
+// 3SiO2 + 4Al -> 2Al2O3 + 3Si
+// apparently this is even done somewhere
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem("dustSiliconDioxide") * 9)
+    .inputs(metaitem("dustAluminium") * 4)
+    .outputs(metaitem('dustAlumina') * 10)
+    .fluidOutputs(fluid("silicon") * 432)
+    .EUt(8000)
+    .duration(150)
+    .buildAndRegister()
+
+// Lunar solar cells
+// based off https://www.niac.usra.edu/files/library/meetings/annual/jun00/433Ignatiev.pdf (very trustworthy paper)
+// step 1: Al back contact on glass substrate
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('plateLunarRGlass'))
+    .inputs(metaitem("dustSmallAluminium"))
+    .outputs(metaitem('simple_solar_panel.step_one'))
+    .requireVacuum()
+    .EUt(4000)
+    .duration(45)
+    .buildAndRegister()
+
+// step 2: Al-doped Si base layer
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_one') * 4)
+    .inputs(metaitem("dustSilicon")) // the vacuum will make it high purity trust
+    .inputs(metaitem("dustTinyAluminium"))
+    .outputs(metaitem('simple_solar_panel.step_two') * 4)
+    .requireVacuum()
+    .EUt(8000)
+    .duration(135)
+    .buildAndRegister()
+
+// step 3: S-doped Si emitter
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_two') * 8)
+    .inputs(metaitem("dustSilicon"))
+    .inputs(metaitem("dustTinySulfur"))
+    .outputs(metaitem('simple_solar_panel.step_three') * 8)
+    .requireVacuum()
+    .EUt(8000)
+    .duration(400)
+    .buildAndRegister()
+
+// step 4: TiO2 antireflection coating
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_three') * 8)
+    .inputs(metaitem("dustTinyLunarRutile"))
+    .outputs(metaitem('simple_solar_panel.step_four') * 8)
+    .requireVacuum()
+    .EUt(10000)
+    .duration(240)
+    .buildAndRegister()
+
+// step 5: Al front contact, deposited via a Ti mask
+SOLAR_FURNACE.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.step_four'))
+    .inputs(metaitem("dustSmallAluminium"))
+    .notConsumable(metaitem('mask.simple_solar_panel'))
+    .outputs(metaitem('simple_solar_panel.cell'))
+    .requireVacuum()
+    .EUt(4000)
+    .duration(60)
+    .buildAndRegister()
+
+crafting.addShaped('susy:simple_solar_mask', metaitem('mask.simple_solar_panel'), [
+    [ore('toolSaw'), null, null],
+    [null, metaitem('plateTitanium'), null],
+    [null, null, null]])

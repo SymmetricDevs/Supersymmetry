@@ -5,7 +5,10 @@ import net.minecraft.potion.PotionEffect;
 import techguns.entities.npcs.Bandit;
 import techguns.entities.npcs.Outcast;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.nbt.NBTTagCompound
+import net.minecraft.nbt.NBTTagCompound;
+import supersymmetry.common.potion.PotionDropPodSickness;
+
+int DROP_POD_SICKNESS_DURATION = 600
 
 //zombie waves
 //can happen at any time, for any reason
@@ -98,6 +101,8 @@ new MobHordeEvent((player) -> {
     root.setInteger("hate", 0);
     bandit.getEntityData().setTag("susy", root);
     bandit.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 999999, 2));
+    bandit.setCustomNameTag("Ivan the Bandit");
+    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
 
     return bandit;
 }, 1, 1, "bandit_scripted_Ivan")
@@ -139,6 +144,8 @@ new MobHordeEvent((player) -> {
     root.setString("faction", "Bandits");
     root.setInteger("hate", -1);
     bandit.getEntityData().setTag("susy", root);
+    bandit.setCustomNameTag("Bandit scout");
+    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
 
     return bandit;
 }, 1, 2, "bandit_scouts")
@@ -182,6 +189,8 @@ new MobHordeEvent((player) -> {
     root.setString("faction", "Bandits");
     root.setInteger("hate", -1);
     bandit.getEntityData().setTag("susy", root);
+    bandit.setCustomNameTag("Bandit");
+    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
 
     return bandit;
 }, 3, 6, "bandit_small_raid")
@@ -226,6 +235,8 @@ new MobHordeEvent((player) -> {
     root.setString("faction", "Bandits");
     root.setInteger("hate", -2);
     bandit.getEntityData().setTag("susy", root);
+    bandit.setCustomNameTag("Bandit");
+    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
 
     return bandit;
 }, 5, 10, "bandit_medium_raid")
@@ -235,20 +246,21 @@ new MobHordeEvent((player) -> {
 
             NBTTagCompound nbt = new NBTTagCompound();
 
-            // List of possible weapons
-            String[] possibleWeapons = new String[]{
-                    "techguns:sawedoff",
-                    "techguns:revolver",
-                    "techguns:boltaction",
-                    "techguns:pistol"
-            };
+            // List of possible weapons (ItemStacks, so NBT is allowed)
+            def possibleWeapons = [
+                    item('techguns:sawedoff'),
+                    item('techguns:revolver'),
+                    item('techguns:boltaction'),
+                    item('techguns:pistol'),
+                    item('techguns:fraggrenade'),
+            ]
 
             // Pick a random weapon
-            String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+            def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())]
+
             net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
             net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
-            main.setString("id", chosenWeapon);
-            main.setByte("Count", (byte) 1);
+            chosenWeapon.writeToNBT(main);   // writes id, Count, Damage and the "tag" (NBT) for you
             hands.appendTag(main);
             hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
             nbt.setTag("HandItems", hands);
@@ -285,12 +297,14 @@ new MobHordeEvent((player) -> null, 10, 18, "bandit_large_raid")
                     root.setString("faction", "Bandits");
                     root.setInteger("hate", -3);
                     bandit.getEntityData().setTag("susy", root);
+                    bandit.setCustomNameTag("Bandit");
+                    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
                     return bandit;
                 },
                 entity -> {
                     NBTTagCompound nbt = new NBTTagCompound();
 
-                    // Armor
+                    // Armor (unchanged)
                     net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
                     String[] armorItems = new String[]{
                             "techguns:t1_scout_boots",
@@ -298,27 +312,28 @@ new MobHordeEvent((player) -> null, 10, 18, "bandit_large_raid")
                             "techguns:t1_scout_chestplate",
                             "techguns:t1_scout_helmet"
                     };
-                    for (String item : armorItems) {
+                    for (String armorItem : armorItems) {
                         net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
-                        armorTag.setString("id", item);
+                        armorTag.setString("id", armorItem);
                         armorTag.setByte("Count", (byte)1);
                         armor.appendTag(armorTag);
                     }
                     nbt.setTag("ArmorItems", armor);
 
-                    // Random weapon
-                    String[] possibleWeapons = new String[]{
-                            "techguns:thompson",
-                            "techguns:boltaction",
-                            "techguns:mac10",
-                            "techguns:ak47"
-                    };
-                    String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+                    // Random weapon (now ItemStacks)
+                    def possibleWeapons = [
+                            item('techguns:thompson'),
+                            item('techguns:boltaction'),
+                            item('techguns:mac10'),
+                            item('techguns:ak47'),
+                            item('techguns:fraggrenade'),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:mustard_gas'])
+                    ]
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())]
 
                     net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
                     net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
-                    main.setString("id", chosenWeapon);
-                    main.setByte("Count", (byte)1);
+                    chosenWeapon.writeToNBT(main);
                     hands.appendTag(main);
                     hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
                     nbt.setTag("HandItems", hands);
@@ -346,6 +361,8 @@ new MobHordeEvent((player) -> null, 10, 18, "bandit_large_raid")
                     root.setString("faction", "Bandits");
                     root.setInteger("hate", -6);
                     bandit.getEntityData().setTag("susy", root);
+                    bandit.setCustomNameTag("Bandit mercenary");
+                    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
                     return bandit;
                 },
                 entity -> {
@@ -412,6 +429,8 @@ new MobHordeEvent((player) -> null, 20, 30, "bandit_massive_raid")
                     root.setString("faction", "Bandits");
                     root.setInteger("hate", -5);
                     bandit.getEntityData().setTag("susy", root);
+                    bandit.setCustomNameTag("Bandit");
+                    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
                     return bandit;
                 },
                 entity -> {
@@ -425,26 +444,27 @@ new MobHordeEvent((player) -> null, 20, 30, "bandit_massive_raid")
                             "techguns:t1_combat_chestplate",
                             "techguns:t1_scout_helmet"
                     };
-                    for (String item : armorItems) {
+                    for (String armorItem : armorItems) {
                         net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
-                        armorTag.setString("id", item);
+                        armorTag.setString("id", armorItem);
                         armorTag.setByte("Count", (byte)1);
                         armor.appendTag(armorTag);
                     }
                     nbt.setTag("ArmorItems", armor);
 
                     // Random weapon
-                    String[] possibleWeapons = new String[]{
-                            "techguns:thompson",
-                            "techguns:combatshotgun",
-                            "techguns:ak47"
-                    };
-                    String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+                    def possibleWeapons = [
+                            item("techguns:thompson"),
+                            item("techguns:combatshotgun"),
+                            item("techguns:ak47"),
+                            item('techguns:fraggrenade'),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:mustard_gas'])
+                    ]
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())]
 
                     net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
                     net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
-                    main.setString("id", chosenWeapon);
-                    main.setByte("Count", (byte)1);
+                    chosenWeapon.writeToNBT(main);
                     hands.appendTag(main);
                     hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
                     nbt.setTag("HandItems", hands);
@@ -471,6 +491,8 @@ new MobHordeEvent((player) -> null, 20, 30, "bandit_massive_raid")
                     root.setString("faction", "Bandits");
                     root.setInteger("hate", -6);
                     bandit.getEntityData().setTag("susy", root);
+                    bandit.setCustomNameTag("Bandit mercenary");
+                    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
                     return bandit;
                 },
                 entity -> {
@@ -524,11 +546,11 @@ new MobHordeEvent((player) -> null, 20, 30, "bandit_massive_raid")
 
 new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
         .setTimer(144000, 216000)
+        .setDropPodExplosions(false)
         .minHate("Bandits", 300)
 
 //walls
         .addPattern(
-                //square
                 t -> {
                     double n = 2;
                     double angle = t * 2 * Math.PI;
@@ -537,23 +559,21 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     double z = (Math.sin(angle) < 0 ? -1 : 1) * Math.pow(Math.abs(Math.sin(angle)), 2/n) * radius;
                     return new MobHordeEvent.Vec2(x, z);
                 },
-                Arrays.asList("#gen SandBags"), //replace with bigger sandbags
+                Arrays.asList("#gen SandBags"),
                 null,
                 null,
         )
 //mortar
         .addPattern(
-                //square
                 t -> {
-                    return new MobHordeEvent.Vec2(0, 0); //always spawns in the center of the invasion
+                    return new MobHordeEvent.Vec2(0, 0);
                 },
-                Arrays.asList("#gen AutoMortar"), //replace with auto-mortar, shells do not destroy blocks before the player launches a rocket
+                Arrays.asList("#gen AutoMortar"),
                 null,
                 null,
         )
 //flare
         .addPattern(
-                //circle
                 t -> {
                     double radius = 5;
                     double angle = t * 2 * Math.PI;
@@ -578,6 +598,8 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     root.setString("faction", "Bandits");
                     root.setInteger("hate", -5);
                     bandit.getEntityData().setTag("susy", root);
+                    bandit.setCustomNameTag("Bandit");
+                    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
                     return bandit;
                 },
                 entity -> {
@@ -600,17 +622,18 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     nbt.setTag("ArmorItems", armor);
 
                     // Random weapon
-                    String[] possibleWeapons = new String[]{
-                            "techguns:m4",
-                            "techguns:combatshotgun",
-                            "techguns:ak47"
-                    };
-                    String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+                    def possibleWeapons = [
+                            item("techguns:m4"),
+                            item("techguns:combatshotgun"),
+                            item("techguns:ak47"),
+                            item('techguns:fraggrenade'),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:mustard_gas'])
+                    ];
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())];
 
                     net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
                     net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
-                    main.setString("id", chosenWeapon);
-                    main.setByte("Count", (byte)1);
+                    chosenWeapon.writeToNBT(main);
                     hands.appendTag(main);
                     hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
                     nbt.setTag("HandItems", hands);
@@ -637,6 +660,8 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     root.setString("faction", "Bandits");
                     root.setInteger("hate", -7);
                     bandit.getEntityData().setTag("susy", root);
+                    bandit.setCustomNameTag("Bandit mercenary");
+                    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
                     return bandit;
                 },
                 entity -> {
@@ -685,8 +710,11 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     Bandit bandit = new Bandit(player.world);
                     NBTTagCompound root = bandit.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Bandits");
+                    root.setBoolean("leader", true); // Sets leader: 1b in NBT
                     root.setInteger("hate", -50);
                     bandit.getEntityData().setTag("susy", root);
+                    bandit.setCustomNameTag("Bandit commander");
+                    bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
                     return bandit;
                 },
                 entity -> {
@@ -748,6 +776,8 @@ new MobHordeEvent((player) -> {
     root.setInteger("hate", -10);
     outcast.getEntityData().setTag("susy", root);
     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+    outcast.setCustomNameTag("Former Federation Soldier");
+    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
     //do not use addRandomArmor in here if you set the nbt tag later, otherwise it will override it for some reason
 
     return outcast;
@@ -785,6 +815,8 @@ new MobHordeEvent((player) -> {
     root.setInteger("hate", -10);
     outcast.getEntityData().setTag("susy", root);
     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+    outcast.setCustomNameTag("Former Federation Soldier");
+    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
     //do not use addRandomArmor in here if you set the nbt tag later, otherwise it will override it for some reason
 
     return outcast;
@@ -795,15 +827,14 @@ new MobHordeEvent((player) -> {
             def main = new NBTTagCompound()
 
             // Random weapon
-            String[] possibleWeapons = new String[]{
-                    "techguns:lmg",
-                    "techguns:flamethrower",
-                    "techguns:minigun"
-            };
-            String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
-
-            main.setString("id", chosenWeapon)
-            main.setByte("Count", (byte) 1)
+            def possibleWeapons = [
+                    item("techguns:lmg"),
+                    item("techguns:flamethrower"),
+                    item("techguns:minigun"),
+                    item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:hydrochloric_acid'])
+            ];
+            def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+            chosenWeapon.writeToNBT(main);
             hands.appendTag(main)
             hands.appendTag(new NBTTagCompound())
             nbt.setTag("HandItems", hands)
@@ -813,6 +844,694 @@ new MobHordeEvent((player) -> {
         .setTimer(144000, 216000)
         .minHate("Feds", 185)
 
+/**
+ federation platoon
+ 16–40 people
+ LMG, miniguns, flamethrowers, vectors
+ full power armor, conscript armor
+ active combat stims
+ supplemented with conscripts to beef up their numbers
+ A proper expeditionary force unit, though some of their members appear to lack some training.
+ **/
+
+new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
+        .setTimer(144000, 216000)
+        .minHate("Feds", 350)
+
+//normal raider
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 10;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -10);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+                    outcast.setCustomNameTag("Former Federation Soldier");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Random weapon
+                    def possibleWeapons = [
+                            item("techguns:lmg"),
+                            item("techguns:flamethrower"),
+                            item("techguns:minigun"),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:hydrochloric_acid']),
+                            item('icbmclassic:grenade', 1)
+                    ];
+                    String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())];
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    chosenWeapon.writeToNBT(main);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+//conscript
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 8;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -5);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 0));
+                    outcast.setCustomNameTag("Former Federation Conscript");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Armor
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t3_combat_boots",
+                            "techguns:t3_combat_leggings",
+                            "techguns:t3_combat_chestplate",
+                            "techguns:t3_combat_helmet"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+
+                    // vector only
+                    String chosenWeapon = "techguns:vector"
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", chosenWeapon);
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+        .setDistribution(60.0,40.0); //mostly normal feds + a few conscript specialists
+
+
+/**
+ federation reinforced flight platoon
+ 45 people
+ LMG, miniguns, flamethrowers, scar
+ full power armor
+ active combat stims
+ direct close air support
+ Standard federation air combat unit, typically reserved for rapid in-and-out operations
+ **/
+
+String helicopterCommand = "summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{faction:\"Feds\",hate:-30,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:150}],Health:150.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b},{Id:" + PotionDropPodSickness.getId() + ",Amplifier:0b,Duration:" + DROP_POD_SICKNESS_DURATION + ",ShowParticles:0b}]}"
+new MobHordeEvent((player) -> null, 50, 50, "fed_reinforced_flight_platoon")
+        .setTimer(144000, 216000)
+        .minHate("Feds", 750)
+
+//normal raider
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 15;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -10);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+                    outcast.setCustomNameTag("Former Federation Soldier");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Random weapon
+                    def possibleWeapons = [
+                            item("techguns:lmg"),
+                            item("techguns:flamethrower"),
+                            item("techguns:minigun"),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:phosphine']),
+                            item('icbmclassic:grenade', 4)
+                    ];
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())];
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    chosenWeapon.writeToNBT(main);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+//sergeant
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 2;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -50);
+                    root.setBoolean("leader", true); // Sets leader: 1b in NBT
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
+                    outcast.setCustomNameTag("Former Federation Sergeant");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+
+                    // Armor
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t4_power_boots",
+                            "techguns:t4_power_leggings",
+                            "techguns:t4_power_chestplate",
+                            "techguns:t2_beret"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+
+                    // always scar
+                    String chosenWeapon = "techguns:scar"
+
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", chosenWeapon);
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound()); // offhand empty
+                    nbt.setTag("HandItems", hands);
+
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+//air support
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 5;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+
+                Arrays.asList(helicopterCommand),
+                null,
+                null,
+        )
+        .setExactDistribution(44,1,5); //federation soldiers, platoon sergeant, helicopters
+
+/**
+ federation air scouts
+ 20 attack helicopters, 1 leader helicopter
+ helicopter munitions, helicopter rockets
+ Air only combat unit, prized by the federation militaries for securing air corridors
+ **/
+
+String helicopterCommand1 = "summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{leader:1b,faction:\"Feds\",hate:-150,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:200}],Health:200.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b},{Id:" + PotionDropPodSickness.getId() + ",Amplifier:0b,Duration:" + DROP_POD_SICKNESS_DURATION + ",ShowParticles:0b}]}"
+new MobHordeEvent((player) -> null, 20, 20, "fed_air_scouts")
+        .setTimer(144000, 216000)
+        .minHate("Feds", 1500)
+
+//normal raider
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 5;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+
+                Arrays.asList(helicopterCommand),
+                null,
+                null,
+        )
+//squadron leader
+        .addPattern(
+                //circle
+                t -> {
+                    double radius = 1;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+
+                Arrays.asList(helicopterCommand1),
+                null,
+                null,
+        )
+        .setExactDistribution(19,1); //normal helicopters, squadron leader
+
+/**
+ federation battery siege
+ 60 people 10 helicopters
+ LMG, miniguns, flamethrowers, as50
+ full power armor
+ active combat stims
+ led by 1 Captain and 1 First Sergeant + 3 Platoon Sergeants
+ arrives in 3 distinct formations
+ introduces the problem causer machines to the game.
+ It is the smallest federation unit capable of completely independent operations and self-subsistence
+ The strongest the federation is willing to send at you as long as you remain planetbound
+ **/
+
+double TRIANGLE_RADIUS = 80.0;
+def tri0x = TRIANGLE_RADIUS * Math.cos(Math.toRadians(90))
+def tri0z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(90))
+def tri1x = TRIANGLE_RADIUS * Math.cos(Math.toRadians(210))
+def tri1z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(210))
+def tri2x = TRIANGLE_RADIUS * Math.cos(Math.toRadians(330))
+def tri2z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(330))
+
+
+new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
+        .setTimer(144000, 216000)
+        .setDropPodExplosions(false)
+        .minHate("Feds", 2500)
+
+// ── FORMATION 0 - normal soldiers ──────────────────────────────────────
+        .addPattern(
+                t -> {
+                    double radius = 12
+                    double angle = t * 2 * Math.PI
+                    return new MobHordeEvent.Vec2(tri0x + radius * Math.cos(angle), tri0z + radius * Math.sin(angle))
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -10);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+                    outcast.setCustomNameTag("Federation Soldier");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    def possibleWeapons = [
+                            item("techguns:lmg"),
+                            item("techguns:flamethrower"),
+                            item("techguns:minigun"),
+                            item("techguns:as50"),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:fluorine']),
+                    ];
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())]
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    chosenWeapon.writeToNBT(main);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+// ── FORMATION 0 - platoon sergeant ─────────────────────────────────────
+        .addPattern(
+                t -> {
+                    double radius = 12
+                    double angle = t * 2 * Math.PI
+                    return new MobHordeEvent.Vec2(tri0x + radius * Math.cos(angle), tri0z + radius * Math.sin(angle))
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -50);
+                    root.setBoolean("leader", true);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
+                    outcast.setCustomNameTag("Federation Platoon Sergeant");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t4_power_boots",
+                            "techguns:t4_power_leggings",
+                            "techguns:t4_power_chestplate",
+                            "techguns:t2_beret"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", "techguns:scar");
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+
+// ── FORMATION 1 - normal soldiers ──────────────────────────────────────
+        .addPattern(
+                t -> {
+                    double radius = 12
+                    double angle = t * 2 * Math.PI
+                    return new MobHordeEvent.Vec2(tri1x + radius * Math.cos(angle), tri1z + radius * Math.sin(angle))
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -10);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+                    outcast.setCustomNameTag("Federation Soldier");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    def possibleWeapons = [
+                            item("techguns:lmg"),
+                            item("techguns:flamethrower"),
+                            item("techguns:minigun"),
+                            item("techguns:as50"),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:fluorine']),
+                    ];
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())]
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    chosenWeapon.writeToNBT(main);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+// ── FORMATION 1 - platoon sergeant ─────────────────────────────────────
+        .addPattern(
+                t -> {
+                    double radius = 12
+                    double angle = t * 2 * Math.PI
+                    return new MobHordeEvent.Vec2(tri1x + radius * Math.cos(angle), tri1z + radius * Math.sin(angle))
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -50);
+                    root.setBoolean("leader", true);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
+                    outcast.setCustomNameTag("Federation Platoon Sergeant");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t4_power_boots",
+                            "techguns:t4_power_leggings",
+                            "techguns:t4_power_chestplate",
+                            "techguns:t2_beret"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", "techguns:scar");
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+
+// ── FORMATION 2 - normal soldiers ──────────────────────────────────────
+        .addPattern(
+                t -> {
+                    double radius = 12
+                    double angle = t * 2 * Math.PI
+                    return new MobHordeEvent.Vec2(tri2x + radius * Math.cos(angle), tri2z + radius * Math.sin(angle))
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -10);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
+                    outcast.setCustomNameTag("Federation Soldier");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    def possibleWeapons = [
+                            item("techguns:lmg"),
+                            item("techguns:flamethrower"),
+                            item("techguns:minigun"),
+                            item("techguns:as50"),
+                            item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:fluorine']),
+                    ];
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())]
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    chosenWeapon.writeToNBT(main);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+// ── FORMATION 2 - platoon sergeant ─────────────────────────────────────
+        .addPattern(
+                t -> {
+                    double radius = 12
+                    double angle = t * 2 * Math.PI
+                    return new MobHordeEvent.Vec2(tri2x + radius * Math.cos(angle), tri2z + radius * Math.sin(angle))
+                },
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -50);
+                    root.setBoolean("leader", true);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
+                    outcast.setCustomNameTag("Federation Platoon Sergeant");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t4_power_boots",
+                            "techguns:t4_power_leggings",
+                            "techguns:t4_power_chestplate",
+                            "techguns:t2_beret"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", "techguns:scar");
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+
+//air support
+        .addPattern(
+                t -> {
+                    double radius = 8;
+                    double angle = t * 2 * Math.PI;
+                    return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
+                },
+                Arrays.asList(helicopterCommand),
+                null,
+                null
+        )
+//siege captain
+        .addPattern(
+                t -> new MobHordeEvent.Vec2(0, 0),
+                Arrays.asList(helicopterCommand1),
+                null,
+                null
+        )
+//first sargent
+        .addPattern(
+                t -> new MobHordeEvent.Vec2(0, 0),
+                null,
+                player -> {
+                    Outcast outcast = new Outcast(player.world);
+                    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
+                    root.setString("faction", "Feds");
+                    root.setInteger("hate", -75);
+                    root.setBoolean("leader", true);
+                    outcast.getEntityData().setTag("susy", root);
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
+                    outcast.setCustomNameTag("Federation Platoon Sergeant");
+                    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+                    outcast.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 10000, 10));
+                    return outcast;
+                },
+                entity -> {
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    net.minecraft.nbt.NBTTagList armor = new net.minecraft.nbt.NBTTagList();
+                    String[] armorItems = new String[]{
+                            "techguns:t4_power_boots",
+                            "techguns:t4_power_leggings",
+                            "techguns:t4_power_chestplate",
+                            "techguns:t2_beret"
+                    };
+                    for (String item : armorItems) {
+                        net.minecraft.nbt.NBTTagCompound armorTag = new net.minecraft.nbt.NBTTagCompound();
+                        armorTag.setString("id", item);
+                        armorTag.setByte("Count", (byte)1);
+                        net.minecraft.nbt.NBTTagCompound itemNbt = new net.minecraft.nbt.NBTTagCompound();
+                        itemNbt.setByte("camo", (byte)2);
+                        armorTag.setTag("tag", itemNbt);
+                        armor.appendTag(armorTag);
+                    }
+                    nbt.setTag("ArmorItems", armor);
+                    net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
+                    net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
+                    main.setString("id", "techguns:grenadelauncher");
+                    main.setByte("Count", (byte)1);
+                    hands.appendTag(main);
+                    hands.appendTag(new net.minecraft.nbt.NBTTagCompound());
+                    nbt.setTag("HandItems", hands);
+                    entity.readEntityFromNBT(nbt);
+                    return entity;
+                }
+        )
+//constructoid
+        .addPattern(
+                t -> {
+                    return new MobHordeEvent.Vec2(0, 0);
+                },
+                Arrays.asList("/#gen ConstructoidMK01"),
+                null,
+                null,
+        )
+//flare
+        .addPattern(
+                t -> {
+                    return new MobHordeEvent.Vec2(-3, 0);
+                },
+                Arrays.asList("setblock ~ ~ ~ susy:raid_flare_block 1 replace {targetUUID:\"%player_uuid%\"}"), //add player data tag
+                null,
+                null,
+        )
+//drop beacon
+        .addPattern(
+                t -> {
+                    return new MobHordeEvent.Vec2(3, 0);
+                },
+                Arrays.asList(
+                        "blocklist",
+                        "gregtech:machine,18650,{\"targetUUID\":\"%player_uuid%\"}"
+                ),
+                null,
+                null,
+        )
+
+        .setExactDistribution(19, 1, 19, 1, 19, 1, 9, 1, 1, 1, 1, 1); // formation0 soldiers, formation0 sergeant, formation1 soldiers, formation1 sergeant, formation2 soldiers, formation2 sergeant, normal helicopter, captain helicopter, constructoid, flare, drop beacon
 /*
 // Commands for pods
 // example code only, templates, etc...

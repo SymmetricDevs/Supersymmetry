@@ -52,6 +52,7 @@ class ChangeFlags {
         Magnesium.addIngot()
         Asbestos.addIngot()
         Potassium.addIngot()
+        Scandium.addIngot()
 
         BisphenolA.addDust()
         Polonium.addDust()
@@ -74,6 +75,7 @@ class ChangeFlags {
         //Iron3Chloride.setupFluidTypes(590, FluidStorageKeys.GAS) 
 
         Sodium.setupFluidTypes(371, FluidStorageKeys.LIQUID)
+        Sulfur.setupFluidTypes(388, FluidStorageKeys.LIQUID)
         SodiumHydroxide.setupFluidTypes(591, FluidStorageKeys.LIQUID)
         Polydimethylsiloxane.setupFluidTypes(293, FluidStorageKeys.LIQUID)
         Glass.setupFluidTypes(1800, FluidStorageKeys.LIQUID)
@@ -92,6 +94,7 @@ class ChangeFlags {
         HighPuritySelenium.setupFluidTypes(494, FluidStorageKeys.LIQUID)
         BlackSteel.setupFluidTypes(1728, FluidStorageKeys.LIQUID)
         Polytetrafluoroethylene.setupFluidTypes(293, FluidStorageKeys.LIQUID)
+        Scandium.setupFluidTypes(1814, FluidStorageKeys.LIQUID)
 
         CarbonDioxide.setupFluidTypes(304, SusyFluidStorageKeys.SUPERCRITICAL)
         Propane.setupFluidTypes(370, SusyFluidStorageKeys.SUPERCRITICAL)
@@ -152,6 +155,7 @@ class ChangeFlags {
         Ammonia.setBasic(FluidStorageKeys.GAS)
         Dimethylamine.setBasic(FluidStorageKeys.GAS)
         Dimethylhydrazine.setBasic(FluidStorageKeys.LIQUID)
+        SodiumHydroxide.setBasic(FluidStorageKeys.LIQUID)
 
         // Dummy properties for continuous casting
         Steel.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
@@ -178,7 +182,7 @@ class ChangeFlags {
         Nickel.addFlags("generate_catalyst_bed");
         Magnesia.addFlags("generate_catalyst_bed");
         CupricOxide.addFlags("generate_catalyst_bed");
-        Brass.addFlags("generate_ring");
+        Brass.addFlags("generate_ring", "generate_pins");
         Indium.addFlags("generate_plate");
         BisphenolA.addFlags("no_unification");
         Phosphorus.addFlags("no_smelting");
@@ -186,7 +190,7 @@ class ChangeFlags {
         Gold.addFlags("generate_gear");
         IronMagnetic.addFlags("generate_ring");
         SteelMagnetic.addFlags("generate_plate")
-        StainlessSteel.addFlags("generate_round");
+        StainlessSteel.addFlags("generate_round", "generate_fine_wire");
         Hafnium.addFlags("generate_long_rod", "generate_rod");
         VanadiumSteel.addFlags("generate_round");
         Mica.addFlags("generate_plate", "no_unification");
@@ -198,16 +202,20 @@ class ChangeFlags {
         AluminiumAlloy7075.addFlags("generate_long_rod", "generate_rod");
         Graphite.addFlags("generate_plate");
         Germanium.addFlags("generate_plate");
-        Magnalium.addFlags("generate_ring", "generate_rotor")
-        ReinforcedEpoxyResin.addFlags("generate_rotor")
-        Beryllium.addFlags("generate_rod")
-        Bronze.addFlags("disable_decomposition")
-        Brass.addFlags("disable_decomposition")
-        Cupronickel.addFlags("disable_decomposition")
-        Invar.addFlags("disable_decomposition")
-        Nichrome.addFlags("disable_decomposition")
-        Kanthal.addFlags("disable_decomposition")
-        Electrum.addFlags("induction_melt")
+        Magnalium.addFlags("generate_ring", "generate_rotor");
+        ReinforcedEpoxyResin.addFlags("generate_rotor");
+        Beryllium.addFlags("generate_rod");
+        Bronze.addFlags("disable_decomposition");
+        Brass.addFlags("disable_decomposition");
+        Cupronickel.addFlags("disable_decomposition");
+        Invar.addFlags("disable_decomposition", "generate_fine_wire");
+        Nichrome.addFlags("disable_decomposition");
+        Kanthal.addFlags("disable_decomposition");
+        Electrum.addFlags("induction_melt");
+        Kovar.addFlags("generate_bolt_screw");
+        NickelZincFerrite.addFlags("generate_bolt_screw");
+        Platinum.addFlags("generate_spring")
+        Scandium.addFlags("generate_fine_wire", "induction_melt")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -234,6 +242,7 @@ class ChangeFlags {
         Erbium.setMaterialRGB(0xc07ede)
         Thulium.setMaterialRGB(0xe86666)
         Mica.setMaterialRGB(0xe8e7ba)
+        Scandium.setMaterialRGB(0xF2CD00)
 
         // Formulae
 
@@ -652,5 +661,6 @@ class ChangeFlags {
         // Mill balls
         Steel.addMillBall(7680)
         StainlessSteel.addMillBall(17280)
+
     }
 }

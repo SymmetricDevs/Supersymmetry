@@ -19,7 +19,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('electric.pump.lv'))
     .inputs(metaitem('large_fluid_cell.steel') * 2)
     .inputs(ore('rotorLead') * 2)
-    .inputs(ore('pipeSmallFluidPotin'))
+    .inputs(ore('pipeSmallFluidIron'))
     .inputs(ore('circuitLv'))
     .outputs(metaitem('liquid_fuel_jetpack'))
     .duration(150)
@@ -401,8 +401,12 @@ def wrenchVoltages = ['lv', 'hv', 'iv']
 
 for (tooltip in allToolTip) {
 
+    int circMod = 0
+    if (tooltip == 'Steel') {
+        circMod = 1
+    }
     ASSEMBLER.recipeBuilder()
-        .circuitMeta(32)
+        .circuitMeta(32 - circMod)
         .inputs(ore('plate' + tooltip) * 4)
         .inputs(ore('ringSteel'))
         .inputs(ore('screwSteel') * 2)
@@ -411,7 +415,7 @@ for (tooltip in allToolTip) {
         .buildAndRegister();
     
     ASSEMBLER.recipeBuilder()
-        .circuitMeta(29)
+        .circuitMeta(29 - circMod)
         .inputs(ore('plate' + tooltip) * 4)
         .inputs(ore('plateSteel') * 4)
         .outputs(metaitem('toolHeadDrill' + tooltip))
@@ -420,7 +424,7 @@ for (tooltip in allToolTip) {
         .buildAndRegister();
     
     ASSEMBLER.recipeBuilder()
-        .circuitMeta(22)
+        .circuitMeta(22 - circMod)
         .inputs(ore('plate' + tooltip) * 2)
         .inputs(ore('plateSteel') * 4)
         .inputs(ore('ringSteel') * 2)
@@ -525,7 +529,7 @@ for (tooltip in allToolTip) {
     if (!(tooltip in screwdriverBlacklist)) {
 
         ASSEMBLER.recipeBuilder()
-            .circuitMeta(32)
+            .circuitMeta(32 - circMod)
             .inputs(ore('stickLong' + tooltip))
             .outputs(metaitem('toolHeadScrewdriver' + tooltip))
             .duration(50)

@@ -1,27 +1,15 @@
 {
-  "preRequisiteTypes:7": [
-    0,
-    0,
-    0,
-    0,
-    1
-  ],
   "preRequisites:11": [
-    496,
-    494,
-    632,
-    480,
-    687
+    1676295411,
+    1576737390
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.497.desc",
-      "frame:8": "GATE",
       "icon:10": {
         "Damage:2": 629,
         "id:8": "gregtech:meta_item_1"
       },
-      "ismain:1": 1,
       "name:8": "susy.quest.db.497.title"
     }
   },

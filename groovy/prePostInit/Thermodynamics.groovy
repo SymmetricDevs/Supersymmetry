@@ -281,6 +281,13 @@ ChlorodifluoromethaneRefrigerant.setDurationRadiator(2);
 ChlorodifluoromethaneRefrigerant.setAmountToUse(1000);
 ChlorodifluoromethaneRefrigerant.setTimeFactor(2);
 
+def TetrafluoroethaneRefrigerant = new Refrigerant("tetrafluoroethane", 'hot_compressed_tetrafluoroethane', 'compressed_tetrafluoroethane', 'cold_tetrafluoroethane');
+TetrafluoroethaneRefrigerant.setPowerToCompress(180);
+TetrafluoroethaneRefrigerant.setDurationToCompress(4);
+TetrafluoroethaneRefrigerant.setDurationRadiator(2);
+TetrafluoroethaneRefrigerant.setAmountToUse(1000);
+TetrafluoroethaneRefrigerant.setTimeFactor(1);
+
 def Refrigerants = [
         AmmoniaRefrigerant,
         PropaneRefrigerant,
@@ -288,7 +295,8 @@ def Refrigerants = [
         TrichlorofluoromethaneRefrigerant,
         DichlorodifluoromethaneRefrigerant,
         ChlorotrifluoromethaneRefrigerant,
-        ChlorodifluoromethaneRefrigerant
+        ChlorodifluoromethaneRefrigerant,
+        TetrafluoroethaneRefrigerant
 ];
 
 def CarbonDioxideSupercritical = new SupercriticalFluid("compressed_carbon_dioxide", "supercritical_carbon_dioxide");
@@ -909,3 +917,11 @@ FLUID_HEATER.recipeBuilder()
         .duration(20)
         .EUt(VA[LV])
         .buildAndRegister();
+
+// Induction hot coolant water
+
+RADIATOR.recipeBuilder()
+    .fluidInputs(liquid('hot_softened_water') * 100)
+    .fluidOutputs(liquid('water') * 100)
+    .duration(100)
+    .buildAndRegister();

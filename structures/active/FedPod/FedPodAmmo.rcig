@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "FedPodAmmo",
+  "items": [
+    {
+      "weight": 3.3419337272644043,
+      "min": 8,
+      "max": 17,
+      "item": {
+        "id": "minecraft:web",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 3,
+      "max": 6,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.25986868143081665,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 110,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 14,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.18405085802078247,
+      "min": 4,
+      "max": 6,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "techguns:itemshared",
+        "damage": 12,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:pistol",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 18
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.0739658921957016,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "techguns:boltaction",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "camo": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "ammovariant": {
+              "nbtType": "string",
+              "nbt": "default"
+            },
+            "ammo": {
+              "nbtType": "short",
+              "nbt": 6
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}
