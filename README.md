@@ -27,11 +27,12 @@ As time of writing, following systems and mechanics have been added or modified 
 - Custom Chemical Reactors
 - Weaponry and Military (Derived from TechGuns and ICBM)
 - Infinite Ore Deposits with related processing
-- Froth Floatation
+- Froth Flotation
 - Catalysts
 - Extensive revamps in petrochemistry, metallurgy and cryogenics
   - Polymer processing lines
   - Superconductors
+- Rocketry and Moon content
 
 Some mods (AE2, Stargate, TARDIS) are listed in the pack, but not legitimately obtainable. Subject to change. 
 Specifically, AE2 is going to be obtained after space travel is possible. 
@@ -40,7 +41,7 @@ Specifically, AE2 is going to be obtained after space travel is possible.
 The pack spans many different levels of technological mastery, from the steam engine to the nuclear reactor. It also incorporates elements from theoretical physics, allowing the player to exploit phenomena that have never before been seen in Minecraft. 
 
 Every mod has its progression altered to fit into GregTech progression. As a consequence of this, automation and mass production are vital, encouraging the construction of large factories and transportation networks to move resources and products. 
-The player will have to conquer Overworld and its resources first, then move on to establish a permanent presence in space, then explore the solar system, and finally move outwards into interstellar space, exploring a variety of planets with unique challenges, world generation, and enemies to face, to get access to the most exotic and rare resources in the cosmos, starting from nothing and building something even more expansive than a Kardashev type III civilization.
+The player will have to conquer the Overworld and its resources first, then move on to establish a permanent presence in space, then explore the solar system, and finally move outwards into interstellar space, exploring a variety of planets with unique challenges, world generation, and enemies to face, to get access to the most exotic and rare resources in the cosmos, starting from nothing and building something even more expansive than a Kardashev type III civilization.
 
 The pack is currently in Beta. You can join the discord server here:
 https://discord.gg/BNbbK98rh6
@@ -58,6 +59,9 @@ Structures and world generation work by [oliwier509](https://github.com/oliwier5
 Part of the main menu music (menu3.ogg and menu4.ogg) by [Ayden George](https://www.youtube.com/@ayden_george_official).
 
 Special thanks to our volunteers:
+- lanicerine • Space content
+- jethro3000 • Circuitry content
+- Fiery • QA/Quests
 - tots • Research
 - Eight • Core mod
 - spacemarie • Quests
