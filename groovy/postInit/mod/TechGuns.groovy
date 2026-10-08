@@ -1261,6 +1261,8 @@ ASSEMBLER.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
+//commando armor
+
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(5)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
