@@ -1261,6 +1261,8 @@ ASSEMBLER.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
+//commando armor
+
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(5)
     .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
@@ -1270,8 +1272,6 @@ WEAPONS_FACTORY.recipeBuilder()
     .duration(100)
     .EUt(240)
     .buildAndRegister();
-
-
 
 WEAPONS_FACTORY.recipeBuilder()
     .circuitMeta(6)
@@ -1634,7 +1634,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .inputs(ore('plateRubber') * 4)
         .outputs(item('techguns:hazmat_boots'))
         .duration(50)
-        .EUt(60)
+        .EUt(15)
         .buildAndRegister()
 
 // exo suit
