@@ -3,11 +3,19 @@ import static gregtech.api.GTValues.*
 
 def name_removals = [
     'bdsandm:upgrade_void',
+    'bdsandm:upgrade_64',
+    'bdsandm:upgrade_64_split',
+    'bdsandm:upgrade_256',
+    'bdsandm:upgrade_256_split',
+    'bdsandm:upgrade_1024',
+    'bdsandm:upgrade_1024_split',
+    'bdsandm:upgrade_4096',
 ]
 
 for (name in name_removals) {
     crafting.remove(name)
 }
+
 crafting.remove('bdsandm:color_tool_b')
 crafting.replaceShaped('bdsandm:color_tool_c', item('bdsandm:color_tool'), [
     [ore('dyeRed'), ore('dyeOrange'), ore('dyeYellow')],
@@ -36,12 +44,6 @@ crafting.replaceShapeless("bdsandm:upgrade_ore_dict", item('bdsandm:upgrade:5'),
 crafting.replaceShapeless("bdsandm:upgrade_uninstall", item('bdsandm:upgrade:7'), [
 	item('minecraft:item_frame'),
 	ore('chestWood')
-])
-
-crafting.replaceShapeless("bdsandm:upgrade_64", item('bdsandm:upgrade'), [
-	item('minecraft:item_frame'),
-	ore('chestWood'),
-	ore('ingotIron')
 ])
 
 crafting.replaceShaped('bdsandm:wood_crate', item('bdsandm:wood_crate'), [
@@ -87,43 +89,39 @@ crafting.replaceShaped('bdsandm:shipping_b', item('bdsandm:shipping_container'),
 ])
 
 ASSEMBLER.recipeBuilder()
-	.circuitMeta(1)
-	.inputs(item('minecraft:item_frame'))
-	.inputs(ore('chestWood'))
-	.inputs(ore('ingotIron'))
+	.inputs(metaitem('electric.piston.mv') * 4)
+	.inputs(ore('platePlastic') * 4)
+	.inputs(ore('circuitMv'))
 	.outputs(item('bdsandm:upgrade') * 4)
 	.duration(10)
-	.EUt(VA[ULV])
+	.EUt(VA[MV])
 	.buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-	.circuitMeta(2)
-	.inputs(item('minecraft:item_frame'))
-	.inputs(ore('chestWood'))
-	.inputs(ore('ingotIron'))
-	.outputs(item('bdsandm:upgrade', 1))
-	.duration(20)
-	.EUt(VA[ULV])
+	.inputs(metaitem('electric.piston.hv') * 6)
+	.inputs(ore('platePolyvinylChloride') * 4)
+	.inputs(ore('circuitHv'))
+	.outputs(item('bdsandm:upgrade', 1) * 3)
+	.duration(10)
+	.EUt(VA[HV])
 	.buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-	.circuitMeta(3)
-	.inputs(item('minecraft:item_frame') * 4)
-	.inputs(ore('chestWood') * 4)
-	.inputs(ore('ingotIron') * 4)
-	.outputs(item('bdsandm:upgrade', 2))
-	.duration(40)
-	.EUt(VA[ULV])
+	.inputs(metaitem('electric.piston.ev') * 8)
+	.inputs(ore('platePolytetrafluoroethylene') * 4)
+	.inputs(ore('circuitEv'))
+	.outputs(item('bdsandm:upgrade', 2) * 2)
+	.duration(10)
+	.EUt(VA[EV])
 	.buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-	.circuitMeta(4)
-	.inputs(item('minecraft:item_frame') * 16)
-	.inputs(ore('chestWood') * 16)
-	.inputs(ore('ingotIron') * 16)
-	.outputs(item('bdsandm:upgrade', 3))
-	.duration(80)
-	.EUt(VA[ULV])
+	.inputs(metaitem('electric.piston.iv') * 16)
+	.inputs(ore('platePolybenzimidazole') * 4)
+	.inputs(ore('circuitIv'))
+	.outputs(item('bdsandm:upgrade', 3) * 1)
+	.duration(10)
+	.EUt(VA[IV])
 	.buildAndRegister()
 
 ASSEMBLER.recipeBuilder()

@@ -27,6 +27,21 @@ SOLIDIFIER.recipeBuilder()
     .EUt(2)
     .buildAndRegister()
 
+// Monel 400 casing
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('plateMonel400') * 6)
+    .inputs(ore('frameGtMonel400'))
+    .outputs(item('susy:susy_multiblock_casing2', 1) * 2)
+    .EUt(VA[LV])
+    .duration(100)
+    .buildAndRegister()
+
+RecyclingHelper.addShaped("susy:monel_400_casing", item('susy:susy_multiblock_casing2', 1) * 2, [
+    [ore('plateMonel400'), ore('toolHammer'), ore('plateMonel400')],
+    [ore('plateMonel400'), ore('frameGtMonel400'), ore('plateMonel400')],
+    [ore('plateMonel400'), ore('toolWrench'), ore('plateMonel400')]
+])
+
 // controller recipe
 
 crafting.addShaped("wood_tank_controller", metaitem('susy:tank.wood'), [

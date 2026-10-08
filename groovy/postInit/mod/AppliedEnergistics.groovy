@@ -611,12 +611,12 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('circuit_board.g10'))
+        .inputs(metaitem('circuit_board.fr4'))
         .inputs(ore('circuitEv'))
         .inputs(metaitem('pattern.memory'))
         .inputs(metaitem('pattern.processor'))
         .inputs(metaitem('cable.optical'))
-        .inputs(ore('plateTitanium') * 4)
+        .inputs(ore('plateScandiumAlloy') * 4)
         .fluidInputs(fluid('cryogenic_solder') * 144)
         .outputs(item('appliedenergistics2:material', 52) * 2) // AE2 blank pattern
         .duration(400)
@@ -758,6 +758,28 @@ crafting.addShaped(item('appliedenergistics2:network_tool'), [
     [null, metaitem('emitter.iv'), metaitem('sensor.iv')],
     [metaitem('stickPolyvinylChloride'), null, null]
 ])
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.cmos_cpu') * 1) // have fun!
+    .inputs(metaitem('foilScandium') * 4) // have fun part 2!
+    .inputs(metaitem('wireFineGold') * 4)
+    .inputs(metaitem('component.leadframe') * 1)
+    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .outputs(metaitem('pattern.processor') * 1)
+    .duration(200)
+    .EUt(VA[IV])
+    .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.nmos_sram') * 4)
+    .inputs(metaitem('foilScandium') * 4)
+    .inputs(metaitem('wireFineGold') * 4)
+    .inputs(metaitem('component.leadframe') * 1)
+    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .outputs(metaitem('pattern.memory') * 1)
+    .duration(200)
+    .EUt(VA[IV])
+    .buildAndRegister()
 
 // Keep this at the end of the script as well as at the start: all AE2
 // Inscriber recipes must be gone before JEI builds its recipe registry.

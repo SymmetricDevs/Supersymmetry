@@ -94,23 +94,6 @@ ASSEMBLER.recipeBuilder()
         .EUt(16)
         .buildAndRegister()
 
-// Laser-Safe Engraving Casing
-RecyclingHelper.replaceShaped('gcym:casing_large_engraver', item('gcym:large_multiblock_casing', 10) * 2, [
-    [ore('plateReneN5'), ore('craftingToolHardHammer'), ore('plateReneN5')],
-    [ore('plateHsla980X'), ore('frameGtHsla980X'), ore('plateHsla980X')],
-    [ore('plateReneN5'), ore('craftingToolWrench'), ore('plateReneN5')]])
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(7)
-    .inputs(ore('frameGtHsla980X'))
-    .inputs(ore('plateReneN5') * 4)
-    .inputs(ore('plateHsla980X') * 2)
-    .outputs(item('gcym:large_multiblock_casing', 10) * 2)
-    .duration(50)
-    .EUt(16)
-    .buildAndRegister()
-
-// Incoloy 20
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('iron') * 1728)
     .fluidInputs(fluid('nickel') * 1152)
@@ -349,14 +332,15 @@ INDUCTION_FURNACE.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister()
 
-INDUCTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('iron') * 3456)
+
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustIron') * 24)
     .inputs(metaitem('dustChrome') * 8)
     .inputs(metaitem('dustNickel') * 5)
     .inputs(metaitem('dustMolybdenum') * 2)
     .inputs(metaitem('dustManganese'))
+    .duration(2400)
     .fluidOutputs(fluid('food_grade_stainless_steel') * 5760)
-    .material("High-Performance Alumina")
     .EUt(VA[EV])
     .buildAndRegister()
 

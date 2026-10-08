@@ -57,7 +57,7 @@ Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_two', 'wafer.signal_m
 // Gate oxide formation and gate polysilicon deposition
 Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_three', 'wafer.signal_mosfet.step_four', 1, false, true)
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.signal_mosfet.step_four', 'wafer.signal_mosfet.step_five', 400, false)
-Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_five', 'wafer.signal_mosfet.step_six', 2.0, 'n_doped_silicon')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_five', 'wafer.signal_mosfet.step_six', 80, 'n_doped_silicon')
 Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_six', 'wafer.signal_mosfet.step_seven', 'novolac_resist', 'mask_set.signal_mosfet', true)
 Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_seven', 'wafer.signal_mosfet.step_eight', 'silicon', 100, false)
 Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_eight', 'wafer.signal_mosfet.step_nine', 1, true)
@@ -72,7 +72,7 @@ Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_fourteen', 
 Doping.generateDriveInRecipe('wafer.signal_mosfet.step_fifteen', 'wafer.signal_mosfet.step_sixteen', 400)
 
 // Passivation layer deposition
-Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_sixteen', 'wafer.signal_mosfet.step_seventeen', 1.0, 'borophosphosilicate_glass')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_sixteen', 'wafer.signal_mosfet.step_seventeen', 40, 'borophosphosilicate_glass')
 Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_seventeen', 'wafer.signal_mosfet.step_eighteen', 'novolac_resist', 'mask_set.signal_mosfet', true)
 Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_eighteen', 'wafer.signal_mosfet.step_nineteen', 'silicon_dioxide', 100, false)
 Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_nineteen', 'wafer.signal_mosfet.step_twenty', 1, false, true)
@@ -85,7 +85,7 @@ Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_twenty_thre
 Deposition.generateSinteringRecipe('wafer.signal_mosfet.step_twenty_four', 'wafer.signal_mosfet.step_twenty_five', 400, HV)
 
 // Protection and packaging
-Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_twenty_five', 'wafer.signal_mosfet.step_twenty_six', 2.0, 'silicon_nitride.silane')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.signal_mosfet.step_twenty_five', 'wafer.signal_mosfet.step_twenty_six', 80, 'silicon_nitride.silane')
 Lithography.generatePhotolithographyRecipes('wafer.signal_mosfet.step_twenty_six', 'wafer.signal_mosfet.step_twenty_seven', 'novolac_resist', 'mask_set.signal_mosfet', true)
 Etching.generateWetEtchingRecipe('wafer.signal_mosfet.step_twenty_seven', 'wafer.signal_mosfet.step_twenty_eight', 'silicon_nitride', 100, false)
 Lithography.generateResistStrippingRecipes('wafer.signal_mosfet.step_twenty_eight', 'wafer.signal_mosfet.step_twenty_nine', 1, true, true)
@@ -113,7 +113,7 @@ ASSEMBLER.recipeBuilder()
 // Power SMD Si-MOSFET (Trench VDMOS)
 
 // N-doped epi layer (drift region) on top of p-doped substrate/drain
-Deposition.generateChemicalVaporDepositionRecipe('wafer.small.silicon.heavily_n_doped', 'wafer.vdmos.step_one', 2.0, 'n_doped_silicon')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.small.silicon.heavily_n_doped', 'wafer.vdmos.step_one', 80, 'n_doped_silicon')
 
 // P-base formation and patterning
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.vdmos.step_one', 'wafer.vdmos.step_two', 400, false)
@@ -138,7 +138,7 @@ Lithography.generateResistStrippingRecipes('wafer.vdmos.step_thirteen', 'wafer.v
 
 // Grow gate oxide and deposit gate polysilicon
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.vdmos.step_fourteen', 'wafer.vdmos.step_fifteen', 400, true)
-Deposition.generateChemicalVaporDepositionRecipe('wafer.vdmos.step_fifteen', 'wafer.vdmos.step_sixteen', 3.0, 'n_doped_silicon')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.vdmos.step_fifteen', 'wafer.vdmos.step_sixteen', 120, 'n_doped_silicon')
 Etching.generateReactiveIonEtchingRecipe('wafer.vdmos.step_sixteen', 'wafer.vdmos.step_seventeen', 'silicon', 100)
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.vdmos.step_seventeen', 'wafer.vdmos.step_eighteen', 400, false)
 
@@ -152,8 +152,8 @@ Etching.generateWetEtchingRecipe('wafer.vdmos.step_twenty_three', 'wafer.vdmos.s
 Lithography.generateResistStrippingRecipes('wafer.vdmos.step_twenty_four', 'wafer.vdmos.step_twenty_five', 1, false, true)
 
 // Passivation layer deposition
-Deposition.generateChemicalVaporDepositionRecipe('wafer.vdmos.step_twenty_five', 'wafer.vdmos.step_twenty_six', 1.0, 'borophosphosilicate_glass')
-Deposition.generateChemicalVaporDepositionRecipe('wafer.vdmos.step_twenty_six', 'wafer.vdmos.step_twenty_seven', 1.0, 'silicon_nitride.silane')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.vdmos.step_twenty_five', 'wafer.vdmos.step_twenty_six', 40, 'borophosphosilicate_glass')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.vdmos.step_twenty_six', 'wafer.vdmos.step_twenty_seven', 40, 'silicon_nitride.silane')
 Lithography.generatePhotolithographyRecipes('wafer.vdmos.step_twenty_seven', 'wafer.vdmos.step_twenty_eight', 'novolac_resist', 'mask_set.vdmos', true)
 Etching.generateReactiveIonEtchingRecipe('wafer.vdmos.step_twenty_eight', 'wafer.vdmos.step_twenty_nine', 'silicon_nitride', 100)
 Etching.generateReactiveIonEtchingRecipe('wafer.vdmos.step_twenty_nine', 'wafer.vdmos.step_thirty', 'silicon_dioxide', 100)
