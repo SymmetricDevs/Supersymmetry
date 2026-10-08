@@ -205,21 +205,6 @@ INDUCTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
-        .inputs(metaitem('dustNimonic105') * 1)
-        .fluidOutputs(fluid('molten.nimonic_105') * 144)
-        .duration(80)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
-INDUCTION_FURNACE.recipeBuilder()
-        .inputs(metaitem('dustIncoloy825') * 1)
-        .fluidOutputs(fluid('molten.incoloy_825') * 144)
-        .duration(80)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
-
-INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('iron') * 3456)
     .inputs(metaitem('dustChrome') * 8)
     .inputs(metaitem('dustNickel') * 5)
