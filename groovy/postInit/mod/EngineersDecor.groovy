@@ -100,9 +100,9 @@ crafting.replaceShaped('engineersdecor:independent/gas_concrete_stairs_recipe', 
 ])
 
 crafting.addShaped('engineersdecor:block_placer', item('engineersdecor:factory_placer') * 1, [
-    [metaitem('plateSteel'), metaitem('plateTreatedWood'), metaitem('plateSteel')],
-    [ore('circuitLv'), metaitem('electric.piston.mv'), metaitem('platePlastic')],
-    [metaitem('plateSteel'), metaitem('plateTreatedWood'), metaitem('plateSteel')]
+	[metaitem('plateSteel'), metaitem('plateTreatedWood'), metaitem('plateSteel')],
+	[ore('circuitLv'), metaitem('electric.piston.mv'), metaitem('platePlastic')],
+	[metaitem('plateSteel'), metaitem('plateTreatedWood'), metaitem('plateSteel')]
 ])
 
 // Stairs rework
