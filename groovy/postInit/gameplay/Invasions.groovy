@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.nbt.NBTTagCompound;
 import supersymmetry.common.potion.PotionDropPodSickness;
 
-int DROP_POD_SICKNESS_DURATION = 600
+int DROP_POD_SICKNESS_DURATION = 1800
 
 //zombie waves
 //can happen at any time, for any reason
@@ -833,7 +833,7 @@ new MobHordeEvent((player) -> {
                     item("techguns:minigun"),
                     item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:hydrochloric_acid'])
             ];
-            def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.length)];
+            def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())];
             chosenWeapon.writeToNBT(main);
             hands.appendTag(main)
             hands.appendTag(new NBTTagCompound())
@@ -889,7 +889,7 @@ new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
                             item('gaspunk:grenade').withNbt(['gaspunk:contained_gas': 'gaspunk:hydrochloric_acid']),
                             item('icbmclassic:grenade', 1)
                     ];
-                    String chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())];
+                    def chosenWeapon = possibleWeapons[(int) (Math.random() * possibleWeapons.size())];
 
                     net.minecraft.nbt.NBTTagList hands = new net.minecraft.nbt.NBTTagList();
                     net.minecraft.nbt.NBTTagCompound main = new net.minecraft.nbt.NBTTagCompound();
