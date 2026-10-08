@@ -793,3 +793,13 @@ crafting.addShaped('susy:heavy_duty_pad', item('susy:susy_multiblock_casing', 8)
     [metaitem('springTungstenSteel'), metaitem('springTungstenSteel'), metaitem('springTungstenSteel')],
     [metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel')]
 ])
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('robot.arm.ev') * 4)
+    .inputs(metaitem('electric.motor.ev') * 4)
+    .inputs(metaitem('stickLongTungstenSteel') * 4)
+    .inputs(metaitem('plateTitanium') * 4)
+    .outputs(item('susy:robot_arm'))
+    .duration(400)
+    .EUt(VA[EV])
+    .buildAndRegister()
