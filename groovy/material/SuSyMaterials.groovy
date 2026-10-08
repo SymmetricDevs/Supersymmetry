@@ -2823,7 +2823,6 @@ class SuSyMaterials {
     public static Material TwoCyclohexenylCyclohexanone
     public static Material TwoCyclohexenylcyclohexanoneSolution
     public static Material BenzalChloride
-    public static Material PMMAEBeamResist
     public static Material AbieticAcid
     public static Material DisproportionatedAbieticAcid
     public static Material AbieticAcidEmulsifier

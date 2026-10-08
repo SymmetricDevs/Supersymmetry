@@ -289,7 +289,7 @@ MIXER.recipeBuilder()
 
 RESIST_PROCESSOR.recipeBuilder()
     .inputs(metaitem('mask.blank.chromium_oxide'))
-    .fluidInputs(fluid('pmma_ebeam_resist') * 50)
+    .fluidInputs(fluid('hydrogen_silsesquioxane_photoresist') * 50)
     .outputs(metaitem('mask.blank.chromium_oxide.wet'))
     .duration(200)
     .EUt(VA[EV])
