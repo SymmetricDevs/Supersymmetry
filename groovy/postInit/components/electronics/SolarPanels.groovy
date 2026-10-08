@@ -16,7 +16,7 @@ Doping.generateDriveInRecipe('wafer.monosilicon_photovoltaic.step_two', 'wafer.m
 Deposition.generateChemicalVaporDepositionRecipe('wafer.monosilicon_photovoltaic.step_three', 'wafer.monosilicon_photovoltaic.step_four', 80, 'silicon_nitride.silane')
 Lithography.generatePhotolithographyRecipes('wafer.monosilicon_photovoltaic.step_four', 'wafer.monosilicon_photovoltaic.step_five', 'novolac_resist', 'mask.monosilicon_photovoltaic', true)
 Deposition.generateSputteringRecipe('wafer.monosilicon_photovoltaic.step_five', 'wafer.monosilicon_photovoltaic.step_six', ['aluminium' : 30, 'titanium' : 30])
-Lithography.generateResistStrippingRecipes('wafer.monosilicon_photovoltaic.step_six', 'wafer.monosilicon_photovoltaic.step_seven', 1, false)
+Lithography.generateResistStrippingRecipes('wafer.monosilicon_photovoltaic.step_six', 'wafer.monosilicon_photovoltaic.step_seven', 1, false, true)
 Deposition.generateSinteringRecipe('wafer.monosilicon_photovoltaic.step_seven', 'wafer.monosilicon_photovoltaic.step_eight', 200, MV)
 Packaging.generateDicingRecipe('wafer.monosilicon_photovoltaic.step_eight', 'cell.monosilicon_photovoltaic', 1, 80, MV)
 
@@ -59,6 +59,6 @@ Deposition.generateChemicalVaporDepositionRecipe('wafer.multijunction_photovolta
 // the patent doesn't have info after this so it's copied from mono-Si
 Lithography.generatePhotolithographyRecipes('wafer.multijunction_photovoltaic.step_twenty_one', 'wafer.multijunction_photovoltaic.step_twenty_two', 'novolac_resist', 'mask.multijunction_photovoltaic', true)
 Deposition.generateSputteringRecipe('wafer.multijunction_photovoltaic.step_twenty_two', 'wafer.multijunction_photovoltaic.step_twenty_three', ['aluminium' : 30, 'titanium' : 30])
-Lithography.generateResistStrippingRecipes('wafer.multijunction_photovoltaic.step_twenty_three', 'wafer.multijunction_photovoltaic.step_twenty_four', 1, false)
+Lithography.generateResistStrippingRecipes('wafer.multijunction_photovoltaic.step_twenty_three', 'wafer.multijunction_photovoltaic.step_twenty_four', 1, false, true)
 Deposition.generateSinteringRecipe('wafer.multijunction_photovoltaic.step_twenty_four', 'wafer.multijunction_photovoltaic.step_twenty_five', 200, MV)
 Packaging.generateDicingRecipe('wafer.multijunction_photovoltaic.step_twenty_five', 'cell.multijunction_photovoltaic', 1, 80, MV)
