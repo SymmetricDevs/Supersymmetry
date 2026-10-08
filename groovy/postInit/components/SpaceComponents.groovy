@@ -787,3 +787,9 @@ ASSEMBLER.recipeBuilder()
     .duration(400)
     .EUt(VA[EV])
     .buildAndRegister()
+
+crafting.addShaped('susy:heavy_duty_pad', item('susy:susy_multiblock_casing', 8) * 8, [
+    [metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel')],
+    [metaitem('springTungstenSteel'), metaitem('springTungstenSteel'), metaitem('springTungstenSteel')],
+    [metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel'), metaitem('plateTungstenSteel')]
+])
