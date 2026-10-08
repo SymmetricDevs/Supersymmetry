@@ -221,7 +221,7 @@ def carbon_reductants = [
         .inputs(ore('ingotPigIron') * 10)
         .inputs(ore('dustQuicklime'))
         .fluidInputs(fluid('oxygen') * 500)
-        .fluidOutputs(fluid('molten.steel') * 1440)
+        .fluidOutputs(fluid('steel') * 1440)
         .EUt(VA[LV])
         .duration(100)
         .buildAndRegister()
@@ -231,7 +231,7 @@ def carbon_reductants = [
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .circuitMeta(20)
     .inputs(ore('dustSteel') * 10)
-    .fluidOutputs(fluid('molten.steel') * 1440)
+    .fluidOutputs(fluid('steel') * 1440)
     .EUt(VA[MV])
     .duration(10) // Give a good number of overclocks
     .buildAndRegister()
