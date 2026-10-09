@@ -1,3 +1,12 @@
+# UPDATE 0.2.0.0.2
+## Mod Changes
+## Changes
+### Changed Features
+- balance change: commando armor now uses fiber epoxy instead of UHMWPE (#2064 by @oliwier509)
+- Alt phthalic anhydride recipe for MV (#2067 by @jethro-3000)
+### Fixes
+- remove molten steel from quenching.groovy + stuff (#2063 by @jethro-3000)
+- LV motor assembler recipe fix (#2066 by @1290418240891)
 # UPDATE 0.2.0.0.1
 ## Mod Changes
 ### Mod Updates
