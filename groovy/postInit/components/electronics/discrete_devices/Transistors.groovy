@@ -8,6 +8,15 @@ import globals.semiconductors.Lithography
 import globals.semiconductors.Etching
 import globals.semiconductors.Mechanicals
 
+mods.jei.ingredient.yeet(metaitem('component.transistor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.transistor'))
+mods.jei.ingredient.yeet(metaitem('component.advanced_smd.transistor'))
+
+// SMD Transistor * 16
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
+// SMD Transistor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineTantalum') * 8], [fluid('plastic') * 144])
+
 // Alloy-junction bipolar transistor (MV)
 
 Packaging.generateDicingRecipe('wafer.germanium.n_doped', 'die.alloy_junction_transistor.step_one', 4, 400, LV, false)

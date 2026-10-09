@@ -7,7 +7,9 @@ import globals.semiconductors.Packaging
 import globals.semiconductors.Etching
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-//crafting.removeByOutput(metaitem('component.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.advanced_smd.resistor'))
 
 // SMD Resistor * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])

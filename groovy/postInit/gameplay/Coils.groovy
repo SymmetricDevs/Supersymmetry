@@ -137,6 +137,5 @@ crafting.replaceShaped('gregtech:machine_8568', item('gregtech:machine', 8568), 
 
 //Remove Recycling
 
-RecyclingHelper.removeRecyclingRecipes(item('gregtech:wire_coil'))
 RecyclingHelper.removeRecyclingRecipes(item('gregtech:wire_coil', 1))
 RecyclingHelper.removeRecyclingRecipes(item('gregtech:wire_coil', 2))
