@@ -48,7 +48,7 @@ COMPRESSOR.recipeBuilder()
 crafting.addShapeless("gregtech:ccr_core", metaitem('component.resistor.carbon_composite.unfired') * 8, [
     ore('resistorCarbon'),
     ore('dustClay'),
-    metaitem('shape.mold.nugget')
+    metaitem('shape.mold.nugget').reuse()
 ])
 
 furnace.add(metaitem('component.resistor.carbon_composite.unfired'), metaitem('component.resistor.carbon_composite.fired'))
