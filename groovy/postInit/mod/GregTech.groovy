@@ -2101,6 +2101,9 @@ mods.gregtech.mixer.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem
 mods.gregtech.macerator.removeByInput(32, [item('gregtech:machine_casing', 6)], null)
 // Rhodium Plated Palladium Ingot * 8
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:machine_casing', 6)], [fluid('oxygen') * 840])
+// Rhodium Plated Palladium Dust * 4
+mods.gregtech.blender.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+
 // Old circuit recipe
 // Integrated Processor * 4
 mods.gregtech.circuit_assembler.removeByInput(2400, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineRedAlloy') * 4, metaitem('boltAnnealedCopper') * 4], [fluid('tin') * 144])
