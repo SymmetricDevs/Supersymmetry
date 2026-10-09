@@ -5,6 +5,12 @@ import globals.semiconductors.Etching
 import globals.Sintering
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
+mods.jei.ingredient.yeet(metaitem('component.capacitor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.capacitor'))
+mods.jei.ingredient.yeet(metaitem('component.advanced_smd.capacitor'))
+
+// Capacitor * 8
+mods.gregtech.assembler.removeByInput(120, [metaitem('foilPlastic'), metaitem('foilAluminium') * 2], [fluid('plastic') * 144])
 // SMD Capacitor * 8
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilAluminium')], [fluid('plastic') * 72])
 // SMD Capacitor * 12
@@ -13,9 +19,6 @@ mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilSiliconeRubber'), metaitem('foilTantalum')], [fluid('plastic') * 72])
 // SMD Capacitor * 24
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilPolyvinylChloride') * 2, metaitem('foilTantalum')], [fluid('plastic') * 72])
-
-oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.silver_mica'))
-oreDict.add('componentCapacitorMedium', metaitem('component.capacitor.film'))
 
 // Silver mica capacitors (LV)
 

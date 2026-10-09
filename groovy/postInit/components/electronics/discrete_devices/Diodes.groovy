@@ -1,3 +1,6 @@
+import postInit.utils.RecyclingHelper
+import globals.Globals
+
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
@@ -7,6 +10,10 @@ import globals.semiconductors.Deposition
 import globals.semiconductors.Packaging
 import globals.semiconductors.Doping
 import globals.semiconductors.Mechanicals
+
+mods.jei.ingredient.yeet(metaitem('component.diode'))
+mods.jei.ingredient.yeet(metaitem('component.smd.diode'))
+mods.jei.ingredient.yeet(metaitem('component.advanced_smd.diode'))
 
 // SMD Diode * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
@@ -237,4 +244,31 @@ ASSEMBLER.recipeBuilder()
 
     // Infrared
 
-    
+def tieredQuadCables = [ore('cableGtQuadrupleLead'), ore('cableGtQuadrupleTin'), ore('cableGtQuadrupleCopper'), ore('cableGtQuadrupleGold'),
+                        ore('cableGtQuadrupleAluminium'), ore('cableGtQuadruplePlatinum'), ore('cableGtQuadrupleNiobiumTitanium'),
+                        ore('cableGtQuadrupleVanadiumGallium'), ore('cableGtQuadrupleYttriumBariumCuprate')]
+
+def hulls = [metaitem('hull.ulv'), metaitem('hull.lv'), metaitem('hull.mv'), metaitem('hull.hv'),
+             metaitem('hull.ev'), metaitem('hull.iv'), metaitem('hull.luv'),
+             metaitem('hull.zpm'), metaitem('hull.uv'), metaitem('hull.uhv'),
+             metaitem('hull.uev'), metaitem('hull.uiv'), metaitem('hull.uxv'),
+             metaitem('hull.opv')];
+
+def tieredPlates = [ore('plateWroughtIron'), ore('plateSteel'), ore('plateAluminium'), ore('plateStainlessSteel'),
+                    ore('plateTitanium'), ore('plateTungstenSteel'), ore('plateRhodiumPlatedPalladium'),
+                    ore('plateNaquadahAlloy'), ore('plateDarmstadtium')];
+
+def powerDiodes = [null, metaitem('circuit.vacuum_tube'), metaitem('circuit.vacuum_tube'), metaitem('circuit.vacuum_tube'),
+                   metaitem('component.thyristor'), metaitem('component.thyristor'), metaitem('component.thyristor')];
+
+// Diode Singleblocks
+
+for (i = 1; i <= 6; i++) {
+    crafting.remove('gregtech:gregtech.machine.diode.' + Globals.voltageTiers[i])
+
+    RecyclingHelper.addShaped("gregtech:diode." + Globals.voltageTiers[i], metaitem('diode.' + Globals.voltageTiers[i]), [
+        [tieredQuadCables[i], powerDiodes[i], tieredQuadCables[i]],
+        [powerDiodes[i], hulls[i], powerDiodes[i]],
+        [tieredPlates[i], powerDiodes[i], tieredPlates[i]]
+    ])
+}
