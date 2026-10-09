@@ -4,8 +4,8 @@ import postInit.utils.RecyclingHelper
 
 //yeet
 
-mods.jei.ingredient.yeet(item('gregtech:machine', 1597))
-mods.jei.ingredient.yeet(item('gregtech:machine', 1599))
+mods.jei.ingredient.yeet(metaitem('tank.wood'))
+mods.jei.ingredient.yeet(metaitem('tank.steel'))
 
 // monel400 recipe
 
