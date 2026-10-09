@@ -19,7 +19,7 @@
 # Supersymmetry
 Supersymmetry is a complex tech-centered modpack based around GregTech that integrates chemical and physical processes from reality into its progression. This means having many different crafting chains that imitate manufacturing processes used in real life.
 
-Much of it is in-development, with PvE elements such as environmental factors and raids of enemy factions being planned. We have our own implementation of space travel in the works as well.
+Much of it is in-development, with custom research and strategic combat mechanics planned. We have our own implementation of particle accelerators in the works as well.
 
 Progression defies the well-established GT power tiers, as the pack aims to break up the rigid progression. Innovation does not let itself be dictated by higher force, it happens through research and discoveries. 
 ## Implemented Content
@@ -34,8 +34,7 @@ As time of writing, following systems and mechanics have been added or modified 
   - Superconductors
 - Rocketry and Moon content
 
-Some mods (AE2, Stargate, TARDIS) are listed in the pack, but not legitimately obtainable. Subject to change. 
-Specifically, AE2 is going to be obtained after space travel is possible. 
+Some mods (Stargate, TARDIS) are listed in the pack, but not legitimately obtainable. Subject to change. 
 
 ## Vision
 The pack spans many different levels of technological mastery, from the steam engine to the nuclear reactor. It also incorporates elements from theoretical physics, allowing the player to exploit phenomena that have never before been seen in Minecraft. 
