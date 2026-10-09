@@ -37,7 +37,7 @@ ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_juncti
 ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
 
 ore('componentDiodeSignal').add(metaitem('component.diode'))
-ore('componentDiodeSignal').add(metaitem('component.smd.diode'))
+ore('componentDiodeSignal').add(metaitem('component.diode.alloy_junction'))
 ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
 
 // Carbon composite
