@@ -1,3 +1,5 @@
+[![ModDex rating](https://moddex.gg/badges/projects/supersymmetry/rating.svg)](https://moddex.gg/modpack/supersymmetry)
+
 <blockquote>
   <details>
     <summary>
