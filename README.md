@@ -1,4 +1,4 @@
-[![ModDex rating](https://moddex.gg/badges/projects/supersymmetry/rating.svg)](https://moddex.gg/modpack/supersymmetry)
+<a href="https://www.curseforge.com/minecraft/modpacks/supersymmetry"><img src="https://cf.way2muchnoise.eu/849321.svg?badge_style=for_the_badge" alt="CurseForge"></a>[![ModDex rating](https://moddex.gg/badges/projects/supersymmetry/rating.svg)](https://moddex.gg/modpack/supersymmetry)
 
 <blockquote>
   <details>
