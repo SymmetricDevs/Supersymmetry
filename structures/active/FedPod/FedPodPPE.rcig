@@ -1,0 +1,93 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "FedPodPPE",
+  "items": [
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 16,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtechfoodoption:gtfo_meta_item",
+        "damage": 325,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.124999523162842,
+      "min": 4,
+      "max": 18,
+      "item": {
+        "id": "minecraft:web",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:susy_armor",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "damage": {
+              "nbtType": "double",
+              "nbt": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.12706157565116882,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:susy_armor",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.11158588528633118,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:susy_armor",
+        "damage": 3,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "maxOxygen": {
+              "nbtType": "double",
+              "nbt": 1200.0
+            },
+            "durability": {
+              "nbtType": "int",
+              "nbt": 500
+            },
+            "oxygen": {
+              "nbtType": "double",
+              "nbt": 1200.0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

@@ -1,0 +1,46 @@
+{
+  "data": {
+    "factors": [
+      {
+        "type": "limit",
+        "factor": {
+          "priority": 1.0,
+          "rays": [
+            {
+              "type": "dynpos",
+              "ray": {
+                "type": "bedrock"
+              }
+            },
+            {
+              "type": "move",
+              "ray": {
+                "distance": 50
+              }
+            },
+            {
+              "type": "average",
+              "ray": {
+                "up": false,
+                "destExpression": "blocks:movement \u0026 !is:foliage"
+              }
+            },
+            {
+              "type": "move",
+              "ray": {
+                "distance": 0,
+                "weight": 1.1242745
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "title": "FedPod",
+    "description": [
+      "FedPod"
+    ]
+  }
+}

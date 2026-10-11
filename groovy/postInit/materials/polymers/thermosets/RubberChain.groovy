@@ -132,7 +132,7 @@ for (rubber in rubbers) {
                         }
                     }
                     .notConsumable(metaitem('shape.extruder.' + shape.shapeName))
-                    .outputs(ore(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
+                    .outputs(metaitem(shape.name + rubber.output)[0] * (rubber.yield * shape.yield))
                     .info('recipe.vulcanization.' + catalyst.name)
                     .EUt(VA[ULV])
                     .buildAndRegister()
@@ -410,16 +410,15 @@ BR.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
-        //FIXME: add rosin acid emulsifier from circuit branch (see Ullmann, Rubber, 3. Synthetic, 2.2.2)
         .fluidInputs(fluid('chloroprene') * 1000)
         .fluidInputs(fluid('distilled_water') * 1000)
+        .fluidInputs(fluid('abietic_acid_emulsifier') * 10)
         .fluidOutputs(fluid('chloroprene_emulsion') * 1000)
         .EUt(VA[MV])
         .duration(140)
         .buildAndRegister()
 
 POLYMERIZATION_TANK.recipeBuilder()
-        //FIXME (maybe): add "shortstopper" (whatever that is) (same source)
         .inputs(metaitem('dustSmallDiisopropylDixanthogenDisulfide'))
         .inputs(metaitem('dustTinyPotassiumPersulfate'))
         .fluidInputs(fluid('chloroprene_emulsion') * 1000)

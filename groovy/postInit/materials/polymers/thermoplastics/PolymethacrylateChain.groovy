@@ -57,7 +57,7 @@ FIXED_BR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-BCR.recipeBuilder() // MOVE TO QUENCHER
+BCR.recipeBuilder()
     .fluidInputs(fluid('gaseous_methacrylic_acid_mixture') * 2000) // 1000L water, 750L methacrylic acid, 250L methacrolein
     .fluidInputs(fluid('water') * 750)
     .fluidOutputs(fluid('methacrylic_acid_solution') * 1500)
@@ -77,7 +77,7 @@ BCR.recipeBuilder()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('absorbed_methacrolein') * 2500)
-    .fluidOutputs(fluid('diluted_acetic_acid') * 2000)
+    .fluidOutputs(fluid('methacrylic_acid_solution') * 2000)
     .fluidOutputs(fluid('gaseous_methacrolein_mixture') * 500)
     .duration(200)
     .EUt(VA[LV])
@@ -122,7 +122,7 @@ POLYMERIZATION_TANK.recipeBuilder()
 
 DRYER.recipeBuilder()
     .fluidInputs(fluid('polymethyl_methacrylate_solution') * 2000)
-    .outputs(metaitem('dustPmma'))
+    .outputs(metaitem('dustPolymethylMethacrylate'))
     .duration(300)
     .EUt(VA[LV])
     .buildAndRegister()

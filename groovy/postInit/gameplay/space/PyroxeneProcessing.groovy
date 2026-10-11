@@ -4,15 +4,6 @@ import static gregtech.api.GTValues.*
 
 // thanks claude
 
-// TODO UNREGISTERED MATERIALS:
-//   dustLunarPyroxene              CaFeSi2O6, 10 dust = 1 mol
-//   dustSodianFerriteClinker       4NaFeO2 + 4CaO per 24 dust
-//   dustHydrolyzedPyroxeneResidue  4Fe(OH)3 + 4Ca(OH)2 per 48 dust
-//   lunar_plagioclase_slurry
-//   lunar_mafic_slurry
-//   scandian_ferric_sulfate_leachate
-//   scandium_bearing_waste_acid
-
 SOLAR_FURNACE.recipeBuilder()
     .inputs(ore('dustLunarPyroxene') * 40)
     .inputs(ore('dustSodaAsh') * 60)

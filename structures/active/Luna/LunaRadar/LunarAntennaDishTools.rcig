@@ -1,0 +1,1139 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "LunarAntennaDishTools",
+  "items": [
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:drill_iv",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "MaxCharge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {
+                "AoERow": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxAoERow": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxAoELayer": {
+                  "nbtType": "int",
+                  "nbt": 8
+                },
+                "TorchPlacing": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                },
+                "MaxAoEColumn": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "AoELayer": {
+                  "nbtType": "int",
+                  "nbt": 8
+                },
+                "AoEColumn": {
+                  "nbtType": "int",
+                  "nbt": 4
+                }
+              }
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 11.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 21503
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.9
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:wrench_iv",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 11.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 24.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.5
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "MaxCharge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:buzzsaw",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "MaxCharge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 11.5
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.9
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:screwdriver_lv",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": 3.3
+                }
+              }
+            },
+            "MaxCharge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:wire_cutter_iv",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "MaxCharge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 24.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.1000001
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 2147483647
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 450,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 25600000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 2,
+      "max": 5,
+      "item": {
+        "id": "gregtech:meta_tool_head_drill",
+        "damage": 2519,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 2,
+      "max": 5,
+      "item": {
+        "id": "gregtech:meta_tool_head_wrench",
+        "damage": 2519,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 2,
+      "max": 5,
+      "item": {
+        "id": "gregtech:meta_tool_head_buzz_saw",
+        "damage": 2519,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 2,
+      "max": 5,
+      "item": {
+        "id": "gregtech:meta_tool_head_screwdriver",
+        "damage": 2519,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:shovel",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 11.5
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.7
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:saw",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.3
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {
+                "HarvestIce": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:hammer",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 11.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.5
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:mining_hammer",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 11.5
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 6.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 9215
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.9
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {
+                "AoERow": {
+                  "nbtType": "int",
+                  "nbt": 1
+                },
+                "MaxAoERow": {
+                  "nbtType": "int",
+                  "nbt": 1
+                },
+                "MaxAoELayer": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "TorchPlacing": {
+                  "nbtType": "byte",
+                  "nbt": 1
+                },
+                "MaxAoEColumn": {
+                  "nbtType": "int",
+                  "nbt": 1
+                },
+                "AoELayer": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "AoEColumn": {
+                  "nbtType": "int",
+                  "nbt": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:wrench",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 11.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.5
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:file",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 0.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.1000001
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:crowbar",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 12.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.1000001
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:screwdriver",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": 3.3
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:wire_cutter",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "ToolSpeed": {
+                  "nbtType": "float",
+                  "nbt": 9.0
+                },
+                "HarvestLevel": {
+                  "nbtType": "int",
+                  "nbt": 4
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": -2.1000001
+                },
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:knife",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 10.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": 3.3
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.8473554849624634,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtechfoodoption:rolling_pin",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "DisallowContainerItem": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "GT.Tool": {
+              "nbtType": "compound",
+              "nbt": {
+                "Material": {
+                  "nbtType": "string",
+                  "nbt": "gregtech:hsse"
+                },
+                "MaxDurability": {
+                  "nbtType": "int",
+                  "nbt": 3071
+                },
+                "Durability": {
+                  "nbtType": "int",
+                  "nbt": 0
+                },
+                "AttackDamage": {
+                  "nbtType": "float",
+                  "nbt": 10.0
+                },
+                "AttackSpeed": {
+                  "nbtType": "float",
+                  "nbt": 0.3
+                }
+              }
+            },
+            "HideFlags": {
+              "nbtType": "int",
+              "nbt": 2
+            },
+            "GT.Behaviours": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.05511390045285225,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 468,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 1000000000
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 14,
+      "max": 43,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 502,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.7249209880828857,
+      "min": 14,
+      "max": 43,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 505,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "susy:meta_item",
+        "damage": 23,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Charge": {
+              "nbtType": "long",
+              "nbt": 16000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

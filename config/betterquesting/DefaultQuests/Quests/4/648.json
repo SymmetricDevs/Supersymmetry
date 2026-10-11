@@ -1,10 +1,8 @@
 {
   "preRequisiteTypes:7": [
-    0,
-    2
+    1
   ],
   "preRequisites:11": [
-    243,
     479
   ],
   "properties:10": {

@@ -4,8 +4,17 @@ import techguns.entities.npcs.Bandit
 import techguns.entities.npcs.Outcast
 import net.minecraft.nbt.NBTTagCompound
 import net.minecraft.util.math.BlockPos
+import supersymmetry.common.metatileentities.single.electric.MetaTileEntityFederationDropBeacon
+import supersymmetry.common.metatileentities.single.electric.MetaTileEntityFederationReinforcementBeacon
+import net.minecraft.inventory.EntityEquipmentSlot
+import net.minecraft.item.Item
+import net.minecraft.item.ItemStack
+import net.minecraft.util.ResourceLocation
+import net.minecraft.potion.PotionEffect;
+import supersymmetry.common.potion.PotionDropPodSickness;
 
 System.out.println("grs Siege loaded")
+int DROP_POD_SICKNESS_DURATION = 450
 
 // /setblock ~ ~ ~ susy:raid_flare_block 0 replace {targetUUID:"31c4910d-9b69-4725-8969-9ed53ac8a7dc"}
 // deverloper uuid, use for RunClient
@@ -35,6 +44,7 @@ def spawnBanditRaid(player) {
         root.setInteger("hate", 0)
         bandit.getEntityData().setTag("susy", root)
         bandit.addRandomArmor(1);
+        bandit.setCustomNameTag("Bandit reinforcements");
 
         // ===== Random weapon =====
         String[] weapons = [
@@ -92,6 +102,7 @@ def spawnFedRaid(player) {
         root.setInteger("hate", 0)
         outcast.getEntityData().setTag("susy", root)
         outcast.addRandomArmor(1);
+        outcast.setCustomNameTag("Former Federation reinforcements");
 
         // ===== Random weapon =====
         String[] weapons = [
@@ -134,4 +145,51 @@ def spawnFedRaid(player) {
         return
     }
 
+}
+
+//fed siege problem causers
+
+MetaTileEntityFederationDropBeacon.fedPayloadProvider = {
+    return [
+            ["gregtech:machine", "18600"],
+            ["gregtech:machine", "18610"],
+            ["gregtech:machine", "18620"],
+            ["gregtech:machine", "18630"],
+            ["gregtech:machine", "18640"],
+    ]
+}
+
+MetaTileEntityFederationReinforcementBeacon.fedPayloadProvider = { world ->
+    Outcast outcast = new Outcast(world)
+
+    NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy")
+    root.setString("faction", "Feds")
+    root.setInteger("hate", 0)
+    outcast.getEntityData().setTag("susy", root)
+    outcast.setCustomNameTag("Former Federation reinforcements")
+    outcast.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
+    return outcast
+}
+
+MetaTileEntityFederationReinforcementBeacon.fedPostSpawnModifier = { mob ->
+    String[] weapons = [
+            "techguns:lmg",
+            "techguns:flamethrower",
+            "techguns:minigun"
+    ]
+
+    String chosen = weapons[(int) (Math.random() * weapons.length)]
+
+    NBTTagCompound nbt = new NBTTagCompound()
+    def hands = new NBTTagList()
+
+    def main = new NBTTagCompound()
+    main.setString("id", chosen)
+    main.setByte("Count", (byte)1)
+
+    hands.appendTag(main)
+    hands.appendTag(new NBTTagCompound())
+
+    nbt.setTag("HandItems", hands)
+    mob.readEntityFromNBT(nbt)
 }

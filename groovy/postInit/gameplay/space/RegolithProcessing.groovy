@@ -43,6 +43,41 @@ MACERATOR.recipeBuilder()
     .duration(10)
     .buildAndRegister()
 
+LUNAR_BWE.recipeBuilder()
+    .notConsumable(item('susy:deposit_block', 6))
+    .outputs(item('susy:deposit_block', 6) * 4)
+    .EUt(256)
+    .duration(20)
+    .buildAndRegister()
+
+MACERATOR.recipeBuilder()
+    .inputs(item('susy:resource_block_1', 3))
+    .outputs(metaitem('dustKreepAnorthosite'))
+    .EUt(2)
+    .duration(150)
+    .buildAndRegister()
+
+// KREEP Basalt Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_smooth', 12)], null)
+
+// KREEP Basalt Dust * 1
+mods.gregtech.macerator.removeByInput(2, [item('susy:susy_stone_cobble', 12)], null)
+
+
+MACERATOR.recipeBuilder()
+    .inputs(item('susy:susy_stone_smooth', 12))
+    .outputs(metaitem('dustLunarBasalt'))
+    .EUt(2)
+    .duration(150)
+    .buildAndRegister()
+
+MACERATOR.recipeBuilder()
+    .inputs(item('susy:susy_stone_cobble', 12))
+    .outputs(metaitem('dustLunarBasalt'))
+    .EUt(2)
+    .duration(150)
+    .buildAndRegister()
+
 // Tier 0.5?
 
 BR.recipeBuilder()
@@ -476,6 +511,14 @@ BR.recipeBuilder()
     .outputs(metaitem('dustLunarPyroxene'))  // off to PyroxeneProcessing.groovy
     .EUt(60)
     .duration(150)
+    .buildAndRegister()
+
+SOLAR_FURNACE.recipeBuilder() // if you don't wanna bother with pyroxene
+    .fluidInputs(fluid('lunar_silicate_slurry') * 3000)
+    .fluidOutputs(fluid('dense_steam') * 3000)
+    .outputs(metaitem('dustSmallAnorthosite'))
+    .EUt(6000)
+    .duration(400)
     .buildAndRegister()
 
 BR.recipeBuilder()

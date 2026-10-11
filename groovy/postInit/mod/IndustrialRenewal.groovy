@@ -62,7 +62,8 @@ mods.jei.ingredient.yeet( // hide IR materials
 		item('industrialrenewal:ingot_steel'),
 		item('industrialrenewal:stick_iron'),
 		item('industrialrenewal:stick_steel'),
-		item('industrialrenewal:steam')
+		item('industrialrenewal:steam'),
+		item('industrialrenewal:fluid_tank')
 )
 
 crafting.replaceShaped("industrialrenewal:screwdrive", item('industrialrenewal:screwdrive'), [
@@ -571,17 +572,6 @@ mods.gregtech.assembler.recipeBuilder()
 	.inputs(ore('ringSteel'))
 	.fluidInputs(fluid('soldering_alloy') * 72)
 	.outputs(item('industrialrenewal:high_pressure_pipe'))
-	.duration(100)
-	.EUt(VA[LV])
-	.buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(metaitem('drum.steel') * 8)
-	.inputs(ore('plateSteel') * 6)
-	.inputs(item('industrialrenewal:catwalk_pillar') * 4)
-	.inputs(item('industrialrenewal:fluid_gauge'))
-	.fluidInputs(fluid('soldering_alloy') * 72)
-	.outputs(item('industrialrenewal:fluid_tank'))
 	.duration(100)
 	.EUt(VA[LV])
 	.buildAndRegister()

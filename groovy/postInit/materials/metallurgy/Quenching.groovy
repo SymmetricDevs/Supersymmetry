@@ -63,14 +63,6 @@ def ingotMap = [
     'Hssg':4200,
     'Hsse':5000,
     'Hsss':5000,
-    'Monel500':3000,
-    'Hsla980X':2600,
-    'FoodGradeStainlessSteel':2600,
-    'PlatinumRhodium':2113,
-    'Zircaloy4':2200,
-    'ReactorSteel':1800,
-    'Alnico':1800,
-    'UraniumMolybdenumAlloy':1405
 ]
 
 def electrodeMap = [
@@ -108,15 +100,6 @@ for (fluid in QuenchingFluid.quenching_fluids) {
         .inputs(ore('ingotHotNichrome'))
         .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
         .outputs(metaitem('ingotNichrome'))
-        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
-        .duration((int) fluid.getDuration() * 4)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
-    CHEMICAL_BATH.recipeBuilder()
-        .inputs(ore('ingotHotAlnico'))
-        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
-        .outputs(metaitem('ingotAlnico'))
         .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
         .duration((int) fluid.getDuration() * 4)
         .EUt(VA[MV])
@@ -203,7 +186,6 @@ def fluidMap = [
     'molten.monel_500':'Monel500',
     'molten.hsla_980_x':'Hsla980X',
     'molten.food_grade_stainless_steel':'FoodGradeStainlessSteel',
-    'molten.steel':'Steel',
     'molten.zircaloy_4':'Zircaloy4',
     'molten.reactor_steel':'ReactorSteel',
     'molten.alnico':'Alnico'

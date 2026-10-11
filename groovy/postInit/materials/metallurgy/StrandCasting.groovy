@@ -15,7 +15,6 @@ SOLIDIFIER.recipeBuilder()
 
 POLISHING_MACHINE.recipeBuilder()
     .inputs(metaitem('work_roll.unfinished'))
-    .fluidInputs(fluid('silicon_dioxide_slurry') * 100)
     .outputs(item('susy:metallurgy_roll'))
     .EUt(VA[MV])
     .duration(200)

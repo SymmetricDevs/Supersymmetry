@@ -93,27 +93,27 @@ SOLIDIFIER.recipeBuilder()
             .buildAndRegister()
     }
 
-// Manganese steel
+// Manganese Steel
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(metaitem('dustIron') * 83)
     .inputs(metaitem('dustManganese') * 13)
     .inputs(metaitem('dustCarbon') * 4)
     .fluidOutputs(fluid('manganese_steel') * 14400)
     .EUt(VA[LV])
-    .duration(400)
+    .duration(12000)
     .buildAndRegister()
 
-// Tungsten steel
+// Tungsten Steel
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .circuitMeta(1)
     .fluidInputs(fluid('steel') * 8640) //equal to 60 Steel dust
     .inputs(ore('dustTungsten') * 8)
     .inputs(ore('dustChrome') * 3)
     .inputs(ore('dustVanadium') * 1)
-    .inputs(ore('dustMolybdenum') * 2)  
+    .inputs(ore('dustMolybdenum') * 2)
     .fluidOutputs(fluid('tungsten_steel') * 10656) // 74 ingot
     .EUt(VA[IV])
-    .duration(22000) 
+    .duration(22000)
     .buildAndRegister()
 
 ADVANCED_ARC_FURNACE.recipeBuilder()
@@ -123,21 +123,34 @@ ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(ore('dustTungsten') * 8)
     .inputs(ore('dustChrome') * 3)
     .inputs(ore('dustVanadium') * 1)
-    .inputs(ore('dustMolybdenum') * 2)  
+    .inputs(ore('dustMolybdenum') * 2)
     .fluidOutputs(fluid('tungsten_steel') * 10656) // 74 ingot
     .EUt(VA[IV])
-    .duration(17000) 
+    .duration(17000)
     .buildAndRegister()
 
-// Reactor steel
+// Reactor Steel
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(metaitem('dustIron') * 113)
     .inputs(metaitem('dustManganese') * 10)
     .inputs(metaitem('dustMolybdenum') * 2)
     .inputs(metaitem('dustNickel') * 3)
     .fluidOutputs(fluid('reactor_steel') * 18432)
+    .circuitMeta(1)
     .EUt(VA[IV])
     .duration(400)
+    .buildAndRegister()
+
+// ER6 Steel
+ADVANCED_ARC_FURNACE.recipeBuilder()
+    .inputs(metaitem('dustIron') * 24)
+    .inputs(metaitem('dustChrome') * 8)
+    .inputs(metaitem('dustNickel') * 5)
+    .inputs(metaitem('dustMolybdenum') * 2)
+    .inputs(metaitem('dustManganese'))
+    .duration(2400)
+    .fluidOutputs(fluid('food_grade_stainless_steel') * 5760)
+    .EUt(VA[EV])
     .buildAndRegister()
 
 // HSLA 980X
@@ -146,5 +159,15 @@ INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('iron') * 5616)
     .inputs(metaitem('dustManganese'))
     .fluidOutputs(fluid('hsla_980_x') * 5760)
+    .material("High-Performance Alumina")
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
+    .inputs(metaitem('dustIron') * 39)
+    .inputs(metaitem('dustManganese'))
+    .fluidOutputs(fluid('hsla_980_x') * 5760)
+    .material("High-Performance Alumina")
     .EUt(VA[EV])
     .buildAndRegister()

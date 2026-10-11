@@ -1,7 +1,7 @@
+package postInit.gameplay;
+
 import static globals.Globals.*
-
 // Ore Removal
-
 // total = unused ores and material
 // partial = ores that are unused but the material can be obtained
 // default = ores that only generate their default ore

@@ -81,11 +81,15 @@ def name_removals = [
         'nae2:block/crafting/4x_coprocessor',
         'nae2:block/crafting/16x_coprocessor',
         'nae2:block/crafting/64x_coprocessor',
+        'nae2:item/material/storage/cell_part_void',
         'appliedenergistics2:network/blocks/crystal_processing_quartz_growth_accelerator',
         'appliedenergistics2:network/blocks/energy_vibration_chamber',
         'appliedenergistics2:network/blocks/quantum_link',
         'appliedenergistics2:network/blocks/quantum_ring',
+        'appliedenergistics2:network/blocks/cell_workbench',
+        'appliedenergistics2:network/blocks/io_port',
         'appliedenergistics2:misc/tiny_tnt',
+        'appliedenergistics2:tools/network_tool',
         'appliedenergistics2:network/blocks/inscribers',
         'appliedenergistics2:misc/fluixpearl',
         'ae2wtlib:booster_card_new',
@@ -135,7 +139,9 @@ def name_removals = [
         'appliedenergistics2:network/parts/terminals',
         'appliedenergistics2:network/parts/terminals_crafting',
         'appliedenergistics2:network/parts/terminals_pattern',
-        'appliedenergistics2:network/crafting/molecular_assembler'
+        'appliedenergistics2:network/crafting/molecular_assembler',
+        'appliedenergistics2:materials/cardcrafting',
+        'appliedenergistics2:materials/cardpatternexpansion'
 ]
 
 for (name in name_removals) {
@@ -148,50 +154,33 @@ mods.appliedenergistics2.Inscriber.removeAll()
 // LazyAE2's ME Circuit Etcher removal
 mods.threng.etcher.removeAll()
 
-[
-        [press: 19, circuit: 'circuitMv', plate: 'plateStainlessSteel', screw: 'screwStainlessSteel', foil: 'foilTin', tier: MV],
-        [press: 13, circuit: 'circuitHv', plate: 'plateTitanium', screw: 'screwTitanium', foil: 'foilCopper', tier: HV],
-        [press: 15, circuit: 'circuitHv', plate: 'plateTitanium', screw: 'screwTitanium', foil: 'foilTin', tier: HV],
-        [press: 14, circuit: 'circuitEv', plate: 'plateTungstenSteel', screw: 'screwTungstenSteel', foil: 'foilSilver', tier: EV]
-].each { press ->
-    ASSEMBLER.recipeBuilder()
-            .inputs(ore(press.circuit))
-            .inputs(ore(press.plate) * 4)
-            .inputs(ore(press.screw) * 8)
-            .inputs(ore(press.foil) * 2)
-            .outputs(item('appliedenergistics2:material', press.press))
-            .duration(400)
-            .EUt(VA[press.tier])
-            .buildAndRegister()
-}
-
-// The original AE2 card recipes are removed above; provide GregTech progression
-// for the base cards needed by the migrated magnet and quantum-link cards.
 CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(ore('plateIron') * 2)
-        .inputs(item('appliedenergistics2:material', 20))
-        .inputs(ore('foilCopper') * 2)
-        .circuitMeta(1)
-        .outputs(item('appliedenergistics2:material', 25)) // basic card
-        .duration(160)
-        .EUt(VA[MV])
-        .buildAndRegister()
+    .inputs(ore('platePolyvinylChloride') * 2)
+    .inputs(metaitem('component.nmos_expansion_bus'))
+    .inputs(ore('circuitHv') * 2)
+    .inputs(metaitem('cable.optical') * 1)
+    .inputs(ore('wireFineGold') * 2)
+    .inputs(ore('pinBerylliumCopper') * 48)
+    .outputs(item('appliedenergistics2:material', 28)) // basic card
+    .duration(160)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(ore('platePolyvinylChloride') * 2)
+    .inputs(metaitem('component.nmos_expansion_bus') * 4)
+    .inputs(ore('circuitIv') * 2)
+    .inputs(metaitem('cable.optical') * 2)
+    .inputs(ore('wireFineGold') * 2)
+    .inputs(ore('pinBerylliumCopper') * 48)
+    .outputs(item('appliedenergistics2:material', 28)) // advanced card
+    .duration(160)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
         .inputs(item('appliedenergistics2:material', 25))
-        .inputs(ore('plateGold') * 2)
-        .inputs(item('appliedenergistics2:material', 20))
-        .inputs(ore('foilSilver') * 2)
-        .circuitMeta(2)
-        .outputs(item('appliedenergistics2:material', 28)) // advanced card
-        .duration(240)
-        .EUt(VA[HV])
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(item('appliedenergistics2:material', 25))
-        .inputs(ore('blockRedstone'))
-        .inputs(ore('blockLapis'))
+        .inputs(ore('plateNeodymiumAlloyMagnetic') * 8)
         .circuitMeta(1)
         .outputs(item('appliedenergistics2:material', 60)) // magnet card
         .duration(240)
@@ -199,89 +188,24 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(item('appliedenergistics2:material', 28))
-        .inputs(item('appliedenergistics2:material', 47) * 2) // singularities
-        .circuitMeta(2)
-        .outputs(item('appliedenergistics2:material', 59)) // quantum-link card
-        .duration(600)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-[
-        'wafer.silicon',
-        'wafer.doped.silicon',
-        'wafer.silicon_germanium',
-        'wafer.gallium_arsenide'
-].each { silicon ->
-    CIRCUIT_ASSEMBLER.recipeBuilder()
-            .inputs(metaitem(silicon))
-            .inputs(ore('foilTin') * 2)
-            .inputs(ore('circuitHv'))
-            .fluidInputs(fluid('soldering_alloy') * 72)
-            .circuitMeta(1)
-            .outputs(item('appliedenergistics2:material', 20))
-            .duration(120)
-            .EUt(VA[HV])
-            .buildAndRegister()
-}
-
-// Processor prints: each press is reusable tooling, while the HV circuit is
-// consumed as the active electronics substrate during printing.
-[
-        [press: 13, substrate: 'wafer.silicon', interconnect: 'foilCopper', output: 16],
-        [press: 13, substrate: 'wafer.silicon_germanium', interconnect: 'foilCopper', output: 16],
-        [press: 14, substrate: 'wafer.gallium_arsenide', interconnect: 'foilSilver', output: 17],
-        [press: 14, substrate: 'wafer.silicon_germanium', interconnect: 'foilSilver', output: 17],
-        [press: 15, substrate: 'wafer.doped.silicon', interconnect: 'foilTin', output: 18],
-        [press: 15, substrate: 'wafer.silicon', interconnect: 'foilTin', output: 18]
-].each { printed ->
-    FORMING_PRESS.recipeBuilder()
-            .notConsumable(item('appliedenergistics2:material', printed.press))
-            .inputs(metaitem(printed.substrate))
-            .inputs(ore(printed.interconnect))
-            .inputs(ore('circuitHv'))
-            .outputs(item('appliedenergistics2:material', printed.output))
-            .duration(160)
-            .EUt(VA[HV])
-            .buildAndRegister()
-}
-
+    .inputs(item('appliedenergistics2:material', 25))
+    .inputs(ore('circuitEv') * 4)
+    .inputs(metaitem('component.nmos_expansion_bus'))
+    .outputs(item('appliedenergistics2:material', 27)) // capacity card
+    .duration(240)
+    .EUt(VA[HV])
+    .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(item('appliedenergistics2:material', 18)) // logic processor print
-        .inputs(item('appliedenergistics2:material', 20)) // silicon print
-        .inputs(ore('foilTin'))
-        .inputs(ore('circuitHv'))
-        .fluidInputs(fluid('soldering_alloy') * 144)
-        .outputs(item('appliedenergistics2:material', 22)) // logic processor
-        .circuitMeta(1)
-        .duration(160)
-        .EUt(VA[EV])
-        .buildAndRegister()
+    .inputs(item('appliedenergistics2:material', 28))
+    .inputs(ore('circuitIv') * 4)
+    .inputs(metaitem('cable.optical') * 2)
+    .inputs(metaitem('component.nmos_expansion_bus'))
+    .outputs(item('appliedenergistics2:material', 30)) // accel card
+    .duration(240)
+    .EUt(VA[HV])
+    .buildAndRegister()
 
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(item('appliedenergistics2:material', 16)) // calculation processor print
-        .inputs(item('appliedenergistics2:material', 20)) // silicon print
-        .inputs(ore('foilCopper'))
-        .inputs(ore('circuitHv'))
-        .fluidInputs(fluid('soldering_alloy') * 144)
-        .outputs(item('appliedenergistics2:material', 23)) // calculation processor
-        .circuitMeta(1)
-        .duration(160)
-        .EUt(VA[EV])
-        .buildAndRegister()
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(item('appliedenergistics2:material', 17)) // engineering processor print
-        .inputs(item('appliedenergistics2:material', 20)) // silicon print
-        .inputs(ore('foilSilver'))
-        .inputs(ore('circuitHv'))
-        .fluidInputs(fluid('soldering_alloy') * 144)
-        .outputs(item('appliedenergistics2:material', 24)) // engineering processor
-        .circuitMeta(1)
-        .duration(240)
-        .EUt(VA[EV])
-        .buildAndRegister()
 // Storage components
 def storageComponents = [
         [circuit: 'circuitIv',  tier: IV,  ramCount: 1, segmentCount: 1,  itemOutput: item('appliedenergistics2:material', 35), fluidOutput: item('appliedenergistics2:material', 54)],
@@ -295,11 +219,10 @@ storageComponents.each { component ->
             [circuitMeta: 1, output: component.itemOutput],
             [circuitMeta: 2, output: component.fluidOutput]
     ].each { storageType ->
-        Globals.solders.each { solder, amount ->
             CIRCUIT_ASSEMBLER.recipeBuilder()
                     .inputs(ore(component.circuit))
                     .inputs(ore('wireGtSingleUraniumTriplatinum') * 4)
-                    .inputs(metaitem('plate.random_access_memory') * component.ramCount)
+                    .inputs(metaitem('component.nmos_sram') * component.ramCount)
                     .inputs(metaitem('storage.segment') * component.segmentCount)
                     .fluidInputs(fluid('lead_free_solder') * 144)
                     .circuitMeta(storageType.circuitMeta)
@@ -308,7 +231,7 @@ storageComponents.each { component ->
                     .duration(200)
                     .EUt(VA[component.tier])
                     .buildAndRegister()
-        }
+
     }
 }
 
@@ -428,10 +351,10 @@ ASSEMBLER.recipeBuilder()
 // AE2 storage component metas: 35-38 = 1k/4k/16k/64k item components; 54-57 = fluid equivalents.
 // Finished item and fluid cells use the gated components above.
 def storageCells = [
-        [tier: IV,  circuit: 'circuitIv',  component: 35, fluidComponent: 54, item: 'storage_cell_1k',  fluid: 'fluid_storage_cell_1k', supcon: 'UraniumTriplatinum'],
-        [tier: LuV, circuit: 'circuitLuv', component: 36, fluidComponent: 55, item: 'storage_cell_4k',  fluid: 'fluid_storage_cell_4k', supcon: 'SamariumIronArsenicOxide'],
-        [tier: ZPM, circuit: 'circuitZpm', component: 37, fluidComponent: 56, item: 'storage_cell_16k', fluid: 'fluid_storage_cell_16k', supcon: 'IndiumTinBariumTitaniumCuprate'],
-        [tier: UV,  circuit: 'circuitUv',  component: 38, fluidComponent: 57, item: 'storage_cell_64k', fluid: 'fluid_storage_cell_64k', supcon: 'UraniumRhodiumDinaquadide']
+        [tier: IV,  circuit: 'circuitIv',  sram: 1,  component: 35, fluidComponent: 54, item: 'storage_cell_1k',  fluid: 'fluid_storage_cell_1k', supcon: 'UraniumTriplatinum'],
+        [tier: LuV, circuit: 'circuitLuv', sram: 4,  component: 36, fluidComponent: 55, item: 'storage_cell_4k',  fluid: 'fluid_storage_cell_4k', supcon: 'SamariumIronArsenicOxide'],
+        [tier: ZPM, circuit: 'circuitZpm', sram: 16, component: 37, fluidComponent: 56, item: 'storage_cell_16k', fluid: 'fluid_storage_cell_16k', supcon: 'IndiumTinBariumTitaniumCuprate'],
+        [tier: UV,  circuit: 'circuitUv',  sram: 64, component: 38, fluidComponent: 57, item: 'storage_cell_64k', fluid: 'fluid_storage_cell_64k', supcon: 'UraniumRhodiumDinaquadide']
 ]
 
 storageCells.each { cell ->
@@ -443,15 +366,55 @@ storageCells.each { cell ->
                 .inputs(item('appliedenergistics2:material', type.component))
                 .inputs(item('appliedenergistics2:material', 39))
                 .inputs(item('appliedenergistics2:quartz_glass') * 2)
+                .inputs(metaitem('component.nmos_sram') * cell.sram)
                 .inputs(ore('wireGtSingle' + cell.supcon) * 8)
                 .inputs(ore('foilIridium') * 2)
                 .inputs(metaitem('battery.ni_mh.iv'))
                 .outputs(item("appliedenergistics2:${type.output}"))
                 .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
                 .EUt(VA[cell.tier])
                 .buildAndRegister()
     }
 }
+
+//Spatial cells
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitLuv'))
+        .inputs(ore('wireFineSilver') * 4)
+        .inputs(metaitem('component.nmos_sram') * 1)
+        .inputs(metaitem('storage.segment') * 1)
+        .circuitMeta(3)
+        .outputs(item('appliedenergistics2:material:32'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(200)
+        .EUt(VA[IV])
+        .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitZpm'))
+        .inputs(ore('wireFineSilver') * 4)
+        .inputs(metaitem('component.nmos_sram') * 4)
+        .inputs(metaitem('storage.segment') * 1)
+        .circuitMeta(3)
+        .outputs(item('appliedenergistics2:material:33'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(200)
+        .EUt(VA[LuV])
+        .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(ore('circuitUv'))
+        .inputs(ore('wireFineSilver') * 4)
+        .inputs(metaitem('component.nmos_sram') * 16)
+        .inputs(metaitem('storage.segment') * 1)
+        .circuitMeta(3)
+        .outputs(item('appliedenergistics2:material:34'))
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(200)
+        .EUt(VA[ZPM])
+        .buildAndRegister()
+
 
 // AE2 material metas: 43 = formation core, 44 = annihilation core, 39 = drive housing.
 // AE2 part metas: 240/241 = item/fluid import buses, 260/261 = export buses
@@ -576,7 +539,7 @@ EXTRUDER.recipeBuilder()
 
 CHEMICAL_BATH.recipeBuilder()
         .inputs(metaitem('fiber.optical') * 16)
-        .fluidInputs(fluid('pmma') * 144)
+        .fluidInputs(fluid('polymethyl_methacrylate') * 144)
         .outputs(metaitem('fiber.optical.coated') * 16)
         .duration(200)
         .EUt(VA[HV])
@@ -596,7 +559,7 @@ ASSEMBLER.recipeBuilder()
 ASSEMBLER.recipeBuilder()
         .inputs(ore('circuitIv') * 8)
         .inputs(ore('wireGtOctalUraniumTriplatinum') * 16) // EV superconducting links
-        .inputs(metaitem('plate.power_integrated_circuit') * 64)
+        .inputs(metaitem('plate.high_power_integrated_circuit') * 64)
         .inputs(metaitem('plateReinforcedEpoxyResin') * 12)
         .inputs(ore('plateTungstenSteel') * 12)
         .inputs(item('appliedenergistics2:material', 43) * 8)
@@ -647,12 +610,13 @@ ASSEMBLER.recipeBuilder()
         .EUt(VA[EV])
         .buildAndRegister()
 
-ASSEMBLER.recipeBuilder()
+CIRCUIT_ASSEMBLER.recipeBuilder()
+        .inputs(metaitem('circuit_board.fr4'))
         .inputs(ore('circuitEv'))
         .inputs(metaitem('pattern.memory'))
         .inputs(metaitem('pattern.processor'))
         .inputs(metaitem('cable.optical'))
-        .inputs(ore('plateTitanium') * 4)
+        .inputs(ore('plateScandiumAlloy') * 4)
         .fluidInputs(fluid('cryogenic_solder') * 144)
         .outputs(item('appliedenergistics2:material', 52) * 2) // AE2 blank pattern
         .duration(400)
@@ -675,9 +639,9 @@ storageCells.each { cell ->
 // Lazy AE2's Mass Assembly Chamber replaces Molecular Assemblers for AE2 autocrafting.
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('frameTungstenSteel') * 2)
+    .inputs(metaitem('frameTungstenSteel') * 2)
     .inputs(ore('plateTungstenSteel') * 8)
-    .inputs(ore('plateReinforcedEpoxyResin') * 8)
+    .inputs(ore('plateScandiumAlloy') * 8)
     .inputs(ore('foilRhodium') * 8)
     .outputs(item("threng:big_assembler") * 8) // frame
     .duration(200)
@@ -685,8 +649,8 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('frameTungstenSteel') * 1)
-    .inputs(ore('plateAluminium') * 32)
+    .inputs(metaitem('frameTungstenSteel') * 1)
+    .inputs(ore('plateScandiumAlloy') * 32)
     .inputs(ore('plateReinforcedEpoxyResin') * 8)
     .inputs(ore('pipeNormalFluidTitanium') * 4)
     .inputs(ore('rotorReinforcedEpoxyResin') * 4)
@@ -758,6 +722,64 @@ crafting.removeByOutput(item('appliedenergistics2:fluid_storage_cell_1k'))
 crafting.removeByOutput(item('appliedenergistics2:fluid_storage_cell_4k'))
 crafting.removeByOutput(item('appliedenergistics2:fluid_storage_cell_16k'))
 crafting.removeByOutput(item('appliedenergistics2:fluid_storage_cell_64k'))
+
+crafting.addShaped(item('appliedenergistics2:cell_workbench'), [
+    [metaitem('emitter.iv'), metaitem('sensor.iv'), metaitem('emitter.iv')],
+    [metaitem('cable.optical'), metaitem('hull.iv'), metaitem('cable.optical')],
+    [metaitem('plateTungstenSteel'), metaitem('electric.motor.iv'), metaitem('plateTungstenSteel')]
+])
+
+crafting.addShaped(item('appliedenergistics2:io_port'), [
+    [metaitem('emitter.iv'), metaitem('sensor.iv'), metaitem('emitter.iv')],
+    [item('appliedenergistics2:drive'), metaitem('hull.iv'), item('appliedenergistics2:drive')],
+    [metaitem('plateTungstenSteel'), metaitem('cable.optical'), metaitem('plateTungstenSteel')]
+])
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('cable.optical') * 2)
+    .inputs(metaitem('sensor.ev') * 2)
+    .outputs(item('appliedenergistics2:part', 280) * 1) // level emitter
+    .duration(200)
+    .circuitMeta(1)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('cable.optical') * 2)
+    .inputs(metaitem('sensor.ev') * 2)
+    .outputs(item('appliedenergistics2:part', 281) * 1) // fluid level emitter
+    .duration(200)
+    .circuitMeta(2)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+crafting.addShaped(item('appliedenergistics2:network_tool'), [
+    [null, metaitem('sensor.iv'), metaitem('cable.optical')],
+    [null, metaitem('emitter.iv'), metaitem('sensor.iv')],
+    [metaitem('stickPolyvinylChloride'), null, null]
+])
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.cmos_cpu') * 1) // have fun!
+    .inputs(metaitem('foilScandium') * 4) // have fun part 2!
+    .inputs(metaitem('wireFineGold') * 4)
+    .inputs(metaitem('component.leadframe') * 1)
+    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .outputs(metaitem('pattern.processor') * 1)
+    .duration(200)
+    .EUt(VA[IV])
+    .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.nmos_sram') * 4)
+    .inputs(metaitem('foilScandium') * 4)
+    .inputs(metaitem('wireFineGold') * 4)
+    .inputs(metaitem('component.leadframe') * 1)
+    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .outputs(metaitem('pattern.memory') * 1)
+    .duration(200)
+    .EUt(VA[IV])
+    .buildAndRegister()
 
 // Keep this at the end of the script as well as at the start: all AE2
 // Inscriber recipes must be gone before JEI builds its recipe registry.

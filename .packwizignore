@@ -12,3 +12,4 @@ buildOut/
 .idea/
 
 !*dimensionstack.dat
+tools/

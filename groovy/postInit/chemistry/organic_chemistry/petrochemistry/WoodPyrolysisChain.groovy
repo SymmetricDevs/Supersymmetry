@@ -5,6 +5,8 @@ import gregtech.api.unification.material.Materials
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
 
+furnace.add(metaitem('dustWood'), metaitem('dustWoodAsh'))
+
 PYROLYSE_OVEN.recipeBuilder()
         .inputs(ore('logWood') * 16)
         .outputs(item('minecraft:coal', 1) * 8)

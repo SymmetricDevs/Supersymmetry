@@ -69,6 +69,37 @@ SINTERING_OVEN.recipeBuilder()
         .EUt(VA[HV])
         .buildAndRegister()
 
+//Wet Mo-Si Spring
+
+EXTRUDER.recipeBuilder()
+        .notConsumable(metaitem('shape.extruder.ring'))
+        .inputs(ore('dustMoSiPrecursor'))
+        .fluidInputs(fluid('water') * 40)
+        .outputs(metaitem('mo_si_spring.wet'))
+        .EUt(VA[MV])
+        .duration(50)
+        .buildAndRegister()
+
+//Unsintered Mo-Si Spring
+
+DRYER.recipeBuilder()
+        .inputs(metaitem('mo_si_spring.wet'))
+        .outputs(metaitem('mo_si_spring.unsintered'))
+        .EUt(VA[MV])
+        .duration(100)
+        .buildAndRegister()
+
+//Molybdenum Disilicide Spring
+
+SINTERING_OVEN.recipeBuilder()
+        .notConsumable(metaitem('graphite_boat'))
+        .inputs(metaitem('mo_si_spring.unsintered'))
+        .fluidInputs(fluid('hydrogen') * 20)
+        .outputs(metaitem('springMolybdenumDisilicide'))
+        .duration(100)
+        .EUt(VA[HV])
+        .buildAndRegister()
+
 // Graphite Boat
 
 MILLING.recipeBuilder()

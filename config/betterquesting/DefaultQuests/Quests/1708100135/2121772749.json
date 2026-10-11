@@ -6,7 +6,6 @@
     "betterquesting:10": {
       "desc:8": "susy.quest.db.2121772749.desc",
       "icon:10": {
-        "Count:3": 1,
         "id:8": "susy:guidance_system"
       },
       "name:8": "susy.quest.db.2121772749.title"
@@ -15,11 +14,11 @@
   "questID:3": 2121772749,
   "tasks:9": {
     "0:10": {
-      "index:3": 0,
       "taskID:8": "bq_standard:checkbox"
     },
     "1:10": {
       "index:3": 1,
+      "optional:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -35,10 +34,11 @@
           "id:8": "gregtech:meta_foil"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     },
     "2:10": {
       "index:3": 2,
+      "optional:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -61,10 +61,11 @@
           "id:8": "susy:spacecraft_instrument"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     },
     "3:10": {
       "index:3": 3,
+      "optional:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -86,10 +87,11 @@
           "id:8": "susy:spacecraft_instrument"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     },
     "4:10": {
       "index:3": 4,
+      "optional:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -125,7 +127,7 @@
           "id:8": "susy:spacecraft_instrument"
         }
       },
-      "taskID:8": "bq_standard:optional_retrieval"
+      "taskID:8": "bq_standard:retrieval"
     }
   }
 }

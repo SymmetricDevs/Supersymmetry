@@ -1,13 +1,13 @@
 name = "SussyPatches"
-filename = "SussyPatches-1.11.6.jar"
+filename = "SussyPatches-1.11.10.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "019891f472d61d76501a28b3c3e707d27eb65ce7"
+hash = "553b9568cf31a4d5c54381f1eb3a154af78e4832"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8762573
+file-id = 8930893
 project-id = 1319894

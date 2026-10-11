@@ -29,7 +29,7 @@ mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustPalladium
     SIFTER.recipeBuilder()
         .inputs(ore('dustAlluvialPgmSand'))
         .outputs(metaitem('nuggetAlluvialPgm') * 4)
-        .outputs(metaitem('dustNetherQuartz') * 3)
+        .outputs(metaitem('dustQuartzSand') * 3)
         .duration(160)
         .EUt(VA[LV])
         .buildAndRegister()
@@ -214,7 +214,7 @@ for (metal in metals) {
 
         CSTR.recipeBuilder()
             .fluidInputs(fluid('os_ru_solution') * 640)
-            .fluidInputs(fluid('hydrogen_peroxide_solution') * 50)
+            .fluidInputs(fluid('hydrogen_peroxide_solution') * 100)
             .fluidOutputs(fluid('hexachlororuthenic_acid_solution') * 690)
             .fluidOutputs(fluid('osmium_tetroxide') * 10)
             .duration(200)
@@ -482,6 +482,18 @@ for (metal in metals) {
             .inputs(metaitem('sponge.iridium'))
             .outputs(metaitem('dustIridium'))
             .duration(240)
+            .EUt(VA[MV])
+            .buildAndRegister()
+
+        // Ir -> H3IrCl6
+        // source: https://pdf.benchchem.com/1316/Synthesis_and_Characterization_of_Iridium_Trichloride_Hydrate_A_Technical_Guide.pdf
+        ELECTROLYZER.recipeBuilder()
+            .inputs(metaitem('dustIridium') * 1)
+            .notConsumable(metaitem('graphite_electrode') * 2)
+            .fluidInputs(fluid('diluted_hydrochloric_acid') * 12000)
+            .fluidOutputs(fluid('hexachloroiridic_iii_acid_solution') * 12000)
+            .fluidOutputs(fluid('hydrogen') * 3000)
+            .duration(200)
             .EUt(VA[MV])
             .buildAndRegister()
 

@@ -116,7 +116,7 @@ def hulls = [metaitem('hull.ulv'), metaitem('hull.lv'), metaitem('hull.mv'), met
              metaitem('hull.opv')];
 
 def tieredWires = [ore('wireGtQuadrupleLead'), ore('wireGtQuadrupleCopper'), ore('wireGtQuadrupleCupronickel'), ore('wireGtQuadrupleNichrome'),
-                   ore('wireGtQuadrupleKanthal'), ore('wireGtQuadrupleRtmAlloy'), ore('wireGtQuadrupleHssg'),
+                   ore('wireGtQuadrupleKanthal'), ore('stickMolybdenumDisilicide'), ore('wireGtQuadrupleTungsten'),
                    ore('wireGtQuadrupleNaquadah'), ore('wireGtQuadrupleNaquadahAlloy')];
 
 def tieredPlates = [ore('plateWroughtIron'), ore('plateSteel'), ore('plateAluminium'), ore('plateStainlessSteel'),
@@ -148,7 +148,7 @@ def tieredHexCables = [ore('cableGtHexLead'), ore('cableGtHexTin'), ore('cableGt
                         ore('cableGtHexVanadiumGallium'), ore('cableGtHexYttriumBariumCuprate')]
 
 def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem('springCupronickel'), metaitem('springNichrome'),
-                     metaitem('springKanthal'), metaitem('springRtmAlloy'), metaitem('springHssg'),
+                     metaitem('springKanthal'), metaitem('springMolybdenumDisilicide'), metaitem('springTungsten'),
                      metaitem('springNaquadah'), metaitem('springNaquadahAlloy')]
 
 def rotors = [
@@ -1340,7 +1340,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(2)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameAluminium') * 3)
     .inputs(ore('circuitHv') * 4)
     .inputs(metaitem('electric.pump.hv') * 4)
@@ -1354,7 +1354,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(3)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameAluminium') * 3)
     .inputs(ore('circuitHv') * 2)
     .inputs(metaitem('electric.pump.hv') * 4)
@@ -1369,7 +1369,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(4)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameAluminium') * 12)
     .inputs(ore('circuitHv') * 6)
     .inputs(metaitem('electric.pump.hv') * 8)
@@ -1383,7 +1383,7 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
     .circuitMeta(3)
-    .inputs(metaitem('hull.Hv'))
+    .inputs(metaitem('hull.hv'))
     .inputs(metaitem('frameStainlessSteel'))
     .inputs(ore('platePolytetrafluoroethylene') * 4)
     .inputs(ore('circuitHv') * 2)
@@ -1402,7 +1402,7 @@ RecyclingHelper.addShaped('gregtech:large_fluid_pump', metaitem('susy:large_flui
 
 RecyclingHelper.addShaped("gregtech:sieve_distillation_tower", metaitem('susy:sieve_distillation_tower'), [
     [metaitem('frameStainlessSteel'), ore('circuitHv'), metaitem('frameStainlessSteel')],
-    [metaitem('springNichrome'), metaitem('hull.Hv'), metaitem('springNichrome')],
+    [metaitem('springNichrome'), metaitem('hull.hv'), metaitem('springNichrome')],
     [metaitem('frameStainlessSteel'), metaitem('electric.pump.hv'), metaitem('frameStainlessSteel')]
 ])
 
@@ -1546,7 +1546,7 @@ ASSEMBLER.recipeBuilder()
 
 RecyclingHelper.addShaped("gregtech:curtain_coater", metaitem('susy:curtain_coater'), [
     [metaitem('electric.pump.hv'), metaitem('frameStainlessSteel'), metaitem('electric.pump.hv')],
-    [ore('circuitHv'), metaitem('hull.Hv'), ore('circuitHv')],
+    [ore('circuitHv'), metaitem('hull.hv'), ore('circuitHv')],
     [metaitem('pipeLargeFluidStainlessSteel'), ore('circuitHv'), metaitem('pipeLargeFluidStainlessSteel')]
 ])
 
@@ -1554,7 +1554,7 @@ RecyclingHelper.addShaped("gregtech:curtain_coater", metaitem('susy:curtain_coat
 
 RecyclingHelper.addShaped("gregtech:milling", metaitem('susy:milling'), [
     [ore('circuitHv'), metaitem('conveyor.module.hv'), ore('circuitHv')],
-    [metaitem('robot.arm.hv'), metaitem('hull.Hv'), metaitem('robot.arm.hv')],
+    [metaitem('robot.arm.hv'), metaitem('hull.hv'), metaitem('robot.arm.hv')],
     [ore('circuitHv'), metaitem('conveyor.module.hv'), ore('circuitHv')]
 ])
 
@@ -2065,8 +2065,8 @@ ASSEMBLER.recipeBuilder()
 
 ASSEMBLER.recipeBuilder()
         .circuitMeta(2)
-        .inputs(ore('plateDoubleAluminiumAlloy2219') * 6)
-        .inputs(ore('stickLongAluminiumAlloy2219') * 12)
+        .inputs(ore('plateDoubleAluminiumAlloy2195') * 6)
+        .inputs(ore('stickLongAluminiumAlloy2195') * 12)
         .outputs(item('susy:spacecraft_hull'))
         .EUt(VA[EV])
         .duration(20)
@@ -2203,29 +2203,11 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 ASSEMBLER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(item('gregtech:steam_casing', 5))
-    .inputs(ore('ringLead') * 2)
-    .outputs(item('gregtech:machine', 1597))
-    .duration(100)
-    .EUt(VA[ULV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
     .circuitMeta(1)
     .inputs(item('gregtech:metal_casing', 4))
     .inputs(ore('ringSteel'))
     .inputs(ore('rotorSteel'))
     .outputs(item('gregtech:machine', 1598))
-    .duration(200)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-ASSEMBLER.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(item('gregtech:metal_casing', 4))
-    .inputs(ore('ringSteel') * 2)
-    .outputs(item('gregtech:machine', 1599))
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister();
@@ -2413,3 +2395,103 @@ RecyclingHelper.addShaped("susy:fluid_samples_storage", metaitem('susy:fluid_sam
     [metaitem('large_fluid_cell.steel'), item('gregtech:boiler_casing', 1), metaitem('large_fluid_cell.steel')],
     [metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel'), metaitem('large_fluid_cell.steel')]
 ])
+
+// ALD Unit
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:ald." + Globals.voltageTiers[i], metaitem('susy:ald.' + Globals.voltageTiers[i]), [
+        [pumps[i], hulls[i], pumps[i]],
+        [tieredCables[i], tieredPlates[i], tieredCables[i]],
+        [circuits[i], tieredSprings[i], circuits[i]]
+    ])
+}
+
+// Plasma Asher
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:plasma_asher." + Globals.voltageTiers[i], metaitem('susy:plasma_asher.' + Globals.voltageTiers[i]), [
+        [circuits[i], pumps[i], tieredElectrodes[i]],
+        [tieredCables[i], hulls[i], tieredCables[i]],
+        [tieredElectrodes[i], tieredPlates[i], circuits[i]]
+    ])
+}
+
+// Reactive Ion Etcher
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:reactive_ion_etcher." + Globals.voltageTiers[i], metaitem('susy:reactive_ion_etcher.' + Globals.voltageTiers[i]), [
+        [tieredElectrodes[i], pumps[i], circuits[i]],
+        [tieredCables[i], hulls[i], tieredCables[i]],
+        [circuits[i], tieredPlates[i], tieredElectrodes[i]]
+    ])
+}
+
+// Wire Bonder
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:wire_bonder." + Globals.voltageTiers[i], metaitem('susy:wire_bonder.' + Globals.voltageTiers[i]), [
+        [motors[i], robotArms[i], motors[i]],
+        [tieredCables[i], hulls[i], tieredCables[i]],
+        [circuits[i], tieredElectrodes[i], circuits[i]]
+    ])
+}
+
+// Resist Processor
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:resist_processor." + Globals.voltageTiers[i], metaitem('susy:resist_processor.' + Globals.voltageTiers[i]), [
+        [robotArms[i], pumps[i], tieredCables[i]],
+        [circuits[i], hulls[i], circuits[i]],
+        [motors[i], tieredWires[i], motors[i]]
+    ])
+}
+
+// Screen Printer
+
+for (i = 1; i <= 8; i++) {
+    RecyclingHelper.addShaped("gregtech:screen_printer." + Globals.voltageTiers[i], metaitem('susy:screen_printer.' + Globals.voltageTiers[i]), [
+        [robotArms[i], metaitem('mesh.stainless_steel'), pumps[i]],
+        [circuits[i], hulls[i], circuits[i]],
+        [tieredCables[i], conveyors[i], tieredCables[i]]
+    ])
+}
+
+// solar panels
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('cell.monosilicon_photovoltaic') * 8)
+    .inputs(metaitem('plateGlass') * 4)
+    .inputs(metaitem('plateAluminium') * 2)
+    .inputs(metaitem('stickLongAluminium') * 4)
+    .inputs(metaitem('electric.motor.lv') * 2)
+    .inputs(metaitem('circuit.power.lv') * 1)
+    .outputs(metaitem('susy:solar_panel.lv'))
+    .duration(80)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('cell.multijunction_photovoltaic') * 8)
+    .inputs(metaitem('plateGlass') * 4)
+    .inputs(metaitem('plateAluminium') * 2)
+    .inputs(metaitem('stickLongAluminium') * 4)
+    .inputs(metaitem('electric.motor.lv') * 2)
+    .inputs(metaitem('circuit.power.lv') * 1)
+    .outputs(metaitem('susy:solar_panel.mv'))
+    .duration(90)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('simple_solar_panel.cell') * 24)
+    .inputs(metaitem('plateLunarRGlass') * 8)
+    .inputs(metaitem('plateAluminium') * 4)
+    .inputs(metaitem('stickLongAluminium') * 4)
+    .inputs(metaitem('electric.motor.lv') * 1)
+    .outputs(metaitem('susy:solar_panel.moon'))
+    .duration(120)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+crafting.removeByOutput(metaitem('cover.solar.panel'))
+crafting.removeByOutput(metaitem('cover.solar.panel.ulv'))
+crafting.removeByOutput(metaitem('cover.solar.panel.lv'))

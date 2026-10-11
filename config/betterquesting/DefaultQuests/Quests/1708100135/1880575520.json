@@ -1,0 +1,50 @@
+{
+  "preRequisites:11": [
+    1319541244
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1880575520.desc",
+      "frame:8": "GATE",
+      "icon:10": {
+        "Damage:2": 10205,
+        "id:8": "gregtech:meta_item_2"
+      },
+      "name:8": "susy.quest.db.1880575520.title"
+    }
+  },
+  "questID:3": 1880575520,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 150,
+            "TrophyColorGreen:3": 150,
+            "TrophyColorRed:3": 150,
+            "TrophyEarnedAt:4": 1791215899,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 10205,
+              "id:8": "gregtech:meta_item_2"
+            },
+            "TrophyName:8": "One Small Step For Man",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "neon"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "dimension:3": 800,
+      "index:3": 1,
+      "name:8": "Moon",
+      "taskID:8": "bq_standard:location"
+    }
+  }
+}

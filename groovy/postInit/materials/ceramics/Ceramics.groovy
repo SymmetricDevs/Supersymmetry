@@ -2,6 +2,11 @@ import static prePostInit.Recipemaps.*
 import globals.Sintering
 import static gregtech.api.GTValues.*
 
+// Alumina Plate * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('alumina') * 144])
+// Alumina Plate * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustAlumina')], null)
+
 // PVA binder
 
 MIXER.recipeBuilder()
@@ -14,6 +19,8 @@ MIXER.recipeBuilder()
 
 // Alumina
 
+mods.jei.ingredient.yeet(metaitem('screwAlumina'))
+
 Sintering.blankets.each { blanket ->
     SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustAlumina') * 10)
@@ -24,16 +31,47 @@ Sintering.blankets.each { blanket ->
         .duration(blanket.duration)
         .EUt(VA[MV])
         .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 5)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 100)
+        .notConsumable(metaitem('shape.mold.bolt'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('boltAlumina') * 20)
+        .duration(blanket.duration)
+        .EUt(VA[MV])
+        .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .circuitMeta(1)
+        .inputs(ore('dustAlumina') * 9)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
+        .notConsumable(metaitem('shape.mold.plate'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('ceramic_casing'))
+        .EUt(VA[MV])
+        .duration(blanket.duration)
+        .buildAndRegister()
+
+    SINTERING_OVEN.recipeBuilder()
+        .inputs(ore('dustAlumina') * 6)
+        .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
+        .notConsumable(metaitem('shape.mold.plate'))
+        .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
+        .outputs(metaitem('plateAlumina'))
+        .EUt(VA[MV])
+        .duration(blanket.duration)
+        .buildAndRegister()
 }
 
 SINTERING_OVEN.recipeBuilder()
-        .inputs(ore('dustAlumina') * 5)
-        .inputs(ore('dustSmallGraphite'))    
-        .notConsumable(metaitem('shape.mold.plate'))
-        .outputs(metaitem('membrane.support.alumina'))
-        .duration(300)
-        .EUt(VA[MV])
-        .buildAndRegister()
+    .inputs(ore('dustAlumina') * 5)
+    .inputs(ore('dustSmallGraphite'))    
+    .notConsumable(metaitem('shape.mold.plate'))
+    .outputs(metaitem('membrane.support.alumina'))
+    .duration(300)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
 // Boron carbide
 
@@ -50,7 +88,7 @@ Sintering.blankets.each { blanket ->
     if (blanket.tier >= 2) {
         SINTERING_OVEN.recipeBuilder()
         .inputs(ore('dustBoronCarbide'))
-        .fluidInputs(fluid('novolacs') * 100)
+        .fluidInputs(fluid('phenolic_novolacs_resin') * 100)
         .notConsumable(metaitem('shape.mold.rod'))
         .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
         .outputs(metaitem('stickBoronCarbide') * 2)
@@ -67,7 +105,7 @@ Sintering.blankets.each { blanket ->
     if (blanket.tier >= 2) {
         SINTERING_OVEN.recipeBuilder()
             .inputs(ore('dustBoronCarbide'))
-            .fluidInputs(fluid('novolacs') * 100)
+            .fluidInputs(fluid('phenolic_novolacs_resin') * 100)
             .notConsumable(metaitem('shape.mold.long_rod'))
             .fluidInputs(fluid(blanket.name) * blanket.amountRequired)
             .outputs(metaitem('stickLongBoronCarbide'))
@@ -103,14 +141,34 @@ HOT_ISOSTATIC_PRESS.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-// Silicon Carbide
 
-FORMING_PRESS.recipeBuilder() //Simplified temporary recipe
+// Induction crucible recipes (temporary recipes)
+
+// Silicon Carbide
+FORMING_PRESS.recipeBuilder()
     .inputs(ore('dustSiliconCarbide') * 4)
     .inputs(ore('dustGraphite') * 2)
     .inputs(ore('dustFireclay'))
     .notConsumable(metaitem('shape.mold.crucible'))
     .outputs(item('susy:crucible'))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// Alumina
+FORMING_PRESS.recipeBuilder()
+    .inputs(ore('dustSyntheticMulliteRefractory') * 7)
+    .notConsumable(metaitem('shape.mold.crucible'))
+    .outputs(item('susy:crucible', 1))
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+// High-Performance Alumina
+FORMING_PRESS.recipeBuilder()
+    .inputs(ore('dustTabularAluminaRefractory') * 7)
+    .notConsumable(metaitem('shape.mold.crucible'))
+    .outputs(item('susy:crucible', 3))
     .duration(200)
     .EUt(VA[LV])
     .buildAndRegister()

@@ -231,7 +231,7 @@ for (solder in soldering_alloys) {
     mods.gregtech.assembler.recipeBuilder()
             .inputs(metaitem('sensor.hv'))
             .inputs(ore('wireGtDoubleAluminium') * 4)
-            .inputs(metaitem('circuit_board.advanced'))
+            .inputs(metaitem('circuit_board.g10'))
             .fluidInputs(solder)
             .circuitMeta([10])
             .outputs(item('computronics:oc_parts', 2))

@@ -9,14 +9,57 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
-// Light oredict
+// Lights
 ore('gtLight').add(metaitem('incandescent_light'))
 ore('gtLight').add(metaitem('halogen_light'))
 ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
-// Circuit oredict
+// Circuit components
+ore('componentResistorMedium').add(metaitem('component.resistor.carbon_composite'))
+ore('componentResistorMedium').add(metaitem('component.resistor.carbon_film'))
+ore('componentResistorMedium').add(metaitem('component.resistor.metal_film'))
+
+ore('componentResistorSmall').add(metaitem('component.thick_film_resistor'))
+
+ore('componentCapacitorMedium').add(metaitem('component.capacitor.silver_mica'))
+ore('componentCapacitorMedium').add(metaitem('component.capacitor.film'))
+
+ore('componentCapacitorSmall').add(metaitem('component.pme_cap'))
+ore('componentCapacitorSmall').add(metaitem('component.bme_cap'))
+
+ore('componentTransistor').add(metaitem('component.transistor.alloy_junction'))
+
+ore('componentTransistorSignal').add(metaitem('component.transistor.signal_mosfet'))
+ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_junction'))
+
+ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
+
+ore('componentDiodeSignal').add(metaitem('component.diode'))
+ore('componentDiodeSignal').add(metaitem('component.diode.alloy_junction'))
+ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
+
+// Carbon composite
+ore('resistorCarbon').add(metaitem('dustCarbon'))
+ore('resistorCarbon').add(metaitem('dustHighPurityCarbon'))
+ore('resistorCarbon').add(metaitem('dustGraphite'))
+
+// Plastic film capacitors
+ore('capacitorFilm').add(metaitem('mylar'))
+ore('capacitorFilm').add(metaitem('foilPolypropylene'))
+
+// Circuits
+ore('circuitLv').add(metaitem('circuit.power.lv'))
+ore('circuitMv').add(metaitem('circuit.power.mv'))
+ore('circuitHv').add(metaitem('circuit.power.hv'))
+
+/*
+ore('circuitLv').remove(metaitem('circuit.basic_integrated')) //being EVIL
+ore('circuitMv').remove(metaitem('circuit.good_integrated'))
+ore('circuitHv').remove(metaitem('circuit.advanced_integrated'))
+*/
+
 ore('circuitZpm').add(metaitem('circuit.gooware_processor'))
 
 ore('circuitUv').add(metaitem('circuit.gooware_assembly'))
@@ -133,6 +176,10 @@ ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.orange'))
 ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.lemon'))
 ore('electrolyteFruit').add(metaitem('gregtechfoodoption:food.lime'))
 
+ore('zest').add(metaitem('zest.orange'))
+ore('zest').add(metaitem('zest.lemon'))
+ore('zest').add(metaitem('zest.lime'))
+
 // Add ore dict to non traditional ore blocks
 ore('oreCaliche').add(item('susy:resource_block:1'))
 
@@ -173,6 +220,13 @@ mods.gregtech.macerator.removeByInput(2, [item('susy:resource_block')], null)
 for (i in 0..2) {
     mods.jei.ingredient.yeet(item('gregtech:ore_bauxite_0', i))
 }
+
+// Electric double-layer (EDLC) supercapacitor, EV-tier aqueous component.
+// "Supercapacitors: Concepts and advances"
+// (IOP, 2025), sections 4.13, 5.6, 5.7.
+
+ore('componentSupercapacitor').add(metaitem('component.capacitor.edlc'))
+
 
 // Kanthal/Nichrome springs
 ore('springEarly').add(metaitem('springNichrome'), metaitem('springKanthal'))
@@ -255,7 +309,7 @@ for (type in StoneVariantBlock.StoneType.values()) {
 
 ore('defaultCobblestone').add(ore('cobblestone'))
 
-for (i in 0..11) {
+for (i in 0..12) {
     ore('defaultCobblestone').remove(item('susy:susy_stone_cobble', i))
 }
 
