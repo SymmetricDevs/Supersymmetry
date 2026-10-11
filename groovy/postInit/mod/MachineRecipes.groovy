@@ -153,8 +153,8 @@ def tieredSprings = [metaitem('springIron'), metaitem('springCopper'), metaitem(
 
 def rotors = [
     ore('rotorLead'),
-    ore('rotorTin'), 
-    ore('rotorBronze'), 
+    ore('rotorTin'),
+    ore('rotorBronze'),
     ore('rotorSteel'),
     ore('rotorStainlessSteel'),
     ore('rotorTungstenSteel'),

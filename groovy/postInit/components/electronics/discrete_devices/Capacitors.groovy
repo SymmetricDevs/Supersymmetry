@@ -47,7 +47,7 @@ ASSEMBLER.recipeBuilder()
 // Plastic film capacitors (MV)
 
 
-EVAPORATION.recipeBuilder()
+EVAPORATION_DEPOSITION.recipeBuilder()
     .inputs(ore('nuggetAluminium'))
     .inputs(ore('capacitorFilm') * 8)
     .outputs(metaitem('component.capacitor.film.metallized_film'))
