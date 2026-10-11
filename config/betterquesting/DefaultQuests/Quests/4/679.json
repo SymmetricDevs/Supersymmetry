@@ -12,7 +12,8 @@
         "id:8": "gregtech:meta_dust"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.679.title"
+      "name:8": "susy.quest.db.679.title",
+      "snd_complete:8": "susy:music.quest_trigger_hv"
     }
   },
   "questID:3": 679,

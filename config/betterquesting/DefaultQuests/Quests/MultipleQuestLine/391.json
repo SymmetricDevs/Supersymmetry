@@ -14,7 +14,8 @@
         "id:8": "gregtech:machine"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.391.title"
+      "name:8": "susy.quest.db.391.title",
+      "snd_complete:8": "susy:music.quest_trigger_mv"
     }
   },
   "questID:3": 391,
