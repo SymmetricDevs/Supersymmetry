@@ -9,43 +9,36 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
-// Light oredict
+// Lights
 ore('gtLight').add(metaitem('incandescent_light'))
 ore('gtLight').add(metaitem('halogen_light'))
 ore('gtLight').add(metaitem('fluorescent_light'))
 ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
-// Circuit component oredict
-ore('componentResistorMedium').add(metaitem('component.resistor.metal_film'))
+// Circuit components
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_composite'))
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_film'))
-ore('componentResistorSmall').add(metaitem('component.smd.resistor'))
-ore('componentResistorSmall').add(metaitem('component.advanced_smd.resistor'))
+ore('componentResistorMedium').add(metaitem('component.resistor.metal_film'))
+
 ore('componentResistorSmall').add(metaitem('component.thick_film_resistor'))
+
 ore('componentCapacitorMedium').add(metaitem('component.capacitor.silver_mica'))
 ore('componentCapacitorMedium').add(metaitem('component.capacitor.film'))
+
 ore('componentCapacitorSmall').add(metaitem('component.pme_cap'))
 ore('componentCapacitorSmall').add(metaitem('component.bme_cap'))
+
 ore('componentTransistor').add(metaitem('component.transistor.alloy_junction'))
+
 ore('componentTransistorSignal').add(metaitem('component.transistor.signal_mosfet'))
 ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_junction'))
+
 ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
-ore('componentOpAmp').add(metaitem('component.op_amp'))
-/*
-ore('circuitLv').remove(metaitem('circuit.basic_integrated')) //being EVIL
-ore('circuitMv').remove(metaitem('circuit.good_integrated'))
-ore('circuitHv').remove(metaitem('circuit.advanced_integrated'))
-*/
-mods.jei.ingredient.yeet(metaitem('component.transistor'))
-mods.jei.ingredient.yeet(metaitem('component.smd.transistor'))
-mods.jei.ingredient.yeet(metaitem('component.resistor'))
-mods.jei.ingredient.yeet(metaitem('component.smd.resistor'))
-mods.jei.ingredient.yeet(metaitem('component.capacitor'))
-mods.jei.ingredient.yeet(metaitem('component.smd.capacitor'))
-// Capacitor * 8
-mods.gregtech.assembler.removeByInput(120, [metaitem('foilPlastic'), metaitem('foilAluminium') * 2], [fluid('plastic') * 144])
-mods.jei.ingredient.yeet(metaitem('component.capacitor'))
+
+ore('componentDiodeSignal').add(metaitem('component.diode'))
+ore('componentDiodeSignal').add(metaitem('component.diode.alloy_junction'))
+ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
 
 // Carbon composite
 ore('resistorCarbon').add(metaitem('dustCarbon'))
@@ -56,16 +49,16 @@ ore('resistorCarbon').add(metaitem('dustGraphite'))
 ore('capacitorFilm').add(metaitem('mylar'))
 ore('capacitorFilm').add(metaitem('foilPolypropylene'))
 
-// Standard signal diodes
-ore('componentDiodeSignal').add(metaitem('component.diode'))
-ore('componentDiodeSignal').add(metaitem('component.smd.diode'))
-ore('componentDiodeSignal').add(metaitem('component.diode.planar'))
-
-// Circuit oredict
-
+// Circuits
 ore('circuitLv').add(metaitem('circuit.power.lv'))
 ore('circuitMv').add(metaitem('circuit.power.mv'))
 ore('circuitHv').add(metaitem('circuit.power.hv'))
+
+/*
+ore('circuitLv').remove(metaitem('circuit.basic_integrated')) //being EVIL
+ore('circuitMv').remove(metaitem('circuit.good_integrated'))
+ore('circuitHv').remove(metaitem('circuit.advanced_integrated'))
+*/
 
 ore('circuitZpm').add(metaitem('circuit.gooware_processor'))
 

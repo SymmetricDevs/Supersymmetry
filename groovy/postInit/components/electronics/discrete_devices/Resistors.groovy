@@ -7,7 +7,9 @@ import globals.semiconductors.Packaging
 import globals.semiconductors.Etching
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-//crafting.removeByOutput(metaitem('component.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.smd.resistor'))
+mods.jei.ingredient.yeet(metaitem('component.advanced_smd.resistor'))
 
 // SMD Resistor * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
@@ -46,7 +48,7 @@ COMPRESSOR.recipeBuilder()
 crafting.addShapeless("gregtech:ccr_core", metaitem('component.resistor.carbon_composite.unfired') * 8, [
     ore('resistorCarbon'),
     ore('dustClay'),
-    metaitem('shape.mold.nugget')
+    metaitem('shape.mold.nugget').reuse()
 ])
 
 furnace.add(metaitem('component.resistor.carbon_composite.unfired'), metaitem('component.resistor.carbon_composite.fired'))

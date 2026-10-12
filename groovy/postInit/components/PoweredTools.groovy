@@ -5,7 +5,7 @@ import gregtech.api.capability.GregtechCapabilities
 import gregtech.api.capability.IElectricItem
 import net.minecraft.nbt.NBTTagCompound
 
-log.infoMC("Running PoweredTools.groovy...")
+crafting.remove('gregtech:fluid_jetpack')
 
 def setChargeFromBatteryFn = { output, inputs, info ->
     def batteryTag = inputs['battery']?.getTagCompound()

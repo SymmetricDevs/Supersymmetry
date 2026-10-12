@@ -1,3 +1,26 @@
+# UPDATE 0.2.0.0.2
+## Mod Changes
+## Changes
+### Changed Features
+- balance change: commando armor now uses fiber epoxy instead of UHMWPE (#2064 by @oliwier509)
+- Alt phthalic anhydride recipe for MV (#2067 by @jethro-3000)
+### Fixes
+- remove molten steel from quenching.groovy + stuff (#2063 by @jethro-3000)
+- LV motor assembler recipe fix (#2066 by @1290418240891)
+# UPDATE 0.2.0.0.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.0 → v0.2.1
+## Changes
+### Changed Features
+- Circuit boards are named better! (#2051 by @Fiery36)
+- Hazmat suits are now LV. (#2052 by @oliwier509)
+- The plasma asher is no longer immediately available. (#2057 by @jethro-3000)
+### Fixes
+- Sieges can no longer destroy themselves with drop pod explosions. Also, a crash was fixed. (#2055 by @oliwier509)
+- AE2 now doesn't immediately run out of power. (#2060 by @Crindigo)
+- SRP no longer spawns on the moon (#2054 by @oliwier509)
+We've also got Fiery Fixes 18 and Jethro Jixes 5 this time. Thanks additionally to @lanicerine and @planetme for fixing some recipes.
 # UPDATE 0.2.0
 ## Mod Changes 
 ### Mod Updates

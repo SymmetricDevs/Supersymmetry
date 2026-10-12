@@ -172,6 +172,7 @@ class Wafer {
     String boule_name
     String wafer_name
     String seed_name
+    String dust_name
     boolean small
 
     // Property getters
@@ -202,23 +203,28 @@ class Wafer {
         return metaitem(wafer_name) * count
     }
 
-    Wafer(String boule_name, String wafer_name, String seed_name, boolean small) {
+    def getDust(int count = 1) {
+        return metaitem(dust_name) * count
+    }
+
+    Wafer(String boule_name, String wafer_name, String seed_name, String dust_name, boolean small) {
         this.boule_name = boule_name
         this.wafer_name = wafer_name
         this.seed_name = seed_name
+        this.dust_name = dust_name
         this.small = small
     }
 }
 
 def wafers = [
-    new Wafer('boule.silicon.cz', 'wafer.silicon', 'seed_crystal.silicon', false),
-    new Wafer('boule.silicon.cz.p_doped', 'wafer.silicon.p_doped', 'seed_crystal.silicon', false),
-    new Wafer('boule.silicon.cz.n_doped', 'wafer.silicon.n_doped', 'seed_crystal.silicon', false),
-    new Wafer('boule.silicon.fz.n_doped', 'wafer.small.silicon.n_doped', 'seed_crystal.silicon', true),
-    new Wafer('boule.silicon.fz.heavily_n_doped', 'wafer.small.silicon.heavily_n_doped', 'seed_crystal.silicon', true),
-    new Wafer('boule.germanium.n_doped', 'wafer.germanium.n_doped', 'seed_crystal.germanium', true),
-    new Wafer('boule.gallium_arsenide.n_doped', 'wafer.gallium_arsenide.n_doped', 'seed_crystal.gallium_arsenide', true),
-    new Wafer('boule.indium_phosphide', 'wafer.indium_phosphide', 'seed_crystal.indium_phosphide', false)
+    new Wafer('boule.silicon.cz', 'wafer.silicon', 'seed_crystal.silicon', 'dustSilicon', false),
+    new Wafer('boule.silicon.cz.p_doped', 'wafer.silicon.p_doped', 'seed_crystal.silicon', 'dustSilicon', false),
+    new Wafer('boule.silicon.cz.n_doped', 'wafer.silicon.n_doped', 'seed_crystal.silicon', 'dustSilicon', false),
+    new Wafer('boule.silicon.fz.n_doped', 'wafer.small.silicon.n_doped', 'seed_crystal.silicon', 'dustSilicon', true),
+    new Wafer('boule.silicon.fz.heavily_n_doped', 'wafer.small.silicon.heavily_n_doped', 'seed_crystal.silicon', 'dustSilicon', true),
+    new Wafer('boule.germanium.n_doped', 'wafer.germanium.n_doped', 'seed_crystal.germanium', 'dustGermanium', true),
+    new Wafer('boule.gallium_arsenide.n_doped', 'wafer.gallium_arsenide.n_doped', 'seed_crystal.gallium_arsenide', 'dustGalliumArsenide', true),
+    new Wafer('boule.indium_phosphide', 'wafer.indium_phosphide', 'seed_crystal.indium_phosphide', 'dustIndiumPhosphide', false)
 ]
 
 // CMP slurry & RCA clean solutions.
@@ -314,13 +320,13 @@ for (wafer in wafers) {
 
     if (wafer.isSmall()) {
         cuttingRecipe.outputs(wafer.getRawWafer(34))
-        cuttingRecipe.chancedOutput(metaitem('dustHighPuritySilicon'), 5000, 0)
+        cuttingRecipe.chancedOutput(wafer.getDust(), 5000, 0)
         cuttingRecipe.chancedOutput(wafer.getRawWafer(2), 10000, 0)
         cuttingRecipe.fluidInputs(fluid('ultrapure_water') * 500)
         cuttingRecipe.duration(4500).EUt(VA[MV])
     } else {
         cuttingRecipe.outputs(wafer.getRawWafer(64))
-        cuttingRecipe.chancedOutput(metaitem('dustHighPuritySilicon') * 4, 5000, 0)
+        cuttingRecipe.chancedOutput(wafer.getDust() * 4, 5000, 0)
         cuttingRecipe.chancedOutput(wafer.getRawWafer(8), 10000, 0)
         cuttingRecipe.fluidInputs(fluid('ultrapure_water') * 2000)
         cuttingRecipe.duration(9000).EUt(VA[HV])
