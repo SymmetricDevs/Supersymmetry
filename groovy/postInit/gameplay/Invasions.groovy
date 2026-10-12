@@ -596,7 +596,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     Bandit bandit = new Bandit(player.world);
                     NBTTagCompound root = bandit.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Bandits");
-                    root.setInteger("hate", -5);
+                    root.setInteger("hate", 0);
                     bandit.getEntityData().setTag("susy", root);
                     bandit.setCustomNameTag("Bandit");
                     bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
@@ -658,7 +658,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     Bandit bandit = new Bandit(player.world);
                     NBTTagCompound root = bandit.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Bandits");
-                    root.setInteger("hate", -7);
+                    root.setInteger("hate", 0);
                     bandit.getEntityData().setTag("susy", root);
                     bandit.setCustomNameTag("Bandit mercenary");
                     bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
@@ -711,7 +711,7 @@ new MobHordeEvent((player) -> null, 62, 62, "bandit_siege")
                     NBTTagCompound root = bandit.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Bandits");
                     root.setBoolean("leader", true); // Sets leader: 1b in NBT
-                    root.setInteger("hate", -50);
+                    root.setInteger("hate", 0);
                     bandit.getEntityData().setTag("susy", root);
                     bandit.setCustomNameTag("Bandit commander");
                     bandit.addPotionEffect(new PotionEffect(PotionDropPodSickness.INSTANCE, DROP_POD_SICKNESS_DURATION, 0));
@@ -842,7 +842,7 @@ new MobHordeEvent((player) -> {
             return entity
         })
         .setTimer(144000, 216000)
-        .minHate("Feds", 185)
+        .minHate("Feds", 350)
 
 /**
  federation platoon
@@ -856,7 +856,7 @@ new MobHordeEvent((player) -> {
 
 new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
         .setTimer(144000, 216000)
-        .minHate("Feds", 350)
+        .minHate("Feds", 600)
 
 //normal raider
         .addPattern(
@@ -977,7 +977,7 @@ new MobHordeEvent((player) -> null, 16, 40, "fed_platoon")
 String helicopterCommand = "summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{faction:\"Feds\",hate:-30,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:150}],Health:150.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b},{Id:" + PotionDropPodSickness.getId() + ",Amplifier:0b,Duration:" + DROP_POD_SICKNESS_DURATION + ",ShowParticles:0b}]}"
 new MobHordeEvent((player) -> null, 50, 50, "fed_reinforced_flight_platoon")
         .setTimer(144000, 216000)
-        .minHate("Feds", 750)
+        .minHate("Feds", 1200)
 
 //normal raider
         .addPattern(
@@ -1100,15 +1100,15 @@ new MobHordeEvent((player) -> null, 50, 50, "fed_reinforced_flight_platoon")
 
 /**
  federation air scouts
- 20 attack helicopters, 1 leader helicopter
+ 10 attack helicopters, 1 leader helicopter
  helicopter munitions, helicopter rockets
  Air only combat unit, prized by the federation militaries for securing air corridors
  **/
 
 String helicopterCommand1 = "summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{leader:1b,faction:\"Feds\",hate:-150,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:200}],Health:200.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b},{Id:" + PotionDropPodSickness.getId() + ",Amplifier:0b,Duration:" + DROP_POD_SICKNESS_DURATION + ",ShowParticles:0b}]}"
-new MobHordeEvent((player) -> null, 20, 20, "fed_air_scouts")
+new MobHordeEvent((player) -> null, 10, 10, "fed_air_scouts")
         .setTimer(144000, 216000)
-        .minHate("Feds", 1500)
+        .minHate("Feds", 3000)
 
 //normal raider
         .addPattern(
@@ -1140,7 +1140,7 @@ new MobHordeEvent((player) -> null, 20, 20, "fed_air_scouts")
 
 /**
  federation battery siege
- 60 people 10 helicopters
+ 60 people 5 helicopters
  LMG, miniguns, flamethrowers, as50
  full power armor
  active combat stims
@@ -1159,11 +1159,13 @@ def tri1z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(210))
 def tri2x = TRIANGLE_RADIUS * Math.cos(Math.toRadians(330))
 def tri2z = TRIANGLE_RADIUS * Math.sin(Math.toRadians(330))
 
+String helicopterCommand2 = "summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{faction:\"Feds\",hate:0,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:150}],Health:150.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b},{Id:" + PotionDropPodSickness.getId() + ",Amplifier:0b,Duration:" + DROP_POD_SICKNESS_DURATION + ",ShowParticles:0b}]}"
+String helicopterCommand3 = "summon techguns:attackhelicopter ~ ~10 ~ {ForgeData:{susy:{leader:1b,faction:\"Feds\",hate:0,invasionOwner:\"%player_uuid%\"}},PersistenceRequired:1b,Attributes:[{Name:\"generic.maxHealth\",Base:200}],Health:200.0f,ActiveEffects:[{Id:10,Amplifier:4b,Duration:2147483647,ShowParticles:0b},{Id:" + PotionDropPodSickness.getId() + ",Amplifier:0b,Duration:" + DROP_POD_SICKNESS_DURATION + ",ShowParticles:0b}]}"
 
-new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
+new MobHordeEvent((player) -> null, 68, 68, "fed_battery_siege")
         .setTimer(144000, 216000)
         .setDropPodExplosions(false)
-        .minHate("Feds", 2500)
+        .minHate("Feds", 5000)
 
 // ── FORMATION 0 - normal soldiers ──────────────────────────────────────
         .addPattern(
@@ -1177,7 +1179,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     Outcast outcast = new Outcast(player.world);
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
-                    root.setInteger("hate", -10);
+                    root.setInteger("hate", 0);
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
                     outcast.setCustomNameTag("Federation Soldier");
@@ -1216,7 +1218,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     Outcast outcast = new Outcast(player.world);
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
-                    root.setInteger("hate", -50);
+                    root.setInteger("hate", 0);
                     root.setBoolean("leader", true);
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
@@ -1267,7 +1269,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     Outcast outcast = new Outcast(player.world);
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
-                    root.setInteger("hate", -10);
+                    root.setInteger("hate", 0);
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
                     outcast.setCustomNameTag("Federation Soldier");
@@ -1306,7 +1308,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     Outcast outcast = new Outcast(player.world);
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
-                    root.setInteger("hate", -50);
+                    root.setInteger("hate", 0);
                     root.setBoolean("leader", true);
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
@@ -1357,7 +1359,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     Outcast outcast = new Outcast(player.world);
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
-                    root.setInteger("hate", -10);
+                    root.setInteger("hate", 0);
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 1));
                     outcast.setCustomNameTag("Federation Soldier");
@@ -1396,7 +1398,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     Outcast outcast = new Outcast(player.world);
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
-                    root.setInteger("hate", -50);
+                    root.setInteger("hate", 0);
                     root.setBoolean("leader", true);
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
@@ -1442,14 +1444,14 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     double angle = t * 2 * Math.PI;
                     return new MobHordeEvent.Vec2(radius * Math.cos(angle), radius * Math.sin(angle));
                 },
-                Arrays.asList(helicopterCommand),
+                Arrays.asList(helicopterCommand2),
                 null,
                 null
         )
 //siege captain
         .addPattern(
                 t -> new MobHordeEvent.Vec2(0, 0),
-                Arrays.asList(helicopterCommand1),
+                Arrays.asList(helicopterCommand3),
                 null,
                 null
         )
@@ -1461,7 +1463,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                     Outcast outcast = new Outcast(player.world);
                     NBTTagCompound root = outcast.getEntityData().getCompoundTag("susy");
                     root.setString("faction", "Feds");
-                    root.setInteger("hate", -75);
+                    root.setInteger("hate", 0);
                     root.setBoolean("leader", true);
                     outcast.getEntityData().setTag("susy", root);
                     outcast.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999, 3));
@@ -1531,7 +1533,7 @@ new MobHordeEvent((player) -> null, 73, 73, "fed_battery_siege")
                 null,
         )
 
-        .setExactDistribution(19, 1, 19, 1, 19, 1, 9, 1, 1, 1, 1, 1); // formation0 soldiers, formation0 sergeant, formation1 soldiers, formation1 sergeant, formation2 soldiers, formation2 sergeant, normal helicopter, captain helicopter, constructoid, flare, drop beacon
+        .setExactDistribution(19, 1, 19, 1, 19, 1, 4, 1, 1, 1, 1, 1); // formation0 soldiers, formation0 sergeant, formation1 soldiers, formation1 sergeant, formation2 soldiers, formation2 sergeant, normal helicopter, captain helicopter, constructoid, flare, drop beacon
 /*
 // Commands for pods
 // example code only, templates, etc...
