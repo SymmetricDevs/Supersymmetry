@@ -10,13 +10,13 @@ import globals.semiconductors.Mechanicals
 
 // Alloy-junction bipolar transistor (MV)
 
-Packaging.generateDicingRecipe('wafer.germanium.n_doped', 'die.alloy_junction_transistor.step_one', 4, 400, LV, false)
+Packaging.generateDicingRecipe('wafer.germanium.n_doped', 'die.alloy_junction_transistor.step_one', 16, 400, LV, false)
 
 RESISTANCE_FURNACE.recipeBuilder()
     .notConsumable(ore('springCupronickel'))
-    .inputs(ore('nuggetHighPurityIndium') * 2)
-    .inputs(metaitem('die.alloy_junction_transistor.step_one'))
-    .outputs(metaitem('die.alloy_junction_transistor.step_two'))
+    .inputs(ore('nuggetHighPurityIndium') * 1)
+    .inputs(metaitem('die.alloy_junction_transistor.step_one') * 4)
+    .outputs(metaitem('die.alloy_junction_transistor.step_two') * 4)
     .duration(100)
     .EUt(VA[MV])
     .buildAndRegister();
