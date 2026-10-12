@@ -450,8 +450,19 @@ ASSEMBLER.recipeBuilder()
     .inputs(ore('wireFineCopper') * 16)
     .outputs(item('susy:meta_item', 27))
     .fluidInputs(fluid('soldering_alloy') * 144)
-    .duration(400)
-    .EUt(VA[EV])
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(24)
+    .inputs(ore('circuitUlv') * 32)
+    .inputs(ore('wireFineCopper') * 32)
+    .inputs(item('gregtech:meta_item_1', 232) * 2)
+    .outputs(item('susy:meta_item', 30).withNbt([:]))
+    .fluidInputs(fluid('soldering_alloy') * 144)
+    .duration(15)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 // Decoration Blocks
