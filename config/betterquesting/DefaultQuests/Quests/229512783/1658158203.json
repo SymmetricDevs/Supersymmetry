@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    1980948963,
+    1467839174,
+    2003101358
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1658158203.desc",
+      "icon:10": {
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "nitric_acid"
+        }
+      },
+      "name:8": "susy.quest.db.1658158203.title"
+    }
+  },
+  "questID:3": 1658158203,
+  "tasks:9": {}
+}

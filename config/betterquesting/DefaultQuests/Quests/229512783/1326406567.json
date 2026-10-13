@@ -1,0 +1,17 @@
+{
+  "preRequisites:11": [
+    104
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1326406567.desc",
+      "icon:10": {
+        "Damage:2": 366,
+        "id:8": "gregtech:meta_dust"
+      },
+      "name:8": "susy.quest.db.1326406567.title"
+    }
+  },
+  "questID:3": 1326406567,
+  "tasks:9": {}
+}

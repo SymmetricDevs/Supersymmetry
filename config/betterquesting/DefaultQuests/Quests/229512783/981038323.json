@@ -1,0 +1,13 @@
+{
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.981038323.desc",
+      "icon:10": {
+        "id:8": "ags_modernmarkings:wall_marking_symbol_chemical"
+      },
+      "name:8": "susy.quest.db.981038323.title"
+    }
+  },
+  "questID:3": 981038323,
+  "tasks:9": {}
+}

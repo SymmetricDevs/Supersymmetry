@@ -1,0 +1,21 @@
+{
+  "preRequisites:11": [
+    560995252,
+    1365935451,
+    248538834
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1957574517.desc",
+      "icon:10": {
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "gtfo_acetic_anhydride"
+        }
+      },
+      "name:8": "susy.quest.db.1957574517.title"
+    }
+  },
+  "questID:3": 1957574517,
+  "tasks:9": {}
+}

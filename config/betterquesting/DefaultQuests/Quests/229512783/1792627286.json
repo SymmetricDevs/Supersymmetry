@@ -1,0 +1,19 @@
+{
+  "preRequisites:11": [
+    479
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1792627286.desc",
+      "icon:10": {
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "oil"
+        }
+      },
+      "name:8": "susy.quest.db.1792627286.title"
+    }
+  },
+  "questID:3": 1792627286,
+  "tasks:9": {}
+}

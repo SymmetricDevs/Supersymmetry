@@ -1,0 +1,16 @@
+{
+  "preRequisites:11": [
+    104
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1259431852.desc",
+      "icon:10": {
+        "id:8": "minecraft:coal"
+      },
+      "name:8": "susy.quest.db.1259431852.title"
+    }
+  },
+  "questID:3": 1259431852,
+  "tasks:9": {}
+}

@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    1303901559,
+    577253663
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.2025279984.desc",
+      "icon:10": {
+        "id:8": "appliedenergistics2:dummy_fluid_item",
+        "tag:10": {
+          "FluidName:8": "propene"
+        }
+      },
+      "name:8": "susy.quest.db.2025279984.title"
+    }
+  },
+  "questID:3": 2025279984,
+  "tasks:9": {}
+}
