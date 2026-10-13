@@ -516,7 +516,7 @@ Globals.solders.each { key, val ->
         .buildAndRegister();
 
     WEAPONS_FACTORY.recipeBuilder()
-        .inputs(ore('plateGraphene') * 3)
+        .inputs(ore('plateTungstenSteel') * 3)
         .inputs(ore('wireGtSingleGraphene') * 2)
         .inputs(ore('gearSmallTungstenSteel'))
         .inputs(ore('springSmallTungsten'))
@@ -1017,18 +1017,19 @@ LATHE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-CUTTER.recipeBuilder()
-    .circuitMeta(2)
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(16)
     .inputs(ore('plankWood'))
+    .fluidInputs(fluid('glue') * 100)
     .outputs(item('techguns:itemshared', 42))
     .duration(20)
     .EUt(VA[LV])
     .buildAndRegister()
 
 crafting.replaceShaped("techguns:riot_shield", item('techguns:riot_shield'), [
-    [metaitem('stickLongSteel'), ore('wireFineBorosilicateGlass'), metaitem('stickLongSteel')],
+    [metaitem('stickLongSteel'), item('gregtech:meta_item_2', 215), metaitem('stickLongSteel')],
     [metaitem('stickSteel'), metaitem('plateSteel'), metaitem('stickSteel')],
-    [metaitem('stickLongSteel'), ore('wireFineBorosilicateGlass'), metaitem('stickLongSteel')]
+    [metaitem('stickLongSteel'), item('gregtech:meta_item_2', 215), metaitem('stickLongSteel')]
 ]);
 
 crafting.replaceShaped("techguns:ballistic_shield", item('techguns:ballistic_shield'), [
@@ -1252,7 +1253,7 @@ crafting.addShaped("bound_leather", metaitem('bound_leather')*8, [
 ]);
 
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('plateIron'))
+    .inputs(ore('plateWroughtIron'))
     .inputs(ore('screwIron') * 2)
     .inputs(item('minecraft:iron_door'))
     .outputs(item('techguns:item_bunkerdoor'))
@@ -1260,9 +1261,11 @@ ASSEMBLER.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
+//commando armor
+
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(1)
-    .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 5)
+    .circuitMeta(5)
+    .inputs(ore('plateReinforcedEpoxyResin') * 5)
     .inputs(ore('plateBoronNitride') * 2)
     .inputs(item('susy:susy_armor', 2))
     .outputs(item('techguns:t2_commando_helmet'))
@@ -1270,11 +1273,9 @@ WEAPONS_FACTORY.recipeBuilder()
     .EUt(240)
     .buildAndRegister();
 
-
-
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 8)
+    .circuitMeta(6)
+    .inputs(ore('plateReinforcedEpoxyResin') * 8)
     .inputs(ore('plateBoronNitride') * 4)
     .inputs(item('susy:susy_armor', 3).withNbt(['maxOxygen': 1200.0d, 'durability': 500, 'oxygen': 1200.0d]))
     .outputs(item('techguns:t2_commando_chestplate'))
@@ -1283,8 +1284,8 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(3)
-    .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 7)
+    .circuitMeta(7)
+    .inputs(ore('plateReinforcedEpoxyResin') * 7)
     .inputs(ore('plateBoronNitride') * 3)
     .outputs(item('techguns:t2_commando_leggings'))
     .duration(100)
@@ -1292,8 +1293,8 @@ WEAPONS_FACTORY.recipeBuilder()
     .buildAndRegister();
 
 WEAPONS_FACTORY.recipeBuilder()
-    .circuitMeta(4)
-    .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 4)
+    .circuitMeta(8)
+    .inputs(ore('plateReinforcedEpoxyResin') * 4)
     .inputs(ore('plateBoronNitride') * 2)
     .outputs(item('techguns:t2_commando_boots'))
     .duration(100)
@@ -1421,12 +1422,8 @@ WEAPONS_FACTORY.recipeBuilder()
 
 // bandit armor
 
-// bandit armor
-
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
-        .inputs(item('techguns:itemshared', 45) * 5)
-        .inputs(item('techguns:steam_helmet'))
         .inputs(item('techguns:itemshared', 60) * 5)
         .inputs(item('susy:susy_armor').withNbt(['damage': 0.0d]) * 1)
         .outputs(item('techguns:t1_scout_helmet'))
@@ -1436,8 +1433,6 @@ WEAPONS_FACTORY.recipeBuilder()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(2)
-        .inputs(item('techguns:itemshared', 45) * 8)
-        .inputs(item('techguns:steam_chestplate'))
         .inputs(item('techguns:itemshared', 60) * 8)
         .outputs(item('techguns:t1_scout_chestplate'))
         .duration(100)
@@ -1446,8 +1441,6 @@ WEAPONS_FACTORY.recipeBuilder()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(3)
-        .inputs(item('techguns:itemshared', 45) * 7)
-        .inputs(item('techguns:steam_leggings'))
         .inputs(item('techguns:itemshared', 60) * 7)
         .outputs(item('techguns:t1_scout_leggings'))
         .duration(100)
@@ -1456,7 +1449,6 @@ WEAPONS_FACTORY.recipeBuilder()
 
 WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(4)
-        .inputs(item('techguns:itemshared', 45) * 4)
         .inputs(item('techguns:itemshared', 60) * 4)
         .outputs(item('techguns:t1_scout_boots'))
         .duration(100)
@@ -1469,7 +1461,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .inputs(ore('plateDoubleTitanium') * 5)
         .inputs(item('gregtech:meta_item_1', 130) * 2)
         .inputs(item('gregtech:meta_item_1', 307) * 1)
-        .inputs(ore('wireFineBorosilicateGlass') * 5)
+        .inputs(item('gregtech:meta_item_2', 215) * 5)
         .inputs(ore('plateUltraHighMolecularWeightPolyethylene') * 2)
         .outputs(item('techguns:t3_combat_helmet'))
         .duration(100)
@@ -1516,7 +1508,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('pipeTinyFluidVanadiumSteel') * 2)
         .inputs(item('gregtech:meta_item_1', 307) * 1)
-        .inputs(ore('wireFineBorosilicateGlass') * 10)
+        .inputs(item('gregtech:meta_item_2', 215) * 10)
         .inputs(item('gregtech:meta_item_1', 130) * 8)
         .inputs(ore('plateSiliconCarbide') * 5)
         .inputs(ore('plateTungstenSteel') * 5)
@@ -1651,7 +1643,7 @@ WEAPONS_FACTORY.recipeBuilder()
         .circuitMeta(1)
         .inputs(ore('wireGtSingleUraniumTriplatinum') * 2)
         .inputs(item('gregtech:meta_item_1', 307) * 1)
-        .inputs(ore('wireFineBorosilicateGlass') * 10)
+        .inputs(item('gregtech:meta_item_2', 215) * 10)
         .inputs(item('gregtech:meta_item_1', 130) * 16)
         .inputs(ore('plateBoronNitride') * 5)
         .inputs(ore('plateNiobiumTitanium') * 5)

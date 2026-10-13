@@ -67,10 +67,9 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-ASSEMBLER.recipeBuilder()
+CHEMICAL_BATH.recipeBuilder()
     .inputs(metaitem('patterned.board.phenolic'))
-    .inputs(metaitem('foilCopper'))
-    .fluidInputs(fluid('glue') * 50)
+    .fluidInputs(fluid('soldering_alloy') * 144)
     .outputs(metaitem('circuit_board.good'))
     .duration(100)
     .EUt(VA[LV])

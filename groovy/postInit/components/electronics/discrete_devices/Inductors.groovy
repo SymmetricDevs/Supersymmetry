@@ -1,6 +1,18 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
+mods.jei.ingredient.yeet(metaitem('component.advanced_smd.inductor'))
+
+// Ferrite Mixture Dust * 6
+mods.gregtech.mixer.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+// Ferrite Mixture Dust * 6
+mods.gregtech.blender.removeByInput(120, [metaitem('dustNickel'), metaitem('dustZinc'), metaitem('dustIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 2])], null)
+// Nickel Zinc Ferrite Ingot * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMixture')], [fluid('oxygen') * 2000])
+// Inductor * 2
+mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineCopper') * 2], [fluid('plastic') * 36])
+// Inductor * 4
+mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
 // SMD Inductor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
 // SMD Inductor * 32

@@ -63,7 +63,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
-    .inputs(metaitem('ingotNickel')  * 8)
+    .inputs(metaitem('ingotNickel')  * 7)
     .inputs(metaitem('ingotChrome') * 2)
     .fluidOutputs(fluid('nichrome') * 1296)
     .EUt(VA[HV])

@@ -136,7 +136,7 @@ def allTrapdoor = ['spruce', 'birch', 'jungle', 'acacia', 'dark_oak']
 allTrapdoor.eachWithIndex { trapdoor, i ->
 
 ASSEMBLER.recipeBuilder()
-    .circuitMeta(3)
+    .circuitMeta(13)
     .inputs(item('minecraft:planks', i + 1) * 3)
     .outputs(item('quark:' + trapdoor + '_trapdoor') * 2)
     .duration(100)

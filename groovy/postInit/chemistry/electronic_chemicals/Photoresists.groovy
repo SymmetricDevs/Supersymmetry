@@ -474,7 +474,7 @@ DT.recipeBuilder()
     // Polyhydroxystyrene
 
     CSTR.recipeBuilder()
-        .circuitMeta(2)
+        .circuitMeta(3)
         .fluidInputs(fluid('ethylbenzene') * 50)
         .fluidInputs(fluid('sulfuric_acid') * 50)
         .fluidOutputs(fluid('para_ethylbenzenesulfonic_acid_solution') * 50)
