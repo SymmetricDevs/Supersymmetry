@@ -54,7 +54,7 @@ BALL_MILL.recipeBuilder()
         .outputs(metaitem('dustSupportedPalladium') * 9)
         .fluidOutputs(fluid('diluted_hydrochloric_acid') * 8000)
         .duration(100)
-        .EUt(VA[HV])
+        .EUt(VA[MV])
         .buildAndRegister()
 
     // Ni/Al2O3
