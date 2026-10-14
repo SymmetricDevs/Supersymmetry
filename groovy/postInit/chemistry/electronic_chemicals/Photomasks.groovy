@@ -267,7 +267,7 @@ REACTION_FURNACE.recipeBuilder()
     //          https://nanolithography.gatech.edu/pmma.html
 Deposition.generateSputteringRecipe('fused_quartz', 'mask.blank.chromium', 400, 'chromium')
 
-SPUTTERER.recipeBuilder()
+SPUTTERING.recipeBuilder()
     .inputs(metaitem('mask.blank.chromium'))
     .inputs(metaitem('target.chromium'))
     .fluidInputs(fluid('argon') * 100)
