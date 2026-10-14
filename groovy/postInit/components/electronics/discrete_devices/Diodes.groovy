@@ -1,6 +1,7 @@
 import postInit.utils.RecyclingHelper
 import globals.Globals
 
+import static prePostInit.TieredItems.*
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
@@ -243,20 +244,6 @@ ASSEMBLER.recipeBuilder()
 // Light-emitting diodes
 
     // Infrared
-
-def tieredQuadCables = [ore('cableGtQuadrupleLead'), ore('cableGtQuadrupleTin'), ore('cableGtQuadrupleCopper'), ore('cableGtQuadrupleGold'),
-                        ore('cableGtQuadrupleAluminium'), ore('cableGtQuadruplePlatinum'), ore('cableGtQuadrupleNiobiumTitanium'),
-                        ore('cableGtQuadrupleVanadiumGallium'), ore('cableGtQuadrupleYttriumBariumCuprate')]
-
-def hulls = [metaitem('hull.ulv'), metaitem('hull.lv'), metaitem('hull.mv'), metaitem('hull.hv'),
-             metaitem('hull.ev'), metaitem('hull.iv'), metaitem('hull.luv'),
-             metaitem('hull.zpm'), metaitem('hull.uv'), metaitem('hull.uhv'),
-             metaitem('hull.uev'), metaitem('hull.uiv'), metaitem('hull.uxv'),
-             metaitem('hull.opv')];
-
-def tieredPlates = [ore('plateWroughtIron'), ore('plateSteel'), ore('plateAluminium'), ore('plateStainlessSteel'),
-                    ore('plateTitanium'), ore('plateTungstenSteel'), ore('plateRhodiumPlatedPalladium'),
-                    ore('plateNaquadahAlloy'), ore('plateDarmstadtium')];
 
 def powerDiodes = [null, metaitem('circuit.vacuum_tube'), metaitem('circuit.vacuum_tube'), metaitem('circuit.vacuum_tube'),
                    metaitem('component.thyristor'), metaitem('component.thyristor'), metaitem('component.thyristor')];
