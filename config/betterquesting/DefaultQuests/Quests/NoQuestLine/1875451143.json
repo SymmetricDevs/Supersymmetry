@@ -1,0 +1,19 @@
+{
+  "preRequisites:11": [
+    71,
+    1558006766
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1875451143.desc",
+      "icon:10": {
+        "id:8": "minecraft:nether_star"
+      },
+      "issilent:1": 1,
+      "name:8": "susy.quest.db.1875451143.title",
+      "questlogic:8": "OR"
+    }
+  },
+  "questID:3": 1875451143,
+  "tasks:9": {}
+}
