@@ -510,7 +510,7 @@ import static gregtech.api.GTValues.*
     FIXED_BR.recipeBuilder()
         .notConsumable(metaitem('catalystBedCobalt'))
         .fluidInputs(fluid('two_ethyl_two_hexenal') * 100)
-        .fluidInputs(fluid('hydrogen') * 200)
+        .fluidInputs(fluid('hydrogen') * 400)
         .fluidOutputs(fluid('two_ethylhexanol') * 100)
         .duration(5)
         .EUt(VA[MV])
