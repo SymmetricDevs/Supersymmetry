@@ -11,8 +11,7 @@
         "id:8": "gregtech:machine"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.452.title",
-      "snd_complete:8": "susy:music.quest_trigger_hv"
+      "name:8": "susy.quest.db.452.title"
     }
   },
   "questID:3": 452,
