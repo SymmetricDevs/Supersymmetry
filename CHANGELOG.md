@@ -1,7 +1,7 @@
 # UPDATE 0.2.0.1
 ## Mod Changes
 ### Mod Updates
-- SusyCore v0.2.0 → v0.2.3
+- SusyCore v0.2.1 → v0.2.4
 - SussyPatches v1.11.10 → v1.11.11
 ## Changes
 ### Changed Features
