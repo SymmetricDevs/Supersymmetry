@@ -33,7 +33,7 @@ susy.material.isobutane=Isobutano
 susy.material.isobutylene=Isobutileno
 susy.material.iron_iii_chloride_solution=Solução de Cloreto de Ferro (III)
 susy.material.n_methyl_two_pyrrolidone=N-metil-2-pirrolidona
-susy.material.salty_n_methyl_two_pyrrolidone=N-metil-2-pirrolidona Salina
+susy.material.salty_n_methyl_two_pyrrolidone=N-Metil-2-pirrolidona Salina
 susy.material.trimethyl_borate=Borato de Trimetilo
 susy.material.acidic_methyl_acetate_water_mixture=Mistura de Acetato Ácido de Metilo e Água
 susy.material.two_chloronitrobenzene=2-Cloronitrobenzeno
@@ -189,79 +189,75 @@ susy.material.potassium_fluoride=Fluoreto de Potássio
 susy.material.carburized_stainless_steel=Aço Inoxidável Cementado
 susy.material.ferrochromium=Ferrocrómio
 susy.material.ferrosilicon=Ferrossilício
-susy.material.cellulose=Cellulose
-susy.material.raw_cellulose=Raw Cellulose
-susy.material.white_liquor=White Liquor
-susy.material.black_liquor=Black Liquor
-susy.material.concentrated_black_liquor=Concentrated Black Liquor
-susy.material.green_liquor=Green Liquor
-susy.material.organosilicon_mixture=Organosilicon Mixture
-susy.material.impure_polydimethylsiloxane_mixture=Impure Polydimethylsiloxane Mixture
-susy.material.raw_polydimethylsiloxane_mixture=Raw Polydimethylsiloxane Mixture
-susy.material.polydimethylsiloxane=Polydimethylsiloxane
-susy.material.trimethylsilane=Trimethylsilane
-susy.material.methyldichlorosilane=Methyldichlorosilane
-susy.material.methyltrichlorosilane=Methyltrichlorosilane
-susy.material.dimethyldichlorosilane=Dimethyldichlorosilane
-susy.material.impure_bertrandite_leach=Impure Bertrandite Leach
-susy.material.bertrandite_leach=Bertrandite Leach
-susy.material.ammonium_alum=Ammonium Alum
-susy.material.beryllium_extraction_mixture=Beryllium Extraction Mixture
-susy.material.beryllium_extract=Beryllium Extract
-susy.material.basic_beryllium_carbonate_slurry=Basic Beryllium Carbonate Slurry
-susy.material.basic_beryllium_carbonate_solution=Basic Beryllium Carbonate Solution
-susy.material.purified_beryllium_hydroxide=Purified Beryllium Hydroxide
-susy.material.purified_beryllium_oxide=Purified Beryllium Oxide
-susy.material.purified_beryllium_chloride=Purified Beryllium Chloride
-susy.material.aniline=Aniline
-susy.material.acetanilide=Acetanilide
-susy.material.n_acetylsulfanilyl_chloride=N-Acetylsulfanilyl Chloride
-susy.material.guanidinium_nitrate=Guanidinium Nitrate
-susy.material.tetramethoxypropane=Tetramethoxypropane
-susy.material.trimethyl_orthoformate=Trimethyl Orthoformate
-susy.material.methyl_vinyl_ether=Methyl Vinyl Ether
-susy.material.two_aminopyrimidine=2-Aminopyrimidine
-susy.material.sodium_sulfadiazine=Sodium Sulfadiazine
-susy.material.silver_nitrate=Silver Nitrate
-susy.material.silver_sulfadiazine=Silver Sulfadiazine
-susy.material.dicyanamide=Dicyanamide
-susy.material.potassium_methoxide=Potassium Methoxide
-susy.material.acetanilide_solution=Acetanilide Solution
-susy.material.cyanamide_slurry=Cyanamide Slurry
-susy.material.crude_cyanamide_solution=Crude Cyanamide Solution
-susy.material.cyanamide_solution=Cyanamide Solution
-susy.material.guanidinium_nitrate_solution=Guanidinium Nitrate Solution
-susy.material.crude_trimethyl_orthoformate=Crude Trimethyl Orthoformate
-susy.material.crude_methyl_vinyl_ether=Crude Methyl Vinyl Ether
-susy.material.nitrile_rubber_precursor_emulsion=Nitrile Rubber Precursor Emulsion
-susy.material.nitrile_rubber_emulsion=Nitrile Rubber Emulsion
-susy.material.nitrile_rubber_latex=Nitrile Rubber Latex
-susy.material.raw_nitrile_rubber=Raw Nitrile Rubber
-susy.material.nitrile_rubber=Nitrile Rubber
-susy.material.zinc_dithionite_solution=Zinc Dithionite Solution
-susy.material.sodium_dithionite=Sodium Dithionite
-susy.material.sodium_dithionite_solution=Sodium Dithionite Solution
-susy.material.zinc_hydroxide=Zinc Hydroxide
+susy.material.cellulose=Celulose
+susy.material.raw_cellulose=Celulose Bruta
+susy.material.white_liquor=Licor Branco
+susy.material.black_liquor=Licor Negro
+susy.material.concentrated_black_liquor=Licor Negro Concentrado
+susy.material.green_liquor=Licor Verde
+susy.material.organosilicon_mixture=Mistura de Organossilício
+susy.material.impure_polydimethylsiloxane_mixture=Mistura de Polidimetilsiloxano Impuro
+susy.material.raw_polydimethylsiloxane_mixture=Mistura de Polidimetilsiloxano Bruto
+susy.material.polydimethylsiloxane=Polidimetilsiloxano 
+susy.material.trimethylsilane=Trimetilsilano
+susy.material.methyldichlorosilane=Metildiclorossilano
+susy.material.methyltrichlorosilane=Metiltriclorossilano
+susy.material.dimethyldichlorosilane=Dimetildiclorossilano
+susy.material.impure_bertrandite_leach=Lixiviação de Bertrandita Impura
+susy.material.bertrandite_leach=Lixiviação de Bertrandita
+susy.material.ammonium_alum=Alúmen de Amónio
+susy.material.beryllium_extraction_mixture=Mistura de Extração de Berílio
+susy.material.beryllium_extract=Extrato de Berílio
+susy.material.basic_beryllium_carbonate_slurry=Suspensão Básica de Carbonato de Berílio
+susy.material.basic_beryllium_carbonate_solution=Solução Básica de Carbonato de Berílio
+susy.material.purified_beryllium_hydroxide=Hidróxido de Berílio Purificado
+susy.material.purified_beryllium_oxide=Óxido de Berílio Purificado
+susy.material.purified_beryllium_chloride=Cloreto de Berílio Purificado
+susy.material.aniline=Anilina
+susy.material.acetanilide=Acetanilida
+susy.material.n_acetylsulfanilyl_chloride=Cloreto de N-Acetilsulfanililo
+susy.material.guanidinium_nitrate=Nitrato de Guanidínio
+susy.material.tetramethoxypropane=Tetrametoxipropano
+susy.material.trimethyl_orthoformate=Ortoformiato de Trimetilo
+susy.material.methyl_vinyl_ether=Metoxieteno
+susy.material.two_aminopyrimidine=2-Aminopirimidina
+susy.material.sodium_sulfadiazine=Sulfadiazina de Sódio
+susy.material.silver_nitrate=Nitrato de Prata
+susy.material.silver_sulfadiazine=Sulfadiazina de Prata
+susy.material.dicyanamide=Dicianamida
+susy.material.potassium_methoxide=Metóxido de Potássio
+susy.material.acetanilide_solution=Solução de Acetanilida
+susy.material.cyanamide_slurry=Suspensão de Cianamida
+susy.material.crude_cyanamide_solution=Solução de Cianamida Bruta
+susy.material.cyanamide_solution=Solução de Cianamida
+susy.material.guanidinium_nitrate_solution=Solução de Nitrato de Guanidínio
+susy.material.crude_trimethyl_orthoformate=Ortoformiato de Trimetilo Bruto
+susy.material.crude_methyl_vinyl_ether=Metoxieteno Bruto
+susy.material.nitrile_rubber_precursor_emulsion=Emulsão Precursora de Borracha de Nitrilo
+susy.material.nitrile_rubber_emulsion=Emulsão de Borracha de Nitrilo
+susy.material.nitrile_rubber_latex=Látex de Borracha de Nitrilo
+susy.material.raw_nitrile_rubber=Borracha de Nitrilo Bruta
+susy.material.nitrile_rubber=Borracha de Nitrilo
+susy.material.zinc_dithionite_solution=Solução de Ditionito de Zinco
+susy.material.sodium_dithionite=Ditionito de Sódio
+susy.material.sodium_dithionite_solution=Solução de Ditionito de Sódio
+susy.material.zinc_hydroxide=Hidróxido de Zinco
 
 # Solids
 
 susy.material.pig_iron=Pig Iron
 susy.material.iron_iii_sulfate=Iron III Sulfate
-
 susy.material.aluminium_hydroxide=Aluminium Hydroxide
 susy.material.aluminium_fluoride=Aluminium Fluoride
 susy.material.sodium_fluoride=Sodium Fluoride
-
 susy.material.gallium_phosphate=Gallium Phosphate
 susy.material.lithium_niobate=Lithium Niobate
 susy.material.lead_zirconate_titanate=Lead Zirconate Titanate
 susy.material.polyvinylidene_fluoride=Polyvinylidene Fluoride (PVDF)
-
 susy.material.polymethyl_methacrylate=Polymethyl Methacrylate (PMMA)
 susy.material.zinc_chloride=Zinc Chloride
 susy.material.polypropylene=Polypropylene
 susy.material.hydrogen_silsesquioxane=Hydrogen Silsesquioxane (HSQ)
-
 susy.material.high_purity_lithium=High Purity Lithium
 susy.material.high_purity_beryllium=High Purity Beryllium
 susy.material.high_purity_boron=High Purity Boron
@@ -334,7 +330,6 @@ susy.material.high_purity_thulium=High Purity Thulium
 susy.material.high_purity_ytterbium=High Purity Ytterbium
 susy.material.high_purity_lutetium=High Purity Lutetium
 susy.material.high_purity_thorium=High Purity Thorium
-
 susy.material.amorphous_boron=Amorphous Boron
 susy.material.magnesium_oxide=Magnesium Oxide
 susy.material.boron_trioxide=Boron Trioxide
@@ -343,7 +338,6 @@ susy.material.sodium_tetraborate=Sodium Tetraborate
 susy.material.boron_carbide=Boron Carbide
 susy.material.potassium_tetrafluoroborate=Potassium Tetrafluoroborate
 susy.material.electrolytic_boron=Electrolytic Boron
-
 susy.material.methylenedianiline=Methylenedianiline
 susy.material.methylene_diphenyl_diisocyanate=Methylene Diphenyl Diisocyanate
 susy.material.triethylenediamine=Triethylenediamine
@@ -351,15 +345,11 @@ susy.material.polyurethane=Polyurethane Foam
 susy.material.rayon=Rayon
 susy.material.alkali_cellulose=Alkali Cellulose
 susy.material.sodium_cellulose_xanthate=Sodium Cellulose Xanthate
-
 susy.material.sodium_bromide=Sodium Bromide
-
 susy.material.roasted_sperrylite=Roasted Sperrylite
 susy.material.enargite_residue=Enargite Residue
-
 susy.material.cobaltite_leach_solution=Cobaltite Leach Solution
 susy.material.arsenopyrite_leach_solution=Arsenopyrite Leach Solution
-
 susy.material.arsenic_iii_sulfide=Arsenic III Sulfide
 susy.material.arsenic_v_sulfide=Arsenic V Sulfide
 susy.material.silver_chloride=Silver Chloride
@@ -373,12 +363,10 @@ susy.material.silver_sulfide=Silver Sulfide
 susy.material.iron_thioantimonite=Iron Thioantimonite
 susy.material.iron_thioarsenite=Iron Thioarsenite
 susy.material.iron_pentacarbonyl=Iron Pentacarbonyl
-
 susy.material.crude_gallium_trichloride=Crude Gallium Trichloride
 susy.material.mercury_ii_chloride=Mercury II Chloride
 susy.material.boron_nitride=Boron Nitride
 susy.material.gallium_arsenide=Pure Gallium Arsenide
-
 susy.material.monocalcium_phosphate=Monocalcium Phosphate
 susy.material.calcium_metaphosphate=Calcium Metaphosphate
 susy.material.phosphorus=White Phosphorus
@@ -388,7 +376,6 @@ susy.material.pyrazine=Pyrazine
 susy.material.molybdenum_disilicide=Molybdenum Disilicide
 susy.material.aluminosilicate_mix=Aluminosilicate Mix
 susy.material.mo_si_precursor=Mo-Si Precursor
-
 susy.material.anorthositic_regolith=Anorthositic Regolith
 susy.material.basaltic_regolith=Basaltic Regolith
 susy.material.kreep_regolith=KREEP Regolith
@@ -444,7 +431,6 @@ susy.material.wet_sodium_polyacrylate=Wet Sodium Polyacrylate
 susy.material.sodium_polyacrylate=Sodium Polyacrylate
 susy.material.diisopropyl_dixanthogen_disulfide=Diisopropyl Dixanthogen Disulfide
 susy.material.neoprene_latex=Neoprene Latex
-
 metaitem.scrap.military.name=Military Scrap
 metaitem.scrap.supply.name=Supply Scrap
 metaitem.scrap.commercial.name=Commercial Scrap
@@ -466,12 +452,10 @@ metaitem.scrap.parts.engine.name=Engine Scrap
 metaitem.scrap.parts.cladding.name=Cladding Scrap
 metaitem.scrap.parts.energy.name=Energy Scrap
 metaitem.scrap.unusable.name=Unusable Scrap
-
 metaitem.food.protein_paste.name=Protein Paste
 metaitem.food.cellulose_reformate.name=Cellulose Reformate
 metaitem.food.glue_pizza.name=Glue Pizza
 metaitem.food.organic_ocean_powder.name=Organic Ocean Powder
-
 metaitem.minecart_wheels.chromoly.name=ER6 Minecart Wheels
 metaitem.lunar_r_glass_fibers.name=Lunar R-Glass Fibers
 metaitem.hardened_titanium_grinding_head.name=Hardened Titanium Grinding Head
@@ -535,11 +519,7 @@ metaitem.iridium_combustion_chamber_mandrel.name=Iridium-Coated Combustion Chamb
 metaitem.rhenium_combustion_chamber_mandrel.name=Rhenium-Coated Combustion Chamber Mandrel
 metaitem.rhenium_combustion_chamber.name=Rhenium Orbital Thruster Combustion Chamber
 metaitem.lunar_module_engine.name=Lunar Module Engine
-
-
-
 tile.deposit_block.lunar_crater.name=Lunar Crater Deposit
-
 tile.engineersdecor.sign_caution.name=§6Sign "Caution"§r
 
 # Fluids
@@ -547,7 +527,6 @@ tile.engineersdecor.sign_caution.name=§6Sign "Caution"§r
 susy.material.smoke_bomb_mix=Smoke Bomb Mix
 susy.material.sugary_water=Sugary Water
 susy.material.clarified_sugary_water=Clarified Sugary Water
-
 susy.material.diluted_oil_light=Diluted Light Oil
 susy.material.diluted_oil=Diluted Oil
 susy.material.diluted_oil_heavy=Diluted Heavy Oil
