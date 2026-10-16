@@ -174,16 +174,10 @@ INDUCTION_FURNACE.recipeBuilder()
 
 // Al–10V Master Alloy
 INDUCTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('aluminium') * 2448)
-    .inputs(ore('ingotVanadium'))
-    .fluidOutputs(fluid('aluminium_10vanadium') * 2592)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-INDUCTION_FURNACE.recipeBuilder()
-    .inputs(ore('ingotAluminium') * 17)
-    .inputs(ore('ingotVanadium'))
-    .fluidOutputs(fluid('aluminium_10vanadium') * 2592)
+    .fluidInputs(fluid('aluminium') * 5376)
+    .inputs(ore('dustVanadiumPentoxide'))
+    .fluidOutputs(fluid('aluminium_10vanadium') * 5184)
+    // .fluidOutputs(fluid('alumina_flux'))
     .EUt(VA[LV])
     .buildAndRegister();
 
