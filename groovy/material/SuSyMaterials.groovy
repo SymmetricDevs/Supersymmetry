@@ -1843,7 +1843,16 @@ class SuSyMaterials {
     public static Material PureGaseousTitaniumTetrachloride
     public static Material FineAluminium
     public static Material HighPuritySilica
-
+    public static Material Aluminium50Silicon
+    public static Material Aluminium30Copper
+    public static Material Aluminium10Chromium
+    public static Material Aluminium50Magnesium
+    public static Material Aluminium25Manganese
+    public static Material Aluminium10Vanadium
+    public static Material Aluminium10Zirconium
+    public static Material Aluminium10Titanium
+    public static Material Aluminium10Lithium
+    
     // HP Materials
 
     public static Material HighPurityLithium
