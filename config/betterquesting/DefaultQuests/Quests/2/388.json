@@ -1,6 +1,11 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    1
+  ],
   "preRequisites:11": [
-    102
+    100,
+    120
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -16,10 +21,16 @@
   "questID:3": 388,
   "tasks:9": {
     "0:10": {
+      "entryLogic:8": "OR",
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
           "Damage:2": 15000,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 15013,
           "id:8": "gregtech:machine"
         }
       },
@@ -30,7 +41,12 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 15013,
+          "Damage:2": 15045,
+          "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "Damage:2": 14720,
           "id:8": "gregtech:machine"
         }
       },

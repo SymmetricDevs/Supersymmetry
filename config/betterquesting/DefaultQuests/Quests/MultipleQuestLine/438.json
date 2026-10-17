@@ -1,13 +1,6 @@
 {
-  "preRequisiteTypes:7": [
-    0,
-    0,
-    1
-  ],
   "preRequisites:11": [
-    369,
-    787,
-    105
+    104
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -16,7 +9,6 @@
         "id:8": "gregtech:boiler_firebox_casing"
       },
       "name:8": "susy.quest.db.438.title",
-      "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
   },

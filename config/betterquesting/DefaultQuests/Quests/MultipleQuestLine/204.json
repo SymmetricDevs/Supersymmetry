@@ -1,5 +1,6 @@
 {
   "preRequisites:11": [
+    122,
     186
   ],
   "properties:10": {
@@ -9,7 +10,8 @@
         "Damage:2": 18,
         "id:8": "gregtech:meta_dust"
       },
-      "name:8": "susy.quest.db.204.title"
+      "name:8": "susy.quest.db.204.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 204,
