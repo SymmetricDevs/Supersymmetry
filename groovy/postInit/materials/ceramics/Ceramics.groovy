@@ -43,7 +43,7 @@ Sintering.blankets.each { blanket ->
         .buildAndRegister()
 
     SINTERING_OVEN.recipeBuilder()
-        .circuitMeta(1)
+        .circuitMeta(2)
         .inputs(ore('dustAlumina') * 9)
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
         .notConsumable(metaitem('shape.mold.plate'))
@@ -54,6 +54,7 @@ Sintering.blankets.each { blanket ->
         .buildAndRegister()
 
     SINTERING_OVEN.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustAlumina') * 6)
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
         .notConsumable(metaitem('shape.mold.plate'))
