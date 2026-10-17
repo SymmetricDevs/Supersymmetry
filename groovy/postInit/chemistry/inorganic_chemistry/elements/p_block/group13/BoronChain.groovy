@@ -33,6 +33,14 @@ import static gregtech.api.GTValues.*
         .EUt(VA[LV])
         .buildAndRegister()
 
+    DISTILLERY.recipeBuilder()
+        .fluidInputs(fluid('boric_acid_solution') * 1000)
+        .outputs(metaitem('dustBoricAcid') * 7)
+        .fluidOutputs(fluid('water') * 1000)
+        .duration(100)
+        .EUt(VA[LV])
+        .buildAndRegister()
+
     // Colemanite
 
     BR.recipeBuilder()

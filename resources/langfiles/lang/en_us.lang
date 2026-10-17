@@ -672,7 +672,6 @@ susy.material.deionized_sea_water=Deionized Sea Water
 susy.material.depleted_hydrogen_sulfide=Depleted Hydrogen Sulfide
 
 susy.material.silicon_tetrachloride=Silicon Tetrachloride
-susy.material.purified_silicon_tetrachloride=Purified Silicon Tetrachloride
 
 susy.material.high_purity_hydrogen=High Purity Hydrogen
 susy.material.high_purity_helium=High Purity Helium
@@ -2429,7 +2428,7 @@ susy.material.incoloy_20=Incoloy 20
 susy.material.incoloy_825=Incoloy 825
 susy.material.incoloy_908=Incoloy 908
 susy.material.rene_n_5=Rene N5
-susy.material.monel_500=Monel 500
+susy.material.monel_500=Monel K-500
 susy.material.monel_400=Monel 400
 susy.material.stellite_j=Stellite J
 susy.material.stellite_6=Stellite 6
