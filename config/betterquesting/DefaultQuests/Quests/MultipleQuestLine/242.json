@@ -10,7 +10,8 @@
         "Damage:2": 622,
         "id:8": "gregtech:meta_item_1"
       },
-      "name:8": "susy.quest.db.242.title"
+      "name:8": "susy.quest.db.242.title",
+      "snd_complete:8": "susy:music.quest_trigger"
     }
   },
   "questID:3": 242,

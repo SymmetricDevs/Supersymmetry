@@ -10,7 +10,8 @@
         "id:8": "susy:separator_rotor"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.793.title"
+      "name:8": "susy.quest.db.793.title",
+      "snd_complete:8": "susy:music.quest_trigger_ev"
     }
   },
   "questID:3": 793,

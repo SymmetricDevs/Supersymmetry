@@ -17,6 +17,7 @@
       },
       "ismain:1": 1,
       "name:8": "susy.quest.db.648.title",
+      "snd_complete:8": "susy:music.quest_trigger_hv",
       "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
