@@ -855,8 +855,6 @@ class FirstDegreeMaterialsB {
                 .iconSet(DULL)
                 .build()
 
-        MolybdenumDisilicide = supersymmetry.common.materials.SusyMaterials.MolybdenumDisilicide
-
         Inconel601 = new Material.Builder(8793, SuSyUtility.susyId('inconel_601'))
                 .ingot().liquid(new FluidBuilder().temperature(1800))
                 .colorAverage()
@@ -1103,11 +1101,6 @@ class FirstDegreeMaterialsB {
                 .iconSet(SHINY)
                 .build()
 
-        Material Monel400 = supersymmetry.common.materials.SusyMaterials.Monel400
-
-        Monel400.addFlags(GENERATE_ROTOR)
-        // 8824: Monel 400 (registered in susycore)
-
         HighPuritySilica = new Material.Builder(8825, SuSyUtility.susyId('high_purity_silica'))
             .dust().liquid(new FluidBuilder().temperature(2500))
             .components(SiliconDioxide)
@@ -1273,66 +1266,66 @@ class FirstDegreeMaterialsB {
                 .color(0xccccff)
                 .build()
 
-        Aluminium50Silicon = new Material.Builder(8855, SuSyUtility.susyId('aluminium_50silicon'))
+        Aluminium50Silicon = new Material.Builder(8855, SuSyUtility.susyId('aluminium_50_silicon'))
                 .ingot().liquid(new FluidBuilder().temperature(1315))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum, Silicon)
+                .components(Aluminium, Silicon)
                 .colorAverage()
                 .build();
 
-    Aluminium30Copper = new Material.Builder(8856, SuSyUtility.susyId('aluminium_30copper'))
+        Aluminium30Copper = new Material.Builder(8856, SuSyUtility.susyId('aluminium_30_copper'))
                 .ingot().liquid(new FluidBuilder().temperature(840))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 11, Copper * 2)
+                .components(Aluminium * 11, Copper * 2)
                 .colorAverage()
                 .build();
 
-    Aluminium10Chromium = new Material.Builder(8857, SuSyUtility.susyId('aluminium_10chromium'))
+        Aluminium10Chromium = new Material.Builder(8857, SuSyUtility.susyId('aluminium_10_chromium'))
                 .ingot().liquid(new FluidBuilder().temperature(1125))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 17, Chromium)
+                .components(Aluminium * 17, Chrome)
                 .colorAverage()
                 .build();
 
-    Aluminium50Magnesium = new Material.Builder(8858, SuSyUtility.susyId('aluminium_50magnesium'))
+        Aluminium50Magnesium = new Material.Builder(8858, SuSyUtility.susyId('aluminium_50_magnesium'))
                 .ingot().liquid(new FluidBuilder().temperature(845))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 7, Magnesium * 8)
+                .components(Aluminium * 7, Magnesium * 8)
                 .colorAverage()
                 .build();
 
-Aluminium25Manganese = new Material.Builder(8859, SuSyUtility.susyId('aluminium_25manganese'))
+        Aluminium25Manganese = new Material.Builder(8859, SuSyUtility.susyId('aluminium_25_manganese'))
                 .ingot().liquid(new FluidBuilder().temperature(1185))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 6, Manganese)
+                .components(Aluminium * 6, Manganese)
                 .colorAverage()
                 .build();
 
-    Aluminium10Vanadium = new Material.Builder(8860, SuSyUtility.susyId('aluminium_10vanadium'))
+        Aluminium10Vanadium = new Material.Builder(8860, SuSyUtility.susyId('aluminium_10_vanadium'))
                 .ingot().liquid(new FluidBuilder().temperature(1300))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 17, Vanadium)
+                .components(Aluminium * 17, Vanadium)
                 .colorAverage()
                 .build();
 
-    Aluminium10Zirconium = new Material.Builder(8861, SuSyUtility.susyId('aluminium_10zirconium'))
+        Aluminium10Zirconium = new Material.Builder(8861, SuSyUtility.susyId('aluminium_10_zirconium'))
                 .ingot().liquid(new FluidBuilder().temperature(1400))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 30, Zirconium)
+                .components(Aluminium * 30, Zirconium)
                 .colorAverage()
                 .build();
 
-    Aluminium10Titanium = new Material.Builder(8862, SuSyUtility.susyId('aluminium_10titanium'))
+        Aluminium10Titanium = new Material.Builder(8862, SuSyUtility.susyId('aluminium_10_titanium'))
                 .ingot().liquid(new FluidBuilder().temperature(1475))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 16, Titanium)
+                .components(Aluminium * 16, Titanium)
                 .colorAverage()
                 .build();
 
-    Aluminium10Lithium = new Material.Builder(8863, SuSyUtility.susyId('aluminium_10lithium'))
+        Aluminium10Lithium = new Material.Builder(8863, SuSyUtility.susyId('aluminium_10_lithium'))
                 .ingot().liquid(new FluidBuilder().temperature(875))
                 .flags(NO_UNIFICATION)
-                .components(Aluminum * 7, Lithium * 3)
+                .components(Aluminium * 7, Lithium * 3)
                 .colorAverage()
                 .build();
 

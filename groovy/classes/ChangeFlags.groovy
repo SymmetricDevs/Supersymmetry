@@ -53,6 +53,7 @@ class ChangeFlags {
         Asbestos.addIngot()
         Potassium.addIngot()
         Scandium.addIngot()
+        Lithium.addIngot()
 
         BisphenolA.addDust()
         Polonium.addDust()
@@ -216,6 +217,7 @@ class ChangeFlags {
         NickelZincFerrite.addFlags("generate_bolt_screw");
         Platinum.addFlags("generate_spring")
         Scandium.addFlags("generate_fine_wire", "induction_melt")
+        Monel400.addFlags("generate_rotor")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")

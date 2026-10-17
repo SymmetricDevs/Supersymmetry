@@ -247,6 +247,15 @@ susy.material.zinc_dithionite_solution=Zinc Dithionite Solution
 susy.material.sodium_dithionite=Sodium Dithionite
 susy.material.sodium_dithionite_solution=Sodium Dithionite Solution
 susy.material.zinc_hydroxide=Zinc Hydroxide
+susy.material.aluminium_50_silicon=Al-Si50 Master Alloy
+susy.material.aluminium_30_copper=Al-Cu30 Master Alloy
+susy.material.aluminium_10_chromium=Al-Cr10 Master Alloy
+susy.material.aluminium_50_magnesium=Al-Mg50 Master Alloy
+susy.material.aluminium_25_manganese=Al-Mn25 Master Alloy
+susy.material.aluminium_10_vanadium=Al-V10 Master Alloy
+susy.material.aluminium_10_zirconium=Al-Zr10 Master Alloy
+susy.material.aluminium_10_titanium=Al-Ti10 Master Alloy
+susy.material.aluminium_10_lithium=Al-Li10 Master Alloy
 
 # Solids
 

@@ -1620,7 +1620,6 @@ class SuSyMaterials {
     public static Material Incoloy908
     public static Material ReneN5
     public static Material Monel500
-    public static Material Monel400
     public static Material StelliteJ
     public static Material Stellite6
     public static Material HSLA980X
@@ -1834,7 +1833,6 @@ class SuSyMaterials {
     public static Material ScandiumIIIFluoride
     public static Material LunarRutile
     public static Material HardenedTitanium
-    public static Material MolybdenumDisilicide
     public static Material Inconel601
     public static Material UraniumMolybdenumAlloy
     public static Material Haynes230
