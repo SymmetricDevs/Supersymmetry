@@ -656,9 +656,9 @@ DT.recipeBuilder()
             .buildAndRegister()
 
         DISTILLERY.recipeBuilder()
-            .fluidInputs(fluid('spent_sulfonium_preparation_mixture') * 28000)
-            .fluidOutputs(fluid('sulfonium_preparation_mixture') * 27000)
-            .duration(100)
+            .fluidInputs(fluid('spent_sulfonium_preparation_mixture') * 14000)
+            .fluidOutputs(fluid('sulfonium_preparation_mixture') * 13500)
+            .duration(50)
             .EUt(VA[LV])
             .buildAndRegister()
 
