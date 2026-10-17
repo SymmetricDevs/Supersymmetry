@@ -68,6 +68,7 @@ INDUCTION_FURNACE.recipeBuilder()
 
 // Magnalium
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .inputs(metaitem('ingotAluminium') * 19)
     .inputs(metaitem('ingotMagnesium'))
     .fluidOutputs(fluid('magnalium') * 2880)
@@ -77,6 +78,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .fluidInputs(fluid('aluminium') * 2736)
     .inputs(metaitem('ingotMagnesium'))
     .fluidOutputs(fluid('magnalium') * 2880)
@@ -121,6 +123,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .inputs(ore('ingotAluminium') * 11)
     .inputs(ore('ingotCopper') * 2)
     .fluidOutputs(fluid('aluminium_30_copper') * 1872)
@@ -144,6 +147,7 @@ INDUCTION_FURNACE.recipeBuilder()
 
 // Al–50Mg Master Alloy
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(3)
     .fluidInputs(fluid('aluminium') * 1008)
     .inputs(ore('ingotMagnesium') * 8)
     .fluidOutputs(fluid('aluminium_50_magnesium') * 2160)
@@ -151,6 +155,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(3)
     .inputs(ore('ingotAluminium') * 7)
     .inputs(ore('ingotMagnesium') * 8)
     .fluidOutputs(fluid('aluminium_50_magnesium') * 2160)

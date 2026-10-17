@@ -100,6 +100,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .inputs(metaitem('ingotCopper') * 8)
     .inputs(metaitem('ingotNickel'))
     .fluidOutputs(fluid('cupronickel') * 1296)
