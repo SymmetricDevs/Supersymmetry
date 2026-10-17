@@ -108,15 +108,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .material("Alumina")
     .buildAndRegister()
 
-INDUCTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('silver') * 144)
-    .inputs(item('minecraft:gold_ingot'))
-    .fluidOutputs(fluid('electrum') * 288)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 // Monel 400
-
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('nickel') * 2268)  //are 15,75 ingot or is 63/4
     .inputs(ore('dustCopper') * 8)
@@ -168,6 +160,41 @@ INDUCTION_FURNACE.recipeBuilder()
     .inputs(metaitem('dustCadmium'))
     .fluidOutputs(fluid('silver_indium_cadmium') * 3024)
     .EUt(VA[EV])
+    .buildAndRegister()
+
+// Electrum
+NDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('silver') * 144)
+    .inputs(item('minecraft:gold_ingot'))
+    .fluidOutputs(fluid('electrum') * 288)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('gold') * 144)
+    .fluidInputs(fluid('silver') * 144)
+    .fluidOutputs(fluid('electrum') * 288)
+    .EUt(VA[MV])
+    .duration(10)
+    .buildAndRegister()
+
+// Gold Antimony
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('nitrogen') * 1000)
+    .fluidInputs(fluid('gold') * 2736)
+    .inputs(ore('dustAntimony'))
+    .fluidOutputs(fluid('gold_antimony') * 2880)
+    .EUt(VA[LV])
+    .duration(10)
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .notConsumable(fluid('argon') * 1000)
+    .fluidInputs(fluid('gold') * 2736)
+    .inputs(ore('dustAntimony'))
+    .fluidOutputs(fluid('gold_antimony') * 2880)
+    .EUt(VA[LV])
+    .duration(10)
     .buildAndRegister()
 
 // Zircaloy
