@@ -113,9 +113,22 @@ INDUCTION_FURNACE.recipeBuilder()
     .inputs(item('minecraft:gold_ingot'))
     .fluidOutputs(fluid('electrum') * 288)
     .EUt(VA[LV])
-    .buildAndRegister()    
+    .buildAndRegister()
 
-// Monel
+// Monel 400
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('nickel') * 2268)  //are 15,75 ingot or is 63/4
+    .inputs(ore('dustCopper') * 8)
+    .inputs(ore('dustTinyIron') * 3)
+    .inputs(ore('dustTinyManganese') * 2)
+    .inputs(ore('dustSmallSilicon') * 2)
+    .fluidOutputs(fluid('monel_400') * 3600)
+    .EUt(VA[MV])
+    .duration(960)
+    .buildAndRegister()
+
+// Monel 500
 INDUCTION_FURNACE.recipeBuilder()
     .circuitMeta(2)
     .fluidInputs(fluid('nickel') * 3312)

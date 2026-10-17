@@ -7,19 +7,6 @@ import postInit.utils.RecyclingHelper
 mods.jei.ingredient.yeet(metaitem('tank.wood'))
 mods.jei.ingredient.yeet(metaitem('tank.steel'))
 
-// monel400 recipe
-
-INDUCTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('nickel') * 2268)  //are 15,75 ingot or is 63/4
-    .inputs(ore('dustCopper') * 8)
-    .inputs(ore('dustTinyIron') * 3)
-    .inputs(ore('dustTinyManganese') * 2)
-    .inputs(ore('dustSmallSilicon') * 2)
-    .fluidOutputs(fluid('monel_400') * 3600)
-    .EUt(VA[MV])
-    .duration(960)
-    .buildAndRegister()
-
 // Monel 400 casing
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('plateMonel400') * 6)

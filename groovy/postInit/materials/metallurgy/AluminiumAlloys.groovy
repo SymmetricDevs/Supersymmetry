@@ -100,15 +100,15 @@ INDUCTION_FURNACE.recipeBuilder()
 // Al–50Si Master Alloy
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 144)
-    .inputs(ore('ingotSilicon'))
-    .fluidOutputs(fluid('aluminium_50silicon') * 288)
+    .inputs(ore('dustSilicon')) // Lumps
+    .fluidOutputs(fluid('aluminium_50_silicon') * 288)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium'))
-    .inputs(ore('ingotSilicon'))
-    .fluidOutputs(fluid('aluminium_50silicon') * 288)
+    .inputs(ore('dustSilicon')) // Lumps
+    .fluidOutputs(fluid('aluminium_50_silicon') * 288)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -116,29 +116,29 @@ INDUCTION_FURNACE.recipeBuilder()
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 1584)
     .inputs(ore('ingotCopper') * 2)
-    .fluidOutputs(fluid('aluminium_30copper') * 1872)
+    .fluidOutputs(fluid('aluminium_30_copper') * 1872)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium') * 11)
     .inputs(ore('ingotCopper') * 2)
-    .fluidOutputs(fluid('aluminium_30copper') * 1872)
+    .fluidOutputs(fluid('aluminium_30_copper') * 1872)
     .EUt(VA[LV])
     .buildAndRegister();
 
 // Al–10Cr Master Alloy
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 2448)
-    .inputs(ore('ingotChrome'))
-    .fluidOutputs(fluid('aluminium_10chromium') * 2592)
+    .inputs(ore('dustChrome')) // Lumps
+    .fluidOutputs(fluid('aluminium_10_chromium') * 2592)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium') * 17)
-    .inputs(ore('ingotChrome'))
-    .fluidOutputs(fluid('aluminium_10chromium') * 2592)
+    .inputs(ore('dustChrome')) // Lumps
+    .fluidOutputs(fluid('aluminium_10_chromium') * 2592)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -146,29 +146,29 @@ INDUCTION_FURNACE.recipeBuilder()
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 1008)
     .inputs(ore('ingotMagnesium') * 8)
-    .fluidOutputs(fluid('aluminium_50magnesium') * 2160)
+    .fluidOutputs(fluid('aluminium_50_magnesium') * 2160)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium') * 7)
     .inputs(ore('ingotMagnesium') * 8)
-    .fluidOutputs(fluid('aluminium_50magnesium') * 2160)
+    .fluidOutputs(fluid('aluminium_50_magnesium') * 2160)
     .EUt(VA[LV])
     .buildAndRegister();
 
 // Al–25Mn Master Alloy
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 864)
-    .inputs(ore('ingotManganese'))
-    .fluidOutputs(fluid('aluminium_25manganese') * 1008)
+    .inputs(ore('ingotManganese')) // Briquettes
+    .fluidOutputs(fluid('aluminium_25_manganese') * 1008)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium') * 6)
-    .inputs(ore('ingotManganese'))
-    .fluidOutputs(fluid('aluminium_25manganese') * 1008)
+    .inputs(ore('ingotManganese')) // Briquettes
+    .fluidOutputs(fluid('aluminium_25_manganese') * 1008)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -176,38 +176,43 @@ INDUCTION_FURNACE.recipeBuilder()
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 5376)
     .inputs(ore('dustVanadiumPentoxide'))
-    .fluidOutputs(fluid('aluminium_10vanadium') * 5184)
+    .fluidOutputs(fluid('aluminium_10_vanadium') * 5184)
     // .fluidOutputs(fluid('alumina_flux'))
+    .duration(200)
     .EUt(VA[LV])
     .buildAndRegister();
 
 // Al–10Zr Master Alloy
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 4320)
-    .inputs(ore('ingotZirconium'))
-    .fluidOutputs(fluid('aluminium_10zirconium') * 4464)
+    .inputs(metaitem('sponge.zirconium'))
+    .fluidOutputs(fluid('aluminium_10_zirconium') * 4464)
+    .duration(40)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium') * 30)
-    .inputs(ore('ingotZirconium'))
-    .fluidOutputs(fluid('aluminium_10zirconium') * 4464)
+    .inputs(metaitem('sponge.zirconium'))
+    .fluidOutputs(fluid('aluminium_10_zirconium') * 4464)
+    .duration(460)
     .EUt(VA[LV])
     .buildAndRegister();
 
 // Al–10Ti Master Alloy
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 2304)
-    .inputs(ore('ingotTitanium'))
-    .fluidOutputs(fluid('aluminium_10titanium') * 2448)
+    .inputs(metaitem('sponge.titanium'))
+    .fluidOutputs(fluid('aluminium_10_titanium') * 2448)
+    .duration(30)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium') * 16)
-    .inputs(ore('ingotTitanium'))
-    .fluidOutputs(fluid('aluminium_10titanium') * 2448)
+    .inputs(metaitem('sponge.titanium'))
+    .fluidOutputs(fluid('aluminium_10_titanium') * 2448)
+    .duration(254)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -215,13 +220,13 @@ INDUCTION_FURNACE.recipeBuilder()
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('aluminium') * 1008)
     .inputs(ore('ingotLithium') * 3)
-    .fluidOutputs(fluid('aluminium_10lithium') * 1440)
+    .fluidOutputs(fluid('aluminium_10_lithium') * 1440)
     .EUt(VA[LV])
     .buildAndRegister();
 
 INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('ingotAluminium') * 7)
     .inputs(ore('ingotLithium') * 3)
-    .fluidOutputs(fluid('aluminium_10lithium') * 1440)
+    .fluidOutputs(fluid('aluminium_10_lithium') * 1440)
     .EUt(VA[LV])
     .buildAndRegister();
