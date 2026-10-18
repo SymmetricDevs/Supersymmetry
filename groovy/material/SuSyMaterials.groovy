@@ -1842,15 +1842,17 @@ class SuSyMaterials {
     public static Material FineAluminium
     public static Material HighPuritySilica
     public static Material Aluminium50Silicon
-    public static Material Aluminium30Copper
-    public static Material Aluminium10Chromium
     public static Material Aluminium50Magnesium
-    public static Material Aluminium25Manganese
-    public static Material Aluminium10Vanadium
-    public static Material Aluminium10Zirconium
-    public static Material Aluminium10Titanium
+    public static Material Aluminium20Copper
+    public static Material Aluminium10Silver
+    public static Material Aluminium10Manganese
     public static Material Aluminium10Lithium
-    
+    public static Material Aluminium10Chromium
+    public static Material Aluminium10Vanadium
+    public static Material Aluminium5Zirconium
+    public static Material Aluminium5Titanium
+    public static Material Aluminium1Beryllium
+
     // HP Materials
 
     public static Material HighPurityLithium

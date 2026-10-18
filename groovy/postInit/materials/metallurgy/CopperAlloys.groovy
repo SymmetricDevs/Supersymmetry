@@ -77,6 +77,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(2)
     .inputs(metaitem('ingotCopper') * 5)
     .inputs(metaitem('ingotZinc') * 2)
     .fluidOutputs(fluid('brass') * 1008)

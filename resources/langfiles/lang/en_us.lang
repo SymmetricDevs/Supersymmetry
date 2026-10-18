@@ -248,14 +248,16 @@ susy.material.sodium_dithionite=Sodium Dithionite
 susy.material.sodium_dithionite_solution=Sodium Dithionite Solution
 susy.material.zinc_hydroxide=Zinc Hydroxide
 susy.material.aluminium_50_silicon=Al-Si50 Master Alloy
-susy.material.aluminium_30_copper=Al-Cu30 Master Alloy
-susy.material.aluminium_10_chromium=Al-Cr10 Master Alloy
 susy.material.aluminium_50_magnesium=Al-Mg50 Master Alloy
-susy.material.aluminium_25_manganese=Al-Mn25 Master Alloy
-susy.material.aluminium_10_vanadium=Al-V10 Master Alloy
-susy.material.aluminium_10_zirconium=Al-Zr10 Master Alloy
-susy.material.aluminium_10_titanium=Al-Ti10 Master Alloy
+susy.material.aluminium_20_copper=Al-Cu20 Master Alloy
+susy.material.aluminium_10_silver=Al-Ag10 Master Alloy
+susy.material.aluminium_10_manganese=Al-Mn10 Master Alloy
 susy.material.aluminium_10_lithium=Al-Li10 Master Alloy
+susy.material.aluminium_10_chromium=Al-Cr10 Master Alloy
+susy.material.aluminium_10_vanadium=Al-V10 Master Alloy
+susy.material.aluminium_5_zirconium=Al-Zr5 Master Alloy
+susy.material.aluminium_5_titanium=Al-Ti5 Master Alloy
+susy.material.aluminium_1_beryllium=Al-Be1 Master Alloy
 
 # Solids
 
@@ -434,8 +436,8 @@ susy.material.aluminium_chloride_hexahydrate=Aluminium Chloride Hexahydrate
 susy.material.lunar_r_glass=Lunar R-Glass
 susy.material.kreep_basalt=KREEP Basalt
 susy.material.calcium_aluminate_concrete=Calcium Aluminate Concrete
-susy.material.aluminium_alloy_2219=Aluminium Alloy 2219
-susy.material.aluminium_alloy_2195=Aluminium Alloy 2195
+susy.material.aluminium_alloy_2219=2219 Aluminium Alloy
+susy.material.aluminium_alloy_2195=2195 Aluminium Alloy
 susy.material.scandium_alloy=Scandium Alloy
 susy.material.lithium_peroxide=Lithium Peroxide
 susy.material.lithium_hydroperoxide=Lithium Hydroperoxide
