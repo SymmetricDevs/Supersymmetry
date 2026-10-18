@@ -86,7 +86,7 @@ FLUIDIZED_BR.recipeBuilder()
 CONDENSER.recipeBuilder()
     .fluidInputs(fluid('gaseous_chlorosilane_mixture') * 3100)
     .fluidOutputs(fluid('chlorosilane_mixture') * 1000)
-    .fluidOutputs(fluid('hydrogen') * 2100)
+    .fluidOutputs(fluid('hydrogen') * 2200) // mixture only contains 900L H
     .duration(5)
     .buildAndRegister()
 
@@ -101,7 +101,7 @@ DISTILLERY.recipeBuilder()
 DT.recipeBuilder()
     .fluidInputs(fluid('chlorosilane_mixture') * 1000)
     .fluidOutputs(fluid('silicon_tetrachloride') * 100)
-    .fluidOutputs(fluid('trichlorosilane') * 900) // missing: 100L hydrogen
+    .fluidOutputs(fluid('trichlorosilane') * 900)
     .duration(20)
     .EUt(VA[LV])
     .buildAndRegister()
