@@ -546,6 +546,7 @@ metaitem.lunar_module_engine.name=Lunar Module Engine
 tile.deposit_block.lunar_crater.name=Lunar Crater Deposit
 
 tile.engineersdecor.sign_caution.name=§6Sign "Caution"§r
+item.industrialrenewal.cart_linkable.name=Cart Linker
 
 # Fluids
 
@@ -3490,6 +3491,7 @@ gas.gaspunk.carbon_monoxide=Carbon Monoxide
 gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 gas.gaspunk.novichok=Novichok A-230 Nerve Agent
+gas.gaspunk.copium=Copium
 
 # Metaitems
 
