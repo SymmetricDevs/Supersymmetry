@@ -1,3 +1,7 @@
+# UPDATE 0.2.0.1-patch1
+## Changes
+### Fixes
+- Gold-Antimony Alloy now has an LV recipe to prevent progression block. (#2084 by @jethro-3000)
 # UPDATE 0.2.0.1
 ## Mod Changes
 ### Mod Updates
