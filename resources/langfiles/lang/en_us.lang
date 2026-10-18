@@ -4117,6 +4117,8 @@ recipemap.electric_blast_furnace.name=Resistance Furnace
 gregtechfoodoption.machine.greenhouse.name=Arboretum
 recipemap.greenhouse.name=Arboretum
 fluid.gregtech.material.ice.liquid_generic=Ice Slurry
+metaitem.component.resistor.name=Sub-Optimal Ceramic Component
+metaitem.component.resistor.tooltip=§7§oWhat am I expected to use these for?
 
 
 # Material Renaming
