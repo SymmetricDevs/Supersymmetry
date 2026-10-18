@@ -4584,7 +4584,7 @@ class OrganicChemistryMaterials {
                 .color(0x6d0840)
                 .build()
 
-        TwoPhenylphenol.setFormula('C₆H₅-C₆H₄OH', false)
+        TwoPhenylphenol.setFormula('C6H5-C6H4OH', false)
 
         TwoCyclohexenylCyclohexanone = new Material.Builder(15761, SuSyUtility.susyId('two_cyclohexenylcyclohexanone'))
                 .liquid()
