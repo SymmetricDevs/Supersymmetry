@@ -134,3 +134,13 @@ crafting.replaceShaped('rsgauges:glass/detectorswitch_glass1', item('rsgauges:de
         [metaitem('wireFineCopper'), metaitem('plateGlass'), metaitem('sensor.lv')],
         [null, metaitem('plateGlass'), null]
 ])
+
+crafting.replaceShaped('rsgauges:industrial/indicator1', item('rsgauges:indicator1'), [
+        [item('minecraft:iron_nugget'), item('minecraft:iron_nugget')],
+        [item('minecraft:redstone'), ore('gtLight')]
+])
+
+crafting.replaceShaped('rsgauges:indicator/indicator_rustic_flag', item('rsgauges:indicator_rustic_flag'), [
+        [item('minecraft:iron_nugget'), item('minecraft:iron_nugget')],
+        [item('minecraft:stick'), ore('gtLight')]
+])
