@@ -1,3 +1,9 @@
+# UPDATE 0.2.0.1-patch1
+## Changes
+### Fixes
+- Gold-Antimony Alloy now has an LV recipe to prevent progression block. (#2084 by @jethro-3000)
+- Nichrome induction furnace recipe fix. (#2089 by @Fiery36)
+- Gave Vacuum Distillation Tower two item output to allow High Purity Gallium and Selenium recipes. (#2089 by @Fiery36)
 # UPDATE 0.2.0.1
 ## Mod Changes
 ### Mod Updates
