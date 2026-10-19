@@ -1,3 +1,13 @@
+# UPDATE 0.2.0.1-patch2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.4 → v0.2.5
+## Changes
+### Changed Features
+- XNet controller now only shows connectors matching the search instead of just highlighting them on the list. (sc#746 by @1290418240891)
+### Fixes
+- Steel Multiblock Tank can now handle bases. (sc#745 by @1290418240891)
+- Gave Sputtering Deposition enough item outputs to run all recipes. (sc#753 by @Fiery36)
 # UPDATE 0.2.0.1-patch1
 ## Changes
 ### Fixes
