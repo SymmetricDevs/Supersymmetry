@@ -1,3 +1,36 @@
+# UPDATE 0.2.0.1-patch2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.4 → v0.2.5
+## Changes
+### Changed Features
+- XNet controller now only shows connectors matching the search instead of just highlighting them on the list. (sc#746 by @1290418240891)
+### Fixes
+- Steel Multiblock Tank can now handle bases. (sc#745 by @1290418240891)
+- Gave Sputtering Deposition enough item outputs to run all recipes. (sc#753 by @Fiery36)
+# UPDATE 0.2.0.1-patch1
+## Changes
+### Fixes
+- Gold-Antimony Alloy now has an LV recipe to prevent progression block. (#2084 by @jethro-3000)
+- Nichrome induction furnace recipe fix. (#2089 by @Fiery36)
+- Gave Vacuum Distillation Tower two item output to allow High Purity Gallium and Selenium recipes. (#2089 by @Fiery36)
+# UPDATE 0.2.0.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.1 → v0.2.4
+- SussyPatches v1.11.10 → v1.11.11
+## Changes
+### Changed Features
+- Added the Skywatch Chip. It will tell you when a raid happens and where. (#741 by @oliwier509)
+- HATE rebalancing and AI improvement. Teams should no longer be spawncamped by endless helicopters. (by @oliwier509)
+- Xnet is now compatable with multiblock tanks and cleanroom passthrough hatches. (#742 by @1290418240891)
+- More RU translation (#2075 by @kanayaya)
+### Fixes
+- Induction furnaces will now store outputs instead of voiding it when the hatches are full of coolant (#735 by @zestehl)
+- Supported Palladium Catalyst Bed is now tiered at MV to allow for H2O2 production (#2074 by @1290418240891)
+- Triarylsulfonium Hexafluoroantimonate & Fused Quartz are now obtainable (#2078 by @jethro-3000)
+- Ghost items when transferring from containers are gone (by @MCTian-mi)
+  Additionally thanks to @lanicerine, @Fiery36, @superintendent2521 for more bugfixes and changes.
 # UPDATE 0.2.0.0.2
 ## Mod Changes
 ## Changes

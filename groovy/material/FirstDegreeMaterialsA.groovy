@@ -117,7 +117,7 @@ class FirstDegreeMaterialsA {
         HighPurityCerium = generatePurifiedElement(Cerium, 8057, false, false)
         HighPurityPraseodymium = generatePurifiedElement(Praseodymium, 8058, false, false)
         HighPurityNeodymium = generatePurifiedElement(Neodymium, 8059, false, false)
-        HighPuritySamarium = generatePurifiedElement(Samarium, 8060, false, false)
+        HighPuritySamarium = generatePurifiedElement(Samarium, 8060, false, true)
         HighPurityEuropium = generatePurifiedElement(Europium, 8061, false, false)
         HighPurityGadolinium = generatePurifiedElement(Gadolinium, 8062, false, false)
         HighPurityTerbium = generatePurifiedElement(Terbium, 8063, false, false)
@@ -3291,11 +3291,7 @@ class FirstDegreeMaterialsA {
                 .color(0x63827f)
                 .build()
 
-        PurifiedSiliconTetrachloride = new Material.Builder(8591, SuSyUtility.susyId('purified_silicon_tetrachloride'))
-                .liquid()
-                .components(Silicon, Chlorine * 4)
-                .color(0x7fa3a0)
-                .build()
+        // FREE ID: 8591
 
         SaltyHydrofluoricAcid = new Material.Builder(8592, SuSyUtility.susyId("salty_hydrofluoric_acid"))
                 .liquid(new FluidBuilder().acidic())

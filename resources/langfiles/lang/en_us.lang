@@ -663,7 +663,6 @@ susy.material.deionized_sea_water=Deionized Sea Water
 susy.material.depleted_hydrogen_sulfide=Depleted Hydrogen Sulfide
 
 susy.material.silicon_tetrachloride=Silicon Tetrachloride
-susy.material.purified_silicon_tetrachloride=Purified Silicon Tetrachloride
 
 susy.material.high_purity_hydrogen=High Purity Hydrogen
 susy.material.high_purity_helium=High Purity Helium
@@ -3423,6 +3422,8 @@ susy.material.electrolytic_capacitor_electrolyte=Electrolytic Capacitor Electrol
 susy.material.abietic_acid=Abietic Acid
 susy.material.disproportionated_abietic_acid=Disproportionated Abietic Acid
 susy.material.abietic_acid_emulsifier=Abietic Acid Emulsifier
+susy.material.dihydrooxaphosphaphenanthreneoxide=9,10-Dihydro-9-oxa-10-phosphaphenanthrene-10-oxide (DOPO)
+susy.material.two_phenylphenol=2-Phenylphenol
 
 # Isotopes
 

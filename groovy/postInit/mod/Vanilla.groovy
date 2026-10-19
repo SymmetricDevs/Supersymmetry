@@ -114,6 +114,9 @@ def name_removals = [
     'chisel:charcoal',
     'quark:charcoal_block',
     'minecraft:bow',
+    'minecraft:polished_granite',
+    'minecraft:polished_diorite',
+    'minecraft:polished_andesite'
 ]
 
 for (name in name_removals) {
@@ -1095,4 +1098,24 @@ stairVariants.each {material ->
         RecyclingHelper.removeRecyclingRecipes(material.stair)
         RecyclingHelper.handleRecycling(material.stair, [material.dust * 3])
     }
+}
+
+// Fixing polished/brick recipe conflict
+
+def stones = [
+    [oreDict: 'stoneGranite', name: 'granite', number: 2],
+    [oreDict: 'stoneDiorite', name: 'diorite', number: 4],
+    [oreDict: 'stoneAndesite', name: 'andesite', number: 6]
+]
+
+stones.each { stone ->
+    ore(stone.oreDict).remove(item('minecraft:stone', stone.number))
+
+    crafting.addShaped('susy:polished' + stone.name, item('minecraft:stone', stone.number) * 4, [
+        [ore(stone.oreDict), ore(stone.oreDict), null],
+        [ore(stone.oreDict), ore(stone.oreDict), null],
+        [null, null, null]
+    ])
+
+    ore(stone.oreDict).add(item('minecraft:stone', stone.number))
 }
