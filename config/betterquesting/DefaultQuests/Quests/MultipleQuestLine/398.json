@@ -12,7 +12,8 @@
         "id:8": "gregtech:meta_ingot"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.398.title"
+      "name:8": "susy.quest.db.398.title",
+      "snd_complete:8": "susy:music.quest_trigger_mv"
     }
   },
   "questID:3": 398,
