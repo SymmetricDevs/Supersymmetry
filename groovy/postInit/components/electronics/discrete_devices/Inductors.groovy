@@ -17,12 +17,26 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wir
 mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
 // SMD Inductor * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
+// Inductor * 4
+mods.gregtech.assembler.removeByInput(120, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCopper') * 2], [fluid('plastic') * 36])
+// Inductor * 8
+mods.gregtech.assembler.removeByInput(120, [metaitem('ringNickelZincFerrite'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
+
+
+ASSEMBLER.recipeBuilder()
+    .fluidInputs(fluid('plastic') * 36)
+    .inputs(ore('ringNickelZincFerrite'))
+    .inputs(ore('wireFineAnnealedCopper') * 2)
+    .outputs(metaitem('component.inductor') * 4)
+    .duration(320)
+    .EUt(VA[MV])
+    .buildAndRegister()
 
 ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('epoxy_molding_compound') * 36)
     .inputs(ore('ringManganeseZincFerrite'))
     .inputs(ore('wireFineAnnealedCopper') * 2)
-    .outputs(metaitem('component.inductor'))
+    .outputs(metaitem('component.inductor') * 4)
     .duration(320)
     .EUt(VA[MV])
     .buildAndRegister()
