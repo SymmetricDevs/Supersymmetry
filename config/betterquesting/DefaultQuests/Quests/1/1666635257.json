@@ -1,0 +1,20 @@
+{
+  "preRequisites:11": [
+    24,
+    27
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1666635257.desc",
+      "icon:10": {
+        "id:8": "minecraft:air"
+      },
+      "issilent:1": 1,
+      "name:8": "susy.quest.db.1666635257.title",
+      "questlogic:8": "OR",
+      "visibility:8": "HIDDEN"
+    }
+  },
+  "questID:3": 1666635257,
+  "tasks:9": {}
+}
