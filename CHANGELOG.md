@@ -1,3 +1,19 @@
+# UPDATE 0.2.0.1-patch2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.4 → v0.2.5
+## Changes
+### Changed Features
+- XNet controller now only shows connectors matching the search instead of just highlighting them on the list. (sc#746 by @1290418240891)
+### Fixes
+- Steel Multiblock Tank can now handle bases. (sc#745 by @1290418240891)
+- Gave Sputtering Deposition enough item outputs to run all recipes. (sc#753 by @Fiery36)
+# UPDATE 0.2.0.1-patch1
+## Changes
+### Fixes
+- Gold-Antimony Alloy now has an LV recipe to prevent progression block. (#2084 by @jethro-3000)
+- Nichrome induction furnace recipe fix. (#2089 by @Fiery36)
+- Gave Vacuum Distillation Tower two item output to allow High Purity Gallium and Selenium recipes. (#2089 by @Fiery36)
 # UPDATE 0.2.0.1
 ## Mod Changes
 ### Mod Updates
