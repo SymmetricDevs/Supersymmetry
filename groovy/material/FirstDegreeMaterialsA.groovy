@@ -1713,7 +1713,7 @@ class FirstDegreeMaterialsA {
         LeadFreeSolder = new Material.Builder(8346, SuSyUtility.susyId('lead_free_solder'))
                 .ingot().liquid(new FluidBuilder().temperature(490))
                 .components(Tin * 115, Silver * 2, Copper * 1)
-                .flags(GENERATE_PLATE, GENERATE_FOIL, RESISTANCE_MELT, INDUCTION_MELT)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, RESISTANCE_MELT, INDUCTION_MELT, DISABLE_DECOMPOSITION)
                 .colorAverage()
                 .build()
 
