@@ -24,7 +24,7 @@ mods.gregtech.assembler.removeByInput(120, [metaitem('ringNickelZincFerrite'), m
 
 
 ASSEMBLER.recipeBuilder()
-    .fluidInputs(fluid('plastic') * 36)
+    .fluidInputs(fluid('epoxy_molding_compound') * 36)
     .inputs(ore('ringNickelZincFerrite'))
     .inputs(ore('wireFineAnnealedCopper') * 2)
     .outputs(metaitem('component.inductor') * 4)
