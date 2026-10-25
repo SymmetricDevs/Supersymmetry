@@ -546,6 +546,7 @@ metaitem.lunar_module_engine.name=Lunar Module Engine
 tile.deposit_block.lunar_crater.name=Lunar Crater Deposit
 
 tile.engineersdecor.sign_caution.name=§6Sign "Caution"§r
+item.industrialrenewal.cart_linkable.name=Cart Linker
 
 # Fluids
 
@@ -3492,6 +3493,7 @@ gas.gaspunk.carbon_monoxide=Carbon Monoxide
 gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 gas.gaspunk.novichok=Novichok A-230 Nerve Agent
+gas.gaspunk.copium=Copium
 
 # Metaitems
 
@@ -4117,6 +4119,8 @@ recipemap.electric_blast_furnace.name=Resistance Furnace
 gregtechfoodoption.machine.greenhouse.name=Arboretum
 recipemap.greenhouse.name=Arboretum
 fluid.gregtech.material.ice.liquid_generic=Ice Slurry
+metaitem.component.resistor.name=Sub-Optimal Ceramic Component
+metaitem.component.resistor.tooltip=§7§oWhat am I expected to use these for?
 
 
 # Material Renaming

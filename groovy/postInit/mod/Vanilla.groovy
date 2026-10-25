@@ -252,9 +252,9 @@ crafting.replaceShaped('quark:iron_rod', item('quark:iron_rod'), [
     [null, ore('stickIron'), null]
 ])
 
-crafting.replaceShaped('minecraft:redstone_lamp', item('minecraft:redstone_lamp'), [
+crafting.replaceShaped('minecraft:redstone_lamp', item('minecraft:redstone_lamp') * 4, [
     [null, ore('plateRedstone'), null],
-    [ore('plateRedstone'), ore('blockGlowstone'), ore('plateRedstone')],
+    [ore('plateRedstone'), ore('gtLight'), ore('plateRedstone')],
     [null, ore('plateRedstone'), null]
 ])
 
@@ -415,6 +415,16 @@ mods.gregtech.assembler.recipeBuilder()
     .inputs(item('minecraft:redstone_torch') * 4)
     .outputs(item('minecraft:repeater') * 4)
     .duration(60)
+    .EUt(16)
+    .buildAndRegister()
+
+// Redstone Lamp * 1
+mods.gregtech.assembler.removeByInput(1, [item('minecraft:redstone') * 4 * 4, item('minecraft:glowstone_dust') * 4 * 4], null)
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('dustRedstone') * 4)
+    .inputs(ore('gtLight') * 1)
+    .outputs(item('minecraft:redstone_lamp') * 4)
+    .duration(20)
     .EUt(16)
     .buildAndRegister()
 

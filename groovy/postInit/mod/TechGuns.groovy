@@ -317,19 +317,19 @@ crafting.replaceShaped("techguns:explosive_charge_1_advanced", item('techguns:ex
 
 crafting.replaceShaped("techguns:lamp0_0", item('techguns:lamp0') * 32, [
     [ore('plateIron'), ore('plateIron'), ore('plateIron')],
-    [ore('plateGlass'), ore('dustGlowstone'), ore('plateGlass')],
+    [ore('plateGlass'), ore('gtLight'), ore('plateGlass')],
     [ore('plateGlass'), ore('plateGlass'), ore('plateGlass')]
 ])
 
 crafting.replaceShaped("techguns:lamp0_12", item('techguns:lamp0', 12) * 32, [
     [ore('plateGlass'), ore('plateIron'), ore('plateGlass')],
-    [ore('plateGlass'), ore('dustGlowstone'), ore('plateGlass')],
+    [ore('plateGlass'), ore('gtLight'), ore('plateGlass')],
     [ore('plateGlass'), ore('plateIron'), ore('plateGlass')]
 ])
 
 crafting.replaceShaped("techguns:neonlights_0", item('techguns:neonlights') * 32, [
     [ore('plateIron'), ore('plateIron'), ore('plateIron')],
-    [ore('plateGlass'), ore('dustGlowstone'), ore('plateGlass')],
+    [ore('plateGlass'), ore('gtLight'), ore('plateGlass')],
     [ore('plateIron'), ore('plateIron'), ore('plateIron')]
 ])
 
