@@ -3494,6 +3494,7 @@ gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 gas.gaspunk.novichok=Novichok A-230 Nerve Agent
 gas.gaspunk.copium=Copium
+agent.gaspunk.lung_odored=Respiratory Disruption Agent
 
 # Metaitems
 
