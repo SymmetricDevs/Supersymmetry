@@ -21,38 +21,6 @@ INDUCTION_FURNACE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// Lead-free (SAC) solder
-ALLOY_SMELTER.recipeBuilder()
-    .inputs(ore('dustTin') * 27)
-    .inputs(ore('dustSilver'))
-    .outputs(metaitem('ingotLeadFreeSolder') * 27)
-    .duration(360)
-    .EUt(VA[MV])
-
-ALLOY_SMELTER.recipeBuilder()
-    .inputs(ore('dustTin') * 27)
-    .inputs(ore('ingotSilver'))
-    .outputs(metaitem('ingotLeadFreeSolder') * 27)
-    .duration(360)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-ALLOY_SMELTER.recipeBuilder()
-    .inputs(ore('ingotTin') * 27)
-    .inputs(ore('dustSilver'))
-    .outputs(metaitem('ingotLeadFreeSolder') * 27)
-    .duration(360)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
-ALLOY_SMELTER.recipeBuilder()
-    .inputs(ore('ingotTin') * 27)
-    .inputs(ore('ingotSilver'))
-    .outputs(metaitem('ingotLeadFreeSolder') * 27)
-    .duration(360)
-    .EUt(VA[MV])
-    .buildAndRegister()
-
 // Cryogenic solder
 RESISTANCE_FURNACE.recipeBuilder()
     .inputs(ore('dustIndium') * 3)
