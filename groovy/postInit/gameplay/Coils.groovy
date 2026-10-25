@@ -69,11 +69,6 @@ ASSEMBLER.recipeBuilder()
 mods.jei.ingredient.yeet(item('gregtech:wire_coil', 3))
 mods.jei.ingredient.yeet(item('gregtech:wire_coil', 4))
 
-crafting.addShapeless('susy:heating_coil.rtm_convert', item('susy:heating_coil', 2), [item('gregtech:wire_coil', 3)])
-crafting.addShapeless('susy:heating_coil.hssg_convert', item('susy:heating_coil', 2), [item('gregtech:wire_coil', 4)])
-crafting.addShapeless('susy:spring.kanthal_convert', item('gregtech:meta_spring', 294), [item('gregtech:meta_spring', 288)])
-crafting.addShapeless('susy:spring.nichrome_convert', item('gregtech:meta_spring', 288), [item('gregtech:meta_spring', 294)])
-
 //Gotta swap nichrome and kanthal 4x wires in these recipes as part of the coil changes.
 //Alloy Smelter
 RecyclingHelper.removeByOutput(item('gregtech:machine', 83))
