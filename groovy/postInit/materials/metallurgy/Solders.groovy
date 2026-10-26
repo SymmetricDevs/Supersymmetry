@@ -40,20 +40,14 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // High-temperature solder, SAC solder melt and solder paste
-MIXER.recipeBuilder()
+INDUCTION_FURNACE.recipeBuilder()
     .inputs(ore('dustLead') * 43)
     .inputs(ore('dustTinySilver') * 6)
     .inputs(ore('dustTinyTin') * 4)
-    .outputs(metaitem('dustHighTemperatureSolder') * 44)
+    .outputs(fluid('high_temperature_solder') * 6336)
     .duration(120)
-    .EUt(VA[MV])
+    .EUt(VA[LV])
     .buildAndRegister()
-
-crafting.addShapeless("susy:high_temperature_solder", metaitem('dustHighTemperatureSolder') * 6, [
-    ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'), ore('dustLead'),
-    ore('dustTinySilver'), ore('dustTinySilver'),
-    ore('dustTinyTin')
-])
 
 INDUCTION_FURNACE.recipeBuilder()
     .notConsumable(fluid('nitrogen') * 1000)
