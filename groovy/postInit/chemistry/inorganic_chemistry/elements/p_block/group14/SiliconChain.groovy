@@ -67,7 +67,7 @@ ROASTER.recipeBuilder()
 ROASTER.recipeBuilder()
     .inputs(ore('dustSilicon'))
     .fluidInputs(fluid('hydrogen_chloride') * 3100)
-    .fluidOutputs(fluid('gaseous_chlorosilane_mixture') * 3100)
+    .fluidOutputs(fluid('gaseous_chlorosilane_mixture') * 3200)
     .duration(100)
     .EUt(VA[LV])
 
@@ -84,18 +84,10 @@ FLUIDIZED_BR.recipeBuilder()
 */
 
 CONDENSER.recipeBuilder()
-    .fluidInputs(fluid('gaseous_chlorosilane_mixture') * 3100)
+    .fluidInputs(fluid('gaseous_chlorosilane_mixture') * 3200)
     .fluidOutputs(fluid('chlorosilane_mixture') * 1000)
-    .fluidOutputs(fluid('hydrogen') * 2200) // mixture only contains 900L H
+    .fluidOutputs(fluid('hydrogen') * 2200)
     .duration(5)
-    .buildAndRegister()
-
-DISTILLERY.recipeBuilder()
-    .circuitMeta(3)
-    .fluidInputs(fluid('chlorosilane_mixture') * 1000)
-    .fluidOutputs(fluid('chlorosilane') * 900)
-    .duration(100)
-    .EUt(VA[LV])
     .buildAndRegister()
 
 DT.recipeBuilder()

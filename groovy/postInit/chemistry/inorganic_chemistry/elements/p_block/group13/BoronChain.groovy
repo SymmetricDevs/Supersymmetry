@@ -4,11 +4,11 @@ import static gregtech.api.GTValues.*
 // Boric acid
 
     // Kernite
-
+    // Na2B4O6(OH)2 * (H2O)3 + 5H2O + H2SO4 -> 2(H3BO3)(H2O) + 2H3BO3 + (Na2SO4)(H2O) + H2O
     BR.recipeBuilder()
         .inputs(ore('dustKernite'))
         .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .fluidInputs(fluid('distilled_water') * 3000)
+        .fluidInputs(fluid('distilled_water') * 5000)
         .fluidOutputs(fluid('boric_acid_solution') * 2000)
         .fluidOutputs(fluid('kernite_liquor') * 2000)
         .duration(120)
@@ -26,7 +26,7 @@ import static gregtech.api.GTValues.*
     CRYSTALLIZER.recipeBuilder()
         .notConsumable(ore('springCupronickel'))
         .fluidInputs(fluid('clarified_kernite_liquor') * 2000)
-        .outputs(metaitem('dustBoricAcid') * 28)
+        .outputs(metaitem('dustBoricAcid') * 14)
         .fluidOutputs(fluid('sodium_sulfate_solution') * 1000)
         .fluidOutputs(fluid('dense_steam') * 1000)
         .duration(120)
