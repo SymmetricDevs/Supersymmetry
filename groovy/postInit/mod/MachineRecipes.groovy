@@ -306,7 +306,7 @@ RecyclingHelper.replaceShaped("gregtech:steam_compressor_steel", metaitem('gregt
         [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
 ])
 
-RecyclingHelper.replaceShaped("gregtech:rock_breaker_steel", metaitem('steam_rock_breaker_steel'), [
+RecyclingHelper.replaceShaped("gregtech:steam_rock_breaker_steel", metaitem('steam_rock_breaker_steel'), [
         [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
         [ore('pipeSmallFluidIron'), metaitem('steam_rock_breaker_bronze'),  ore('pipeSmallFluidIron')],
         [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
@@ -318,25 +318,25 @@ RecyclingHelper.replaceShaped("gregtech:steam_furnace_steel", metaitem('gregtech
         [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
 ])
 
-RecyclingHelper.replaceShaped("gregtech:macerator_steel", metaitem('gregtech:steam_macerator_steel'), [
+RecyclingHelper.replaceShaped("gregtech:steam_macerator_steel", metaitem('gregtech:steam_macerator_steel'), [
         [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
         [ore('pipeSmallFluidIron'), metaitem('gregtech:steam_macerator_bronze'), ore('pipeSmallFluidIron')],
         [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],
 ])
 
-RecyclingHelper.replaceShaped("gregtech:alloy_smelter_steel", metaitem('gregtech:steam_alloy_smelter_steel'), [
+RecyclingHelper.replaceShaped("gregtech:steam_alloy_smelter_steel", metaitem('gregtech:steam_alloy_smelter_steel'), [
         [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
         [metaitem('plateWroughtIron'), metaitem('gregtech:steam_alloy_smelter_bronze'), metaitem('plateWroughtIron')],
         [metaitem('plateWroughtIron'), ore('pipeSmallFluidIron'), metaitem('plateWroughtIron')],
 ])
 
-RecyclingHelper.replaceShaped("gregtech:extractor_steel", metaitem('gregtech:steam_extractor_steel'), [
+RecyclingHelper.replaceShaped("gregtech:steam_extractor_steel", metaitem('gregtech:steam_extractor_steel'), [
     	[ore('pipeSmallFluidIron'), metaitem('plateSteel'), ore('pipeSmallFluidIron')],
         [metaitem('plateWroughtIron'), metaitem('gregtech:steam_extractor_bronze'), metaitem('plateWroughtIron')],
         [ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron'), ore('pipeSmallFluidIron')]
 ])
 
-RecyclingHelper.replaceShaped("gregtech:forge_hammer_steel", metaitem('gregtech:steam_hammer_steel'), [
+RecyclingHelper.replaceShaped("gregtech:steam_hammer_steel", metaitem('gregtech:steam_hammer_steel'), [
         [metaitem('plateWroughtIron'), metaitem('plateSteel'), metaitem('plateWroughtIron')],
         [ore('pipeSmallFluidIron'), metaitem('gregtech:steam_hammer_bronze'), ore('pipeSmallFluidIron')],
         [metaitem('plateWroughtIron'), metaitem('plateWroughtIron'), metaitem('plateWroughtIron')],

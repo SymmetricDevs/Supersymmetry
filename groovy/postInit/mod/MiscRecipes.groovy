@@ -102,6 +102,31 @@ crafting.replaceShaped('toolbelt:belt', item('toolbelt:belt'), [
         [item('toolbelt:pouch'), metaitem('ringSteel'), item('toolbelt:pouch')]
 ])
 
+crafting.shapelessBuilder()
+    .name('belt_pouch_upgrade_keep_nbt')
+    .output(item('toolbelt:belt'))
+    .input(item('toolbelt:belt'))
+    .input(item('toolbelt:pouch'))
+    .recipeFunction { output, ingredients, info ->
+        def oldBelt = ingredients.find { it.item.registryName.toString() == 'toolbelt:belt' }
+
+        def tag = (oldBelt != null && oldBelt.hasTagCompound())
+                ? oldBelt.getTagCompound().copy()
+                : new net.minecraft.nbt.NBTTagCompound()
+
+        int oldSize = tag.hasKey('Size') ? tag.getInteger('Size') : 2
+
+        // already at max slots: no result, so the craft is blocked
+        if (oldSize >= 9) {
+            return net.minecraft.item.ItemStack.EMPTY
+        }
+
+        tag.setInteger('Size', oldSize + 1)
+        output.setTagCompound(tag)
+        return output
+    }
+    .register()
+
 crafting.replaceShaped('jecalculation:item_calculator', item('jecalculation:item_calculator'), [
         [metaitem('wireFineTin'), metaitem('plateGlass'), metaitem('wireFineTin')],
         [item('opencomputers:material', 14), ore('circuitLv'), item('opencomputers:material', 16)],
