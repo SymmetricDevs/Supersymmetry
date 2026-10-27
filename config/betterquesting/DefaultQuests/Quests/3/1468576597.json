@@ -13,6 +13,30 @@
     }
   },
   "questID:3": 1468576597,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 153,
+            "TrophyColorGreen:3": 0,
+            "TrophyColorRed:3": 76,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 48,
+              "id:8": "gregtech:meta_dust"
+            },
+            "TrophyName:8": "Metallic Gum",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {

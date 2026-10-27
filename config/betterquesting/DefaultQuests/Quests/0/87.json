@@ -14,6 +14,29 @@
     }
   },
   "questID:3": 87,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 58,
+            "TrophyColorGreen:3": 117,
+            "TrophyColorRed:3": 162,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "minecraft:crafting_table"
+            },
+            "TrophyName:8": "Things Lurk in the Shadows",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "neon"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {

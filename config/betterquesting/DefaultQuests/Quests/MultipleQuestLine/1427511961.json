@@ -1,11 +1,13 @@
 {
   "preRequisiteTypes:7": [
     0,
+    1,
     1
   ],
   "preRequisites:11": [
     477886967,
-    120
+    120,
+    60
   ],
   "properties:10": {
     "betterquesting:10": {

@@ -1,4 +1,7 @@
 {
+  "preRequisites:11": [
+    100
+  ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.607.desc",

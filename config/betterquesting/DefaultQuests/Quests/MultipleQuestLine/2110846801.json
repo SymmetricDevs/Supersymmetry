@@ -24,6 +24,30 @@
     }
   },
   "questID:3": 2110846801,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 0,
+            "TrophyColorGreen:3": 235,
+            "TrophyColorRed:3": 100,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 17011,
+              "id:8": "gregtech:machine"
+            },
+            "TrophyName:8": "They're Already Dead; Let Them Rest",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {
