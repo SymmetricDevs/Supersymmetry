@@ -103,7 +103,7 @@ ASSEMBLER.recipeBuilder()
 	.inputs(ore('gtLight'))
 	.inputs(ore('plateGlass') * 6)
 	.outputs(item('projectred-illumination:lamp', 16) * 3)
-	.circuitMeta(3)
+	.circuitMeta(2)
 	.duration(40)
 	.EUt(VA[ULV])
 	.buildAndRegister();

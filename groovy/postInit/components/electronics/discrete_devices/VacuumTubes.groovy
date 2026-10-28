@@ -20,7 +20,10 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), meta
 
 crafting.addShapeless("vacuum_tube_components", metaitem('vacuum_tube_components') * 4, [
     metaitem('carbon_filament'),
-    ore('wireFineCopper') * 4,
+    ore('wireFineCopper'),
+    ore('wireFineCopper'),
+    ore('wireFineCopper'),
+    ore('wireFineCopper'),
     ore('foilNickel')
 ])
 

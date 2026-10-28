@@ -69,12 +69,14 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 //IG FARBEN CHLORINATION
+
+// 2MgO + C + 2Cl2 -> 2MgCl2 + CO2
 for (combustible in Carbons.combustibles()) {
     REACTION_FURNACE.recipeBuilder()
         .inputs(ore('dustMagnesia') * 2)
         .inputs(ore(combustible.name) * combustible.equivalent(1))
-        .fluidInputs(fluid('chlorine') * 2000)
-        .outputs(metaitem('dustMagnesiumChloride') * 3)
+        .fluidInputs(fluid('chlorine') * 4000)
+        .outputs(metaitem('dustMagnesiumChloride') * 6)
         .outputs(metaitem(combustible.byproduct))
         .fluidOutputs(fluid('carbon_dioxide') * 1000)
         .EUt(VA[LV])

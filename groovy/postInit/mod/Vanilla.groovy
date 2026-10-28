@@ -420,7 +420,9 @@ mods.gregtech.assembler.recipeBuilder()
 
 // Redstone Lamp * 1
 mods.gregtech.assembler.removeByInput(1, [item('minecraft:redstone') * 4 * 4, item('minecraft:glowstone_dust') * 4 * 4], null)
+
 mods.gregtech.assembler.recipeBuilder()
+    .circuitMeta(1)
     .inputs(ore('dustRedstone') * 4)
     .inputs(ore('gtLight') * 1)
     .outputs(item('minecraft:redstone_lamp') * 4)
