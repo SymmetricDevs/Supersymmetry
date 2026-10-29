@@ -87,7 +87,7 @@ crafting.shapedBuilder()
 
 // Carbon film resistor
 
-LASER_ENGRAVER.recipeBuilder()
+ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
     .inputs(ore('boltAlumina') * 20)
     .outputs(metaitem('component.resistor.carbon_film.cut_substrate') * 20)
     .duration(100)
@@ -125,7 +125,7 @@ ASSEMBLER.recipeBuilder()
 // NiCr film resistors
 Deposition.generateSputteringRecipe("boltAlumina", "component.resistor.metal_film.core.deposited", ['chromium':120, 'nickel':480])
 
-LASER_ENGRAVER.recipeBuilder()
+ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
     .inputs(metaitem("component.resistor.metal_film.core.deposited"))
     .outputs(metaitem("component.resistor.metal_film.core.uncut"))
     .duration(100)
@@ -225,7 +225,7 @@ SCREEN_PRINTING.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
-LASER_ENGRAVER.recipeBuilder()
+ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
     .inputs(metaitem('component.thick_film_resistor.wafer.fired'))
     .outputs(metaitem('component.thick_film_resistor.wafer.etched'))
     .duration(200)
@@ -249,7 +249,7 @@ Lithography.generatePhotolithographyRecipes("component.thin_film_resistor.wafer"
 Etching.generateWetEtchingRecipe("component.thin_film_resistor.wafer.patterned", "component.thin_film_resistor.wafer.etched", "nichrome", 400, false)
 Lithography.generateResistStrippingRecipes("component.thin_film_resistor.wafer.etched", "component.thin_film_resistor.wafer.stripped", 1, false, true) // don't know what timeMultiplier means
 
-LASER_ENGRAVER.recipeBuilder()
+ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
     .inputs(metaitem('component.thin_film_resistor.wafer.stripped'))
     .outputs(metaitem('component.thin_film_resistor.wafer.tuned'))
     .duration(200)

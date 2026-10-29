@@ -453,7 +453,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
     // Drilling
 
-    LASER_ENGRAVER.recipeBuilder()
+    ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
         .inputs(metaitem('substrate.fr4.etched'))
         .outputs(metaitem('substrate.fr4.drilled'))
         .EUt(VA[MV])
