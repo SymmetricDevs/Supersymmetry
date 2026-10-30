@@ -94,7 +94,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 // LV Power Circuit
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(ore('componentResistor') * 2)
+    .inputs(ore('componentResistorMedium') * 2)
     .inputs(ore('componentTransistor') * 4)
     .inputs(ore('componentCapacitorMedium'))
     .inputs(metaitem('component.diode.zener'))
