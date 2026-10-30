@@ -17,6 +17,9 @@ ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
 // Circuit components
+ore('componentResistor').add(metaitem('component.resistor.carbon_composite'))
+ore('componentResistor').add(metaitem('component.resistor.carbon_film'))
+
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_composite'))
 ore('componentResistorMedium').add(metaitem('component.resistor.carbon_film'))
 ore('componentResistorMedium').add(metaitem('component.resistor.metal_film'))
