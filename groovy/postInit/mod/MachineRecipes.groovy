@@ -2155,10 +2155,9 @@ RecyclingHelper.removeByOutput(item('gregtech:multiblock_casing', 3))
 RecyclingHelper.removeByOutput(item('gregtech:multiblock_casing', 4))
 
 // ULV hull change
-RecyclingHelper.removeByOutput(metaitem('gregtech:hull.ulv'))
 mods.gregtech.assembler.removeByInput(16, [item('gregtech:machine_casing'), metaitem('cableGtSingleRedAlloy') * 2], [fluid('plastic') * 288])
 
-RecyclingHelper.addShaped("gregtech:hull.ulv", metaitem("gregtech:hull.ulv"), [
+RecyclingHelper.replaceShaped("gregtech:gregtech.machine.hull.ulv", metaitem("gregtech:hull.ulv"), [
         [ore('plateWood'), ore('plateWroughtIron'), ore('plateWood')],
         [ore('cableGtSingleLead'), item('gregtech:machine_casing'), ore('cableGtSingleLead')]
 ])
@@ -2166,7 +2165,7 @@ RecyclingHelper.addShaped("gregtech:hull.ulv", metaitem("gregtech:hull.ulv"), [
 ASSEMBLER.recipeBuilder()
         .inputs(item('gregtech:machine_casing'))
         .inputs(ore('cableGtSingleLead') * 2)
-        .fluidInputs(fluid('plastic') * 72) // I don't see why it should be 2 dust
+        .fluidInputs(fluid('plastic') * 288)
         .outputs(metaitem('gregtech:hull.ulv'))
         .duration(25)
         .EUt(16)
@@ -2174,62 +2173,67 @@ ASSEMBLER.recipeBuilder()
 
 // Other red alloy uses
 
-for (i=0; i<=8; i++) {
-    RecyclingHelper.removeByOutput(metaitem("gregtech:energy_converter." + Globals.voltageTiers[i] + ".1"))
-    RecyclingHelper.removeByOutput(metaitem("gregtech:energy_converter." + Globals.voltageTiers[i] + ".4"))
-    RecyclingHelper.removeByOutput(metaitem("gregtech:energy_converter." + Globals.voltageTiers[i] + ".8"))
-    RecyclingHelper.removeByOutput(metaitem("gregtech:energy_converter." + Globals.voltageTiers[i] + ".16"))
+// ULV Energy Hatch * 1
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), metaitem('cableGtSingleRedAlloy') * 2, metaitem('voltage_coil.ulv')], null)
 
-    RecyclingHelper.replaceShaped("gregtech:energy_converter." + Globals.voltageTiers[i] + ".1", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.1'), [
+RecyclingHelper.replaceShaped("gregtech:energy_hatch.ulv", metaitem('gregtech:energy_hatch.input.ulv'), [
+    [null, metaitem('gregtech:voltage_coil.ulv'), null],
+    [ore('cableGtSingleLead'), metaitem('gregtech:hull.ulv'), ore('cableGtSingleLead')],
+    [null, null, null]])
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('gregtech:hull.ulv'))
+    .inputs(ore('cableGtSingleLead') * 2)
+    .inputs(metaitem('voltage_coil.ulv'))
+    .outputs(metaitem('energy_hatch.input.ulv'))
+    .duration(25)
+    .EUt(16)
+    .buildAndRegister();
+
+for (i=0; i<=9; i++) {
+    RecyclingHelper.replaceShaped("gregtech:gregtech.machine.energy_converter." + Globals.voltageTiers[i] + ".1", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.1'), [
             [null, tieredCables[i], tieredCables[i]],
             [tieredCables[0], hulls[i], circuits[i]],
             [null, tieredCables[i], tieredCables[i]]])
+}
 
-    RecyclingHelper.replaceShaped("gregtech:energy_converter." + Globals.voltageTiers[i] + ".4", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.4'), [
+for (i=0; i<=8; i++) {
+    RecyclingHelper.replaceShaped("gregtech:gregtech.machine.energy_converter." + Globals.voltageTiers[i] + ".4", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.4'), [
             [null, tieredQuadCables[i], tieredQuadCables[i]],
             [tieredQuadCables[0], hulls[i], circuits[i]],
             [null, tieredQuadCables[i], tieredQuadCables[i]]])
 
-    RecyclingHelper.replaceShaped("gregtech:energy_converter." + Globals.voltageTiers[i] + ".8", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.8'), [
+    RecyclingHelper.replaceShaped("gregtech:gregtech.machine.energy_converter." + Globals.voltageTiers[i] + ".8", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.8'), [
             [null, tieredOctCables[i], tieredOctCables[i]],
             [tieredOctCables[0], hulls[i], circuits[i]],
             [null, tieredOctCables[i], tieredOctCables[i]]])
 
-    RecyclingHelper.replaceShaped("gregtech:energy_converter." + Globals.voltageTiers[i] + ".16", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.16'), [
+    RecyclingHelper.replaceShaped("gregtech:gregtech.machine.energy_converter." + Globals.voltageTiers[i] + ".16", metaitem('gregtech:energy_converter.' + Globals.voltageTiers[i] + '.16'), [
             [null, tieredHexCables[i], tieredHexCables[i]],
             [tieredHexCables[0], hulls[i], circuits[i]],
             [null, tieredHexCables[i], tieredHexCables[i]]])
 }
 
-RecyclingHelper.removeByOutput(metaitem("gregtech:transformer.ulv"))
-RecyclingHelper.removeByOutput(metaitem("gregtech:transformer.hi_amp.ulv"))
-RecyclingHelper.removeByOutput(metaitem("gregtech:energy_hatch.input.ulv"))
-RecyclingHelper.removeByOutput(metaitem("gregtech:charger.ulv"))
-RecyclingHelper.removeByOutput(metaitem("gregtech:diode.ulv"))
-
-RecyclingHelper.replaceShaped("gregtech:transformer.ulv", metaitem('gregtech:transformer.ulv'), [
+RecyclingHelper.replaceShaped("gregtech:gregtech.machine.transformer.ulv", metaitem('gregtech:transformer.ulv'), [
         [null, ore('cableGtSingleLead'), ore('cableGtSingleLead')],
         [ore('cableGtSingleTin'), metaitem('gregtech:hull.ulv'), null],
         [null, ore('cableGtSingleLead'), ore('cableGtSingleLead')]])
 
-RecyclingHelper.replaceShaped("gregtech:transformer.hi_amp.ulv", metaitem('gregtech:transformer.hi_amp.ulv'), [
+RecyclingHelper.replaceShaped("gregtech:gregtech.machine.transformer.hi_amp.ulv", metaitem('gregtech:transformer.hi_amp.ulv'), [
         [null, ore('cableGtQuadrupleLead'), ore('cableGtQuadrupleLead')],
         [ore('cableGtQuadrupleTin'), metaitem('gregtech:transformer.ulv'), null],
         [null, ore('cableGtQuadrupleLead'), ore('cableGtQuadrupleLead')]])
 
-RecyclingHelper.replaceShaped("gregtech:energy_hatch.input.ulv", metaitem('gregtech:energy_hatch.input.ulv'), [
-        [null, metaitem('gregtech:voltage_coil.ulv'), null],
-        [ore('cableGtSingleLead'), metaitem('gregtech:hull.ulv'), ore('cableGtSingleLead')]])
-
-RecyclingHelper.replaceShaped("gregtech:charger.ulv", metaitem('gregtech:charger.ulv'), [
+RecyclingHelper.replaceShaped("gregtech:gregtech.machine.charger.ulv", metaitem('gregtech:charger.ulv'), [
         [ore('wireGtQuadrupleLead'), item('minecraft:chest'), ore('wireGtQuadrupleLead')],
         [ore('wireGtQuadrupleLead'), metaitem('gregtech:hull.ulv'), ore('wireGtQuadrupleLead')],
         [ore('cableGtSingleLead'), ore('circuitUlv'), ore('cableGtSingleLead')]])
 
-RecyclingHelper.replaceShaped("gregtech:diode.ulv", metaitem('gregtech:diode.ulv'), [
+RecyclingHelper.replaceShaped("gregtech:gregtech.machine.diode.ulv", metaitem('gregtech:diode.ulv'), [
         [ore('cableGtQuadrupleLead'), ore('componentDiode'), ore('cableGtQuadrupleLead')],
         [ore('componentDiode'), metaitem('gregtech:hull.ulv'), ore('componentDiode')],
         [ore('plateWroughtIron'), ore('componentDiode'), ore('plateWroughtIron')]])
+
 //Log Washer
 
 crafting.addShaped(metaitem('susy:log_washer'),
