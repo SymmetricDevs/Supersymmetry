@@ -56,17 +56,18 @@
                 "TrophyColorBlue:3": 43,
                 "TrophyColorGreen:3": 128,
                 "TrophyColorRed:3": 200,
+                "TrophyEarnedAt:4": 1736715768,
                 "TrophyItem:10": {
                   "Count:3": 1,
                   "Damage:2": 1013,
                   "id:8": "gregtech:meta_dust"
                 },
-                "TrophyName:8": "Your New Best Friend",
+                "TrophyName:8": "Don't Stick Your Fingers Together",
                 "TrophyShowsTooltip:1": 1,
                 "TrophyVariant:8": "classic"
               }
             },
-            "TrophyName:8": "More Than Kin, Less Than Kind",
+            "TrophyName:8": "I Think I Found a Glue!",
             "TrophyShowsTooltip:1": 1,
             "TrophyVariant:8": "classic"
           }

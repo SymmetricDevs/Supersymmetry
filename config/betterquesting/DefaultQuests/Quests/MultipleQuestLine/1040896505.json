@@ -1,0 +1,91 @@
+{
+  "preRequisites:11": [
+    644
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1040896505.desc",
+      "frame:8": "CROSS",
+      "icon:10": {
+        "id:8": "simple_trophies:trophy",
+        "tag:10": {
+          "TrophyColorBlue:3": 96,
+          "TrophyColorGreen:3": 96,
+          "TrophyColorRed:3": 96,
+          "TrophyItem:10": {
+            "Count:3": 1,
+            "id:8": "simple_trophies:trophy",
+            "tag:10": {
+              "TrophyColorBlue:3": 96,
+              "TrophyColorGreen:3": 96,
+              "TrophyColorRed:3": 96,
+              "TrophyEarnedAt:4": 1736715768,
+              "TrophyItem:10": {
+                "Count:3": 1,
+                "Damage:2": 1016,
+                "id:8": "gregtech:meta_dust"
+              },
+              "TrophyName:8": "Perfect Temperature Firm Elastic",
+              "TrophyShowsTooltip:1": 1,
+              "TrophyVariant:8": "classic"
+            }
+          },
+          "TrophyName:8": "Poly(1,1,2,2-tetrafluoroethylene)",
+          "TrophyShowsTooltip:1": 1,
+          "TrophyVariant:8": "classic"
+        }
+      },
+      "name:8": "susy.quest.db.1040896505.title"
+    }
+  },
+  "questID:3": 1040896505,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 96,
+            "TrophyColorGreen:3": 96,
+            "TrophyColorRed:3": 96,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "simple_trophies:trophy",
+              "tag:10": {
+                "TrophyColorBlue:3": 96,
+                "TrophyColorGreen:3": 96,
+                "TrophyColorRed:3": 96,
+                "TrophyEarnedAt:4": 1736715768,
+                "TrophyItem:10": {
+                  "Count:3": 1,
+                  "Damage:2": 1016,
+                  "id:8": "gregtech:meta_dust"
+                },
+                "TrophyName:8": "Perfect Temperature Firm Elastic",
+                "TrophyShowsTooltip:1": 1,
+                "TrophyVariant:8": "classic"
+              }
+            },
+            "TrophyName:8": "Poly(1,1,2,2-tetrafluoroethylene)",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 512,
+          "Damage:2": 1016,
+          "id:8": "gregtech:meta_dust"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

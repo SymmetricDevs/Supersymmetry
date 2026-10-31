@@ -6,7 +6,7 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.550.desc",
-      "frame:8": "GATE",
+      "frame:8": "JAGGED",
       "icon:10": {
         "Damage:2": 989,
         "id:8": "gregtech:machine"
@@ -32,7 +32,7 @@
               "Damage:2": 989,
               "id:8": "gregtech:machine"
             },
-            "TrophyName:8": "I Have Become Death",
+            "TrophyName:8": "I am become death.",
             "TrophyShowsTooltip:1": 1,
             "TrophyVariant:8": "neon"
           }

@@ -20,36 +20,6 @@
     }
   },
   "questID:3": 1319198702,
-  "rewards:9": {
-    "0:10": {
-      "rewardID:8": "bq_standard:item",
-      "rewards:9": {
-        "0:10": {
-          "Count:3": 1,
-          "id:8": "simple_trophies:trophy",
-          "tag:10": {
-            "TrophyColorBlue:3": 148,
-            "TrophyColorGreen:3": 83,
-            "TrophyColorRed:3": 38,
-            "TrophyItem:10": {
-              "Count:3": 1,
-              "Damage:2": 1,
-              "id:8": "susy:susy_armor",
-              "tag:10": {
-                "Fluid:10": {
-                  "Amount:3": 32000,
-                  "FluidName:8": "kerosene"
-                }
-              }
-            },
-            "TrophyName:8": "To The Skies",
-            "TrophyShowsTooltip:1": 1,
-            "TrophyVariant:8": "classic"
-          }
-        }
-      }
-    }
-  },
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,

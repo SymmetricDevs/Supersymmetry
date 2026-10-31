@@ -1,6 +1,6 @@
 {
   "preRequisites:11": [
-    101
+    100
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -15,30 +15,6 @@
     }
   },
   "questID:3": 99,
-  "rewards:9": {
-    "0:10": {
-      "rewardID:8": "bq_standard:item",
-      "rewards:9": {
-        "0:10": {
-          "Count:3": 1,
-          "id:8": "simple_trophies:trophy",
-          "tag:10": {
-            "TrophyColorBlue:3": 67,
-            "TrophyColorGreen:3": 67,
-            "TrophyColorRed:3": 67,
-            "TrophyItem:10": {
-              "Count:3": 1,
-              "Damage:2": 110,
-              "id:8": "gregtech:machine"
-            },
-            "TrophyName:8": "Getting Serious",
-            "TrophyShowsTooltip:1": 1,
-            "TrophyVariant:8": "classic"
-          }
-        }
-      }
-    }
-  },
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {
