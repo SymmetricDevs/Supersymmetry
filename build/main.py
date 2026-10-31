@@ -15,6 +15,7 @@ import zipfile
 import questbook
 
 import download
+from zip_timestamps import stamp_groovy_timestamps
 
 # used to map a projects classId on curseforge to a folder
 class_id_to_dir = {
@@ -87,6 +88,8 @@ def refresh():
 def export_client_pack():
     print("Client Pack Exporting")
     subprocess.run([packwizName, 'curseforge', 'export', '-o', 'client.zip'], check=True)
+    count = stamp_groovy_timestamps('client.zip')
+    print(f"Updated export timestamps for {count} Groovy scripts")
     shutil.copy('./client.zip', './buildOut/')
     os.remove('./client.zip')
     print("Client Pack Export Done")
