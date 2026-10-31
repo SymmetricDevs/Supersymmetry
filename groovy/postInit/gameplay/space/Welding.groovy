@@ -3,8 +3,7 @@ import static prePostInit.Recipemaps.*
 
 MIXER.recipeBuilder()
     .inputs(ore('dustTungstenTrioxide') * 44)
-    .inputs(ore('dustTinyThoriumDioxide') * 2)
-    .inputs(ore('dustRheniumHeptoxide') * 1)
+    .inputs(ore('dustThoriumDioxide') * 1)
     .outputs(metaitem('dustThoriatedTungstenMixture') * 45)
     .EUt(VA[EV])
     .duration(20)
