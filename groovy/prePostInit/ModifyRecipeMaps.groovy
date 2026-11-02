@@ -466,7 +466,7 @@ RecipeMaps.ASSEMBLER_RECIPES
     .modifyMaxFluidInputs(3)
 
 RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES
-    .modifyMaxInputs(12)
+    .modifyMaxInputs(16)
     .modifyMaxFluidInputs(4)
     
 RecipeMaps.DISTILLERY_RECIPES
@@ -486,3 +486,6 @@ RecipeMaps.CUTTER_RECIPES
 
 SuSyRecipeMaps.ELECTRON_BEAM_LITHOGRAPHY
     .setMaxInputs(2)
+
+SuSyRecipeMaps.VACUUM_DISTILLATION_RECIPES
+    .modifyMaxOutputs(2)

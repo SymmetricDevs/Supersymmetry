@@ -52,22 +52,25 @@ BR.recipeBuilder() //Potassium permangante is typically added to oxidize iron II
     .duration(100)
     .buildAndRegister()
 
-BR.recipeBuilder() //75%
-    .inputs(ore('dustSodiumHydroxide') * 18)
-    .circuitMeta(1)
-    .fluidInputs(fluid('beryllium_sulfate_solution') * 1000)
-    .outputs(metaitem('dustBerylliumHydroxide') * 9)
-    .fluidOutputs(fluid('sodium_sulfate_solution') * 8000)
-    .EUt(VA[MV])
-    .duration(100)
-    .buildAndRegister()
-
-BR.recipeBuilder() //100% (Technically, it makes a little bit of ferric EDTA but I dont want to model it)
+// 6NaOH + Be3Na2S4O16 -> 3Be(OH)2 + 4Na2SO4
+//100% (Technically, it makes a little bit of ferric EDTA but I dont want to model it)
+BR.recipeBuilder()
     .inputs(ore('dustSodiumHydroxide') * 18)
     .inputs(ore('dustTinyTetrasodiumEthylenediaminetetraacetate'))
     .fluidInputs(fluid('beryllium_sulfate_solution') * 1000)
     .outputs(metaitem('dustBerylliumHydroxide') * 12)
-    .fluidOutputs(fluid('sodium_sulfate_solution') * 8000)
+    .fluidOutputs(fluid('sodium_sulfate_solution') * 4000)
+    .EUt(VA[MV])
+    .duration(100)
+    .buildAndRegister()
+
+// 75%
+BR.recipeBuilder()
+    .inputs(ore('dustSodiumHydroxide') * 18)
+    .circuitMeta(1)
+    .fluidInputs(fluid('beryllium_sulfate_solution') * 1000)
+    .outputs(metaitem('dustBerylliumHydroxide') * 9)
+    .fluidOutputs(fluid('sodium_sulfate_solution') * 4000)
     .EUt(VA[MV])
     .duration(100)
     .buildAndRegister()

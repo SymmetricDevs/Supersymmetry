@@ -759,7 +759,6 @@ susy.material.ebr_solvent=Растворитель EBR 70/30
 susy.material.novolac_liftoff_resist=Новолачный фоторезист для обратной литографии
 susy.material.novolac_resist=Новолачный фоторезист
 susy.material.silicon_tetrachloride=Тетрахлорид кремния
-susy.material.purified_silicon_tetrachloride=Очищенный тетрахлорид кремния
 
 susy.material.high_purity_hydrogen=Водород высокой чистоты
 susy.material.high_purity_helium=Гелий высокой чистоты

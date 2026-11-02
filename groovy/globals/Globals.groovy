@@ -42,7 +42,6 @@ class Globals {
         new InertGas('helium', 1000, 1, 3)
     ]
 
-
     public static elementList = [
         'Lithium' , 'Beryllium', 'Boron', 'Carbon', 'Sodium', 'Magnesium', 'Aluminium', 'Silicon',
         'Phosphorus' , 'Sulfur', 'Potassium', 'Calcium', 'Scandium', 'Titanium', 'Vanadium', 'Chrome',
