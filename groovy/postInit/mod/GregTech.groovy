@@ -1693,6 +1693,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+/*
 // HV Alternate Energy Handling
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.hv'))
@@ -1704,7 +1705,7 @@ ASSEMBLER.recipeBuilder()
     .duration(200)
     .EUt(VA[MV])
     .buildAndRegister()
-
+*/
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.hv'))

@@ -87,7 +87,8 @@ crafting.shapedBuilder()
 
 // Carbon film resistor
 
-LASER_ENGRAVER.recipeBuilder()
+ASSEMBLER.recipeBuilder()
+    .notConsumable(metaitem('emitter.mv')) // needs to be replaced by CO2 laser, when they are added
     .inputs(ore('boltAlumina') * 20)
     .outputs(metaitem('component.resistor.carbon_film.cut_substrate') * 20)
     .duration(100)
