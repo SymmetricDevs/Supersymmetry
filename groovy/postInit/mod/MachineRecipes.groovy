@@ -801,7 +801,7 @@ RecyclingHelper.addShaped("gregtech:ore_sorter", metaitem('susy:ore_sorter'), [
 
 RecyclingHelper.addShaped("gregtech:primitive_mud_pump", metaitem('susy:primitive_mud_pump'), [
     [metaitem('ringBronze'), metaitem('pipeNormalFluidTreatedWood'), metaitem('screwBronze')],
-    [metaitem('rotorBronze'), item('gregtech:steam_casing'), ore('craftingToolScrewdriver')],
+    [metaitem('susy:pump.steam'), item('gregtech:steam_casing'), ore('craftingToolScrewdriver')],
     [item('minecraft:stone_slab', 4), metaitem('pipeLargeFluidWood'), item('minecraft:stone_slab', 4)]
 ]);
 

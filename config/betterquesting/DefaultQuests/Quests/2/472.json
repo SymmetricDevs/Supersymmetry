@@ -3,14 +3,15 @@
     1
   ],
   "preRequisites:11": [
-    104
+    375402176
+   
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.472.desc",
       "frame:8": "GATE",
       "icon:10": {
-        "Damage:2": 274,
+        "Damage:2": 287,
         "id:8": "gregtech:meta_ingot"
       },
       "ismain:1": 1,
@@ -23,7 +24,7 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
-          "Damage:2": 274,
+          "Damage:2": 287,
           "id:8": "gregtech:meta_ingot"
         }
       },

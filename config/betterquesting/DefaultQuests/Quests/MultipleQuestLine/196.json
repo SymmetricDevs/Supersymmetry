@@ -17,6 +17,29 @@
     }
   },
   "questID:3": 196,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 0,
+            "TrophyColorGreen:3": 0,
+            "TrophyColorRed:3": 128,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "techguns:pistol"
+            },
+            "TrophyName:8": "We Do a Little Trolling",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "ignoreNBT:1": 1,

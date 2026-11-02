@@ -1,11 +1,6 @@
 {
-  "preRequisiteTypes:7": [
-    1,
-    0
-  ],
   "preRequisites:11": [
-    105,
-    787
+    104
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -18,7 +13,6 @@
         }
       },
       "name:8": "susy.quest.db.477886967.title",
-      "questlogic:8": "OR",
       "tasklogic:8": "OR"
     }
   },
