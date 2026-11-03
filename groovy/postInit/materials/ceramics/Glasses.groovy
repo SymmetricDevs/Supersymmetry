@@ -252,7 +252,7 @@ QUENCHER.recipeBuilder()
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('shape.mold.block'))
-    .fluidInputs(fluid('purified_silicon_tetrachloride') * 2000)
+    .fluidInputs(fluid('silicon_tetrachloride') * 2000)
     .fluidInputs(fluid('hydrogen') * 8000)
     .fluidInputs(fluid('oxygen') * 4000)
     .outputs(item('appliedenergistics2:quartz_glass'))
