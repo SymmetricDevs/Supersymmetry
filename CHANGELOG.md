@@ -1,3 +1,23 @@
+# UPDATE 0.2.0.2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.5 → v0.2.6
+
+## Changes
+## Breaking Changes
+- Brushless motor recipes now require power circuits specifically. (#2092 by Fiery36)
+- Alloy Smelter recipes for Lead-Free Solder have been removed. (#2092 by Fiery36)
+
+### Changed Features
+- The Eccentric Roll Crusher now has parallels. (sc#747 by trainvoi)
+- The Train Radio-control Card range is now effectively unlimited. (#2094 by lanicerine)
+- The Tool Belt can now be upgraded via Crafting Table. (#2086 by trainvoi)
+
+### Fixes
+- Fixed a LittleTiles crash. (sc#755 by oliwier509)
+- AE2 Storage Bus is re-enabled (does not have a recipe). (#2096 by jethro-3000)
+- Various light sources from ProjectRed Illumination and other mods have recipes again. (#2088 by NeoRussia)
+And thanks to @superintendent2521, @Crindigo, @jethro-3000, and @Fiery36 for helping maintain the pack.
 # UPDATE 0.2.0.1-patch2
 ## Mod Changes
 ### Mod Updates
