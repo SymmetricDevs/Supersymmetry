@@ -21,3 +21,9 @@ crafting.replaceShaped('torchmaster:terrain_lighter', item('torchmaster:terrain_
         [metaitem('plateStone'), item('minecraft:chest'), metaitem('plateStone')],
         [ore('plankWood'), metaitem('plateStone'), ore('plankWood')]
 ])
+
+crafting.replaceShaped('torchmaster:frozen_pearl', item('torchmaster:frozen_pearl'), [
+    [null, ore('blockIce'), null],
+    [ore('blockIce'), ore('craftingLensGlass'), ore('blockIce')],
+    [null, ore('blockIce'), null]
+])

@@ -39,7 +39,7 @@ class Deposition {
         }
 
         def generateRecipe(String input, String product, int duration, boolean cleanroom) {
-            def evaporationRecipe = EVAPORATION.recipeBuilder()
+            def evaporationRecipe = EVAPORATION_DEPOSITION.recipeBuilder()
                 .inputs(metaitem(input))
                 .inputs(ore('nugget' + this.material.split('_').collect { it.capitalize() }.join('')))
                 .outputs(metaitem(product))
@@ -101,7 +101,7 @@ class Deposition {
         def generateRecipe(String input, String product, int duration) { // For standalone sputtering (no co-sputtering or sequential sputtering)
             def reuseChance = Math.max(1, (10000 - ((int) (consumptionRate * duration))))
 
-            SPUTTERER.recipeBuilder()
+            SPUTTERING.recipeBuilder()
                 .inputs(metaitem(input))
                 .inputs(metaitem('target.' + this.targetMaterial))
                 .outputs(metaitem(product))
@@ -195,7 +195,7 @@ class Deposition {
         int totalDuration = 0
         int power = 0
 
-        def sputteringRecipe = SPUTTERER.recipeBuilder()
+        def sputteringRecipe = SPUTTERING.recipeBuilder()
             .inputs(metaitem(input))
             .outputs(metaitem(product))
             .cleanroom(CleanroomType.CLEANROOM)

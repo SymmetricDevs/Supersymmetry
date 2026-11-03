@@ -546,6 +546,7 @@ metaitem.lunar_module_engine.name=Lunar Module Engine
 tile.deposit_block.lunar_crater.name=Lunar Crater Deposit
 
 tile.engineersdecor.sign_caution.name=§6Sign "Caution"§r
+item.industrialrenewal.cart_linkable.name=Cart Linker
 
 # Fluids
 
@@ -663,7 +664,6 @@ susy.material.deionized_sea_water=Deionized Sea Water
 susy.material.depleted_hydrogen_sulfide=Depleted Hydrogen Sulfide
 
 susy.material.silicon_tetrachloride=Silicon Tetrachloride
-susy.material.purified_silicon_tetrachloride=Purified Silicon Tetrachloride
 
 susy.material.high_purity_hydrogen=High Purity Hydrogen
 susy.material.high_purity_helium=High Purity Helium
@@ -2432,7 +2432,7 @@ susy.material.incoloy_20=Incoloy 20
 susy.material.incoloy_825=Incoloy 825
 susy.material.incoloy_908=Incoloy 908
 susy.material.rene_n_5=Rene N5
-susy.material.monel_500=Monel 500
+susy.material.monel_500=Monel K-500
 susy.material.monel_400=Monel 400
 susy.material.stellite_j=Stellite J
 susy.material.stellite_6=Stellite 6
@@ -3441,6 +3441,8 @@ susy.material.electrolytic_capacitor_electrolyte=Electrolytic Capacitor Electrol
 susy.material.abietic_acid=Abietic Acid
 susy.material.disproportionated_abietic_acid=Disproportionated Abietic Acid
 susy.material.abietic_acid_emulsifier=Abietic Acid Emulsifier
+susy.material.dihydrooxaphosphaphenanthreneoxide=9,10-Dihydro-9-oxa-10-phosphaphenanthrene-10-oxide (DOPO)
+susy.material.two_phenylphenol=2-Phenylphenol
 
 # Isotopes
 
@@ -3509,6 +3511,8 @@ gas.gaspunk.carbon_monoxide=Carbon Monoxide
 gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 gas.gaspunk.novichok=Novichok A-230 Nerve Agent
+gas.gaspunk.copium=Copium
+agent.gaspunk.lung_odored=Respiratory Disruption Agent
 
 # Metaitems
 
@@ -4134,6 +4138,8 @@ recipemap.electric_blast_furnace.name=Resistance Furnace
 gregtechfoodoption.machine.greenhouse.name=Arboretum
 recipemap.greenhouse.name=Arboretum
 fluid.gregtech.material.ice.liquid_generic=Ice Slurry
+metaitem.component.resistor.name=Sub-Optimal Ceramic Component
+metaitem.component.resistor.tooltip=§7§oWhat am I expected to use these for?
 
 
 # Material Renaming
@@ -4205,7 +4211,7 @@ recipe.water.electrolysis=This is significantly faster if done in an electrolysi
 recipe.power_generation.multiblock_rotation=This recipe is run in a multiblock with shaft rotation mechanics, which means there is a spin-up time to reach maximum power output. Supply with lubricants to keep it running smoothly!
 recipe.power_generation.combustion=Can either be run in a multiblock or singleblock configuration. Multiblocks only require lubricant but singleblocks also require a coolant!
 recipe.power_generation.fuel_cell=Fuel cells require a certain temperature to run properly. Make sure to maintain temperature with preheated air!
-recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste heat from gas turbine exhaust to boil water. Flue gas carries 10 EU/L of energy, and yields an extra 25% energy for a given amount of fuel.
+recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste heat from gas turbine exhaust to boil water. Flue gas carries 10 EU/L of energy, and yields an extra 25 percent energy for a given amount of fuel.
 recipe.lubricant.midgrade=Provides a 1.2x boost in power generation recipes requiring lubricant.
 recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requiring lubricant.
 recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.

@@ -251,7 +251,7 @@ UV_LIGHT_BOX.recipeBuilder()
 
 REACTION_FURNACE.recipeBuilder()
     .notConsumable(metaitem('shape.mold.plate'))
-    .fluidInputs(fluid('purified_silicon_tetrachloride') * 1000)
+    .fluidInputs(fluid('silicon_tetrachloride') * 1000)
     .fluidInputs(fluid('oxygen') * 3000)
     .fluidInputs(fluid('hydrogen') * 2000)
     .outputs(metaitem('fused_quartz'))
@@ -267,7 +267,7 @@ REACTION_FURNACE.recipeBuilder()
     //          https://nanolithography.gatech.edu/pmma.html
 Deposition.generateSputteringRecipe('fused_quartz', 'mask.blank.chromium', 400, 'chromium')
 
-SPUTTERER.recipeBuilder()
+SPUTTERING.recipeBuilder()
     .inputs(metaitem('mask.blank.chromium'))
     .inputs(metaitem('target.chromium'))
     .fluidInputs(fluid('argon') * 100)
