@@ -1,0 +1,91 @@
+{
+  "preRequisites:11": [
+    25
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.1740968962.desc",
+      "frame:8": "CROSS",
+      "icon:10": {
+        "id:8": "simple_trophies:trophy",
+        "tag:10": {
+          "TrophyColorBlue:3": 70,
+          "TrophyColorGreen:3": 70,
+          "TrophyColorRed:3": 70,
+          "TrophyItem:10": {
+            "Count:3": 1,
+            "id:8": "simple_trophies:trophy",
+            "tag:10": {
+              "TrophyColorBlue:3": 70,
+              "TrophyColorGreen:3": 70,
+              "TrophyColorRed:3": 70,
+              "TrophyEarnedAt:4": 1736715768,
+              "TrophyItem:10": {
+                "Count:3": 1,
+                "Damage:2": 324,
+                "id:8": "gregtech:meta_ingot"
+              },
+              "TrophyName:8": "Gateway to the Industrial Age",
+              "TrophyShowsTooltip:1": 1,
+              "TrophyVariant:8": "classic"
+            }
+          },
+          "TrophyName:8": "You Better Not Have This in Primitive",
+          "TrophyShowsTooltip:1": 1,
+          "TrophyVariant:8": "classic"
+        }
+      },
+      "name:8": "susy.quest.db.1740968962.title"
+    }
+  },
+  "questID:3": 1740968962,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 70,
+            "TrophyColorGreen:3": 70,
+            "TrophyColorRed:3": 70,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "simple_trophies:trophy",
+              "tag:10": {
+                "TrophyColorBlue:3": 70,
+                "TrophyColorGreen:3": 70,
+                "TrophyColorRed:3": 70,
+                "TrophyEarnedAt:4": 1736715768,
+                "TrophyItem:10": {
+                  "Count:3": 1,
+                  "Damage:2": 324,
+                  "id:8": "gregtech:meta_ingot"
+                },
+                "TrophyName:8": "Gateway to the Industrial Age",
+                "TrophyShowsTooltip:1": 1,
+                "TrophyVariant:8": "classic"
+              }
+            },
+            "TrophyName:8": "You Better Not Have This in Primitive",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 2048,
+          "Damage:2": 324,
+          "id:8": "gregtech:meta_ingot"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

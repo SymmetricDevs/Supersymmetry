@@ -15,6 +15,30 @@
     }
   },
   "questID:3": 261303499,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 240,
+            "TrophyColorGreen:3": 255,
+            "TrophyColorRed:3": 200,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 16603,
+              "id:8": "gregtech:machine"
+            },
+            "TrophyName:8": "Serving a Buffet for Industry",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {
