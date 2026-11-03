@@ -351,6 +351,8 @@ mods.gregtech.blender.removeByInput(1920, [metaitem('dustTungsten'), metaitem('d
 mods.gregtech.centrifuge.removeByInput(30, [metaitem('dustTungstenSteel') * 2], null)
 // Tempered Glass * 1
 mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:glass')], [fluid('oxygen') * 60 * 60])
+// Tempered Glass * 1
+mods.gregtech.electric_blast_furnace.removeByInput(120, [item('chisel:glass')], [fluid('oxygen') * 100])
 // Yttria Stabilized Zirconia Plate * 1
 mods.gregtech.compressor.removeByInput(2, [metaitem('dustYttriaStabilizedZirconia')], null)
 // Small Ethylene-Vinyl Acetate (EVA) Fluid Pipe * 1

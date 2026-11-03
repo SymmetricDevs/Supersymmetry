@@ -1361,23 +1361,6 @@ mods.gregtech.coke_oven.recipeBuilder()
         .duration(900)
         .buildAndRegister()
 
-// Slag glass
-ALLOY_SMELTER.recipeBuilder()
-        .inputs(item('pyrotech:slag') * 9)
-        .notConsumable(metaitem('shape.mold.block'))
-        .outputs(item('pyrotech:slag_glass'))
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister();
-
-ALLOY_SMELTER.recipeBuilder()
-        .inputs(item('pyrotech:pile_slag'))
-        .notConsumable(metaitem('shape.mold.block'))
-        .outputs(item('pyrotech:slag_glass'))
-        .duration(100)
-        .EUt(VA[LV])
-        .buildAndRegister();
-
 // Brick series for deco
 COMPRESSOR.recipeBuilder()
         .inputs(item('pyrotech:material', 16) * 4)

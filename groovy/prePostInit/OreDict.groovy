@@ -9,6 +9,12 @@ import gregtech.common.blocks.StoneVariantBlock
 
 import net.minecraftforge.oredict.OreDictionary
 
+// Glass
+ore('dustSilicaSource').add(metaitem('dustQuartzite'))
+ore('dustSilicaSource').add(metaitem('dustQuartzSand'))
+ore('dustSilicaSource').add(metaitem('dustNetherQuartz'))
+ore('dustSilicaSource').add(metaitem('dustCertusQuartz'))
+
 // Lights
 ore('gtLight').add(metaitem('incandescent_light'))
 ore('gtLight').add(metaitem('halogen_light'))

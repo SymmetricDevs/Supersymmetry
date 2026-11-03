@@ -800,13 +800,13 @@ class UnknownCompositionMaterials {
                 .color(0xc7c991)
                 .build()
 
-        CocoAmine = new Material.Builder(4155, SuSyUtility.susyId('coco_amine'))
+        Cocoamine = new Material.Builder(4155, SuSyUtility.susyId('cocoamine'))
                 .liquid(new FluidBuilder().basic())
                 .color(0xb4d487)
                 .build()
 
-        CocoAmineAcetate = new Material.Builder(4156, SuSyUtility.susyId('coco_amine_acetate'))
-                .liquid()
+        CocoamineAcetate = new Material.Builder(4156, SuSyUtility.susyId('cocoamine_acetate'))
+                .dust()
                 .color(0xada67b)
                 .build()
 
@@ -3941,6 +3941,51 @@ class UnknownCompositionMaterials {
                 .dust()
                 .iconSet(SHINY)
                 .color(0xb21383)
+                .build()
+
+        Feldspar = new Material.Builder(4825, SuSyUtility.susyId('feldspar'))
+                .dust()
+                .color(0xe3c7b5)
+                .build()
+
+        GraniteSlurry = new Material.Builder(4826, SuSyUtility.susyId('granite_slurry'))
+                .liquid()
+                .color(0xc48072)
+                .build()
+
+        GraniticQuartzFeldsparSlurry = new Material.Builder(4827, SuSyUtility.susyId('granitic_quartz_feldspar_slurry'))
+                .liquid()
+                .color(0xd8b8a8)
+                .build()
+
+        PegmatiteSlurry = new Material.Builder(4828, SuSyUtility.susyId('pegmatite_slurry'))
+                .liquid()
+                .color(0xd9cfc4)
+                .build()
+
+        PegmatiteQuartzFeldsparSlurry = new Material.Builder(4829, SuSyUtility.susyId('pegmatite_quartz_feldspar_slurry'))
+                .liquid()
+                .color(0xe3dbd2)
+                .build()
+
+        MicaSlurry = new Material.Builder(4830, SuSyUtility.susyId('mica_slurry'))
+                .liquid()
+                .color(0x9a9a80)
+                .build()
+
+        QuartzSlurry = new Material.Builder(4831, SuSyUtility.susyId('quartz_slurry'))
+                .liquid()
+                .color(0xe6e6e6)
+                .build()
+
+        FeldsparSlurry = new Material.Builder(4832, SuSyUtility.susyId('feldspar_slurry'))
+                .liquid()
+                .color(0xe8ccb8)
+                .build()
+
+        Coconitrile = new Material.Builder(4833, SuSyUtility.susyId('coconitrile'))
+                .liquid()
+                .color(0xc9c48a)
                 .build()
     }
 }

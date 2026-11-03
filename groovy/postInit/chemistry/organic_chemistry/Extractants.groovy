@@ -86,21 +86,72 @@ import static gregtech.api.GTValues.*
 
         //COCOAMINE
 
-        REACTION_FURNACE.recipeBuilder()
+        FIXED_BR.recipeBuilder()
+            .notConsumable(ore('catalystBedAmorphousSilicaAlumina'))
             .fluidInputs(fluid('coconut_acid') * 1000)
             .fluidInputs(fluid('ammonia') * 1000)
-            .fluidOutputs(fluid('coco_amine') * 1000)
+            .fluidOutputs(fluid('coconitrile') * 1000)
             .fluidOutputs(fluid('dense_steam') * 2000)
-            .EUt(VA[LV])
-            .duration(200)
+            .EUt(VA[MV])
+            .duration(10)
             .buildAndRegister()
 
-        CSTR.recipeBuilder()
-            .fluidInputs(fluid('coco_amine') * 50)
-            .fluidInputs(fluid('acetic_acid') * 50)
-            .fluidOutputs(fluid('coco_amine_acetate') * 50)
+        FIXED_BR.recipeBuilder()
+            .notConsumable(fluid('ammonia') * 1000)
+            .notConsumable(ore('catalystBedSupportedNickel'))
+            .fluidInputs(fluid('coconitrile') * 50)
+            .fluidInputs(fluid('hydrogen') * 200)
+            .fluidOutputs(fluid('cocoamine') * 50)
+            .EUt(VA[MV])
+            .duration(10)
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .fluidInputs(fluid('cocoamine') * 1000)
+            .fluidInputs(fluid('acetic_acid') * 1000)
+            .outputs(metaitem('dustCocoamineAcetate'))
             .EUt(VA[LV])
             .duration(10)
+            .buildAndRegister()
+
+        //DODECYLAMINE
+
+        FIXED_BR.recipeBuilder()
+            .notConsumable(ore('catalystBedAmorphousSilicaAlumina'))
+            .fluidInputs(fluid('lauric_acid') * 1000)
+            .fluidInputs(fluid('ammonia') * 1000)
+            .fluidOutputs(fluid('lauronitrile') * 1000)
+            .fluidOutputs(fluid('dense_steam') * 2000)
+            .EUt(VA[MV])
+            .duration(10)
+            .buildAndRegister()
+
+        FIXED_BR.recipeBuilder()
+            .notConsumable(fluid('ammonia') * 1000)
+            .notConsumable(ore('catalystBedSupportedNickel'))
+            .fluidInputs(fluid('lauronitrile') * 50)
+            .fluidInputs(fluid('hydrogen') * 200)
+            .fluidOutputs(fluid('dodecylamine') * 50)
+            .EUt(VA[MV])
+            .duration(10)
+            .buildAndRegister()
+
+        BR.recipeBuilder()
+            .fluidInputs(fluid('dodecylamine') * 1000)
+            .fluidInputs(fluid('acetic_acid') * 1000)
+            .outputs(metaitem('dustDodecylamineAcetate'))
+            .EUt(VA[LV])
+            .duration(10)
+            .buildAndRegister()
+
+        FIXED_BR.recipeBuilder()
+            .notConsumable(ore('catalystBedSupportedNickel'))
+            .fluidInputs(fluid('n_dodecanol') * 50)
+            .fluidInputs(fluid('ammonia') * 50)
+            .fluidOutputs(fluid('dodecylamine') * 50)
+            .fluidOutputs(fluid('water') * 50)
+            .duration(3)
+            .EUt(VA[LV])
             .buildAndRegister()
 
     //XANTHATES
@@ -449,9 +500,9 @@ import static gregtech.api.GTValues.*
 
     //TRIOCTYLAMINE
 
-    TBR.recipeBuilder()
+    FIXED_BR.recipeBuilder()
         .circuitMeta(1)
-        .notConsumable(ore('dustNickel'))
+        .notConsumable(ore('catalystBedSupportedNickel'))
         .fluidInputs(fluid('n_octanol') * 150)
         .fluidInputs(fluid('ammonia') * 50)
         .fluidOutputs(fluid('trioctylamine') * 50)

@@ -4643,6 +4643,28 @@ class OrganicChemistryMaterials {
 
         AbieticAcidEmulsifier.setFormula('(C20H29O2Na)(H2O)', true)
 
+        DodecylamineAcetate = new Material.Builder(15770, SuSyUtility.susyId('dodecylamine_acetate'))
+            .dust()
+            .components(Carbon * 14, Hydrogen * 31, Nitrogen * 1, Oxygen * 2)
+            .color(0xf0ecd8)
+            .build()
 
+        DodecylamineAcetate.setFormula('(C12H25NH3)(CH3COO)', true)
+
+        Lauronitrile = new Material.Builder(15771, SuSyUtility.susyId('lauronitrile'))
+            .liquid()
+            .components(Carbon * 12, Hydrogen * 23, Nitrogen * 1)
+            .color(0xd8d4a0)
+            .build()
+
+        Lauronitrile.setFormula('CH3(CH2)10CN', true)
+
+        Dodecylamine = new Material.Builder(15772, SuSyUtility.susyId('dodecylamine'))
+            .liquid(new FluidBuilder().basic())
+            .components(Carbon * 12, Hydrogen * 27, Nitrogen * 1)
+            .color(0xe6e2c8)
+            .build()
+
+        Dodecylamine.setFormula('CH3(CH2)11NH2', true)
     }
 }

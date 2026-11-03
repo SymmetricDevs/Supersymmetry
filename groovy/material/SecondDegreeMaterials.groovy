@@ -555,7 +555,7 @@ class SecondDegreeMaterials {
                 .build()
 
         EGlass = new Material.Builder(13088, SuSyUtility.susyId('e_glass'))
-                .dust().liquid(new FluidBuilder().temperature(2300))
+                .liquid(new FluidBuilder().temperature(2300))
                 .components(SiliconDioxide * 6, Alumina, BoronTrioxide, Quicklime * 2)
                 .color(0x778f8b)
                 .build()
@@ -1245,7 +1245,7 @@ class SecondDegreeMaterials {
                 .build();
 
         SGlass = new Material.Builder(13194, SuSyUtility.susyId('s_glass'))
-                .dust().liquid(new FluidBuilder().temperature(1800))
+                .liquid(new FluidBuilder().temperature(1800))
                 .color(0xC49FAD)
                 .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
                 .iconSet(BRIGHT)
@@ -1446,5 +1446,45 @@ class SecondDegreeMaterials {
                 .iconSet(DULL)
                 .build()
 
+        SodaLimeGlass = new Material.Builder(13222, SuSyUtility.susyId('soda_lime_glass'))
+                .liquid(new FluidBuilder().temperature(1800))
+                .components(SiliconDioxide * 75, SodiumOxide * 8, Quicklime * 11, Magnesia * 5, Alumina)
+                .color(0xc8dcd8)
+                .build()
+
+        TelluriteGlass = new Material.Builder(13223, SuSyUtility.susyId('tellurite_glass'))
+                .dust().liquid(new FluidBuilder().temperature(1000))
+                .components(TelluriumDioxide * 50, LeadIIOxide * 45, BismuthIIIOxide * 2, BoronTrioxide * 3)
+                .color(0xb8a878)
+                .iconSet(SHINY)
+                .build()
+
+        PotashLimeGlassBlend = new Material.Builder(13224, SuSyUtility.susyId('potash_lime_glass_blend'))
+                .dust()
+                .components(SiliconDioxide * 79, Potash * 10, Quicklime * 11)
+                .color(0xd6d0c4)
+                .iconSet(SHINY)
+                .build()
+
+        SodaLimeGlassBlend = new Material.Builder(13225, SuSyUtility.susyId('soda_lime_glass_blend'))
+                .dust()
+                .components(SiliconDioxide * 75, SodiumOxide * 8, Quicklime * 11, Magnesia * 5, Alumina)
+                .color(0xe0ddd2)
+                .iconSet(SHINY)
+                .build()
+
+        EGlassBlend = new Material.Builder(13226, SuSyUtility.susyId('e_glass_blend'))
+                .dust()
+                .components(SiliconDioxide * 6, Alumina, BoronTrioxide, Quicklime * 2)
+                .color(0x9fb0ac)
+                .iconSet(SHINY)
+                .build()
+
+        SGlassBlend = new Material.Builder(13227, SuSyUtility.susyId('s_glass_blend'))
+                .dust()
+                .components(SiliconDioxide * 3, Alumina * 1, Magnesia * 1)
+                .color(0xd4b8c2)
+                .iconSet(SHINY)
+                .build()
     }
 }

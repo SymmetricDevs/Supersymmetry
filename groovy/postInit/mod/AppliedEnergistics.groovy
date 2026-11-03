@@ -302,40 +302,6 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[EV])
     .buildAndRegister()
 
-
-// Quartz glass: flame hydrolysis of SiCl4 followed by consolidation in a block mold
-REACTION_FURNACE.recipeBuilder()
-        .notConsumable(metaitem('shape.mold.block'))
-        .fluidInputs(fluid('purified_silicon_tetrachloride') * 2000)
-        .fluidInputs(fluid('hydrogen') * 8000)
-        .fluidInputs(fluid('oxygen') * 4000)
-        .outputs(item('appliedenergistics2:quartz_glass'))
-        .fluidOutputs(fluid('hydrogen_chloride') * 8000)
-        .duration(35)
-        .EUt(VA[MV])
-        .buildAndRegister()
-
-['dustCertusQuartz', 'dustNetherQuartz', 'dustQuartzite'].each { quartz ->
-    mods.gregtech.electric_blast_furnace.recipeBuilder()
-            .inputs(ore(quartz) * 15)
-            .inputs(metaitem('dustZincSulfide') * 2)
-            .inputs(metaitem('dustTinyCopper') * 1)
-            .outputs(item('appliedenergistics2:quartz_vibrant_glass') * 15)
-            .blastFurnaceTemp(1400)
-            .duration(1200)
-            .EUt(60)
-            .buildAndRegister()
-
-    mods.gregtech.electric_blast_furnace.recipeBuilder()
-        .inputs(ore(quartz) * 64)
-        .inputs(metaitem('dustStrontiumOxide') * 2) // strontium aluminate, should be doped with Eu but that would be way too expensive (and doesn't fit)
-        .inputs(metaitem('dustAlumina') * 5)
-        .outputs(item('appliedenergistics2:quartz_vibrant_glass') * 64)
-        .blastFurnaceTemp(1400)
-        .duration(1200)
-        .EUt(60)
-        .buildAndRegister()
-}
 // Illuminated Panel
 ASSEMBLER.recipeBuilder()
         .inputs(metaitem('plateTitanium') * 4)

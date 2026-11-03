@@ -63,12 +63,20 @@ QUARRY.recipeBuilder()
     .buildAndRegister();
 
 QUARRY.recipeBuilder()
-        .notConsumable(ore('dustKyanite'))
-        .outputs(metaitem('dustKyanite'))
-        .dimension(Globals.dimensions["Beneath"])
-        .duration(60)
-        .EUt(VA[MV])
-        .buildAndRegister();
+    .notConsumable(ore('dustKyanite'))
+    .outputs(metaitem('dustKyanite'))
+    .dimension(Globals.dimensions["Beneath"])
+    .duration(60)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+QUARRY.recipeBuilder()
+    .notConsumable(ore('dustDolomite'))
+    .outputs(metaitem('dustDolomite'))
+    .dimension(Globals.dimensions["Beneath"])
+    .duration(60)
+    .EUt(VA[MV])
+    .buildAndRegister();
 
 QUARRY.recipeBuilder()
     .circuitMeta(1)

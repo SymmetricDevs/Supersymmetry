@@ -19,7 +19,7 @@ ROASTER.recipeBuilder()
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
-        .inputs(ore('dustDolomite') * 10)
+        .inputs(ore('dustDolomite'))
         .outputs(metaitem('dustDolime') * 4)
         .fluidOutputs(fluid('carbon_dioxide') * 2000)
         .EUt(VA[LV])

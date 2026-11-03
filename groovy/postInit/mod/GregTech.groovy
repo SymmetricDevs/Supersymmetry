@@ -745,72 +745,6 @@ mods.chisel.carving.addVariation("home_blocks", item('susy:home_block', 12))
 // Acetone * 200
 mods.gregtech.fluid_heater.removeByInput(30, [metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('dissolved_calcium_acetate') * 200])
 
-SIFTER.recipeBuilder()
-    .inputs(ore('dustPegmatiteTailings') * 3)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustMica'), 5000, 500)
-    .chancedOutput(metaitem('dustKyanite'), 1000, 500)
-    .chancedOutput(item('minecraft:emerald'), 1000, 250)
-    .chancedOutput(metaitem('gemTourmaline'), 1000, 250)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustGraniteTailings') * 2)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustMica'), 5000, 500)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustLimestoneTailings') * 3)
-    .chancedOutput(metaitem('dustLimestone'), 5000, 500)
-    .chancedOutput(metaitem('dustLimestone'), 5000, 500)
-    .chancedOutput(metaitem('dustLimestone'), 5000, 500)
-    .chancedOutput(metaitem('dustDolomite'), 5000, 500)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustUltramaficTailings') * 3)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustQuartzite'), 5000, 500)
-    .chancedOutput(metaitem('dustMagnesia'), 2000, 500)
-    .chancedOutput(metaitem('dustMagnetite'), 1000, 500)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustKimberlite'))
-    .chancedOutput(metaitem('dustUltramaficTailings'), 7500, 500)
-    .chancedOutput(item('minecraft:diamond'), 1000, 500)
-    .chancedOutput(metaitem('gemPyrope'), 500, 250)
-    .chancedOutput(metaitem('gemAlmandine'), 500, 250)
-    .chancedOutput(item('minecraft:dye', 4), 500, 250)
-    .chancedOutput(metaitem('dustChromite'), 500, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
-SIFTER.recipeBuilder()
-    .inputs(ore('dustCorundum'))
-    .chancedOutput(metaitem('dustUltramaficTailings'), 7500, 500)
-    .chancedOutput(metaitem('gemRuby'), 1000, 250)
-    .chancedOutput(metaitem('gemSapphire'), 1000, 250)
-    .duration(60)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 MACERATOR.recipeBuilder()
     .inputs(item('susy:resource_block', 2))
     .outputs(metaitem('dustNonMarineEvaporite') * 4)
@@ -1392,15 +1326,6 @@ GAS_COLLECTOR.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister();
 
-FORMING_PRESS.recipeBuilder()
-    .inputs(item('gregtech:transparent_casing') * 2)
-    .inputs(ore('platePolyvinylButyral') * 2)
-    .inputs(ore('platePolycarbonate') * 2)
-    .outputs(item('gregtech:transparent_casing', 2))
-    .duration(200)
-    .EUt(VA[HV])
-    .buildAndRegister();
-
 // Cobblestone * 1
 mods.gregtech.forge_hammer.removeByInput(16, [item('minecraft:stone')], null)
 
@@ -1964,27 +1889,6 @@ ALLOY_SMELTER.recipeBuilder()
     .duration(40)
     .EUt(VA[LV])
     .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .inputs(metaitem('dustFlint'))
-    .inputs(metaitem('dustQuartzite') * 16)
-    .outputs(metaitem('dustGlass') * 20)
-    .duration(160)
-    .EUt(VA[ULV])
-    .buildAndRegister()
-
-MIXER.recipeBuilder()
-    .inputs(metaitem('dustFlint'))
-    .inputs(metaitem('dustQuartzSand') * 16)
-    .outputs(metaitem('dustGlass') * 16)
-    .duration(200)
-    .EUt(VA[ULV])
-    .buildAndRegister()
-    
-crafting.addShapeless('gregtech:glass_flint_dust_full', metaitem('dustGlass') * 8, [
-        metaitem('dustFlint'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
-        metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand'),
-        metaitem('dustQuartzSand'), metaitem('dustQuartzSand'), metaitem('dustQuartzSand')])
 
 LATHE.recipeBuilder()
     .inputs(ore('stone'))

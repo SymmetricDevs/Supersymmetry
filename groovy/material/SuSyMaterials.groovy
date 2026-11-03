@@ -533,8 +533,8 @@ class SuSyMaterials {
     public static Material TelluriumSlag
     public static Material CoconutOil
     public static Material CoconutAcid
-    public static Material CocoAmine
-    public static Material CocoAmineAcetate
+    public static Material Cocoamine
+    public static Material CocoamineAcetate
     public static Material PolluciteLeach
     public static Material CaesiumRubidiumAlumMixture
     public static Material HydratedTriethyleneGlycol
@@ -876,6 +876,15 @@ class SuSyMaterials {
     public static Material WeaklyMagneticHeavyMineralTailing
     public static Material NonMagneticHeavyMineralTailing
     public static Material ZirconMonaziteConcentrate
+    public static Material Feldspar
+    public static Material GraniteSlurry
+    public static Material GraniticQuartzFeldsparSlurry
+    public static Material PegmatiteSlurry
+    public static Material PegmatiteQuartzFeldsparSlurry
+    public static Material MicaSlurry
+    public static Material QuartzSlurry
+    public static Material FeldsparSlurry
+    public static Material Coconitrile
     public static Material CalciumAluminateConcrete
     public static Material AnorthositicRegolith
     public static Material BasalticRegolith
@@ -2128,6 +2137,12 @@ class SuSyMaterials {
     public static Material AluminiumChlorideHexahydrate
     public static Material LunarRGlass
     public static Material SGlass
+    public static Material SGlassBlend
+    public static Material EGlassBlend
+    public static Material SodaLimeGlass
+    public static Material SodaLimeGlassBlend
+    public static Material PotashLimeGlassBlend
+    public static Material TelluriteGlass
     public static Material ALICE
     public static Material SilicaSulfurMix
     public static Material LunarConcrete
@@ -2831,6 +2846,9 @@ class SuSyMaterials {
     public static Material AbieticAcid
     public static Material DisproportionatedAbieticAcid
     public static Material AbieticAcidEmulsifier
+    public static Material DodecylamineAcetate
+    public static Material Lauronitrile
+    public static Material Dodecylamine
 
     // Third Degree Materials
 
