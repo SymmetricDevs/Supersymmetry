@@ -12,12 +12,6 @@ crafting.replaceShaped('littletiles:saw', item('littletiles:saw'), [
     [ore('dyeBlue'), ore('stickIron'), ore('craftingToolFile')]
 ])
 
-crafting.replaceShaped('littletiles:bag', item('littletiles:container'), [
-    [null, ore('string'), null],
-    [ore('leather'), ore('dyeBlue'), ore('leather')],
-    [null, ore('leather'), null]
-])
-
 crafting.replaceShaped('littletiles:wrench', item('littletiles:wrench'), [
     [ore('plateIron'), null, ore('plateIron')],
     [ore('plateIron'), ore('stickIron'), ore('plateIron')],
