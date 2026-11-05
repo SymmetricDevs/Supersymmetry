@@ -59,7 +59,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glue') * 50)
     .fluidInputs(fluid('high_temperature_solder') * 18)
     .outputs(metaitem('component.resistor.carbon_composite'))
-    .duration(240)
+    .duration(60)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -69,7 +69,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glue') * 50)
     .fluidInputs(fluid('high_temperature_solder') * 18)
     .outputs(metaitem('component.resistor.carbon_composite'))
-    .duration(80)
+    .duration(20)
     .EUt(VA[LV])
     .buildAndRegister();
 
