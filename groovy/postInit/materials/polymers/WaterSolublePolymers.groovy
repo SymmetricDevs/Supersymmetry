@@ -22,9 +22,22 @@ BR.recipeBuilder()
 
 DT.recipeBuilder()
     .fluidInputs(fluid('neutralized_polyethylene_glycol_solution') * 3000)
-    .outputs(metaitem('dustDisodiumPhosphate') * 8)
+    .outputs(metaitem('dustDisodiumPhosphate') * 4)
     .fluidOutputs(fluid('polyethylene_glycol') * 1000)
     .fluidOutputs(fluid('water') * 2000)
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+// Disodium Phosphate Recycling
+
+ELECTROLYTIC_CELL.recipeBuilder()
+    .notConsumable('membrane.cation_exchange')
+    .notConsumable('membrane.anion_exchange')
+    .inputs(metaitem('dustDisodiumPhosphate') * 8)
+    .fluidInputs(fluid('water') * 4000)
+    .fluidOutputs(fluid('phosphoric_acid') * 1000)
+    .fluidOutputs(fluid('sodium_hydroxide_solution') * 2000)
     .duration(200)
     .EUt(VA[MV])
     .buildAndRegister()
