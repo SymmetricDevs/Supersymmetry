@@ -611,7 +611,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.ultra_low_power_integrated_circuit'))
+		.inputs(metaitem('circuit.power.mv'))
 		.inputs(metaitem('circuit_board.good'))
 		.fluidInputs(solder)
 		.circuitMeta([1])
@@ -621,7 +621,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.ultra_low_power_integrated_circuit') * 2)
+		.inputs(metaitem('circuit.power.mv') * 2)
 		.inputs(metaitem('circuit_board.g10'))
 		.fluidInputs(solder)
 		.circuitMeta([2])
@@ -631,7 +631,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 		.buildAndRegister();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-		.inputs(metaitem('plate.ultra_low_power_integrated_circuit') * 4)
+		.inputs(metaitem('circuit.power.mv') * 4)
 		.inputs(metaitem('circuit_board.g10'))
 		.fluidInputs(solder)
 		.circuitMeta([3])

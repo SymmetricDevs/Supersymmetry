@@ -679,7 +679,7 @@ crafting.addShaped('susy:lv_energy_hatch_moon', metaitem('energy_hatch.input.lv'
 crafting.addShaped('susy:mv_energy_hatch_moon', metaitem('energy_hatch.input.mv'), [
     [null, metaitem('voltage_coil.mv'), null],
     [metaitem('cableGtSingleAluminium'), metaitem('hull.ev'), metaitem('cableGtSingleAluminium')],
-    [null, metaitem('plate.ultra_low_power_integrated_circuit'), null]])
+    [null, metaitem('circuit.power.mv'), null]])
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('hull.ev'))
