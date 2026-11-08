@@ -5,7 +5,7 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.87.desc",
-      "frame:8": "GATE",
+      "frame:8": "JAGGED",
       "icon:10": {
         "id:8": "minecraft:crafting_table"
       },
@@ -29,7 +29,7 @@
               "Count:3": 1,
               "id:8": "minecraft:crafting_table"
             },
-            "TrophyName:8": "Things Lurk in the Shadows",
+            "TrophyName:8": "Upon This Rock...",
             "TrophyShowsTooltip:1": 1,
             "TrophyVariant:8": "neon"
           }

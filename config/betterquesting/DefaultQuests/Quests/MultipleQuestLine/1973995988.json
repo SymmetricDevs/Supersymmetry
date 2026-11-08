@@ -19,7 +19,6 @@
               "TrophyColorBlue:3": 153,
               "TrophyColorGreen:3": 0,
               "TrophyColorRed:3": 76,
-              "TrophyEarnedAt:4": 1736716926,
               "TrophyItem:10": {
                 "Count:3": 1,
                 "Damage:2": 48,
@@ -30,7 +29,7 @@
               "TrophyVariant:8": "classic"
             }
           },
-          "TrophyName:8": "Electrical Enginner Beginnings",
+          "TrophyName:8": "Deep Indium (In) the Chain",
           "TrophyShowsTooltip:1": 1,
           "TrophyVariant:8": "classic"
         }
@@ -58,7 +57,6 @@
                 "TrophyColorBlue:3": 153,
                 "TrophyColorGreen:3": 0,
                 "TrophyColorRed:3": 76,
-                "TrophyEarnedAt:4": 1736716926,
                 "TrophyItem:10": {
                   "Count:3": 1,
                   "Damage:2": 48,
@@ -69,7 +67,7 @@
                 "TrophyVariant:8": "classic"
               }
             },
-            "TrophyName:8": "Electrical Enginner Beginnings",
+            "TrophyName:8": "Deep Indium (In) the Chain",
             "TrophyShowsTooltip:1": 1,
             "TrophyVariant:8": "classic"
           }
