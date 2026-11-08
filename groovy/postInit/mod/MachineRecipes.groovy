@@ -2326,7 +2326,7 @@ for (i = 1; i <= 8; i++) {
     ])
 }
 
-// solar panels
+// Solar Panels
 
 ASSEMBLER.recipeBuilder()
     .inputs(metaitem('cell.monosilicon_photovoltaic') * 8)
@@ -2366,3 +2366,41 @@ ASSEMBLER.recipeBuilder()
 crafting.removeByOutput(metaitem('cover.solar.panel'))
 crafting.removeByOutput(metaitem('cover.solar.panel.ulv'))
 crafting.removeByOutput(metaitem('cover.solar.panel.lv'))
+
+// EBCHM
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('frameStainlessSteel'))
+    .inputs(metaitem('plateStainlessSteel') * 6)
+    .inputs(metaitem('electric.motor.hv'))
+    .inputs(metaitem('ringViton') * 4)
+    .outputs(item('susy:sealed_door'))
+    .circuitMeta(14)
+    .duration(140)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('frameStainlessSteel'))
+    .inputs(metaitem('plateStainlessSteel') * 6)
+    .inputs(metaitem('electron_gun'))
+    .inputs(metaitem('cableGtSingleTungsten') * 2)
+    .outputs(item('susy:susy_multiblock_casing2', 3))
+    .circuitMeta(14)
+    .duration(200)
+    .EUt(VA[EV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.iv'))
+    .inputs(ore('circuitIv') * 6)
+    .inputs(metaitem('sensor.iv') * 2)
+    .inputs(ore('wireGtQuadrupleTungsten') * 16)
+    .inputs(metaitem('electric.motor.iv') * 8)
+    .inputs(metaitem('electric.pump.iv') * 8)
+    .outputs(metaitem('susy:electron_beam_cold_hearth_melter'))
+    .circuitMeta(14)
+    .duration(400)
+    .EUt(VA[IV])
+    .buildAndRegister()
+
