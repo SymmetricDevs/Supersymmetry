@@ -13,7 +13,7 @@ import net.minecraftforge.oredict.OreDictionary
 ore('gtLight').add(metaitem('incandescent_light'))
 ore('gtLight').add(metaitem('halogen_light'))
 ore('gtLight').add(metaitem('fluorescent_light'))
-ore('gtLight').add(metaitem('led_light'))
+//ore('gtLight').add(metaitem('led_light'))
 ore('gtLight').add(metaitem('lamp.mercury.hp'))
 
 // Circuit components
