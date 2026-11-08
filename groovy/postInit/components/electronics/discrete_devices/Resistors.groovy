@@ -7,14 +7,12 @@ import globals.semiconductors.Packaging
 import globals.semiconductors.Etching
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-mods.jei.ingredient.yeet(metaitem('component.resistor'))
-mods.jei.ingredient.yeet(metaitem('component.smd.resistor'))
-mods.jei.ingredient.yeet(metaitem('component.advanced_smd.resistor'))
+mods.jei.ingredient.yeet(
+    metaitem('component.resistor'),
+    metaitem('component.smd.resistor'),
+    metaitem('component.advanced_smd.resistor')
+)
 
-// SMD Resistor * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
-// SMD Resistor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineElectrum') * 4], [fluid('plastic') * 288])
 // Resistor * 2
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100])
 // Resistor * 2
@@ -27,7 +25,10 @@ mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFi
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
 // Resistor * 4
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
-
+// SMD Resistor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
+// SMD Resistor * 16
+mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineElectrum') * 4], [fluid('plastic') * 288])
 
 MIXER.recipeBuilder()
     .inputs(ore('resistorCarbon'))

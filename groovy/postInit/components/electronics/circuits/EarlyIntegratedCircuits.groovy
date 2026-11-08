@@ -10,70 +10,37 @@ import globals.semiconductors.Deposition
 import globals.semiconductors.Packaging
 import globals.semiconductors.Doping
 
-mods.jei.ingredient.yeet(
-    item('gregtech:meta_item_2', 2759),
-    item('gregtech:meta_item_2', 2760),
-    item('gregtech:meta_item_2', 2761),
-    item('gregtech:meta_item_2', 2762),
-    item('gregtech:meta_item_1', 577),
-    item('gregtech:meta_item_1', 578),
-    item('gregtech:meta_item_1', 579),
-    item('gregtech:meta_item_1', 580)
-)
-mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('plate.integrated_logic_circuit'), metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
-
-// NAND Chip * 8
-mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
 // NAND Chip * 8
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('tin') * 144])
-// NAND Chip * 12
-mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.good'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
+
 // NAND Chip * 12
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('tin') * 144])
-// Microprocessor * 6
-mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
-// Microprocessor * 6
-mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
-
-// Good Electronic Circuit * 1
-mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.good'), metaitem('circuit.electronic') * 2, metaitem('component.diode') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('tin') * 144])
-// Good Electronic Circuit * 1
-mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.good'), metaitem('circuit.electronic') * 2, metaitem('component.diode') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('soldering_alloy') * 72])
+mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('plate.simple_system_on_chip'), metaitem('boltRedAlloy') * 2, metaitem('wireFineTin') * 2], [fluid('soldering_alloy') * 72])
 
 // Microprocessor * 5
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('tin') * 144])
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 2, metaitem('component.capacitor') * 2, metaitem('component.transistor') * 2, metaitem('wireFineCopper') * 2], [fluid('soldering_alloy') * 72])
 
+// Microprocessor * 6
+mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
+mods.gregtech.circuit_assembler.removeByInput(600, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
+
 // Integrated Processor * 2
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 4, metaitem('component.capacitor') * 4, metaitem('component.transistor') * 4, metaitem('wireFineRedAlloy') * 4], [fluid('tin') * 144])
 mods.gregtech.circuit_assembler.removeByInput(60, [metaitem('circuit_board.plastic'), metaitem('plate.central_processing_unit'), metaitem('component.resistor') * 4, metaitem('component.capacitor') * 4, metaitem('component.transistor') * 4, metaitem('wireFineRedAlloy') * 4], [fluid('soldering_alloy') * 72])
+
 // Integrated Processor * 4
+mods.gregtech.circuit_assembler.removeByInput(2400, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineRedAlloy') * 4, metaitem('boltAnnealedCopper') * 4], [fluid('tin') * 144])
 mods.gregtech.circuit_assembler.removeByInput(2400, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineRedAlloy') * 4, metaitem('boltAnnealedCopper') * 4], [fluid('soldering_alloy') * 72])
 
 // Processor Assembly * 1
 mods.gregtech.circuit_assembler.removeByInput(90, [metaitem('circuit_board.plastic'), metaitem('circuit.processor') * 2, metaitem('component.inductor') * 4, metaitem('component.capacitor') * 8, metaitem('plate.random_access_memory') * 4, metaitem('wireFineRedAlloy') * 8], [fluid('soldering_alloy') * 144])
 mods.gregtech.circuit_assembler.removeByInput(90, [metaitem('circuit_board.plastic'), metaitem('circuit.processor') * 2, metaitem('component.inductor') * 4, metaitem('component.capacitor') * 8, metaitem('plate.random_access_memory') * 4, metaitem('wireFineRedAlloy') * 8], [fluid('tin') * 288])
 
-// Mainframe * 1
-mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.inductor') * 8, metaitem('component.capacitor') * 16, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('soldering_alloy') * 288])
-mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.inductor') * 8, metaitem('component.capacitor') * 16, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('tin') * 576])
-mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.advanced_smd.inductor') * 2, metaitem('component.advanced_smd.capacitor') * 4, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('soldering_alloy') * 288])
-mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.advanced_smd.inductor') * 2, metaitem('component.advanced_smd.capacitor') * 4, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('tin') * 576])
-
 // Workstation * 1
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('circuit.assembly') * 2, metaitem('component.diode') * 4, metaitem('plate.random_access_memory') * 4, metaitem('wireFineElectrum') * 16, metaitem('boltBlueAlloy') * 16], [fluid('soldering_alloy') * 144])
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('circuit.assembly') * 2, metaitem('component.diode') * 4, metaitem('plate.random_access_memory') * 4, metaitem('wireFineElectrum') * 16, metaitem('boltBlueAlloy') * 16], [fluid('tin') * 288])
-mods.jei.ingredient.yeet(metaitem('circuit.basic_integrated'))
-mods.jei.ingredient.yeet(metaitem('circuit.good_integrated'))
-mods.jei.ingredient.yeet(metaitem('circuit.advanced_integrated'))
-// Miniaturized Electronic Circuit * 2
-mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('plate.integrated_logic_circuit'), metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
-// Advanced Electronic Circuit * 2
-mods.gregtech.circuit_assembler.removeByInput(24, [metaitem('circuit_board.good'), metaitem('circuit.basic_integrated') * 2, metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineGold') * 4, metaitem('boltSilver') * 4], [fluid('soldering_alloy') * 72])
-mods.gregtech.circuit_assembler.removeByInput(24, [metaitem('circuit_board.good'), metaitem('circuit.basic_integrated') * 2, metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineGold') * 4, metaitem('boltSilver') * 4], [fluid('tin') * 144])
-// High-Voltage Electronic Circuit * 1
-mods.gregtech.circuit_assembler.removeByInput(30, [metaitem('circuit.good_integrated') * 2, metaitem('plate.integrated_logic_circuit') * 2, metaitem('plate.random_access_memory') * 2, metaitem('component.transistor') * 4, metaitem('wireFineElectrum') * 8, metaitem('boltAnnealedCopper') * 8], [fluid('soldering_alloy') * 72])
-mods.gregtech.circuit_assembler.removeByInput(30, [metaitem('circuit.good_integrated') * 2, metaitem('plate.integrated_logic_circuit') * 2, metaitem('plate.random_access_memory') * 2, metaitem('component.transistor') * 4, metaitem('wireFineElectrum') * 8, metaitem('boltAnnealedCopper') * 8], [fluid('tin') * 144])
 
 // Leadframes
 
@@ -376,24 +343,6 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .outputs(metaitem('circuit.workstation'))
     .duration(200)
     .EUt(VA[MV])
-    .cleanroom(CleanroomType.CLEANROOM)
-    .buildAndRegister();
-
-CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('circuit.workstation') * 4)
-    .inputs(metaitem('component.nmos_expansion_bus') * 3)
-    .inputs(metaitem('component.floppy_drive'))
-    .inputs(metaitem('circuit.power.ev'))
-    .inputs(ore('frameGtAluminium') * 2)
-    .inputs(ore('plateAluminium') * 12)
-    .inputs(metaitem('component.heat_sink') * 4)
-    .inputs(metaitem('electric.motor.hv') * 2)
-    .inputs(ore('rotorAluminium') * 2)
-    .inputs(ore('wireFineEnameledCopper') * 64)
-    .fluidInputs(fluid('lead_free_solder_paste') * 1152)
-    .outputs(metaitem('circuit.mainframe'))
-    .duration(200)
-    .EUt(VA[HV])
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister();
 
