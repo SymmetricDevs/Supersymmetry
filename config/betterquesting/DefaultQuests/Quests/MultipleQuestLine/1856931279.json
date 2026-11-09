@@ -1,6 +1,7 @@
 {
   "preRequisites:11": [
-    550
+    550,
+    1399178319
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -17,7 +18,7 @@
     "0:10": {
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 16,
+          "Count:3": 1,
           "Damage:2": 5811,
           "id:8": "gregtech:meta_item_2"
         }

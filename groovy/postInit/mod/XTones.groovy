@@ -37,6 +37,11 @@ crafting.replaceShaped('xtones:base', item('xtones:base') * 32, [
         [null, ore('slabStone'), ore('slabStone')]
 ])
 
+crafting.replaceShaped('xtones:lamp_flat', item('xtones:lamp_flat') * 32, [
+    [ore('plateIron'), ore('gtLight'), ore('plateIron')],
+    [item('minecraft:stone_slab'), item('minecraft:stone_slab'), item('minecraft:stone_slab')]
+])
+
 ASSEMBLER.recipeBuilder()
         .inputs(ore('stone'))
         .inputs(item('minecraft:stone_slab') * 6)

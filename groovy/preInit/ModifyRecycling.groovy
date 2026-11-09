@@ -83,4 +83,9 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
         ore('stickLongSteel') * 2,
         ore('ringSteel') * 2
     ])
+
+    RecyclingManager.addRecyclingGroovy(item('gregtech:wire_coil'), [
+        metaitem('wireGtDoubleCupronickel') * 8,
+        metaitem('foilBronze') * 8
+    ])
 }

@@ -546,6 +546,7 @@ metaitem.lunar_module_engine.name=Lunar Module Engine
 tile.deposit_block.lunar_crater.name=Lunar Crater Deposit
 
 tile.engineersdecor.sign_caution.name=§6Sign "Caution"§r
+item.industrialrenewal.cart_linkable.name=Cart Linker
 
 # Fluids
 
@@ -663,7 +664,6 @@ susy.material.deionized_sea_water=Deionized Sea Water
 susy.material.depleted_hydrogen_sulfide=Depleted Hydrogen Sulfide
 
 susy.material.silicon_tetrachloride=Silicon Tetrachloride
-susy.material.purified_silicon_tetrachloride=Purified Silicon Tetrachloride
 
 susy.material.high_purity_hydrogen=High Purity Hydrogen
 susy.material.high_purity_helium=High Purity Helium
@@ -2420,7 +2420,7 @@ susy.material.incoloy_20=Incoloy 20
 susy.material.incoloy_825=Incoloy 825
 susy.material.incoloy_908=Incoloy 908
 susy.material.rene_n_5=Rene N5
-susy.material.monel_500=Monel 500
+susy.material.monel_500=Monel K-500
 susy.material.monel_400=Monel 400
 susy.material.stellite_j=Stellite J
 susy.material.stellite_6=Stellite 6
@@ -3423,6 +3423,8 @@ susy.material.electrolytic_capacitor_electrolyte=Electrolytic Capacitor Electrol
 susy.material.abietic_acid=Abietic Acid
 susy.material.disproportionated_abietic_acid=Disproportionated Abietic Acid
 susy.material.abietic_acid_emulsifier=Abietic Acid Emulsifier
+susy.material.dihydrooxaphosphaphenanthreneoxide=9,10-Dihydro-9-oxa-10-phosphaphenanthrene-10-oxide (DOPO)
+susy.material.two_phenylphenol=2-Phenylphenol
 
 # Isotopes
 
@@ -3491,6 +3493,8 @@ gas.gaspunk.carbon_monoxide=Carbon Monoxide
 gas.gaspunk.hydrochloric_acid=Hydrochloric Acid
 gas.gaspunk.hydrofluoric_acid=Hydrofluoric Acid
 gas.gaspunk.novichok=Novichok A-230 Nerve Agent
+gas.gaspunk.copium=Copium
+agent.gaspunk.lung_odored=Respiratory Disruption Agent
 
 # Metaitems
 
@@ -3710,12 +3714,6 @@ metaitem.patterned.tungsten.name=Patterned Tungsten-Coated Wafer
 # metaitem.patterned.nand.name=Nickel-Coated Wafer (NAND Pattern)
 # metaitem.patterned.nor.name=Nickel-Coated Wafer (NOR Pattern)
 
-metaitem.patterned.board.coated.name=Patterned Coated Circuit Board
-metaitem.patterned.board.phenolic.name=Drilled Phenolic Circuit Board
-# metaitem.patterned.board.plastic.name=Patterned Plastic Circuit Board
-
-metaitem.laminated.board.phenolic.name=Copper-Clad Phenolic Circuit Board
-
 # metaitem.etched.ic.name=Etched Integrated Logic Circuit Wafer
 # metaitem.etched.cpu.name=Etched CPU Wafer
 # metaitem.etched.ram.name=Etched RAM Wafer
@@ -3932,11 +3930,18 @@ metaitem.brush.unfired.name=Unfired Brush
 metaitem.work_roll.unfinished.name=Unfinished Work Roll
 metaitem.nozzle.boron_nitride.name=Boron Nitride Nozzle
 
+metaitem.circuit_board.basic.name=Treated Wood Circuit Board
+
+metaitem.board.phenolic.name=Phenolic Paper Prepreg
+metaitem.laminated.board.phenolic.name=Phenolic Copper Clad Laminate
+metaitem.patterned.board.phenolic.name=Drilled Phenolic Copper Clad Laminate
+metaitem.circuit_board.good.name=Phenolic Circuit Board
+
 metaitem.board.fr4.prepreg.name=FR-4 Epoxy Prepreg
 metaitem.board.fr4.copper_clad.name=FR-4 Copper Clad Laminate
-metaitem.board.fr4.resist.name=Photoresist-Coated FR-4 Circuit Board
-metaitem.board.fr4.patterned.name=Patterned FR-4 Circuit Board
-metiatem.board.fr4.developed.name=Developed FR-4 Circuit Board
+metaitem.board.fr4.resist.name=Photoresist-Coated FR-4 Copper Clad Laminate
+metaitem.board.fr4.patterned.name=Exposed FR-4 Copper Clad Laminate
+metiatem.board.fr4.developed.name=Developed FR-4 Copper Clad Laminate
 metaitem.board.fr4.etched.name=Etched FR-4 Circuit Board
 metaitem.board.fr4.drilled.name=Drilled FR-4 Circuit Board
 metaitem.board.fr4.electroless.name=Electroless Plated FR-4 Circuit Board
@@ -3944,14 +3949,14 @@ metaitem.board.fr4.electrolytic.name=Electrolytic Plated FR-4 Circuit Board
 metaitem.board.fr4.wet_masked.name=Wet Masked FR-4 Circuit Board
 metaitem.board.fr4.masked.name=Masked FR-4 Circuit Board
 metaitem.board.fr4.mask_affixed.name=Mask-Affixed FR-4 Circuit Board
-metaitem.circuit_board.fr4.name=Double-Layer Circuit Board
-metaitem.circuit_board.fr4.tooltip=An Elite Circuit Board/nDouble-sided FR-4 Printed Circuit Board
+metaitem.circuit_board.fr4.name=Double-Sided FR-4 Printed Circuit Board
+metaitem.circuit_board.fr4.tooltip=An Elite Circuit Board
 
 metaitem.board.g10.prepreg.name=G-10 Epoxy Prepreg
 metaitem.board.g10.copper_clad.name=G-10 Copper Clad Laminate
-metaitem.board.g10.resist.name=Photoresist-Coated G-10 Circuit Board
-metaitem.board.g10.patterned.name=Patterned G-10 Circuit Board
-metaitem.board.g10.developed.name=Developed G-10 Circuit Board
+metaitem.board.g10.resist.name=Photoresist-Coated G-10 Copper Clad Laminate
+metaitem.board.g10.patterned.name=Exposed G-10 Copper Clad Laminate
+metaitem.board.g10.developed.name=Developed G-10 Copper Clad Laminate
 metaitem.board.g10.etched.name=Etched G-10 Circuit Board
 metaitem.board.g10.drilled.name=Drilled G-10 Circuit Board
 metaitem.board.g10.electroless.name=Electroless Plated G-10 Circuit Board
@@ -3959,8 +3964,8 @@ metaitem.board.g10.electrolytic.name=Electrolytic Plated G-10 Circuit Board
 metaitem.board.g10.wet_masked.name=Wet Masked G-10 Circuit Board
 metaitem.board.g10.masked.name=Masked G-10 Circuit Board
 metaitem.board.g10.mask_affixed.name=Mask-Affixed G-10 Circuit Board
-metaitem.circuit_board.g10.name=Advanced Circuit Board
-metaitem.circuit_board.g10.tooltip=An Advanced Circuit Board/nG-10 Printed Circuit Board
+metaitem.circuit_board.g10.name=G-10 Printed Circuit Board
+metaitem.circuit_board.g10.tooltip=An Advanced Circuit Board
 
 metaitem.fiber.oxidized_polyacrylonitrile.name=Oxidized Polyacrylonitrile Fiber
 metaitem.carbon.mesh.treated.name=Treated Carbon Mesh
@@ -4114,8 +4119,9 @@ gregtech.advancement.medium_voltage.31_mv_energy_hatch.name=Upgrade Your ERF
 recipemap.electric_blast_furnace.name=Resistance Furnace
 gregtechfoodoption.machine.greenhouse.name=Arboretum
 recipemap.greenhouse.name=Arboretum
-metaitem.board.phenolic.name=Phenolic Circuit Board Prepreg
 fluid.gregtech.material.ice.liquid_generic=Ice Slurry
+metaitem.component.resistor.name=Sub-Optimal Ceramic Component
+metaitem.component.resistor.tooltip=§7§oWhat am I expected to use these for?
 
 
 # Material Renaming
@@ -4187,7 +4193,7 @@ recipe.water.electrolysis=This is significantly faster if done in an electrolysi
 recipe.power_generation.multiblock_rotation=This recipe is run in a multiblock with shaft rotation mechanics, which means there is a spin-up time to reach maximum power output. Supply with lubricants to keep it running smoothly!
 recipe.power_generation.combustion=Can either be run in a multiblock or singleblock configuration. Multiblocks only require lubricant but singleblocks also require a coolant!
 recipe.power_generation.fuel_cell=Fuel cells require a certain temperature to run properly. Make sure to maintain temperature with preheated air!
-recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste heat from gas turbine exhaust to boil water. Flue gas carries 10 EU/L of energy, and yields an extra 25% energy for a given amount of fuel.
+recipe.power_generation.combined_cycle=Combined cycle power plants utilize waste heat from gas turbine exhaust to boil water. Flue gas carries 10 EU/L of energy, and yields an extra 25 percent energy for a given amount of fuel.
 recipe.lubricant.midgrade=Provides a 1.2x boost in power generation recipes requiring lubricant.
 recipe.lubricant.premium=Provides a 1.4x boost in power generation recipes requiring lubricant.
 recipe.lubricant.supreme=Provides a 1.6x boost in power generation recipes requiring lubricant.

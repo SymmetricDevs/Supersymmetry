@@ -52,6 +52,7 @@ class ChangeFlags {
         Magnesium.addIngot()
         Asbestos.addIngot()
         Potassium.addIngot()
+        Scandium.addIngot()
 
         BisphenolA.addDust()
         Polonium.addDust()
@@ -93,6 +94,7 @@ class ChangeFlags {
         HighPuritySelenium.setupFluidTypes(494, FluidStorageKeys.LIQUID)
         BlackSteel.setupFluidTypes(1728, FluidStorageKeys.LIQUID)
         Polytetrafluoroethylene.setupFluidTypes(293, FluidStorageKeys.LIQUID)
+        Scandium.setupFluidTypes(1814, FluidStorageKeys.LIQUID)
 
         CarbonDioxide.setupFluidTypes(304, SusyFluidStorageKeys.SUPERCRITICAL)
         Propane.setupFluidTypes(370, SusyFluidStorageKeys.SUPERCRITICAL)
@@ -153,6 +155,7 @@ class ChangeFlags {
         Ammonia.setBasic(FluidStorageKeys.GAS)
         Dimethylamine.setBasic(FluidStorageKeys.GAS)
         Dimethylhydrazine.setBasic(FluidStorageKeys.LIQUID)
+        SodiumHydroxide.setBasic(FluidStorageKeys.LIQUID)
 
         // Dummy properties for continuous casting
         Steel.setProperty(GCYMPropertyKey.ALLOY_BLAST, new DummyABSProperty())
@@ -212,6 +215,7 @@ class ChangeFlags {
         Kovar.addFlags("generate_bolt_screw");
         NickelZincFerrite.addFlags("generate_bolt_screw");
         Platinum.addFlags("generate_spring")
+        Scandium.addFlags("generate_fine_wire", "induction_melt")
 
         /*
         ManganesePhosphide.addFlags("no_smashing", "no_smelting")
@@ -238,6 +242,7 @@ class ChangeFlags {
         Erbium.setMaterialRGB(0xc07ede)
         Thulium.setMaterialRGB(0xe86666)
         Mica.setMaterialRGB(0xe8e7ba)
+        Scandium.setMaterialRGB(0xF2CD00)
 
         // Formulae
 

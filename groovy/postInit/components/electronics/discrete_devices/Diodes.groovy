@@ -1,3 +1,7 @@
+import postInit.utils.RecyclingHelper
+import globals.Globals
+
+import static prePostInit.TieredItems.*
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import gregtech.api.metatileentity.multiblock.CleanroomType
@@ -7,6 +11,10 @@ import globals.semiconductors.Deposition
 import globals.semiconductors.Packaging
 import globals.semiconductors.Doping
 import globals.semiconductors.Mechanicals
+
+mods.jei.ingredient.yeet(metaitem('component.diode'))
+mods.jei.ingredient.yeet(metaitem('component.smd.diode'))
+mods.jei.ingredient.yeet(metaitem('component.advanced_smd.diode'))
 
 // SMD Diode * 32
 mods.gregtech.assembler.removeByInput(480, [metaitem('dustGalliumArsenide'), metaitem('wireFinePlatinum') * 8], [fluid('plastic') * 288])
@@ -54,7 +62,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('die.diode.alloy'))
     .fluidInputs(fluid('glass') * 72)
     .fluidInputs(fluid('high_temperature_solder') * 72)
-    .outputs(metaitem('component.diode'))
+    .outputs(metaitem('component.diode.alloy_junction'))
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister();
@@ -125,11 +133,11 @@ ASSEMBLER.recipeBuilder()
 // Planar power diodes (mesa diodes w/ drift layer)
 
 // Deposit drift layer and dope p-side
-Deposition.generateChemicalVaporDepositionRecipe('wafer.small.silicon.n_doped', 'wafer.diode.drift.step_one', 1, 'phosphosilicate_glass')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.small.silicon.n_doped', 'wafer.diode.drift.step_one', 40, 'phosphosilicate_glass')
 Doping.generateIonImplantationRecipes('wafer.diode.drift.step_one', 'wafer.diode.power.step_two', 1200, 'boron_trifluoride')
 
 // Mask mesa/contact and etch
-Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', 1, 'silicon_nitride.silane')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.power.step_two', 'wafer.diode.power.step_three', 40, 'silicon_nitride.silane')
 Lithography.generatePhotolithographyRecipes('wafer.diode.power.step_three', 'wafer.diode.power.step_four', 'novolac_resist', 'mask_set.diode.power', true)
 Etching.generateWetEtchingRecipe('wafer.diode.power.step_four', 'wafer.diode.power.step_five', 'silicon_nitride', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.power.step_five', 'wafer.diode.power.step_six', 1, false, true)
@@ -167,7 +175,7 @@ Doping.generateIonImplantationRecipes('wafer.diode.schottky.step_two', 'wafer.di
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_three', 'wafer.diode.schottky.step_four', 1, false, true)
 
 // Deposit passivation oxide
-Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.schottky.step_four', 'wafer.diode.schottky.step_five', 1, 'silicon_dioxide.silane')
+Deposition.generateChemicalVaporDepositionRecipe('wafer.diode.schottky.step_four', 'wafer.diode.schottky.step_five', 40, 'silicon_dioxide.silane')
 Lithography.generatePhotolithographyRecipes('wafer.diode.schottky.step_five', 'wafer.diode.schottky.step_six', 'novolac_resist', 'mask_set.diode.schottky', true)
 Etching.generateWetEtchingRecipe('wafer.diode.schottky.step_six', 'wafer.diode.schottky.step_seven', 'silicon_dioxide', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.diode.schottky.step_seven', 'wafer.diode.schottky.step_eight', 1, false, true)
@@ -201,6 +209,7 @@ CRYSTALLIZER.recipeBuilder()
     .inputs(ore('dustHighPurityIndium') * 4)
     .fluidInputs(fluid('high_purity_phosphorus') * 576)
     .outputs(metaitem('seed_crystal.indium_phosphide'))
+    .circuitMeta(1)
     .duration(1200)
     .EUt(VA[HV])
     .buildAndRegister()
@@ -236,4 +245,17 @@ ASSEMBLER.recipeBuilder()
 
     // Infrared
 
-    
+def powerDiodes = [null, metaitem('circuit.vacuum_tube'), metaitem('circuit.vacuum_tube'), metaitem('circuit.vacuum_tube'),
+                   metaitem('component.thyristor'), metaitem('component.thyristor'), metaitem('component.thyristor')];
+
+// Diode Singleblocks
+
+for (i = 1; i <= 6; i++) {
+    crafting.remove('gregtech:gregtech.machine.diode.' + Globals.voltageTiers[i])
+
+    RecyclingHelper.addShaped("gregtech:diode." + Globals.voltageTiers[i], metaitem('diode.' + Globals.voltageTiers[i]), [
+        [tieredQuadCables[i], powerDiodes[i], tieredQuadCables[i]],
+        [powerDiodes[i], hulls[i], powerDiodes[i]],
+        [tieredPlates[i], powerDiodes[i], tieredPlates[i]]
+    ])
+}

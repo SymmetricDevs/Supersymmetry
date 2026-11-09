@@ -723,13 +723,6 @@ crafting.replaceShaped('susy:home_block', item('susy:home_block'), [
     [null, null, null]
 ])
 
-FORGE_HAMMER.recipeBuilder()
-	.inputs(ore('stoneSmooth'))
-    .outputs(item('susy:home_block'))
-    .duration(40)
-    .EUt(VA[LV])
-    .buildAndRegister();
-
 crafting.addShapeless('susy:home_block_1', item('susy:home_block', 4), [item('susy:home_block', 0)])
 crafting.addShapeless('susy:home_block_2', item('susy:home_block', 8), [item('susy:home_block', 4)])
 crafting.addShapeless('susy:home_block_3', item('susy:home_block', 12), [item('susy:home_block', 8)])
@@ -1700,6 +1693,58 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
+// HV Alternate Energy Handling
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.hv'))
+    .inputs(ore('cableGtSingleGold') * 2)
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .fluidInputs(fluid('sodium_potassium') * 1000)
+    .outputs(metaitem('energy_hatch.input.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('hull.hv'))
+    .inputs(ore('springGold') * 2)
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .fluidInputs(fluid('sodium_potassium') * 1000)
+    .outputs(metaitem('energy_hatch.output.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('transformer.hv'))
+    .inputs(metaitem('energy_hatch.output.hv'))
+    .inputs(metaitem('circuit.power.hv'))
+    .inputs(metaitem('voltage_coil.hv'))
+    .inputs(ore('wireGtQuadrupleGold') * 2)
+    .outputs(metaitem('susy:energy_hatch.output_4a.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('transformer.adjustable.hv'))
+    .inputs(metaitem('susy:energy_hatch.output_4a.hv'))
+    .inputs(metaitem('circuit.power.hv') * 2)
+    .inputs(metaitem('voltage_coil.hv'))
+    .inputs(ore('wireGtOctalGold') * 2)
+    .outputs(metaitem('susy:energy_hatch.output_16a.hv'))
+    .duration(200)
+    .EUt(VA[MV])
+    .buildAndRegister()
+
+crafting.addShaped('gregtech:transformer.hv2', item('gregtech:machine', 1273), [
+    [metaitem('circuit.power.hv'), ore('cableGtSingleGold'), ore('cableGtSingleGold')],
+    [ore('cableGtSingleAluminium'), item('gregtech:machine', 988), null],
+    [metaitem('circuit.power.hv'), ore('cableGtSingleGold'), ore('cableGtSingleGold')]
+])
+
 // Jet Wingpack recipes
 // Wing panel
 ASSEMBLER.recipeBuilder()
@@ -1949,6 +1994,7 @@ RecyclingHelper.handleRecycling(metaitem('gearStone'), [metaitem('dustStone') * 
 
 // Moist Air * 1000
 mods.gregtech.mixer.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
+mods.gregtech.blender.removeByInput(8, null, [fluid('air') * 900, fluid('steam') * 10])
 
 MIXER.recipeBuilder()
     .circuitMeta(1)
@@ -2048,3 +2094,11 @@ mods.gregtech.mixer.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem
 mods.gregtech.macerator.removeByInput(32, [item('gregtech:machine_casing', 6)], null)
 // Rhodium Plated Palladium Ingot * 8
 mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:machine_casing', 6)], [fluid('oxygen') * 840])
+// Rhodium Plated Palladium Dust * 4
+mods.gregtech.blender.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
+
+// Old circuit recipe
+// Integrated Processor * 4
+mods.gregtech.circuit_assembler.removeByInput(2400, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineRedAlloy') * 4, metaitem('boltAnnealedCopper') * 4], [fluid('tin') * 144])
+// prevent conflict with slicer blades
+mods.gregtech.forming_press.removeByInput(256, [metaitem('plateIron') * 10, metaitem('screwIron') * 2], null)

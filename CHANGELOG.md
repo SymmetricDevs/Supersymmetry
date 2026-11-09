@@ -1,3 +1,79 @@
+# UPDATE 0.2.0.2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.5 → v0.2.6
+
+## Changes
+## Breaking Changes
+- Brushless motor recipes now require power circuits specifically. (#2092 by Fiery36)
+- Alloy Smelter recipes for Lead-Free Solder have been removed. (#2092 by Fiery36)
+
+### Changed Features
+- The Eccentric Roll Crusher now has parallels. (sc#747 by trainvoi)
+- The Train Radio-control Card range is now effectively unlimited. (#2094 by lanicerine)
+- The Tool Belt can now be upgraded via Crafting Table. (#2086 by trainvoi)
+
+### Fixes
+- Fixed a LittleTiles crash. (sc#755 by oliwier509)
+- AE2 Storage Bus is re-enabled (does not have a recipe). (#2096 by jethro-3000)
+- Various light sources from ProjectRed Illumination and other mods have recipes again. (#2088 by NeoRussia)
+And thanks to @superintendent2521, @Crindigo, @jethro-3000, and @Fiery36 for helping maintain the pack.
+# UPDATE 0.2.0.1-patch2
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.4 → v0.2.5
+## Changes
+### Changed Features
+- XNet controller now only shows connectors matching the search instead of just highlighting them on the list. (sc#746 by @1290418240891)
+### Fixes
+- Steel Multiblock Tank can now handle bases. (sc#745 by @1290418240891)
+- Gave Sputtering Deposition enough item outputs to run all recipes. (sc#753 by @Fiery36)
+# UPDATE 0.2.0.1-patch1
+## Changes
+### Fixes
+- Gold-Antimony Alloy now has an LV recipe to prevent progression block. (#2084 by @jethro-3000)
+- Nichrome induction furnace recipe fix. (#2089 by @Fiery36)
+- Gave Vacuum Distillation Tower two item output to allow High Purity Gallium and Selenium recipes. (#2089 by @Fiery36)
+# UPDATE 0.2.0.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.1 → v0.2.4
+- SussyPatches v1.11.10 → v1.11.11
+## Changes
+### Changed Features
+- Added the Skywatch Chip. It will tell you when a raid happens and where. (#741 by @oliwier509)
+- HATE rebalancing and AI improvement. Teams should no longer be spawncamped by endless helicopters. (by @oliwier509)
+- Xnet is now compatable with multiblock tanks and cleanroom passthrough hatches. (#742 by @1290418240891)
+- More RU translation (#2075 by @kanayaya)
+### Fixes
+- Induction furnaces will now store outputs instead of voiding it when the hatches are full of coolant (#735 by @zestehl)
+- Supported Palladium Catalyst Bed is now tiered at MV to allow for H2O2 production (#2074 by @1290418240891)
+- Triarylsulfonium Hexafluoroantimonate & Fused Quartz are now obtainable (#2078 by @jethro-3000)
+- Ghost items when transferring from containers are gone (by @MCTian-mi)
+  Additionally thanks to @lanicerine, @Fiery36, @superintendent2521 for more bugfixes and changes.
+# UPDATE 0.2.0.0.2
+## Mod Changes
+## Changes
+### Changed Features
+- balance change: commando armor now uses fiber epoxy instead of UHMWPE (#2064 by @oliwier509)
+- Alt phthalic anhydride recipe for MV (#2067 by @jethro-3000)
+### Fixes
+- remove molten steel from quenching.groovy + stuff (#2063 by @jethro-3000)
+- LV motor assembler recipe fix (#2066 by @1290418240891)
+# UPDATE 0.2.0.0.1
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.0 → v0.2.1
+## Changes
+### Changed Features
+- Circuit boards are named better! (#2051 by @Fiery36)
+- Hazmat suits are now LV. (#2052 by @oliwier509)
+- The plasma asher is no longer immediately available. (#2057 by @jethro-3000)
+### Fixes
+- Sieges can no longer destroy themselves with drop pod explosions. Also, a crash was fixed. (#2055 by @oliwier509)
+- AE2 now doesn't immediately run out of power. (#2060 by @Crindigo)
+- SRP no longer spawns on the moon (#2054 by @oliwier509)
+We've also got Fiery Fixes 18 and Jethro Jixes 5 this time. Thanks additionally to @lanicerine and @planetme for fixing some recipes.
 # UPDATE 0.2.0
 ## Mod Changes 
 ### Mod Updates
@@ -11,19 +87,19 @@
 - UniversalTweaks 1.20.1 → 1.21.0
 - VintageFix 0.7.0 → 0.7.2
 ## Changes
+- **BREAKING**: AE2 now requires 512x more power, so clear your system before updating!
+- **Breaking**: All circuits have been gregified beyond where anyone has gone before, so prepare to change a lot.
 ### New Features
 - You can now use space to jump!
 - You can now launch customizable rockets! Build components in the Aerospace Cleanroom, test your rocket with the Flight Simulator, and construct the Transporter/Erector with a Large Railroad Engineering Station. (This is not an exhaustive list.)
 - The moon is now accessible for regolith extraction! There are plenty of other things to explore there too...
-- **Breaking**: MV-EV circuit lines have been brought up to standard.
 - Late-game invasions now use advanced mob AI that can avoid traps and go through your doors.
+- Armor and chemical gas progression has been brought in line with player progression.
 - AE2 autocrafting components can be obtained from orbital scrap harvesting missions.
 ### Changed Features
 - Induction furnaces now can accept more crucible types.
 - Mineral sand can now be processed in HV for zircon.
-- **Breaking**: AE2 now requires 512x more power, so maybe take your items out before updating!
-
-Thanks to our new contributors @Wheatley and @Henrytorybot!
+Thanks to our new contributors @Wheatley, @1290418240891, and @Henrytorybot!
 # UPDATE 0.1.16.16
 ## Mod Changes
 ### Mod Updates

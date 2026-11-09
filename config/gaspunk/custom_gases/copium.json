@@ -1,7 +1,7 @@
 {
   "gasType": "GAS",
   "particleType": "GAS",
-  "color": "80B8EFF5",
+  "color": "0x80B8EFF5",
   "agents": [
 	{
       "agent": "gaspunk:hallucinogen",

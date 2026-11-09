@@ -3531,7 +3531,7 @@ class OrganicChemistryMaterials {
                 .color(0xDCDCDC)
                 .build()
 
-        SodiumFormate.setFormula('NaCOOH', true)
+        SodiumFormate.setFormula('HCOONa', true)
 
         SodiumOxalate = new Material.Builder(15546, SuSyUtility.susyId('sodium_oxalate'))
                 .dust()
@@ -4584,7 +4584,7 @@ class OrganicChemistryMaterials {
                 .color(0x6d0840)
                 .build()
 
-        TwoPhenylphenol.setFormula('C₆H₅-C₆H₄OH', false)
+        TwoPhenylphenol.setFormula('C6H5-C6H4OH', false)
 
         TwoCyclohexenylCyclohexanone = new Material.Builder(15761, SuSyUtility.susyId('two_cyclohexenylcyclohexanone'))
                 .liquid()
@@ -4620,12 +4620,6 @@ class OrganicChemistryMaterials {
                 .build()
 
         BismethylcyclopentadienylBeryllium.setFormula('Be(MeCp)2', true)
-
-        PMMAEBeamResist = new Material.Builder(15766, SuSyUtility.susyId('pmma_ebeam_resist'))
-                .liquid()
-                .components(PolymethylMethacrylate, Chlorobenzene)
-                .color(0x32cd32)
-                .build()
 
         AbieticAcid = new Material.Builder(15767, SuSyUtility.susyId('abietic_acid'))
             .dust()

@@ -158,7 +158,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(ore('platePolyvinylChloride') * 2)
     .inputs(metaitem('component.nmos_expansion_bus'))
     .inputs(ore('circuitHv') * 2)
-    .inputs(ore('cable.optical') * 1)
+    .inputs(metaitem('cable.optical') * 1)
     .inputs(ore('wireFineGold') * 2)
     .inputs(ore('pinBerylliumCopper') * 48)
     .outputs(item('appliedenergistics2:material', 28)) // basic card
@@ -170,7 +170,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(ore('platePolyvinylChloride') * 2)
     .inputs(metaitem('component.nmos_expansion_bus') * 4)
     .inputs(ore('circuitIv') * 2)
-    .inputs(ore('cable.optical') * 2)
+    .inputs(metaitem('cable.optical') * 2)
     .inputs(ore('wireFineGold') * 2)
     .inputs(ore('pinBerylliumCopper') * 48)
     .outputs(item('appliedenergistics2:material', 28)) // advanced card
@@ -180,7 +180,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
         .inputs(item('appliedenergistics2:material', 25))
-        .inputs(ore('plateMagneticNeodymiumAlloy') * 8)
+        .inputs(ore('plateNeodymiumAlloyMagnetic') * 8)
         .circuitMeta(1)
         .outputs(item('appliedenergistics2:material', 60)) // magnet card
         .duration(240)
@@ -199,7 +199,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(item('appliedenergistics2:material', 28))
     .inputs(ore('circuitIv') * 4)
-    .inputs(ore('cable.optical') * 2)
+    .inputs(metaitem('cable.optical') * 2)
     .inputs(metaitem('component.nmos_expansion_bus'))
     .outputs(item('appliedenergistics2:material', 30)) // accel card
     .duration(240)
@@ -306,7 +306,7 @@ ASSEMBLER.recipeBuilder()
 // Quartz glass: flame hydrolysis of SiCl4 followed by consolidation in a block mold
 REACTION_FURNACE.recipeBuilder()
         .notConsumable(metaitem('shape.mold.block'))
-        .fluidInputs(fluid('purified_silicon_tetrachloride') * 2000)
+        .fluidInputs(fluid('silicon_tetrachloride') * 2000)
         .fluidInputs(fluid('hydrogen') * 8000)
         .fluidInputs(fluid('oxygen') * 4000)
         .outputs(item('appliedenergistics2:quartz_glass'))
@@ -611,12 +611,12 @@ ASSEMBLER.recipeBuilder()
         .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('circuit_board.g10'))
+        .inputs(metaitem('circuit_board.fr4'))
         .inputs(ore('circuitEv'))
         .inputs(metaitem('pattern.memory'))
         .inputs(metaitem('pattern.processor'))
         .inputs(metaitem('cable.optical'))
-        .inputs(ore('plateTitanium') * 4)
+        .inputs(ore('plateScandiumAlloy') * 4)
         .fluidInputs(fluid('cryogenic_solder') * 144)
         .outputs(item('appliedenergistics2:material', 52) * 2) // AE2 blank pattern
         .duration(400)
@@ -758,6 +758,28 @@ crafting.addShaped(item('appliedenergistics2:network_tool'), [
     [null, metaitem('emitter.iv'), metaitem('sensor.iv')],
     [metaitem('stickPolyvinylChloride'), null, null]
 ])
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.cmos_cpu') * 1) // have fun!
+    .inputs(metaitem('foilScandium') * 4) // have fun part 2!
+    .inputs(metaitem('wireFineGold') * 4)
+    .inputs(metaitem('component.leadframe') * 1)
+    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .outputs(metaitem('pattern.processor') * 1)
+    .duration(200)
+    .EUt(VA[IV])
+    .buildAndRegister()
+
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.nmos_sram') * 4)
+    .inputs(metaitem('foilScandium') * 4)
+    .inputs(metaitem('wireFineGold') * 4)
+    .inputs(metaitem('component.leadframe') * 1)
+    .fluidInputs(fluid('epoxy_molding_compound') * 144)
+    .outputs(metaitem('pattern.memory') * 1)
+    .duration(200)
+    .EUt(VA[IV])
+    .buildAndRegister()
 
 // Keep this at the end of the script as well as at the start: all AE2
 // Inscriber recipes must be gone before JEI builds its recipe registry.

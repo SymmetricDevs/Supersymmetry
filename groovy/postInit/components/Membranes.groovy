@@ -48,6 +48,15 @@ CHEMICAL_BATH.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister() 
 
+DT.recipeBuilder()
+    .fluidInputs(fluid('diluted_n_methyl_two_pyrrolidone') * 2000)
+    .fluidOutputs(fluid('n_methyl_two_pyrrolidone') * 1000)
+    .fluidOutputs(fluid('water') * 1000)
+    .duration(200)
+    .EUt(VA[LV])
+    .buildAndRegister()
+
+
 // Ion exchange membranes
 
     // Proton exchange membrane --> Nafion chain

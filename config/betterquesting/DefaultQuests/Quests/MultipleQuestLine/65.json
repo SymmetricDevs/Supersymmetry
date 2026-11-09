@@ -1,10 +1,5 @@
 {
-  "preRequisiteTypes:7": [
-    1,
-    0
-  ],
   "preRequisites:11": [
-    79,
     862
   ],
   "properties:10": {
@@ -22,11 +17,6 @@
     "0:10": {
       "requiredItems:9": {
         "0:10": {
-          "Count:3": 1,
-          "Damage:2": 381,
-          "id:8": "gregtech:meta_item_1"
-        },
-        "1:10": {
           "Count:3": 1,
           "Damage:2": 401,
           "id:8": "gregtech:meta_item_1"

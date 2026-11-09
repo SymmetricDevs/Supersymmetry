@@ -266,7 +266,7 @@ crafting.shapelessBuilder()
         output.getTagCompound().setDouble("damage", inputs['tank'].getTagCompound().getDouble("damage"))
     }.register()
 
-EVAPORATION.recipeBuilder()
+EVAPORATION_DEPOSITION.recipeBuilder()
     .inputs(metaitem('dustAluminium'))
     .inputNBT(item('susy:susy_armor', 4), NBTMatcher.ANY, NBTCondition.ANY)
     .outputs(item('susy:susy_armor', 9).withNbt(['damage': 0.0D]))
@@ -274,7 +274,7 @@ EVAPORATION.recipeBuilder()
     .EUt(VA[HV])
     .buildAndRegister()
 
-EVAPORATION.recipeBuilder()
+EVAPORATION_DEPOSITION.recipeBuilder()
     .inputs(metaitem('dustAluminium'))
     .inputNBT(item('susy:susy_armor', 5), NBTMatcher.ANY, NBTCondition.ANY)
     .outputs(item('susy:susy_armor', 10).withNbt(['damage': 0.0D, 'oxygen': 0.0D]))
@@ -428,15 +428,41 @@ dyes.each { dye, number ->
         .buildAndRegister()
 }
 
+
+
 ASSEMBLER.recipeBuilder()
-    .inputs(ore('circuitIv') * 4)
+    .inputs(ore('circuitIv') * 2)
     .inputs(metaitem('cover.screen'))
     .inputs(ore('wireFineGold') * 8)
+    .inputs(item('susy:meta_item', 28).withNbt(['susy': ['faction': 'Feds']]))
     .inputs(metaitem('circuit_board.fr4'))
     .outputs(metaitem('susy:code_breacher'))
     .fluidInputs(fluid('soldering_alloy') * 144)
     .duration(400)
     .EUt(VA[EV])
+    .buildAndRegister();
+
+
+ASSEMBLER.recipeBuilder()
+    .inputs(ore('circuitLv') * 1)
+    .inputs(ore('circuitUlv') * 4)
+    .inputs(item('gregtech:meta_item_1', 401))
+    .inputs(ore('wireFineCopper') * 16)
+    .outputs(item('susy:meta_item', 27))
+    .fluidInputs(fluid('soldering_alloy') * 144)
+    .duration(10)
+    .EUt(VA[LV])
+    .buildAndRegister();
+
+ASSEMBLER.recipeBuilder()
+    .circuitMeta(24)
+    .inputs(ore('circuitUlv') * 32)
+    .inputs(ore('wireFineCopper') * 32)
+    .inputs(item('gregtech:meta_item_1', 232) * 2)
+    .outputs(item('susy:meta_item', 30).withNbt([:]))
+    .fluidInputs(fluid('soldering_alloy') * 144)
+    .duration(15)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 // Decoration Blocks

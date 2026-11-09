@@ -486,3 +486,6 @@ RecipeMaps.CUTTER_RECIPES
 
 SuSyRecipeMaps.ELECTRON_BEAM_LITHOGRAPHY
     .setMaxInputs(2)
+
+SuSyRecipeMaps.VACUUM_DISTILLATION_RECIPES
+    .modifyMaxOutputs(2)
