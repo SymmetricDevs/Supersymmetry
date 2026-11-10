@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 // Bronze
+
 ALLOY_SMELTER.recipeBuilder()
     .inputs(metaitem('ingotCopper') * 14)
     .inputs(metaitem('ingotTin'))
@@ -43,6 +44,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // Brass
+
 ALLOY_SMELTER.recipeBuilder()
     .inputs(metaitem('ingotCopper') * 5)
     .inputs(metaitem('ingotZinc') * 2)
