@@ -2,7 +2,7 @@
     "parent": "builtin/text",
     "position_type": "TOP_LEFT",
     "offset_pos": "TOP_LEFT",
-    "text": "' Loading Time: ' + floor(time / 60) + ':' + floor((time % 60) / 10) + floor(time % 60 % 10)",
+    "text": "' ' + translate('susy.loading.time') + ': ' + floor(time / 60) + ':' + floor((time % 60) / 10) + floor(time % 60 % 10)",
     "position": {
         "x": "0",
         "y": "20",

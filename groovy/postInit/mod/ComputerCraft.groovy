@@ -1,0 +1,39 @@
+def name_removals = [
+        "computercraft:normal_computer",
+	"computercraft:advanced_computer",
+	"computercraft:disk_drive",
+	"computercraft:wireless_modem",
+	"computercraft:normal_monitor",
+	"computercraft:advanced_monitor",
+	"computercraft:printer",
+	"computercraft:speaker",
+	"computercraft:cable",
+	"computercraft:wired_modem",
+	"computercraft:command_computer",
+	"computercraft:ender_modem",
+	"computercraft:disk_impostor",
+	"computercraft:disk_imposter_0",
+	"computercraft:disk_imposter_1",
+	"computercraft:disk_imposter_2",
+	"computercraft:disk_imposter_3",
+	"computercraft:disk_imposter_4",
+	"computercraft:disk_imposter_5",
+	"computercraft:disk_imposter_6",
+	"computercraft:disk_imposter_7",
+	"computercraft:disk_imposter_8",
+	"computercraft:disk_imposter_9",
+	"computercraft:disk_imposter_10",
+	"computercraft:disk_imposter_11",
+	"computercraft:disk_imposter_12",
+	"computercraft:disk_imposter_13",
+	"computercraft:disk_imposter_14",
+	"computercraft:disk_imposter_15",
+	"computercraft:normal_pocket_computer",
+	"computercraft:advanced_pocket_computer",
+	"computercraft:normal_turtle",
+	"computercraft:advanced_turtle"
+]
+
+for (name in name_removals) {
+    crafting.remove(name)
+}

@@ -1222,6 +1222,7 @@ for (carbon in Carbons.sources) {
         .inputs(ore(carbon.name) * carbon.equivalent(3))
         .outputs(metaitem('dustCalciumCarbide') * 3)
         .fluidOutputs(fluid('carbon_monoxide') * 1000)
+        .circuitMeta(2)
         .EUt(VA[MV])
         .duration(400)
         .buildAndRegister()
