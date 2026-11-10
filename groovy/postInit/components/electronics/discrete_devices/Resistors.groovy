@@ -59,7 +59,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glue') * 50)
     .fluidInputs(fluid('high_temperature_solder') * 18)
     .outputs(metaitem('component.resistor.carbon_composite'))
-    .duration(240)
+    .duration(60)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -69,7 +69,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glue') * 50)
     .fluidInputs(fluid('high_temperature_solder') * 18)
     .outputs(metaitem('component.resistor.carbon_composite'))
-    .duration(80)
+    .duration(20)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -87,7 +87,8 @@ crafting.shapedBuilder()
 
 // Carbon film resistor
 
-LASER_ENGRAVER.recipeBuilder()
+ASSEMBLER.recipeBuilder()
+    .notConsumable(metaitem('emitter.mv')) // needs to be replaced by CO2 laser, when they are added
     .inputs(ore('boltAlumina') * 20)
     .outputs(metaitem('component.resistor.carbon_film.cut_substrate') * 20)
     .duration(100)
