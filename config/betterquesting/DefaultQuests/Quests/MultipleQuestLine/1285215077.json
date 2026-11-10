@@ -1,40 +1,44 @@
 {
+  "preRequisites:11": [
+    1420297848
+  ],
   "properties:10": {
     "betterquesting:10": {
-      "desc:8": "susy.quest.db.1703733058.desc",
+      "desc:8": "susy.quest.db.1285215077.desc",
       "frame:8": "CROSS",
       "icon:10": {
         "id:8": "simple_trophies:trophy",
         "tag:10": {
-          "TrophyColorBlue:3": 139,
-          "TrophyColorGreen:3": 102,
-          "TrophyColorRed:3": 84,
+          "TrophyColorBlue:3": 155,
+          "TrophyColorGreen:3": 0,
+          "TrophyColorRed:3": 128,
           "TrophyItem:10": {
             "Count:3": 1,
             "id:8": "simple_trophies:trophy",
             "tag:10": {
-              "TrophyColorBlue:3": 139,
-              "TrophyColorGreen:3": 102,
-              "TrophyColorRed:3": 84,
+              "TrophyColorBlue:3": 155,
+              "TrophyColorGreen:3": 0,
+              "TrophyColorRed:3": 128,
+              "TrophyEarnedAt:4": 1736725334,
               "TrophyItem:10": {
                 "Count:3": 1,
-                "Damage:2": 371,
-                "id:8": "gregtech:meta_item_1"
+                "Damage:2": 8431,
+                "id:8": "gregtech:meta_item_2"
               },
-              "TrophyName:8": "Raw Circuit",
+              "TrophyName:8": "Semiconductor Hell",
               "TrophyShowsTooltip:1": 1,
               "TrophyVariant:8": "classic"
             }
           },
-          "TrophyName:8": "Do Not Eat",
+          "TrophyName:8": "Semiconductor Heaven",
           "TrophyShowsTooltip:1": 1,
           "TrophyVariant:8": "classic"
         }
       },
-      "name:8": "susy.quest.db.1703733058.title"
+      "name:8": "susy.quest.db.1285215077.title"
     }
   },
-  "questID:3": 1703733058,
+  "questID:3": 1285215077,
   "rewards:9": {
     "0:10": {
       "rewardID:8": "bq_standard:item",
@@ -43,27 +47,28 @@
           "Count:3": 1,
           "id:8": "simple_trophies:trophy",
           "tag:10": {
-            "TrophyColorBlue:3": 139,
-            "TrophyColorGreen:3": 102,
-            "TrophyColorRed:3": 84,
+            "TrophyColorBlue:3": 155,
+            "TrophyColorGreen:3": 0,
+            "TrophyColorRed:3": 128,
             "TrophyItem:10": {
               "Count:3": 1,
               "id:8": "simple_trophies:trophy",
               "tag:10": {
-                "TrophyColorBlue:3": 139,
-                "TrophyColorGreen:3": 102,
-                "TrophyColorRed:3": 84,
+                "TrophyColorBlue:3": 155,
+                "TrophyColorGreen:3": 0,
+                "TrophyColorRed:3": 128,
+                "TrophyEarnedAt:4": 1736725334,
                 "TrophyItem:10": {
                   "Count:3": 1,
-                  "Damage:2": 371,
-                  "id:8": "gregtech:meta_item_1"
+                  "Damage:2": 8431,
+                  "id:8": "gregtech:meta_item_2"
                 },
-                "TrophyName:8": "Raw Circuit",
+                "TrophyName:8": "Semiconductor Hell",
                 "TrophyShowsTooltip:1": 1,
                 "TrophyVariant:8": "classic"
               }
             },
-            "TrophyName:8": "Do Not Eat",
+            "TrophyName:8": "Semiconductor Heaven",
             "TrophyShowsTooltip:1": 1,
             "TrophyVariant:8": "classic"
           }
@@ -76,8 +81,8 @@
       "requiredItems:9": {
         "0:10": {
           "Count:3": 512,
-          "Damage:2": 371,
-          "id:8": "gregtech:meta_item_1"
+          "Damage:2": 8431,
+          "id:8": "gregtech:meta_item_2"
         }
       },
       "taskID:8": "bq_standard:retrieval"
