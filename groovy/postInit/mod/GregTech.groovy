@@ -2098,8 +2098,5 @@ mods.gregtech.arc_furnace.removeByInput(30, [item('gregtech:machine_casing', 6)]
 // Rhodium Plated Palladium Dust * 4
 mods.gregtech.blender.removeByInput(7680, [metaitem('dustPalladium') * 3, metaitem('dustRhodium'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], null)
 
-// Old circuit recipe
-// Integrated Processor * 4
-mods.gregtech.circuit_assembler.removeByInput(2400, [metaitem('circuit_board.plastic'), metaitem('plate.system_on_chip'), metaitem('wireFineRedAlloy') * 4, metaitem('boltAnnealedCopper') * 4], [fluid('tin') * 144])
 // prevent conflict with slicer blades
 mods.gregtech.forming_press.removeByInput(256, [metaitem('plateIron') * 10, metaitem('screwIron') * 2], null)

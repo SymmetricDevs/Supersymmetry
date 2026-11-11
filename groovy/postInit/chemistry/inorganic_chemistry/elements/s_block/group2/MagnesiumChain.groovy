@@ -73,7 +73,7 @@ ROASTER.recipeBuilder()
 // 2MgO + C + 2Cl2 -> 2MgCl2 + CO2
 for (combustible in Carbons.combustibles()) {
     REACTION_FURNACE.recipeBuilder()
-        .inputs(ore('dustMagnesia') * 2)
+        .inputs(ore('dustMagnesia') * 4)
         .inputs(ore(combustible.name) * combustible.equivalent(1))
         .fluidInputs(fluid('chlorine') * 4000)
         .outputs(metaitem('dustMagnesiumChloride') * 6)

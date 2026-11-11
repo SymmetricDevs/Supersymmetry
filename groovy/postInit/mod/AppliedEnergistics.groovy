@@ -337,16 +337,16 @@ REACTION_FURNACE.recipeBuilder()
         .buildAndRegister()
 }
 // Illuminated Panel
-ASSEMBLER.recipeBuilder()
-        .inputs(metaitem('plateTitanium') * 4)
-        .inputs(metaitem('led_light') * 32)
-        .inputs(ore('cableGtSingleGold') * 2)
-        .inputs(item('appliedenergistics2:quartz_glass'))
-        .outputs(item('appliedenergistics2:part', 180)) // AE2 illuminated panel
-        .circuitMeta(1)
-        .duration(200)
-        .EUt(VA[EV])
-        .buildAndRegister()
+//ASSEMBLER.recipeBuilder()
+//        .inputs(metaitem('plateTitanium') * 4)
+//        .inputs(metaitem('led_light') * 32)
+//        .inputs(ore('cableGtSingleGold') * 2)
+//        .inputs(item('appliedenergistics2:quartz_glass'))
+//        .outputs(item('appliedenergistics2:part', 180)) // AE2 illuminated panel
+//        .circuitMeta(1)
+//        .duration(200)
+//        .EUt(VA[EV])
+//        .buildAndRegister()
 
 // AE2 storage component metas: 35-38 = 1k/4k/16k/64k item components; 54-57 = fluid equivalents.
 // Finished item and fluid cells use the gated components above.

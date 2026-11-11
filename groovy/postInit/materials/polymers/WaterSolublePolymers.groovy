@@ -32,8 +32,8 @@ DT.recipeBuilder()
 // Disodium Phosphate Recycling
 
 ELECTROLYTIC_CELL.recipeBuilder()
-    .notConsumable('membrane.cation_exchange')
-    .notConsumable('membrane.anion_exchange')
+    .notConsumable(metaitem('membrane.cation_exchange'))
+    .notConsumable(metaitem('membrane.anion_exchange'))
     .inputs(metaitem('dustDisodiumPhosphate') * 8)
     .fluidInputs(fluid('water') * 4000)
     .fluidOutputs(fluid('phosphoric_acid') * 1000)
