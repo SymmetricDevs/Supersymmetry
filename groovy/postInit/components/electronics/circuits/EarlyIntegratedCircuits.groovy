@@ -494,7 +494,7 @@ ASSEMBLER.recipeBuilder()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(metaitem('circuit_board.g10'))
-    .inputs(metaitem('circuit.power.mv'))
+    .inputs(metaitem('plate.low_power_integrated_circuit'))
     .inputs(ore('componentResistorMedium') * 2)
     .inputs(ore('componentCapacitorMedium') * 2)
     .fluidInputs(fluid('lead_free_solder_paste') * 72)
