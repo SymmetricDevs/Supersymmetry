@@ -106,6 +106,7 @@ INDUCTION_FURNACE.recipeBuilder()
 // Kovar
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(3)
     .fluidInputs(fluid('iron') * 1440) // TO DO: replace
     .inputs(metaitem('ingotNickel') * 5)
     .inputs(metaitem('ingotCobalt') * 3)
@@ -115,6 +116,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(3)
     .inputs(item('minecraft:iron_ingot') * 10)
     .inputs(metaitem('ingotNickel') * 5)
     .inputs(metaitem('ingotCobalt') * 3)
