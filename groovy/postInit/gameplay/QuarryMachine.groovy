@@ -35,7 +35,7 @@ def beneath_ores = [
 ]
 ]
 def neather_ores = [
-    item('minecraft:soul_sand', 1), //Mineral Rich Sand
+    item('minecraft:soul_sand'), //Mineral Rich Sand
 
 ]
 
@@ -134,11 +134,11 @@ QUARRY.recipeBuilder()
 
 //nether rocks
 QUARRY.recipeBuilder()
-    .notConsumable(item('minecraft:soul_sand', 16))
-    .outputs(item('minecraft:soul_sand' 16))
+    .notConsumable(item('minecraft:soul_sand'))
+    .outputs(item('minecraft:soul_sand'))
     .dimension(Globals.dimensions["Nether"])
-    .duration(100)
-    .EUt(VA[MV])
+    .duration(20)
+    .EUt(VA[LV])
     .buildAndRegister();
 
 // Anorthosite
