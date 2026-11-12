@@ -135,7 +135,7 @@ QUARRY.recipeBuilder()
 //nether rocks
 QUARRY.recipeBuilder()
     .notConsumable(item('minecraft_soulsand', 16))
-    .outputs(item('minecraft_soulsand'))
+    .outputs(item('minecraft_soulsand' 16))
     .dimension(Globals.dimensions["Nether"])
     .duration(100)
     .EUt(VA[MV])
