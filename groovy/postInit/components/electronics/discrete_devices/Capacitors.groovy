@@ -5,9 +5,11 @@ import globals.semiconductors.Etching
 import globals.Sintering
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-mods.jei.ingredient.yeet(metaitem('component.capacitor'))
-mods.jei.ingredient.yeet(metaitem('component.smd.capacitor'))
-mods.jei.ingredient.yeet(metaitem('component.advanced_smd.capacitor'))
+mods.jei.ingredient.yeet(
+    metaitem('component.capacitor'),
+    metaitem('component.smd.capacitor'),
+    metaitem('component.advanced_smd.capacitor')
+)
 
 // Capacitor * 8
 mods.gregtech.assembler.removeByInput(120, [metaitem('foilPlastic'), metaitem('foilAluminium') * 2], [fluid('plastic') * 144])

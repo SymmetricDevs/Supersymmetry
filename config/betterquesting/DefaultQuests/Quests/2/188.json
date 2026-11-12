@@ -1,11 +1,8 @@
 {
-  "preRequisiteTypes:7": [
-    1,
-    1
-  ],
   "preRequisites:11": [
     224,
-    472
+    472,
+    120
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -27,6 +24,10 @@
           "Count:3": 1,
           "Damage:2": 1001,
           "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 16,
+          "id:8": "gregtech:wire_coil"
         }
       },
       "taskID:8": "bq_standard:retrieval"

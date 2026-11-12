@@ -23,7 +23,7 @@ INDUCTION_FURNACE.recipeBuilder()
 
 // Cryogenic solder
 RESISTANCE_FURNACE.recipeBuilder()
-    .inputs(ore('dustIndium') * 3)
+    .inputs(ore('dustAnyPurityIndium') * 3)
     .inputs(ore('dustTinySilver'))
     .notConsumable(metaitem('susy:clay_graphite_crucible'))
     .fluidOutputs(fluid('cryogenic_solder') * 432)
@@ -32,7 +32,7 @@ RESISTANCE_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
-    .inputs(ore('dustIndium') * 3)
+    .inputs(ore('dustAnyPurityIndium') * 3)
     .inputs(ore('dustTinySilver'))
     .fluidOutputs(fluid('cryogenic_solder') * 432)
     .duration(60)

@@ -7,14 +7,12 @@ import globals.semiconductors.Packaging
 import globals.semiconductors.Etching
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
-mods.jei.ingredient.yeet(metaitem('component.resistor'))
-mods.jei.ingredient.yeet(metaitem('component.smd.resistor'))
-mods.jei.ingredient.yeet(metaitem('component.advanced_smd.resistor'))
+mods.jei.ingredient.yeet(
+    metaitem('component.resistor'),
+    metaitem('component.smd.resistor'),
+    metaitem('component.advanced_smd.resistor')
+)
 
-// SMD Resistor * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
-// SMD Resistor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineElectrum') * 4], [fluid('plastic') * 288])
 // Resistor * 2
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100])
 // Resistor * 2
@@ -27,7 +25,10 @@ mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFi
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
 // Resistor * 4
 mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100])
-
+// SMD Resistor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 288])
+// SMD Resistor * 16
+mods.gregtech.assembler.removeByInput(480, [metaitem('dustCarbon'), metaitem('wireFineElectrum') * 4], [fluid('plastic') * 288])
 
 MIXER.recipeBuilder()
     .inputs(ore('resistorCarbon'))
@@ -59,7 +60,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glue') * 50)
     .fluidInputs(fluid('high_temperature_solder') * 18)
     .outputs(metaitem('component.resistor.carbon_composite'))
-    .duration(240)
+    .duration(60)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -69,7 +70,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('glue') * 50)
     .fluidInputs(fluid('high_temperature_solder') * 18)
     .outputs(metaitem('component.resistor.carbon_composite'))
-    .duration(80)
+    .duration(20)
     .EUt(VA[LV])
     .buildAndRegister();
 
@@ -87,7 +88,8 @@ crafting.shapedBuilder()
 
 // Carbon film resistor
 
-LASER_ENGRAVER.recipeBuilder()
+ASSEMBLER.recipeBuilder()
+    .notConsumable(metaitem('emitter.mv')) // needs to be replaced by CO2 laser, when they are added
     .inputs(ore('boltAlumina') * 20)
     .outputs(metaitem('component.resistor.carbon_film.cut_substrate') * 20)
     .duration(100)
@@ -125,7 +127,7 @@ ASSEMBLER.recipeBuilder()
 // NiCr film resistors
 Deposition.generateSputteringRecipe("boltAlumina", "component.resistor.metal_film.core.deposited", ['chromium':120, 'nickel':480])
 
-LASER_ENGRAVER.recipeBuilder()
+ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
     .inputs(metaitem("component.resistor.metal_film.core.deposited"))
     .outputs(metaitem("component.resistor.metal_film.core.uncut"))
     .duration(100)
@@ -225,7 +227,7 @@ SCREEN_PRINTING.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
-LASER_ENGRAVER.recipeBuilder()
+ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
     .inputs(metaitem('component.thick_film_resistor.wafer.fired'))
     .outputs(metaitem('component.thick_film_resistor.wafer.etched'))
     .duration(200)
@@ -249,7 +251,7 @@ Lithography.generatePhotolithographyRecipes("component.thin_film_resistor.wafer"
 Etching.generateWetEtchingRecipe("component.thin_film_resistor.wafer.patterned", "component.thin_film_resistor.wafer.etched", "nichrome", 400, false)
 Lithography.generateResistStrippingRecipes("component.thin_film_resistor.wafer.etched", "component.thin_film_resistor.wafer.stripped", 1, false, true) // don't know what timeMultiplier means
 
-LASER_ENGRAVER.recipeBuilder()
+ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
     .inputs(metaitem('component.thin_film_resistor.wafer.stripped'))
     .outputs(metaitem('component.thin_film_resistor.wafer.tuned'))
     .duration(200)

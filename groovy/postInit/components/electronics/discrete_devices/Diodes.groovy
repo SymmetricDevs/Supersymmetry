@@ -203,27 +203,6 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 // Photodiodes          Source: https://patents.google.com/patent/US4477964A/en
-//Indium phosphide
-
-CRYSTALLIZER.recipeBuilder()
-    .inputs(ore('dustHighPurityIndium') * 4)
-    .fluidInputs(fluid('high_purity_phosphorus') * 576)
-    .outputs(metaitem('seed_crystal.indium_phosphide'))
-    .circuitMeta(1)
-    .duration(1200)
-    .EUt(VA[HV])
-    .buildAndRegister()
-
-CRYSTALLIZER.recipeBuilder()
-    .inputs(ore('dustHighPurityIndium'))
-    .fluidInputs(fluid('high_purity_phosphorus') * 144)
-    .notConsumable(fluid('boron_trioxide') * 720)
-    .inputs(metaitem('seed_crystal.indium_phosphide'))
-    .notConsumable(metaitem('crucible.boron.nitride'))
-    .outputs(metaitem('boule.indium_phosphide'))
-    .duration(300)
-    .EUt(VA[HV])
-    .buildAndRegister()
 
 Doping.generateSealedDiffusionRecipe('wafer.indium_phosphide', 'wafer.photodiode.step_one', 400, HV, "Cadmium", "Indium") // Diffuse Cd into the wafer w/ In additive to aid process
 Lithography.generatePhotolithographyRecipes('wafer.photodiode.step_one', 'wafer.photodiode.step_two', 'novolac_resist', 'mask.photodiode', true)

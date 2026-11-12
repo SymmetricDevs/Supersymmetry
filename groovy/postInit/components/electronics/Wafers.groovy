@@ -4,6 +4,97 @@ import static gregtech.api.GTValues.*
 import gregtech.api.recipes.chance.output.ChancedOutputLogic
 import gregtech.api.metatileentity.multiblock.CleanroomType
 
+mods.jei.ingredient.yeet(
+    metaitem('boule.gallium_arsenide'),
+    metaitem('boule.gallium_arsenide.n_doped'),
+    metaitem('boule.silicon'),
+    metaitem('boule.phosphorus'),
+    metaitem('boule.naquadah'),
+    metaitem('boule.neutronium'),
+    metaitem('wafer.pattern.processor'),
+    metaitem('wafer.pattern.memory'),
+    metaitem('gallium_nitride_buffer_wafer'),
+    metaitem('raw_led_wafer'),
+    metaitem('patterned_led_wafer'),
+    metaitem('etched_led_wafer'),
+    metaitem('metallized_led_wafer'),
+    metaitem('wafer.silicon'),
+    metaitem('wafer.phosphorus'),
+    metaitem('wafer.naquadah'),
+    metaitem('wafer.neutronium'),
+    metaitem('wafer.central_processing_unit'),
+    metaitem('wafer.random_access_memory'),
+    metaitem('wafer.integrated_logic_circuit'),
+    metaitem('wafer.nano_central_processing_unit'),
+    metaitem('wafer.qbit_central_processing_unit'),
+    metaitem('wafer.simple_system_on_chip'),
+    metaitem('wafer.system_on_chip'),
+    metaitem('wafer.advanced_system_on_chip'),
+    metaitem('wafer.highly_advanced_system_on_chip'),
+    metaitem('wafer.nand_memory_chip'),
+    metaitem('wafer.nor_memory_chip'),
+    metaitem('wafer.ultra_low_power_integrated_circuit'),
+    metaitem('wafer.low_power_integrated_circuit'),
+    metaitem('wafer.power_integrated_circuit'),
+    metaitem('wafer.high_power_integrated_circuit'),
+    metaitem('wafer.ultra_high_power_integrated_circuit'),
+    metaitem('plate.pattern.processor'),
+    metaitem('plate.pattern.memory'),
+    metaitem('led_chip'),
+    metaitem('plate.central_processing_unit'),
+    metaitem('plate.random_access_memory'),
+    metaitem('plate.integrated_logic_circuit'),
+    metaitem('plate.nano_central_processing_unit'),
+    metaitem('plate.qbit_central_processing_unit'),
+    metaitem('plate.simple_system_on_chip'),
+    metaitem('plate.system_on_chip'),
+    metaitem('plate.advanced_system_on_chip'),
+    metaitem('plate.highly_advanced_system_on_chip'),
+    metaitem('plate.nand_memory_chip'),
+    metaitem('plate.nor_memory_chip'),
+    item('gregtech:meta_item_2', 2759),
+    item('gregtech:meta_item_2', 2760),
+    item('gregtech:meta_item_2', 2761),
+    item('gregtech:meta_item_2', 2762),
+    item('gregtech:meta_item_2', 2763)
+)
+
+def cutterRemovals = [
+    [metaitem: metaitem('boule.silicon'), EUt: 64, water: 900, distilled_water: 676, lubricant: 225],
+    [metaitem: metaitem('boule.phosphorus'), EUt: 480, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('boule.naquadah'), EUt: 1920, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('boule.neutronium'), EUt: 7680, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.central_processing_unit'), EUt: 120, water: 337, distilled_water: 253, lubricant: 84],
+    [metaitem: metaitem('wafer.random_access_memory'), EUt: 96, water: 270, distilled_water: 202, lubricant: 67],
+    [metaitem: metaitem('wafer.integrated_logic_circuit'), EUt: 64, water: 180, distilled_water: 135, lubricant: 45],
+    [metaitem: metaitem('wafer.nano_central_processing_unit'), EUt: 480, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.qbit_central_processing_unit'), EUt: 1920, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.simple_system_on_chip'), EUt: 64, water: 180, distilled_water: 135, lubricant: 45],
+    [metaitem: metaitem('wafer.system_on_chip'), EUt: 480, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.advanced_system_on_chip'), EUt: 1920, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.highly_advanced_system_on_chip'), EUt: 7680, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.nand_memory_chip'), EUt: 192, water: 540, distilled_water: 405, lubricant: 135],
+    [metaitem: metaitem('wafer.nor_memory_chip'), EUt: 192, water: 540, distilled_water: 405, lubricant: 135],
+    [metaitem: metaitem('wafer.ultra_low_power_integrated_circuit'), EUt: 120, water: 337, distilled_water: 253, lubricant: 84],
+    [metaitem: metaitem('wafer.low_power_integrated_circuit'), EUt: 480, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.power_integrated_circuit'), EUt: 1920, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.high_power_integrated_circuit'), EUt: 7680, water: 1000, distilled_water: 750, lubricant: 250],
+    [metaitem: metaitem('wafer.ultra_high_power_integrated_circuit'), EUt: 30720, water: 1000, distilled_water: 750, lubricant: 250],
+]
+
+cutterRemovals.each { entry ->
+    mods.gregtech.cutter.removeByInput(entry.EUt, [entry.metaitem], [fluid('water') * entry.water])
+    mods.gregtech.cutter.removeByInput(entry.EUt, [entry.metaitem], [fluid('distilled_water') * entry.distilled_water])
+    mods.gregtech.cutter.removeByInput(entry.EUt, [entry.metaitem], [fluid('lubricant') * entry.lubricant])
+}
+
+// Phosphorus-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustSilicon') * 64, metaitem('dustPhosphorus') * 8, metaitem('dustSmallGalliumArsenide') * 2], [fluid('nitrogen') * 8000])
+// Naquadah-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('blockSilicon') * 16, metaitem('ingotNaquadah'), metaitem('dustGalliumArsenide')], [fluid('argon') * 8000])
+// Neutronium-doped Monocrystalline Silicon Boule * 1
+mods.gregtech.electric_blast_furnace.removeByInput(7680, [metaitem('blockSilicon') * 32, metaitem('ingotNeutronium') * 4, metaitem('dustGalliumArsenide') * 2], [fluid('xenon') * 8000])
+
 // Seed crystal from Bridgman-Stockbarger growth
 
 VACUUM_CHAMBER.recipeBuilder()
@@ -155,15 +246,37 @@ CRYSTALLIZER.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
+//CRYSTALLIZER.recipeBuilder()
+//    .fluidInputs(fluid('high_purity_gallium') * 2592)
+//    .fluidInputs(fluid('high_purity_arsenic') * 2592)
+//    .notConsumable(fluid('boron_trioxide') * 720)
+//    .inputs(metaitem('seed_crystal.gallium_arsenide'))
+//    .notConsumable(metaitem('crucible.boron.nitride'))
+//    .outputs(metaitem('boule.gallium_arsenide'))
+//    .duration(240)
+//    .EUt(VA[LV])
+//    .buildAndRegister()
+
+// Indium phosphide
+
 CRYSTALLIZER.recipeBuilder()
-    .fluidInputs(fluid('high_purity_gallium') * 2592)
-    .fluidInputs(fluid('high_purity_arsenic') * 2592)
+    .inputs(ore('dustHighPurityIndium') * 4)
+    .fluidInputs(fluid('high_purity_phosphorus') * 576)
+    .outputs(metaitem('seed_crystal.indium_phosphide'))
+    .circuitMeta(1)
+    .duration(1200)
+    .EUt(VA[HV])
+    .buildAndRegister()
+
+CRYSTALLIZER.recipeBuilder()
+    .inputs(ore('dustHighPurityIndium'))
+    .fluidInputs(fluid('high_purity_phosphorus') * 144)
     .notConsumable(fluid('boron_trioxide') * 720)
-    .inputs(metaitem('seed_crystal.gallium_arsenide'))
+    .inputs(metaitem('seed_crystal.indium_phosphide'))
     .notConsumable(metaitem('crucible.boron.nitride'))
-    .outputs(metaitem('boule.gallium_arsenide'))
-    .duration(240)
-    .EUt(VA[LV])
+    .outputs(metaitem('boule.indium_phosphide'))
+    .duration(300)
+    .EUt(VA[HV])
     .buildAndRegister()
 
 // Wafer preparation
@@ -223,7 +336,7 @@ def wafers = [
     new Wafer('boule.silicon.fz.n_doped', 'wafer.small.silicon.n_doped', 'seed_crystal.silicon', 'dustSilicon', true),
     new Wafer('boule.silicon.fz.heavily_n_doped', 'wafer.small.silicon.heavily_n_doped', 'seed_crystal.silicon', 'dustSilicon', true),
     new Wafer('boule.germanium.n_doped', 'wafer.germanium.n_doped', 'seed_crystal.germanium', 'dustGermanium', true),
-    new Wafer('boule.gallium_arsenide.n_doped', 'wafer.gallium_arsenide.n_doped', 'seed_crystal.gallium_arsenide', 'dustGalliumArsenide', true),
+//    new Wafer('boule.gallium_arsenide.n_doped', 'wafer.gallium_arsenide.n_doped', 'seed_crystal.gallium_arsenide', 'dustGalliumArsenide', true),
     new Wafer('boule.indium_phosphide', 'wafer.indium_phosphide', 'seed_crystal.indium_phosphide', 'dustIndiumPhosphide', false)
 ]
 

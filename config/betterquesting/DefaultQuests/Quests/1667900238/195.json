@@ -17,6 +17,29 @@
     }
   },
   "questID:3": 195,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 51,
+            "TrophyColorGreen:3": 51,
+            "TrophyColorRed:3": 255,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "openmodularturrets:incendiary_turret"
+            },
+            "TrophyName:8": "Sneak Attack!",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "requiredItems:9": {

@@ -4,8 +4,11 @@ import gregtech.api.recipes.ingredients.GTRecipeItemInput
 
 // Electronic Circuit * 2
 mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('wireGtSingleRedAlloy') * 2, metaitem('circuit.vacuum_tube') * 2], [fluid('tin') * 144])
-// Electronic Circuit * 2
 mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('wireGtSingleRedAlloy') * 2, metaitem('circuit.vacuum_tube') * 2], [fluid('soldering_alloy') * 72])
+
+// Good Electronic Circuit * 1
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.good'), metaitem('circuit.electronic') * 2, metaitem('component.diode') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('tin') * 144])
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.good'), metaitem('circuit.electronic') * 2, metaitem('component.diode') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('soldering_alloy') * 72])
 
 //Remove steel plates from electronic circuits since they were unnecessary
 
@@ -16,7 +19,7 @@ crafting.replaceShaped("gregtech:electronic_circuit_lv", metaitem('circuit.elect
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(ore('circuitUlv') * 2)
-    .inputs(ore('componentResistorMedium') * 2)
+    .inputs(ore('componentResistor') * 2)
     .inputs(ore('wireFineCopper') * 2)
     .inputs(metaitem('circuit_board.basic'))
     .outputs(metaitem('circuit.electronic') * 2)

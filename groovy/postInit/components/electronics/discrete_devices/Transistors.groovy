@@ -8,10 +8,14 @@ import globals.semiconductors.Lithography
 import globals.semiconductors.Etching
 import globals.semiconductors.Mechanicals
 
-mods.jei.ingredient.yeet(metaitem('component.transistor'))
-mods.jei.ingredient.yeet(metaitem('component.smd.transistor'))
-mods.jei.ingredient.yeet(metaitem('component.advanced_smd.transistor'))
+mods.jei.ingredient.yeet(
+    metaitem('component.transistor'),
+    metaitem('component.smd.transistor'),
+    metaitem('component.advanced_smd.transistor')
+)
 
+// Transistor * 8
+mods.gregtech.assembler.removeByInput(120, [metaitem('plateSilicon'), metaitem('wireFineTin') * 6], [fluid('plastic') * 144])
 // SMD Transistor * 16
 mods.gregtech.assembler.removeByInput(480, [metaitem('foilGallium'), metaitem('wireFineAnnealedCopper') * 8], [fluid('plastic') * 144])
 // SMD Transistor * 32

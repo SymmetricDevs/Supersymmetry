@@ -1,3 +1,24 @@
+# UPDATE 0.2.0.3
+## Mod Changes
+### Mod Updates
+- SusyCore v0.2.6 → v0.2.7
+## Changes
+- **BREAKING** HV Energy Hatches can no longer use the HV Power Circuit in it's recipe. (#2106 by WideMan)
+- **BREAKING** The Calcium Carbide recipe now uses a circuit to allow for easier automation of different recipes within a single Arc Furnace. (#2110 by jethro-3000)
+- **BREAKING** Alnico has been moved to the Induction Furnace. (#2112 by Fiery36)
+- **BREAKING** Phosphorus Trichloride production has been slightly changed. (#2112 by Fiery36)
+### New Features
+- Load screen and tips now have RU translation with support for adding other languages. (#2108 by kanayaya)
+- 176 more BMRF blocks have been added, get building! (sc#756 by JorgeMIng) 
+### Changed Features
+- The Steam Age and LV chapters have been overhauled and more trophies have been added. (#2083 by The-ExZombie)
+- Disodium Phosphate can now be recycled via Bipolar Membrane Electrodialysis. (#2103 by jethro-3000)
+- Removed Stainless Steel from the Oil Rig and Nether Lab structures (#2109 by oliwier509)
+- Monel 400 can now be obtained in LV (#2112 by Fiery36)
+### Fixes
+- Fixed toolbelt upgrading causing a crash on servers (#2105 by trainvoi)
+- Carbon film resistors are now actually obtainable in MV as opposed to EV. (#2106 by WideMann)
+And thanks to @trainvoi, @oliwier509, @jethro-3000, and @Fiery36 for helping maintain the pack.
 # UPDATE 0.2.0.2
 ## Mod Changes
 ### Mod Updates
