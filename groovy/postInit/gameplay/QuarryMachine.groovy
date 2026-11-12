@@ -33,6 +33,11 @@ def beneath_ores = [
     item('susy:susy_stone_smooth', 6), //Slate
     item('susy:susy_stone_cobble', 6) //Slate Cobblestone
 ]
+]
+def neather_ores = [
+    item('minecraft_soulsand', 1), //Mineral Rich Sand
+
+]
 
 //overworld rocks:
 for (entry in overworld_ores) {
@@ -124,6 +129,15 @@ QUARRY.recipeBuilder()
     .chancedOutput(item('susy:susy_stone_cobble', 6), 3333, 500)
     .dimension(Globals.dimensions["Beneath"])
     .duration(100)
+    .EUt(VA[MV])
+    .buildAndRegister();
+
+//nether rocks
+QUARRY.recipeBuilder()
+    .notConsumable(item('minecraft_soulsand'))
+    .outputs(item('minecraft_soulsand'))
+    .dimension(Globals.dimensions["Nether"])
+    .duration(60)
     .EUt(VA[MV])
     .buildAndRegister();
 
