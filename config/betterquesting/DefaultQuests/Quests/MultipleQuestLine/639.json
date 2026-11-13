@@ -1,7 +1,6 @@
 {
   "preRequisites:11": [
-    695,
-    1558006766
+    372465406
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -13,9 +12,7 @@
           "Charge:4": 1000000
         }
       },
-      "name:8": "susy.quest.db.639.title",
-      "questlogic:8": "OR",
-      "tasklogic:8": "OR"
+      "name:8": "susy.quest.db.639.title"
     }
   },
   "questID:3": 639,

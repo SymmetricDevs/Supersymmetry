@@ -1,7 +1,6 @@
 {
   "preRequisites:11": [
-    1520504426,
-    243
+    2110846801
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -12,9 +11,7 @@
           "FluidName:8": "liquid_natural_gas"
         }
       },
-      "name:8": "susy.quest.db.1997511526.title",
-      "questlogic:8": "OR",
-      "tasklogic:8": "OR"
+      "name:8": "susy.quest.db.1997511526.title"
     }
   },
   "questID:3": 1997511526,
