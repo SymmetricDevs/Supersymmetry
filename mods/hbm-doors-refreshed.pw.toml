@@ -1,13 +1,13 @@
-name = "HBM Doors: Refreshed"
-filename = "ntmdoors-1.0.26.jar"
+name = "HBM Doors: Refreshed/ClosedSecurity"
+filename = "ntmdoors-1.0.50.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "833ac002c35469e32dbb50c0fb8255fff24de422"
+hash = "632c58c6d512e29553e32f4fbfc421b98e7133f9"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9352459
+file-id = 9577818
 project-id = 1770444
