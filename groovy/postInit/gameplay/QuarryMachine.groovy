@@ -33,7 +33,6 @@ def beneath_ores = [
     item('susy:susy_stone_smooth', 6), //Slate
     item('susy:susy_stone_cobble', 6) //Slate Cobblestone
 ]
-]
 def neather_ores = [
     item('minecraft:soul_sand'), //Mineral Rich Sand
 
