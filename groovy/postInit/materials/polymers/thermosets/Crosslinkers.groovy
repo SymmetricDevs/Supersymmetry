@@ -7,7 +7,7 @@ CSTR.recipeBuilder()
     .fluidInputs(fluid('formaldehyde') * 75)
     .fluidInputs(fluid('ammonia_solution') * 50)
     .fluidOutputs(fluid('hexamethylenetetramine_solution') * 50)
-    .duration(50)
+    .duration(5)
     .EUt(VA[ULV])
     .buildAndRegister()
 
