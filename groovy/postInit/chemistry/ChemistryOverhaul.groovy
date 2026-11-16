@@ -477,7 +477,7 @@ DT.recipeBuilder()
 
 CSTR.recipeBuilder()
     .fluidInputs(fluid('chloroform') * 50)
-    .fluidInputs(fluid('chlorine') * 50)
+    .fluidInputs(fluid('chlorine') * 100)
     .fluidOutputs(fluid('carbon_tetrachloride') * 50)
     .fluidOutputs(fluid('hydrogen_chloride') * 50)
     .duration(5)
