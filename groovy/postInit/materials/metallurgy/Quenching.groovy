@@ -88,15 +88,6 @@ mods.gregtech.chemical_bath.removeByInput(120, [metaitem('ingotHotKanthal')], [f
 
 for (fluid in QuenchingFluid.quenching_fluids) {
     CHEMICAL_BATH.recipeBuilder()
-        .inputs(ore('ingotHotKanthal'))
-        .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
-        .outputs(metaitem('ingotKanthal'))
-        .fluidOutputs(liquid(fluid.getHotFluid()) * fluid.amount)
-        .duration((int) fluid.getDuration() * 4)
-        .EUt(VA[MV])
-        .buildAndRegister();
-
-    CHEMICAL_BATH.recipeBuilder()
         .inputs(ore('ingotHotNichrome'))
         .fluidInputs(liquid(fluid.getColdFluid()) * fluid.amount)
         .outputs(metaitem('ingotNichrome'))

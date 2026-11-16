@@ -1,7 +1,13 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    0,
+    1
+  ],
   "preRequisites:11": [
     371,
-    398
+    398,
+    829239928
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -29,13 +35,25 @@
         },
         "1:10": {
           "Count:3": 1,
+          "Damage:2": 20,
+          "id:8": "susy:meta_item"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "1:10": {
+      "entryLogic:8": "OR",
+      "index:3": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
           "Damage:2": 18,
           "id:8": "susy:meta_item",
           "tag:10": {
             "Charge:4": 51200
           }
         },
-        "2:10": {
+        "1:10": {
           "Count:3": 1,
           "Damage:2": 19,
           "id:8": "susy:meta_item",
@@ -43,22 +61,24 @@
             "Charge:4": 204800
           }
         },
-        "3:10": {
+        "2:10": {
           "Count:3": 1,
           "Damage:2": 21,
           "id:8": "susy:meta_item"
-        },
-        "4:10": {
-          "Count:3": 1,
-          "Damage:2": 20,
-          "id:8": "susy:meta_item"
-        },
-        "5:10": {
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    },
+    "2:10": {
+      "entryLogic:8": "OR",
+      "index:3": 2,
+      "requiredItems:9": {
+        "0:10": {
           "Count:3": 1,
           "Damage:2": 18210,
           "id:8": "gregtech:machine"
         },
-        "6:10": {
+        "1:10": {
           "Count:3": 1,
           "Damage:2": 18211,
           "id:8": "gregtech:machine"

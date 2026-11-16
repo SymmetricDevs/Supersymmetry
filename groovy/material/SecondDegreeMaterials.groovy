@@ -1348,7 +1348,7 @@ class SecondDegreeMaterials {
                 .color(0x0fc3d4)
                 .build()
 
-        UltrapureHydrofluoricAcid.setFormula("(HF)(H2O)")
+        UltrapureHydrofluoricAcid.setFormula("(HF)(H2O)", true)
 
         UltrapureIronIIIChlorideSolution = new Material.Builder(13208, SuSyUtility.susyId('ultrapure_iron_iii_chloride_solution'))
                 .liquid()

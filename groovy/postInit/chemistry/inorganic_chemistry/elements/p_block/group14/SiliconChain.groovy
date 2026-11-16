@@ -8,21 +8,6 @@ import gregtech.api.unification.material.Materials
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
 
-// Silicon Carbide Plate * 1
-mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
-// Phosphorus-doped Monocrystalline Silicon Boule * 1
-mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustSilicon') * 64, metaitem('dustPhosphorus') * 8, metaitem('dustSmallGalliumArsenide') * 2], [fluid('nitrogen') * 8000])
-// Naquadah-doped Monocrystalline Silicon Boule * 1
-mods.gregtech.electric_blast_furnace.removeByInput(1920, [metaitem('blockSilicon') * 16, metaitem('ingotNaquadah'), metaitem('dustGalliumArsenide')], [fluid('argon') * 8000])
-// Neutronium-doped Monocrystalline Silicon Boule * 1
-mods.gregtech.electric_blast_furnace.removeByInput(7680, [metaitem('blockSilicon') * 32, metaitem('ingotNeutronium') * 4, metaitem('dustGalliumArsenide') * 2], [fluid('xenon') * 8000])
-// Raw Silicon Wafer * 14
-mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('lubricant') * 225])
-// Raw Silicon Wafer * 14
-mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('distilled_water') * 676])
-// Raw Silicon Wafer * 14
-mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('water') * 900])
-
 // Fix Hot Silicon Ingot conflict with dust
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustSiliconDioxide') * 3, metaitem('dustCarbon') * 2], null)
 
@@ -67,7 +52,7 @@ ROASTER.recipeBuilder()
 ROASTER.recipeBuilder()
     .inputs(ore('dustSilicon'))
     .fluidInputs(fluid('hydrogen_chloride') * 3100)
-    .fluidOutputs(fluid('gaseous_chlorosilane_mixture') * 3100)
+    .fluidOutputs(fluid('gaseous_chlorosilane_mixture') * 3200)
     .duration(100)
     .EUt(VA[LV])
 
@@ -84,22 +69,14 @@ FLUIDIZED_BR.recipeBuilder()
 */
 
 CONDENSER.recipeBuilder()
-    .fluidInputs(fluid('gaseous_chlorosilane_mixture') * 3100)
+    .fluidInputs(fluid('gaseous_chlorosilane_mixture') * 3200)
     .fluidOutputs(fluid('chlorosilane_mixture') * 1000)
-    .fluidOutputs(fluid('hydrogen') * 2100)
+    .fluidOutputs(fluid('hydrogen') * 2200)
     .duration(5)
     .buildAndRegister()
 
-DISTILLERY.recipeBuilder()
-    .circuitMeta(3)
-    .fluidInputs(fluid('chlorosilane_mixture') * 100)
-    .fluidOutputs(fluid('chlorosilane') * 900)
-    .duration(100)
-    .EUt(VA[LV])
-    .buildAndRegister()
-
 DT.recipeBuilder()
-    .fluidInputs(fluid('chlorosilane_mixture') * 3100)
+    .fluidInputs(fluid('chlorosilane_mixture') * 1000)
     .fluidOutputs(fluid('silicon_tetrachloride') * 100)
     .fluidOutputs(fluid('trichlorosilane') * 900)
     .duration(20)

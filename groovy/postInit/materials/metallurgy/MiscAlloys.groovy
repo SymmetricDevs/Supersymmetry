@@ -2,6 +2,7 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
 // Red Alloy
+
 RESISTANCE_FURNACE.recipeBuilder()
     .fluidInputs(fluid('copper') * 144)
     .inputs(item('minecraft:redstone') * 4)
@@ -34,9 +35,38 @@ INDUCTION_FURNACE.recipeBuilder()
     .fluidOutputs(fluid('red_alloy') * 144)
     .duration(74)
     .EUt(VA[LV])
+    .buildAndRegister()
+
+// Electrum
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('gold') * 144)
+    .fluidInputs(fluid('silver') * 144)
+    .fluidOutputs(fluid('electrum') * 288)
+    .EUt(VA[MV])
+    .duration(10)
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .fluidInputs(fluid('nitrogen') * 1000)
+    .fluidInputs(fluid('gold') * 2736)
+    .inputs(ore('dustAntimony'))
+    .fluidOutputs(fluid('gold_antimony') * 2880)
+    .EUt(VA[LV])
+    .duration(20)
+    .buildAndRegister()
+
+INDUCTION_FURNACE.recipeBuilder()
+    .notConsumable(fluid('argon') * 1000)
+    .fluidInputs(fluid('gold') * 2736)
+    .inputs(ore('dustAntimony'))
+    .fluidOutputs(fluid('gold_antimony') * 2880)
+    .EUt(VA[MV])
+    .duration(8)
     .buildAndRegister()
 
 // Invar
+
 INDUCTION_FURNACE.recipeBuilder()
     .circuitMeta(2)
     .fluidInputs(fluid('iron') * 720) // TO DO: replace
@@ -53,24 +83,8 @@ INDUCTION_FURNACE.recipeBuilder()
     .EUt(VA[LV])
     .buildAndRegister()
 
-// Nichrome
-INDUCTION_FURNACE.recipeBuilder()
-    .fluidInputs(fluid('nickel') * 1008)
-    .inputs(metaitem('ingotChrome') * 2)
-    .fluidOutputs(fluid('nichrome') * 1296)
-    .EUt(VA[MV])
-    .material("Alumina")
-    .buildAndRegister()
-
-INDUCTION_FURNACE.recipeBuilder()
-    .inputs(metaitem('ingotNickel')  * 7)
-    .inputs(metaitem('ingotChrome') * 2)
-    .fluidOutputs(fluid('nichrome') * 1296)
-    .EUt(VA[MV])
-    .material("Alumina")
-    .buildAndRegister()
-
 // Kanthal
+
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('iron') * 3312) // TO DO: replace
     .inputs(metaitem('dustFerrochromium') * 12)
@@ -90,7 +104,9 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // Kovar
+
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(3)
     .fluidInputs(fluid('iron') * 1440) // TO DO: replace
     .inputs(metaitem('ingotNickel') * 5)
     .inputs(metaitem('ingotCobalt') * 3)
@@ -100,6 +116,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 INDUCTION_FURNACE.recipeBuilder()
+    .circuitMeta(3)
     .inputs(item('minecraft:iron_ingot') * 10)
     .inputs(metaitem('ingotNickel') * 5)
     .inputs(metaitem('ingotCobalt') * 3)
@@ -113,34 +130,10 @@ INDUCTION_FURNACE.recipeBuilder()
     .inputs(item('minecraft:gold_ingot'))
     .fluidOutputs(fluid('electrum') * 288)
     .EUt(VA[LV])
-    .buildAndRegister()    
-
-// Monel
-INDUCTION_FURNACE.recipeBuilder()
-    .circuitMeta(2)
-    .fluidInputs(fluid('nickel') * 3312)
-    .inputs(metaitem('dustManganese') * 2)
-    .inputs(metaitem('dustCopper') * 10)
-    .inputs(metaitem('dustAluminium') * 4)
-    .inputs(metaitem('dustTitanium'))
-    .fluidOutputs(fluid('monel_500') * 5760)
-    .EUt(VA[MV])
-    .material("Alumina")
-    .buildAndRegister()
-
-INDUCTION_FURNACE.recipeBuilder()
-    .circuitMeta(2)
-    .inputs(metaitem('dustNickel') * 23)
-    .inputs(metaitem('dustManganese') * 2)
-    .inputs(metaitem('dustCopper') * 10)
-    .inputs(metaitem('dustAluminium') * 4)
-    .inputs(metaitem('dustTitanium'))
-    .fluidOutputs(fluid('monel_500') * 5760)
-    .EUt(VA[MV])
-    .material("Alumina")
     .buildAndRegister()
 
 // Silver-Indium-Cadmium
+
 INDUCTION_FURNACE.recipeBuilder()
     .fluidInputs(fluid('silver') * 2448)
     .inputs(metaitem('dustIndium') * 3)
@@ -158,6 +151,7 @@ INDUCTION_FURNACE.recipeBuilder()
     .buildAndRegister()
 
 // Zircaloy
+
 ADVANCED_ARC_FURNACE.recipeBuilder()
     .inputs(metaitem('dustHighPurityZirconium') * 18)
     .inputs(metaitem('dustTin') * 3)

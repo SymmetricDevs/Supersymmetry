@@ -283,8 +283,8 @@ class Deposition {
         "indium_gallium_phosphide": new cvdRecipe(['trimethyl_indium' : 10, 'trimethyl_gallium' : 10, 'phosphine' : 20, 'hydrogen' : 100], ['hydrogen' : 100, 'methane' : 60], HV, 40, 13, 0.04),
         "indium_gallium_phosphide.be_doped": new cvdRecipe(['trimethyl_indium' : 50, 'trimethyl_gallium' : 50, 'phosphine' : 100, 'hydrogen' : 500, 'bismethylcyclopentadienyl_beryllium' : 1], ['hydrogen' : 500, 'methane' : 300], HV, 40, 13, 0.2),
         "indium_aluminium_phosphide": new cvdRecipe(['trimethyl_indium' : 10, 'trimethylaluminium' : 10, 'phosphine' : 20, 'hydrogen' : 100], ['hydrogen' : 100, 'methane' : 60], HV, 40, 13, 0.04),
-        "gallium_arsenide": new cvdRecipe(['trimethyl_gallium' : 10, 'arsine' : 10, 'hydrogen' : 100], ['hydrogen' : 100, 'methane' : 30], HV, 25, 13, 0.02),
-        "gallium_arsenide.be_doped": new cvdRecipe(['trimethyl_gallium' : 50, 'arsine' : 50, 'hydrogen' : 500, 'bismethylcyclopentadienyl_beryllium' : 1], ['hydrogen' : 500, 'methane' : 150], HV, 25, 13, 0.1),
+//        "gallium_arsenide": new cvdRecipe(['trimethyl_gallium' : 10, 'arsine' : 10, 'hydrogen' : 100], ['hydrogen' : 100, 'methane' : 30], HV, 25, 13, 0.02),
+//        "gallium_arsenide.be_doped": new cvdRecipe(['trimethyl_gallium' : 50, 'arsine' : 50, 'hydrogen' : 500, 'bismethylcyclopentadienyl_beryllium' : 1], ['hydrogen' : 500, 'methane' : 150], HV, 25, 13, 0.1),
     ]
 
     static void generateChemicalVaporDepositionRecipe(String input, String product, double thickness, String recipe) {

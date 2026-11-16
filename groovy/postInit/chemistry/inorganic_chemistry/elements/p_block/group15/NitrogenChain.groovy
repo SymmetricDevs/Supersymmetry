@@ -217,6 +217,13 @@ BR.recipeBuilder()
     .duration(200)
     .buildAndRegister()
 
+CRYSTALLIZER.recipeBuilder()
+    .fluidInputs(fluid('sodium_amide') * 576)
+    .outputs(metaitem('dustSodiumAmide') * 4)
+    .EUt(VA[MV])
+    .duration(200)
+    .buildAndRegister()
+
 ROASTER.recipeBuilder()
     .inputs(ore('dustAnyPurityCarbon'))
     .inputs(ore('dustSodiumAmide') * 4)

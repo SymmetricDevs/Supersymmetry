@@ -1,9 +1,17 @@
 import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 
-//Change transistor to use silicon wafer instead of silicon plate
-// Transistor * 8
-mods.gregtech.assembler.removeByInput(120, [metaitem('plateSilicon'), metaitem('wireFineTin') * 6], [fluid('plastic') * 144])
+// Miniaturized Electronic Circuit * 2
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('plate.integrated_logic_circuit'), metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('soldering_alloy') * 72])
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('plate.integrated_logic_circuit'), metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineCopper') * 2, metaitem('boltTin') * 2], [fluid('tin') * 144])
+
+// Advanced Electronic Circuit * 2
+mods.gregtech.circuit_assembler.removeByInput(24, [metaitem('circuit_board.good'), metaitem('circuit.basic_integrated') * 2, metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineGold') * 4, metaitem('boltSilver') * 4], [fluid('soldering_alloy') * 72])
+mods.gregtech.circuit_assembler.removeByInput(24, [metaitem('circuit_board.good'), metaitem('circuit.basic_integrated') * 2, metaitem('component.resistor') * 2, metaitem('component.diode') * 2, metaitem('wireFineGold') * 4, metaitem('boltSilver') * 4], [fluid('tin') * 144])
+
+// High-Voltage Electronic Circuit * 1
+mods.gregtech.circuit_assembler.removeByInput(30, [metaitem('circuit.good_integrated') * 2, metaitem('plate.integrated_logic_circuit') * 2, metaitem('plate.random_access_memory') * 2, metaitem('component.transistor') * 4, metaitem('wireFineElectrum') * 8, metaitem('boltAnnealedCopper') * 8], [fluid('soldering_alloy') * 72])
+mods.gregtech.circuit_assembler.removeByInput(30, [metaitem('circuit.good_integrated') * 2, metaitem('plate.integrated_logic_circuit') * 2, metaitem('plate.random_access_memory') * 2, metaitem('component.transistor') * 4, metaitem('wireFineElectrum') * 8, metaitem('boltAnnealedCopper') * 8], [fluid('tin') * 144])
 
 // Op amps
 
@@ -61,7 +69,7 @@ ASSEMBLER.recipeBuilder()
 // Protector circuit
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(ore('componentResistorMedium') * 2)
+    .inputs(ore('componentResistor') * 2)
     .inputs(ore('componentCapacitorMedium') * 2)
     .inputs(ore('componentTransistor') * 2)
     .inputs(metaitem('component.fuse.hv'))
@@ -76,7 +84,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .buildAndRegister()
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(metaitem('component.resistor.carbon_film') * 2)
+    .inputs(ore('componentResistor') * 2)
     .inputs(ore('componentCapacitorMedium') * 2)
     .inputs(ore('componentTransistor') * 2)
     .inputs(metaitem('component.fuse.hv'))
@@ -110,7 +118,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 // MV Power Circuit
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(ore('componentResistorMedium') * 4)
+    .inputs(ore('componentResistor') * 4)
     .inputs(ore('componentTransistor') * 6)
     .inputs(ore('componentCapacitorMedium') * 2)
     .inputs(metaitem("component.op_amp"))
@@ -128,14 +136,14 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
 // HV Power Circuit
 
 CIRCUIT_ASSEMBLER.recipeBuilder()
-    .inputs(ore('componentResistorMedium') * 6)
+    .inputs(ore('componentResistor') * 6)
     .inputs(ore('componentCapacitorMedium') * 2)
     .inputs(metaitem('component.transistor.alloy_junction') * 8)
     .inputs(metaitem('component.protector_circuit'))
     .inputs(metaitem('component.op_amp'))
     .inputs(metaitem('component.diode.zener'))
     .inputs(metaitem('component.heat_sink'))
-    .inputs(ore('componentInductor'))
+    .inputs(metaitem('component.inductor'))
     .inputs(ore('wireFineGold') * 6)
     .inputs(metaitem('circuit_board.good'))
     .fluidInputs(fluid('soldering_alloy') * 72)

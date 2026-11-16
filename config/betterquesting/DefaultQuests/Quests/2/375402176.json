@@ -1,14 +1,25 @@
 {
+  "preRequisiteTypes:7": [
+    0,
+    1,
+    1,
+    0
+  ],
   "preRequisites:11": [
-    99
+    126,
+    517464893,
+    110,
+    183
   ],
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.375402176.desc",
+      "frame:8": "GATE",
       "icon:10": {
         "Damage:2": 18502,
         "id:8": "gregtech:machine"
       },
+      "ismain:1": 1,
       "name:8": "susy.quest.db.375402176.title"
     }
   },
@@ -20,6 +31,14 @@
           "Count:3": 1,
           "Damage:2": 18502,
           "id:8": "gregtech:machine"
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "susy:crucible"
+        },
+        "2:10": {
+          "Count:3": 8,
+          "id:8": "susy:induction_coil_assembly"
         }
       },
       "taskID:8": "bq_standard:retrieval"

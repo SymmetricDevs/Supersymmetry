@@ -11,6 +11,12 @@ import globals.semiconductors.Packaging
 import globals.semiconductors.Doping
 import globals.semiconductors.Mechanicals
 
+// Mainframe * 1
+mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.inductor') * 8, metaitem('component.capacitor') * 16, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('soldering_alloy') * 288])
+mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.inductor') * 8, metaitem('component.capacitor') * 16, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('tin') * 576])
+mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.advanced_smd.inductor') * 2, metaitem('component.advanced_smd.capacitor') * 4, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('soldering_alloy') * 288])
+mods.gregtech.circuit_assembler.removeByInput(480, [metaitem('frameAluminium') * 2, metaitem('circuit.workstation') * 2, metaitem('component.advanced_smd.inductor') * 2, metaitem('component.advanced_smd.capacitor') * 4, metaitem('plate.random_access_memory') * 16, metaitem('wireGtSingleAnnealedCopper') * 16], [fluid('tin') * 576])
+
 // Lookup table for int to string conversion
 
 // Damascene copper BEOL
@@ -404,7 +410,7 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .inputs(ore('componentInductorSmall') * 5)
     .inputs(ore('componentCapacitorSmall') * 4)
     .inputs(metaitem('component.capacitor.electrolytic'))
-    //.inputs(metaitem('component.capacitor.film') * 2)
+    .inputs(metaitem('component.capacitor.film') * 2)
     .inputs(ore('componentDiodeSignal'))
     .inputs(metaitem('component.diode.zener'))
     .inputs(metaitem('component.diode.schottky') * 2)
@@ -417,5 +423,22 @@ CIRCUIT_ASSEMBLER.recipeBuilder()
     .cleanroom(CleanroomType.CLEANROOM)
     .buildAndRegister()
 
+CIRCUIT_ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('circuit.workstation') * 4)
+    .inputs(metaitem('component.nmos_expansion_bus') * 3)
+    .inputs(metaitem('component.floppy_drive'))
+    .inputs(metaitem('circuit.power.ev'))
+    .inputs(ore('frameGtAluminium') * 2)
+    .inputs(ore('plateAluminium') * 12)
+    .inputs(metaitem('component.heat_sink') * 4)
+    .inputs(metaitem('electric.motor.hv') * 2)
+    .inputs(ore('rotorAluminium') * 2)
+    .inputs(ore('wireFineEnameledCopper') * 64)
+    .fluidInputs(fluid('lead_free_solder_paste') * 1152)
+    .outputs(metaitem('circuit.mainframe'))
+    .duration(200)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister();
 
 // Cheaper clock generator

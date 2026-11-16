@@ -1,0 +1,51 @@
+{
+  "preRequisites:11": [
+    758,
+    813
+  ],
+  "properties:10": {
+    "betterquesting:10": {
+      "desc:8": "susy.quest.db.459075482.desc",
+      "icon:10": {
+        "id:8": "techguns:t3_combat_helmet"
+      },
+      "name:8": "susy.quest.db.459075482.title"
+    }
+  },
+  "questID:3": 459075482,
+  "tasks:9": {
+    "0:10": {
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "techguns:t3_exo_helmet",
+          "tag:10": {
+            "power:3": 0
+          }
+        },
+        "1:10": {
+          "Count:3": 1,
+          "id:8": "techguns:t3_exo_chestplate",
+          "tag:10": {
+            "power:3": 0
+          }
+        },
+        "2:10": {
+          "Count:3": 1,
+          "id:8": "techguns:t3_exo_leggings",
+          "tag:10": {
+            "power:3": 0
+          }
+        },
+        "3:10": {
+          "Count:3": 1,
+          "id:8": "techguns:t3_exo_boots",
+          "tag:10": {
+            "power:3": 0
+          }
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}

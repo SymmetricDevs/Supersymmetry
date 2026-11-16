@@ -2,7 +2,7 @@
     "parent": "builtin/text",
     "position_type": "TOP_LEFT",
     "offset_pos": "TOP_LEFT",
-    "text": "' Memory Usage: ' + memory_used() + 'MB / ' + memory_max() + 'MB'",
+    "text": "' ' + translate('susy.loading.memory') + ': ' + memory_used() + translate('susy.loading.megabytes') + ' / ' + memory_max() + translate('susy.loading.megabytes')",
     "position": {
         "x": "0",
         "y": "10",

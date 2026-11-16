@@ -2,6 +2,8 @@ import static prePostInit.Recipemaps.*
 import globals.Sintering
 import static gregtech.api.GTValues.*
 
+// Silicon Carbide Plate * 1
+mods.gregtech.compressor.removeByInput(2, [metaitem('dustSiliconCarbide')], null)
 // Alumina Plate * 1
 mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('alumina') * 144])
 // Alumina Plate * 1
@@ -43,7 +45,7 @@ Sintering.blankets.each { blanket ->
         .buildAndRegister()
 
     SINTERING_OVEN.recipeBuilder()
-        .circuitMeta(1)
+        .circuitMeta(2)
         .inputs(ore('dustAlumina') * 9)
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
         .notConsumable(metaitem('shape.mold.plate'))
@@ -54,6 +56,7 @@ Sintering.blankets.each { blanket ->
         .buildAndRegister()
 
     SINTERING_OVEN.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustAlumina') * 6)
         .fluidInputs(fluid('polyvinyl_alcohol_binder') * 180)
         .notConsumable(metaitem('shape.mold.plate'))

@@ -103,55 +103,55 @@ ASSEMBLER.recipeBuilder()
 	.inputs(ore('gtLight'))
 	.inputs(ore('plateGlass') * 6)
 	.outputs(item('projectred-illumination:lamp', 16) * 3)
-	.circuitMeta(3)
+	.circuitMeta(2)
 	.duration(40)
 	.EUt(VA[ULV])
 	.buildAndRegister();
 
 crafting.addShaped("projectred-illumination:lantern", item('projectred-illumination:lantern'), [
-    [item('projectred-core:resource_item'), ore('nuggetGold'), item('projectred-core:resource_item')],
+    [ore('plateStone'), ore('nuggetGold'), ore('plateStone')],
     [ore('paneGlass'), ore('gtLight'), ore('paneGlass')],
-    [item('projectred-core:resource_item'), ore('dustRedstone'), item('projectred-core:resource_item')]
+    [ore('plateStone'), ore('dustRedstone'), ore('plateStone')]
 ])
 
 crafting.addShaped("projectred-illumination:inverted_lantern", item('projectred-illumination:inverted_lantern'), [
-    [item('projectred-core:resource_item'), ore('nuggetGold'), item('projectred-core:resource_item')],
+    [ore('plateStone'), ore('nuggetGold'), ore('plateStone')],
     [ore('paneGlass'), ore('gtLight'), ore('paneGlass')],
-    [item('projectred-core:resource_item'), item('minecraft:redstone_torch'), item('projectred-core:resource_item')]
+    [ore('plateStone'), item('minecraft:redstone_torch'), ore('plateStone')]
 ])
 
 crafting.addShaped("projectred-illumination:fixture_light", item('projectred-illumination:fixture_light'), [
     [ore('paneGlass'), ore('paneGlass'), ore('paneGlass')],
     [ore('paneGlass'), ore('gtLight'), ore('paneGlass')],
-    [item('projectred-core:resource_item'), item('projectred-core:resource_item',1), item('projectred-core:resource_item')]
+    [ore('plateStone'), ore('plateRedstone'), ore('plateStone')]
 ])
 
 crafting.addShaped("projectred-illumination:inverted_fixture_light", item('projectred-illumination:inverted_fixture_light'), [
     [ore('paneGlass'), ore('paneGlass'), ore('paneGlass')],
     [ore('paneGlass'), ore('gtLight'), ore('paneGlass')],
-    [item('projectred-core:resource_item'), item('projectred-core:resource_item',11), item('projectred-core:resource_item')]
+    [ore('plateStone'), ore('plateStone'), ore('plateStone')]
 ])
 
 crafting.addShaped("projectred-illumination:fallout_lamp", item('projectred-illumination:fallout_lamp'), [
     [ore('barsIron'), ore('barsIron'), ore('barsIron')],
     [ore('barsIron'), ore('gtLight'), ore('barsIron')],
-    [ore('nuggetGold'), item('projectred-core:resource_item',1), ore('nuggetGold')]
+    [ore('nuggetGold'), ore('plateRedstone'), ore('nuggetGold')]
 ])
 
 crafting.addShaped("projectred-illumination:inverted_fallout_lamp", item('projectred-illumination:inverted_fallout_lamp'), [
     [ore('barsIron'), ore('barsIron'), ore('barsIron')],
     [ore('barsIron'), ore('gtLight'), ore('barsIron')],
-    [ore('nuggetGold'), item('projectred-core:resource_item',11), ore('nuggetGold')]
+    [ore('nuggetGold'), ore('plateStone'), ore('nuggetGold')]
 ])
 
 crafting.addShaped("projectred-illumination:cage_lamp", item('projectred-illumination:cage_lamp'), [
     [null, ore('barsIron'), null],
     [ore('barsIron'), ore('gtLight'), ore('barsIron')],
-    [item('projectred-core:resource_item',1), item('projectred-core:resource_item',1), item('projectred-core:resource_item',1)]
+    [ore('plateRedstone'), ore('plateRedstone'), ore('plateRedstone')]
 ])
 
 crafting.addShaped("projectred-illumination:inverted_cage_lamp", item('projectred-illumination:inverted_cage_lamp'), [
     [null, ore('barsIron'), null],
     [ore('barsIron'), ore('gtLight'), ore('barsIron')],
-    [item('projectred-core:resource_item',1), item('projectred-core:resource_item',11), item('projectred-core:resource_item',1)]
+    [ore('plateRedstone'), ore('plateStone'), ore('plateRedstone')]
 ])

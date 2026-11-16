@@ -25,6 +25,33 @@
     }
   },
   "questID:3": 874,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 0,
+            "TrophyColorGreen:3": 115,
+            "TrophyColorRed:3": 190,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "forge:bucketfilled",
+              "tag:10": {
+                "Amount:3": 1000,
+                "FluidName:8": "supreme_lubricant"
+              }
+            },
+            "TrophyName:8": "Buttery Smooth",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

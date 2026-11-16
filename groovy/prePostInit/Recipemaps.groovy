@@ -76,7 +76,7 @@ class Recipemaps {
     static final def LARGE_FLUID_PUMP = recipemap('large_fluid_pump')
     static final def LARGE_STEAM_TURBINE = recipemap('large_steam_turbine')
     static final def LARGE_WEAPONS_FACTORY = recipemap('large_weapons_factory')
-    static final def LASER_ENGRAVER = recipemap('laser_engraver')
+    static final def ELECTRON_BEAM_LITHOGRAPHY = recipemap('laser_engraver')
     static final def LATEX_COLLECTOR = recipemap('latex_collector')
     static final def LATHE = recipemap('lathe')
     static final def LCR = recipemap('large_chemical_reactor')
@@ -135,7 +135,6 @@ class Recipemaps {
     static final def REACTIVE_ION_ETCHER = recipemap('reactive_ion_etching')
     static final def RESIST_PROCESSOR = recipemap('resist_processing')
     static final def PLASMA_ASHER = recipemap('plasma_ashing')
-    static final def ELECTRON_BEAM_LITHOGRAPHY = recipemap('electron_beam_lithography')
     static final def WIRE_BONDING = recipemap('wire_bonding') // ball bonding?
     static final def SCREEN_PRINTING = recipemap('screen_printer')
 }
