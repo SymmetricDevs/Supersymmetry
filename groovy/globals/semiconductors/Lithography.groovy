@@ -217,8 +217,8 @@ class Lithography {
         }
 
         tmp_builder.outputs(metaitem(ashed))
-            .duration(200 * timeMultiplier)
-            .EUt(VA[EV])
+            .duration(800 * timeMultiplier)
+            .EUt(VA[HV])
             .cleanroom(CleanroomType.CLEANROOM)
             .buildAndRegister()
 
