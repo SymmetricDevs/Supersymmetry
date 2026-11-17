@@ -62,7 +62,7 @@ ASSEMBLER.recipeBuilder()
     .inputs(metaitem('die.diode.alloy'))
     .fluidInputs(fluid('glass') * 72)
     .fluidInputs(fluid('high_temperature_solder') * 72)
-    .outputs(metaitem('component.diode.alloy_junction'))
+    .outputs(ore('componentTransistor'))
     .duration(100)
     .EUt(VA[LV])
     .buildAndRegister();
