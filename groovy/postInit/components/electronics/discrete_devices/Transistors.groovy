@@ -58,6 +58,59 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
+// Planar NPN BJT (HV)
+//
+// Sources: https://patents.google.com/patent/US3025589A/en
+
+// Generate SiO2 doping mask and etch holes into it for P doped regions
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.n_doped', 'wafer.bjt_planar.step_one', 400, true, 2)
+Lithography.generatePhotolithographyRecipes('wafer.bjt_planar.step_one', 'wafer.bjt_planar.step_two', 'novolac_resist', 'mask_set.bjt_planar', true)
+Etching.generateWetEtchingRecipe('wafer.bjt_planar.step_two', 'wafer.bjt_planar.step_three', 'silicon_dioxide', 400, false)
+Lithography.generateResistStrippingRecipes('wafer.bjt_planar.step_three', 'wafer.bjt_planar.step_four', 1, false, true)
+
+// Doping of boron and drive-in
+Doping.generateBoronDiffusionDopingRecipes('wafer.bjt_planar.step_four', 'wafer.bjt_planar.step_five', 400)
+Doping.generateDriveInRecipe('wafer.bjt_planar.step_five', 'wafer.bjt_planar.step_six', 400)
+
+// Generate SiO2 doping mask and etch holes into it for N doped regions
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.bjt_planar.step_six', 'wafer.bjt_planar.step_seven', 400, false)
+Lithography.generatePhotolithographyRecipes('wafer.bjt_planar.step_seven', 'wafer.bjt_planar.step_eight', 'novolac_resist', 'mask_set.bjt_planar', true)
+Etching.generateWetEtchingRecipe('wafer.bjt_planar.step_eight', 'wafer.bjt_planar.step_nine', 'silicon_dioxide', 400, false)
+Lithography.generateResistStrippingRecipes('wafer.bjt_planar.step_nine', 'wafer.bjt_planar.step_ten', 1, false, true)
+
+// Doping of phosphorus and drive-in
+Doping.generatePhosphorusDiffusionDopingRecipes('wafer.bjt_planar.step_ten', 'wafer.bjt_planar.step_eleven', 400)
+Doping.generateDriveInRecipe('wafer.bjt_planar.step_eleven', 'wafer.bjt_planar.step_twelve', 400)
+
+// Generate SiO2 doping mask and etch holes into it for contact window
+Deposition.generateSiliconDioxideGrowthRecipe('wafer.bjt_planar.step_twelve', 'wafer.bjt_planar.step_thirteen', 400, false)
+Lithography.generatePhotolithographyRecipes('wafer.bjt_planar.step_thirteen', 'wafer.bjt_planar.step_fourteen', 'novolac_resist', 'mask_set.bjt_planar', true)
+Etching.generateWetEtchingRecipe('wafer.bjt_planar.step_fourteen', 'wafer.bjt_planar.step_fifteen', 'silicon_dioxide', 400, false)
+Lithography.generateResistStrippingRecipes('wafer.bjt_planar.step_fifteen', 'wafer.bjt_planar.step_sixteen', 1, false, true)
+
+// metallization 
+Deposition.generateSputteringRecipe('wafer.bjt_planar.step_sixteen', 'wafer.bjt_planar.step_seventeen', 400, [ 'aluminium' : 396, 'silicon' : 4 ])
+Lithography.generatePhotolithographyRecipes('wafer.bjt_planar.step_seventeen', 'wafer.bjt_planar.step_eighteen', 'novolac_resist', 'mask_set.bjt_planar', false)
+Etching.generateWetEtchingRecipe('wafer.bjt_planar.step_eighteen', 'wafer.bjt_planar.step_nineteen', 'aluminium', 400, false)
+Lithography.generateResistStrippingRecipes('wafer.bjt_planar.step_nineteen', 'wafer.bjt_planar.step_twenty', 1, false, true)
+Deposition.generateSinteringRecipe('wafer.bjt_planar.step_twenty', 'wafer.bjt_planar.step_twenty_one', 400, HV)
+
+// Protection and packaging
+Mechanicals.generateBackgrindingRecipe('wafer.bjt_planar.step_twenty_one', 'wafer.bjt_planar.step_twenty_two', 400, HV)
+Deposition.generateEvaporationRecipe('wafer.bjt_planar.step_twenty_two', 'wafer.bjt_planar.step_twenty_three', 100, 'gold_antimony', false) // contact
+Deposition.generateSinteringRecipe('wafer.bjt_planar.step_twenty_three', 'wafer.bjt_planar.step_twenty_four', 400, HV)
+Packaging.generateDicingRecipe('wafer.bjt_planar.step_twenty_four', 'die.bjt_planar', 16, 400, HV)
+Packaging.generateWireBondingRecipe('die.bjt_planar', 'die.bjt_planar.bonded', 'gold', 50, HV)
+
+ASSEMBLER.recipeBuilder()
+    .inputs(metaitem('die.bjt_planar.bonded'))
+    .fluidInputs(fluid('epoxy_molding_compound') * 36)
+    .outputs(metaitem('component.transistor.bjt_planar'))
+    .duration(100)
+    .EUt(VA[HV])
+    .cleanroom(CleanroomType.CLEANROOM)
+    .buildAndRegister()
+
 // Signal MOSFET (HV, SMD)
 // Sources: https://patents.google.com/patent/US4319396A/en
 //          https://patents.google.com/patent/US4299024A/en

@@ -36,6 +36,7 @@ ore('componentTransistor').add(metaitem('component.transistor.alloy_junction'))
 
 ore('componentTransistorSignal').add(metaitem('component.transistor.signal_mosfet'))
 ore('componentTransistorSignal').add(metaitem('component.transistor.alloy_junction'))
+ore('componentTransistorSignal').add(metaitem('component.transistor.bjt_planar'))
 
 ore('componentInductorSmall').add(metaitem('component.smd.inductor'))
 
