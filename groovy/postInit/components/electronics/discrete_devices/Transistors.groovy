@@ -59,8 +59,8 @@ ASSEMBLER.recipeBuilder()
     .buildAndRegister();
 
 // Planar NPN BJT (HV)
-//
 // Sources: https://patents.google.com/patent/US3025589A/en
+//          https://patents.google.com/patent/US3698077A/en?oq=US3698077
 
 // Generate SiO2 doping mask and etch holes into it for P doped regions
 Deposition.generateSiliconDioxideGrowthRecipe('wafer.silicon.n_doped', 'wafer.bjt_planar.step_one', 400, true, 2)
@@ -89,7 +89,7 @@ Etching.generateWetEtchingRecipe('wafer.bjt_planar.step_fourteen', 'wafer.bjt_pl
 Lithography.generateResistStrippingRecipes('wafer.bjt_planar.step_fifteen', 'wafer.bjt_planar.step_sixteen', 1, false, true)
 
 // metallization 
-Deposition.generateSputteringRecipe('wafer.bjt_planar.step_sixteen', 'wafer.bjt_planar.step_seventeen', 400, [ 'aluminium' : 396, 'silicon' : 4 ])
+Deposition.generateSputteringRecipe('wafer.bjt_planar.step_sixteen', 'wafer.bjt_planar.step_seventeen', [ 'aluminium' : 396, 'silicon' : 4 ])
 Lithography.generatePhotolithographyRecipes('wafer.bjt_planar.step_seventeen', 'wafer.bjt_planar.step_eighteen', 'novolac_resist', 'mask_set.bjt_planar', false)
 Etching.generateWetEtchingRecipe('wafer.bjt_planar.step_eighteen', 'wafer.bjt_planar.step_nineteen', 'aluminium', 400, false)
 Lithography.generateResistStrippingRecipes('wafer.bjt_planar.step_nineteen', 'wafer.bjt_planar.step_twenty', 1, false, true)
