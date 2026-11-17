@@ -199,8 +199,8 @@ class Lithography {
                 .inputs(metaitem(input))
                 .fluidInputs(fluid('n_methyl_two_pyrrolidone') * 100)
                 .outputs(metaitem(product))
-                .duration((int) (400 * timeMultiplier))
-                .EUt(VA[HV])
+                .duration((int) (200 * timeMultiplier))
+                .EUt(VA[EV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister()
         }
