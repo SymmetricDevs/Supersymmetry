@@ -64,7 +64,7 @@ ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('high_temperature_solder') * 72)
     .outputs(metaitem('component.diode.alloy_junction'))
     .duration(100)
-    .EUt(VA[LV])
+    .EUt(VA[MV])
     .buildAndRegister();
 
 // Alloy junction zener diode (MV)
