@@ -101,7 +101,7 @@ for (ore in tab_MAsS) {
         .fluidInputs(fluid('nitric_acid') * 13000)
         .fluidInputs(fluid('distilled_water') * 1000)
         .outputs(metaitem('dustSulfur') * 3)
-        .fluidOutputs(fluid(ore.toLowerCase() + "_leach_solution") * 1000)
+        .fluidOutputs(fluid(ore.toLowerCase() + "_leach_solution") * 3000)
         .fluidOutputs(fluid('nitric_oxide') * 7000)
         .duration(240)
         .EUt(VA[HV])
