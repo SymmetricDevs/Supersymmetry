@@ -11,9 +11,13 @@ mods.jei.ingredient.yeet(
     metaitem('board.plastic'),
     metaitem('board.epoxy'),
     metaitem('board.fiber_reinforced'),
+    metaitem('board.multilayer.fiber_reinforced'),
+    metaitem('board.wetware'),
     metaitem('circuit_board.plastic'),
     metaitem('circuit_board.advanced'),
-    metaitem('circuit_board.extreme')
+    metaitem('circuit_board.extreme'),
+    metaitem('circuit_board.elite'),
+    metaitem('circuit_board.wetware')
 )
 
 // LV circuit board
@@ -453,7 +457,7 @@ ELECTROLYTIC_CELL.recipeBuilder()
 
     // Drilling
 
-    LASER_ENGRAVER.recipeBuilder()
+    ELECTRON_BEAM_LITHOGRAPHY.recipeBuilder()
         .inputs(metaitem('substrate.fr4.etched'))
         .outputs(metaitem('substrate.fr4.drilled'))
         .EUt(VA[MV])
@@ -564,3 +568,6 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)
         .buildAndRegister();
+
+// Wetware Lifesupport Circuit Board * 16
+mods.gregtech.circuit_assembler.removeByInput(30720, [metaitem('board.multilayer.fiber_reinforced') * 16, metaitem('petri_dish'), metaitem('electric.pump.luv'), metaitem('sensor.iv'), metaitem('circuit.mainframe'), metaitem('foilNiobiumTitanium') * 16], [fluid('sterilized_growth_medium') * 4000])

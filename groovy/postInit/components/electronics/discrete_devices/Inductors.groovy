@@ -13,15 +13,14 @@ mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustFerriteMi
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineCopper') * 2], [fluid('plastic') * 36])
 // Inductor * 4
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringSteel'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
-// SMD Inductor * 16
-mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
-// SMD Inductor * 32
-mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
 // Inductor * 4
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCopper') * 2], [fluid('plastic') * 36])
 // Inductor * 8
 mods.gregtech.assembler.removeByInput(120, [metaitem('ringNickelZincFerrite'), metaitem('wireFineAnnealedCopper') * 2], [fluid('plastic') * 36])
-
+// SMD Inductor * 16
+mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineCupronickel') * 4], [fluid('plastic') * 144])
+// SMD Inductor * 32
+mods.gregtech.assembler.removeByInput(480, [metaitem('ringNickelZincFerrite'), metaitem('wireFineTantalum') * 4], [fluid('plastic') * 144])
 
 ASSEMBLER.recipeBuilder()
     .fluidInputs(fluid('epoxy_molding_compound') * 36)

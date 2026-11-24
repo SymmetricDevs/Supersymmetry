@@ -2,6 +2,9 @@ import static prePostInit.Recipemaps.*
 import static gregtech.api.GTValues.*
 import globals.Sintering
 
+mods.jei.ingredient.yeet(metaitem('boule.sapphire'))
+mods.jei.ingredient.yeet(metaitem('boule.ruby'))
+
 CVD.recipeBuilder()
         .notConsumable(metaitem('wafer.silicon'))
         .fluidInputs(fluid('methane') * 100)

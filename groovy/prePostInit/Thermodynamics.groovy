@@ -87,9 +87,9 @@ PolychlorinatedBiphenylCoolant.setAmountToUse(1000);
 PolychlorinatedBiphenylCoolant.setTimeFactor(2);
 
 def FC75Coolant = new Coolant("fc_75", "warm_fc_75");
-PolychlorinatedBiphenylCoolant.setDurationRadiator(30);
-PolychlorinatedBiphenylCoolant.setAmountToUse(1000);
-PolychlorinatedBiphenylCoolant.setTimeFactor(1);
+FC75Coolant.setDurationRadiator(30);
+FC75Coolant.setAmountToUse(1000);
+FC75Coolant.setTimeFactor(1);
 
 def Coolants = [
         WaterCoolant,
@@ -200,12 +200,12 @@ CryoNaturalGas.setDurationRadiator(200);
 CryoNaturalGas.setTemperature(80);
 
 def CryoPetroleumGas = new CryoGas('fuel_gas', 'hot_hp_fuel_gas', 'hp_fuel_gas', 'cold_hp_fuel_gas', 'lpg');
-CryoNaturalGas.setEUt(60);
-CryoNaturalGas.setDuration(100);
-CryoNaturalGas.setPowerHX(100);
-CryoNaturalGas.setDurationHX(5);
-CryoNaturalGas.setDurationRadiator(200);
-CryoNaturalGas.setTemperature(80);
+CryoPetroleumGas.setEUt(60);
+CryoPetroleumGas.setDuration(100);
+CryoPetroleumGas.setPowerHX(100);
+CryoPetroleumGas.setDurationHX(5);
+CryoPetroleumGas.setDurationRadiator(200);
+CryoPetroleumGas.setTemperature(80);
 
 def CryoMethane = new CryoGas('methane', 'hot_hp_methane', 'hp_methane', 'cold_hp_methane', 'liquid_methane');
 CryoMethane.setEUt(60);

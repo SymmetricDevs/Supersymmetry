@@ -88,4 +88,10 @@ event_manager.listen { RecyclingManager.PreRecyclingEvent event ->
         metaitem('wireGtDoubleCupronickel') * 8,
         metaitem('foilBronze') * 8
     ])
+
+    RecyclingManager.addRecyclingGroovy(metaitem('hull.ulv'), [
+        metaitem('cableGtSingleLead') * 2,
+        item('gregtech:machine_casing'),
+        metaitem('plateWroughtIron')
+    ])
 }

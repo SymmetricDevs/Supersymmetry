@@ -5,12 +5,12 @@ import static gregtech.api.GTValues.*
 // Source: Acetic Anhydride and Mixed Fatty Acid Anhydrides Chapter in Ullmann's Encyclopedia of Industrial Chemistry https://doi.org/10.1002/14356007.a01_065.pub3
 
 // Oxidation of Acetaldehyde
-// Cu2(OH)2CO3 + 4C2H4O2 + 3H2O -> 2Cu(C2H3O2)2*H2O + 4H2O + CO2
+// Cu2(OH)2CO3 + 4C2H4O2 + 3H2O -> 2Cu(C2H3O2)2(H2O)3 + CO2
 BR.recipeBuilder() // Source: Copper Compounds Chapter in Ullmann's Encyclopedia of Industrial Chemistry https://doi.org/10.1002/14356007.a07_567
     .inputs(ore('dustBasicCopperCarbonate') * 10)
     .fluidInputs(fluid('acetic_acid') * 4000)
     .fluidInputs(fluid('distilled_water') * 3000)
-    .fluidOutputs(fluid('copper_ii_acetate_solution') * 4000) // Cu(C2H3O2)2(H2O)3
+    .fluidOutputs(fluid('copper_ii_acetate_solution') * 6000) // Cu(C2H3O2)2(H2O)3
     .fluidOutputs(fluid('carbon_dioxide') * 1000)
     .EUt(VA[MV])
     .duration(160)
@@ -29,17 +29,16 @@ MIXER.recipeBuilder()
 BR.recipeBuilder() // Source: Copper Compounds Chapter in Ullmann's Encyclopedia of Industrial Chemistry https://doi.org/10.1002/14356007.a07_567
     .inputs(ore('dustCupricOxide') * 2)
     .fluidInputs(fluid('diluted_acetic_acid') * 4000)
-    .fluidOutputs(fluid('copper_ii_acetate_solution') * 2000) // Cu(C2H3O2)2(H2O)3
+    .fluidOutputs(fluid('copper_ii_acetate_solution') * 3000) // Cu(C2H3O2)2(H2O)3
     .EUt(VA[MV])
     .duration(200)
     .buildAndRegister()
 
 CRYSTALLIZER.recipeBuilder()
     .notConsumable(ore('springCupronickel'))
-    .fluidInputs(fluid('copper_ii_acetate_solution') * 2000)
+    .fluidInputs(fluid('copper_ii_acetate_solution') * 3000)
     .outputs(metaitem('dustCopperIiAcetateMonohydrate') * 16) // Cu(C2H3O2)2*H2O
-    .fluidOutputs(fluid('water'))
-    .fluidOutputs(fluid('dense_steam') * 1000)
+    .fluidOutputs(fluid('dense_steam') * 2000)
     .EUt(VA[LV])
     .duration(200)
     .buildAndRegister()

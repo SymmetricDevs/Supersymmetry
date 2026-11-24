@@ -1,8 +1,7 @@
 {
   "preRequisites:11": [
-    27,
-    25,
-    24
+    30,
+    1666635257
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -13,8 +12,7 @@
         "id:8": "gregtech:meta_plate"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.26.title",
-      "questlogic:8": "OR"
+      "name:8": "susy.quest.db.26.title"
     }
   },
   "questID:3": 26,

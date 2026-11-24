@@ -475,17 +475,5 @@ RecipeMaps.DISTILLERY_RECIPES
 RecipeMaps.COMPRESSOR_RECIPES
     .modifyMaxInputs(2)
 
-SuSyRecipeMaps.WIRE_BONDING
-    .setMaxInputs(3)
-
-SuSyRecipeMaps.SCREEN_PRINTER
-    .setMaxInputs(3)
-
 RecipeMaps.CUTTER_RECIPES
     .modifyMaxInputs(2)
-
-SuSyRecipeMaps.ELECTRON_BEAM_LITHOGRAPHY
-    .setMaxInputs(2)
-
-SuSyRecipeMaps.VACUUM_DISTILLATION_RECIPES
-    .modifyMaxOutputs(2)

@@ -17,6 +17,33 @@
     }
   },
   "questID:3": 271215180,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 255,
+            "TrophyColorGreen:3": 255,
+            "TrophyColorRed:3": 0,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "forge:bucketfilled",
+              "tag:10": {
+                "Amount:3": 1000,
+                "FluidName:8": "xenon"
+              }
+            },
+            "TrophyName:8": "Nothing Noble About It",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "requiredFluids:9": {

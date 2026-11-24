@@ -1,5 +1,6 @@
 {
   "preRequisites:11": [
+    128,
     115
   ],
   "properties:10": {
@@ -11,7 +12,8 @@
           "FluidName:8": "water"
         }
       },
-      "name:8": "susy.quest.db.131.title"
+      "name:8": "susy.quest.db.131.title",
+      "questlogic:8": "OR"
     }
   },
   "questID:3": 131,
@@ -27,6 +29,11 @@
           "Count:3": 1,
           "Damage:2": 51,
           "id:8": "gregtech:meta_stick"
+        },
+        "2:10": {
+          "Count:3": 1,
+          "Damage:2": 253,
+          "id:8": "gregtech:meta_plate"
         }
       },
       "taskID:8": "bq_standard:retrieval"
