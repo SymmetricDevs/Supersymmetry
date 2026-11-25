@@ -58,7 +58,7 @@ ASSEMBLER.recipeBuilder()
     .EUt(VA[MV])
     .buildAndRegister();
 
-// Signal MOSFET (HV, SMD)
+// Signal MOSFET (EV, SMD)
 // Sources: https://patents.google.com/patent/US4319396A/en
 //          https://patents.google.com/patent/US4299024A/en
 

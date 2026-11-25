@@ -1263,28 +1263,34 @@ def alloying_prefixes = [
         prefix_dust
 ]
 
-def alloy_add = {String outputAlloy, int outputAmount, int recipeDuration, ArrayList materialInputs ->
-        int recipeMultiplier = Math.ceil(8 / outputAmount)
-        def numUniqueInputs = materialInputs.size().intdiv(2)
-        def uniqueCombinations = ([alloying_prefixes] * numUniqueInputs).combinations()
-        reductants.forEach { reductant ->
-            uniqueCombinations.forEach { uniqueCombination ->
-                def builder = PRIMITIVE_SMELTER.recipeBuilder()
-                double fuel_duration_multiplier = 0
-                int fuelCount = 0
-                for (int i = 0; i < numUniqueInputs; i++) {
-                    int numInput = materialInputs[ 2 * i + 1 ] //this gets the amount of used metal for the recipe
-                    fuel_duration_multiplier += uniqueCombination[i].duration_multiplier * numInput
-                    fuelCount += numInput
-                    builder.inputs(ore(uniqueCombination[i].name + materialInputs[ 2 * i ]) * (numInput * recipeMultiplier))
-                }
-                builder.inputs(ore(reductant.name) * (fuelCount * recipeMultiplier))
-                        .outputs(metaitem("ingot" + outputAlloy) * (outputAmount * recipeMultiplier))
-                        .duration((int) (recipeDuration * fuel_duration_multiplier / fuelCount) * recipeMultiplier)
-                        .buildAndRegister()
-            }
-        }
+def restrictedPrefixes = [
+    "CobaltMatte": [prefix_ingot]
+]
 
+def alloy_add = {String outputAlloy, int outputAmount, int recipeDuration, ArrayList materialInputs ->
+    int recipeMultiplier = Math.ceil(8 / outputAmount)
+    def numUniqueInputs = materialInputs.size().intdiv(2)
+    def allowedPerInput = (0..<numUniqueInputs).collect { int i ->
+        restrictedPrefixes.get(materialInputs[2 * i], alloying_prefixes)
+    }
+    def uniqueCombinations = allowedPerInput.combinations()
+    reductants.forEach { reductant ->
+        uniqueCombinations.forEach { uniqueCombination ->
+            def builder = PRIMITIVE_SMELTER.recipeBuilder()
+            double fuel_duration_multiplier = 0
+            int fuelCount = 0
+            for (int i = 0; i < numUniqueInputs; i++) {
+                int numInput = materialInputs[ 2 * i + 1 ] //this gets the amount of used metal for the recipe
+                fuel_duration_multiplier += uniqueCombination[i].duration_multiplier * numInput
+                fuelCount += numInput
+                builder.inputs(ore(uniqueCombination[i].name + materialInputs[ 2 * i ]) * (numInput * recipeMultiplier))
+            }
+            builder.inputs(ore(reductant.name) * (fuelCount * recipeMultiplier))
+                .outputs(metaitem("ingot" + outputAlloy) * (outputAmount * recipeMultiplier))
+                .duration((int) (recipeDuration * fuel_duration_multiplier / fuelCount) * recipeMultiplier)
+                .buildAndRegister()
+        }
+    }
 }
 
 // Smelter alloying recipes
@@ -1294,7 +1300,7 @@ alloying_recipes = [
         // Brass
         ["Brass", 7, 200, ["Copper", 5, "Zinc", 2]],
         // Kovar
-        ["Kovar", 2, 100, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
+        ["Kovar", 18, 100, ["Iron", 10, "Nickel", 5, "CobaltMatte", 3]]
 ]
 
 alloying_recipes.forEach { recipe ->

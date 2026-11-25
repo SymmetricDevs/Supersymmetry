@@ -1,3 +1,20 @@
+# UPDATE 0.2.0.4-rc1
+## Mod Changes
+### Mod Updates
+- SusyCore 0.2.7 → 0.2.9
+- Had Enough Items 4.35.0 -> 4.38.1
+- HBM Doors: Refreshed 1.0.26 -> 1.0.51
+## Changes
+### New Features
+- You can now obtain Mineral-Rich Sand from a Quarry in the Nether. (#2115 by BensonDE)
+### Changed Features
+- HMTA solution recipe duration has been decreased from 2.5 to 0.25 seconds. (#2120 by WideMann)
+- Increased Smoke/Flare Stack max height to 16 and decreased Incinerator clearance requirement to 3. (sc#771/774 by BensonDE)
+- MV Cargo Drones no longer require Stainless Steel. (#2124 by lanicerine)
+### Fixes
+- Eccentric Roll Crusher should (fingers crossed) finally be able to reach 32 parallels. (sc#761 by PeterKlimk)
+- The Floppy Disk Controller is no longer unobtainable. (#2123 by Fiery36)
+  And thanks to @WideMann, @PeterKlimk, @Fiery36, and @costajohnt for helping maintain the pack.
 # UPDATE 0.2.0.3
 ## Mod Changes
 ### Mod Updates
