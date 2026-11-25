@@ -1,4 +1,4 @@
-# UPDATE 0.2.0.4
+# UPDATE 0.2.0.4-rc1
 ## Mod Changes
 ### Mod Updates
 - SusyCore 0.2.7 → 0.2.8
