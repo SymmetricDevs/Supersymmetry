@@ -365,7 +365,8 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(2759, "plate.power_integrated_circuit")
         addItem(2760, "plate.high_power_integrated_circuit")
         addItem(2761, "component.quartz_oscillator")
-        // FREE ID: 2762 - 2764
+        addItem(2762, "component.transistor.bjt_planar")
+        // FREE ID: 2763 - 2764
         addItem(2765, "component.clock_generator")
         addItem(2766, "component.crystal_oscillator")
         addItem(2767, "component.diode.schottky")
@@ -644,6 +645,7 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(5034, "mask_set.vdmos")
 
         addItem(5035, "mask.substrate_ev")
+        addItem(5036, "stencil.bjt_planar")
 
         addItem(5050, "mask.blank.chromium")
         addItem(5051, "mask.blank.chromium_oxide")
@@ -981,6 +983,12 @@ eventManager.listen { PostMaterialEvent event ->
         addItem(8197, "die.signal_mosfet")
         addItem(8198, "die.signal_mosfet.bonded")
         addItem(8199, "component.transistor.signal_mosfet")
+
+        // Discrete planar NPN BJT (mask/die/package keep their fixed IDs)
+        registerWaferSteps("bjt_planar", 24, [start: 1, mask: true, die: true,
+            photoresist: [1, 7, 13, 17],
+            bsg:         [4],
+            psg:         [10]])
 
         log.infoMC("adding " + toadd_list.size() + " wafer metaitems")
         def start = 8250

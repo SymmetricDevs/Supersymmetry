@@ -197,6 +197,12 @@ crafting.addShaped("rubylith_diode_planar", metaitem('stencil.diode.planar'), [
     [null, null, null]
 ]);
 
+crafting.addShaped("rubylith_bjt_planar", metaitem('stencil.bjt_planar'), [
+    [null, null, metaitem('rubylith')],
+    [null, null, ore('craftingToolKnife')],
+    [null, null, null]
+]);
+
 [
     ['signal_mosfet', 7],
     ['nmos_cpu', 5],
@@ -212,6 +218,7 @@ crafting.addShaped("rubylith_diode_planar", metaitem('stencil.diode.planar'), [
     ['bjt_ulpic', 1],
     ['bjt_lpic', 4],
     ['bjt_pic', 3],
+    ['bjt_planar', 4],
 ].each { name, maskCount ->
     UV_LIGHT_BOX.recipeBuilder()
         .inputs(metaitem('stencil.' + name))
