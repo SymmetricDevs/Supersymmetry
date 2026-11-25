@@ -22,9 +22,9 @@ crafting.addShaped("susy:drone_pad_block_alt", item('susy:susy_multiblock_casing
 ])
 
 crafting.addShaped("susy:cargo_drone_pad_controller", metaitem('susy:cargo_drone_pad'), [
-        [ore('plateMagnalium'), metaitem('wireless'), ore('plateMagnalium')],
+        [ore('plateMagnalium'), metaitem('emitter.mv'), ore('plateMagnalium')],
         [ore('circuitMv'), metaitem('hull.mv'), ore('circuitMv')],
-        [ore('plateMagnalium'), ore('circuitMv'), ore('plateMagnalium')]
+        [ore('plateMagnalium'), metaitem('sensor.mv'), ore('plateMagnalium')]
 ])
 
 mods.gregtech.assembler.recipeBuilder()
@@ -114,7 +114,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('platePlastic') * 4)
         .inputs(metaitem('electric.motor.mv') * 4)
         .inputs(metaitem('rotorMagnalium') * 4)
-        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('sensor.mv') * 2)
         .inputs(ore('batteryMv') * 4)
         .inputs(ore('circuitMv') * 2)
         .outputs(metaitem('susy:cargo_drone.basic').withNbt(["Charge": 0L]))
@@ -127,7 +127,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('platePlastic') * 4)
         .inputs(metaitem('electric.motor.mv') * 4)
         .inputs(metaitem('rotorMagnalium') * 4)
-        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('sensor.mv') * 2)
         .inputs(metaitem('battery.ni_fe') * 2)
         .inputs(ore('circuitMv') * 2)
         .outputs(metaitem('susy:cargo_drone.basic').withNbt(["Charge": 0L]))
@@ -140,7 +140,7 @@ ASSEMBLER.recipeBuilder()
         .inputs(ore('platePlastic') * 4)
         .inputs(metaitem('electric.motor.mv') * 4)
         .inputs(metaitem('rotorMagnalium') * 4)
-        .inputs(metaitem('wireless') * 1)
+        .inputs(metaitem('sensor.mv') * 2)
         .inputs(metaitem('battery.ni_cd.mv') * 1)
         .inputs(ore('circuitMv') * 2)
         .outputs(metaitem('susy:cargo_drone.basic').withNbt(["Charge": 0L]))
@@ -190,7 +190,7 @@ ASSEMBLER.recipeBuilder()
 
 
 crafting.addShaped("susy:drone_basket", metaitem('susy:drone_deposit_basket'), [
-        [ore('platePlastic'), metaitem('wireless'), ore('platePlastic')],
+        [ore('platePlastic'), metaitem('emitter.mv'), ore('platePlastic')],
         [ore('stickLongMagnalium'), metaitem('screwMagnalium'), ore('stickLongMagnalium')],
         [ore('platePlastic'), ore('stickLongMagnalium'), ore('platePlastic')]
 ])
