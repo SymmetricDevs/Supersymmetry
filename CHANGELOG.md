@@ -14,6 +14,7 @@
 ### Fixes
 - Eccentric Roll Crusher should (fingers crossed) finally be able to reach 32 parallels. (sc#761 by PeterKlimk)
 - The Floppy Disk Controller is no longer unobtainable. (#2123 by Fiery36)
+  
 And thanks to @WideMann, @PeterKlimk, @Fiery36, and @costajohnt for helping maintain the pack.
 # UPDATE 0.2.0.4-rc1
 ## Mod Changes
